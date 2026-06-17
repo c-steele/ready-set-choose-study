@@ -728,15 +728,20 @@ async function handleStudyFinish(jsPsych) {
     reason: error.message || "post_failed",
   }));
   if (shouldDownloadData) downloadPayloadFiles(payload);
-  if (window.opener) {
-    window.opener.postMessage({
+  const completionMessage = {
       type: "GAME_COMPLETE",
       study: payload.study,
       session_id: payload.session_id,
       chs_child_id: payload.chs_child_id,
       chs_response_id: payload.chs_response_id,
       data_posted: result.sent,
-    }, "*");
+      payload,
+  };
+  if (window.opener) {
+    window.opener.postMessage(completionMessage, "*");
+  }
+  if (window.parent && window.parent !== window) {
+    window.parent.postMessage(completionMessage, "*");
   }
   if (shouldDownloadData || params.get("showDataStatus") === "1") {
     document.body.innerHTML = `
