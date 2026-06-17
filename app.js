@@ -1,27 +1,29 @@
+const params = new URLSearchParams(window.location.search);
+const requestedVoiceProfile = params.get("voice") || "";
 const DYAD_MANIFEST_URL = "data/dyad_manifest.json?v=two-part-pairs-1";
 const EVENT_MANIFEST_URL = "data/ksize_manifest.json?v=two-part-pairs-1";
 const INTRO_IMAGE_FIXES_URL = "data/intro_image_fixes.json?v=two-part-pairs-1";
 const CANONICAL_AUDIO_MANIFEST_URL = "data/canonical_audio_manifest.json?v=preferred-v32";
-const PREFERRED_AUDIO_DIR = "audio_preferred";
-const AUDIO_VERSION = "preferred-v67-pair-story-counter";
+const PREFERRED_AUDIO_DIR = requestedVoiceProfile === "relkind" ? "audio_relkind_voice" : "audio_preferred";
+const AUDIO_VERSION = requestedVoiceProfile === "relkind" ? "preferred-v68-relkind-voice" : "preferred-v69-no-researcher-tools";
 const DATA_ENDPOINT_URL = "";
 const START_INTRO_TEXT = "Hi there! Welcome to Who Will Help? We are going to look at pictures and play a choosing game. Listen to each page. When you see choices, tap the one you pick.";
 const START_INTRO_AUDIO = "audio/seg_f8d6eefb87a4.mp3";
 const GAME_START_TEXT = "Let’s play. Listen to the story, then answer the questions. Hit the green button to start.";
 const GAME_START_AUDIO = "audio/rating_3fbab442.mp3";
 const COIN_PARTY_TEXT = "Hooray! You did it! You finished the game! Thanks so much for playing!";
-const COIN_PARTY_AUDIO = "audio_preferred/074_ending_Hooray_you_did_it_finished_game_slower_v44.mp3";
+const COIN_PARTY_AUDIO = `${PREFERRED_AUDIO_DIR}/074_ending_Hooray_you_did_it_finished_game_slower_v44.mp3`;
 const ALL_DONE_TEXT = "Thank you for playing! We're all done!";
 const ALL_DONE_AUDIO_SEQUENCE = [
   {
-    src: "audio_preferred/075_ending_Thank_you_for_playing_fun_profile_v61.mp3",
+    src: `${PREFERRED_AUDIO_DIR}/075_ending_Thank_you_for_playing_fun_profile_v61.mp3`,
     text: "Thank you for playing!",
     volume: 0.45,
     playbackRate: 1,
     preservePitch: true,
   },
   {
-    src: "audio_preferred/075_ending_Were_all_done_fun_profile_v59.mp3",
+    src: `${PREFERRED_AUDIO_DIR}/075_ending_Were_all_done_fun_profile_v59.mp3`,
     text: "We're all done!",
     volume: 0.45,
     playbackRate: 1,
@@ -36,7 +38,6 @@ const REWARD_VALUES = {
 };
 
 const runtimeConfig = window.KSIZE_RUNTIME_CONFIG || {};
-const params = new URLSearchParams(window.location.search);
 const assetBaseUrl = runtimeConfig.assetBaseUrl || window.KSIZE_ASSET_BASE_URL || "";
 
 function assetUrl(path) {
@@ -64,6 +65,7 @@ const requestedEvent = configValue("event").toUpperCase();
 const requestedPartOrder = configValue("partOrder", "order");
 const requestedRatingMode = configValue("ratingMode") || "one-after-story";
 const requestedPreviewIndex = Math.max(0, Number(configValue("previewIndex") || 0) || 0);
+const showResearcherTools = configValue("researcherTools", "researcher", "debug") === "1";
 const requestedDataEndpoint = configValue("dataEndpoint") || DATA_ENDPOINT_URL;
 const shouldDownloadData = configValue("downloadData") === "1";
 const useSyntheticSpeech = configValue("syntheticSpeech") !== "0";
@@ -1145,6 +1147,8 @@ const audio = {
 function installResearcherSkip(jsPsych) {
   const existing = document.querySelector(".ksize-researcher-tools");
   if (existing) existing.remove();
+  if (!showResearcherTools) return;
+
   const wrap = document.createElement("div");
   wrap.className = "ksize-researcher-tools";
 
