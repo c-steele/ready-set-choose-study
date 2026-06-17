@@ -1,0 +1,5689 @@
+{
+  "source": {
+    "name": "K-SIZE dyad Likert PNG export",
+    "generatedAt": "2026-06-10",
+    "assetRoot": "assets/dyads",
+    "scriptCsv": "/Users/christinasteele/Downloads/ksize script by story type - Pairs.csv",
+    "scriptVersion": "two-part-pairs-1"
+  },
+  "chunks": [
+    {
+      "id": "best_friend-kid_01_bfkf-blue",
+      "folder": "best friend-kid",
+      "subject": "best friend",
+      "target": "kid",
+      "sourceKey": "BFKF",
+      "color": "blue",
+      "variantKey": "BFKF-blue",
+      "label": "assets/dyads/best_friend-kid_01_bfkf-blue/best_friend-kid.001.png",
+      "slides": [
+        {
+          "src": "assets/dyads/best_friend-kid_01_bfkf-blue/best_friend-kid.002.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "Look! Here are some people.",
+          "scriptColumn": "INTRO-1"
+        },
+        {
+          "src": "assets/dyads/best_friend-kid_01_bfkf-blue/best_friend-kid.003.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is a kid.",
+          "scriptColumn": "INTRO-2"
+        },
+        {
+          "src": "assets/dyads/best_friend-kid_01_bfkf-blue/best_friend-kid.004.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is this kid’s best friend.",
+          "scriptColumn": "INTRO-3"
+        },
+        {
+          "src": "assets/dyads/best_friend-kid_01_bfkf-blue/best_friend-kid.005.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the best friend love the kid?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/best_friend-kid_01_bfkf-blue/best_friend-kid.006.png",
+          "kind": "response",
+          "trait": "love",
+          "text": "Does not love, Loves a little, Loves a lot",
+          "scriptColumn": "LOVE-2"
+        },
+        {
+          "src": "assets/dyads/best_friend-kid_01_bfkf-blue/best_friend-kid.007.png",
+          "kind": "question",
+          "trait": "like",
+          "text": "How much does the best friend like the kid?",
+          "scriptColumn": "LIKE-1"
+        },
+        {
+          "src": "assets/dyads/best_friend-kid_01_bfkf-blue/best_friend-kid.008.png",
+          "kind": "response",
+          "trait": "like",
+          "text": "Does not like, Likes a little, Likes a lot",
+          "scriptColumn": "LIKE-2"
+        },
+        {
+          "src": "assets/dyads/best_friend-kid_01_bfkf-blue/best_friend-kid.009.png",
+          "kind": "question",
+          "trait": "charge",
+          "text": "How much is the best friend in charge?",
+          "scriptColumn": "CHARGE-1"
+        },
+        {
+          "src": "assets/dyads/best_friend-kid_01_bfkf-blue/best_friend-kid.010.png",
+          "kind": "response",
+          "trait": "charge",
+          "text": "Not in charge, A little in charge, or Very much in charge?",
+          "scriptColumn": "CHARGE-2"
+        },
+        {
+          "src": "assets/dyads/best_friend-kid_01_bfkf-blue/best_friend-kid.011.png",
+          "kind": "question",
+          "trait": "old",
+          "text": "How old is the best friend?",
+          "scriptColumn": "OLD-1"
+        },
+        {
+          "src": "assets/dyads/best_friend-kid_01_bfkf-blue/best_friend-kid.012.png",
+          "kind": "response",
+          "trait": "old",
+          "text": "Not old, A little old, or Very old?",
+          "scriptColumn": "OLD-2"
+        },
+        {
+          "src": "assets/dyads/best_friend-kid_01_bfkf-blue/best_friend-kid.013.png",
+          "kind": "question",
+          "trait": "strong",
+          "text": "How strong is the best friend?",
+          "scriptColumn": "STRONG-1"
+        },
+        {
+          "src": "assets/dyads/best_friend-kid_01_bfkf-blue/best_friend-kid.014.png",
+          "kind": "response",
+          "trait": "strong",
+          "text": "Not strong, A little strong, or Very strong?",
+          "scriptColumn": "STRONG-2"
+        }
+      ],
+      "nSlides": 13,
+      "scriptKey": "kid-BEST FRIEND"
+    },
+    {
+      "id": "best_friend-kid_02_bfkf-pink",
+      "folder": "best friend-kid",
+      "subject": "best friend",
+      "target": "kid",
+      "sourceKey": "BFKF",
+      "color": "pink",
+      "variantKey": "BFKF-pink",
+      "label": "assets/dyads/best_friend-kid_02_bfkf-pink/best_friend-kid.015.png",
+      "slides": [
+        {
+          "src": "assets/dyads/best_friend-kid_02_bfkf-pink/best_friend-kid.016.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "Look! Here are some people.",
+          "scriptColumn": "INTRO-1"
+        },
+        {
+          "src": "assets/dyads/best_friend-kid_02_bfkf-pink/best_friend-kid.017.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is a kid.",
+          "scriptColumn": "INTRO-2"
+        },
+        {
+          "src": "assets/dyads/best_friend-kid_02_bfkf-pink/best_friend-kid.018.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is this kid’s best friend.",
+          "scriptColumn": "INTRO-3"
+        },
+        {
+          "src": "assets/dyads/best_friend-kid_02_bfkf-pink/best_friend-kid.019.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the best friend love the kid?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/best_friend-kid_02_bfkf-pink/best_friend-kid.020.png",
+          "kind": "response",
+          "trait": "love",
+          "text": "Does not love, Loves a little, Loves a lot",
+          "scriptColumn": "LOVE-2"
+        },
+        {
+          "src": "assets/dyads/best_friend-kid_02_bfkf-pink/best_friend-kid.021.png",
+          "kind": "question",
+          "trait": "like",
+          "text": "How much does the best friend like the kid?",
+          "scriptColumn": "LIKE-1"
+        },
+        {
+          "src": "assets/dyads/best_friend-kid_02_bfkf-pink/best_friend-kid.022.png",
+          "kind": "response",
+          "trait": "like",
+          "text": "Does not like, Likes a little, Likes a lot",
+          "scriptColumn": "LIKE-2"
+        },
+        {
+          "src": "assets/dyads/best_friend-kid_02_bfkf-pink/best_friend-kid.023.png",
+          "kind": "question",
+          "trait": "charge",
+          "text": "How much is the best friend in charge?",
+          "scriptColumn": "CHARGE-1"
+        },
+        {
+          "src": "assets/dyads/best_friend-kid_02_bfkf-pink/best_friend-kid.024.png",
+          "kind": "response",
+          "trait": "charge",
+          "text": "Not in charge, A little in charge, or Very much in charge?",
+          "scriptColumn": "CHARGE-2"
+        },
+        {
+          "src": "assets/dyads/best_friend-kid_02_bfkf-pink/best_friend-kid.025.png",
+          "kind": "question",
+          "trait": "old",
+          "text": "How old is the best friend?",
+          "scriptColumn": "OLD-1"
+        },
+        {
+          "src": "assets/dyads/best_friend-kid_02_bfkf-pink/best_friend-kid.026.png",
+          "kind": "response",
+          "trait": "old",
+          "text": "Not old, A little old, or Very old?",
+          "scriptColumn": "OLD-2"
+        },
+        {
+          "src": "assets/dyads/best_friend-kid_02_bfkf-pink/best_friend-kid.027.png",
+          "kind": "question",
+          "trait": "strong",
+          "text": "How strong is the best friend?",
+          "scriptColumn": "STRONG-1"
+        },
+        {
+          "src": "assets/dyads/best_friend-kid_02_bfkf-pink/best_friend-kid.028.png",
+          "kind": "response",
+          "trait": "strong",
+          "text": "Not strong, A little strong, or Very strong?",
+          "scriptColumn": "STRONG-2"
+        }
+      ],
+      "nSlides": 13,
+      "scriptKey": "kid-BEST FRIEND"
+    },
+    {
+      "id": "brother-kid_01_dkb-purple",
+      "folder": "brother-kid",
+      "subject": "brother",
+      "target": "kid",
+      "sourceKey": "DKB",
+      "color": "purple",
+      "variantKey": "DKB-purple",
+      "label": "assets/dyads/brother-kid_01_dkb-purple/brother-kid.001.png",
+      "slides": [
+        {
+          "src": "assets/dyads/brother-kid_01_dkb-purple/brother-kid.002.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "Look! Here are some people.",
+          "scriptColumn": "INTRO-1"
+        },
+        {
+          "src": "assets/dyads/brother-kid_01_dkb-purple/brother-kid.003.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is a kid.",
+          "scriptColumn": "INTRO-2"
+        },
+        {
+          "src": "assets/dyads/brother-kid_01_dkb-purple/brother-kid.004.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is this kid’s brother.",
+          "scriptColumn": "INTRO-3"
+        },
+        {
+          "src": "assets/dyads/brother-kid_01_dkb-purple/brother-kid.005.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the brother love the kid?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/brother-kid_01_dkb-purple/brother-kid.006.png",
+          "kind": "response",
+          "trait": "love",
+          "text": "Does not love, Loves a little, Loves a lot",
+          "scriptColumn": "LOVE-2"
+        },
+        {
+          "src": "assets/dyads/brother-kid_01_dkb-purple/brother-kid.007.png",
+          "kind": "question",
+          "trait": "like",
+          "text": "How much does the brother like the kid?",
+          "scriptColumn": "LIKE-1"
+        },
+        {
+          "src": "assets/dyads/brother-kid_01_dkb-purple/brother-kid.008.png",
+          "kind": "response",
+          "trait": "like",
+          "text": "Does not like, Likes a little, Likes a lot",
+          "scriptColumn": "LIKE-2"
+        },
+        {
+          "src": "assets/dyads/brother-kid_01_dkb-purple/brother-kid.009.png",
+          "kind": "question",
+          "trait": "charge",
+          "text": "How much is the brother in charge?",
+          "scriptColumn": "CHARGE-1"
+        },
+        {
+          "src": "assets/dyads/brother-kid_01_dkb-purple/brother-kid.010.png",
+          "kind": "response",
+          "trait": "charge",
+          "text": "Not in charge, A little in charge, or Very much in charge?",
+          "scriptColumn": "CHARGE-2"
+        },
+        {
+          "src": "assets/dyads/brother-kid_01_dkb-purple/brother-kid.011.png",
+          "kind": "question",
+          "trait": "old",
+          "text": "How old is the brother?",
+          "scriptColumn": "OLD-1"
+        },
+        {
+          "src": "assets/dyads/brother-kid_01_dkb-purple/brother-kid.012.png",
+          "kind": "response",
+          "trait": "old",
+          "text": "Not old, A little old, or Very old?",
+          "scriptColumn": "OLD-2"
+        },
+        {
+          "src": "assets/dyads/brother-kid_01_dkb-purple/brother-kid.013.png",
+          "kind": "question",
+          "trait": "strong",
+          "text": "How strong is the brother?",
+          "scriptColumn": "STRONG-1"
+        },
+        {
+          "src": "assets/dyads/brother-kid_01_dkb-purple/brother-kid.014.png",
+          "kind": "response",
+          "trait": "strong",
+          "text": "Not strong, A little strong, or Very strong?",
+          "scriptColumn": "STRONG-2"
+        }
+      ],
+      "nSlides": 13,
+      "scriptKey": "kid-BROTHER"
+    },
+    {
+      "id": "brother-kid_02_dkb-green",
+      "folder": "brother-kid",
+      "subject": "brother",
+      "target": "kid",
+      "sourceKey": "DKB",
+      "color": "green",
+      "variantKey": "DKB-green",
+      "label": "assets/dyads/brother-kid_02_dkb-green/brother-kid.015.png",
+      "slides": [
+        {
+          "src": "assets/dyads/brother-kid_02_dkb-green/brother-kid.016.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "Look! Here are some people.",
+          "scriptColumn": "INTRO-1"
+        },
+        {
+          "src": "assets/dyads/brother-kid_02_dkb-green/brother-kid.017.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is a kid.",
+          "scriptColumn": "INTRO-2"
+        },
+        {
+          "src": "assets/dyads/brother-kid_02_dkb-green/brother-kid.018.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is this kid’s brother.",
+          "scriptColumn": "INTRO-3"
+        },
+        {
+          "src": "assets/dyads/brother-kid_02_dkb-green/brother-kid.019.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the brother love the kid?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/brother-kid_02_dkb-green/brother-kid.020.png",
+          "kind": "response",
+          "trait": "love",
+          "text": "Does not love, Loves a little, Loves a lot",
+          "scriptColumn": "LOVE-2"
+        },
+        {
+          "src": "assets/dyads/brother-kid_02_dkb-green/brother-kid.021.png",
+          "kind": "question",
+          "trait": "like",
+          "text": "How much does the brother like the kid?",
+          "scriptColumn": "LIKE-1"
+        },
+        {
+          "src": "assets/dyads/brother-kid_02_dkb-green/brother-kid.022.png",
+          "kind": "response",
+          "trait": "like",
+          "text": "Does not like, Likes a little, Likes a lot",
+          "scriptColumn": "LIKE-2"
+        },
+        {
+          "src": "assets/dyads/brother-kid_02_dkb-green/brother-kid.023.png",
+          "kind": "question",
+          "trait": "charge",
+          "text": "How much is the brother in charge?",
+          "scriptColumn": "CHARGE-1"
+        },
+        {
+          "src": "assets/dyads/brother-kid_02_dkb-green/brother-kid.024.png",
+          "kind": "response",
+          "trait": "charge",
+          "text": "Not in charge, A little in charge, or Very much in charge?",
+          "scriptColumn": "CHARGE-2"
+        },
+        {
+          "src": "assets/dyads/brother-kid_02_dkb-green/brother-kid.025.png",
+          "kind": "question",
+          "trait": "old",
+          "text": "How old is the brother?",
+          "scriptColumn": "OLD-1"
+        },
+        {
+          "src": "assets/dyads/brother-kid_02_dkb-green/brother-kid.026.png",
+          "kind": "response",
+          "trait": "old",
+          "text": "Not old, A little old, or Very old?",
+          "scriptColumn": "OLD-2"
+        },
+        {
+          "src": "assets/dyads/brother-kid_02_dkb-green/brother-kid.027.png",
+          "kind": "question",
+          "trait": "strong",
+          "text": "How strong is the brother?",
+          "scriptColumn": "STRONG-1"
+        },
+        {
+          "src": "assets/dyads/brother-kid_02_dkb-green/brother-kid.028.png",
+          "kind": "response",
+          "trait": "strong",
+          "text": "Not strong, A little strong, or Very strong?",
+          "scriptColumn": "STRONG-2"
+        }
+      ],
+      "nSlides": 13,
+      "scriptKey": "kid-BROTHER"
+    },
+    {
+      "id": "brother-kid_03_bkf-gray",
+      "folder": "brother-kid",
+      "subject": "brother",
+      "target": "kid",
+      "sourceKey": "BKF",
+      "color": "gray",
+      "variantKey": "BKF-gray",
+      "label": "assets/dyads/brother-kid_03_bkf-gray/brother-kid.029.png",
+      "slides": [
+        {
+          "src": "assets/dyads/brother-kid_03_bkf-gray/brother-kid.030.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "Look! Here are some people.",
+          "scriptColumn": "INTRO-1"
+        },
+        {
+          "src": "assets/dyads/brother-kid_03_bkf-gray/brother-kid.031.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is a kid.",
+          "scriptColumn": "INTRO-2"
+        },
+        {
+          "src": "assets/dyads/brother-kid_03_bkf-gray/brother-kid.032.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is this kid’s brother.",
+          "scriptColumn": "INTRO-3"
+        },
+        {
+          "src": "assets/dyads/brother-kid_03_bkf-gray/brother-kid.033.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the brother love the kid?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/brother-kid_03_bkf-gray/brother-kid.034.png",
+          "kind": "response",
+          "trait": "love",
+          "text": "Does not love, Loves a little, Loves a lot",
+          "scriptColumn": "LOVE-2"
+        },
+        {
+          "src": "assets/dyads/brother-kid_03_bkf-gray/brother-kid.035.png",
+          "kind": "question",
+          "trait": "like",
+          "text": "How much does the brother like the kid?",
+          "scriptColumn": "LIKE-1"
+        },
+        {
+          "src": "assets/dyads/brother-kid_03_bkf-gray/brother-kid.036.png",
+          "kind": "response",
+          "trait": "like",
+          "text": "Does not like, Likes a little, Likes a lot",
+          "scriptColumn": "LIKE-2"
+        },
+        {
+          "src": "assets/dyads/brother-kid_03_bkf-gray/brother-kid.037.png",
+          "kind": "question",
+          "trait": "charge",
+          "text": "How much is the brother in charge?",
+          "scriptColumn": "CHARGE-1"
+        },
+        {
+          "src": "assets/dyads/brother-kid_03_bkf-gray/brother-kid.038.png",
+          "kind": "response",
+          "trait": "charge",
+          "text": "Not in charge, A little in charge, or Very much in charge?",
+          "scriptColumn": "CHARGE-2"
+        },
+        {
+          "src": "assets/dyads/brother-kid_03_bkf-gray/brother-kid.039.png",
+          "kind": "question",
+          "trait": "old",
+          "text": "How old is the brother?",
+          "scriptColumn": "OLD-1"
+        },
+        {
+          "src": "assets/dyads/brother-kid_03_bkf-gray/brother-kid.040.png",
+          "kind": "response",
+          "trait": "old",
+          "text": "Not old, A little old, or Very old?",
+          "scriptColumn": "OLD-2"
+        },
+        {
+          "src": "assets/dyads/brother-kid_03_bkf-gray/brother-kid.041.png",
+          "kind": "question",
+          "trait": "strong",
+          "text": "How strong is the brother?",
+          "scriptColumn": "STRONG-1"
+        },
+        {
+          "src": "assets/dyads/brother-kid_03_bkf-gray/brother-kid.042.png",
+          "kind": "response",
+          "trait": "strong",
+          "text": "Not strong, A little strong, or Very strong?",
+          "scriptColumn": "STRONG-2"
+        }
+      ],
+      "nSlides": 13,
+      "scriptKey": "kid-BROTHER"
+    },
+    {
+      "id": "brother-kid_04_bkf-green",
+      "folder": "brother-kid",
+      "subject": "brother",
+      "target": "kid",
+      "sourceKey": "BKF",
+      "color": "green",
+      "variantKey": "BKF-green",
+      "label": "assets/dyads/brother-kid_04_bkf-green/brother-kid.043.png",
+      "slides": [
+        {
+          "src": "assets/dyads/brother-kid_04_bkf-green/brother-kid.044.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "Look! Here are some people.",
+          "scriptColumn": "INTRO-1"
+        },
+        {
+          "src": "assets/dyads/brother-kid_04_bkf-green/brother-kid.045.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is a kid.",
+          "scriptColumn": "INTRO-2"
+        },
+        {
+          "src": "assets/dyads/brother-kid_04_bkf-green/brother-kid.046.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is this kid’s brother.",
+          "scriptColumn": "INTRO-3"
+        },
+        {
+          "src": "assets/dyads/brother-kid_04_bkf-green/brother-kid.047.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the brother love the kid?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/brother-kid_04_bkf-green/brother-kid.048.png",
+          "kind": "response",
+          "trait": "love",
+          "text": "Does not love, Loves a little, Loves a lot",
+          "scriptColumn": "LOVE-2"
+        },
+        {
+          "src": "assets/dyads/brother-kid_04_bkf-green/brother-kid.049.png",
+          "kind": "question",
+          "trait": "like",
+          "text": "How much does the brother like the kid?",
+          "scriptColumn": "LIKE-1"
+        },
+        {
+          "src": "assets/dyads/brother-kid_04_bkf-green/brother-kid.050.png",
+          "kind": "response",
+          "trait": "like",
+          "text": "Does not like, Likes a little, Likes a lot",
+          "scriptColumn": "LIKE-2"
+        },
+        {
+          "src": "assets/dyads/brother-kid_04_bkf-green/brother-kid.051.png",
+          "kind": "question",
+          "trait": "charge",
+          "text": "How much is the brother in charge?",
+          "scriptColumn": "CHARGE-1"
+        },
+        {
+          "src": "assets/dyads/brother-kid_04_bkf-green/brother-kid.052.png",
+          "kind": "response",
+          "trait": "charge",
+          "text": "Not in charge, A little in charge, or Very much in charge?",
+          "scriptColumn": "CHARGE-2"
+        },
+        {
+          "src": "assets/dyads/brother-kid_04_bkf-green/brother-kid.053.png",
+          "kind": "question",
+          "trait": "old",
+          "text": "How old is the brother?",
+          "scriptColumn": "OLD-1"
+        },
+        {
+          "src": "assets/dyads/brother-kid_04_bkf-green/brother-kid.054.png",
+          "kind": "response",
+          "trait": "old",
+          "text": "Not old, A little old, or Very old?",
+          "scriptColumn": "OLD-2"
+        },
+        {
+          "src": "assets/dyads/brother-kid_04_bkf-green/brother-kid.055.png",
+          "kind": "question",
+          "trait": "strong",
+          "text": "How strong is the brother?",
+          "scriptColumn": "STRONG-1"
+        },
+        {
+          "src": "assets/dyads/brother-kid_04_bkf-green/brother-kid.056.png",
+          "kind": "response",
+          "trait": "strong",
+          "text": "Not strong, A little strong, or Very strong?",
+          "scriptColumn": "STRONG-2"
+        }
+      ],
+      "nSlides": 13,
+      "scriptKey": "kid-BROTHER"
+    },
+    {
+      "id": "brother-kid_05_skb-blue",
+      "folder": "brother-kid",
+      "subject": "brother",
+      "target": "kid",
+      "sourceKey": "SKB",
+      "color": "blue",
+      "variantKey": "SKB-blue",
+      "label": "assets/dyads/brother-kid_05_skb-blue/brother-kid.057.png",
+      "slides": [
+        {
+          "src": "assets/dyads/brother-kid_05_skb-blue/brother-kid.058.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "Look! Here are some people.",
+          "scriptColumn": "INTRO-1"
+        },
+        {
+          "src": "assets/dyads/brother-kid_05_skb-blue/brother-kid.059.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is a kid.",
+          "scriptColumn": "INTRO-2"
+        },
+        {
+          "src": "assets/dyads/brother-kid_05_skb-blue/brother-kid.060.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is this kid’s brother.",
+          "scriptColumn": "INTRO-3"
+        },
+        {
+          "src": "assets/dyads/brother-kid_05_skb-blue/brother-kid.061.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the brother love the kid?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/brother-kid_05_skb-blue/brother-kid.062.png",
+          "kind": "response",
+          "trait": "love",
+          "text": "Does not love, Loves a little, Loves a lot",
+          "scriptColumn": "LOVE-2"
+        },
+        {
+          "src": "assets/dyads/brother-kid_05_skb-blue/brother-kid.063.png",
+          "kind": "question",
+          "trait": "like",
+          "text": "How much does the brother like the kid?",
+          "scriptColumn": "LIKE-1"
+        },
+        {
+          "src": "assets/dyads/brother-kid_05_skb-blue/brother-kid.064.png",
+          "kind": "response",
+          "trait": "like",
+          "text": "Does not like, Likes a little, Likes a lot",
+          "scriptColumn": "LIKE-2"
+        },
+        {
+          "src": "assets/dyads/brother-kid_05_skb-blue/brother-kid.065.png",
+          "kind": "question",
+          "trait": "charge",
+          "text": "How much is the brother in charge?",
+          "scriptColumn": "CHARGE-1"
+        },
+        {
+          "src": "assets/dyads/brother-kid_05_skb-blue/brother-kid.066.png",
+          "kind": "response",
+          "trait": "charge",
+          "text": "Not in charge, A little in charge, or Very much in charge?",
+          "scriptColumn": "CHARGE-2"
+        },
+        {
+          "src": "assets/dyads/brother-kid_05_skb-blue/brother-kid.067.png",
+          "kind": "question",
+          "trait": "old",
+          "text": "How old is the brother?",
+          "scriptColumn": "OLD-1"
+        },
+        {
+          "src": "assets/dyads/brother-kid_05_skb-blue/brother-kid.068.png",
+          "kind": "response",
+          "trait": "old",
+          "text": "Not old, A little old, or Very old?",
+          "scriptColumn": "OLD-2"
+        },
+        {
+          "src": "assets/dyads/brother-kid_05_skb-blue/brother-kid.069.png",
+          "kind": "question",
+          "trait": "strong",
+          "text": "How strong is the brother?",
+          "scriptColumn": "STRONG-1"
+        },
+        {
+          "src": "assets/dyads/brother-kid_05_skb-blue/brother-kid.070.png",
+          "kind": "response",
+          "trait": "strong",
+          "text": "Not strong, A little strong, or Very strong?",
+          "scriptColumn": "STRONG-2"
+        }
+      ],
+      "nSlides": 13,
+      "scriptKey": "kid-BROTHER"
+    },
+    {
+      "id": "brother-kid_06_skb-pink",
+      "folder": "brother-kid",
+      "subject": "brother",
+      "target": "kid",
+      "sourceKey": "SKB",
+      "color": "pink",
+      "variantKey": "SKB-pink",
+      "label": "assets/dyads/brother-kid_06_skb-pink/brother-kid.071.png",
+      "slides": [
+        {
+          "src": "assets/dyads/brother-kid_06_skb-pink/brother-kid.072.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "Look! Here are some people.",
+          "scriptColumn": "INTRO-1"
+        },
+        {
+          "src": "assets/dyads/brother-kid_06_skb-pink/brother-kid.073.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is a kid.",
+          "scriptColumn": "INTRO-2"
+        },
+        {
+          "src": "assets/dyads/brother-kid_06_skb-pink/brother-kid.074.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is this kid’s brother.",
+          "scriptColumn": "INTRO-3"
+        },
+        {
+          "src": "assets/dyads/brother-kid_06_skb-pink/brother-kid.075.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the brother love the kid?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/brother-kid_06_skb-pink/brother-kid.076.png",
+          "kind": "response",
+          "trait": "love",
+          "text": "Does not love, Loves a little, Loves a lot",
+          "scriptColumn": "LOVE-2"
+        },
+        {
+          "src": "assets/dyads/brother-kid_06_skb-pink/brother-kid.077.png",
+          "kind": "question",
+          "trait": "like",
+          "text": "How much does the brother like the kid?",
+          "scriptColumn": "LIKE-1"
+        },
+        {
+          "src": "assets/dyads/brother-kid_06_skb-pink/brother-kid.078.png",
+          "kind": "response",
+          "trait": "like",
+          "text": "Does not like, Likes a little, Likes a lot",
+          "scriptColumn": "LIKE-2"
+        },
+        {
+          "src": "assets/dyads/brother-kid_06_skb-pink/brother-kid.079.png",
+          "kind": "question",
+          "trait": "charge",
+          "text": "How much is the brother in charge?",
+          "scriptColumn": "CHARGE-1"
+        },
+        {
+          "src": "assets/dyads/brother-kid_06_skb-pink/brother-kid.080.png",
+          "kind": "response",
+          "trait": "charge",
+          "text": "Not in charge, A little in charge, or Very much in charge?",
+          "scriptColumn": "CHARGE-2"
+        },
+        {
+          "src": "assets/dyads/brother-kid_06_skb-pink/brother-kid.081.png",
+          "kind": "question",
+          "trait": "old",
+          "text": "How old is the brother?",
+          "scriptColumn": "OLD-1"
+        },
+        {
+          "src": "assets/dyads/brother-kid_06_skb-pink/brother-kid.082.png",
+          "kind": "response",
+          "trait": "old",
+          "text": "Not old, A little old, or Very old?",
+          "scriptColumn": "OLD-2"
+        },
+        {
+          "src": "assets/dyads/brother-kid_06_skb-pink/brother-kid.083.png",
+          "kind": "question",
+          "trait": "strong",
+          "text": "How strong is the brother?",
+          "scriptColumn": "STRONG-1"
+        },
+        {
+          "src": "assets/dyads/brother-kid_06_skb-pink/brother-kid.084.png",
+          "kind": "response",
+          "trait": "strong",
+          "text": "Not strong, A little strong, or Very strong?",
+          "scriptColumn": "STRONG-2"
+        }
+      ],
+      "nSlides": 13,
+      "scriptKey": "kid-BROTHER"
+    },
+    {
+      "id": "sister-kid_01_mks-orange",
+      "folder": "sister-kid",
+      "subject": "sister",
+      "target": "kid",
+      "sourceKey": "MKS",
+      "color": "orange",
+      "variantKey": "MKS-orange",
+      "label": "assets/dyads/sister-kid_01_mks-orange/sister-kid.001.png",
+      "slides": [
+        {
+          "src": "assets/dyads/sister-kid_01_mks-orange/sister-kid.002.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "Look! Here are some people.",
+          "scriptColumn": "INTRO-1"
+        },
+        {
+          "src": "assets/dyads/sister-kid_01_mks-orange/sister-kid.003.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is a kid.",
+          "scriptColumn": "INTRO-2"
+        },
+        {
+          "src": "assets/dyads/sister-kid_01_mks-orange/sister-kid.004.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is this kid’s sister.",
+          "scriptColumn": "INTRO-3"
+        },
+        {
+          "src": "assets/dyads/sister-kid_01_mks-orange/sister-kid.005.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the sister love the kid?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/sister-kid_01_mks-orange/sister-kid.006.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the sister love the kid?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/sister-kid_01_mks-orange/sister-kid.007.png",
+          "kind": "response",
+          "trait": "love",
+          "text": "Does not love, Loves a little, Loves a lot",
+          "scriptColumn": "LOVE-2"
+        },
+        {
+          "src": "assets/dyads/sister-kid_01_mks-orange/sister-kid.008.png",
+          "kind": "question",
+          "trait": "like",
+          "text": "How much does the sister like the kid?",
+          "scriptColumn": "LIKE-1"
+        },
+        {
+          "src": "assets/dyads/sister-kid_01_mks-orange/sister-kid.009.png",
+          "kind": "response",
+          "trait": "like",
+          "text": "Does not like, Likes a little, Likes a lot",
+          "scriptColumn": "LIKE-2"
+        },
+        {
+          "src": "assets/dyads/sister-kid_01_mks-orange/sister-kid.010.png",
+          "kind": "question",
+          "trait": "charge",
+          "text": "How much is the sister in charge?",
+          "scriptColumn": "CHARGE-1"
+        },
+        {
+          "src": "assets/dyads/sister-kid_01_mks-orange/sister-kid.011.png",
+          "kind": "response",
+          "trait": "charge",
+          "text": "Not in charge, A little in charge, or Very much in charge?",
+          "scriptColumn": "CHARGE-2"
+        },
+        {
+          "src": "assets/dyads/sister-kid_01_mks-orange/sister-kid.012.png",
+          "kind": "question",
+          "trait": "old",
+          "text": "How old is the sister?",
+          "scriptColumn": "OLD-1"
+        },
+        {
+          "src": "assets/dyads/sister-kid_01_mks-orange/sister-kid.013.png",
+          "kind": "response",
+          "trait": "old",
+          "text": "Not old, A little old, or Very old?",
+          "scriptColumn": "OLD-2"
+        },
+        {
+          "src": "assets/dyads/sister-kid_01_mks-orange/sister-kid.014.png",
+          "kind": "question",
+          "trait": "strong",
+          "text": "How strong is the sister?",
+          "scriptColumn": "STRONG-1"
+        },
+        {
+          "src": "assets/dyads/sister-kid_01_mks-orange/sister-kid.015.png",
+          "kind": "response",
+          "trait": "strong",
+          "text": "Not strong, A little strong, or Very strong?",
+          "scriptColumn": "STRONG-2"
+        }
+      ],
+      "nSlides": 14,
+      "scriptKey": "kid-SISTER"
+    },
+    {
+      "id": "sister-kid_02_mks-red",
+      "folder": "sister-kid",
+      "subject": "sister",
+      "target": "kid",
+      "sourceKey": "MKS",
+      "color": "red",
+      "variantKey": "MKS-red",
+      "label": "assets/dyads/sister-kid_02_mks-red/sister-kid.016.png",
+      "slides": [
+        {
+          "src": "assets/dyads/sister-kid_02_mks-red/sister-kid.017.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "Look! Here are some people.",
+          "scriptColumn": "INTRO-1"
+        },
+        {
+          "src": "assets/dyads/sister-kid_02_mks-red/sister-kid.018.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is a kid.",
+          "scriptColumn": "INTRO-2"
+        },
+        {
+          "src": "assets/dyads/sister-kid_02_mks-red/sister-kid.019.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is this kid’s sister.",
+          "scriptColumn": "INTRO-3"
+        },
+        {
+          "src": "assets/dyads/sister-kid_02_mks-red/sister-kid.020.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the sister love the kid?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/sister-kid_02_mks-red/sister-kid.021.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the sister love the kid?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/sister-kid_02_mks-red/sister-kid.022.png",
+          "kind": "response",
+          "trait": "love",
+          "text": "Does not love, Loves a little, Loves a lot",
+          "scriptColumn": "LOVE-2"
+        },
+        {
+          "src": "assets/dyads/sister-kid_02_mks-red/sister-kid.023.png",
+          "kind": "question",
+          "trait": "like",
+          "text": "How much does the sister like the kid?",
+          "scriptColumn": "LIKE-1"
+        },
+        {
+          "src": "assets/dyads/sister-kid_02_mks-red/sister-kid.024.png",
+          "kind": "response",
+          "trait": "like",
+          "text": "Does not like, Likes a little, Likes a lot",
+          "scriptColumn": "LIKE-2"
+        },
+        {
+          "src": "assets/dyads/sister-kid_02_mks-red/sister-kid.025.png",
+          "kind": "question",
+          "trait": "charge",
+          "text": "How much is the sister in charge?",
+          "scriptColumn": "CHARGE-1"
+        },
+        {
+          "src": "assets/dyads/sister-kid_02_mks-red/sister-kid.026.png",
+          "kind": "response",
+          "trait": "charge",
+          "text": "Not in charge, A little in charge, or Very much in charge?",
+          "scriptColumn": "CHARGE-2"
+        },
+        {
+          "src": "assets/dyads/sister-kid_02_mks-red/sister-kid.027.png",
+          "kind": "question",
+          "trait": "old",
+          "text": "How old is the sister?",
+          "scriptColumn": "OLD-1"
+        },
+        {
+          "src": "assets/dyads/sister-kid_02_mks-red/sister-kid.028.png",
+          "kind": "response",
+          "trait": "old",
+          "text": "Not old, A little old, or Very old?",
+          "scriptColumn": "OLD-2"
+        },
+        {
+          "src": "assets/dyads/sister-kid_02_mks-red/sister-kid.029.png",
+          "kind": "question",
+          "trait": "strong",
+          "text": "How strong is the sister?",
+          "scriptColumn": "STRONG-1"
+        },
+        {
+          "src": "assets/dyads/sister-kid_02_mks-red/sister-kid.030.png",
+          "kind": "response",
+          "trait": "strong",
+          "text": "Not strong, A little strong, or Very strong?",
+          "scriptColumn": "STRONG-2"
+        }
+      ],
+      "nSlides": 14,
+      "scriptKey": "kid-SISTER"
+    },
+    {
+      "id": "sister-kid_03_skf-green",
+      "folder": "sister-kid",
+      "subject": "sister",
+      "target": "kid",
+      "sourceKey": "SKF",
+      "color": "green",
+      "variantKey": "SKF-green",
+      "label": "assets/dyads/sister-kid_03_skf-green/sister-kid.031.png",
+      "slides": [
+        {
+          "src": "assets/dyads/sister-kid_03_skf-green/sister-kid.032.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "Look! Here are some people.",
+          "scriptColumn": "INTRO-1"
+        },
+        {
+          "src": "assets/dyads/sister-kid_03_skf-green/sister-kid.033.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is a kid.",
+          "scriptColumn": "INTRO-2"
+        },
+        {
+          "src": "assets/dyads/sister-kid_03_skf-green/sister-kid.034.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is this kid’s sister.",
+          "scriptColumn": "INTRO-3"
+        },
+        {
+          "src": "assets/dyads/sister-kid_03_skf-green/sister-kid.035.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the sister love the kid?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/sister-kid_03_skf-green/sister-kid.036.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the sister love the kid?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/sister-kid_03_skf-green/sister-kid.037.png",
+          "kind": "response",
+          "trait": "love",
+          "text": "Does not love, Loves a little, Loves a lot",
+          "scriptColumn": "LOVE-2"
+        },
+        {
+          "src": "assets/dyads/sister-kid_03_skf-green/sister-kid.038.png",
+          "kind": "question",
+          "trait": "like",
+          "text": "How much does the sister like the kid?",
+          "scriptColumn": "LIKE-1"
+        },
+        {
+          "src": "assets/dyads/sister-kid_03_skf-green/sister-kid.039.png",
+          "kind": "response",
+          "trait": "like",
+          "text": "Does not like, Likes a little, Likes a lot",
+          "scriptColumn": "LIKE-2"
+        },
+        {
+          "src": "assets/dyads/sister-kid_03_skf-green/sister-kid.040.png",
+          "kind": "question",
+          "trait": "charge",
+          "text": "How much is the sister in charge?",
+          "scriptColumn": "CHARGE-1"
+        },
+        {
+          "src": "assets/dyads/sister-kid_03_skf-green/sister-kid.041.png",
+          "kind": "response",
+          "trait": "charge",
+          "text": "Not in charge, A little in charge, or Very much in charge?",
+          "scriptColumn": "CHARGE-2"
+        },
+        {
+          "src": "assets/dyads/sister-kid_03_skf-green/sister-kid.042.png",
+          "kind": "question",
+          "trait": "old",
+          "text": "How old is the sister?",
+          "scriptColumn": "OLD-1"
+        },
+        {
+          "src": "assets/dyads/sister-kid_03_skf-green/sister-kid.043.png",
+          "kind": "response",
+          "trait": "old",
+          "text": "Not old, A little old, or Very old?",
+          "scriptColumn": "OLD-2"
+        },
+        {
+          "src": "assets/dyads/sister-kid_03_skf-green/sister-kid.044.png",
+          "kind": "question",
+          "trait": "strong",
+          "text": "How strong is the sister?",
+          "scriptColumn": "STRONG-1"
+        },
+        {
+          "src": "assets/dyads/sister-kid_03_skf-green/sister-kid.045.png",
+          "kind": "response",
+          "trait": "strong",
+          "text": "Not strong, A little strong, or Very strong?",
+          "scriptColumn": "STRONG-2"
+        }
+      ],
+      "nSlides": 14,
+      "scriptKey": "kid-SISTER"
+    },
+    {
+      "id": "sister-kid_04_skf-yellow",
+      "folder": "sister-kid",
+      "subject": "sister",
+      "target": "kid",
+      "sourceKey": "SKF",
+      "color": "yellow",
+      "variantKey": "SKF-yellow",
+      "label": "assets/dyads/sister-kid_04_skf-yellow/sister-kid.046.png",
+      "slides": [
+        {
+          "src": "assets/dyads/sister-kid_04_skf-yellow/sister-kid.047.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "Look! Here are some people.",
+          "scriptColumn": "INTRO-1"
+        },
+        {
+          "src": "assets/dyads/sister-kid_04_skf-yellow/sister-kid.048.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is a kid.",
+          "scriptColumn": "INTRO-2"
+        },
+        {
+          "src": "assets/dyads/sister-kid_04_skf-yellow/sister-kid.049.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is this kid’s sister.",
+          "scriptColumn": "INTRO-3"
+        },
+        {
+          "src": "assets/dyads/sister-kid_04_skf-yellow/sister-kid.050.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the sister love the kid?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/sister-kid_04_skf-yellow/sister-kid.051.png",
+          "kind": "response",
+          "trait": "love",
+          "text": "Does not love, Loves a little, Loves a lot",
+          "scriptColumn": "LOVE-2"
+        },
+        {
+          "src": "assets/dyads/sister-kid_04_skf-yellow/sister-kid.052.png",
+          "kind": "question",
+          "trait": "like",
+          "text": "How much does the sister like the kid?",
+          "scriptColumn": "LIKE-1"
+        },
+        {
+          "src": "assets/dyads/sister-kid_04_skf-yellow/sister-kid.053.png",
+          "kind": "response",
+          "trait": "like",
+          "text": "Does not like, Likes a little, Likes a lot",
+          "scriptColumn": "LIKE-2"
+        },
+        {
+          "src": "assets/dyads/sister-kid_04_skf-yellow/sister-kid.054.png",
+          "kind": "question",
+          "trait": "charge",
+          "text": "How much is the sister in charge?",
+          "scriptColumn": "CHARGE-1"
+        },
+        {
+          "src": "assets/dyads/sister-kid_04_skf-yellow/sister-kid.055.png",
+          "kind": "response",
+          "trait": "charge",
+          "text": "Not in charge, A little in charge, or Very much in charge?",
+          "scriptColumn": "CHARGE-2"
+        },
+        {
+          "src": "assets/dyads/sister-kid_04_skf-yellow/sister-kid.056.png",
+          "kind": "question",
+          "trait": "old",
+          "text": "How old is the sister?",
+          "scriptColumn": "OLD-1"
+        },
+        {
+          "src": "assets/dyads/sister-kid_04_skf-yellow/sister-kid.057.png",
+          "kind": "response",
+          "trait": "old",
+          "text": "Not old, A little old, or Very old?",
+          "scriptColumn": "OLD-2"
+        },
+        {
+          "src": "assets/dyads/sister-kid_04_skf-yellow/sister-kid.058.png",
+          "kind": "question",
+          "trait": "strong",
+          "text": "How strong is the sister?",
+          "scriptColumn": "STRONG-1"
+        },
+        {
+          "src": "assets/dyads/sister-kid_04_skf-yellow/sister-kid.059.png",
+          "kind": "response",
+          "trait": "strong",
+          "text": "Not strong, A little strong, or Very strong?",
+          "scriptColumn": "STRONG-2"
+        }
+      ],
+      "nSlides": 13,
+      "scriptKey": "kid-SISTER"
+    },
+    {
+      "id": "sister-kid_05_skb-blue",
+      "folder": "sister-kid",
+      "subject": "sister",
+      "target": "kid",
+      "sourceKey": "SKB",
+      "color": "blue",
+      "variantKey": "SKB-blue",
+      "label": "assets/dyads/sister-kid_05_skb-blue/sister-kid.060.png",
+      "slides": [
+        {
+          "src": "assets/dyads/sister-kid_05_skb-blue/sister-kid.061.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "Look! Here are some people.",
+          "scriptColumn": "INTRO-1"
+        },
+        {
+          "src": "assets/dyads/sister-kid_05_skb-blue/sister-kid.062.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is a kid.",
+          "scriptColumn": "INTRO-2"
+        },
+        {
+          "src": "assets/dyads/sister-kid_05_skb-blue/sister-kid.063.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is this kid’s sister.",
+          "scriptColumn": "INTRO-3"
+        },
+        {
+          "src": "assets/dyads/sister-kid_05_skb-blue/sister-kid.064.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the sister love the kid?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/sister-kid_05_skb-blue/sister-kid.065.png",
+          "kind": "response",
+          "trait": "love",
+          "text": "Does not love, Loves a little, Loves a lot",
+          "scriptColumn": "LOVE-2"
+        },
+        {
+          "src": "assets/dyads/sister-kid_05_skb-blue/sister-kid.066.png",
+          "kind": "question",
+          "trait": "like",
+          "text": "How much does the sister like the kid?",
+          "scriptColumn": "LIKE-1"
+        },
+        {
+          "src": "assets/dyads/sister-kid_05_skb-blue/sister-kid.067.png",
+          "kind": "response",
+          "trait": "like",
+          "text": "Does not like, Likes a little, Likes a lot",
+          "scriptColumn": "LIKE-2"
+        },
+        {
+          "src": "assets/dyads/sister-kid_05_skb-blue/sister-kid.068.png",
+          "kind": "question",
+          "trait": "charge",
+          "text": "How much is the sister in charge?",
+          "scriptColumn": "CHARGE-1"
+        },
+        {
+          "src": "assets/dyads/sister-kid_05_skb-blue/sister-kid.069.png",
+          "kind": "response",
+          "trait": "charge",
+          "text": "Not in charge, A little in charge, or Very much in charge?",
+          "scriptColumn": "CHARGE-2"
+        },
+        {
+          "src": "assets/dyads/sister-kid_05_skb-blue/sister-kid.070.png",
+          "kind": "question",
+          "trait": "old",
+          "text": "How old is the sister?",
+          "scriptColumn": "OLD-1"
+        },
+        {
+          "src": "assets/dyads/sister-kid_05_skb-blue/sister-kid.071.png",
+          "kind": "response",
+          "trait": "old",
+          "text": "Not old, A little old, or Very old?",
+          "scriptColumn": "OLD-2"
+        },
+        {
+          "src": "assets/dyads/sister-kid_05_skb-blue/sister-kid.072.png",
+          "kind": "question",
+          "trait": "strong",
+          "text": "How strong is the sister?",
+          "scriptColumn": "STRONG-1"
+        },
+        {
+          "src": "assets/dyads/sister-kid_05_skb-blue/sister-kid.073.png",
+          "kind": "response",
+          "trait": "strong",
+          "text": "Not strong, A little strong, or Very strong?",
+          "scriptColumn": "STRONG-2"
+        }
+      ],
+      "nSlides": 13,
+      "scriptKey": "kid-SISTER"
+    },
+    {
+      "id": "sister-kid_06_skb-pink",
+      "folder": "sister-kid",
+      "subject": "sister",
+      "target": "kid",
+      "sourceKey": "SKB",
+      "color": "pink",
+      "variantKey": "SKB-pink",
+      "label": "assets/dyads/sister-kid_06_skb-pink/sister-kid.074.png",
+      "slides": [
+        {
+          "src": "assets/dyads/sister-kid_06_skb-pink/sister-kid.075.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "Look! Here are some people.",
+          "scriptColumn": "INTRO-1"
+        },
+        {
+          "src": "assets/dyads/sister-kid_06_skb-pink/sister-kid.076.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is a kid.",
+          "scriptColumn": "INTRO-2"
+        },
+        {
+          "src": "assets/dyads/sister-kid_06_skb-pink/sister-kid.077.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is this kid’s sister.",
+          "scriptColumn": "INTRO-3"
+        },
+        {
+          "src": "assets/dyads/sister-kid_06_skb-pink/sister-kid.078.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the sister love the kid?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/sister-kid_06_skb-pink/sister-kid.079.png",
+          "kind": "response",
+          "trait": "love",
+          "text": "Does not love, Loves a little, Loves a lot",
+          "scriptColumn": "LOVE-2"
+        },
+        {
+          "src": "assets/dyads/sister-kid_06_skb-pink/sister-kid.080.png",
+          "kind": "question",
+          "trait": "like",
+          "text": "How much does the sister like the kid?",
+          "scriptColumn": "LIKE-1"
+        },
+        {
+          "src": "assets/dyads/sister-kid_06_skb-pink/sister-kid.081.png",
+          "kind": "response",
+          "trait": "like",
+          "text": "Does not like, Likes a little, Likes a lot",
+          "scriptColumn": "LIKE-2"
+        },
+        {
+          "src": "assets/dyads/sister-kid_06_skb-pink/sister-kid.082.png",
+          "kind": "question",
+          "trait": "charge",
+          "text": "How much is the sister in charge?",
+          "scriptColumn": "CHARGE-1"
+        },
+        {
+          "src": "assets/dyads/sister-kid_06_skb-pink/sister-kid.083.png",
+          "kind": "response",
+          "trait": "charge",
+          "text": "Not in charge, A little in charge, or Very much in charge?",
+          "scriptColumn": "CHARGE-2"
+        },
+        {
+          "src": "assets/dyads/sister-kid_06_skb-pink/sister-kid.084.png",
+          "kind": "question",
+          "trait": "old",
+          "text": "How old is the sister?",
+          "scriptColumn": "OLD-1"
+        },
+        {
+          "src": "assets/dyads/sister-kid_06_skb-pink/sister-kid.085.png",
+          "kind": "response",
+          "trait": "old",
+          "text": "Not old, A little old, or Very old?",
+          "scriptColumn": "OLD-2"
+        },
+        {
+          "src": "assets/dyads/sister-kid_06_skb-pink/sister-kid.086.png",
+          "kind": "question",
+          "trait": "strong",
+          "text": "How strong is the sister?",
+          "scriptColumn": "STRONG-1"
+        },
+        {
+          "src": "assets/dyads/sister-kid_06_skb-pink/sister-kid.087.png",
+          "kind": "response",
+          "trait": "strong",
+          "text": "Not strong, A little strong, or Very strong?",
+          "scriptColumn": "STRONG-2"
+        }
+      ],
+      "nSlides": 13,
+      "scriptKey": "kid-SISTER"
+    },
+    {
+      "id": "mom-kid_01_mks-orange",
+      "folder": "mom-kid",
+      "subject": "mom",
+      "target": "kid",
+      "sourceKey": "MKS",
+      "color": "orange",
+      "variantKey": "MKS-orange",
+      "label": "assets/dyads/mom-kid_01_mks-orange/mom-kid.001.png",
+      "slides": [
+        {
+          "src": "assets/dyads/mom-kid_01_mks-orange/mom-kid.002.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "Look! Here are some people.",
+          "scriptColumn": "INTRO-1"
+        },
+        {
+          "src": "assets/dyads/mom-kid_01_mks-orange/mom-kid.003.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is a kid.",
+          "scriptColumn": "INTRO-2"
+        },
+        {
+          "src": "assets/dyads/mom-kid_01_mks-orange/mom-kid.004.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This big one is this kid’s mom.",
+          "scriptColumn": "INTRO-3"
+        },
+        {
+          "src": "assets/dyads/mom-kid_01_mks-orange/mom-kid.005.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the mom love the kid?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/mom-kid_01_mks-orange/mom-kid.006.png",
+          "kind": "response",
+          "trait": "love",
+          "text": "Does not love, Loves a little, Loves a lot",
+          "scriptColumn": "LOVE-2"
+        },
+        {
+          "src": "assets/dyads/mom-kid_01_mks-orange/mom-kid.007.png",
+          "kind": "question",
+          "trait": "like",
+          "text": "How much does the mom like the kid?",
+          "scriptColumn": "LIKE-1"
+        },
+        {
+          "src": "assets/dyads/mom-kid_01_mks-orange/mom-kid.008.png",
+          "kind": "response",
+          "trait": "like",
+          "text": "Does not like, Likes a little, Likes a lot",
+          "scriptColumn": "LIKE-2"
+        },
+        {
+          "src": "assets/dyads/mom-kid_01_mks-orange/mom-kid.009.png",
+          "kind": "question",
+          "trait": "charge",
+          "text": "How much is the mom in charge?",
+          "scriptColumn": "CHARGE-1"
+        },
+        {
+          "src": "assets/dyads/mom-kid_01_mks-orange/mom-kid.010.png",
+          "kind": "response",
+          "trait": "charge",
+          "text": "Not in charge, A little in charge, or Very much in charge?",
+          "scriptColumn": "CHARGE-2"
+        },
+        {
+          "src": "assets/dyads/mom-kid_01_mks-orange/mom-kid.011.png",
+          "kind": "question",
+          "trait": "old",
+          "text": "How old is the mom?",
+          "scriptColumn": "OLD-1"
+        },
+        {
+          "src": "assets/dyads/mom-kid_01_mks-orange/mom-kid.012.png",
+          "kind": "response",
+          "trait": "old",
+          "text": "Not old, A little old, or Very old?",
+          "scriptColumn": "OLD-2"
+        },
+        {
+          "src": "assets/dyads/mom-kid_01_mks-orange/mom-kid.013.png",
+          "kind": "question",
+          "trait": "strong",
+          "text": "How strong is the mom?",
+          "scriptColumn": "STRONG-1"
+        },
+        {
+          "src": "assets/dyads/mom-kid_01_mks-orange/mom-kid.014.png",
+          "kind": "response",
+          "trait": "strong",
+          "text": "Not strong, A little strong, or Very strong?",
+          "scriptColumn": "STRONG-2"
+        }
+      ],
+      "nSlides": 13,
+      "scriptKey": "kid-MOM"
+    },
+    {
+      "id": "mom-kid_02_mks-red",
+      "folder": "mom-kid",
+      "subject": "mom",
+      "target": "kid",
+      "sourceKey": "MKS",
+      "color": "red",
+      "variantKey": "MKS-red",
+      "label": "assets/dyads/mom-kid_02_mks-red/mom-kid.015.png",
+      "slides": [
+        {
+          "src": "assets/dyads/mom-kid_02_mks-red/mom-kid.016.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "Look! Here are some people.",
+          "scriptColumn": "INTRO-1"
+        },
+        {
+          "src": "assets/dyads/mom-kid_02_mks-red/mom-kid.017.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is a kid.",
+          "scriptColumn": "INTRO-2"
+        },
+        {
+          "src": "assets/dyads/mom-kid_02_mks-red/mom-kid.018.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This big one is this kid’s mom.",
+          "scriptColumn": "INTRO-3"
+        },
+        {
+          "src": "assets/dyads/mom-kid_02_mks-red/mom-kid.019.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the mom love the kid?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/mom-kid_02_mks-red/mom-kid.020.png",
+          "kind": "response",
+          "trait": "love",
+          "text": "Does not love, Loves a little, Loves a lot",
+          "scriptColumn": "LOVE-2"
+        },
+        {
+          "src": "assets/dyads/mom-kid_02_mks-red/mom-kid.021.png",
+          "kind": "question",
+          "trait": "like",
+          "text": "How much does the mom like the kid?",
+          "scriptColumn": "LIKE-1"
+        },
+        {
+          "src": "assets/dyads/mom-kid_02_mks-red/mom-kid.022.png",
+          "kind": "response",
+          "trait": "like",
+          "text": "Does not like, Likes a little, Likes a lot",
+          "scriptColumn": "LIKE-2"
+        },
+        {
+          "src": "assets/dyads/mom-kid_02_mks-red/mom-kid.023.png",
+          "kind": "question",
+          "trait": "charge",
+          "text": "How much is the mom in charge?",
+          "scriptColumn": "CHARGE-1"
+        },
+        {
+          "src": "assets/dyads/mom-kid_02_mks-red/mom-kid.024.png",
+          "kind": "response",
+          "trait": "charge",
+          "text": "Not in charge, A little in charge, or Very much in charge?",
+          "scriptColumn": "CHARGE-2"
+        },
+        {
+          "src": "assets/dyads/mom-kid_02_mks-red/mom-kid.025.png",
+          "kind": "question",
+          "trait": "old",
+          "text": "How old is the mom?",
+          "scriptColumn": "OLD-1"
+        },
+        {
+          "src": "assets/dyads/mom-kid_02_mks-red/mom-kid.026.png",
+          "kind": "response",
+          "trait": "old",
+          "text": "Not old, A little old, or Very old?",
+          "scriptColumn": "OLD-2"
+        },
+        {
+          "src": "assets/dyads/mom-kid_02_mks-red/mom-kid.027.png",
+          "kind": "question",
+          "trait": "strong",
+          "text": "How strong is the mom?",
+          "scriptColumn": "STRONG-1"
+        },
+        {
+          "src": "assets/dyads/mom-kid_02_mks-red/mom-kid.028.png",
+          "kind": "response",
+          "trait": "strong",
+          "text": "Not strong, A little strong, or Very strong?",
+          "scriptColumn": "STRONG-2"
+        }
+      ],
+      "nSlides": 13,
+      "scriptKey": "kid-MOM"
+    },
+    {
+      "id": "mom-kid_03_mkt-green",
+      "folder": "mom-kid",
+      "subject": "mom",
+      "target": "kid",
+      "sourceKey": "MKT",
+      "color": "green",
+      "variantKey": "MKT-green",
+      "label": "assets/dyads/mom-kid_03_mkt-green/mom-kid.029.png",
+      "slides": [
+        {
+          "src": "assets/dyads/mom-kid_03_mkt-green/mom-kid.030.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "Look! Here are some people.",
+          "scriptColumn": "INTRO-1"
+        },
+        {
+          "src": "assets/dyads/mom-kid_03_mkt-green/mom-kid.031.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is a kid.",
+          "scriptColumn": "INTRO-2"
+        },
+        {
+          "src": "assets/dyads/mom-kid_03_mkt-green/mom-kid.032.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This big one is this kid’s mom.",
+          "scriptColumn": "INTRO-3"
+        },
+        {
+          "src": "assets/dyads/mom-kid_03_mkt-green/mom-kid.033.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the mom love the kid?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/mom-kid_03_mkt-green/mom-kid.034.png",
+          "kind": "response",
+          "trait": "love",
+          "text": "Does not love, Loves a little, Loves a lot",
+          "scriptColumn": "LOVE-2"
+        },
+        {
+          "src": "assets/dyads/mom-kid_03_mkt-green/mom-kid.035.png",
+          "kind": "question",
+          "trait": "like",
+          "text": "How much does the mom like the kid?",
+          "scriptColumn": "LIKE-1"
+        },
+        {
+          "src": "assets/dyads/mom-kid_03_mkt-green/mom-kid.036.png",
+          "kind": "response",
+          "trait": "like",
+          "text": "Does not like, Likes a little, Likes a lot",
+          "scriptColumn": "LIKE-2"
+        },
+        {
+          "src": "assets/dyads/mom-kid_03_mkt-green/mom-kid.037.png",
+          "kind": "question",
+          "trait": "charge",
+          "text": "How much is the mom in charge?",
+          "scriptColumn": "CHARGE-1"
+        },
+        {
+          "src": "assets/dyads/mom-kid_03_mkt-green/mom-kid.038.png",
+          "kind": "response",
+          "trait": "charge",
+          "text": "Not in charge, A little in charge, or Very much in charge?",
+          "scriptColumn": "CHARGE-2"
+        },
+        {
+          "src": "assets/dyads/mom-kid_03_mkt-green/mom-kid.039.png",
+          "kind": "question",
+          "trait": "old",
+          "text": "How old is the mom?",
+          "scriptColumn": "OLD-1"
+        },
+        {
+          "src": "assets/dyads/mom-kid_03_mkt-green/mom-kid.040.png",
+          "kind": "response",
+          "trait": "old",
+          "text": "Not old, A little old, or Very old?",
+          "scriptColumn": "OLD-2"
+        },
+        {
+          "src": "assets/dyads/mom-kid_03_mkt-green/mom-kid.041.png",
+          "kind": "question",
+          "trait": "strong",
+          "text": "How strong is the mom?",
+          "scriptColumn": "STRONG-1"
+        },
+        {
+          "src": "assets/dyads/mom-kid_03_mkt-green/mom-kid.042.png",
+          "kind": "response",
+          "trait": "strong",
+          "text": "Not strong, A little strong, or Very strong?",
+          "scriptColumn": "STRONG-2"
+        }
+      ],
+      "nSlides": 13,
+      "scriptKey": "kid-MOM"
+    },
+    {
+      "id": "mom-kid_04_mkt-yellow",
+      "folder": "mom-kid",
+      "subject": "mom",
+      "target": "kid",
+      "sourceKey": "MKT",
+      "color": "yellow",
+      "variantKey": "MKT-yellow",
+      "label": "assets/dyads/mom-kid_04_mkt-yellow/mom-kid.043.png",
+      "slides": [
+        {
+          "src": "assets/dyads/mom-kid_04_mkt-yellow/mom-kid.044.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "Look! Here are some people.",
+          "scriptColumn": "INTRO-1"
+        },
+        {
+          "src": "assets/dyads/mom-kid_04_mkt-yellow/mom-kid.045.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is a kid.",
+          "scriptColumn": "INTRO-2"
+        },
+        {
+          "src": "assets/dyads/mom-kid_04_mkt-yellow/mom-kid.046.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This big one is this kid’s mom.",
+          "scriptColumn": "INTRO-3"
+        },
+        {
+          "src": "assets/dyads/mom-kid_04_mkt-yellow/mom-kid.047.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the mom love the kid?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/mom-kid_04_mkt-yellow/mom-kid.048.png",
+          "kind": "response",
+          "trait": "love",
+          "text": "Does not love, Loves a little, Loves a lot",
+          "scriptColumn": "LOVE-2"
+        },
+        {
+          "src": "assets/dyads/mom-kid_04_mkt-yellow/mom-kid.049.png",
+          "kind": "question",
+          "trait": "like",
+          "text": "How much does the mom like the kid?",
+          "scriptColumn": "LIKE-1"
+        },
+        {
+          "src": "assets/dyads/mom-kid_04_mkt-yellow/mom-kid.050.png",
+          "kind": "response",
+          "trait": "like",
+          "text": "Does not like, Likes a little, Likes a lot",
+          "scriptColumn": "LIKE-2"
+        },
+        {
+          "src": "assets/dyads/mom-kid_04_mkt-yellow/mom-kid.051.png",
+          "kind": "question",
+          "trait": "charge",
+          "text": "How much is the mom in charge?",
+          "scriptColumn": "CHARGE-1"
+        },
+        {
+          "src": "assets/dyads/mom-kid_04_mkt-yellow/mom-kid.052.png",
+          "kind": "response",
+          "trait": "charge",
+          "text": "Not in charge, A little in charge, or Very much in charge?",
+          "scriptColumn": "CHARGE-2"
+        },
+        {
+          "src": "assets/dyads/mom-kid_04_mkt-yellow/mom-kid.053.png",
+          "kind": "question",
+          "trait": "old",
+          "text": "How old is the mom?",
+          "scriptColumn": "OLD-1"
+        },
+        {
+          "src": "assets/dyads/mom-kid_04_mkt-yellow/mom-kid.054.png",
+          "kind": "response",
+          "trait": "old",
+          "text": "Not old, A little old, or Very old?",
+          "scriptColumn": "OLD-2"
+        },
+        {
+          "src": "assets/dyads/mom-kid_04_mkt-yellow/mom-kid.055.png",
+          "kind": "question",
+          "trait": "strong",
+          "text": "How strong is the mom?",
+          "scriptColumn": "STRONG-1"
+        },
+        {
+          "src": "assets/dyads/mom-kid_04_mkt-yellow/mom-kid.056.png",
+          "kind": "response",
+          "trait": "strong",
+          "text": "Not strong, A little strong, or Very strong?",
+          "scriptColumn": "STRONG-2"
+        }
+      ],
+      "nSlides": 13,
+      "scriptKey": "kid-MOM"
+    },
+    {
+      "id": "mom-kid_05_mkd-blue",
+      "folder": "mom-kid",
+      "subject": "mom",
+      "target": "kid",
+      "sourceKey": "MKD",
+      "color": "blue",
+      "variantKey": "MKD-blue",
+      "label": "assets/dyads/mom-kid_05_mkd-blue/mom-kid.057.png",
+      "slides": [
+        {
+          "src": "assets/dyads/mom-kid_05_mkd-blue/mom-kid.058.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "Look! Here are some people.",
+          "scriptColumn": "INTRO-1"
+        },
+        {
+          "src": "assets/dyads/mom-kid_05_mkd-blue/mom-kid.059.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is a kid.",
+          "scriptColumn": "INTRO-2"
+        },
+        {
+          "src": "assets/dyads/mom-kid_05_mkd-blue/mom-kid.060.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This big one is this kid’s mom.",
+          "scriptColumn": "INTRO-3"
+        },
+        {
+          "src": "assets/dyads/mom-kid_05_mkd-blue/mom-kid.061.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the mom love the kid?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/mom-kid_05_mkd-blue/mom-kid.062.png",
+          "kind": "response",
+          "trait": "love",
+          "text": "Does not love, Loves a little, Loves a lot",
+          "scriptColumn": "LOVE-2"
+        },
+        {
+          "src": "assets/dyads/mom-kid_05_mkd-blue/mom-kid.063.png",
+          "kind": "question",
+          "trait": "like",
+          "text": "How much does the mom like the kid?",
+          "scriptColumn": "LIKE-1"
+        },
+        {
+          "src": "assets/dyads/mom-kid_05_mkd-blue/mom-kid.064.png",
+          "kind": "response",
+          "trait": "like",
+          "text": "Does not like, Likes a little, Likes a lot",
+          "scriptColumn": "LIKE-2"
+        },
+        {
+          "src": "assets/dyads/mom-kid_05_mkd-blue/mom-kid.065.png",
+          "kind": "question",
+          "trait": "charge",
+          "text": "How much is the mom in charge?",
+          "scriptColumn": "CHARGE-1"
+        },
+        {
+          "src": "assets/dyads/mom-kid_05_mkd-blue/mom-kid.066.png",
+          "kind": "response",
+          "trait": "charge",
+          "text": "Not in charge, A little in charge, or Very much in charge?",
+          "scriptColumn": "CHARGE-2"
+        },
+        {
+          "src": "assets/dyads/mom-kid_05_mkd-blue/mom-kid.067.png",
+          "kind": "question",
+          "trait": "old",
+          "text": "How old is the mom?",
+          "scriptColumn": "OLD-1"
+        },
+        {
+          "src": "assets/dyads/mom-kid_05_mkd-blue/mom-kid.068.png",
+          "kind": "response",
+          "trait": "old",
+          "text": "Not old, A little old, or Very old?",
+          "scriptColumn": "OLD-2"
+        },
+        {
+          "src": "assets/dyads/mom-kid_05_mkd-blue/mom-kid.069.png",
+          "kind": "question",
+          "trait": "strong",
+          "text": "How strong is the mom?",
+          "scriptColumn": "STRONG-1"
+        },
+        {
+          "src": "assets/dyads/mom-kid_05_mkd-blue/mom-kid.070.png",
+          "kind": "response",
+          "trait": "strong",
+          "text": "Not strong, A little strong, or Very strong?",
+          "scriptColumn": "STRONG-2"
+        }
+      ],
+      "nSlides": 13,
+      "scriptKey": "kid-MOM"
+    },
+    {
+      "id": "mom-kid_06_mkd-pink",
+      "folder": "mom-kid",
+      "subject": "mom",
+      "target": "kid",
+      "sourceKey": "MKD",
+      "color": "pink",
+      "variantKey": "MKD-pink",
+      "label": "assets/dyads/mom-kid_06_mkd-pink/mom-kid.071.png",
+      "slides": [
+        {
+          "src": "assets/dyads/mom-kid_06_mkd-pink/mom-kid.072.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "Look! Here are some people.",
+          "scriptColumn": "INTRO-1"
+        },
+        {
+          "src": "assets/dyads/mom-kid_06_mkd-pink/mom-kid.073.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is a kid.",
+          "scriptColumn": "INTRO-2"
+        },
+        {
+          "src": "assets/dyads/mom-kid_06_mkd-pink/mom-kid.074.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This big one is this kid’s mom.",
+          "scriptColumn": "INTRO-3"
+        },
+        {
+          "src": "assets/dyads/mom-kid_06_mkd-pink/mom-kid.075.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the mom love the kid?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/mom-kid_06_mkd-pink/mom-kid.076.png",
+          "kind": "response",
+          "trait": "love",
+          "text": "Does not love, Loves a little, Loves a lot",
+          "scriptColumn": "LOVE-2"
+        },
+        {
+          "src": "assets/dyads/mom-kid_06_mkd-pink/mom-kid.077.png",
+          "kind": "question",
+          "trait": "like",
+          "text": "How much does the mom like the kid?",
+          "scriptColumn": "LIKE-1"
+        },
+        {
+          "src": "assets/dyads/mom-kid_06_mkd-pink/mom-kid.078.png",
+          "kind": "response",
+          "trait": "like",
+          "text": "Does not like, Likes a little, Likes a lot",
+          "scriptColumn": "LIKE-2"
+        },
+        {
+          "src": "assets/dyads/mom-kid_06_mkd-pink/mom-kid.079.png",
+          "kind": "question",
+          "trait": "charge",
+          "text": "How much is the mom in charge?",
+          "scriptColumn": "CHARGE-1"
+        },
+        {
+          "src": "assets/dyads/mom-kid_06_mkd-pink/mom-kid.080.png",
+          "kind": "response",
+          "trait": "charge",
+          "text": "Not in charge, A little in charge, or Very much in charge?",
+          "scriptColumn": "CHARGE-2"
+        },
+        {
+          "src": "assets/dyads/mom-kid_06_mkd-pink/mom-kid.081.png",
+          "kind": "question",
+          "trait": "old",
+          "text": "How old is the mom?",
+          "scriptColumn": "OLD-1"
+        },
+        {
+          "src": "assets/dyads/mom-kid_06_mkd-pink/mom-kid.082.png",
+          "kind": "response",
+          "trait": "old",
+          "text": "Not old, A little old, or Very old?",
+          "scriptColumn": "OLD-2"
+        },
+        {
+          "src": "assets/dyads/mom-kid_06_mkd-pink/mom-kid.083.png",
+          "kind": "question",
+          "trait": "strong",
+          "text": "How strong is the mom?",
+          "scriptColumn": "STRONG-1"
+        },
+        {
+          "src": "assets/dyads/mom-kid_06_mkd-pink/mom-kid.084.png",
+          "kind": "response",
+          "trait": "strong",
+          "text": "Not strong, A little strong, or Very strong?",
+          "scriptColumn": "STRONG-2"
+        }
+      ],
+      "nSlides": 13,
+      "scriptKey": "kid-MOM"
+    },
+    {
+      "id": "dad-kid_01_dkb-purple",
+      "folder": "dad-kid",
+      "subject": "dad",
+      "target": "kid",
+      "sourceKey": "DKB",
+      "color": "purple",
+      "variantKey": "DKB-purple",
+      "label": "assets/dyads/dad-kid_01_dkb-purple/dad-kid.001.png",
+      "slides": [
+        {
+          "src": "assets/dyads/dad-kid_01_dkb-purple/dad-kid.002.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "Look! Here are some people.",
+          "scriptColumn": "INTRO-1"
+        },
+        {
+          "src": "assets/dyads/dad-kid_01_dkb-purple/dad-kid.003.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is a kid.",
+          "scriptColumn": "INTRO-2"
+        },
+        {
+          "src": "assets/dyads/dad-kid_01_dkb-purple/dad-kid.004.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This big one is this kid’s dad.",
+          "scriptColumn": "INTRO-3"
+        },
+        {
+          "src": "assets/dyads/dad-kid_01_dkb-purple/dad-kid.005.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the dad love the kid?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/dad-kid_01_dkb-purple/dad-kid.006.png",
+          "kind": "response",
+          "trait": "love",
+          "text": "Does not love, Loves a little, Loves a lot",
+          "scriptColumn": "LOVE-2"
+        },
+        {
+          "src": "assets/dyads/dad-kid_01_dkb-purple/dad-kid.007.png",
+          "kind": "question",
+          "trait": "like",
+          "text": "How much does the dad like the kid?",
+          "scriptColumn": "LIKE-1"
+        },
+        {
+          "src": "assets/dyads/dad-kid_01_dkb-purple/dad-kid.008.png",
+          "kind": "response",
+          "trait": "like",
+          "text": "Does not like, Likes a little, Likes a lot",
+          "scriptColumn": "LIKE-2"
+        },
+        {
+          "src": "assets/dyads/dad-kid_01_dkb-purple/dad-kid.009.png",
+          "kind": "question",
+          "trait": "charge",
+          "text": "How much is the dad in charge?",
+          "scriptColumn": "CHARGE-1"
+        },
+        {
+          "src": "assets/dyads/dad-kid_01_dkb-purple/dad-kid.010.png",
+          "kind": "response",
+          "trait": "charge",
+          "text": "Not in charge, A little in charge, or Very much in charge?",
+          "scriptColumn": "CHARGE-2"
+        },
+        {
+          "src": "assets/dyads/dad-kid_01_dkb-purple/dad-kid.011.png",
+          "kind": "question",
+          "trait": "old",
+          "text": "How old is the dad?",
+          "scriptColumn": "OLD-1"
+        },
+        {
+          "src": "assets/dyads/dad-kid_01_dkb-purple/dad-kid.012.png",
+          "kind": "response",
+          "trait": "old",
+          "text": "Not old, A little old, or Very old?",
+          "scriptColumn": "OLD-2"
+        },
+        {
+          "src": "assets/dyads/dad-kid_01_dkb-purple/dad-kid.013.png",
+          "kind": "question",
+          "trait": "strong",
+          "text": "How strong is the dad?",
+          "scriptColumn": "STRONG-1"
+        },
+        {
+          "src": "assets/dyads/dad-kid_01_dkb-purple/dad-kid.014.png",
+          "kind": "response",
+          "trait": "strong",
+          "text": "Not strong, A little strong, or Very strong?",
+          "scriptColumn": "STRONG-2"
+        }
+      ],
+      "nSlides": 13,
+      "scriptKey": "kid-DAD"
+    },
+    {
+      "id": "dad-kid_02_dkb-green",
+      "folder": "dad-kid",
+      "subject": "dad",
+      "target": "kid",
+      "sourceKey": "DKB",
+      "color": "green",
+      "variantKey": "DKB-green",
+      "label": "assets/dyads/dad-kid_02_dkb-green/dad-kid.015.png",
+      "slides": [
+        {
+          "src": "assets/dyads/dad-kid_02_dkb-green/dad-kid.016.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "Look! Here are some people.",
+          "scriptColumn": "INTRO-1"
+        },
+        {
+          "src": "assets/dyads/dad-kid_02_dkb-green/dad-kid.017.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is a kid.",
+          "scriptColumn": "INTRO-2"
+        },
+        {
+          "src": "assets/dyads/dad-kid_02_dkb-green/dad-kid.018.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This big one is this kid’s dad.",
+          "scriptColumn": "INTRO-3"
+        },
+        {
+          "src": "assets/dyads/dad-kid_02_dkb-green/dad-kid.019.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the dad love the kid?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/dad-kid_02_dkb-green/dad-kid.020.png",
+          "kind": "response",
+          "trait": "love",
+          "text": "Does not love, Loves a little, Loves a lot",
+          "scriptColumn": "LOVE-2"
+        },
+        {
+          "src": "assets/dyads/dad-kid_02_dkb-green/dad-kid.021.png",
+          "kind": "question",
+          "trait": "like",
+          "text": "How much does the dad like the kid?",
+          "scriptColumn": "LIKE-1"
+        },
+        {
+          "src": "assets/dyads/dad-kid_02_dkb-green/dad-kid.022.png",
+          "kind": "response",
+          "trait": "like",
+          "text": "Does not like, Likes a little, Likes a lot",
+          "scriptColumn": "LIKE-2"
+        },
+        {
+          "src": "assets/dyads/dad-kid_02_dkb-green/dad-kid.023.png",
+          "kind": "question",
+          "trait": "charge",
+          "text": "How much is the dad in charge?",
+          "scriptColumn": "CHARGE-1"
+        },
+        {
+          "src": "assets/dyads/dad-kid_02_dkb-green/dad-kid.024.png",
+          "kind": "response",
+          "trait": "charge",
+          "text": "Not in charge, A little in charge, or Very much in charge?",
+          "scriptColumn": "CHARGE-2"
+        },
+        {
+          "src": "assets/dyads/dad-kid_02_dkb-green/dad-kid.025.png",
+          "kind": "question",
+          "trait": "old",
+          "text": "How old is the dad?",
+          "scriptColumn": "OLD-1"
+        },
+        {
+          "src": "assets/dyads/dad-kid_02_dkb-green/dad-kid.026.png",
+          "kind": "response",
+          "trait": "old",
+          "text": "Not old, A little old, or Very old?",
+          "scriptColumn": "OLD-2"
+        },
+        {
+          "src": "assets/dyads/dad-kid_02_dkb-green/dad-kid.027.png",
+          "kind": "question",
+          "trait": "strong",
+          "text": "How strong is the dad?",
+          "scriptColumn": "STRONG-1"
+        },
+        {
+          "src": "assets/dyads/dad-kid_02_dkb-green/dad-kid.028.png",
+          "kind": "response",
+          "trait": "strong",
+          "text": "Not strong, A little strong, or Very strong?",
+          "scriptColumn": "STRONG-2"
+        }
+      ],
+      "nSlides": 13,
+      "scriptKey": "kid-DAD"
+    },
+    {
+      "id": "dad-kid_03_dkt-gray",
+      "folder": "dad-kid",
+      "subject": "dad",
+      "target": "kid",
+      "sourceKey": "DKT",
+      "color": "gray",
+      "variantKey": "DKT-gray",
+      "label": "assets/dyads/dad-kid_03_dkt-gray/dad-kid.029.png",
+      "slides": [
+        {
+          "src": "assets/dyads/dad-kid_03_dkt-gray/dad-kid.030.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "Look! Here are some people.",
+          "scriptColumn": "INTRO-1"
+        },
+        {
+          "src": "assets/dyads/dad-kid_03_dkt-gray/dad-kid.031.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is a kid.",
+          "scriptColumn": "INTRO-2"
+        },
+        {
+          "src": "assets/dyads/dad-kid_03_dkt-gray/dad-kid.032.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This big one is this kid’s dad.",
+          "scriptColumn": "INTRO-3"
+        },
+        {
+          "src": "assets/dyads/dad-kid_03_dkt-gray/dad-kid.033.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the dad love the kid?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/dad-kid_03_dkt-gray/dad-kid.034.png",
+          "kind": "response",
+          "trait": "love",
+          "text": "Does not love, Loves a little, Loves a lot",
+          "scriptColumn": "LOVE-2"
+        },
+        {
+          "src": "assets/dyads/dad-kid_03_dkt-gray/dad-kid.035.png",
+          "kind": "question",
+          "trait": "like",
+          "text": "How much does the dad like the kid?",
+          "scriptColumn": "LIKE-1"
+        },
+        {
+          "src": "assets/dyads/dad-kid_03_dkt-gray/dad-kid.036.png",
+          "kind": "response",
+          "trait": "like",
+          "text": "Does not like, Likes a little, Likes a lot",
+          "scriptColumn": "LIKE-2"
+        },
+        {
+          "src": "assets/dyads/dad-kid_03_dkt-gray/dad-kid.037.png",
+          "kind": "question",
+          "trait": "charge",
+          "text": "How much is the dad in charge?",
+          "scriptColumn": "CHARGE-1"
+        },
+        {
+          "src": "assets/dyads/dad-kid_03_dkt-gray/dad-kid.038.png",
+          "kind": "response",
+          "trait": "charge",
+          "text": "Not in charge, A little in charge, or Very much in charge?",
+          "scriptColumn": "CHARGE-2"
+        },
+        {
+          "src": "assets/dyads/dad-kid_03_dkt-gray/dad-kid.039.png",
+          "kind": "question",
+          "trait": "old",
+          "text": "How old is the dad?",
+          "scriptColumn": "OLD-1"
+        },
+        {
+          "src": "assets/dyads/dad-kid_03_dkt-gray/dad-kid.040.png",
+          "kind": "response",
+          "trait": "old",
+          "text": "Not old, A little old, or Very old?",
+          "scriptColumn": "OLD-2"
+        },
+        {
+          "src": "assets/dyads/dad-kid_03_dkt-gray/dad-kid.041.png",
+          "kind": "question",
+          "trait": "strong",
+          "text": "How strong is the dad?",
+          "scriptColumn": "STRONG-1"
+        },
+        {
+          "src": "assets/dyads/dad-kid_03_dkt-gray/dad-kid.042.png",
+          "kind": "response",
+          "trait": "strong",
+          "text": "Not strong, A little strong, or Very strong?",
+          "scriptColumn": "STRONG-2"
+        }
+      ],
+      "nSlides": 13,
+      "scriptKey": "kid-DAD"
+    },
+    {
+      "id": "dad-kid_04_dkt-green",
+      "folder": "dad-kid",
+      "subject": "dad",
+      "target": "kid",
+      "sourceKey": "DKT",
+      "color": "green",
+      "variantKey": "DKT-green",
+      "label": "assets/dyads/dad-kid_04_dkt-green/dad-kid.043.png",
+      "slides": [
+        {
+          "src": "assets/dyads/dad-kid_04_dkt-green/dad-kid.044.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "Look! Here are some people.",
+          "scriptColumn": "INTRO-1"
+        },
+        {
+          "src": "assets/dyads/dad-kid_04_dkt-green/dad-kid.045.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is a kid.",
+          "scriptColumn": "INTRO-2"
+        },
+        {
+          "src": "assets/dyads/dad-kid_04_dkt-green/dad-kid.046.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This big one is this kid’s dad.",
+          "scriptColumn": "INTRO-3"
+        },
+        {
+          "src": "assets/dyads/dad-kid_04_dkt-green/dad-kid.047.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the dad love the kid?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/dad-kid_04_dkt-green/dad-kid.048.png",
+          "kind": "response",
+          "trait": "love",
+          "text": "Does not love, Loves a little, Loves a lot",
+          "scriptColumn": "LOVE-2"
+        },
+        {
+          "src": "assets/dyads/dad-kid_04_dkt-green/dad-kid.049.png",
+          "kind": "question",
+          "trait": "like",
+          "text": "How much does the dad like the kid?",
+          "scriptColumn": "LIKE-1"
+        },
+        {
+          "src": "assets/dyads/dad-kid_04_dkt-green/dad-kid.050.png",
+          "kind": "response",
+          "trait": "like",
+          "text": "Does not like, Likes a little, Likes a lot",
+          "scriptColumn": "LIKE-2"
+        },
+        {
+          "src": "assets/dyads/dad-kid_04_dkt-green/dad-kid.051.png",
+          "kind": "question",
+          "trait": "charge",
+          "text": "How much is the dad in charge?",
+          "scriptColumn": "CHARGE-1"
+        },
+        {
+          "src": "assets/dyads/dad-kid_04_dkt-green/dad-kid.052.png",
+          "kind": "response",
+          "trait": "charge",
+          "text": "Not in charge, A little in charge, or Very much in charge?",
+          "scriptColumn": "CHARGE-2"
+        },
+        {
+          "src": "assets/dyads/dad-kid_04_dkt-green/dad-kid.053.png",
+          "kind": "question",
+          "trait": "old",
+          "text": "How old is the dad?",
+          "scriptColumn": "OLD-1"
+        },
+        {
+          "src": "assets/dyads/dad-kid_04_dkt-green/dad-kid.054.png",
+          "kind": "response",
+          "trait": "old",
+          "text": "Not old, A little old, or Very old?",
+          "scriptColumn": "OLD-2"
+        },
+        {
+          "src": "assets/dyads/dad-kid_04_dkt-green/dad-kid.055.png",
+          "kind": "question",
+          "trait": "strong",
+          "text": "How strong is the dad?",
+          "scriptColumn": "STRONG-1"
+        },
+        {
+          "src": "assets/dyads/dad-kid_04_dkt-green/dad-kid.056.png",
+          "kind": "response",
+          "trait": "strong",
+          "text": "Not strong, A little strong, or Very strong?",
+          "scriptColumn": "STRONG-2"
+        }
+      ],
+      "nSlides": 13,
+      "scriptKey": "kid-DAD"
+    },
+    {
+      "id": "dad-kid_05_mkd-blue",
+      "folder": "dad-kid",
+      "subject": "dad",
+      "target": "kid",
+      "sourceKey": "MKD",
+      "color": "blue",
+      "variantKey": "MKD-blue",
+      "label": "assets/dyads/dad-kid_05_mkd-blue/dad-kid.057.png",
+      "slides": [
+        {
+          "src": "assets/dyads/dad-kid_05_mkd-blue/dad-kid.058.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "Look! Here are some people.",
+          "scriptColumn": "INTRO-1"
+        },
+        {
+          "src": "assets/dyads/dad-kid_05_mkd-blue/dad-kid.059.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is a kid.",
+          "scriptColumn": "INTRO-2"
+        },
+        {
+          "src": "assets/dyads/dad-kid_05_mkd-blue/dad-kid.060.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This big one is this kid’s dad.",
+          "scriptColumn": "INTRO-3"
+        },
+        {
+          "src": "assets/dyads/dad-kid_05_mkd-blue/dad-kid.061.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the dad love the kid?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/dad-kid_05_mkd-blue/dad-kid.062.png",
+          "kind": "response",
+          "trait": "love",
+          "text": "Does not love, Loves a little, Loves a lot",
+          "scriptColumn": "LOVE-2"
+        },
+        {
+          "src": "assets/dyads/dad-kid_05_mkd-blue/dad-kid.063.png",
+          "kind": "question",
+          "trait": "like",
+          "text": "How much does the dad like the kid?",
+          "scriptColumn": "LIKE-1"
+        },
+        {
+          "src": "assets/dyads/dad-kid_05_mkd-blue/dad-kid.064.png",
+          "kind": "response",
+          "trait": "like",
+          "text": "Does not like, Likes a little, Likes a lot",
+          "scriptColumn": "LIKE-2"
+        },
+        {
+          "src": "assets/dyads/dad-kid_05_mkd-blue/dad-kid.065.png",
+          "kind": "question",
+          "trait": "charge",
+          "text": "How much is the dad in charge?",
+          "scriptColumn": "CHARGE-1"
+        },
+        {
+          "src": "assets/dyads/dad-kid_05_mkd-blue/dad-kid.066.png",
+          "kind": "response",
+          "trait": "charge",
+          "text": "Not in charge, A little in charge, or Very much in charge?",
+          "scriptColumn": "CHARGE-2"
+        },
+        {
+          "src": "assets/dyads/dad-kid_05_mkd-blue/dad-kid.067.png",
+          "kind": "question",
+          "trait": "old",
+          "text": "How old is the dad?",
+          "scriptColumn": "OLD-1"
+        },
+        {
+          "src": "assets/dyads/dad-kid_05_mkd-blue/dad-kid.068.png",
+          "kind": "response",
+          "trait": "old",
+          "text": "Not old, A little old, or Very old?",
+          "scriptColumn": "OLD-2"
+        },
+        {
+          "src": "assets/dyads/dad-kid_05_mkd-blue/dad-kid.069.png",
+          "kind": "question",
+          "trait": "strong",
+          "text": "How strong is the dad?",
+          "scriptColumn": "STRONG-1"
+        },
+        {
+          "src": "assets/dyads/dad-kid_05_mkd-blue/dad-kid.070.png",
+          "kind": "response",
+          "trait": "strong",
+          "text": "Not strong, A little strong, or Very strong?",
+          "scriptColumn": "STRONG-2"
+        }
+      ],
+      "nSlides": 13,
+      "scriptKey": "kid-DAD"
+    },
+    {
+      "id": "dad-kid_06_mkd-pink",
+      "folder": "dad-kid",
+      "subject": "dad",
+      "target": "kid",
+      "sourceKey": "MKD",
+      "color": "pink",
+      "variantKey": "MKD-pink",
+      "label": "assets/dyads/dad-kid_06_mkd-pink/dad-kid.071.png",
+      "slides": [
+        {
+          "src": "assets/dyads/dad-kid_06_mkd-pink/dad-kid.072.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "Look! Here are some people.",
+          "scriptColumn": "INTRO-1"
+        },
+        {
+          "src": "assets/dyads/dad-kid_06_mkd-pink/dad-kid.073.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is a kid.",
+          "scriptColumn": "INTRO-2"
+        },
+        {
+          "src": "assets/dyads/dad-kid_06_mkd-pink/dad-kid.074.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This big one is this kid’s dad.",
+          "scriptColumn": "INTRO-3"
+        },
+        {
+          "src": "assets/dyads/dad-kid_06_mkd-pink/dad-kid.075.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the dad love the kid?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/dad-kid_06_mkd-pink/dad-kid.076.png",
+          "kind": "response",
+          "trait": "love",
+          "text": "Does not love, Loves a little, Loves a lot",
+          "scriptColumn": "LOVE-2"
+        },
+        {
+          "src": "assets/dyads/dad-kid_06_mkd-pink/dad-kid.077.png",
+          "kind": "question",
+          "trait": "like",
+          "text": "How much does the dad like the kid?",
+          "scriptColumn": "LIKE-1"
+        },
+        {
+          "src": "assets/dyads/dad-kid_06_mkd-pink/dad-kid.078.png",
+          "kind": "response",
+          "trait": "like",
+          "text": "Does not like, Likes a little, Likes a lot",
+          "scriptColumn": "LIKE-2"
+        },
+        {
+          "src": "assets/dyads/dad-kid_06_mkd-pink/dad-kid.079.png",
+          "kind": "question",
+          "trait": "charge",
+          "text": "How much is the dad in charge?",
+          "scriptColumn": "CHARGE-1"
+        },
+        {
+          "src": "assets/dyads/dad-kid_06_mkd-pink/dad-kid.080.png",
+          "kind": "response",
+          "trait": "charge",
+          "text": "Not in charge, A little in charge, or Very much in charge?",
+          "scriptColumn": "CHARGE-2"
+        },
+        {
+          "src": "assets/dyads/dad-kid_06_mkd-pink/dad-kid.081.png",
+          "kind": "question",
+          "trait": "old",
+          "text": "How old is the dad?",
+          "scriptColumn": "OLD-1"
+        },
+        {
+          "src": "assets/dyads/dad-kid_06_mkd-pink/dad-kid.082.png",
+          "kind": "response",
+          "trait": "old",
+          "text": "Not old, A little old, or Very old?",
+          "scriptColumn": "OLD-2"
+        },
+        {
+          "src": "assets/dyads/dad-kid_06_mkd-pink/dad-kid.083.png",
+          "kind": "question",
+          "trait": "strong",
+          "text": "How strong is the dad?",
+          "scriptColumn": "STRONG-1"
+        },
+        {
+          "src": "assets/dyads/dad-kid_06_mkd-pink/dad-kid.084.png",
+          "kind": "response",
+          "trait": "strong",
+          "text": "Not strong, A little strong, or Very strong?",
+          "scriptColumn": "STRONG-2"
+        }
+      ],
+      "nSlides": 13,
+      "scriptKey": "kid-DAD"
+    },
+    {
+      "id": "teacher-kid_01_tkf-orange",
+      "folder": "teacher-kid",
+      "subject": "teacher",
+      "target": "kid",
+      "sourceKey": "TKF",
+      "color": "orange",
+      "variantKey": "TKF-orange",
+      "label": "assets/dyads/teacher-kid_01_tkf-orange/teacher-kid.001.png",
+      "slides": [
+        {
+          "src": "assets/dyads/teacher-kid_01_tkf-orange/teacher-kid.002.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "Look! Here are some people.",
+          "scriptColumn": "INTRO-1"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_01_tkf-orange/teacher-kid.003.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is a kid.",
+          "scriptColumn": "INTRO-2"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_01_tkf-orange/teacher-kid.004.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This big one is this kid’s teacher.",
+          "scriptColumn": "INTRO-3"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_01_tkf-orange/teacher-kid.005.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the teacher love the kid?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_01_tkf-orange/teacher-kid.006.png",
+          "kind": "response",
+          "trait": "love",
+          "text": "Does not love, Loves a little, Loves a lot",
+          "scriptColumn": "LOVE-2"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_01_tkf-orange/teacher-kid.007.png",
+          "kind": "question",
+          "trait": "like",
+          "text": "How much does the teacher like the kid?",
+          "scriptColumn": "LIKE-1"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_01_tkf-orange/teacher-kid.008.png",
+          "kind": "response",
+          "trait": "like",
+          "text": "Does not like, Likes a little, Likes a lot",
+          "scriptColumn": "LIKE-2"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_01_tkf-orange/teacher-kid.009.png",
+          "kind": "question",
+          "trait": "charge",
+          "text": "How much is the teacher in charge?",
+          "scriptColumn": "CHARGE-1"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_01_tkf-orange/teacher-kid.010.png",
+          "kind": "response",
+          "trait": "charge",
+          "text": "Not in charge, A little in charge, or Very much in charge?",
+          "scriptColumn": "CHARGE-2"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_01_tkf-orange/teacher-kid.011.png",
+          "kind": "question",
+          "trait": "old",
+          "text": "How old is the teacher?",
+          "scriptColumn": "OLD-1"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_01_tkf-orange/teacher-kid.012.png",
+          "kind": "response",
+          "trait": "old",
+          "text": "Not old, A little old, or Very old?",
+          "scriptColumn": "OLD-2"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_01_tkf-orange/teacher-kid.013.png",
+          "kind": "question",
+          "trait": "strong",
+          "text": "How strong is the teacher?",
+          "scriptColumn": "STRONG-1"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_01_tkf-orange/teacher-kid.014.png",
+          "kind": "response",
+          "trait": "strong",
+          "text": "Not strong, A little strong, or Very strong?",
+          "scriptColumn": "STRONG-2"
+        }
+      ],
+      "nSlides": 13,
+      "scriptKey": "kid-TEACHER"
+    },
+    {
+      "id": "teacher-kid_02_tkf-red",
+      "folder": "teacher-kid",
+      "subject": "teacher",
+      "target": "kid",
+      "sourceKey": "TKF",
+      "color": "red",
+      "variantKey": "TKF-red",
+      "label": "assets/dyads/teacher-kid_02_tkf-red/teacher-kid.015.png",
+      "slides": [
+        {
+          "src": "assets/dyads/teacher-kid_02_tkf-red/teacher-kid.016.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "Look! Here are some people.",
+          "scriptColumn": "INTRO-1"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_02_tkf-red/teacher-kid.017.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is a kid.",
+          "scriptColumn": "INTRO-2"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_02_tkf-red/teacher-kid.018.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This big one is this kid’s teacher.",
+          "scriptColumn": "INTRO-3"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_02_tkf-red/teacher-kid.019.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the teacher love the kid?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_02_tkf-red/teacher-kid.020.png",
+          "kind": "response",
+          "trait": "love",
+          "text": "Does not love, Loves a little, Loves a lot",
+          "scriptColumn": "LOVE-2"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_02_tkf-red/teacher-kid.021.png",
+          "kind": "question",
+          "trait": "like",
+          "text": "How much does the teacher like the kid?",
+          "scriptColumn": "LIKE-1"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_02_tkf-red/teacher-kid.022.png",
+          "kind": "response",
+          "trait": "like",
+          "text": "Does not like, Likes a little, Likes a lot",
+          "scriptColumn": "LIKE-2"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_02_tkf-red/teacher-kid.023.png",
+          "kind": "question",
+          "trait": "charge",
+          "text": "How much is the teacher in charge?",
+          "scriptColumn": "CHARGE-1"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_02_tkf-red/teacher-kid.024.png",
+          "kind": "response",
+          "trait": "charge",
+          "text": "Not in charge, A little in charge, or Very much in charge?",
+          "scriptColumn": "CHARGE-2"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_02_tkf-red/teacher-kid.025.png",
+          "kind": "question",
+          "trait": "old",
+          "text": "How old is the teacher?",
+          "scriptColumn": "OLD-1"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_02_tkf-red/teacher-kid.026.png",
+          "kind": "response",
+          "trait": "old",
+          "text": "Not old, A little old, or Very old?",
+          "scriptColumn": "OLD-2"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_02_tkf-red/teacher-kid.027.png",
+          "kind": "question",
+          "trait": "strong",
+          "text": "How strong is the teacher?",
+          "scriptColumn": "STRONG-1"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_02_tkf-red/teacher-kid.028.png",
+          "kind": "response",
+          "trait": "strong",
+          "text": "Not strong, A little strong, or Very strong?",
+          "scriptColumn": "STRONG-2"
+        }
+      ],
+      "nSlides": 13,
+      "scriptKey": "kid-TEACHER"
+    },
+    {
+      "id": "teacher-kid_03_mkt-green",
+      "folder": "teacher-kid",
+      "subject": "teacher",
+      "target": "kid",
+      "sourceKey": "MKT",
+      "color": "green",
+      "variantKey": "MKT-green",
+      "label": "assets/dyads/teacher-kid_03_mkt-green/teacher-kid.029.png",
+      "slides": [
+        {
+          "src": "assets/dyads/teacher-kid_03_mkt-green/teacher-kid.030.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "Look! Here are some people.",
+          "scriptColumn": "INTRO-1"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_03_mkt-green/teacher-kid.031.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is a kid.",
+          "scriptColumn": "INTRO-2"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_03_mkt-green/teacher-kid.032.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This big one is this kid’s teacher.",
+          "scriptColumn": "INTRO-3"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_03_mkt-green/teacher-kid.033.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the teacher love the kid?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_03_mkt-green/teacher-kid.034.png",
+          "kind": "response",
+          "trait": "love",
+          "text": "Does not love, Loves a little, Loves a lot",
+          "scriptColumn": "LOVE-2"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_03_mkt-green/teacher-kid.035.png",
+          "kind": "question",
+          "trait": "like",
+          "text": "How much does the teacher like the kid?",
+          "scriptColumn": "LIKE-1"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_03_mkt-green/teacher-kid.036.png",
+          "kind": "response",
+          "trait": "like",
+          "text": "Does not like, Likes a little, Likes a lot",
+          "scriptColumn": "LIKE-2"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_03_mkt-green/teacher-kid.037.png",
+          "kind": "question",
+          "trait": "charge",
+          "text": "How much is the teacher in charge?",
+          "scriptColumn": "CHARGE-1"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_03_mkt-green/teacher-kid.038.png",
+          "kind": "response",
+          "trait": "charge",
+          "text": "Not in charge, A little in charge, or Very much in charge?",
+          "scriptColumn": "CHARGE-2"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_03_mkt-green/teacher-kid.039.png",
+          "kind": "question",
+          "trait": "old",
+          "text": "How old is the teacher?",
+          "scriptColumn": "OLD-1"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_03_mkt-green/teacher-kid.040.png",
+          "kind": "response",
+          "trait": "old",
+          "text": "Not old, A little old, or Very old?",
+          "scriptColumn": "OLD-2"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_03_mkt-green/teacher-kid.041.png",
+          "kind": "question",
+          "trait": "strong",
+          "text": "How strong is the teacher?",
+          "scriptColumn": "STRONG-1"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_03_mkt-green/teacher-kid.042.png",
+          "kind": "response",
+          "trait": "strong",
+          "text": "Not strong, A little strong, or Very strong?",
+          "scriptColumn": "STRONG-2"
+        }
+      ],
+      "nSlides": 13,
+      "scriptKey": "kid-TEACHER"
+    },
+    {
+      "id": "teacher-kid_04_mkt-yellow",
+      "folder": "teacher-kid",
+      "subject": "teacher",
+      "target": "kid",
+      "sourceKey": "MKT",
+      "color": "yellow",
+      "variantKey": "MKT-yellow",
+      "label": "assets/dyads/teacher-kid_04_mkt-yellow/teacher-kid.043.png",
+      "slides": [
+        {
+          "src": "assets/dyads/teacher-kid_04_mkt-yellow/teacher-kid.044.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "Look! Here are some people.",
+          "scriptColumn": "INTRO-1"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_04_mkt-yellow/teacher-kid.045.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is a kid.",
+          "scriptColumn": "INTRO-2"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_04_mkt-yellow/teacher-kid.046.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This big one is this kid’s teacher.",
+          "scriptColumn": "INTRO-3"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_04_mkt-yellow/teacher-kid.047.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the teacher love the kid?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_04_mkt-yellow/teacher-kid.048.png",
+          "kind": "response",
+          "trait": "love",
+          "text": "Does not love, Loves a little, Loves a lot",
+          "scriptColumn": "LOVE-2"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_04_mkt-yellow/teacher-kid.049.png",
+          "kind": "question",
+          "trait": "like",
+          "text": "How much does the teacher like the kid?",
+          "scriptColumn": "LIKE-1"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_04_mkt-yellow/teacher-kid.050.png",
+          "kind": "response",
+          "trait": "like",
+          "text": "Does not like, Likes a little, Likes a lot",
+          "scriptColumn": "LIKE-2"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_04_mkt-yellow/teacher-kid.051.png",
+          "kind": "question",
+          "trait": "charge",
+          "text": "How much is the teacher in charge?",
+          "scriptColumn": "CHARGE-1"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_04_mkt-yellow/teacher-kid.052.png",
+          "kind": "response",
+          "trait": "charge",
+          "text": "Not in charge, A little in charge, or Very much in charge?",
+          "scriptColumn": "CHARGE-2"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_04_mkt-yellow/teacher-kid.053.png",
+          "kind": "question",
+          "trait": "old",
+          "text": "How old is the teacher?",
+          "scriptColumn": "OLD-1"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_04_mkt-yellow/teacher-kid.054.png",
+          "kind": "response",
+          "trait": "old",
+          "text": "Not old, A little old, or Very old?",
+          "scriptColumn": "OLD-2"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_04_mkt-yellow/teacher-kid.055.png",
+          "kind": "question",
+          "trait": "strong",
+          "text": "How strong is the teacher?",
+          "scriptColumn": "STRONG-1"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_04_mkt-yellow/teacher-kid.056.png",
+          "kind": "response",
+          "trait": "strong",
+          "text": "Not strong, A little strong, or Very strong?",
+          "scriptColumn": "STRONG-2"
+        }
+      ],
+      "nSlides": 13,
+      "scriptKey": "kid-TEACHER"
+    },
+    {
+      "id": "teacher-kid_05_dkt-gray",
+      "folder": "teacher-kid",
+      "subject": "teacher",
+      "target": "kid",
+      "sourceKey": "DKT",
+      "color": "gray",
+      "variantKey": "DKT-gray",
+      "label": "assets/dyads/teacher-kid_05_dkt-gray/teacher-kid.057.png",
+      "slides": [
+        {
+          "src": "assets/dyads/teacher-kid_05_dkt-gray/teacher-kid.058.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "Look! Here are some people.",
+          "scriptColumn": "INTRO-1"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_05_dkt-gray/teacher-kid.059.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is a kid.",
+          "scriptColumn": "INTRO-2"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_05_dkt-gray/teacher-kid.060.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This big one is this kid’s teacher.",
+          "scriptColumn": "INTRO-3"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_05_dkt-gray/teacher-kid.061.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the teacher love the kid?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_05_dkt-gray/teacher-kid.062.png",
+          "kind": "response",
+          "trait": "love",
+          "text": "Does not love, Loves a little, Loves a lot",
+          "scriptColumn": "LOVE-2"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_05_dkt-gray/teacher-kid.063.png",
+          "kind": "question",
+          "trait": "like",
+          "text": "How much does the teacher like the kid?",
+          "scriptColumn": "LIKE-1"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_05_dkt-gray/teacher-kid.064.png",
+          "kind": "response",
+          "trait": "like",
+          "text": "Does not like, Likes a little, Likes a lot",
+          "scriptColumn": "LIKE-2"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_05_dkt-gray/teacher-kid.065.png",
+          "kind": "question",
+          "trait": "charge",
+          "text": "How much is the teacher in charge?",
+          "scriptColumn": "CHARGE-1"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_05_dkt-gray/teacher-kid.066.png",
+          "kind": "response",
+          "trait": "charge",
+          "text": "Not in charge, A little in charge, or Very much in charge?",
+          "scriptColumn": "CHARGE-2"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_05_dkt-gray/teacher-kid.067.png",
+          "kind": "question",
+          "trait": "old",
+          "text": "How old is the teacher?",
+          "scriptColumn": "OLD-1"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_05_dkt-gray/teacher-kid.068.png",
+          "kind": "response",
+          "trait": "old",
+          "text": "Not old, A little old, or Very old?",
+          "scriptColumn": "OLD-2"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_05_dkt-gray/teacher-kid.069.png",
+          "kind": "question",
+          "trait": "strong",
+          "text": "How strong is the teacher?",
+          "scriptColumn": "STRONG-1"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_05_dkt-gray/teacher-kid.070.png",
+          "kind": "response",
+          "trait": "strong",
+          "text": "Not strong, A little strong, or Very strong?",
+          "scriptColumn": "STRONG-2"
+        }
+      ],
+      "nSlides": 13,
+      "scriptKey": "kid-TEACHER"
+    },
+    {
+      "id": "teacher-kid_06_dkt-green",
+      "folder": "teacher-kid",
+      "subject": "teacher",
+      "target": "kid",
+      "sourceKey": "DKT",
+      "color": "green",
+      "variantKey": "DKT-green",
+      "label": "assets/dyads/teacher-kid_06_dkt-green/teacher-kid.071.png",
+      "slides": [
+        {
+          "src": "assets/dyads/teacher-kid_06_dkt-green/teacher-kid.072.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "Look! Here are some people.",
+          "scriptColumn": "INTRO-1"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_06_dkt-green/teacher-kid.073.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is a kid.",
+          "scriptColumn": "INTRO-2"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_06_dkt-green/teacher-kid.074.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This big one is this kid’s teacher.",
+          "scriptColumn": "INTRO-3"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_06_dkt-green/teacher-kid.075.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the teacher love the kid?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_06_dkt-green/teacher-kid.076.png",
+          "kind": "response",
+          "trait": "love",
+          "text": "Does not love, Loves a little, Loves a lot",
+          "scriptColumn": "LOVE-2"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_06_dkt-green/teacher-kid.077.png",
+          "kind": "question",
+          "trait": "like",
+          "text": "How much does the teacher like the kid?",
+          "scriptColumn": "LIKE-1"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_06_dkt-green/teacher-kid.078.png",
+          "kind": "response",
+          "trait": "like",
+          "text": "Does not like, Likes a little, Likes a lot",
+          "scriptColumn": "LIKE-2"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_06_dkt-green/teacher-kid.079.png",
+          "kind": "question",
+          "trait": "charge",
+          "text": "How much is the teacher in charge?",
+          "scriptColumn": "CHARGE-1"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_06_dkt-green/teacher-kid.080.png",
+          "kind": "response",
+          "trait": "charge",
+          "text": "Not in charge, A little in charge, or Very much in charge?",
+          "scriptColumn": "CHARGE-2"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_06_dkt-green/teacher-kid.081.png",
+          "kind": "question",
+          "trait": "old",
+          "text": "How old is the teacher?",
+          "scriptColumn": "OLD-1"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_06_dkt-green/teacher-kid.082.png",
+          "kind": "response",
+          "trait": "old",
+          "text": "Not old, A little old, or Very old?",
+          "scriptColumn": "OLD-2"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_06_dkt-green/teacher-kid.083.png",
+          "kind": "question",
+          "trait": "strong",
+          "text": "How strong is the teacher?",
+          "scriptColumn": "STRONG-1"
+        },
+        {
+          "src": "assets/dyads/teacher-kid_06_dkt-green/teacher-kid.084.png",
+          "kind": "response",
+          "trait": "strong",
+          "text": "Not strong, A little strong, or Very strong?",
+          "scriptColumn": "STRONG-2"
+        }
+      ],
+      "nSlides": 13,
+      "scriptKey": "kid-TEACHER"
+    },
+    {
+      "id": "friend-kid_01_tkf-orange",
+      "folder": "friend-kid",
+      "subject": "friend",
+      "target": "kid",
+      "sourceKey": "TKF",
+      "color": "orange",
+      "variantKey": "TKF-orange",
+      "label": "assets/dyads/friend-kid_01_tkf-orange/friend-kid.001.png",
+      "slides": [
+        {
+          "src": "assets/dyads/friend-kid_01_tkf-orange/friend-kid.002.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "Look! Here are some people.",
+          "scriptColumn": "INTRO-1"
+        },
+        {
+          "src": "assets/dyads/friend-kid_01_tkf-orange/friend-kid.003.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is a kid.",
+          "scriptColumn": "INTRO-2"
+        },
+        {
+          "src": "assets/dyads/friend-kid_01_tkf-orange/friend-kid.004.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is this kid’s friend.",
+          "scriptColumn": "INTRO-3"
+        },
+        {
+          "src": "assets/dyads/friend-kid_01_tkf-orange/friend-kid.005.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the friend love the kid?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/friend-kid_01_tkf-orange/friend-kid.006.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the friend love the kid?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/friend-kid_01_tkf-orange/friend-kid.007.png",
+          "kind": "response",
+          "trait": "love",
+          "text": "Does not love, Loves a little, Loves a lot",
+          "scriptColumn": "LOVE-2"
+        },
+        {
+          "src": "assets/dyads/friend-kid_01_tkf-orange/friend-kid.008.png",
+          "kind": "question",
+          "trait": "like",
+          "text": "How much does the friend like the kid?",
+          "scriptColumn": "LIKE-1"
+        },
+        {
+          "src": "assets/dyads/friend-kid_01_tkf-orange/friend-kid.009.png",
+          "kind": "response",
+          "trait": "like",
+          "text": "Does not like, Likes a little, Likes a lot",
+          "scriptColumn": "LIKE-2"
+        },
+        {
+          "src": "assets/dyads/friend-kid_01_tkf-orange/friend-kid.010.png",
+          "kind": "question",
+          "trait": "charge",
+          "text": "How much is the friend in charge?",
+          "scriptColumn": "CHARGE-1"
+        },
+        {
+          "src": "assets/dyads/friend-kid_01_tkf-orange/friend-kid.011.png",
+          "kind": "response",
+          "trait": "charge",
+          "text": "Not in charge, A little in charge, or Very much in charge?",
+          "scriptColumn": "CHARGE-2"
+        },
+        {
+          "src": "assets/dyads/friend-kid_01_tkf-orange/friend-kid.012.png",
+          "kind": "question",
+          "trait": "old",
+          "text": "How old is the friend?",
+          "scriptColumn": "OLD-1"
+        },
+        {
+          "src": "assets/dyads/friend-kid_01_tkf-orange/friend-kid.013.png",
+          "kind": "response",
+          "trait": "old",
+          "text": "Not old, A little old, or Very old?",
+          "scriptColumn": "OLD-2"
+        },
+        {
+          "src": "assets/dyads/friend-kid_01_tkf-orange/friend-kid.014.png",
+          "kind": "question",
+          "trait": "strong",
+          "text": "How strong is the friend?",
+          "scriptColumn": "STRONG-1"
+        },
+        {
+          "src": "assets/dyads/friend-kid_01_tkf-orange/friend-kid.015.png",
+          "kind": "response",
+          "trait": "strong",
+          "text": "Not strong, A little strong, or Very strong?",
+          "scriptColumn": "STRONG-2"
+        }
+      ],
+      "nSlides": 14,
+      "scriptKey": "kid-FRIEND"
+    },
+    {
+      "id": "friend-kid_02_tkf-red",
+      "folder": "friend-kid",
+      "subject": "friend",
+      "target": "kid",
+      "sourceKey": "TKF",
+      "color": "red",
+      "variantKey": "TKF-red",
+      "label": "assets/dyads/friend-kid_02_tkf-red/friend-kid.016.png",
+      "slides": [
+        {
+          "src": "assets/dyads/friend-kid_02_tkf-red/friend-kid.017.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "Look! Here are some people.",
+          "scriptColumn": "INTRO-1"
+        },
+        {
+          "src": "assets/dyads/friend-kid_02_tkf-red/friend-kid.018.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is a kid.",
+          "scriptColumn": "INTRO-2"
+        },
+        {
+          "src": "assets/dyads/friend-kid_02_tkf-red/friend-kid.019.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is this kid’s friend.",
+          "scriptColumn": "INTRO-3"
+        },
+        {
+          "src": "assets/dyads/friend-kid_02_tkf-red/friend-kid.020.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the friend love the kid?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/friend-kid_02_tkf-red/friend-kid.021.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the friend love the kid?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/friend-kid_02_tkf-red/friend-kid.022.png",
+          "kind": "response",
+          "trait": "love",
+          "text": "Does not love, Loves a little, Loves a lot",
+          "scriptColumn": "LOVE-2"
+        },
+        {
+          "src": "assets/dyads/friend-kid_02_tkf-red/friend-kid.023.png",
+          "kind": "question",
+          "trait": "like",
+          "text": "How much does the friend like the kid?",
+          "scriptColumn": "LIKE-1"
+        },
+        {
+          "src": "assets/dyads/friend-kid_02_tkf-red/friend-kid.024.png",
+          "kind": "response",
+          "trait": "like",
+          "text": "Does not like, Likes a little, Likes a lot",
+          "scriptColumn": "LIKE-2"
+        },
+        {
+          "src": "assets/dyads/friend-kid_02_tkf-red/friend-kid.025.png",
+          "kind": "question",
+          "trait": "charge",
+          "text": "How much is the friend in charge?",
+          "scriptColumn": "CHARGE-1"
+        },
+        {
+          "src": "assets/dyads/friend-kid_02_tkf-red/friend-kid.026.png",
+          "kind": "response",
+          "trait": "charge",
+          "text": "Not in charge, A little in charge, or Very much in charge?",
+          "scriptColumn": "CHARGE-2"
+        },
+        {
+          "src": "assets/dyads/friend-kid_02_tkf-red/friend-kid.027.png",
+          "kind": "question",
+          "trait": "old",
+          "text": "How old is the friend?",
+          "scriptColumn": "OLD-1"
+        },
+        {
+          "src": "assets/dyads/friend-kid_02_tkf-red/friend-kid.028.png",
+          "kind": "response",
+          "trait": "old",
+          "text": "Not old, A little old, or Very old?",
+          "scriptColumn": "OLD-2"
+        },
+        {
+          "src": "assets/dyads/friend-kid_02_tkf-red/friend-kid.029.png",
+          "kind": "question",
+          "trait": "strong",
+          "text": "How strong is the friend?",
+          "scriptColumn": "STRONG-1"
+        },
+        {
+          "src": "assets/dyads/friend-kid_02_tkf-red/friend-kid.030.png",
+          "kind": "response",
+          "trait": "strong",
+          "text": "Not strong, A little strong, or Very strong?",
+          "scriptColumn": "STRONG-2"
+        }
+      ],
+      "nSlides": 14,
+      "scriptKey": "kid-FRIEND"
+    },
+    {
+      "id": "friend-kid_03_skf-green",
+      "folder": "friend-kid",
+      "subject": "friend",
+      "target": "kid",
+      "sourceKey": "SKF",
+      "color": "green",
+      "variantKey": "SKF-green",
+      "label": "assets/dyads/friend-kid_03_skf-green/friend-kid.031.png",
+      "slides": [
+        {
+          "src": "assets/dyads/friend-kid_03_skf-green/friend-kid.032.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "Look! Here are some people.",
+          "scriptColumn": "INTRO-1"
+        },
+        {
+          "src": "assets/dyads/friend-kid_03_skf-green/friend-kid.033.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is a kid.",
+          "scriptColumn": "INTRO-2"
+        },
+        {
+          "src": "assets/dyads/friend-kid_03_skf-green/friend-kid.034.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is this kid’s friend.",
+          "scriptColumn": "INTRO-3"
+        },
+        {
+          "src": "assets/dyads/friend-kid_03_skf-green/friend-kid.035.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the friend love the kid?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/friend-kid_03_skf-green/friend-kid.036.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the friend love the kid?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/friend-kid_03_skf-green/friend-kid.037.png",
+          "kind": "response",
+          "trait": "love",
+          "text": "Does not love, Loves a little, Loves a lot",
+          "scriptColumn": "LOVE-2"
+        },
+        {
+          "src": "assets/dyads/friend-kid_03_skf-green/friend-kid.038.png",
+          "kind": "question",
+          "trait": "like",
+          "text": "How much does the friend like the kid?",
+          "scriptColumn": "LIKE-1"
+        },
+        {
+          "src": "assets/dyads/friend-kid_03_skf-green/friend-kid.039.png",
+          "kind": "response",
+          "trait": "like",
+          "text": "Does not like, Likes a little, Likes a lot",
+          "scriptColumn": "LIKE-2"
+        },
+        {
+          "src": "assets/dyads/friend-kid_03_skf-green/friend-kid.040.png",
+          "kind": "question",
+          "trait": "charge",
+          "text": "How much is the friend in charge?",
+          "scriptColumn": "CHARGE-1"
+        },
+        {
+          "src": "assets/dyads/friend-kid_03_skf-green/friend-kid.041.png",
+          "kind": "response",
+          "trait": "charge",
+          "text": "Not in charge, A little in charge, or Very much in charge?",
+          "scriptColumn": "CHARGE-2"
+        },
+        {
+          "src": "assets/dyads/friend-kid_03_skf-green/friend-kid.042.png",
+          "kind": "question",
+          "trait": "old",
+          "text": "How old is the friend?",
+          "scriptColumn": "OLD-1"
+        },
+        {
+          "src": "assets/dyads/friend-kid_03_skf-green/friend-kid.043.png",
+          "kind": "response",
+          "trait": "old",
+          "text": "Not old, A little old, or Very old?",
+          "scriptColumn": "OLD-2"
+        },
+        {
+          "src": "assets/dyads/friend-kid_03_skf-green/friend-kid.044.png",
+          "kind": "question",
+          "trait": "strong",
+          "text": "How strong is the friend?",
+          "scriptColumn": "STRONG-1"
+        },
+        {
+          "src": "assets/dyads/friend-kid_03_skf-green/friend-kid.045.png",
+          "kind": "response",
+          "trait": "strong",
+          "text": "Not strong, A little strong, or Very strong?",
+          "scriptColumn": "STRONG-2"
+        }
+      ],
+      "nSlides": 14,
+      "scriptKey": "kid-FRIEND"
+    },
+    {
+      "id": "friend-kid_04_skf-yellow",
+      "folder": "friend-kid",
+      "subject": "friend",
+      "target": "kid",
+      "sourceKey": "SKF",
+      "color": "yellow",
+      "variantKey": "SKF-yellow",
+      "label": "assets/dyads/friend-kid_04_skf-yellow/friend-kid.046.png",
+      "slides": [
+        {
+          "src": "assets/dyads/friend-kid_04_skf-yellow/friend-kid.047.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "Look! Here are some people.",
+          "scriptColumn": "INTRO-1"
+        },
+        {
+          "src": "assets/dyads/friend-kid_04_skf-yellow/friend-kid.048.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is a kid.",
+          "scriptColumn": "INTRO-2"
+        },
+        {
+          "src": "assets/dyads/friend-kid_04_skf-yellow/friend-kid.049.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is this kid’s friend.",
+          "scriptColumn": "INTRO-3"
+        },
+        {
+          "src": "assets/dyads/friend-kid_04_skf-yellow/friend-kid.050.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the friend love the kid?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/friend-kid_04_skf-yellow/friend-kid.051.png",
+          "kind": "response",
+          "trait": "love",
+          "text": "Does not love, Loves a little, Loves a lot",
+          "scriptColumn": "LOVE-2"
+        },
+        {
+          "src": "assets/dyads/friend-kid_04_skf-yellow/friend-kid.052.png",
+          "kind": "question",
+          "trait": "like",
+          "text": "How much does the friend like the kid?",
+          "scriptColumn": "LIKE-1"
+        },
+        {
+          "src": "assets/dyads/friend-kid_04_skf-yellow/friend-kid.053.png",
+          "kind": "response",
+          "trait": "like",
+          "text": "Does not like, Likes a little, Likes a lot",
+          "scriptColumn": "LIKE-2"
+        },
+        {
+          "src": "assets/dyads/friend-kid_04_skf-yellow/friend-kid.054.png",
+          "kind": "question",
+          "trait": "charge",
+          "text": "How much is the friend in charge?",
+          "scriptColumn": "CHARGE-1"
+        },
+        {
+          "src": "assets/dyads/friend-kid_04_skf-yellow/friend-kid.055.png",
+          "kind": "response",
+          "trait": "charge",
+          "text": "Not in charge, A little in charge, or Very much in charge?",
+          "scriptColumn": "CHARGE-2"
+        },
+        {
+          "src": "assets/dyads/friend-kid_04_skf-yellow/friend-kid.056.png",
+          "kind": "question",
+          "trait": "old",
+          "text": "How old is the friend?",
+          "scriptColumn": "OLD-1"
+        },
+        {
+          "src": "assets/dyads/friend-kid_04_skf-yellow/friend-kid.057.png",
+          "kind": "response",
+          "trait": "old",
+          "text": "Not old, A little old, or Very old?",
+          "scriptColumn": "OLD-2"
+        },
+        {
+          "src": "assets/dyads/friend-kid_04_skf-yellow/friend-kid.058.png",
+          "kind": "question",
+          "trait": "strong",
+          "text": "How strong is the friend?",
+          "scriptColumn": "STRONG-1"
+        },
+        {
+          "src": "assets/dyads/friend-kid_04_skf-yellow/friend-kid.059.png",
+          "kind": "response",
+          "trait": "strong",
+          "text": "Not strong, A little strong, or Very strong?",
+          "scriptColumn": "STRONG-2"
+        }
+      ],
+      "nSlides": 13,
+      "scriptKey": "kid-FRIEND"
+    },
+    {
+      "id": "friend-kid_05_bkf-gray",
+      "folder": "friend-kid",
+      "subject": "friend",
+      "target": "kid",
+      "sourceKey": "BKF",
+      "color": "gray",
+      "variantKey": "BKF-gray",
+      "label": "assets/dyads/friend-kid_05_bkf-gray/friend-kid.060.png",
+      "slides": [
+        {
+          "src": "assets/dyads/friend-kid_05_bkf-gray/friend-kid.061.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "Look! Here are some people.",
+          "scriptColumn": "INTRO-1"
+        },
+        {
+          "src": "assets/dyads/friend-kid_05_bkf-gray/friend-kid.062.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is a kid.",
+          "scriptColumn": "INTRO-2"
+        },
+        {
+          "src": "assets/dyads/friend-kid_05_bkf-gray/friend-kid.063.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is this kid’s friend.",
+          "scriptColumn": "INTRO-3"
+        },
+        {
+          "src": "assets/dyads/friend-kid_05_bkf-gray/friend-kid.064.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the friend love the kid?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/friend-kid_05_bkf-gray/friend-kid.065.png",
+          "kind": "response",
+          "trait": "love",
+          "text": "Does not love, Loves a little, Loves a lot",
+          "scriptColumn": "LOVE-2"
+        },
+        {
+          "src": "assets/dyads/friend-kid_05_bkf-gray/friend-kid.066.png",
+          "kind": "question",
+          "trait": "like",
+          "text": "How much does the friend like the kid?",
+          "scriptColumn": "LIKE-1"
+        },
+        {
+          "src": "assets/dyads/friend-kid_05_bkf-gray/friend-kid.067.png",
+          "kind": "response",
+          "trait": "like",
+          "text": "Does not like, Likes a little, Likes a lot",
+          "scriptColumn": "LIKE-2"
+        },
+        {
+          "src": "assets/dyads/friend-kid_05_bkf-gray/friend-kid.068.png",
+          "kind": "question",
+          "trait": "charge",
+          "text": "How much is the friend in charge?",
+          "scriptColumn": "CHARGE-1"
+        },
+        {
+          "src": "assets/dyads/friend-kid_05_bkf-gray/friend-kid.069.png",
+          "kind": "response",
+          "trait": "charge",
+          "text": "Not in charge, A little in charge, or Very much in charge?",
+          "scriptColumn": "CHARGE-2"
+        },
+        {
+          "src": "assets/dyads/friend-kid_05_bkf-gray/friend-kid.070.png",
+          "kind": "question",
+          "trait": "old",
+          "text": "How old is the friend?",
+          "scriptColumn": "OLD-1"
+        },
+        {
+          "src": "assets/dyads/friend-kid_05_bkf-gray/friend-kid.071.png",
+          "kind": "response",
+          "trait": "old",
+          "text": "Not old, A little old, or Very old?",
+          "scriptColumn": "OLD-2"
+        },
+        {
+          "src": "assets/dyads/friend-kid_05_bkf-gray/friend-kid.072.png",
+          "kind": "question",
+          "trait": "strong",
+          "text": "How strong is the friend?",
+          "scriptColumn": "STRONG-1"
+        },
+        {
+          "src": "assets/dyads/friend-kid_05_bkf-gray/friend-kid.073.png",
+          "kind": "response",
+          "trait": "strong",
+          "text": "Not strong, A little strong, or Very strong?",
+          "scriptColumn": "STRONG-2"
+        }
+      ],
+      "nSlides": 13,
+      "scriptKey": "kid-FRIEND"
+    },
+    {
+      "id": "friend-kid_06_bkf-green",
+      "folder": "friend-kid",
+      "subject": "friend",
+      "target": "kid",
+      "sourceKey": "BKF",
+      "color": "green",
+      "variantKey": "BKF-green",
+      "label": "assets/dyads/friend-kid_06_bkf-green/friend-kid.074.png",
+      "slides": [
+        {
+          "src": "assets/dyads/friend-kid_06_bkf-green/friend-kid.075.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "Look! Here are some people.",
+          "scriptColumn": "INTRO-1"
+        },
+        {
+          "src": "assets/dyads/friend-kid_06_bkf-green/friend-kid.076.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is a kid.",
+          "scriptColumn": "INTRO-2"
+        },
+        {
+          "src": "assets/dyads/friend-kid_06_bkf-green/friend-kid.077.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is this kid’s friend.",
+          "scriptColumn": "INTRO-3"
+        },
+        {
+          "src": "assets/dyads/friend-kid_06_bkf-green/friend-kid.078.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the friend love the kid?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/friend-kid_06_bkf-green/friend-kid.079.png",
+          "kind": "response",
+          "trait": "love",
+          "text": "Does not love, Loves a little, Loves a lot",
+          "scriptColumn": "LOVE-2"
+        },
+        {
+          "src": "assets/dyads/friend-kid_06_bkf-green/friend-kid.080.png",
+          "kind": "question",
+          "trait": "like",
+          "text": "How much does the friend like the kid?",
+          "scriptColumn": "LIKE-1"
+        },
+        {
+          "src": "assets/dyads/friend-kid_06_bkf-green/friend-kid.081.png",
+          "kind": "response",
+          "trait": "like",
+          "text": "Does not like, Likes a little, Likes a lot",
+          "scriptColumn": "LIKE-2"
+        },
+        {
+          "src": "assets/dyads/friend-kid_06_bkf-green/friend-kid.082.png",
+          "kind": "question",
+          "trait": "charge",
+          "text": "How much is the friend in charge?",
+          "scriptColumn": "CHARGE-1"
+        },
+        {
+          "src": "assets/dyads/friend-kid_06_bkf-green/friend-kid.083.png",
+          "kind": "response",
+          "trait": "charge",
+          "text": "Not in charge, A little in charge, or Very much in charge?",
+          "scriptColumn": "CHARGE-2"
+        },
+        {
+          "src": "assets/dyads/friend-kid_06_bkf-green/friend-kid.084.png",
+          "kind": "question",
+          "trait": "old",
+          "text": "How old is the friend?",
+          "scriptColumn": "OLD-1"
+        },
+        {
+          "src": "assets/dyads/friend-kid_06_bkf-green/friend-kid.085.png",
+          "kind": "response",
+          "trait": "old",
+          "text": "Not old, A little old, or Very old?",
+          "scriptColumn": "OLD-2"
+        },
+        {
+          "src": "assets/dyads/friend-kid_06_bkf-green/friend-kid.086.png",
+          "kind": "question",
+          "trait": "strong",
+          "text": "How strong is the friend?",
+          "scriptColumn": "STRONG-1"
+        },
+        {
+          "src": "assets/dyads/friend-kid_06_bkf-green/friend-kid.087.png",
+          "kind": "response",
+          "trait": "strong",
+          "text": "Not strong, A little strong, or Very strong?",
+          "scriptColumn": "STRONG-2"
+        }
+      ],
+      "nSlides": 13,
+      "scriptKey": "kid-FRIEND"
+    },
+    {
+      "id": "friend-kid_07_bfkf-blue",
+      "folder": "friend-kid",
+      "subject": "friend",
+      "target": "kid",
+      "sourceKey": "BFKF",
+      "color": "blue",
+      "variantKey": "BFKF-blue",
+      "label": "assets/dyads/friend-kid_07_bfkf-blue/friend-kid.088.png",
+      "slides": [
+        {
+          "src": "assets/dyads/friend-kid_07_bfkf-blue/friend-kid.089.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "Look! Here are some people.",
+          "scriptColumn": "INTRO-1"
+        },
+        {
+          "src": "assets/dyads/friend-kid_07_bfkf-blue/friend-kid.090.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is a kid.",
+          "scriptColumn": "INTRO-2"
+        },
+        {
+          "src": "assets/dyads/friend-kid_07_bfkf-blue/friend-kid.091.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is this kid’s friend.",
+          "scriptColumn": "INTRO-3"
+        },
+        {
+          "src": "assets/dyads/friend-kid_07_bfkf-blue/friend-kid.092.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the friend love the kid?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/friend-kid_07_bfkf-blue/friend-kid.093.png",
+          "kind": "response",
+          "trait": "love",
+          "text": "Does not love, Loves a little, Loves a lot",
+          "scriptColumn": "LOVE-2"
+        },
+        {
+          "src": "assets/dyads/friend-kid_07_bfkf-blue/friend-kid.094.png",
+          "kind": "question",
+          "trait": "like",
+          "text": "How much does the friend like the kid?",
+          "scriptColumn": "LIKE-1"
+        },
+        {
+          "src": "assets/dyads/friend-kid_07_bfkf-blue/friend-kid.095.png",
+          "kind": "response",
+          "trait": "like",
+          "text": "Does not like, Likes a little, Likes a lot",
+          "scriptColumn": "LIKE-2"
+        },
+        {
+          "src": "assets/dyads/friend-kid_07_bfkf-blue/friend-kid.096.png",
+          "kind": "question",
+          "trait": "charge",
+          "text": "How much is the friend in charge?",
+          "scriptColumn": "CHARGE-1"
+        },
+        {
+          "src": "assets/dyads/friend-kid_07_bfkf-blue/friend-kid.097.png",
+          "kind": "response",
+          "trait": "charge",
+          "text": "Not in charge, A little in charge, or Very much in charge?",
+          "scriptColumn": "CHARGE-2"
+        },
+        {
+          "src": "assets/dyads/friend-kid_07_bfkf-blue/friend-kid.098.png",
+          "kind": "question",
+          "trait": "old",
+          "text": "How old is the friend?",
+          "scriptColumn": "OLD-1"
+        },
+        {
+          "src": "assets/dyads/friend-kid_07_bfkf-blue/friend-kid.099.png",
+          "kind": "response",
+          "trait": "old",
+          "text": "Not old, A little old, or Very old?",
+          "scriptColumn": "OLD-2"
+        },
+        {
+          "src": "assets/dyads/friend-kid_07_bfkf-blue/friend-kid.100.png",
+          "kind": "question",
+          "trait": "strong",
+          "text": "How strong is the friend?",
+          "scriptColumn": "STRONG-1"
+        },
+        {
+          "src": "assets/dyads/friend-kid_07_bfkf-blue/friend-kid.101.png",
+          "kind": "response",
+          "trait": "strong",
+          "text": "Not strong, A little strong, or Very strong?",
+          "scriptColumn": "STRONG-2"
+        }
+      ],
+      "nSlides": 13,
+      "scriptKey": "kid-FRIEND"
+    },
+    {
+      "id": "friend-kid_08_bfkf-pink",
+      "folder": "friend-kid",
+      "subject": "friend",
+      "target": "kid",
+      "sourceKey": "BFKF",
+      "color": "pink",
+      "variantKey": "BFKF-pink",
+      "label": "assets/dyads/friend-kid_08_bfkf-pink/friend-kid.102.png",
+      "slides": [
+        {
+          "src": "assets/dyads/friend-kid_08_bfkf-pink/friend-kid.103.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "Look! Here are some people.",
+          "scriptColumn": "INTRO-1"
+        },
+        {
+          "src": "assets/dyads/friend-kid_08_bfkf-pink/friend-kid.104.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is a kid.",
+          "scriptColumn": "INTRO-2"
+        },
+        {
+          "src": "assets/dyads/friend-kid_08_bfkf-pink/friend-kid.105.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is this kid’s friend.",
+          "scriptColumn": "INTRO-3"
+        },
+        {
+          "src": "assets/dyads/friend-kid_08_bfkf-pink/friend-kid.106.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the friend love the kid?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/friend-kid_08_bfkf-pink/friend-kid.107.png",
+          "kind": "response",
+          "trait": "love",
+          "text": "Does not love, Loves a little, Loves a lot",
+          "scriptColumn": "LOVE-2"
+        },
+        {
+          "src": "assets/dyads/friend-kid_08_bfkf-pink/friend-kid.108.png",
+          "kind": "question",
+          "trait": "like",
+          "text": "How much does the friend like the kid?",
+          "scriptColumn": "LIKE-1"
+        },
+        {
+          "src": "assets/dyads/friend-kid_08_bfkf-pink/friend-kid.109.png",
+          "kind": "response",
+          "trait": "like",
+          "text": "Does not like, Likes a little, Likes a lot",
+          "scriptColumn": "LIKE-2"
+        },
+        {
+          "src": "assets/dyads/friend-kid_08_bfkf-pink/friend-kid.110.png",
+          "kind": "question",
+          "trait": "charge",
+          "text": "How much is the friend in charge?",
+          "scriptColumn": "CHARGE-1"
+        },
+        {
+          "src": "assets/dyads/friend-kid_08_bfkf-pink/friend-kid.111.png",
+          "kind": "response",
+          "trait": "charge",
+          "text": "Not in charge, A little in charge, or Very much in charge?",
+          "scriptColumn": "CHARGE-2"
+        },
+        {
+          "src": "assets/dyads/friend-kid_08_bfkf-pink/friend-kid.112.png",
+          "kind": "question",
+          "trait": "old",
+          "text": "How old is the friend?",
+          "scriptColumn": "OLD-1"
+        },
+        {
+          "src": "assets/dyads/friend-kid_08_bfkf-pink/friend-kid.113.png",
+          "kind": "response",
+          "trait": "old",
+          "text": "Not old, A little old, or Very old?",
+          "scriptColumn": "OLD-2"
+        },
+        {
+          "src": "assets/dyads/friend-kid_08_bfkf-pink/friend-kid.114.png",
+          "kind": "question",
+          "trait": "strong",
+          "text": "How strong is the friend?",
+          "scriptColumn": "STRONG-1"
+        },
+        {
+          "src": "assets/dyads/friend-kid_08_bfkf-pink/friend-kid.115.png",
+          "kind": "response",
+          "trait": "strong",
+          "text": "Not strong, A little strong, or Very strong?",
+          "scriptColumn": "STRONG-2"
+        }
+      ],
+      "nSlides": 13,
+      "scriptKey": "kid-FRIEND"
+    },
+    {
+      "id": "dad-mom_01_dmk-purple",
+      "folder": "dad-mom",
+      "subject": "mom",
+      "target": "dad",
+      "sourceKey": "DMK",
+      "color": "purple",
+      "variantKey": "DMK-purple",
+      "label": "assets/dyads/dad-mom_01_dmk-purple/dad-mom.001.png",
+      "slides": [
+        {
+          "src": "assets/dyads/dad-mom_01_dmk-purple/dad-mom.002.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "Look! Here are some people.",
+          "scriptColumn": "INTRO-1"
+        },
+        {
+          "src": "assets/dyads/dad-mom_01_dmk-purple/dad-mom.003.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This big one is a mom.",
+          "scriptColumn": "INTRO-2"
+        },
+        {
+          "src": "assets/dyads/dad-mom_01_dmk-purple/dad-mom.004.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This big one is a dad.",
+          "scriptColumn": "INTRO-3"
+        },
+        {
+          "src": "assets/dyads/dad-mom_01_dmk-purple/dad-mom.005.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the mom love the dad?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/dad-mom_01_dmk-purple/dad-mom.006.png",
+          "kind": "response",
+          "trait": "love",
+          "text": "Does not love, Loves a little, Loves a lot",
+          "scriptColumn": "LOVE-2"
+        },
+        {
+          "src": "assets/dyads/dad-mom_01_dmk-purple/dad-mom.007.png",
+          "kind": "question",
+          "trait": "like",
+          "text": "How much does the mom like the dad?",
+          "scriptColumn": "LIKE-1"
+        },
+        {
+          "src": "assets/dyads/dad-mom_01_dmk-purple/dad-mom.008.png",
+          "kind": "response",
+          "trait": "like",
+          "text": "Does not like, Likes a little, Likes a lot",
+          "scriptColumn": "LIKE-2"
+        },
+        {
+          "src": "assets/dyads/dad-mom_01_dmk-purple/dad-mom.009.png",
+          "kind": "question",
+          "trait": "charge",
+          "text": "How much is the mom in charge?",
+          "scriptColumn": "CHARGE-1"
+        },
+        {
+          "src": "assets/dyads/dad-mom_01_dmk-purple/dad-mom.010.png",
+          "kind": "response",
+          "trait": "charge",
+          "text": "Not in charge, A little in charge, or Very much in charge?",
+          "scriptColumn": "CHARGE-2"
+        },
+        {
+          "src": "assets/dyads/dad-mom_01_dmk-purple/dad-mom.011.png",
+          "kind": "question",
+          "trait": "old",
+          "text": "How old is the mom?",
+          "scriptColumn": "OLD-1"
+        },
+        {
+          "src": "assets/dyads/dad-mom_01_dmk-purple/dad-mom.012.png",
+          "kind": "response",
+          "trait": "old",
+          "text": "Not old, A little old, or Very old?",
+          "scriptColumn": "OLD-2"
+        },
+        {
+          "src": "assets/dyads/dad-mom_01_dmk-purple/dad-mom.013.png",
+          "kind": "question",
+          "trait": "strong",
+          "text": "How strong is the mom?",
+          "scriptColumn": "STRONG-1"
+        },
+        {
+          "src": "assets/dyads/dad-mom_01_dmk-purple/dad-mom.014.png",
+          "kind": "response",
+          "trait": "strong",
+          "text": "Not strong, A little strong, or Very strong?",
+          "scriptColumn": "STRONG-2"
+        }
+      ],
+      "nSlides": 13,
+      "scriptKey": "mom-DAD"
+    },
+    {
+      "id": "dad-mom_02_dmk-blue",
+      "folder": "dad-mom",
+      "subject": "mom",
+      "target": "dad",
+      "sourceKey": "DMK",
+      "color": "blue",
+      "variantKey": "DMK-blue",
+      "label": "assets/dyads/dad-mom_02_dmk-blue/dad-mom.015.png",
+      "slides": [
+        {
+          "src": "assets/dyads/dad-mom_02_dmk-blue/dad-mom.016.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "Look! Here are some people.",
+          "scriptColumn": "INTRO-1"
+        },
+        {
+          "src": "assets/dyads/dad-mom_02_dmk-blue/dad-mom.017.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This big one is a mom.",
+          "scriptColumn": "INTRO-2"
+        },
+        {
+          "src": "assets/dyads/dad-mom_02_dmk-blue/dad-mom.018.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This big one is a dad.",
+          "scriptColumn": "INTRO-3"
+        },
+        {
+          "src": "assets/dyads/dad-mom_02_dmk-blue/dad-mom.019.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the mom love the dad?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/dad-mom_02_dmk-blue/dad-mom.020.png",
+          "kind": "response",
+          "trait": "love",
+          "text": "Does not love, Loves a little, Loves a lot",
+          "scriptColumn": "LOVE-2"
+        },
+        {
+          "src": "assets/dyads/dad-mom_02_dmk-blue/dad-mom.021.png",
+          "kind": "question",
+          "trait": "like",
+          "text": "How much does the mom like the dad?",
+          "scriptColumn": "LIKE-1"
+        },
+        {
+          "src": "assets/dyads/dad-mom_02_dmk-blue/dad-mom.022.png",
+          "kind": "response",
+          "trait": "like",
+          "text": "Does not like, Likes a little, Likes a lot",
+          "scriptColumn": "LIKE-2"
+        },
+        {
+          "src": "assets/dyads/dad-mom_02_dmk-blue/dad-mom.023.png",
+          "kind": "question",
+          "trait": "charge",
+          "text": "How much is the mom in charge?",
+          "scriptColumn": "CHARGE-1"
+        },
+        {
+          "src": "assets/dyads/dad-mom_02_dmk-blue/dad-mom.024.png",
+          "kind": "response",
+          "trait": "charge",
+          "text": "Not in charge, A little in charge, or Very much in charge?",
+          "scriptColumn": "CHARGE-2"
+        },
+        {
+          "src": "assets/dyads/dad-mom_02_dmk-blue/dad-mom.025.png",
+          "kind": "question",
+          "trait": "old",
+          "text": "How old is the mom?",
+          "scriptColumn": "OLD-1"
+        },
+        {
+          "src": "assets/dyads/dad-mom_02_dmk-blue/dad-mom.026.png",
+          "kind": "response",
+          "trait": "old",
+          "text": "Not old, A little old, or Very old?",
+          "scriptColumn": "OLD-2"
+        },
+        {
+          "src": "assets/dyads/dad-mom_02_dmk-blue/dad-mom.027.png",
+          "kind": "question",
+          "trait": "strong",
+          "text": "How strong is the mom?",
+          "scriptColumn": "STRONG-1"
+        },
+        {
+          "src": "assets/dyads/dad-mom_02_dmk-blue/dad-mom.028.png",
+          "kind": "response",
+          "trait": "strong",
+          "text": "Not strong, A little strong, or Very strong?",
+          "scriptColumn": "STRONG-2"
+        }
+      ],
+      "nSlides": 13,
+      "scriptKey": "mom-DAD"
+    },
+    {
+      "id": "mom-dad_01_mdk-red",
+      "folder": "mom-dad",
+      "subject": "dad",
+      "target": "mom",
+      "sourceKey": "MDK",
+      "color": "red",
+      "variantKey": "MDK-red",
+      "label": "assets/dyads/mom-dad_01_mdk-red/mom-dad.001.png",
+      "slides": [
+        {
+          "src": "assets/dyads/mom-dad_01_mdk-red/mom-dad.002.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "Look! Here are some people.",
+          "scriptColumn": "INTRO-1"
+        },
+        {
+          "src": "assets/dyads/mom-dad_01_mdk-red/mom-dad.003.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This big one is a dad.",
+          "scriptColumn": "INTRO-2"
+        },
+        {
+          "src": "assets/dyads/mom-dad_01_mdk-red/mom-dad.004.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This big one is a mom.",
+          "scriptColumn": "INTRO-3"
+        },
+        {
+          "src": "assets/dyads/mom-dad_01_mdk-red/mom-dad.005.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the dad love the mom?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/mom-dad_01_mdk-red/mom-dad.006.png",
+          "kind": "response",
+          "trait": "love",
+          "text": "Does not love, Loves a little, Loves a lot",
+          "scriptColumn": "LOVE-2"
+        },
+        {
+          "src": "assets/dyads/mom-dad_01_mdk-red/mom-dad.007.png",
+          "kind": "question",
+          "trait": "like",
+          "text": "How much does the dad like the mom?",
+          "scriptColumn": "LIKE-1"
+        },
+        {
+          "src": "assets/dyads/mom-dad_01_mdk-red/mom-dad.008.png",
+          "kind": "response",
+          "trait": "like",
+          "text": "Does not like, Likes a little, Likes a lot",
+          "scriptColumn": "LIKE-2"
+        },
+        {
+          "src": "assets/dyads/mom-dad_01_mdk-red/mom-dad.009.png",
+          "kind": "question",
+          "trait": "charge",
+          "text": "How much is the dad in charge?",
+          "scriptColumn": "CHARGE-1"
+        },
+        {
+          "src": "assets/dyads/mom-dad_01_mdk-red/mom-dad.010.png",
+          "kind": "response",
+          "trait": "charge",
+          "text": "Not in charge, A little in charge, or Very much in charge?",
+          "scriptColumn": "CHARGE-2"
+        },
+        {
+          "src": "assets/dyads/mom-dad_01_mdk-red/mom-dad.011.png",
+          "kind": "question",
+          "trait": "old",
+          "text": "How old is the dad?",
+          "scriptColumn": "OLD-1"
+        },
+        {
+          "src": "assets/dyads/mom-dad_01_mdk-red/mom-dad.012.png",
+          "kind": "response",
+          "trait": "old",
+          "text": "Not old, A little old, or Very old?",
+          "scriptColumn": "OLD-2"
+        },
+        {
+          "src": "assets/dyads/mom-dad_01_mdk-red/mom-dad.013.png",
+          "kind": "question",
+          "trait": "strong",
+          "text": "How strong is the dad?",
+          "scriptColumn": "STRONG-1"
+        },
+        {
+          "src": "assets/dyads/mom-dad_01_mdk-red/mom-dad.014.png",
+          "kind": "response",
+          "trait": "strong",
+          "text": "Not strong, A little strong, or Very strong?",
+          "scriptColumn": "STRONG-2"
+        }
+      ],
+      "nSlides": 13,
+      "scriptKey": "dad-MOM"
+    },
+    {
+      "id": "mom-dad_02_mdk-blue",
+      "folder": "mom-dad",
+      "subject": "dad",
+      "target": "mom",
+      "sourceKey": "MDK",
+      "color": "blue",
+      "variantKey": "MDK-blue",
+      "label": "assets/dyads/mom-dad_02_mdk-blue/mom-dad.015.png",
+      "slides": [
+        {
+          "src": "assets/dyads/mom-dad_02_mdk-blue/mom-dad.016.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "Look! Here are some people.",
+          "scriptColumn": "INTRO-1"
+        },
+        {
+          "src": "assets/dyads/mom-dad_02_mdk-blue/mom-dad.017.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This big one is a dad.",
+          "scriptColumn": "INTRO-2"
+        },
+        {
+          "src": "assets/dyads/mom-dad_02_mdk-blue/mom-dad.018.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This big one is a mom.",
+          "scriptColumn": "INTRO-3"
+        },
+        {
+          "src": "assets/dyads/mom-dad_02_mdk-blue/mom-dad.019.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the dad love the mom?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/mom-dad_02_mdk-blue/mom-dad.020.png",
+          "kind": "response",
+          "trait": "love",
+          "text": "Does not love, Loves a little, Loves a lot",
+          "scriptColumn": "LOVE-2"
+        },
+        {
+          "src": "assets/dyads/mom-dad_02_mdk-blue/mom-dad.021.png",
+          "kind": "question",
+          "trait": "like",
+          "text": "How much does the dad like the mom?",
+          "scriptColumn": "LIKE-1"
+        },
+        {
+          "src": "assets/dyads/mom-dad_02_mdk-blue/mom-dad.022.png",
+          "kind": "response",
+          "trait": "like",
+          "text": "Does not like, Likes a little, Likes a lot",
+          "scriptColumn": "LIKE-2"
+        },
+        {
+          "src": "assets/dyads/mom-dad_02_mdk-blue/mom-dad.023.png",
+          "kind": "question",
+          "trait": "charge",
+          "text": "How much is the dad in charge?",
+          "scriptColumn": "CHARGE-1"
+        },
+        {
+          "src": "assets/dyads/mom-dad_02_mdk-blue/mom-dad.024.png",
+          "kind": "response",
+          "trait": "charge",
+          "text": "Not in charge, A little in charge, or Very much in charge?",
+          "scriptColumn": "CHARGE-2"
+        },
+        {
+          "src": "assets/dyads/mom-dad_02_mdk-blue/mom-dad.025.png",
+          "kind": "question",
+          "trait": "old",
+          "text": "How old is the dad?",
+          "scriptColumn": "OLD-1"
+        },
+        {
+          "src": "assets/dyads/mom-dad_02_mdk-blue/mom-dad.026.png",
+          "kind": "response",
+          "trait": "old",
+          "text": "Not old, A little old, or Very old?",
+          "scriptColumn": "OLD-2"
+        },
+        {
+          "src": "assets/dyads/mom-dad_02_mdk-blue/mom-dad.027.png",
+          "kind": "question",
+          "trait": "strong",
+          "text": "How strong is the dad?",
+          "scriptColumn": "STRONG-1"
+        },
+        {
+          "src": "assets/dyads/mom-dad_02_mdk-blue/mom-dad.028.png",
+          "kind": "response",
+          "trait": "strong",
+          "text": "Not strong, A little strong, or Very strong?",
+          "scriptColumn": "STRONG-2"
+        }
+      ],
+      "nSlides": 13,
+      "scriptKey": "dad-MOM"
+    },
+    {
+      "id": "teacher-teacher_01_ttk-purple",
+      "folder": "teacher-teacher",
+      "subject": "teacher",
+      "target": "teacher",
+      "sourceKey": "TTK",
+      "color": "purple",
+      "variantKey": "TTK-purple",
+      "label": "assets/dyads/teacher-teacher_01_ttk-purple/teacher-teacher.001.png",
+      "slides": [
+        {
+          "src": "assets/dyads/teacher-teacher_01_ttk-purple/teacher-teacher.002.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "Look! Here are some people.",
+          "scriptColumn": "INTRO-1"
+        },
+        {
+          "src": "assets/dyads/teacher-teacher_01_ttk-purple/teacher-teacher.003.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This big one is a teacher.",
+          "scriptColumn": "INTRO-2"
+        },
+        {
+          "src": "assets/dyads/teacher-teacher_01_ttk-purple/teacher-teacher.004.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This big one is a teacher too.",
+          "scriptColumn": "INTRO-3"
+        },
+        {
+          "src": "assets/dyads/teacher-teacher_01_ttk-purple/teacher-teacher.005.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the teacher love the other teacher?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/teacher-teacher_01_ttk-purple/teacher-teacher.006.png",
+          "kind": "response",
+          "trait": "love",
+          "text": "Does not love, Loves a little, Loves a lot",
+          "scriptColumn": "LOVE-2"
+        },
+        {
+          "src": "assets/dyads/teacher-teacher_01_ttk-purple/teacher-teacher.007.png",
+          "kind": "question",
+          "trait": "like",
+          "text": "How much does the teacher like the other teacher?",
+          "scriptColumn": "LIKE-1"
+        },
+        {
+          "src": "assets/dyads/teacher-teacher_01_ttk-purple/teacher-teacher.008.png",
+          "kind": "response",
+          "trait": "like",
+          "text": "Does not like, Likes a little, Likes a lot",
+          "scriptColumn": "LIKE-2"
+        },
+        {
+          "src": "assets/dyads/teacher-teacher_01_ttk-purple/teacher-teacher.009.png",
+          "kind": "question",
+          "trait": "charge",
+          "text": "How much is the teacher in charge?",
+          "scriptColumn": "CHARGE-1"
+        },
+        {
+          "src": "assets/dyads/teacher-teacher_01_ttk-purple/teacher-teacher.010.png",
+          "kind": "response",
+          "trait": "charge",
+          "text": "Not in charge, A little in charge, or Very much in charge?",
+          "scriptColumn": "CHARGE-2"
+        },
+        {
+          "src": "assets/dyads/teacher-teacher_01_ttk-purple/teacher-teacher.011.png",
+          "kind": "question",
+          "trait": "old",
+          "text": "How old is the teacher?",
+          "scriptColumn": "OLD-1"
+        },
+        {
+          "src": "assets/dyads/teacher-teacher_01_ttk-purple/teacher-teacher.012.png",
+          "kind": "response",
+          "trait": "old",
+          "text": "Not old, A little old, or Very old?",
+          "scriptColumn": "OLD-2"
+        },
+        {
+          "src": "assets/dyads/teacher-teacher_01_ttk-purple/teacher-teacher.013.png",
+          "kind": "question",
+          "trait": "strong",
+          "text": "How strong is the teacher?",
+          "scriptColumn": "STRONG-1"
+        },
+        {
+          "src": "assets/dyads/teacher-teacher_01_ttk-purple/teacher-teacher.014.png",
+          "kind": "response",
+          "trait": "strong",
+          "text": "Not strong, A little strong, or Very strong?",
+          "scriptColumn": "STRONG-2"
+        }
+      ],
+      "nSlides": 13,
+      "scriptKey": "teacher-TEACHER"
+    },
+    {
+      "id": "teacher-teacher_02_ttk-blue",
+      "folder": "teacher-teacher",
+      "subject": "teacher",
+      "target": "teacher",
+      "sourceKey": "TTK",
+      "color": "blue",
+      "variantKey": "TTK-blue",
+      "label": "assets/dyads/teacher-teacher_02_ttk-blue/teacher-teacher.015.png",
+      "slides": [
+        {
+          "src": "assets/dyads/teacher-teacher_02_ttk-blue/teacher-teacher.016.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "Look! Here are some people.",
+          "scriptColumn": "INTRO-1"
+        },
+        {
+          "src": "assets/dyads/teacher-teacher_02_ttk-blue/teacher-teacher.017.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This big one is a teacher.",
+          "scriptColumn": "INTRO-2"
+        },
+        {
+          "src": "assets/dyads/teacher-teacher_02_ttk-blue/teacher-teacher.018.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This big one is a teacher too.",
+          "scriptColumn": "INTRO-3"
+        },
+        {
+          "src": "assets/dyads/teacher-teacher_02_ttk-blue/teacher-teacher.019.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the teacher love the other teacher?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/teacher-teacher_02_ttk-blue/teacher-teacher.020.png",
+          "kind": "response",
+          "trait": "love",
+          "text": "Does not love, Loves a little, Loves a lot",
+          "scriptColumn": "LOVE-2"
+        },
+        {
+          "src": "assets/dyads/teacher-teacher_02_ttk-blue/teacher-teacher.021.png",
+          "kind": "question",
+          "trait": "like",
+          "text": "How much does the teacher like the other teacher?",
+          "scriptColumn": "LIKE-1"
+        },
+        {
+          "src": "assets/dyads/teacher-teacher_02_ttk-blue/teacher-teacher.022.png",
+          "kind": "response",
+          "trait": "like",
+          "text": "Does not like, Likes a little, Likes a lot",
+          "scriptColumn": "LIKE-2"
+        },
+        {
+          "src": "assets/dyads/teacher-teacher_02_ttk-blue/teacher-teacher.023.png",
+          "kind": "question",
+          "trait": "charge",
+          "text": "How much is the teacher in charge?",
+          "scriptColumn": "CHARGE-1"
+        },
+        {
+          "src": "assets/dyads/teacher-teacher_02_ttk-blue/teacher-teacher.024.png",
+          "kind": "response",
+          "trait": "charge",
+          "text": "Not in charge, A little in charge, or Very much in charge?",
+          "scriptColumn": "CHARGE-2"
+        },
+        {
+          "src": "assets/dyads/teacher-teacher_02_ttk-blue/teacher-teacher.025.png",
+          "kind": "question",
+          "trait": "old",
+          "text": "How old is the teacher?",
+          "scriptColumn": "OLD-1"
+        },
+        {
+          "src": "assets/dyads/teacher-teacher_02_ttk-blue/teacher-teacher.026.png",
+          "kind": "response",
+          "trait": "old",
+          "text": "Not old, A little old, or Very old?",
+          "scriptColumn": "OLD-2"
+        },
+        {
+          "src": "assets/dyads/teacher-teacher_02_ttk-blue/teacher-teacher.027.png",
+          "kind": "question",
+          "trait": "strong",
+          "text": "How strong is the teacher?",
+          "scriptColumn": "STRONG-1"
+        },
+        {
+          "src": "assets/dyads/teacher-teacher_02_ttk-blue/teacher-teacher.028.png",
+          "kind": "response",
+          "trait": "strong",
+          "text": "Not strong, A little strong, or Very strong?",
+          "scriptColumn": "STRONG-2"
+        }
+      ],
+      "nSlides": 13,
+      "scriptKey": "teacher-TEACHER"
+    },
+    {
+      "id": "kid-dad_01_mdk-red",
+      "folder": "kid-dad",
+      "subject": "kid",
+      "target": "dad",
+      "sourceKey": "MDK",
+      "color": "red",
+      "variantKey": "MDK-red",
+      "label": "assets/dyads/kid-dad_01_mdk-red/kid-dad.001.png",
+      "slides": [
+        {
+          "src": "assets/dyads/kid-dad_01_mdk-red/kid-dad.002.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "Look! Here are some people.",
+          "scriptColumn": "INTRO-1"
+        },
+        {
+          "src": "assets/dyads/kid-dad_01_mdk-red/kid-dad.003.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is a kid.",
+          "scriptColumn": "INTRO-2"
+        },
+        {
+          "src": "assets/dyads/kid-dad_01_mdk-red/kid-dad.004.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This big one is this kid’s dad.",
+          "scriptColumn": "INTRO-3"
+        },
+        {
+          "src": "assets/dyads/kid-dad_01_mdk-red/kid-dad.005.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the kid love the dad?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/kid-dad_01_mdk-red/kid-dad.006.png",
+          "kind": "response",
+          "trait": "love",
+          "text": "Does not love, Loves a little, Loves a lot",
+          "scriptColumn": "LOVE-2"
+        },
+        {
+          "src": "assets/dyads/kid-dad_01_mdk-red/kid-dad.007.png",
+          "kind": "question",
+          "trait": "like",
+          "text": "How much does the kid like the dad?",
+          "scriptColumn": "LIKE-1"
+        },
+        {
+          "src": "assets/dyads/kid-dad_01_mdk-red/kid-dad.008.png",
+          "kind": "response",
+          "trait": "like",
+          "text": "Does not like, Likes a little, Likes a lot",
+          "scriptColumn": "LIKE-2"
+        },
+        {
+          "src": "assets/dyads/kid-dad_01_mdk-red/kid-dad.009.png",
+          "kind": "question",
+          "trait": "charge",
+          "text": "How much is the kid in charge?",
+          "scriptColumn": "CHARGE-1"
+        },
+        {
+          "src": "assets/dyads/kid-dad_01_mdk-red/kid-dad.010.png",
+          "kind": "response",
+          "trait": "charge",
+          "text": "Not in charge, A little in charge, or Very much in charge?",
+          "scriptColumn": "CHARGE-2"
+        },
+        {
+          "src": "assets/dyads/kid-dad_01_mdk-red/kid-dad.011.png",
+          "kind": "question",
+          "trait": "old",
+          "text": "How old is the kid?",
+          "scriptColumn": "OLD-1"
+        },
+        {
+          "src": "assets/dyads/kid-dad_01_mdk-red/kid-dad.012.png",
+          "kind": "response",
+          "trait": "old",
+          "text": "Not old, A little old, or Very old?",
+          "scriptColumn": "OLD-2"
+        },
+        {
+          "src": "assets/dyads/kid-dad_01_mdk-red/kid-dad.013.png",
+          "kind": "question",
+          "trait": "strong",
+          "text": "How strong is the kid?",
+          "scriptColumn": "STRONG-1"
+        },
+        {
+          "src": "assets/dyads/kid-dad_01_mdk-red/kid-dad.014.png",
+          "kind": "response",
+          "trait": "strong",
+          "text": "Not strong, A little strong, or Very strong?",
+          "scriptColumn": "STRONG-2"
+        }
+      ],
+      "nSlides": 13,
+      "scriptKey": "dad-KID"
+    },
+    {
+      "id": "kid-dad_02_mdk-blue",
+      "folder": "kid-dad",
+      "subject": "kid",
+      "target": "dad",
+      "sourceKey": "MDK",
+      "color": "blue",
+      "variantKey": "MDK-blue",
+      "label": "assets/dyads/kid-dad_02_mdk-blue/kid-dad.015.png",
+      "slides": [
+        {
+          "src": "assets/dyads/kid-dad_02_mdk-blue/kid-dad.016.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "Look! Here are some people.",
+          "scriptColumn": "INTRO-1"
+        },
+        {
+          "src": "assets/dyads/kid-dad_02_mdk-blue/kid-dad.017.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is a kid.",
+          "scriptColumn": "INTRO-2"
+        },
+        {
+          "src": "assets/dyads/kid-dad_02_mdk-blue/kid-dad.018.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This big one is this kid’s dad.",
+          "scriptColumn": "INTRO-3"
+        },
+        {
+          "src": "assets/dyads/kid-dad_02_mdk-blue/kid-dad.019.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the kid love the dad?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/kid-dad_02_mdk-blue/kid-dad.020.png",
+          "kind": "response",
+          "trait": "love",
+          "text": "Does not love, Loves a little, Loves a lot",
+          "scriptColumn": "LOVE-2"
+        },
+        {
+          "src": "assets/dyads/kid-dad_02_mdk-blue/kid-dad.021.png",
+          "kind": "question",
+          "trait": "like",
+          "text": "How much does the kid like the dad?",
+          "scriptColumn": "LIKE-1"
+        },
+        {
+          "src": "assets/dyads/kid-dad_02_mdk-blue/kid-dad.022.png",
+          "kind": "response",
+          "trait": "like",
+          "text": "Does not like, Likes a little, Likes a lot",
+          "scriptColumn": "LIKE-2"
+        },
+        {
+          "src": "assets/dyads/kid-dad_02_mdk-blue/kid-dad.023.png",
+          "kind": "question",
+          "trait": "charge",
+          "text": "How much is the kid in charge?",
+          "scriptColumn": "CHARGE-1"
+        },
+        {
+          "src": "assets/dyads/kid-dad_02_mdk-blue/kid-dad.024.png",
+          "kind": "response",
+          "trait": "charge",
+          "text": "Not in charge, A little in charge, or Very much in charge?",
+          "scriptColumn": "CHARGE-2"
+        },
+        {
+          "src": "assets/dyads/kid-dad_02_mdk-blue/kid-dad.025.png",
+          "kind": "question",
+          "trait": "old",
+          "text": "How old is the kid?",
+          "scriptColumn": "OLD-1"
+        },
+        {
+          "src": "assets/dyads/kid-dad_02_mdk-blue/kid-dad.026.png",
+          "kind": "response",
+          "trait": "old",
+          "text": "Not old, A little old, or Very old?",
+          "scriptColumn": "OLD-2"
+        },
+        {
+          "src": "assets/dyads/kid-dad_02_mdk-blue/kid-dad.027.png",
+          "kind": "question",
+          "trait": "strong",
+          "text": "How strong is the kid?",
+          "scriptColumn": "STRONG-1"
+        },
+        {
+          "src": "assets/dyads/kid-dad_02_mdk-blue/kid-dad.028.png",
+          "kind": "response",
+          "trait": "strong",
+          "text": "Not strong, A little strong, or Very strong?",
+          "scriptColumn": "STRONG-2"
+        }
+      ],
+      "nSlides": 13,
+      "scriptKey": "dad-KID"
+    },
+    {
+      "id": "kid-teacher_01_ttk-blue",
+      "folder": "kid-teacher",
+      "subject": "kid",
+      "target": "teacher",
+      "sourceKey": "TTK",
+      "color": "blue",
+      "variantKey": "TTK-blue",
+      "label": "assets/dyads/kid-teacher_01_ttk-blue/kid-teacher.001.png",
+      "slides": [
+        {
+          "src": "assets/dyads/kid-teacher_01_ttk-blue/kid-teacher.002.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "Look! Here are some people.",
+          "scriptColumn": "INTRO-1"
+        },
+        {
+          "src": "assets/dyads/kid-teacher_01_ttk-blue/kid-teacher.003.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is a kid.",
+          "scriptColumn": "INTRO-2"
+        },
+        {
+          "src": "assets/dyads/kid-teacher_01_ttk-blue/kid-teacher.004.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This big one is this kid’s teacher.",
+          "scriptColumn": "INTRO-3"
+        },
+        {
+          "src": "assets/dyads/kid-teacher_01_ttk-blue/kid-teacher.005.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the kid love the teacher?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/kid-teacher_01_ttk-blue/kid-teacher.006.png",
+          "kind": "response",
+          "trait": "love",
+          "text": "Does not love, Loves a little, Loves a lot",
+          "scriptColumn": "LOVE-2"
+        },
+        {
+          "src": "assets/dyads/kid-teacher_01_ttk-blue/kid-teacher.007.png",
+          "kind": "question",
+          "trait": "like",
+          "text": "How much does the kid like the teacher?",
+          "scriptColumn": "LIKE-1"
+        },
+        {
+          "src": "assets/dyads/kid-teacher_01_ttk-blue/kid-teacher.008.png",
+          "kind": "response",
+          "trait": "like",
+          "text": "Does not like, Likes a little, Likes a lot",
+          "scriptColumn": "LIKE-2"
+        },
+        {
+          "src": "assets/dyads/kid-teacher_01_ttk-blue/kid-teacher.009.png",
+          "kind": "question",
+          "trait": "charge",
+          "text": "How much is the kid in charge?",
+          "scriptColumn": "CHARGE-1"
+        },
+        {
+          "src": "assets/dyads/kid-teacher_01_ttk-blue/kid-teacher.010.png",
+          "kind": "response",
+          "trait": "charge",
+          "text": "Not in charge, A little in charge, or Very much in charge?",
+          "scriptColumn": "CHARGE-2"
+        },
+        {
+          "src": "assets/dyads/kid-teacher_01_ttk-blue/kid-teacher.011.png",
+          "kind": "question",
+          "trait": "old",
+          "text": "How old is the kid?",
+          "scriptColumn": "OLD-1"
+        },
+        {
+          "src": "assets/dyads/kid-teacher_01_ttk-blue/kid-teacher.012.png",
+          "kind": "response",
+          "trait": "old",
+          "text": "Not old, A little old, or Very old?",
+          "scriptColumn": "OLD-2"
+        },
+        {
+          "src": "assets/dyads/kid-teacher_01_ttk-blue/kid-teacher.013.png",
+          "kind": "question",
+          "trait": "strong",
+          "text": "How strong is the kid?",
+          "scriptColumn": "STRONG-1"
+        },
+        {
+          "src": "assets/dyads/kid-teacher_01_ttk-blue/kid-teacher.014.png",
+          "kind": "response",
+          "trait": "strong",
+          "text": "Not strong, A little strong, or Very strong?",
+          "scriptColumn": "STRONG-2"
+        }
+      ],
+      "nSlides": 13,
+      "scriptKey": "teacher-KID"
+    },
+    {
+      "id": "kid-teacher_02_ttk-purple",
+      "folder": "kid-teacher",
+      "subject": "kid",
+      "target": "teacher",
+      "sourceKey": "TTK",
+      "color": "purple",
+      "variantKey": "TTK-purple",
+      "label": "assets/dyads/kid-teacher_02_ttk-purple/kid-teacher.015.png",
+      "slides": [
+        {
+          "src": "assets/dyads/kid-teacher_02_ttk-purple/kid-teacher.016.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "Look! Here are some people.",
+          "scriptColumn": "INTRO-1"
+        },
+        {
+          "src": "assets/dyads/kid-teacher_02_ttk-purple/kid-teacher.017.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is a kid.",
+          "scriptColumn": "INTRO-2"
+        },
+        {
+          "src": "assets/dyads/kid-teacher_02_ttk-purple/kid-teacher.018.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This big one is this kid’s teacher.",
+          "scriptColumn": "INTRO-3"
+        },
+        {
+          "src": "assets/dyads/kid-teacher_02_ttk-purple/kid-teacher.019.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the kid love the teacher?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/kid-teacher_02_ttk-purple/kid-teacher.020.png",
+          "kind": "response",
+          "trait": "love",
+          "text": "Does not love, Loves a little, Loves a lot",
+          "scriptColumn": "LOVE-2"
+        },
+        {
+          "src": "assets/dyads/kid-teacher_02_ttk-purple/kid-teacher.021.png",
+          "kind": "question",
+          "trait": "like",
+          "text": "How much does the kid like the teacher?",
+          "scriptColumn": "LIKE-1"
+        },
+        {
+          "src": "assets/dyads/kid-teacher_02_ttk-purple/kid-teacher.022.png",
+          "kind": "response",
+          "trait": "like",
+          "text": "Does not like, Likes a little, Likes a lot",
+          "scriptColumn": "LIKE-2"
+        },
+        {
+          "src": "assets/dyads/kid-teacher_02_ttk-purple/kid-teacher.023.png",
+          "kind": "question",
+          "trait": "charge",
+          "text": "How much is the kid in charge?",
+          "scriptColumn": "CHARGE-1"
+        },
+        {
+          "src": "assets/dyads/kid-teacher_02_ttk-purple/kid-teacher.024.png",
+          "kind": "response",
+          "trait": "charge",
+          "text": "Not in charge, A little in charge, or Very much in charge?",
+          "scriptColumn": "CHARGE-2"
+        },
+        {
+          "src": "assets/dyads/kid-teacher_02_ttk-purple/kid-teacher.025.png",
+          "kind": "question",
+          "trait": "old",
+          "text": "How old is the kid?",
+          "scriptColumn": "OLD-1"
+        },
+        {
+          "src": "assets/dyads/kid-teacher_02_ttk-purple/kid-teacher.026.png",
+          "kind": "response",
+          "trait": "old",
+          "text": "Not old, A little old, or Very old?",
+          "scriptColumn": "OLD-2"
+        },
+        {
+          "src": "assets/dyads/kid-teacher_02_ttk-purple/kid-teacher.027.png",
+          "kind": "question",
+          "trait": "strong",
+          "text": "How strong is the kid?",
+          "scriptColumn": "STRONG-1"
+        },
+        {
+          "src": "assets/dyads/kid-teacher_02_ttk-purple/kid-teacher.028.png",
+          "kind": "response",
+          "trait": "strong",
+          "text": "Not strong, A little strong, or Very strong?",
+          "scriptColumn": "STRONG-2"
+        }
+      ],
+      "nSlides": 13,
+      "scriptKey": "teacher-KID"
+    },
+    {
+      "id": "kid-mom_01_dmk-purple",
+      "folder": "kid-mom",
+      "subject": "kid",
+      "target": "mom",
+      "sourceKey": "DMK",
+      "color": "purple",
+      "variantKey": "DMK-purple",
+      "label": "assets/dyads/kid-mom_01_dmk-purple/kid-mom.001.png",
+      "slides": [
+        {
+          "src": "assets/dyads/kid-mom_01_dmk-purple/kid-mom.002.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "Look! Here are some people.",
+          "scriptColumn": "INTRO-1"
+        },
+        {
+          "src": "assets/dyads/kid-mom_01_dmk-purple/kid-mom.003.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is a kid.",
+          "scriptColumn": "INTRO-2"
+        },
+        {
+          "src": "assets/dyads/kid-mom_01_dmk-purple/kid-mom.004.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This big one is this kid’s mom.",
+          "scriptColumn": "INTRO-3"
+        },
+        {
+          "src": "assets/dyads/kid-mom_01_dmk-purple/kid-mom.005.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the kid love the mom?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/kid-mom_01_dmk-purple/kid-mom.006.png",
+          "kind": "response",
+          "trait": "love",
+          "text": "Does not love, Loves a little, Loves a lot",
+          "scriptColumn": "LOVE-2"
+        },
+        {
+          "src": "assets/dyads/kid-mom_01_dmk-purple/kid-mom.007.png",
+          "kind": "question",
+          "trait": "like",
+          "text": "How much does the kid like the mom?",
+          "scriptColumn": "LIKE-1"
+        },
+        {
+          "src": "assets/dyads/kid-mom_01_dmk-purple/kid-mom.008.png",
+          "kind": "response",
+          "trait": "like",
+          "text": "Does not like, Likes a little, Likes a lot",
+          "scriptColumn": "LIKE-2"
+        },
+        {
+          "src": "assets/dyads/kid-mom_01_dmk-purple/kid-mom.009.png",
+          "kind": "question",
+          "trait": "charge",
+          "text": "How much is the kid in charge?",
+          "scriptColumn": "CHARGE-1"
+        },
+        {
+          "src": "assets/dyads/kid-mom_01_dmk-purple/kid-mom.010.png",
+          "kind": "response",
+          "trait": "charge",
+          "text": "Not in charge, A little in charge, or Very much in charge?",
+          "scriptColumn": "CHARGE-2"
+        },
+        {
+          "src": "assets/dyads/kid-mom_01_dmk-purple/kid-mom.011.png",
+          "kind": "question",
+          "trait": "old",
+          "text": "How old is the kid?",
+          "scriptColumn": "OLD-1"
+        },
+        {
+          "src": "assets/dyads/kid-mom_01_dmk-purple/kid-mom.012.png",
+          "kind": "response",
+          "trait": "old",
+          "text": "Not old, A little old, or Very old?",
+          "scriptColumn": "OLD-2"
+        },
+        {
+          "src": "assets/dyads/kid-mom_01_dmk-purple/kid-mom.013.png",
+          "kind": "question",
+          "trait": "strong",
+          "text": "How strong is the kid?",
+          "scriptColumn": "STRONG-1"
+        },
+        {
+          "src": "assets/dyads/kid-mom_01_dmk-purple/kid-mom.014.png",
+          "kind": "response",
+          "trait": "strong",
+          "text": "Not strong, A little strong, or Very strong?",
+          "scriptColumn": "STRONG-2"
+        }
+      ],
+      "nSlides": 13,
+      "scriptKey": "mom-KID"
+    },
+    {
+      "id": "kid-mom_02_dmk-blue",
+      "folder": "kid-mom",
+      "subject": "kid",
+      "target": "mom",
+      "sourceKey": "DMK",
+      "color": "blue",
+      "variantKey": "DMK-blue",
+      "label": "assets/dyads/kid-mom_02_dmk-blue/kid-mom.015.png",
+      "slides": [
+        {
+          "src": "assets/dyads/kid-mom_02_dmk-blue/kid-mom.016.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "Look! Here are some people.",
+          "scriptColumn": "INTRO-1"
+        },
+        {
+          "src": "assets/dyads/kid-mom_02_dmk-blue/kid-mom.017.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This little one is a kid.",
+          "scriptColumn": "INTRO-2"
+        },
+        {
+          "src": "assets/dyads/kid-mom_02_dmk-blue/kid-mom.018.png",
+          "kind": "intro",
+          "trait": null,
+          "text": "This big one is this kid’s mom.",
+          "scriptColumn": "INTRO-3"
+        },
+        {
+          "src": "assets/dyads/kid-mom_02_dmk-blue/kid-mom.019.png",
+          "kind": "question",
+          "trait": "love",
+          "text": "How much does the kid love the mom?",
+          "scriptColumn": "LOVE-1"
+        },
+        {
+          "src": "assets/dyads/kid-mom_02_dmk-blue/kid-mom.020.png",
+          "kind": "response",
+          "trait": "love",
+          "text": "Does not love, Loves a little, Loves a lot",
+          "scriptColumn": "LOVE-2"
+        },
+        {
+          "src": "assets/dyads/kid-mom_02_dmk-blue/kid-mom.021.png",
+          "kind": "question",
+          "trait": "like",
+          "text": "How much does the kid like the mom?",
+          "scriptColumn": "LIKE-1"
+        },
+        {
+          "src": "assets/dyads/kid-mom_02_dmk-blue/kid-mom.022.png",
+          "kind": "response",
+          "trait": "like",
+          "text": "Does not like, Likes a little, Likes a lot",
+          "scriptColumn": "LIKE-2"
+        },
+        {
+          "src": "assets/dyads/kid-mom_02_dmk-blue/kid-mom.023.png",
+          "kind": "question",
+          "trait": "charge",
+          "text": "How much is the kid in charge?",
+          "scriptColumn": "CHARGE-1"
+        },
+        {
+          "src": "assets/dyads/kid-mom_02_dmk-blue/kid-mom.024.png",
+          "kind": "response",
+          "trait": "charge",
+          "text": "Not in charge, A little in charge, or Very much in charge?",
+          "scriptColumn": "CHARGE-2"
+        },
+        {
+          "src": "assets/dyads/kid-mom_02_dmk-blue/kid-mom.025.png",
+          "kind": "question",
+          "trait": "old",
+          "text": "How old is the kid?",
+          "scriptColumn": "OLD-1"
+        },
+        {
+          "src": "assets/dyads/kid-mom_02_dmk-blue/kid-mom.026.png",
+          "kind": "response",
+          "trait": "old",
+          "text": "Not old, A little old, or Very old?",
+          "scriptColumn": "OLD-2"
+        },
+        {
+          "src": "assets/dyads/kid-mom_02_dmk-blue/kid-mom.027.png",
+          "kind": "question",
+          "trait": "strong",
+          "text": "How strong is the kid?",
+          "scriptColumn": "STRONG-1"
+        },
+        {
+          "src": "assets/dyads/kid-mom_02_dmk-blue/kid-mom.028.png",
+          "kind": "response",
+          "trait": "strong",
+          "text": "Not strong, A little strong, or Very strong?",
+          "scriptColumn": "STRONG-2"
+        }
+      ],
+      "nSlides": 13,
+      "scriptKey": "mom-KID"
+    }
+  ],
+  "conditionFamilies": {
+    "MOM-KID--KID-SISTER": {
+      "sourceKey": "MKS",
+      "dyads": [
+        "mom-kid",
+        "sister-kid"
+      ],
+      "variantKeys": [
+        "MKS-orange",
+        "MKS-red"
+      ]
+    },
+    "DAD-KID--KID-BROTHER": {
+      "sourceKey": "DKB",
+      "dyads": [
+        "dad-kid",
+        "brother-kid"
+      ],
+      "variantKeys": [
+        "DKB-green",
+        "DKB-purple"
+      ]
+    },
+    "TEACHER-KID--KID-FRIEND": {
+      "sourceKey": "TKF",
+      "dyads": [
+        "teacher-kid",
+        "friend-kid"
+      ],
+      "variantKeys": [
+        "TKF-orange",
+        "TKF-red"
+      ]
+    },
+    "DAD-MOM--KID-MOM": {
+      "sourceKey": "DMK",
+      "dyads": [
+        "dad-mom",
+        "kid-mom"
+      ],
+      "variantKeys": [
+        "DMK-blue",
+        "DMK-purple"
+      ]
+    },
+    "MOM-DAD--KID-DAD": {
+      "sourceKey": "MDK",
+      "dyads": [
+        "mom-dad",
+        "kid-dad"
+      ],
+      "variantKeys": [
+        "MDK-blue",
+        "MDK-red"
+      ]
+    },
+    "TEACHER-TEACHER--KID-TEACHER": {
+      "sourceKey": "TTK",
+      "dyads": [
+        "teacher-teacher",
+        "kid-teacher"
+      ],
+      "variantKeys": [
+        "TTK-blue",
+        "TTK-purple"
+      ]
+    },
+    "MOM-KID--KID-TEACHER": {
+      "sourceKey": "MKT",
+      "dyads": [
+        "mom-kid",
+        "teacher-kid"
+      ],
+      "variantKeys": [
+        "MKT-green",
+        "MKT-yellow"
+      ]
+    },
+    "DAD-KID--KID-TEACHER": {
+      "sourceKey": "DKT",
+      "dyads": [
+        "dad-kid",
+        "teacher-kid"
+      ],
+      "variantKeys": [
+        "DKT-gray",
+        "DKT-green"
+      ]
+    },
+    "MOM-KID--KID-DAD": {
+      "sourceKey": "MKD",
+      "dyads": [
+        "mom-kid",
+        "dad-kid"
+      ],
+      "variantKeys": [
+        "MKD-blue",
+        "MKD-pink"
+      ]
+    },
+    "SISTER-KID--KID-FRIEND": {
+      "sourceKey": "SKF",
+      "dyads": [
+        "sister-kid",
+        "friend-kid"
+      ],
+      "variantKeys": [
+        "SKF-green",
+        "SKF-yellow"
+      ]
+    },
+    "BROTHER-KID--KID-FRIEND": {
+      "sourceKey": "BKF",
+      "dyads": [
+        "brother-kid",
+        "friend-kid"
+      ],
+      "variantKeys": [
+        "BKF-gray",
+        "BKF-green"
+      ]
+    },
+    "SISTER-KID--KID-BROTHER": {
+      "sourceKey": "SKB",
+      "dyads": [
+        "sister-kid",
+        "brother-kid"
+      ],
+      "variantKeys": [
+        "SKB-blue",
+        "SKB-pink"
+      ]
+    },
+    "BESTFRIEND-KID--KID-FRIEND": {
+      "sourceKey": "BFKF",
+      "dyads": [
+        "best friend-kid",
+        "friend-kid"
+      ],
+      "variantKeys": [
+        "BFKF-blue",
+        "BFKF-pink"
+      ]
+    }
+  },
+  "roleSets": {
+    "woman": [
+      "MOM-KID--KID-TEACHER",
+      "SISTER-KID--KID-FRIEND",
+      "BESTFRIEND-KID--KID-FRIEND",
+      "TEACHER-KID--KID-FRIEND",
+      "MOM-KID--KID-SISTER"
+    ],
+    "man": [
+      "DAD-KID--KID-TEACHER",
+      "BROTHER-KID--KID-FRIEND",
+      "BESTFRIEND-KID--KID-FRIEND",
+      "TEACHER-KID--KID-FRIEND",
+      "DAD-KID--KID-BROTHER"
+    ],
+    "all": [
+      "MOM-KID--KID-SISTER",
+      "DAD-KID--KID-BROTHER",
+      "TEACHER-KID--KID-FRIEND",
+      "DAD-MOM--KID-MOM",
+      "MOM-DAD--KID-DAD",
+      "TEACHER-TEACHER--KID-TEACHER",
+      "MOM-KID--KID-TEACHER",
+      "DAD-KID--KID-TEACHER",
+      "MOM-KID--KID-DAD",
+      "SISTER-KID--KID-FRIEND",
+      "BROTHER-KID--KID-FRIEND",
+      "SISTER-KID--KID-BROTHER",
+      "BESTFRIEND-KID--KID-FRIEND"
+    ]
+  }
+}
