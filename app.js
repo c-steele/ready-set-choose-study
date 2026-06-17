@@ -5,9 +5,9 @@ const EVENT_MANIFEST_URL = "data/ksize_manifest.json?v=two-part-pairs-1";
 const INTRO_IMAGE_FIXES_URL = "data/intro_image_fixes.json?v=two-part-pairs-1";
 const CANONICAL_AUDIO_MANIFEST_URL = "data/canonical_audio_manifest.json?v=preferred-v32";
 const PREFERRED_AUDIO_DIR = requestedVoiceProfile === "relkind" ? "audio_relkind_voice" : "audio_preferred";
-const AUDIO_VERSION = requestedVoiceProfile === "relkind" ? "preferred-v68-relkind-voice" : "preferred-v69-no-researcher-tools";
+const AUDIO_VERSION = requestedVoiceProfile === "relkind" ? "preferred-v68-relkind-voice" : "preferred-v70-autoplay-context";
 const DATA_ENDPOINT_URL = "";
-const START_INTRO_TEXT = "Hi there! Welcome to Who Will Help? We are going to look at pictures and play a choosing game. Listen to each page. When you see choices, tap the one you pick.";
+const START_INTRO_TEXT = "Hi there! Welcome to Who Will Help? We are going to look at pictures and play a choosing game. Listen to each page. When you see choices, tap the one you pick. When you are ready, hit the green button to start.";
 const START_INTRO_AUDIO = "audio/seg_f8d6eefb87a4.mp3";
 const GAME_START_TEXT = "Let’s play. Listen to the story, then answer the questions. Hit the green button to start.";
 const GAME_START_AUDIO = "audio/rating_3fbab442.mp3";
@@ -1277,7 +1277,7 @@ function renderKidSlide({ image, text, choices = [], overlayChoices = false, sho
   `;
 }
 
-function makeKidNode(jsPsych, { trial, block, suffix, image, text, audioSegments = [], choices = [], slideKind, overlayChoices = false, showText = false, autoPlay = true, partKind, partNumber, visualChoices = false, highlightChoices = false, highlightStartMs = 350, storyNumber = null, storyTotal = null }) {
+function makeKidNode(jsPsych, { trial, block, suffix, image, text, audioSegments = [], choices = [], slideKind, overlayChoices = false, showText = false, autoPlay = true, autoAdvanceAfterAudio = false, partKind, partNumber, visualChoices = false, highlightChoices = false, highlightStartMs = 350, storyNumber = null, storyTotal = null }) {
   const hasChoices = choices.length > 0 && !visualChoices;
   return {
     type: jsPsychHtmlButtonResponse,
@@ -1301,7 +1301,13 @@ function makeKidNode(jsPsych, { trial, block, suffix, image, text, audioSegments
     },
     on_load: () => {
       installResearcherSkip(jsPsych);
+      let didFinish = false;
       let highlightTimers = [];
+      const finishNext = () => {
+        if (didFinish) return;
+        didFinish = true;
+        finishWithReward(jsPsych, { response: "auto_next" }, REWARD_VALUES.next, "auto_next_page");
+      };
       const clearHighlights = () => {
         highlightTimers.forEach((timer) => clearTimeout(timer));
         highlightTimers = [];
@@ -1326,7 +1332,7 @@ function makeKidNode(jsPsych, { trial, block, suffix, image, text, audioSegments
           buttons.forEach((item) => item.classList.remove("ksize-char-name-cue"));
         }, highlightStartMs + buttons.length * cueGapMs + 700));
       };
-      const playAudio = async () => {
+      const playAudio = async ({ advanceWhenDone = false } = {}) => {
         clearHighlights();
         if (highlightChoices && audioSegments.length === 1) {
           await audio.playFile(audioSegments[0], text || "", {
@@ -1334,6 +1340,7 @@ function makeKidNode(jsPsych, { trial, block, suffix, image, text, audioSegments
             onEnd: clearHighlights,
           });
           clearHighlights();
+          if (advanceWhenDone && autoAdvanceAfterAudio && !hasChoices) finishNext();
           return;
         }
         if (highlightChoices && audioSegments.length > 1) {
@@ -1347,14 +1354,18 @@ function makeKidNode(jsPsych, { trial, block, suffix, image, text, audioSegments
             onEnd: clearHighlights,
           });
           clearHighlights();
+          if (advanceWhenDone && autoAdvanceAfterAudio && !hasChoices) finishNext();
           return;
         }
         for (const segment of audioSegments) {
           await audio.playFile(segment, text || "");
         }
+        if (advanceWhenDone && autoAdvanceAfterAudio && !hasChoices) finishNext();
       };
       document.querySelector(".ksize-audio-btn")?.addEventListener("click", playAudio);
       document.querySelector(".ksize-next-btn")?.addEventListener("click", () => {
+        if (didFinish) return;
+        didFinish = true;
         clearHighlights();
         audio.stop();
         finishWithReward(jsPsych, { response: "next" }, REWARD_VALUES.next, "next_page");
@@ -1362,6 +1373,8 @@ function makeKidNode(jsPsych, { trial, block, suffix, image, text, audioSegments
       document.querySelectorAll(".ksize-char-btn").forEach((button) => {
         if (visualChoices) return;
         button.addEventListener("click", () => {
+          if (didFinish) return;
+          didFinish = true;
           clearHighlights();
           audio.stop();
           const idx = Number(button.dataset.choiceIndex);
@@ -1372,7 +1385,7 @@ function makeKidNode(jsPsych, { trial, block, suffix, image, text, audioSegments
           }, REWARD_VALUES.choice, "story_choice");
         });
       });
-      if (autoPlay) setTimeout(playAudio, 250);
+      if (autoPlay) setTimeout(() => playAudio({ advanceWhenDone: autoAdvanceAfterAudio }), 250);
     },
     on_finish: () => audio.stop(),
   };
@@ -1399,6 +1412,7 @@ function buildEventTrialNodes(jsPsych, trial, trialIndex, totalTrials, eventSuff
         choices: [],
         slideKind: "intro",
         showText: false,
+        autoAdvanceAfterAudio: true,
         partKind,
         partNumber,
         storyNumber: trialIndex + 1,
@@ -1421,6 +1435,7 @@ function buildEventTrialNodes(jsPsych, trial, trialIndex, totalTrials, eventSuff
         choices: [],
         slideKind: "story",
         showText: false,
+        autoAdvanceAfterAudio: true,
         partKind,
         partNumber,
         storyNumber: trialIndex + 1,
@@ -1821,7 +1836,7 @@ async function main() {
               <div class="ksize-helper-bubble">Ready?</div>
             </div>
             <h1 class="ksize-title">Who Will Help?</h1>
-            <p class="ksize-text">Listen and play. Earn coins as you go, then see a silly coin party at the end.</p>
+            <p class="ksize-text">Listen and play. Earn coins as you go, then see a silly coin party at the end. When you are ready, hit the green button to start.</p>
             <div class="ksize-controls">
               <button class="ksize-audio-btn ksize-icon-btn ksize-start-audio ksize-prompt-glow" type="button" aria-label="Play">
                 <span class="ksize-icon-symbol" aria-hidden="true">▶</span>
@@ -1843,6 +1858,7 @@ async function main() {
         playButton?.addEventListener("click", async () => {
           playButton.classList.remove("ksize-prompt-glow");
           await audio.playFile(START_INTRO_AUDIO, START_INTRO_TEXT);
+          await audio.playFile(GAME_START_AUDIO, GAME_START_TEXT);
           startButton?.classList.add("ksize-prompt-glow");
         });
         startButton?.addEventListener("click", () => {
