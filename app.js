@@ -5,7 +5,7 @@ const EVENT_MANIFEST_URL = "data/ksize_manifest.json?v=two-part-pairs-1";
 const INTRO_IMAGE_FIXES_URL = "data/intro_image_fixes.json?v=two-part-pairs-1";
 const CANONICAL_AUDIO_MANIFEST_URL = "data/canonical_audio_manifest.json?v=preferred-v32";
 const PREFERRED_AUDIO_DIR = requestedVoiceProfile === "relkind" ? "audio_relkind_voice" : "audio_preferred";
-const AUDIO_VERSION = requestedVoiceProfile === "relkind" ? "preferred-v68-relkind-voice" : "preferred-v70-autoplay-context";
+const AUDIO_VERSION = requestedVoiceProfile === "relkind" ? "preferred-v68-relkind-voice" : "preferred-v71-welcome-only";
 const DATA_ENDPOINT_URL = "";
 const START_INTRO_TEXT = "Hi there! Welcome to Who Will Help? We are going to look at pictures and play a choosing game. Listen to each page. When you see choices, tap the one you pick. When you are ready, hit the green button to start.";
 const START_INTRO_AUDIO = "audio/seg_f8d6eefb87a4.mp3";
@@ -1858,7 +1858,6 @@ async function main() {
         playButton?.addEventListener("click", async () => {
           playButton.classList.remove("ksize-prompt-glow");
           await audio.playFile(START_INTRO_AUDIO, START_INTRO_TEXT);
-          await audio.playFile(GAME_START_AUDIO, GAME_START_TEXT);
           startButton?.classList.add("ksize-prompt-glow");
         });
         startButton?.addEventListener("click", () => {
