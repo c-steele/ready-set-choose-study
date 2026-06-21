@@ -1,0 +1,49 @@
+{
+  "source": {
+    "purpose": "Short parent setup narration for Who Will Help?"
+  },
+  "lines": [
+    {
+      "id": "parent_welcome_short",
+      "text": "Welcome, grown-ups! Thank you for helping your child take part. First, we'll get the sound, screen, and camera ready. Then your child will listen to stories and tap their choices. You can help with the device, but please let your child choose the answers.",
+      "category": "parent-setup",
+      "output": "audio_preferred/077_parent_setup_Welcome_grownups.mp3"
+    },
+    {
+      "id": "parent_quick_checks_short",
+      "text": "Three quick checks before the game. Use one screen and place it in front of your child. Turn the sound to a comfortable volume. Stay close to help with the device, but let your child choose the answers. There are no right or wrong answers in this game.",
+      "category": "parent-setup",
+      "output": "audio_preferred/078_parent_setup_Three_quick_checks.mp3"
+    },
+    {
+      "id": "parent_camera_setup_short",
+      "text": "Let's check the camera. Put the screen directly in front of your child. Keep their full face and shoulders in view, and avoid a bright window behind them. Use one screen, and keep the webcam centered above the screen your child is watching.",
+      "category": "parent-setup",
+      "output": "audio_preferred/079_parent_setup_Check_the_camera.mp3"
+    },
+    {
+      "id": "parent_consent_short",
+      "text": "Please record one short statement giving permission for your child to participate. This is a recorded picture game about social relationships. It takes about ten to fifteen minutes, and you and your child may stop at any time. There are no right or wrong answers in this game. Please say: I am this child's parent or legal guardian, and I agree for my child to participate in this study.",
+      "category": "parent-consent",
+      "output": "audio_preferred/082_parent_consent_Record_your_consent.mp3"
+    },
+    {
+      "id": "parent_child_handoff",
+      "text": "Grown-up setup is finished. Please invite your child to come sit in front of the screen now. Grown-ups, you may stay nearby to help with the device, but please let your child choose the answers. There are no right or wrong answers in this game. When your child is ready, press the green button to continue.",
+      "category": "parent-setup",
+      "output": "audio_preferred/083_parent_handoff_Invite_your_child.mp3"
+    },
+    {
+      "id": "child_assent",
+      "text": "Hi there! Do you want to play a fun game today? In my game, I'm going to show you some shapes and ask you some questions. You'll press buttons on the screen to tell me what you think. There are no right or wrong answers, so you can say whatever you think! We're just curious about how kids think. The camera will stay on while you play, and you can stop at any time. Are you ready to play my game?",
+      "category": "child-assent",
+      "output": "audio_preferred/084_child_assent_Would_you_like_to_play.mp3"
+    },
+    {
+      "id": "child_get_grownup",
+      "text": "Great job! You finished the game! Please go get your grown-up so they can finish the last few steps.",
+      "category": "child-closeout",
+      "output": "audio_preferred/085_child_closeout_Get_your_grownup.mp3"
+    }
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "source": {
+    "purpose": "Custom parent and transition clips for the stable Ashley-example RELKIND voice version"
+  },
+  "generation": {
+    "provider": "ElevenLabs",
+    "voiceId": "CBHdTdZwkV4jYoCyMV1B",
+    "modelId": "eleven_turbo_v2_5",
+    "settings": {
+      "speed": 0.92,
+      "stability": 0.55,
+      "similarity_boost": 0.85,
+      "style": 0,
+      "use_speaker_boost": true
+    }
+  },
+  "lines": [
+    {
+      "id": "parent_welcome",
+      "text": "Welcome, grown-ups! Thank you for helping your child take part. First, we'll get the sound, screen, and camera ready. Then your child will listen to stories and tap their choices. You can help with the device, but please let your child choose the answers.",
+      "output": "audio_relkind_voice/077_parent_setup_Welcome_grownups.mp3"
+    },
+    {
+      "id": "parent_quick_checks",
+      "text": "Three quick checks before the game. Use one screen and place it in front of your child. Turn the sound to a comfortable volume. Stay close to help with the device, but let your child choose the answers. There are no right or wrong answers in this game.",
+      "output": "audio_relkind_voice/078_parent_setup_Three_quick_checks.mp3"
+    },
+    {
+      "id": "parent_camera",
+      "text": "Let's check the camera. Put the screen directly in front of your child. Keep their full face and shoulders in view, and avoid a bright window behind them. Use one screen, and keep the webcam centered above the screen your child is watching.",
+      "output": "audio_relkind_voice/079_parent_setup_Check_the_camera.mp3"
+    },
+    {
+      "id": "child_welcome",
+      "text": "Hi there! Welcome to Who Will Help? We are going to look at pictures and play a choosing game. Listen to each page. When you see choices, tap the one you pick. When you are ready, hit the green button to start.",
+      "output": "audio_relkind_voice/080_welcome_Hit_green_button_to_start.mp3"
+    },
+    {
+      "id": "game_start",
+      "text": "Let's play. Listen to the story, then answer the questions. Hit the green button to start.",
+      "output": "audio_relkind_voice/081_game_start_Lets_play.mp3"
+    },
+    {
+      "id": "parent_consent",
+      "text": "Please record one short statement giving permission for your child to participate. This is a recorded picture game about social relationships. It takes about ten to fifteen minutes, and you and your child may stop at any time. There are no right or wrong answers in this game. Please say: I am this child's parent or legal guardian, and I agree for my child to participate in this study.",
+      "output": "audio_relkind_voice/082_parent_consent_Record_your_consent.mp3"
+    },
+    {
+      "id": "parent_child_handoff",
+      "text": "Grown-up setup is finished. Please invite your child to come sit in front of the screen now. Grown-ups, you may stay nearby to help with the device, but please let your child choose the answers. There are no right or wrong answers in this game. When your child is ready, press the green button to continue.",
+      "output": "audio_relkind_voice/083_parent_handoff_Invite_your_child.mp3"
+    },
+    {
+      "id": "child_assent",
+      "text": "Hi there! Do you want to play a fun game today? In my game, I'm going to show you some shapes and ask you some questions. You'll press buttons on the screen to tell me what you think. There are no right or wrong answers, so you can say whatever you think! We're just curious about how kids think. The camera will stay on while you play, and you can stop at any time. Are you ready to play my game?",
+      "output": "audio_relkind_voice/084_child_assent_Would_you_like_to_play.mp3"
+    },
+    {
+      "id": "child_get_grownup",
+      "text": "Great job! You finished the game! Please go get your grown-up so they can finish the last few steps.",
+      "output": "audio_relkind_voice/085_child_closeout_Get_your_grownup.mp3"
+    }
+  ]
+}

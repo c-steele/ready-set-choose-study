@@ -5,12 +5,32 @@ const EVENT_MANIFEST_URL = "data/ksize_manifest.json?v=two-part-pairs-1";
 const INTRO_IMAGE_FIXES_URL = "data/intro_image_fixes.json?v=two-part-pairs-1";
 const CANONICAL_AUDIO_MANIFEST_URL = "data/canonical_audio_manifest.json?v=preferred-v32";
 const PREFERRED_AUDIO_DIR = requestedVoiceProfile === "relkind" ? "audio_relkind_voice" : "audio_preferred";
-const AUDIO_VERSION = requestedVoiceProfile === "relkind" ? "preferred-v68-relkind-voice" : "preferred-v71-welcome-only";
+const AUDIO_VERSION = requestedVoiceProfile === "relkind" ? "relkind-stable-v27" : "consent-audio-v27";
 const DATA_ENDPOINT_URL = "";
+const AUTO_ADVANCE_PAUSE_MS = 1200;
 const START_INTRO_TEXT = "Hi there! Welcome to Who Will Help? We are going to look at pictures and play a choosing game. Listen to each page. When you see choices, tap the one you pick. When you are ready, hit the green button to start.";
-const START_INTRO_AUDIO = "audio/seg_f8d6eefb87a4.mp3";
+const START_INTRO_AUDIO = requestedVoiceProfile === "relkind"
+  ? `${PREFERRED_AUDIO_DIR}/080_welcome_Hit_green_button_to_start.mp3`
+  : "audio/welcome_with_start_cue_original_voice.mp3";
 const GAME_START_TEXT = "Let’s play. Listen to the story, then answer the questions. Hit the green button to start.";
-const GAME_START_AUDIO = "audio/rating_3fbab442.mp3";
+const GAME_START_AUDIO = requestedVoiceProfile === "relkind"
+  ? `${PREFERRED_AUDIO_DIR}/081_game_start_Lets_play.mp3`
+  : "audio/game_start_without_game_1.mp3";
+const PARENT_WELCOME_AUDIO = `${PREFERRED_AUDIO_DIR}/077_parent_setup_Welcome_grownups.mp3`;
+const PARENT_WELCOME_TEXT = "Welcome, grown-ups! Thank you for helping your child take part. First, we'll get the sound, screen, and camera ready. Then your child will listen to stories and tap their choices. You can help with the device, but please let your child choose the answers.";
+const PARENT_QUICK_CHECKS_AUDIO = `${PREFERRED_AUDIO_DIR}/078_parent_setup_Three_quick_checks.mp3`;
+const PARENT_QUICK_CHECKS_TEXT = "Three quick checks before the game. Use one screen and place it in front of your child. Turn the sound to a comfortable volume. Stay close to help with the device, but let your child choose the answers. There are no right or wrong answers in this game.";
+const PARENT_CAMERA_AUDIO = `${PREFERRED_AUDIO_DIR}/079_parent_setup_Check_the_camera.mp3`;
+const PARENT_CAMERA_TEXT = "Let's check the camera. Put the screen directly in front of your child. Keep their full face and shoulders in view, and avoid a bright window behind them. Use one screen, and keep the webcam centered above the screen your child is watching.";
+const PARENT_CONSENT_AUDIO = `${PREFERRED_AUDIO_DIR}/082_parent_consent_Record_your_consent.mp3`;
+const PARENT_CONSENT_TEXT = "Please record one short statement giving permission for your child to participate. This is a recorded picture game about social relationships. It takes about ten to fifteen minutes, and you and your child may stop at any time. There are no right or wrong answers in this game. Please say: I am this child's parent or legal guardian, and I agree for my child to participate in this study.";
+const PARENT_HANDOFF_AUDIO = `${PREFERRED_AUDIO_DIR}/083_parent_handoff_Invite_your_child.mp3`;
+const PARENT_HANDOFF_TEXT = "Grown-up setup is finished. Please invite your child to come sit in front of the screen now. Grown-ups, you may stay nearby to help with the device, but please let your child choose the answers. There are no right or wrong answers in this game. When your child is ready, press the green button to continue.";
+const CHILD_ASSENT_AUDIO = `${PREFERRED_AUDIO_DIR}/084_child_assent_Would_you_like_to_play.mp3`;
+const CHILD_ASSENT_TEXT = "Hi there! Do you want to play a fun game today? In my game, I'm going to show you some shapes and ask you some questions. You'll press buttons on the screen to tell me what you think. There are no right or wrong answers, so you can say whatever you think! We're just curious about how kids think. The camera will stay on while you play, and you can stop at any time. Are you ready to play my game?";
+const CHILD_GET_GROWNUP_AUDIO = `${PREFERRED_AUDIO_DIR}/085_child_closeout_Get_your_grownup.mp3`;
+const CHILD_GET_GROWNUP_TEXT = "Great job! You finished the game! Please go get your grown-up so they can finish the last few steps.";
+const ENABLE_CHILD_ASSENT = false;
 const COIN_PARTY_TEXT = "Hooray! You did it! You finished the game! Thanks so much for playing!";
 const COIN_PARTY_AUDIO = `${PREFERRED_AUDIO_DIR}/074_ending_Hooray_you_did_it_finished_game_slower_v44.mp3`;
 const ALL_DONE_TEXT = "Thank you for playing! We're all done!";
@@ -30,7 +50,7 @@ const ALL_DONE_AUDIO_SEQUENCE = [
     preservePitch: true,
   },
 ];
-const REWARD_GOAL_COINS = 20;
+let REWARD_GOAL_COINS = 20;
 const REWARD_VALUES = {
   next: 1,
   choice: 1,
@@ -65,7 +85,13 @@ const requestedEvent = configValue("event").toUpperCase();
 const requestedPartOrder = configValue("partOrder", "order");
 const requestedRatingMode = configValue("ratingMode") || "one-after-story";
 const requestedPreviewIndex = Math.max(0, Number(configValue("previewIndex") || 0) || 0);
-const showResearcherTools = configValue("researcherTools", "researcher", "debug") === "1";
+const requestedResearcherTools = configValue("researcherTools", "researcher", "debug");
+const isLocalResearchPreview = window.location.protocol === "file:"
+  || ["localhost", "127.0.0.1", "::1"].includes(window.location.hostname);
+const showResearcherTools = requestedResearcherTools
+  ? requestedResearcherTools === "1"
+  : isLocalResearchPreview;
+const requestedRewardCoins = Math.max(0, Number(configValue("rewardCoins")) || 0);
 const requestedDataEndpoint = configValue("dataEndpoint") || DATA_ENDPOINT_URL;
 const shouldDownloadData = configValue("downloadData") === "1";
 const useSyntheticSpeech = configValue("syntheticSpeech") !== "0";
@@ -185,9 +211,11 @@ let totalPreviewScreens = 0;
 let currentSessionParams = {};
 let canonicalAudioByText = new Map();
 let canonicalAudioByOriginalSrc = new Map();
-let rewardCoins = 0;
+let rewardCoins = showResearcherTools ? requestedRewardCoins : 0;
 let rewardMusicStopper = null;
 let rewardMusicAudio = null;
+let introMusicStopper = null;
+let welcomeSequenceToken = 0;
 
 function hashSeed(seedText) {
   let hash = 2166136261;
@@ -282,6 +310,9 @@ function updateRewardHud() {
   document.querySelectorAll(".ksize-coin-count").forEach((node) => {
     node.textContent = String(rewardCoins);
   });
+  document.querySelectorAll(".ksize-coin-goal").forEach((node) => {
+    node.textContent = `/ ${REWARD_GOAL_COINS}`;
+  });
   document.querySelectorAll(".ksize-reward-total").forEach((node) => {
     node.textContent = String(rewardCoins);
   });
@@ -328,6 +359,66 @@ function stopRewardMusic() {
   }
   rewardMusicStopper?.();
   rewardMusicStopper = null;
+}
+
+function stopIntroMusic() {
+  introMusicStopper?.();
+  introMusicStopper = null;
+  document.body.classList.remove("ksize-intro-music-playing");
+}
+
+function playIntroOpeningMusic() {
+  stopIntroMusic();
+  const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+  if (!AudioContextClass) return;
+  const context = new AudioContextClass();
+  context.resume?.().catch(() => {});
+  const master = context.createGain();
+  master.gain.value = 0.18;
+  master.connect(context.destination);
+  document.body.classList.add("ksize-intro-music-playing");
+  const startAt = context.currentTime + 0.05;
+  const beat = 0.28;
+  const melody = [
+    [523.25, 0, 0.22], [659.25, 1, 0.22], [783.99, 2, 0.3],
+    [659.25, 3.2, 0.18], [880, 4, 0.22], [987.77, 5, 0.22],
+    [1046.5, 6, 0.38], [783.99, 7.5, 0.2], [987.77, 8.5, 0.22],
+    [1174.66, 9.5, 0.22], [1318.51, 10.5, 0.55],
+  ];
+  const playTone = (frequency, offset, duration, type = "triangle", level = 0.1) => {
+    const begins = startAt + offset * beat;
+    const osc = context.createOscillator();
+    const gain = context.createGain();
+    osc.type = type;
+    osc.frequency.setValueAtTime(frequency, begins);
+    gain.gain.setValueAtTime(0.0001, begins);
+    gain.gain.linearRampToValueAtTime(level, begins + 0.025);
+    gain.gain.setValueAtTime(level * 0.7, begins + Math.max(0.05, duration - 0.06));
+    gain.gain.exponentialRampToValueAtTime(0.0001, begins + duration);
+    osc.connect(gain).connect(master);
+    osc.start(begins);
+    osc.stop(begins + duration + 0.03);
+  };
+  melody.forEach(([frequency, offset, duration]) => {
+    playTone(frequency, offset, duration);
+    playTone(frequency * 2, offset + 0.04, duration * 0.72, "sine", 0.025);
+  });
+  [
+    [261.63, 0, 3.4], [349.23, 4, 2.7], [392, 7.5, 2.8], [523.25, 10.5, 1.6],
+  ].forEach(([frequency, offset, duration]) => {
+    [1, 1.25, 1.5].forEach((ratio) => playTone(frequency * ratio, offset, duration * beat, "sine", 0.018));
+  });
+  const closeTimer = window.setTimeout(() => {
+    master.gain.setTargetAtTime(0.0001, context.currentTime, 0.18);
+    window.setTimeout(() => context.close().catch(() => {}), 500);
+    introMusicStopper = null;
+    document.body.classList.remove("ksize-intro-music-playing");
+  }, 3900);
+  introMusicStopper = () => {
+    window.clearTimeout(closeTimer);
+    master.gain.setTargetAtTime(0.0001, context.currentTime, 0.06);
+    window.setTimeout(() => context.close().catch(() => {}), 250);
+  };
 }
 
 function playLoopingMusic(src, volume = 0.5) {
@@ -510,7 +601,7 @@ function playTaDaSfx() {
   if (!AudioContextClass) return;
   const context = new AudioContextClass();
   const master = context.createGain();
-  master.gain.value = 0.28;
+  master.gain.value = 0.62;
   master.connect(context.destination);
 
   const playHorn = (delay, frequencies, duration = 0.34) => {
@@ -522,8 +613,8 @@ function playTaDaSfx() {
       osc.frequency.setValueAtTime(frequency, start);
       osc.frequency.linearRampToValueAtTime(frequency * 1.015, start + duration);
       gain.gain.setValueAtTime(0.0001, start);
-      gain.gain.exponentialRampToValueAtTime(0.13 / frequencies.length, start + 0.035);
-      gain.gain.setValueAtTime(0.12 / frequencies.length, start + duration - 0.07);
+      gain.gain.exponentialRampToValueAtTime(0.2 / frequencies.length, start + 0.035);
+      gain.gain.setValueAtTime(0.18 / frequencies.length, start + duration - 0.07);
       gain.gain.exponentialRampToValueAtTime(0.0001, start + duration);
       osc.connect(gain).connect(master);
       osc.start(start + index * 0.006);
@@ -1160,6 +1251,7 @@ function installResearcherSkip(jsPsych) {
       if (value) url.searchParams.set(key, value);
     });
     url.searchParams.set("previewIndex", String(Math.max(0, Math.min(index, totalPreviewScreens - 1))));
+    url.searchParams.set("rewardCoins", String(rewardCoins));
     window.location.href = url.toString();
   };
 
@@ -1308,6 +1400,10 @@ function makeKidNode(jsPsych, { trial, block, suffix, image, text, audioSegments
         didFinish = true;
         finishWithReward(jsPsych, { response: "auto_next" }, REWARD_VALUES.next, "auto_next_page");
       };
+      const finishNextAfterPause = async () => {
+        await new Promise((resolve) => window.setTimeout(resolve, AUTO_ADVANCE_PAUSE_MS));
+        finishNext();
+      };
       const clearHighlights = () => {
         highlightTimers.forEach((timer) => clearTimeout(timer));
         highlightTimers = [];
@@ -1340,7 +1436,7 @@ function makeKidNode(jsPsych, { trial, block, suffix, image, text, audioSegments
             onEnd: clearHighlights,
           });
           clearHighlights();
-          if (advanceWhenDone && autoAdvanceAfterAudio && !hasChoices) finishNext();
+          if (advanceWhenDone && autoAdvanceAfterAudio && !hasChoices) await finishNextAfterPause();
           return;
         }
         if (highlightChoices && audioSegments.length > 1) {
@@ -1354,13 +1450,13 @@ function makeKidNode(jsPsych, { trial, block, suffix, image, text, audioSegments
             onEnd: clearHighlights,
           });
           clearHighlights();
-          if (advanceWhenDone && autoAdvanceAfterAudio && !hasChoices) finishNext();
+          if (advanceWhenDone && autoAdvanceAfterAudio && !hasChoices) await finishNextAfterPause();
           return;
         }
         for (const segment of audioSegments) {
           await audio.playFile(segment, text || "");
         }
-        if (advanceWhenDone && autoAdvanceAfterAudio && !hasChoices) finishNext();
+        if (advanceWhenDone && autoAdvanceAfterAudio && !hasChoices) await finishNextAfterPause();
       };
       document.querySelector(".ksize-audio-btn")?.addEventListener("click", playAudio);
       document.querySelector(".ksize-next-btn")?.addEventListener("click", () => {
@@ -1812,7 +1908,15 @@ async function main() {
         const eventNodes = buildEventTrialNodes(jsPsych, trial, idx, eventPlan.length, selectedEventSuffix, PART_EVENT, 1);
         const dyadNodes = dyadGroupsByTrial[idx].flatMap((chunk) =>
           orderedDyadSlides(chunk, { includeIntro: false }).map((slide) => {
-            const node = makeSlideNode(jsPsych, chunk, slide, dyadSlideIndex, allDyadSlides.length);
+            const node = makeSlideNode(
+              jsPsych,
+              chunk,
+              slide,
+              dyadSlideIndex,
+              allDyadSlides.length,
+              idx + 1,
+              eventPlan.length
+            );
             dyadSlideIndex += 1;
             return node;
           })
@@ -1820,13 +1924,423 @@ async function main() {
         return [...eventNodes, ...dyadNodes];
       })
     : [];
+  REWARD_GOAL_COINS = Math.max(
+    1,
+    selectedRatingMode === "one-after-story"
+      ? oneAfterStoryNodes.length
+      : storyNodes.length + ratingNodes.length
+  );
+
+  const showStandaloneConsentPreview = !requestedChsResponse;
+  const parentProgressHtml = (activeStep) => `
+    <nav class="ksize-parent-progress" aria-label="Parent setup progress">
+      ${["Welcome", "Consent", "Quick check", "Camera", "Kid game"].map((label, index) => {
+        const step = index + 1;
+        const state = step < activeStep ? "complete" : step === activeStep ? "active" : "";
+        return `<span class="ksize-parent-progress-step ${state}"><i>${step < activeStep ? "✓" : step}</i><b>${label}</b></span>`;
+      }).join("")}
+    </nav>
+  `;
+  const consentPreviewNode = {
+      type: jsPsychHtmlButtonResponse,
+      stimulus: `
+        <main class="ksize-shell ksize-setup-shell">
+          <section class="ksize-screen ksize-setup-screen ksize-consent-screen">
+            ${parentProgressHtml(2)}
+            <header class="ksize-setup-heading">
+              <span class="ksize-setup-eyebrow">Parent consent</span>
+              <h1 class="ksize-setup-title">Record your consent</h1>
+              <p class="ksize-setup-intro">Please record one short statement giving permission for your child to participate.</p>
+            </header>
+            <div class="ksize-consent-layout">
+              <div class="ksize-consent-summary">
+                <div class="ksize-parent-motion-icon ksize-motion-lock" aria-hidden="true"><span>✓</span></div>
+                <h2>Before you record</h2>
+                <ul>
+                  <li>A recorded picture game about social relationships</li>
+                  <li>About 10–15 minutes</li>
+                  <li>You and your child may stop at any time</li>
+                  <li>There are no right or wrong answers in this game</li>
+                </ul>
+              </div>
+              <div class="ksize-consent-record-card">
+                <div class="ksize-consent-camera" aria-hidden="true">
+                  <span class="ksize-consent-person">
+                    <i></i>
+                    <b></b>
+                  </span>
+                  <span class="ksize-consent-rec"><i></i> REC</span>
+                  <span class="ksize-consent-scan-line"></span>
+                </div>
+                <div class="ksize-consent-statement">
+                  <span>Please say:</span>
+                  <blockquote>“I am this child’s parent or legal guardian, and I agree for my child to participate in this study.”</blockquote>
+                </div>
+                <div class="ksize-consent-actions" aria-label="Consent recording controls preview">
+                  <button type="button" disabled><span aria-hidden="true">●</span> Record</button>
+                  <button type="button" disabled><span aria-hidden="true">▶</span> Play</button>
+                  <button type="button" disabled><span aria-hidden="true">↻</span> Re-record</button>
+                </div>
+                <p class="ksize-consent-preview-note">CHS activates these controls in the live study.</p>
+              </div>
+            </div>
+            <button class="ksize-parent-listen ksize-consent-audio" type="button"><span aria-hidden="true">▶</span><span>Listen</span></button>
+            <footer class="ksize-setup-footer">
+              <p>Continue after recording your statement.</p>
+              <button class="ksize-setup-next ksize-consent-preview-next" type="button"><span>Next page</span><span aria-hidden="true">➜</span></button>
+            </footer>
+          </section>
+        </main>
+      `,
+      choices: [],
+      on_load: () => {
+        installResearcherSkip(jsPsych);
+        const playConsentAudio = () => audio.playFile(PARENT_CONSENT_AUDIO, PARENT_CONSENT_TEXT);
+        document.querySelector(".ksize-consent-audio")?.addEventListener("click", playConsentAudio);
+        window.setTimeout(playConsentAudio, 500);
+        document.querySelector(".ksize-consent-preview-next")?.addEventListener("click", () => {
+          audio.stop();
+          finishWithReward(jsPsych, { response: "consent_preview_continue" }, 0, "consent_preview");
+        });
+      },
+    };
+
+  const parentWelcomeNode = {
+      type: jsPsychHtmlButtonResponse,
+      stimulus: `
+        <main class="ksize-shell ksize-setup-shell">
+          <section class="ksize-screen ksize-setup-screen ksize-parent-welcome-screen">
+            ${parentProgressHtml(1)}
+            <header class="ksize-parent-welcome-header">
+              <span class="ksize-setup-eyebrow">Who Will Help?</span>
+              <h1 class="ksize-setup-title">Welcome, grown-ups!</h1>
+              <p class="ksize-parent-welcome-lead">Thank you for helping your child take part. We’ll get set up together.</p>
+            </header>
+            <div class="ksize-parent-welcome-grid">
+              <article class="ksize-parent-welcome-card">
+                <span class="ksize-parent-welcome-icon ksize-icon-bob" aria-hidden="true">◉</span>
+                <h2>Quick setup</h2>
+                <p>Check the sound, screen, and camera.</p>
+              </article>
+              <article class="ksize-parent-welcome-card">
+                <span class="ksize-parent-welcome-icon ksize-icon-pulse" aria-hidden="true">▶</span>
+                <h2>Your child plays</h2>
+                <p>Listen to stories and tap choices.</p>
+              </article>
+              <article class="ksize-parent-welcome-card">
+                <span class="ksize-parent-welcome-icon ksize-icon-heart" aria-hidden="true">♡</span>
+                <h2>Stay close by</h2>
+                <p>Help with the device—not the answers.</p>
+              </article>
+            </div>
+            <div class="ksize-parent-welcome-note">
+              <strong>About 10–15 minutes</strong>
+              <span>You may pause if your child needs a break.</span>
+            </div>
+            <button class="ksize-parent-listen ksize-parent-welcome-audio" type="button"><span aria-hidden="true">▶</span><span>Listen</span></button>
+            <footer class="ksize-setup-footer">
+              <p>The next pages are for the grown-up.</p>
+              <button class="ksize-setup-next ksize-parent-welcome-next" type="button"><span>Let’s get set up</span><span aria-hidden="true">➜</span></button>
+            </footer>
+          </section>
+        </main>
+      `,
+      choices: [],
+      on_load: () => {
+        installResearcherSkip(jsPsych);
+        const playParentWelcomeAudio = () => audio.playFile(PARENT_WELCOME_AUDIO, PARENT_WELCOME_TEXT);
+        document.querySelector(".ksize-parent-welcome-audio")?.addEventListener("click", playParentWelcomeAudio);
+        window.setTimeout(playParentWelcomeAudio, 500);
+        document.querySelector(".ksize-parent-welcome-next")?.addEventListener("click", () => {
+          audio.stop();
+          finishWithReward(jsPsych, { response: "parent_welcome_continue" }, 0, "parent_welcome");
+        });
+      },
+    };
+
+  const setupNode = {
+      type: jsPsychHtmlButtonResponse,
+      stimulus: `
+        <main class="ksize-shell ksize-setup-shell">
+          <section class="ksize-screen ksize-setup-screen">
+            ${parentProgressHtml(3)}
+            <header class="ksize-setup-heading">
+              <span class="ksize-setup-eyebrow">A quick note for the grown-up</span>
+              <h1 class="ksize-setup-title">Get ready to play</h1>
+              <p class="ksize-setup-intro">Three quick checks before the game.</p>
+            </header>
+            <div class="ksize-setup-list">
+              <article class="ksize-setup-card">
+                <span class="ksize-setup-number">1</span>
+                <div class="ksize-setup-copy">
+                  <h2>Make the game easy to see</h2>
+                  <p>Use one screen and place it in front of your child.</p>
+                </div>
+                <div class="ksize-setup-picture ksize-screen-picture" aria-hidden="true">
+                  <span class="ksize-monitor">
+                    <span class="ksize-monitor-scene"><i></i><i></i><i></i></span>
+                    <span class="ksize-monitor-stand"></span>
+                  </span>
+                  <span class="ksize-setup-check">✓</span>
+                  <span class="ksize-setup-spark ksize-setup-spark-1">✦</span>
+                </div>
+              </article>
+              <article class="ksize-setup-card">
+                <span class="ksize-setup-number">2</span>
+                <div class="ksize-setup-copy">
+                  <h2>Turn the sound on</h2>
+                  <p>Choose a comfortable listening volume.</p>
+                </div>
+                <div class="ksize-setup-picture ksize-sound-picture" aria-hidden="true">
+                  <span class="ksize-speaker">▶</span>
+                  <span class="ksize-sound-wave ksize-sound-wave-1"></span>
+                  <span class="ksize-sound-wave ksize-sound-wave-2"></span>
+                  <span class="ksize-sound-wave ksize-sound-wave-3"></span>
+                </div>
+              </article>
+              <article class="ksize-setup-card">
+                <span class="ksize-setup-number">3</span>
+                <div class="ksize-setup-copy">
+                  <h2>Let your child choose</h2>
+                  <p>Help with the device, but not with answers. There are no right or wrong answers in this game.</p>
+                </div>
+                <div class="ksize-setup-picture ksize-choice-picture" aria-hidden="true">
+                  <span class="ksize-choice-dot ksize-choice-dot-left">A</span>
+                  <span class="ksize-choice-hand">☝</span>
+                  <span class="ksize-choice-dot ksize-choice-dot-right">B</span>
+                </div>
+              </article>
+            </div>
+            <button class="ksize-parent-listen ksize-quick-checks-audio" type="button"><span aria-hidden="true">▶</span><span>Listen</span></button>
+            <footer class="ksize-setup-footer">
+              <button class="ksize-setup-next" type="button"><span>Ready</span><span aria-hidden="true">➜</span></button>
+            </footer>
+          </section>
+        </main>
+      `,
+      choices: [],
+      on_load: () => {
+        installResearcherSkip(jsPsych);
+        const playQuickChecksAudio = () => audio.playFile(PARENT_QUICK_CHECKS_AUDIO, PARENT_QUICK_CHECKS_TEXT);
+        document.querySelector(".ksize-quick-checks-audio")?.addEventListener("click", playQuickChecksAudio);
+        window.setTimeout(playQuickChecksAudio, 500);
+        document.querySelector(".ksize-setup-next")?.addEventListener("click", () => {
+          audio.stop();
+          finishWithReward(jsPsych, { response: "setup_ready" }, 0, "setup_ready");
+        });
+      },
+    };
+
+  const cameraSetupNode = {
+      type: jsPsychHtmlButtonResponse,
+      stimulus: `
+        <main class="ksize-shell ksize-setup-shell">
+          <section class="ksize-screen ksize-setup-screen ksize-camera-screen">
+            ${parentProgressHtml(4)}
+            <header class="ksize-setup-heading">
+              <span class="ksize-setup-eyebrow">Camera check</span>
+              <h1 class="ksize-setup-title">Set up the camera for recording</h1>
+              <p class="ksize-setup-intro">Make sure your child stays easy to see.</p>
+            </header>
+            <div class="ksize-camera-layout">
+              <div class="ksize-camera-instructions">
+                <article class="ksize-camera-tip">
+                  <span class="ksize-camera-tip-number">1</span>
+                  <span class="ksize-camera-tip-icon ksize-camera-center-icon" aria-hidden="true"><i></i></span>
+                  <div>
+                    <h2>Center the camera</h2>
+                    <p>Put the screen directly in front of your child.</p>
+                  </div>
+                </article>
+                <article class="ksize-camera-tip">
+                  <span class="ksize-camera-tip-number">2</span>
+                  <span class="ksize-camera-tip-icon ksize-camera-frame-icon" aria-hidden="true"><i></i></span>
+                  <div>
+                    <h2>Frame head and shoulders</h2>
+                    <p>Keep their full face and shoulders in view.</p>
+                  </div>
+                </article>
+                <article class="ksize-camera-tip">
+                  <span class="ksize-camera-tip-number">3</span>
+                  <span class="ksize-camera-tip-icon ksize-camera-light-icon" aria-hidden="true">☀</span>
+                  <div>
+                    <h2>Check the light</h2>
+                    <p>Avoid a bright window behind your child.</p>
+                  </div>
+                </article>
+              </div>
+              <div class="ksize-camera-panel">
+                <h2 class="ksize-camera-examples-title">Use these examples to check your setup</h2>
+                <div class="ksize-lookit-example-stack">
+                  <figure class="ksize-lookit-example ksize-camera-combined-example">
+                    <img src="assets/lookit-camera-centering.png" alt="Three original setup photos: a correct centered external webcam, an incorrect off-center external webcam, and a correct laptop with a built-in camera.">
+                    <figcaption>
+                      <span><strong>External webcam:</strong> center it above the study screen.</span>
+                      <span><strong>Most families:</strong> use the camera built into your laptop.</span>
+                    </figcaption>
+                  </figure>
+                  <figure class="ksize-lookit-example">
+                    <img src="assets/lookit-monitor-setup-correct-first.png" alt="Two correct one-screen setups appear first, with the large monitor setup first; an incorrect two-screen setup appears last.">
+                    <figcaption><strong>Use one study screen.</strong> Turn off or close other screens that might distract your child.</figcaption>
+                  </figure>
+                </div>
+                <div class="ksize-recording-note">
+                  <span class="ksize-recording-dot" aria-hidden="true"></span>
+                  <p><strong>Next:</strong> CHS will show a live view for one final check.</p>
+                </div>
+              </div>
+            </div>
+            <button class="ksize-parent-listen ksize-camera-setup-audio" type="button"><span aria-hidden="true">▶</span><span>Listen</span></button>
+            <footer class="ksize-setup-footer ksize-camera-footer">
+              <p>Keep this position during the game.</p>
+              <button class="ksize-setup-next ksize-camera-next" type="button"><span>Finish grown-up setup</span><span aria-hidden="true">➜</span></button>
+            </footer>
+          </section>
+        </main>
+      `,
+      choices: [],
+      on_load: () => {
+        installResearcherSkip(jsPsych);
+        const playCameraSetupAudio = () => audio.playFile(PARENT_CAMERA_AUDIO, PARENT_CAMERA_TEXT);
+        document.querySelector(".ksize-camera-setup-audio")?.addEventListener("click", playCameraSetupAudio);
+        window.setTimeout(playCameraSetupAudio, 500);
+        document.querySelector(".ksize-camera-next")?.addEventListener("click", () => {
+          audio.stop();
+          finishWithReward(jsPsych, { response: "camera_setup_continue" }, 0, "camera_setup");
+        });
+      },
+    };
+
+  const childHandoffNode = {
+      type: jsPsychHtmlButtonResponse,
+      stimulus: `
+        <main class="ksize-shell ksize-setup-shell">
+          <section class="ksize-screen ksize-setup-screen ksize-handoff-screen">
+            ${parentProgressHtml(5)}
+            <div class="ksize-handoff-complete"><span aria-hidden="true">✓</span> Grown-up setup complete</div>
+            <div class="ksize-handoff-visual" aria-hidden="true">
+              <div class="ksize-handoff-person ksize-handoff-grownup"><span></span><b></b></div>
+              <div class="ksize-handoff-arrow">➜</div>
+              <div class="ksize-handoff-person ksize-handoff-child"><span></span><b></b><i>★</i></div>
+            </div>
+            <header class="ksize-handoff-heading">
+              <span class="ksize-setup-eyebrow">Time to switch players</span>
+              <h1 class="ksize-setup-title">Now it’s your child’s turn!</h1>
+              <p>Please invite your child to sit in front of the screen.</p>
+            </header>
+            <div class="ksize-handoff-reminder">
+              <span aria-hidden="true">♡</span>
+              <p>
+                <strong>Grown-ups,</strong> you may stay nearby to help with the device, but please let your child choose the answers.
+                <span class="ksize-handoff-reassurance">There are no right or wrong answers in this game.</span>
+              </p>
+            </div>
+            <button class="ksize-parent-listen ksize-handoff-audio" type="button"><span aria-hidden="true">▶</span><span>Listen</span></button>
+            <footer class="ksize-setup-footer ksize-handoff-footer">
+              <button class="ksize-setup-next ksize-handoff-next" type="button"><span>My child is ready</span><span aria-hidden="true">➜</span></button>
+            </footer>
+          </section>
+        </main>
+      `,
+      choices: [],
+      on_load: () => {
+        installResearcherSkip(jsPsych);
+        const playHandoffAudio = () => audio.playFile(PARENT_HANDOFF_AUDIO, PARENT_HANDOFF_TEXT);
+        document.querySelector(".ksize-handoff-audio")?.addEventListener("click", playHandoffAudio);
+        window.setTimeout(playHandoffAudio, 500);
+        document.querySelector(".ksize-handoff-next")?.addEventListener("click", () => {
+          audio.stop();
+          finishWithReward(jsPsych, { response: "child_ready" }, 0, "child_handoff");
+        });
+      },
+    };
+
+  const childAssentNode = {
+      type: jsPsychHtmlButtonResponse,
+      stimulus: `
+        <main class="ksize-shell">
+          <section class="ksize-screen ksize-assent-screen">
+            <div class="ksize-child-turn-badge">Child’s turn</div>
+            <div class="ksize-helper ksize-helper-start ksize-assent-study-helper" aria-hidden="true">
+              <div class="ksize-helper-face">
+                <span class="ksize-eye ksize-eye-left"></span>
+                <span class="ksize-eye ksize-eye-right"></span>
+                <span class="ksize-mouth"></span>
+              </div>
+            </div>
+            <header class="ksize-assent-heading">
+              <span class="ksize-setup-eyebrow">Before we play</span>
+              <h1>Want to play a fun game?</h1>
+              <p>I’ll show you some shapes. Tap the buttons to tell me what you think!</p>
+            </header>
+            <div class="ksize-assent-points">
+              <article><span aria-hidden="true">✓</span><p>Say whatever you think!</p></article>
+              <article><span aria-hidden="true">■</span><p>The camera stays on.</p></article>
+              <article><span aria-hidden="true">♡</span><p>You can stop at any time.</p></article>
+            </div>
+            <button class="ksize-parent-listen ksize-assent-audio" type="button"><span aria-hidden="true">▶</span><span>Listen</span></button>
+            <div class="ksize-assent-actions">
+              <button class="ksize-assent-yes" type="button"><span aria-hidden="true">✓</span> Yes!</button>
+              <button class="ksize-assent-no" type="button">No, thank you</button>
+            </div>
+          </section>
+        </main>
+      `,
+      choices: [],
+      data: {
+        slide_kind: "child_assent",
+      },
+      on_load: () => {
+        installResearcherSkip(jsPsych);
+        const playAssentAudio = () => audio.playFile(CHILD_ASSENT_AUDIO, CHILD_ASSENT_TEXT);
+        document.querySelector(".ksize-assent-audio")?.addEventListener("click", playAssentAudio);
+        window.setTimeout(playAssentAudio, 500);
+        document.querySelector(".ksize-assent-yes")?.addEventListener("click", () => {
+          audio.stop();
+          playIntroOpeningMusic();
+          finishWithReward(jsPsych, { response: "yes", child_assent: true }, 0, "child_assent");
+        });
+        document.querySelector(".ksize-assent-no")?.addEventListener("click", () => {
+          audio.stop();
+          jsPsych.data.write({
+            slide_kind: "child_assent",
+            response: "no",
+            child_assent: false,
+          });
+          jsPsych.endExperiment(`
+            <main class="ksize-shell">
+              <section class="ksize-screen ksize-assent-decline-screen">
+                <div class="ksize-assent-decline-icon" aria-hidden="true">♡</div>
+                <h1>That’s okay!</h1>
+                <p>Thank you for telling us. You do not have to play today.</p>
+                <p class="ksize-small">Grown-up: you may close this page.</p>
+              </section>
+            </main>
+          `);
+        });
+      },
+      on_finish: () => audio.stop(),
+    };
 
   const welcomeNode = {
       type: jsPsychHtmlButtonResponse,
       stimulus: `
         <main class="ksize-shell">
           <section class="ksize-screen ksize-start-screen ksize-welcome-screen">
+            <div class="ksize-welcome-sky" aria-hidden="true">
+              <span class="ksize-welcome-floater ksize-welcome-star ksize-welcome-floater-1">★</span>
+              <span class="ksize-welcome-floater ksize-welcome-circle ksize-welcome-floater-2"></span>
+              <span class="ksize-welcome-floater ksize-welcome-diamond ksize-welcome-floater-3"></span>
+              <span class="ksize-welcome-floater ksize-welcome-coin ksize-welcome-floater-4">C</span>
+              <span class="ksize-welcome-floater ksize-welcome-star ksize-welcome-floater-5">✦</span>
+              <span class="ksize-welcome-floater ksize-welcome-triangle ksize-welcome-floater-6"></span>
+              <span class="ksize-welcome-floater ksize-welcome-circle ksize-welcome-floater-7"></span>
+              <span class="ksize-welcome-floater ksize-welcome-coin ksize-welcome-floater-8">C</span>
+              <span class="ksize-welcome-floater ksize-welcome-star ksize-welcome-floater-9">★</span>
+              <span class="ksize-welcome-floater ksize-welcome-diamond ksize-welcome-floater-10"></span>
+            </div>
             ${compactRewardHudHtml()}
+            <div class="ksize-child-turn-badge">Child’s turn</div>
             <div class="ksize-helper ksize-helper-start" aria-hidden="true">
               <div class="ksize-helper-face">
                 <span class="ksize-eye ksize-eye-left"></span>
@@ -1836,7 +2350,8 @@ async function main() {
               <div class="ksize-helper-bubble">Ready?</div>
             </div>
             <h1 class="ksize-title">Who Will Help?</h1>
-            <p class="ksize-text">Listen and play. Earn coins as you go, then see a silly coin party at the end. When you are ready, hit the green button to start.</p>
+            <p class="ksize-text">Listen and play. Earn coins as you go, then see a silly coin party at the end.</p>
+            <p class="ksize-start-cue">When you are ready, hit the green button to start.</p>
             <div class="ksize-controls">
               <button class="ksize-audio-btn ksize-icon-btn ksize-start-audio ksize-prompt-glow" type="button" aria-label="Play">
                 <span class="ksize-icon-symbol" aria-hidden="true">▶</span>
@@ -1855,15 +2370,40 @@ async function main() {
         installResearcherSkip(jsPsych);
         const playButton = document.querySelector(".ksize-start-audio");
         const startButton = document.querySelector(".ksize-next-btn");
+        const runWelcomeSequence = async ({ includeOpening = true } = {}) => {
+          welcomeSequenceToken += 1;
+          const sequenceToken = welcomeSequenceToken;
+          if (includeOpening) playIntroOpeningMusic();
+          await new Promise((resolve) => window.setTimeout(resolve, 4100));
+          if (sequenceToken !== welcomeSequenceToken) return;
+          stopIntroMusic();
+          playButton?.classList.remove("ksize-prompt-glow");
+          await audio.playFile(START_INTRO_AUDIO, START_INTRO_TEXT);
+          if (sequenceToken !== welcomeSequenceToken) return;
+          playIntroOpeningMusic();
+          startButton?.classList.add("ksize-prompt-glow");
+        };
+        runWelcomeSequence({ includeOpening: !introMusicStopper });
         playButton?.addEventListener("click", async () => {
+          welcomeSequenceToken += 1;
+          stopIntroMusic();
+          audio.stop();
           playButton.classList.remove("ksize-prompt-glow");
           await audio.playFile(START_INTRO_AUDIO, START_INTRO_TEXT);
+          playIntroOpeningMusic();
           startButton?.classList.add("ksize-prompt-glow");
         });
         startButton?.addEventListener("click", () => {
+          welcomeSequenceToken += 1;
+          stopIntroMusic();
           audio.stop();
           finishWithReward(jsPsych, { response: "start" }, 0, "start_game");
         });
+      },
+      on_finish: () => {
+        welcomeSequenceToken += 1;
+        stopIntroMusic();
+        audio.stop();
       },
     };
   const rewardNode = {
@@ -1889,6 +2429,7 @@ async function main() {
             <h1 class="ksize-title">Coin party!</h1>
             <p class="ksize-text">Hooray! You did it!</p>
             <p class="ksize-small">You finished the game. Thanks so much for playing! You earned <span class="ksize-reward-total">${rewardCoins}</span> coins.</p>
+            ${showResearcherTools ? "" : '<p class="ksize-reward-auto-note">The celebration will continue on its own.</p>'}
             <div class="ksize-controls">
               <button class="ksize-next-btn ksize-icon-btn" type="button" aria-label="Finish">
                 <span class="ksize-icon-symbol" aria-hidden="true">➜</span>
@@ -1912,6 +2453,7 @@ async function main() {
         const glowFinish = () => finishButton?.classList.add("ksize-prompt-glow");
         let partyStarted = false;
         let rewardEnded = false;
+        let autoFinishTimer = null;
         const startCoinParty = () => {
           if (rewardEnded) return;
           if (partyStarted) return;
@@ -1919,6 +2461,11 @@ async function main() {
           rewardScreen?.classList.add("ksize-party-started");
           playCoinPartyMusic();
           glowFinish();
+          if (!showResearcherTools) {
+            autoFinishTimer = window.setTimeout(() => {
+              completeRewardPage("auto_finish_reward");
+            }, 6500);
+          }
         };
         const fallbackTimer = window.setTimeout(startCoinParty, 9500);
         const narrationTimer = window.setTimeout(() => {
@@ -1934,12 +2481,17 @@ async function main() {
           rewardEnded = true;
           window.clearTimeout(fallbackTimer);
           window.clearTimeout(narrationTimer);
+          if (autoFinishTimer) window.clearTimeout(autoFinishTimer);
           stopRewardMusic();
           audio.stop();
         };
-        finishButton?.addEventListener("click", () => {
+        const completeRewardPage = (response) => {
+          if (rewardEnded) return;
           cleanupRewardPage();
-          finishWithReward(jsPsych, { response: "finish_reward" }, 0, "finish_reward");
+          finishWithReward(jsPsych, { response }, 0, "finish_reward");
+        };
+        finishButton?.addEventListener("click", () => {
+          completeRewardPage("finish_reward");
         });
         window.currentRewardPageCleanup = cleanupRewardPage;
       },
@@ -1952,7 +2504,7 @@ async function main() {
       type: jsPsychHtmlButtonResponse,
       stimulus: `
         <main class="ksize-shell">
-          <section class="ksize-screen ksize-done-screen">
+          <section class="ksize-screen ksize-done-screen ksize-grownup-return-screen">
             ${rewardHudHtml()}
             <div class="ksize-firework-field" aria-hidden="true">
               <span class="ksize-firework ksize-firework-1"></span>
@@ -1962,14 +2514,35 @@ async function main() {
               <span class="ksize-firework ksize-firework-5"></span>
             </div>
             <h1 class="ksize-title">Thank you for playing!</h1>
-            <p class="ksize-text">We’re all done!</p>
+            <p class="ksize-text">Great job—you finished the game!</p>
+            <div class="ksize-get-grownup-visual" aria-hidden="true">
+              <div class="ksize-get-grownup-child"><span></span><b></b></div>
+              <div class="ksize-get-grownup-arrow">➜</div>
+              <div class="ksize-get-grownup-adult"><span></span><b></b></div>
+            </div>
+            <div class="ksize-get-grownup-callout">
+              <strong>Please go get your grown-up.</strong>
+              <span>They have a few last steps to finish.</span>
+            </div>
+            <button class="ksize-grownup-here-btn" type="button">Grown-up is here</button>
+            <div class="ksize-final-grownup-panel" hidden>
+              <span class="ksize-final-grownup-label">For the grown-up</span>
+              <h2>The child’s game is complete</h2>
+              <p>${requestedChsResponse
+                ? "Continue to stop the recording and complete the final Children Helping Science pages, including payment information, a short exit survey, and the study debrief."
+                : "Continue to complete the final grown-up steps."}</p>
+              <button class="ksize-final-grownup-continue" type="button">Continue to grown-up steps <span aria-hidden="true">➜</span></button>
+            </div>
           </section>
         </main>
       `,
-      choices: ["✓"],
+      choices: [],
       on_load: () => {
         installResearcherSkip(jsPsych);
         updateRewardHud();
+        const grownupHereButton = document.querySelector(".ksize-grownup-here-btn");
+        const grownupPanel = document.querySelector(".ksize-final-grownup-panel");
+        const continueButton = document.querySelector(".ksize-final-grownup-continue");
         (async () => {
           for (const [index, line] of ALL_DONE_AUDIO_SEQUENCE.entries()) {
             if (index > 0) await new Promise((resolve) => window.setTimeout(resolve, 180));
@@ -1979,8 +2552,20 @@ async function main() {
               preservePitch: line.preservePitch ?? true,
             });
           }
-          playOutroMusic();
+          await audio.playFile(CHILD_GET_GROWNUP_AUDIO, CHILD_GET_GROWNUP_TEXT, {
+            volume: 0.8,
+          });
         })();
+        grownupHereButton?.addEventListener("click", () => {
+          audio.stop();
+          stopRewardMusic();
+          grownupHereButton.hidden = true;
+          grownupPanel.hidden = false;
+          continueButton?.focus();
+        });
+        continueButton?.addEventListener("click", () => {
+          finishWithReward(jsPsych, { response: "grownup_closeout_continue" }, 0, "grownup_closeout");
+        });
       },
       on_finish: () => {
         stopRewardMusic();
@@ -1994,13 +2579,24 @@ async function main() {
   const reviewNodes = (
     selectedRatingMode === "one-after-story"
       ? [
+          parentWelcomeNode,
+          ...(showStandaloneConsentPreview ? [consentPreviewNode] : []),
+          setupNode,
+          cameraSetupNode,
+          childHandoffNode,
+          ...(ENABLE_CHILD_ASSENT ? [childAssentNode] : []),
           welcomeNode,
-          makePartBreakNode(jsPsych, PART_INTERLEAVED, 1, selectedEventSuffix),
           ...oneAfterStoryNodes,
           rewardNode,
           doneNode,
         ]
       : [
+          parentWelcomeNode,
+          ...(showStandaloneConsentPreview ? [consentPreviewNode] : []),
+          setupNode,
+          cameraSetupNode,
+          childHandoffNode,
+          ...(ENABLE_CHILD_ASSENT ? [childAssentNode] : []),
           welcomeNode,
           makePartBreakNode(jsPsych, firstPartKind, 1, selectedEventSuffix),
           ...firstPartNodes,
