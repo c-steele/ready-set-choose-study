@@ -2436,7 +2436,7 @@ async function main() {
             <h1 class="ksize-title">Coin party!</h1>
             <p class="ksize-text">Hooray! You did it!</p>
             <p class="ksize-small">You finished the game. Thanks so much for playing! You earned <span class="ksize-reward-total">${rewardCoins}</span> coins.</p>
-            ${showResearcherTools ? "" : '<p class="ksize-reward-auto-note">The celebration will continue on its own.</p>'}
+            <p class="ksize-reward-auto-note">The celebration will continue on its own.</p>
             <div class="ksize-controls">
               <button class="ksize-next-btn ksize-icon-btn" type="button" aria-label="Finish">
                 <span class="ksize-icon-symbol" aria-hidden="true">➜</span>
@@ -2468,11 +2468,9 @@ async function main() {
           rewardScreen?.classList.add("ksize-party-started");
           playCoinPartyMusic();
           glowFinish();
-          if (!showResearcherTools) {
-            autoFinishTimer = window.setTimeout(() => {
-              completeRewardPage("auto_finish_reward");
-            }, 4000);
-          }
+          autoFinishTimer = window.setTimeout(() => {
+            completeRewardPage("auto_finish_reward");
+          }, 4000);
         };
         const fallbackTimer = window.setTimeout(startCoinParty, 7000);
         const narrationTimer = window.setTimeout(() => {
