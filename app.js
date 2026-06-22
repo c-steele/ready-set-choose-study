@@ -2406,7 +2406,7 @@ async function main() {
           glowFinish();
           autoFinishTimer = window.setTimeout(() => {
             completeRewardPage("auto_finish_reward");
-          }, 4000);
+          }, 6000);
         };
         const fallbackTimer = window.setTimeout(startCoinParty, 7000);
         const narrationTimer = window.setTimeout(() => {
