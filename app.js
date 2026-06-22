@@ -1791,7 +1791,9 @@ async function main() {
   installCanonicalAudioMap(canonicalAudioManifest);
   introImageFixes = await fetch(assetUrl(INTRO_IMAGE_FIXES_URL)).then((res) => res.json()).catch(() => ({}));
   const assignment = balancedAssignment(requestedParticipantId, requestedRoleSet, requestedEvent);
-  const selectedRoleSet = assignment.roleSet;
+  const selectedRoleSet = ["family", "mixed", "third", "parent-peer"].includes(String(requestedSet).toLowerCase())
+    ? "family"
+    : assignment.roleSet;
   const eventPlan = planEventSession(eventManifest, requestedSeed, requestedVariant, requestedSet, selectedRoleSet);
   const selectedEventSuffix = assignment.eventSuffix;
   currentSessionParams = {
