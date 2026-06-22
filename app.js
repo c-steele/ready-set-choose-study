@@ -36,14 +36,14 @@ const ALL_DONE_AUDIO_SEQUENCE = [
   {
     src: `${PREFERRED_AUDIO_DIR}/075_ending_Thank_you_for_playing_fun_profile_v61.mp3`,
     text: "Thank you for playing!",
-    volume: 0.45,
+    volume: 0.8,
     playbackRate: 1,
     preservePitch: true,
   },
   {
     src: `${PREFERRED_AUDIO_DIR}/075_ending_Were_all_done_fun_profile_v59.mp3`,
     text: "We're all done!",
-    volume: 0.45,
+    volume: 0.8,
     playbackRate: 1,
     preservePitch: true,
   },
@@ -2485,10 +2485,11 @@ async function main() {
         const grownupPanel = document.querySelector(".ksize-final-grownup-panel");
         const continueButton = document.querySelector(".ksize-final-grownup-continue");
         (async () => {
+          await new Promise((resolve) => window.setTimeout(resolve, 350));
           for (const [index, line] of ALL_DONE_AUDIO_SEQUENCE.entries()) {
             if (index > 0) await new Promise((resolve) => window.setTimeout(resolve, 180));
             await audio.playFile(line.src, line.text, {
-              volume: line.volume ?? 0.45,
+              volume: line.volume ?? 0.8,
               playbackRate: line.playbackRate ?? 1,
               preservePitch: line.preservePitch ?? true,
             });
