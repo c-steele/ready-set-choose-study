@@ -2011,6 +2011,13 @@ body {
   font-weight: 900;
 }
 
+.ksize-quick-checks-heading {
+  margin: 4px 0 12px;
+  color: #17466f;
+  font-size: 23px;
+  text-align: left;
+}
+
 .ksize-consent-contact {
   margin: 18px 0 0;
   padding: 12px;

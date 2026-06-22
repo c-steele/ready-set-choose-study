@@ -5,7 +5,7 @@ const EVENT_MANIFEST_URL = "data/ksize_manifest.json?v=two-part-pairs-1";
 const INTRO_IMAGE_FIXES_URL = "data/intro_image_fixes.json?v=two-part-pairs-1";
 const CANONICAL_AUDIO_MANIFEST_URL = "data/canonical_audio_manifest.json?v=preferred-v32";
 const PREFERRED_AUDIO_DIR = requestedVoiceProfile === "relkind" ? "audio_relkind_voice" : "audio_preferred";
-const AUDIO_VERSION = requestedVoiceProfile === "relkind" ? "relkind-stable-v27" : "consent-audio-v27";
+const AUDIO_VERSION = requestedVoiceProfile === "relkind" ? "relkind-stable-v46" : "parent-audio-v46";
 const DATA_ENDPOINT_URL = "";
 const AUTO_ADVANCE_PAUSE_MS = 1200;
 const START_INTRO_TEXT = "Hi there! Welcome to Who Will Help? We are going to look at pictures and play a choosing game. Listen to each page. When you see choices, tap the one you pick. When you are ready, hit the green button to start.";
@@ -19,7 +19,7 @@ const GAME_START_AUDIO = requestedVoiceProfile === "relkind"
 const PARENT_WELCOME_AUDIO = `${PREFERRED_AUDIO_DIR}/077_parent_setup_Welcome_grownups.mp3`;
 const PARENT_WELCOME_TEXT = "Welcome, grown-ups! Thank you for helping your child take part. First, we'll get the sound, screen, and camera ready. Then your child will listen to stories and tap their choices. You can help with the device, but please let your child choose the answers.";
 const PARENT_QUICK_CHECKS_AUDIO = `${PREFERRED_AUDIO_DIR}/078_parent_setup_Three_quick_checks.mp3`;
-const PARENT_QUICK_CHECKS_TEXT = "Three quick checks before the game. Use one screen and place it in front of your child. Turn the sound to a comfortable volume. Stay close to help with the device, but let your child choose the answers. There are no right or wrong answers in this game.";
+const PARENT_QUICK_CHECKS_TEXT = "Before you begin: This is a recorded picture game about social relationships. It takes about ten to fifteen minutes. You and your child may stop at any time. There are no right or wrong answers in this game. Now, three quick checks. Use one screen and place it in front of your child. Turn the sound to a comfortable volume. Stay close to help with the device, but let your child choose the answers.";
 const PARENT_CAMERA_AUDIO = `${PREFERRED_AUDIO_DIR}/079_parent_setup_Check_the_camera.mp3`;
 const PARENT_CAMERA_TEXT = "Let's check the camera. Put the screen directly in front of your child. Keep their full face and shoulders in view, and avoid a bright window behind them. Use one screen, and keep the webcam centered above the screen your child is watching.";
 const PARENT_HANDOFF_AUDIO = `${PREFERRED_AUDIO_DIR}/083_parent_handoff_Invite_your_child.mp3`;
@@ -1999,7 +1999,7 @@ async function main() {
             <header class="ksize-setup-heading">
               <span class="ksize-setup-eyebrow">A quick note for the grown-up</span>
               <h1 class="ksize-setup-title">Get ready to play</h1>
-              <p class="ksize-setup-intro">Three quick checks before the game.</p>
+              <p class="ksize-setup-intro">A few important details, then three quick checks.</p>
             </header>
             <div class="ksize-before-begin-card">
               <strong>Before you begin</strong>
@@ -2008,6 +2008,7 @@ async function main() {
               <span>You and your child may stop at any time</span>
               <span>There are no right or wrong answers in this game</span>
             </div>
+            <h2 class="ksize-quick-checks-heading">Three quick checks</h2>
             <div class="ksize-setup-list">
               <article class="ksize-setup-card">
                 <span class="ksize-setup-number">1</span>
