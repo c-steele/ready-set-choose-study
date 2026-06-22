@@ -554,7 +554,7 @@ function playOutroMusic() {
   const context = new AudioContextClass();
   context.resume?.().catch(() => {});
   const master = context.createGain();
-  master.gain.value = 0.13;
+  master.gain.value = 0.2;
   master.connect(context.destination);
   const notes = [
     [523.25, 0.00, 0.46],
@@ -2502,6 +2502,7 @@ async function main() {
           await audio.playFile(CHILD_GET_GROWNUP_AUDIO, CHILD_GET_GROWNUP_TEXT, {
             volume: 1,
           });
+          playOutroMusic();
         })();
         grownupHereButton?.addEventListener("click", () => {
           audio.stop();
