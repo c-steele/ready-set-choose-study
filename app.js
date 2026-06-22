@@ -323,9 +323,9 @@ function awardCoins(amount, label = "coin") {
   updateRewardHud();
   const pop = document.createElement("div");
   pop.className = "ksize-coin-pop";
-  pop.textContent = `+${amount}`;
+  pop.innerHTML = `<span aria-hidden="true">C</span><strong>+${amount}</strong>`;
   document.body.appendChild(pop);
-  window.setTimeout(() => pop.remove(), 900);
+  window.setTimeout(() => pop.remove(), 1350);
   return {
     reward_coins_earned: amount,
     reward_coin_label: label,
@@ -1976,12 +1976,14 @@ async function main() {
                   <span>Please say:</span>
                   <blockquote>“I am this child’s parent or legal guardian, and I agree for my child to participate in this study.”</blockquote>
                 </div>
-                <div class="ksize-consent-actions" aria-label="Consent recording controls preview">
-                  <button type="button" disabled><span aria-hidden="true">●</span> Record</button>
-                  <button type="button" disabled><span aria-hidden="true">▶</span> Play</button>
-                  <button type="button" disabled><span aria-hidden="true">↻</span> Re-record</button>
+                <div class="ksize-consent-live-note" aria-label="Live CHS consent recorder">
+                  <span aria-hidden="true">●</span>
+                  <div>
+                    <strong>The live CHS study records here</strong>
+                    <p>CHS provides working Record, Play, and Re-record controls and securely attaches the consent video to the study response.</p>
+                  </div>
                 </div>
-                <p class="ksize-consent-preview-note">CHS activates these controls in the live study.</p>
+                <p class="ksize-consent-preview-note">This standalone preview does not record or save video.</p>
               </div>
             </div>
             <button class="ksize-parent-listen ksize-consent-audio" type="button"><span aria-hidden="true">▶</span><span>Listen</span></button>
@@ -2180,7 +2182,7 @@ async function main() {
                     </figcaption>
                   </figure>
                   <figure class="ksize-lookit-example">
-                    <img src="assets/lookit-monitor-setup-correct-first.png" alt="Two correct one-screen setups appear first, with the large monitor setup first; an incorrect two-screen setup appears last.">
+                    <img src="assets/lookit-monitor-setup-correct-first.png?v=camera-fix-v40" alt="Two correct one-screen setups appear first, with the large monitor setup first; an incorrect two-screen setup appears last.">
                     <figcaption><strong>Use one study screen.</strong> Turn off or close other screens that might distract your child.</figcaption>
                   </figure>
                 </div>
@@ -2464,10 +2466,10 @@ async function main() {
           if (!showResearcherTools) {
             autoFinishTimer = window.setTimeout(() => {
               completeRewardPage("auto_finish_reward");
-            }, 6500);
+            }, 4000);
           }
         };
-        const fallbackTimer = window.setTimeout(startCoinParty, 9500);
+        const fallbackTimer = window.setTimeout(startCoinParty, 7000);
         const narrationTimer = window.setTimeout(() => {
           if (rewardEnded) return;
           audio.playFile(COIN_PARTY_AUDIO, COIN_PARTY_TEXT, {
