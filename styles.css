@@ -1269,8 +1269,8 @@ body {
 
 .ksize-parent-progress {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 8px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
   width: min(820px, 100%);
   margin: 0 auto 25px;
 }
@@ -1278,9 +1278,10 @@ body {
 .ksize-parent-progress-step {
   position: relative;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 7px;
+  gap: 4px;
   color: #829097;
   font-size: 12px;
 }
@@ -1288,8 +1289,8 @@ body {
 .ksize-parent-progress-step:not(:last-child)::after {
   content: "";
   position: absolute;
-  left: calc(50% + 25px);
-  right: calc(-50% + 25px);
+  left: calc(50% + 18px);
+  right: calc(-50% + 18px);
   top: 15px;
   height: 3px;
   border-radius: 999px;
@@ -2783,8 +2784,8 @@ body {
   }
 
   .ksize-parent-progress-step:not(:last-child)::after {
-    left: calc(50% + 17px);
-    right: calc(-50% + 17px);
+    left: calc(50% + 16px);
+    right: calc(-50% + 16px);
   }
 
   .ksize-parent-progress-step i {
