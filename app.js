@@ -439,6 +439,7 @@ function playCoinPartyMusic() {
   const AudioContextClass = window.AudioContext || window.webkitAudioContext;
   if (!AudioContextClass) return;
   const context = new AudioContextClass();
+  context.resume?.().catch(() => {});
   const master = context.createGain();
   master.gain.value = 0.2;
   master.connect(context.destination);
@@ -551,6 +552,7 @@ function playOutroMusic() {
   const AudioContextClass = window.AudioContext || window.webkitAudioContext;
   if (!AudioContextClass) return;
   const context = new AudioContextClass();
+  context.resume?.().catch(() => {});
   const master = context.createGain();
   master.gain.value = 0.13;
   master.connect(context.destination);
@@ -629,6 +631,7 @@ function playFireworkSfx({ loop = false } = {}) {
   const AudioContextClass = window.AudioContext || window.webkitAudioContext;
   if (!AudioContextClass) return () => {};
   const context = new AudioContextClass();
+  context.resume?.().catch(() => {});
   const master = context.createGain();
   master.gain.value = 0.16;
   master.connect(context.destination);
@@ -2441,6 +2444,7 @@ async function main() {
         window.currentRewardPageCleanup = null;
       },
     };
+  let stopDoneFireworkSounds = null;
   const doneNode = {
       type: jsPsychHtmlButtonResponse,
       stimulus: `
@@ -2481,6 +2485,8 @@ async function main() {
       on_load: () => {
         installResearcherSkip(jsPsych);
         updateRewardHud();
+        playOutroMusic();
+        stopDoneFireworkSounds = playFireworkSfx({ loop: true });
         const grownupHereButton = document.querySelector(".ksize-grownup-here-btn");
         const grownupPanel = document.querySelector(".ksize-final-grownup-panel");
         const continueButton = document.querySelector(".ksize-final-grownup-continue");
@@ -2500,6 +2506,8 @@ async function main() {
         })();
         grownupHereButton?.addEventListener("click", () => {
           audio.stop();
+          stopDoneFireworkSounds?.();
+          stopDoneFireworkSounds = null;
           stopRewardMusic();
           grownupHereButton.hidden = true;
           grownupPanel.hidden = false;
@@ -2510,6 +2518,8 @@ async function main() {
         });
       },
       on_finish: () => {
+        stopDoneFireworkSounds?.();
+        stopDoneFireworkSounds = null;
         stopRewardMusic();
         audio.stop();
       },
