@@ -372,7 +372,7 @@ function playIntroOpeningMusic() {
   const context = new AudioContextClass();
   context.resume?.().catch(() => {});
   const master = context.createGain();
-  master.gain.value = 0.18;
+  master.gain.value = 0.28;
   master.connect(context.destination);
   document.body.classList.add("ksize-intro-music-playing");
   const startAt = context.currentTime + 0.05;
