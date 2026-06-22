@@ -1977,6 +1977,30 @@ body {
   margin-top: 7px;
 }
 
+.ksize-parent-welcome-facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px 18px;
+  text-align: left;
+}
+
+.ksize-parent-welcome-facts strong {
+  grid-column: 1 / -1;
+}
+
+.ksize-parent-welcome-facts span {
+  position: relative;
+  padding-left: 20px;
+}
+
+.ksize-parent-welcome-facts span::before {
+  position: absolute;
+  left: 0;
+  content: "✓";
+  color: #278473;
+  font-weight: 900;
+}
+
 .ksize-consent-contact {
   margin: 18px 0 0;
   padding: 12px;

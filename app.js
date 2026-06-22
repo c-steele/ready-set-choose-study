@@ -22,8 +22,6 @@ const PARENT_QUICK_CHECKS_AUDIO = `${PREFERRED_AUDIO_DIR}/078_parent_setup_Three
 const PARENT_QUICK_CHECKS_TEXT = "Three quick checks before the game. Use one screen and place it in front of your child. Turn the sound to a comfortable volume. Stay close to help with the device, but let your child choose the answers. There are no right or wrong answers in this game.";
 const PARENT_CAMERA_AUDIO = `${PREFERRED_AUDIO_DIR}/079_parent_setup_Check_the_camera.mp3`;
 const PARENT_CAMERA_TEXT = "Let's check the camera. Put the screen directly in front of your child. Keep their full face and shoulders in view, and avoid a bright window behind them. Use one screen, and keep the webcam centered above the screen your child is watching.";
-const PARENT_CONSENT_AUDIO = `${PREFERRED_AUDIO_DIR}/082_parent_consent_Record_your_consent.mp3`;
-const PARENT_CONSENT_TEXT = "Please record one short statement giving permission for your child to participate. This is a recorded picture game about social relationships. It takes about ten to fifteen minutes, and you and your child may stop at any time. There are no right or wrong answers in this game. Please say: I am this child's parent or legal guardian, and I agree for my child to participate in this study.";
 const PARENT_HANDOFF_AUDIO = `${PREFERRED_AUDIO_DIR}/083_parent_handoff_Invite_your_child.mp3`;
 const PARENT_HANDOFF_TEXT = "Grown-up setup is finished. Please invite your child to come sit in front of the screen now. Grown-ups, you may stay nearby to help with the device, but please let your child choose the answers. There are no right or wrong answers in this game. When your child is ready, press the green button to continue.";
 const CHILD_ASSENT_AUDIO = `${PREFERRED_AUDIO_DIR}/084_child_assent_Would_you_like_to_play.mp3`;
@@ -1931,11 +1929,8 @@ async function main() {
       : storyNodes.length + ratingNodes.length
   );
 
-  const showStandaloneConsentPreview = !requestedChsResponse;
   const parentProgressHtml = (activeStep) => {
-    const labels = showStandaloneConsentPreview
-      ? ["Welcome", "Consent", "Quick check", "Camera", "Child’s turn"]
-      : ["Welcome", "Quick check", "Camera", "Child’s turn"];
+    const labels = ["Welcome", "Quick check", "Camera", "Child’s turn"];
     return `
     <nav class="ksize-parent-progress" aria-label="Parent setup progress">
       ${labels.map((label, index) => {
@@ -1946,72 +1941,6 @@ async function main() {
     </nav>
   `;
   };
-  const consentPreviewNode = {
-      type: jsPsychHtmlButtonResponse,
-      stimulus: `
-        <main class="ksize-shell ksize-setup-shell">
-          <section class="ksize-screen ksize-setup-screen ksize-consent-screen">
-            ${parentProgressHtml(2)}
-            <header class="ksize-setup-heading">
-              <span class="ksize-setup-eyebrow">Parent consent</span>
-              <h1 class="ksize-setup-title">Record your consent</h1>
-              <p class="ksize-setup-intro">Please record one short statement giving permission for your child to participate.</p>
-            </header>
-            <div class="ksize-consent-layout">
-              <div class="ksize-consent-summary">
-                <div class="ksize-parent-motion-icon ksize-motion-lock" aria-hidden="true"><span>✓</span></div>
-                <h2>Before you record</h2>
-                <ul>
-                  <li>A recorded picture game about social relationships</li>
-                  <li>About 10–15 minutes</li>
-                  <li>You and your child may stop at any time</li>
-                  <li>There are no right or wrong answers in this game</li>
-                </ul>
-              </div>
-              <div class="ksize-consent-record-card">
-                <div class="ksize-consent-camera" aria-hidden="true">
-                  <span class="ksize-consent-person">
-                    <i></i>
-                    <b></b>
-                  </span>
-                  <span class="ksize-consent-rec"><i></i> REC</span>
-                  <span class="ksize-consent-scan-line"></span>
-                </div>
-                <div class="ksize-consent-statement">
-                  <span>Please say:</span>
-                  <blockquote>“I am this child’s parent or legal guardian, and I agree for my child to participate in this study.”</blockquote>
-                </div>
-                <div class="ksize-consent-live-note" aria-label="Live CHS consent recorder">
-                  <span aria-hidden="true">●</span>
-                  <div>
-                    <strong>The live CHS study records here</strong>
-                    <p>CHS provides working Record, Play, and Re-record controls and securely attaches the consent video to the study response.</p>
-                  </div>
-                </div>
-                <p class="ksize-consent-preview-note">This standalone preview does not record or save video.</p>
-              </div>
-            </div>
-            <button class="ksize-parent-listen ksize-consent-audio" type="button"><span aria-hidden="true">▶</span><span>Listen</span></button>
-            <footer class="ksize-setup-footer">
-              <p>Continue after recording your statement.</p>
-              <button class="ksize-setup-next ksize-consent-preview-next" type="button"><span>Next page</span><span aria-hidden="true">➜</span></button>
-            </footer>
-          </section>
-        </main>
-      `,
-      choices: [],
-      on_load: () => {
-        installResearcherSkip(jsPsych);
-        const playConsentAudio = () => audio.playFile(PARENT_CONSENT_AUDIO, PARENT_CONSENT_TEXT);
-        document.querySelector(".ksize-consent-audio")?.addEventListener("click", playConsentAudio);
-        window.setTimeout(playConsentAudio, 500);
-        document.querySelector(".ksize-consent-preview-next")?.addEventListener("click", () => {
-          audio.stop();
-          finishWithReward(jsPsych, { response: "consent_preview_continue" }, 0, "consent_preview");
-        });
-      },
-    };
-
   const parentWelcomeNode = {
       type: jsPsychHtmlButtonResponse,
       stimulus: `
@@ -2040,9 +1969,12 @@ async function main() {
                 <p>Help with the device—not the answers.</p>
               </article>
             </div>
-            <div class="ksize-parent-welcome-note">
-              <strong>About 10–15 minutes</strong>
-              <span>You may pause if your child needs a break.</span>
+            <div class="ksize-parent-welcome-note ksize-parent-welcome-facts">
+              <strong>Before you begin</strong>
+              <span>A recorded picture game about social relationships</span>
+              <span>About 10–15 minutes</span>
+              <span>You and your child may stop at any time</span>
+              <span>There are no right or wrong answers in this game</span>
             </div>
             <button class="ksize-parent-listen ksize-parent-welcome-audio" type="button"><span aria-hidden="true">▶</span><span>Listen</span></button>
             <footer class="ksize-setup-footer">
@@ -2070,7 +2002,7 @@ async function main() {
       stimulus: `
         <main class="ksize-shell ksize-setup-shell">
           <section class="ksize-screen ksize-setup-screen">
-            ${parentProgressHtml(showStandaloneConsentPreview ? 3 : 2)}
+            ${parentProgressHtml(2)}
             <header class="ksize-setup-heading">
               <span class="ksize-setup-eyebrow">A quick note for the grown-up</span>
               <h1 class="ksize-setup-title">Get ready to play</h1>
@@ -2143,7 +2075,7 @@ async function main() {
       stimulus: `
         <main class="ksize-shell ksize-setup-shell">
           <section class="ksize-screen ksize-setup-screen ksize-camera-screen">
-            ${parentProgressHtml(showStandaloneConsentPreview ? 4 : 3)}
+            ${parentProgressHtml(3)}
             <header class="ksize-setup-heading">
               <span class="ksize-setup-eyebrow">Camera check</span>
               <h1 class="ksize-setup-title">Set up the camera for recording</h1>
@@ -2223,7 +2155,7 @@ async function main() {
       stimulus: `
         <main class="ksize-shell ksize-setup-shell">
           <section class="ksize-screen ksize-setup-screen ksize-handoff-screen">
-            ${parentProgressHtml(showStandaloneConsentPreview ? 5 : 4)}
+            ${parentProgressHtml(4)}
             <div class="ksize-handoff-complete"><span aria-hidden="true">✓</span> Grown-up setup complete</div>
             <div class="ksize-handoff-visual" aria-hidden="true">
               <div class="ksize-handoff-person ksize-handoff-grownup"><span></span><b></b></div>
@@ -2585,7 +2517,6 @@ async function main() {
     selectedRatingMode === "one-after-story"
       ? [
           parentWelcomeNode,
-          ...(showStandaloneConsentPreview ? [consentPreviewNode] : []),
           setupNode,
           cameraSetupNode,
           childHandoffNode,
@@ -2597,7 +2528,6 @@ async function main() {
         ]
       : [
           parentWelcomeNode,
-          ...(showStandaloneConsentPreview ? [consentPreviewNode] : []),
           setupNode,
           cameraSetupNode,
           childHandoffNode,
