@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#eefaff"/>
+      <stop offset="0.55" stop-color="#f8fbef"/>
+      <stop offset="1" stop-color="#fff5d9"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="170%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#263b50" flood-opacity=".17"/>
+    </filter>
+    <clipPath id="smileyCrop">
+      <circle cx="400" cy="335" r="198"/>
+    </clipPath>
+  </defs>
+
+  <rect width="800" height="800" rx="54" fill="url(#bg)"/>
+
+  <g opacity=".72">
+    <circle cx="75" cy="111" r="12" fill="#ff7aa8"/>
+    <circle cx="714" cy="135" r="15" fill="#77d7b4"/>
+    <path d="M103 226l10 21 23 3-17 16 4 23-20-11-21 11 4-23-17-16 24-3z" fill="#ffd15c"/>
+    <path d="M695 244l8 17 19 3-14 13 3 19-16-9-17 9 3-19-14-13 19-3z" fill="#8bb9e8"/>
+    <circle cx="69" cy="575" r="9" fill="#8bb9e8"/>
+    <circle cx="735" cy="562" r="10" fill="#ff9f5c"/>
+  </g>
+
+  <text x="400" y="92" text-anchor="middle" fill="#17466f"
+        font-family="Arial, Helvetica, sans-serif" font-size="61" font-weight="900">
+    Who Will Help?
+  </text>
+  <text x="400" y="132" text-anchor="middle" fill="#3c6c7c"
+        font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700"
+        letter-spacing="1.8">
+    A PICTURE CHOOSING GAME
+  </text>
+
+  <!-- Exact study smiley, cropped from the unchanged HTML-study asset. -->
+  <g clip-path="url(#smileyCrop)" filter="url(#shadow)">
+    <image href="who-will-help-study-smiley.png"
+           x="153" y="88" width="494" height="494"
+           preserveAspectRatio="xMidYMid meet"/>
+  </g>
+
+  <g transform="translate(68 554)" filter="url(#shadow)">
+    <rect width="664" height="178" rx="34" fill="#fff" stroke="#d8e8ec" stroke-width="5"/>
+
+    <g transform="translate(42 31)">
+      <rect width="178" height="116" rx="24" fill="#eaf6ff" stroke="#8bb9e8" stroke-width="5"/>
+      <circle cx="54" cy="47" r="23" fill="#8bb9e8"/>
+      <path d="M24 103c4-29 17-42 30-42s27 13 31 42z" fill="#4f91c8"/>
+      <circle cx="126" cy="39" r="20" fill="#ffd15c"/>
+      <path d="M99 100c4-27 15-39 27-39s24 12 28 39z" fill="#e3ad39"/>
+      <path d="M89 71c12-13 20-16 30-19" fill="none" stroke="#278473" stroke-width="7" stroke-linecap="round"/>
+      <circle cx="90" cy="71" r="7" fill="#278473"/>
+    </g>
+
+    <g transform="translate(243 27)">
+      <circle cx="89" cy="55" r="36" fill="#ffd15c" stroke="#fff" stroke-width="6"/>
+      <circle cx="76" cy="48" r="5" fill="#203040"/>
+      <circle cx="102" cy="48" r="5" fill="#203040"/>
+      <path d="M74 66c9 12 22 12 31 0" fill="none" stroke="#203040" stroke-width="6" stroke-linecap="round"/>
+      <path d="M89 98v25" stroke="#278473" stroke-width="8" stroke-linecap="round"/>
+      <path d="M89 121l-12-13M89 121l13-13" stroke="#278473" stroke-width="7" stroke-linecap="round"/>
+      <text x="89" y="146" text-anchor="middle" fill="#278473"
+            font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="900">CHOOSE</text>
+    </g>
+
+    <g transform="translate(444 31)">
+      <rect width="178" height="116" rx="24" fill="#fff4e7" stroke="#ffb16f" stroke-width="5"/>
+      <circle cx="54" cy="39" r="20" fill="#ff9f5c"/>
+      <path d="M26 100c4-27 16-39 28-39s24 12 28 39z" fill="#e47b49"/>
+      <circle cx="125" cy="47" r="23" fill="#b59ae8"/>
+      <path d="M94 103c4-29 18-42 31-42s27 13 31 42z" fill="#8b70ca"/>
+      <path d="M89 71c-12-13-20-16-30-19" fill="none" stroke="#278473" stroke-width="7" stroke-linecap="round"/>
+      <circle cx="89" cy="71" r="7" fill="#278473"/>
+    </g>
+  </g>
+
+  <rect x="255" y="755" width="290" height="27" rx="13.5" fill="#17466f" opacity=".92"/>
+  <text x="400" y="775" text-anchor="middle" fill="#fff"
+        font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="800">
+    LISTEN • LOOK • TAP YOUR CHOICE
+  </text>
+</svg>
