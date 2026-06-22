@@ -1932,15 +1932,20 @@ async function main() {
   );
 
   const showStandaloneConsentPreview = !requestedChsResponse;
-  const parentProgressHtml = (activeStep) => `
+  const parentProgressHtml = (activeStep) => {
+    const labels = showStandaloneConsentPreview
+      ? ["Welcome", "Consent", "Quick check", "Camera", "Child’s turn"]
+      : ["Welcome", "Quick check", "Camera", "Child’s turn"];
+    return `
     <nav class="ksize-parent-progress" aria-label="Parent setup progress">
-      ${["Welcome", "Consent", "Quick check", "Camera", "Kid game"].map((label, index) => {
+      ${labels.map((label, index) => {
         const step = index + 1;
         const state = step < activeStep ? "complete" : step === activeStep ? "active" : "";
         return `<span class="ksize-parent-progress-step ${state}"><i>${step < activeStep ? "✓" : step}</i><b>${label}</b></span>`;
       }).join("")}
     </nav>
   `;
+  };
   const consentPreviewNode = {
       type: jsPsychHtmlButtonResponse,
       stimulus: `
@@ -2065,7 +2070,7 @@ async function main() {
       stimulus: `
         <main class="ksize-shell ksize-setup-shell">
           <section class="ksize-screen ksize-setup-screen">
-            ${parentProgressHtml(3)}
+            ${parentProgressHtml(showStandaloneConsentPreview ? 3 : 2)}
             <header class="ksize-setup-heading">
               <span class="ksize-setup-eyebrow">A quick note for the grown-up</span>
               <h1 class="ksize-setup-title">Get ready to play</h1>
@@ -2138,7 +2143,7 @@ async function main() {
       stimulus: `
         <main class="ksize-shell ksize-setup-shell">
           <section class="ksize-screen ksize-setup-screen ksize-camera-screen">
-            ${parentProgressHtml(4)}
+            ${parentProgressHtml(showStandaloneConsentPreview ? 4 : 3)}
             <header class="ksize-setup-heading">
               <span class="ksize-setup-eyebrow">Camera check</span>
               <h1 class="ksize-setup-title">Set up the camera for recording</h1>
@@ -2218,7 +2223,7 @@ async function main() {
       stimulus: `
         <main class="ksize-shell ksize-setup-shell">
           <section class="ksize-screen ksize-setup-screen ksize-handoff-screen">
-            ${parentProgressHtml(5)}
+            ${parentProgressHtml(showStandaloneConsentPreview ? 5 : 4)}
             <div class="ksize-handoff-complete"><span aria-hidden="true">✓</span> Grown-up setup complete</div>
             <div class="ksize-handoff-visual" aria-hidden="true">
               <div class="ksize-handoff-person ksize-handoff-grownup"><span></span><b></b></div>
