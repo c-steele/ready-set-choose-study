@@ -36,14 +36,14 @@ const ALL_DONE_AUDIO_SEQUENCE = [
   {
     src: `${PREFERRED_AUDIO_DIR}/075_ending_Thank_you_for_playing_fun_profile_v61.mp3`,
     text: "Thank you for playing!",
-    volume: 0.8,
+    volume: 1,
     playbackRate: 1,
     preservePitch: true,
   },
   {
     src: `${PREFERRED_AUDIO_DIR}/075_ending_Were_all_done_fun_profile_v59.mp3`,
     text: "We're all done!",
-    volume: 0.8,
+    volume: 1,
     playbackRate: 1,
     preservePitch: true,
   },
@@ -2444,7 +2444,6 @@ async function main() {
         window.currentRewardPageCleanup = null;
       },
     };
-  let stopDoneFireworkSounds = null;
   const doneNode = {
       type: jsPsychHtmlButtonResponse,
       stimulus: `
@@ -2485,8 +2484,8 @@ async function main() {
       on_load: () => {
         installResearcherSkip(jsPsych);
         updateRewardHud();
-        playOutroMusic();
-        stopDoneFireworkSounds = playFireworkSfx({ loop: true });
+        stopRewardMusic();
+        audio.stop();
         const grownupHereButton = document.querySelector(".ksize-grownup-here-btn");
         const grownupPanel = document.querySelector(".ksize-final-grownup-panel");
         const continueButton = document.querySelector(".ksize-final-grownup-continue");
@@ -2501,13 +2500,11 @@ async function main() {
             });
           }
           await audio.playFile(CHILD_GET_GROWNUP_AUDIO, CHILD_GET_GROWNUP_TEXT, {
-            volume: 0.8,
+            volume: 1,
           });
         })();
         grownupHereButton?.addEventListener("click", () => {
           audio.stop();
-          stopDoneFireworkSounds?.();
-          stopDoneFireworkSounds = null;
           stopRewardMusic();
           grownupHereButton.hidden = true;
           grownupPanel.hidden = false;
@@ -2518,8 +2515,6 @@ async function main() {
         });
       },
       on_finish: () => {
-        stopDoneFireworkSounds?.();
-        stopDoneFireworkSounds = null;
         stopRewardMusic();
         audio.stop();
       },
