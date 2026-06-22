@@ -1977,23 +1977,33 @@ body {
   margin-top: 7px;
 }
 
-.ksize-parent-welcome-facts {
+.ksize-before-begin-card {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 8px 18px;
+  margin: 14px 0 18px;
+  padding: 14px 18px;
+  border: 2px solid #d8e9e3;
+  border-radius: 14px;
+  background: #f4fbf8;
+  color: #43535b;
+  font-size: 15px;
+  line-height: 1.4;
   text-align: left;
 }
 
-.ksize-parent-welcome-facts strong {
+.ksize-before-begin-card strong {
   grid-column: 1 / -1;
+  color: #245c50;
+  font-size: 17px;
 }
 
-.ksize-parent-welcome-facts span {
+.ksize-before-begin-card span {
   position: relative;
   padding-left: 20px;
 }
 
-.ksize-parent-welcome-facts span::before {
+.ksize-before-begin-card span::before {
   position: absolute;
   left: 0;
   content: "✓";

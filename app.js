@@ -1969,13 +1969,6 @@ async function main() {
                 <p>Help with the device—not the answers.</p>
               </article>
             </div>
-            <div class="ksize-parent-welcome-note ksize-parent-welcome-facts">
-              <strong>Before you begin</strong>
-              <span>A recorded picture game about social relationships</span>
-              <span>About 10–15 minutes</span>
-              <span>You and your child may stop at any time</span>
-              <span>There are no right or wrong answers in this game</span>
-            </div>
             <button class="ksize-parent-listen ksize-parent-welcome-audio" type="button"><span aria-hidden="true">▶</span><span>Listen</span></button>
             <footer class="ksize-setup-footer">
               <p>The next pages are for the grown-up.</p>
@@ -2008,6 +2001,13 @@ async function main() {
               <h1 class="ksize-setup-title">Get ready to play</h1>
               <p class="ksize-setup-intro">Three quick checks before the game.</p>
             </header>
+            <div class="ksize-before-begin-card">
+              <strong>Before you begin</strong>
+              <span>A recorded picture game about social relationships</span>
+              <span>About 10–15 minutes</span>
+              <span>You and your child may stop at any time</span>
+              <span>There are no right or wrong answers in this game</span>
+            </div>
             <div class="ksize-setup-list">
               <article class="ksize-setup-card">
                 <span class="ksize-setup-number">1</span>
