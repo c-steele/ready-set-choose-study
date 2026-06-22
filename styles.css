@@ -1414,6 +1414,11 @@ body {
   line-height: 1.42;
 }
 
+.ksize-setup-copy .ksize-no-right-wrong-reminder {
+  margin-top: 7px;
+  font-weight: 700;
+}
+
 .ksize-setup-picture {
   position: relative;
   display: grid;

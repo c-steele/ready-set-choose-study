@@ -2044,7 +2044,8 @@ async function main() {
                 <span class="ksize-setup-number">3</span>
                 <div class="ksize-setup-copy">
                   <h2>Let your child choose</h2>
-                  <p>Help with the device, but not with answers. There are no right or wrong answers in this game.</p>
+                  <p>Help with the device, but not with answers.</p>
+                  <p class="ksize-no-right-wrong-reminder">There are no right or wrong answers in this game.</p>
                 </div>
                 <div class="ksize-setup-picture ksize-choice-picture" aria-hidden="true">
                   <span class="ksize-choice-dot ksize-choice-dot-left">A</span>
