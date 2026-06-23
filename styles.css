@@ -230,11 +230,11 @@ body {
   display: inline-flex;
   width: max-content;
   align-items: center;
-  gap: 5px;
-  min-width: 74px;
+  gap: 6px;
+  min-width: 0;
   max-width: max-content;
   margin: 0;
-  padding: 5px 9px;
+  padding: 5px 10px;
   border: 3px solid #ffd15c;
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.94);
@@ -242,6 +242,14 @@ body {
   font-size: 16px;
   font-weight: 900;
   box-shadow: 0 8px 20px rgba(91, 66, 5, 0.14);
+}
+
+.ksize-coin-label {
+  color: #755619;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
 }
 
 .ksize-compact-coin-wrap {
@@ -308,6 +316,7 @@ body {
 .ksize-coin-goal {
   color: var(--muted);
   font-size: 12px;
+  white-space: nowrap;
 }
 
 .ksize-coin-pop {

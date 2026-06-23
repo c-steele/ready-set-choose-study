@@ -5,27 +5,27 @@ const EVENT_MANIFEST_URL = "data/ksize_manifest.json?v=sister-brother-wording-v5
 const INTRO_IMAGE_FIXES_URL = "data/intro_image_fixes.json?v=two-part-pairs-1";
 const CANONICAL_AUDIO_MANIFEST_URL = "data/canonical_audio_manifest.json?v=preferred-v32";
 const PREFERRED_AUDIO_DIR = requestedVoiceProfile === "relkind" ? "audio_relkind_voice" : "audio_preferred";
-const AUDIO_VERSION = requestedVoiceProfile === "relkind" ? "relkind-stable-v48" : "parent-audio-v48";
+const AUDIO_VERSION = requestedVoiceProfile === "relkind" ? "relkind-stable-v48" : "parent-audio-v61";
 const DATA_ENDPOINT_URL = "";
 const AUTO_ADVANCE_PAUSE_MS = 1200;
-const START_INTRO_TEXT = "Hi there! Welcome to Who Will Help? We are going to look at pictures and play a choosing game. Listen to each page. When you see choices, tap the one you pick. When you are ready, hit the green button to start.";
+const START_INTRO_TEXT = "Hi there! Welcome to Who Will Help? We are going to look at pictures and play a choosing game. Listen to each page. When you see choices, choose the one you pick. When you are ready, hit the green button to start.";
 const START_INTRO_AUDIO = requestedVoiceProfile === "relkind"
   ? `${PREFERRED_AUDIO_DIR}/080_welcome_Hit_green_button_to_start.mp3`
-  : "audio/welcome_with_start_cue_original_voice.mp3";
+  : `${PREFERRED_AUDIO_DIR}/080_welcome_Hit_green_button_to_start.mp3`;
 const GAME_START_TEXT = "Let’s play. Listen to the story, then answer the questions. Hit the green button to start.";
 const GAME_START_AUDIO = requestedVoiceProfile === "relkind"
   ? `${PREFERRED_AUDIO_DIR}/081_game_start_Lets_play.mp3`
   : "audio/game_start_without_game_1.mp3";
 const PARENT_WELCOME_AUDIO = `${PREFERRED_AUDIO_DIR}/077_parent_setup_Welcome_grownups.mp3`;
-const PARENT_WELCOME_TEXT = "Welcome, grown-ups! Thank you for helping your child take part. First, we'll get the sound, screen, and camera ready. Then your child will listen to stories and tap their choices. You can help with the device, but please let your child choose the answers.";
+const PARENT_WELCOME_TEXT = "Welcome, grown-ups! Thank you for helping your child take part. First, we'll get the sound, screen, and camera ready. Then your child will listen to stories and choose pictures on the screen. Most pages move on by themselves, and you can press Replay if your child wants to hear a page again. You can help with the device, but please let your child choose the answers.";
 const PARENT_QUICK_CHECKS_AUDIO = `${PREFERRED_AUDIO_DIR}/078_parent_setup_Three_quick_checks.mp3`;
-const PARENT_QUICK_CHECKS_TEXT = "Before you begin: This is a recorded picture game about social relationships. It takes about ten to fifteen minutes. You and your child may stop at any time. There are no right or wrong answers in this game. Now, three quick checks. Use one screen and place it in front of your child. Turn the sound to a comfortable volume. Stay close to help with the device, but let your child choose the answers.";
+const PARENT_QUICK_CHECKS_TEXT = "Before you begin: This is a recorded picture game about social relationships. It takes about ten to fifteen minutes. You and your child may stop at any time. There are no right or wrong answers in this game. The pages are read aloud, so your child does not need to read. Most pages move on by themselves; you can also press Next when it appears. Now, three quick checks. Use one screen and place it in front of your child. Turn the sound to a comfortable volume. Stay close to help with the device, but let your child choose the answers.";
 const PARENT_CAMERA_AUDIO = `${PREFERRED_AUDIO_DIR}/079_parent_setup_Check_the_camera.mp3`;
-const PARENT_CAMERA_TEXT = "Let's check the camera. Put the screen directly in front of your child. Keep their full face and shoulders in view, and avoid a bright window behind them. Use one screen, and keep the webcam centered above the screen your child is watching.";
+const PARENT_CAMERA_TEXT = "Let's check the camera. Children Helping Science checks the webcam before the game. Put the screen directly in front of your child. Keep their full face and shoulders in view, and avoid a bright window behind them. Use one screen, and keep the webcam centered above the screen your child is watching.";
 const PARENT_HANDOFF_AUDIO = `${PREFERRED_AUDIO_DIR}/083_parent_handoff_Invite_your_child.mp3`;
 const PARENT_HANDOFF_TEXT = "Grown-up setup is finished. Please invite your child to come sit in front of the screen now. Grown-ups, you may stay nearby to help with the device, but please let your child choose the answers. There are no right or wrong answers in this game. When your child is ready, press the green button to continue.";
 const CHILD_ASSENT_AUDIO = `${PREFERRED_AUDIO_DIR}/084_child_assent_Would_you_like_to_play.mp3`;
-const CHILD_ASSENT_TEXT = "Hi there! Do you want to play a fun game today? In my game, I'm going to show you some shapes and ask you some questions. You'll press buttons on the screen to tell me what you think. There are no right or wrong answers, so you can say whatever you think! We're just curious about how kids think. The camera will stay on while you play, and you can stop at any time. Are you ready to play my game?";
+const CHILD_ASSENT_TEXT = "Hi there! Do you want to play a fun game today? In my game, I'm going to show you some shapes and ask you some questions. You'll press or click buttons on the screen to tell me what you think. There are no right or wrong answers, so you can say whatever you think! We're just curious about how kids think. The camera will stay on while you play, and you can stop at any time. Are you ready to play my game?";
 const CHILD_GET_GROWNUP_AUDIO = `${PREFERRED_AUDIO_DIR}/085_child_closeout_Get_your_grownup.mp3`;
 const CHILD_GET_GROWNUP_TEXT = "Great job! You finished the game! Please go get your grown-up so they can finish the last few steps.";
 const ENABLE_CHILD_ASSENT = false;
@@ -293,7 +293,7 @@ function canonicalAudioPathForSrc(src) {
 function rewardHudHtml() {
   return `
     <div class="ksize-coin-hud" aria-live="polite">
-      <span class="ksize-coin-icon" aria-hidden="true">C</span>
+      <span class="ksize-coin-label">Coins earned</span>
       <span class="ksize-coin-count">${rewardCoins}</span>
       <span class="ksize-coin-goal">/ ${REWARD_GOAL_COINS}</span>
     </div>
@@ -1348,9 +1348,9 @@ function renderKidSlide({ image, text, choices = [], overlayChoices = false, sho
             <div class="ksize-helper-bubble">${overlayChoices && !visualChoices ? "Choose one!" : "Listen and look!"}</div>
           </div>
           <div class="ksize-controls">
-            <button class="ksize-audio-btn ksize-icon-btn" type="button" aria-label="Play">
+            <button class="ksize-audio-btn ksize-icon-btn" type="button" aria-label="Replay">
               <span class="ksize-icon-symbol" aria-hidden="true">▶</span>
-              <span class="ksize-icon-label">Play</span>
+              <span class="ksize-icon-label">Replay</span>
             </button>
             ${showNext ? `
               <button class="ksize-next-btn ksize-icon-btn" type="button" aria-label="Next">
@@ -1597,9 +1597,9 @@ function renderSlide({ chunk, slide, index, total, storyNumber = null, storyTota
             <div class="ksize-helper-bubble">${slide.kind === "response" ? "Pick one!" : "Listen and look!"}</div>
           </div>
           <div class="ksize-controls">
-            <button class="ksize-audio-btn ksize-icon-btn" type="button" aria-label="Play">
+            <button class="ksize-audio-btn ksize-icon-btn" type="button" aria-label="Replay">
               <span class="ksize-icon-symbol" aria-hidden="true">▶</span>
-              <span class="ksize-icon-label">Play</span>
+              <span class="ksize-icon-label">Replay</span>
             </button>
             ${slide.kind !== "response" ? `
               <button class="ksize-next-btn ksize-icon-btn" type="button" aria-label="Next">
@@ -1961,7 +1961,7 @@ async function main() {
               <article class="ksize-parent-welcome-card">
                 <span class="ksize-parent-welcome-icon ksize-icon-pulse" aria-hidden="true">▶</span>
                 <h2>Your child plays</h2>
-                <p>Listen to stories and tap choices.</p>
+                <p>Listen to stories and choose pictures.</p>
               </article>
               <article class="ksize-parent-welcome-card">
                 <span class="ksize-parent-welcome-icon ksize-icon-heart" aria-hidden="true">♡</span>
@@ -2007,6 +2007,8 @@ async function main() {
               <span>About 10–15 minutes</span>
               <span>You and your child may stop at any time</span>
               <span>There are no right or wrong answers in this game</span>
+              <span>The pages are read aloud, so your child does not need to read</span>
+              <span>Most pages move on by themselves; you can also press Next when it appears</span>
             </div>
             <h2 class="ksize-quick-checks-heading">Three quick checks</h2>
             <div class="ksize-setup-list">
@@ -2127,7 +2129,7 @@ async function main() {
                 </div>
                 <div class="ksize-recording-note">
                   <span class="ksize-recording-dot" aria-hidden="true"></span>
-                  <p><strong>Next:</strong> CHS will show a live view for one final check.</p>
+                  <p><strong>Camera check:</strong> CHS checks the webcam before the game. Keep your child centered while the game records.</p>
                 </div>
               </div>
             </div>
@@ -2294,9 +2296,9 @@ async function main() {
             <p class="ksize-text">Listen and play. Earn coins as you go, then see a silly coin party at the end.</p>
             <p class="ksize-start-cue">When you are ready, hit the green button to start.</p>
             <div class="ksize-controls">
-              <button class="ksize-audio-btn ksize-icon-btn ksize-start-audio ksize-prompt-glow" type="button" aria-label="Play">
+              <button class="ksize-audio-btn ksize-icon-btn ksize-start-audio ksize-prompt-glow" type="button" aria-label="Replay">
                 <span class="ksize-icon-symbol" aria-hidden="true">▶</span>
-                <span class="ksize-icon-label">Play</span>
+                <span class="ksize-icon-label">Replay</span>
               </button>
               <button class="ksize-next-btn ksize-icon-btn" type="button" aria-label="Start">
                 <span class="ksize-icon-symbol" aria-hidden="true">➜</span>

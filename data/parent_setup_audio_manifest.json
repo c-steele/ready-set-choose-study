@@ -5,19 +5,19 @@
   "lines": [
     {
       "id": "parent_welcome_short",
-      "text": "Welcome, grown-ups! Thank you for helping your child take part. First, we'll get the sound, screen, and camera ready. Then your child will listen to stories and tap their choices. You can help with the device, but please let your child choose the answers.",
+      "text": "Welcome, grown-ups! Thank you for helping your child take part. First, we'll get the sound, screen, and camera ready. Then your child will listen to stories and choose pictures on the screen. Most pages move on by themselves, and you can press Replay if your child wants to hear a page again. You can help with the device, but please let your child choose the answers.",
       "category": "parent-setup",
       "output": "audio_preferred/077_parent_setup_Welcome_grownups.mp3"
     },
     {
       "id": "parent_quick_checks_short",
-      "text": "Before you begin: This is a recorded picture game about social relationships. It takes about ten to fifteen minutes. You and your child may stop at any time. There are no right or wrong answers in this game. Now, three quick checks. Use one screen and place it in front of your child. Turn the sound to a comfortable volume. Stay close to help with the device, but let your child choose the answers.",
+      "text": "Before you begin: This is a recorded picture game about social relationships. It takes about ten to fifteen minutes. You and your child may stop at any time. There are no right or wrong answers in this game. The pages are read aloud, so your child does not need to read. Most pages move on by themselves; you can also press Next when it appears. Now, three quick checks. Use one screen and place it in front of your child. Turn the sound to a comfortable volume. Stay close to help with the device, but let your child choose the answers.",
       "category": "parent-setup",
       "output": "audio_preferred/078_parent_setup_Three_quick_checks.mp3"
     },
     {
       "id": "parent_camera_setup_short",
-      "text": "Let's check the camera. Put the screen directly in front of your child. Keep their full face and shoulders in view, and avoid a bright window behind them. Use one screen, and keep the webcam centered above the screen your child is watching.",
+      "text": "Let's check the camera. Children Helping Science checks the webcam before the game. Put the screen directly in front of your child. Keep their full face and shoulders in view, and avoid a bright window behind them. Use one screen, and keep the webcam centered above the screen your child is watching.",
       "category": "parent-setup",
       "output": "audio_preferred/079_parent_setup_Check_the_camera.mp3"
     },
@@ -35,7 +35,7 @@
     },
     {
       "id": "child_assent",
-      "text": "Hi there! Do you want to play a fun game today? In my game, I'm going to show you some shapes and ask you some questions. You'll press buttons on the screen to tell me what you think. There are no right or wrong answers, so you can say whatever you think! We're just curious about how kids think. The camera will stay on while you play, and you can stop at any time. Are you ready to play my game?",
+      "text": "Hi there! Do you want to play a fun game today? In my game, I'm going to show you some shapes and ask you some questions. You'll press or click buttons on the screen to tell me what you think. There are no right or wrong answers, so you can say whatever you think! We're just curious about how kids think. The camera will stay on while you play, and you can stop at any time. Are you ready to play my game?",
       "category": "child-assent",
       "output": "audio_preferred/084_child_assent_Would_you_like_to_play.mp3"
     },
