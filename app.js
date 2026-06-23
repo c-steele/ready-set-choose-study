@@ -319,11 +319,6 @@ function updateRewardHud() {
 function awardCoins(amount, label = "coin") {
   rewardCoins += amount;
   updateRewardHud();
-  const pop = document.createElement("div");
-  pop.className = "ksize-coin-pop";
-  pop.innerHTML = `<span aria-hidden="true">C</span><strong>+${amount}</strong>`;
-  document.body.appendChild(pop);
-  window.setTimeout(() => pop.remove(), 1350);
   return {
     reward_coins_earned: amount,
     reward_coin_label: label,
@@ -346,7 +341,7 @@ function finishWithReward(jsPsych, data, amount, label) {
   };
   window.setTimeout(() => {
     jsPsych.finishTrial({ ...data, ...rewardData });
-  }, amount > 0 ? 220 : 0);
+  }, 0);
 }
 
 function stopRewardMusic() {
