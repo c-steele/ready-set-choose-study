@@ -2008,7 +2008,7 @@ async function main() {
             </header>
             <div class="ksize-before-begin-card">
               <strong>Before you begin</strong>
-              <span>This is a recorded picture game about social relationships.</span>
+              <span>This is a recorded picture game about social relationships</span>
               <span>About 10–15 minutes</span>
               <span>You and your child may stop at any time</span>
               <span>There are no right or wrong answers in this game</span>
