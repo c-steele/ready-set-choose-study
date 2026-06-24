@@ -5,11 +5,12 @@ const EVENT_MANIFEST_URL = "data/ksize_manifest.json?v=sister-brother-wording-v5
 const INTRO_IMAGE_FIXES_URL = "data/intro_image_fixes.json?v=two-part-pairs-1";
 const CANONICAL_AUDIO_MANIFEST_URL = "data/canonical_audio_manifest.json?v=preferred-v32";
 const PREFERRED_AUDIO_DIR = requestedVoiceProfile === "relkind" ? "audio_relkind_voice" : "audio_preferred";
-const AUDIO_VERSION = requestedVoiceProfile === "relkind" ? "relkind-stable-v48" : "parent-audio-v65";
+const AUDIO_VERSION = requestedVoiceProfile === "relkind" ? "relkind-stable-v48" : "parent-audio-v66";
 const DATA_ENDPOINT_URL = "";
 const AUTO_ADVANCE_PAUSE_MS = 1200;
 const COIN_PARTY_AUTO_FINISH_MS = 9000;
 const PARENT_AUTOPLAY_NOTE = "Most pages in the game move on by themselves after a few moments, but you can press Replay to hear it again or press Next to move on sooner when it appears.";
+const PARENT_AUTOPLAY_NOTE_SHORT = "Most pages move on by themselves. Press Replay to hear it again, or Next to move on sooner.";
 const START_INTRO_TEXT = "Hi there! Welcome to Who Will Help? We are going to look at pictures and play a choosing game. Listen to each page. When you see choices, choose the one you pick. When you are ready, hit the green button to start.";
 const START_INTRO_AUDIO = requestedVoiceProfile === "relkind"
   ? `${PREFERRED_AUDIO_DIR}/080_welcome_Hit_green_button_to_start.mp3`
@@ -23,9 +24,9 @@ const PARENT_WELCOME_TEXT = `Welcome, grown-ups! Thank you for helping your chil
 const PARENT_QUICK_CHECKS_AUDIO = `${PREFERRED_AUDIO_DIR}/078_parent_setup_Three_quick_checks.mp3`;
 const PARENT_QUICK_CHECKS_TEXT = `Before you begin: This is a recorded picture game about social relationships. It takes about ten to fifteen minutes. You and your child may stop at any time. There are no right or wrong answers in this game. The pages are read aloud, so your child does not need to read. ${PARENT_AUTOPLAY_NOTE} Now, three quick checks. Use one screen and place it in front of your child. Turn the sound to a comfortable volume. Stay close to help with the device, but let your child choose the answers.`;
 const PARENT_CAMERA_AUDIO = `${PREFERRED_AUDIO_DIR}/079_parent_setup_Check_the_camera.mp3`;
-const PARENT_CAMERA_TEXT = "Let's check the camera. Children Helping Science checks the webcam before the game. Put the screen directly in front of your child. Keep their full face and shoulders in view, and avoid a bright window behind them. Use one screen, and keep the webcam centered above the screen your child is watching.";
+const PARENT_CAMERA_TEXT = "Set up the camera for recording. Please make sure your child stays easy to see. Put the screen directly in front of your child. Keep their face and shoulders in view. Avoid a bright window behind them. Use one study screen, and keep your child centered while the game records.";
 const PARENT_HANDOFF_AUDIO = `${PREFERRED_AUDIO_DIR}/083_parent_handoff_Invite_your_child.mp3`;
-const PARENT_HANDOFF_TEXT = `Grown-up setup is finished. Please invite your child to come sit in front of the screen now. Grown-ups, you may stay nearby to help with the device, but please let your child choose the answers. There are no right or wrong answers in this game. The pages are read aloud, so your child does not need to read. ${PARENT_AUTOPLAY_NOTE} When your child is ready, press the green button to continue.`;
+const PARENT_HANDOFF_TEXT = `Grown-up setup is finished. Now it's your child's turn. Please invite your child to sit in front of the screen. Grown-ups, you may help with the device, but please let your child choose. There are no right or wrong answers. The pages are read aloud. ${PARENT_AUTOPLAY_NOTE_SHORT} When your child is ready, press the green button to continue.`;
 const CHILD_ASSENT_AUDIO = `${PREFERRED_AUDIO_DIR}/084_child_assent_Would_you_like_to_play.mp3`;
 const CHILD_ASSENT_TEXT = "Hi there! Do you want to play a fun game today? In my game, I'm going to show you some shapes and ask you some questions. You'll press or click buttons on the screen to tell me what you think. There are no right or wrong answers, so you can say whatever you think! We're just curious about how kids think. The camera will stay on while you play, and you can stop at any time. Are you ready to play my game?";
 const CHILD_GET_GROWNUP_AUDIO = `${PREFERRED_AUDIO_DIR}/085_child_closeout_Get_your_grownup.mp3`;
@@ -2183,6 +2184,7 @@ async function main() {
                 </div>
               </div>
             </div>
+            <button class="ksize-parent-listen ksize-camera-audio" type="button"><span aria-hidden="true">▶</span><span>Listen</span></button>
             <footer class="ksize-setup-footer ksize-camera-footer">
               <p>Keep this position during the game.</p>
               <button class="ksize-setup-next ksize-camera-next" type="button"><span>Finish grown-up setup</span><span aria-hidden="true">➜</span></button>
@@ -2193,6 +2195,9 @@ async function main() {
       choices: [],
       on_load: () => {
         installResearcherSkip(jsPsych);
+        const playCameraAudio = () => audio.playFile(PARENT_CAMERA_AUDIO, PARENT_CAMERA_TEXT);
+        document.querySelector(".ksize-camera-audio")?.addEventListener("click", playCameraAudio);
+        window.setTimeout(playCameraAudio, 500);
         document.querySelector(".ksize-camera-next")?.addEventListener("click", () => {
           audio.stop();
           finishWithReward(jsPsych, { response: "camera_setup_continue" }, 0, "camera_setup");
@@ -2220,10 +2225,10 @@ async function main() {
             <div class="ksize-handoff-reminder">
               <span aria-hidden="true">♡</span>
               <p>
-                <strong>Grown-ups,</strong> you may stay nearby to help with the device, but please let your child choose the answers.
-                <span class="ksize-handoff-reassurance">There are no right or wrong answers in this game.</span>
-                <span class="ksize-handoff-reassurance">The pages are read aloud, so your child does not need to read.</span>
-                <span class="ksize-handoff-flow">${PARENT_AUTOPLAY_NOTE}</span>
+                <strong>Grown-ups,</strong> you may help with the device, but please let your child choose.
+                <span class="ksize-handoff-reassurance">There are no right or wrong answers.</span>
+                <span class="ksize-handoff-reassurance">The pages are read aloud.</span>
+                <span class="ksize-handoff-flow">${PARENT_AUTOPLAY_NOTE_SHORT}</span>
               </p>
             </div>
             <button class="ksize-parent-listen ksize-handoff-audio" type="button"><span aria-hidden="true">▶</span><span>Listen</span></button>
