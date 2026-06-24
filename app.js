@@ -90,11 +90,7 @@ const requestedRatingMode = configValue("ratingMode") || "one-after-story";
 const requestedFamilyLikertMode = configValue("familyLikert", "familyLikertMode", "familyPairs").toLowerCase();
 const requestedPreviewIndex = Math.max(0, Number(configValue("previewIndex") || 0) || 0);
 const requestedResearcherTools = configValue("researcherTools", "researcher", "debug");
-const isLocalResearchPreview = window.location.protocol === "file:"
-  || ["localhost", "127.0.0.1", "::1"].includes(window.location.hostname);
-const showResearcherTools = requestedResearcherTools
-  ? requestedResearcherTools === "1"
-  : isLocalResearchPreview;
+const showResearcherTools = requestedResearcherTools === "1";
 const requestedRewardCoins = Math.max(0, Number(configValue("rewardCoins")) || 0);
 const requestedDataEndpoint = configValue("dataEndpoint") || DATA_ENDPOINT_URL;
 const shouldDownloadData = configValue("downloadData") === "1";
