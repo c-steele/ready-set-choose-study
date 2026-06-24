@@ -87,6 +87,7 @@ const requestedVariant = configValue("variant").toLowerCase();
 const requestedEvent = configValue("event").toUpperCase();
 const requestedPartOrder = configValue("partOrder", "order");
 const requestedRatingMode = configValue("ratingMode") || "one-after-story";
+const requestedFamilyLikertMode = configValue("familyLikert", "familyLikertMode", "familyPairs").toLowerCase();
 const requestedPreviewIndex = Math.max(0, Number(configValue("previewIndex") || 0) || 0);
 const requestedResearcherTools = configValue("researcherTools", "researcher", "debug");
 const isLocalResearchPreview = window.location.protocol === "file:"
@@ -994,6 +995,10 @@ function onePairSchedulesForSession(setName, roleSet) {
     : ONE_PAIR_SCRIPT_SCHEDULES;
 }
 
+function wantsAllFamilyDyads(mode) {
+  return ["all", "all10", "all-10", "all-pairs", "both", "full"].includes(String(mode || "").toLowerCase());
+}
+
 function trialColor(trial) {
   return trial?.blocks.INTRO?.color || "";
 }
@@ -1851,6 +1856,7 @@ async function main() {
     ...(requestedVariant ? { variant: requestedVariant } : {}),
     ...(requestedPartOrder ? { partOrder: requestedPartOrder } : {}),
     ...(requestedRatingMode ? { ratingMode: requestedRatingMode } : {}),
+    ...(requestedFamilyLikertMode ? { familyLikert: requestedFamilyLikertMode } : {}),
     ...(requestedDataEndpoint ? { dataEndpoint: requestedDataEndpoint } : {}),
     ...(shouldDownloadData ? { downloadData: "1" } : {}),
     ...(params.get("showDataStatus") === "1" ? { showDataStatus: "1" } : {}),
@@ -1866,8 +1872,13 @@ async function main() {
   const onePairSchedules = onePairSchedulesForSession(requestedSet, selectedRoleSet);
   const onePairScheduleIndex = hashSeed(`${requestedSeed}:one-pair-schedule`) % onePairSchedules.length;
   const onePairSchedule = onePairSchedules[onePairScheduleIndex] || onePairSchedules[0];
+  const useAllFamilyDyadsAfterStory = selectedRatingMode === "one-after-story"
+    && isFamilyConditionSet(requestedSet, selectedRoleSet)
+    && wantsAllFamilyDyads(requestedFamilyLikertMode);
   const dyadGroupsByTrial = selectedRatingMode === "one-after-story"
-    ? selectOneDyadPerTrial(rawDyadGroupsByTrial, eventPlan, onePairSchedule)
+    ? (useAllFamilyDyadsAfterStory
+      ? rawDyadGroupsByTrial
+      : selectOneDyadPerTrial(rawDyadGroupsByTrial, eventPlan, onePairSchedule))
     : dedupeDyadGroupsByRelationship(rawDyadGroupsByTrial);
   const allDyadChunks = dyadGroupsByTrial.flat();
   const includePairIntros = selectedRatingMode !== "one-after-story";
@@ -1914,8 +1925,10 @@ async function main() {
     event_suffix: selectedEventSuffix,
     part_order: selectedRatingMode === "one-after-story" ? "interleaved-one-after-story" : selectedPartOrder,
     rating_mode: selectedRatingMode,
-    one_pair_schedule: selectedRatingMode === "one-after-story" ? onePairScheduleIndex : null,
-    one_pair_schedule_map: selectedRatingMode === "one-after-story"
+    family_likert_mode_requested: requestedFamilyLikertMode || null,
+    family_likert_mode_used: useAllFamilyDyadsAfterStory ? "all-matching-pairs" : "one-pair-schedule",
+    one_pair_schedule: selectedRatingMode === "one-after-story" && !useAllFamilyDyadsAfterStory ? onePairScheduleIndex : null,
+    one_pair_schedule_map: selectedRatingMode === "one-after-story" && !useAllFamilyDyadsAfterStory
       ? JSON.stringify(onePairSchedule)
       : null,
     requested_set: requestedSet,
