@@ -5,13 +5,13 @@
   "lines": [
     {
       "id": "parent_welcome_short",
-      "text": "Welcome, grown-ups! Thank you for helping your child take part. First, we'll get the sound, screen, and camera ready. Then your child will listen to stories and choose pictures on the screen. Most pages move on by themselves after a few moments, but you can press Replay to hear it again or press Next to move on sooner when it appears. You can help with the device, but please let your child choose the answers.",
+      "text": "Welcome, grown-ups! Thank you for helping your child take part. First, we'll get the sound, screen, and camera ready. Then your child will listen to stories and choose pictures on the screen. You can help with the device, but please let your child choose the answers. How the game moves: Most pages in the game move on by themselves after a few moments, but you can press Replay to hear it again or press Next to move on sooner when it appears.",
       "category": "parent-setup",
       "output": "audio_preferred/077_parent_setup_Welcome_grownups.mp3"
     },
     {
       "id": "parent_quick_checks_short",
-      "text": "Before you begin: This is a recorded picture game about social relationships. It takes about ten to fifteen minutes. You and your child may stop at any time. There are no right or wrong answers in this game. The pages are read aloud, so your child does not need to read. Most pages move on by themselves after a few moments, but you can press Replay to hear it again or press Next to move on sooner when it appears. Now, three quick checks. Use one screen and place it in front of your child. Turn the sound to a comfortable volume. Stay close to help with the device, but let your child choose the answers.",
+      "text": "Before you begin: This is a recorded picture game about social relationships. It takes about ten to fifteen minutes. You and your child may stop at any time. There are no right or wrong answers in this game. The pages are read aloud, so your child does not need to read. Most pages in the game move on by themselves after a few moments, but you can press Replay to hear it again or press Next to move on sooner when it appears. Now, three quick checks. Use one screen and place it in front of your child. Turn the sound to a comfortable volume. Stay close to help with the device, but let your child choose the answers.",
       "category": "parent-setup",
       "output": "audio_preferred/078_parent_setup_Three_quick_checks.mp3"
     },
@@ -29,7 +29,7 @@
     },
     {
       "id": "parent_child_handoff",
-      "text": "Grown-up setup is finished. Please invite your child to come sit in front of the screen now. Grown-ups, you may stay nearby to help with the device, but please let your child choose the answers. There are no right or wrong answers in this game. Remember: The pages are read aloud, so your child does not need to read. Most pages move on by themselves after a few moments, but you can press Replay to hear it again or press Next to move on sooner when it appears. When your child is ready, press the green button to continue.",
+      "text": "Grown-up setup is finished. Please invite your child to come sit in front of the screen now. Grown-ups, you may stay nearby to help with the device, but please let your child choose the answers. There are no right or wrong answers in this game. The pages are read aloud, so your child does not need to read. Most pages in the game move on by themselves after a few moments, but you can press Replay to hear it again or press Next to move on sooner when it appears. When your child is ready, press the green button to continue.",
       "category": "parent-setup",
       "output": "audio_preferred/083_parent_handoff_Invite_your_child.mp3"
     },
@@ -44,6 +44,12 @@
       "text": "Great job! You finished the game! Please go get your grown-up so they can finish the last few steps.",
       "category": "child-closeout",
       "output": "audio_preferred/085_child_closeout_Get_your_grownup.mp3"
+    },
+    {
+      "id": "grownup_closeout_final_steps",
+      "text": "The child's game is complete. Continue to complete the final grown-up steps.",
+      "category": "parent-closeout",
+      "output": "audio_preferred/086_grownup_closeout_Final_steps.mp3"
     }
   ]
 }

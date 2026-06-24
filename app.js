@@ -5,10 +5,11 @@ const EVENT_MANIFEST_URL = "data/ksize_manifest.json?v=sister-brother-wording-v5
 const INTRO_IMAGE_FIXES_URL = "data/intro_image_fixes.json?v=two-part-pairs-1";
 const CANONICAL_AUDIO_MANIFEST_URL = "data/canonical_audio_manifest.json?v=preferred-v32";
 const PREFERRED_AUDIO_DIR = requestedVoiceProfile === "relkind" ? "audio_relkind_voice" : "audio_preferred";
-const AUDIO_VERSION = requestedVoiceProfile === "relkind" ? "relkind-stable-v48" : "parent-audio-v62";
+const AUDIO_VERSION = requestedVoiceProfile === "relkind" ? "relkind-stable-v48" : "parent-audio-v65";
 const DATA_ENDPOINT_URL = "";
 const AUTO_ADVANCE_PAUSE_MS = 1200;
-const PARENT_AUTOPLAY_NOTE = "Most pages move on by themselves after a few moments, but you can press Replay to hear it again or press Next to move on sooner when it appears.";
+const COIN_PARTY_AUTO_FINISH_MS = 9000;
+const PARENT_AUTOPLAY_NOTE = "Most pages in the game move on by themselves after a few moments, but you can press Replay to hear it again or press Next to move on sooner when it appears.";
 const START_INTRO_TEXT = "Hi there! Welcome to Who Will Help? We are going to look at pictures and play a choosing game. Listen to each page. When you see choices, choose the one you pick. When you are ready, hit the green button to start.";
 const START_INTRO_AUDIO = requestedVoiceProfile === "relkind"
   ? `${PREFERRED_AUDIO_DIR}/080_welcome_Hit_green_button_to_start.mp3`
@@ -18,17 +19,19 @@ const GAME_START_AUDIO = requestedVoiceProfile === "relkind"
   ? `${PREFERRED_AUDIO_DIR}/081_game_start_Lets_play.mp3`
   : "audio/game_start_without_game_1.mp3";
 const PARENT_WELCOME_AUDIO = `${PREFERRED_AUDIO_DIR}/077_parent_setup_Welcome_grownups.mp3`;
-const PARENT_WELCOME_TEXT = `Welcome, grown-ups! Thank you for helping your child take part. First, we'll get the sound, screen, and camera ready. Then your child will listen to stories and choose pictures on the screen. ${PARENT_AUTOPLAY_NOTE} You can help with the device, but please let your child choose the answers.`;
+const PARENT_WELCOME_TEXT = `Welcome, grown-ups! Thank you for helping your child take part. First, we'll get the sound, screen, and camera ready. Then your child will listen to stories and choose pictures on the screen. You can help with the device, but please let your child choose the answers. How the game moves: ${PARENT_AUTOPLAY_NOTE}`;
 const PARENT_QUICK_CHECKS_AUDIO = `${PREFERRED_AUDIO_DIR}/078_parent_setup_Three_quick_checks.mp3`;
 const PARENT_QUICK_CHECKS_TEXT = `Before you begin: This is a recorded picture game about social relationships. It takes about ten to fifteen minutes. You and your child may stop at any time. There are no right or wrong answers in this game. The pages are read aloud, so your child does not need to read. ${PARENT_AUTOPLAY_NOTE} Now, three quick checks. Use one screen and place it in front of your child. Turn the sound to a comfortable volume. Stay close to help with the device, but let your child choose the answers.`;
 const PARENT_CAMERA_AUDIO = `${PREFERRED_AUDIO_DIR}/079_parent_setup_Check_the_camera.mp3`;
 const PARENT_CAMERA_TEXT = "Let's check the camera. Children Helping Science checks the webcam before the game. Put the screen directly in front of your child. Keep their full face and shoulders in view, and avoid a bright window behind them. Use one screen, and keep the webcam centered above the screen your child is watching.";
 const PARENT_HANDOFF_AUDIO = `${PREFERRED_AUDIO_DIR}/083_parent_handoff_Invite_your_child.mp3`;
-const PARENT_HANDOFF_TEXT = `Grown-up setup is finished. Please invite your child to come sit in front of the screen now. Grown-ups, you may stay nearby to help with the device, but please let your child choose the answers. There are no right or wrong answers in this game. Remember: The pages are read aloud, so your child does not need to read. ${PARENT_AUTOPLAY_NOTE} When your child is ready, press the green button to continue.`;
+const PARENT_HANDOFF_TEXT = `Grown-up setup is finished. Please invite your child to come sit in front of the screen now. Grown-ups, you may stay nearby to help with the device, but please let your child choose the answers. There are no right or wrong answers in this game. The pages are read aloud, so your child does not need to read. ${PARENT_AUTOPLAY_NOTE} When your child is ready, press the green button to continue.`;
 const CHILD_ASSENT_AUDIO = `${PREFERRED_AUDIO_DIR}/084_child_assent_Would_you_like_to_play.mp3`;
 const CHILD_ASSENT_TEXT = "Hi there! Do you want to play a fun game today? In my game, I'm going to show you some shapes and ask you some questions. You'll press or click buttons on the screen to tell me what you think. There are no right or wrong answers, so you can say whatever you think! We're just curious about how kids think. The camera will stay on while you play, and you can stop at any time. Are you ready to play my game?";
 const CHILD_GET_GROWNUP_AUDIO = `${PREFERRED_AUDIO_DIR}/085_child_closeout_Get_your_grownup.mp3`;
 const CHILD_GET_GROWNUP_TEXT = "Great job! You finished the game! Please go get your grown-up so they can finish the last few steps.";
+const FINAL_GROWNUP_AUDIO = `${PREFERRED_AUDIO_DIR}/086_grownup_closeout_Final_steps.mp3`;
+const FINAL_GROWNUP_TEXT = "The child's game is complete. Continue to complete the final grown-up steps.";
 const ENABLE_CHILD_ASSENT = false;
 const COIN_PARTY_TEXT = "Hooray! You did it! You finished the game! Thanks so much for playing!";
 const COIN_PARTY_AUDIO = `${PREFERRED_AUDIO_DIR}/074_ending_Hooray_you_did_it_finished_game_slower_v44.mp3`;
@@ -1360,6 +1363,7 @@ function topHudHtml(storyNumber = null, storyTotal = null) {
 }
 
 function renderKidSlide({ image, text, choices = [], overlayChoices = false, showText = false, slideKind = "", showNext = false, visualChoices = false, storyNumber = null, storyTotal = null }) {
+  const hasChoicePrompt = choices.length > 0 && !visualChoices;
   const imageBlock = overlayChoices && image
     ? `<div class="ksize-scene-wrap">
         <img src="${escapeHtml(displayImageSrc(image.src))}" alt="" draggable="false">
@@ -1395,6 +1399,7 @@ function renderKidSlide({ image, text, choices = [], overlayChoices = false, sho
               </button>
             ` : ""}
           </div>
+          ${hasChoicePrompt ? `<div class="ksize-choice-page-note">Choose a glowing box to move on.</div>` : ""}
           ${showNext ? `<div class="ksize-auto-next-note">Game will keep going on its own, or press Next to move on sooner.</div>` : ""}
         </div>
       </section>
@@ -1645,6 +1650,7 @@ function renderSlide({ chunk, slide, index, total, storyNumber = null, storyTota
               </button>
             ` : ""}
           </div>
+          ${slide.kind === "response" ? `<div class="ksize-choice-page-note">Choose one answer to move on.</div>` : ""}
           ${slide.kind !== "response" ? `<div class="ksize-auto-next-note">Game will keep going on its own, or press Next to move on sooner.</div>` : ""}
         </div>
       </section>
@@ -2216,7 +2222,7 @@ async function main() {
               <p>
                 <strong>Grown-ups,</strong> you may stay nearby to help with the device, but please let your child choose the answers.
                 <span class="ksize-handoff-reassurance">There are no right or wrong answers in this game.</span>
-                <span class="ksize-handoff-reassurance">Remember: The pages are read aloud, so your child does not need to read.</span>
+                <span class="ksize-handoff-reassurance">The pages are read aloud, so your child does not need to read.</span>
                 <span class="ksize-handoff-flow">${PARENT_AUTOPLAY_NOTE}</span>
               </p>
             </div>
@@ -2448,7 +2454,7 @@ async function main() {
           glowFinish();
           autoFinishTimer = window.setTimeout(() => {
             completeRewardPage("auto_finish_reward");
-          }, 6000);
+          }, COIN_PARTY_AUTO_FINISH_MS);
         };
         const fallbackTimer = window.setTimeout(startCoinParty, 7000);
         const narrationTimer = window.setTimeout(() => {
@@ -2549,6 +2555,9 @@ async function main() {
           grownupHereButton.hidden = true;
           grownupPanel.hidden = false;
           continueButton?.focus();
+          window.setTimeout(() => {
+            audio.playFile(FINAL_GROWNUP_AUDIO, FINAL_GROWNUP_TEXT);
+          }, 250);
         });
         continueButton?.addEventListener("click", () => {
           finishWithReward(jsPsych, { response: "grownup_closeout_continue" }, 0, "grownup_closeout");
