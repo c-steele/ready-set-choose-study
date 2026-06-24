@@ -5,25 +5,26 @@ const EVENT_MANIFEST_URL = "data/ksize_manifest.json?v=sister-brother-wording-v5
 const INTRO_IMAGE_FIXES_URL = "data/intro_image_fixes.json?v=two-part-pairs-1";
 const CANONICAL_AUDIO_MANIFEST_URL = "data/canonical_audio_manifest.json?v=preferred-v32";
 const PREFERRED_AUDIO_DIR = requestedVoiceProfile === "relkind" ? "audio_relkind_voice" : "audio_preferred";
-const AUDIO_VERSION = requestedVoiceProfile === "relkind" ? "relkind-stable-v48" : "parent-audio-v61";
+const AUDIO_VERSION = requestedVoiceProfile === "relkind" ? "relkind-stable-v48" : "parent-audio-v62";
 const DATA_ENDPOINT_URL = "";
 const AUTO_ADVANCE_PAUSE_MS = 1200;
+const PARENT_AUTOPLAY_NOTE = "Most pages move on by themselves after a few moments, but you can press Replay to hear it again or press Next to move on sooner when it appears.";
 const START_INTRO_TEXT = "Hi there! Welcome to Who Will Help? We are going to look at pictures and play a choosing game. Listen to each page. When you see choices, choose the one you pick. When you are ready, hit the green button to start.";
 const START_INTRO_AUDIO = requestedVoiceProfile === "relkind"
   ? `${PREFERRED_AUDIO_DIR}/080_welcome_Hit_green_button_to_start.mp3`
-  : `${PREFERRED_AUDIO_DIR}/080_welcome_Hit_green_button_to_start.mp3`;
+  : "audio/welcome_with_start_cue_original_voice.mp3";
 const GAME_START_TEXT = "Let’s play. Listen to the story, then answer the questions. Hit the green button to start.";
 const GAME_START_AUDIO = requestedVoiceProfile === "relkind"
   ? `${PREFERRED_AUDIO_DIR}/081_game_start_Lets_play.mp3`
   : "audio/game_start_without_game_1.mp3";
 const PARENT_WELCOME_AUDIO = `${PREFERRED_AUDIO_DIR}/077_parent_setup_Welcome_grownups.mp3`;
-const PARENT_WELCOME_TEXT = "Welcome, grown-ups! Thank you for helping your child take part. First, we'll get the sound, screen, and camera ready. Then your child will listen to stories and choose pictures on the screen. Most pages move on by themselves, and you can press Replay if your child wants to hear a page again. You can help with the device, but please let your child choose the answers.";
+const PARENT_WELCOME_TEXT = `Welcome, grown-ups! Thank you for helping your child take part. First, we'll get the sound, screen, and camera ready. Then your child will listen to stories and choose pictures on the screen. ${PARENT_AUTOPLAY_NOTE} You can help with the device, but please let your child choose the answers.`;
 const PARENT_QUICK_CHECKS_AUDIO = `${PREFERRED_AUDIO_DIR}/078_parent_setup_Three_quick_checks.mp3`;
-const PARENT_QUICK_CHECKS_TEXT = "Before you begin: This is a recorded picture game about social relationships. It takes about ten to fifteen minutes. You and your child may stop at any time. There are no right or wrong answers in this game. The pages are read aloud, so your child does not need to read. Most pages move on by themselves; you can also press Next when it appears. Now, three quick checks. Use one screen and place it in front of your child. Turn the sound to a comfortable volume. Stay close to help with the device, but let your child choose the answers.";
+const PARENT_QUICK_CHECKS_TEXT = `Before you begin: This is a recorded picture game about social relationships. It takes about ten to fifteen minutes. You and your child may stop at any time. There are no right or wrong answers in this game. The pages are read aloud, so your child does not need to read. ${PARENT_AUTOPLAY_NOTE} Now, three quick checks. Use one screen and place it in front of your child. Turn the sound to a comfortable volume. Stay close to help with the device, but let your child choose the answers.`;
 const PARENT_CAMERA_AUDIO = `${PREFERRED_AUDIO_DIR}/079_parent_setup_Check_the_camera.mp3`;
 const PARENT_CAMERA_TEXT = "Let's check the camera. Children Helping Science checks the webcam before the game. Put the screen directly in front of your child. Keep their full face and shoulders in view, and avoid a bright window behind them. Use one screen, and keep the webcam centered above the screen your child is watching.";
 const PARENT_HANDOFF_AUDIO = `${PREFERRED_AUDIO_DIR}/083_parent_handoff_Invite_your_child.mp3`;
-const PARENT_HANDOFF_TEXT = "Grown-up setup is finished. Please invite your child to come sit in front of the screen now. Grown-ups, you may stay nearby to help with the device, but please let your child choose the answers. There are no right or wrong answers in this game. When your child is ready, press the green button to continue.";
+const PARENT_HANDOFF_TEXT = `Grown-up setup is finished. Please invite your child to come sit in front of the screen now. Grown-ups, you may stay nearby to help with the device, but please let your child choose the answers. There are no right or wrong answers in this game. Remember: The pages are read aloud, so your child does not need to read. ${PARENT_AUTOPLAY_NOTE} When your child is ready, press the green button to continue.`;
 const CHILD_ASSENT_AUDIO = `${PREFERRED_AUDIO_DIR}/084_child_assent_Would_you_like_to_play.mp3`;
 const CHILD_ASSENT_TEXT = "Hi there! Do you want to play a fun game today? In my game, I'm going to show you some shapes and ask you some questions. You'll press or click buttons on the screen to tell me what you think. There are no right or wrong answers, so you can say whatever you think! We're just curious about how kids think. The camera will stay on while you play, and you can stop at any time. Are you ready to play my game?";
 const CHILD_GET_GROWNUP_AUDIO = `${PREFERRED_AUDIO_DIR}/085_child_closeout_Get_your_grownup.mp3`;
@@ -192,6 +193,30 @@ const ONE_PAIR_SCRIPT_SCHEDULES = [
   },
 ];
 
+const FAMILY_ONE_PAIR_SCRIPT_SCHEDULES = [
+  {
+    "MOM-DAD": "kid-MOM",
+    "SISTER-BROTHER": "kid-SISTER",
+    "DAD-KID": "mom-DAD",
+    "MOM-KID": "dad-KID",
+    "TEACHER-KID": "teacher-KID",
+  },
+  {
+    "MOM-DAD": "kid-DAD",
+    "SISTER-BROTHER": "kid-BROTHER",
+    "DAD-KID": "mom-KID",
+    "MOM-KID": "dad-MOM",
+    "TEACHER-KID": "teacher-KID",
+  },
+  {
+    "MOM-DAD": "kid-MOM",
+    "SISTER-BROTHER": "kid-BROTHER",
+    "DAD-KID": "mom-KID",
+    "MOM-KID": "dad-KID",
+    "TEACHER-KID": "teacher-TEACHER",
+  },
+];
+
 const OPTION_LABELS = {
   love: ["Does not love", "Loves a little", "Loves a lot"],
   like: ["Does not like", "Likes a little", "Likes a lot"],
@@ -293,7 +318,7 @@ function canonicalAudioPathForSrc(src) {
 function rewardHudHtml() {
   return `
     <div class="ksize-coin-hud" aria-live="polite">
-      <span class="ksize-coin-label">Coins earned</span>
+      <span class="ksize-coin-label">Page</span>
       <span class="ksize-coin-count">${rewardCoins}</span>
       <span class="ksize-coin-goal">/ ${REWARD_GOAL_COINS}</span>
     </div>
@@ -947,10 +972,22 @@ function selectPartOrder(seedText, forcedPartOrder) {
 function selectedConditionsForSet(setName, roleSet) {
   const normalizedSet = String(setName || "").toLowerCase();
   if (normalizedSet === "all") return null;
-  if (["family", "mixed", "third", "parent-peer"].includes(normalizedSet)) {
+  if (isFamilyConditionSet(setName, roleSet)) {
     return FAMILY_ROLE_CONDITIONS;
   }
   return roleSet === "man" ? MAN_ROLE_CONDITIONS : CORE_CONDITIONS;
+}
+
+function isFamilyConditionSet(setName, roleSet) {
+  const normalizedSet = String(setName || "").toLowerCase();
+  return ["family", "mixed", "third", "parent-peer"].includes(normalizedSet)
+    || String(roleSet || "").toLowerCase() === "family";
+}
+
+function onePairSchedulesForSession(setName, roleSet) {
+  return isFamilyConditionSet(setName, roleSet)
+    ? FAMILY_ONE_PAIR_SCRIPT_SCHEDULES
+    : ONE_PAIR_SCRIPT_SCHEDULES;
 }
 
 function trialColor(trial) {
@@ -1076,8 +1113,7 @@ function dedupeDyadGroupsByRelationship(dyadGroups) {
   }));
 }
 
-function selectOneDyadPerTrial(dyadGroups, eventPlan, scheduleIndex) {
-  const schedule = ONE_PAIR_SCRIPT_SCHEDULES[scheduleIndex] || ONE_PAIR_SCRIPT_SCHEDULES[0];
+function selectOneDyadPerTrial(dyadGroups, eventPlan, schedule) {
   const seen = new Set();
   return dyadGroups.map((group, idx) => {
     const condition = eventPlan[idx]?.blocks.INTRO?.condition || "";
@@ -1359,6 +1395,7 @@ function renderKidSlide({ image, text, choices = [], overlayChoices = false, sho
               </button>
             ` : ""}
           </div>
+          ${showNext ? `<div class="ksize-auto-next-note">Game will keep going on its own, or press Next to move on sooner.</div>` : ""}
         </div>
       </section>
     </main>
@@ -1608,6 +1645,7 @@ function renderSlide({ chunk, slide, index, total, storyNumber = null, storyTota
               </button>
             ` : ""}
           </div>
+          ${slide.kind !== "response" ? `<div class="ksize-auto-next-note">Game will keep going on its own, or press Next to move on sooner.</div>` : ""}
         </div>
       </section>
     </main>
@@ -1818,9 +1856,11 @@ async function main() {
     return shuffle(chunks, makeRng(`${requestedSeed}:dyad-order:${trial.id}`));
   });
   const selectedRatingMode = normalizeRatingMode(requestedRatingMode);
-  const onePairScheduleIndex = hashSeed(`${requestedSeed}:one-pair-schedule`) % ONE_PAIR_SCRIPT_SCHEDULES.length;
+  const onePairSchedules = onePairSchedulesForSession(requestedSet, selectedRoleSet);
+  const onePairScheduleIndex = hashSeed(`${requestedSeed}:one-pair-schedule`) % onePairSchedules.length;
+  const onePairSchedule = onePairSchedules[onePairScheduleIndex] || onePairSchedules[0];
   const dyadGroupsByTrial = selectedRatingMode === "one-after-story"
-    ? selectOneDyadPerTrial(rawDyadGroupsByTrial, eventPlan, onePairScheduleIndex)
+    ? selectOneDyadPerTrial(rawDyadGroupsByTrial, eventPlan, onePairSchedule)
     : dedupeDyadGroupsByRelationship(rawDyadGroupsByTrial);
   const allDyadChunks = dyadGroupsByTrial.flat();
   const includePairIntros = selectedRatingMode !== "one-after-story";
@@ -1869,7 +1909,7 @@ async function main() {
     rating_mode: selectedRatingMode,
     one_pair_schedule: selectedRatingMode === "one-after-story" ? onePairScheduleIndex : null,
     one_pair_schedule_map: selectedRatingMode === "one-after-story"
-      ? JSON.stringify(ONE_PAIR_SCRIPT_SCHEDULES[onePairScheduleIndex])
+      ? JSON.stringify(onePairSchedule)
       : null,
     requested_set: requestedSet,
     requested_color: requestedColor || null,
@@ -1969,6 +2009,10 @@ async function main() {
                 <p>Help with the device—not the answers.</p>
               </article>
             </div>
+            <div class="ksize-parent-flow-note">
+              <strong>How the game moves:</strong>
+              <span>${PARENT_AUTOPLAY_NOTE}</span>
+            </div>
             <button class="ksize-parent-listen ksize-parent-welcome-audio" type="button"><span aria-hidden="true">▶</span><span>Listen</span></button>
             <footer class="ksize-setup-footer">
               <p>The next pages are for the grown-up.</p>
@@ -2008,7 +2052,7 @@ async function main() {
               <span>You and your child may stop at any time</span>
               <span>There are no right or wrong answers in this game</span>
               <span>The pages are read aloud, so your child does not need to read</span>
-              <span>Most pages move on by themselves; you can also press Next when it appears</span>
+              <span>${PARENT_AUTOPLAY_NOTE}</span>
             </div>
             <h2 class="ksize-quick-checks-heading">Three quick checks</h2>
             <div class="ksize-setup-list">
@@ -2133,7 +2177,6 @@ async function main() {
                 </div>
               </div>
             </div>
-            <button class="ksize-parent-listen ksize-camera-setup-audio" type="button"><span aria-hidden="true">▶</span><span>Listen</span></button>
             <footer class="ksize-setup-footer ksize-camera-footer">
               <p>Keep this position during the game.</p>
               <button class="ksize-setup-next ksize-camera-next" type="button"><span>Finish grown-up setup</span><span aria-hidden="true">➜</span></button>
@@ -2144,9 +2187,6 @@ async function main() {
       choices: [],
       on_load: () => {
         installResearcherSkip(jsPsych);
-        const playCameraSetupAudio = () => audio.playFile(PARENT_CAMERA_AUDIO, PARENT_CAMERA_TEXT);
-        document.querySelector(".ksize-camera-setup-audio")?.addEventListener("click", playCameraSetupAudio);
-        window.setTimeout(playCameraSetupAudio, 500);
         document.querySelector(".ksize-camera-next")?.addEventListener("click", () => {
           audio.stop();
           finishWithReward(jsPsych, { response: "camera_setup_continue" }, 0, "camera_setup");
@@ -2176,6 +2216,8 @@ async function main() {
               <p>
                 <strong>Grown-ups,</strong> you may stay nearby to help with the device, but please let your child choose the answers.
                 <span class="ksize-handoff-reassurance">There are no right or wrong answers in this game.</span>
+                <span class="ksize-handoff-reassurance">Remember: The pages are read aloud, so your child does not need to read.</span>
+                <span class="ksize-handoff-flow">${PARENT_AUTOPLAY_NOTE}</span>
               </p>
             </div>
             <button class="ksize-parent-listen ksize-handoff-audio" type="button"><span aria-hidden="true">▶</span><span>Listen</span></button>
