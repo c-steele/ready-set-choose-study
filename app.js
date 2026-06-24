@@ -5,7 +5,7 @@ const EVENT_MANIFEST_URL = "data/ksize_manifest.json?v=sister-brother-wording-v5
 const INTRO_IMAGE_FIXES_URL = "data/intro_image_fixes.json?v=two-part-pairs-1";
 const CANONICAL_AUDIO_MANIFEST_URL = "data/canonical_audio_manifest.json?v=preferred-v32";
 const PREFERRED_AUDIO_DIR = requestedVoiceProfile === "relkind" ? "audio_relkind_voice" : "audio_preferred";
-const AUDIO_VERSION = requestedVoiceProfile === "relkind" ? "relkind-stable-v48" : "parent-audio-v66";
+const AUDIO_VERSION = requestedVoiceProfile === "relkind" ? "relkind-stable-v48" : "parent-audio-v68";
 const DATA_ENDPOINT_URL = "";
 const AUTO_ADVANCE_PAUSE_MS = 1200;
 const COIN_PARTY_AUTO_FINISH_MS = 9000;
@@ -20,11 +20,11 @@ const GAME_START_AUDIO = requestedVoiceProfile === "relkind"
   ? `${PREFERRED_AUDIO_DIR}/081_game_start_Lets_play.mp3`
   : "audio/game_start_without_game_1.mp3";
 const PARENT_WELCOME_AUDIO = `${PREFERRED_AUDIO_DIR}/077_parent_setup_Welcome_grownups.mp3`;
-const PARENT_WELCOME_TEXT = `Welcome, grown-ups! Thank you for helping your child take part. First, we'll get the sound, screen, and camera ready. Then your child will listen to stories and choose pictures on the screen. You can help with the device, but please let your child choose the answers. How the game moves: ${PARENT_AUTOPLAY_NOTE}`;
+const PARENT_WELCOME_TEXT = "Welcome, grown-ups! Thank you for helping your child take part. First, we'll get the sound, screen, and camera ready. Then your child will listen to stories and choose pictures on the screen. Most pages move on by themselves, and you can press Replay if your child wants to hear a page again. You can help with the device, but please let your child choose the answers.";
 const PARENT_QUICK_CHECKS_AUDIO = `${PREFERRED_AUDIO_DIR}/078_parent_setup_Three_quick_checks.mp3`;
 const PARENT_QUICK_CHECKS_TEXT = `Before you begin: This is a recorded picture game about social relationships. It takes about ten to fifteen minutes. You and your child may stop at any time. There are no right or wrong answers in this game. The pages are read aloud, so your child does not need to read. ${PARENT_AUTOPLAY_NOTE} Now, three quick checks. Use one screen and place it in front of your child. Turn the sound to a comfortable volume. Stay close to help with the device, but let your child choose the answers.`;
 const PARENT_CAMERA_AUDIO = `${PREFERRED_AUDIO_DIR}/079_parent_setup_Check_the_camera.mp3`;
-const PARENT_CAMERA_TEXT = "Set up the camera for recording. Please make sure your child stays easy to see. Put the screen directly in front of your child. Keep their face and shoulders in view. Avoid a bright window behind them. Use one study screen, and keep your child centered while the game records.";
+const PARENT_CAMERA_TEXT = "Let's check the camera. Put the screen directly in front of your child. Keep their full face and shoulders in view, and avoid a bright window behind them. Use one screen, and keep the webcam centered above the screen your child is watching.";
 const PARENT_HANDOFF_AUDIO = `${PREFERRED_AUDIO_DIR}/083_parent_handoff_Invite_your_child.mp3`;
 const PARENT_HANDOFF_TEXT = `Grown-up setup is finished. Now it's your child's turn. Please invite your child to sit in front of the screen. Grown-ups, you may help with the device, but please let your child choose. There are no right or wrong answers. The pages are read aloud. ${PARENT_AUTOPLAY_NOTE_SHORT} When your child is ready, press the green button to continue.`;
 const CHILD_ASSENT_AUDIO = `${PREFERRED_AUDIO_DIR}/084_child_assent_Would_you_like_to_play.mp3`;

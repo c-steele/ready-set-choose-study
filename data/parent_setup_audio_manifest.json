@@ -5,7 +5,7 @@
   "lines": [
     {
       "id": "parent_welcome_short",
-      "text": "Welcome, grown-ups! Thank you for helping your child take part. First, we'll get the sound, screen, and camera ready. Then your child will listen to stories and choose pictures on the screen. You can help with the device, but please let your child choose the answers. How the game moves: Most pages in the game move on by themselves after a few moments, but you can press Replay to hear it again or press Next to move on sooner when it appears.",
+      "text": "Welcome, grown-ups! Thank you for helping your child take part. First, we'll get the sound, screen, and camera ready. Then your child will listen to stories and choose pictures on the screen. Most pages move on by themselves, and you can press Replay if your child wants to hear a page again. You can help with the device, but please let your child choose the answers.",
       "category": "parent-setup",
       "output": "audio_preferred/077_parent_setup_Welcome_grownups.mp3"
     },
@@ -17,7 +17,7 @@
     },
     {
       "id": "parent_camera_setup_short",
-      "text": "Set up the camera for recording. Please make sure your child stays easy to see. Put the screen directly in front of your child. Keep their face and shoulders in view. Avoid a bright window behind them. Use one study screen, and keep your child centered while the game records.",
+      "text": "Let's check the camera. Put the screen directly in front of your child. Keep their full face and shoulders in view, and avoid a bright window behind them. Use one screen, and keep the webcam centered above the screen your child is watching.",
       "category": "parent-setup",
       "output": "audio_preferred/079_parent_setup_Check_the_camera.mp3"
     },
