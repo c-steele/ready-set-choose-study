@@ -3,12 +3,11 @@ const requestedVoiceProfile = params.get("voice") || "";
 const DYAD_MANIFEST_URL = "data/dyad_manifest.json?v=two-part-pairs-1";
 const EVENT_MANIFEST_URL = "data/ksize_manifest.json?v=sister-brother-wording-v56";
 const INTRO_IMAGE_FIXES_URL = "data/intro_image_fixes.json?v=two-part-pairs-1";
-const CANONICAL_AUDIO_MANIFEST_URL = "data/canonical_audio_manifest.json?v=preferred-v32";
+const CANONICAL_AUDIO_MANIFEST_URL = "data/canonical_audio_manifest.json?v=preferred-v70";
 const PREFERRED_AUDIO_DIR = requestedVoiceProfile === "relkind" ? "audio_relkind_voice" : "audio_preferred";
-const AUDIO_VERSION = requestedVoiceProfile === "relkind" ? "relkind-stable-v48" : "parent-audio-v68";
+const AUDIO_VERSION = requestedVoiceProfile === "relkind" ? "relkind-stable-v48" : "review-polish-v70";
 const DATA_ENDPOINT_URL = "";
 const AUTO_ADVANCE_PAUSE_MS = 1200;
-const COIN_PARTY_AUTO_FINISH_MS = 9000;
 const PARENT_AUTOPLAY_NOTE = "Most pages in the game move on by themselves after a few moments, but you can press Replay to hear it again or press Next to move on sooner when it appears.";
 const PARENT_AUTOPLAY_NOTE_SHORT = "Most pages move on by themselves. Press Replay to hear it again, or Next to move on sooner.";
 const START_INTRO_TEXT = "Hi there! Welcome to Who Will Help? We are going to look at pictures and play a choosing game. Listen to each page. When you see choices, choose the one you pick. When you are ready, hit the green button to start.";
@@ -29,13 +28,10 @@ const PARENT_HANDOFF_AUDIO = `${PREFERRED_AUDIO_DIR}/083_parent_handoff_Invite_y
 const PARENT_HANDOFF_TEXT = `Grown-up setup is finished. Now it's your child's turn. Please invite your child to sit in front of the screen. Grown-ups, you may help with the device, but please let your child choose. There are no right or wrong answers. The pages are read aloud. ${PARENT_AUTOPLAY_NOTE_SHORT} When your child is ready, press the green button to continue.`;
 const CHILD_ASSENT_AUDIO = `${PREFERRED_AUDIO_DIR}/084_child_assent_Would_you_like_to_play.mp3`;
 const CHILD_ASSENT_TEXT = "Hi there! Do you want to play a fun game today? In my game, I'm going to show you some shapes and ask you some questions. You'll press or click buttons on the screen to tell me what you think. There are no right or wrong answers, so you can say whatever you think! We're just curious about how kids think. The camera will stay on while you play, and you can stop at any time. Are you ready to play my game?";
-const CHILD_GET_GROWNUP_AUDIO = `${PREFERRED_AUDIO_DIR}/085_child_closeout_Get_your_grownup.mp3`;
-const CHILD_GET_GROWNUP_TEXT = "Great job! You finished the game! Please go get your grown-up so they can finish the last few steps.";
+const CHILD_GROWNUP_HANDOFF_TEXT = "Great job—you finished the game! The final questions are for your grown-up to do. Your grown-up may already be with you.";
 const FINAL_GROWNUP_AUDIO = `${PREFERRED_AUDIO_DIR}/086_grownup_closeout_Final_steps.mp3`;
 const FINAL_GROWNUP_TEXT = "The child's game is complete. Continue to complete the final grown-up steps.";
 const ENABLE_CHILD_ASSENT = false;
-const COIN_PARTY_TEXT = "Hooray! You did it! You finished the game! Thanks so much for playing!";
-const COIN_PARTY_AUDIO = `${PREFERRED_AUDIO_DIR}/074_ending_Hooray_you_did_it_finished_game_slower_v44.mp3`;
 const ALL_DONE_TEXT = "Thank you for playing! We're all done!";
 const ALL_DONE_AUDIO_SEQUENCE = [
   {
@@ -53,11 +49,10 @@ const ALL_DONE_AUDIO_SEQUENCE = [
     preservePitch: true,
   },
 ];
-let REWARD_GOAL_COINS = 20;
-const REWARD_VALUES = {
-  next: 1,
-  choice: 1,
-  rating: 1,
+const TRIAL_ADVANCE_VALUES = {
+  next: 0,
+  choice: 0,
+  rating: 0,
 };
 
 const runtimeConfig = window.KSIZE_RUNTIME_CONFIG || {};
@@ -91,7 +86,6 @@ const requestedFamilyLikertMode = configValue("familyLikert", "familyLikertMode"
 const requestedPreviewIndex = Math.max(0, Number(configValue("previewIndex") || 0) || 0);
 const requestedResearcherTools = configValue("researcherTools", "researcher", "debug");
 const showResearcherTools = requestedResearcherTools === "1";
-const requestedRewardCoins = Math.max(0, Number(configValue("rewardCoins")) || 0);
 const requestedDataEndpoint = configValue("dataEndpoint") || DATA_ENDPOINT_URL;
 const shouldDownloadData = configValue("downloadData") === "1";
 const useSyntheticSpeech = configValue("syntheticSpeech") !== "0";
@@ -225,19 +219,45 @@ const OPTION_LABELS = {
   old: ["Not old", "A little old", "Very old"],
   strong: ["Not strong", "A little strong", "Very strong"],
 };
-const COIN_RAIN_HTML = Array.from({ length: 18 }, (_, index) =>
-  `<span class="ksize-rain-coin ksize-rain-coin-${index + 1}">C</span>`
-).join("");
-
+const CHOICE_CONFIRMATION_TEXT = {
+  "BEST FRIEND": "You chose the best friend!",
+  BROTHER: "You chose the brother!",
+  DAD: "You chose the dad!",
+  FRIEND: "You chose the friend!",
+  KID: "You chose the kid!",
+  MOM: "You chose the mom!",
+  SISTER: "You chose the sister!",
+  TEACHER: "You chose the teacher!",
+};
+const FOLLOWUP_TEXT_BY_SCRIPT = {
+  "dad-KID": "Now let's answer some questions about the kid inside the box and the dad.",
+  "dad-MOM": "Now let's answer some questions about the dad inside the box and the mom.",
+  "kid-BEST FRIEND": "Now let's answer some questions about the best friend inside the box and the kid.",
+  "kid-BROTHER": "Now let's answer some questions about the brother inside the box and the kid.",
+  "kid-DAD": "Now let's answer some questions about the dad inside the box and the kid.",
+  "kid-FRIEND": "Now let's answer some questions about the friend inside the box and the kid.",
+  "kid-MOM": "Now let's answer some questions about the mom inside the box and the kid.",
+  "kid-SISTER": "Now let's answer some questions about the sister inside the box and the kid.",
+  "kid-TEACHER": "Now let's answer some questions about the teacher inside the box and the kid.",
+  "mom-DAD": "Now let's answer some questions about the mom inside the box and the dad.",
+  "mom-KID": "Now let's answer some questions about the kid inside the box and the mom.",
+  "teacher-KID": "Now let's answer some questions about the kid inside the box and the teacher.",
+  "teacher-TEACHER": "Now let's answer some questions about the teacher inside the box and the other teacher.",
+};
+const TEACHER_BOX_QUESTION_TEXT = {
+  love: "How much does the teacher inside the box love the other teacher?",
+  like: "How much does the teacher inside the box like the other teacher?",
+  charge: "How much is the teacher inside the box in charge?",
+  old: "How old is the teacher inside the box?",
+  strong: "How strong is the teacher inside the box?",
+};
 let introImageFixes = {};
 let currentPreviewIndex = 0;
 let totalPreviewScreens = 0;
 let currentSessionParams = {};
 let canonicalAudioByText = new Map();
 let canonicalAudioByOriginalSrc = new Map();
-let rewardCoins = showResearcherTools ? requestedRewardCoins : 0;
-let rewardMusicStopper = null;
-let rewardMusicAudio = null;
+let outroMusicStopper = null;
 let introMusicStopper = null;
 let welcomeSequenceToken = 0;
 
@@ -316,68 +336,18 @@ function canonicalAudioPathForSrc(src) {
   return canonicalAudioByOriginalSrc.get(normalizeAudioSrc(src)) || "";
 }
 
-function rewardHudHtml() {
-  return `
-    <div class="ksize-coin-hud" aria-live="polite">
-      <span class="ksize-coin-label">Page</span>
-      <span class="ksize-coin-count">${rewardCoins}</span>
-      <span class="ksize-coin-goal">/ ${REWARD_GOAL_COINS}</span>
-    </div>
-  `;
-}
-
-function compactRewardHudHtml() {
-  return `<div class="ksize-compact-coin-wrap">${rewardHudHtml()}</div>`;
-}
-
-function updateRewardHud() {
-  document.querySelectorAll(".ksize-coin-count").forEach((node) => {
-    node.textContent = String(rewardCoins);
-  });
-  document.querySelectorAll(".ksize-coin-goal").forEach((node) => {
-    node.textContent = `/ ${REWARD_GOAL_COINS}`;
-  });
-  document.querySelectorAll(".ksize-reward-total").forEach((node) => {
-    node.textContent = String(rewardCoins);
-  });
-}
-
-function awardCoins(amount, label = "coin") {
-  rewardCoins += amount;
-  updateRewardHud();
-  return {
-    reward_coins_earned: amount,
-    reward_coin_label: label,
-    reward_coin_total: rewardCoins,
-    reward_goal: REWARD_GOAL_COINS,
-    reward_unlocked: rewardCoins >= REWARD_GOAL_COINS,
-  };
-}
-
-function finishWithReward(jsPsych, data, amount, label) {
+function finishParticipantTrial(jsPsych, data, amount, label) {
   document.querySelectorAll("button").forEach((button) => {
     button.disabled = true;
   });
-  const rewardData = amount > 0 ? awardCoins(amount, label) : {
-    reward_coins_earned: 0,
-    reward_coin_label: label,
-    reward_coin_total: rewardCoins,
-    reward_goal: REWARD_GOAL_COINS,
-    reward_unlocked: rewardCoins >= REWARD_GOAL_COINS,
-  };
   window.setTimeout(() => {
-    jsPsych.finishTrial({ ...data, ...rewardData });
+    jsPsych.finishTrial(data);
   }, 0);
 }
 
-function stopRewardMusic() {
-  if (rewardMusicAudio) {
-    rewardMusicAudio.pause();
-    rewardMusicAudio.currentTime = 0;
-    rewardMusicAudio = null;
-  }
-  rewardMusicStopper?.();
-  rewardMusicStopper = null;
+function stopOutroMusic() {
+  outroMusicStopper?.();
+  outroMusicStopper = null;
 }
 
 function stopIntroMusic() {
@@ -440,136 +410,8 @@ function playIntroOpeningMusic() {
   };
 }
 
-function playLoopingMusic(src, volume = 0.5) {
-  stopRewardMusic();
-  rewardMusicAudio = new Audio(versionedAudioSrc(src));
-  rewardMusicAudio.loop = true;
-  rewardMusicAudio.volume = volume;
-  rewardMusicAudio.addEventListener("timeupdate", () => {
-    if (!Number.isFinite(rewardMusicAudio.duration)) return;
-    if (rewardMusicAudio.duration - rewardMusicAudio.currentTime < 0.08) {
-      rewardMusicAudio.currentTime = 0.01;
-      rewardMusicAudio.play().catch(() => {});
-    }
-  });
-  rewardMusicAudio.play().catch(() => {});
-}
-
-function playCoinPartyMusic() {
-  stopRewardMusic();
-  const AudioContextClass = window.AudioContext || window.webkitAudioContext;
-  if (!AudioContextClass) return;
-  const context = new AudioContextClass();
-  context.resume?.().catch(() => {});
-  const master = context.createGain();
-  master.gain.value = 0.2;
-  master.connect(context.destination);
-  const delay = context.createDelay();
-  const delayGain = context.createGain();
-  delay.delayTime.value = 0.18;
-  delayGain.gain.value = 0.1;
-  delay.connect(delayGain).connect(master);
-  const beat = 0.23;
-  const melody = [
-    [783.99, 0, 0.18],
-    [987.77, 1, 0.18],
-    [1174.66, 2, 0.22],
-    [987.77, 3, 0.16],
-    [1318.51, 4, 0.22],
-    [1174.66, 5, 0.16],
-    [987.77, 6, 0.18],
-    [783.99, 7, 0.18],
-    [880.0, 8, 0.18],
-    [987.77, 9, 0.18],
-    [1174.66, 10, 0.22],
-    [1318.51, 11, 0.16],
-    [1567.98, 12, 0.24],
-    [1318.51, 13, 0.18],
-    [1174.66, 14, 0.18],
-    [987.77, 15, 0.28],
-  ];
-  const bass = [
-    [261.63, 0],
-    [261.63, 2],
-    [349.23, 4],
-    [349.23, 6],
-    [392.0, 8],
-    [392.0, 10],
-    [523.25, 12],
-    [523.25, 14],
-  ];
-  const chords = [
-    [261.63, 329.63, 392.0],
-    [349.23, 440.0, 523.25],
-    [392.0, 493.88, 587.33],
-    [523.25, 659.25, 783.99],
-  ];
-
-  const playTone = (frequency, start, duration, type = "triangle", gainLevel = 0.13, attack = 0.025) => {
-    const osc = context.createOscillator();
-    const gain = context.createGain();
-    osc.type = type;
-    osc.frequency.setValueAtTime(frequency, start);
-    gain.gain.setValueAtTime(0.0001, start);
-    gain.gain.linearRampToValueAtTime(gainLevel, start + attack);
-    gain.gain.setValueAtTime(gainLevel * 0.78, start + Math.max(attack + 0.02, duration - 0.05));
-    gain.gain.exponentialRampToValueAtTime(0.0001, start + duration);
-    osc.connect(gain).connect(master);
-    if (frequency > 700) gain.connect(delay);
-    osc.start(start);
-    osc.stop(start + duration + 0.04);
-  };
-
-  const playTick = (start, gainLevel = 0.035) => {
-    const noiseBuffer = context.createBuffer(1, Math.floor(context.sampleRate * 0.035), context.sampleRate);
-    const data = noiseBuffer.getChannelData(0);
-    for (let i = 0; i < data.length; i += 1) {
-      data[i] = (Math.random() * 2 - 1) * (1 - i / data.length);
-    }
-    const noise = context.createBufferSource();
-    noise.buffer = noiseBuffer;
-    const filter = context.createBiquadFilter();
-    filter.type = "highpass";
-    filter.frequency.value = 5200;
-    const gain = context.createGain();
-    gain.gain.setValueAtTime(0.0001, start);
-    gain.gain.exponentialRampToValueAtTime(gainLevel, start + 0.006);
-    gain.gain.exponentialRampToValueAtTime(0.0001, start + 0.04);
-    noise.connect(filter).connect(gain).connect(master);
-    noise.start(start);
-    noise.stop(start + 0.05);
-  };
-
-  const scheduleLoop = () => {
-    const now = context.currentTime + 0.04;
-    melody.forEach(([frequency, step, duration]) => {
-      const start = now + step * beat;
-      playTone(frequency, start, duration, "triangle", 0.135, 0.022);
-      playTone(frequency * 2, start + 0.012, duration * 0.72, "sine", 0.03, 0.018);
-    });
-    bass.forEach(([frequency, step]) => {
-      playTone(frequency, now + step * beat, beat * 1.25, "square", 0.032, 0.018);
-    });
-    chords.forEach((frequencies, index) => {
-      const start = now + index * beat * 4;
-      frequencies.forEach((frequency) => playTone(frequency, start, beat * 3.6, "sine", 0.018, 0.06));
-    });
-    Array.from({ length: 16 }, (_, step) => step).forEach((step) => {
-      playTick(now + step * beat + 0.02, step % 4 === 0 ? 0.045 : 0.026);
-    });
-  };
-
-  scheduleLoop();
-  const loopId = window.setInterval(scheduleLoop, beat * 16 * 1000);
-  rewardMusicStopper = () => {
-    window.clearInterval(loopId);
-    master.gain.setTargetAtTime(0.0001, context.currentTime, 0.08);
-    window.setTimeout(() => context.close().catch(() => {}), 300);
-  };
-}
-
 function playOutroMusic() {
-  stopRewardMusic();
+  stopOutroMusic();
   const AudioContextClass = window.AudioContext || window.webkitAudioContext;
   if (!AudioContextClass) return;
   const context = new AudioContextClass();
@@ -610,42 +452,11 @@ function playOutroMusic() {
   };
   schedule();
   const loopId = window.setInterval(schedule, 3900);
-  rewardMusicStopper = () => {
+  outroMusicStopper = () => {
     window.clearInterval(loopId);
     master.gain.setTargetAtTime(0.0001, context.currentTime, 0.08);
     window.setTimeout(() => context.close().catch(() => {}), 300);
   };
-}
-
-function playTaDaSfx() {
-  const AudioContextClass = window.AudioContext || window.webkitAudioContext;
-  if (!AudioContextClass) return;
-  const context = new AudioContextClass();
-  const master = context.createGain();
-  master.gain.value = 0.62;
-  master.connect(context.destination);
-
-  const playHorn = (delay, frequencies, duration = 0.34) => {
-    const start = context.currentTime + delay;
-    frequencies.forEach((frequency, index) => {
-      const osc = context.createOscillator();
-      const gain = context.createGain();
-      osc.type = "sawtooth";
-      osc.frequency.setValueAtTime(frequency, start);
-      osc.frequency.linearRampToValueAtTime(frequency * 1.015, start + duration);
-      gain.gain.setValueAtTime(0.0001, start);
-      gain.gain.exponentialRampToValueAtTime(0.2 / frequencies.length, start + 0.035);
-      gain.gain.setValueAtTime(0.18 / frequencies.length, start + duration - 0.07);
-      gain.gain.exponentialRampToValueAtTime(0.0001, start + duration);
-      osc.connect(gain).connect(master);
-      osc.start(start + index * 0.006);
-      osc.stop(start + duration + 0.02);
-    });
-  };
-
-  playHorn(0.02, [392, 494, 587], 0.26);
-  playHorn(0.34, [523, 659, 784], 0.44);
-  window.setTimeout(() => context.close().catch(() => {}), 1300);
 }
 
 function playFireworkSfx({ loop = false } = {}) {
@@ -902,9 +713,20 @@ function audioTextForSlide(slide) {
 
 function questionTextForResponse(chunk, slide) {
   if (slide.kind !== "response" || !slide.trait) return "";
+  if (chunk.scriptKey === "teacher-TEACHER" && TEACHER_BOX_QUESTION_TEXT[slide.trait]) {
+    return TEACHER_BOX_QUESTION_TEXT[slide.trait];
+  }
   return chunk.slides.find((candidate) =>
     candidate.kind === "question" && candidate.trait === slide.trait
   )?.text || "";
+}
+
+function ratingFocusLabel(chunk) {
+  if (chunk.scriptKey === "teacher-TEACHER") {
+    return "Questions are about the teacher inside the box, not the other teacher.";
+  }
+  const subject = String(chunk.subject || "person").toLowerCase();
+  return `Questions are about the ${subject} inside the box.`;
 }
 
 function localImage(src) {
@@ -1272,6 +1094,10 @@ const audio = {
   },
 };
 
+async function playReviewNarration(text) {
+  return audio.speak(text);
+}
+
 function installResearcherSkip(jsPsych) {
   const existing = document.querySelector(".ksize-researcher-tools");
   if (existing) existing.remove();
@@ -1281,14 +1107,12 @@ function installResearcherSkip(jsPsych) {
   wrap.className = "ksize-researcher-tools";
 
   const jumpToPreview = (index) => {
-    window.currentRewardPageCleanup?.();
     audio.stop();
     const url = new URL(window.location.href);
     Object.entries(currentSessionParams).forEach(([key, value]) => {
       if (value) url.searchParams.set(key, value);
     });
     url.searchParams.set("previewIndex", String(Math.max(0, Math.min(index, totalPreviewScreens - 1))));
-    url.searchParams.set("rewardCoins", String(rewardCoins));
     window.location.href = url.toString();
   };
 
@@ -1316,7 +1140,6 @@ function installResearcherSkip(jsPsych) {
   button.className = "ksize-researcher-skip";
   button.textContent = "Skip";
   button.addEventListener("click", () => {
-    window.currentRewardPageCleanup?.();
     audio.stop();
     jsPsych.finishTrial({ researcher_skip: true });
   });
@@ -1344,7 +1167,6 @@ function withPreviewIndex(node, index) {
     on_load: () => {
       currentPreviewIndex = index;
       originalOnLoad?.();
-      updateRewardHud();
     },
   };
 }
@@ -1358,7 +1180,7 @@ function topHudHtml(storyNumber = null, storyTotal = null) {
   return `
     <div class="ksize-top-hud">
       <div class="ksize-top-hud-left">${storyCounterHtml(storyNumber, storyTotal)}</div>
-      <div class="ksize-top-hud-center">${rewardHudHtml()}</div>
+      <div class="ksize-top-hud-center"></div>
       <div class="ksize-top-hud-right"></div>
     </div>
   `;
@@ -1438,7 +1260,7 @@ function makeKidNode(jsPsych, { trial, block, suffix, image, text, audioSegments
       const finishNext = () => {
         if (didFinish) return;
         didFinish = true;
-        finishWithReward(jsPsych, { response: "auto_next" }, REWARD_VALUES.next, "auto_next_page");
+        finishParticipantTrial(jsPsych, { response: "auto_next" }, TRIAL_ADVANCE_VALUES.next, "auto_next_page");
       };
       const finishNextAfterPause = async () => {
         await new Promise((resolve) => window.setTimeout(resolve, AUTO_ADVANCE_PAUSE_MS));
@@ -1504,7 +1326,7 @@ function makeKidNode(jsPsych, { trial, block, suffix, image, text, audioSegments
         didFinish = true;
         clearHighlights();
         audio.stop();
-        finishWithReward(jsPsych, { response: "next" }, REWARD_VALUES.next, "next_page");
+        finishParticipantTrial(jsPsych, { response: "next" }, TRIAL_ADVANCE_VALUES.next, "next_page");
       });
       document.querySelectorAll(".ksize-char-btn").forEach((button) => {
         if (visualChoices) return;
@@ -1514,11 +1336,11 @@ function makeKidNode(jsPsych, { trial, block, suffix, image, text, audioSegments
           clearHighlights();
           audio.stop();
           const idx = Number(button.dataset.choiceIndex);
-          finishWithReward(jsPsych, {
+          finishParticipantTrial(jsPsych, {
             response: idx,
             choice_id: choices[idx]?.id || null,
             choice_label: choices[idx]?.label || null,
-          }, REWARD_VALUES.choice, "story_choice");
+          }, TRIAL_ADVANCE_VALUES.choice, "story_choice");
         });
       });
       if (autoPlay) setTimeout(() => playAudio({ advanceWhenDone: autoAdvanceAfterAudio }), 250);
@@ -1611,6 +1433,83 @@ function buildEventTrialNodes(jsPsych, trial, trialIndex, totalTrials, eventSuff
   });
 }
 
+function makeFollowupTransitionNode(jsPsych, trial, chunk, storyNumber, storyTotal) {
+  const followupText = FOLLOWUP_TEXT_BY_SCRIPT[chunk.scriptKey]
+    || "Now let's answer some questions about these two people.";
+  let choiceLabel = "";
+  let choiceText = "";
+  return {
+    type: jsPsychHtmlButtonResponse,
+    stimulus: `
+      <main class="ksize-shell ksize-kid-shell">
+        <section class="ksize-screen ksize-followup-transition-screen">
+          ${topHudHtml(storyNumber, storyTotal)}
+          <div class="ksize-followup-transition-card">
+            <div class="ksize-followup-check" aria-hidden="true">✓</div>
+            <p class="ksize-followup-choice" data-followup-choice>Thanks for choosing!</p>
+            <h2>${escapeHtml(followupText)}</h2>
+            <p>First, we’ll meet the two people so it is clear who each question is about.</p>
+          </div>
+          <div class="ksize-bottom-area">
+            <div class="ksize-controls">
+              <button class="ksize-audio-btn ksize-icon-btn" type="button" aria-label="Replay">
+                <span class="ksize-icon-symbol" aria-hidden="true">▶</span>
+                <span class="ksize-icon-label">Replay</span>
+              </button>
+              <button class="ksize-next-btn ksize-icon-btn" type="button" aria-label="Continue">
+                <span class="ksize-icon-symbol" aria-hidden="true">➜</span>
+                <span class="ksize-icon-label">Continue</span>
+              </button>
+            </div>
+          </div>
+        </section>
+      </main>
+    `,
+    choices: [],
+    data: {
+      trial_key: trial.id,
+      slide_kind: "followup_transition",
+      dyad_id: chunk.id,
+      dyad_script_key: chunk.scriptKey,
+      followup_subject: chunk.subject,
+      followup_target: chunk.target,
+      story_number: storyNumber,
+      story_total: storyTotal,
+    },
+    on_load: () => {
+      installResearcherSkip(jsPsych);
+      const choiceRows = jsPsych.data.get().filter({
+        trial_key: trial.id,
+        slide_kind: "response_choices",
+      }).last(1).values();
+      choiceLabel = String(choiceRows[0]?.choice_label || "").toUpperCase();
+      choiceText = CHOICE_CONFIRMATION_TEXT[choiceLabel] || "Thanks for choosing!";
+      const choiceNode = document.querySelector("[data-followup-choice]");
+      if (choiceNode) choiceNode.textContent = choiceText;
+
+      const playAudio = async () => {
+        if (CHOICE_CONFIRMATION_TEXT[choiceLabel]) {
+          await playReviewNarration(choiceText);
+          await new Promise((resolve) => window.setTimeout(resolve, 140));
+        }
+        await playReviewNarration(followupText);
+      };
+      document.querySelector(".ksize-audio-btn")?.addEventListener("click", playAudio);
+      document.querySelector(".ksize-next-btn")?.addEventListener("click", () => {
+        audio.stop();
+        finishParticipantTrial(jsPsych, {
+          response: "continue",
+          story_choice_label: choiceLabel || null,
+          choice_confirmation_text: choiceText,
+          followup_orientation_text: followupText,
+        }, 0, "followup_transition");
+      });
+      window.setTimeout(playAudio, 250);
+    },
+    on_finish: () => audio.stop(),
+  };
+}
+
 function renderSlide({ chunk, slide, index, total, storyNumber = null, storyTotal = null }) {
   const options = OPTION_LABELS[slide.trait] || [];
   const buttons = slide.kind === "response"
@@ -1627,6 +1526,9 @@ function renderSlide({ chunk, slide, index, total, storyNumber = null, storyTota
     <main class="ksize-shell">
       <section class="ksize-screen" data-slide-kind="${escapeHtml(slide.kind)}">
         ${topHudHtml(storyNumber, storyTotal)}
+        ${slide.kind === "response"
+          ? `<div class="ksize-rating-focus">${escapeHtml(ratingFocusLabel(chunk))}</div>`
+          : ""}
         <div class="ksize-image-wrap">
           <img src="${escapeHtml(slide.src)}" alt="">
         </div>
@@ -1718,7 +1620,11 @@ function makeSlideNode(jsPsych, chunk, slide, index, total, storyNumber = null, 
           resetOptions();
           const questionText = questionTextForResponse(chunk, slide);
           if (questionText) {
-            await audio.play(questionText);
+            if (chunk.scriptKey === "teacher-TEACHER") {
+              await playReviewNarration(questionText);
+            } else {
+              await audio.play(questionText);
+            }
             if (token !== playToken) return;
           }
           OPTION_LABELS[slide.trait]?.forEach((_, idx) => {
@@ -1734,17 +1640,17 @@ function makeSlideNode(jsPsych, chunk, slide, index, total, storyNumber = null, 
       document.querySelector(".ksize-audio-btn")?.addEventListener("click", playAudio);
       document.querySelector(".ksize-next-btn")?.addEventListener("click", () => {
         audio.stop();
-        finishWithReward(jsPsych, { response: "next" }, REWARD_VALUES.next, "next_page");
+        finishParticipantTrial(jsPsych, { response: "next" }, TRIAL_ADVANCE_VALUES.next, "next_page");
       });
       document.querySelectorAll(".ksize-rating-choice").forEach((button) => {
         button.addEventListener("click", () => {
           const idx = Number(button.dataset.ratingIndex);
           audio.stop();
-          finishWithReward(jsPsych, {
+          finishParticipantTrial(jsPsych, {
             response: idx,
             rating_value: idx + 1,
             rating_label: OPTION_LABELS[slide.trait]?.[idx] || null,
-          }, REWARD_VALUES.rating, "rating_choice");
+          }, TRIAL_ADVANCE_VALUES.rating, "rating_choice");
         });
       });
       if (slide.kind === "response") resetOptions();
@@ -1774,9 +1680,8 @@ function makePartBreakNode(jsPsych, partKind, partNumber, eventSuffix) {
   return {
     type: jsPsychHtmlButtonResponse,
     stimulus: `
-      <main class="ksize-shell">
-        <section class="ksize-screen ksize-start-screen ksize-welcome-screen">
-          ${rewardHudHtml()}
+        <main class="ksize-shell">
+          <section class="ksize-screen ksize-start-screen ksize-welcome-screen">
           <div class="ksize-helper ksize-helper-start" aria-hidden="true">
             <div class="ksize-helper-face">
               <span class="ksize-eye ksize-eye-left"></span>
@@ -1812,7 +1717,7 @@ function makePartBreakNode(jsPsych, partKind, partNumber, eventSuffix) {
       const partAudioSrc = partNumber === 1 ? GAME_START_AUDIO : "";
       document.querySelector(".ksize-next-btn")?.addEventListener("click", () => {
         audio.stop();
-        finishWithReward(jsPsych, { response: "start_part" }, 0, "start_part");
+        finishParticipantTrial(jsPsych, { response: "start_part" }, 0, "start_part");
       });
       setTimeout(() => {
         if (partAudioSrc) {
@@ -1877,7 +1782,7 @@ async function main() {
       : selectOneDyadPerTrial(rawDyadGroupsByTrial, eventPlan, onePairSchedule))
     : dedupeDyadGroupsByRelationship(rawDyadGroupsByTrial);
   const allDyadChunks = dyadGroupsByTrial.flat();
-  const includePairIntros = selectedRatingMode !== "one-after-story";
+  const includePairIntros = true;
   const allDyadSlides = allDyadChunks.flatMap((chunk) =>
     orderedDyadSlides(chunk, { includeIntro: includePairIntros }).map((slide) => ({ chunk, slide }))
   );
@@ -1960,8 +1865,9 @@ async function main() {
   const oneAfterStoryNodes = selectedRatingMode === "one-after-story"
     ? eventPlan.flatMap((trial, idx) => {
         const eventNodes = buildEventTrialNodes(jsPsych, trial, idx, eventPlan.length, selectedEventSuffix, PART_EVENT, 1);
-        const dyadNodes = dyadGroupsByTrial[idx].flatMap((chunk) =>
-          orderedDyadSlides(chunk, { includeIntro: false }).map((slide) => {
+        const dyadNodes = dyadGroupsByTrial[idx].flatMap((chunk) => [
+          makeFollowupTransitionNode(jsPsych, trial, chunk, idx + 1, eventPlan.length),
+          ...orderedDyadSlides(chunk, { includeIntro: true }).map((slide) => {
             const node = makeSlideNode(
               jsPsych,
               chunk,
@@ -1973,17 +1879,11 @@ async function main() {
             );
             dyadSlideIndex += 1;
             return node;
-          })
-        );
+          }),
+        ]);
         return [...eventNodes, ...dyadNodes];
       })
     : [];
-  REWARD_GOAL_COINS = Math.max(
-    1,
-    selectedRatingMode === "one-after-story"
-      ? oneAfterStoryNodes.length
-      : storyNodes.length + ratingNodes.length
-  );
 
   const parentProgressHtml = (activeStep) => {
     const labels = ["Welcome", "Quick check", "Camera", "Child’s turn"];
@@ -2045,7 +1945,7 @@ async function main() {
         window.setTimeout(playParentWelcomeAudio, 500);
         document.querySelector(".ksize-parent-welcome-next")?.addEventListener("click", () => {
           audio.stop();
-          finishWithReward(jsPsych, { response: "parent_welcome_continue" }, 0, "parent_welcome");
+          finishParticipantTrial(jsPsych, { response: "parent_welcome_continue" }, 0, "parent_welcome");
         });
       },
     };
@@ -2064,7 +1964,7 @@ async function main() {
             <div class="ksize-before-begin-card">
               <strong>Before you begin</strong>
               <span>This is a recorded picture game about social relationships</span>
-              <span>About 10–15 minutes</span>
+              <span>15 minutes</span>
               <span>You and your child may stop at any time</span>
               <span>There are no right or wrong answers in this game</span>
               <span>The pages are read aloud, so your child does not need to read</span>
@@ -2129,7 +2029,7 @@ async function main() {
         window.setTimeout(playQuickChecksAudio, 500);
         document.querySelector(".ksize-setup-next")?.addEventListener("click", () => {
           audio.stop();
-          finishWithReward(jsPsych, { response: "setup_ready" }, 0, "setup_ready");
+          finishParticipantTrial(jsPsych, { response: "setup_ready" }, 0, "setup_ready");
         });
       },
     };
@@ -2209,7 +2109,7 @@ async function main() {
         window.setTimeout(playCameraAudio, 500);
         document.querySelector(".ksize-camera-next")?.addEventListener("click", () => {
           audio.stop();
-          finishWithReward(jsPsych, { response: "camera_setup_continue" }, 0, "camera_setup");
+          finishParticipantTrial(jsPsych, { response: "camera_setup_continue" }, 0, "camera_setup");
         });
       },
     };
@@ -2255,7 +2155,7 @@ async function main() {
         window.setTimeout(playHandoffAudio, 500);
         document.querySelector(".ksize-handoff-next")?.addEventListener("click", () => {
           audio.stop();
-          finishWithReward(jsPsych, { response: "child_ready" }, 0, "child_handoff");
+          finishParticipantTrial(jsPsych, { response: "child_ready" }, 0, "child_handoff");
         });
       },
     };
@@ -2303,7 +2203,7 @@ async function main() {
         document.querySelector(".ksize-assent-yes")?.addEventListener("click", () => {
           audio.stop();
           playIntroOpeningMusic();
-          finishWithReward(jsPsych, { response: "yes", child_assent: true }, 0, "child_assent");
+          finishParticipantTrial(jsPsych, { response: "yes", child_assent: true }, 0, "child_assent");
         });
         document.querySelector(".ksize-assent-no")?.addEventListener("click", () => {
           audio.stop();
@@ -2336,15 +2236,14 @@ async function main() {
               <span class="ksize-welcome-floater ksize-welcome-star ksize-welcome-floater-1">★</span>
               <span class="ksize-welcome-floater ksize-welcome-circle ksize-welcome-floater-2"></span>
               <span class="ksize-welcome-floater ksize-welcome-diamond ksize-welcome-floater-3"></span>
-              <span class="ksize-welcome-floater ksize-welcome-coin ksize-welcome-floater-4">C</span>
+              <span class="ksize-welcome-floater ksize-welcome-star ksize-welcome-floater-4">✦</span>
               <span class="ksize-welcome-floater ksize-welcome-star ksize-welcome-floater-5">✦</span>
               <span class="ksize-welcome-floater ksize-welcome-triangle ksize-welcome-floater-6"></span>
               <span class="ksize-welcome-floater ksize-welcome-circle ksize-welcome-floater-7"></span>
-              <span class="ksize-welcome-floater ksize-welcome-coin ksize-welcome-floater-8">C</span>
+              <span class="ksize-welcome-floater ksize-welcome-diamond ksize-welcome-floater-8"></span>
               <span class="ksize-welcome-floater ksize-welcome-star ksize-welcome-floater-9">★</span>
               <span class="ksize-welcome-floater ksize-welcome-diamond ksize-welcome-floater-10"></span>
             </div>
-            ${compactRewardHudHtml()}
             <div class="ksize-child-turn-badge">Child’s turn</div>
             <div class="ksize-helper ksize-helper-start" aria-hidden="true">
               <div class="ksize-helper-face">
@@ -2353,9 +2252,9 @@ async function main() {
                 <span class="ksize-mouth"></span>
               </div>
               <div class="ksize-helper-bubble">Ready?</div>
-            </div>
-            <h1 class="ksize-title">Who Will Help?</h1>
-            <p class="ksize-text">Listen and play. Earn coins as you go, then see a silly coin party at the end.</p>
+          </div>
+          <h1 class="ksize-title">Who Will Help?</h1>
+          <p class="ksize-text">Listen to each story, choose who you think will help, and answer questions about the people.</p>
             <p class="ksize-start-cue">When you are ready, hit the green button to start.</p>
             <div class="ksize-controls">
               <button class="ksize-audio-btn ksize-icon-btn ksize-start-audio ksize-prompt-glow" type="button" aria-label="Replay">
@@ -2402,7 +2301,7 @@ async function main() {
           welcomeSequenceToken += 1;
           stopIntroMusic();
           audio.stop();
-          finishWithReward(jsPsych, { response: "start" }, 0, "start_game");
+          finishParticipantTrial(jsPsych, { response: "start" }, 0, "start_game");
         });
       },
       on_finish: () => {
@@ -2411,104 +2310,11 @@ async function main() {
         audio.stop();
       },
     };
-  const rewardNode = {
-      type: jsPsychHtmlButtonResponse,
-      stimulus: `
-        <main class="ksize-shell">
-          <section class="ksize-screen ksize-reward-screen">
-            ${rewardHudHtml()}
-            <div class="ksize-reward-stage" aria-hidden="true">
-              <div class="ksize-coin-rain">
-                ${COIN_RAIN_HTML}
-              </div>
-              <div class="ksize-dance-helper">
-                <span class="ksize-dance-eye ksize-dance-eye-left"></span>
-                <span class="ksize-dance-eye ksize-dance-eye-right"></span>
-                <span class="ksize-dance-mouth"></span>
-              </div>
-              <div class="ksize-dance-coin ksize-dance-coin-1">C</div>
-              <div class="ksize-dance-coin ksize-dance-coin-2">C</div>
-              <div class="ksize-dance-coin ksize-dance-coin-3">C</div>
-              <div class="ksize-dance-coin ksize-dance-coin-4">C</div>
-            </div>
-            <h1 class="ksize-title">Coin party!</h1>
-            <p class="ksize-text">Hooray! You did it!</p>
-            <p class="ksize-small">You finished the game. Thanks so much for playing! You earned <span class="ksize-reward-total">${rewardCoins}</span> coins.</p>
-            <p class="ksize-reward-auto-note">The celebration will continue on its own.</p>
-            <div class="ksize-controls">
-              <button class="ksize-next-btn ksize-icon-btn" type="button" aria-label="Finish">
-                <span class="ksize-icon-symbol" aria-hidden="true">➜</span>
-                <span class="ksize-icon-label">Finish</span>
-              </button>
-            </div>
-          </section>
-        </main>
-      `,
-      choices: [],
-      data: {
-        slide_kind: "reward",
-        reward_goal: REWARD_GOAL_COINS,
-      },
-      on_load: () => {
-        installResearcherSkip(jsPsych);
-        updateRewardHud();
-        playTaDaSfx();
-        const finishButton = document.querySelector(".ksize-next-btn");
-        const rewardScreen = document.querySelector(".ksize-reward-screen");
-        const glowFinish = () => finishButton?.classList.add("ksize-prompt-glow");
-        let partyStarted = false;
-        let rewardEnded = false;
-        let autoFinishTimer = null;
-        const startCoinParty = () => {
-          if (rewardEnded) return;
-          if (partyStarted) return;
-          partyStarted = true;
-          rewardScreen?.classList.add("ksize-party-started");
-          playCoinPartyMusic();
-          glowFinish();
-          autoFinishTimer = window.setTimeout(() => {
-            completeRewardPage("auto_finish_reward");
-          }, COIN_PARTY_AUTO_FINISH_MS);
-        };
-        const fallbackTimer = window.setTimeout(startCoinParty, 7000);
-        const narrationTimer = window.setTimeout(() => {
-          if (rewardEnded) return;
-          audio.playFile(COIN_PARTY_AUDIO, COIN_PARTY_TEXT, {
-            onEnd: () => {
-              window.clearTimeout(fallbackTimer);
-              startCoinParty();
-            },
-          });
-        }, 1650);
-        const cleanupRewardPage = () => {
-          rewardEnded = true;
-          window.clearTimeout(fallbackTimer);
-          window.clearTimeout(narrationTimer);
-          if (autoFinishTimer) window.clearTimeout(autoFinishTimer);
-          stopRewardMusic();
-          audio.stop();
-        };
-        const completeRewardPage = (response) => {
-          if (rewardEnded) return;
-          cleanupRewardPage();
-          finishWithReward(jsPsych, { response }, 0, "finish_reward");
-        };
-        finishButton?.addEventListener("click", () => {
-          completeRewardPage("finish_reward");
-        });
-        window.currentRewardPageCleanup = cleanupRewardPage;
-      },
-      on_finish: () => {
-        window.currentRewardPageCleanup?.();
-        window.currentRewardPageCleanup = null;
-      },
-    };
   const doneNode = {
       type: jsPsychHtmlButtonResponse,
       stimulus: `
         <main class="ksize-shell">
           <section class="ksize-screen ksize-done-screen ksize-grownup-return-screen">
-            ${rewardHudHtml()}
             <div class="ksize-firework-field" aria-hidden="true">
               <span class="ksize-firework ksize-firework-1"></span>
               <span class="ksize-firework ksize-firework-2"></span>
@@ -2524,15 +2330,15 @@ async function main() {
               <div class="ksize-get-grownup-adult"><span></span><b></b></div>
             </div>
             <div class="ksize-get-grownup-callout">
-              <strong>Please go get your grown-up.</strong>
-              <span>They have a few last steps to finish.</span>
+              <strong>Final questions for your grown-up to do.</strong>
+              <span>Your grown-up may already be with you.</span>
             </div>
-            <button class="ksize-grownup-here-btn" type="button">Grown-up is here</button>
+            <button class="ksize-grownup-here-btn" type="button">Grown-up ready to answer</button>
             <div class="ksize-final-grownup-panel" hidden>
               <span class="ksize-final-grownup-label">For the grown-up</span>
               <h2>The child’s game is complete</h2>
               <p>${requestedChsResponse
-                ? "Continue to stop the recording and complete the final Children Helping Science pages, including payment information, a short exit survey, and the study debrief."
+                ? "Continue to stop the recording and complete the final Children Helping Science pages, including a short exit survey and the study debrief. The research team will contact you through Children Helping Science about the gift card."
                 : "Continue to complete the final grown-up steps."}</p>
               <button class="ksize-final-grownup-continue" type="button">Continue to grown-up steps <span aria-hidden="true">➜</span></button>
             </div>
@@ -2542,8 +2348,7 @@ async function main() {
       choices: [],
       on_load: () => {
         installResearcherSkip(jsPsych);
-        updateRewardHud();
-        stopRewardMusic();
+        stopOutroMusic();
         audio.stop();
         const grownupHereButton = document.querySelector(".ksize-grownup-here-btn");
         const grownupPanel = document.querySelector(".ksize-final-grownup-panel");
@@ -2558,14 +2363,12 @@ async function main() {
               preservePitch: line.preservePitch ?? true,
             });
           }
-          await audio.playFile(CHILD_GET_GROWNUP_AUDIO, CHILD_GET_GROWNUP_TEXT, {
-            volume: 1,
-          });
+          await playReviewNarration(CHILD_GROWNUP_HANDOFF_TEXT);
           playOutroMusic();
         })();
         grownupHereButton?.addEventListener("click", () => {
           audio.stop();
-          stopRewardMusic();
+          stopOutroMusic();
           grownupHereButton.hidden = true;
           grownupPanel.hidden = false;
           continueButton?.focus();
@@ -2574,11 +2377,11 @@ async function main() {
           }, 250);
         });
         continueButton?.addEventListener("click", () => {
-          finishWithReward(jsPsych, { response: "grownup_closeout_continue" }, 0, "grownup_closeout");
+          finishParticipantTrial(jsPsych, { response: "grownup_closeout_continue" }, 0, "grownup_closeout");
         });
       },
       on_finish: () => {
-        stopRewardMusic();
+        stopOutroMusic();
         audio.stop();
       },
     };
@@ -2596,7 +2399,6 @@ async function main() {
           ...(ENABLE_CHILD_ASSENT ? [childAssentNode] : []),
           welcomeNode,
           ...oneAfterStoryNodes,
-          rewardNode,
           doneNode,
         ]
       : [
@@ -2610,7 +2412,6 @@ async function main() {
           ...firstPartNodes,
           makePartBreakNode(jsPsych, secondPartKind, 2, selectedEventSuffix),
           ...secondPartNodes,
-          rewardNode,
           doneNode,
         ]
   ).map((node, index) => withPreviewIndex(node, index));
