@@ -11,7 +11,7 @@ const AUTO_ADVANCE_PAUSE_MS = 1200;
 const PARENT_AUTOPLAY_NOTE = "Most pages in the game move on by themselves after a few moments, but you can press Replay to hear it again or press Next to move on sooner when it appears.";
 const PARENT_AUTOPLAY_NOTE_SHORT = "Most pages move on by themselves. Press Replay to hear it again, or Next to move on sooner.";
 const START_INTRO_TEXT = "Hi there! Welcome to Find the Caregiver! We are going to look at pictures and play a choosing game. Listen to each page. When you see choices, choose the one you pick. When you are ready, hit the green button to start.";
-const START_INTRO_AUDIO = "audio/find_the_caregiver_welcome_system_voice.mp3";
+const START_INTRO_AUDIO = "audio/find_the_caregiver_welcome_system_voice.mp3?v=warm-welcome-v1";
 const GAME_START_TEXT = "Let’s play. Listen to the story, then answer the questions. Hit the green button to start.";
 const GAME_START_AUDIO = requestedVoiceProfile === "relkind"
   ? `${PREFERRED_AUDIO_DIR}/081_game_start_Lets_play.mp3`
