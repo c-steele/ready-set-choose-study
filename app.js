@@ -3,17 +3,15 @@ const requestedVoiceProfile = params.get("voice") || "";
 const DYAD_MANIFEST_URL = "data/dyad_manifest.json?v=two-part-pairs-1";
 const EVENT_MANIFEST_URL = "data/ksize_manifest.json?v=sister-brother-wording-v56";
 const INTRO_IMAGE_FIXES_URL = "data/intro_image_fixes.json?v=two-part-pairs-1";
-const CANONICAL_AUDIO_MANIFEST_URL = "data/canonical_audio_manifest.json?v=preferred-v71";
+const CANONICAL_AUDIO_MANIFEST_URL = "data/canonical_audio_manifest.json?v=preferred-v72";
 const PREFERRED_AUDIO_DIR = requestedVoiceProfile === "relkind" ? "audio_relkind_voice" : "audio_preferred";
-const AUDIO_VERSION = requestedVoiceProfile === "relkind" ? "relkind-stable-v48" : "review-polish-v71";
+const AUDIO_VERSION = requestedVoiceProfile === "relkind" ? "relkind-stable-v48" : "review-polish-v72";
 const DATA_ENDPOINT_URL = "";
 const AUTO_ADVANCE_PAUSE_MS = 1200;
 const PARENT_AUTOPLAY_NOTE = "Most pages in the game move on by themselves after a few moments, but you can press Replay to hear it again or press Next to move on sooner when it appears.";
 const PARENT_AUTOPLAY_NOTE_SHORT = "Most pages move on by themselves. Press Replay to hear it again, or Next to move on sooner.";
-const START_INTRO_TEXT = "Hi there! Welcome to Who Will Help? We are going to look at pictures and play a choosing game. Listen to each page. When you see choices, choose the one you pick. When you are ready, hit the green button to start.";
-const START_INTRO_AUDIO = requestedVoiceProfile === "relkind"
-  ? `${PREFERRED_AUDIO_DIR}/080_welcome_Hit_green_button_to_start.mp3`
-  : "audio/welcome_with_start_cue_original_voice.mp3";
+const START_INTRO_TEXT = "Hi there! Welcome to Find the Caregiver! We are going to look at pictures and play a choosing game. Listen to each page. When you see choices, choose the one you pick. When you are ready, hit the green button to start.";
+const START_INTRO_AUDIO = "audio/find_the_caregiver_welcome_system_voice.mp3";
 const GAME_START_TEXT = "Let’s play. Listen to the story, then answer the questions. Hit the green button to start.";
 const GAME_START_AUDIO = requestedVoiceProfile === "relkind"
   ? `${PREFERRED_AUDIO_DIR}/081_game_start_Lets_play.mp3`
@@ -84,7 +82,7 @@ const requestedPartOrder = configValue("partOrder", "order");
 const requestedRatingMode = configValue("ratingMode") || "one-after-story";
 const requestedFamilyLikertMode = configValue("familyLikert", "familyLikertMode", "familyPairs").toLowerCase();
 const requestedPreviewIndex = Math.max(0, Number(configValue("previewIndex") || 0) || 0);
-const requestedResearcherTools = configValue("researcherTools", "researcher", "debug");
+const requestedResearcherTools = configValue("researcherTools");
 const showResearcherTools = requestedResearcherTools === "1";
 const requestedDataEndpoint = configValue("dataEndpoint") || DATA_ENDPOINT_URL;
 const shouldDownloadData = configValue("downloadData") === "1";
@@ -1904,7 +1902,7 @@ async function main() {
           <section class="ksize-screen ksize-setup-screen ksize-parent-welcome-screen">
             ${parentProgressHtml(1)}
             <header class="ksize-parent-welcome-header">
-              <span class="ksize-setup-eyebrow">Who Will Help?</span>
+              <span class="ksize-setup-eyebrow">Find the Caregiver!</span>
               <h1 class="ksize-setup-title">Welcome, grown-ups!</h1>
               <p class="ksize-parent-welcome-lead">Thank you for helping your child take part. We’ll get set up together.</p>
             </header>
@@ -2253,7 +2251,7 @@ async function main() {
               </div>
               <div class="ksize-helper-bubble">Ready?</div>
           </div>
-          <h1 class="ksize-title">Who Will Help?</h1>
+          <h1 class="ksize-title">Find the Caregiver!</h1>
           <p class="ksize-text">Listen to each story, choose who you think will help, and answer questions about the people.</p>
             <p class="ksize-start-cue">When you are ready, hit the green button to start.</p>
             <div class="ksize-controls">
