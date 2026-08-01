@@ -1481,6 +1481,8 @@ function makeFollowupTransitionNode(jsPsych, trial, chunk, storyNumber, storyTot
     },
     on_load: () => {
       installResearcherSkip(jsPsych);
+      let didFinish = false;
+      let playToken = 0;
       const choiceRows = jsPsych.data.get().filter({
         trial_key: trial.id,
         slide_kind: "response_choices",
@@ -1490,25 +1492,46 @@ function makeFollowupTransitionNode(jsPsych, trial, chunk, storyNumber, storyTot
       const choiceNode = document.querySelector("[data-followup-choice]");
       if (choiceNode) choiceNode.textContent = choiceText;
 
-      const playAudio = async () => {
-        await playReviewNarration(choiceText);
-        await new Promise((resolve) => window.setTimeout(resolve, 140));
-        await playReviewNarration(followupText);
-        await new Promise((resolve) => window.setTimeout(resolve, 140));
-        await playReviewNarration(FOLLOWUP_MEET_TEXT);
-      };
-      document.querySelector(".ksize-audio-btn")?.addEventListener("click", playAudio);
-      document.querySelector(".ksize-next-btn")?.addEventListener("click", () => {
+      const finishTransition = (response, label) => {
+        if (didFinish) return;
+        didFinish = true;
+        playToken += 1;
         audio.stop();
         finishParticipantTrial(jsPsych, {
-          response: "continue",
+          response,
           story_choice_label: choiceLabel || null,
           choice_confirmation_text: choiceText,
           followup_orientation_text: followupText,
           followup_meet_text: FOLLOWUP_MEET_TEXT,
-        }, 0, "followup_transition");
+        }, 0, label);
+      };
+      const playAudio = async ({ advanceWhenDone = false } = {}) => {
+        playToken += 1;
+        const token = playToken;
+        const choicePlayed = await playReviewNarration(choiceText);
+        if (!choicePlayed) return;
+        if (token !== playToken || didFinish) return;
+        await new Promise((resolve) => window.setTimeout(resolve, 140));
+        if (token !== playToken || didFinish) return;
+        const followupPlayed = await playReviewNarration(followupText);
+        if (!followupPlayed) return;
+        if (token !== playToken || didFinish) return;
+        await new Promise((resolve) => window.setTimeout(resolve, 140));
+        if (token !== playToken || didFinish) return;
+        const meetPlayed = await playReviewNarration(FOLLOWUP_MEET_TEXT);
+        if (!meetPlayed) return;
+        if (!advanceWhenDone || token !== playToken || didFinish) return;
+        await new Promise((resolve) => window.setTimeout(resolve, AUTO_ADVANCE_PAUSE_MS));
+        if (token !== playToken || didFinish) return;
+        finishTransition("auto_continue", "followup_transition_auto");
+      };
+      document.querySelector(".ksize-audio-btn")?.addEventListener("click", () => {
+        playAudio({ advanceWhenDone: true });
       });
-      window.setTimeout(playAudio, 250);
+      document.querySelector(".ksize-next-btn")?.addEventListener("click", () => {
+        finishTransition("continue", "followup_transition");
+      });
+      window.setTimeout(() => playAudio({ advanceWhenDone: true }), 250);
     },
     on_finish: () => audio.stop(),
   };
@@ -1588,6 +1611,7 @@ function makeSlideNode(jsPsych, chunk, slide, index, total, storyNumber = null, 
     on_load: () => {
       installResearcherSkip(jsPsych);
       const buttons = Array.from(document.querySelectorAll(".ksize-rating-choice"));
+      let didFinish = false;
       let playToken = 0;
       let revealTimers = [];
       const clearRevealTimers = () => {
@@ -1617,6 +1641,14 @@ function makeSlideNode(jsPsych, chunk, slide, index, total, storyNumber = null, 
           button.classList.remove("ksize-rating-current");
         });
       };
+      const finishSlide = (data, amount, label) => {
+        if (didFinish) return;
+        didFinish = true;
+        playToken += 1;
+        clearRevealTimers();
+        audio.stop();
+        finishParticipantTrial(jsPsych, data, amount, label);
+      };
       const playAudio = async () => {
         playToken += 1;
         const token = playToken;
@@ -1631,22 +1663,25 @@ function makeSlideNode(jsPsych, chunk, slide, index, total, storyNumber = null, 
             revealTimers.push(setTimeout(() => revealOption(idx), 250 + idx * 900));
           });
         }
-        await audio.play(audioTextForSlide(slide));
+        const narrationPlayed = await audio.play(audioTextForSlide(slide));
         if (token !== playToken) return;
         if (slide.kind === "response") {
           enableOptions();
+          return;
         }
+        if (!narrationPlayed) return;
+        await new Promise((resolve) => window.setTimeout(resolve, AUTO_ADVANCE_PAUSE_MS));
+        if (token !== playToken || didFinish) return;
+        finishSlide({ response: "auto_next" }, TRIAL_ADVANCE_VALUES.next, "auto_next_page");
       };
       document.querySelector(".ksize-audio-btn")?.addEventListener("click", playAudio);
       document.querySelector(".ksize-next-btn")?.addEventListener("click", () => {
-        audio.stop();
-        finishParticipantTrial(jsPsych, { response: "next" }, TRIAL_ADVANCE_VALUES.next, "next_page");
+        finishSlide({ response: "next" }, TRIAL_ADVANCE_VALUES.next, "next_page");
       });
       document.querySelectorAll(".ksize-rating-choice").forEach((button) => {
         button.addEventListener("click", () => {
           const idx = Number(button.dataset.ratingIndex);
-          audio.stop();
-          finishParticipantTrial(jsPsych, {
+          finishSlide({
             response: idx,
             rating_value: idx + 1,
             rating_label: OPTION_LABELS[slide.trait]?.[idx] || null,

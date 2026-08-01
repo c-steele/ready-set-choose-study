@@ -172,6 +172,7 @@ function loadAppForVerification(appSource, search = "") {
       makeKidNode,
       buildEventTrialNodes,
       makeFollowupTransitionNode,
+      makeSlideNode,
       makePartBreakNode,
       audio,
     };
@@ -243,8 +244,8 @@ assert(normalizePathname(app.CANONICAL_AUDIO_MANIFEST_URL) === "data/canonical_a
   `Default participant manifest is ${app.CANONICAL_AUDIO_MANIFEST_URL}, not the Evelyn manifest`);
 assert(app.AUDIO_VERSION === "evelyn-full-v74",
   `Expected AUDIO_VERSION evelyn-full-v74, found ${app.AUDIO_VERSION}`);
-assert(/styles\.css\?v=chs-polish-v74/.test(indexSource), "index.html does not request v74 styles");
-assert(/app\.js\?v=chs-polish-v74/.test(indexSource), "index.html does not request v74 app.js");
+assert(/styles\.css\?v=chs-polish-v75/.test(indexSource), "index.html does not request v75 styles");
+assert(/app\.js\?v=chs-polish-v75/.test(indexSource), "index.html does not request v75 app.js");
 
 const evelynLines = evelynManifest.evelynLines || [];
 const normalizedTextToOutput = evelynManifest.normalizedTextToOutput || {};
@@ -467,8 +468,22 @@ for (const text of [...teacherQuestionTexts, app.FOLLOWUP_TEXT_BY_SCRIPT["teache
 const followupSource = app.makeFollowupTransitionNode.toString();
 assert(followupSource.includes("playReviewNarration(FOLLOWUP_MEET_TEXT)"),
   "The displayed ‘First, we’ll meet…’ transition is not wired for narration");
+assert(followupSource.includes('finishTransition("auto_continue", "followup_transition_auto")'),
+  "The narrated follow-up transition does not auto-advance");
+assert(followupSource.includes("AUTO_ADVANCE_PAUSE_MS"),
+  "The follow-up transition does not pause after narration before auto-advancing");
 assert(app.playReviewNarration.toString().includes("audio.play(text)"),
   "Reviewer-added narration does not route through prerecorded audio.play(text)");
+
+const makeSlideSource = app.makeSlideNode.toString();
+assert(makeSlideSource.includes('finishSlide({ response: "auto_next" }, TRIAL_ADVANCE_VALUES.next, "auto_next_page")'),
+  "Narration-only paired-question slides do not auto-advance");
+assert(makeSlideSource.includes('if (slide.kind === "response")'),
+  "Paired-question response slides are not distinguished from narration-only slides");
+assert(makeSlideSource.includes("AUTO_ADVANCE_PAUSE_MS"),
+  "Narration-only paired-question slides do not pause before auto-advancing");
+assert(makeSlideSource.includes("if (!narrationPlayed) return"),
+  "A failed paired-question narration can be silently skipped");
 
 const makeKidSource = app.makeKidNode.toString();
 const buildEventSource = app.buildEventTrialNodes.toString();
