@@ -3,9 +3,11 @@ const requestedVoiceProfile = params.get("voice") || "";
 const DYAD_MANIFEST_URL = "data/dyad_manifest.json?v=two-part-pairs-1";
 const EVENT_MANIFEST_URL = "data/ksize_manifest.json?v=sister-brother-wording-v56";
 const INTRO_IMAGE_FIXES_URL = "data/intro_image_fixes.json?v=two-part-pairs-1";
-const CANONICAL_AUDIO_MANIFEST_URL = "data/canonical_audio_manifest.json?v=preferred-v72";
+const CANONICAL_AUDIO_MANIFEST_URL = requestedVoiceProfile === "relkind"
+  ? "data/canonical_audio_manifest.json?v=relkind-stable-v48"
+  : "data/canonical_audio_manifest_evelyn.json?v=evelyn-full-v74";
 const PREFERRED_AUDIO_DIR = requestedVoiceProfile === "relkind" ? "audio_relkind_voice" : "audio_preferred";
-const AUDIO_VERSION = requestedVoiceProfile === "relkind" ? "relkind-stable-v48" : "review-polish-v72";
+const AUDIO_VERSION = requestedVoiceProfile === "relkind" ? "relkind-stable-v48" : "evelyn-full-v74";
 const DATA_ENDPOINT_URL = "";
 const AUTO_ADVANCE_PAUSE_MS = 1200;
 const PARENT_AUTOPLAY_NOTE = "Most pages in the game move on by themselves after a few moments, but you can press Replay to hear it again or press Next to move on sooner when it appears.";
@@ -27,6 +29,7 @@ const PARENT_HANDOFF_TEXT = `Grown-up setup is finished. Now it's your child's t
 const CHILD_ASSENT_AUDIO = `${PREFERRED_AUDIO_DIR}/084_child_assent_Would_you_like_to_play.mp3`;
 const CHILD_ASSENT_TEXT = "Hi there! Do you want to play a fun game today? In my game, I'm going to show you some shapes and ask you some questions. You'll press or click buttons on the screen to tell me what you think. There are no right or wrong answers, so you can say whatever you think! We're just curious about how kids think. The camera will stay on while you play, and you can stop at any time. Are you ready to play my game?";
 const CHILD_GROWNUP_HANDOFF_TEXT = "Great job—you finished the game! The final questions are for your grown-up to do. Your grown-up may already be with you.";
+const FOLLOWUP_MEET_TEXT = "First, we’ll meet the two people so it is clear who each question is about.";
 const FINAL_GROWNUP_AUDIO = `${PREFERRED_AUDIO_DIR}/086_grownup_closeout_Final_steps.mp3`;
 const FINAL_GROWNUP_TEXT = "The child's game is complete. Continue to complete the final grown-up steps.";
 const ENABLE_CHILD_ASSENT = false;
@@ -86,7 +89,9 @@ const requestedResearcherTools = configValue("researcherTools");
 const showResearcherTools = requestedResearcherTools === "1";
 const requestedDataEndpoint = configValue("dataEndpoint") || DATA_ENDPOINT_URL;
 const shouldDownloadData = configValue("downloadData") === "1";
-const useSyntheticSpeech = configValue("syntheticSpeech") !== "0";
+// Browser speech is an opt-in researcher fallback only. Participant URLs use
+// the complete prerecorded Evelyn set and never mix in a system voice.
+const useSyntheticSpeech = showResearcherTools && configValue("syntheticSpeech") === "1";
 const requestedChsChild = configValue("child", "CHILD_ID");
 const requestedChsResponse = configValue("response", "response_uuid", "CHS_RESPONSE_ID");
 const currentSessionId = configValue("session_id", "SESSION_ID")
@@ -309,7 +314,11 @@ function normalizeAudioSrc(src) {
 }
 
 function preferredAudioPathFromOutput(output) {
-  const filename = String(output || "").split("/").pop();
+  const normalizedOutput = normalizeAudioSrc(output);
+  if (requestedVoiceProfile !== "relkind" && normalizedOutput.startsWith("audio_evelyn/")) {
+    return normalizedOutput;
+  }
+  const filename = normalizedOutput.split("/").pop();
   return filename ? `${PREFERRED_AUDIO_DIR}/${filename}` : "";
 }
 
@@ -320,6 +329,18 @@ function installCanonicalAudioMap(manifest) {
     const preferredPath = preferredAudioPathFromOutput(line.output);
     if (!preferredPath) continue;
     canonicalAudioByText.set(normalizeAudioText(line.text), preferredPath);
+  }
+  if (requestedVoiceProfile !== "relkind") {
+    for (const [text, output] of Object.entries(manifest?.normalizedTextToOutput || {})) {
+      const evelynPath = normalizeAudioSrc(output);
+      if (!evelynPath.startsWith("audio_evelyn/")) continue;
+      canonicalAudioByText.set(normalizeAudioText(text), evelynPath);
+    }
+  }
+  for (const line of manifest?.lines || []) {
+    const preferredPath = canonicalAudioByText.get(normalizeAudioText(line.text))
+      || preferredAudioPathFromOutput(line.output);
+    if (!preferredPath) continue;
     for (const original of line.currentOutputs || []) {
       canonicalAudioByOriginalSrc.set(normalizeAudioSrc(original), preferredPath);
     }
@@ -525,7 +546,9 @@ function audioIdForText(text) {
 }
 
 function audioPathForText(text) {
-  return canonicalAudioPathForText(text) || `audio/${audioIdForText(text)}.mp3`;
+  const mappedPath = canonicalAudioPathForText(text);
+  if (mappedPath || requestedVoiceProfile !== "relkind") return mappedPath;
+  return `audio/${audioIdForText(text)}.mp3`;
 }
 
 function versionedAudioSrc(src) {
@@ -1036,7 +1059,16 @@ const audio = {
     this.stop();
     const token = this.token;
     return new Promise((resolve) => {
-      const resolvedSrc = canonicalAudioPathForText(text) || canonicalAudioPathForSrc(src) || src;
+      const mappedTextSrc = canonicalAudioPathForText(text);
+      const suppliedSrc = normalizeAudioSrc(src);
+      const resolvedSrc = requestedVoiceProfile === "relkind"
+        ? (mappedTextSrc || canonicalAudioPathForSrc(src) || src)
+        : (mappedTextSrc || (suppliedSrc.startsWith("audio_evelyn/") ? src : ""));
+      if (!resolvedSrc) {
+        console.error(`Missing Evelyn narration for: ${text || src || "unknown text"}`);
+        resolve(false);
+        return;
+      }
       const fileAudio = new Audio(versionedAudioSrc(resolvedSrc));
       fileAudio.volume = options.volume ?? 1;
       fileAudio.playbackRate = options.playbackRate ?? 1;
@@ -1070,30 +1102,12 @@ const audio = {
     });
   },
   speak(text) {
-    this.stop();
-    if (!("speechSynthesis" in window) || !text) return Promise.resolve(false);
-    return new Promise((resolve) => {
-      const utterance = new SpeechSynthesisUtterance(text);
-      utterance.rate = 0.88;
-      utterance.pitch = 1.12;
-      utterance.volume = 1;
-      if (this.voice) utterance.voice = this.voice;
-      document.body.classList.add("ksize-audio-playing");
-      utterance.addEventListener("end", () => {
-        document.body.classList.remove("ksize-audio-playing");
-        resolve(true);
-      }, { once: true });
-      utterance.addEventListener("error", () => {
-        document.body.classList.remove("ksize-audio-playing");
-        resolve(false);
-      }, { once: true });
-      window.speechSynthesis.speak(utterance);
-    });
+    return this.play(text);
   },
 };
 
 async function playReviewNarration(text) {
-  return audio.speak(text);
+  return audio.play(text);
 }
 
 function installResearcherSkip(jsPsych) {
@@ -1229,7 +1243,7 @@ function renderKidSlide({ image, text, choices = [], overlayChoices = false, sho
   `;
 }
 
-function makeKidNode(jsPsych, { trial, block, suffix, image, text, audioSegments = [], choices = [], slideKind, overlayChoices = false, showText = false, autoPlay = true, autoAdvanceAfterAudio = false, partKind, partNumber, visualChoices = false, highlightChoices = false, highlightStartMs = 350, storyNumber = null, storyTotal = null }) {
+function makeKidNode(jsPsych, { trial, block, suffix, image, text, audioSegments = [], audioTexts = [], choices = [], slideKind, overlayChoices = false, showText = false, autoPlay = true, autoAdvanceAfterAudio = false, partKind, partNumber, visualChoices = false, highlightChoices = false, highlightStartMs = 350, storyNumber = null, storyTotal = null }) {
   const hasChoices = choices.length > 0 && !visualChoices;
   return {
     type: jsPsychHtmlButtonResponse,
@@ -1290,32 +1304,20 @@ function makeKidNode(jsPsych, { trial, block, suffix, image, text, audioSegments
       };
       const playAudio = async ({ advanceWhenDone = false } = {}) => {
         clearHighlights();
-        if (highlightChoices && audioSegments.length === 1) {
-          await audio.playFile(audioSegments[0], text || "", {
+        const narrationItems = audioTexts.length
+          ? audioTexts.map((audioText, index) => ({
+              src: audioSegments[index] || audioPathForText(audioText),
+              text: audioText,
+            }))
+          : audioSegments.map((segment) => ({ src: segment, text: text || "" }));
+        for (const [index, item] of narrationItems.entries()) {
+          const isChoiceOptions = highlightChoices && index === narrationItems.length - 1;
+          await audio.playFile(item.src, item.text, isChoiceOptions ? {
             onStart: highlightChoiceNames,
             onEnd: clearHighlights,
-          });
-          clearHighlights();
-          if (advanceWhenDone && autoAdvanceAfterAudio && !hasChoices) await finishNextAfterPause();
-          return;
+          } : {});
         }
-        if (highlightChoices && audioSegments.length > 1) {
-          const leadSegments = audioSegments.slice(0, -1);
-          const optionSegment = audioSegments.at(-1);
-          for (const segment of leadSegments) {
-            await audio.playFile(segment, "");
-          }
-          await audio.playFile(optionSegment, text || "", {
-            onStart: highlightChoiceNames,
-            onEnd: clearHighlights,
-          });
-          clearHighlights();
-          if (advanceWhenDone && autoAdvanceAfterAudio && !hasChoices) await finishNextAfterPause();
-          return;
-        }
-        for (const segment of audioSegments) {
-          await audio.playFile(segment, text || "");
-        }
+        clearHighlights();
         if (advanceWhenDone && autoAdvanceAfterAudio && !hasChoices) await finishNextAfterPause();
       };
       document.querySelector(".ksize-audio-btn")?.addEventListener("click", playAudio);
@@ -1365,6 +1367,7 @@ function buildEventTrialNodes(jsPsych, trial, trialIndex, totalTrials, eventSuff
         image: introImageForSlide(trial, slide, slideIndex),
         text: slide.text,
         audioSegments: slide.audioSegments,
+        audioTexts: [slide.text],
         choices: [],
         slideKind: "intro",
         showText: false,
@@ -1388,6 +1391,7 @@ function buildEventTrialNodes(jsPsych, trial, trialIndex, totalTrials, eventSuff
         image: storyImages[idx] || block.images[0],
         text: line,
         audioSegments: block.audioSegments?.[idx] ? [block.audioSegments[idx]] : [],
+        audioTexts: [line],
         choices: [],
         slideKind: "story",
         showText: false,
@@ -1414,6 +1418,7 @@ function buildEventTrialNodes(jsPsych, trial, trialIndex, totalTrials, eventSuff
         image: responseImage,
         text: optionLine,
         audioSegments: [...questionAudio, ...optionAudio],
+        audioTexts: [...questionLines, optionLine],
         choices: block.choices || [],
         slideKind: "response_choices",
         overlayChoices: Boolean(responseImage),
@@ -1446,7 +1451,7 @@ function makeFollowupTransitionNode(jsPsych, trial, chunk, storyNumber, storyTot
             <div class="ksize-followup-check" aria-hidden="true">✓</div>
             <p class="ksize-followup-choice" data-followup-choice>Thanks for choosing!</p>
             <h2>${escapeHtml(followupText)}</h2>
-            <p>First, we’ll meet the two people so it is clear who each question is about.</p>
+            <p>${escapeHtml(FOLLOWUP_MEET_TEXT)}</p>
           </div>
           <div class="ksize-bottom-area">
             <div class="ksize-controls">
@@ -1486,11 +1491,11 @@ function makeFollowupTransitionNode(jsPsych, trial, chunk, storyNumber, storyTot
       if (choiceNode) choiceNode.textContent = choiceText;
 
       const playAudio = async () => {
-        if (CHOICE_CONFIRMATION_TEXT[choiceLabel]) {
-          await playReviewNarration(choiceText);
-          await new Promise((resolve) => window.setTimeout(resolve, 140));
-        }
+        await playReviewNarration(choiceText);
+        await new Promise((resolve) => window.setTimeout(resolve, 140));
         await playReviewNarration(followupText);
+        await new Promise((resolve) => window.setTimeout(resolve, 140));
+        await playReviewNarration(FOLLOWUP_MEET_TEXT);
       };
       document.querySelector(".ksize-audio-btn")?.addEventListener("click", playAudio);
       document.querySelector(".ksize-next-btn")?.addEventListener("click", () => {
@@ -1500,6 +1505,7 @@ function makeFollowupTransitionNode(jsPsych, trial, chunk, storyNumber, storyTot
           story_choice_label: choiceLabel || null,
           choice_confirmation_text: choiceText,
           followup_orientation_text: followupText,
+          followup_meet_text: FOLLOWUP_MEET_TEXT,
         }, 0, "followup_transition");
       });
       window.setTimeout(playAudio, 250);
@@ -1618,11 +1624,7 @@ function makeSlideNode(jsPsych, chunk, slide, index, total, storyNumber = null, 
           resetOptions();
           const questionText = questionTextForResponse(chunk, slide);
           if (questionText) {
-            if (chunk.scriptKey === "teacher-TEACHER") {
-              await playReviewNarration(questionText);
-            } else {
-              await audio.play(questionText);
-            }
+            await audio.play(questionText);
             if (token !== playToken) return;
           }
           OPTION_LABELS[slide.trait]?.forEach((_, idx) => {
@@ -1722,7 +1724,7 @@ function makePartBreakNode(jsPsych, partKind, partNumber, eventSuffix) {
           audio.playFile(partAudioSrc, partAudioText);
           return;
         }
-        audio.speak(partAudioText);
+        audio.play(partAudioText);
       }, 250);
     },
     on_finish: () => audio.stop(),
