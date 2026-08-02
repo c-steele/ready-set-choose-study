@@ -7,6 +7,7 @@ import { fileURLToPath } from "node:url";
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const appPath = path.join(projectRoot, "app.js");
 const indexPath = path.join(projectRoot, "index.html");
+const stylesPath = path.join(projectRoot, "styles.css");
 const eventManifestPath = path.join(projectRoot, "data", "ksize_manifest.json");
 const dyadManifestPath = path.join(projectRoot, "data", "dyad_manifest.json");
 const evelynManifestPath = path.join(projectRoot, "data", "canonical_audio_manifest_evelyn.json");
@@ -226,9 +227,10 @@ function runtimeTextCollector(app, expectedOutputs) {
   return { all, missing, add };
 }
 
-const [appSource, indexSource, eventManifest, dyadManifest, evelynManifest] = await Promise.all([
+const [appSource, indexSource, stylesSource, eventManifest, dyadManifest, evelynManifest] = await Promise.all([
   fs.readFile(appPath, "utf8"),
   fs.readFile(indexPath, "utf8"),
+  fs.readFile(stylesPath, "utf8"),
   readJson(eventManifestPath),
   readJson(dyadManifestPath),
   readJson(evelynManifestPath),
@@ -244,8 +246,14 @@ assert(normalizePathname(app.CANONICAL_AUDIO_MANIFEST_URL) === "data/canonical_a
   `Default participant manifest is ${app.CANONICAL_AUDIO_MANIFEST_URL}, not the Evelyn manifest`);
 assert(app.AUDIO_VERSION === "evelyn-full-v74",
   `Expected AUDIO_VERSION evelyn-full-v74, found ${app.AUDIO_VERSION}`);
-assert(/styles\.css\?v=chs-polish-v75/.test(indexSource), "index.html does not request v75 styles");
-assert(/app\.js\?v=chs-polish-v75/.test(indexSource), "index.html does not request v75 app.js");
+assert(/styles\.css\?v=chs-polish-v76/.test(indexSource), "index.html does not request v76 styles");
+assert(/app\.js\?v=chs-polish-v76/.test(indexSource), "index.html does not request v76 app.js");
+assert(appSource.includes("sister-kid_01_mks-orange/sister-kid.007.png"),
+  "The isolated orange LOVE-2 outline correction target is missing");
+assert(appSource.includes("sister-kid_01_mks-orange/sister-kid.006.png"),
+  "The correct orange outline reference is missing");
+assert(stylesSource.includes(".ksize-orange-outline-reference"),
+  "The exact orange outline overlay style is missing");
 
 const evelynLines = evelynManifest.evelynLines || [];
 const normalizedTextToOutput = evelynManifest.normalizedTextToOutput || {};

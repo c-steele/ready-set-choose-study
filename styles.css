@@ -433,6 +433,29 @@ body {
   border-radius: 4px;
 }
 
+/* The source LOVE-2 orange stimulus has one isolated coral outline. Its
+   adjacent LOVE-1 image is pixel-identical in this region and has the correct
+   orange outline, so layer only that rectangle without altering the artwork. */
+.ksize-image-stage.ksize-orange-outline-fix {
+  position: relative;
+  width: min(100%, 1180px, 92.444vh);
+  aspect-ratio: 16 / 9;
+}
+
+.ksize-image-stage.ksize-orange-outline-fix > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  max-height: none;
+  object-fit: contain;
+}
+
+.ksize-orange-outline-reference {
+  pointer-events: none;
+  clip-path: inset(36.4815% 23.5938% 25.7407% 54.0104%);
+}
+
 .ksize-images {
   display: flex;
   flex-wrap: wrap;
@@ -2954,6 +2977,10 @@ body {
 
   .ksize-image-wrap img {
     max-height: 48vh;
+  }
+
+  .ksize-image-stage.ksize-orange-outline-fix {
+    width: min(100%, 1180px, 85.333vh);
   }
 
   .ksize-rating-options {

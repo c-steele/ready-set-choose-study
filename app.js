@@ -30,6 +30,8 @@ const CHILD_ASSENT_AUDIO = `${PREFERRED_AUDIO_DIR}/084_child_assent_Would_you_li
 const CHILD_ASSENT_TEXT = "Hi there! Do you want to play a fun game today? In my game, I'm going to show you some shapes and ask you some questions. You'll press or click buttons on the screen to tell me what you think. There are no right or wrong answers, so you can say whatever you think! We're just curious about how kids think. The camera will stay on while you play, and you can stop at any time. Are you ready to play my game?";
 const CHILD_GROWNUP_HANDOFF_TEXT = "Great job—you finished the game! The final questions are for your grown-up to do. Your grown-up may already be with you.";
 const FOLLOWUP_MEET_TEXT = "First, we’ll meet the two people so it is clear who each question is about.";
+const ORANGE_SISTER_OUTLINE_FIX_TARGET = "assets/dyads/sister-kid_01_mks-orange/sister-kid.007.png";
+const ORANGE_SISTER_OUTLINE_FIX_REFERENCE = "assets/dyads/sister-kid_01_mks-orange/sister-kid.006.png";
 const FINAL_GROWNUP_AUDIO = `${PREFERRED_AUDIO_DIR}/086_grownup_closeout_Final_steps.mp3`;
 const FINAL_GROWNUP_TEXT = "The child's game is complete. Continue to complete the final grown-up steps.";
 const ENABLE_CHILD_ASSENT = false;
@@ -1539,6 +1541,13 @@ function makeFollowupTransitionNode(jsPsych, trial, chunk, storyNumber, storyTot
 
 function renderSlide({ chunk, slide, index, total, storyNumber = null, storyTotal = null }) {
   const options = OPTION_LABELS[slide.trait] || [];
+  const needsOrangeOutlineFix = String(slide.src || "").split("?")[0] === ORANGE_SISTER_OUTLINE_FIX_TARGET;
+  const stimulusImage = needsOrangeOutlineFix
+    ? `<div class="ksize-image-stage ksize-orange-outline-fix">
+        <img src="${escapeHtml(slide.src)}" alt="">
+        <img class="ksize-orange-outline-reference" src="${escapeHtml(displayImageSrc(ORANGE_SISTER_OUTLINE_FIX_REFERENCE))}" alt="" aria-hidden="true">
+      </div>`
+    : `<img src="${escapeHtml(slide.src)}" alt="">`;
   const buttons = slide.kind === "response"
     ? `<div class="ksize-rating-options">
         ${options.map((option, idx) => `
@@ -1557,7 +1566,7 @@ function renderSlide({ chunk, slide, index, total, storyNumber = null, storyTota
           ? `<div class="ksize-rating-focus">${escapeHtml(ratingFocusLabel(chunk))}</div>`
           : ""}
         <div class="ksize-image-wrap">
-          <img src="${escapeHtml(slide.src)}" alt="">
+          ${stimulusImage}
         </div>
         ${buttons}
         <div class="ksize-bottom-area">
