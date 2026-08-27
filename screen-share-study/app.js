@@ -1350,6 +1350,7 @@ async function handleStudyFinish(jsPsych) {
               ? "Saved to the combined local dataset."
               : (backupKey ? "Saved as a local browser backup." : "A local browser backup could not be created; use the download buttons below."))}</p>
           <p class="ksize-small">Backup key: ${escapeHtml(backupKey || "not available")}</p>
+          ${isLiveShareMode ? "<p class=\"ksize-small\"><strong>Researcher:</strong> Stop the Zoom recording now, then keep this page open until both files have downloaded.</p>" : ""}
           <div class="ksize-controls">
             <button class="ksize-next-btn ksize-icon-btn" type="button" data-download-json>
               <span class="ksize-icon-symbol" aria-hidden="true">↓</span>
@@ -3153,6 +3154,19 @@ async function main() {
   const facilitatorDurationText = selectedRatingMode === "one-after-story"
     ? "It takes about ten to fifteen minutes."
     : "It takes about fifteen to thirty minutes, depending on the assigned character set.";
+  const visibleSessionDuration = isFacilitatorMode
+    ? (selectedRatingMode === "one-after-story" ? "10–15 minutes" : "15–30 minutes")
+    : "15 minutes";
+  const setupSoundTitle = isFacilitatorMode ? "Check Zoom sound" : "Turn the sound on";
+  const setupSoundText = isFacilitatorMode
+    ? "Make sure you can hear the researcher at a comfortable volume."
+    : "Choose a comfortable listening volume.";
+  const cameraSetupTitle = isFacilitatorMode
+    ? "Check the Zoom camera and recording"
+    : "Set up the camera for recording";
+  const cameraRecordingNote = isFacilitatorMode
+    ? "<strong>Researcher:</strong> Start recording in Zoom before continuing. Keep the child centered in their Zoom video during the game."
+    : "<strong>Camera check:</strong> CHS checks the webcam before the game. Keep your child centered while the game records.";
   const parentWelcomeScript = isFacilitatorMode
     ? "Welcome, grown-ups! Thank you for helping your child take part. First, we'll get the screen and camera ready. Then your child will listen to stories and choose pictures on the screen. I will read each page aloud, and every page will stay on screen until I move on. You can help with the device, but please let your child choose the answers."
     : PARENT_WELCOME_TEXT;
@@ -3247,7 +3261,7 @@ async function main() {
             <div class="ksize-before-begin-card">
               <strong>Before you begin</strong>
               <span>This is a recorded picture game about social relationships</span>
-              <span>15 minutes</span>
+              <span>${visibleSessionDuration}</span>
               <span>You and your child may stop at any time</span>
               <span>There are no right or wrong answers in this game</span>
               <span>The pages are read aloud, so your child does not need to read</span>
@@ -3273,8 +3287,8 @@ async function main() {
               <article class="ksize-setup-card">
                 <span class="ksize-setup-number">2</span>
                 <div class="ksize-setup-copy">
-                  <h2>Turn the sound on</h2>
-                  <p>Choose a comfortable listening volume.</p>
+                  <h2>${setupSoundTitle}</h2>
+                  <p>${setupSoundText}</p>
                 </div>
                 <div class="ksize-setup-picture ksize-sound-picture" aria-hidden="true">
                   <span class="ksize-speaker">▶</span>
@@ -3330,7 +3344,7 @@ async function main() {
             ${parentProgressHtml(3)}
             <header class="ksize-setup-heading">
               <span class="ksize-setup-eyebrow">Camera check</span>
-              <h1 class="ksize-setup-title">Set up the camera for recording</h1>
+              <h1 class="ksize-setup-title">${cameraSetupTitle}</h1>
               <p class="ksize-setup-intro">Make sure your child stays easy to see.</p>
             </header>
             <div class="ksize-camera-layout">
@@ -3377,7 +3391,7 @@ async function main() {
                 </div>
                 <div class="ksize-recording-note">
                   <span class="ksize-recording-dot" aria-hidden="true"></span>
-                  <p><strong>Camera check:</strong> CHS checks the webcam before the game. Keep your child centered while the game records.</p>
+                  <p>${cameraRecordingNote}</p>
                 </div>
               </div>
             </div>
