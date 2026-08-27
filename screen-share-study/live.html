@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <title>Find the Caregiver — live screen-share study</title>
+    <link rel="stylesheet" href="live.css?v=ftc-live-screen-share-v1">
+  </head>
+  <body>
+    <main class="live-shell">
+      <header class="live-hero">
+        <div class="live-hero-copy">
+          <span class="live-eyebrow">Researcher setup · complete before sharing</span>
+          <h1>Find the Caregiver</h1>
+          <p class="live-subtitle">Two-part, researcher-paced testing in one browser tab</p>
+          <div class="live-promise-row" aria-label="Session features">
+            <span><i aria-hidden="true">✓</i> You control every page</span>
+            <span><i aria-hidden="true">✓</i> Two parts counterbalanced</span>
+            <span><i aria-hidden="true">✓</i> About 15–30 minutes</span>
+            <span><i aria-hidden="true">✓</i> Data downloaded at the end</span>
+          </div>
+        </div>
+        <div class="live-hero-mark" aria-hidden="true">
+          <span class="live-hero-mark-small">LIVE</span>
+          <strong>2</strong>
+          <span>parts</span>
+        </div>
+      </header>
+
+      <section class="live-workspace">
+        <form class="live-setup-card" data-live-form>
+          <div class="live-section-heading">
+            <span class="live-step">1</span>
+            <div>
+              <h2>Set up this session</h2>
+              <p>The participant ID locks every randomized assignment.</p>
+            </div>
+          </div>
+
+          <label class="live-field">
+            <span>De-identified participant ID <em>Required</em></span>
+            <input
+              type="text"
+              name="participantId"
+              data-participant-id
+              autocomplete="off"
+              autocapitalize="characters"
+              spellcheck="false"
+              minlength="3"
+              maxlength="80"
+              placeholder="Example: FTC-027"
+              required
+            >
+            <small>Use a study ID only—not a name, email address, birthdate, or Zoom display name.</small>
+          </label>
+
+          <fieldset class="live-mode-picker">
+            <legend>Story set</legend>
+            <label class="live-mode-option">
+              <input type="radio" name="studyMode" value="teacher-classmate" checked>
+              <span class="live-radio-dot" aria-hidden="true"></span>
+              <span class="live-mode-copy">
+                <strong>Current study + Teacher–Classmate</strong>
+                <small>Six stories: CHS v76 plus one Teacher–Classmate story</small>
+              </span>
+              <span class="live-default-badge">Default</span>
+            </label>
+            <label class="live-mode-option">
+              <input type="radio" name="studyMode" value="v76">
+              <span class="live-radio-dot" aria-hidden="true"></span>
+              <span class="live-mode-copy">
+                <strong>Original CHS v76</strong>
+                <small>The original five-story version</small>
+              </span>
+            </label>
+          </fieldset>
+
+          <section class="live-preview" data-assignment-preview aria-live="polite" aria-atomic="true">
+            <div class="live-preview-empty" data-preview-empty>
+              <span aria-hidden="true">↳</span>
+              Enter an ID to preview the locked condition and two-part order.
+            </div>
+
+            <div class="live-preview-ready" data-preview-ready hidden>
+              <div class="live-preview-title">
+                <div>
+                  <span>Locked assignment</span>
+                  <strong data-preview-id>—</strong>
+                </div>
+                <span class="live-cell-badge" data-preview-cell>Cell — of 9</span>
+              </div>
+
+              <div class="live-assignment-grid">
+                <div class="live-assignment-item">
+                  <span>Role set</span>
+                  <strong data-preview-role>—</strong>
+                </div>
+                <div class="live-assignment-item">
+                  <span>Story event</span>
+                  <strong data-preview-event>—</strong>
+                </div>
+                <div class="live-assignment-item">
+                  <span>Version</span>
+                  <strong data-preview-mode>—</strong>
+                </div>
+              </div>
+
+              <div class="live-order-heading">
+                <span>Counterbalanced two-part order</span>
+                <small>The same ID always receives this same order.</small>
+              </div>
+              <ol class="live-order-list">
+                <li>
+                  <span>1</span>
+                  <div>
+                    <strong data-preview-first>—</strong>
+                    <small data-preview-first-detail>—</small>
+                  </div>
+                </li>
+                <li>
+                  <span>2</span>
+                  <div>
+                    <strong data-preview-second>—</strong>
+                    <small data-preview-second-detail>—</small>
+                  </div>
+                </li>
+              </ol>
+            </div>
+          </section>
+
+          <button class="live-start" type="submit" data-start-button>
+            <span>
+              <strong>Start study in this tab</strong>
+              <small>Then share this browser tab or window in Zoom</small>
+            </span>
+            <span class="live-start-arrow" aria-hidden="true">→</span>
+          </button>
+        </form>
+
+        <aside class="live-guide-card">
+          <div class="live-section-heading">
+            <span class="live-step live-step-alt">2</span>
+            <div>
+              <h2>Run it over Zoom</h2>
+              <p>No separate controller window is needed.</p>
+            </div>
+          </div>
+
+          <ol class="live-guide-list">
+            <li>
+              <span>1</span>
+              <div><strong>Enter the ID before sharing.</strong><p>Check the locked condition and part order shown on the left.</p></div>
+            </li>
+            <li>
+              <span>2</span>
+              <div><strong>Start the study.</strong><p>It replaces this setup page in the same browser tab.</p></div>
+            </li>
+            <li>
+              <span>3</span>
+              <div><strong>Share that tab in Zoom.</strong><p>Plan about 15–30 minutes. Manually click Next and record each spoken answer by clicking the matching choice.</p></div>
+            </li>
+            <li>
+              <span>4</span>
+              <div><strong>Finish and save.</strong><p>Keep the study tab open until the data-saved screen appears.</p></div>
+            </li>
+          </ol>
+
+          <div class="live-study-map">
+            <span class="live-panel-label">What each child completes</span>
+            <div>
+              <span class="live-map-icon live-map-story" aria-hidden="true">A</span>
+              <p><strong>Story choices</strong><small>Assigned Hug, Help, or Food stories in one woman, man, or family/teacher role set</small></p>
+            </div>
+            <div>
+              <span class="live-map-icon live-map-ratings" aria-hidden="true">B</span>
+              <p><strong>Pair ratings</strong><small>Like, love, in charge, strong, and old questions</small></p>
+            </div>
+          </div>
+
+          <div class="live-data-note">
+            <span class="live-data-icon" aria-hidden="true">↓</span>
+            <div>
+              <strong>How responses are saved</strong>
+              <p>Progress is backed up locally in this browser as you click. At the end, the study starts JSON and CSV downloads and shows buttons to download either file again.</p>
+              <small>Allow multiple downloads if your browser asks. A browser backup is not a shared or cloud dataset.</small>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <footer class="live-footer">
+        <span>Manual pacing is locked on: story and rating pages never move forward on their own.</span>
+        <span>Use the exact same participant ID to reproduce the same condition, order, sides, colors, and item randomization.</span>
+      </footer>
+    </main>
+
+    <script src="zoom_assignment.js?v=zoom-facilitator-v5"></script>
+    <script src="live.js?v=ftc-live-screen-share-v1"></script>
+  </body>
+</html>
