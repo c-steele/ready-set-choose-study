@@ -818,3 +818,67 @@ button {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* The public live link now skips researcher setup and only shows this brief,
+   large loading state while it creates an anonymous session. */
+.live-auto-body {
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.live-auto-card {
+  width: min(680px, 100%);
+  padding: clamp(34px, 7vw, 68px);
+  border: 2px solid rgba(22, 127, 120, 0.18);
+  border-radius: 30px;
+  text-align: center;
+  background: #fff;
+  box-shadow: var(--shadow);
+}
+
+.live-auto-card h1 {
+  margin: 22px 0 12px;
+  font-size: clamp(34px, 6vw, 58px);
+  line-height: 1.05;
+}
+
+.live-auto-card p,
+.live-auto-noscript {
+  margin: 0 auto;
+  color: var(--muted);
+  font-size: clamp(18px, 2.5vw, 24px);
+  line-height: 1.45;
+}
+
+.live-auto-spinner {
+  display: inline-block;
+  width: 58px;
+  height: 58px;
+  border: 8px solid #d9eeeb;
+  border-top-color: var(--teal);
+  border-radius: 50%;
+  animation: live-auto-spin 0.8s linear infinite;
+}
+
+.live-auto-fallback {
+  display: inline-block;
+  margin-top: 28px;
+  padding: 14px 24px;
+  border-radius: 999px;
+  color: #fff;
+  font-size: 19px;
+  font-weight: 800;
+  text-decoration: none;
+  background: var(--teal);
+}
+
+@keyframes live-auto-spin {
+  to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .live-auto-spinner {
+    animation: none;
+  }
+}

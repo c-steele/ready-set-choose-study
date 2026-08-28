@@ -80,6 +80,24 @@
     return `live-${safeKey(participantId)}-${safeKey(mode.value)}-${timestampToken(now)}`;
   }
 
+  function automaticIdToken() {
+    if (typeof globalObject.crypto?.randomUUID === "function") {
+      return globalObject.crypto.randomUUID().replace(/-/g, "").slice(0, 8).toUpperCase();
+    }
+    if (typeof globalObject.crypto?.getRandomValues === "function") {
+      const values = new Uint32Array(2);
+      globalObject.crypto.getRandomValues(values);
+      return Array.from(values, (value) => value.toString(16).padStart(8, "0")).join("").slice(0, 8).toUpperCase();
+    }
+    return Math.floor(Math.random() * 0xffffffff).toString(16).padStart(8, "0").toUpperCase();
+  }
+
+  function makeAutomaticParticipantId(now = Date.now(), token = automaticIdToken()) {
+    const anonymousToken = safeKey(token).replace(/[^a-zA-Z0-9]/g, "").slice(0, 8).toUpperCase()
+      || "SESSION";
+    return `AUTO-${timestampToken(now)}-${anonymousToken}`;
+  }
+
   function buildStudyUrl(participantId, modeValue, baseHref, now = Date.now()) {
     const normalizedId = normalizeParticipantId(participantId);
     if (normalizedId.length < 3) throw new Error("Enter a de-identified participant ID with at least three characters.");
@@ -92,6 +110,7 @@
       facilitator: "1",
       facilitatorChild: "1",
       liveShare: "1",
+      skipParentSetup: "1",
       facilitatorSession: sessionId,
       pid: normalizedId,
       seed: normalizedId,
@@ -107,6 +126,7 @@
       researcherTools: "0",
       downloadData: "1",
       showDataStatus: "1",
+      exportFormat: "csv",
       previewIndex: "0",
     };
     Object.entries(values).forEach(([key, value]) => url.searchParams.set(key, value));
@@ -129,81 +149,26 @@
     partOrderForKey,
     assignmentForParticipant,
     makeSessionId,
+    makeAutomaticParticipantId,
     buildStudyUrl,
   });
   globalObject.FTCLiveLauncher = launcherApi;
 
   if (!documentObject) return;
 
-  const form = documentObject.querySelector("[data-live-form]");
-  if (!form) return;
-  const participantInput = documentObject.querySelector("[data-participant-id]");
-  const modeInputs = Array.from(documentObject.querySelectorAll('input[name="studyMode"]'));
-  const previewEmpty = documentObject.querySelector("[data-preview-empty]");
-  const previewReady = documentObject.querySelector("[data-preview-ready]");
-  const previewId = documentObject.querySelector("[data-preview-id]");
-  const previewCell = documentObject.querySelector("[data-preview-cell]");
-  const previewRole = documentObject.querySelector("[data-preview-role]");
-  const previewEvent = documentObject.querySelector("[data-preview-event]");
-  const previewMode = documentObject.querySelector("[data-preview-mode]");
-  const previewFirst = documentObject.querySelector("[data-preview-first]");
-  const previewFirstDetail = documentObject.querySelector("[data-preview-first-detail]");
-  const previewSecond = documentObject.querySelector("[data-preview-second]");
-  const previewSecondDetail = documentObject.querySelector("[data-preview-second-detail]");
-  const startButton = documentObject.querySelector("[data-start-button]");
-
-  function currentMode() {
-    const selected = modeInputs.find((input) => input.checked)?.value;
-    return selectedMode(selected);
+  function openAutomaticSession() {
+    const participantId = makeAutomaticParticipantId();
+    const launch = buildStudyUrl(participantId, "teacher-classmate", globalObject.location.href);
+    const status = documentObject.querySelector("[data-auto-status]");
+    const fallback = documentObject.querySelector("[data-auto-fallback]");
+    if (fallback) fallback.href = launch.url.toString();
+    if (status) status.textContent = "Opening the child study…";
+    globalObject.location.replace(launch.url.toString());
   }
 
-  function renderPreview() {
-    const participantId = normalizeParticipantId(participantInput?.value);
-    if (participantId.length < 3) {
-      previewEmpty.hidden = false;
-      previewReady.hidden = true;
-      return;
-    }
-
-    const mode = currentMode();
-    const assignment = assignmentForParticipant(participantId);
-    previewId.textContent = participantId;
-    previewCell.textContent = `Cell ${assignment.condition.cell + 1} of 9`;
-    previewRole.textContent = assignment.condition.role.label;
-    previewEvent.textContent = assignment.condition.event[0] + assignment.condition.event.slice(1).toLowerCase();
-    previewMode.textContent = `${mode.storyCount} stories`;
-    previewFirst.textContent = assignment.partOrder.first.title;
-    previewFirstDetail.textContent = assignment.partOrder.first.detail;
-    previewSecond.textContent = assignment.partOrder.second.title;
-    previewSecondDetail.textContent = assignment.partOrder.second.detail;
-    previewEmpty.hidden = true;
-    previewReady.hidden = false;
+  if (documentObject.readyState === "loading") {
+    documentObject.addEventListener("DOMContentLoaded", openAutomaticSession, { once: true });
+  } else {
+    openAutomaticSession();
   }
-
-  participantInput?.addEventListener("input", renderPreview);
-  participantInput?.addEventListener("blur", () => {
-    const normalizedId = normalizeParticipantId(participantInput.value);
-    if (normalizedId) participantInput.value = normalizedId;
-    renderPreview();
-  });
-  modeInputs.forEach((input) => input.addEventListener("change", renderPreview));
-
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const participantId = normalizeParticipantId(participantInput?.value);
-    if (participantId.length < 3) {
-      participantInput?.setCustomValidity("Enter a de-identified participant ID with at least three characters.");
-      participantInput?.reportValidity();
-      return;
-    }
-    participantInput.setCustomValidity("");
-    participantInput.value = participantId;
-    const launch = buildStudyUrl(participantId, currentMode().value, globalObject.location.href);
-    startButton.disabled = true;
-    startButton.querySelector("strong").textContent = "Opening the study…";
-    startButton.querySelector("small").textContent = "This setup page will be replaced in the same tab";
-    globalObject.location.assign(launch.url.toString());
-  });
-
-  renderPreview();
 })(window, document);

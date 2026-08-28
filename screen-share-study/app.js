@@ -160,6 +160,8 @@ const requestedExpectedResumeRows = Math.max(0, Number(configValue("expectedResu
 const requestedResearcherTools = configValue("researcherTools");
 const isFacilitatorMode = configValue("facilitator", "zoom") === "1";
 const isLiveShareMode = configValue("liveShare", "screenShare", "screen_share") === "1";
+const skipParentSetup = isFacilitatorMode
+  && configValue("skipParentSetup", "skip_parent_setup") === "1";
 const isFacilitatorChildWindow = isFacilitatorMode && configValue("facilitatorChild") === "1";
 const facilitatorSessionKey = configValue("facilitatorSession", "facilitator_session")
   || configValue("session_id", "SESSION_ID")
@@ -169,6 +171,8 @@ const showResearcherTools = requestedResearcherTools === "1" && !isFacilitatorCh
 const requestedDataEndpoint = configValue("dataEndpoint") || DATA_ENDPOINT_URL;
 const requestedCheckpointEndpoint = configValue("checkpointEndpoint", "checkpoint_endpoint");
 const shouldDownloadData = configValue("downloadData") === "1";
+const requestedExportFormat = configValue("exportFormat", "export_format").toLowerCase();
+const csvOnlyExport = requestedExportFormat === "csv";
 // Browser speech is an opt-in researcher fallback only. Participant URLs use
 // the complete prerecorded Evelyn set and never mix in a system voice.
 const useSyntheticSpeech = showResearcherTools && configValue("syntheticSpeech") === "1";
@@ -759,6 +763,8 @@ function makeDataPayload(jsPsych) {
     relationship_status: currentSessionParams.relationshipStatus || "",
     facilitator_mode: isFacilitatorMode,
     live_share_mode: isLiveShareMode,
+    parent_setup_skipped: skipParentSetup,
+    export_format: csvOnlyExport ? "csv" : "json+csv",
     facilitator_session: isFacilitatorMode ? facilitatorSessionKey : "",
     facilitator_preview_index: isFacilitatorMode ? currentPreviewIndex : null,
     facilitator_ended_early: isFacilitatorMode ? facilitatorEndedEarly : false,
@@ -850,6 +856,8 @@ function flattenRow(row, payload) {
     completion_status: payload.completion_status || "",
     facilitator_ended_early: Boolean(payload.facilitator_ended_early),
     live_share_mode: Boolean(payload.live_share_mode),
+    parent_setup_skipped: Boolean(payload.parent_setup_skipped),
+    export_format: payload.export_format || "json+csv",
     facilitator_restored_row_count: payload.facilitator_restored_row_count || 0,
     audio_version: payload.audio_version,
     ...row,
@@ -897,6 +905,13 @@ function downloadTextFile(filename, text, type) {
 
 function downloadPayloadFiles(payload) {
   const safeId = String(payload.session_id || "session").replace(/[^a-zA-Z0-9_-]/g, "_");
+  if (csvOnlyExport) {
+    return downloadTextFile(
+      `who-will-help_${safeId}.csv`,
+      rowsToCsv(payloadRowsForExport(payload)),
+      "text/csv",
+    );
+  }
   const jsonStarted = downloadTextFile(
     `who-will-help_${safeId}.json`,
     JSON.stringify(payload, null, 2),
@@ -1340,25 +1355,30 @@ async function handleStudyFinish(jsPsych) {
     if (window.parent && window.parent !== window) window.parent.postMessage(completionMessage, "*");
   }
   if (shouldDownloadData || params.get("showDataStatus") === "1") {
+    const saveSummary = csvOnlyExport
+      ? (backupKey
+          ? "Responses were saved in this browser, and the CSV download has started."
+          : "The CSV download has started.")
+      : (result.sent
+          ? "Submitted to the data endpoint."
+          : (datasetResult.sent
+            ? "Saved to the combined local dataset."
+            : (backupKey ? "Saved as a local browser backup." : "A local browser backup could not be created; use the download buttons below.")));
     document.body.innerHTML = `
       <main class="ksize-shell">
         <section class="ksize-screen ksize-done-screen">
           <h1 class="ksize-title">${facilitatorEndedEarly ? "Session ended" : "Data saved"}</h1>
-          <p class="ksize-text">${result.sent
-            ? "Submitted to the data endpoint."
-            : (datasetResult.sent
-              ? "Saved to the combined local dataset."
-              : (backupKey ? "Saved as a local browser backup." : "A local browser backup could not be created; use the download buttons below."))}</p>
-          <p class="ksize-small">Backup key: ${escapeHtml(backupKey || "not available")}</p>
-          ${isLiveShareMode ? "<p class=\"ksize-small\"><strong>Researcher:</strong> Stop the Zoom recording now, then keep this page open until both files have downloaded.</p>" : ""}
+          <p class="ksize-text">${saveSummary}</p>
+          ${csvOnlyExport ? "" : `<p class="ksize-small">Backup key: ${escapeHtml(backupKey || "not available")}</p>`}
+          ${isLiveShareMode ? `<p class="ksize-small"><strong>Researcher:</strong> Stop the Zoom recording now, then keep this page open until ${csvOnlyExport ? "the CSV has" : "both files have"} downloaded.</p>` : ""}
           <div class="ksize-controls">
-            <button class="ksize-next-btn ksize-icon-btn" type="button" data-download-json>
+            ${csvOnlyExport ? "" : `<button class="ksize-next-btn ksize-icon-btn" type="button" data-download-json>
               <span class="ksize-icon-symbol" aria-hidden="true">↓</span>
               <span class="ksize-icon-label">JSON</span>
-            </button>
+            </button>`}
             <button class="ksize-next-btn ksize-icon-btn" type="button" data-download-csv>
               <span class="ksize-icon-symbol" aria-hidden="true">↓</span>
-              <span class="ksize-icon-label">CSV</span>
+              <span class="ksize-icon-label">${csvOnlyExport ? "Download CSV again" : "CSV"}</span>
             </button>
           </div>
         </section>
@@ -2957,7 +2977,7 @@ async function main() {
     ...(selectedContext
       ? [contextBadgeSrc(selectedContext), contextBadgeSrc(selectedContext, { large: true })].map(displayImageSrc)
       : []),
-    ...allDyadSlides.map(({ slide }) => slide.src),
+    ...allDyadSlides.map(({ slide }) => displayImageSrc(slide.src)),
     ...eventPlan.flatMap((trial) =>
       [
         introImageFixes[`${trial.id}|3`],
@@ -3070,6 +3090,8 @@ async function main() {
     assigned_context_visual_id: selectedContext ? contextImageId(selectedContext) : null,
     part_order: resolvedPartOrder,
     rating_mode: selectedRatingMode,
+    parent_setup_skipped: skipParentSetup,
+    export_format: csvOnlyExport ? "csv" : "json+csv",
     design_version: selectedContext
       ? HOME_SCHOOL_DESIGN_VERSION
       : (isCurrentChsV76Study ? "chs-polish-v76" : (includesTeacherClassmate ? TEACHER_CLASSMATE_DESIGN_VERSION : null)),
@@ -3727,23 +3749,20 @@ async function main() {
   const secondPartKind = selectedPartOrder === "ratings-first" ? PART_EVENT : PART_DYAD;
   const firstPartNodes = selectedPartOrder === "ratings-first" ? ratingNodes : storyNodes;
   const secondPartNodes = selectedPartOrder === "ratings-first" ? storyNodes : ratingNodes;
+  const parentSetupNodes = skipParentSetup
+    ? []
+    : [parentWelcomeNode, setupNode, cameraSetupNode, childHandoffNode];
   const reviewNodes = (
     selectedRatingMode === "one-after-story"
       ? [
-          parentWelcomeNode,
-          setupNode,
-          cameraSetupNode,
-          childHandoffNode,
+          ...parentSetupNodes,
           ...(ENABLE_CHILD_ASSENT ? [childAssentNode] : []),
           welcomeNode,
           ...oneAfterStoryNodes,
           doneNode,
         ]
       : [
-          parentWelcomeNode,
-          setupNode,
-          cameraSetupNode,
-          childHandoffNode,
+          ...parentSetupNodes,
           ...(ENABLE_CHILD_ASSENT ? [childAssentNode] : []),
           welcomeNode,
           makePartBreakNode(jsPsych, firstPartKind, 1, selectedEventSuffix),
