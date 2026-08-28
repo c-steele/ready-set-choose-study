@@ -157,9 +157,12 @@ const requestedFamilyLikertMode = configValue("familyLikert", "familyLikertMode"
 const requestedPreviewIndex = Math.max(0, Number(configValue("previewIndex") || 0) || 0);
 const requestedResumeBackupKey = configValue("resumeBackupKey", "resume_backup_key");
 const requestedExpectedResumeRows = Math.max(0, Number(configValue("expectedResumeRows", "expected_resume_rows") || 0) || 0);
+const requestedResearcherJump = configValue("researcherJump", "researcher_jump") === "1";
 const requestedResearcherTools = configValue("researcherTools");
 const isFacilitatorMode = configValue("facilitator", "zoom") === "1";
 const isLiveShareMode = configValue("liveShare", "screenShare", "screen_share") === "1";
+const showLiveReadAloud = isLiveShareMode
+  && configValue("showReadAloud", "readAloudCaptions", "read_aloud_captions") !== "0";
 const skipParentSetup = isFacilitatorMode
   && configValue("skipParentSetup", "skip_parent_setup") === "1";
 const isFacilitatorChildWindow = isFacilitatorMode && configValue("facilitatorChild") === "1";
@@ -167,7 +170,8 @@ const facilitatorSessionKey = configValue("facilitatorSession", "facilitator_ses
   || configValue("session_id", "SESSION_ID")
   || requestedParticipantId
   || requestedSeed;
-const showResearcherTools = requestedResearcherTools === "1" && !isFacilitatorChildWindow;
+const showResearcherTools = requestedResearcherTools === "1"
+  && (!isFacilitatorChildWindow || isLiveShareMode);
 const requestedDataEndpoint = configValue("dataEndpoint") || DATA_ENDPOINT_URL;
 const requestedCheckpointEndpoint = configValue("checkpointEndpoint", "checkpoint_endpoint");
 const shouldDownloadData = configValue("downloadData") === "1";
@@ -815,12 +819,14 @@ function restoreFacilitatorDataBackup(jsPsych) {
 function safeFacilitatorPreviewIndex({
   requestedIndex,
   facilitatorMode,
+  researcherJump,
   resumeBackupKey,
   expectedRows,
   restoredRows,
 }) {
   const normalizedIndex = Math.max(0, Number(requestedIndex) || 0);
   if (!facilitatorMode || normalizedIndex === 0) return normalizedIndex;
+  if (researcherJump && Number(expectedRows) === 0) return normalizedIndex;
   const recoveryVerified = Boolean(
     resumeBackupKey
       && Number(expectedRows) > 0
@@ -937,7 +943,10 @@ function setFacilitatorScript(lines, meta = {}) {
 }
 
 function renderLiveShareScript(lines) {
-  if (!isLiveShareMode) return;
+  if (!showLiveReadAloud) {
+    document.querySelector(".ksize-live-share-script")?.remove();
+    return;
+  }
   const slot = document.querySelector(".ksize-top-hud-right");
   if (!slot) return;
   const script = normalizeFacilitatorScript(lines);
@@ -1920,11 +1929,31 @@ function installResearcherSkip(jsPsych) {
 
   const jumpToPreview = (index) => {
     audio.stop();
+    const targetIndex = Math.max(0, Math.min(index, totalPreviewScreens - 1));
     const url = new URL(window.location.href);
     Object.entries(currentSessionParams).forEach(([key, value]) => {
       if (value) url.searchParams.set(key, value);
     });
-    url.searchParams.set("previewIndex", String(Math.max(0, Math.min(index, totalPreviewScreens - 1))));
+    url.searchParams.delete("resumeBackupKey");
+    url.searchParams.delete("expectedResumeRows");
+    url.searchParams.set("researcherJump", "1");
+    if (isFacilitatorMode && targetIndex > 0) {
+      const payload = currentFacilitatorPayload();
+      if (!payload) return;
+      payload.rows = payload.rows.filter((row) => {
+        const rowIndex = Number(row?.preview_index);
+        return Number.isFinite(rowIndex) && rowIndex < targetIndex;
+      });
+      payload.facilitator_navigation_from = currentPreviewIndex;
+      payload.facilitator_navigation_to = targetIndex;
+      const backupKey = saveLocalDataBackup(payload);
+      if (payload.rows.length > 0) {
+        if (!backupKey) return;
+        url.searchParams.set("resumeBackupKey", backupKey);
+        url.searchParams.set("expectedResumeRows", String(payload.rows.length));
+      }
+    }
+    url.searchParams.set("previewIndex", String(targetIndex));
     window.location.href = url.toString();
   };
 
@@ -3778,6 +3807,7 @@ async function main() {
   const safeRequestedPreviewIndex = safeFacilitatorPreviewIndex({
     requestedIndex: requestedPreviewIndex,
     facilitatorMode: isFacilitatorMode,
+    researcherJump: requestedResearcherJump,
     resumeBackupKey: requestedResumeBackupKey,
     expectedRows: requestedExpectedResumeRows,
     restoredRows: facilitatorRestoredRowCount,

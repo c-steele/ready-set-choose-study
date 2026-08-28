@@ -3252,6 +3252,16 @@ body.ksize-facilitator-child .ksize-auto-next-note {
   display: none !important;
 }
 
+body.ksize-live-share.ksize-facilitator-child .ksize-researcher-tools {
+  display: flex !important;
+}
+
+body.ksize-live-share .ksize-researcher-tools button {
+  min-width: 58px;
+  padding: 8px 10px;
+  font-size: 14px;
+}
+
 body.ksize-facilitator-child .ksize-controls {
   min-height: 72px;
 }
