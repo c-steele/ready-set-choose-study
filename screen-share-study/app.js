@@ -2980,7 +2980,9 @@ async function main() {
     ...allDyadSlides.map(({ slide }) => displayImageSrc(slide.src)),
     ...eventPlan.flatMap((trial) =>
       [
-        introImageFixes[`${trial.id}|3`],
+        introImageFixes[`${trial.id}|3`]
+          ? displayImageSrc(introImageFixes[`${trial.id}|3`])
+          : null,
         ...trial.blockOrder.flatMap((suffix) => {
           const block = trial.blocks[suffix];
           if (!block) return [];
