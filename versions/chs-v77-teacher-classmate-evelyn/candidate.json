@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "candidateId": "chs-v77-teacher-classmate-evelyn",
+  "status": "pending_chs_reapproval",
+  "activeChsStudyChanged": false,
+  "description": "Six-story Find the Caregiver candidate with Teacher-Classmate and interleaved pair ratings.",
+  "storyCount": 6,
+  "ratingMode": "one-after-story",
+  "voice": "Evelyn — NaturalReaders Commercial",
+  "syntheticSpeech": false,
+  "teacherClassmateNewClipCount": 10,
+  "teacherClassmateAudioManifest": "data/teacher_classmate_audio_manifest.json",
+  "participantBaseUrl": "https://c-steele.github.io/ready-set-choose-study/versions/chs-v77-teacher-classmate-evelyn/index.html?syntheticSpeech=0&ratingMode=one-after-story",
+  "pinnedFilesSha256": {
+    "app.js": "660d70b3829dbcbffb172afa1cef7e6445ccf1cfc48578f3da1714eb303002b6",
+    "styles.css": "8bfb2979e6ac03101f98a27c04790190781ad5eeef8f805700539e82382d361f",
+    "data/dyad_manifest.json": "e965d8bd52c725de5ce5d4353dff9fd300d9fec69de0132809f379aadbae0cfd",
+    "data/ksize_manifest.json": "e8a63eb4d912b1a984f0533c28f7e5448292e491266ffa9582015cf8d2563d6b",
+    "data/intro_image_fixes.json": "9f2c27cf96bb451a40a2480387f6f0b60b57867f03df416c074b04d42dad8409",
+    "data/canonical_audio_manifest_evelyn.json": "e8b91ce0ce0d35dd2aa65842daa3d06ca1cdd4f27c669c6d9ecbb84f5d168cc5",
+    "data/teacher_classmate_audio_manifest.json": "27102c0ddb8db954490e3d8d7bc2358fb286c0a82c7375397afaa21da26a0784",
+    "data/rating_option_cues.json": "71e3fdbc4d443490fcb70819ffd74fd885496a14c33c38ec6ea7fefb02d575c7"
+  }
+}

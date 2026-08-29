@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "voiceProfile": "evelyn-full-v74",
+  "description": "Measured phrase-start cues for the three spoken anchors in each combined Evelyn rating-scale clip. The UI follows media currentTime rather than wall-clock timers.",
+  "scales": {
+    "love": {
+      "text": "Does not love. Loves a little. Loves a lot.",
+      "audio": "audio_evelyn/ftc_118_rating_scale_01_does_not_love_loves_a_little_loves_a_lot.mp3",
+      "sha256": "995a782b95b61f453bdcbafca858bf1cf28a8d10c584d2e8fc58b682f6ee25d9",
+      "startsSeconds": [0.195, 1.954, 3.532],
+      "durationSeconds": 4.885
+    },
+    "like": {
+      "text": "Does not like. Likes a little. Likes a lot.",
+      "audio": "audio_evelyn/ftc_119_rating_scale_02_does_not_like_likes_a_little_likes_a_lot.mp3",
+      "sha256": "f7ea0021de0620633e404841a3b04d07a5097cb6a3b6a9241acba23237a9a013",
+      "startsSeconds": [0.195, 1.934, 3.474],
+      "durationSeconds": 4.78
+    },
+    "charge": {
+      "text": "Not in charge. A little in charge. Very much in charge.",
+      "audio": "audio_evelyn/ftc_120_rating_scale_03_not_in_charge_a_little_in_charge_very_much_in_charge.mp3",
+      "sha256": "becedb4eef0370bea1c6c6f13132e0799981cef595393d9a9f4097eeaef45969",
+      "startsSeconds": [0.187, 1.997, 3.907],
+      "durationSeconds": 5.851
+    },
+    "old": {
+      "text": "Not old. A little old. Very old.",
+      "audio": "audio_evelyn/ftc_121_rating_scale_04_not_old_a_little_old_very_old.mp3",
+      "sha256": "70685543ba726e2da016bef9b4f752f267e1218f7584d5b60a4e988e059513e7",
+      "startsSeconds": [0.186, 1.748, 3.331],
+      "durationSeconds": 4.702
+    },
+    "strong": {
+      "text": "Not strong. A little strong. Very strong.",
+      "audio": "audio_evelyn/ftc_122_rating_scale_05_not_strong_a_little_strong_very_strong.mp3",
+      "sha256": "ce0bf8a21eb6ea3ae0322343a0f0249b84d6d0da1b11c55b28520bce76e01a41",
+      "startsSeconds": [0.194, 1.985, 3.754],
+      "durationSeconds": 5.303
+    }
+  }
+}

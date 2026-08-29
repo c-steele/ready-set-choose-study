@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "condition": "TEACHER-CLASSMATE",
+  "voice": "Evelyn — NaturalReaders Commercial",
+  "status": "complete",
+  "audioRoot": "assets/teacher_classmate/generated/audio",
+  "recording": {
+    "generatedOn": "2026-08-26",
+    "service": "NaturalReaders Commercial",
+    "voice": "Evelyn",
+    "style": "Soft",
+    "speed": 0.9,
+    "wordsPerMinute": 180,
+    "pauseBetweenParagraphsSeconds": 0,
+    "format": "mp3",
+    "bitrateKbps": 320,
+    "clipCount": 10
+  },
+  "lines": [
+    {
+      "text": "This little one is this kid's classmate who the kid is not friends with.",
+      "output": "assets/teacher_classmate/generated/audio/tc_v2_classmate_intro_no_comma.mp3",
+      "bytes": 194396,
+      "sha256": "cf3967802ec97f08f22da0749cbfe84cc2e2a4d136479c9fb8f24bf681af29de"
+    },
+    {
+      "text": "The kid's teacher or the kid's classmate who the kid is not friends with?",
+      "output": "assets/teacher_classmate/generated/audio/the_kids_teacher_or_the_kids_classmate_who_the_kid_is_not_friends_with.mp3",
+      "bytes": 191261,
+      "sha256": "d0d9a1141f6e9b38d1532e4fe2e8b7c7a6a327cb0dab323b316487a64e1e5c27"
+    },
+    {
+      "text": "The kid's classmate who the kid is not friends with or the kid's teacher?",
+      "output": "assets/teacher_classmate/generated/audio/the_kids_classmate_who_the_kid_is_not_friends_with_or_the_kids_teacher.mp3",
+      "bytes": 187081,
+      "sha256": "b5b53ffa112bda264d7a7db276e341703dd271629c997189d6e3c2d11fac100f"
+    },
+    {
+      "text": "You chose the classmate who the kid is not friends with!",
+      "output": "assets/teacher_classmate/generated/audio/you_chose_the_classmate_who_the_kid_is_not_friends_with.mp3",
+      "bytes": 162004,
+      "sha256": "2f7c74772ef225a6b8feb58dd671312157d135f2833cee06b62cfc5f1a70a631"
+    },
+    {
+      "text": "Now let's answer some questions about the classmate inside the box and the kid.",
+      "output": "assets/teacher_classmate/generated/audio/tc_005_followup_orientation_classmate_kid.mp3",
+      "bytes": 216338,
+      "sha256": "ef7da27735ead882f709e01106a4a61a27624b0eeabb772bc9c47a4883039283"
+    },
+    {
+      "text": "How much does the classmate who the kid is not friends with love the kid?",
+      "output": "assets/teacher_classmate/generated/audio/tc_v2_rating_classmate_not_friends_love_kid.mp3",
+      "bytes": 193351,
+      "sha256": "0c0cd437e51a106dc3f2c90fbc4b7dd0d6d51ac54a75497ad1da392c31af7a60"
+    },
+    {
+      "text": "How much does the classmate who the kid is not friends with like the kid?",
+      "output": "assets/teacher_classmate/generated/audio/tc_v2_rating_classmate_not_friends_like_kid.mp3",
+      "bytes": 188126,
+      "sha256": "d2df0d21f4bcfca544f540af99902963dfa049ce969b00b2e1d4ee3e9eddb8a2"
+    },
+    {
+      "text": "How much is the classmate who the kid is not friends with in charge?",
+      "output": "assets/teacher_classmate/generated/audio/tc_v2_rating_classmate_not_friends_in_charge.mp3",
+      "bytes": 182902,
+      "sha256": "02d0591d66acc87b8c5901db16887354ba7a613b15a1675ace6f3fd86dc5f462"
+    },
+    {
+      "text": "How old is the classmate who the kid is not friends with?",
+      "output": "assets/teacher_classmate/generated/audio/tc_v2_rating_classmate_not_friends_old.mp3",
+      "bytes": 163049,
+      "sha256": "978fc0eb6211aa116657d8e0c0f97f2ce42b63ee06f634f81c50330621ef662f"
+    },
+    {
+      "text": "How strong is the classmate who the kid is not friends with?",
+      "output": "assets/teacher_classmate/generated/audio/tc_v2_rating_classmate_not_friends_strong.mp3",
+      "bytes": 174543,
+      "sha256": "0a4143c64f12a3ec1517a8b4b346287c39061769396094ceba1e8567cba3e2f5"
+    }
+  ]
+}
