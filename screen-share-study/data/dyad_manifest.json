@@ -5095,8 +5095,8 @@
       "subject": "kid",
       "target": "teacher",
       "sourceKey": "TTK",
-      "color": "blue",
-      "variantKey": "TTK-blue",
+      "color": "purple",
+      "variantKey": "TTK-purple",
       "label": "assets/dyads/kid-teacher_01_ttk-blue/kid-teacher.001.png",
       "slides": [
         {
@@ -5200,8 +5200,8 @@
       "subject": "kid",
       "target": "teacher",
       "sourceKey": "TTK",
-      "color": "purple",
-      "variantKey": "TTK-purple",
+      "color": "blue",
+      "variantKey": "TTK-blue",
       "label": "assets/dyads/kid-teacher_02_ttk-purple/kid-teacher.015.png",
       "slides": [
         {

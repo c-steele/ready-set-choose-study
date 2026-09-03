@@ -115,7 +115,7 @@
       pid: normalizedId,
       seed: normalizedId,
       session_id: sessionId,
-      STUDY_ID: "ftc-live-screen-share-interleaved-v1",
+      STUDY_ID: "ftc-live-screen-share-interleaved-unique-roles-v2",
       roleSet: assignment.condition.role.value,
       set: assignment.condition.role.set,
       event: assignment.condition.event,

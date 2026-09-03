@@ -2,12 +2,13 @@ const params = new URLSearchParams(window.location.search);
 const runtimeConfig = window.KSIZE_RUNTIME_CONFIG || {};
 const assetBaseUrl = runtimeConfig.assetBaseUrl || window.KSIZE_ASSET_BASE_URL || "";
 const requestedVoiceProfile = params.get("voice") || "";
-const TEACHER_CLASSMATE_ASSET_VERSION = "teacher-classmate-deep-purple-preview-v12";
+const TEACHER_CLASSMATE_ASSET_VERSION = "teacher-classmate-deep-purple-preview-v13";
 const TEACHER_CLASSMATE_DESIGN_VERSION = "teacher_classmate_deep_purple_preview_v12";
 const TEACHER_CLASSMATE_GENERATED_ROOT = "assets/teacher_classmate/generated/";
 const HOME_SCHOOL_ASSET_VERSION = "home-school-context-preview-v4";
 const HOME_SCHOOL_DESIGN_VERSION = "home_school_context_preview_v1";
 const HOME_SCHOOL_CONTEXT_SCRIPT_VERSION = "home_school_context_script_v1";
+const RATING_SCHEDULE_VERSION = "unique_focal_role_per_set_v1";
 const HOME_SCHOOL_GENERATED_ROOT = "assets/home_school/generated/";
 const DYAD_MANIFEST_URL = runtimeConfig.dyadManifestUrl
   || `data/dyad_manifest.json?v=${TEACHER_CLASSMATE_ASSET_VERSION}`;
@@ -264,7 +265,7 @@ const ONE_PAIR_SCRIPT_SCHEDULES = [
     "DAD-KID": "mom-DAD",
     "MOM-KID": "dad-MOM",
     "TEACHER-KID": "teacher-TEACHER",
-    "TEACHER-CLASSMATE": "kid-TEACHER",
+    "TEACHER-CLASSMATE": "kid-CLASSMATE",
   },
   {
     "MOM-TEACHER": "kid-MOM",
@@ -288,47 +289,31 @@ const FAMILY_ONE_PAIR_SCRIPT_SCHEDULES = [
   {
     "MOM-DAD": "kid-MOM",
     "SISTER-BROTHER": "kid-SISTER",
-    "DAD-KID": "mom-DAD",
-    "MOM-KID": "dad-KID",
-    "TEACHER-KID": "teacher-KID",
-    "TEACHER-CLASSMATE": "kid-TEACHER",
+    "DAD-KID": "mom-KID",
+    "MOM-KID": "dad-MOM",
+    "TEACHER-KID": "teacher-TEACHER",
+    "TEACHER-CLASSMATE": "kid-CLASSMATE",
   },
   {
     "MOM-DAD": "kid-MOM",
+    "SISTER-BROTHER": "kid-BROTHER",
+    "DAD-KID": "mom-KID",
+    "MOM-KID": "dad-MOM",
+    "TEACHER-KID": "teacher-TEACHER",
+    "TEACHER-CLASSMATE": "kid-CLASSMATE",
+  },
+  {
+    "MOM-DAD": "kid-DAD",
     "SISTER-BROTHER": "kid-SISTER",
     "DAD-KID": "mom-DAD",
     "MOM-KID": "dad-KID",
-    "TEACHER-KID": "teacher-KID",
-    "TEACHER-CLASSMATE": "kid-CLASSMATE",
-  },
-  {
-    "MOM-DAD": "kid-DAD",
-    "SISTER-BROTHER": "kid-BROTHER",
-    "DAD-KID": "mom-KID",
-    "MOM-KID": "dad-MOM",
-    "TEACHER-KID": "teacher-KID",
-    "TEACHER-CLASSMATE": "kid-TEACHER",
-  },
-  {
-    "MOM-DAD": "kid-DAD",
-    "SISTER-BROTHER": "kid-BROTHER",
-    "DAD-KID": "mom-KID",
-    "MOM-KID": "dad-MOM",
-    "TEACHER-KID": "teacher-KID",
-    "TEACHER-CLASSMATE": "kid-CLASSMATE",
-  },
-  {
-    "MOM-DAD": "kid-MOM",
-    "SISTER-BROTHER": "kid-BROTHER",
-    "DAD-KID": "mom-KID",
-    "MOM-KID": "dad-KID",
     "TEACHER-KID": "teacher-TEACHER",
-    "TEACHER-CLASSMATE": "kid-TEACHER",
+    "TEACHER-CLASSMATE": "kid-CLASSMATE",
   },
   {
-    "MOM-DAD": "kid-MOM",
+    "MOM-DAD": "kid-DAD",
     "SISTER-BROTHER": "kid-BROTHER",
-    "DAD-KID": "mom-KID",
+    "DAD-KID": "mom-DAD",
     "MOM-KID": "dad-KID",
     "TEACHER-KID": "teacher-TEACHER",
     "TEACHER-CLASSMATE": "kid-CLASSMATE",
@@ -762,6 +747,9 @@ function makeDataPayload(jsPsych) {
     assignment_key_type: currentSessionParams.assignmentKeyType || requestedSeedSource,
     audio_playback_or_load_failure_count: audioPlaybackFailureCount,
     rating_mode: currentSessionParams.ratingMode || requestedRatingMode,
+    rating_schedule_version: currentSessionParams.ratingScheduleVersion || "",
+    rating_focal_roles: currentSessionParams.ratingFocalRoles || [],
+    rating_focal_roles_unique: currentSessionParams.ratingFocalRolesUnique ?? null,
     part_order: currentSessionParams.partOrder || "",
     design_version: currentSessionParams.designVersion || "",
     relationship_status: currentSessionParams.relationshipStatus || "",
@@ -1607,6 +1595,18 @@ function trialColor(trial) {
   return trial?.blocks.INTRO?.color || "";
 }
 
+function hasKnownDuplicateVisualSet(trial, selectedTrials) {
+  const condition = trial?.blocks.INTRO?.condition || "";
+  const conflictingCondition = condition === "DAD-KID"
+    ? "TEACHER-KID"
+    : (condition === "TEACHER-KID" ? "DAD-KID" : "");
+  if (!conflictingCondition) return false;
+  return selectedTrials.some((selectedTrial) =>
+    selectedTrial?.blocks.INTRO?.condition === conflictingCondition
+      && trialColor(selectedTrial) === trialColor(trial)
+  );
+}
+
 function shuffleAvoidingAdjacentColors(items, rng) {
   for (let attempt = 0; attempt < 80; attempt += 1) {
     const shuffled = shuffle(items, rng);
@@ -1630,7 +1630,13 @@ function chooseUniqueColorTrials(conditionOrder, byCondition, rng, forcedVariant
       ? variants.filter((trial) => trial.variant === forcedVariant)
       : shuffle(variants, rng);
     const freshPool = pool.filter((trial) => !usedColors.has(trialColor(trial)));
-    const orderedPool = [...freshPool, ...pool.filter((trial) => usedColors.has(trialColor(trial)))];
+    const reusedPool = pool.filter((trial) => usedColors.has(trialColor(trial)));
+    // DAD-KID and TEACHER-KID share their underlying purple/blue generic
+    // character art. When a color repeat is unavoidable, prefer a different
+    // visual set instead of showing that exact set twice in one session.
+    const preferredReusedPool = reusedPool.filter((trial) => !hasKnownDuplicateVisualSet(trial, selected));
+    const duplicateVisualPool = reusedPool.filter((trial) => hasKnownDuplicateVisualSet(trial, selected));
+    const orderedPool = [...freshPool, ...preferredReusedPool, ...duplicateVisualPool];
 
     for (const trial of orderedPool) {
       const color = trialColor(trial);
@@ -1732,19 +1738,23 @@ function dedupeDyadGroupsByRelationship(dyadGroups) {
 }
 
 function selectOneDyadPerTrial(dyadGroups, eventPlan, schedule) {
-  const seen = new Set();
+  const seenSubjects = new Set();
   return dyadGroups.map((group, idx) => {
     const condition = eventPlan[idx]?.blocks.INTRO?.condition || "";
     const preferred = schedule[condition];
-    // Preview schedules are authoritative. Woman/man schedule 0 intentionally
-    // repeats kid-TEACHER for two conditions; repetition must not trigger a
-    // story-order-dependent fallback.
     const preferredChunk = group.find((chunk) => chunk.scriptKey === preferred);
-    const fallbackFresh = group.find((chunk) => !seen.has(chunk.scriptKey));
-    const selected = preferredChunk || fallbackFresh || group[0];
-    if (!selected) return [];
-    seen.add(selected.scriptKey || `${selected.subject}-${selected.target}`);
-    return [selected];
+    if (!preferredChunk) {
+      throw new Error(`Rating schedule ${RATING_SCHEDULE_VERSION} cannot deliver ${preferred || "a pairing"} for ${condition}.`);
+    }
+    const preferredSubject = String(preferredChunk.subject || "").trim().toLowerCase();
+    if (!preferredSubject) {
+      throw new Error(`Rating schedule ${RATING_SCHEDULE_VERSION} has no focal role for ${condition}.`);
+    }
+    if (seenSubjects.has(preferredSubject)) {
+      throw new Error(`Rating schedule ${RATING_SCHEDULE_VERSION} repeats focal role ${preferredSubject}.`);
+    }
+    seenSubjects.add(preferredSubject);
+    return [preferredChunk];
   });
 }
 
@@ -2993,6 +3003,11 @@ async function main() {
     ? onePairScheduleIndex
     : null;
   const allDyadChunks = dyadGroupsByTrial.flat();
+  const ratingFocalRoles = allDyadChunks.map((chunk) => String(chunk.subject || "").trim().toLowerCase());
+  const ratingFocalRolesUnique = new Set(ratingFocalRoles).size === ratingFocalRoles.length;
+  currentSessionParams.ratingScheduleVersion = RATING_SCHEDULE_VERSION;
+  currentSessionParams.ratingFocalRoles = ratingFocalRoles;
+  currentSessionParams.ratingFocalRolesUnique = ratingFocalRolesUnique;
   const includePairIntros = true;
   const allDyadSlides = allDyadChunks.flatMap((chunk) =>
     orderedDyadSlides(chunk, { includeIntro: includePairIntros }).map((slide) => ({ chunk, slide }))
@@ -3078,6 +3093,9 @@ async function main() {
     followupScheduleMap: selectedRatingMode === "one-after-story" && !useAllFamilyDyadsAfterStory
       ? onePairSchedule
       : null,
+    ratingScheduleVersion: RATING_SCHEDULE_VERSION,
+    ratingFocalRoles,
+    ratingFocalRolesUnique,
     ratingMode: selectedRatingMode,
     partOrder: resolvedPartOrder,
     traitOrders: allDyadChunks.map((chunk) => ({
@@ -3135,6 +3153,9 @@ async function main() {
     one_pair_schedule_map: selectedRatingMode === "one-after-story" && !useAllFamilyDyadsAfterStory
       ? JSON.stringify(onePairSchedule)
       : null,
+    rating_schedule_version: RATING_SCHEDULE_VERSION,
+    rating_focal_roles: ratingFocalRoles.join(","),
+    rating_focal_roles_unique: ratingFocalRolesUnique,
     requested_set: requestedSet,
     requested_color: requestedColor || null,
     n_event_trials: eventPlan.length,

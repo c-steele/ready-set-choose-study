@@ -4,27 +4,33 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Find the Caregiver — live screen-share study</title>
-  <script src="../vendor/jspsych/jspsych-7.3.4.js?v=ftc-live-screen-share-v6"></script>
-  <link href="../vendor/jspsych/jspsych-7.3.4.css?v=ftc-live-screen-share-v6" rel="stylesheet" type="text/css">
-  <script src="../vendor/jspsych/plugin-preload-1.1.3.js?v=ftc-live-screen-share-v6"></script>
-  <script src="../vendor/jspsych/plugin-html-button-response-1.1.3.js?v=ftc-live-screen-share-v6"></script>
-  <link href="styles.css?v=ftc-live-screen-share-v6" rel="stylesheet">
+  <script src="../vendor/jspsych/jspsych-7.3.4.js?v=ftc-live-screen-share-v8"></script>
+  <link href="../vendor/jspsych/jspsych-7.3.4.css?v=ftc-live-screen-share-v8" rel="stylesheet" type="text/css">
+  <script src="../vendor/jspsych/plugin-preload-1.1.3.js?v=ftc-live-screen-share-v8"></script>
+  <script src="../vendor/jspsych/plugin-html-button-response-1.1.3.js?v=ftc-live-screen-share-v8"></script>
+  <link href="styles.css?v=ftc-live-screen-share-v8" rel="stylesheet">
 </head>
 <body></body>
 <script>
   (() => {
     const studyRoot = new URL("../", window.location.href).toString();
     const localData = new URL("data/", window.location.href);
+    const runtimeVersion = "ftc-live-screen-share-v8";
+    const versionedDataUrl = (filename) => {
+      const url = new URL(filename, localData);
+      url.searchParams.set("v", runtimeVersion);
+      return url.toString();
+    };
     window.KSIZE_RUNTIME_CONFIG = Object.freeze({
       assetBaseUrl: studyRoot,
-      dyadManifestUrl: new URL("dyad_manifest.json", localData).toString(),
-      eventManifestUrl: new URL("ksize_manifest.json", localData).toString(),
-      introImageFixesUrl: new URL("intro_image_fixes.json", localData).toString(),
-      canonicalAudioManifestUrl: new URL("canonical_audio_manifest_evelyn.json", localData).toString(),
-      teacherClassmateAudioManifestUrl: new URL("teacher_classmate_audio_manifest.json", localData).toString(),
-      ratingOptionCuesUrl: new URL("rating_option_cues.json", localData).toString(),
+      dyadManifestUrl: versionedDataUrl("dyad_manifest.json"),
+      eventManifestUrl: versionedDataUrl("ksize_manifest.json"),
+      introImageFixesUrl: versionedDataUrl("intro_image_fixes.json"),
+      canonicalAudioManifestUrl: versionedDataUrl("canonical_audio_manifest_evelyn.json"),
+      teacherClassmateAudioManifestUrl: versionedDataUrl("teacher_classmate_audio_manifest.json"),
+      ratingOptionCuesUrl: versionedDataUrl("rating_option_cues.json"),
     });
   })();
 </script>
-<script src="app.js?v=ftc-live-screen-share-v6"></script>
+<script src="app.js?v=ftc-live-screen-share-v8"></script>
 </html>
