@@ -1,5 +1,6 @@
 const params = new URLSearchParams(window.location.search);
 const runtimeConfig = window.KSIZE_RUNTIME_CONFIG || {};
+const lockedDataStudyVersion = String(runtimeConfig.lockedDataStudyVersion || "").trim();
 const assetBaseUrl = runtimeConfig.assetBaseUrl || window.KSIZE_ASSET_BASE_URL || "";
 const requestedVoiceProfile = params.get("voice") || "";
 const TEACHER_CLASSMATE_ASSET_VERSION = "teacher-classmate-deep-purple-preview-v16";
@@ -2962,7 +2963,7 @@ async function main() {
     ? `home_school_context_${selectedContext.toLowerCase()}_preview_v1`
     : (isCurrentChsV76Study
       ? "chs-polish-v76"
-      : (includesTeacherClassmate ? TEACHER_CLASSMATE_DESIGN_VERSION : ""));
+      : (lockedDataStudyVersion || (includesTeacherClassmate ? TEACHER_CLASSMATE_DESIGN_VERSION : "")));
   currentSessionParams = {
     seed: requestedSeed,
     session_id: currentSessionId,

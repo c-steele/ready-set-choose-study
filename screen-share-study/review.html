@@ -6,7 +6,7 @@
     <meta name="color-scheme" content="light">
     <meta name="robots" content="noindex,nofollow">
     <title>Find the Caregiver — Study review board</title>
-    <link rel="stylesheet" href="review.css?v=ftc-rendition-review-v2">
+    <link rel="stylesheet" href="review.css?v=ftc-rendition-review-v4">
   </head>
   <body>
     <main class="review-shell">
@@ -14,14 +14,35 @@
         <div>
           <p class="review-eyebrow">Researcher preview</p>
           <h1>Study review board</h1>
-          <p class="review-subtitle">Open every role set, event, visual rendition, and pairing plan without waiting for a random assignment.</p>
+          <p class="review-subtitle">Preview the same 96 assignments in the Zoom and CHS audio versions, without waiting for a random assignment.</p>
         </div>
         <div class="review-progress-card" aria-live="polite">
           <strong data-progress-count>0 / 96</strong>
-          <span>runs reviewed</span>
+          <span data-progress-label>Zoom runs reviewed</span>
           <div class="review-progress-track" aria-hidden="true"><i data-progress-bar></i></div>
         </div>
       </header>
+
+      <fieldset class="review-mode-selector" aria-describedby="review-mode-help">
+        <legend>Which version do you want to preview?</legend>
+        <label class="review-mode-option">
+          <input type="radio" name="preview-mode" value="zoom" data-preview-mode checked>
+          <span class="review-mode-copy">
+            <strong>Zoom researcher-paced</strong>
+            <small>You control every page. Back and Skip are available.</small>
+          </span>
+          <span class="review-mode-tag">Manual</span>
+        </label>
+        <label class="review-mode-option">
+          <input type="radio" name="preview-mode" value="chs" data-preview-mode>
+          <span class="review-mode-copy">
+            <strong>CHS audio / autoplay</strong>
+            <small>Visual/script review is ready. Four revised Classmate lines still need new Evelyn recordings before CHS use.</small>
+          </span>
+          <span class="review-mode-tag">Audio pending</span>
+        </label>
+        <p id="review-mode-help" class="review-mode-help" data-mode-help>The Zoom version is researcher-paced for live screen sharing.</p>
+      </fieldset>
 
       <section class="review-controls" aria-label="Review filters">
         <label>
@@ -56,11 +77,11 @@
           <input type="checkbox" data-filter="unfinished">
           <span>Only show unchecked</span>
         </label>
-        <button type="button" class="review-reset" data-reset>Clear checks</button>
+        <button type="button" class="review-reset" data-reset>Clear Zoom checks</button>
       </section>
 
       <section class="review-summary">
-        <p><strong data-visible-count>96 runs</strong> shown. Each opens in manual researcher mode with Back and Skip controls and the exact wording visible. Every pair plan rates six different focal roles.</p>
+        <p><strong data-visible-count>96 runs</strong> shown for <strong data-mode-name>Zoom researcher-paced</strong>. <span data-mode-summary>Each opens in manual researcher mode with Back and Skip controls.</span> Every pair plan rates six different focal roles.</p>
       </section>
 
       <section class="review-grid" data-review-grid aria-live="polite"></section>
@@ -82,10 +103,10 @@
           <summary>See who is rated after each story</summary>
           <ul class="review-pairing-list"></ul>
         </details>
-        <a class="review-open" target="_blank" rel="noopener">Open this rendition <span aria-hidden="true">↗</span></a>
+        <a class="review-open" target="_blank" rel="noopener"><span data-open-label>Open Zoom rendition</span> <span aria-hidden="true">↗</span></a>
       </article>
     </template>
 
-    <script src="review.js?v=ftc-rendition-review-v2"></script>
+    <script src="review.js?v=ftc-rendition-review-v4"></script>
   </body>
 </html>
