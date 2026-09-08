@@ -34,6 +34,9 @@ const RATING_OPTION_CUES_URL = runtimeConfig.ratingOptionCuesUrl
 const PREFERRED_AUDIO_DIR = requestedVoiceProfile === "relkind" ? "audio_relkind_voice" : "audio_preferred";
 const AUDIO_VERSION = requestedVoiceProfile === "relkind" ? "relkind-stable-v48" : "evelyn-full-v74";
 const DATA_ENDPOINT_URL = "";
+const BROWSER_DATASET_DB_NAME = "find-the-caregiver-researcher-data";
+const BROWSER_DATASET_DB_VERSION = 1;
+const BROWSER_DATASET_STORE = "sessions";
 const AUTO_ADVANCE_PAUSE_MS = 1200;
 const PARENT_AUTOPLAY_NOTE = "Most pages in the game move on by themselves after a few moments, but you can press Replay to hear it again or press Next to move on sooner when it appears.";
 const PARENT_AUTOPLAY_NOTE_SHORT = "Most pages move on by themselves. Press Replay to hear it again, or Next to move on sooner.";
@@ -780,7 +783,69 @@ function makeDataPayload(jsPsych) {
   };
 }
 
+function openBrowserDatasetDatabase(indexedDb = window.indexedDB) {
+  return new Promise((resolve, reject) => {
+    if (!indexedDb || typeof indexedDb.open !== "function") {
+      reject(new Error("Browser dataset storage is unavailable"));
+      return;
+    }
+    const request = indexedDb.open(BROWSER_DATASET_DB_NAME, BROWSER_DATASET_DB_VERSION);
+    request.addEventListener("upgradeneeded", () => {
+      const database = request.result;
+      if (!database.objectStoreNames.contains(BROWSER_DATASET_STORE)) {
+        database.createObjectStore(BROWSER_DATASET_STORE, { keyPath: "session_id" });
+      }
+    });
+    request.addEventListener("success", () => resolve(request.result));
+    request.addEventListener("error", () => reject(request.error || new Error("Could not open browser dataset")));
+    request.addEventListener("blocked", () => reject(new Error("Browser dataset upgrade was blocked")));
+  });
+}
+
+async function saveBrowserDatasetSnapshot(payload) {
+  if (!payload?.session_id || !Array.isArray(payload?.rows)) return false;
+  const database = await openBrowserDatasetDatabase();
+  try {
+    await new Promise((resolve, reject) => {
+      const transaction = database.transaction(BROWSER_DATASET_STORE, "readwrite");
+      const store = transaction.objectStore(BROWSER_DATASET_STORE);
+      const incoming = {
+        ...payload,
+        browser_dataset_saved_at: new Date().toISOString(),
+      };
+      const request = store.get(payload.session_id);
+      request.addEventListener("success", () => {
+        const current = request.result;
+        const currentTime = Date.parse(current?.saved_at || current?.completed_at || current?.browser_dataset_saved_at || "") || 0;
+        const incomingTime = Date.parse(incoming.saved_at || incoming.completed_at || incoming.browser_dataset_saved_at || "") || 0;
+        const currentRows = Array.isArray(current?.rows) ? current.rows.length : 0;
+        const incomingRows = incoming.rows.length;
+        const incomingIsFinal = ["completed", "ended_by_researcher"].includes(incoming.completion_status);
+        const currentIsFinal = ["completed", "ended_by_researcher"].includes(current?.completion_status);
+        if (!current
+          || incomingTime > currentTime
+          || (incomingTime === currentTime && incomingRows >= currentRows)
+          || (incomingIsFinal && !currentIsFinal)) {
+          store.put(incoming);
+        }
+      });
+      request.addEventListener("error", () => transaction.abort());
+      transaction.addEventListener("complete", resolve);
+      transaction.addEventListener("abort", () => reject(transaction.error || new Error("Browser dataset save was interrupted")));
+      transaction.addEventListener("error", () => reject(transaction.error || new Error("Could not save browser dataset")));
+    });
+    return true;
+  } finally {
+    database.close();
+  }
+}
+
 function saveLocalDataBackup(payload) {
+  if (typeof saveBrowserDatasetSnapshot === "function") {
+    void saveBrowserDatasetSnapshot(payload).catch((error) => {
+      console.warn("Could not update the cumulative browser dataset", error);
+    });
+  }
   try {
     const key = `who-will-help-data:${payload.session_id}`;
     localStorage.setItem(key, JSON.stringify(payload));
@@ -2014,7 +2079,16 @@ function installResearcherSkip(jsPsych) {
   end.disabled = !totalPreviewScreens || currentPreviewIndex >= totalPreviewScreens - 1;
   end.addEventListener("click", () => jumpToPreview(totalPreviewScreens - 1));
 
-  wrap.append(start, back, button, end);
+  const data = document.createElement("button");
+  data.type = "button";
+  data.className = "ksize-researcher-data";
+  data.textContent = "Data";
+  data.title = "Open the saved-data preview in a separate researcher tab.";
+  data.addEventListener("click", () => {
+    window.open(new URL("data.html", window.location.href).toString(), "_blank", "noopener");
+  });
+
+  wrap.append(start, back, button, data, end);
   document.body.appendChild(wrap);
 }
 

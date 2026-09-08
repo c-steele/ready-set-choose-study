@@ -153,7 +153,25 @@
     );
   }
 
-  function buildStudyUrl(entry, baseHref, requestedMode = "zoom") {
+  function makeLaunchToken(now = Date.now(), cryptoObject = globalObject.crypto) {
+    const timestamp = new Date(now).toISOString().replace(/\D/g, "").slice(0, 17);
+    let randomToken = "";
+    try {
+      if (typeof cryptoObject?.randomUUID === "function") {
+        randomToken = cryptoObject.randomUUID().replaceAll("-", "").slice(0, 8).toUpperCase();
+      } else if (typeof cryptoObject?.getRandomValues === "function") {
+        const values = new Uint32Array(1);
+        cryptoObject.getRandomValues(values);
+        randomToken = values[0].toString(16).padStart(8, "0").toUpperCase();
+      }
+    } catch (_error) {
+      randomToken = "";
+    }
+    if (!randomToken) randomToken = Math.random().toString(16).slice(2, 10).padEnd(8, "0").toUpperCase();
+    return `${timestamp}-${randomToken}`;
+  }
+
+  function buildStudyUrl(entry, baseHref, requestedMode = "zoom", launchToken = "") {
     const mode = PREVIEW_MODES[requestedMode];
     if (!mode) throw new Error(`Unknown review mode: ${requestedMode}`);
     const url = new URL(
@@ -176,7 +194,10 @@
       showDataStatus: "0",
       exportFormat: "csv",
     };
-    const sessionId = `review-zoom-${entry.id}`;
+    const normalizedLaunchToken = String(launchToken || "")
+      .replace(/[^A-Za-z0-9_-]/g, "")
+      .slice(0, 80);
+    const sessionId = `review-zoom-${entry.id}${normalizedLaunchToken ? `-${normalizedLaunchToken}` : ""}`;
     const values = requestedMode === "chs"
       ? { ...commonValues, previewIndex: "4" }
       : {
@@ -216,6 +237,7 @@
     scheduleIndexForSeed,
     seedForRendition,
     renditionEntries,
+    makeLaunchToken,
     buildStudyUrl,
     reviewCheckKey,
   });
@@ -338,7 +360,16 @@
         pairingList.append(item);
       });
       const openLink = card.querySelector(".review-open");
-      openLink.href = buildStudyUrl(entry, globalObject.location.href, activeMode).toString();
+      const prepareLaunch = () => {
+        const launchToken = activeMode === "zoom" ? makeLaunchToken() : "";
+        openLink.href = buildStudyUrl(entry, globalObject.location.href, activeMode, launchToken).toString();
+      };
+      prepareLaunch();
+      openLink.addEventListener("pointerdown", prepareLaunch);
+      openLink.addEventListener("click", prepareLaunch);
+      openLink.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" || event.key === " ") prepareLaunch();
+      });
       openLink.querySelector("[data-open-label]").textContent = mode.openLabel;
       checkbox.checked = Boolean(checks[checkKey]);
       checkbox.addEventListener("change", () => {
