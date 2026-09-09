@@ -2,10 +2,10 @@
   "schemaVersion": 1,
   "condition": "TEACHER-CLASSMATE",
   "voice": "Evelyn — NaturalReaders Commercial",
-  "status": "awaiting_four_replacement_recordings",
+  "status": "complete",
   "audioRoot": "assets/teacher_classmate/generated/audio",
   "recording": {
-    "generatedOn": "2026-08-26",
+    "generatedOn": "2026-08-26 and 2026-09-08",
     "service": "NaturalReaders Commercial",
     "voice": "Evelyn",
     "style": "Soft",
@@ -14,34 +14,46 @@
     "pauseBetweenParagraphsSeconds": 0,
     "format": "mp3",
     "bitrateKbps": 320,
-    "clipCount": 6,
-    "note": "The six Classmate follow-up and Likert clips remain approved and reusable."
+    "clipCount": 10,
+    "note": "The six Classmate follow-up and Likert clips were retained. Four revised short-wording clips were recorded on 2026-09-08."
   },
-  "pendingRecording": {
+  "replacementRecording": {
     "clipCount": 4,
     "voice": "Evelyn",
     "style": "Soft",
     "speed": 0.9,
-    "lines": [
-      {
-        "text": "This little one is this kid's classmate.",
-        "proposedOutput": "assets/teacher_classmate/generated/audio/tc_v3_classmate_intro.mp3"
-      },
-      {
-        "text": "The kid's teacher or the kid's classmate?",
-        "proposedOutput": "assets/teacher_classmate/generated/audio/tc_v3_teacher_or_classmate.mp3"
-      },
-      {
-        "text": "The kid's classmate or the kid's teacher?",
-        "proposedOutput": "assets/teacher_classmate/generated/audio/tc_v3_classmate_or_teacher.mp3"
-      },
-      {
-        "text": "You chose the classmate!",
-        "proposedOutput": "assets/teacher_classmate/generated/audio/tc_v3_choice_classmate.mp3"
-      }
-    ]
+    "generatedOn": "2026-09-08",
+    "service": "NaturalReaders Commercial",
+    "wordsPerMinute": 180,
+    "pauseBetweenParagraphsSeconds": 0,
+    "format": "mp3",
+    "bitrateKbps": 320
   },
   "lines": [
+    {
+      "text": "This little one is this kid's classmate.",
+      "output": "assets/teacher_classmate/generated/audio/tc_v3_classmate_intro.mp3",
+      "bytes": 126477,
+      "sha256": "6d1336670d2aad049c78754076a8c20d2977e24d7905055d34315cdf1e6b45a2"
+    },
+    {
+      "text": "The kid's teacher or the kid's classmate?",
+      "output": "assets/teacher_classmate/generated/audio/tc_v3_teacher_or_classmate.mp3",
+      "bytes": 127522,
+      "sha256": "d4d780674d7a57414dd581880af93f149cd60d7ffed5faaf6e015450adc0858f"
+    },
+    {
+      "text": "The kid's classmate or the kid's teacher?",
+      "output": "assets/teacher_classmate/generated/audio/tc_v3_classmate_or_teacher.mp3",
+      "bytes": 123343,
+      "sha256": "88992cb50601d55284e8a1e8fdeced5bacdf2e5225333e45efae5788df207912"
+    },
+    {
+      "text": "You chose the classmate!",
+      "output": "assets/teacher_classmate/generated/audio/tc_v3_choice_classmate.mp3",
+      "bytes": 95130,
+      "sha256": "9372589974d78b2f1a38756bca3710b34097332c3a47fb4d749519a1893c621f"
+    },
     {
       "text": "Now let's answer some questions about the classmate inside the box and the kid.",
       "output": "assets/teacher_classmate/generated/audio/tc_005_followup_orientation_classmate_kid.mp3",

@@ -18,8 +18,8 @@
       label: "CHS audio / autoplay",
       progressLabel: "CHS audio runs reviewed",
       openLabel: "Open CHS audio rendition",
-      help: "The CHS visual/script candidate is ready, but four revised Classmate lines still need new Evelyn recordings.",
-      summary: "Each opens in participant autoplay mode for visual/script review. Do not use it with participants until the four pending Evelyn clips are added.",
+      help: "The six-story CHS candidate now has complete prerecorded Evelyn audio and is ready for CHS re-approval review.",
+      summary: "Each opens in participant autoplay mode with the proposed Teacher–Classmate story and complete Evelyn narration. The approved CHS v76 study remains unchanged.",
     }),
   });
   const ROLE_SETS = Object.freeze([
@@ -273,6 +273,8 @@
   let checks = loadChecks();
 
   function loadMode() {
+    const requestedMode = new URLSearchParams(globalObject.location.search).get("mode");
+    if (PREVIEW_MODES[requestedMode]) return requestedMode;
     try {
       const storedMode = globalObject.localStorage.getItem(MODE_STORAGE_KEY);
       return PREVIEW_MODES[storedMode] ? storedMode : "zoom";

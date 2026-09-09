@@ -32186,8 +32186,8 @@
       "selectionGlowHex": "#FFB000",
       "assetsGenerated": true,
       "audioGenerated": true,
-      "audioComplete": false,
-      "audioStatus": "awaiting_four_evelyn_clips"
+      "audioComplete": true,
+      "audioStatus": "complete"
     }
   }
 }
