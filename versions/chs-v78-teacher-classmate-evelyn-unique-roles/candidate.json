@@ -2,9 +2,9 @@
   "schemaVersion": 1,
   "candidateId": "chs-v78-teacher-classmate-evelyn-unique-roles",
   "sourceCandidateId": "chs-v77-teacher-classmate-evelyn",
-  "status": "pending_evelyn_audio_and_chs_reapproval",
+  "status": "ready_for_chs_reapproval",
   "activeChsStudyChanged": false,
-  "description": "Isolated six-story CHS audio/autoplay review candidate with classmate-only Teacher-Classmate wording, short Classmate Likert prompts matched to the canonical header size, interleaved pair ratings, and corrected unique-focal-role schedules.",
+  "description": "Audio-complete isolated six-story CHS candidate with classmate-only Teacher-Classmate wording, short Classmate Likert prompts matched to the canonical header size, interleaved pair ratings, and corrected unique-focal-role schedules.",
   "storyCount": 6,
   "ratingMode": "one-after-story",
   "ratingScheduleVersion": "unique_focal_role_per_set_v1",
@@ -15,10 +15,16 @@
   },
   "voice": "Evelyn — NaturalReaders Commercial",
   "syntheticSpeech": false,
-  "teacherClassmateAvailableClipCount": 6,
+  "teacherClassmateAvailableClipCount": 10,
   "teacherClassmateReplacementClipCount": 4,
-  "teacherClassmateAudioStatus": "awaiting_four_replacement_evelyn_clips",
+  "teacherClassmateAudioStatus": "complete",
   "teacherClassmateAudioManifest": "data/teacher_classmate_audio_manifest.json",
+  "teacherClassmateReplacementAudioSha256": {
+    "assets/teacher_classmate/generated/audio/tc_v3_classmate_intro.mp3": "6d1336670d2aad049c78754076a8c20d2977e24d7905055d34315cdf1e6b45a2",
+    "assets/teacher_classmate/generated/audio/tc_v3_teacher_or_classmate.mp3": "d4d780674d7a57414dd581880af93f149cd60d7ffed5faaf6e015450adc0858f",
+    "assets/teacher_classmate/generated/audio/tc_v3_classmate_or_teacher.mp3": "88992cb50601d55284e8a1e8fdeced5bacdf2e5225333e45efae5788df207912",
+    "assets/teacher_classmate/generated/audio/tc_v3_choice_classmate.mp3": "9372589974d78b2f1a38756bca3710b34097332c3a47fb4d749519a1893c621f"
+  },
   "teacherClassmateAssetVersion": "teacher-classmate-deep-purple-preview-v16",
   "teacherClassmateDesignVersion": "teacher_classmate_deep_purple_preview_v15",
   "versionedGeneratedAssets": {
@@ -38,20 +44,20 @@
   },
   "participantBaseUrl": "https://c-steele.github.io/ready-set-choose-study/versions/chs-v78-teacher-classmate-evelyn-unique-roles/index.html?syntheticSpeech=0&ratingMode=one-after-story",
   "isolationBaselinesSha256": {
-    "../../app.js": "71922c3f24badb39a20969144a49bab290472f10908566f1235a4c707c5de2a9",
-    "../../index.html": "3eb6ec847fc7ae9fb4a39614f05af2e58453d967434ded93aedf09c097f0014a",
-    "../chs-v77-teacher-classmate-evelyn/app.js": "a562a89dd8f1af6d16e51f6c854ec74b670b9c91977756a62602a0b5440654d6",
-    "../chs-v77-teacher-classmate-evelyn/index.html": "947f2e9f410d3511169d10d65b41c649b2133087ebc698fdb128bf89efbe2cc4"
+    "../../app.js": "ec1ef2d9831648a5a132d0646ca6b1255ef371e053472f73c16475f39e644e45",
+    "../../index.html": "cca3eb4ddaf9ab1171d93ecafbdf9c371ece58eff8a1062cb6f2ded5b612aa99",
+    "../chs-v77-teacher-classmate-evelyn/app.js": "660d70b3829dbcbffb172afa1cef7e6445ccf1cfc48578f3da1714eb303002b6",
+    "../chs-v77-teacher-classmate-evelyn/index.html": "e4281d807c12bc57cf2e9bbb89ee4c5cccd175696db4577b3d52ceccec2a5c75"
   },
   "pinnedFilesSha256": {
     "app.js": "279210146ca42b538c226b2c6d0983b72656ddefe61a2e69dacbdc2ce0404a3b",
-    "index.html": "15952d436265191d9562349b246aa1d0ae41afd169502e9078d321ff9ece5ea4",
+    "index.html": "05907a5674f0a5f7a56f3bcb053703fedbb0970ca8a99f8bcbe7f972f7f75be3",
     "styles.css": "8bfb2979e6ac03101f98a27c04790190781ad5eeef8f805700539e82382d361f",
-    "data/dyad_manifest.json": "71f1fc87da94af5cf24ada77a4c9b163687a75a0e07738c5d242258cf69dc239",
-    "data/ksize_manifest.json": "cc7a5a9a44ca27fac5a1f7df1af3371ebc49a2c1849967aabeca422a2c344e28",
+    "data/dyad_manifest.json": "5dd185b1c1e68803ce3b0e64c3ccf1baa11bdcd51cb3d5069d7b4815970486bb",
+    "data/ksize_manifest.json": "b738d2bde322db230662a56a4b688d9622d78c9d8caa6c700e7a733c3bba2afd",
     "data/intro_image_fixes.json": "9f2c27cf96bb451a40a2480387f6f0b60b57867f03df416c074b04d42dad8409",
     "data/canonical_audio_manifest_evelyn.json": "e8b91ce0ce0d35dd2aa65842daa3d06ca1cdd4f27c669c6d9ecbb84f5d168cc5",
-    "data/teacher_classmate_audio_manifest.json": "b66dd6d4f4e6d96ed6a5bae477367faed16eb4be0f5c75db7570c127e28a5e92",
+    "data/teacher_classmate_audio_manifest.json": "3a5a9e2b123c09a6657dd7b515e8880678d308dfe4904464d81a4f39b35ad239",
     "data/rating_option_cues.json": "71e3fdbc4d443490fcb70819ffd74fd885496a14c33c38ec6ea7fefb02d575c7"
   }
 }

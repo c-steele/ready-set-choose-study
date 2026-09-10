@@ -1,0 +1,15 @@
+{
+  "candidateId": "chs-v80-balanced-assignment",
+  "sourceCandidateId": "chs-v78-teacher-classmate-evelyn-unique-roles",
+  "status": "researcher_approved_for_hosted_chs_preview",
+  "activeChsStudyChanged": false,
+  "allocatorContract": "ftc-condition-allocator-v1",
+  "studyId": "ftc-v78-balanced-v1",
+  "primaryCellCount": 9,
+  "reviewConfigurationCount": 96,
+  "firstFullHierarchicalBalanceBlock": 144,
+  "ratingPlanCounts": { "woman": 2, "man": 2, "family": 4 },
+  "visualPlanCount": 4,
+  "visualPlanVersion": "balanced_unique_colors_sides_v1",
+  "notes": "Researcher approved publishing this isolated version for CHS preview on 2026-09-09. Exact least-filled allocation still requires the separately deployed private-sheet allocator, final CHS preview verification, and CHS re-approval before enrollment resumes."
+}

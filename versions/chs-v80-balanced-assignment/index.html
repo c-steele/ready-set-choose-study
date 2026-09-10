@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Find the Caregiver! — balanced-assignment candidate</title>
+  <script>
+    (() => {
+      const studyRoot = new URL("../../", window.location.href);
+      const sourceCandidate = new URL("../chs-v78-teacher-classmate-evelyn-unique-roles/", window.location.href);
+      const sourceData = new URL("data/", sourceCandidate);
+      const runtimeVersion = "chs-v80-balanced-assignment-r1";
+      const versionedDataUrl = (filename) => {
+        const url = new URL(filename, sourceData);
+        url.searchParams.set("v", runtimeVersion);
+        return url.toString();
+      };
+      window.KSIZE_RUNTIME_CONFIG = Object.freeze({
+        assetBaseUrl: studyRoot.toString(),
+        lockedStudyVersion: "teacher-classmate-preview",
+        lockedDataStudyVersion: "chs-v80-balanced-assignment",
+        dyadManifestUrl: versionedDataUrl("dyad_manifest.json"),
+        eventManifestUrl: versionedDataUrl("ksize_manifest.json"),
+        introImageFixesUrl: versionedDataUrl("intro_image_fixes.json"),
+        canonicalAudioManifestUrl: versionedDataUrl("canonical_audio_manifest_evelyn.json"),
+        teacherClassmateAudioManifestUrl: versionedDataUrl("teacher_classmate_audio_manifest.json"),
+        ratingOptionCuesUrl: versionedDataUrl("rating_option_cues.json"),
+      });
+    })();
+  </script>
+  <script src="../../vendor/jspsych/jspsych-7.3.4.js?v=chs-v80-balanced-assignment-r1"></script>
+  <link href="../../vendor/jspsych/jspsych-7.3.4.css?v=chs-v80-balanced-assignment-r1" rel="stylesheet" type="text/css">
+  <script src="../../vendor/jspsych/plugin-preload-1.1.3.js?v=chs-v80-balanced-assignment-r1"></script>
+  <script src="../../vendor/jspsych/plugin-html-button-response-1.1.3.js?v=chs-v80-balanced-assignment-r1"></script>
+  <link href="../chs-v78-teacher-classmate-evelyn-unique-roles/styles.css?v=chs-v80-balanced-assignment-r1" rel="stylesheet">
+</head>
+<body></body>
+<script src="app.js?v=chs-v80-balanced-assignment-r1"></script>
+</html>
