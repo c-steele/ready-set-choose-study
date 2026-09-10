@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Find the Caregiver! — CHS Home / School candidate</title>
+  <script>
+    (() => {
+      const candidateRoot = new URL("./", window.location.href);
+      const studyRoot = new URL("../../", window.location.href);
+      const localData = new URL("data/", candidateRoot);
+      const runtimeVersion = "chs-home-school-evelyn-v1-r8";
+      const versionedDataUrl = (filename) => {
+        const url = new URL(filename, localData);
+        url.searchParams.set("v", runtimeVersion);
+        return url.toString();
+      };
+      window.KSIZE_RUNTIME_CONFIG = Object.freeze({
+        assetBaseUrl: studyRoot.toString(),
+        lockedStudyVersion: "home-school",
+        lockedDataStudyVersion: "chs-home-school-evelyn-v1",
+        dyadManifestUrl: versionedDataUrl("dyad_manifest.json"),
+        eventManifestUrl: versionedDataUrl("ksize_manifest.json"),
+        introImageFixesUrl: versionedDataUrl("intro_image_fixes.json"),
+        canonicalAudioManifestUrl: versionedDataUrl("canonical_audio_manifest_evelyn.json"),
+        teacherClassmateAudioManifestUrl: versionedDataUrl("teacher_classmate_audio_manifest.json"),
+        homeSchoolAudioManifestUrl: versionedDataUrl("home_school_audio_manifest.json"),
+        homeSchoolContextManifestUrl: versionedDataUrl("home_school_context_manifest.json"),
+        missingHomeSchoolAudioManifestUrl: versionedDataUrl("missing_home_school_directional_audio_manifest.json"),
+        ratingOptionCuesUrl: versionedDataUrl("rating_option_cues.json"),
+      });
+    })();
+  </script>
+  <script src="../../vendor/jspsych/jspsych-7.3.4.js?v=chs-home-school-evelyn-v1-r8"></script>
+  <link href="../../vendor/jspsych/jspsych-7.3.4.css?v=chs-home-school-evelyn-v1-r8" rel="stylesheet" type="text/css">
+  <script src="../../vendor/jspsych/plugin-preload-1.1.3.js?v=chs-home-school-evelyn-v1-r8"></script>
+  <script src="../../vendor/jspsych/plugin-html-button-response-1.1.3.js?v=chs-home-school-evelyn-v1-r8"></script>
+  <link href="styles.css?v=chs-home-school-evelyn-v1-r8" rel="stylesheet">
+</head>
+<body></body>
+<script src="app.js?v=chs-home-school-evelyn-v1-r8"></script>
+</html>

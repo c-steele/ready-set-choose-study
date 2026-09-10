@@ -1,0 +1,160 @@
+FIND THE CAREGIVER — HOME / SCHOOL DIRECTIONAL AUDIO
+Evelyn recording script (30 clips)
+
+Recording settings
+- NaturalReaders Commercial
+- Voice: Evelyn
+- Style: Soft
+- Speed: 0.9
+- Pause between paragraphs: 0 seconds
+- Export: MP3 at 320 kbps
+
+How to use this script
+- Record one numbered RECORD line per audio file.
+- Read only the words after RECORD. Do not read headings, numbers, IDs, or filenames.
+- Keep every word, contraction, apostrophe, and question ending exactly as written.
+- Save each clip with the exact filename shown after SAVE AS.
+- Finish all five clips for one recipient before moving to the next recipient.
+
+========================================================================
+AT HOME
+========================================================================
+
+--- MOM IN THE MIDDLE ---
+
+01. hs_v2_015 — HUG QUESTION
+RECORD: Who will give the mom in the middle a hug now that they're sad at the kid's home?
+SAVE AS: hs_v2_015_home_mom_hug_question.mp3
+
+02. hs_v2_016 — FOOD EVENT
+RECORD: Oh no! At the kid's home, the mom in the middle is hungry now!
+SAVE AS: hs_v2_016_home_mom_food_event.mp3
+
+03. hs_v2_017 — FOOD QUESTION
+RECORD: Who will give the mom in the middle strawberries now that they're hungry at the kid's home?
+SAVE AS: hs_v2_017_home_mom_food_question.mp3
+
+04. hs_v2_018 — HELP EVENT
+RECORD: Oh no! At the kid's home, the mom in the middle dropped a heavy box!
+SAVE AS: hs_v2_018_home_mom_help_event.mp3
+
+05. hs_v2_019 — HELP QUESTION
+RECORD: Who will help the mom in the middle pick up the heavy box at the kid's home?
+SAVE AS: hs_v2_019_home_mom_help_question.mp3
+
+--- DAD IN THE MIDDLE ---
+
+06. hs_v2_020 — HUG QUESTION
+RECORD: Who will give the dad in the middle a hug now that they're sad at the kid's home?
+SAVE AS: hs_v2_020_home_dad_hug_question.mp3
+
+07. hs_v2_021 — FOOD EVENT
+RECORD: Oh no! At the kid's home, the dad in the middle is hungry now!
+SAVE AS: hs_v2_021_home_dad_food_event.mp3
+
+08. hs_v2_022 — FOOD QUESTION
+RECORD: Who will give the dad in the middle strawberries now that they're hungry at the kid's home?
+SAVE AS: hs_v2_022_home_dad_food_question.mp3
+
+09. hs_v2_023 — HELP EVENT
+RECORD: Oh no! At the kid's home, the dad in the middle dropped a heavy box!
+SAVE AS: hs_v2_023_home_dad_help_event.mp3
+
+10. hs_v2_024 — HELP QUESTION
+RECORD: Who will help the dad in the middle pick up the heavy box at the kid's home?
+SAVE AS: hs_v2_024_home_dad_help_question.mp3
+
+--- TEACHER IN THE MIDDLE ---
+
+11. hs_v2_025 — HUG QUESTION
+RECORD: Who will give the teacher in the middle a hug now that they're sad at the kid's home?
+SAVE AS: hs_v2_025_home_teacher_hug_question.mp3
+
+12. hs_v2_026 — FOOD EVENT
+RECORD: Oh no! At the kid's home, the teacher in the middle is hungry now!
+SAVE AS: hs_v2_026_home_teacher_food_event.mp3
+
+13. hs_v2_027 — FOOD QUESTION
+RECORD: Who will give the teacher in the middle strawberries now that they're hungry at the kid's home?
+SAVE AS: hs_v2_027_home_teacher_food_question.mp3
+
+14. hs_v2_028 — HELP EVENT
+RECORD: Oh no! At the kid's home, the teacher in the middle dropped a heavy box!
+SAVE AS: hs_v2_028_home_teacher_help_event.mp3
+
+15. hs_v2_029 — HELP QUESTION
+RECORD: Who will help the teacher in the middle pick up the heavy box at the kid's home?
+SAVE AS: hs_v2_029_home_teacher_help_question.mp3
+
+========================================================================
+AT SCHOOL
+========================================================================
+
+--- MOM IN THE MIDDLE ---
+
+16. hs_v2_030 — HUG QUESTION
+RECORD: Who will give the mom in the middle a hug now that they're sad at the kid's school?
+SAVE AS: hs_v2_030_school_mom_hug_question.mp3
+
+17. hs_v2_031 — FOOD EVENT
+RECORD: Oh no! At the kid's school, the mom in the middle is hungry now!
+SAVE AS: hs_v2_031_school_mom_food_event.mp3
+
+18. hs_v2_032 — FOOD QUESTION
+RECORD: Who will give the mom in the middle strawberries now that they're hungry at the kid's school?
+SAVE AS: hs_v2_032_school_mom_food_question.mp3
+
+19. hs_v2_033 — HELP EVENT
+RECORD: Oh no! At the kid's school, the mom in the middle dropped a heavy box!
+SAVE AS: hs_v2_033_school_mom_help_event.mp3
+
+20. hs_v2_034 — HELP QUESTION
+RECORD: Who will help the mom in the middle pick up the heavy box at the kid's school?
+SAVE AS: hs_v2_034_school_mom_help_question.mp3
+
+--- DAD IN THE MIDDLE ---
+
+21. hs_v2_035 — HUG QUESTION
+RECORD: Who will give the dad in the middle a hug now that they're sad at the kid's school?
+SAVE AS: hs_v2_035_school_dad_hug_question.mp3
+
+22. hs_v2_036 — FOOD EVENT
+RECORD: Oh no! At the kid's school, the dad in the middle is hungry now!
+SAVE AS: hs_v2_036_school_dad_food_event.mp3
+
+23. hs_v2_037 — FOOD QUESTION
+RECORD: Who will give the dad in the middle strawberries now that they're hungry at the kid's school?
+SAVE AS: hs_v2_037_school_dad_food_question.mp3
+
+24. hs_v2_038 — HELP EVENT
+RECORD: Oh no! At the kid's school, the dad in the middle dropped a heavy box!
+SAVE AS: hs_v2_038_school_dad_help_event.mp3
+
+25. hs_v2_039 — HELP QUESTION
+RECORD: Who will help the dad in the middle pick up the heavy box at the kid's school?
+SAVE AS: hs_v2_039_school_dad_help_question.mp3
+
+--- TEACHER IN THE MIDDLE ---
+
+26. hs_v2_040 — HUG QUESTION
+RECORD: Who will give the teacher in the middle a hug now that they're sad at the kid's school?
+SAVE AS: hs_v2_040_school_teacher_hug_question.mp3
+
+27. hs_v2_041 — FOOD EVENT
+RECORD: Oh no! At the kid's school, the teacher in the middle is hungry now!
+SAVE AS: hs_v2_041_school_teacher_food_event.mp3
+
+28. hs_v2_042 — FOOD QUESTION
+RECORD: Who will give the teacher in the middle strawberries now that they're hungry at the kid's school?
+SAVE AS: hs_v2_042_school_teacher_food_question.mp3
+
+29. hs_v2_043 — HELP EVENT
+RECORD: Oh no! At the kid's school, the teacher in the middle dropped a heavy box!
+SAVE AS: hs_v2_043_school_teacher_help_event.mp3
+
+30. hs_v2_044 — HELP QUESTION
+RECORD: Who will help the teacher in the middle pick up the heavy box at the kid's school?
+SAVE AS: hs_v2_044_school_teacher_help_question.mp3
+
+END OF SCRIPT
+Total clips: 30

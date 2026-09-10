@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "condition": "TEACHER-CLASSMATE",
+  "voice": "Evelyn — NaturalReaders Commercial",
+  "status": "complete",
+  "audioRoot": "assets/teacher_classmate/generated/audio",
+  "recording": {
+    "generatedOn": "2026-08-26 and 2026-09-08",
+    "service": "NaturalReaders Commercial",
+    "voice": "Evelyn",
+    "style": "Soft",
+    "speed": 0.9,
+    "wordsPerMinute": 180,
+    "pauseBetweenParagraphsSeconds": 0,
+    "format": "mp3",
+    "bitrateKbps": 320,
+    "clipCount": 10,
+    "note": "The six Classmate follow-up and Likert clips were retained. Four revised short-wording clips were recorded on 2026-09-08."
+  },
+  "replacementRecording": {
+    "clipCount": 4,
+    "voice": "Evelyn",
+    "style": "Soft",
+    "speed": 0.9,
+    "generatedOn": "2026-09-08",
+    "service": "NaturalReaders Commercial",
+    "wordsPerMinute": 180,
+    "pauseBetweenParagraphsSeconds": 0,
+    "format": "mp3",
+    "bitrateKbps": 320
+  },
+  "lines": [
+    {
+      "text": "This little one is this kid's classmate.",
+      "output": "assets/teacher_classmate/generated/audio/tc_v3_classmate_intro.mp3",
+      "bytes": 126477,
+      "sha256": "6d1336670d2aad049c78754076a8c20d2977e24d7905055d34315cdf1e6b45a2"
+    },
+    {
+      "text": "The kid's teacher or the kid's classmate?",
+      "output": "assets/teacher_classmate/generated/audio/tc_v3_teacher_or_classmate.mp3",
+      "bytes": 127522,
+      "sha256": "d4d780674d7a57414dd581880af93f149cd60d7ffed5faaf6e015450adc0858f"
+    },
+    {
+      "text": "The kid's classmate or the kid's teacher?",
+      "output": "assets/teacher_classmate/generated/audio/tc_v3_classmate_or_teacher.mp3",
+      "bytes": 123343,
+      "sha256": "88992cb50601d55284e8a1e8fdeced5bacdf2e5225333e45efae5788df207912"
+    },
+    {
+      "text": "You chose the classmate!",
+      "output": "assets/teacher_classmate/generated/audio/tc_v3_choice_classmate.mp3",
+      "bytes": 95130,
+      "sha256": "9372589974d78b2f1a38756bca3710b34097332c3a47fb4d749519a1893c621f"
+    },
+    {
+      "text": "Now let's answer some questions about the classmate inside the box and the kid.",
+      "output": "assets/teacher_classmate/generated/audio/tc_005_followup_orientation_classmate_kid.mp3",
+      "bytes": 216338,
+      "sha256": "ef7da27735ead882f709e01106a4a61a27624b0eeabb772bc9c47a4883039283"
+    },
+    {
+      "text": "How much does the classmate love the kid?",
+      "output": "assets/teacher_classmate/generated/audio/tc_006_rating_classmate_love_kid.mp3",
+      "bytes": 128567,
+      "sha256": "7ad1d3121333175c0ff7db10cac2434ae6e5c935940d3c40b983afc10f412d7b"
+    },
+    {
+      "text": "How much does the classmate like the kid?",
+      "output": "assets/teacher_classmate/generated/audio/tc_007_rating_classmate_like_kid.mp3",
+      "bytes": 125432,
+      "sha256": "e5c7d98edf83cc0fdd886a039e0aebd0bd75bde0582943c1b43150e3f1cb621d"
+    },
+    {
+      "text": "How much is the classmate in charge?",
+      "output": "assets/teacher_classmate/generated/audio/tc_008_rating_classmate_in_charge.mp3",
+      "bytes": 117073,
+      "sha256": "59ee54f33046bf7523e93a1821db8c6fbb7e60c8ee6c675bb7c68f63cad9c682"
+    },
+    {
+      "text": "How old is the classmate?",
+      "output": "assets/teacher_classmate/generated/audio/tc_009_rating_classmate_old.mp3",
+      "bytes": 96175,
+      "sha256": "c197d09d39534298f96eb3da793449ec5de26edca156b974e993fd711a20b4c8"
+    },
+    {
+      "text": "How strong is the classmate?",
+      "output": "assets/teacher_classmate/generated/audio/tc_010_rating_classmate_strong.mp3",
+      "bytes": 108714,
+      "sha256": "c720c9328b6e4cbc0955cc39564b12bbbcdb9118b3b8625be555f9cda9869a54"
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "candidateId": "chs-home-school-evelyn-v1",
+  "sourceRuntime": "screen-share-study/app.js",
+  "sourceStimulusCandidate": "chs-v78-teacher-classmate-evelyn-unique-roles",
+  "status": "published_for_chs_review",
+  "activeChsStudyChanged": false,
+  "published": true,
+  "publishedOn": "2026-09-10",
+  "description": "Isolated CHS candidate for a between-child At Home versus At School manipulation. Each child receives one stable context, one event, and one six-story role set. Pair ratings remain interleaved one after each story.",
+  "storyCount": 6,
+  "ratingMode": "one-after-story",
+  "contexts": ["HOME", "SCHOOL"],
+  "events": ["HUG", "FOOD", "HELP"],
+  "roleSets": ["woman", "man", "family"],
+  "assignmentCellCount": 18,
+  "assignmentCellFormula": "role_index * 6 + event_index * 2 + context_index + 1",
+  "queryOverrides": ["context", "roleSet", "event", "variant", "seed"],
+  "ratingScheduleVersion": "unique_focal_role_per_set_v1",
+  "ratingScheduleCounts": {
+    "woman": 2,
+    "man": 2,
+    "family": 4
+  },
+  "pairings": {
+    "woman": ["MOM-TEACHER", "SISTER-FRIEND", "BESTFRIEND-FRIEND", "TEACHER-FRIEND", "MOM-SISTER", "TEACHER-CLASSMATE"],
+    "man": ["DAD-TEACHER", "BROTHER-FRIEND", "BESTFRIEND-FRIEND", "TEACHER-FRIEND", "DAD-BROTHER", "TEACHER-CLASSMATE"],
+    "family": ["MOM-DAD", "SISTER-BROTHER", "DAD-KID", "MOM-KID", "TEACHER-KID", "TEACHER-CLASSMATE"]
+  },
+  "directionalRecipients": {
+    "DAD-KID": "MOM",
+    "MOM-KID": "DAD",
+    "TEACHER-KID": "TEACHER"
+  },
+  "teacherClassmateRelationshipWording": "classmate",
+  "voice": "Evelyn — NaturalReaders Commercial",
+  "syntheticSpeech": false,
+  "participantAutoplay": true,
+  "visualStatus": "researcher_approved",
+  "visualVersion": "home_school_furnished_palette_picture_v38",
+  "visualTreatment": "Furnished Home and School rooms with subtle palette-matched walls. In the Home room, only the empty artwork field and four original wooden frame bars receive a faint same-hue palette tint inside fixed hard masks; the picture mat and shadow, surrounding wall, lamp, natural wooden floor, neutral couch and cast shadow remain untouched. The abstract picture people are removed, pillows and selected furniture details remain shared gray, and the original character RGB and geometry remain unchanged.",
+  "visualCoverage": {
+    "implementedTrials": 56,
+    "implementedPairings": 14,
+    "visualVariants": 4,
+    "paletteCount": 17,
+    "foregroundPages": 560,
+    "contextualScenes": 1120
+  },
+  "visualManifest": "data/furnished_visual_manifest.json",
+  "visualContactSheet": "review/all_pairings_home_school_contact_sheet_v5.jpg",
+  "visualIntegrity": "Only edge-connected or very large pure-white background components are transparent. Enclosed eye whites and white label text remain opaque; retained opaque RGB pixels are unchanged.",
+  "missingEvelynClipCount": 0,
+  "directionalEvelynClipCount": 30,
+  "directionalEvelynAudioStatus": "complete",
+  "directionalEvelynRequirementsManifest": "data/missing_home_school_directional_audio_manifest.json",
+  "directionalEvelynImportReceipt": "data/directional_audio_import_receipt.json",
+  "participantSafety": "The runtime performs an audio preflight before the study. All 18 assignment cells now have complete prerecorded Evelyn coverage; it does not substitute browser speech.",
+  "localParticipantBaseUrl": "versions/chs-home-school-evelyn-v1/index.html?syntheticSpeech=0&ratingMode=one-after-story",
+  "chsParticipantBaseUrlAfterPublication": "https://c-steele.github.io/ready-set-choose-study/versions/chs-home-school-evelyn-v1/index.html?syntheticSpeech=0&ratingMode=one-after-story"
+}
