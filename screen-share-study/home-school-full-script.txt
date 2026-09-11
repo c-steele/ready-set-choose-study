@@ -1,0 +1,387 @@
+WHO TAKES CARE? A COLORFUL STORY GAME
+Complete Home / School study script reference
+Current candidate: chs-home-school-evelyn-v1-r11
+
+PURPOSE OF THIS DOCUMENT
+
+This is the complete researcher-facing script reference for the current Home / School candidate. It lists the fixed participant flow and every line that can vary by setting, event, relationship pairing, response order, or follow-up focal person.
+
+One child receives:
+- one setting for all six stories: At Home OR At School;
+- one event for all six stories: Hug OR Food OR Help;
+- one six-story role set: Woman, Man, OR Family / Teacher;
+- one visual rendition family (A, B, C, or D); and
+- one follow-up focal-person schedule.
+
+IMPORTANT CURRENT-BUILD CHECK
+
+The current r11 game asks five ratings after every story: love, like, in charge, old, and strong. It does not currently ask only love and in charge. The five traits appear in a seed-randomized order.
+
+The setting cue is currently repeated once inside each of the six stories, immediately after “Look! Here are some people.”
+
+CHS PARTICIPANT FLOW
+
+1. CHS camera configuration.
+2. CHS guardian video consent.
+3. Recording begins.
+4. In-game grown-up welcome.
+5. In-game quick checks.
+6. In-game camera directions.
+7. Grown-up-to-child handoff.
+8. Child welcome.
+9. Six interleaved story + follow-up sequences, in randomized story order.
+10. Child completion and grown-up handoff.
+11. Recording stops.
+12. Standard CHS exit survey.
+13. Custom study debrief.
+
+The child-assent screen exists in the code but is currently disabled and is not shown. The separate “Let’s play” game-start line also exists in the code but is not shown in the current one-after-story flow.
+
+
+PART A. IN-GAME GROWN-UP SETUP
+
+Page 1 — Grown-up welcome
+
+“Welcome, grown-ups! Thank you for helping your child take part. First, we'll get the sound, screen, and camera ready. Then your child will listen to stories and choose pictures on the screen. Most pages move on by themselves, and you can press Replay if your child wants to hear a page again. You can help with the device, but please let your child choose the answers.”
+
+Page 2 — Quick checks
+
+“Before you begin: This is a recorded picture game about social relationships. It takes about ten to fifteen minutes. You and your child may stop at any time. There are no right or wrong answers in this game. The pages are read aloud, so your child does not need to read. Most pages in the game move on by themselves after a few moments, but you can press Replay to hear it again or press Next to move on sooner when it appears. Now, three quick checks. Use one screen and place it in front of your child. Turn the sound to a comfortable volume. Stay close to help with the device, but let your child choose the answers.”
+
+Page 3 — Camera directions
+
+“Let's check the camera. Put the screen directly in front of your child. Keep their full face and shoulders in view, and avoid a bright window behind them. Use one screen, and keep the webcam centered above the screen your child is watching.”
+
+Page 4 — Grown-up-to-child handoff
+
+“Grown-up setup is finished. Now it's your child's turn. Please invite your child to sit in front of the screen. Grown-ups, you may help with the device, but please let your child choose. There are no right or wrong answers. The pages are read aloud. Most pages move on by themselves. Press Replay to hear it again, or Next to move on sooner. When your child is ready, press the green button to continue.”
+
+
+PART B. CHILD WELCOME
+
+“Hi there! Welcome to Who Takes Care? We are going to look at pictures and play a choosing game. Listen to each page. When you see choices, choose the one you pick. When you are ready, hit the green button to start.”
+
+
+PART C. EACH OF THE SIX STORIES
+
+The following sequence repeats six times. The six story pairings depend on the assigned role set and appear in a randomized order.
+
+1. “Look! Here are some people.”
+
+2. Assigned setting cue:
+   - Home: “Today, these people are at the kid's home.”
+   - School: “Today, these people are at the kid's school.”
+
+3. “This little one is a kid.”
+
+4–5. The two candidate identity lines for the assigned pairing. See Part D. Renditions A and B introduce the first-named candidate and then the second-named candidate. Renditions C and D reverse those two identity lines.
+
+6. The assigned event line. See Part E.
+
+7. The assigned context question followed by the two-choice line. See Parts D and E.
+
+8. After the child selects a character:
+   - “You chose the best friend!”
+   - “You chose the brother!”
+   - “You chose the classmate!”
+   - “You chose the dad!”
+   - “You chose the friend!”
+   - “You chose the kid!”
+   - “You chose the mom!”
+   - “You chose the sister!”
+   - “You chose the teacher!”
+
+9. Follow-up transition:
+
+“Now let's answer some questions about the [focal person] inside the box and the [other person].”
+
+Teacher / Teacher wording: “Now let's answer some questions about the teacher inside the box and the other teacher.”
+
+10. “First, we’ll meet the two people so it is clear who each question is about.”
+
+11–13. Follow-up identity sequence:
+   - “Look! Here are some people.”
+   - identity line for the other person;
+   - identity line for the focal person.
+
+14–18. Five rating questions, in a seed-randomized order. See Part F.
+
+
+PART D. SIX-STORY ROLE SETS AND IDENTITY / CHOICE WORDING
+
+For renditions A and B, use the identity lines and choice line in the order printed below. Renditions C and D reverse the two candidate identity lines and reverse the candidate order in the final choice line.
+
+WOMAN ROLE SET
+
+1. MOM – TEACHER
+   “This big one is this kid's mom.”
+   “This big one is this kid's teacher.”
+   “The kid's mom or the kid's teacher?”
+
+2. SISTER – FRIEND
+   “This little one is this kid's sister.”
+   “This little one is this kid's friend.”
+   “The kid's sister or the kid's friend?”
+
+3. BEST FRIEND – FRIEND
+   “This little one is this kid's best friend.”
+   “This little one is this kid's friend.”
+   “The kid's best friend or the kid's friend?”
+
+4. TEACHER – FRIEND
+   “This big one is this kid's teacher.”
+   “This little one is this kid's friend.”
+   “The kid's teacher or the kid's friend?”
+
+5. MOM – SISTER
+   “This big one is this kid's mom.”
+   “This little one is this kid's sister.”
+   “The kid's mom or the kid's sister?”
+
+6. TEACHER – CLASSMATE
+   “This big one is this kid's teacher.”
+   “This little one is this kid's classmate.”
+   “The kid's teacher or the kid's classmate?”
+
+MAN ROLE SET
+
+1. DAD – TEACHER
+   “This big one is this kid's dad.”
+   “This big one is this kid's teacher.”
+   “The kid's dad or the kid's teacher?”
+
+2. BROTHER – FRIEND
+   “This little one is this kid's brother.”
+   “This little one is this kid's friend.”
+   “The kid's brother or the kid's friend?”
+
+3. BEST FRIEND – FRIEND
+   “This little one is this kid's best friend.”
+   “This little one is this kid's friend.”
+   “The kid's best friend or the kid's friend?”
+
+4. TEACHER – FRIEND
+   “This big one is this kid's teacher.”
+   “This little one is this kid's friend.”
+   “The kid's teacher or the kid's friend?”
+
+5. DAD – BROTHER
+   “This big one is this kid's dad.”
+   “This little one is this kid's brother.”
+   “The kid's dad or the kid's brother?”
+
+6. TEACHER – CLASSMATE
+   “This big one is this kid's teacher.”
+   “This little one is this kid's classmate.”
+   “The kid's teacher or the kid's classmate?”
+
+FAMILY / TEACHER ROLE SET
+
+1. MOM – DAD
+   “This big one is this kid's mom.”
+   “This big one is this kid's dad.”
+   “The kid's mom or the kid's dad?”
+
+2. SISTER – BROTHER
+   “This little one is this kid's sister.”
+   “This little one is this kid's brother.”
+   “The kid's sister or the kid's brother?”
+
+3. DAD – KID (the mom is the middle recipient)
+   “This big one is this kid's dad.”
+   “This big one is this kid's mom.”
+   “The kid's dad or the kid?”
+
+4. MOM – KID (the dad is the middle recipient)
+   “This big one is this kid's mom.”
+   “This big one is this kid's dad.”
+   “The kid's mom or the kid?”
+
+5. TEACHER – KID (the other teacher is the middle recipient)
+   “This big one is this kid's teacher.”
+   “This big one is this kid's teacher too.”
+   “The kid's teacher or the kid?”
+
+6. TEACHER – CLASSMATE
+   “This big one is this kid's teacher.”
+   “This little one is this kid's classmate.”
+   “The kid's teacher or the kid's classmate?”
+
+
+PART E. SETTING / EVENT LANGUAGE
+
+The recipient is the KID for every ordinary pairing.
+
+Directional recipient exceptions:
+- DAD – KID: MOM is in the middle.
+- MOM – KID: DAD is in the middle.
+- TEACHER – KID: TEACHER is in the middle.
+
+HUG
+
+Event:
+“Oh no! The [recipient] in the middle is sad now!”
+
+Home question:
+“Who will give the [recipient] in the middle a hug now that they're sad, at the kid's home?”
+
+School question:
+“Who will give the [recipient] in the middle a hug now that they're sad, at the kid's school?”
+
+FOOD
+
+Home event:
+“Oh no! At the kid's home, the [recipient] in the middle is hungry now!”
+
+School event:
+“Oh no! At the kid's school, the [recipient] in the middle is hungry now!”
+
+Home question:
+“Who will give the [recipient] in the middle strawberries now that they're hungry, at the kid's home?”
+
+School question:
+“Who will give the [recipient] in the middle strawberries now that they're hungry, at the kid's school?”
+
+HELP
+
+Home event:
+“Oh no! At the kid's home, the [recipient] in the middle dropped a heavy box!”
+
+School event:
+“Oh no! At the kid's school, the [recipient] in the middle dropped a heavy box!”
+
+Home question:
+“Who will help the [recipient] in the middle pick up the heavy box, at the kid's home?”
+
+School question:
+“Who will help the [recipient] in the middle pick up the heavy box, at the kid's school?”
+
+
+PART F. FOLLOW-UP RATINGS
+
+The selected focal person varies by relationship and pairing schedule. Before the response choices, the screen displays:
+
+“Questions are about the [focal person] inside the box.”
+
+Teacher / Teacher version:
+
+“Questions are about the teacher inside the box, not the other teacher.”
+
+The five spoken question-and-scale pairs are:
+
+LOVE
+“How much does the [focal person] love the [other person]?”
+“Does not love. Loves a little. Loves a lot.”
+
+LIKE
+“How much does the [focal person] like the [other person]?”
+“Does not like. Likes a little. Likes a lot.”
+
+IN CHARGE
+“How much is the [focal person] in charge?”
+“Not in charge. A little in charge. Very much in charge.”
+
+OLD
+“How old is the [focal person]?”
+“Not old. A little old. Very old.”
+
+STRONG
+“How strong is the [focal person]?”
+“Not strong. A little strong. Very strong.”
+
+Possible focal / other-person directions in the current schedules:
+- mom → kid
+- dad → kid
+- teacher → kid
+- sister → kid
+- brother → kid
+- friend → kid
+- best friend → kid
+- classmate → kid
+- kid → mom
+- kid → dad
+- kid → teacher
+- mom → dad
+- dad → mom
+- teacher → other teacher
+
+
+PART G. CHILD COMPLETION / GROWN-UP HANDOFF
+
+“Thank you for playing!”
+
+“We're all done!”
+
+“Great job—you finished the game! The final questions are for your grown-up to do. Your grown-up may already be with you.”
+
+After the grown-up selects “Grown-up ready to answer”:
+
+“The child's game is complete. Continue to complete the final grown-up steps.”
+
+
+PART H. CUSTOM CHS CONSENT COPY
+
+CHS also presents its standard platform camera and consent interface. The following fields are the custom study copy supplied by this study.
+
+SUMMARY — BEFORE YOU BEGIN
+
+- “This is a recorded picture game about social relationships and where events happen.”
+- “It takes about 15 minutes.”
+- “You and your child may stop at any time.”
+- “There are no right or wrong answers in this game.”
+
+PAYMENT
+
+“You will receive a $5 Amazon.com gift card after participating. Families may still receive compensation if they stop early. To be eligible, your child must be within the study age range and visible in the study video, including any portion recorded before stopping. Each child can receive one gift card. The gift card will be sent through Children Helping Science messaging within 2 weeks.”
+
+PROCEDURES
+
+“Your participation is completely voluntary; you and your child can choose not to take part. You and your child can agree to take part and later change your mind. The study session will be conducted remotely and recorded through Children Helping Science, an online platform for developmental research studies. During the study, your child will play a picture game called Who Takes Care? The game includes colorful pictures and prerecorded narration. Your child will hear six stories that all take place either at the kid's home or at the kid's school. In each story, someone needs comfort, food, or help and two characters could respond. Your child will select who is more likely to help and then answer questions about the characters, including who is in charge and how much one character loves another. Children do not need to be able to read to participate. Children are randomly assigned to one version of the game; different versions include different locations, relationship sets, and events. The study takes about 15 minutes. Please keep the sound on and let the game audio play. A grown-up may help with the device, but please do not suggest answers or point to a choice. All responses are stored automatically and uploaded to the research team. The recording is used for research purposes so the team can check how children responded during the task. We do not believe there are any risks for your child from participating in this research. Participation is completely voluntary. You and your child can stop at any time without penalty or loss of benefits to which you are otherwise entitled.”
+
+PURPOSE
+
+“We invite your child to take part in a research study about how children connect caregiving with different kinds of social relationships and settings. Children notice social roles, relationships, and locations and use them to make predictions about what people will do. This study asks whether children's caregiving expectations differ when the same kinds of events take place at home versus at school. By comparing children's helper choices with their answers about authority and affection, we can learn how they connect caregiving with relationships and settings.”
+
+RESEARCH RIGHTS
+
+“You are not waiving any legal claims, rights, or remedies because of your participation in this research study. If you have questions, concerns, or complaints, or think the research has hurt your child, talk to the research team at 617-384-7777. You can also contact the PI, Ashley Thomas, at athomas@g.harvard.edu. This research has been reviewed and approved by the Harvard University Area Institutional Review Board. You may talk to them at (617) 496-2847 or cuhs@harvard.edu if:
+
+- Your questions, concerns, or complaints are not being answered by the research team.
+- You cannot reach the research team.
+- You want to talk to someone besides the research team.
+- You have questions about your child's rights as a research subject.
+- You want to get information or provide input about this research.”
+
+
+PART I. CUSTOM CHS DEBRIEF COPY
+
+Header:
+“Study complete”
+“Thank you for participating!”
+
+1. WHAT WE ARE STUDYING
+
+“We want to understand how children use relationships and settings to predict who will provide care. Children are randomly assigned to stories that all take place either at the kid's home or at the kid's school. We compare patterns across these versions.”
+
+2. WHAT YOUR CHILD DID
+
+“Your child heard six stories about family members, friends, a teacher, and a classmate. Depending on their assigned version, your child chose who they thought would respond at home or at school and answered questions about the people in the pictures.”
+
+3. HOW WE INTERPRET THE ANSWERS
+
+“Children may make different choices for many reasons, and every answer is okay. We look at patterns across many children rather than judging any individual response.”
+
+4. GIFT CARD
+
+“Your $5 Amazon.com gift card will be sent through Children Helping Science messaging within 2 weeks. Families may still receive compensation if they stop early, provided the child is within the study age range and visible in the portion of video recorded before stopping.”
+
+5. LEARN MORE
+
+“If you would like to learn more about this topic, please watch this short video: https://www.youtube.com/watch?v=-G-kVhEqAtE
+
+Thank you again for your participation!”
+
+Button: “Finish”
+
+
+END OF SCRIPT REFERENCE

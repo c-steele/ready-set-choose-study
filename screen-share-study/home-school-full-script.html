@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Who Takes Care? — Full Home / School script</title>
+    <style>
+      :root {
+        font-family: Inter, ui-rounded, "Avenir Next", system-ui, sans-serif;
+        color: #26344a;
+        background: #f7f4fb;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; }
+      header {
+        padding: 34px clamp(20px, 5vw, 64px);
+        color: #fff;
+        background: linear-gradient(135deg, #633780, #8e2d94 62%, #bd6fae);
+      }
+      header p { max-width: 850px; margin: 10px 0 0; line-height: 1.5; }
+      h1 { margin: 0; font-size: clamp(2rem, 5vw, 3.8rem); line-height: 1; }
+      nav { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+      a, button {
+        display: inline-flex;
+        align-items: center;
+        min-height: 44px;
+        padding: 0 16px;
+        border: 1px solid rgba(255,255,255,.55);
+        border-radius: 999px;
+        color: inherit;
+        background: rgba(255,255,255,.14);
+        font: inherit;
+        font-weight: 800;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      main { width: min(1050px, calc(100% - 32px)); margin: 24px auto 60px; }
+      .notice {
+        margin-bottom: 18px;
+        padding: 16px 18px;
+        border: 2px solid #efc45c;
+        border-radius: 16px;
+        color: #5a4211;
+        background: #fff9dd;
+        line-height: 1.5;
+      }
+      pre {
+        min-height: 420px;
+        margin: 0;
+        padding: clamp(18px, 4vw, 36px);
+        overflow: auto;
+        border: 1px solid #ded6e5;
+        border-radius: 20px;
+        background: #fff;
+        box-shadow: 0 16px 44px rgba(55, 36, 68, .09);
+        font: 16px/1.62 "SFMono-Regular", Consolas, monospace;
+        white-space: pre-wrap;
+      }
+      .status { margin: 10px 4px 0; min-height: 1.4em; color: #5c6472; font-weight: 700; }
+      @media print {
+        header nav, .status { display: none; }
+        main { width: 100%; margin: 0; }
+        pre { border: 0; box-shadow: none; font-size: 11pt; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Full Home / School script</h1>
+      <p>Current “Who Takes Care?” r11 participant flow, every setting and event template, all three six-story role sets, all follow-up ratings, and the custom CHS consent and debrief copy.</p>
+      <nav aria-label="Script actions">
+        <a href="home-school-review.html?v=who-takes-care-home-school-review-r11">← Back to 96 versions</a>
+        <button type="button" data-copy>Copy full script</button>
+        <a href="home-school-full-script.txt?v=who-takes-care-full-script-r1" download>Download text file</a>
+      </nav>
+    </header>
+    <main>
+      <div class="notice"><strong>Review flag:</strong> the current build asks five ratings after every story—love, like, in charge, old, and strong—and repeats the Home/School cue within each story.</div>
+      <pre data-script aria-live="polite">Loading the current script…</pre>
+      <p class="status" data-status></p>
+    </main>
+    <script>
+      const scriptElement = document.querySelector("[data-script]");
+      const statusElement = document.querySelector("[data-status]");
+      let fullScript = "";
+      fetch("home-school-full-script.txt?v=who-takes-care-full-script-r1")
+        .then((response) => {
+          if (!response.ok) throw new Error(`Script request failed (${response.status})`);
+          return response.text();
+        })
+        .then((text) => {
+          fullScript = text;
+          scriptElement.textContent = text;
+        })
+        .catch((error) => {
+          scriptElement.textContent = `The script could not be loaded. ${error.message}`;
+        });
+      document.querySelector("[data-copy]").addEventListener("click", async () => {
+        if (!fullScript) return;
+        await navigator.clipboard.writeText(fullScript);
+        statusElement.textContent = "Full script copied.";
+      });
+    </script>
+  </body>
+</html>

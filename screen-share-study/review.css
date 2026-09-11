@@ -332,6 +332,21 @@ button, select, input { font: inherit; }
 .review-open:hover { background: var(--teal-dark); }
 .review-card.is-audio-mode .review-open { background: var(--plum); }
 .review-card.is-audio-mode .review-open:hover { background: #593978; }
+.review-context-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+.review-context-action {
+  padding: 11px;
+  border: 1px solid #d7e5ea;
+  border-radius: 15px;
+  background: #f8fbfc;
+}
+.review-context-action.is-reviewed {
+  border-color: #a9d6ca;
+  background: #eef9f5;
+}
 .review-empty { grid-column: 1 / -1; padding: 44px; border: 2px dashed #c8d9df; border-radius: 20px; color: var(--muted); text-align: center; font-size: 18px; }
 
 @media (max-width: 980px) {
@@ -347,4 +362,5 @@ button, select, input { font: inherit; }
   .review-mode-help { grid-column: auto; }
   .review-mode-option { grid-template-columns: auto 1fr; }
   .review-mode-tag { display: none; }
+  .review-context-actions { grid-template-columns: 1fr; }
 }
