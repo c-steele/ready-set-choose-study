@@ -1,8 +1,8 @@
 (function installHomeSchoolReview(globalObject, documentObject) {
   "use strict";
 
-  const REVIEW_VERSION = "who-takes-care-home-school-review-r12";
-  const STUDY_RUNTIME_VERSION = "chs-home-school-evelyn-v1-r12";
+  const REVIEW_VERSION = "who-takes-care-home-school-review-r13";
+  const STUDY_RUNTIME_VERSION = "chs-home-school-evelyn-v1-r13";
   const STORAGE_KEY = `${REVIEW_VERSION}:checked`;
   const MODE_STORAGE_KEY = `${REVIEW_VERSION}:mode`;
   const PREVIEW_MODES = Object.freeze({

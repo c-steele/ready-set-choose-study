@@ -2,7 +2,7 @@
   "schemaVersion": 2,
   "status": "release_ready",
   "designVersion": "home_school_context_chs_candidate_v1",
-  "scriptVersion": "home_school_context_recipient_aware_v3",
+  "scriptVersion": "home_school_context_recipient_aware_v4",
   "assignment": {
     "design": "between-child",
     "contexts": [
@@ -46,12 +46,12 @@
         "alt": "At the kid's home"
       },
       "intro": {
-        "text": "Today, these people are at the kid's home.",
-        "audio": "assets/home_school/generated/audio/hs_001_context_intro_home.mp3",
+        "text": "They are all at the kid's home.",
+        "audio": "assets/home_school/generated/audio/hs_r13_001_context_intro_home.mp3",
         "image": {
-          "id": "home_context_intro_cue_v1",
-          "src": "assets/home_school/generated/home_context_intro_cue.png",
-          "alt": "Today, these people are at the kid's home."
+          "id": "home_context_intro_cue_v2",
+          "src": "assets/home_school/generated/home_context_intro_cue_v2.png",
+          "alt": "They are all at the kid's home."
         }
       },
       "events": {
@@ -146,12 +146,12 @@
         "alt": "At the kid's school"
       },
       "intro": {
-        "text": "Today, these people are at the kid's school.",
-        "audio": "assets/home_school/generated/audio/hs_002_context_intro_school.mp3",
+        "text": "They are all at the kid's school.",
+        "audio": "assets/home_school/generated/audio/hs_r13_002_context_intro_school.mp3",
         "image": {
-          "id": "school_context_intro_cue_v1",
-          "src": "assets/home_school/generated/school_context_intro_cue.png",
-          "alt": "Today, these people are at the kid's school."
+          "id": "school_context_intro_cue_v2",
+          "src": "assets/home_school/generated/school_context_intro_cue_v2.png",
+          "alt": "They are all at the kid's school."
         }
       },
       "events": {

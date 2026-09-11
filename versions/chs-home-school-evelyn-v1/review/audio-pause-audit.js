@@ -1,7 +1,7 @@
 (async function installAudioPauseAudit() {
   "use strict";
 
-  const RELEASE = "chs-home-school-evelyn-v1-r12-audio-pause-r1";
+  const RELEASE = "chs-home-school-evelyn-v1-r13-audio-pause-r1";
   const candidateRoot = new URL("../", window.location.href);
   const studyRoot = new URL("../../../", window.location.href);
   const manifestUrl = new URL("data/home_school_question_pause_manifest.json", candidateRoot);

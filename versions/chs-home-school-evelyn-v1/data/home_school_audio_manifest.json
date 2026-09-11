@@ -21,22 +21,24 @@
     "directionalClipCount": 30,
     "questionSettingPauseSeconds": 0.45,
     "questionSettingPauseClipCount": 24,
-    "pauseEditedAudioRoot": "assets/home_school/generated/audio/setting_pause_450ms"
+    "pauseEditedAudioRoot": "assets/home_school/generated/audio/setting_pause_450ms",
+    "contextIntroRevision": "r13",
+    "contextIntroRevisionGeneratedOn": "2026-09-11"
   },
   "lines": [
     {
-      "text": "Today, these people are at the kid's home.",
-      "output": "assets/home_school/generated/audio/hs_001_context_intro_home.mp3",
-      "bytes": 119163,
-      "durationSeconds": 2.97795,
-      "sha256": "0ae576764b5c6c780802b1274e82772108b7a8d55cc570fed13d7080f1879aae"
+      "text": "They are all at the kid's home.",
+      "output": "assets/home_school/generated/audio/hs_r13_001_context_intro_home.mp3",
+      "bytes": 94085,
+      "durationSeconds": 2.351,
+      "sha256": "d96069caa7e846365a300b7ee2a5f664ec4d0b2c1fb68d192c9286059dd0e72b"
     },
     {
-      "text": "Today, these people are at the kid's school.",
-      "output": "assets/home_school/generated/audio/hs_002_context_intro_school.mp3",
-      "bytes": 120208,
-      "durationSeconds": 3.004075,
-      "sha256": "5c562ba62e2d45cee31b68c6374409311e1092f1d76b476647df21e1f6559e2b"
+      "text": "They are all at the kid's school.",
+      "output": "assets/home_school/generated/audio/hs_r13_002_context_intro_school.mp3",
+      "bytes": 96175,
+      "durationSeconds": 2.40325,
+      "sha256": "772cc1c85c43fb6aa08b17443802206acb3c6e7299531d477d29e211493b9bc0"
     },
     {
       "text": "Oh no! At the kid's home, the kid in the middle is sad now!",

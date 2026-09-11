@@ -69,11 +69,11 @@
   <body>
     <header>
       <h1>Full Home / School script</h1>
-      <p>Current “Who Takes Care?” r12 participant flow, every setting and event template, all three six-story role sets, all follow-up ratings, and the custom CHS consent and debrief copy.</p>
+      <p>Current “Who Takes Care?” r13 participant flow, every setting and event template, all three six-story role sets, all follow-up ratings, and the custom CHS consent and debrief copy.</p>
       <nav aria-label="Script actions">
-        <a href="home-school-review.html?v=who-takes-care-home-school-review-r12">← Back to 96 versions</a>
+        <a href="home-school-review.html?v=who-takes-care-home-school-review-r13">← Back to 96 versions</a>
         <button type="button" data-copy>Copy full script</button>
-        <a href="home-school-full-script.txt?v=who-takes-care-full-script-r2" download>Download text file</a>
+        <a href="home-school-full-script.txt?v=who-takes-care-full-script-r3" download>Download text file</a>
       </nav>
     </header>
     <main>
@@ -85,7 +85,7 @@
       const scriptElement = document.querySelector("[data-script]");
       const statusElement = document.querySelector("[data-status]");
       let fullScript = "";
-      fetch("home-school-full-script.txt?v=who-takes-care-full-script-r2")
+      fetch("home-school-full-script.txt?v=who-takes-care-full-script-r3")
         .then((response) => {
           if (!response.ok) throw new Error(`Script request failed (${response.status})`);
           return response.text();

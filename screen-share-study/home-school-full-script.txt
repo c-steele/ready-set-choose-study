@@ -1,6 +1,6 @@
 WHO TAKES CARE? A COLORFUL STORY GAME
 Complete Home / School study script reference
-Current candidate: chs-home-school-evelyn-v1-r12
+Current candidate: chs-home-school-evelyn-v1-r13
 
 PURPOSE OF THIS DOCUMENT
 
@@ -15,11 +15,11 @@ One child receives:
 
 IMPORTANT CURRENT-BUILD CHECK
 
-The current r12 game asks five ratings after every story: love, like, in charge, old, and strong. It does not currently ask only love and in charge. The five traits appear in a seed-randomized order.
+The current r13 game asks five ratings after every story: love, like, in charge, old, and strong. It does not currently ask only love and in charge. The five traits appear in a seed-randomized order.
 
 Each prerecorded context question has a 450 millisecond total pause at the comma, immediately before “at the kid's home” or “at the kid's school.”
 
-The setting cue is currently repeated once inside each of the six stories, immediately after “Look! Here are some people.”
+The setting cue is repeated once inside each of the six stories, after the last character is introduced and before the event begins. It always refers to the kid's home or the kid's school, including when an adult is the person in the middle.
 
 CHS PARTICIPANT FLOW
 
@@ -70,13 +70,13 @@ The following sequence repeats six times. The six story pairings depend on the a
 
 1. “Look! Here are some people.”
 
-2. Assigned setting cue:
-   - Home: “Today, these people are at the kid's home.”
-   - School: “Today, these people are at the kid's school.”
+2. “This little one is a kid.”
 
-3. “This little one is a kid.”
+3–4. The two candidate identity lines for the assigned pairing. See Part D. Renditions A and B introduce the first-named candidate and then the second-named candidate. Renditions C and D reverse those two identity lines.
 
-4–5. The two candidate identity lines for the assigned pairing. See Part D. Renditions A and B introduce the first-named candidate and then the second-named candidate. Renditions C and D reverse those two identity lines.
+5. Assigned setting cue, after the last candidate identity line:
+   - Home: “They are all at the kid's home.”
+   - School: “They are all at the kid's school.”
 
 6. The assigned event line. See Part E.
 
