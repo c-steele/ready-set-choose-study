@@ -1,6 +1,6 @@
 WHO TAKES CARE? A COLORFUL STORY GAME
 Complete Home / School study script reference
-Current candidate: chs-home-school-evelyn-v1-r11
+Current candidate: chs-home-school-evelyn-v1-r12
 
 PURPOSE OF THIS DOCUMENT
 
@@ -15,7 +15,9 @@ One child receives:
 
 IMPORTANT CURRENT-BUILD CHECK
 
-The current r11 game asks five ratings after every story: love, like, in charge, old, and strong. It does not currently ask only love and in charge. The five traits appear in a seed-randomized order.
+The current r12 game asks five ratings after every story: love, like, in charge, old, and strong. It does not currently ask only love and in charge. The five traits appear in a seed-randomized order.
+
+Each prerecorded context question has a 450 millisecond total pause at the comma, immediately before “at the kid's home” or “at the kid's school.”
 
 The setting cue is currently repeated once inside each of the six stories, immediately after “Look! Here are some people.”
 

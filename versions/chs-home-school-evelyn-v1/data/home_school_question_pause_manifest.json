@@ -1,0 +1,873 @@
+{
+  "schemaVersion": 1,
+  "candidateId": "chs-home-school-evelyn-v1",
+  "status": "complete",
+  "generatedOn": "2026-09-11T02:25:25.218Z",
+  "targetPauseSeconds": 0.45,
+  "sourceAudioRoot": "assets/home_school/generated/audio",
+  "outputAudioRoot": "assets/home_school/generated/audio/setting_pause_450ms",
+  "processor": {
+    "script": "scripts/build_home_school_question_pauses.mjs",
+    "ffmpegVersion": "ffmpeg version 4.2.2 Copyright (c) 2000-2019 the FFmpeg developers",
+    "ffprobeVersion": "ffprobe version 4.2.2 Copyright (c) 2007-2019 the FFmpeg developers",
+    "outputCodec": "MP3, 44.1 kHz, mono, 320 kbps CBR"
+  },
+  "method": {
+    "description": "Split each source inside its reviewed low-energy boundary and insert only enough digital silence to make that complete boundary 450 ms. No source samples are removed.",
+    "sourceSilenceDetection": "Reviewed with ffmpeg silencedetect=n=-38dB:d=0.025.",
+    "outputSilenceValidation": "Verified with ffmpeg silencedetect=n=-38dB:d=0.40; accepted range 0.44–0.46 seconds.",
+    "scope": "The 24 question clips whose terminal setting phrase is 'at the kid's home/school.' Event and context-introduction clips are unchanged."
+  },
+  "clipCount": 24,
+  "validation": {
+    "sourceHashesVerified": true,
+    "outputAudioSpecsVerified": true,
+    "durationDeltasVerified": true,
+    "pauseDurationsVerified": true,
+    "contextQuestionMappingCount": 24,
+    "originalSourcesPreserved": true,
+    "historicalDirectionalImportReceiptPreserved": true
+  },
+  "clips": [
+    {
+      "id": "hs_004",
+      "text": "Who will give the kid in the middle a hug now that they're sad, at the kid's home?",
+      "context": "HOME",
+      "recipient": "KID",
+      "event": "HUG",
+      "kind": "question",
+      "source": "assets/home_school/generated/audio/hs_004_home_hug_question.mp3",
+      "sourceBytes": 188126,
+      "sourceDurationSeconds": 4.702025,
+      "sourceSha256": "badf0da6a58a0ef1ec6297a7de4aac86fffa135c07eb2bd6bd63ff553f20b053",
+      "boundary": {
+        "silenceStartSeconds": 3.22447,
+        "silenceEndSeconds": 3.28717,
+        "originalPauseSeconds": 0.0627,
+        "splitSeconds": 3.25582,
+        "insertedSilenceSeconds": 0.3873,
+        "targetPauseSeconds": 0.45
+      },
+      "output": "assets/home_school/generated/audio/setting_pause_450ms/hs_004_home_hug_question.mp3",
+      "bytes": 205889,
+      "durationSeconds": 5.12,
+      "sha256": "03ab9aec221462bff1409f7b8fe45155894e61c02e2c2d2360cac24a43cee1d8",
+      "measuredPause": {
+        "startSeconds": 3.22447,
+        "endSeconds": 3.67447,
+        "durationSeconds": 0.45
+      },
+      "validation": {
+        "sourceHashVerified": true,
+        "outputAudioSpecVerified": true,
+        "durationDeltaVerified": true,
+        "pauseDurationVerified": true
+      }
+    },
+    {
+      "id": "hs_006",
+      "text": "Who will give the kid in the middle a hug now that they're sad, at the kid's school?",
+      "context": "SCHOOL",
+      "recipient": "KID",
+      "event": "HUG",
+      "kind": "question",
+      "source": "assets/home_school/generated/audio/hs_006_school_hug_question.mp3",
+      "sourceBytes": 190216,
+      "sourceDurationSeconds": 4.754275,
+      "sourceSha256": "6aed625ca52ddf2b3d3e0e75779764202013bb64a9e77a90d1cb53ce52e6834f",
+      "boundary": {
+        "silenceStartSeconds": 3.20166,
+        "silenceEndSeconds": 3.26215,
+        "originalPauseSeconds": 0.06049,
+        "splitSeconds": 3.231905,
+        "insertedSilenceSeconds": 0.38951,
+        "targetPauseSeconds": 0.45
+      },
+      "output": "assets/home_school/generated/audio/setting_pause_450ms/hs_006_school_hug_question.mp3",
+      "bytes": 207978,
+      "durationSeconds": 5.172245,
+      "sha256": "8576682643e5fc8587b76077a7448226e53f8cd3f832c4a134772e8a6a7068aa",
+      "measuredPause": {
+        "startSeconds": 3.20166,
+        "endSeconds": 3.65166,
+        "durationSeconds": 0.45
+      },
+      "validation": {
+        "sourceHashVerified": true,
+        "outputAudioSpecVerified": true,
+        "durationDeltaVerified": true,
+        "pauseDurationVerified": true
+      }
+    },
+    {
+      "id": "hs_008",
+      "text": "Who will give the kid in the middle strawberries now that they're hungry, at the kid's home?",
+      "context": "HOME",
+      "recipient": "KID",
+      "event": "FOOD",
+      "kind": "question",
+      "source": "assets/home_school/generated/audio/hs_008_home_food_question.mp3",
+      "sourceBytes": 209024,
+      "sourceDurationSeconds": 5.224475,
+      "sourceSha256": "e5fe7c383dca00829dd490b3784de25e938a0111c5401d25635365a527a66639",
+      "boundary": {
+        "silenceStartSeconds": 3.70009,
+        "silenceEndSeconds": 3.77526,
+        "originalPauseSeconds": 0.07517,
+        "splitSeconds": 3.737675,
+        "insertedSilenceSeconds": 0.37483,
+        "targetPauseSeconds": 0.45
+      },
+      "output": "assets/home_school/generated/audio/setting_pause_450ms/hs_008_home_food_question.mp3",
+      "bytes": 226787,
+      "durationSeconds": 5.642449,
+      "sha256": "5d8b8b89e52639e87fd275b8742c557a1f603bfc49fb6d7b4afc7259ca629c3a",
+      "measuredPause": {
+        "startSeconds": 3.70009,
+        "endSeconds": 4.15009,
+        "durationSeconds": 0.45
+      },
+      "validation": {
+        "sourceHashVerified": true,
+        "outputAudioSpecVerified": true,
+        "durationDeltaVerified": true,
+        "pauseDurationVerified": true
+      }
+    },
+    {
+      "id": "hs_010",
+      "text": "Who will give the kid in the middle strawberries now that they're hungry, at the kid's school?",
+      "context": "SCHOOL",
+      "recipient": "KID",
+      "event": "FOOD",
+      "kind": "question",
+      "source": "assets/home_school/generated/audio/hs_010_school_food_question.mp3",
+      "sourceBytes": 211114,
+      "sourceDurationSeconds": 5.276725,
+      "sourceSha256": "5a319ee0a50c13a35e30e1d327183f2587ff9acc5b35227a9533a19ff85f5222",
+      "boundary": {
+        "silenceStartSeconds": 3.6941,
+        "silenceEndSeconds": 3.76483,
+        "originalPauseSeconds": 0.07073,
+        "splitSeconds": 3.729465,
+        "insertedSilenceSeconds": 0.37927,
+        "targetPauseSeconds": 0.45
+      },
+      "output": "assets/home_school/generated/audio/setting_pause_450ms/hs_010_school_food_question.mp3",
+      "bytes": 228876,
+      "durationSeconds": 5.694694,
+      "sha256": "f8a15652a62bcb9e6e1605aad94e8d8c641d6d1b37c71d5d900f0058eb441e0f",
+      "measuredPause": {
+        "startSeconds": 3.6941,
+        "endSeconds": 4.1441,
+        "durationSeconds": 0.45
+      },
+      "validation": {
+        "sourceHashVerified": true,
+        "outputAudioSpecVerified": true,
+        "durationDeltaVerified": true,
+        "pauseDurationVerified": true
+      }
+    },
+    {
+      "id": "hs_012",
+      "text": "Who will help the kid in the middle pick up the heavy box, at the kid's home?",
+      "context": "HOME",
+      "recipient": "KID",
+      "event": "HELP",
+      "kind": "question",
+      "source": "assets/home_school/generated/audio/hs_012_home_help_question.mp3",
+      "sourceBytes": 187081,
+      "sourceDurationSeconds": 4.6759,
+      "sourceSha256": "567da3e0ebe2faba6fc598b3e4f3b56405c315f3762027b6048d94a5d8f04ac7",
+      "boundary": {
+        "silenceStartSeconds": 3.1622,
+        "silenceEndSeconds": 3.22213,
+        "originalPauseSeconds": 0.05993,
+        "splitSeconds": 3.192165,
+        "insertedSilenceSeconds": 0.39007,
+        "targetPauseSeconds": 0.45
+      },
+      "output": "assets/home_school/generated/audio/setting_pause_450ms/hs_012_home_help_question.mp3",
+      "bytes": 204844,
+      "durationSeconds": 5.093878,
+      "sha256": "0fe7a0305dd5abae5e15ca9c1aea05f3bb2a37496c9c1ce9eb3df36410dbbb4d",
+      "measuredPause": {
+        "startSeconds": 3.1622,
+        "endSeconds": 3.6122,
+        "durationSeconds": 0.45
+      },
+      "validation": {
+        "sourceHashVerified": true,
+        "outputAudioSpecVerified": true,
+        "durationDeltaVerified": true,
+        "pauseDurationVerified": true
+      }
+    },
+    {
+      "id": "hs_014",
+      "text": "Who will help the kid in the middle pick up the heavy box, at the kid's school?",
+      "context": "SCHOOL",
+      "recipient": "KID",
+      "event": "HELP",
+      "kind": "question",
+      "source": "assets/home_school/generated/audio/hs_014_school_help_question.mp3",
+      "sourceBytes": 188126,
+      "sourceDurationSeconds": 4.702025,
+      "sourceSha256": "4afff6f8a6607c54a21a6c56fd8cb1c4aea72ba4b2528e485cb9f209b7e5ba8b",
+      "boundary": {
+        "silenceStartSeconds": 3.19,
+        "silenceEndSeconds": 3.24787,
+        "originalPauseSeconds": 0.05787,
+        "splitSeconds": 3.218935,
+        "insertedSilenceSeconds": 0.39213,
+        "targetPauseSeconds": 0.45
+      },
+      "output": "assets/home_school/generated/audio/setting_pause_450ms/hs_014_school_help_question.mp3",
+      "bytes": 206933,
+      "durationSeconds": 5.146122,
+      "sha256": "b9ba175f36eed1136d22add0d26aec04236c8b831f25112377b104ea354f8ea4",
+      "measuredPause": {
+        "startSeconds": 3.19,
+        "endSeconds": 3.64,
+        "durationSeconds": 0.45
+      },
+      "validation": {
+        "sourceHashVerified": true,
+        "outputAudioSpecVerified": true,
+        "durationDeltaVerified": true,
+        "pauseDurationVerified": true
+      }
+    },
+    {
+      "id": "hs_v2_015",
+      "text": "Who will give the mom in the middle a hug now that they're sad, at the kid's home?",
+      "context": "HOME",
+      "recipient": "MOM",
+      "event": "HUG",
+      "kind": "question",
+      "source": "assets/home_school/generated/audio/hs_v2_015_home_mom_hug_question.mp3",
+      "sourceBytes": 190216,
+      "sourceDurationSeconds": 4.754275,
+      "sourceSha256": "f093c190ce6b1fc891befd79256e8351f310f7e965346196723cbc5dab616161",
+      "boundary": {
+        "silenceStartSeconds": 3.27204,
+        "silenceEndSeconds": 3.33717,
+        "originalPauseSeconds": 0.06513,
+        "splitSeconds": 3.304605,
+        "insertedSilenceSeconds": 0.38487,
+        "targetPauseSeconds": 0.45
+      },
+      "output": "assets/home_school/generated/audio/setting_pause_450ms/hs_v2_015_home_mom_hug_question.mp3",
+      "bytes": 207978,
+      "durationSeconds": 5.172245,
+      "sha256": "69a4326b08441a87d11b21ab8b1fd69bb3488712616ca132a84637d20e54f91e",
+      "measuredPause": {
+        "startSeconds": 3.27204,
+        "endSeconds": 3.72204,
+        "durationSeconds": 0.45
+      },
+      "validation": {
+        "sourceHashVerified": true,
+        "outputAudioSpecVerified": true,
+        "durationDeltaVerified": true,
+        "pauseDurationVerified": true
+      }
+    },
+    {
+      "id": "hs_v2_017",
+      "text": "Who will give the mom in the middle strawberries now that they're hungry, at the kid's home?",
+      "context": "HOME",
+      "recipient": "MOM",
+      "event": "FOOD",
+      "kind": "question",
+      "source": "assets/home_school/generated/audio/hs_v2_017_home_mom_food_question.mp3",
+      "sourceBytes": 207979,
+      "sourceDurationSeconds": 5.19835,
+      "sourceSha256": "ded738963c4d6ea0a7594225649e39604eb17f079335a421e69803ef9e726ee1",
+      "boundary": {
+        "silenceStartSeconds": 3.68735,
+        "silenceEndSeconds": 3.76483,
+        "originalPauseSeconds": 0.07748,
+        "splitSeconds": 3.72609,
+        "insertedSilenceSeconds": 0.37252,
+        "targetPauseSeconds": 0.45
+      },
+      "output": "assets/home_school/generated/audio/setting_pause_450ms/hs_v2_017_home_mom_food_question.mp3",
+      "bytes": 225742,
+      "durationSeconds": 5.616327,
+      "sha256": "c41a7a1c02caff27c103a9a9ee19d031b5cb686f09e3e39c7f21f492de0b74ac",
+      "measuredPause": {
+        "startSeconds": 3.68735,
+        "endSeconds": 4.13735,
+        "durationSeconds": 0.45
+      },
+      "validation": {
+        "sourceHashVerified": true,
+        "outputAudioSpecVerified": true,
+        "durationDeltaVerified": true,
+        "pauseDurationVerified": true
+      }
+    },
+    {
+      "id": "hs_v2_019",
+      "text": "Who will help the mom in the middle pick up the heavy box, at the kid's home?",
+      "context": "HOME",
+      "recipient": "MOM",
+      "event": "HELP",
+      "kind": "question",
+      "source": "assets/home_school/generated/audio/hs_v2_019_home_mom_help_question.mp3",
+      "sourceBytes": 188126,
+      "sourceDurationSeconds": 4.702025,
+      "sourceSha256": "9c2ca35eb33d8edd2a2dc301ee88c3e4d466387f46a4c15e5b7bbb476a5e7b5a",
+      "boundary": {
+        "silenceStartSeconds": 3.18912,
+        "silenceEndSeconds": 3.24785,
+        "originalPauseSeconds": 0.05873,
+        "splitSeconds": 3.218485,
+        "insertedSilenceSeconds": 0.39127,
+        "targetPauseSeconds": 0.45
+      },
+      "output": "assets/home_school/generated/audio/setting_pause_450ms/hs_v2_019_home_mom_help_question.mp3",
+      "bytes": 205889,
+      "durationSeconds": 5.12,
+      "sha256": "ceb2f6621ccf3e7dd5e91d68a5e197e9a3f42df1459e6e2b77364c4be2d3bbfd",
+      "measuredPause": {
+        "startSeconds": 3.18912,
+        "endSeconds": 3.63912,
+        "durationSeconds": 0.45
+      },
+      "validation": {
+        "sourceHashVerified": true,
+        "outputAudioSpecVerified": true,
+        "durationDeltaVerified": true,
+        "pauseDurationVerified": true
+      }
+    },
+    {
+      "id": "hs_v2_020",
+      "text": "Who will give the dad in the middle a hug now that they're sad, at the kid's home?",
+      "context": "HOME",
+      "recipient": "DAD",
+      "event": "HUG",
+      "kind": "question",
+      "source": "assets/home_school/generated/audio/hs_v2_020_home_dad_hug_question.mp3",
+      "sourceBytes": 188126,
+      "sourceDurationSeconds": 4.702025,
+      "sourceSha256": "8cc21621eb2a5ba0ea2f8929f3425081aaaaafe5b350b44c4e368e28652ea8df",
+      "boundary": {
+        "silenceStartSeconds": 3.22193,
+        "silenceEndSeconds": 3.28717,
+        "originalPauseSeconds": 0.06524,
+        "splitSeconds": 3.25455,
+        "insertedSilenceSeconds": 0.38476,
+        "targetPauseSeconds": 0.45
+      },
+      "output": "assets/home_school/generated/audio/setting_pause_450ms/hs_v2_020_home_dad_hug_question.mp3",
+      "bytes": 205889,
+      "durationSeconds": 5.12,
+      "sha256": "bedadfafa9e8829cfb16cc0f8c15da8b68d56246b6751f3a392bc82f96ad3b17",
+      "measuredPause": {
+        "startSeconds": 3.22193,
+        "endSeconds": 3.67193,
+        "durationSeconds": 0.45
+      },
+      "validation": {
+        "sourceHashVerified": true,
+        "outputAudioSpecVerified": true,
+        "durationDeltaVerified": true,
+        "pauseDurationVerified": true
+      }
+    },
+    {
+      "id": "hs_v2_022",
+      "text": "Who will give the dad in the middle strawberries now that they're hungry, at the kid's home?",
+      "context": "HOME",
+      "recipient": "DAD",
+      "event": "FOOD",
+      "kind": "question",
+      "source": "assets/home_school/generated/audio/hs_v2_022_home_dad_food_question.mp3",
+      "sourceBytes": 207979,
+      "sourceDurationSeconds": 5.19835,
+      "sourceSha256": "5bfbcd7c6bb3f1a7b6bc67bd5b99fa8a3222e2fe59e212acb13f671dc6d4f4b7",
+      "boundary": {
+        "silenceStartSeconds": 3.68732,
+        "silenceEndSeconds": 3.76483,
+        "originalPauseSeconds": 0.07751,
+        "splitSeconds": 3.726075,
+        "insertedSilenceSeconds": 0.37249,
+        "targetPauseSeconds": 0.45
+      },
+      "output": "assets/home_school/generated/audio/setting_pause_450ms/hs_v2_022_home_dad_food_question.mp3",
+      "bytes": 225742,
+      "durationSeconds": 5.616327,
+      "sha256": "dd6e28a26c63954085c9a27df7be50864b40b1a528d3ad356f1d2c0c3a77b0c3",
+      "measuredPause": {
+        "startSeconds": 3.68732,
+        "endSeconds": 4.13732,
+        "durationSeconds": 0.45
+      },
+      "validation": {
+        "sourceHashVerified": true,
+        "outputAudioSpecVerified": true,
+        "durationDeltaVerified": true,
+        "pauseDurationVerified": true
+      }
+    },
+    {
+      "id": "hs_v2_024",
+      "text": "Who will help the dad in the middle pick up the heavy box, at the kid's home?",
+      "context": "HOME",
+      "recipient": "DAD",
+      "event": "HELP",
+      "kind": "question",
+      "source": "assets/home_school/generated/audio/hs_v2_024_home_dad_help_question.mp3",
+      "sourceBytes": 188126,
+      "sourceDurationSeconds": 4.702025,
+      "sourceSha256": "f5fb5c8dc0711f35c875557c6c16045ac1f203da2b9e636120832abc65a17cbe",
+      "boundary": {
+        "silenceStartSeconds": 3.18891,
+        "silenceEndSeconds": 3.24787,
+        "originalPauseSeconds": 0.05896,
+        "splitSeconds": 3.21839,
+        "insertedSilenceSeconds": 0.39104,
+        "targetPauseSeconds": 0.45
+      },
+      "output": "assets/home_school/generated/audio/setting_pause_450ms/hs_v2_024_home_dad_help_question.mp3",
+      "bytes": 205889,
+      "durationSeconds": 5.12,
+      "sha256": "b7137fbc7cf63762247406e596a514759b96fd4b5001bbe251520f883fe8cdd0",
+      "measuredPause": {
+        "startSeconds": 3.18891,
+        "endSeconds": 3.63891,
+        "durationSeconds": 0.45
+      },
+      "validation": {
+        "sourceHashVerified": true,
+        "outputAudioSpecVerified": true,
+        "durationDeltaVerified": true,
+        "pauseDurationVerified": true
+      }
+    },
+    {
+      "id": "hs_v2_025",
+      "text": "Who will give the teacher in the middle a hug now that they're sad, at the kid's home?",
+      "context": "HOME",
+      "recipient": "TEACHER",
+      "event": "HUG",
+      "kind": "question",
+      "source": "assets/home_school/generated/audio/hs_v2_025_home_teacher_hug_question.mp3",
+      "sourceBytes": 193351,
+      "sourceDurationSeconds": 4.83265,
+      "sourceSha256": "0cd8cddcd6f80ef9218191ce296eaf83d898e6459d4c4e70252b06bbcb989999",
+      "boundary": {
+        "silenceStartSeconds": 3.34982,
+        "silenceEndSeconds": 3.41215,
+        "originalPauseSeconds": 0.06233,
+        "splitSeconds": 3.380985,
+        "insertedSilenceSeconds": 0.38767,
+        "targetPauseSeconds": 0.45
+      },
+      "output": "assets/home_school/generated/audio/setting_pause_450ms/hs_v2_025_home_teacher_hug_question.mp3",
+      "bytes": 211113,
+      "durationSeconds": 5.250612,
+      "sha256": "d8cefaf1f613cbead3a0257e4d438bdefd0013a97e43cab3f01dfd1f909b56cd",
+      "measuredPause": {
+        "startSeconds": 3.3498,
+        "endSeconds": 3.79982,
+        "durationSeconds": 0.450023
+      },
+      "validation": {
+        "sourceHashVerified": true,
+        "outputAudioSpecVerified": true,
+        "durationDeltaVerified": true,
+        "pauseDurationVerified": true
+      }
+    },
+    {
+      "id": "hs_v2_027",
+      "text": "Who will give the teacher in the middle strawberries now that they're hungry, at the kid's home?",
+      "context": "HOME",
+      "recipient": "TEACHER",
+      "event": "FOOD",
+      "kind": "question",
+      "source": "assets/home_school/generated/audio/hs_v2_027_home_teacher_food_question.mp3",
+      "sourceBytes": 209024,
+      "sourceDurationSeconds": 5.224475,
+      "sourceSha256": "92aed9f430e01ccc1b92ff016ca575b62f016731ec5625ac99b2c91b0c0ac2f3",
+      "boundary": {
+        "silenceStartSeconds": 3.71923,
+        "silenceEndSeconds": 3.78805,
+        "originalPauseSeconds": 0.06882,
+        "splitSeconds": 3.75364,
+        "insertedSilenceSeconds": 0.38118,
+        "targetPauseSeconds": 0.45
+      },
+      "output": "assets/home_school/generated/audio/setting_pause_450ms/hs_v2_027_home_teacher_food_question.mp3",
+      "bytes": 226787,
+      "durationSeconds": 5.642449,
+      "sha256": "060f415d3c15cd168aec0e0c40f360a95766325273c017513592e38c270eb4f7",
+      "measuredPause": {
+        "startSeconds": 3.71923,
+        "endSeconds": 4.16923,
+        "durationSeconds": 0.45
+      },
+      "validation": {
+        "sourceHashVerified": true,
+        "outputAudioSpecVerified": true,
+        "durationDeltaVerified": true,
+        "pauseDurationVerified": true
+      }
+    },
+    {
+      "id": "hs_v2_029",
+      "text": "Who will help the teacher in the middle pick up the heavy box, at the kid's home?",
+      "context": "HOME",
+      "recipient": "TEACHER",
+      "event": "HELP",
+      "kind": "question",
+      "source": "assets/home_school/generated/audio/hs_v2_029_home_teacher_help_question.mp3",
+      "sourceBytes": 190216,
+      "sourceDurationSeconds": 4.754275,
+      "sourceSha256": "d1d30f5c294b5ef62722070beddaeb29d3600a279cd6b4490eec449c014e51ea",
+      "boundary": {
+        "silenceStartSeconds": 3.24973,
+        "silenceEndSeconds": 3.31036,
+        "originalPauseSeconds": 0.06063,
+        "splitSeconds": 3.280045,
+        "insertedSilenceSeconds": 0.38937,
+        "targetPauseSeconds": 0.45
+      },
+      "output": "assets/home_school/generated/audio/setting_pause_450ms/hs_v2_029_home_teacher_help_question.mp3",
+      "bytes": 207978,
+      "durationSeconds": 5.172245,
+      "sha256": "2825f7f35842cda7079d408743288e363e15251d2db16aeac84073e3b0a73e23",
+      "measuredPause": {
+        "startSeconds": 3.24973,
+        "endSeconds": 3.69973,
+        "durationSeconds": 0.45
+      },
+      "validation": {
+        "sourceHashVerified": true,
+        "outputAudioSpecVerified": true,
+        "durationDeltaVerified": true,
+        "pauseDurationVerified": true
+      }
+    },
+    {
+      "id": "hs_v2_030",
+      "text": "Who will give the mom in the middle a hug now that they're sad, at the kid's school?",
+      "context": "SCHOOL",
+      "recipient": "MOM",
+      "event": "HUG",
+      "kind": "question",
+      "source": "assets/home_school/generated/audio/hs_v2_030_school_mom_hug_question.mp3",
+      "sourceBytes": 192306,
+      "sourceDurationSeconds": 4.806525,
+      "sourceSha256": "9966b18d150f64b6288e6095c950a2ff19285e24b5c123d79d3fe373fe148446",
+      "boundary": {
+        "silenceStartSeconds": 3.23769,
+        "silenceEndSeconds": 3.29966,
+        "originalPauseSeconds": 0.06197,
+        "splitSeconds": 3.268675,
+        "insertedSilenceSeconds": 0.38803,
+        "targetPauseSeconds": 0.45
+      },
+      "output": "assets/home_school/generated/audio/setting_pause_450ms/hs_v2_030_school_mom_hug_question.mp3",
+      "bytes": 210068,
+      "durationSeconds": 5.22449,
+      "sha256": "cdf4a7016f2e527649d9454cccfe4cfe00f9ea01fd4e20e9cec61b52abf4d8c8",
+      "measuredPause": {
+        "startSeconds": 3.23769,
+        "endSeconds": 3.68769,
+        "durationSeconds": 0.45
+      },
+      "validation": {
+        "sourceHashVerified": true,
+        "outputAudioSpecVerified": true,
+        "durationDeltaVerified": true,
+        "pauseDurationVerified": true
+      }
+    },
+    {
+      "id": "hs_v2_032",
+      "text": "Who will give the mom in the middle strawberries now that they're hungry, at the kid's school?",
+      "context": "SCHOOL",
+      "recipient": "MOM",
+      "event": "FOOD",
+      "kind": "question",
+      "source": "assets/home_school/generated/audio/hs_v2_032_school_mom_food_question.mp3",
+      "sourceBytes": 211114,
+      "sourceDurationSeconds": 5.276725,
+      "sourceSha256": "001c436a00dd529166e8ed44fb3f7107c99816435cfd72db0c0960f2d6f64399",
+      "boundary": {
+        "silenceStartSeconds": 3.67497,
+        "silenceEndSeconds": 3.74998,
+        "originalPauseSeconds": 0.07501,
+        "splitSeconds": 3.712475,
+        "insertedSilenceSeconds": 0.37499,
+        "targetPauseSeconds": 0.45
+      },
+      "output": "assets/home_school/generated/audio/setting_pause_450ms/hs_v2_032_school_mom_food_question.mp3",
+      "bytes": 228876,
+      "durationSeconds": 5.694694,
+      "sha256": "397e8c36b4574c189c2bdadc50452ca48fe33ffa3cb8672626353b8cf1da314d",
+      "measuredPause": {
+        "startSeconds": 3.67497,
+        "endSeconds": 4.12497,
+        "durationSeconds": 0.45
+      },
+      "validation": {
+        "sourceHashVerified": true,
+        "outputAudioSpecVerified": true,
+        "durationDeltaVerified": true,
+        "pauseDurationVerified": true
+      }
+    },
+    {
+      "id": "hs_v2_034",
+      "text": "Who will help the mom in the middle pick up the heavy box, at the kid's school?",
+      "context": "SCHOOL",
+      "recipient": "MOM",
+      "event": "HELP",
+      "kind": "question",
+      "source": "assets/home_school/generated/audio/hs_v2_034_school_mom_help_question.mp3",
+      "sourceBytes": 188126,
+      "sourceDurationSeconds": 4.702025,
+      "sourceSha256": "3a2e6a93623a8bf5e60867481a6546426ef3b3d2ee0ce5fa4a56511e70c28247",
+      "boundary": {
+        "silenceStartSeconds": 3.20018,
+        "silenceEndSeconds": 3.26036,
+        "originalPauseSeconds": 0.06018,
+        "splitSeconds": 3.23027,
+        "insertedSilenceSeconds": 0.38982,
+        "targetPauseSeconds": 0.45
+      },
+      "output": "assets/home_school/generated/audio/setting_pause_450ms/hs_v2_034_school_mom_help_question.mp3",
+      "bytes": 205889,
+      "durationSeconds": 5.12,
+      "sha256": "9297efa06f95056c7d06ee237d7208624552f114dea6837aecb2f03e73d22b26",
+      "measuredPause": {
+        "startSeconds": 3.20018,
+        "endSeconds": 3.65018,
+        "durationSeconds": 0.45
+      },
+      "validation": {
+        "sourceHashVerified": true,
+        "outputAudioSpecVerified": true,
+        "durationDeltaVerified": true,
+        "pauseDurationVerified": true
+      }
+    },
+    {
+      "id": "hs_v2_035",
+      "text": "Who will give the dad in the middle a hug now that they're sad, at the kid's school?",
+      "context": "SCHOOL",
+      "recipient": "DAD",
+      "event": "HUG",
+      "kind": "question",
+      "source": "assets/home_school/generated/audio/hs_v2_035_school_dad_hug_question.mp3",
+      "sourceBytes": 191261,
+      "sourceDurationSeconds": 4.7804,
+      "sourceSha256": "25d8448e6dd0d117af215d59e478e45322073fa461117cfbf3d68792051fcc61",
+      "boundary": {
+        "silenceStartSeconds": 3.22215,
+        "silenceEndSeconds": 3.28717,
+        "originalPauseSeconds": 0.06502,
+        "splitSeconds": 3.25466,
+        "insertedSilenceSeconds": 0.38498,
+        "targetPauseSeconds": 0.45
+      },
+      "output": "assets/home_school/generated/audio/setting_pause_450ms/hs_v2_035_school_dad_hug_question.mp3",
+      "bytes": 209023,
+      "durationSeconds": 5.198367,
+      "sha256": "f84e23c0a632c45be63c8bb7f097846d5c74d4cfc9b6c75fd2c9e5b362530758",
+      "measuredPause": {
+        "startSeconds": 3.22215,
+        "endSeconds": 3.67215,
+        "durationSeconds": 0.45
+      },
+      "validation": {
+        "sourceHashVerified": true,
+        "outputAudioSpecVerified": true,
+        "durationDeltaVerified": true,
+        "pauseDurationVerified": true
+      }
+    },
+    {
+      "id": "hs_v2_037",
+      "text": "Who will give the dad in the middle strawberries now that they're hungry, at the kid's school?",
+      "context": "SCHOOL",
+      "recipient": "DAD",
+      "event": "FOOD",
+      "kind": "question",
+      "source": "assets/home_school/generated/audio/hs_v2_037_school_dad_food_question.mp3",
+      "sourceBytes": 210069,
+      "sourceDurationSeconds": 5.2506,
+      "sourceSha256": "cb87bb9f86f9ce0c80172944dd69480f28a688d4b6ed47ae1187fb6f2c6c15e8",
+      "boundary": {
+        "silenceStartSeconds": 3.65025,
+        "silenceEndSeconds": 3.72526,
+        "originalPauseSeconds": 0.07501,
+        "splitSeconds": 3.687755,
+        "insertedSilenceSeconds": 0.37499,
+        "targetPauseSeconds": 0.45
+      },
+      "output": "assets/home_school/generated/audio/setting_pause_450ms/hs_v2_037_school_dad_food_question.mp3",
+      "bytes": 227831,
+      "durationSeconds": 5.668571,
+      "sha256": "94ca9a21ce2dffa286040c10ca2ce3741102dc24a33ea25539f0951fb01f901c",
+      "measuredPause": {
+        "startSeconds": 3.65025,
+        "endSeconds": 4.10025,
+        "durationSeconds": 0.45
+      },
+      "validation": {
+        "sourceHashVerified": true,
+        "outputAudioSpecVerified": true,
+        "durationDeltaVerified": true,
+        "pauseDurationVerified": true
+      }
+    },
+    {
+      "id": "hs_v2_039",
+      "text": "Who will help the dad in the middle pick up the heavy box, at the kid's school?",
+      "context": "SCHOOL",
+      "recipient": "DAD",
+      "event": "HELP",
+      "kind": "question",
+      "source": "assets/home_school/generated/audio/hs_v2_039_school_dad_help_question.mp3",
+      "sourceBytes": 188126,
+      "sourceDurationSeconds": 4.702025,
+      "sourceSha256": "6a1b82121ea3408f8ad63b2bdeb6661bf82f3bc958236970d15591453a767183",
+      "boundary": {
+        "silenceStartSeconds": 3.20014,
+        "silenceEndSeconds": 3.26036,
+        "originalPauseSeconds": 0.06022,
+        "splitSeconds": 3.23025,
+        "insertedSilenceSeconds": 0.38978,
+        "targetPauseSeconds": 0.45
+      },
+      "output": "assets/home_school/generated/audio/setting_pause_450ms/hs_v2_039_school_dad_help_question.mp3",
+      "bytes": 205889,
+      "durationSeconds": 5.12,
+      "sha256": "2149ca9b3c0c0c9cf0f192751bb1191ea1d761880d6fdadc7a6046965fc001c5",
+      "measuredPause": {
+        "startSeconds": 3.20014,
+        "endSeconds": 3.65014,
+        "durationSeconds": 0.45
+      },
+      "validation": {
+        "sourceHashVerified": true,
+        "outputAudioSpecVerified": true,
+        "durationDeltaVerified": true,
+        "pauseDurationVerified": true
+      }
+    },
+    {
+      "id": "hs_v2_040",
+      "text": "Who will give the teacher in the middle a hug now that they're sad, at the kid's school?",
+      "context": "SCHOOL",
+      "recipient": "TEACHER",
+      "event": "HUG",
+      "kind": "question",
+      "source": "assets/home_school/generated/audio/hs_v2_040_school_teacher_hug_question.mp3",
+      "sourceBytes": 194396,
+      "sourceDurationSeconds": 4.858775,
+      "sourceSha256": "16cfdc8951044529ffcb0fa8d11e9bd01c1d26798f854735dbb0f65f79aeef40",
+      "boundary": {
+        "silenceStartSeconds": 3.27463,
+        "silenceEndSeconds": 3.33717,
+        "originalPauseSeconds": 0.06254,
+        "splitSeconds": 3.3059,
+        "insertedSilenceSeconds": 0.38746,
+        "targetPauseSeconds": 0.45
+      },
+      "output": "assets/home_school/generated/audio/setting_pause_450ms/hs_v2_040_school_teacher_hug_question.mp3",
+      "bytes": 212158,
+      "durationSeconds": 5.276735,
+      "sha256": "4a4723eb7895c36ad2cdecd11ab14a7529725682aefa5bc1a72b29b786ba6aa3",
+      "measuredPause": {
+        "startSeconds": 3.27463,
+        "endSeconds": 3.72463,
+        "durationSeconds": 0.45
+      },
+      "validation": {
+        "sourceHashVerified": true,
+        "outputAudioSpecVerified": true,
+        "durationDeltaVerified": true,
+        "pauseDurationVerified": true
+      }
+    },
+    {
+      "id": "hs_v2_042",
+      "text": "Who will give the teacher in the middle strawberries now that they're hungry, at the kid's school?",
+      "context": "SCHOOL",
+      "recipient": "TEACHER",
+      "event": "FOOD",
+      "kind": "question",
+      "source": "assets/home_school/generated/audio/hs_v2_042_school_teacher_food_question.mp3",
+      "sourceBytes": 213204,
+      "sourceDurationSeconds": 5.328975,
+      "sourceSha256": "4c9a2b6dbcdd7c0940d2b219e04efab86ec7c9d2421339296861c1bc7e8ca665",
+      "boundary": {
+        "silenceStartSeconds": 3.72088,
+        "silenceEndSeconds": 3.78807,
+        "originalPauseSeconds": 0.06719,
+        "splitSeconds": 3.754475,
+        "insertedSilenceSeconds": 0.38281,
+        "targetPauseSeconds": 0.45
+      },
+      "output": "assets/home_school/generated/audio/setting_pause_450ms/hs_v2_042_school_teacher_food_question.mp3",
+      "bytes": 230966,
+      "durationSeconds": 5.746939,
+      "sha256": "cb4077dd4908fa4e1758f4c23ba0f332bcc46d82d85979bbaffeaee3cc819077",
+      "measuredPause": {
+        "startSeconds": 3.72088,
+        "endSeconds": 4.17088,
+        "durationSeconds": 0.45
+      },
+      "validation": {
+        "sourceHashVerified": true,
+        "outputAudioSpecVerified": true,
+        "durationDeltaVerified": true,
+        "pauseDurationVerified": true
+      }
+    },
+    {
+      "id": "hs_v2_044",
+      "text": "Who will help the teacher in the middle pick up the heavy box, at the kid's school?",
+      "context": "SCHOOL",
+      "recipient": "TEACHER",
+      "event": "HELP",
+      "kind": "question",
+      "source": "assets/home_school/generated/audio/hs_v2_044_school_teacher_help_question.mp3",
+      "sourceBytes": 191261,
+      "sourceDurationSeconds": 4.7804,
+      "sourceSha256": "ba1fe79b7d8b03b8018bf93ae2b510514807e90cd13075a2b80ebbeced68323f",
+      "boundary": {
+        "silenceStartSeconds": 3.26272,
+        "silenceEndSeconds": 3.32497,
+        "originalPauseSeconds": 0.06225,
+        "splitSeconds": 3.293845,
+        "insertedSilenceSeconds": 0.38775,
+        "targetPauseSeconds": 0.45
+      },
+      "output": "assets/home_school/generated/audio/setting_pause_450ms/hs_v2_044_school_teacher_help_question.mp3",
+      "bytes": 209023,
+      "durationSeconds": 5.198367,
+      "sha256": "82064c0b71c03b9396e9a06bed95aac9e1e045f29c708f666dfd89082808b6a3",
+      "measuredPause": {
+        "startSeconds": 3.26272,
+        "endSeconds": 3.71272,
+        "durationSeconds": 0.45
+      },
+      "validation": {
+        "sourceHashVerified": true,
+        "outputAudioSpecVerified": true,
+        "durationDeltaVerified": true,
+        "pauseDurationVerified": true
+      }
+    }
+  ]
+}

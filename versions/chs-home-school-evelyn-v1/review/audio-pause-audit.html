@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Who Takes Care? — question pause review</title>
+    <link rel="stylesheet" href="audio-pause-audit.css?v=audio-pause-audit-r2">
+  </head>
+  <body>
+    <main class="audit-shell">
+      <header class="audit-hero">
+        <div>
+          <p class="eyebrow">Private audio check</p>
+          <h1>Question pause review</h1>
+          <p class="hero-copy">Compare every original question with its edited version. The edit adds a brief pause before the setting phrase at the end.</p>
+        </div>
+        <div class="hero-counts" aria-live="polite">
+          <strong data-summary>Loading clips…</strong>
+          <span data-pause-summary></span>
+        </div>
+      </header>
+
+      <section class="pause-key" aria-label="What to listen for">
+        <span class="pause-key-icon" aria-hidden="true">II</span>
+        <div>
+          <strong>Listen for a natural break</strong>
+          <p>The edited version should pause at the marker, immediately before “at the kid’s home” or “at the kid’s school.”</p>
+        </div>
+      </section>
+
+      <section class="audit-controls" aria-label="Audio filters">
+        <label>
+          <span>Setting</span>
+          <select data-filter="context">
+            <option value="all">Home and School</option>
+          </select>
+        </label>
+        <label>
+          <span>Person in the middle</span>
+          <select data-filter="recipient">
+            <option value="all">Everyone</option>
+          </select>
+        </label>
+        <label>
+          <span>Event</span>
+          <select data-filter="event">
+            <option value="all">All events</option>
+          </select>
+        </label>
+        <button type="button" class="reset-button" data-reset>Clear filters</button>
+      </section>
+
+      <section class="loading-state" data-loading aria-live="polite">
+        <div class="loading-dot" aria-hidden="true"></div>
+        <p>Loading the pause comparison manifest…</p>
+      </section>
+
+      <div class="clip-groups" data-groups hidden></div>
+
+      <section class="empty-state" data-empty hidden>
+        <h2>No questions match these filters</h2>
+        <p>Change a filter to continue reviewing.</p>
+      </section>
+
+      <section class="error-state" data-error hidden role="alert">
+        <h2>The audio comparison could not load</h2>
+        <p data-error-message></p>
+        <p>Open this page through the study’s local or public static web server so it can read the comparison manifest.</p>
+      </section>
+
+      <footer class="audit-footer">
+        <a data-manifest-link target="_blank" rel="noopener">Open comparison manifest</a>
+        <span>Only one audio clip plays at a time.</span>
+      </footer>
+    </main>
+
+    <template id="clip-card-template">
+      <article class="clip-card">
+        <header class="clip-card-header">
+          <div class="clip-number" data-number></div>
+          <div class="clip-tags">
+            <span class="tag context-tag" data-context></span>
+            <span class="tag" data-recipient></span>
+            <span class="tag" data-event></span>
+          </div>
+          <span class="validation-badge" data-validation></span>
+        </header>
+
+        <p class="transcript" data-transcript aria-label="Question transcript"></p>
+
+        <div class="audio-comparison">
+          <section class="audio-version original-version">
+            <div class="version-heading">
+              <div>
+                <span class="version-kicker">Before</span>
+                <h3>Original</h3>
+              </div>
+              <span class="pause-measure" data-original-pause></span>
+            </div>
+            <audio controls preload="none" data-original-audio></audio>
+            <p class="file-name" data-original-file></p>
+          </section>
+
+          <section class="audio-version edited-version">
+            <div class="version-heading">
+              <div>
+                <span class="version-kicker">After</span>
+                <h3>Edited</h3>
+              </div>
+              <span class="pause-measure" data-edited-pause></span>
+            </div>
+            <audio controls preload="none" data-edited-audio></audio>
+            <p class="file-name" data-edited-file></p>
+          </section>
+        </div>
+      </article>
+    </template>
+
+    <script src="audio-pause-audit.js?v=audio-pause-audit-r2"></script>
+  </body>
+</html>
