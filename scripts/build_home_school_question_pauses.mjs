@@ -15,6 +15,14 @@ const targetPauseSeconds = 0.45;
 const ffmpeg = process.env.FTC_FFMPEG_PATH || "ffmpeg";
 const ffprobe = process.env.FTC_FFPROBE_PATH || "ffprobe";
 
+if (!process.argv.includes("--rebuild-rejected-450ms-derivatives")) {
+  throw new Error(
+    "This historical builder creates the rejected 450 ms question pauses and rewires the candidate. "
+    + "The active study intentionally uses NaturalReaders' original comma timing. "
+    + "Pass --rebuild-rejected-450ms-derivatives only for an explicit historical rollback."
+  );
+}
+
 // These intervals were reviewed on the immutable NaturalReaders source clips.
 // Each one is the low-energy word boundary immediately before the terminal
 // setting phrase, "at the kid's home/school." The edit splits at the interval

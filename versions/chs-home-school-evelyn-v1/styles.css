@@ -308,27 +308,8 @@ body {
   object-fit: contain;
 }
 
-.ksize-context-intro-cue {
-  position: relative;
-  z-index: 6;
-  display: flex;
-  width: 100%;
-  flex: 0 0 auto;
-  align-items: center;
-  justify-content: center;
-  margin: -2px auto 8px;
-  pointer-events: none;
-}
-
-.ksize-context-badge-large {
-  width: min(94%, 900px);
-  max-width: 900px;
-  max-height: min(18vh, 180px);
-  object-fit: contain;
-}
-
-/* The dedicated context-introduction plate already states the context at a
-   readable size. Keep the HUD column's footprint but avoid repeating it. */
+/* Context-introduction pages state the location once, in the colored caption
+   over the scene. Never repeat a separate location card in the HUD. */
 .ksize-kid-screen[data-slide-kind="context_intro"] .ksize-top-hud-center > .ksize-context-badge {
   visibility: hidden;
 }
@@ -417,52 +398,28 @@ body {
   right: 0;
   left: 0;
   display: grid;
-  min-height: 9.4%;
+  min-height: 12.5%;
   box-sizing: border-box;
   place-items: center;
-  padding: 6px 14px;
+  padding: 7px 10px;
   background: #8e2d94;
   color: #fff;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: clamp(14px, 1.75vw, 25px);
+  font-size: clamp(20px, 2.2vw, 30px);
   font-weight: 700;
-  line-height: 1.08;
+  line-height: 1.12;
   text-align: center;
-  text-wrap: balance;
+  text-wrap: wrap;
+  white-space: normal;
+  overflow-wrap: break-word;
   pointer-events: none;
 }
 
-/* The context page adds a second visual plate to a standard 16:9 story image.
-   Keep the complete page—including Replay/Next—inside a 720px classroom or
-   laptop viewport instead of forcing the child to scroll. */
-.ksize-kid-screen[data-slide-kind="context_intro"] {
-  justify-content: flex-start;
-}
-
-.ksize-kid-screen[data-slide-kind="context_intro"] .ksize-slide-image {
-  margin-bottom: 2px;
-}
-
-.ksize-kid-screen[data-slide-kind="context_intro"] .ksize-slide-image img {
-  max-height: min(42vh, 360px);
-}
-
-.ksize-kid-screen[data-slide-kind="context_intro"] .ksize-slide-image.ksize-furnished-scene {
-  width: min(100%, 1080px, calc(42vh * 16 / 9));
-}
-
-.ksize-kid-screen[data-slide-kind="context_intro"] .ksize-slide-image.ksize-furnished-scene > img {
-  height: 100%;
-  max-height: none;
-}
-
-.ksize-kid-screen[data-slide-kind="context_intro"] .ksize-context-badge-large {
-  width: min(82%, 760px);
-  max-height: min(13vh, 110px);
-}
-
+/* The narrated setting cue now uses the same in-scene banner as the event
+   narration. It stays above the characters and no longer consumes a second
+   plate beneath the scene. */
 .ksize-kid-screen[data-slide-kind="context_intro"] .ksize-bottom-area {
-  margin-top: 0;
+  margin-top: 2px;
 }
 
 .ksize-coin-icon,
@@ -617,6 +574,19 @@ body {
   height: 100%;
   max-height: none;
   object-fit: contain;
+}
+
+/* Keep the assigned furnished room visible through every Home/School dyad
+   introduction and rating page. The transparent layer preserves the original
+   characters, boxes, labels, and caption pixels exactly. */
+.ksize-image-wrap .ksize-rating-furnished-scene {
+  width: min(100%, 1180px, calc(52vh * 16 / 9));
+  flex: 0 0 auto;
+  margin: 0;
+}
+
+.ksize-rating-furnished-scene > .ksize-orange-outline-reference {
+  z-index: 2;
 }
 
 .ksize-orange-outline-reference {
@@ -3033,15 +3003,6 @@ body {
     max-height: 40px;
   }
 
-  .ksize-context-intro-cue {
-    margin-top: -4px;
-  }
-
-  .ksize-context-badge-large {
-    width: min(98%, 760px);
-    max-height: min(16vh, 132px);
-  }
-
   .ksize-setup-screen {
     padding: 22px 16px 26px;
   }
@@ -3168,6 +3129,10 @@ body {
 
   .ksize-image-stage.ksize-orange-outline-fix {
     width: min(100%, 1180px, 85.333vh);
+  }
+
+  .ksize-image-wrap .ksize-rating-furnished-scene {
+    width: min(100%, 1180px, calc(48vh * 16 / 9));
   }
 
   .ksize-rating-options {

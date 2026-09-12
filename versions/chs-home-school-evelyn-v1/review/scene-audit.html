@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Who Takes Care? — complete scene review</title>
+    <link rel="stylesheet" href="scene-audit.css?v=scene-audit-r2">
+  </head>
+  <body>
+    <main class="audit-shell">
+      <header class="audit-hero">
+        <div>
+          <p class="eyebrow">Private visual check</p>
+          <h1>Every unique Home and School scene</h1>
+          <p class="hero-copy">This viewer uses the exact room and character layers in the current draft. Exact duplicate pictures are hidden by default.</p>
+        </div>
+        <div class="hero-counts" aria-live="polite">
+          <strong data-summary>Loading scenes…</strong>
+          <span data-progress-summary></span>
+        </div>
+      </header>
+
+      <section class="audit-controls" aria-label="Scene filters">
+        <label><span>Context</span><select data-filter="context"><option value="all">Home and School</option></select></label>
+        <label><span>Pairing</span><select data-filter="condition"><option value="all">All pairings</option></select></label>
+        <label><span>Page</span><select data-filter="suffix"><option value="all">All picture pages</option></select></label>
+        <label><span>Variant</span><select data-filter="variant"><option value="all">A, B, C, and D</option></select></label>
+        <label><span>Color set</span><select data-filter="palette"><option value="all">All colors</option></select></label>
+        <label class="check-control"><input type="checkbox" data-filter="repaired"><span>Only repaired Help slides</span></label>
+        <label class="check-control"><input type="checkbox" data-filter="duplicates"><span>Include exact duplicates</span></label>
+      </section>
+
+      <section class="viewer-card" id="scene-viewer" aria-live="polite">
+        <div class="viewer-topline">
+          <div>
+            <p class="scene-position" data-position>Scene 0 of 0</p>
+            <h2 data-title>Loading…</h2>
+          </div>
+          <label class="review-check"><input type="checkbox" data-reviewed><span>No artifact noticed</span></label>
+        </div>
+
+        <div class="scene-frame" data-scene-frame>
+          <img class="scene-room" data-room alt="">
+          <img class="scene-foreground" data-foreground alt="">
+          <div class="scene-banner" data-banner hidden></div>
+        </div>
+
+        <div class="viewer-actions">
+          <button type="button" data-previous>← Previous</button>
+          <button type="button" class="contrast-button" data-transparency>Check transparency</button>
+          <button type="button" class="primary" data-next>Next →</button>
+        </div>
+
+        <dl class="scene-details">
+          <div><dt>Setting</dt><dd data-detail="context"></dd></div>
+          <div><dt>Pairing</dt><dd data-detail="condition"></dd></div>
+          <div><dt>Color</dt><dd data-detail="palette"></dd></div>
+          <div><dt>Slide</dt><dd data-detail="slide"></dd></div>
+          <div><dt>Visual variant</dt><dd data-detail="variant"></dd></div>
+          <div><dt>Trial</dt><dd data-detail="trial"></dd></div>
+        </dl>
+
+        <details class="file-details">
+          <summary>Asset details</summary>
+          <p><a data-open-foreground target="_blank" rel="noopener">Open character layer</a></p>
+          <p data-file-detail></p>
+        </details>
+      </section>
+
+      <section class="empty-state" data-empty hidden>
+        <h2>No scenes match these filters</h2>
+        <p>Change one of the filters above to continue reviewing.</p>
+      </section>
+
+      <p class="keyboard-note">Tip: use the left and right arrow keys to move through scenes.</p>
+    </main>
+    <script src="scene-audit.js?v=scene-audit-r2"></script>
+  </body>
+</html>

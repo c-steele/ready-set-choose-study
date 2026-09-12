@@ -9,7 +9,7 @@ const TEACHER_CLASSMATE_GENERATED_ROOT = "assets/teacher_classmate/generated/";
 const TEACHER_CLASSMATE_V78_REVISION_ROOT = "versions/chs-v78-teacher-classmate-evelyn-unique-roles/assets/teacher_classmate/generated/";
 const TEACHER_CLASSMATE_V78_DYAD_REVISION = /^dyads\/classmate-kid_0(?:1_tkc-deep-purple-a|2_tkc-deep-purple-b)\/slide_(?:0[3-9]|1[0-3])\.svg$/;
 const TEACHER_CLASSMATE_V78_TRIAL_REVISION = /^trials\/14(?:[ab]\/intro_04|[cd]\/intro_0[34]|[abcd]\/(?:hug|food|help)_screen_2)\.svg$/;
-const HOME_SCHOOL_ASSET_VERSION = "chs-home-school-evelyn-v1-r13";
+const HOME_SCHOOL_ASSET_VERSION = "chs-home-school-evelyn-v1-r14-preview-3";
 const HOME_SCHOOL_DESIGN_VERSION = "home_school_context_chs_candidate_v1";
 const HOME_SCHOOL_CONTEXT_SCRIPT_VERSION = "home_school_context_recipient_aware_v4";
 const HOME_SCHOOL_FURNISHED_VISUAL_VERSION = "home_school_furnished_palette_picture_v38";
@@ -1936,6 +1936,13 @@ function selectDyadChunk(manifest, request) {
   };
 }
 
+function setNarratorMouthPlaying(playing) {
+  const classes = document.body?.classList;
+  if (!classes) return;
+  if (playing) classes.add("ksize-audio-playing");
+  else classes.remove("ksize-audio-playing");
+}
+
 const audio = {
   voice: null,
   current: null,
@@ -1952,7 +1959,7 @@ const audio = {
   },
   stop() {
     this.token += 1;
-    document.body.classList.remove("ksize-audio-playing");
+    setNarratorMouthPlaying(false);
     if (this.current) {
       this.current.pause();
       this.current.currentTime = 0;
@@ -1963,21 +1970,29 @@ const audio = {
   playSpeech(text) {
     if (!useSyntheticSpeech || !("speechSynthesis" in window) || !text) return Promise.resolve(false);
     return new Promise((resolve) => {
+      const token = this.token;
       const utterance = new SpeechSynthesisUtterance(text);
       utterance.rate = 0.86;
       utterance.pitch = 1.08;
       utterance.volume = 1;
       if (this.voice) utterance.voice = this.voice;
-      document.body.classList.add("ksize-audio-playing");
+      utterance.addEventListener("start", () => {
+        if (token === this.token) setNarratorMouthPlaying(true);
+      }, { once: true });
       utterance.addEventListener("end", () => {
-        document.body.classList.remove("ksize-audio-playing");
+        if (token === this.token) setNarratorMouthPlaying(false);
         resolve(true);
       }, { once: true });
       utterance.addEventListener("error", () => {
-        document.body.classList.remove("ksize-audio-playing");
+        if (token === this.token) setNarratorMouthPlaying(false);
         resolve(false);
       }, { once: true });
-      window.speechSynthesis.speak(utterance);
+      try {
+        window.speechSynthesis.speak(utterance);
+      } catch {
+        if (token === this.token) setNarratorMouthPlaying(false);
+        resolve(false);
+      }
     });
   },
   play(text, options = {}) {
@@ -2021,31 +2036,45 @@ const audio = {
         fileAudio.webkitPreservesPitch = false;
       }
       this.current = fileAudio;
-      document.body.classList.add("ksize-audio-playing");
+      const isCurrentAudio = () => token === this.token && this.current === fileAudio;
+      const setMouthPlaying = (playing) => {
+        if (!isCurrentAudio()) return;
+        setNarratorMouthPlaying(playing);
+      };
+      let didStart = false;
       const reportPlaybackTime = () => {
-        if (token !== this.token) return;
+        if (!isCurrentAudio()) return;
         options.onTimeUpdate?.(fileAudio.currentTime, fileAudio.duration);
       };
-      fileAudio.addEventListener("play", () => {
-        options.onStart?.();
+      fileAudio.addEventListener("playing", () => {
+        if (!isCurrentAudio()) return;
+        setMouthPlaying(true);
+        if (!didStart) {
+          didStart = true;
+          options.onStart?.();
+        }
         reportPlaybackTime();
-      }, { once: true });
+      });
+      fileAudio.addEventListener("waiting", () => setMouthPlaying(false));
+      fileAudio.addEventListener("pause", () => setMouthPlaying(false));
+      fileAudio.addEventListener("abort", () => setMouthPlaying(false), { once: true });
+      fileAudio.addEventListener("emptied", () => setMouthPlaying(false));
       fileAudio.addEventListener("timeupdate", reportPlaybackTime);
       fileAudio.addEventListener("ended", () => {
-        document.body.classList.remove("ksize-audio-playing");
+        setMouthPlaying(false);
         options.onEnd?.();
         resolve(true);
       }, { once: true });
       fileAudio.addEventListener("error", async () => {
-        document.body.classList.remove("ksize-audio-playing");
-        if (token !== this.token) return resolve(false);
+        setMouthPlaying(false);
+        if (!isCurrentAudio()) return resolve(false);
         options.onFallback?.();
         options.onStart?.();
         resolve(await this.playSpeech(text));
       }, { once: true });
       fileAudio.play().catch(async () => {
-        document.body.classList.remove("ksize-audio-playing");
-        if (token !== this.token) return resolve(false);
+        setMouthPlaying(false);
+        if (!isCurrentAudio()) return resolve(false);
         options.onFallback?.();
         options.onStart?.();
         resolve(await this.playSpeech(text));
@@ -2208,14 +2237,12 @@ function audioSegmentsForNarrationLines(lines, sourceSegments = [], useContext =
   });
 }
 
-function contextBadgeSrc(context = activeStudyContext, { large = false } = {}) {
-  const spec = contextSpec(context);
-  return (large ? spec?.intro?.image?.src : spec?.badge?.src) || spec?.badge?.src || "";
+function contextBadgeSrc(context = activeStudyContext) {
+  return contextSpec(context)?.badge?.src || "";
 }
 
-function contextImageId(context = activeStudyContext, { intro = false } = {}) {
-  const spec = contextSpec(context);
-  return (intro ? spec?.intro?.image?.id : spec?.badge?.id) || spec?.badge?.id || null;
+function contextImageId(context = activeStudyContext) {
+  return contextSpec(context)?.badge?.id || null;
 }
 
 function contextAudioIdForText(text) {
@@ -2263,11 +2290,11 @@ function assertParticipantContextAudioCoverage(eventPlan, eventSuffix, context =
   );
 }
 
-function contextBadgeHtml({ large = false } = {}) {
-  const src = contextBadgeSrc(activeStudyContext, { large });
+function contextBadgeHtml() {
+  const src = contextBadgeSrc(activeStudyContext);
   if (!src) return "";
-  const alt = large ? contextSpec()?.intro?.image?.alt : contextSpec()?.badge?.alt;
-  return `<img class="ksize-context-badge${large ? " ksize-context-badge-large" : ""}" src="${escapeHtml(displayImageSrc(src))}" alt="${escapeHtml(alt || "Story context")}">`;
+  const alt = contextSpec()?.badge?.alt;
+  return `<img class="ksize-context-badge" src="${escapeHtml(displayImageSrc(src))}" alt="${escapeHtml(alt || "Story context")}">`;
 }
 
 function topHudHtml(storyNumber = null, storyTotal = null, { showContext = false } = {}) {
@@ -2297,6 +2324,22 @@ function furnishedSceneSpec(trial, image, context = activeStudyContext) {
   };
 }
 
+function followupForegroundSrc(chunk, slideOrSource) {
+  if (slideOrSource && typeof slideOrSource === "object" && slideOrSource.homeSchoolForegroundSrc) {
+    return slideOrSource.homeSchoolForegroundSrc;
+  }
+  const source = typeof slideOrSource === "string" ? slideOrSource : slideOrSource?.src;
+  const basename = String(source || "").split("?")[0].split("/").pop()?.replace(/\.svg$/i, ".png");
+  if (!chunk?.id || !basename) return "";
+  return `${HOME_SCHOOL_FURNISHED_FOREGROUND_ROOT}followups/${chunk.id}/${basename}`;
+}
+
+function furnishedFollowupSceneSpec(trial, chunk, slide, context = activeStudyContext) {
+  const foregroundSrc = followupForegroundSrc(chunk, slide);
+  if (!foregroundSrc) return null;
+  return furnishedSceneSpec(trial, { homeSchoolForegroundSrc: foregroundSrc }, context);
+}
+
 function furnishedImageLayersHtml(scene, { draggable = false } = {}) {
   if (!scene) return "";
   return `
@@ -2310,9 +2353,11 @@ function renderKidSlide({ trial = null, image, text, choices = [], overlayChoice
   const contextEvent = activeContextEventSpec(contextCondition);
   const furnishedScene = furnishedSceneSpec(trial, image);
   const contextOverlayText = activeStudyContext
-    ? (slideKind === "story"
-      ? contextEvent?.eventText || ""
-      : (slideKind === "response_choices" ? contextEvent?.questionText || "" : ""))
+    ? (slideKind === "context_intro"
+      ? text || contextIntroText()
+      : (slideKind === "story"
+        ? contextEvent?.eventText || ""
+        : (slideKind === "response_choices" ? contextEvent?.questionText || "" : "")))
     : "";
   const contextOverlayHtml = contextOverlayText
     ? `<div class="ksize-context-spoken-banner"${furnishedScene ? ` style="background:${escapeHtml(furnishedScene.accent)}"` : ""}>${escapeHtml(contextOverlayText)}</div>`
@@ -2340,7 +2385,6 @@ function renderKidSlide({ trial = null, image, text, choices = [], overlayChoice
       <section class="ksize-screen ksize-kid-screen" data-slide-kind="${escapeHtml(slideKind)}" data-context="${escapeHtml(activeStudyContext)}">
         ${topHudHtml(storyNumber, storyTotal)}
         ${imageBlock}
-        ${contextIntro ? `<div class="ksize-context-intro-cue">${contextBadgeHtml({ large: true })}</div>` : ""}
         ${showText && text ? `<div class="ksize-kid-text">${escapeHtml(text)}</div>` : ""}
         <div class="ksize-bottom-area">
           <div class="ksize-helper" aria-hidden="true">
@@ -2405,7 +2449,7 @@ function makeKidNode(jsPsych, { trial, block, suffix, image, text, audioSegments
       side_assignment: block.side || null,
       color_variant: block.color || null,
       story_order: storyNumber,
-      context_image_id: activeStudyContext ? contextImageId(activeStudyContext, { intro: contextIntro }) : null,
+      context_image_id: activeStudyContext ? contextImageId(activeStudyContext) : null,
       context_audio_id: contextAudioIds[0] || null,
       context_audio_ids: contextAudioIds.join(",") || null,
       context_intro_text: activeStudyContext ? contextIntroText() : null,
@@ -2810,15 +2854,26 @@ function makeFollowupTransitionNode(jsPsych, trial, chunk, storyNumber, storyTot
   };
 }
 
-function renderSlide({ chunk, slide, index, total, storyNumber = null, storyTotal = null }) {
+function renderSlide({ trial = null, chunk, slide, index, total, storyNumber = null, storyTotal = null }) {
   const options = OPTION_LABELS[slide.trait] || [];
   const needsOrangeOutlineFix = String(slide.src || "").split("?")[0] === ORANGE_SISTER_OUTLINE_FIX_TARGET;
-  const stimulusImage = needsOrangeOutlineFix
+  const furnishedScene = furnishedFollowupSceneSpec(trial, chunk, slide);
+  const furnishedOutlineReference = needsOrangeOutlineFix && furnishedScene
+    ? followupForegroundSrc(chunk, ORANGE_SISTER_OUTLINE_FIX_REFERENCE)
+    : "";
+  const stimulusImage = furnishedScene
+    ? `<div class="ksize-image-stage ksize-rating-furnished-scene ksize-furnished-scene" data-palette="${escapeHtml(furnishedScene.paletteSlug)}" data-visual-version="${escapeHtml(furnishedScene.visualVersion)}">
+        ${furnishedImageLayersHtml(furnishedScene)}
+        ${furnishedOutlineReference
+          ? `<img class="ksize-furnished-foreground ksize-orange-outline-reference" src="${escapeHtml(displayImageSrc(furnishedOutlineReference))}" alt="" aria-hidden="true">`
+          : ""}
+      </div>`
+    : (needsOrangeOutlineFix
     ? `<div class="ksize-image-stage ksize-orange-outline-fix">
         <img src="${escapeHtml(displayImageSrc(slide.src))}" alt="">
         <img class="ksize-orange-outline-reference" src="${escapeHtml(displayImageSrc(ORANGE_SISTER_OUTLINE_FIX_REFERENCE))}" alt="" aria-hidden="true">
       </div>`
-    : `<img src="${escapeHtml(displayImageSrc(slide.src))}" alt="">`;
+    : `<img src="${escapeHtml(displayImageSrc(slide.src))}" alt="">`);
   const buttons = slide.kind === "response"
     ? `<div class="ksize-rating-options">
         ${options.map((option, idx) => `
@@ -2831,7 +2886,7 @@ function renderSlide({ chunk, slide, index, total, storyNumber = null, storyTota
     : "";
   return `
     <main class="ksize-shell">
-      <section class="ksize-screen" data-slide-kind="${escapeHtml(slide.kind)}">
+      <section class="ksize-screen" data-slide-kind="${escapeHtml(slide.kind)}" data-context="${escapeHtml(activeStudyContext)}">
         ${topHudHtml(storyNumber, storyTotal)}
         ${slide.kind === "response"
           ? `<div class="ksize-rating-focus">${escapeHtml(ratingFocusLabel(chunk))}</div>`
@@ -2869,12 +2924,12 @@ function renderSlide({ chunk, slide, index, total, storyNumber = null, storyTota
   `;
 }
 
-function makeSlideNode(jsPsych, chunk, slide, index, total, storyNumber = null, storyTotal = null) {
+function makeSlideNode(jsPsych, trial, chunk, slide, index, total, storyNumber = null, storyTotal = null) {
   let replayCount = 0;
   let audioPlaybackOrLoadFailure = false;
   return {
     type: jsPsychHtmlButtonResponse,
-    stimulus: renderSlide({ chunk, slide, index, total, storyNumber, storyTotal }),
+    stimulus: renderSlide({ trial, chunk, slide, index, total, storyNumber, storyTotal }),
     choices: [],
     data: {
       slide_kind: slide.kind,
@@ -2902,6 +2957,13 @@ function makeSlideNode(jsPsych, chunk, slide, index, total, storyNumber = null, 
       trait_order: slide.trait ? traitOrderForChunk(chunk).indexOf(slide.trait) + 1 : null,
       followup_schedule: activeFollowupSchedule,
       image_src: slide.src,
+      context_foreground_src: activeStudyContext ? followupForegroundSrc(chunk, slide) : null,
+      context_background_src: activeStudyContext
+        ? (activeStudyContext === "HOME"
+          ? trial?.homeSchoolFurnished?.homeBackground || null
+          : trial?.homeSchoolFurnished?.schoolBackground || null)
+        : null,
+      context_palette_slug: activeStudyContext ? trial?.homeSchoolFurnished?.paletteSlug || null : null,
       story_number: storyNumber,
       story_total: storyTotal,
       facilitator_script: (slide.kind === "response"
@@ -3231,8 +3293,14 @@ async function main() {
   currentSessionParams.ratingFocalRoles = ratingFocalRoles;
   currentSessionParams.ratingFocalRolesUnique = ratingFocalRolesUnique;
   const includePairIntros = true;
-  const allDyadSlides = allDyadChunks.flatMap((chunk) =>
-    orderedDyadSlides(chunk, { includeIntro: includePairIntros }).map((slide) => ({ chunk, slide }))
+  const allDyadSlides = dyadGroupsByTrial.flatMap((group, trialIndex) =>
+    group.flatMap((chunk) =>
+      orderedDyadSlides(chunk, { includeIntro: includePairIntros }).map((slide) => ({
+        chunk,
+        slide,
+        trial: eventPlan[trialIndex] || null,
+      }))
+    )
   );
   const selectedPartOrder = selectPartOrder(requestedSeed, requestedPartOrder);
   const resolvedPartOrder = selectedRatingMode === "one-after-story"
@@ -3255,10 +3323,15 @@ async function main() {
       })
     : [];
   const imagePaths = [
-    ...(selectedContext
-      ? [contextBadgeSrc(selectedContext), contextBadgeSrc(selectedContext, { large: true })].map(displayImageSrc)
-      : []),
-    ...allDyadSlides.map(({ slide }) => displayImageSrc(slide.src)),
+    ...(selectedContext ? [displayImageSrc(contextBadgeSrc(selectedContext))] : []),
+    ...allDyadSlides.flatMap(({ chunk, slide }) => {
+      if (!selectedContext) return [displayImageSrc(slide.src)];
+      const paths = [displayImageSrc(followupForegroundSrc(chunk, slide))];
+      if (String(slide.src || "").split("?")[0] === ORANGE_SISTER_OUTLINE_FIX_TARGET) {
+        paths.push(displayImageSrc(followupForegroundSrc(chunk, ORANGE_SISTER_OUTLINE_FIX_REFERENCE)));
+      }
+      return paths;
+    }),
     ...eventPlan.flatMap((trial) =>
       [
         introImageFixes[`${trial.id}|3`]
@@ -3426,10 +3499,17 @@ async function main() {
   );
   const ratingNodes = selectedRatingMode === "one-after-story"
     ? []
-    : dyadGroupsByTrial.flatMap((group) =>
+    : dyadGroupsByTrial.flatMap((group, groupIndex) =>
         group.flatMap((chunk) =>
           orderedDyadSlides(chunk, { includeIntro: includePairIntros }).map((slide) => {
-            const node = makeSlideNode(jsPsych, chunk, slide, dyadSlideIndex, allDyadSlides.length);
+            const node = makeSlideNode(
+              jsPsych,
+              eventPlan[groupIndex] || null,
+              chunk,
+              slide,
+              dyadSlideIndex,
+              allDyadSlides.length
+            );
             dyadSlideIndex += 1;
             return node;
           })
@@ -3444,6 +3524,7 @@ async function main() {
           ...orderedDyadSlides(chunk, { includeIntro: true }).map((slide) => {
             const node = makeSlideNode(
               jsPsych,
+              trial,
               chunk,
               slide,
               dyadSlideIndex,

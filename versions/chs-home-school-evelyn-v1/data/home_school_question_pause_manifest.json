@@ -1,7 +1,10 @@
 {
   "schemaVersion": 1,
   "candidateId": "chs-home-school-evelyn-v1",
-  "status": "complete",
+  "status": "inactive_historical",
+  "active": false,
+  "supersededOn": "2026-09-12",
+  "supersededReason": "The researcher rejected the inserted 450 ms gap. Runtime mappings use the original NaturalReaders recordings and their natural comma timing.",
   "generatedOn": "2026-09-11T02:25:25.218Z",
   "targetPauseSeconds": 0.45,
   "sourceAudioRoot": "assets/home_school/generated/audio",
