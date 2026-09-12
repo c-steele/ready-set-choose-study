@@ -29,7 +29,7 @@
         <div>
           <p class="review-eyebrow">Researcher preview</p>
           <h1>Study review board</h1>
-          <p class="review-subtitle">Preview the same 96 assignments in the Zoom and CHS audio versions, without waiting for a random assignment.</p>
+          <p class="review-subtitle">Preview the same 96 assignments in the Zoom and CHS audio versions, without waiting for a random assignment. Every run uses six different character colors.</p>
         </div>
         <div class="review-progress-card" aria-live="polite">
           <strong data-progress-count>0 / 96</strong>
@@ -80,8 +80,8 @@
           </select>
         </label>
         <label>
-          <span>Visual rendition</span>
-          <select data-filter="variant">
+          <span>Session color plan</span>
+          <select data-filter="visual">
             <option value="all">A, B, C, and D</option>
             <option value="a">A</option>
             <option value="b">B</option>
@@ -112,7 +112,7 @@
         <h2></h2>
         <dl>
           <div><dt>Event</dt><dd data-field="event"></dd></div>
-          <div><dt>Visuals</dt><dd data-field="variant"></dd></div>
+          <div><dt>Colors</dt><dd data-field="visual"></dd></div>
           <div><dt>Pair plan</dt><dd data-field="schedule"></dd></div>
         </dl>
         <details class="review-pairings">
@@ -123,6 +123,6 @@
       </article>
     </template>
 
-    <script src="review.js?v=ftc-rendition-review-v7"></script>
+    <script src="review.js?v=ftc-rendition-review-v8-unique-colors"></script>
   </body>
 </html>

@@ -72,6 +72,15 @@
     };
   }
 
+  function balancedPlansForParticipant(participantId, roleValue) {
+    const normalizedId = normalizeParticipantId(participantId);
+    const ratingPlanCount = roleValue === "family" ? 4 : 2;
+    return {
+      ratingPlan: assignmentApi.stableHash(`${normalizedId}:one-pair-schedule`) % ratingPlanCount + 1,
+      visualPlan: assignmentApi.stableHash(`${normalizedId}:visual-plan`) % 4 + 1,
+    };
+  }
+
   function timestampToken(now = Date.now()) {
     return new Date(now).toISOString().replace(/\D/g, "").slice(0, 17);
   }
@@ -104,8 +113,15 @@
 
     const mode = selectedMode(modeValue);
     const assignment = assignmentForParticipant(normalizedId);
+    const balancedPlans = balancedPlansForParticipant(normalizedId, assignment.condition.role.value);
     const sessionId = makeSessionId(normalizedId, mode, now);
-    const url = new URL("index.html", baseHref);
+    const usesBalancedCandidate = mode.value === "teacher-classmate";
+    const url = new URL(
+      usesBalancedCandidate
+        ? "../versions/chs-v80-balanced-assignment/index.html"
+        : "../index.html",
+      baseHref,
+    );
     const values = {
       facilitator: "1",
       facilitatorChild: "1",
@@ -128,6 +144,14 @@
       showDataStatus: "1",
       exportFormat: "csv",
       previewIndex: "0",
+      ...(usesBalancedCandidate ? {
+        primaryCell: assignment.condition.cell + 1,
+        ratingPlan: balancedPlans.ratingPlan,
+        visualPlan: balancedPlans.visualPlan,
+        assignmentId: `ZOOM-${safeKey(normalizedId)}-C${String(assignment.condition.cell + 1).padStart(2, "0")}-RP${balancedPlans.ratingPlan}-VP${balancedPlans.visualPlan}`,
+        assignmentMethod: "deterministic_participant_hash",
+        allocatorVersion: "zoom-balanced-unique-colors-v1",
+      } : {}),
     };
     Object.entries(values).forEach(([key, value]) => url.searchParams.set(key, value));
     return {
@@ -148,6 +172,7 @@
     selectedMode,
     partOrderForKey,
     assignmentForParticipant,
+    balancedPlansForParticipant,
     makeSessionId,
     makeAutomaticParticipantId,
     buildStudyUrl,

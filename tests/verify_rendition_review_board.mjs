@@ -11,7 +11,7 @@ const css = fs.readFileSync(path.join(reviewRoot, "review.css"), "utf8");
 const source = fs.readFileSync(path.join(reviewRoot, "review.js"), "utf8");
 
 assert.match(html, /Study review board/);
-assert.match(html, /review\.js\?v=ftc-rendition-review-v7/);
+assert.match(html, /review\.js\?v=ftc-rendition-review-v8-unique-colors/);
 assert.match(html, /review\.css\?v=ftc-rendition-review-v4/);
 assert.match(html, /data\.html\?v=ftc-browser-dataset-v1/);
 assert.match(html, /View \/ download data/);
@@ -22,6 +22,8 @@ assert.doesNotMatch(`${html}\n${source}`, /still need new Evelyn|pending Evelyn 
 assert.match(html, /data-preview-mode/);
 assert.match(html, /Only show unchecked/);
 assert.match(html, /See who is rated after each story/);
+assert.match(html, /Every run uses six different character colors/);
+assert.match(html, /Session color plan/);
 assert.match(css, /\.review-grid/);
 assert.doesNotMatch(source, /location\.replace|location\.assign/);
 
@@ -35,11 +37,11 @@ const sandbox = {
 vm.runInNewContext(source, sandbox, { filename: "review.js" });
 const api = sandbox.window.FTCRenditionReview;
 assert.ok(api, "review API should be exported");
-assert.equal(api.REVIEW_VERSION, "ftc-rendition-review-v4");
+assert.equal(api.REVIEW_VERSION, "ftc-rendition-review-v8-unique-colors");
 assert.deepEqual(Object.keys(api.PREVIEW_MODES), ["zoom", "chs"]);
 
 const entries = Array.from(api.renditionEntries());
-assert.equal(entries.length, 96, "review board should enumerate all 96 forced rendition combinations");
+assert.equal(entries.length, 96, "review board should enumerate all 96 balanced color-plan combinations");
 assert.equal(new Set(entries.map((entry) => entry.id)).size, entries.length, "rendition IDs must be unique");
 
 const roleCounts = Object.fromEntries(api.ROLE_SETS.map((role) => [
@@ -54,17 +56,47 @@ function extractSchedule(sourceText, constantName) {
   return vm.runInNewContext(`(${match[1]})`);
 }
 
-const appSource = fs.readFileSync(path.join(reviewRoot, "app.js"), "utf8");
+function plain(value) {
+  return JSON.parse(JSON.stringify(value));
+}
+
+const v80Root = path.join(root, "versions", "chs-v80-balanced-assignment");
+const appSource = fs.readFileSync(path.join(v80Root, "app.js"), "utf8");
+const v80ReviewSource = fs.readFileSync(path.join(v80Root, "review.js"), "utf8");
+const v80Sandbox = { window: {}, document: null, URL };
+vm.runInNewContext(v80ReviewSource, v80Sandbox, { filename: "v80-review.js" });
+const v80Api = v80Sandbox.window.FTCStandardV80Review;
+assert.ok(v80Api, "v80 review API should be exported");
+
+const exactPaletteMatch = appSource.match(
+  /const EXACT_VISUAL_PALETTES = Object\.freeze\((\{[\s\S]*?\})\);\n\nfunction trialExactColor/,
+);
+assert.ok(exactPaletteMatch, "exact rendered palette map should be present in the v80 runtime");
+const exactVisualPalettes = vm.runInNewContext(`(${exactPaletteMatch[1]})`);
+
 assert.deepEqual(
-  JSON.parse(JSON.stringify(api.ONE_PAIR_SCRIPT_SCHEDULES)),
-  JSON.parse(JSON.stringify(extractSchedule(appSource, "ONE_PAIR_SCRIPT_SCHEDULES"))),
+  plain(api.ONE_PAIR_SCRIPT_SCHEDULES),
+  plain(extractSchedule(appSource, "ONE_PAIR_SCRIPT_SCHEDULES")),
   "review-board woman/man pair plans must match the study runtime",
 );
 assert.deepEqual(
-  JSON.parse(JSON.stringify(api.FAMILY_ONE_PAIR_SCRIPT_SCHEDULES)),
-  JSON.parse(JSON.stringify(extractSchedule(appSource, "FAMILY_ONE_PAIR_SCRIPT_SCHEDULES"))),
+  plain(api.FAMILY_ONE_PAIR_SCRIPT_SCHEDULES),
+  plain(extractSchedule(appSource, "FAMILY_ONE_PAIR_SCRIPT_SCHEDULES")),
   "review-board family pair plans must match the study runtime",
 );
+
+for (const role of api.ROLE_SETS) {
+  const v80Role = Array.from(v80Api.ROLE_SETS).find((candidate) => candidate.value === role.value);
+  assert.ok(v80Role, `${role.value} should exist in the v80 runtime review`);
+  assert.deepEqual(plain(api.ROLE_CONDITIONS[role.value]), plain(v80Role.conditions));
+  for (const condition of api.ROLE_CONDITIONS[role.value]) {
+    const variants = Array.from(v80Api.SESSION_VISUAL_PLANS[role.value], (plan) => plan[condition]);
+    assert.deepEqual([...variants].sort(), ["a", "b", "c", "d"],
+      `${role.value} ${condition} should receive every rendition once across the four color plans`);
+  }
+}
+
+const v80Entries = Array.from(v80Api.renditionEntries());
 
 for (const entry of entries) {
   assert.equal(
@@ -80,8 +112,8 @@ for (const entry of entries) {
     "20260907123456789-ABCD1234",
   );
   const audioUrl = api.buildStudyUrl(entry, sandbox.window.location.href, "chs");
-  assert.equal(zoomUrl.pathname, "/screen-share-study/index.html");
-  assert.equal(audioUrl.pathname, "/versions/chs-v78-teacher-classmate-evelyn-unique-roles/index.html");
+  assert.equal(zoomUrl.pathname, "/versions/chs-v80-balanced-assignment/index.html");
+  assert.equal(audioUrl.pathname, "/versions/chs-v80-balanced-assignment/index.html");
 
   for (const url of [zoomUrl, audioUrl]) {
     assert.equal(url.searchParams.get("researcherTools"), "1");
@@ -91,7 +123,13 @@ for (const entry of entries) {
     assert.equal(url.searchParams.get("roleSet"), entry.role);
     assert.equal(url.searchParams.get("set"), entry.set);
     assert.equal(url.searchParams.get("event"), entry.event);
-    assert.equal(url.searchParams.get("variant"), entry.variant);
+    assert.equal(url.searchParams.has("variant"), false, "a whole-session color plan must never force one rendition letter");
+    assert.equal(url.searchParams.get("primaryCell"), String(api.canonicalPrimaryCell(entry.role, entry.event)));
+    assert.equal(url.searchParams.get("ratingPlan"), String(entry.scheduleIndex + 1));
+    assert.equal(url.searchParams.get("visualPlan"), String(entry.visualPlan));
+    assert.match(url.searchParams.get("assignmentId") || "", /^REVIEW-FTC-C\d{2}-RP\d-VP\d$/);
+    assert.equal(url.searchParams.get("assignmentMethod"), "review_preview_only");
+    assert.equal(url.searchParams.get("allocatorVersion"), "review-preview-v2-unique-colors");
     assert.equal(url.searchParams.get("seed"), entry.seed);
   }
   assert.equal(zoomUrl.searchParams.get("facilitator"), "1");
@@ -101,14 +139,14 @@ for (const entry of entries) {
   assert.equal(zoomUrl.searchParams.get("previewIndex"), "0");
   assert.equal(zoomUrl.searchParams.get("studyVersion"), "teacher-classmate-preview");
   assert.equal(zoomUrl.searchParams.get("pid"), entry.seed);
-  assert.equal(zoomUrl.searchParams.get("STUDY_ID"), "ftc-rendition-review-v4");
+  assert.equal(zoomUrl.searchParams.get("STUDY_ID"), "ftc-rendition-review-v8-unique-colors");
   assert.equal(
     uniqueZoomUrl.searchParams.get("session_id"),
     `review-zoom-${entry.id}-20260907123456789-ABCD1234`,
     "each clicked Zoom rendition should be able to receive a distinct run ID",
   );
   assert.equal(uniqueZoomUrl.searchParams.get("seed"), entry.seed,
-    "a unique run ID must not change the forced rendition seed");
+    "a unique run ID must not change the balanced plan seed");
 
   assert.equal(audioUrl.searchParams.get("previewIndex"), "4");
   for (const omittedParam of [
@@ -126,6 +164,27 @@ for (const entry of entries) {
   }
   assert.equal(zoomUrl.searchParams.get("seed"), audioUrl.searchParams.get("seed"),
     `${entry.id} should use the same randomization seed in both modes`);
+
+  const v80Entry = v80Entries.find((candidate) =>
+    candidate.role === entry.role
+      && candidate.event === entry.event
+      && candidate.ratingPlan === entry.scheduleIndex + 1
+      && candidate.visualPlan === entry.visualPlan
+  );
+  assert.ok(v80Entry, `${entry.id} should map to one canonical v80 plan`);
+  const variants = Array.from(api.ROLE_CONDITIONS[entry.role], (condition) => v80Entry.visualPlanMap[condition]);
+  const exactColors = Array.from(api.ROLE_CONDITIONS[entry.role], (condition) => {
+    const variant = v80Entry.visualPlanMap[condition];
+    const palettes = exactVisualPalettes[condition];
+    assert.ok(palettes, `${condition} should have an exact rendered palette mapping`);
+    return palettes[["b", "d"].includes(variant) ? 1 : 0];
+  });
+  assert.equal(new Set(exactColors).size, 6, `${entry.id} should use six unique exact character colors`);
+  assert.equal(variants.filter((variant) => ["a", "b"].includes(variant)).length, 3,
+    `${entry.id} should use three left-side layouts`);
+  assert.equal(variants.filter((variant) => ["c", "d"].includes(variant)).length, 3,
+    `${entry.id} should use three right-side layouts`);
+
   assert.deepEqual(
     JSON.parse(JSON.stringify(entry.pairings)),
     JSON.parse(JSON.stringify(Object.fromEntries(
@@ -178,5 +237,5 @@ console.log(JSON.stringify({
   totalRenditions: entries.length,
   roleCounts,
   events: Array.from(api.EVENTS),
-  variants: Array.from(api.VARIANTS),
+  visualPlans: Array.from(api.VISUAL_PLANS, (plan) => plan.label),
 }, null, 2));

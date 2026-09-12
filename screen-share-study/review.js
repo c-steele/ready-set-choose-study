@@ -1,7 +1,7 @@
 (function installRenditionReview(globalObject, documentObject) {
   "use strict";
 
-  const REVIEW_VERSION = "ftc-rendition-review-v4";
+  const REVIEW_VERSION = "ftc-rendition-review-v8-unique-colors";
   const STORAGE_KEY = `${REVIEW_VERSION}:checked`;
   const MODE_STORAGE_KEY = `${REVIEW_VERSION}:mode`;
   const PREVIEW_MODES = Object.freeze({
@@ -28,7 +28,12 @@
     Object.freeze({ value: "family", label: "Family–teacher", set: "family", scheduleCount: 4 }),
   ]);
   const EVENTS = Object.freeze(["HUG", "FOOD", "HELP"]);
-  const VARIANTS = Object.freeze(["a", "b", "c", "d"]);
+  const VISUAL_PLANS = Object.freeze([
+    Object.freeze({ value: "a", number: 1, label: "A" }),
+    Object.freeze({ value: "b", number: 2, label: "B" }),
+    Object.freeze({ value: "c", number: 3, label: "C" }),
+    Object.freeze({ value: "d", number: 4, label: "D" }),
+  ]);
   const ROLE_CONDITIONS = Object.freeze({
     woman: Object.freeze(["MOM-TEACHER", "SISTER-FRIEND", "BESTFRIEND-FRIEND", "TEACHER-FRIEND", "MOM-SISTER", "TEACHER-CLASSMATE"]),
     man: Object.freeze(["DAD-TEACHER", "BROTHER-FRIEND", "BESTFRIEND-FRIEND", "TEACHER-FRIEND", "DAD-BROTHER", "TEACHER-CLASSMATE"]),
@@ -115,8 +120,8 @@
     return stableHash(`${seed}:one-pair-schedule`) % scheduleCount;
   }
 
-  function seedForRendition(role, event, variant, scheduleIndex, scheduleCount) {
-    const stem = `REVIEW-${role.toUpperCase()}-${event}-${variant.toUpperCase()}-P${scheduleIndex + 1}`;
+  function seedForRendition(role, event, visualPlanKey, scheduleIndex, scheduleCount) {
+    const stem = `REVIEW-${role.toUpperCase()}-${event}-COLOR-${visualPlanKey.toUpperCase()}-P${scheduleIndex + 1}`;
     for (let suffix = 0; suffix < 10000; suffix += 1) {
       const seed = `${stem}-${suffix}`;
       if (scheduleIndexForSeed(seed, scheduleCount) === scheduleIndex) return seed;
@@ -127,16 +132,18 @@
   function renditionEntries() {
     return ROLE_SETS.flatMap((role) =>
       EVENTS.flatMap((event) =>
-        VARIANTS.flatMap((variant) =>
+        VISUAL_PLANS.flatMap((visualPlan) =>
           Array.from({ length: role.scheduleCount }, (_, scheduleIndex) => {
-            const id = `${role.value}-${event.toLowerCase()}-${variant}-pair-${scheduleIndex + 1}`;
+            const id = `${role.value}-${event.toLowerCase()}-color-${visualPlan.value}-pair-${scheduleIndex + 1}`;
             return Object.freeze({
               id,
               role: role.value,
               roleLabel: role.label,
               set: role.set,
               event,
-              variant,
+              visualPlan: visualPlan.number,
+              visualPlanKey: visualPlan.value,
+              visualPlanLabel: visualPlan.label,
               scheduleIndex,
               scheduleCount: role.scheduleCount,
               pairings: Object.freeze(Object.fromEntries(
@@ -145,12 +152,18 @@
                   schedulesForRole(role.value)[scheduleIndex][condition],
                 ])
               )),
-              seed: seedForRendition(role.value, event, variant, scheduleIndex, role.scheduleCount),
+              seed: seedForRendition(role.value, event, visualPlan.value, scheduleIndex, role.scheduleCount),
             });
           })
         )
       )
     );
+  }
+
+  function canonicalPrimaryCell(role, event) {
+    const roleIndex = ROLE_SETS.findIndex((candidate) => candidate.value === role);
+    const eventIndex = EVENTS.indexOf(event);
+    return roleIndex < 0 || eventIndex < 0 ? null : eventIndex * ROLE_SETS.length + roleIndex + 1;
   }
 
   function makeLaunchToken(now = Date.now(), cryptoObject = globalObject.crypto) {
@@ -174,18 +187,21 @@
   function buildStudyUrl(entry, baseHref, requestedMode = "zoom", launchToken = "") {
     const mode = PREVIEW_MODES[requestedMode];
     if (!mode) throw new Error(`Unknown review mode: ${requestedMode}`);
-    const url = new URL(
-      requestedMode === "chs"
-        ? "../versions/chs-v78-teacher-classmate-evelyn-unique-roles/index.html"
-        : "index.html",
-      baseHref,
-    );
+    const url = new URL("../versions/chs-v80-balanced-assignment/index.html", baseHref);
+    const primaryCell = canonicalPrimaryCell(entry.role, entry.event);
+    const ratingPlan = entry.scheduleIndex + 1;
+    const assignmentId = `REVIEW-FTC-C${String(primaryCell).padStart(2, "0")}-RP${ratingPlan}-VP${entry.visualPlan}`;
     const commonValues = {
       seed: entry.seed,
       roleSet: entry.role,
       set: entry.set,
       event: entry.event,
-      variant: entry.variant,
+      primaryCell,
+      ratingPlan,
+      visualPlan: entry.visualPlan,
+      assignmentId,
+      assignmentMethod: "review_preview_only",
+      allocatorVersion: "review-preview-v2-unique-colors",
       ratingMode: "one-after-story",
       syntheticSpeech: "0",
       researcherTools: "1",
@@ -227,7 +243,7 @@
     PREVIEW_MODES,
     ROLE_SETS,
     EVENTS,
-    VARIANTS,
+    VISUAL_PLANS,
     ROLE_CONDITIONS,
     ONE_PAIR_SCRIPT_SCHEDULES,
     FAMILY_ONE_PAIR_SCRIPT_SCHEDULES,
@@ -237,6 +253,7 @@
     scheduleIndexForSeed,
     seedForRendition,
     renditionEntries,
+    canonicalPrimaryCell,
     makeLaunchToken,
     buildStudyUrl,
     reviewCheckKey,
@@ -311,7 +328,7 @@
   function matchesFilters(entry) {
     if (filters.role.value !== "all" && entry.role !== filters.role.value) return false;
     if (filters.event.value !== "all" && entry.event !== filters.event.value) return false;
-    if (filters.variant.value !== "all" && entry.variant !== filters.variant.value) return false;
+    if (filters.visual.value !== "all" && entry.visualPlanKey !== filters.visual.value) return false;
     if (filters.unfinished.checked && checks[reviewCheckKey(activeMode, entry.id)]) return false;
     return true;
   }
@@ -347,9 +364,9 @@
       card.classList.toggle("is-reviewed", Boolean(checks[checkKey]));
       card.classList.toggle("is-audio-mode", activeMode === "chs");
       card.querySelector(".review-role").textContent = `${entry.roleLabel} role set`;
-      card.querySelector("h2").textContent = `${entry.event[0]}${entry.event.slice(1).toLowerCase()} · Rendition ${entry.variant.toUpperCase()}`;
+      card.querySelector("h2").textContent = `${entry.event[0]}${entry.event.slice(1).toLowerCase()} · Color plan ${entry.visualPlanLabel}`;
       card.querySelector('[data-field="event"]').textContent = entry.event[0] + entry.event.slice(1).toLowerCase();
-      card.querySelector('[data-field="variant"]').textContent = entry.variant.toUpperCase();
+      card.querySelector('[data-field="visual"]').textContent = `${entry.visualPlanLabel} · six different colors`;
       card.querySelector('[data-field="schedule"]').textContent = `${entry.scheduleIndex + 1} of ${entry.scheduleCount}`;
       const pairingList = card.querySelector(".review-pairing-list");
       Object.entries(entry.pairings).forEach(([condition, scriptKey]) => {
