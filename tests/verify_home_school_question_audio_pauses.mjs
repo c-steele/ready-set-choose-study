@@ -13,6 +13,7 @@ const ffmpeg = process.env.FTC_FFMPEG_PATH || "ffmpeg";
 const pauseManifest = JSON.parse(fs.readFileSync(path.join(candidateDataRoot, "home_school_question_pause_manifest.json"), "utf8"));
 const activeAudio = JSON.parse(fs.readFileSync(path.join(candidateDataRoot, "home_school_audio_manifest.json"), "utf8"));
 const contextManifest = JSON.parse(fs.readFileSync(path.join(candidateDataRoot, "home_school_context_manifest.json"), "utf8"));
+const contextFirstReceipt = JSON.parse(fs.readFileSync(path.join(candidateDataRoot, "context_first_question_audio_import_receipt.json"), "utf8"));
 
 function sha256(bytes) {
   return createHash("sha256").update(bytes).digest("hex");
@@ -66,8 +67,10 @@ assert.equal(contextManifest.questionSettingPauseSeconds, undefined);
 
 const specs = questionSpecs();
 const activeByText = new Map(activeAudio.lines.map((line) => [line.text, line]));
-const historicalByText = new Map(pauseManifest.clips.map((clip) => [clip.text, clip]));
+const contextFirstByOutput = new Map(contextFirstReceipt.clips.map((clip) => [clip.output, clip]));
 assert.equal(specs.length, 24);
+assert.equal(contextFirstReceipt.clipCount, 24);
+assert.equal(contextFirstReceipt.clips.length, 24);
 assert.equal(new Set(specs.map((spec) => spec.questionText)).size, 24);
 assert.deepEqual(
   Object.fromEntries(["HOME", "SCHOOL"].map((context) => [context, specs.filter((spec) => spec.context === context).length])),
@@ -78,51 +81,67 @@ assert.deepEqual(
   { KID: 6, MOM: 6, DAD: 6, TEACHER: 6 },
 );
 
-for (const spec of specs) {
-  assert.match(spec.questionText, /, at the kid's (?:home|school)\?$/);
-  const clip = historicalByText.get(spec.questionText);
-  const active = activeByText.get(spec.questionText);
-  assert.ok(clip, `Missing historical pause record for ${spec.questionText}`);
-  assert.ok(active, `Missing active audio record for ${spec.questionText}`);
-  assert.equal(spec.questionAudio, clip.source, `${clip.id} context must use the untouched NaturalReaders source`);
-  assert.equal(active.output, clip.source, `${clip.id} active audio must use the untouched NaturalReaders source`);
-  assert.equal(active.bytes, clip.sourceBytes);
-  assert.equal(active.durationSeconds, clip.sourceDurationSeconds);
-  assert.equal(active.sha256, clip.sourceSha256);
-  assert.equal(active.audioEdit, undefined);
-  assert.equal(active.sourceOutput, undefined);
-  assert.ok(!active.output.startsWith(`${derivedRoot}/`));
-
+// Keep both the untouched context-last source recordings and the inactive
+// 450 ms derivatives verifiable as rollback evidence. Neither is active in r15.
+for (const clip of pauseManifest.clips) {
   const sourceBytes = fs.readFileSync(path.join(root, clip.source));
   assert.equal(sourceBytes.length, clip.sourceBytes);
   assert.equal(sha256(sourceBytes), clip.sourceSha256);
   const sourceSilences = detectedSilences(path.join(root, clip.source));
-  assert.equal(
-    sourceSilences.filter((silence) =>
-      silence.start > 0.3
-      && silence.end < clip.sourceDurationSeconds - 0.3
-      && silence.duration >= 0.40
-    ).length,
-    0,
-    `${clip.id} source must not contain an artificial pause of 400 ms or longer`,
-  );
   const reviewedBoundary = sourceSilences.find((silence) =>
     Math.abs(silence.start - clip.boundary.silenceStartSeconds) <= 0.002
     && Math.abs(silence.end - clip.boundary.silenceEndSeconds) <= 0.002
   );
-  assert.ok(reviewedBoundary, `${clip.id} natural comma boundary must match the reviewed source boundary`);
-  assert.ok(reviewedBoundary.duration >= 0.05 && reviewedBoundary.duration <= 0.08);
+  assert.ok(reviewedBoundary, `${clip.id} historical comma boundary must still match its receipt`);
 
   const derivativeBytes = fs.readFileSync(path.join(root, clip.output));
   assert.equal(derivativeBytes.length, clip.bytes, `${clip.id} rollback derivative byte count drifted`);
   assert.equal(sha256(derivativeBytes), clip.sha256, `${clip.id} rollback derivative hash drifted`);
 }
 
+for (const spec of specs) {
+  assert.match(spec.questionText, new RegExp(`^At the kid's ${spec.context.toLowerCase()}, who will `));
+  const active = activeByText.get(spec.questionText);
+  assert.ok(active, `Missing active audio record for ${spec.questionText}`);
+  const clip = contextFirstByOutput.get(active.output);
+  assert.ok(clip, `Missing r15 context-first receipt record for ${spec.questionText}`);
+  assert.equal(spec.questionAudio, clip.output);
+  assert.equal(active.output, clip.output);
+  assert.equal(active.bytes, clip.bytes);
+  assert.equal(active.durationSeconds, clip.durationSeconds);
+  assert.equal(active.sha256, clip.sha256);
+  assert.equal(active.questionRevision, "r15-context-first");
+  assert.equal(active.audioEdit, undefined);
+  assert.equal(active.sourceOutput, undefined);
+  assert.ok(!active.output.startsWith(`${derivedRoot}/`));
+
+  const sourceBytes = fs.readFileSync(path.join(root, clip.output));
+  assert.equal(sourceBytes.length, clip.bytes);
+  assert.equal(sha256(sourceBytes), clip.sha256);
+  const sourceSilences = detectedSilences(path.join(root, clip.output));
+  assert.equal(
+    sourceSilences.filter((silence) =>
+      silence.start > 0.3
+      && silence.end < clip.durationSeconds - 0.3
+      && silence.duration >= 0.40
+    ).length,
+    0,
+    `${clip.output} must not contain an artificial pause of 400 ms or longer`,
+  );
+  const naturalContextBoundary = sourceSilences.find((silence) =>
+    silence.start >= 0.8
+    && silence.start <= 1.75
+    && silence.duration >= 0.05
+    && silence.duration <= 0.30
+  );
+  assert.ok(naturalContextBoundary, `${clip.output} must retain a short natural boundary after the opening context`);
+}
+
 const activeSerialized = JSON.stringify({ activeAudio, contextManifest });
 assert.doesNotMatch(activeSerialized, /setting_pause_450ms/);
 assert.doesNotMatch(activeSerialized, /insert_silence_before_terminal_setting_phrase/);
 
-const nonQuestionLines = activeAudio.lines.filter((line) => !/, at the kid's (?:home|school)\?$/.test(line.text));
+const nonQuestionLines = activeAudio.lines.filter((line) => line.questionRevision !== "r15-context-first");
 assert.equal(nonQuestionLines.length, 20);
 for (const line of nonQuestionLines) {
   const bytes = fs.readFileSync(path.join(root, line.output));
@@ -130,7 +149,7 @@ for (const line of nonQuestionLines) {
   assert.equal(sha256(bytes), line.sha256, `Non-question hash drifted: ${line.output}`);
 }
 
-console.log("PASS: 24 Home/School questions use untouched NaturalReaders comma timing");
+console.log("PASS: 24 Home/School questions use context-first NaturalReaders comma timing");
 console.log("- Twelve Home and twelve School questions cover Kid, Mom, Dad, and Teacher recipients.");
-console.log("- Independent decoding found the reviewed 50–80 ms comma boundary and no >=400 ms pause in every active source.");
+console.log("- Independent decoding found a short natural opening-context boundary and no >=400 ms pause in every active recording.");
 console.log("- All 24 former derivatives remain hash-verified as inactive rollback evidence; all 20 non-question clips remain unchanged.");

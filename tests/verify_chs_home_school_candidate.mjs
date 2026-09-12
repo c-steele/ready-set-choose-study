@@ -15,6 +15,8 @@ const contextManifest = JSON.parse(fs.readFileSync(path.join(dataRoot, "home_sch
 const homeSchoolAudio = JSON.parse(fs.readFileSync(path.join(dataRoot, "home_school_audio_manifest.json"), "utf8"));
 const missingAudio = JSON.parse(fs.readFileSync(path.join(dataRoot, "missing_home_school_directional_audio_manifest.json"), "utf8"));
 const directionalAudioReceipt = JSON.parse(fs.readFileSync(path.join(dataRoot, "directional_audio_import_receipt.json"), "utf8"));
+const contextFirstQuestionReceipt = JSON.parse(fs.readFileSync(path.join(dataRoot, "context_first_question_audio_import_receipt.json"), "utf8"));
+const historicalPauseManifest = JSON.parse(fs.readFileSync(path.join(dataRoot, "home_school_question_pause_manifest.json"), "utf8"));
 const canonicalAudio = JSON.parse(fs.readFileSync(path.join(dataRoot, "canonical_audio_manifest_evelyn.json"), "utf8"));
 const teacherClassmateAudio = JSON.parse(fs.readFileSync(path.join(dataRoot, "teacher_classmate_audio_manifest.json"), "utf8"));
 const eventManifest = JSON.parse(fs.readFileSync(path.join(dataRoot, "ksize_manifest.json"), "utf8"));
@@ -95,8 +97,8 @@ assert.equal(metadata.status, "published_for_chs_draft_preview");
 assert.equal(metadata.activeChsStudyChanged, false);
 assert.equal(metadata.published, true);
 assert.equal(metadata.publishedOn, "2026-09-12");
-assert.equal(metadata.lastPublishedRelease, "chs-home-school-evelyn-v1-r14-preview-3");
-assert.equal(metadata.candidateRelease, "chs-home-school-evelyn-v1-r14-preview-3");
+assert.equal(metadata.lastPublishedRelease, "chs-home-school-evelyn-v1-r15-context-first-preview-1");
+assert.equal(metadata.candidateRelease, "chs-home-school-evelyn-v1-r15-context-first-preview-1");
 assert.equal(metadata.latestRevisionOn, "2026-09-12");
 assert.equal(metadata.storyCount, 6);
 assert.equal(metadata.assignmentCellCount, 18);
@@ -105,6 +107,10 @@ assert.equal(metadata.syntheticSpeech, false);
 assert.equal(metadata.missingEvelynClipCount, 0);
 assert.equal(metadata.directionalEvelynClipCount, 30);
 assert.equal(metadata.directionalEvelynAudioStatus, "complete");
+assert.equal(metadata.questionContextPlacement, "Each helping question begins with 'At the kid's home,' or 'At the kid's school,' followed by the helping question.");
+assert.equal(metadata.contextFirstQuestionClipCount, 24);
+assert.equal(metadata.contextFirstQuestionAudioReceipt, "data/context_first_question_audio_import_receipt.json");
+assert.equal(metadata.artificialQuestionPauseSeconds, 0);
 
 assert.match(indexHtml, /lockedStudyVersion:\s*"home-school"/);
 assert.match(indexHtml, /<title>Who Takes Care\? — CHS Home \/ School candidate<\/title>/);
@@ -152,7 +158,7 @@ assert.match(allCandidateText, /kid's classmate/i);
 assert.equal(contextManifest.schemaVersion, 2);
 assert.equal(contextManifest.status, "release_ready");
 assert.equal(contextManifest.designVersion, "home_school_context_chs_candidate_v1");
-assert.equal(contextManifest.scriptVersion, "home_school_context_recipient_aware_v4");
+assert.equal(contextManifest.scriptVersion, "home_school_context_first_recipient_aware_v5");
 assert.deepEqual(Object.keys(contextManifest.contexts).sort(), ["HOME", "SCHOOL"]);
 
 const expectedContextIntroductions = {
@@ -297,8 +303,8 @@ for (const [context, contextSpec] of Object.entries(contextManifest.contexts)) {
         if (kind === "question") {
           assert.match(
             text,
-            /, at the kid's (?:home|school)\?$/,
-            `Missing context comma in ${context}/${recipient}/${event}/${kind}`,
+            new RegExp(`^At the kid's ${context.toLowerCase()}, who will `),
+            `Missing context-first wording in ${context}/${recipient}/${event}/${kind}`,
           );
         }
         assert.ok(availableAudio.has(normalizeText(text)), `Missing ${context}/${recipient}/${event}/${kind} audio`);
@@ -311,6 +317,9 @@ assert.equal(homeSchoolAudio.status, "complete");
 assert.equal(homeSchoolAudio.candidateStatus, "release_ready");
 assert.equal(homeSchoolAudio.recording.clipCount, 44);
 assert.equal(homeSchoolAudio.recording.directionalClipCount, 30);
+assert.equal(homeSchoolAudio.recording.questionRevision, "r15-context-first");
+assert.equal(homeSchoolAudio.recording.questionClipCount, 24);
+assert.equal(homeSchoolAudio.recording.questionWording, "Context first, followed by a natural comma pause");
 assert.equal(missingAudio.status, "awaiting_recordings");
 assert.equal(missingAudio.missingClipCount, 30);
 assert.equal(missingAudio.lines.length, 30);
@@ -318,24 +327,52 @@ assert.equal(new Set(missingAudio.lines.map((line) => line.id)).size, 30);
 assert.equal(new Set(missingAudio.lines.map((line) => line.output)).size, 30);
 assert.equal(directionalAudioReceipt.importedClipCount, 30);
 assert.equal(directionalAudioReceipt.clips.length, 30);
+assert.equal(contextFirstQuestionReceipt.candidateRelease, metadata.candidateRelease);
+assert.equal(contextFirstQuestionReceipt.scriptVersion, contextManifest.scriptVersion);
+assert.equal(contextFirstQuestionReceipt.service, "NaturalReaders Commercial");
+assert.equal(contextFirstQuestionReceipt.voice, "Evelyn");
+assert.equal(contextFirstQuestionReceipt.clipCount, 24);
+assert.equal(contextFirstQuestionReceipt.clips.length, 24);
+assert.equal(new Set(contextFirstQuestionReceipt.clips.map((clip) => clip.output)).size, 24);
+assert.equal(historicalPauseManifest.status, "inactive_historical");
+assert.equal(historicalPauseManifest.active, false);
+assert.equal(historicalPauseManifest.clipCount, 24);
 const activeAudioById = new Map(homeSchoolAudio.lines.map((line) => [line.id, line]));
+const contextFirstByOutput = new Map(contextFirstQuestionReceipt.clips.map((clip) => [clip.output, clip]));
+const contextFirstByLegacyOutput = new Map(contextFirstQuestionReceipt.clips.map((clip) => [clip.legacyOutput, clip]));
 for (const line of missingAudio.lines) {
   const active = activeAudioById.get(line.id);
   const imported = directionalAudioReceipt.clips.find((clip) => clip.id === line.id);
   assert.ok(active, `${line.id} is missing from the active audio manifest`);
   assert.ok(imported, `${line.id} is missing from the historical import receipt`);
-  assert.equal(availableAudio.get(normalizeText(line.text)), active.output, `${line.id} is not active in the audio map`);
   assert.equal(fs.existsSync(path.join(root, line.output)), true, `${line.output} was not imported`);
   assert.equal(imported.output, line.output, `${line.id} source provenance path drifted`);
-  assert.equal(active.output, line.output, `${line.id} must use the original NaturalReaders recording`);
-  assert.equal(active.sha256, imported.sha256, `${line.id} active source hash drifted`);
+  if (line.kind === "question") {
+    const contextFirst = contextFirstByLegacyOutput.get(line.output);
+    assert.ok(contextFirst, `${line.id} is missing from the context-first import receipt`);
+    assert.equal(active.text, contextFirst.text);
+    assert.equal(active.output, contextFirst.output);
+    assert.equal(availableAudio.get(normalizeText(active.text)), active.output, `${line.id} is not active in the audio map`);
+    assert.equal(active.bytes, contextFirst.bytes);
+    assert.equal(active.durationSeconds, contextFirst.durationSeconds);
+    assert.equal(active.sha256, contextFirst.sha256);
+    assert.equal(active.questionRevision, "r15-context-first");
+    assert.notEqual(active.sha256, imported.sha256, `${line.id} must not retain the superseded context-last recording`);
+  } else {
+    assert.equal(availableAudio.get(normalizeText(line.text)), active.output, `${line.id} is not active in the audio map`);
+    assert.equal(active.output, line.output, `${line.id} output path drifted`);
+    assert.equal(active.text, imported.text, `${line.id} event wording drifted`);
+    assert.equal(active.bytes, imported.bytes, `${line.id} event byte count drifted`);
+    assert.equal(active.durationSeconds, imported.durationSeconds, `${line.id} event duration drifted`);
+    assert.equal(active.sha256, imported.sha256, `${line.id} event recording drifted`);
+  }
   assert.equal(active.audioEdit, undefined, `${line.id} must not retain a synthetic-pause edit`);
 }
 
 const activeQuestionOutputs = [];
 for (const contextSpec of Object.values(contextManifest.contexts)) {
   for (const eventSpec of Object.values(contextSpec.events)) {
-    assert.match(eventSpec.questionText, /, at the kid's (?:home|school)\?$/);
+    assert.match(eventSpec.questionText, /^At the kid's (?:home|school), who will /);
     assert.ok(availableAudio.has(normalizeText(eventSpec.eventText)), `Missing kid-recipient event audio: ${eventSpec.eventText}`);
     assert.ok(availableAudio.has(normalizeText(eventSpec.questionText)), `Missing kid-recipient question audio: ${eventSpec.questionText}`);
     activeQuestionOutputs.push(eventSpec.questionAudio);
@@ -350,7 +387,12 @@ assert.equal(activeQuestionOutputs.length, 24);
 assert.equal(new Set(activeQuestionOutputs).size, 24);
 for (const output of activeQuestionOutputs) {
   assert.match(output, /^assets\/home_school\/generated\/audio\/[^/]+\.mp3$/);
-  assert.equal(fs.existsSync(path.join(root, output)), true, `Missing natural-timing question audio ${output}`);
+  assert.equal(fs.existsSync(path.join(root, output)), true, `Missing context-first question audio ${output}`);
+  const imported = contextFirstByOutput.get(output);
+  assert.ok(imported, `Question output is absent from the context-first receipt: ${output}`);
+  const bytes = fs.readFileSync(path.join(root, output));
+  assert.equal(bytes.length, imported.bytes, `Context-first byte count drifted: ${output}`);
+  assert.equal(crypto.createHash("sha256").update(bytes).digest("hex"), imported.sha256, `Context-first hash drifted: ${output}`);
 }
 
 console.log(JSON.stringify({
@@ -363,7 +405,7 @@ console.log(JSON.stringify({
   existingContextClipsVerified: homeSchoolAudio.lines.filter((line) => line.active !== false).length,
   teacherClassmateClipsVerified: teacherClassmateAudio.lines.length,
   importedDirectionalEvelynClips: directionalAudioReceipt.importedClipCount,
-  naturalTimingQuestionClips: activeQuestionOutputs.length,
+  contextFirstNaturalReadersQuestionClips: activeQuestionOutputs.length,
   missingDirectionalEvelynClips: metadata.missingEvelynClipCount,
   participantAutoplay: true,
   browserSpeech: false,

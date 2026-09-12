@@ -20,7 +20,11 @@
     "clipCount": 44,
     "directionalClipCount": 30,
     "contextIntroRevision": "r13",
-    "contextIntroRevisionGeneratedOn": "2026-09-11"
+    "contextIntroRevisionGeneratedOn": "2026-09-11",
+    "questionRevision": "r15-context-first",
+    "questionRevisionGeneratedOn": "2026-09-12",
+    "questionClipCount": 24,
+    "questionWording": "Context first, followed by a natural comma pause"
   },
   "lines": [
     {
@@ -47,11 +51,12 @@
       "sha256": "e1dac0c213c65e1b5031be9c347cd6d283fb7112b2fe518be5cc41a9148eb83d"
     },
     {
-      "text": "Who will give the kid in the middle a hug now that they're sad, at the kid's home?",
-      "output": "assets/home_school/generated/audio/hs_004_home_hug_question.mp3",
-      "bytes": 188126,
-      "durationSeconds": 4.702025,
-      "sha256": "badf0da6a58a0ef1ec6297a7de4aac86fffa135c07eb2bd6bd63ff553f20b053"
+      "text": "At the kid's home, who will give the kid in the middle a hug now that they're sad?",
+      "output": "assets/home_school/generated/audio/hs_r15_001_home_kid_hug_question_context_first.mp3",
+      "bytes": 175587,
+      "durationSeconds": 4.362449,
+      "sha256": "01ee24d35fb540eeb2e4da9bc486f5ee8f3aa54257d4143ab43203b05f700d63",
+      "questionRevision": "r15-context-first"
     },
     {
       "text": "Oh no! At the kid's school, the kid in the middle is sad now!",
@@ -63,11 +68,12 @@
       "sha256": "ca7ccd53916a730c30f83026497e5a0710f8c8eca64d7aaebefdf074235c2362"
     },
     {
-      "text": "Who will give the kid in the middle a hug now that they're sad, at the kid's school?",
-      "output": "assets/home_school/generated/audio/hs_006_school_hug_question.mp3",
-      "bytes": 190216,
-      "durationSeconds": 4.754275,
-      "sha256": "6aed625ca52ddf2b3d3e0e75779764202013bb64a9e77a90d1cb53ce52e6834f"
+      "text": "At the kid's school, who will give the kid in the middle a hug now that they're sad?",
+      "output": "assets/home_school/generated/audio/hs_r15_013_school_kid_hug_question_context_first.mp3",
+      "bytes": 175587,
+      "durationSeconds": 4.362449,
+      "sha256": "fac54d5949f7854f92c8557e6640984857dc2aca325ca50a0e3ad942031b59a0",
+      "questionRevision": "r15-context-first"
     },
     {
       "text": "Oh no! At the kid's home, the kid in the middle is hungry now!",
@@ -77,11 +83,12 @@
       "sha256": "39a839adb2a88b7cb620961afe4aad87ab68810784fddb4cbbb3dbc759fe8643"
     },
     {
-      "text": "Who will give the kid in the middle strawberries now that they're hungry, at the kid's home?",
-      "output": "assets/home_school/generated/audio/hs_008_home_food_question.mp3",
-      "bytes": 209024,
-      "durationSeconds": 5.224475,
-      "sha256": "e5fe7c383dca00829dd490b3784de25e938a0111c5401d25635365a527a66639"
+      "text": "At the kid's home, who will give the kid in the middle strawberries now that they're hungry?",
+      "output": "assets/home_school/generated/audio/hs_r15_002_home_kid_food_question_context_first.mp3",
+      "bytes": 192305,
+      "durationSeconds": 4.780408,
+      "sha256": "b5d9754f190c4d9a85a460bac8a9700b68a5fb4eca2f4127bf54d71d5e77e50d",
+      "questionRevision": "r15-context-first"
     },
     {
       "text": "Oh no! At the kid's school, the kid in the middle is hungry now!",
@@ -91,11 +98,12 @@
       "sha256": "e9c5e6f8d75dfa8971dac259fa4342a4bfeada8baed5d53db6a76814680134dd"
     },
     {
-      "text": "Who will give the kid in the middle strawberries now that they're hungry, at the kid's school?",
-      "output": "assets/home_school/generated/audio/hs_010_school_food_question.mp3",
-      "bytes": 211114,
-      "durationSeconds": 5.276725,
-      "sha256": "5a319ee0a50c13a35e30e1d327183f2587ff9acc5b35227a9533a19ff85f5222"
+      "text": "At the kid's school, who will give the kid in the middle strawberries now that they're hungry?",
+      "output": "assets/home_school/generated/audio/hs_r15_014_school_kid_food_question_context_first.mp3",
+      "bytes": 194395,
+      "durationSeconds": 4.832653,
+      "sha256": "60013acd284adc63f3c43fd423099813fa25060f12c508d899d61fce910fcaff",
+      "questionRevision": "r15-context-first"
     },
     {
       "text": "Oh no! At the kid's home, the kid in the middle dropped a heavy box!",
@@ -105,11 +113,12 @@
       "sha256": "05c8a930430b08637de9dfbba4acb41eb147551a2deff18067f08b5a6e29a9fe"
     },
     {
-      "text": "Who will help the kid in the middle pick up the heavy box, at the kid's home?",
-      "output": "assets/home_school/generated/audio/hs_012_home_help_question.mp3",
-      "bytes": 187081,
-      "durationSeconds": 4.6759,
-      "sha256": "567da3e0ebe2faba6fc598b3e4f3b56405c315f3762027b6048d94a5d8f04ac7"
+      "text": "At the kid's home, who will help the kid in the middle pick up the heavy box?",
+      "output": "assets/home_school/generated/audio/hs_r15_003_home_kid_help_question_context_first.mp3",
+      "bytes": 164093,
+      "durationSeconds": 4.075102,
+      "sha256": "caf71e0a250b2668f764112569edccb213e28e87f48007a0702ff14127eb0e09",
+      "questionRevision": "r15-context-first"
     },
     {
       "text": "Oh no! At the kid's school, the kid in the middle dropped a heavy box!",
@@ -119,19 +128,21 @@
       "sha256": "f9825979c6934ad9481418129cd5dbfa82faa0815e262ba4e0516a9d3f8aff21"
     },
     {
-      "text": "Who will help the kid in the middle pick up the heavy box, at the kid's school?",
-      "output": "assets/home_school/generated/audio/hs_014_school_help_question.mp3",
-      "bytes": 188126,
-      "durationSeconds": 4.702025,
-      "sha256": "4afff6f8a6607c54a21a6c56fd8cb1c4aea72ba4b2528e485cb9f209b7e5ba8b"
+      "text": "At the kid's school, who will help the kid in the middle pick up the heavy box?",
+      "output": "assets/home_school/generated/audio/hs_r15_015_school_kid_help_question_context_first.mp3",
+      "bytes": 167227,
+      "durationSeconds": 4.153469,
+      "sha256": "f0e759d4622a7519500e990f66cbf91d4c9d0127ec6a1ff86f2a1bf5d2454532",
+      "questionRevision": "r15-context-first"
     },
     {
       "id": "hs_v2_015",
-      "text": "Who will give the mom in the middle a hug now that they're sad, at the kid's home?",
-      "output": "assets/home_school/generated/audio/hs_v2_015_home_mom_hug_question.mp3",
-      "bytes": 190216,
-      "durationSeconds": 4.754275,
-      "sha256": "f093c190ce6b1fc891befd79256e8351f310f7e965346196723cbc5dab616161"
+      "text": "At the kid's home, who will give the mom in the middle a hug now that they're sad?",
+      "output": "assets/home_school/generated/audio/hs_r15_004_home_mom_hug_question_context_first.mp3",
+      "bytes": 174542,
+      "durationSeconds": 4.336327,
+      "sha256": "80efd302133f47ef4c71f259b5061b227dd5a535dfdcd2827254e9e0b0492b80",
+      "questionRevision": "r15-context-first"
     },
     {
       "id": "hs_v2_016",
@@ -143,11 +154,12 @@
     },
     {
       "id": "hs_v2_017",
-      "text": "Who will give the mom in the middle strawberries now that they're hungry, at the kid's home?",
-      "output": "assets/home_school/generated/audio/hs_v2_017_home_mom_food_question.mp3",
-      "bytes": 207979,
-      "durationSeconds": 5.19835,
-      "sha256": "ded738963c4d6ea0a7594225649e39604eb17f079335a421e69803ef9e726ee1"
+      "text": "At the kid's home, who will give the mom in the middle strawberries now that they're hungry?",
+      "output": "assets/home_school/generated/audio/hs_r15_005_home_mom_food_question_context_first.mp3",
+      "bytes": 190215,
+      "durationSeconds": 4.728163,
+      "sha256": "0f4d1b9320c332810c7db466133850a65d21fb97b08508ce86af83d3a7169c24",
+      "questionRevision": "r15-context-first"
     },
     {
       "id": "hs_v2_018",
@@ -159,19 +171,21 @@
     },
     {
       "id": "hs_v2_019",
-      "text": "Who will help the mom in the middle pick up the heavy box, at the kid's home?",
-      "output": "assets/home_school/generated/audio/hs_v2_019_home_mom_help_question.mp3",
-      "bytes": 188126,
-      "durationSeconds": 4.702025,
-      "sha256": "9c2ca35eb33d8edd2a2dc301ee88c3e4d466387f46a4c15e5b7bbb476a5e7b5a"
+      "text": "At the kid's home, who will help the mom in the middle pick up the heavy box?",
+      "output": "assets/home_school/generated/audio/hs_r15_006_home_mom_help_question_context_first.mp3",
+      "bytes": 166182,
+      "durationSeconds": 4.127347,
+      "sha256": "deceb811d7f7b454aa1b04cc5796b708b573bf437f840f04f2e7f71d99efcabf",
+      "questionRevision": "r15-context-first"
     },
     {
       "id": "hs_v2_020",
-      "text": "Who will give the dad in the middle a hug now that they're sad, at the kid's home?",
-      "output": "assets/home_school/generated/audio/hs_v2_020_home_dad_hug_question.mp3",
-      "bytes": 188126,
-      "durationSeconds": 4.702025,
-      "sha256": "8cc21621eb2a5ba0ea2f8929f3425081aaaaafe5b350b44c4e368e28652ea8df"
+      "text": "At the kid's home, who will give the dad in the middle a hug now that they're sad?",
+      "output": "assets/home_school/generated/audio/hs_r15_007_home_dad_hug_question_context_first.mp3",
+      "bytes": 174542,
+      "durationSeconds": 4.336327,
+      "sha256": "a9d4d3bd0ee682706c5fd7496c040ef623a812afd9f8d7379c0b9e8fca26a9d8",
+      "questionRevision": "r15-context-first"
     },
     {
       "id": "hs_v2_021",
@@ -183,11 +197,12 @@
     },
     {
       "id": "hs_v2_022",
-      "text": "Who will give the dad in the middle strawberries now that they're hungry, at the kid's home?",
-      "output": "assets/home_school/generated/audio/hs_v2_022_home_dad_food_question.mp3",
-      "bytes": 207979,
-      "durationSeconds": 5.19835,
-      "sha256": "5bfbcd7c6bb3f1a7b6bc67bd5b99fa8a3222e2fe59e212acb13f671dc6d4f4b7"
+      "text": "At the kid's home, who will give the dad in the middle strawberries now that they're hungry?",
+      "output": "assets/home_school/generated/audio/hs_r15_008_home_dad_food_question_context_first.mp3",
+      "bytes": 188125,
+      "durationSeconds": 4.675918,
+      "sha256": "4ad45f180f34429a6da1d469e816731b08f8a7a0e843a35a062d042ace676137",
+      "questionRevision": "r15-context-first"
     },
     {
       "id": "hs_v2_023",
@@ -199,19 +214,21 @@
     },
     {
       "id": "hs_v2_024",
-      "text": "Who will help the dad in the middle pick up the heavy box, at the kid's home?",
-      "output": "assets/home_school/generated/audio/hs_v2_024_home_dad_help_question.mp3",
-      "bytes": 188126,
-      "durationSeconds": 4.702025,
-      "sha256": "f5fb5c8dc0711f35c875557c6c16045ac1f203da2b9e636120832abc65a17cbe"
+      "text": "At the kid's home, who will help the dad in the middle pick up the heavy box?",
+      "output": "assets/home_school/generated/audio/hs_r15_009_home_dad_help_question_context_first.mp3",
+      "bytes": 167227,
+      "durationSeconds": 4.153469,
+      "sha256": "b94a3f1a74e3369e1e1844ff7f15bb38e421aa2a11e1d6c1fe23d38986319307",
+      "questionRevision": "r15-context-first"
     },
     {
       "id": "hs_v2_025",
-      "text": "Who will give the teacher in the middle a hug now that they're sad, at the kid's home?",
-      "output": "assets/home_school/generated/audio/hs_v2_025_home_teacher_hug_question.mp3",
-      "bytes": 193351,
-      "durationSeconds": 4.83265,
-      "sha256": "0cd8cddcd6f80ef9218191ce296eaf83d898e6459d4c4e70252b06bbcb989999"
+      "text": "At the kid's home, who will give the teacher in the middle a hug now that they're sad?",
+      "output": "assets/home_school/generated/audio/hs_r15_010_home_teacher_hug_question_context_first.mp3",
+      "bytes": 179766,
+      "durationSeconds": 4.466939,
+      "sha256": "4575265bb6c189d44700d23818b25ed0aaa80e1f79b94f97d356cf0003524ec1",
+      "questionRevision": "r15-context-first"
     },
     {
       "id": "hs_v2_026",
@@ -223,11 +240,12 @@
     },
     {
       "id": "hs_v2_027",
-      "text": "Who will give the teacher in the middle strawberries now that they're hungry, at the kid's home?",
-      "output": "assets/home_school/generated/audio/hs_v2_027_home_teacher_food_question.mp3",
-      "bytes": 209024,
-      "durationSeconds": 5.224475,
-      "sha256": "92aed9f430e01ccc1b92ff016ca575b62f016731ec5625ac99b2c91b0c0ac2f3"
+      "text": "At the kid's home, who will give the teacher in the middle strawberries now that they're hungry?",
+      "output": "assets/home_school/generated/audio/hs_r15_011_home_teacher_food_question_context_first.mp3",
+      "bytes": 197529,
+      "durationSeconds": 4.91102,
+      "sha256": "2f035011aa69b868c62f14063531d5997c8238c48c9dfde5c958df2ab2364f19",
+      "questionRevision": "r15-context-first"
     },
     {
       "id": "hs_v2_028",
@@ -239,19 +257,21 @@
     },
     {
       "id": "hs_v2_029",
-      "text": "Who will help the teacher in the middle pick up the heavy box, at the kid's home?",
-      "output": "assets/home_school/generated/audio/hs_v2_029_home_teacher_help_question.mp3",
-      "bytes": 190216,
-      "durationSeconds": 4.754275,
-      "sha256": "d1d30f5c294b5ef62722070beddaeb29d3600a279cd6b4490eec449c014e51ea"
+      "text": "At the kid's home, who will help the teacher in the middle pick up the heavy box?",
+      "output": "assets/home_school/generated/audio/hs_r15_012_home_teacher_help_question_context_first.mp3",
+      "bytes": 174542,
+      "durationSeconds": 4.336327,
+      "sha256": "8e8e35d0afadc26278dae1efff1249647c69a5dd79a724cdf3ec38c918194f0e",
+      "questionRevision": "r15-context-first"
     },
     {
       "id": "hs_v2_030",
-      "text": "Who will give the mom in the middle a hug now that they're sad, at the kid's school?",
-      "output": "assets/home_school/generated/audio/hs_v2_030_school_mom_hug_question.mp3",
-      "bytes": 192306,
-      "durationSeconds": 4.806525,
-      "sha256": "9966b18d150f64b6288e6095c950a2ff19285e24b5c123d79d3fe373fe148446"
+      "text": "At the kid's school, who will give the mom in the middle a hug now that they're sad?",
+      "output": "assets/home_school/generated/audio/hs_r15_016_school_mom_hug_question_context_first.mp3",
+      "bytes": 174542,
+      "durationSeconds": 4.336327,
+      "sha256": "f8ba7cadb076820d933cc8430f186edc6e7ac2e35489884a7b6477bf63fae013",
+      "questionRevision": "r15-context-first"
     },
     {
       "id": "hs_v2_031",
@@ -263,11 +283,12 @@
     },
     {
       "id": "hs_v2_032",
-      "text": "Who will give the mom in the middle strawberries now that they're hungry, at the kid's school?",
-      "output": "assets/home_school/generated/audio/hs_v2_032_school_mom_food_question.mp3",
-      "bytes": 211114,
-      "durationSeconds": 5.276725,
-      "sha256": "001c436a00dd529166e8ed44fb3f7107c99816435cfd72db0c0960f2d6f64399"
+      "text": "At the kid's school, who will give the mom in the middle strawberries now that they're hungry?",
+      "output": "assets/home_school/generated/audio/hs_r15_017_school_mom_food_question_context_first.mp3",
+      "bytes": 193350,
+      "durationSeconds": 4.806531,
+      "sha256": "8b39c9636fdc14516882951e508b5df1081f7401c57a54dafcd6f29312533118",
+      "questionRevision": "r15-context-first"
     },
     {
       "id": "hs_v2_033",
@@ -279,19 +300,21 @@
     },
     {
       "id": "hs_v2_034",
-      "text": "Who will help the mom in the middle pick up the heavy box, at the kid's school?",
-      "output": "assets/home_school/generated/audio/hs_v2_034_school_mom_help_question.mp3",
-      "bytes": 188126,
-      "durationSeconds": 4.702025,
-      "sha256": "3a2e6a93623a8bf5e60867481a6546426ef3b3d2ee0ce5fa4a56511e70c28247"
+      "text": "At the kid's school, who will help the mom in the middle pick up the heavy box?",
+      "output": "assets/home_school/generated/audio/hs_r15_018_school_mom_help_question_context_first.mp3",
+      "bytes": 169317,
+      "durationSeconds": 4.205714,
+      "sha256": "8eea6e59eaa6861502621dc4ed1788ad6766ad0a938022a29572de6631ee052a",
+      "questionRevision": "r15-context-first"
     },
     {
       "id": "hs_v2_035",
-      "text": "Who will give the dad in the middle a hug now that they're sad, at the kid's school?",
-      "output": "assets/home_school/generated/audio/hs_v2_035_school_dad_hug_question.mp3",
-      "bytes": 191261,
-      "durationSeconds": 4.7804,
-      "sha256": "25d8448e6dd0d117af215d59e478e45322073fa461117cfbf3d68792051fcc61"
+      "text": "At the kid's school, who will give the dad in the middle a hug now that they're sad?",
+      "output": "assets/home_school/generated/audio/hs_r15_019_school_dad_hug_question_context_first.mp3",
+      "bytes": 173497,
+      "durationSeconds": 4.310204,
+      "sha256": "a28921c0fc464e329ac5bef17211071715b9286102fc28b435e31e0fca6c9ea3",
+      "questionRevision": "r15-context-first"
     },
     {
       "id": "hs_v2_036",
@@ -303,11 +326,12 @@
     },
     {
       "id": "hs_v2_037",
-      "text": "Who will give the dad in the middle strawberries now that they're hungry, at the kid's school?",
-      "output": "assets/home_school/generated/audio/hs_v2_037_school_dad_food_question.mp3",
-      "bytes": 210069,
-      "durationSeconds": 5.2506,
-      "sha256": "cb87bb9f86f9ce0c80172944dd69480f28a688d4b6ed47ae1187fb6f2c6c15e8"
+      "text": "At the kid's school, who will give the dad in the middle strawberries now that they're hungry?",
+      "output": "assets/home_school/generated/audio/hs_r15_020_school_dad_food_question_context_first.mp3",
+      "bytes": 191260,
+      "durationSeconds": 4.754286,
+      "sha256": "3028de6d6df734b2be5050a2c91bd4875bdd71e27488cf1b61f1bce783add517",
+      "questionRevision": "r15-context-first"
     },
     {
       "id": "hs_v2_038",
@@ -319,19 +343,21 @@
     },
     {
       "id": "hs_v2_039",
-      "text": "Who will help the dad in the middle pick up the heavy box, at the kid's school?",
-      "output": "assets/home_school/generated/audio/hs_v2_039_school_dad_help_question.mp3",
-      "bytes": 188126,
-      "durationSeconds": 4.702025,
-      "sha256": "6a1b82121ea3408f8ad63b2bdeb6661bf82f3bc958236970d15591453a767183"
+      "text": "At the kid's school, who will help the dad in the middle pick up the heavy box?",
+      "output": "assets/home_school/generated/audio/hs_r15_021_school_dad_help_question_context_first.mp3",
+      "bytes": 169317,
+      "durationSeconds": 4.205714,
+      "sha256": "03da9791699b095dd74064e0265df44b832a03fc8e78c5762d421c0502e90245",
+      "questionRevision": "r15-context-first"
     },
     {
       "id": "hs_v2_040",
-      "text": "Who will give the teacher in the middle a hug now that they're sad, at the kid's school?",
-      "output": "assets/home_school/generated/audio/hs_v2_040_school_teacher_hug_question.mp3",
-      "bytes": 194396,
-      "durationSeconds": 4.858775,
-      "sha256": "16cfdc8951044529ffcb0fa8d11e9bd01c1d26798f854735dbb0f65f79aeef40"
+      "text": "At the kid's school, who will give the teacher in the middle a hug now that they're sad?",
+      "output": "assets/home_school/generated/audio/hs_r15_022_school_teacher_hug_question_context_first.mp3",
+      "bytes": 181856,
+      "durationSeconds": 4.519184,
+      "sha256": "6c447da42286606830cf9f93a38e37ff0fdbc78811165cc1eb3459dd950f3843",
+      "questionRevision": "r15-context-first"
     },
     {
       "id": "hs_v2_041",
@@ -343,11 +369,12 @@
     },
     {
       "id": "hs_v2_042",
-      "text": "Who will give the teacher in the middle strawberries now that they're hungry, at the kid's school?",
-      "output": "assets/home_school/generated/audio/hs_v2_042_school_teacher_food_question.mp3",
-      "bytes": 213204,
-      "durationSeconds": 5.328975,
-      "sha256": "4c9a2b6dbcdd7c0940d2b219e04efab86ec7c9d2421339296861c1bc7e8ca665"
+      "text": "At the kid's school, who will give the teacher in the middle strawberries now that they're hungry?",
+      "output": "assets/home_school/generated/audio/hs_r15_023_school_teacher_food_question_context_first.mp3",
+      "bytes": 199619,
+      "durationSeconds": 4.963265,
+      "sha256": "34449483e9c5c9b9bf94e86e23a5895180f9b9588812885ab76b7bb06b829eca",
+      "questionRevision": "r15-context-first"
     },
     {
       "id": "hs_v2_043",
@@ -359,16 +386,18 @@
     },
     {
       "id": "hs_v2_044",
-      "text": "Who will help the teacher in the middle pick up the heavy box, at the kid's school?",
-      "output": "assets/home_school/generated/audio/hs_v2_044_school_teacher_help_question.mp3",
-      "bytes": 191261,
-      "durationSeconds": 4.7804,
-      "sha256": "ba1fe79b7d8b03b8018bf93ae2b510514807e90cd13075a2b80ebbeced68323f"
+      "text": "At the kid's school, who will help the teacher in the middle pick up the heavy box?",
+      "output": "assets/home_school/generated/audio/hs_r15_024_school_teacher_help_question_context_first.mp3",
+      "bytes": 177676,
+      "durationSeconds": 4.414694,
+      "sha256": "7596812148eefcee2c868835acbdf5643aec0464f55b09c1bb2ed1d6d6a70faf",
+      "questionRevision": "r15-context-first"
     }
   ],
-  "completedOn": "2026-09-10",
+  "completedOn": "2026-09-12",
   "sourceExports": [
     "FindtheCaregiverHomeScho.zip",
-    "Whowillgivethemom.zip"
+    "Whowillgivethemom.zip",
+    "WhoTakesCare_context_first_questions_r15.mp3"
   ]
 }

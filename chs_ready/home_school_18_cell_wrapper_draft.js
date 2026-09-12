@@ -1,7 +1,7 @@
 /*
   PRODUCTION-READY CHS WRAPPER SOURCE FOR STUDY 6349.
 
-  This source targets the locally reviewed r14-preview-3 Home/School candidate.
+  This source targets the r15 context-first Home/School editing preview.
   Installing it in CHS remains a separate researcher-controlled action.
 
   Public title: Who Takes Care? A Colorful Story Game
@@ -24,8 +24,8 @@ var HOME_SCHOOL_CANDIDATE_ROOT_URL =
 var HOME_SCHOOL_CANDIDATE_ORIGIN = "https://c-steele.github.io";
 
 var HOME_SCHOOL_STUDY_VERSION = "chs-home-school-evelyn-v1";
-var HOME_SCHOOL_CANDIDATE_RELEASE = "chs-home-school-evelyn-v1-r14-preview-3";
-var HOME_SCHOOL_CONTEXT_SCRIPT_VERSION = "home_school_context_recipient_aware_v4";
+var HOME_SCHOOL_CANDIDATE_RELEASE = "chs-home-school-evelyn-v1-r15-context-first-preview-1";
+var HOME_SCHOOL_CONTEXT_SCRIPT_VERSION = "home_school_context_first_recipient_aware_v5";
 /* Intentionally blank for study 6349. Google mirroring is disabled and CHS
    remains the complete, authoritative primary record. */
 var HOME_SCHOOL_SHEETS_WEBHOOK = "";
@@ -212,7 +212,11 @@ var assignedCell = assignmentKey ? assignHomeSchoolCell(assignmentKey) : null;
 /* One entrypoint serves both contexts; the locked context is passed below. */
 var assignedEntrypoint = "index.html";
 var candidateRoot = HOME_SCHOOL_CANDIDATE_ROOT_URL.replace(/\/$/, "");
-var researcherToolsParam = getUrlParam("researcherTools") === "1" ? "&researcherTools=1" : "";
+/* Editing previews get Back/Skip navigation automatically. This path check
+   keeps researcher controls out of live participant sessions. */
+var researcherToolsParam = isChsPreviewContext
+  ? "&researcherTools=1&researcherToolbar=back-skip"
+  : "";
 var sheetsWebhook = String(HOME_SCHOOL_SHEETS_WEBHOOK || "").trim();
 if (sheetsWebhook && !/^https:\/\/script\.google\.com\/macros\/s\/[A-Za-z0-9_-]+\/exec$/.test(sheetsWebhook)) {
   throw new Error("The approved Google Sheets receiver must be a deployed script.google.com /exec URL.");

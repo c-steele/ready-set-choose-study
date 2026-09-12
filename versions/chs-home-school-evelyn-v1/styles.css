@@ -317,8 +317,8 @@ body {
 /* Keep the 16:9 Home/School plate and child controls visible without scrolling
    on a 1280×720 display. The context is established once on the narrated
    context-introduction screen; it is not repeated as a reading-dependent badge. */
-.ksize-kid-screen[data-context="HOME"],
-.ksize-kid-screen[data-context="SCHOOL"] {
+.ksize-screen[data-context="HOME"],
+.ksize-screen[data-context="SCHOOL"] {
   justify-content: flex-start;
 }
 
@@ -420,6 +420,15 @@ body {
    plate beneath the scene. */
 .ksize-kid-screen[data-slide-kind="context_intro"] .ksize-bottom-area {
   margin-top: 2px;
+}
+
+/* Keep the narrator and page controls attached to the scene on every
+   Home/School screen. Without this override, the shared flex layout pushes
+   them to the bottom of a tall browser window on all but the context page. */
+.ksize-screen[data-context="HOME"] .ksize-bottom-area,
+.ksize-screen[data-context="SCHOOL"] .ksize-bottom-area {
+  flex: 0 0 auto;
+  margin-top: 8px;
 }
 
 .ksize-coin-icon,

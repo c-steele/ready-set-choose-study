@@ -9,9 +9,9 @@ const TEACHER_CLASSMATE_GENERATED_ROOT = "assets/teacher_classmate/generated/";
 const TEACHER_CLASSMATE_V78_REVISION_ROOT = "versions/chs-v78-teacher-classmate-evelyn-unique-roles/assets/teacher_classmate/generated/";
 const TEACHER_CLASSMATE_V78_DYAD_REVISION = /^dyads\/classmate-kid_0(?:1_tkc-deep-purple-a|2_tkc-deep-purple-b)\/slide_(?:0[3-9]|1[0-3])\.svg$/;
 const TEACHER_CLASSMATE_V78_TRIAL_REVISION = /^trials\/14(?:[ab]\/intro_04|[cd]\/intro_0[34]|[abcd]\/(?:hug|food|help)_screen_2)\.svg$/;
-const HOME_SCHOOL_ASSET_VERSION = "chs-home-school-evelyn-v1-r14-preview-3";
+const HOME_SCHOOL_ASSET_VERSION = "chs-home-school-evelyn-v1-r15-context-first-preview-1";
 const HOME_SCHOOL_DESIGN_VERSION = "home_school_context_chs_candidate_v1";
-const HOME_SCHOOL_CONTEXT_SCRIPT_VERSION = "home_school_context_recipient_aware_v4";
+const HOME_SCHOOL_CONTEXT_SCRIPT_VERSION = "home_school_context_first_recipient_aware_v5";
 const HOME_SCHOOL_FURNISHED_VISUAL_VERSION = "home_school_furnished_palette_picture_v38";
 const RATING_SCHEDULE_VERSION = "unique_focal_role_per_set_v1";
 const HOME_SCHOOL_GENERATED_ROOT = "assets/home_school/generated/";
@@ -183,6 +183,7 @@ const requestedResumeBackupKey = configValue("resumeBackupKey", "resume_backup_k
 const requestedExpectedResumeRows = Math.max(0, Number(configValue("expectedResumeRows", "expected_resume_rows") || 0) || 0);
 const requestedResearcherJump = configValue("researcherJump", "researcher_jump") === "1";
 const requestedResearcherTools = configValue("researcherTools");
+const requestedResearcherToolbar = configValue("researcherToolbar", "researcher_toolbar").toLowerCase();
 const isFacilitatorMode = configValue("facilitator", "zoom") === "1";
 const isLiveShareMode = configValue("liveShare", "screenShare", "screen_share") === "1";
 const showLiveReadAloud = isLiveShareMode
@@ -2173,7 +2174,11 @@ function installResearcherSkip(jsPsych) {
     window.open(new URL("data.html", window.location.href).toString(), "_blank", "noopener");
   });
 
-  wrap.append(start, back, button, data, end);
+  if (requestedResearcherToolbar === "back-skip") {
+    wrap.append(back, button);
+  } else {
+    wrap.append(start, back, button, data, end);
+  }
   document.body.appendChild(wrap);
 }
 

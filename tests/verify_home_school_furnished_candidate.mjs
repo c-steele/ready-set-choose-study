@@ -45,7 +45,8 @@ assert.equal(candidate.candidateId, "chs-home-school-evelyn-v1");
 assert.equal(candidate.activeChsStudyChanged, false);
 assert.equal(candidate.published, true);
 assert.equal(candidate.publishedOn, "2026-09-12");
-assert.equal(candidate.lastPublishedRelease, "chs-home-school-evelyn-v1-r14-preview-3");
+assert.equal(candidate.lastPublishedRelease, "chs-home-school-evelyn-v1-r15-context-first-preview-1");
+assert.equal(candidate.candidateRelease, "chs-home-school-evelyn-v1-r15-context-first-preview-1");
 assert.equal(candidate.status, "published_for_chs_draft_preview");
 assert.equal(candidate.missingEvelynClipCount, 0);
 assert.equal(candidate.directionalEvelynClipCount, 30);
@@ -57,7 +58,7 @@ assert.equal(candidate.visualVersion, "home_school_furnished_palette_picture_v38
 assert.equal(contextManifest.visualTreatment.type, "furnished-palette-matched-background");
 assert.equal(contextManifest.visualTreatment.version, candidate.visualVersion);
 assert.equal(contextManifest.visualTreatment.fullyIllustratedBackgrounds, true);
-assert.equal(contextManifest.scriptVersion, "home_school_context_recipient_aware_v4");
+assert.equal(contextManifest.scriptVersion, "home_school_context_first_recipient_aware_v5");
 assert.match(contextManifest.visualTreatment.followupRatings, /assigned furnished Home or School room retained/);
 assert.match(contextManifest.visualTreatment.scope, /dyad introductions, and Likert rating pages/);
 assert.equal(contextManifest.visualTreatment.followupQualityControl, "data/furnished_dyad_visual_manifest.json");
@@ -174,7 +175,7 @@ assert.ok(fs.existsSync(contactSheet), "Missing all-pairings Home/School contact
 assert.ok(fs.statSync(contactSheet).size > 100_000, "Contact sheet is unexpectedly small");
 
 assert.match(app, /function furnishedSceneSpec\(/);
-assert.match(app, /const HOME_SCHOOL_ASSET_VERSION = "chs-home-school-evelyn-v1-r14-preview-3"/);
+assert.match(app, /const HOME_SCHOOL_ASSET_VERSION = "chs-home-school-evelyn-v1-r15-context-first-preview-1"/);
 assert.match(app, /slideIndex === block\.introSlides\.length - 1 && activeStudyContext/);
 assert.doesNotMatch(app, /slideIndex === 0 && activeStudyContext/);
 assert.doesNotMatch(css, /text-wrap:\s*balance/);
@@ -203,7 +204,9 @@ assert.match(css, /\.ksize-furnished-scene > \.ksize-furnished-room/);
 assert.match(css, /\.ksize-furnished-scene > \.ksize-furnished-foreground/);
 assert.match(css, /\.ksize-image-wrap \.ksize-rating-furnished-scene/);
 assert.match(css, /\.ksize-furnished-scene \.ksize-char-btn/);
-assert.match(html, /chs-home-school-evelyn-v1-r14-preview-3/g);
+assert.match(css, /\.ksize-screen\[data-context="HOME"\],[\s\S]*?\.ksize-screen\[data-context="SCHOOL"\][\s\S]*?justify-content:\s*flex-start/);
+assert.match(css, /\.ksize-screen\[data-context="HOME"\] \.ksize-bottom-area,[\s\S]*?\.ksize-screen\[data-context="SCHOOL"\] \.ksize-bottom-area[\s\S]*?margin-top:\s*8px/);
+assert.match(html, /chs-home-school-evelyn-v1-r15-context-first-preview-1/g);
 assert.doesNotMatch(html, /chs-home-school-evelyn-v1-r(?:[1-9])(?!\d)/);
 
 console.log(JSON.stringify({

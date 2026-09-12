@@ -140,7 +140,8 @@ assert.equal(recorded.properties.external_data_mirror_configured, false);
 assert.equal(recorded.properties.external_data_mirror_contract, "find-the-caregiver-sheets-v1");
 assert.equal(recorded.properties.chs_child_id, "TEST-CHILD");
 assert.equal(recorded.properties.chs_response_id, "TEST-RESPONSE");
-assert.equal(recorded.properties.candidate_release, "chs-home-school-evelyn-v1-r14-preview-3");
+assert.equal(recorded.properties.candidate_release, "chs-home-school-evelyn-v1-r15-context-first-preview-1");
+assert.doesNotMatch(context.gameUrl, /researcherTools=1/, "live CHS runs must not expose researcher controls");
 
 assert.doesNotMatch(source, /REPLACE_WITH_FROZEN_HOME_SCHOOL_CANDIDATE/);
 assert.doesNotMatch(source, /DO NOT PASTE|DRAFT\s*[—-]/i);
@@ -150,8 +151,8 @@ assert.match(source, /assignedEntrypoint\s*=\s*"index\.html"/);
 assert.doesNotMatch(source, /assignedEntrypoint[^;]*(?:home\.html|school\.html)/);
 assert.match(source, /context="\s*\+\s*encodeURIComponent\(assignedCell\.context\)/);
 assert.match(source, /HOME_SCHOOL_STUDY_VERSION\s*=\s*"chs-home-school-evelyn-v1"/);
-assert.match(source, /HOME_SCHOOL_CONTEXT_SCRIPT_VERSION\s*=\s*"home_school_context_recipient_aware_v4"/);
-assert.match(source, /HOME_SCHOOL_CANDIDATE_RELEASE\s*=\s*"chs-home-school-evelyn-v1-r14-preview-3"/);
+assert.match(source, /HOME_SCHOOL_CONTEXT_SCRIPT_VERSION\s*=\s*"home_school_context_first_recipient_aware_v5"/);
+assert.match(source, /HOME_SCHOOL_CANDIDATE_RELEASE\s*=\s*"chs-home-school-evelyn-v1-r15-context-first-preview-1"/);
 assert.doesNotMatch(source, /chs-home-school-evelyn-v1-r(?:[1-9])(?!\d)/);
 assert.match(source, /Who Takes Care\? child game/);
 assert.match(source, /HOME_SCHOOL_SHEETS_WEBHOOK\s*=\s*""/);
@@ -242,6 +243,8 @@ const responsePreview = loadIdentityScenario({
 assert.equal(responsePreview.context.assignmentKey, "PREVIEW-RESPONSE");
 assert.equal(responsePreview.context.assignmentKeyType, "response_id_preview_fallback");
 assert.ok(responsePreview.context.assignedCell, "CHS preview should remain renderable with its response fallback");
+assert.match(responsePreview.context.gameUrl, /[?&]researcherTools=1(?:&|$)/, "CHS response previews must expose researcher controls");
+assert.match(responsePreview.context.gameUrl, /[?&]researcherToolbar=back-skip(?:&|$)/, "CHS response previews must request the Back/Skip toolbar");
 
 const pathnamePreview = loadIdentityScenario({
   origin: "https://childrenhelpingscience.com",
@@ -250,6 +253,8 @@ const pathnamePreview = loadIdentityScenario({
 assert.equal(pathnamePreview.context.assignmentKey, "/responses/path-only/preview/");
 assert.equal(pathnamePreview.context.assignmentKeyType, "pathname_preview_fallback");
 assert.ok(pathnamePreview.context.assignedCell, "CHS preview should remain renderable with its pathname fallback");
+assert.match(pathnamePreview.context.gameUrl, /[?&]researcherTools=1(?:&|$)/, "CHS pathname previews must expose researcher controls");
+assert.match(pathnamePreview.context.gameUrl, /[?&]researcherToolbar=back-skip(?:&|$)/, "CHS pathname previews must request the Back/Skip toolbar");
 
 const localReview = loadIdentityScenario({
   origin: "http://127.0.0.1:8000",
@@ -258,6 +263,20 @@ const localReview = loadIdentityScenario({
 });
 assert.equal(localReview.context.assignmentKey, "LOCAL-REVIEW-CHILD");
 assert.equal(localReview.context.assignmentKeyType, "child_id_url_local_review");
+assert.doesNotMatch(localReview.context.gameUrl, /researcherTools=1/, "local review links should opt into researcher tools explicitly");
+
+const liveResearcherParam = loadIdentityScenario({
+  origin: "https://childrenhelpingscience.com",
+  pathname: "/studies/6349/run/",
+  search: "?researcherTools=1",
+  runtimeChildId: "LIVE-TOOLS-CHILD",
+  responseId: "LIVE-TOOLS-RESPONSE",
+});
+assert.doesNotMatch(
+  liveResearcherParam.context.gameUrl,
+  /[?&]researcherTools=1(?:&|$)/,
+  "a live CHS query parameter must not enable preview-only researcher controls",
+);
 
 const iframeTrial = recorded.timeline[3];
 assert.equal(iframeTrial.data.trial_type, "ready_set_choose_home_school_iframe");
