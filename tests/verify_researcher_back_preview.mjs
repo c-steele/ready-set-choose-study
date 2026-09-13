@@ -9,11 +9,13 @@ const appPath = path.join(root, "versions/chs-v81-researcher-back-preview/app.js
 const indexPath = path.join(root, "versions/chs-v81-researcher-back-preview/index.html");
 const boardPath = path.join(root, "screen-share-study/review-back-preview.js");
 const boardHtmlPath = path.join(root, "screen-share-study/review-back-preview.html");
+const eventManifestPath = path.join(root, "data/ksize_manifest.json");
 
 const appSource = fs.readFileSync(appPath, "utf8");
 const indexSource = fs.readFileSync(indexPath, "utf8");
 const boardSource = fs.readFileSync(boardPath, "utf8");
 const boardHtmlSource = fs.readFileSync(boardHtmlPath, "utf8");
+const eventManifest = JSON.parse(fs.readFileSync(eventManifestPath, "utf8"));
 
 assert.match(appSource, /window\.location\.replace\(url\.toString\(\)\)/);
 assert.match(appSource, /requestedAssignmentMethod === "review_preview_only"/);
@@ -27,7 +29,7 @@ assert.doesNotMatch(
 assert.match(indexSource, /chs-v81-researcher-back-preview-r1/);
 assert.match(indexSource, /researcher-navigation\.css/);
 assert.match(boardHtmlSource, /pairings, colors, positions, and ratings/);
-assert.match(boardHtmlSource, /ftc-rendition-review-v11-colors-live-links/);
+assert.match(boardHtmlSource, /ftc-rendition-review-v12-corrected-purple-labels/);
 
 const sandbox = { window: {}, document: null, URL, URLSearchParams, Date, Math, Uint32Array };
 vm.runInNewContext(boardSource, sandbox, { filename: boardPath });
@@ -63,6 +65,22 @@ assert.deepEqual(
   { ...review.pairingColor("MOM-DAD", "a") },
   { name: "Sky blue", hex: "#8DD3FB" },
 );
+assert.deepEqual(
+  { ...review.pairingColor("DAD-KID", "a") },
+  { name: "Periwinkle", hex: "#7B80F7" },
+);
+assert.deepEqual(
+  { ...review.pairingColor("DAD-KID", "b") },
+  { name: "Aqua", hex: "#64D4CE" },
+);
+assert.deepEqual(
+  { ...review.pairingColor("TEACHER-KID", "c") },
+  { name: "Periwinkle", hex: "#7B80F7" },
+);
+assert.deepEqual(
+  { ...review.pairingColor("TEACHER-KID", "d") },
+  { name: "Aqua", hex: "#64D4CE" },
+);
 
 const exactPaletteMatch = appSource.match(
   /const EXACT_VISUAL_PALETTES = Object\.freeze\((\{[\s\S]*?\})\);\n\nfunction trialExactColor/,
@@ -73,6 +91,16 @@ assert.deepEqual(
   JSON.parse(JSON.stringify(review.EXACT_VISUAL_PALETTES)),
   JSON.parse(JSON.stringify(canonicalExactPalettes)),
 );
+for (const trial of eventManifest.trials.filter((candidate) =>
+  ["DAD-KID", "TEACHER-KID"].includes(candidate.blocks.INTRO.condition)
+)) {
+  const expectedHex = trial.blocks.INTRO.color === "PURPLE" ? "#7B80F7" : "#64D4CE";
+  assert.equal(
+    review.pairingColor(trial.blocks.INTRO.condition, trial.variant).hex,
+    expectedHex,
+    `${trial.id} must keep the imported ${trial.blocks.INTRO.color} palette`,
+  );
+}
 
 const entries = review.renditionEntries();
 assert.equal(entries.length, 96);
