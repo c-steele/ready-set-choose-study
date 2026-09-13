@@ -23,13 +23,46 @@
       .review-data-link:focus-visible { background: #e7f6f2; outline: none; }
       .review-pairing-details {
         display: grid;
-        justify-items: end;
+        justify-items: start;
         gap: 2px;
-        text-align: right;
+        text-align: left;
+      }
+      .review-pairing-list li {
+        display: grid;
+        gap: 3px;
+        padding: 7px 0;
+        border-top: 1px solid #e3edef;
+        font-size: 13px;
+      }
+      .review-pairing-list li:first-child {
+        border-top: 0;
+      }
+      .review-pairing-list li > span:first-child {
+        color: #294853;
+        font-weight: 850;
+      }
+      .review-pairing-list strong {
+        text-align: left;
       }
       .review-side-placement {
         color: #526b75;
         font-weight: 800;
+      }
+      .review-color-label {
+        display: inline-flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 5px;
+        color: #294853;
+        font-weight: 850;
+      }
+      .review-color-swatch {
+        flex: 0 0 auto;
+        width: 12px;
+        height: 12px;
+        border: 1px solid rgba(15, 42, 55, 0.28);
+        border-radius: 50%;
+        box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.45);
       }
     </style>
   </head>
@@ -131,13 +164,13 @@
           <div><dt>Pair plan</dt><dd data-field="schedule"></dd></div>
         </dl>
         <details class="review-pairings">
-          <summary>See pairings, left/middle/right positions, and ratings</summary>
+          <summary>See pairings, colors, positions, and ratings</summary>
           <ul class="review-pairing-list"></ul>
         </details>
         <a class="review-open" target="_blank" rel="noopener"><span data-open-label>Open Zoom rendition</span> <span aria-hidden="true">↗</span></a>
       </article>
     </template>
 
-    <script src="review-back-preview.js?v=ftc-rendition-review-v10-side-labels"></script>
+    <script src="review-back-preview.js?v=ftc-rendition-review-v11-colors-live-links"></script>
   </body>
 </html>

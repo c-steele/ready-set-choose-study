@@ -3,6 +3,7 @@
 
   // Keep this stable so existing "Reviewed" checkmarks carry into presentation-only updates.
   const REVIEW_VERSION = "ftc-rendition-review-v9-back-preview";
+  const PUBLIC_REVIEW_BASE = "https://c-steele.github.io/ready-set-choose-study/screen-share-study/review-back-preview.html";
   const STORAGE_KEY = `${REVIEW_VERSION}:checked`;
   const MODE_STORAGE_KEY = `${REVIEW_VERSION}:mode`;
   const PREVIEW_MODES = Object.freeze({
@@ -54,6 +55,41 @@
       Object.freeze({ "MOM-DAD": "d", "SISTER-BROTHER": "a", "DAD-KID": "d", "MOM-KID": "b", "TEACHER-KID": "c", "TEACHER-CLASSMATE": "a" }),
       Object.freeze({ "MOM-DAD": "c", "SISTER-BROTHER": "b", "DAD-KID": "b", "MOM-KID": "d", "TEACHER-KID": "a", "TEACHER-CLASSMATE": "d" }),
     ]),
+  });
+  const EXACT_VISUAL_PALETTES = Object.freeze({
+    "MOM-SISTER": ["#F2B13D", "#ED6E57"],
+    "TEACHER-FRIEND": ["#F2B13D", "#ED6E57"],
+    "MOM-TEACHER": ["#81D653", "#FFD100"],
+    "SISTER-FRIEND": ["#81D653", "#FFD100"],
+    "DAD-BROTHER": ["#893DF6", "#4CA98F"],
+    "DAD-TEACHER": ["#A9A9A9", "#92902C"],
+    "BROTHER-FRIEND": ["#A9A9A9", "#92902C"],
+    "BESTFRIEND-FRIEND": ["#1432F5", "#EB52F7"],
+    "MOM-DAD": ["#8DD3FB", "#F19AC8"],
+    "SISTER-BROTHER": ["#8DD3FB", "#F19AC8"],
+    "DAD-KID": ["#64D4CE", "#7B80F7"],
+    "TEACHER-KID": ["#64D4CE", "#7B80F7"],
+    "MOM-KID": ["#A62B17", "#22528E"],
+    "TEACHER-CLASSMATE": ["#8E2D94", "#8E2D94"],
+  });
+  const COLOR_NAMES_BY_HEX = Object.freeze({
+    "#F2B13D": "Warm orange",
+    "#ED6E57": "Coral red",
+    "#81D653": "Lime green",
+    "#FFD100": "Golden yellow",
+    "#893DF6": "Violet",
+    "#4CA98F": "Sea green",
+    "#A9A9A9": "Gray",
+    "#92902C": "Olive green",
+    "#1432F5": "Electric blue",
+    "#EB52F7": "Bright pink",
+    "#8DD3FB": "Sky blue",
+    "#F19AC8": "Soft pink",
+    "#64D4CE": "Aqua",
+    "#7B80F7": "Periwinkle",
+    "#A62B17": "Deep red",
+    "#22528E": "Navy blue",
+    "#8E2D94": "Plum",
   });
   const ROLE_CONDITIONS = Object.freeze({
     woman: Object.freeze(["MOM-TEACHER", "SISTER-FRIEND", "BESTFRIEND-FRIEND", "TEACHER-FRIEND", "MOM-SISTER", "TEACHER-CLASSMATE"]),
@@ -153,6 +189,18 @@
     });
   }
 
+  function pairingColor(condition, variant) {
+    const palettes = EXACT_VISUAL_PALETTES[condition];
+    if (!palettes) return Object.freeze({ name: "Unknown color", hex: "" });
+    const hex = palettes[["b", "d"].includes(String(variant || "").toLowerCase()) ? 1 : 0];
+    return Object.freeze({ name: COLOR_NAMES_BY_HEX[hex] || "Custom color", hex });
+  }
+
+  function previewBaseHref(baseHref) {
+    const requestedBase = new URL(baseHref || PUBLIC_REVIEW_BASE, PUBLIC_REVIEW_BASE);
+    return requestedBase.protocol === "file:" ? PUBLIC_REVIEW_BASE : requestedBase.href;
+  }
+
   function stableHash(text) {
     let hash = 2166136261;
     const input = String(text || "");
@@ -235,7 +283,7 @@
   function buildStudyUrl(entry, baseHref, requestedMode = "zoom", launchToken = "") {
     const mode = PREVIEW_MODES[requestedMode];
     if (!mode) throw new Error(`Unknown review mode: ${requestedMode}`);
-    const url = new URL("../versions/chs-v81-researcher-back-preview/index.html", baseHref);
+    const url = new URL("../versions/chs-v81-researcher-back-preview/index.html", previewBaseHref(baseHref));
     const primaryCell = canonicalPrimaryCell(entry.role, entry.event);
     const ratingPlan = entry.scheduleIndex + 1;
     const assignmentId = `REVIEW-FTC-C${String(primaryCell).padStart(2, "0")}-RP${ratingPlan}-VP${entry.visualPlan}`;
@@ -288,11 +336,14 @@
 
   const api = Object.freeze({
     REVIEW_VERSION,
+    PUBLIC_REVIEW_BASE,
     PREVIEW_MODES,
     ROLE_SETS,
     EVENTS,
     VISUAL_PLANS,
     SESSION_VISUAL_PLANS,
+    EXACT_VISUAL_PALETTES,
+    COLOR_NAMES_BY_HEX,
     ROLE_CONDITIONS,
     ONE_PAIR_SCRIPT_SCHEDULES,
     FAMILY_ONE_PAIR_SCRIPT_SCHEDULES,
@@ -301,6 +352,8 @@
     focusedRole,
     displayRole,
     sidePlacement,
+    pairingColor,
+    previewBaseHref,
     stableHash,
     scheduleIndexForSeed,
     seedForRendition,
@@ -425,15 +478,26 @@
         const item = documentObject.createElement("li");
         const story = documentObject.createElement("span");
         const details = documentObject.createElement("span");
+        const colorLabel = documentObject.createElement("span");
+        const colorSwatch = documentObject.createElement("i");
+        const colorText = documentObject.createElement("span");
         const sides = documentObject.createElement("span");
         const focus = documentObject.createElement("strong");
-        const placement = sidePlacement(condition, entry.visualPlanMap[condition], scriptKey);
+        const variant = entry.visualPlanMap[condition];
+        const placement = sidePlacement(condition, variant, scriptKey);
+        const color = pairingColor(condition, variant);
         story.textContent = condition.replace("BESTFRIEND", "BEST FRIEND").replaceAll("-", " + ");
         details.className = "review-pairing-details";
+        colorLabel.className = "review-color-label";
+        colorSwatch.className = "review-color-swatch";
+        colorSwatch.setAttribute("aria-hidden", "true");
+        colorSwatch.style.backgroundColor = color.hex;
+        colorText.textContent = `${color.name} (${color.hex})`;
+        colorLabel.append(colorSwatch, colorText);
         sides.className = "review-side-placement";
         sides.textContent = `${placement.left} left · ${placement.middle} middle · ${placement.right} right`;
         focus.textContent = `rates ${focusedRole(scriptKey)}`;
-        details.append(sides, focus);
+        details.append(colorLabel, sides, focus);
         item.append(story, details);
         pairingList.append(item);
       });

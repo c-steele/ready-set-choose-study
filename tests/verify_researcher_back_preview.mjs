@@ -26,13 +26,15 @@ assert.doesNotMatch(
 );
 assert.match(indexSource, /chs-v81-researcher-back-preview-r1/);
 assert.match(indexSource, /researcher-navigation\.css/);
-assert.match(boardHtmlSource, /left\/middle\/right positions/);
+assert.match(boardHtmlSource, /pairings, colors, positions, and ratings/);
+assert.match(boardHtmlSource, /ftc-rendition-review-v11-colors-live-links/);
 
 const sandbox = { window: {}, document: null, URL, URLSearchParams, Date, Math, Uint32Array };
 vm.runInNewContext(boardSource, sandbox, { filename: boardPath });
 const review = sandbox.window.FTCRenditionReview;
 assert.ok(review);
 assert.equal(review.REVIEW_VERSION, "ftc-rendition-review-v9-back-preview");
+assert.equal(review.PUBLIC_REVIEW_BASE, "https://c-steele.github.io/ready-set-choose-study/screen-share-study/review-back-preview.html");
 assert.deepEqual(
   { ...review.sidePlacement("MOM-DAD", "a") },
   { left: "Mom", middle: "Kid", right: "Dad" },
@@ -53,12 +55,42 @@ assert.deepEqual(
   { ...review.sidePlacement("TEACHER-KID", "a", "teacher-TEACHER") },
   { left: "Teacher", middle: "Teacher", right: "Kid" },
 );
+assert.deepEqual(
+  { ...review.pairingColor("SISTER-BROTHER", "b") },
+  { name: "Soft pink", hex: "#F19AC8" },
+);
+assert.deepEqual(
+  { ...review.pairingColor("MOM-DAD", "a") },
+  { name: "Sky blue", hex: "#8DD3FB" },
+);
+
+const exactPaletteMatch = appSource.match(
+  /const EXACT_VISUAL_PALETTES = Object\.freeze\((\{[\s\S]*?\})\);\n\nfunction trialExactColor/,
+);
+assert.ok(exactPaletteMatch, "Could not find the app's canonical exact-palette catalog");
+const canonicalExactPalettes = vm.runInNewContext(`(${exactPaletteMatch[1]})`);
+assert.deepEqual(
+  JSON.parse(JSON.stringify(review.EXACT_VISUAL_PALETTES)),
+  JSON.parse(JSON.stringify(canonicalExactPalettes)),
+);
 
 const entries = review.renditionEntries();
 assert.equal(entries.length, 96);
+let pairingLabelCount = 0;
 for (const entry of entries) {
   assert.ok(entry.visualPlanMap);
   assert.deepEqual(Object.keys(entry.visualPlanMap).sort(), [...review.ROLE_CONDITIONS[entry.role]].sort());
+  const entryColors = new Set();
+  for (const condition of review.ROLE_CONDITIONS[entry.role]) {
+    const variant = entry.visualPlanMap[condition];
+    assert.match(variant, /^[a-d]$/);
+    const color = review.pairingColor(condition, variant);
+    assert.match(color.hex, /^#[0-9A-F]{6}$/);
+    assert.equal(color.name, review.COLOR_NAMES_BY_HEX[color.hex]);
+    entryColors.add(color.hex);
+    pairingLabelCount += 1;
+  }
+  assert.equal(entryColors.size, 6);
   const zoomUrl = review.buildStudyUrl(
     entry,
     "https://example.test/screen-share-study/review-back-preview.html",
@@ -70,6 +102,17 @@ for (const entry of entries) {
   assert.equal(zoomUrl.searchParams.get("assignmentMethod"), "review_preview_only");
   assert.equal(zoomUrl.searchParams.get("previewIndex"), "0");
 }
+assert.equal(pairingLabelCount, 576);
+
+const localFileUrl = review.buildStudyUrl(
+  entries[0],
+  "file:///Users/example/review-back-preview.html",
+  "zoom",
+  "LOCALTEST",
+);
+assert.equal(localFileUrl.protocol, "https:");
+assert.equal(localFileUrl.host, "c-steele.github.io");
+assert.equal(localFileUrl.pathname, "/ready-set-choose-study/versions/chs-v81-researcher-back-preview/index.html");
 
 const familyPlanD = entries.find((entry) =>
   entry.role === "family"
