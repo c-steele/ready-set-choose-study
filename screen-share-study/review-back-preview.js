@@ -1,6 +1,7 @@
 (function installRenditionReview(globalObject, documentObject) {
   "use strict";
 
+  // Keep this stable so existing "Reviewed" checkmarks carry into presentation-only updates.
   const REVIEW_VERSION = "ftc-rendition-review-v9-back-preview";
   const STORAGE_KEY = `${REVIEW_VERSION}:checked`;
   const MODE_STORAGE_KEY = `${REVIEW_VERSION}:mode`;
@@ -34,6 +35,26 @@
     Object.freeze({ value: "c", number: 3, label: "C" }),
     Object.freeze({ value: "d", number: 4, label: "D" }),
   ]);
+  const SESSION_VISUAL_PLANS = Object.freeze({
+    woman: Object.freeze([
+      Object.freeze({ "MOM-TEACHER": "a", "SISTER-FRIEND": "d", "BESTFRIEND-FRIEND": "a", "TEACHER-FRIEND": "c", "MOM-SISTER": "b", "TEACHER-CLASSMATE": "c" }),
+      Object.freeze({ "MOM-TEACHER": "b", "SISTER-FRIEND": "c", "BESTFRIEND-FRIEND": "c", "TEACHER-FRIEND": "a", "MOM-SISTER": "d", "TEACHER-CLASSMATE": "b" }),
+      Object.freeze({ "MOM-TEACHER": "d", "SISTER-FRIEND": "a", "BESTFRIEND-FRIEND": "b", "TEACHER-FRIEND": "d", "MOM-SISTER": "c", "TEACHER-CLASSMATE": "a" }),
+      Object.freeze({ "MOM-TEACHER": "c", "SISTER-FRIEND": "b", "BESTFRIEND-FRIEND": "d", "TEACHER-FRIEND": "b", "MOM-SISTER": "a", "TEACHER-CLASSMATE": "d" }),
+    ]),
+    man: Object.freeze([
+      Object.freeze({ "DAD-TEACHER": "a", "BROTHER-FRIEND": "d", "BESTFRIEND-FRIEND": "a", "TEACHER-FRIEND": "c", "DAD-BROTHER": "b", "TEACHER-CLASSMATE": "c" }),
+      Object.freeze({ "DAD-TEACHER": "b", "BROTHER-FRIEND": "c", "BESTFRIEND-FRIEND": "c", "TEACHER-FRIEND": "a", "DAD-BROTHER": "d", "TEACHER-CLASSMATE": "b" }),
+      Object.freeze({ "DAD-TEACHER": "d", "BROTHER-FRIEND": "a", "BESTFRIEND-FRIEND": "b", "TEACHER-FRIEND": "d", "DAD-BROTHER": "c", "TEACHER-CLASSMATE": "a" }),
+      Object.freeze({ "DAD-TEACHER": "c", "BROTHER-FRIEND": "b", "BESTFRIEND-FRIEND": "d", "TEACHER-FRIEND": "b", "DAD-BROTHER": "a", "TEACHER-CLASSMATE": "d" }),
+    ]),
+    family: Object.freeze([
+      Object.freeze({ "MOM-DAD": "a", "SISTER-BROTHER": "d", "DAD-KID": "c", "MOM-KID": "a", "TEACHER-KID": "b", "TEACHER-CLASSMATE": "c" }),
+      Object.freeze({ "MOM-DAD": "b", "SISTER-BROTHER": "c", "DAD-KID": "a", "MOM-KID": "c", "TEACHER-KID": "d", "TEACHER-CLASSMATE": "b" }),
+      Object.freeze({ "MOM-DAD": "d", "SISTER-BROTHER": "a", "DAD-KID": "d", "MOM-KID": "b", "TEACHER-KID": "c", "TEACHER-CLASSMATE": "a" }),
+      Object.freeze({ "MOM-DAD": "c", "SISTER-BROTHER": "b", "DAD-KID": "b", "MOM-KID": "d", "TEACHER-KID": "a", "TEACHER-CLASSMATE": "d" }),
+    ]),
+  });
   const ROLE_CONDITIONS = Object.freeze({
     woman: Object.freeze(["MOM-TEACHER", "SISTER-FRIEND", "BESTFRIEND-FRIEND", "TEACHER-FRIEND", "MOM-SISTER", "TEACHER-CLASSMATE"]),
     man: Object.freeze(["DAD-TEACHER", "BROTHER-FRIEND", "BESTFRIEND-FRIEND", "TEACHER-FRIEND", "DAD-BROTHER", "TEACHER-CLASSMATE"]),
@@ -97,6 +118,13 @@
     "teacher-KID": "KID",
   });
 
+  const MIDDLE_ROLE_BY_SCRIPT_PREFIX = Object.freeze({
+    kid: "KID",
+    mom: "MOM",
+    dad: "DAD",
+    teacher: "TEACHER",
+  });
+
   function schedulesForRole(role) {
     return role === "family" ? FAMILY_ONE_PAIR_SCRIPT_SCHEDULES : ONE_PAIR_SCRIPT_SCHEDULES;
   }
@@ -104,6 +132,25 @@
   function focusedRole(scriptKey) {
     return FOCUSED_ROLE_BY_SCRIPT[scriptKey]
       || String(scriptKey || "").split("-").slice(1).join("-");
+  }
+
+  function displayRole(role) {
+    return String(role || "")
+      .replace("BESTFRIEND", "BEST FRIEND")
+      .toLowerCase()
+      .replace(/\b\w/g, (letter) => letter.toUpperCase());
+  }
+
+  function sidePlacement(condition, variant, scriptKey = "kid-") {
+    const roles = String(condition || "").split("-");
+    if (roles.length !== 2) return Object.freeze({ left: "", middle: "", right: "" });
+    const firstRoleIsLeft = variant === "a" || variant === "b";
+    const middleRole = MIDDLE_ROLE_BY_SCRIPT_PREFIX[String(scriptKey || "").split("-")[0]] || "KID";
+    return Object.freeze({
+      left: displayRole(firstRoleIsLeft ? roles[0] : roles[1]),
+      middle: displayRole(middleRole),
+      right: displayRole(firstRoleIsLeft ? roles[1] : roles[0]),
+    });
   }
 
   function stableHash(text) {
@@ -144,6 +191,7 @@
               visualPlan: visualPlan.number,
               visualPlanKey: visualPlan.value,
               visualPlanLabel: visualPlan.label,
+              visualPlanMap: SESSION_VISUAL_PLANS[role.value][visualPlan.number - 1],
               scheduleIndex,
               scheduleCount: role.scheduleCount,
               pairings: Object.freeze(Object.fromEntries(
@@ -244,11 +292,15 @@
     ROLE_SETS,
     EVENTS,
     VISUAL_PLANS,
+    SESSION_VISUAL_PLANS,
     ROLE_CONDITIONS,
     ONE_PAIR_SCRIPT_SCHEDULES,
     FAMILY_ONE_PAIR_SCRIPT_SCHEDULES,
+    MIDDLE_ROLE_BY_SCRIPT_PREFIX,
     schedulesForRole,
     focusedRole,
+    displayRole,
+    sidePlacement,
     stableHash,
     scheduleIndexForSeed,
     seedForRendition,
@@ -372,10 +424,17 @@
       Object.entries(entry.pairings).forEach(([condition, scriptKey]) => {
         const item = documentObject.createElement("li");
         const story = documentObject.createElement("span");
+        const details = documentObject.createElement("span");
+        const sides = documentObject.createElement("span");
         const focus = documentObject.createElement("strong");
+        const placement = sidePlacement(condition, entry.visualPlanMap[condition], scriptKey);
         story.textContent = condition.replace("BESTFRIEND", "BEST FRIEND").replaceAll("-", " + ");
+        details.className = "review-pairing-details";
+        sides.className = "review-side-placement";
+        sides.textContent = `${placement.left} left · ${placement.middle} middle · ${placement.right} right`;
         focus.textContent = `rates ${focusedRole(scriptKey)}`;
-        item.append(story, focus);
+        details.append(sides, focus);
+        item.append(story, details);
         pairingList.append(item);
       });
       const openLink = card.querySelector(".review-open");

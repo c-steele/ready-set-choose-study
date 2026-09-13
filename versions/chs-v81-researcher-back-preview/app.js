@@ -4108,8 +4108,7 @@ async function main() {
   const startIndex = Math.min(safeRequestedPreviewIndex, Math.max(0, reviewNodes.length - 1));
   currentPreviewIndex = startIndex;
   const reuseWarmedResearcherAssets = showResearcherTools
-    && requestedResearcherJump
-    && startIndex > 0;
+    && requestedResearcherJump;
 
   const timeline = [
     ...(reuseWarmedResearcherAssets

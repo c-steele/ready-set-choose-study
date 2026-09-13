@@ -21,6 +21,16 @@
       }
       .review-data-link:hover,
       .review-data-link:focus-visible { background: #e7f6f2; outline: none; }
+      .review-pairing-details {
+        display: grid;
+        justify-items: end;
+        gap: 2px;
+        text-align: right;
+      }
+      .review-side-placement {
+        color: #526b75;
+        font-weight: 800;
+      }
     </style>
   </head>
   <body>
@@ -121,13 +131,13 @@
           <div><dt>Pair plan</dt><dd data-field="schedule"></dd></div>
         </dl>
         <details class="review-pairings">
-          <summary>See who is rated after each story</summary>
+          <summary>See pairings, left/middle/right positions, and ratings</summary>
           <ul class="review-pairing-list"></ul>
         </details>
         <a class="review-open" target="_blank" rel="noopener"><span data-open-label>Open Zoom rendition</span> <span aria-hidden="true">↗</span></a>
       </article>
     </template>
 
-    <script src="review-back-preview.js?v=ftc-rendition-review-v9-back-preview"></script>
+    <script src="review-back-preview.js?v=ftc-rendition-review-v10-side-labels"></script>
   </body>
 </html>
