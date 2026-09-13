@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Find the Caregiver — final 96-configuration review</title>
+    <link rel="stylesheet" href="../../screen-share-study/review.css?v=ftc-rendition-review-v4">
+    <link rel="stylesheet" href="review.css?v=chs-v80-standard-96-review-v1">
+  </head>
+  <body>
+    <main class="review-shell">
+      <header class="review-hero">
+        <div>
+          <p class="review-eyebrow">Final standard study · researcher preview</p>
+          <h1>Review all 96 configurations</h1>
+          <p class="review-subtitle">Open every balanced Find the Caregiver configuration exactly as it would be assigned for CHS re-approval.</p>
+        </div>
+        <div class="review-progress-card" aria-live="polite">
+          <strong data-progress-count>0 / 96</strong>
+          <span>configurations reviewed</span>
+          <div class="review-progress-track" aria-hidden="true"><i data-progress-bar></i></div>
+        </div>
+      </header>
+
+      <section class="review-breakdown" aria-label="Configuration totals">
+        <div><strong>24</strong><span>Woman</span><small>3 events × 2 question plans × 4 color/layout plans</small></div>
+        <div><strong>24</strong><span>Man</span><small>3 events × 2 question plans × 4 color/layout plans</small></div>
+        <div><strong>48</strong><span>Family</span><small>3 events × 4 question plans × 4 color/layout plans</small></div>
+      </section>
+
+      <section class="review-note" aria-label="What this page shows">
+        <strong>This is the final standard study—not the Home/School study.</strong>
+        <span>The 96 cards are review configurations inside 9 main assignment conditions. Each preview uses the final v80 study, prerecorded Evelyn audio, and its exact balanced question and color/layout plans. Opening a preview does not change the live assignment counts.</span>
+      </section>
+
+      <section class="review-controls review-controls-v80" aria-label="Review filters">
+        <label>
+          <span>Role set</span>
+          <select data-filter="role">
+            <option value="all">All role sets</option>
+            <option value="woman">Woman</option>
+            <option value="man">Man</option>
+            <option value="family">Family</option>
+          </select>
+        </label>
+        <label>
+          <span>Story event</span>
+          <select data-filter="event">
+            <option value="all">All story events</option>
+            <option value="HUG">Hug</option>
+            <option value="FOOD">Food</option>
+            <option value="HELP">Help</option>
+          </select>
+        </label>
+        <label>
+          <span>Question plan</span>
+          <select data-filter="rating">
+            <option value="all">All plans</option>
+            <option value="1">Plan 1</option>
+            <option value="2">Plan 2</option>
+            <option value="3">Plan 3 (Family)</option>
+            <option value="4">Plan 4 (Family)</option>
+          </select>
+        </label>
+        <label>
+          <span>Color/layout plan</span>
+          <select data-filter="visual">
+            <option value="all">All plans</option>
+            <option value="1">Plan 1</option>
+            <option value="2">Plan 2</option>
+            <option value="3">Plan 3</option>
+            <option value="4">Plan 4</option>
+          </select>
+        </label>
+        <label class="review-check-filter">
+          <input type="checkbox" data-filter="unfinished">
+          <span>Only show unchecked</span>
+        </label>
+        <button type="button" class="review-reset" data-reset>Clear review checks</button>
+      </section>
+
+      <section class="review-summary">
+        <p><strong data-visible-count>96 configurations</strong> shown. Cards are ordered Woman, Man, then Family; within each set: Hug, Food, Help; then question plan and color/layout plan.</p>
+      </section>
+
+      <section class="review-grid" data-review-grid aria-live="polite"></section>
+    </main>
+
+    <template id="review-card-template">
+      <article class="review-card">
+        <div class="review-card-topline">
+          <span class="review-role"></span>
+          <label class="review-done"><input type="checkbox"><span>Reviewed</span></label>
+        </div>
+        <h2></h2>
+        <dl>
+          <div><dt>Main condition</dt><dd data-field="cell"></dd></div>
+          <div><dt>Question plan</dt><dd data-field="rating"></dd></div>
+          <div><dt>Color/layout plan</dt><dd data-field="visual"></dd></div>
+        </dl>
+        <details class="review-pairings">
+          <summary>See the six story settings</summary>
+          <ul class="review-pairing-list"></ul>
+        </details>
+        <a class="review-open" target="_blank" rel="noopener">Open this CHS audio preview <span aria-hidden="true">↗</span></a>
+      </article>
+    </template>
+
+    <script src="review.js?v=chs-v80-standard-96-review-v1"></script>
+  </body>
+</html>

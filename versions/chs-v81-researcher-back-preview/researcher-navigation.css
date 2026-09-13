@@ -1,0 +1,38 @@
+.ksize-researcher-navigation-status {
+  align-self: center;
+  max-width: 260px;
+  border: 2px solid #9b2c2c;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.97);
+  color: #7a1e1e;
+  font-size: 12px;
+  font-weight: 850;
+  line-height: 1.25;
+  padding: 6px 9px;
+}
+
+body.ksize-researcher-navigating::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  background: rgba(255, 255, 255, 0.74);
+  cursor: progress;
+}
+
+body.ksize-researcher-navigating::after {
+  content: attr(data-researcher-navigation-message);
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  border: 3px solid #1b4f7a;
+  border-radius: 16px;
+  background: #fff;
+  color: #163f64;
+  box-shadow: 0 14px 40px rgba(22, 63, 100, 0.22);
+  font-size: clamp(20px, 3vw, 34px);
+  font-weight: 900;
+  padding: 18px 28px;
+}
