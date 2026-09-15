@@ -163,6 +163,7 @@ assert.equal(recorded.properties.second_context, context.assignedCell.secondCont
 assert.equal(recorded.properties.design_version, "home_school_within_child_counterbalanced_context_order_v1");
 assert.equal(recorded.properties.candidate_release, "chs-home-school-evelyn-v1-r16-within-child-preview-1");
 assert.doesNotMatch(context.gameUrl, /researcherTools=1/, "live CHS runs must not expose researcher controls");
+assert.doesNotMatch(context.gameUrl, /[?&](?:researcherToolbar|researcherJump|skipParentSetup)=/, "live CHS runs must not expose any researcher navigation parameters");
 assert.match(context.gameUrl, /[?&]contextStudy=1(?:&|$)/);
 assert.match(context.gameUrl, /[?&]withinChildContexts=1(?:&|$)/);
 assert.match(context.gameUrl, /[?&]ratingMode=none(?:&|$)/);
@@ -178,6 +179,7 @@ assert.match(source, /context="\s*\+\s*encodeURIComponent\(assignedCell\.firstCo
 assert.match(source, /HOME_SCHOOL_STUDY_VERSION\s*=\s*"chs-home-school-evelyn-v1"/);
 assert.match(source, /HOME_SCHOOL_CONTEXT_SCRIPT_VERSION\s*=\s*"home_school_context_first_recipient_aware_v5"/);
 assert.match(source, /HOME_SCHOOL_CANDIDATE_RELEASE\s*=\s*"chs-home-school-evelyn-v1-r16-within-child-preview-1"/);
+assert.doesNotMatch(source, /researcher(?:Tools|Toolbar|Jump)=|skipParentSetup=/, "the CHS wrapper must never append researcher navigation parameters");
 assert.match(source, /HOME_SCHOOL_DESIGN_VERSION\s*=\s*"home_school_within_child_counterbalanced_context_order_v1"/);
 assert.doesNotMatch(source, /chs-home-school-evelyn-v1-r(?:[1-9])(?!\d)/);
 assert.match(source, /Who Takes Care\? child game/);
@@ -276,8 +278,9 @@ const responsePreview = loadIdentityScenario({
 assert.equal(responsePreview.context.assignmentKey, "PREVIEW-RESPONSE");
 assert.equal(responsePreview.context.assignmentKeyType, "response_id_preview_fallback");
 assert.ok(responsePreview.context.assignedCell, "CHS preview should remain renderable with its response fallback");
-assert.match(responsePreview.context.gameUrl, /[?&]researcherTools=1(?:&|$)/, "CHS response previews must expose researcher controls");
-assert.match(responsePreview.context.gameUrl, /[?&]researcherToolbar=back-skip(?:&|$)/, "CHS response previews must request the Back/Skip toolbar");
+assert.doesNotMatch(responsePreview.context.gameUrl, /[?&]researcherTools=1(?:&|$)/, "CHS response previews must not expose researcher controls");
+assert.doesNotMatch(responsePreview.context.gameUrl, /[?&]researcherToolbar=back-skip(?:&|$)/, "CHS response previews must not request the Back/Skip toolbar");
+assert.doesNotMatch(responsePreview.context.gameUrl, /[?&](?:researcherJump|skipParentSetup)=/, "CHS response previews must not request researcher navigation shortcuts");
 
 const pathnamePreview = loadIdentityScenario({
   origin: "https://childrenhelpingscience.com",
@@ -286,8 +289,9 @@ const pathnamePreview = loadIdentityScenario({
 assert.equal(pathnamePreview.context.assignmentKey, "/responses/path-only/preview/");
 assert.equal(pathnamePreview.context.assignmentKeyType, "pathname_preview_fallback");
 assert.ok(pathnamePreview.context.assignedCell, "CHS preview should remain renderable with its pathname fallback");
-assert.match(pathnamePreview.context.gameUrl, /[?&]researcherTools=1(?:&|$)/, "CHS pathname previews must expose researcher controls");
-assert.match(pathnamePreview.context.gameUrl, /[?&]researcherToolbar=back-skip(?:&|$)/, "CHS pathname previews must request the Back/Skip toolbar");
+assert.doesNotMatch(pathnamePreview.context.gameUrl, /[?&]researcherTools=1(?:&|$)/, "CHS pathname previews must not expose researcher controls");
+assert.doesNotMatch(pathnamePreview.context.gameUrl, /[?&]researcherToolbar=back-skip(?:&|$)/, "CHS pathname previews must not request the Back/Skip toolbar");
+assert.doesNotMatch(pathnamePreview.context.gameUrl, /[?&](?:researcherJump|skipParentSetup)=/, "CHS pathname previews must not request researcher navigation shortcuts");
 
 const localReview = loadIdentityScenario({
   origin: "http://127.0.0.1:8000",

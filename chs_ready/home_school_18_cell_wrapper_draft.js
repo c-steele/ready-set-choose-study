@@ -225,11 +225,8 @@ var assignedCell = assignmentKey ? assignHomeSchoolCell(assignmentKey) : null;
    candidate derives the second block when withinChildContexts=1. */
 var assignedEntrypoint = "index.html";
 var candidateRoot = HOME_SCHOOL_CANDIDATE_ROOT_URL.replace(/\/$/, "");
-/* Editing previews get Back/Skip navigation automatically. This path check
-   keeps researcher controls out of live participant sessions. */
-var researcherToolsParam = isChsPreviewContext
-  ? "&researcherTools=1&researcherToolbar=back-skip"
-  : "";
+/* CHS launches never expose researcher Back/Skip controls. Those controls
+   remain available only through the separate review board URLs. */
 var sheetsWebhook = String(HOME_SCHOOL_SHEETS_WEBHOOK || "").trim();
 if (sheetsWebhook && !/^https:\/\/script\.google\.com\/macros\/s\/[A-Za-z0-9_-]+\/exec$/.test(sheetsWebhook)) {
   throw new Error("The approved Google Sheets receiver must be a deployed script.google.com /exec URL.");
@@ -252,8 +249,7 @@ var gameUrl = assignedCell
     "&assignmentCell=" + encodeURIComponent(assignedCell.assignmentCell) +
     "&child=" + encodeURIComponent(chsChildId) +
     "&response=" + encodeURIComponent(chsResponseId) +
-    dataMirrorParams +
-    researcherToolsParam
+    dataMirrorParams
   : "about:blank";
 
 var assignmentData = {
