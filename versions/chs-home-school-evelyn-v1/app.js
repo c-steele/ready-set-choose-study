@@ -2358,11 +2358,13 @@ function renderKidSlide({ trial = null, image, text, choices = [], overlayChoice
   const contextEvent = activeContextEventSpec(contextCondition);
   const furnishedScene = furnishedSceneSpec(trial, image);
   const contextOverlayText = activeStudyContext
-    ? (slideKind === "context_intro"
-      ? text || contextIntroText()
-      : (slideKind === "story"
-        ? contextEvent?.eventText || ""
-        : (slideKind === "response_choices" ? contextEvent?.questionText || "" : "")))
+    ? (slideKind === "intro"
+      ? text || ""
+      : (slideKind === "context_intro"
+        ? text || contextIntroText()
+        : (slideKind === "story"
+          ? contextEvent?.eventText || ""
+          : (slideKind === "response_choices" ? contextEvent?.questionText || "" : ""))))
     : "";
   const contextOverlayHtml = contextOverlayText
     ? `<div class="ksize-context-spoken-banner"${furnishedScene ? ` style="background:${escapeHtml(furnishedScene.accent)}"` : ""}>${escapeHtml(contextOverlayText)}</div>`

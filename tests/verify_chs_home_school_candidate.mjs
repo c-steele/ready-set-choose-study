@@ -129,6 +129,12 @@ assert.match(app, /assertParticipantContextAudioCoverage\(eventPlan, selectedEve
 assert.match(app, /slideIndex === block\.introSlides\.length - 1 && activeStudyContext/);
 assert.doesNotMatch(app, /slideIndex === 0 && activeStudyContext/);
 assert.match(app, /slideKind === "context_intro"[\s\S]*?text \|\| contextIntroText\(\)/);
+assert.match(
+  app,
+  /slideKind === "intro"[\s\S]*?text \|\| ""[\s\S]*?slideKind === "context_intro"[\s\S]*?slideKind === "story"[\s\S]*?slideKind === "response_choices"/,
+  "Every Home/School story heading must use the same in-scene caption banner",
+);
+assert.match(indexHtml, /app\.js\?v=chs-home-school-evelyn-v1-r15-context-first-preview-1-uniform-captions-v1/);
 assert.doesNotMatch(app, /contextIntro \? `<div class="ksize-context-intro-cue"/);
 assert.match(app, /fileAudio\.addEventListener\("playing",[\s\S]*?setMouthPlaying\(true\)/);
 assert.match(app, /fileAudio\.addEventListener\("waiting", \(\) => setMouthPlaying\(false\)\)/);
