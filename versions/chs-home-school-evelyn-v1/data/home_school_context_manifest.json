@@ -1,10 +1,10 @@
 {
-  "schemaVersion": 2,
-  "status": "release_ready",
-  "designVersion": "home_school_context_chs_candidate_v1",
+  "schemaVersion": 3,
+  "status": "review_ready_not_submitted",
+  "designVersion": "home_school_within_child_counterbalanced_context_order_v1",
   "scriptVersion": "home_school_context_first_recipient_aware_v5",
   "assignment": {
-    "design": "between-child",
+    "design": "within-child",
     "contexts": [
       "HOME",
       "SCHOOL"
@@ -21,14 +21,21 @@
     ],
     "cellCount": 18,
     "cellBase": 1,
-    "cellFormula": "role_index * 6 + event_index * 2 + context_index + 1",
-    "consistency": "One context and one event are fixed across all six stories for each child."
+    "cellFormula": "role_index * 6 + event_index * 2 + context_order_index + 1",
+    "contextOrders": [
+      ["HOME", "SCHOOL"],
+      ["SCHOOL", "HOME"]
+    ],
+    "storyCount": 12,
+    "storyCountPerContext": 6,
+    "ratings": "none",
+    "consistency": "Each child receives the same six matched stories once at Home and once at School. Event, pairing, palette, side, rendition, and within-block story order stay matched; only the setting changes."
   },
   "visualTreatment": {
     "type": "furnished-palette-matched-background",
     "version": "home_school_furnished_palette_picture_v38",
-    "scope": "context introduction, relationship identity pages, event pages, helping-choice page, dyad introductions, and Likert rating pages",
-    "followupRatings": "assigned furnished Home or School room retained behind the original dyad artwork",
+    "scope": "context introduction, relationship identity pages, event pages, and helping-choice pages in both matched setting blocks",
+    "followupRatings": "removed from this design",
     "fullyIllustratedBackgrounds": true,
     "homeRoom": "subtle palette-matched wall; original picture-frame geometry retained while the empty artwork field and frame bars receive a faint palette-matched tint inside fixed masks; abstract picture people removed; lamp, floor, couch, shadows, matched gray pillows, and neutral furniture details protected from tint spill",
     "schoolRoom": "subtle palette-matched wall, inverse neutral classroom rug, and neutral gray desk surfaces",

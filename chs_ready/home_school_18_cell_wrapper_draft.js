@@ -1,7 +1,7 @@
 /*
   PRODUCTION-READY CHS WRAPPER SOURCE FOR STUDY 6349.
 
-  This source targets the r15 context-first Home/School editing preview.
+  This source targets the r16 within-child Home/School editing preview.
   Installing it in CHS remains a separate researcher-controlled action.
 
   Public title: Who Takes Care? A Colorful Story Game
@@ -11,8 +11,11 @@
   participant messaging, the exit survey, and debrief. The child task is
   hosted in an isolated GitHub Pages candidate and runs inside an iframe.
 
-  Between-child assignment:
-    2 contexts × 3 role sets × 3 events = 18 cells.
+  Within-child context design with between-child counterbalancing:
+    3 role sets × 3 events × 2 context orders = 18 cells.
+  Every child receives the same six matched stories at HOME and SCHOOL. The
+  assigned context-order cell determines whether HOME or SCHOOL is presented
+  first. No Likert or other character-rating trials are included.
   Live assignment uses CHS's trusted study-specific child hash; that one cell
   and the same seed are reused after reloads. URL, response, and pathname
   fallbacks are restricted to CHS preview or clearly non-CHS local review.
@@ -24,8 +27,9 @@ var HOME_SCHOOL_CANDIDATE_ROOT_URL =
 var HOME_SCHOOL_CANDIDATE_ORIGIN = "https://c-steele.github.io";
 
 var HOME_SCHOOL_STUDY_VERSION = "chs-home-school-evelyn-v1";
-var HOME_SCHOOL_CANDIDATE_RELEASE = "chs-home-school-evelyn-v1-r15-context-first-preview-1";
+var HOME_SCHOOL_CANDIDATE_RELEASE = "chs-home-school-evelyn-v1-r16-within-child-preview-1";
 var HOME_SCHOOL_CONTEXT_SCRIPT_VERSION = "home_school_context_first_recipient_aware_v5";
+var HOME_SCHOOL_DESIGN_VERSION = "home_school_within_child_counterbalanced_context_order_v1";
 /* Intentionally blank for study 6349. Google mirroring is disabled and CHS
    remains the complete, authoritative primary record. */
 var HOME_SCHOOL_SHEETS_WEBHOOK = "";
@@ -154,7 +158,10 @@ function stableHash(text) {
   return hash >>> 0;
 }
 
-var HOME_SCHOOL_CONTEXTS = ["HOME", "SCHOOL"];
+var HOME_SCHOOL_CONTEXT_ORDERS = [
+  { dataLabel: "HOME_FIRST", contexts: ["HOME", "SCHOOL"] },
+  { dataLabel: "SCHOOL_FIRST", contexts: ["SCHOOL", "HOME"] }
+];
 var HOME_SCHOOL_ROLE_SETS = [
   { dataLabel: "WOMAN", urlValue: "woman", conditionSet: "role" },
   { dataLabel: "MAN", urlValue: "man", conditionSet: "role" },
@@ -162,9 +169,9 @@ var HOME_SCHOOL_ROLE_SETS = [
 ];
 var HOME_SCHOOL_EVENTS = ["HUG", "FOOD", "HELP"];
 
-/* Cell numbering is fixed and matches the preregistration table:
-   1 Woman/Hug/Home, 2 Woman/Hug/School, ...,
-   17 Family-Teacher/Help/Home, 18 Family-Teacher/Help/School. */
+/* Cell numbering is fixed for the review candidate:
+   1 Woman/Hug/Home-first, 2 Woman/Hug/School-first, ...,
+   17 Family-Teacher/Help/Home-first, 18 Family-Teacher/Help/School-first. */
 function assignmentFromCellIndex(zeroBasedCellIndex) {
   var cellIndex = Number(zeroBasedCellIndex);
   if (cellIndex < 0 || cellIndex >= 18 || Math.floor(cellIndex) !== cellIndex) {
@@ -172,18 +179,23 @@ function assignmentFromCellIndex(zeroBasedCellIndex) {
   }
   var roleSetIndex = Math.floor(cellIndex / 6);
   var eventIndex = Math.floor((cellIndex % 6) / 2);
-  var contextIndex = cellIndex % 2;
+  var contextOrderIndex = cellIndex % 2;
   var roleSet = HOME_SCHOOL_ROLE_SETS[roleSetIndex];
-  var context = HOME_SCHOOL_CONTEXTS[contextIndex];
+  var contextOrder = HOME_SCHOOL_CONTEXT_ORDERS[contextOrderIndex];
   var eventName = HOME_SCHOOL_EVENTS[eventIndex];
   return {
     assignmentCell: cellIndex + 1,
-    context: context,
+    assignedContext: "BOTH",
+    assignedContexts: contextOrder.contexts.slice(),
+    contextOrderCondition: contextOrder.dataLabel,
+    contextOrder: contextOrder.contexts.slice(),
+    firstContext: contextOrder.contexts[0],
+    secondContext: contextOrder.contexts[1],
     roleSet: roleSet.dataLabel,
     roleSetParam: roleSet.urlValue,
     conditionSet: roleSet.conditionSet,
     event: eventName,
-    variantId: "home_school_" + roleSet.urlValue + "_" + eventName.toLowerCase() + "_" + context.toLowerCase()
+    variantId: "home_school_" + roleSet.urlValue + "_" + eventName.toLowerCase() + "_" + contextOrder.dataLabel.toLowerCase()
   };
 }
 
@@ -209,7 +221,8 @@ var assignmentKeyType = runtimeChsChildId
           ? "response_id_preview_fallback"
           : (isChsPreviewContext ? "pathname_preview_fallback" : "missing_identity")));
 var assignedCell = assignmentKey ? assignHomeSchoolCell(assignmentKey) : null;
-/* One entrypoint serves both contexts; the locked context is passed below. */
+/* One entrypoint serves both contexts; context names the first block and the
+   candidate derives the second block when withinChildContexts=1. */
 var assignedEntrypoint = "index.html";
 var candidateRoot = HOME_SCHOOL_CANDIDATE_ROOT_URL.replace(/\/$/, "");
 /* Editing previews get Back/Skip navigation automatically. This path check
@@ -228,9 +241,10 @@ var gameUrl = assignedCell
   ? candidateRoot + "/" + assignedEntrypoint +
     "?v=" + encodeURIComponent(HOME_SCHOOL_CANDIDATE_RELEASE) +
     "&syntheticSpeech=0" +
-    "&ratingMode=one-after-story" +
+    "&ratingMode=none" +
     "&contextStudy=1" +
-    "&context=" + encodeURIComponent(assignedCell.context) +
+    "&withinChildContexts=1" +
+    "&context=" + encodeURIComponent(assignedCell.firstContext) +
     "&set=" + encodeURIComponent(assignedCell.conditionSet) +
     "&roleSet=" + encodeURIComponent(assignedCell.roleSetParam) +
     "&event=" + encodeURIComponent(assignedCell.event) +
@@ -246,8 +260,14 @@ var assignmentData = {
   study_version: HOME_SCHOOL_STUDY_VERSION,
   candidate_release: HOME_SCHOOL_CANDIDATE_RELEASE,
   context_script_version: HOME_SCHOOL_CONTEXT_SCRIPT_VERSION,
+  design_version: HOME_SCHOOL_DESIGN_VERSION,
   assignment_cell: assignedCell ? assignedCell.assignmentCell : null,
-  assigned_context: assignedCell ? assignedCell.context : "",
+  assigned_context: assignedCell ? assignedCell.assignedContext : "",
+  assigned_contexts: assignedCell ? assignedCell.assignedContexts.join(",") : "",
+  context_order: assignedCell ? assignedCell.contextOrder.join(",") : "",
+  context_order_condition: assignedCell ? assignedCell.contextOrderCondition : "",
+  first_context: assignedCell ? assignedCell.firstContext : "",
+  second_context: assignedCell ? assignedCell.secondContext : "",
   assigned_role_set: assignedCell ? assignedCell.roleSet : "",
   assigned_event: assignedCell ? assignedCell.event : "",
   assigned_study_variant: assignedCell ? assignedCell.variantId : "",
@@ -262,12 +282,23 @@ var assignmentData = {
 
 jsPsych.data.addProperties(assignmentData);
 
+function normalizedContextOrder(value) {
+  var values = Array.isArray(value) ? value : String(value == null ? "" : value).split(",");
+  return values.map(function(context) {
+    return String(context || "").trim().toUpperCase();
+  }).filter(Boolean).join(",");
+}
+
 function sheetMirrorMessageMatchesAssignment(message) {
   return Boolean(message) && Boolean(assignedCell) &&
     message.data_mirror_contract === HOME_SCHOOL_DATA_MIRROR_CONTRACT &&
     String(message.study || "") === "K-SIZE-home-school-context" &&
     String(message.chs_response_id || "") === String(chsResponseId || "") &&
-    String(message.assigned_context || "").toUpperCase() === assignedCell.context &&
+    String(message.assigned_context || "").toUpperCase() === assignedCell.assignedContext &&
+    normalizedContextOrder(message.assigned_contexts) === assignedCell.contextOrder.join(",") &&
+    normalizedContextOrder(message.context_order) === assignedCell.contextOrder.join(",") &&
+    String(message.first_context || "").toUpperCase() === assignedCell.firstContext &&
+    String(message.second_context || "").toUpperCase() === assignedCell.secondContext &&
     String(message.role_set || "").toLowerCase() === assignedCell.roleSetParam &&
     String(message.event_suffix || "").toUpperCase() === assignedCell.event &&
     Number(message.assignment_cell) === assignedCell.assignmentCell;
@@ -325,7 +356,9 @@ function sheetMirrorMetadata(source) {
   var keys = [
     "study", "audio_version", "participant_id", "study_id", "session_id",
     "chs_child_id", "chs_response_id", "seed", "event_suffix", "role_set",
-    "assigned_context", "study_version", "context_script_version",
+    "assigned_context", "assigned_contexts", "context_order",
+    "context_order_condition", "first_context", "second_context",
+    "study_version", "context_script_version",
     "assignment_cell", "assignment_cell_schema", "assignment_method",
     "assignment_key_type", "rating_mode", "rating_schedule_version",
     "rating_focal_roles", "rating_focal_roles_unique", "part_order",
@@ -419,10 +452,10 @@ var videoConsent = {
   PIName: "Ashley Thomas",
   institution: "Harvard University",
   PIContact: "athomas@g.harvard.edu",
-  summary_statement: "<h2>Before you begin</h2><ul><li>This is a recorded picture game about social relationships and where events happen.</li><li>It takes about 15 minutes.</li><li>You and your child may stop at any time.</li><li>There are no right or wrong answers in this game.</li></ul>",
+  summary_statement: "<h2>Before you begin</h2><ul><li>This is a recorded picture game about who children expect to help at home and at school.</li><li>Your child will hear 12 picture stories.</li><li>It takes about 15 minutes.</li><li>You and your child may stop at any time.</li><li>There are no right or wrong answers in this game.</li></ul>",
   payment: "You will receive a $5 Amazon.com gift card after participating. Families may still receive compensation if they stop early. To be eligible, your child must be within the study age range and visible in the study video, including any portion recorded before stopping. Each child can receive one gift card. The gift card will be sent through Children Helping Science messaging within 2 weeks.",
-  procedures: "Your participation is completely voluntary; you and your child can choose not to take part. You and your child can agree to take part and later change your mind. The study session will be conducted remotely and recorded through Children Helping Science, an online platform for developmental research studies. During the study, your child will play a picture game called Who Takes Care? The game includes colorful pictures and prerecorded narration. Your child will hear six stories that all take place either at the kid's home or at the kid's school. In each story, someone needs comfort, food, or help and two characters could respond. Your child will select who is more likely to help and then answer questions about the characters, including who is in charge and how much one character loves another. Children do not need to be able to read to participate. Children are randomly assigned to one version of the game; different versions include different locations, relationship sets, and events. The study takes about 15 minutes. Please keep the sound on and let the game audio play. A grown-up may help with the device, but please do not suggest answers or point to a choice. All responses are stored automatically and uploaded to the research team. The recording is used for research purposes so the team can check how children responded during the task. We do not believe there are any risks for your child from participating in this research. Participation is completely voluntary. You and your child can stop at any time without penalty or loss of benefits to which you are otherwise entitled.",
-  purpose: "We invite your child to take part in a research study about how children connect caregiving with different kinds of social relationships and settings. Children notice social roles, relationships, and locations and use them to make predictions about what people will do. This study asks whether children's caregiving expectations differ when the same kinds of events take place at home versus at school. By comparing children's helper choices with their answers about authority and affection, we can learn how they connect caregiving with relationships and settings.",
+  procedures: "Your participation is completely voluntary; you and your child can choose not to take part. You and your child can agree to take part and later change your mind. The study session will be conducted remotely and recorded through Children Helping Science, an online platform for developmental research studies. During the study, your child will play a picture game called Who Takes Care? The game includes colorful pictures and prerecorded narration. Your child will hear 12 picture stories: six set at the kid's home and six set at the kid's school. Every child sees both settings. Some children see the home stories first, and others see the school stories first. The stories focus on one type of need—comfort, food, or help—depending on the version assigned to your child. In each story, two characters could respond, and your child will choose who is more likely to help. Children do not need to be able to read to participate. Different versions include different relationship sets, types of need, and setting orders. The study takes about 15 minutes. Please keep the sound on and let the game audio play. A grown-up may help with the device, but please do not suggest answers or point to a choice. All responses are stored automatically and uploaded to the research team. The recording is used for research purposes so the team can check how children responded during the task. We do not believe there are any risks for your child from participating in this research. Participation is completely voluntary. You and your child can stop at any time without penalty or loss of benefits to which you are otherwise entitled.",
+  purpose: "We invite your child to take part in a research study about how social settings can shape children's caregiving expectations. Children notice social roles, relationships, and locations and use them to make predictions about what people will do. By comparing children's choices in matched stories set at home and at school, we can learn whether social setting shapes whom children expect to provide care.",
   research_rights_statement: "You are not waiving any legal claims, rights, or remedies because of your participation in this research study. If you have questions, concerns, or complaints, or think the research has hurt your child, talk to the research team at 617-384-7777. You can also contact the PI, Ashley Thomas, at athomas@g.harvard.edu. This research has been reviewed and approved by the Harvard University Area Institutional Review Board. You may talk to them at (617) 496-2847 or cuhs@harvard.edu if: <ul><li>Your questions, concerns, or complaints are not being answered by the research team.</li><li>You cannot reach the research team.</li><li>You want to talk to someone besides the research team.</li><li>You have questions about your child's rights as a research subject.</li><li>You want to get information or provide input about this research.</li></ul>"
 };
 
@@ -444,8 +477,14 @@ var readySetChooseGame = {
     study_version: HOME_SCHOOL_STUDY_VERSION,
     candidate_release: HOME_SCHOOL_CANDIDATE_RELEASE,
     context_script_version: HOME_SCHOOL_CONTEXT_SCRIPT_VERSION,
+    design_version: HOME_SCHOOL_DESIGN_VERSION,
     assignment_cell: assignedCell ? assignedCell.assignmentCell : null,
-    assigned_context: assignedCell ? assignedCell.context : "",
+    assigned_context: assignedCell ? assignedCell.assignedContext : "",
+    assigned_contexts: assignedCell ? assignedCell.assignedContexts.join(",") : "",
+    context_order: assignedCell ? assignedCell.contextOrder.join(",") : "",
+    context_order_condition: assignedCell ? assignedCell.contextOrderCondition : "",
+    first_context: assignedCell ? assignedCell.firstContext : "",
+    second_context: assignedCell ? assignedCell.secondContext : "",
     assigned_role_set: assignedCell ? assignedCell.roleSet : "",
     assigned_event: assignedCell ? assignedCell.event : "",
     assigned_study_variant: assignedCell ? assignedCell.variantId : "",
@@ -478,7 +517,11 @@ var readySetChooseGame = {
       if (event.data.type !== "GAME_COMPLETE") return;
       var gamePayload = event.data.payload || {};
       var payloadMatchesAssignment =
-        String(gamePayload.assigned_context || "").toUpperCase() === assignedCell.context &&
+        String(gamePayload.assigned_context || "").toUpperCase() === assignedCell.assignedContext &&
+        normalizedContextOrder(gamePayload.assigned_contexts) === assignedCell.contextOrder.join(",") &&
+        normalizedContextOrder(gamePayload.context_order) === assignedCell.contextOrder.join(",") &&
+        String(gamePayload.first_context || "").toUpperCase() === assignedCell.firstContext &&
+        String(gamePayload.second_context || "").toUpperCase() === assignedCell.secondContext &&
         String(gamePayload.role_set || "").toLowerCase() === assignedCell.roleSetParam &&
         String(gamePayload.event_suffix || "").toUpperCase() === assignedCell.event &&
         Number(gamePayload.assignment_cell) === assignedCell.assignmentCell;
@@ -494,8 +537,14 @@ var readySetChooseGame = {
         study_version: HOME_SCHOOL_STUDY_VERSION,
         candidate_release: HOME_SCHOOL_CANDIDATE_RELEASE,
         context_script_version: HOME_SCHOOL_CONTEXT_SCRIPT_VERSION,
+        design_version: HOME_SCHOOL_DESIGN_VERSION,
         assignment_cell: assignedCell.assignmentCell,
-        assigned_context: assignedCell.context,
+        assigned_context: assignedCell.assignedContext,
+        assigned_contexts: assignedCell.assignedContexts.join(","),
+        context_order: assignedCell.contextOrder.join(","),
+        context_order_condition: assignedCell.contextOrderCondition,
+        first_context: assignedCell.firstContext,
+        second_context: assignedCell.secondContext,
         assigned_role_set: assignedCell.roleSet,
         assigned_event: assignedCell.event,
         assigned_study_variant: assignedCell.variantId,
@@ -539,8 +588,8 @@ var debrief = {
         '<div><span style="color:#278473;font-size:15px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;">Study complete</span><h2 style="margin:5px 0 4px;font-size:40px;line-height:1.05;color:#17466f;text-align:left;">Thank you for participating!</h2></div>' +
       '</header>' +
       '<section style="display:grid;gap:14px;">' +
-        '<article style="padding:22px 24px;border-left:7px solid #4f91c8;border-radius:16px;background:#fff;box-shadow:0 8px 22px rgba(41,62,82,.08);"><h3 style="margin:0 0 8px;font-size:22px;color:#17466f;">1. What we are studying</h3><p style="margin:0;font-size:17px;line-height:1.55;">We want to understand how children use relationships and settings to predict who will provide care. Children are randomly assigned to stories that all take place either at the kid\'s home or at the kid\'s school. We compare patterns across these versions.</p></article>' +
-        '<article style="padding:22px 24px;border-left:7px solid #57ad95;border-radius:16px;background:#fff;box-shadow:0 8px 22px rgba(41,62,82,.08);"><h3 style="margin:0 0 8px;font-size:22px;color:#245c50;">2. What your child did</h3><p style="margin:0;font-size:17px;line-height:1.55;">Your child heard six stories about family members, friends, a teacher, and a classmate. Depending on their assigned version, your child chose who they thought would respond at home or at school and answered questions about the people in the pictures.</p></article>' +
+        '<article style="padding:22px 24px;border-left:7px solid #4f91c8;border-radius:16px;background:#fff;box-shadow:0 8px 22px rgba(41,62,82,.08);"><h3 style="margin:0 0 8px;font-size:22px;color:#17466f;">1. What we are studying</h3><p style="margin:0;font-size:17px;line-height:1.55;">We want to understand whether social setting shapes whom children expect to provide care. Every child hears matched stories set at both the kid\'s home and the kid\'s school. We compare children\'s choices across the two settings.</p></article>' +
+        '<article style="padding:22px 24px;border-left:7px solid #57ad95;border-radius:16px;background:#fff;box-shadow:0 8px 22px rgba(41,62,82,.08);"><h3 style="margin:0 0 8px;font-size:22px;color:#245c50;">2. What your child did</h3><p style="margin:0;font-size:17px;line-height:1.55;">Your child heard 12 stories about family members, friends, a teacher, and a classmate: six at home and six at school. In each story, your child chose which of two characters was more likely to help.</p></article>' +
         '<article style="padding:22px 24px;border-left:7px solid #9a7bd5;border-radius:16px;background:#fff;box-shadow:0 8px 22px rgba(41,62,82,.08);"><h3 style="margin:0 0 8px;font-size:22px;color:#5b438e;">3. How we interpret the answers</h3><p style="margin:0;font-size:17px;line-height:1.55;">Children may make different choices for many reasons, and every answer is okay. We look at patterns across many children rather than judging any individual response.</p></article>' +
         '<article style="padding:22px 24px;border-left:7px solid #e3ad39;border-radius:16px;background:#fff;box-shadow:0 8px 22px rgba(41,62,82,.08);"><h3 style="margin:0 0 8px;font-size:22px;color:#755619;">4. Gift card</h3><p style="margin:0;font-size:17px;line-height:1.55;">Your $5 Amazon.com gift card will be sent through Children Helping Science messaging within 2 weeks. Families may still receive compensation if they stop early, provided the child is within the study age range and visible in the portion of video recorded before stopping.</p></article>' +
         '<article style="padding:22px 24px;border-left:7px solid #f07b6d;border-radius:16px;background:#fff;box-shadow:0 8px 22px rgba(41,62,82,.08);"><h3 style="margin:0 0 8px;font-size:22px;color:#994235;">5. Learn more</h3><p style="margin:0;font-size:17px;line-height:1.55;">If you would like to learn more about this topic, please watch this short video: <a href="https://www.youtube.com/watch?v=-G-kVhEqAtE" target="_blank" rel="noopener" style="color:#17466f;font-weight:700;">https://www.youtube.com/watch?v=-G-kVhEqAtE</a><br><br>Thank you again for your participation!</p></article>' +

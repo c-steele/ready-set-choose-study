@@ -208,6 +208,24 @@ function queryFor(context = "") {
   return `?${params.toString()}`;
 }
 
+function withinChildQuery(firstContext, roleSet = "family", variant = "") {
+  const params = new URLSearchParams({
+    seed: `within-child-runtime-${firstContext.toLowerCase()}-${roleSet}-${variant || "random"}`,
+    set: roleSet === "family" ? "family" : "role",
+    roleSet,
+    event: "HUG",
+    ratingMode: "none",
+    contextStudy: "1",
+    withinChildContexts: "1",
+    context: firstContext,
+    researcherTools: "1",
+    skipParentSetup: "1",
+    syntheticSpeech: "1",
+  });
+  if (variant) params.set("variant", variant);
+  return `?${params.toString()}`;
+}
+
 function dyadNodes(timeline) {
   return timeline.filter((node) => node?.data?.dyad_id && ["intro", "response"].includes(node.data.slide_kind));
 }
@@ -311,6 +329,87 @@ for (const contextName of ["HOME", "SCHOOL"]) {
     assert.match(node.stimulus, /ksize-rating-furnished-scene/);
     assert.ok(node.stimulus.includes(expectedBackground), `Rendered HTML omitted ${expectedBackground}`);
     assert.ok(node.stimulus.includes(node.data.context_foreground_src), "Rendered HTML omitted its dyad foreground");
+  }
+}
+
+// The revised Who Takes Care preview presents the same six matched stories in
+// both settings, counterbalances which six-story block comes first, and omits
+// every dyad/Likert follow-up.
+for (const firstContext of ["HOME", "SCHOOL"]) {
+  const secondContext = firstContext === "HOME" ? "SCHOOL" : "HOME";
+  const { timeline, properties } = await runMain(withinChildQuery(firstContext));
+  const timelineNodes = Array.from(timeline);
+  const choices = timelineNodes.filter((node) => node?.data?.slide_kind === "response_choices");
+  const intros = timelineNodes.filter((node) => node?.data?.slide_kind === "context_intro");
+  const ratings = timelineNodes.filter((node) => node?.data?.rating_value != null || node?.data?.dyad_id);
+  const parentSetup = timelineNodes.filter((node) => ["parent_welcome", "parent_setup", "camera_setup", "child_handoff"].includes(node?.data?.slide_kind));
+  const contextSequence = choices.map((node) => node.data.context);
+
+  assert.equal(properties.assigned_context, "BOTH");
+  assert.equal(properties.assigned_contexts, `${firstContext},${secondContext}`);
+  assert.equal(properties.context_order, `${firstContext},${secondContext}`);
+  assert.equal(properties.first_context, firstContext);
+  assert.equal(properties.second_context, secondContext);
+  assert.equal(properties.context_order_condition, `${firstContext}_FIRST`);
+  assert.equal(properties.assignment_cell_schema, "one_based_role_major_3_role_sets_x_3_events_x_2_context_orders");
+  assert.equal(properties.context_manipulation, "within_child_two_six_story_blocks_counterbalanced_order");
+  assert.equal(properties.design_version, "home_school_within_child_counterbalanced_context_order_v1");
+  assert.equal(properties.rating_mode, "none");
+  assert.equal(properties.part_order, "stories-only");
+  assert.equal(properties.n_event_trials, 12);
+  assert.equal(properties.n_event_trials_per_context, 6);
+  assert.equal(properties.n_dyads, 0);
+
+  assert.equal(choices.length, 12, "Within-child study must collect twelve helper choices");
+  assert.equal(intros.length, 12, "Every story must repeat its setting sentence");
+  assert.equal(ratings.length, 0, "Within-child study must not contain Likert/dyad pages");
+  assert.equal(parentSetup.length, 0, "Researcher review URL must open directly to the child study");
+  assert.deepEqual(contextSequence.slice(0, 6), Array(6).fill(firstContext));
+  assert.deepEqual(contextSequence.slice(6), Array(6).fill(secondContext));
+  assert.deepEqual(choices.map((node) => node.data.story_number), Array.from({ length: 12 }, (_, index) => index + 1));
+  assert.deepEqual(choices.map((node) => node.data.story_total), Array(12).fill(12));
+  assert.deepEqual(choices.map((node) => node.data.context_block), [...Array(6).fill(1), ...Array(6).fill(2)]);
+  assert.deepEqual(choices.map((node) => node.data.story_within_context), [1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6]);
+
+  const firstBlock = choices.slice(0, 6).map((node) => ({
+    trial: node.data.trial_key,
+    condition: node.data.condition_pairing,
+    variant: node.data.variant,
+    side: node.data.side,
+    color: node.data.color,
+    palette: node.data.context_palette_slug,
+  }));
+  const secondBlock = choices.slice(6).map((node) => ({
+    trial: node.data.trial_key,
+    condition: node.data.condition_pairing,
+    variant: node.data.variant,
+    side: node.data.side,
+    color: node.data.color,
+    palette: node.data.context_palette_slug,
+  }));
+  assert.deepEqual(secondBlock, firstBlock, "Only the room setting should change across matched blocks");
+  assert.equal(new Set(firstBlock.map((story) => story.palette)).size, 6, "Each six-story block must keep unique visual palettes");
+
+  const preloadImages = timeline[0]?.images || [];
+  for (const trial of eventManifest.trials.filter((candidate) => firstBlock.some((story) => story.trial === candidate.id))) {
+    assert.ok(preloadImages.some((src) => String(src).includes(trial.homeSchoolFurnished.homeBackground)));
+    assert.ok(preloadImages.some((src) => String(src).includes(trial.homeSchoolFurnished.schoolBackground)));
+  }
+}
+
+// The review profiles may request a left- or right-placement rendition. The
+// planner may mix the two same-side source variants, but must still retain six
+// genuinely distinct visual palettes in every role set.
+for (const roleSet of ["woman", "man", "family"]) {
+  for (const variant of ["a", "b", "c", "d"]) {
+    const { timeline } = await runMain(withinChildQuery("HOME", roleSet, variant));
+    const choices = Array.from(timeline).filter((node) => node?.data?.slide_kind === "response_choices");
+    const firstBlock = choices.slice(0, 6);
+    assert.equal(new Set(firstBlock.map((node) => node.data.context_palette_slug)).size, 6,
+      `${roleSet}/${variant} repeated a visual palette within its first block`);
+    assert.equal(new Set(firstBlock.map((node) => node.data.side)).size, 1,
+      `${roleSet}/${variant} mixed left and right placement within one review profile`);
+    assert.equal(firstBlock[0]?.data?.side, ["a", "b"].includes(variant) ? "LEFT" : "RIGHT");
   }
 }
 

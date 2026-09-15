@@ -93,14 +93,19 @@ function plain(value) {
 }
 
 assert.equal(metadata.candidateId, "chs-home-school-evelyn-v1");
-assert.equal(metadata.status, "published_for_chs_draft_preview");
+assert.equal(metadata.status, "published_for_review_only");
 assert.equal(metadata.activeChsStudyChanged, false);
+assert.equal(metadata.chsDraftConfigurationUpdated, false);
+assert.equal(metadata.chsSubmissionStatus, "not_submitted");
 assert.equal(metadata.published, true);
-assert.equal(metadata.publishedOn, "2026-09-12");
-assert.equal(metadata.lastPublishedRelease, "chs-home-school-evelyn-v1-r15-context-first-preview-1");
-assert.equal(metadata.candidateRelease, "chs-home-school-evelyn-v1-r15-context-first-preview-1");
-assert.equal(metadata.latestRevisionOn, "2026-09-12");
-assert.equal(metadata.storyCount, 6);
+assert.equal(metadata.publishedOn, "2026-09-15");
+assert.equal(metadata.lastPublishedRelease, "chs-home-school-evelyn-v1-r16-within-child-preview-1");
+assert.equal(metadata.candidateRelease, "chs-home-school-evelyn-v1-r16-within-child-preview-1");
+assert.equal(metadata.latestRevisionOn, "2026-09-15");
+assert.equal(metadata.storyCount, 12);
+assert.equal(metadata.storyCountPerContext, 6);
+assert.equal(metadata.ratingMode, "none");
+assert.equal(metadata.contextDesign, "within-child");
 assert.equal(metadata.assignmentCellCount, 18);
 assert.equal(metadata.participantAutoplay, true);
 assert.equal(metadata.syntheticSpeech, false);
@@ -125,16 +130,16 @@ assert.match(app, /<h1 class="ksize-title">Who Takes Care\?<\/h1>/);
 assert.doesNotMatch(app, /Welcome to Find the Caregiver|>Find the Caregiver!</);
 assert.match(app, /if \(autoPlay && !isFacilitatorMode\)/);
 assert.match(app, /if \(!isFacilitatorMode\) setTimeout\(\(\) => playAudio\(\{ advanceWhenDone: true \}\), 250\)/);
-assert.match(app, /assertParticipantContextAudioCoverage\(eventPlan, selectedEventSuffix, selectedContext\)/);
-assert.match(app, /slideIndex === block\.introSlides\.length - 1 && activeStudyContext/);
-assert.doesNotMatch(app, /slideIndex === 0 && activeStudyContext/);
-assert.match(app, /slideKind === "context_intro"[\s\S]*?text \|\| contextIntroText\(\)/);
+assert.match(app, /contextOrder\.forEach\(\(context\) => \{[\s\S]*?assertParticipantContextAudioCoverage\(eventPlan, selectedEventSuffix, context\)/);
+assert.match(app, /slideIndex === block\.introSlides\.length - 1 && studyContext/);
+assert.doesNotMatch(app, /slideIndex === 0 && (?:activeStudyContext|studyContext)/);
+assert.match(app, /slideKind === "context_intro"[\s\S]*?text \|\| contextIntroText\(studyContext\)/);
 assert.match(
   app,
   /slideKind === "intro"[\s\S]*?text \|\| ""[\s\S]*?slideKind === "context_intro"[\s\S]*?slideKind === "story"[\s\S]*?slideKind === "response_choices"/,
   "Every Home/School story heading must use the same in-scene caption banner",
 );
-assert.match(indexHtml, /app\.js\?v=chs-home-school-evelyn-v1-r15-context-first-preview-1-uniform-captions-v1/);
+assert.match(indexHtml, /app\.js\?v=chs-home-school-evelyn-v1-r16-within-child-preview-1/);
 assert.doesNotMatch(app, /contextIntro \? `<div class="ksize-context-intro-cue"/);
 assert.match(app, /fileAudio\.addEventListener\("playing",[\s\S]*?setMouthPlaying\(true\)/);
 assert.match(app, /fileAudio\.addEventListener\("waiting", \(\) => setMouthPlaying\(false\)\)/);
@@ -161,9 +166,13 @@ const allCandidateText = [
 assert.doesNotMatch(allCandidateText, /not friends with/i);
 assert.match(allCandidateText, /kid's classmate/i);
 
-assert.equal(contextManifest.schemaVersion, 2);
-assert.equal(contextManifest.status, "release_ready");
-assert.equal(contextManifest.designVersion, "home_school_context_chs_candidate_v1");
+assert.equal(contextManifest.schemaVersion, 3);
+assert.equal(contextManifest.status, "review_ready_not_submitted");
+assert.equal(contextManifest.designVersion, "home_school_within_child_counterbalanced_context_order_v1");
+assert.equal(contextManifest.assignment.design, "within-child");
+assert.equal(contextManifest.assignment.storyCount, 12);
+assert.equal(contextManifest.assignment.storyCountPerContext, 6);
+assert.equal(contextManifest.assignment.ratings, "none");
 assert.equal(contextManifest.scriptVersion, "home_school_context_first_recipient_aware_v5");
 assert.deepEqual(Object.keys(contextManifest.contexts).sort(), ["HOME", "SCHOOL"]);
 
@@ -333,7 +342,7 @@ assert.equal(new Set(missingAudio.lines.map((line) => line.id)).size, 30);
 assert.equal(new Set(missingAudio.lines.map((line) => line.output)).size, 30);
 assert.equal(directionalAudioReceipt.importedClipCount, 30);
 assert.equal(directionalAudioReceipt.clips.length, 30);
-assert.equal(contextFirstQuestionReceipt.candidateRelease, metadata.candidateRelease);
+assert.equal(contextFirstQuestionReceipt.candidateRelease, "chs-home-school-evelyn-v1-r15-context-first-preview-1");
 assert.equal(contextFirstQuestionReceipt.scriptVersion, contextManifest.scriptVersion);
 assert.equal(contextFirstQuestionReceipt.service, "NaturalReaders Commercial");
 assert.equal(contextFirstQuestionReceipt.voice, "Evelyn");

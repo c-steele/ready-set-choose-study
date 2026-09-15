@@ -96,7 +96,10 @@ assert.equal(recorded.timeline.length, 7, "consent/recording/game/exit/debrief a
 
 const expectedRoleSets = ["WOMAN", "MAN", "FAMILY_TEACHER"];
 const expectedEvents = ["HUG", "FOOD", "HELP"];
-const expectedContexts = ["HOME", "SCHOOL"];
+const expectedContextOrders = [
+  { condition: "HOME_FIRST", contexts: ["HOME", "SCHOOL"] },
+  { condition: "SCHOOL_FIRST", contexts: ["SCHOOL", "HOME"] },
+];
 const seenCells = new Set();
 
 for (let index = 0; index < 18; index += 1) {
@@ -104,7 +107,13 @@ for (let index = 0; index < 18; index += 1) {
   assert.equal(cell.assignmentCell, index + 1);
   assert.equal(cell.roleSet, expectedRoleSets[Math.floor(index / 6)]);
   assert.equal(cell.event, expectedEvents[Math.floor((index % 6) / 2)]);
-  assert.equal(cell.context, expectedContexts[index % 2]);
+  const expectedOrder = expectedContextOrders[index % 2];
+  assert.equal(cell.assignedContext, "BOTH");
+  assert.deepEqual(Array.from(cell.assignedContexts), expectedOrder.contexts);
+  assert.equal(cell.contextOrderCondition, expectedOrder.condition);
+  assert.deepEqual(Array.from(cell.contextOrder), expectedOrder.contexts);
+  assert.equal(cell.firstContext, expectedOrder.contexts[0]);
+  assert.equal(cell.secondContext, expectedOrder.contexts[1]);
   seenCells.add(cell.assignmentCell);
 }
 assert.equal(seenCells.size, 18);
@@ -129,6 +138,11 @@ for (let targetCell = 1; targetCell <= 18; targetCell += 1) {
 for (const field of [
   "assignment_cell",
   "assigned_context",
+  "assigned_contexts",
+  "context_order",
+  "context_order_condition",
+  "first_context",
+  "second_context",
   "assigned_role_set",
   "assigned_event",
   "assignment_method",
@@ -140,8 +154,19 @@ assert.equal(recorded.properties.external_data_mirror_configured, false);
 assert.equal(recorded.properties.external_data_mirror_contract, "find-the-caregiver-sheets-v1");
 assert.equal(recorded.properties.chs_child_id, "TEST-CHILD");
 assert.equal(recorded.properties.chs_response_id, "TEST-RESPONSE");
-assert.equal(recorded.properties.candidate_release, "chs-home-school-evelyn-v1-r15-context-first-preview-1");
+assert.equal(recorded.properties.assigned_context, "BOTH");
+assert.equal(recorded.properties.assigned_contexts, context.assignedCell.contextOrder.join(","));
+assert.equal(recorded.properties.context_order, context.assignedCell.contextOrder.join(","));
+assert.equal(recorded.properties.context_order_condition, context.assignedCell.contextOrderCondition);
+assert.equal(recorded.properties.first_context, context.assignedCell.firstContext);
+assert.equal(recorded.properties.second_context, context.assignedCell.secondContext);
+assert.equal(recorded.properties.design_version, "home_school_within_child_counterbalanced_context_order_v1");
+assert.equal(recorded.properties.candidate_release, "chs-home-school-evelyn-v1-r16-within-child-preview-1");
 assert.doesNotMatch(context.gameUrl, /researcherTools=1/, "live CHS runs must not expose researcher controls");
+assert.match(context.gameUrl, /[?&]contextStudy=1(?:&|$)/);
+assert.match(context.gameUrl, /[?&]withinChildContexts=1(?:&|$)/);
+assert.match(context.gameUrl, /[?&]ratingMode=none(?:&|$)/);
+assert.match(context.gameUrl, new RegExp(`[?&]context=${context.assignedCell.firstContext}(?:&|$)`));
 
 assert.doesNotMatch(source, /REPLACE_WITH_FROZEN_HOME_SCHOOL_CANDIDATE/);
 assert.doesNotMatch(source, /DO NOT PASTE|DRAFT\s*[—-]/i);
@@ -149,10 +174,11 @@ assert.match(source, /PRODUCTION-READY CHS WRAPPER SOURCE FOR STUDY 6349/);
 assert.match(source, /versions\/chs-home-school-evelyn-v1/);
 assert.match(source, /assignedEntrypoint\s*=\s*"index\.html"/);
 assert.doesNotMatch(source, /assignedEntrypoint[^;]*(?:home\.html|school\.html)/);
-assert.match(source, /context="\s*\+\s*encodeURIComponent\(assignedCell\.context\)/);
+assert.match(source, /context="\s*\+\s*encodeURIComponent\(assignedCell\.firstContext\)/);
 assert.match(source, /HOME_SCHOOL_STUDY_VERSION\s*=\s*"chs-home-school-evelyn-v1"/);
 assert.match(source, /HOME_SCHOOL_CONTEXT_SCRIPT_VERSION\s*=\s*"home_school_context_first_recipient_aware_v5"/);
-assert.match(source, /HOME_SCHOOL_CANDIDATE_RELEASE\s*=\s*"chs-home-school-evelyn-v1-r15-context-first-preview-1"/);
+assert.match(source, /HOME_SCHOOL_CANDIDATE_RELEASE\s*=\s*"chs-home-school-evelyn-v1-r16-within-child-preview-1"/);
+assert.match(source, /HOME_SCHOOL_DESIGN_VERSION\s*=\s*"home_school_within_child_counterbalanced_context_order_v1"/);
 assert.doesNotMatch(source, /chs-home-school-evelyn-v1-r(?:[1-9])(?!\d)/);
 assert.match(source, /Who Takes Care\? child game/);
 assert.match(source, /HOME_SCHOOL_SHEETS_WEBHOOK\s*=\s*""/);
@@ -164,10 +190,17 @@ assert.doesNotMatch(context.gameUrl, /dataEndpoint|dataMirrorBridge/);
 assert.match(source, /event\.origin\s*!==\s*HOME_SCHOOL_CANDIDATE_ORIGIN/);
 assert.match(source, /event\.source\s*!==\s*gameFrame\.contentWindow/);
 assert.match(source, /gamePayload\.assigned_context/);
+assert.match(source, /gamePayload\.context_order/);
+assert.match(source, /gamePayload\.first_context/);
+assert.match(source, /gamePayload\.second_context/);
 assert.match(source, /gamePayload\.role_set/);
 assert.match(source, /gamePayload\.event_suffix/);
 assert.match(source, /gamePayload\.assignment_cell/);
 assert.doesNotMatch(source, /15[\u2013-]20 minutes/);
+assert.doesNotMatch(source, /who is in charge|how much one character loves|authority and affection|answer questions about the characters/i);
+assert.match(source, /12 picture stories/);
+assert.match(source, /six set at the kid's home and six set at the kid's school/);
+assert.match(source, /Every child sees both settings/);
 
 function loadIdentityScenario({ origin, pathname, search = "", runtimeChildId = "", responseId }) {
   const localRecorded = { properties: null, timeline: null };
@@ -284,7 +317,12 @@ iframeTrial.on_load();
 assert.equal(typeof registeredListeners.message, "function");
 const expectedAssignment = context.assignHomeSchoolCell("TEST-CHILD");
 const matchingPayload = {
-  assigned_context: expectedAssignment.context,
+  assigned_context: expectedAssignment.assignedContext,
+  assigned_contexts: expectedAssignment.assignedContexts,
+  context_order: expectedAssignment.contextOrder,
+  context_order_condition: expectedAssignment.contextOrderCondition,
+  first_context: expectedAssignment.firstContext,
+  second_context: expectedAssignment.secondContext,
   role_set: expectedAssignment.roleSetParam,
   event_suffix: expectedAssignment.event,
   assignment_cell: expectedAssignment.assignmentCell,
@@ -305,6 +343,21 @@ registeredListeners.message({
   source: gameFrameWindow,
   data: { type: "GAME_COMPLETE", payload: { ...matchingPayload, assignment_cell: 99 } },
 });
+const reversedContextOrder = Array.from(expectedAssignment.contextOrder).reverse();
+registeredListeners.message({
+  origin: "https://c-steele.github.io",
+  source: gameFrameWindow,
+  data: {
+    type: "GAME_COMPLETE",
+    payload: {
+      ...matchingPayload,
+      assigned_contexts: reversedContextOrder,
+      context_order: reversedContextOrder,
+      first_context: reversedContextOrder[0],
+      second_context: reversedContextOrder[1],
+    },
+  },
+});
 assert.equal(recorded.finishTrials.length, 0, "untrusted or mismatched completion messages must be ignored");
 registeredListeners.message({
   origin: "https://c-steele.github.io",
@@ -320,10 +373,19 @@ registeredListeners.message({
 });
 assert.equal(recorded.finishTrials.length, 1, "the assigned candidate frame must complete the iframe trial");
 assert.equal(recorded.finishTrials[0].assignment_cell, expectedAssignment.assignmentCell);
+assert.equal(recorded.finishTrials[0].assigned_context, "BOTH");
+assert.equal(recorded.finishTrials[0].assigned_contexts, expectedAssignment.contextOrder.join(","));
+assert.equal(recorded.finishTrials[0].context_order, expectedAssignment.contextOrder.join(","));
+assert.equal(recorded.finishTrials[0].context_order_condition, expectedAssignment.contextOrderCondition);
+assert.equal(recorded.finishTrials[0].first_context, expectedAssignment.firstContext);
+assert.equal(recorded.finishTrials[0].second_context, expectedAssignment.secondContext);
 assert.equal(recorded.finishTrials[0].game_session_id, "TEST-SESSION");
 assert.equal(recorded.finishTrials[0].sheet_mirror_requested, false);
 assert.equal(recorded.finishTrials[0].sheet_mirror_row_count, 0);
-assert.deepEqual(JSON.parse(recorded.finishTrials[0].game_payload_json), matchingPayload);
+assert.deepEqual(
+  JSON.parse(recorded.finishTrials[0].game_payload_json),
+  JSON.parse(JSON.stringify(matchingPayload)),
+);
 assert.equal(context.isSheetMirrorAnswerRow({ slide_kind: "response_choices" }), true);
 assert.equal(context.isSheetMirrorAnswerRow({ slide_kind: "response" }), true);
 assert.equal(context.isSheetMirrorAnswerRow({ slide_kind: "intro" }), false);
@@ -342,4 +404,4 @@ assert.match(source, /StopRecordPlugin/);
 assert.match(source, /ExitSurveyPlugin/);
 assert.match(source, /GAME_COMPLETE/);
 
-console.log("Verified production-ready CHS study 6349 wrapper: trusted live identity, bounded preview fallbacks, 18 deterministic cells, and intact CHS recording flow.");
+console.log("Verified local CHS study 6349 wrapper draft: trusted live identity, 18 role/event/context-order cells, 12-story within-child context design, no rating trials, and intact CHS recording flow.");

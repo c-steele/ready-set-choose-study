@@ -9,8 +9,9 @@ const TEACHER_CLASSMATE_GENERATED_ROOT = "assets/teacher_classmate/generated/";
 const TEACHER_CLASSMATE_V78_REVISION_ROOT = "versions/chs-v78-teacher-classmate-evelyn-unique-roles/assets/teacher_classmate/generated/";
 const TEACHER_CLASSMATE_V78_DYAD_REVISION = /^dyads\/classmate-kid_0(?:1_tkc-deep-purple-a|2_tkc-deep-purple-b)\/slide_(?:0[3-9]|1[0-3])\.svg$/;
 const TEACHER_CLASSMATE_V78_TRIAL_REVISION = /^trials\/14(?:[ab]\/intro_04|[cd]\/intro_0[34]|[abcd]\/(?:hug|food|help)_screen_2)\.svg$/;
-const HOME_SCHOOL_ASSET_VERSION = "chs-home-school-evelyn-v1-r15-context-first-preview-1";
+const HOME_SCHOOL_ASSET_VERSION = "chs-home-school-evelyn-v1-r16-within-child-preview-1";
 const HOME_SCHOOL_DESIGN_VERSION = "home_school_context_chs_candidate_v1";
+const HOME_SCHOOL_WITHIN_CHILD_DESIGN_VERSION = "home_school_within_child_counterbalanced_context_order_v1";
 const HOME_SCHOOL_CONTEXT_SCRIPT_VERSION = "home_school_context_first_recipient_aware_v5";
 const HOME_SCHOOL_FURNISHED_VISUAL_VERSION = "home_school_furnished_palette_picture_v38";
 const RATING_SCHEDULE_VERSION = "unique_focal_role_per_set_v1";
@@ -166,6 +167,8 @@ const requestedContext = lockedStudyContext || normalizeStudyContext(
 const isHomeSchoolStudy = Boolean(requestedContext)
   || ["home-school", "home_school", "home-vs-school", "home_vs_school", "context"].includes(requestedStudyVersion)
   || configValue("contextStudy", "context_study") === "1";
+const requestedWithinChildContexts = isHomeSchoolStudy
+  && configValue("withinChildContexts", "within_child_contexts", "bothContexts", "both_contexts") === "1";
 const requestedAssignmentIdentity = isHomeSchoolStudy
   ? (requestedChsChild
       ? { seed: requestedChsChild, source: "chs_child_id" }
@@ -188,7 +191,7 @@ const isFacilitatorMode = configValue("facilitator", "zoom") === "1";
 const isLiveShareMode = configValue("liveShare", "screenShare", "screen_share") === "1";
 const showLiveReadAloud = isLiveShareMode
   && configValue("showReadAloud", "readAloudCaptions", "read_aloud_captions") !== "0";
-const skipParentSetup = isFacilitatorMode
+const skipParentSetup = (isFacilitatorMode || requestedResearcherTools === "1")
   && configValue("skipParentSetup", "skip_parent_setup") === "1";
 const isFacilitatorChildWindow = isFacilitatorMode && configValue("facilitatorChild") === "1";
 const facilitatorSessionKey = configValue("facilitatorSession", "facilitator_session")
@@ -764,6 +767,10 @@ function makeDataPayload(jsPsych) {
     event_suffix: currentSessionParams.event || "",
     role_set: currentSessionParams.roleSet || "",
     assigned_context: currentSessionParams.context || "",
+    assigned_contexts: currentSessionParams.contextOrder || [],
+    context_order: currentSessionParams.contextOrder || [],
+    first_context: currentSessionParams.firstContext || "",
+    second_context: currentSessionParams.secondContext || "",
     study_version: currentSessionParams.studyVersion || "",
     context_script_version: currentSessionParams.contextScriptVersion || "",
     assignment_cell: currentSessionParams.assignmentCell ?? null,
@@ -928,6 +935,10 @@ function flattenRow(row, payload) {
     assigned_event_suffix: payload.event_suffix,
     assigned_role_set: payload.role_set,
     assigned_context: payload.assigned_context,
+    assigned_contexts: payload.assigned_contexts,
+    context_order: payload.context_order,
+    first_context: payload.first_context,
+    second_context: payload.second_context,
     study_version: payload.study_version,
     context_script_version: payload.context_script_version,
     assignment_cell: payload.assignment_cell,
@@ -1653,6 +1664,7 @@ function describeActualAssignment(
   selectedContext = "",
   contextSelectedByConfig = false,
   contextStudyActive = false,
+  withinChildContexts = false,
 ) {
   const roleOptions = ["woman", "man", "family"];
   const eventOptions = ["HUG", "FOOD", "HELP"];
@@ -1676,13 +1688,17 @@ function describeActualAssignment(
     roleMethod: roleSelectedByConfig ? "wrapper_or_url_selected" : internalAssignment.method,
     eventMethod: eventSelectedByConfig ? "wrapper_or_url_selected" : internalAssignment.method,
     contextMethod: contextStudyActive
-      ? (contextSelectedByConfig ? "locked_entrypoint_or_url_selected" : internalAssignment.method)
+      ? (contextSelectedByConfig
+        ? (withinChildContexts ? "first_context_or_url_selected" : "locked_entrypoint_or_url_selected")
+        : internalAssignment.method)
       : "not_applicable",
     cell: contextStudyActive
       ? contextCell
       : (roleIndex >= 0 && eventIndex >= 0 ? eventIndex * roleOptions.length + roleIndex : null),
     cellSchema: contextStudyActive
-      ? "one_based_role_major_3_role_sets_x_3_events_x_2_contexts"
+      ? (withinChildContexts
+        ? "one_based_role_major_3_role_sets_x_3_events_x_2_context_orders"
+        : "one_based_role_major_3_role_sets_x_3_events_x_2_contexts")
       : "zero_based_event_major_3_role_sets_x_3_events",
     internalHashCell: internalAssignment.cell,
     internalHashMethod: internalAssignment.method,
@@ -1728,6 +1744,17 @@ function trialColor(trial) {
   return trial?.blocks.INTRO?.color || "";
 }
 
+function trialPaletteKey(trial) {
+  return trial?.homeSchoolFurnished?.paletteSlug
+    || trial?.homeSchoolFurnished?.characterHex
+    || trialColor(trial);
+}
+
+function variantSide(variant) {
+  return ["a", "b"].includes(String(variant || "").toLowerCase()) ? "LEFT"
+    : (["c", "d"].includes(String(variant || "").toLowerCase()) ? "RIGHT" : "");
+}
+
 function hasKnownDuplicateVisualSet(trial, selectedTrials) {
   const condition = trial?.blocks.INTRO?.condition || "";
   const conflictingCondition = condition === "DAD-KID"
@@ -1736,7 +1763,7 @@ function hasKnownDuplicateVisualSet(trial, selectedTrials) {
   if (!conflictingCondition) return false;
   return selectedTrials.some((selectedTrial) =>
     selectedTrial?.blocks.INTRO?.condition === conflictingCondition
-      && trialColor(selectedTrial) === trialColor(trial)
+      && trialPaletteKey(selectedTrial) === trialPaletteKey(trial)
   );
 }
 
@@ -1744,7 +1771,7 @@ function shuffleAvoidingAdjacentColors(items, rng) {
   for (let attempt = 0; attempt < 80; attempt += 1) {
     const shuffled = shuffle(items, rng);
     const hasAdjacentRepeat = shuffled.some((trial, idx) =>
-      idx > 0 && trialColor(trial) === trialColor(shuffled[idx - 1])
+      idx > 0 && trialPaletteKey(trial) === trialPaletteKey(shuffled[idx - 1])
     );
     if (!hasAdjacentRepeat) return shuffled;
   }
@@ -1753,33 +1780,32 @@ function shuffleAvoidingAdjacentColors(items, rng) {
 
 function chooseUniqueColorTrials(conditionOrder, byCondition, rng, forcedVariant) {
   const selected = [];
-  const usedColors = new Set();
+  const usedPalettes = new Set();
+  const requestedSide = variantSide(forcedVariant);
 
   const search = (conditionIndex) => {
     if (conditionIndex >= conditionOrder.length) return true;
     const condition = conditionOrder[conditionIndex];
     const variants = byCondition.get(condition) || [];
+    const sideCompatible = requestedSide
+      ? variants.filter((trial) => variantSide(trial.variant) === requestedSide)
+      : variants;
+    const shuffledPool = shuffle(sideCompatible, rng);
     const pool = forcedVariant
-      ? variants.filter((trial) => trial.variant === forcedVariant)
-      : shuffle(variants, rng);
-    const freshPool = pool.filter((trial) => !usedColors.has(trialColor(trial)));
-    const reusedPool = pool.filter((trial) => usedColors.has(trialColor(trial)));
-    // DAD-KID and TEACHER-KID share their underlying purple/blue generic
-    // character art. When a color repeat is unavoidable, prefer a different
-    // visual set instead of showing that exact set twice in one session.
-    const preferredReusedPool = reusedPool.filter((trial) => !hasKnownDuplicateVisualSet(trial, selected));
-    const duplicateVisualPool = reusedPool.filter((trial) => hasKnownDuplicateVisualSet(trial, selected));
-    const orderedPool = [...freshPool, ...preferredReusedPool, ...duplicateVisualPool];
+      ? [
+          ...shuffledPool.filter((trial) => trial.variant === forcedVariant),
+          ...shuffledPool.filter((trial) => trial.variant !== forcedVariant),
+        ]
+      : shuffledPool;
 
-    for (const trial of orderedPool) {
-      const color = trialColor(trial);
-      const wasUsed = usedColors.has(color);
-      if (wasUsed && freshPool.length) continue;
+    for (const trial of pool) {
+      const palette = trialPaletteKey(trial);
+      if (usedPalettes.has(palette) || hasKnownDuplicateVisualSet(trial, selected)) continue;
       selected.push(trial);
-      usedColors.add(color);
+      usedPalettes.add(palette);
       if (search(conditionIndex + 1)) return true;
       selected.pop();
-      if (!wasUsed) usedColors.delete(color);
+      usedPalettes.delete(palette);
     }
     return false;
   };
@@ -1804,7 +1830,11 @@ function planEventSession(manifest, seedText, forcedVariant, conditionSet, roleS
   if (!selected.length) {
     return shuffleAvoidingAdjacentColors(conditionOrder.map((condition) => {
       const variants = byCondition.get(condition) || [];
-      const forced = forcedVariant ? variants.find((trial) => trial.variant === forcedVariant) : null;
+      const requestedSide = variantSide(forcedVariant);
+      const forced = forcedVariant
+        ? (variants.find((trial) => trial.variant === forcedVariant)
+          || variants.find((trial) => variantSide(trial.variant) === requestedSide))
+        : null;
       return forced || variants[Math.floor(rng() * variants.length)];
     }).filter(Boolean), rng);
   }
@@ -1838,6 +1868,7 @@ function orderedDyadSlides(chunk, { includeIntro = true } = {}) {
 
 function normalizeRatingMode(mode) {
   const normalized = String(mode || "").toLowerCase();
+  if (["none", "stories-only", "story-only", "no-ratings"].includes(normalized)) return "none";
   if (["one-after-story", "one-after-each-story", "interleaved-one", "one-pair"].includes(normalized)) {
     return "one-after-story";
   }
@@ -2250,9 +2281,9 @@ function contextImageId(context = activeStudyContext) {
   return contextSpec(context)?.badge?.id || null;
 }
 
-function contextAudioIdForText(text) {
-  if (!activeStudyContext || !text) return null;
-  const spec = contextSpec();
+function contextAudioIdForText(text, context = activeStudyContext) {
+  if (!context || !text) return null;
+  const spec = contextSpec(context);
   const contextTexts = [
     spec?.intro?.text,
     ...Object.values(spec?.events || {}).flatMap((event) => [event.eventText, event.questionText]),
@@ -2353,15 +2384,17 @@ function furnishedImageLayersHtml(scene, { draggable = false } = {}) {
   `;
 }
 
-function renderKidSlide({ trial = null, image, text, choices = [], overlayChoices = false, showText = false, slideKind = "", showNext = false, visualChoices = false, contextIntro = false, contextCondition = "", storyNumber = null, storyTotal = null }) {
+function renderKidSlide({ trial = null, image, text, choices = [], overlayChoices = false, showText = false, slideKind = "", showNext = false, visualChoices = false, contextIntro = false, contextCondition = "", studyContext = activeStudyContext, storyNumber = null, storyTotal = null }) {
   const hasChoicePrompt = choices.length > 0 && !visualChoices;
-  const contextEvent = activeContextEventSpec(contextCondition);
-  const furnishedScene = furnishedSceneSpec(trial, image);
-  const contextOverlayText = activeStudyContext
+  const contextEvent = studyContext && activeStudyEvent
+    ? contextEventSpec(activeStudyEvent, studyContext, contextCondition)
+    : null;
+  const furnishedScene = furnishedSceneSpec(trial, image, studyContext);
+  const contextOverlayText = studyContext
     ? (slideKind === "intro"
       ? text || ""
       : (slideKind === "context_intro"
-        ? text || contextIntroText()
+        ? text || contextIntroText(studyContext)
         : (slideKind === "story"
           ? contextEvent?.eventText || ""
           : (slideKind === "response_choices" ? contextEvent?.questionText || "" : ""))))
@@ -2389,7 +2422,7 @@ function renderKidSlide({ trial = null, image, text, choices = [], overlayChoice
 
   return `
     <main class="ksize-shell ksize-kid-shell">
-      <section class="ksize-screen ksize-kid-screen" data-slide-kind="${escapeHtml(slideKind)}" data-context="${escapeHtml(activeStudyContext)}">
+      <section class="ksize-screen ksize-kid-screen" data-slide-kind="${escapeHtml(slideKind)}" data-context="${escapeHtml(studyContext)}">
         ${topHudHtml(storyNumber, storyTotal)}
         ${imageBlock}
         ${showText && text ? `<div class="ksize-kid-text">${escapeHtml(text)}</div>` : ""}
@@ -2422,18 +2455,20 @@ function renderKidSlide({ trial = null, image, text, choices = [], overlayChoice
   `;
 }
 
-function makeKidNode(jsPsych, { trial, block, suffix, image, text, audioSegments = [], audioTexts = [], choices = [], slideKind, overlayChoices = false, showText = false, autoPlay = true, autoAdvanceAfterAudio = false, partKind, partNumber, visualChoices = false, highlightChoices = false, highlightStartMs = 350, contextIntro = false, storyNumber = null, storyTotal = null }) {
+function makeKidNode(jsPsych, { trial, block, suffix, image, text, audioSegments = [], audioTexts = [], choices = [], slideKind, overlayChoices = false, showText = false, autoPlay = true, autoAdvanceAfterAudio = false, partKind, partNumber, visualChoices = false, highlightChoices = false, highlightStartMs = 350, contextIntro = false, studyContext = activeStudyContext, contextBlock = null, storyWithinContext = null, storyNumber = null, storyTotal = null }) {
   const contextCondition = block?.condition || trial?.blocks?.INTRO?.condition || "";
-  const contextEvent = activeContextEventSpec(contextCondition);
+  const contextEvent = studyContext && activeStudyEvent
+    ? contextEventSpec(activeStudyEvent, studyContext, contextCondition)
+    : null;
   const hasChoices = choices.length > 0 && !visualChoices;
-  const contextAudioIds = activeStudyContext
-    ? [...new Set((audioTexts.length ? audioTexts : [text]).map(contextAudioIdForText).filter(Boolean))]
+  const contextAudioIds = studyContext
+    ? [...new Set((audioTexts.length ? audioTexts : [text]).map((audioText) => contextAudioIdForText(audioText, studyContext)).filter(Boolean))]
     : [];
   let replayCount = 0;
   let audioPlaybackOrLoadFailure = false;
   return {
     type: jsPsychHtmlButtonResponse,
-    stimulus: renderKidSlide({ trial, image, text, choices, overlayChoices, showText, slideKind, showNext: !hasChoices, visualChoices, contextIntro, contextCondition, storyNumber, storyTotal }),
+    stimulus: renderKidSlide({ trial, image, text, choices, overlayChoices, showText, slideKind, showNext: !hasChoices, visualChoices, contextIntro, contextCondition, studyContext, storyNumber, storyTotal }),
     choices: [],
     data: {
       trial_key: trial.id,
@@ -2448,7 +2483,9 @@ function makeKidNode(jsPsych, { trial, block, suffix, image, text, audioSegments
       question_id: block.questionId,
       condition: block.condition,
       condition_pairing: block.condition,
-      context: activeStudyContext || null,
+      context: studyContext || null,
+      context_block: contextBlock,
+      story_within_context: storyWithinContext,
       event_type: activeStudyEvent || null,
       role_set: activeStudyRoleSet || null,
       left_role_label: block.choices?.[0]?.label || null,
@@ -2456,15 +2493,15 @@ function makeKidNode(jsPsych, { trial, block, suffix, image, text, audioSegments
       side_assignment: block.side || null,
       color_variant: block.color || null,
       story_order: storyNumber,
-      context_image_id: activeStudyContext ? contextImageId(activeStudyContext) : null,
+      context_image_id: studyContext ? contextImageId(studyContext) : null,
       context_audio_id: contextAudioIds[0] || null,
       context_audio_ids: contextAudioIds.join(",") || null,
-      context_intro_text: activeStudyContext ? contextIntroText() : null,
+      context_intro_text: studyContext ? contextIntroText(studyContext) : null,
       context_event_line_1: contextEvent?.eventText || null,
       context_event_line_2: contextEvent?.questionText || null,
-      context_visual_version: activeStudyContext ? trial?.homeSchoolFurnished?.version || null : null,
-      context_palette_slug: activeStudyContext ? trial?.homeSchoolFurnished?.paletteSlug || null : null,
-      context_character_hex: activeStudyContext ? trial?.homeSchoolFurnished?.characterHex || null : null,
+      context_visual_version: studyContext ? trial?.homeSchoolFurnished?.version || null : null,
+      context_palette_slug: studyContext ? trial?.homeSchoolFurnished?.paletteSlug || null : null,
+      context_character_hex: studyContext ? trial?.homeSchoolFurnished?.characterHex || null : null,
       side: block.side,
       color: block.color,
       relationship_status: trial.relationship_status || block.relationship_status || null,
@@ -2481,7 +2518,7 @@ function makeKidNode(jsPsych, { trial, block, suffix, image, text, audioSegments
       let highlightTimers = [];
       const contextChoiceButtons = Array.from(document.querySelectorAll(".ksize-char-btn"));
       const setContextChoicesEnabled = (enabled) => {
-        if (!activeStudyContext || !hasChoices) return;
+        if (!studyContext || !hasChoices) return;
         contextChoiceButtons.forEach((button) => {
           button.disabled = !enabled;
         });
@@ -2605,7 +2642,18 @@ function estimatedSpeechMs(text) {
   return Math.max(1300, Math.min(5200, words * 390));
 }
 
-function buildEventTrialNodes(jsPsych, trial, trialIndex, totalTrials, eventSuffix, partKind, partNumber) {
+function buildEventTrialNodes(
+  jsPsych,
+  trial,
+  trialIndex,
+  totalTrials,
+  eventSuffix,
+  partKind,
+  partNumber,
+  studyContext = activeStudyContext,
+  contextBlock = null,
+  storyWithinContext = null,
+) {
   return trial.blockOrder.flatMap((suffix) => {
     const block = trial.blocks[suffix];
     if (!block) return [];
@@ -2628,18 +2676,21 @@ function buildEventTrialNodes(jsPsych, trial, trialIndex, totalTrials, eventSuff
           autoAdvanceAfterAudio: true,
           partKind,
           partNumber,
+          studyContext,
+          contextBlock,
+          storyWithinContext,
           storyNumber: trialIndex + 1,
           storyTotal: totalTrials,
         }));
-        if (slideIndex === block.introSlides.length - 1 && activeStudyContext) {
-          const contextText = contextIntroText();
+        if (slideIndex === block.introSlides.length - 1 && studyContext) {
+          const contextText = contextIntroText(studyContext);
           introNodes.push(makeKidNode(jsPsych, {
             trial,
             block,
             suffix,
             image,
             text: contextText,
-            audioSegments: [contextSpec()?.intro?.audio || audioPathForText(contextText)],
+            audioSegments: [contextSpec(studyContext)?.intro?.audio || audioPathForText(contextText)],
             audioTexts: [contextText],
             choices: [],
             slideKind: "context_intro",
@@ -2648,6 +2699,9 @@ function buildEventTrialNodes(jsPsych, trial, trialIndex, totalTrials, eventSuff
             contextIntro: true,
             partKind,
             partNumber,
+            studyContext,
+            contextBlock,
+            storyWithinContext,
             storyNumber: trialIndex + 1,
             storyTotal: totalTrials,
           }));
@@ -2658,13 +2712,13 @@ function buildEventTrialNodes(jsPsych, trial, trialIndex, totalTrials, eventSuff
 
     const baseLines = block.text.split(/\n+/).map((line) => line.trim()).filter(Boolean);
     const condition = block.condition || trial.blocks.INTRO?.condition || "";
-    const lines = activeStudyContext
-      ? contextualizedEventLines(baseLines, eventSuffix, activeStudyContext, condition)
+    const lines = studyContext
+      ? contextualizedEventLines(baseLines, eventSuffix, studyContext, condition)
       : baseLines;
     const narrationAudioSegments = audioSegmentsForNarrationLines(
       lines,
       block.audioSegments || [],
-      Boolean(activeStudyContext),
+      Boolean(studyContext),
     );
     const nodes = [];
     const storyImages = block.choices?.length ? block.images.slice(0, -1) : block.images;
@@ -2684,6 +2738,9 @@ function buildEventTrialNodes(jsPsych, trial, trialIndex, totalTrials, eventSuff
         autoAdvanceAfterAudio: true,
         partKind,
         partNumber,
+        studyContext,
+        contextBlock,
+        storyWithinContext,
         storyNumber: trialIndex + 1,
         storyTotal: totalTrials,
       }));
@@ -2714,6 +2771,9 @@ function buildEventTrialNodes(jsPsych, trial, trialIndex, totalTrials, eventSuff
         highlightStartMs: 350,
         partKind,
         partNumber,
+        studyContext,
+        contextBlock,
+        storyWithinContext,
         storyNumber: trialIndex + 1,
         storyTotal: totalTrials,
       }));
@@ -3220,12 +3280,30 @@ async function main() {
   if (selectedContext && requestedVoiceProfile === "relkind") {
     throw new Error("Home/School study versions require the approved prerecorded Evelyn narration");
   }
+  const contextOrder = requestedWithinChildContexts
+    ? [selectedContext, ...STUDY_CONTEXTS.filter((context) => context !== selectedContext)]
+    : (selectedContext ? [selectedContext] : []);
   activeStudyContext = selectedContext;
   activeStudyRoleSet = selectedRoleSet;
   const eventPlan = planEventSession(eventManifest, requestedSeed, requestedVariant, requestedSet, selectedRoleSet);
   const selectedEventSuffix = assignment.eventSuffix;
   activeStudyEvent = selectedEventSuffix;
-  assertParticipantContextAudioCoverage(eventPlan, selectedEventSuffix, selectedContext);
+  const presentedEventPlan = requestedWithinChildContexts
+    ? contextOrder.flatMap((context, contextIndex) => eventPlan.map((trial, storyIndex) => ({
+        trial,
+        context,
+        contextBlock: contextIndex + 1,
+        storyWithinContext: storyIndex + 1,
+      })))
+    : eventPlan.map((trial, storyIndex) => ({
+        trial,
+        context: selectedContext,
+        contextBlock: selectedContext ? 1 : null,
+        storyWithinContext: selectedContext ? storyIndex + 1 : null,
+      }));
+  contextOrder.forEach((context) => {
+    assertParticipantContextAudioCoverage(eventPlan, selectedEventSuffix, context);
+  });
   const assignmentMetadata = describeActualAssignment(
     assignment,
     selectedRoleSet,
@@ -3235,10 +3313,13 @@ async function main() {
     selectedContext,
     Boolean(requestedContext),
     isHomeSchoolStudy,
+    requestedWithinChildContexts,
   );
   const includesTeacherClassmate = eventPlan.some((trial) => trial.blocks.INTRO?.condition === "TEACHER-CLASSMATE");
   const resolvedStudyVersion = selectedContext
-    ? (lockedDataStudyVersion || `home_school_context_${selectedContext.toLowerCase()}_preview_v1`)
+    ? (requestedWithinChildContexts
+      ? (lockedDataStudyVersion || HOME_SCHOOL_WITHIN_CHILD_DESIGN_VERSION)
+      : (lockedDataStudyVersion || `home_school_context_${selectedContext.toLowerCase()}_preview_v1`))
     : (isCurrentChsV76Study
       ? "chs-polish-v76"
       : (includesTeacherClassmate ? TEACHER_CLASSMATE_DESIGN_VERSION : ""));
@@ -3252,10 +3333,15 @@ async function main() {
     roleSet: selectedRoleSet,
     set: requestedSet,
     designVersion: selectedContext
-      ? (lockedDataStudyVersion || HOME_SCHOOL_DESIGN_VERSION)
+      ? (requestedWithinChildContexts
+        ? HOME_SCHOOL_WITHIN_CHILD_DESIGN_VERSION
+        : (lockedDataStudyVersion || HOME_SCHOOL_DESIGN_VERSION))
       : (isCurrentChsV76Study ? "chs-polish-v76" : (includesTeacherClassmate ? TEACHER_CLASSMATE_DESIGN_VERSION : "")),
     studyVersion: resolvedStudyVersion,
-    context: selectedContext,
+    context: requestedWithinChildContexts ? "BOTH" : selectedContext,
+    contextOrder,
+    firstContext: contextOrder[0] || "",
+    secondContext: contextOrder[1] || "",
     contextScriptVersion: selectedContext ? HOME_SCHOOL_CONTEXT_SCRIPT_VERSION : "",
     contextVisualVersion: selectedContext ? HOME_SCHOOL_FURNISHED_VISUAL_VERSION : "",
     assignmentCell: assignmentMetadata.cell,
@@ -3265,38 +3351,41 @@ async function main() {
     relationshipStatus: includesTeacherClassmate ? "unspecified" : "",
     ...(requestedVariant ? { variant: requestedVariant } : {}),
     ...(requestedPartOrder ? { partOrder: requestedPartOrder } : {}),
-    ...(requestedRatingMode ? { ratingMode: requestedRatingMode } : {}),
+    ratingMode: requestedWithinChildContexts ? "none" : requestedRatingMode,
     ...(requestedFamilyLikertMode ? { familyLikert: requestedFamilyLikertMode } : {}),
     ...(requestedDataEndpoint ? { dataEndpoint: requestedDataEndpoint } : {}),
     ...(shouldDownloadData ? { downloadData: "1" } : {}),
     ...(params.get("showDataStatus") === "1" ? { showDataStatus: "1" } : {}),
     syntheticSpeech: useSyntheticSpeech ? "1" : "0",
   };
-  const rawDyadGroupsByTrial = eventPlan.map((trial) => {
+  const rawDyadGroupsByTrial = requestedWithinChildContexts ? eventPlan.map(() => []) : eventPlan.map((trial) => {
     const chunks = dyadRequestsForTrial(trial)
       .map((request) => selectDyadChunk(dyadManifest, request))
       .filter(Boolean);
     return shuffle(chunks, makeRng(`${requestedSeed}:dyad-order:${trial.id}`));
   });
-  const selectedRatingMode = normalizeRatingMode(requestedRatingMode);
+  const selectedRatingMode = requestedWithinChildContexts ? "none" : normalizeRatingMode(requestedRatingMode);
   const onePairSchedules = onePairSchedulesForSession(requestedSet, selectedRoleSet);
   const onePairScheduleIndex = hashSeed(`${requestedSeed}:one-pair-schedule`) % onePairSchedules.length;
   const onePairSchedule = onePairSchedules[onePairScheduleIndex] || onePairSchedules[0];
   const useAllFamilyDyadsAfterStory = selectedRatingMode === "one-after-story"
     && isFamilyConditionSet(requestedSet, selectedRoleSet)
     && wantsAllFamilyDyads(requestedFamilyLikertMode);
-  const dyadGroupsByTrial = selectedRatingMode === "one-after-story"
-    ? (useAllFamilyDyadsAfterStory
-      ? rawDyadGroupsByTrial
-      : selectOneDyadPerTrial(rawDyadGroupsByTrial, eventPlan, onePairSchedule))
-    : dedupeDyadGroupsByRelationship(rawDyadGroupsByTrial);
+  const dyadGroupsByTrial = selectedRatingMode === "none"
+    ? eventPlan.map(() => [])
+    : (selectedRatingMode === "one-after-story"
+      ? (useAllFamilyDyadsAfterStory
+        ? rawDyadGroupsByTrial
+        : selectOneDyadPerTrial(rawDyadGroupsByTrial, eventPlan, onePairSchedule))
+      : dedupeDyadGroupsByRelationship(rawDyadGroupsByTrial));
   activeFollowupSchedule = selectedRatingMode === "one-after-story" && !useAllFamilyDyadsAfterStory
     ? onePairScheduleIndex
     : null;
   const allDyadChunks = dyadGroupsByTrial.flat();
   const ratingFocalRoles = allDyadChunks.map((chunk) => String(chunk.subject || "").trim().toLowerCase());
   const ratingFocalRolesUnique = new Set(ratingFocalRoles).size === ratingFocalRoles.length;
-  currentSessionParams.ratingScheduleVersion = RATING_SCHEDULE_VERSION;
+  currentSessionParams.ratingMode = selectedRatingMode;
+  currentSessionParams.ratingScheduleVersion = selectedRatingMode === "none" ? "" : RATING_SCHEDULE_VERSION;
   currentSessionParams.ratingFocalRoles = ratingFocalRoles;
   currentSessionParams.ratingFocalRolesUnique = ratingFocalRolesUnique;
   const includePairIntros = true;
@@ -3309,15 +3398,19 @@ async function main() {
       }))
     )
   );
-  const selectedPartOrder = selectPartOrder(requestedSeed, requestedPartOrder);
-  const resolvedPartOrder = selectedRatingMode === "one-after-story"
-    ? "interleaved-one-after-story"
-    : selectedPartOrder;
+  const selectedPartOrder = requestedWithinChildContexts
+    ? "stories-only"
+    : selectPartOrder(requestedSeed, requestedPartOrder);
+  const resolvedPartOrder = selectedRatingMode === "none"
+    ? "stories-only"
+    : (selectedRatingMode === "one-after-story"
+      ? "interleaved-one-after-story"
+      : selectedPartOrder);
   currentSessionParams.partOrder = resolvedPartOrder;
   const furnishedImagePaths = selectedContext
-    ? eventPlan.flatMap((trial) => {
+    ? contextOrder.flatMap((context) => eventPlan.flatMap((trial) => {
         const visual = trial.homeSchoolFurnished;
-        const background = selectedContext === "HOME" ? visual?.homeBackground : visual?.schoolBackground;
+        const background = context === "HOME" ? visual?.homeBackground : visual?.schoolBackground;
         const introForegrounds = (trial.blocks.INTRO?.introSlides || [])
           .flatMap((slide) => slide.images || [])
           .map((image) => image.homeSchoolForegroundSrc);
@@ -3327,10 +3420,10 @@ async function main() {
         return [background, ...introForegrounds, ...eventForegrounds]
           .filter(Boolean)
           .map(displayImageSrc);
-      })
+      }))
     : [];
   const imagePaths = [
-    ...(selectedContext ? [displayImageSrc(contextBadgeSrc(selectedContext))] : []),
+    ...contextOrder.map((context) => displayImageSrc(contextBadgeSrc(context))).filter(Boolean),
     ...allDyadSlides.flatMap(({ chunk, slide }) => {
       if (!selectedContext) return [displayImageSrc(slide.src)];
       const paths = [displayImageSrc(followupForegroundSrc(chunk, slide))];
@@ -3384,7 +3477,7 @@ async function main() {
 
   facilitatorAssignmentSummary = {
     studyVersion: resolvedStudyVersion,
-    storyCount: eventPlan.length,
+    storyCount: presentedEventPlan.length,
     restoredRowCount: facilitatorRestoredRowCount,
     participantKey: requestedParticipantId || requestedSeed,
     sessionId: sessionId(),
@@ -3392,13 +3485,19 @@ async function main() {
     seedSource: requestedSeedSource,
     roleSet: selectedRoleSet,
     event: selectedEventSuffix,
-    context: selectedContext || null,
+    context: requestedWithinChildContexts ? "BOTH" : (selectedContext || null),
+    contextOrder,
+    firstContext: contextOrder[0] || null,
+    secondContext: contextOrder[1] || null,
     assignmentCell: assignmentMetadata.cell,
     assignmentCellSchema: assignmentMetadata.cellSchema,
     assignmentMethod: assignmentMetadata.method,
-    storyOrder: eventPlan.map((trial) => trial.blocks.INTRO?.condition || ""),
-    storyPlan: eventPlan.map((trial, index) => ({
+    storyOrder: presentedEventPlan.map(({ trial, context }) => `${context}:${trial.blocks.INTRO?.condition || ""}`),
+    storyPlan: presentedEventPlan.map(({ trial, context, contextBlock, storyWithinContext }, index) => ({
       story: index + 1,
+      context,
+      contextBlock,
+      storyWithinContext,
       condition: trial.blocks.INTRO?.condition || "",
       trialId: trial.id,
       variant: trial.variant,
@@ -3412,7 +3511,7 @@ async function main() {
     followupScheduleMap: selectedRatingMode === "one-after-story" && !useAllFamilyDyadsAfterStory
       ? onePairSchedule
       : null,
-    ratingScheduleVersion: RATING_SCHEDULE_VERSION,
+    ratingScheduleVersion: selectedRatingMode === "none" ? null : RATING_SCHEDULE_VERSION,
     ratingFocalRoles,
     ratingFocalRolesUnique,
     ratingMode: selectedRatingMode,
@@ -3449,42 +3548,61 @@ async function main() {
     event_suffix: selectedEventSuffix,
     assigned_role_set: selectedRoleSet === "family" ? "FAMILY_TEACHER" : selectedRoleSet.toUpperCase(),
     assigned_event: selectedEventSuffix,
-    assigned_context: selectedContext || null,
-    context: selectedContext || null,
+    assigned_context: requestedWithinChildContexts ? "BOTH" : (selectedContext || null),
+    assigned_contexts: contextOrder.join(",") || null,
+    context_order: contextOrder.join(",") || null,
+    context_order_condition: requestedWithinChildContexts
+      ? (contextOrder[0] === "HOME" ? "HOME_FIRST" : "SCHOOL_FIRST")
+      : null,
+    first_context: contextOrder[0] || null,
+    second_context: contextOrder[1] || null,
+    context: requestedWithinChildContexts ? null : (selectedContext || null),
     study_version: resolvedStudyVersion || null,
     context_script_version: selectedContext ? HOME_SCHOOL_CONTEXT_SCRIPT_VERSION : null,
-    context_manipulation: selectedContext ? "between_child_fixed_across_six_stories" : null,
+    context_manipulation: selectedContext
+      ? (requestedWithinChildContexts
+        ? "within_child_two_six_story_blocks_counterbalanced_order"
+        : "between_child_fixed_across_six_stories")
+      : null,
     context_visual_treatment: selectedContext ? "furnished_palette_matched_background" : null,
     context_visual_version: selectedContext ? HOME_SCHOOL_FURNISHED_VISUAL_VERSION : null,
-    assigned_context_visual_id: selectedContext ? contextImageId(selectedContext) : null,
+    assigned_context_visual_id: selectedContext
+      ? contextOrder.map((context) => contextImageId(context)).filter(Boolean).join(",")
+      : null,
     part_order: resolvedPartOrder,
     rating_mode: selectedRatingMode,
     parent_setup_skipped: skipParentSetup,
     export_format: csvOnlyExport ? "csv" : "json+csv",
     design_version: selectedContext
-      ? (lockedDataStudyVersion || HOME_SCHOOL_DESIGN_VERSION)
+      ? (requestedWithinChildContexts
+        ? HOME_SCHOOL_WITHIN_CHILD_DESIGN_VERSION
+        : (lockedDataStudyVersion || HOME_SCHOOL_DESIGN_VERSION))
       : (isCurrentChsV76Study ? "chs-polish-v76" : (includesTeacherClassmate ? TEACHER_CLASSMATE_DESIGN_VERSION : null)),
     teacher_classmate_design_version: includesTeacherClassmate ? TEACHER_CLASSMATE_DESIGN_VERSION : null,
     teacher_classmate_condition_present: includesTeacherClassmate,
     teacher_classmate_relationship_status: includesTeacherClassmate ? "unspecified" : null,
-    family_likert_mode_requested: requestedFamilyLikertMode || null,
-    family_likert_mode_used: useAllFamilyDyadsAfterStory ? "all-matching-pairs" : "one-pair-schedule",
+    family_likert_mode_requested: selectedRatingMode === "none" ? null : (requestedFamilyLikertMode || null),
+    family_likert_mode_used: selectedRatingMode === "none"
+      ? null
+      : (useAllFamilyDyadsAfterStory ? "all-matching-pairs" : "one-pair-schedule"),
     one_pair_schedule: selectedRatingMode === "one-after-story" && !useAllFamilyDyadsAfterStory ? onePairScheduleIndex : null,
     one_pair_schedule_map: selectedRatingMode === "one-after-story" && !useAllFamilyDyadsAfterStory
       ? JSON.stringify(onePairSchedule)
       : null,
-    rating_schedule_version: RATING_SCHEDULE_VERSION,
+    rating_schedule_version: selectedRatingMode === "none" ? null : RATING_SCHEDULE_VERSION,
     rating_focal_roles: ratingFocalRoles.join(","),
     rating_focal_roles_unique: ratingFocalRolesUnique,
     requested_set: requestedSet,
     requested_color: requestedColor || null,
-    n_event_trials: eventPlan.length,
+    n_event_trials: presentedEventPlan.length,
+    n_event_trials_per_context: requestedWithinChildContexts ? eventPlan.length : null,
     n_dyads: allDyadChunks.length,
-    event_condition_order: eventPlan.map((trial) => trial.blocks.INTRO?.condition).join(","),
-    event_trial_order: eventPlan.map((trial) => trial.id).join(","),
-    event_source_variant_slot_order: eventPlan.map((trial) => trial.source_variant_slot || "none").join(","),
-    event_color_order: eventPlan.map((trial) => trial.blocks.INTRO?.color).join(","),
-    event_relationship_status_order: eventPlan.map((trial) => trial.relationship_status || "none").join(","),
+    event_context_order: presentedEventPlan.map(({ context }) => context || "none").join(","),
+    event_condition_order: presentedEventPlan.map(({ trial }) => trial.blocks.INTRO?.condition).join(","),
+    event_trial_order: presentedEventPlan.map(({ trial }) => trial.id).join(","),
+    event_source_variant_slot_order: presentedEventPlan.map(({ trial }) => trial.source_variant_slot || "none").join(","),
+    event_color_order: presentedEventPlan.map(({ trial }) => trial.blocks.INTRO?.color).join(","),
+    event_relationship_status_order: presentedEventPlan.map(({ trial }) => trial.relationship_status || "none").join(","),
     dyad_unique_relationships: allDyadChunks.map((chunk) => chunk.scriptKey || `${chunk.subject}-${chunk.target}`).join(","),
     dyad_order: allDyadChunks.map((chunk) => chunk.id).join(","),
     dyad_source_conditions: allDyadChunks.map((chunk) => `${chunk.sourceCondition}:${chunk.id}`).join(","),
@@ -3501,8 +3619,19 @@ async function main() {
   });
 
   let dyadSlideIndex = 0;
-  const storyNodes = eventPlan.flatMap((trial, idx) =>
-    buildEventTrialNodes(jsPsych, trial, idx, eventPlan.length, selectedEventSuffix, PART_EVENT, 1)
+  const storyNodes = presentedEventPlan.flatMap(({ trial, context, contextBlock, storyWithinContext }, idx) =>
+    buildEventTrialNodes(
+      jsPsych,
+      trial,
+      idx,
+      presentedEventPlan.length,
+      selectedEventSuffix,
+      PART_EVENT,
+      contextBlock || 1,
+      context,
+      contextBlock,
+      storyWithinContext,
+    )
   );
   const ratingNodes = selectedRatingMode === "one-after-story"
     ? []
@@ -3553,11 +3682,15 @@ async function main() {
   const parentPaceNoteShort = isFacilitatorMode
     ? "The researcher will read each page aloud and move on only when your child is ready."
     : PARENT_AUTOPLAY_NOTE_SHORT;
-  const facilitatorDurationText = selectedRatingMode === "one-after-story"
-    ? "It takes about ten to fifteen minutes."
-    : "It takes about fifteen to thirty minutes, depending on the assigned character set.";
+  const facilitatorDurationText = selectedRatingMode === "none"
+    ? "It takes about fifteen minutes."
+    : (selectedRatingMode === "one-after-story"
+      ? "It takes about ten to fifteen minutes."
+      : "It takes about fifteen to thirty minutes, depending on the assigned character set.");
   const visibleSessionDuration = isFacilitatorMode
-    ? (selectedRatingMode === "one-after-story" ? "10–15 minutes" : "15–30 minutes")
+    ? (selectedRatingMode === "none"
+      ? "About 15 minutes"
+      : (selectedRatingMode === "one-after-story" ? "10–15 minutes" : "15–30 minutes"))
     : "15 minutes";
   const setupSoundTitle = isFacilitatorMode ? "Check Zoom sound" : "Turn the sound on";
   const setupSoundText = isFacilitatorMode
@@ -3970,7 +4103,9 @@ async function main() {
               <div class="ksize-helper-bubble">Ready?</div>
           </div>
           <h1 class="ksize-title">Who Takes Care?</h1>
-          <p class="ksize-text">Listen to each story, choose who you think will help, and answer questions about the people.</p>
+          <p class="ksize-text">${requestedWithinChildContexts
+            ? "Listen to each story and choose who you think will help."
+            : "Listen to each story, choose who you think will help, and answer questions about the people."}</p>
             <p class="ksize-start-cue">When you are ready, hit the green button to start.</p>
             <div class="ksize-controls">
               <button class="ksize-audio-btn ksize-icon-btn ksize-start-audio ksize-prompt-glow" type="button" aria-label="Replay">
@@ -4133,7 +4268,15 @@ async function main() {
     ? []
     : [parentWelcomeNode, setupNode, cameraSetupNode, childHandoffNode];
   const reviewNodes = (
-    selectedRatingMode === "one-after-story"
+    selectedRatingMode === "none"
+      ? [
+          ...parentSetupNodes,
+          ...(ENABLE_CHILD_ASSENT ? [childAssentNode] : []),
+          welcomeNode,
+          ...storyNodes,
+          doneNode,
+        ]
+      : (selectedRatingMode === "one-after-story"
       ? [
           ...parentSetupNodes,
           ...(ENABLE_CHILD_ASSENT ? [childAssentNode] : []),
@@ -4150,7 +4293,7 @@ async function main() {
           makePartBreakNode(jsPsych, secondPartKind, 2, selectedEventSuffix),
           ...secondPartNodes,
           doneNode,
-        ]
+        ])
   ).map((node, index) => withPreviewIndex(node, index));
   totalPreviewScreens = reviewNodes.length;
   const safeRequestedPreviewIndex = safeFacilitatorPreviewIndex({
