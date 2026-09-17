@@ -16,6 +16,8 @@ const homeSchoolAudio = JSON.parse(fs.readFileSync(path.join(dataRoot, "home_sch
 const missingAudio = JSON.parse(fs.readFileSync(path.join(dataRoot, "missing_home_school_directional_audio_manifest.json"), "utf8"));
 const directionalAudioReceipt = JSON.parse(fs.readFileSync(path.join(dataRoot, "directional_audio_import_receipt.json"), "utf8"));
 const contextFirstQuestionReceipt = JSON.parse(fs.readFileSync(path.join(dataRoot, "context_first_question_audio_import_receipt.json"), "utf8"));
+const entranceHouseReceipt = JSON.parse(fs.readFileSync(path.join(dataRoot, "entrance_house_audio_import_receipt.json"), "utf8"));
+const entranceHouseByReplacedOutput = new Map(entranceHouseReceipt.clips.filter((clip) => clip.replaces).map((clip) => [clip.replaces.output, clip]));
 const historicalPauseManifest = JSON.parse(fs.readFileSync(path.join(dataRoot, "home_school_question_pause_manifest.json"), "utf8"));
 const canonicalAudio = JSON.parse(fs.readFileSync(path.join(dataRoot, "canonical_audio_manifest_evelyn.json"), "utf8"));
 const teacherClassmateAudio = JSON.parse(fs.readFileSync(path.join(dataRoot, "teacher_classmate_audio_manifest.json"), "utf8"));
@@ -93,15 +95,15 @@ function plain(value) {
 }
 
 assert.equal(metadata.candidateId, "chs-home-school-evelyn-v1");
-assert.equal(metadata.status, "published_for_review_only");
+assert.equal(metadata.status, "local_entrance_review_pending_verification");
 assert.equal(metadata.activeChsStudyChanged, false);
 assert.equal(metadata.chsDraftConfigurationUpdated, false);
 assert.equal(metadata.chsSubmissionStatus, "not_submitted");
-assert.equal(metadata.published, true);
+assert.equal(metadata.published, false);
 assert.equal(metadata.publishedOn, "2026-09-15");
 assert.equal(metadata.lastPublishedRelease, "chs-home-school-evelyn-v1-r16-within-child-preview-1");
-assert.equal(metadata.candidateRelease, "chs-home-school-evelyn-v1-r16-within-child-preview-1");
-assert.equal(metadata.latestRevisionOn, "2026-09-15");
+assert.equal(metadata.candidateRelease, "chs-home-school-evelyn-v1-r17-entrance-preview-1");
+assert.equal(metadata.latestRevisionOn, "2026-09-17");
 assert.equal(metadata.storyCount, 12);
 assert.equal(metadata.storyCountPerContext, 6);
 assert.equal(metadata.ratingMode, "none");
@@ -112,7 +114,7 @@ assert.equal(metadata.syntheticSpeech, false);
 assert.equal(metadata.missingEvelynClipCount, 0);
 assert.equal(metadata.directionalEvelynClipCount, 30);
 assert.equal(metadata.directionalEvelynAudioStatus, "complete");
-assert.equal(metadata.questionContextPlacement, "Each helping question begins with 'At the kid's home,' or 'At the kid's school,' followed by the helping question.");
+assert.equal(metadata.questionContextPlacement, "Each helping question begins with 'At the kid's house,' or 'At the kid's school,' followed by the helping question.");
 assert.equal(metadata.contextFirstQuestionClipCount, 24);
 assert.equal(metadata.contextFirstQuestionAudioReceipt, "data/context_first_question_audio_import_receipt.json");
 assert.equal(metadata.artificialQuestionPauseSeconds, 0);
@@ -136,16 +138,16 @@ assert.doesNotMatch(app, /slideIndex === 0 && (?:activeStudyContext|studyContext
 assert.match(app, /slideKind === "context_intro"[\s\S]*?text \|\| contextIntroText\(studyContext\)/);
 assert.match(
   app,
-  /slideKind === "intro"[\s\S]*?text \|\| ""[\s\S]*?slideKind === "context_intro"[\s\S]*?slideKind === "story"[\s\S]*?slideKind === "response_choices"/,
+  /\["intro", "exterior", "room_entry"\]\.includes\(slideKind\)[\s\S]*?text \|\| ""[\s\S]*?slideKind === "context_intro"[\s\S]*?slideKind === "story"[\s\S]*?slideKind === "response_choices"/,
   "Every Home/School story heading must use the same in-scene caption banner",
 );
-assert.match(indexHtml, /app\.js\?v=chs-home-school-evelyn-v1-r16-within-child-preview-1/);
+assert.match(indexHtml, /app\.js\?v=chs-home-school-evelyn-v1-r17-entrance-preview-1/);
 assert.doesNotMatch(app, /contextIntro \? `<div class="ksize-context-intro-cue"/);
 assert.match(app, /fileAudio\.addEventListener\("playing",[\s\S]*?setMouthPlaying\(true\)/);
 assert.match(app, /fileAudio\.addEventListener\("waiting", \(\) => setMouthPlaying\(false\)\)/);
 assert.match(app, /fileAudio\.addEventListener\("pause", \(\) => setMouthPlaying\(false\)\)/);
 assert.doesNotMatch(app, /this\.current = fileAudio;\s*document\.body\.classList\.add\("ksize-audio-playing"\)/);
-assert.match(app, /if \(!context \|\| isFacilitatorMode \|\| useSyntheticSpeech\) return \[\]/);
+assert.match(app, /if \(!context \|\| entranceVisualOnly\) return \[\]/);
 assert.match(app, /lockedDataStudyVersion \|\| `home_school_context_\$\{selectedContext\.toLowerCase\(\)\}_preview_v1`/);
 assert.match(app, /\$\{topHudHtml\(storyNumber, storyTotal\)\}/);
 assert.doesNotMatch(app, /topHudHtml\(storyNumber, storyTotal, \{ showContext: Boolean\(activeStudyContext\) \}\)/);
@@ -173,14 +175,14 @@ assert.equal(contextManifest.assignment.design, "within-child");
 assert.equal(contextManifest.assignment.storyCount, 12);
 assert.equal(contextManifest.assignment.storyCountPerContext, 6);
 assert.equal(contextManifest.assignment.ratings, "none");
-assert.equal(contextManifest.scriptVersion, "home_school_context_first_recipient_aware_v5");
+assert.equal(contextManifest.scriptVersion, "home_school_house_entrance_recipient_aware_v6");
 assert.deepEqual(Object.keys(contextManifest.contexts).sort(), ["HOME", "SCHOOL"]);
 
 const expectedContextIntroductions = {
   HOME: {
-    text: "They are all at the kid's home.",
-    audio: "assets/home_school/generated/audio/hs_r13_001_context_intro_home.mp3",
-    sha256: "d96069caa7e846365a300b7ee2a5f664ec4d0b2c1fb68d192c9286059dd0e72b",
+    text: "They are all at the kid's house.",
+    audio: "assets/home_school/generated/audio/hs_r17_005_context_intro_house.mp3",
+    sha256: "e6d2e7187aa75f095db59d2661c06e5a4bcfd0eb49e582f4cb7ad66687e72911",
   },
   SCHOOL: {
     text: "They are all at the kid's school.",
@@ -232,7 +234,7 @@ for (const [condition, recipient] of Object.entries(directionalRecipients)) {
       assert.equal(lines.length, 3);
       assert.match(lines[0], new RegExp(`the ${recipient} in the middle`, "i"));
       assert.match(lines[1], new RegExp(`the ${recipient} in the middle`, "i"));
-      assert.match(lines[1], new RegExp(`kid's ${context.toLowerCase()}`, "i"));
+      assert.match(lines[1], new RegExp(`kid's ${context === "HOME" ? "house" : "school"}`, "i"));
       assert.doesNotMatch(lines.slice(0, 2).join(" "), /the kid in the middle/i);
       assert.equal(lines[2], baseLines[2], "choice order wording must stay tied to the source rendition");
     }
@@ -248,7 +250,7 @@ for (const context of ["HOME", "SCHOOL"]) {
     const lines = plain(contextFunctions.contextualizedEventLines(baseLines, event, context, "MOM-TEACHER"));
     assert.match(lines[0], /kid in the middle/i);
     assert.match(lines[1], /kid in the middle/i);
-    assert.match(lines[1], new RegExp(`kid's ${context.toLowerCase()}`, "i"));
+    assert.match(lines[1], new RegExp(`kid's ${context === "HOME" ? "house" : "school"}`, "i"));
   }
 }
 
@@ -318,7 +320,7 @@ for (const [context, contextSpec] of Object.entries(contextManifest.contexts)) {
         if (kind === "question") {
           assert.match(
             text,
-            new RegExp(`^At the kid's ${context.toLowerCase()}, who will `),
+            new RegExp(`^At the kid's ${context === "HOME" ? "house" : "school"}, who will `),
             `Missing context-first wording in ${context}/${recipient}/${event}/${kind}`,
           );
         }
@@ -329,8 +331,8 @@ for (const [context, contextSpec] of Object.entries(contextManifest.contexts)) {
   }
 }
 assert.equal(homeSchoolAudio.status, "complete");
-assert.equal(homeSchoolAudio.candidateStatus, "release_ready");
-assert.equal(homeSchoolAudio.recording.clipCount, 44);
+assert.equal(homeSchoolAudio.candidateStatus, "local_review_recorded");
+assert.equal(homeSchoolAudio.recording.clipCount, 48);
 assert.equal(homeSchoolAudio.recording.directionalClipCount, 30);
 assert.equal(homeSchoolAudio.recording.questionRevision, "r15-context-first");
 assert.equal(homeSchoolAudio.recording.questionClipCount, 24);
@@ -343,7 +345,7 @@ assert.equal(new Set(missingAudio.lines.map((line) => line.output)).size, 30);
 assert.equal(directionalAudioReceipt.importedClipCount, 30);
 assert.equal(directionalAudioReceipt.clips.length, 30);
 assert.equal(contextFirstQuestionReceipt.candidateRelease, "chs-home-school-evelyn-v1-r15-context-first-preview-1");
-assert.equal(contextFirstQuestionReceipt.scriptVersion, contextManifest.scriptVersion);
+assert.equal(contextFirstQuestionReceipt.scriptVersion, "home_school_context_first_recipient_aware_v5", "Historical r15 receipt must retain its original script version");
 assert.equal(contextFirstQuestionReceipt.service, "NaturalReaders Commercial");
 assert.equal(contextFirstQuestionReceipt.voice, "Evelyn");
 assert.equal(contextFirstQuestionReceipt.clipCount, 24);
@@ -356,8 +358,12 @@ const activeAudioById = new Map(homeSchoolAudio.lines.map((line) => [line.id, li
 const contextFirstByOutput = new Map(contextFirstQuestionReceipt.clips.map((clip) => [clip.output, clip]));
 const contextFirstByLegacyOutput = new Map(contextFirstQuestionReceipt.clips.map((clip) => [clip.legacyOutput, clip]));
 for (const line of missingAudio.lines) {
-  const active = activeAudioById.get(line.id);
   const imported = directionalAudioReceipt.clips.find((clip) => clip.id === line.id);
+  const priorClip = line.kind === "question" ? contextFirstByLegacyOutput.get(line.output) : imported;
+  const houseReplacement = entranceHouseByReplacedOutput.get(priorClip?.output);
+  const active = houseReplacement
+    ? homeSchoolAudio.lines.find((clip) => clip.output === houseReplacement.output)
+    : activeAudioById.get(line.id);
   assert.ok(active, `${line.id} is missing from the active audio manifest`);
   assert.ok(imported, `${line.id} is missing from the historical import receipt`);
   assert.equal(fs.existsSync(path.join(root, line.output)), true, `${line.output} was not imported`);
@@ -365,21 +371,24 @@ for (const line of missingAudio.lines) {
   if (line.kind === "question") {
     const contextFirst = contextFirstByLegacyOutput.get(line.output);
     assert.ok(contextFirst, `${line.id} is missing from the context-first import receipt`);
-    assert.equal(active.text, contextFirst.text);
-    assert.equal(active.output, contextFirst.output);
+    const currentClip = entranceHouseByReplacedOutput.get(contextFirst.output) || contextFirst;
+    assert.equal(active.text, currentClip.text);
+    assert.equal(active.output, currentClip.output);
     assert.equal(availableAudio.get(normalizeText(active.text)), active.output, `${line.id} is not active in the audio map`);
-    assert.equal(active.bytes, contextFirst.bytes);
-    assert.equal(active.durationSeconds, contextFirst.durationSeconds);
-    assert.equal(active.sha256, contextFirst.sha256);
-    assert.equal(active.questionRevision, "r15-context-first");
+    assert.equal(active.bytes, currentClip.bytes);
+    assert.equal(active.durationSeconds, currentClip.durationSeconds);
+    assert.equal(active.sha256, currentClip.sha256);
+    if (houseReplacement) assert.equal(active.revision, "r17-entrance-house");
+    else assert.equal(active.questionRevision, "r15-context-first");
     assert.notEqual(active.sha256, imported.sha256, `${line.id} must not retain the superseded context-last recording`);
   } else {
-    assert.equal(availableAudio.get(normalizeText(line.text)), active.output, `${line.id} is not active in the audio map`);
-    assert.equal(active.output, line.output, `${line.id} output path drifted`);
-    assert.equal(active.text, imported.text, `${line.id} event wording drifted`);
-    assert.equal(active.bytes, imported.bytes, `${line.id} event byte count drifted`);
-    assert.equal(active.durationSeconds, imported.durationSeconds, `${line.id} event duration drifted`);
-    assert.equal(active.sha256, imported.sha256, `${line.id} event recording drifted`);
+    const currentClip = entranceHouseByReplacedOutput.get(imported.output) || imported;
+    assert.equal(availableAudio.get(normalizeText(currentClip.text)), active.output, `${line.id} is not active in the audio map`);
+    assert.equal(active.output, currentClip.output, `${line.id} output path drifted`);
+    assert.equal(active.text, currentClip.text, `${line.id} event wording drifted`);
+    assert.equal(active.bytes, currentClip.bytes, `${line.id} event byte count drifted`);
+    assert.equal(active.durationSeconds, currentClip.durationSeconds, `${line.id} event duration drifted`);
+    assert.equal(active.sha256, currentClip.sha256, `${line.id} event recording drifted`);
   }
   assert.equal(active.audioEdit, undefined, `${line.id} must not retain a synthetic-pause edit`);
 }
@@ -387,7 +396,7 @@ for (const line of missingAudio.lines) {
 const activeQuestionOutputs = [];
 for (const contextSpec of Object.values(contextManifest.contexts)) {
   for (const eventSpec of Object.values(contextSpec.events)) {
-    assert.match(eventSpec.questionText, /^At the kid's (?:home|school), who will /);
+    assert.match(eventSpec.questionText, /^At the kid's (?:house|school), who will /);
     assert.ok(availableAudio.has(normalizeText(eventSpec.eventText)), `Missing kid-recipient event audio: ${eventSpec.eventText}`);
     assert.ok(availableAudio.has(normalizeText(eventSpec.questionText)), `Missing kid-recipient question audio: ${eventSpec.questionText}`);
     activeQuestionOutputs.push(eventSpec.questionAudio);
@@ -403,8 +412,8 @@ assert.equal(new Set(activeQuestionOutputs).size, 24);
 for (const output of activeQuestionOutputs) {
   assert.match(output, /^assets\/home_school\/generated\/audio\/[^/]+\.mp3$/);
   assert.equal(fs.existsSync(path.join(root, output)), true, `Missing context-first question audio ${output}`);
-  const imported = contextFirstByOutput.get(output);
-  assert.ok(imported, `Question output is absent from the context-first receipt: ${output}`);
+  const imported = entranceHouseReceipt.clips.find((clip) => clip.output === output) || contextFirstByOutput.get(output);
+  assert.ok(imported, `Question output is absent from the r15/r17 receipts: ${output}`);
   const bytes = fs.readFileSync(path.join(root, output));
   assert.equal(bytes.length, imported.bytes, `Context-first byte count drifted: ${output}`);
   assert.equal(crypto.createHash("sha256").update(bytes).digest("hex"), imported.sha256, `Context-first hash drifted: ${output}`);

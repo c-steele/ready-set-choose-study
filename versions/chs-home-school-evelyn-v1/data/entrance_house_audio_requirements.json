@@ -1,0 +1,613 @@
+{
+  "schemaVersion": 1,
+  "candidateId": "chs-home-school-evelyn-v1",
+  "revision": "r17-entrance-house",
+  "status": "recorded_mapped_for_local_review",
+  "scope": "Who Takes Care context study only. This package does not activate recordings, change existing manifests, publish, or update CHS.",
+  "recording": {
+    "service": "NaturalReaders Commercial",
+    "voice": "Evelyn",
+    "style": "Soft",
+    "speed": 0.9,
+    "wordsPerMinute": 180,
+    "pauseBetweenParagraphsSeconds": 0,
+    "format": "mp3",
+    "bitrateKbps": 320,
+    "sampleRateHz": 44100,
+    "channels": 1
+  },
+  "clipCount": 25,
+  "newEntranceClipCount": 4,
+  "houseReplacementClipCount": 21,
+  "lines": [
+    {
+      "index": 1,
+      "id": "hs_r17_001",
+      "kind": "exterior",
+      "context": "HOME",
+      "text": "Oh look! Here is a house.",
+      "output": "assets/home_school/generated/audio/hs_r17_001_house_exterior.mp3",
+      "replaces": null,
+      "contextManifestLocations": [
+        {
+          "manifest": "versions/chs-home-school-evelyn-v1/data/home_school_context_manifest.json",
+          "textPointer": "/contexts/HOME/exterior/text",
+          "audioPointer": "/contexts/HOME/exterior/audio"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "id": "hs_r17_002",
+      "kind": "exterior",
+      "context": "SCHOOL",
+      "text": "Oh look! Here is a school.",
+      "output": "assets/home_school/generated/audio/hs_r17_002_school_exterior.mp3",
+      "replaces": null,
+      "contextManifestLocations": [
+        {
+          "manifest": "versions/chs-home-school-evelyn-v1/data/home_school_context_manifest.json",
+          "textPointer": "/contexts/SCHOOL/exterior/text",
+          "audioPointer": "/contexts/SCHOOL/exterior/audio"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "id": "hs_r17_003",
+      "kind": "room",
+      "context": "HOME",
+      "text": "This is a room inside the house.",
+      "output": "assets/home_school/generated/audio/hs_r17_003_house_room.mp3",
+      "replaces": null,
+      "contextManifestLocations": [
+        {
+          "manifest": "versions/chs-home-school-evelyn-v1/data/home_school_context_manifest.json",
+          "textPointer": "/contexts/HOME/room/text",
+          "audioPointer": "/contexts/HOME/room/audio"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "id": "hs_r17_004",
+      "kind": "room",
+      "context": "SCHOOL",
+      "text": "This is a room inside the school.",
+      "output": "assets/home_school/generated/audio/hs_r17_004_school_room.mp3",
+      "replaces": null,
+      "contextManifestLocations": [
+        {
+          "manifest": "versions/chs-home-school-evelyn-v1/data/home_school_context_manifest.json",
+          "textPointer": "/contexts/SCHOOL/room/text",
+          "audioPointer": "/contexts/SCHOOL/room/audio"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "id": "hs_r17_005",
+      "kind": "context_intro",
+      "context": "HOME",
+      "text": "They are all at the kid's house.",
+      "output": "assets/home_school/generated/audio/hs_r17_005_context_intro_house.mp3",
+      "replaces": {
+        "manifest": "versions/chs-home-school-evelyn-v1/data/home_school_audio_manifest.json",
+        "lineIndex": 0,
+        "id": null,
+        "text": "They are all at the kid's home.",
+        "output": "assets/home_school/generated/audio/hs_r13_001_context_intro_home.mp3",
+        "sha256": "d96069caa7e846365a300b7ee2a5f664ec4d0b2c1fb68d192c9286059dd0e72b",
+        "textPointer": "/lines/0/text",
+        "audioPointer": "/lines/0/output"
+      },
+      "contextManifestLocations": [
+        {
+          "manifest": "versions/chs-home-school-evelyn-v1/data/home_school_context_manifest.json",
+          "textPointer": "/contexts/HOME/intro/text",
+          "audioPointer": "/contexts/HOME/intro/audio"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "id": "hs_r17_006",
+      "kind": "question",
+      "context": "HOME",
+      "text": "At the kid's house, who will give the kid in the middle a hug now that they're sad?",
+      "output": "assets/home_school/generated/audio/hs_r17_006_house_kid_hug_question.mp3",
+      "replaces": {
+        "manifest": "versions/chs-home-school-evelyn-v1/data/home_school_audio_manifest.json",
+        "lineIndex": 3,
+        "id": null,
+        "text": "At the kid's home, who will give the kid in the middle a hug now that they're sad?",
+        "output": "assets/home_school/generated/audio/hs_r15_001_home_kid_hug_question_context_first.mp3",
+        "sha256": "01ee24d35fb540eeb2e4da9bc486f5ee8f3aa54257d4143ab43203b05f700d63",
+        "textPointer": "/lines/3/text",
+        "audioPointer": "/lines/3/output"
+      },
+      "contextManifestLocations": [
+        {
+          "manifest": "versions/chs-home-school-evelyn-v1/data/home_school_context_manifest.json",
+          "textPointer": "/contexts/HOME/events/HUG/questionText",
+          "audioPointer": "/contexts/HOME/events/HUG/questionAudio"
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "id": "hs_r17_007",
+      "kind": "event",
+      "context": "HOME",
+      "text": "Oh no! At the kid's house, the kid in the middle is hungry now!",
+      "output": "assets/home_school/generated/audio/hs_r17_007_house_food_event.mp3",
+      "replaces": {
+        "manifest": "versions/chs-home-school-evelyn-v1/data/home_school_audio_manifest.json",
+        "lineIndex": 6,
+        "id": null,
+        "text": "Oh no! At the kid's home, the kid in the middle is hungry now!",
+        "output": "assets/home_school/generated/audio/hs_007_home_food_event.mp3",
+        "sha256": "39a839adb2a88b7cb620961afe4aad87ab68810784fddb4cbbb3dbc759fe8643",
+        "textPointer": "/lines/6/text",
+        "audioPointer": "/lines/6/output"
+      },
+      "contextManifestLocations": [
+        {
+          "manifest": "versions/chs-home-school-evelyn-v1/data/home_school_context_manifest.json",
+          "textPointer": "/contexts/HOME/events/FOOD/eventText",
+          "audioPointer": "/contexts/HOME/events/FOOD/eventAudio"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "id": "hs_r17_008",
+      "kind": "question",
+      "context": "HOME",
+      "text": "At the kid's house, who will give the kid in the middle strawberries now that they're hungry?",
+      "output": "assets/home_school/generated/audio/hs_r17_008_house_kid_food_question.mp3",
+      "replaces": {
+        "manifest": "versions/chs-home-school-evelyn-v1/data/home_school_audio_manifest.json",
+        "lineIndex": 7,
+        "id": null,
+        "text": "At the kid's home, who will give the kid in the middle strawberries now that they're hungry?",
+        "output": "assets/home_school/generated/audio/hs_r15_002_home_kid_food_question_context_first.mp3",
+        "sha256": "b5d9754f190c4d9a85a460bac8a9700b68a5fb4eca2f4127bf54d71d5e77e50d",
+        "textPointer": "/lines/7/text",
+        "audioPointer": "/lines/7/output"
+      },
+      "contextManifestLocations": [
+        {
+          "manifest": "versions/chs-home-school-evelyn-v1/data/home_school_context_manifest.json",
+          "textPointer": "/contexts/HOME/events/FOOD/questionText",
+          "audioPointer": "/contexts/HOME/events/FOOD/questionAudio"
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "id": "hs_r17_009",
+      "kind": "event",
+      "context": "HOME",
+      "text": "Oh no! At the kid's house, the kid in the middle dropped a heavy box!",
+      "output": "assets/home_school/generated/audio/hs_r17_009_house_help_event.mp3",
+      "replaces": {
+        "manifest": "versions/chs-home-school-evelyn-v1/data/home_school_audio_manifest.json",
+        "lineIndex": 10,
+        "id": null,
+        "text": "Oh no! At the kid's home, the kid in the middle dropped a heavy box!",
+        "output": "assets/home_school/generated/audio/hs_011_home_help_event.mp3",
+        "sha256": "05c8a930430b08637de9dfbba4acb41eb147551a2deff18067f08b5a6e29a9fe",
+        "textPointer": "/lines/10/text",
+        "audioPointer": "/lines/10/output"
+      },
+      "contextManifestLocations": [
+        {
+          "manifest": "versions/chs-home-school-evelyn-v1/data/home_school_context_manifest.json",
+          "textPointer": "/contexts/HOME/events/HELP/eventText",
+          "audioPointer": "/contexts/HOME/events/HELP/eventAudio"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "id": "hs_r17_010",
+      "kind": "question",
+      "context": "HOME",
+      "text": "At the kid's house, who will help the kid in the middle pick up the heavy box?",
+      "output": "assets/home_school/generated/audio/hs_r17_010_house_kid_help_question.mp3",
+      "replaces": {
+        "manifest": "versions/chs-home-school-evelyn-v1/data/home_school_audio_manifest.json",
+        "lineIndex": 11,
+        "id": null,
+        "text": "At the kid's home, who will help the kid in the middle pick up the heavy box?",
+        "output": "assets/home_school/generated/audio/hs_r15_003_home_kid_help_question_context_first.mp3",
+        "sha256": "caf71e0a250b2668f764112569edccb213e28e87f48007a0702ff14127eb0e09",
+        "textPointer": "/lines/11/text",
+        "audioPointer": "/lines/11/output"
+      },
+      "contextManifestLocations": [
+        {
+          "manifest": "versions/chs-home-school-evelyn-v1/data/home_school_context_manifest.json",
+          "textPointer": "/contexts/HOME/events/HELP/questionText",
+          "audioPointer": "/contexts/HOME/events/HELP/questionAudio"
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "id": "hs_r17_011",
+      "kind": "question",
+      "context": "HOME",
+      "text": "At the kid's house, who will give the mom in the middle a hug now that they're sad?",
+      "output": "assets/home_school/generated/audio/hs_r17_011_house_mom_hug_question.mp3",
+      "replaces": {
+        "manifest": "versions/chs-home-school-evelyn-v1/data/home_school_audio_manifest.json",
+        "lineIndex": 14,
+        "id": "hs_v2_015",
+        "text": "At the kid's home, who will give the mom in the middle a hug now that they're sad?",
+        "output": "assets/home_school/generated/audio/hs_r15_004_home_mom_hug_question_context_first.mp3",
+        "sha256": "80efd302133f47ef4c71f259b5061b227dd5a535dfdcd2827254e9e0b0492b80",
+        "textPointer": "/lines/14/text",
+        "audioPointer": "/lines/14/output"
+      },
+      "contextManifestLocations": [
+        {
+          "manifest": "versions/chs-home-school-evelyn-v1/data/home_school_context_manifest.json",
+          "textPointer": "/contexts/HOME/recipientEvents/MOM/HUG/questionText",
+          "audioPointer": "/contexts/HOME/recipientEvents/MOM/HUG/questionAudio"
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "id": "hs_r17_012",
+      "kind": "event",
+      "context": "HOME",
+      "text": "Oh no! At the kid's house, the mom in the middle is hungry now!",
+      "output": "assets/home_school/generated/audio/hs_r17_012_house_mom_food_event.mp3",
+      "replaces": {
+        "manifest": "versions/chs-home-school-evelyn-v1/data/home_school_audio_manifest.json",
+        "lineIndex": 15,
+        "id": "hs_v2_016",
+        "text": "Oh no! At the kid's home, the mom in the middle is hungry now!",
+        "output": "assets/home_school/generated/audio/hs_v2_016_home_mom_food_event.mp3",
+        "sha256": "d5629c2bd87ce1a5c02d25384d8a5df2acc3c7a88e5ae3cc8f8c39983b63605d",
+        "textPointer": "/lines/15/text",
+        "audioPointer": "/lines/15/output"
+      },
+      "contextManifestLocations": [
+        {
+          "manifest": "versions/chs-home-school-evelyn-v1/data/home_school_context_manifest.json",
+          "textPointer": "/contexts/HOME/recipientEvents/MOM/FOOD/eventText",
+          "audioPointer": "/contexts/HOME/recipientEvents/MOM/FOOD/eventAudio"
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "id": "hs_r17_013",
+      "kind": "question",
+      "context": "HOME",
+      "text": "At the kid's house, who will give the mom in the middle strawberries now that they're hungry?",
+      "output": "assets/home_school/generated/audio/hs_r17_013_house_mom_food_question.mp3",
+      "replaces": {
+        "manifest": "versions/chs-home-school-evelyn-v1/data/home_school_audio_manifest.json",
+        "lineIndex": 16,
+        "id": "hs_v2_017",
+        "text": "At the kid's home, who will give the mom in the middle strawberries now that they're hungry?",
+        "output": "assets/home_school/generated/audio/hs_r15_005_home_mom_food_question_context_first.mp3",
+        "sha256": "0f4d1b9320c332810c7db466133850a65d21fb97b08508ce86af83d3a7169c24",
+        "textPointer": "/lines/16/text",
+        "audioPointer": "/lines/16/output"
+      },
+      "contextManifestLocations": [
+        {
+          "manifest": "versions/chs-home-school-evelyn-v1/data/home_school_context_manifest.json",
+          "textPointer": "/contexts/HOME/recipientEvents/MOM/FOOD/questionText",
+          "audioPointer": "/contexts/HOME/recipientEvents/MOM/FOOD/questionAudio"
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "id": "hs_r17_014",
+      "kind": "event",
+      "context": "HOME",
+      "text": "Oh no! At the kid's house, the mom in the middle dropped a heavy box!",
+      "output": "assets/home_school/generated/audio/hs_r17_014_house_mom_help_event.mp3",
+      "replaces": {
+        "manifest": "versions/chs-home-school-evelyn-v1/data/home_school_audio_manifest.json",
+        "lineIndex": 17,
+        "id": "hs_v2_018",
+        "text": "Oh no! At the kid's home, the mom in the middle dropped a heavy box!",
+        "output": "assets/home_school/generated/audio/hs_v2_018_home_mom_help_event.mp3",
+        "sha256": "6d8e490180f9688112e269db3d7c9c697a1d24303f97df4e58b602b97df620f3",
+        "textPointer": "/lines/17/text",
+        "audioPointer": "/lines/17/output"
+      },
+      "contextManifestLocations": [
+        {
+          "manifest": "versions/chs-home-school-evelyn-v1/data/home_school_context_manifest.json",
+          "textPointer": "/contexts/HOME/recipientEvents/MOM/HELP/eventText",
+          "audioPointer": "/contexts/HOME/recipientEvents/MOM/HELP/eventAudio"
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "id": "hs_r17_015",
+      "kind": "question",
+      "context": "HOME",
+      "text": "At the kid's house, who will help the mom in the middle pick up the heavy box?",
+      "output": "assets/home_school/generated/audio/hs_r17_015_house_mom_help_question.mp3",
+      "replaces": {
+        "manifest": "versions/chs-home-school-evelyn-v1/data/home_school_audio_manifest.json",
+        "lineIndex": 18,
+        "id": "hs_v2_019",
+        "text": "At the kid's home, who will help the mom in the middle pick up the heavy box?",
+        "output": "assets/home_school/generated/audio/hs_r15_006_home_mom_help_question_context_first.mp3",
+        "sha256": "deceb811d7f7b454aa1b04cc5796b708b573bf437f840f04f2e7f71d99efcabf",
+        "textPointer": "/lines/18/text",
+        "audioPointer": "/lines/18/output"
+      },
+      "contextManifestLocations": [
+        {
+          "manifest": "versions/chs-home-school-evelyn-v1/data/home_school_context_manifest.json",
+          "textPointer": "/contexts/HOME/recipientEvents/MOM/HELP/questionText",
+          "audioPointer": "/contexts/HOME/recipientEvents/MOM/HELP/questionAudio"
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "id": "hs_r17_016",
+      "kind": "question",
+      "context": "HOME",
+      "text": "At the kid's house, who will give the dad in the middle a hug now that they're sad?",
+      "output": "assets/home_school/generated/audio/hs_r17_016_house_dad_hug_question.mp3",
+      "replaces": {
+        "manifest": "versions/chs-home-school-evelyn-v1/data/home_school_audio_manifest.json",
+        "lineIndex": 19,
+        "id": "hs_v2_020",
+        "text": "At the kid's home, who will give the dad in the middle a hug now that they're sad?",
+        "output": "assets/home_school/generated/audio/hs_r15_007_home_dad_hug_question_context_first.mp3",
+        "sha256": "a9d4d3bd0ee682706c5fd7496c040ef623a812afd9f8d7379c0b9e8fca26a9d8",
+        "textPointer": "/lines/19/text",
+        "audioPointer": "/lines/19/output"
+      },
+      "contextManifestLocations": [
+        {
+          "manifest": "versions/chs-home-school-evelyn-v1/data/home_school_context_manifest.json",
+          "textPointer": "/contexts/HOME/recipientEvents/DAD/HUG/questionText",
+          "audioPointer": "/contexts/HOME/recipientEvents/DAD/HUG/questionAudio"
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "id": "hs_r17_017",
+      "kind": "event",
+      "context": "HOME",
+      "text": "Oh no! At the kid's house, the dad in the middle is hungry now!",
+      "output": "assets/home_school/generated/audio/hs_r17_017_house_dad_food_event.mp3",
+      "replaces": {
+        "manifest": "versions/chs-home-school-evelyn-v1/data/home_school_audio_manifest.json",
+        "lineIndex": 20,
+        "id": "hs_v2_021",
+        "text": "Oh no! At the kid's home, the dad in the middle is hungry now!",
+        "output": "assets/home_school/generated/audio/hs_v2_021_home_dad_food_event.mp3",
+        "sha256": "d0493a5ad0de30eb5a51b7dfe851718274d0a7cf0a08b55780f894cd9d37b93c",
+        "textPointer": "/lines/20/text",
+        "audioPointer": "/lines/20/output"
+      },
+      "contextManifestLocations": [
+        {
+          "manifest": "versions/chs-home-school-evelyn-v1/data/home_school_context_manifest.json",
+          "textPointer": "/contexts/HOME/recipientEvents/DAD/FOOD/eventText",
+          "audioPointer": "/contexts/HOME/recipientEvents/DAD/FOOD/eventAudio"
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "id": "hs_r17_018",
+      "kind": "question",
+      "context": "HOME",
+      "text": "At the kid's house, who will give the dad in the middle strawberries now that they're hungry?",
+      "output": "assets/home_school/generated/audio/hs_r17_018_house_dad_food_question.mp3",
+      "replaces": {
+        "manifest": "versions/chs-home-school-evelyn-v1/data/home_school_audio_manifest.json",
+        "lineIndex": 21,
+        "id": "hs_v2_022",
+        "text": "At the kid's home, who will give the dad in the middle strawberries now that they're hungry?",
+        "output": "assets/home_school/generated/audio/hs_r15_008_home_dad_food_question_context_first.mp3",
+        "sha256": "4ad45f180f34429a6da1d469e816731b08f8a7a0e843a35a062d042ace676137",
+        "textPointer": "/lines/21/text",
+        "audioPointer": "/lines/21/output"
+      },
+      "contextManifestLocations": [
+        {
+          "manifest": "versions/chs-home-school-evelyn-v1/data/home_school_context_manifest.json",
+          "textPointer": "/contexts/HOME/recipientEvents/DAD/FOOD/questionText",
+          "audioPointer": "/contexts/HOME/recipientEvents/DAD/FOOD/questionAudio"
+        }
+      ]
+    },
+    {
+      "index": 19,
+      "id": "hs_r17_019",
+      "kind": "event",
+      "context": "HOME",
+      "text": "Oh no! At the kid's house, the dad in the middle dropped a heavy box!",
+      "output": "assets/home_school/generated/audio/hs_r17_019_house_dad_help_event.mp3",
+      "replaces": {
+        "manifest": "versions/chs-home-school-evelyn-v1/data/home_school_audio_manifest.json",
+        "lineIndex": 22,
+        "id": "hs_v2_023",
+        "text": "Oh no! At the kid's home, the dad in the middle dropped a heavy box!",
+        "output": "assets/home_school/generated/audio/hs_v2_023_home_dad_help_event.mp3",
+        "sha256": "952b5f837757bc4c680a3b7a8222915744c35c54cc804e42e930f1eb2862f42c",
+        "textPointer": "/lines/22/text",
+        "audioPointer": "/lines/22/output"
+      },
+      "contextManifestLocations": [
+        {
+          "manifest": "versions/chs-home-school-evelyn-v1/data/home_school_context_manifest.json",
+          "textPointer": "/contexts/HOME/recipientEvents/DAD/HELP/eventText",
+          "audioPointer": "/contexts/HOME/recipientEvents/DAD/HELP/eventAudio"
+        }
+      ]
+    },
+    {
+      "index": 20,
+      "id": "hs_r17_020",
+      "kind": "question",
+      "context": "HOME",
+      "text": "At the kid's house, who will help the dad in the middle pick up the heavy box?",
+      "output": "assets/home_school/generated/audio/hs_r17_020_house_dad_help_question.mp3",
+      "replaces": {
+        "manifest": "versions/chs-home-school-evelyn-v1/data/home_school_audio_manifest.json",
+        "lineIndex": 23,
+        "id": "hs_v2_024",
+        "text": "At the kid's home, who will help the dad in the middle pick up the heavy box?",
+        "output": "assets/home_school/generated/audio/hs_r15_009_home_dad_help_question_context_first.mp3",
+        "sha256": "b94a3f1a74e3369e1e1844ff7f15bb38e421aa2a11e1d6c1fe23d38986319307",
+        "textPointer": "/lines/23/text",
+        "audioPointer": "/lines/23/output"
+      },
+      "contextManifestLocations": [
+        {
+          "manifest": "versions/chs-home-school-evelyn-v1/data/home_school_context_manifest.json",
+          "textPointer": "/contexts/HOME/recipientEvents/DAD/HELP/questionText",
+          "audioPointer": "/contexts/HOME/recipientEvents/DAD/HELP/questionAudio"
+        }
+      ]
+    },
+    {
+      "index": 21,
+      "id": "hs_r17_021",
+      "kind": "question",
+      "context": "HOME",
+      "text": "At the kid's house, who will give the teacher in the middle a hug now that they're sad?",
+      "output": "assets/home_school/generated/audio/hs_r17_021_house_teacher_hug_question.mp3",
+      "replaces": {
+        "manifest": "versions/chs-home-school-evelyn-v1/data/home_school_audio_manifest.json",
+        "lineIndex": 24,
+        "id": "hs_v2_025",
+        "text": "At the kid's home, who will give the teacher in the middle a hug now that they're sad?",
+        "output": "assets/home_school/generated/audio/hs_r15_010_home_teacher_hug_question_context_first.mp3",
+        "sha256": "4575265bb6c189d44700d23818b25ed0aaa80e1f79b94f97d356cf0003524ec1",
+        "textPointer": "/lines/24/text",
+        "audioPointer": "/lines/24/output"
+      },
+      "contextManifestLocations": [
+        {
+          "manifest": "versions/chs-home-school-evelyn-v1/data/home_school_context_manifest.json",
+          "textPointer": "/contexts/HOME/recipientEvents/TEACHER/HUG/questionText",
+          "audioPointer": "/contexts/HOME/recipientEvents/TEACHER/HUG/questionAudio"
+        }
+      ]
+    },
+    {
+      "index": 22,
+      "id": "hs_r17_022",
+      "kind": "event",
+      "context": "HOME",
+      "text": "Oh no! At the kid's house, the teacher in the middle is hungry now!",
+      "output": "assets/home_school/generated/audio/hs_r17_022_house_teacher_food_event.mp3",
+      "replaces": {
+        "manifest": "versions/chs-home-school-evelyn-v1/data/home_school_audio_manifest.json",
+        "lineIndex": 25,
+        "id": "hs_v2_026",
+        "text": "Oh no! At the kid's home, the teacher in the middle is hungry now!",
+        "output": "assets/home_school/generated/audio/hs_v2_026_home_teacher_food_event.mp3",
+        "sha256": "a3748b8f213225ad1dbe81294c184fd7e778d8346e566cf1b7bed13b062ab8ee",
+        "textPointer": "/lines/25/text",
+        "audioPointer": "/lines/25/output"
+      },
+      "contextManifestLocations": [
+        {
+          "manifest": "versions/chs-home-school-evelyn-v1/data/home_school_context_manifest.json",
+          "textPointer": "/contexts/HOME/recipientEvents/TEACHER/FOOD/eventText",
+          "audioPointer": "/contexts/HOME/recipientEvents/TEACHER/FOOD/eventAudio"
+        }
+      ]
+    },
+    {
+      "index": 23,
+      "id": "hs_r17_023",
+      "kind": "question",
+      "context": "HOME",
+      "text": "At the kid's house, who will give the teacher in the middle strawberries now that they're hungry?",
+      "output": "assets/home_school/generated/audio/hs_r17_023_house_teacher_food_question.mp3",
+      "replaces": {
+        "manifest": "versions/chs-home-school-evelyn-v1/data/home_school_audio_manifest.json",
+        "lineIndex": 26,
+        "id": "hs_v2_027",
+        "text": "At the kid's home, who will give the teacher in the middle strawberries now that they're hungry?",
+        "output": "assets/home_school/generated/audio/hs_r15_011_home_teacher_food_question_context_first.mp3",
+        "sha256": "2f035011aa69b868c62f14063531d5997c8238c48c9dfde5c958df2ab2364f19",
+        "textPointer": "/lines/26/text",
+        "audioPointer": "/lines/26/output"
+      },
+      "contextManifestLocations": [
+        {
+          "manifest": "versions/chs-home-school-evelyn-v1/data/home_school_context_manifest.json",
+          "textPointer": "/contexts/HOME/recipientEvents/TEACHER/FOOD/questionText",
+          "audioPointer": "/contexts/HOME/recipientEvents/TEACHER/FOOD/questionAudio"
+        }
+      ]
+    },
+    {
+      "index": 24,
+      "id": "hs_r17_024",
+      "kind": "event",
+      "context": "HOME",
+      "text": "Oh no! At the kid's house, the teacher in the middle dropped a heavy box!",
+      "output": "assets/home_school/generated/audio/hs_r17_024_house_teacher_help_event.mp3",
+      "replaces": {
+        "manifest": "versions/chs-home-school-evelyn-v1/data/home_school_audio_manifest.json",
+        "lineIndex": 27,
+        "id": "hs_v2_028",
+        "text": "Oh no! At the kid's home, the teacher in the middle dropped a heavy box!",
+        "output": "assets/home_school/generated/audio/hs_v2_028_home_teacher_help_event.mp3",
+        "sha256": "98988ac9e0bb893b4abe32ba500a768ab6d9d993ff8a433ca987895e9072e929",
+        "textPointer": "/lines/27/text",
+        "audioPointer": "/lines/27/output"
+      },
+      "contextManifestLocations": [
+        {
+          "manifest": "versions/chs-home-school-evelyn-v1/data/home_school_context_manifest.json",
+          "textPointer": "/contexts/HOME/recipientEvents/TEACHER/HELP/eventText",
+          "audioPointer": "/contexts/HOME/recipientEvents/TEACHER/HELP/eventAudio"
+        }
+      ]
+    },
+    {
+      "index": 25,
+      "id": "hs_r17_025",
+      "kind": "question",
+      "context": "HOME",
+      "text": "At the kid's house, who will help the teacher in the middle pick up the heavy box?",
+      "output": "assets/home_school/generated/audio/hs_r17_025_house_teacher_help_question.mp3",
+      "replaces": {
+        "manifest": "versions/chs-home-school-evelyn-v1/data/home_school_audio_manifest.json",
+        "lineIndex": 28,
+        "id": "hs_v2_029",
+        "text": "At the kid's home, who will help the teacher in the middle pick up the heavy box?",
+        "output": "assets/home_school/generated/audio/hs_r15_012_home_teacher_help_question_context_first.mp3",
+        "sha256": "8e8e35d0afadc26278dae1efff1249647c69a5dd79a724cdf3ec38c918194f0e",
+        "textPointer": "/lines/28/text",
+        "audioPointer": "/lines/28/output"
+      },
+      "contextManifestLocations": [
+        {
+          "manifest": "versions/chs-home-school-evelyn-v1/data/home_school_context_manifest.json",
+          "textPointer": "/contexts/HOME/recipientEvents/TEACHER/HELP/questionText",
+          "audioPointer": "/contexts/HOME/recipientEvents/TEACHER/HELP/questionAudio"
+        }
+      ]
+    }
+  ]
+}

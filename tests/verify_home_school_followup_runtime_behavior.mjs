@@ -300,7 +300,7 @@ for (const contextName of ["HOME", "SCHOOL"]) {
   );
   const followups = dyadNodes(timeline);
   const contextIntros = timeline.filter((node) => node?.data?.slide_kind === "context_intro");
-  const locationSentence = `They are all at the kid's ${contextName === "HOME" ? "home" : "school"}.`;
+  const locationSentence = `They are all at the kid's ${contextName === "HOME" ? "house" : "school"}.`;
   const obsoleteCue = `assets/home_school/generated/${contextName.toLowerCase()}_context_intro_cue_v2.png`;
   assert.equal(contextIntros.length, 6, `${contextName} timeline must show one location sentence per story`);
   for (const node of contextIntros) {

@@ -1,0 +1,49 @@
+Oh look! Here is a house.
+
+Oh look! Here is a school.
+
+This is a room inside the house.
+
+This is a room inside the school.
+
+They are all at the kid's house.
+
+At the kid's house, who will give the kid in the middle a hug now that they're sad?
+
+Oh no! At the kid's house, the kid in the middle is hungry now!
+
+At the kid's house, who will give the kid in the middle strawberries now that they're hungry?
+
+Oh no! At the kid's house, the kid in the middle dropped a heavy box!
+
+At the kid's house, who will help the kid in the middle pick up the heavy box?
+
+At the kid's house, who will give the mom in the middle a hug now that they're sad?
+
+Oh no! At the kid's house, the mom in the middle is hungry now!
+
+At the kid's house, who will give the mom in the middle strawberries now that they're hungry?
+
+Oh no! At the kid's house, the mom in the middle dropped a heavy box!
+
+At the kid's house, who will help the mom in the middle pick up the heavy box?
+
+At the kid's house, who will give the dad in the middle a hug now that they're sad?
+
+Oh no! At the kid's house, the dad in the middle is hungry now!
+
+At the kid's house, who will give the dad in the middle strawberries now that they're hungry?
+
+Oh no! At the kid's house, the dad in the middle dropped a heavy box!
+
+At the kid's house, who will help the dad in the middle pick up the heavy box?
+
+At the kid's house, who will give the teacher in the middle a hug now that they're sad?
+
+Oh no! At the kid's house, the teacher in the middle is hungry now!
+
+At the kid's house, who will give the teacher in the middle strawberries now that they're hungry?
+
+Oh no! At the kid's house, the teacher in the middle dropped a heavy box!
+
+At the kid's house, who will help the teacher in the middle pick up the heavy box?

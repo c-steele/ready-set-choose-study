@@ -9,15 +9,18 @@ const TEACHER_CLASSMATE_GENERATED_ROOT = "assets/teacher_classmate/generated/";
 const TEACHER_CLASSMATE_V78_REVISION_ROOT = "versions/chs-v78-teacher-classmate-evelyn-unique-roles/assets/teacher_classmate/generated/";
 const TEACHER_CLASSMATE_V78_DYAD_REVISION = /^dyads\/classmate-kid_0(?:1_tkc-deep-purple-a|2_tkc-deep-purple-b)\/slide_(?:0[3-9]|1[0-3])\.svg$/;
 const TEACHER_CLASSMATE_V78_TRIAL_REVISION = /^trials\/14(?:[ab]\/intro_04|[cd]\/intro_0[34]|[abcd]\/(?:hug|food|help)_screen_2)\.svg$/;
-const HOME_SCHOOL_ASSET_VERSION = "chs-home-school-evelyn-v1-r16-within-child-preview-1";
+const HOME_SCHOOL_ASSET_VERSION = "chs-home-school-evelyn-v1-r17-entrance-preview-1";
 const HOME_SCHOOL_DESIGN_VERSION = "home_school_context_chs_candidate_v1";
 const HOME_SCHOOL_WITHIN_CHILD_DESIGN_VERSION = "home_school_within_child_counterbalanced_context_order_v1";
-const HOME_SCHOOL_CONTEXT_SCRIPT_VERSION = "home_school_context_first_recipient_aware_v5";
+const HOME_SCHOOL_CONTEXT_SCRIPT_VERSION = "home_school_house_entrance_recipient_aware_v6";
 const HOME_SCHOOL_FURNISHED_VISUAL_VERSION = "home_school_furnished_palette_picture_v38";
 const RATING_SCHEDULE_VERSION = "unique_focal_role_per_set_v1";
 const HOME_SCHOOL_GENERATED_ROOT = "assets/home_school/generated/";
 const HOME_SCHOOL_FURNISHED_FOREGROUND_ROOT = "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/";
 const HOME_SCHOOL_FURNISHED_ROOM_ROOT = "assets/home_school/furnished_color_group_preview/";
+const HOME_SCHOOL_ENTRANCE_ROOT = "versions/chs-home-school-evelyn-v1/assets/entrance/";
+const HOME_SCHOOL_ENTRANCE_VERSION = "who-takes-care-entry-halls-v1";
+const ENTRANCE_DURATION_MS = 10100;
 const DYAD_MANIFEST_URL = runtimeConfig.dyadManifestUrl
   || `data/dyad_manifest.json?v=${TEACHER_CLASSMATE_ASSET_VERSION}`;
 const EVENT_MANIFEST_URL = runtimeConfig.eventManifestUrl
@@ -200,6 +203,10 @@ const facilitatorSessionKey = configValue("facilitatorSession", "facilitator_ses
   || requestedSeed;
 const showResearcherTools = requestedResearcherTools === "1"
   && (!isFacilitatorChildWindow || isLiveShareMode);
+// This explicit review mode is recorded on every story row. It never enables
+// synthetic speech or silently bypasses missing recordings for participants.
+const entranceVisualOnly = isHomeSchoolStudy && showResearcherTools
+  && configValue("entranceVisualOnly") === "1";
 const requestedDataEndpoint = configValue("dataEndpoint") || DATA_ENDPOINT_URL;
 const requestedDataMirrorBridge = configValue("dataMirrorBridge", "data_mirror_bridge").toLowerCase();
 const shouldMirrorAnswerRowsToParent = requestedDataMirrorBridge === "parent";
@@ -1581,6 +1588,7 @@ function displayImageSrc(src) {
     ? TEACHER_CLASSMATE_ASSET_VERSION
     : ((source.startsWith(HOME_SCHOOL_GENERATED_ROOT)
       || source.startsWith(HOME_SCHOOL_FURNISHED_FOREGROUND_ROOT)
+      || source.startsWith(HOME_SCHOOL_ENTRANCE_ROOT)
       || source.startsWith(HOME_SCHOOL_FURNISHED_ROOM_ROOT))
       ? HOME_SCHOOL_ASSET_VERSION
       : "");
@@ -2285,6 +2293,8 @@ function contextAudioIdForText(text, context = activeStudyContext) {
   if (!context || !text) return null;
   const spec = contextSpec(context);
   const contextTexts = [
+    spec?.exterior?.text,
+    spec?.room?.text,
     spec?.intro?.text,
     ...Object.values(spec?.events || {}).flatMap((event) => [event.eventText, event.questionText]),
     ...Object.values(spec?.recipientEvents || {}).flatMap((eventGroup) =>
@@ -2303,7 +2313,11 @@ function activeContextEventSpec(condition = "") {
 }
 
 function missingContextAudioForPlan(eventPlan, eventSuffix, context = activeStudyContext) {
-  const requiredLines = [contextIntroText(context)];
+  const requiredLines = [
+    entranceNarrationSpec(context, "exterior").text,
+    entranceNarrationSpec(context, "room").text,
+    contextIntroText(context),
+  ];
   for (const trial of eventPlan || []) {
     const block = trial?.blocks?.[eventSuffix];
     if (!block) continue;
@@ -2315,7 +2329,7 @@ function missingContextAudioForPlan(eventPlan, eventSuffix, context = activeStud
 }
 
 function assertParticipantContextAudioCoverage(eventPlan, eventSuffix, context = activeStudyContext) {
-  if (!context || isFacilitatorMode || useSyntheticSpeech) return [];
+  if (!context || entranceVisualOnly) return [];
   const missing = missingContextAudioForPlan(eventPlan, eventSuffix, context);
   if (!missing.length) return missing;
   const manifestUrl = assetUrl(MISSING_HOME_SCHOOL_AUDIO_MANIFEST_URL);
@@ -2345,7 +2359,7 @@ function topHudHtml(storyNumber = null, storyTotal = null, { showContext = false
 
 function furnishedSceneSpec(trial, image, context = activeStudyContext) {
   const visual = trial?.homeSchoolFurnished;
-  if (!context || !visual || !image?.homeSchoolForegroundSrc) return null;
+  if (!context || !visual || (!image?.homeSchoolForegroundSrc && !image?.homeSchoolEmptyRoom)) return null;
   const backgroundSrc = context === "HOME" ? visual.homeBackground : visual.schoolBackground;
   if (!backgroundSrc) return null;
   const accent = /^#[0-9a-f]{6}$/i.test(String(visual.characterHex || ""))
@@ -2353,7 +2367,8 @@ function furnishedSceneSpec(trial, image, context = activeStudyContext) {
     : "#8e2d94";
   return {
     backgroundSrc,
-    foregroundSrc: image.homeSchoolForegroundSrc,
+    foregroundSrc: image.homeSchoolForegroundSrc || "",
+    revealedSlots: image.homeSchoolRevealedSlots || null,
     accent,
     paletteSlug: visual.paletteSlug || "",
     visualVersion: visual.version || HOME_SCHOOL_FURNISHED_VISUAL_VERSION,
@@ -2380,8 +2395,203 @@ function furnishedImageLayersHtml(scene, { draggable = false } = {}) {
   if (!scene) return "";
   return `
     <img class="ksize-furnished-room" src="${escapeHtml(displayImageSrc(scene.backgroundSrc))}" alt="" aria-hidden="true">
-    <img class="ksize-furnished-foreground" src="${escapeHtml(displayImageSrc(scene.foregroundSrc))}" alt="" ${draggable ? "draggable=\"false\"" : ""}>
+    ${scene.foregroundSrc ? (scene.revealedSlots
+      ? `<canvas class="ksize-furnished-foreground ksize-character-reveal" width="1920" height="1080" data-source="${escapeHtml(displayImageSrc(scene.foregroundSrc))}" data-revealed-slots="${escapeHtml(scene.revealedSlots.join(","))}" aria-label="${escapeHtml(scene.revealedSlots.join(" and "))} characters introduced"></canvas>`
+      : `<img class="ksize-furnished-foreground" src="${escapeHtml(displayImageSrc(scene.foregroundSrc))}" alt="" ${draggable ? "draggable=\"false\"" : ""}>`) : ""}
   `;
+}
+
+function entranceNarrationSpec(context, kind) {
+  const place = context === "HOME" ? "house" : "school";
+  const defaults = {
+    exterior: `Oh look! Here is a ${place}.`,
+    room: `This is a room inside the ${place}.`,
+  };
+  const supplied = contextSpec(context)?.[kind] || {};
+  const text = supplied.text || defaults[kind];
+  return { text, audio: supplied.audio || canonicalAudioPathForText(text) || "" };
+}
+
+function entranceAssets(context) {
+  const place = context === "HOME" ? "house" : "school";
+  return {
+    exterior: `${HOME_SCHOOL_ENTRANCE_ROOT}${place}-exterior.webp`,
+    hall: `${HOME_SCHOOL_ENTRANCE_ROOT}${place}-hall.webp`,
+  };
+}
+
+function introRevealedSlots(trial, slideIndex) {
+  if (slideIndex >= 3) return ["left", "center", "right"];
+  const directional = recipientKeyForCondition(trial.blocks.INTRO?.condition) !== "KID";
+  const order = directional
+    ? (trial.blocks.INTRO?.side === "LEFT" ? ["right", "left", "center"] : ["left", "center", "right"])
+    : ["center", "left", "right"];
+  return order.slice(0, slideIndex);
+}
+
+// The original foreground includes all people, even on each identity page.
+// Classify connected opaque components rather than clipping equal thirds:
+// adults' hands cross those boundaries in the directional story renditions.
+const introRevealCache = new Map();
+function prepareIntroReveal(canvas) {
+  if (!canvas) return Promise.resolve();
+  const source = canvas.dataset.source;
+  if (!introRevealCache.has(source)) {
+    introRevealCache.set(source, new Promise((resolve, reject) => {
+      const image = new Image();
+      image.onload = () => {
+        try {
+          const scratch = document.createElement("canvas");
+          scratch.width = image.naturalWidth;
+          scratch.height = image.naturalHeight;
+          const context = scratch.getContext("2d", { willReadFrequently: true });
+          context.drawImage(image, 0, 0);
+          const pixels = context.getImageData(0, 0, scratch.width, scratch.height);
+          const { width, height, data } = pixels;
+          const seen = new Uint8Array(width * height);
+          const queue = new Int32Array(width * height);
+          const groups = [];
+          const firstPixel = Math.ceil(height * 0.125) * width;
+          for (let start = firstPixel; start < seen.length; start += 1) {
+            if (seen[start] || data[start * 4 + 3] === 0) continue;
+            let head = 0, tail = 1, minX = width, maxX = 0;
+            queue[0] = start;
+            seen[start] = 1;
+            while (head < tail) {
+              const pixel = queue[head++];
+              const x = pixel % width;
+              minX = Math.min(minX, x); maxX = Math.max(maxX, x);
+              const neighbors = [pixel - width, pixel + width];
+              if (x > 0) neighbors.push(pixel - 1);
+              if (x + 1 < width) neighbors.push(pixel + 1);
+              for (const next of neighbors) {
+                if (next < firstPixel || next >= seen.length || seen[next] || data[next * 4 + 3] === 0) continue;
+                seen[next] = 1; queue[tail++] = next;
+              }
+            }
+            const midpoint = (minX + maxX) / (2 * width);
+            const slot = midpoint < 0.34 ? "left" : midpoint > 0.67 ? "right" : "center";
+            groups.push({ slot, pixels: queue.slice(0, tail) });
+          }
+          resolve({ pixels, groups });
+        } catch (error) { reject(error); }
+      };
+      image.onerror = () => reject(new Error(`Character foreground could not load: ${source}`));
+      image.src = source;
+    }));
+  }
+  return introRevealCache.get(source).then(({ pixels, groups }) => {
+    const visible = new Set(canvas.dataset.revealedSlots.split(","));
+    canvas.width = pixels.width; canvas.height = pixels.height;
+    const context = canvas.getContext("2d");
+    const output = context.createImageData(pixels.width, pixels.height);
+    for (const group of groups) {
+      if (!visible.has(group.slot)) continue;
+      for (const pixel of group.pixels) {
+        const offset = pixel * 4;
+        output.data[offset] = pixels.data[offset];
+        output.data[offset + 1] = pixels.data[offset + 1];
+        output.data[offset + 2] = pixels.data[offset + 2];
+        output.data[offset + 3] = pixels.data[offset + 3];
+      }
+    }
+    context.putImageData(output, 0, 0);
+    canvas.dataset.revealReady = "true";
+  });
+}
+
+function entranceLayersHtml(context) {
+  const assets = entranceAssets(context);
+  const house = context === "HOME";
+  const g = house ? { x: 752, y: 375, w: 162, h: 307 } : { x: 725, y: 440, w: 220, h: 202 };
+  const src = escapeHtml(displayImageSrc(assets.exterior));
+  const leaf = (x, width) => `<svg viewBox="${x} ${g.y} ${width} ${g.h}" preserveAspectRatio="none"><image href="${src}" width="1672" height="941" preserveAspectRatio="none"/></svg>`;
+  return `<div class="ksize-entry-layers" data-entry-context="${context}" data-entrance-progress="0" aria-label="Outside the ${house ? "house" : "school"}; no characters are visible">
+    <div class="ksize-entry-backing"><img class="ksize-entry-hall" src="${escapeHtml(displayImageSrc(assets.hall))}" alt=""></div>
+    <div class="ksize-entry-world">
+      <svg class="ksize-entry-building" viewBox="0 0 1672 941" preserveAspectRatio="none"><defs><mask id="ksize-entry-opening"><rect width="1672" height="941" fill="white"/><rect x="${g.x}" y="${g.y}" width="${g.w}" height="${g.h}" fill="black"/></mask></defs><image href="${src}" width="1672" height="941" preserveAspectRatio="none" mask="url(#ksize-entry-opening)"/></svg>
+      <div class="ksize-entry-doorway" style="left:${g.x / 1672 * 100}%;top:${g.y / 941 * 100}%;width:${g.w / 1672 * 100}%;height:${g.h / 941 * 100}%">
+        <div class="ksize-entry-door ksize-entry-door-left" style="width:${house ? 100 : 50}%">${leaf(g.x, house ? g.w : g.w / 2)}</div>
+        ${house ? "" : `<div class="ksize-entry-door ksize-entry-door-right">${leaf(g.x + g.w / 2, g.w / 2)}</div>`}
+      </div>
+    </div><div class="ksize-entry-fade" hidden></div>
+  </div>`;
+}
+
+function entranceController(element, studyContext) {
+  if (!element) return null;
+  const house = studyContext === "HOME";
+  const g = house ? { x: 752, y: 375, w: 162, h: 307 } : { x: 725, y: 440, w: 220, h: 202 };
+  const hall = house ? { cx: 0.502, cy: 0.40, scale: 4.6 } : { cx: 0.522, cy: 0.45, scale: 7.8 };
+  const world = element.querySelector(".ksize-entry-world");
+  const backing = element.querySelector(".ksize-entry-backing");
+  const hallway = element.querySelector(".ksize-entry-hall");
+  const fade = element.querySelector(".ksize-entry-fade");
+  const door = element.querySelector(".ksize-entry-doorway");
+  const left = element.querySelector(".ksize-entry-door-left");
+  const right = element.querySelector(".ksize-entry-door-right");
+  const reduced = window.matchMedia?.("(prefers-reduced-motion: reduce)");
+  let frame = 0, settle = null, paused = false, progress = 0, start = 0;
+  const smooth = (number) => { const n = Math.max(0, Math.min(1, number)); return n * n * (3 - 2 * n); };
+  function render(value) {
+    progress = value;
+    const seconds = value * 10.1;
+    const approach = smooth((seconds - 0.7) / 2.8);
+    const opening = smooth((seconds - 3.7) / 1.25);
+    const travel = smooth((seconds - 5.05) / 1.05);
+    const cx = (g.x + g.w / 2) / 1672, cy = (g.y + g.h / 2) / 941;
+    const scale = (1 + 2.8 * approach) * Math.pow((house ? 15 : 11.5) / 3.8, travel);
+    world.hidden = value >= 1 || seconds >= 6.1;
+    world.style.transformOrigin = `${cx * 100}% ${cy * 100}%`;
+    world.style.transform = `translate(${(50 - cx * 100) * approach}%,${(50 - cy * 100) * approach}%) scale(${scale})`;
+    door.style.perspective = `${Math.max(1, door.offsetHeight * 2.2)}px`;
+    left.style.transform = `rotateY(${opening * 88}deg)`;
+    if (right) right.style.transform = `rotateY(${-opening * 88}deg)`;
+    backing.hidden = value >= 1 || seconds >= 9.3;
+    const hallMove = smooth((seconds - 7.05) / 2.2);
+    hallway.style.transformOrigin = `${hall.cx * 100}% ${hall.cy * 100}%`;
+    hallway.style.transform = `translate(${(50 - hall.cx * 100) * hallMove}%,${(50 - hall.cy * 100) * hallMove}%) scale(${1 + (hall.scale - 1) * hallMove})`;
+    const opacity = seconds < 9.3 ? smooth((seconds - 9.05) / 0.25) : 1 - smooth((seconds - 9.4) / 0.45);
+    fade.hidden = value >= 1 || opacity <= 0;
+    fade.style.opacity = String(opacity);
+    element.dataset.entranceProgress = String(Math.round(value * 1000) / 1000);
+    element.dataset.phase = value >= 1 ? "empty_room" : seconds < 3.7 ? "approaching" : seconds < 4.95 ? "opening" : seconds < 6.1 ? "crossing_doorway" : seconds < 7.05 ? "entry_hall" : seconds < 9.05 ? "moving_through_hall" : "entering_room";
+    element.setAttribute("aria-label", value >= 1
+      ? `Room inside the ${house ? "house" : "school"}; no characters are visible`
+      : `${element.dataset.phase.replace(/_/g, " ")} at the ${house ? "house" : "school"}; no characters are visible`);
+  }
+  function stop(completed = false) {
+    window.cancelAnimationFrame(frame); frame = 0; paused = false;
+    if (completed) render(1);
+    const resolve = settle; settle = null; resolve?.(completed);
+  }
+  function tick(now) {
+    render(Math.min(1, (now - start) / ENTRANCE_DURATION_MS));
+    if (progress >= 1) stop(true);
+    else frame = window.requestAnimationFrame(tick);
+  }
+  const onMotion = () => { if (reduced?.matches && settle) stop(true); };
+  reduced?.addEventListener?.("change", onMotion);
+  render(0);
+  return {
+    play() {
+      stop(); render(0);
+      return new Promise((resolve) => {
+        settle = resolve;
+        if (reduced?.matches) { stop(true); return; }
+        start = performance.now(); frame = window.requestAnimationFrame(tick);
+      });
+    },
+    pause() {
+      if (!settle) return false;
+      paused = !paused;
+      if (paused) window.cancelAnimationFrame(frame);
+      else { start = performance.now() - progress * ENTRANCE_DURATION_MS; frame = window.requestAnimationFrame(tick); }
+      return paused;
+    },
+    skip() { stop(true); },
+    destroy() { stop(); reduced?.removeEventListener?.("change", onMotion); },
+  };
 }
 
 function renderKidSlide({ trial = null, image, text, choices = [], overlayChoices = false, showText = false, slideKind = "", showNext = false, visualChoices = false, contextIntro = false, contextCondition = "", studyContext = activeStudyContext, storyNumber = null, storyTotal = null }) {
@@ -2390,9 +2600,10 @@ function renderKidSlide({ trial = null, image, text, choices = [], overlayChoice
     ? contextEventSpec(activeStudyEvent, studyContext, contextCondition)
     : null;
   const furnishedScene = furnishedSceneSpec(trial, image, studyContext);
+  const isEntranceSlide = studyContext && ["exterior", "room_entry"].includes(slideKind);
   const contextOverlayText = studyContext
-    ? (slideKind === "intro"
-      ? text || ""
+    ? (["intro", "exterior", "room_entry"].includes(slideKind)
+      ? (slideKind === "room_entry" ? entranceNarrationSpec(studyContext, "exterior").text : text || "")
       : (slideKind === "context_intro"
         ? text || contextIntroText(studyContext)
         : (slideKind === "story"
@@ -2402,7 +2613,15 @@ function renderKidSlide({ trial = null, image, text, choices = [], overlayChoice
   const contextOverlayHtml = contextOverlayText
     ? `<div class="ksize-context-spoken-banner"${furnishedScene ? ` style="background:${escapeHtml(furnishedScene.accent)}"` : ""}>${escapeHtml(contextOverlayText)}</div>`
     : "";
-  const imageBlock = overlayChoices && image
+  const imageBlock = isEntranceSlide && furnishedScene
+    ? `<div class="ksize-slide-image ksize-furnished-scene ksize-entry-shell" data-palette="${escapeHtml(furnishedScene.paletteSlug)}" data-visual-version="${escapeHtml(furnishedScene.visualVersion)}">
+        ${contextOverlayHtml}
+        <div class="ksize-entry-stage">
+          ${furnishedImageLayersHtml(furnishedScene)}
+          ${entranceLayersHtml(studyContext)}
+        </div>
+      </div>`
+    : overlayChoices && image
     ? `<div class="ksize-scene-wrap${contextOverlayText ? " ksize-contextual-stimulus" : ""}${furnishedScene ? " ksize-furnished-scene" : ""}"${furnishedScene ? ` data-palette="${escapeHtml(furnishedScene.paletteSlug)}" data-visual-version="${escapeHtml(furnishedScene.visualVersion)}"` : ""}>
         ${furnishedScene
           ? furnishedImageLayersHtml(furnishedScene, { draggable: true })
@@ -2424,6 +2643,7 @@ function renderKidSlide({ trial = null, image, text, choices = [], overlayChoice
     <main class="ksize-shell ksize-kid-shell">
       <section class="ksize-screen ksize-kid-screen" data-slide-kind="${escapeHtml(slideKind)}" data-context="${escapeHtml(studyContext)}">
         ${topHudHtml(storyNumber, storyTotal)}
+        ${entranceVisualOnly ? '<div class="ksize-entry-review-note" role="status">Silent visual review · researcher use only</div>' : ""}
         ${imageBlock}
         ${showText && text ? `<div class="ksize-kid-text">${escapeHtml(text)}</div>` : ""}
         <div class="ksize-bottom-area">
@@ -2440,6 +2660,7 @@ function renderKidSlide({ trial = null, image, text, choices = [], overlayChoice
               <span class="ksize-icon-symbol" aria-hidden="true">▶</span>
               <span class="ksize-icon-label">Replay</span>
             </button>
+            ${slideKind === "room_entry" ? '<button class="ksize-entry-pause ksize-icon-btn" type="button" aria-label="Pause entrance">Pause entrance</button>' : ""}
             ${showNext ? `
               <button class="ksize-next-btn ksize-icon-btn" type="button" aria-label="Next">
                 <span class="ksize-icon-symbol" aria-hidden="true">➜</span>
@@ -2448,7 +2669,7 @@ function renderKidSlide({ trial = null, image, text, choices = [], overlayChoice
             ` : ""}
           </div>
           ${hasChoicePrompt ? `<div class="ksize-choice-page-note">Choose a glowing box to move on.</div>` : ""}
-          ${showNext ? `<div class="ksize-auto-next-note">Game will keep going on its own, or press Next to move on sooner.</div>` : ""}
+          ${showNext ? `<div class="ksize-auto-next-note">${entranceVisualOnly ? "Press Next to continue the visual review." : "Game will keep going on its own, or press Next to move on sooner."}</div>` : ""}
         </div>
       </section>
     </main>
@@ -2466,6 +2687,7 @@ function makeKidNode(jsPsych, { trial, block, suffix, image, text, audioSegments
     : [];
   let replayCount = 0;
   let audioPlaybackOrLoadFailure = false;
+  let disposeNode = () => {};
   return {
     type: jsPsychHtmlButtonResponse,
     stimulus: renderKidSlide({ trial, image, text, choices, overlayChoices, showText, slideKind, showNext: !hasChoices, visualChoices, contextIntro, contextCondition, studyContext, storyNumber, storyTotal }),
@@ -2502,6 +2724,9 @@ function makeKidNode(jsPsych, { trial, block, suffix, image, text, audioSegments
       context_visual_version: studyContext ? trial?.homeSchoolFurnished?.version || null : null,
       context_palette_slug: studyContext ? trial?.homeSchoolFurnished?.paletteSlug || null : null,
       context_character_hex: studyContext ? trial?.homeSchoolFurnished?.characterHex || null : null,
+      entrance_version: studyContext ? HOME_SCHOOL_ENTRANCE_VERSION : null,
+      entrance_visual_only: entranceVisualOnly,
+      revealed_character_slots: image?.homeSchoolRevealedSlots || null,
       side: block.side,
       color: block.color,
       relationship_status: trial.relationship_status || block.relationship_status || null,
@@ -2516,6 +2741,29 @@ function makeKidNode(jsPsych, { trial, block, suffix, image, text, audioSegments
       const loadedAt = performance.now();
       let didFinish = false;
       let highlightTimers = [];
+      let playbackGeneration = 0;
+      const pendingTimers = new Set();
+      const entrance = entranceController(document.querySelector(".ksize-entry-layers"), studyContext);
+      const pauseButton = document.querySelector(".ksize-entry-pause");
+      const caption = document.querySelector(".ksize-context-spoken-banner");
+      const resetPause = () => {
+        if (!pauseButton) return;
+        pauseButton.hidden = false;
+        pauseButton.textContent = "Pause entrance";
+        pauseButton.setAttribute("aria-label", "Pause entrance");
+      };
+      const revealReady = prepareIntroReveal(document.querySelector(".ksize-character-reveal"));
+      // Register immediately so a rapid Skip/Back/reload cannot leave a running
+      // animation or a pending advance from the page that was just removed.
+      disposeNode = () => {
+        didFinish = true; playbackGeneration += 1;
+        entrance?.destroy();
+        pendingTimers.forEach((timer) => window.clearTimeout(timer));
+        pendingTimers.clear();
+        highlightTimers.forEach((timer) => window.clearTimeout(timer));
+        window.removeEventListener?.("pagehide", disposeNode);
+      };
+      window.addEventListener?.("pagehide", disposeNode, { once: true });
       const contextChoiceButtons = Array.from(document.querySelectorAll(".ksize-char-btn"));
       const setContextChoicesEnabled = (enabled) => {
         if (!studyContext || !hasChoices) return;
@@ -2532,9 +2780,12 @@ function makeKidNode(jsPsych, { trial, block, suffix, image, text, audioSegments
         didFinish = true;
         finishParticipantTrial(jsPsych, { response: "auto_next" }, TRIAL_ADVANCE_VALUES.next, "auto_next_page");
       };
-      const finishNextAfterPause = async () => {
-        await new Promise((resolve) => window.setTimeout(resolve, AUTO_ADVANCE_PAUSE_MS));
-        finishNext();
+      const finishNextAfterPause = (generation) => {
+        const timer = window.setTimeout(() => {
+          pendingTimers.delete(timer);
+          if (!didFinish && generation === playbackGeneration) finishNext();
+        }, AUTO_ADVANCE_PAUSE_MS);
+        pendingTimers.add(timer);
       };
       const clearHighlights = () => {
         highlightTimers.forEach((timer) => clearTimeout(timer));
@@ -2561,9 +2812,26 @@ function makeKidNode(jsPsych, { trial, block, suffix, image, text, audioSegments
         }, highlightStartMs + buttons.length * cueGapMs + 700));
       };
       const playAudio = async ({ advanceWhenDone = false } = {}) => {
+        const generation = ++playbackGeneration;
+        audio.stop();
         clearHighlights();
         setContextChoicesEnabled(false);
         let attemptFailed = false;
+        try { await revealReady; } catch (error) {
+          audioPlaybackOrLoadFailure = true;
+          if (caption) caption.textContent = "This picture could not load. Please reload the study.";
+          console.error(error);
+          return;
+        }
+        if (didFinish || generation !== playbackGeneration) return;
+        if (slideKind === "room_entry") {
+          resetPause();
+          if (caption) caption.textContent = entranceNarrationSpec(studyContext, "exterior").text;
+          const completed = await entrance?.play();
+          if (!completed || didFinish || generation !== playbackGeneration) return;
+          if (pauseButton) pauseButton.hidden = true;
+          if (caption) caption.textContent = text;
+        }
         const narrationItems = audioTexts.length
           ? audioTexts.map((audioText, index) => ({
               src: audioSegments[index] || audioPathForText(audioText),
@@ -2571,6 +2839,8 @@ function makeKidNode(jsPsych, { trial, block, suffix, image, text, audioSegments
             }))
           : audioSegments.map((segment) => ({ src: segment, text: text || "" }));
         for (const [index, item] of narrationItems.entries()) {
+          if (entranceVisualOnly) continue;
+          if (didFinish || generation !== playbackGeneration) return;
           const isChoiceOptions = highlightChoices && index === narrationItems.length - 1;
           const played = await audio.playFile(item.src, item.text, isChoiceOptions ? {
             onStart: highlightChoiceNames,
@@ -2583,17 +2853,27 @@ function makeKidNode(jsPsych, { trial, block, suffix, image, text, audioSegments
             break;
           }
         }
+        if (didFinish || generation !== playbackGeneration) return;
         clearHighlights();
         if (attemptFailed) return;
         setContextChoicesEnabled(true);
-        if (advanceWhenDone && autoAdvanceAfterAudio && !hasChoices) await finishNextAfterPause();
+        if (advanceWhenDone && autoAdvanceAfterAudio && !hasChoices && !entranceVisualOnly) finishNextAfterPause(generation);
       };
+      pauseButton?.addEventListener("click", () => {
+        pauseButton.textContent = entrance?.pause() ? "Continue entrance" : "Pause entrance";
+        pauseButton.setAttribute("aria-label", pauseButton.textContent);
+      });
       document.querySelector(".ksize-audio-btn")?.addEventListener("click", () => {
         replayCount += 1;
         playAudio();
       });
       document.querySelector(".ksize-next-btn")?.addEventListener("click", () => {
         if (didFinish) return;
+        const entryElement = document.querySelector(".ksize-entry-layers");
+        if (slideKind === "room_entry" && Number(entryElement?.dataset.entranceProgress) < 1) {
+          entrance?.skip();
+          return;
+        }
         didFinish = true;
         clearHighlights();
         audio.stop();
@@ -2618,14 +2898,20 @@ function makeKidNode(jsPsych, { trial, block, suffix, image, text, audioSegments
             choice_context_associated_binary: null,
             response_time_ms: Math.round(performance.now() - loadedAt),
             response_missing: false,
+            researcher_visual_review_choice: entranceVisualOnly,
           }, TRIAL_ADVANCE_VALUES.choice, "story_choice");
         });
       });
       if (autoPlay && !isFacilitatorMode) {
-        setTimeout(() => playAudio({ advanceWhenDone: autoAdvanceAfterAudio }), 250);
+        const timer = window.setTimeout(() => {
+          pendingTimers.delete(timer);
+          if (!didFinish) playAudio({ advanceWhenDone: autoAdvanceAfterAudio });
+        }, 250);
+        pendingTimers.add(timer);
       }
     },
     on_finish: (data) => {
+      disposeNode();
       audio.stop();
       data.replay_count = replayCount;
       data.audio_playback_or_load_failure = audioPlaybackOrLoadFailure;
@@ -2660,8 +2946,27 @@ function buildEventTrialNodes(
     if (suffix !== "INTRO" && suffix !== eventSuffix) return [];
     if (suffix === "INTRO" && block.introSlides?.length) {
       const introNodes = [];
+      if (studyContext) {
+        for (const [kind, slideKind] of [["exterior", "exterior"], ["room", "room_entry"]]) {
+          const narration = entranceNarrationSpec(studyContext, kind);
+          introNodes.push(makeKidNode(jsPsych, {
+            trial, block, suffix,
+            image: { homeSchoolEmptyRoom: true },
+            text: narration.text,
+            audioSegments: [narration.audio],
+            audioTexts: [narration.text],
+            choices: [], slideKind, showText: false, autoAdvanceAfterAudio: true,
+            partKind, partNumber, studyContext, contextBlock, storyWithinContext,
+            storyNumber: trialIndex + 1, storyTotal: totalTrials,
+          }));
+        }
+      }
       block.introSlides.forEach((slide, slideIndex) => {
-        const image = introImageForSlide(trial, slide, slideIndex);
+        if (studyContext && slideIndex === 0) return;
+        const originalImage = introImageForSlide(trial, slide, slideIndex);
+        const image = studyContext
+          ? { ...originalImage, homeSchoolRevealedSlots: introRevealedSlots(trial, slideIndex) }
+          : originalImage;
         introNodes.push(makeKidNode(jsPsych, {
           trial,
           block,
@@ -2688,7 +2993,7 @@ function buildEventTrialNodes(
             trial,
             block,
             suffix,
-            image,
+            image: originalImage,
             text: contextText,
             audioSegments: [contextSpec(studyContext)?.intro?.audio || audioPathForText(contextText)],
             audioTexts: [contextText],
@@ -3357,6 +3662,7 @@ async function main() {
     ...(shouldDownloadData ? { downloadData: "1" } : {}),
     ...(params.get("showDataStatus") === "1" ? { showDataStatus: "1" } : {}),
     syntheticSpeech: useSyntheticSpeech ? "1" : "0",
+    entranceVisualOnly: entranceVisualOnly ? "1" : "0",
   };
   const rawDyadGroupsByTrial = requestedWithinChildContexts ? eventPlan.map(() => []) : eventPlan.map((trial) => {
     const chunks = dyadRequestsForTrial(trial)
@@ -3423,6 +3729,7 @@ async function main() {
       }))
     : [];
   const imagePaths = [
+    ...contextOrder.flatMap((context) => Object.values(entranceAssets(context)).map(displayImageSrc)),
     ...contextOrder.map((context) => displayImageSrc(contextBadgeSrc(context))).filter(Boolean),
     ...allDyadSlides.flatMap(({ chunk, slide }) => {
       if (!selectedContext) return [displayImageSrc(slide.src)];
@@ -3449,6 +3756,13 @@ async function main() {
     ),
     ...furnishedImagePaths,
   ];
+  const contextAudioPaths = [...new Set(contextOrder.flatMap((context) => {
+    const spec = contextSpec(context);
+    return [spec?.exterior?.text, spec?.room?.text, spec?.intro?.text,
+      ...Object.values(spec?.events || {}).flatMap((event) => [event.eventText, event.questionText]),
+      ...Object.values(spec?.recipientEvents || {}).flatMap((events) =>
+        Object.values(events).flatMap((event) => [event.eventText, event.questionText]))];
+  }).filter(Boolean).map(canonicalAudioPathForText).filter(Boolean).map(versionedAudioSrc))];
   audio.init();
 
   const jsPsych = initJsPsych({
@@ -4308,7 +4622,7 @@ async function main() {
   currentPreviewIndex = startIndex;
 
   const timeline = [
-    { type: jsPsychPreload, images: imagePaths, show_progress_bar: true },
+    { type: jsPsychPreload, images: imagePaths, audio: entranceVisualOnly ? [] : contextAudioPaths, show_progress_bar: true },
     ...reviewNodes.slice(startIndex),
   ];
 

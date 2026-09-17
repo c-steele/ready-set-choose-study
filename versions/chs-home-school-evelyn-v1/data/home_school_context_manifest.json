@@ -2,7 +2,7 @@
   "schemaVersion": 3,
   "status": "review_ready_not_submitted",
   "designVersion": "home_school_within_child_counterbalanced_context_order_v1",
-  "scriptVersion": "home_school_context_first_recipient_aware_v5",
+  "scriptVersion": "home_school_house_entrance_recipient_aware_v6",
   "assignment": {
     "design": "within-child",
     "contexts": [
@@ -23,8 +23,14 @@
     "cellBase": 1,
     "cellFormula": "role_index * 6 + event_index * 2 + context_order_index + 1",
     "contextOrders": [
-      ["HOME", "SCHOOL"],
-      ["SCHOOL", "HOME"]
+      [
+        "HOME",
+        "SCHOOL"
+      ],
+      [
+        "SCHOOL",
+        "HOME"
+      ]
     ],
     "storyCount": 12,
     "storyCountPerContext": 6,
@@ -46,36 +52,36 @@
   },
   "contexts": {
     "HOME": {
-      "label": "At the kid's home",
+      "label": "At the kid's house",
       "entrypoint": "home.html",
       "badge": {
         "id": "home_context_badge_v1",
         "src": "assets/home_school/generated/home_context_badge.png",
-        "alt": "At the kid's home"
+        "alt": "At the kid's house"
       },
       "intro": {
-        "text": "They are all at the kid's home.",
-        "audio": "assets/home_school/generated/audio/hs_r13_001_context_intro_home.mp3",
+        "text": "They are all at the kid's house.",
+        "audio": "assets/home_school/generated/audio/hs_r17_005_context_intro_house.mp3",
         "presentation": "palette-colored top caption above the furnished scene"
       },
       "events": {
         "HUG": {
           "eventText": "Oh no! The kid in the middle is sad now!",
           "eventAudio": "audio_evelyn/ftc_005_story_event_01_oh_no_the_kid_in_the_middle_is_sad_now.mp3",
-          "questionText": "At the kid's home, who will give the kid in the middle a hug now that they're sad?",
-          "questionAudio": "assets/home_school/generated/audio/hs_r15_001_home_kid_hug_question_context_first.mp3"
+          "questionText": "At the kid's house, who will give the kid in the middle a hug now that they're sad?",
+          "questionAudio": "assets/home_school/generated/audio/hs_r17_006_house_kid_hug_question.mp3"
         },
         "FOOD": {
-          "eventText": "Oh no! At the kid's home, the kid in the middle is hungry now!",
-          "eventAudio": "assets/home_school/generated/audio/hs_007_home_food_event.mp3",
-          "questionText": "At the kid's home, who will give the kid in the middle strawberries now that they're hungry?",
-          "questionAudio": "assets/home_school/generated/audio/hs_r15_002_home_kid_food_question_context_first.mp3"
+          "eventText": "Oh no! At the kid's house, the kid in the middle is hungry now!",
+          "eventAudio": "assets/home_school/generated/audio/hs_r17_007_house_food_event.mp3",
+          "questionText": "At the kid's house, who will give the kid in the middle strawberries now that they're hungry?",
+          "questionAudio": "assets/home_school/generated/audio/hs_r17_008_house_kid_food_question.mp3"
         },
         "HELP": {
-          "eventText": "Oh no! At the kid's home, the kid in the middle dropped a heavy box!",
-          "eventAudio": "assets/home_school/generated/audio/hs_011_home_help_event.mp3",
-          "questionText": "At the kid's home, who will help the kid in the middle pick up the heavy box?",
-          "questionAudio": "assets/home_school/generated/audio/hs_r15_003_home_kid_help_question_context_first.mp3"
+          "eventText": "Oh no! At the kid's house, the kid in the middle dropped a heavy box!",
+          "eventAudio": "assets/home_school/generated/audio/hs_r17_009_house_help_event.mp3",
+          "questionText": "At the kid's house, who will help the kid in the middle pick up the heavy box?",
+          "questionAudio": "assets/home_school/generated/audio/hs_r17_010_house_kid_help_question.mp3"
         }
       },
       "recipientEvents": {
@@ -83,62 +89,70 @@
           "HUG": {
             "eventText": "Oh no! The mom in the middle is sad now!",
             "eventAudio": "audio_evelyn/ftc_018_story_event_04_oh_no_the_mom_in_the_middle_is_sad_now.mp3",
-            "questionText": "At the kid's home, who will give the mom in the middle a hug now that they're sad?",
-            "questionAudio": "assets/home_school/generated/audio/hs_r15_004_home_mom_hug_question_context_first.mp3"
+            "questionText": "At the kid's house, who will give the mom in the middle a hug now that they're sad?",
+            "questionAudio": "assets/home_school/generated/audio/hs_r17_011_house_mom_hug_question.mp3"
           },
           "FOOD": {
-            "eventText": "Oh no! At the kid's home, the mom in the middle is hungry now!",
-            "eventAudio": "assets/home_school/generated/audio/hs_v2_016_home_mom_food_event.mp3",
-            "questionText": "At the kid's home, who will give the mom in the middle strawberries now that they're hungry?",
-            "questionAudio": "assets/home_school/generated/audio/hs_r15_005_home_mom_food_question_context_first.mp3"
+            "eventText": "Oh no! At the kid's house, the mom in the middle is hungry now!",
+            "eventAudio": "assets/home_school/generated/audio/hs_r17_012_house_mom_food_event.mp3",
+            "questionText": "At the kid's house, who will give the mom in the middle strawberries now that they're hungry?",
+            "questionAudio": "assets/home_school/generated/audio/hs_r17_013_house_mom_food_question.mp3"
           },
           "HELP": {
-            "eventText": "Oh no! At the kid's home, the mom in the middle dropped a heavy box!",
-            "eventAudio": "assets/home_school/generated/audio/hs_v2_018_home_mom_help_event.mp3",
-            "questionText": "At the kid's home, who will help the mom in the middle pick up the heavy box?",
-            "questionAudio": "assets/home_school/generated/audio/hs_r15_006_home_mom_help_question_context_first.mp3"
+            "eventText": "Oh no! At the kid's house, the mom in the middle dropped a heavy box!",
+            "eventAudio": "assets/home_school/generated/audio/hs_r17_014_house_mom_help_event.mp3",
+            "questionText": "At the kid's house, who will help the mom in the middle pick up the heavy box?",
+            "questionAudio": "assets/home_school/generated/audio/hs_r17_015_house_mom_help_question.mp3"
           }
         },
         "DAD": {
           "HUG": {
             "eventText": "Oh no! The dad in the middle is sad now!",
             "eventAudio": "audio_evelyn/ftc_042_story_event_10_oh_no_the_dad_in_the_middle_is_sad_now.mp3",
-            "questionText": "At the kid's home, who will give the dad in the middle a hug now that they're sad?",
-            "questionAudio": "assets/home_school/generated/audio/hs_r15_007_home_dad_hug_question_context_first.mp3"
+            "questionText": "At the kid's house, who will give the dad in the middle a hug now that they're sad?",
+            "questionAudio": "assets/home_school/generated/audio/hs_r17_016_house_dad_hug_question.mp3"
           },
           "FOOD": {
-            "eventText": "Oh no! At the kid's home, the dad in the middle is hungry now!",
-            "eventAudio": "assets/home_school/generated/audio/hs_v2_021_home_dad_food_event.mp3",
-            "questionText": "At the kid's home, who will give the dad in the middle strawberries now that they're hungry?",
-            "questionAudio": "assets/home_school/generated/audio/hs_r15_008_home_dad_food_question_context_first.mp3"
+            "eventText": "Oh no! At the kid's house, the dad in the middle is hungry now!",
+            "eventAudio": "assets/home_school/generated/audio/hs_r17_017_house_dad_food_event.mp3",
+            "questionText": "At the kid's house, who will give the dad in the middle strawberries now that they're hungry?",
+            "questionAudio": "assets/home_school/generated/audio/hs_r17_018_house_dad_food_question.mp3"
           },
           "HELP": {
-            "eventText": "Oh no! At the kid's home, the dad in the middle dropped a heavy box!",
-            "eventAudio": "assets/home_school/generated/audio/hs_v2_023_home_dad_help_event.mp3",
-            "questionText": "At the kid's home, who will help the dad in the middle pick up the heavy box?",
-            "questionAudio": "assets/home_school/generated/audio/hs_r15_009_home_dad_help_question_context_first.mp3"
+            "eventText": "Oh no! At the kid's house, the dad in the middle dropped a heavy box!",
+            "eventAudio": "assets/home_school/generated/audio/hs_r17_019_house_dad_help_event.mp3",
+            "questionText": "At the kid's house, who will help the dad in the middle pick up the heavy box?",
+            "questionAudio": "assets/home_school/generated/audio/hs_r17_020_house_dad_help_question.mp3"
           }
         },
         "TEACHER": {
           "HUG": {
             "eventText": "Oh no! The teacher in the middle is sad now!",
             "eventAudio": "audio_evelyn/ftc_027_story_event_07_oh_no_the_teacher_in_the_middle_is_sad_now.mp3",
-            "questionText": "At the kid's home, who will give the teacher in the middle a hug now that they're sad?",
-            "questionAudio": "assets/home_school/generated/audio/hs_r15_010_home_teacher_hug_question_context_first.mp3"
+            "questionText": "At the kid's house, who will give the teacher in the middle a hug now that they're sad?",
+            "questionAudio": "assets/home_school/generated/audio/hs_r17_021_house_teacher_hug_question.mp3"
           },
           "FOOD": {
-            "eventText": "Oh no! At the kid's home, the teacher in the middle is hungry now!",
-            "eventAudio": "assets/home_school/generated/audio/hs_v2_026_home_teacher_food_event.mp3",
-            "questionText": "At the kid's home, who will give the teacher in the middle strawberries now that they're hungry?",
-            "questionAudio": "assets/home_school/generated/audio/hs_r15_011_home_teacher_food_question_context_first.mp3"
+            "eventText": "Oh no! At the kid's house, the teacher in the middle is hungry now!",
+            "eventAudio": "assets/home_school/generated/audio/hs_r17_022_house_teacher_food_event.mp3",
+            "questionText": "At the kid's house, who will give the teacher in the middle strawberries now that they're hungry?",
+            "questionAudio": "assets/home_school/generated/audio/hs_r17_023_house_teacher_food_question.mp3"
           },
           "HELP": {
-            "eventText": "Oh no! At the kid's home, the teacher in the middle dropped a heavy box!",
-            "eventAudio": "assets/home_school/generated/audio/hs_v2_028_home_teacher_help_event.mp3",
-            "questionText": "At the kid's home, who will help the teacher in the middle pick up the heavy box?",
-            "questionAudio": "assets/home_school/generated/audio/hs_r15_012_home_teacher_help_question_context_first.mp3"
+            "eventText": "Oh no! At the kid's house, the teacher in the middle dropped a heavy box!",
+            "eventAudio": "assets/home_school/generated/audio/hs_r17_024_house_teacher_help_event.mp3",
+            "questionText": "At the kid's house, who will help the teacher in the middle pick up the heavy box?",
+            "questionAudio": "assets/home_school/generated/audio/hs_r17_025_house_teacher_help_question.mp3"
           }
         }
+      },
+      "exterior": {
+        "text": "Oh look! Here is a house.",
+        "audio": "assets/home_school/generated/audio/hs_r17_001_house_exterior.mp3"
+      },
+      "room": {
+        "text": "This is a room inside the house.",
+        "audio": "assets/home_school/generated/audio/hs_r17_003_house_room.mp3"
       }
     },
     "SCHOOL": {
@@ -235,7 +249,30 @@
             "questionAudio": "assets/home_school/generated/audio/hs_r15_024_school_teacher_help_question_context_first.mp3"
           }
         }
+      },
+      "exterior": {
+        "text": "Oh look! Here is a school.",
+        "audio": "assets/home_school/generated/audio/hs_r17_002_school_exterior.mp3"
+      },
+      "room": {
+        "text": "This is a room inside the school.",
+        "audio": "assets/home_school/generated/audio/hs_r17_004_school_room.mp3"
       }
     }
+  },
+  "entrance": {
+    "version": "house_school_entry_halls_v1",
+    "sequence": [
+      "exterior",
+      "entrance_room",
+      "character_1",
+      "character_2",
+      "character_3",
+      "context",
+      "event",
+      "helper_choice"
+    ],
+    "scope": "all conditions in both matched setting blocks",
+    "audioReceipt": "data/entrance_house_audio_import_receipt.json"
   }
 }

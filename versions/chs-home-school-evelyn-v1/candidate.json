@@ -3,31 +3,73 @@
   "candidateId": "chs-home-school-evelyn-v1",
   "sourceRuntime": "screen-share-study/app.js",
   "sourceStimulusCandidate": "chs-v78-teacher-classmate-evelyn-unique-roles",
-  "status": "published_for_review_only",
+  "status": "local_entrance_review_ready",
   "activeChsStudyChanged": false,
   "chsDraftConfigurationUpdated": false,
   "chsSubmissionStatus": "not_submitted",
-  "published": true,
+  "published": false,
   "publishedOn": "2026-09-15",
   "lastPublishedRelease": "chs-home-school-evelyn-v1-r16-within-child-preview-1",
-  "candidateRelease": "chs-home-school-evelyn-v1-r16-within-child-preview-1",
-  "latestRevisionOn": "2026-09-15",
+  "candidateRelease": "chs-home-school-evelyn-v1-r17-entrance-preview-1",
+  "latestRevisionOn": "2026-09-17",
   "description": "Review-only Who Takes Care candidate. Every child receives the same matched six-story set at Home and at School, for twelve helping-choice stories total. Home-first versus School-first is counterbalanced. Character ratings and all Likert follow-ups are removed.",
   "storyCount": 12,
   "storyCountPerContext": 6,
   "ratingMode": "none",
   "contextDesign": "within-child",
-  "contexts": ["HOME", "SCHOOL"],
-  "contextOrders": ["HOME,SCHOOL", "SCHOOL,HOME"],
-  "events": ["HUG", "FOOD", "HELP"],
-  "roleSets": ["woman", "man", "family"],
+  "contexts": [
+    "HOME",
+    "SCHOOL"
+  ],
+  "contextOrders": [
+    "HOME,SCHOOL",
+    "SCHOOL,HOME"
+  ],
+  "events": [
+    "HUG",
+    "FOOD",
+    "HELP"
+  ],
+  "roleSets": [
+    "woman",
+    "man",
+    "family"
+  ],
   "assignmentCellCount": 18,
   "assignmentCellFormula": "role_index * 6 + event_index * 2 + context_order_index + 1",
-  "queryOverrides": ["context", "roleSet", "event", "variant", "seed", "withinChildContexts"],
+  "queryOverrides": [
+    "context",
+    "roleSet",
+    "event",
+    "variant",
+    "seed",
+    "withinChildContexts"
+  ],
   "pairings": {
-    "woman": ["MOM-TEACHER", "SISTER-FRIEND", "BESTFRIEND-FRIEND", "TEACHER-FRIEND", "MOM-SISTER", "TEACHER-CLASSMATE"],
-    "man": ["DAD-TEACHER", "BROTHER-FRIEND", "BESTFRIEND-FRIEND", "TEACHER-FRIEND", "DAD-BROTHER", "TEACHER-CLASSMATE"],
-    "family": ["MOM-DAD", "SISTER-BROTHER", "DAD-KID", "MOM-KID", "TEACHER-KID", "TEACHER-CLASSMATE"]
+    "woman": [
+      "MOM-TEACHER",
+      "SISTER-FRIEND",
+      "BESTFRIEND-FRIEND",
+      "TEACHER-FRIEND",
+      "MOM-SISTER",
+      "TEACHER-CLASSMATE"
+    ],
+    "man": [
+      "DAD-TEACHER",
+      "BROTHER-FRIEND",
+      "BESTFRIEND-FRIEND",
+      "TEACHER-FRIEND",
+      "DAD-BROTHER",
+      "TEACHER-CLASSMATE"
+    ],
+    "family": [
+      "MOM-DAD",
+      "SISTER-BROTHER",
+      "DAD-KID",
+      "MOM-KID",
+      "TEACHER-KID",
+      "TEACHER-CLASSMATE"
+    ]
   },
   "directionalRecipients": {
     "DAD-KID": "MOM",
@@ -40,13 +82,16 @@
   "participantAutoplay": true,
   "questionAudioTiming": "new NaturalReaders Evelyn recordings with the Home/School context first and natural comma timing",
   "artificialQuestionPauseSeconds": 0,
-  "questionContextPlacement": "Each helping question begins with 'At the kid's home,' or 'At the kid's school,' followed by the helping question.",
+  "questionContextPlacement": "Each helping question begins with 'At the kid's house,' or 'At the kid's school,' followed by the helping question.",
   "contextFirstQuestionClipCount": 24,
   "contextFirstQuestionAudioReceipt": "data/context_first_question_audio_import_receipt.json",
   "editingPreviewControls": "Review paths show researcher Back and Skip controls. Live participant paths will not show them.",
   "locationCaptionTreatment": "The Home or School sentence appears once in the palette-colored top caption; the former blue-and-white lower card is inactive.",
   "narratorMouthTiming": "The yellow narrator mouth starts on actual media playback and stops on buffering, pause, abort, emptied media, end, error, or researcher navigation.",
-  "contextIntroduction": "After the kid and both candidate characters are introduced, the story says, 'They are all at the kid's home' or 'They are all at the kid's school.'",
+  "contextIntroduction": "After each character appears and is introduced, the story says, 'They are all at the kid's house' or 'They are all at the kid's school.'",
+  "entranceSequence": "Exterior caption and Evelyn narration, zoom toward door, door opens, entry hallway, room introduction, then cumulative character introductions. Twelve stories and matched context blocks are unchanged.",
+  "entranceArtwork": "Approved shared lavender house and school exteriors and entry halls; existing assigned room backgrounds and character palettes retained.",
+  "entranceAudioRequirements": "data/entrance_house_audio_requirements.json",
   "visualStatus": "researcher_preview",
   "visualVersion": "home_school_furnished_palette_picture_v38",
   "visualTreatment": "Furnished Home and School rooms with subtle palette-matched walls. In the Home room, only the empty artwork field and four original wooden frame bars receive a faint same-hue palette tint inside fixed hard masks; the picture mat and shadow, surrounding wall, lamp, natural wooden floor, neutral couch and cast shadow remain untouched. The abstract picture people are removed, pillows and selected furniture details remain shared gray, and the original character RGB and geometry remain unchanged.",
@@ -74,5 +119,9 @@
   "palettePlan": "Each six-story block uses six distinct exact palette slugs. The matched Home and School versions of a story deliberately keep the same palette, side, and rendition so only setting changes.",
   "localParticipantBaseUrl": "versions/chs-home-school-evelyn-v1/index.html?syntheticSpeech=0&contextStudy=1&withinChildContexts=1&ratingMode=none",
   "reviewParticipantBaseUrl": "https://c-steele.github.io/ready-set-choose-study/versions/chs-home-school-evelyn-v1/index.html?syntheticSpeech=0&contextStudy=1&withinChildContexts=1&ratingMode=none",
-  "chsParticipantBaseUrlAfterApproval": "https://c-steele.github.io/ready-set-choose-study/versions/chs-home-school-evelyn-v1/index.html?syntheticSpeech=0&contextStudy=1&withinChildContexts=1&ratingMode=none"
+  "chsParticipantBaseUrlAfterApproval": "https://c-steele.github.io/ready-set-choose-study/versions/chs-home-school-evelyn-v1/index.html?syntheticSpeech=0&contextStudy=1&withinChildContexts=1&ratingMode=none",
+  "entranceEvelynClipCount": 4,
+  "houseReplacementEvelynClipCount": 21,
+  "entranceEvelynAudioReceipt": "data/entrance_house_audio_import_receipt.json",
+  "entranceEvelynListeningReview": "pending_researcher_review"
 }

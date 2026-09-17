@@ -1,0 +1,25 @@
+/* Who Takes Care only: approved house/school entry-hall animation. */
+.ksize-slide-image.ksize-furnished-scene.ksize-entry-shell { display:block; aspect-ratio:auto; overflow:hidden; }
+.ksize-entry-shell > .ksize-context-spoken-banner { position:relative; display:grid; width:100%; min-height:0; inset:auto; }
+.ksize-entry-stage { display:block; position:relative; width:100%; aspect-ratio:16 / 9; overflow:hidden; }
+.ksize-entry-stage > .ksize-furnished-room { position:absolute; inset:0; display:block; width:100%; height:100%; max-height:none; object-fit:cover; object-position:50% 57%; }
+.ksize-entry-layers { position:absolute; inset:0; z-index:2; pointer-events:none; overflow:hidden; }
+.ksize-entry-layers [hidden] { display:none !important; }
+.ksize-entry-backing, .ksize-entry-world, .ksize-entry-fade { position:absolute; inset:0; }
+.ksize-entry-backing { overflow:hidden; background:#b9aac6; }
+.ksize-entry-hall, .ksize-entry-building { display:block; width:100%; height:100%; max-height:none; }
+.ksize-entry-stage .ksize-entry-hall { object-fit:fill; transform-origin:50% 45%; }
+.ksize-entry-building { overflow:visible; }
+.ksize-entry-doorway { position:absolute; overflow:hidden; perspective-origin:50% 50%; }
+.ksize-entry-door { position:absolute; top:0; height:100%; backface-visibility:hidden; }
+.ksize-entry-door svg { display:block; width:100%; height:100%; }
+.ksize-entry-door-left { left:0; transform-origin:left center; }
+.ksize-entry-door-right { right:0; width:50%; transform-origin:right center; }
+.ksize-entry-fade { background:#5d5367; }
+.ksize-entry-pause { min-height:44px; padding:8px 14px; font:700 15px "Helvetica Neue",Arial,sans-serif; color:#194869; background:#fff; border:2px solid #bcdef3; border-radius:18px; cursor:pointer; }
+.ksize-entry-review-note { color:#5c4770; font-size:13px; text-align:center; margin:0 0 6px; }
+.ksize-entry-pause[hidden] { display:none; }
+.ksize-furnished-scene > canvas.ksize-character-reveal { display:block; }
+@media (prefers-reduced-motion: reduce) {
+  .ksize-entry-layers *, .ksize-char-btn { animation:none !important; transition:none !important; }
+}

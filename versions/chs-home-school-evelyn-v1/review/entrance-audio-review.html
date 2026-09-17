@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Who Takes Care? — Evelyn entrance narration</title>
+<style>
+body{font:18px/1.5 system-ui,sans-serif;color:#233746;background:#f7f5f9;margin:0;padding:30px}main{max-width:850px;margin:auto}h1{font-size:30px}article{padding:18px 22px;background:white;border:1px solid #dfd8e7;border-radius:12px;margin:16px 0}article p{margin:0 0 12px}audio{width:100%}small{color:#5f5669}a{color:#65448c}details{margin-top:28px}summary{cursor:pointer;font-weight:650}
+</style>
+<main>
+<h1>Evelyn’s new entrance narration</h1>
+<p>NaturalReaders Commercial · Evelyn · Soft · 0.90× (180 WPM). These are the actual recordings used by the revised study. Please listen for wording and pacing.</p>
+<div id="openings"></div>
+<details><summary>Review the 21 “house” wording replacements</summary><div id="replacements"></div></details>
+<p><a href="../../../screen-share-study/home-school-review.html?v=who-takes-care-entrance-review-r17">Open all 72 complete study previews</a></p>
+<small>This page does not submit or save anything to CHS.</small>
+</main>
+<script>
+fetch('../data/entrance_house_audio_import_receipt.json?v=r17').then(response=>{if(!response.ok)throw new Error('Audio list unavailable');return response.json()}).then(receipt=>{
+ for(const clip of receipt.clips){const item=document.createElement('article');const text=document.createElement('p');text.textContent=clip.text;const audio=document.createElement('audio');audio.controls=true;audio.preload='none';audio.src='../../../'+clip.output;audio.setAttribute('aria-label',clip.text);item.append(text,audio);document.getElementById(clip.index<=4?'openings':'replacements').append(item);}
+}).catch(error=>{document.getElementById('openings').textContent=error.message;});
+</script>
+</html>

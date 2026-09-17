@@ -1,0 +1,143 @@
+WHO TAKES CARE? — ENTRANCE AND HOUSE WORDING
+Evelyn recording script — 25 clips — r17
+
+Recording settings
+- NaturalReaders Commercial
+- Voice: Evelyn; style: Soft
+- Speed: 0.9 (180 words per minute)
+- Pause between paragraphs: 0 seconds
+- Export: MP3, 320 kbps, 44.1 kHz mono
+- Keep natural comma timing; do not insert an artificial question pause.
+
+Record only the words following RECORD. Do not read the numbers, IDs, headings, or filenames.
+Export one file per numbered line, preserving this order. The companion paste-only file contains only the spoken paragraphs.
+A numbered NaturalReaders ZIP or a directory of exact target filenames can be validated with scripts/import_home_school_entrance_audio.mjs.
+The importer defaults to validation only; --write imports new files and a separate receipt. Existing recordings and runtime manifests remain unchanged.
+The four entrance lines are new. Lines 5–25 replace the active Home recordings with House wording; School questions/events remain as recorded.
+
+01. hs_r17_001 — EXTERIOR
+RECORD: Oh look! Here is a house.
+SAVE AS: hs_r17_001_house_exterior.mp3
+NEW ENTRANCE RECORDING
+
+02. hs_r17_002 — EXTERIOR
+RECORD: Oh look! Here is a school.
+SAVE AS: hs_r17_002_school_exterior.mp3
+NEW ENTRANCE RECORDING
+
+03. hs_r17_003 — ROOM
+RECORD: This is a room inside the house.
+SAVE AS: hs_r17_003_house_room.mp3
+NEW ENTRANCE RECORDING
+
+04. hs_r17_004 — ROOM
+RECORD: This is a room inside the school.
+SAVE AS: hs_r17_004_school_room.mp3
+NEW ENTRANCE RECORDING
+
+05. hs_r17_005 — CONTEXT_INTRO
+RECORD: They are all at the kid's house.
+SAVE AS: hs_r17_005_context_intro_house.mp3
+REPLACES: assets/home_school/generated/audio/hs_r13_001_context_intro_home.mp3
+
+06. hs_r17_006 — QUESTION
+RECORD: At the kid's house, who will give the kid in the middle a hug now that they're sad?
+SAVE AS: hs_r17_006_house_kid_hug_question.mp3
+REPLACES: assets/home_school/generated/audio/hs_r15_001_home_kid_hug_question_context_first.mp3
+
+07. hs_r17_007 — EVENT
+RECORD: Oh no! At the kid's house, the kid in the middle is hungry now!
+SAVE AS: hs_r17_007_house_food_event.mp3
+REPLACES: assets/home_school/generated/audio/hs_007_home_food_event.mp3
+
+08. hs_r17_008 — QUESTION
+RECORD: At the kid's house, who will give the kid in the middle strawberries now that they're hungry?
+SAVE AS: hs_r17_008_house_kid_food_question.mp3
+REPLACES: assets/home_school/generated/audio/hs_r15_002_home_kid_food_question_context_first.mp3
+
+09. hs_r17_009 — EVENT
+RECORD: Oh no! At the kid's house, the kid in the middle dropped a heavy box!
+SAVE AS: hs_r17_009_house_help_event.mp3
+REPLACES: assets/home_school/generated/audio/hs_011_home_help_event.mp3
+
+10. hs_r17_010 — QUESTION
+RECORD: At the kid's house, who will help the kid in the middle pick up the heavy box?
+SAVE AS: hs_r17_010_house_kid_help_question.mp3
+REPLACES: assets/home_school/generated/audio/hs_r15_003_home_kid_help_question_context_first.mp3
+
+11. hs_r17_011 — QUESTION
+RECORD: At the kid's house, who will give the mom in the middle a hug now that they're sad?
+SAVE AS: hs_r17_011_house_mom_hug_question.mp3
+REPLACES: assets/home_school/generated/audio/hs_r15_004_home_mom_hug_question_context_first.mp3
+
+12. hs_r17_012 — EVENT
+RECORD: Oh no! At the kid's house, the mom in the middle is hungry now!
+SAVE AS: hs_r17_012_house_mom_food_event.mp3
+REPLACES: assets/home_school/generated/audio/hs_v2_016_home_mom_food_event.mp3
+
+13. hs_r17_013 — QUESTION
+RECORD: At the kid's house, who will give the mom in the middle strawberries now that they're hungry?
+SAVE AS: hs_r17_013_house_mom_food_question.mp3
+REPLACES: assets/home_school/generated/audio/hs_r15_005_home_mom_food_question_context_first.mp3
+
+14. hs_r17_014 — EVENT
+RECORD: Oh no! At the kid's house, the mom in the middle dropped a heavy box!
+SAVE AS: hs_r17_014_house_mom_help_event.mp3
+REPLACES: assets/home_school/generated/audio/hs_v2_018_home_mom_help_event.mp3
+
+15. hs_r17_015 — QUESTION
+RECORD: At the kid's house, who will help the mom in the middle pick up the heavy box?
+SAVE AS: hs_r17_015_house_mom_help_question.mp3
+REPLACES: assets/home_school/generated/audio/hs_r15_006_home_mom_help_question_context_first.mp3
+
+16. hs_r17_016 — QUESTION
+RECORD: At the kid's house, who will give the dad in the middle a hug now that they're sad?
+SAVE AS: hs_r17_016_house_dad_hug_question.mp3
+REPLACES: assets/home_school/generated/audio/hs_r15_007_home_dad_hug_question_context_first.mp3
+
+17. hs_r17_017 — EVENT
+RECORD: Oh no! At the kid's house, the dad in the middle is hungry now!
+SAVE AS: hs_r17_017_house_dad_food_event.mp3
+REPLACES: assets/home_school/generated/audio/hs_v2_021_home_dad_food_event.mp3
+
+18. hs_r17_018 — QUESTION
+RECORD: At the kid's house, who will give the dad in the middle strawberries now that they're hungry?
+SAVE AS: hs_r17_018_house_dad_food_question.mp3
+REPLACES: assets/home_school/generated/audio/hs_r15_008_home_dad_food_question_context_first.mp3
+
+19. hs_r17_019 — EVENT
+RECORD: Oh no! At the kid's house, the dad in the middle dropped a heavy box!
+SAVE AS: hs_r17_019_house_dad_help_event.mp3
+REPLACES: assets/home_school/generated/audio/hs_v2_023_home_dad_help_event.mp3
+
+20. hs_r17_020 — QUESTION
+RECORD: At the kid's house, who will help the dad in the middle pick up the heavy box?
+SAVE AS: hs_r17_020_house_dad_help_question.mp3
+REPLACES: assets/home_school/generated/audio/hs_r15_009_home_dad_help_question_context_first.mp3
+
+21. hs_r17_021 — QUESTION
+RECORD: At the kid's house, who will give the teacher in the middle a hug now that they're sad?
+SAVE AS: hs_r17_021_house_teacher_hug_question.mp3
+REPLACES: assets/home_school/generated/audio/hs_r15_010_home_teacher_hug_question_context_first.mp3
+
+22. hs_r17_022 — EVENT
+RECORD: Oh no! At the kid's house, the teacher in the middle is hungry now!
+SAVE AS: hs_r17_022_house_teacher_food_event.mp3
+REPLACES: assets/home_school/generated/audio/hs_v2_026_home_teacher_food_event.mp3
+
+23. hs_r17_023 — QUESTION
+RECORD: At the kid's house, who will give the teacher in the middle strawberries now that they're hungry?
+SAVE AS: hs_r17_023_house_teacher_food_question.mp3
+REPLACES: assets/home_school/generated/audio/hs_r15_011_home_teacher_food_question_context_first.mp3
+
+24. hs_r17_024 — EVENT
+RECORD: Oh no! At the kid's house, the teacher in the middle dropped a heavy box!
+SAVE AS: hs_r17_024_house_teacher_help_event.mp3
+REPLACES: assets/home_school/generated/audio/hs_v2_028_home_teacher_help_event.mp3
+
+25. hs_r17_025 — QUESTION
+RECORD: At the kid's house, who will help the teacher in the middle pick up the heavy box?
+SAVE AS: hs_r17_025_house_teacher_help_question.mp3
+REPLACES: assets/home_school/generated/audio/hs_r15_012_home_teacher_help_question_context_first.mp3
+
+END OF SCRIPT — 25 clips
