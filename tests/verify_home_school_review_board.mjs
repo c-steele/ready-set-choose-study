@@ -18,8 +18,8 @@ assert.match(html, /School → Home/);
 assert.match(html, /Back and Skip buttons/);
 assert.match(html, /no longer includes any Likert rating questions/);
 assert.match(html, /Visual profiles A–D/);
-assert.match(html, /home-school-review\.js\?v=who-takes-care-entrance-review-r17/);
-assert.match(html, /review\.css\?v=who-takes-care-entrance-review-r17/);
+assert.match(html, /home-school-review\.js\?v=who-helps-where-review-r18/);
+assert.match(html, /review\.css\?v=who-helps-where-review-r18/);
 assert.match(html, /See the six pairings in both settings/);
 assert.match(css, /\.review-grid/);
 assert.doesNotMatch(html, /See who is rated after each story/);
@@ -37,8 +37,8 @@ const sandbox = {
 vm.runInNewContext(source, sandbox, { filename: "home-school-review.js" });
 const api = sandbox.window.FTCHomeSchoolReview;
 assert.ok(api, "Home/School review API should be exported");
-assert.equal(api.REVIEW_VERSION, "who-takes-care-entrance-review-r17");
-assert.equal(api.STUDY_RUNTIME_VERSION, "chs-home-school-evelyn-v1-r17-entrance-preview-1");
+assert.equal(api.REVIEW_VERSION, "who-helps-where-review-r18");
+assert.equal(api.STUDY_RUNTIME_VERSION, "chs-home-school-evelyn-v1-r18-preview-polish-1");
 
 const orderValues = Array.from(api.CONTEXT_ORDERS, (order) => order.value);
 assert.deepEqual(orderValues, ["HOME", "SCHOOL"]);
@@ -102,7 +102,7 @@ for (const entry of entries) {
     reviewKeys.push(api.reviewCheckKey(orderValue, entry.id));
 
     assert.equal(url.pathname, "/versions/chs-home-school-evelyn-v1/index.html");
-    assert.equal(url.searchParams.get("v"), "chs-home-school-evelyn-v1-r17-entrance-preview-1");
+    assert.equal(url.searchParams.get("v"), "chs-home-school-evelyn-v1-r18-preview-polish-1");
     assert.equal(url.searchParams.get("syntheticSpeech"), "0");
     assert.equal(url.searchParams.get("ratingMode"), "none");
     assert.equal(url.searchParams.get("contextStudy"), "1");

@@ -1,0 +1,212 @@
+{
+  "version": "who-takes-care-visual-repair-v1",
+  "scope": "Who Takes Care candidate only; original and shared assets preserved",
+  "sourceFloorMaster": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/source-school-room.webp",
+  "sourceFloorMasterSha256": "021dc45424391bb1ded1cf384f36ff21d8999085ce0812db7771d77444e3d9b4",
+  "floorRepair": "Restore original exposed wooden floor and contact shadows within the two faulty furniture recoloring footprints; fixed source-derived mask excludes furniture and baseboard",
+  "floorMask": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/school-floor-mask.png",
+  "floorMaskSha256": "735317bfcc27d485ce4b8d3d77aad91a25530649bcc5291534a9171237907ff8",
+  "floorMaskPixelCount": 16963,
+  "hallwayTreatment": "Remap source lavender pigment to assigned character hue with original geometry and luminance; natural green, wood, blue glass and neutral pixels unchanged; gray palette receives zero saturation",
+  "hallwaySources": {
+    "house": {
+      "source": "versions/chs-home-school-evelyn-v1/assets/entrance/house-hall.webp",
+      "sourceSha256": "07581a635d91a944643096fd39cfa054cb56c930678e2bf55354562b81e7c983",
+      "mask": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/house-hall-palette-mask.png"
+    },
+    "school": {
+      "source": "versions/chs-home-school-evelyn-v1/assets/entrance/school-hall.webp",
+      "sourceSha256": "e6c40fabd8c5add1245c7ac565a97e33e3b54255c5236afaeb0f84fcf5354c45",
+      "mask": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/school-hall-palette-mask.png"
+    }
+  },
+  "palettes": {
+    "bfkf-blue-1432f5": {
+      "characterHex": "#1432F5",
+      "schoolRoomSource": "assets/home_school/furnished_color_group_preview/bfkf-blue-1432f5/school_room_subtle_palette_wall_matched_pillows_v12.webp",
+      "schoolRoomSourceSha256": "7d397e9b0d616a097b3bd29ad45283b1a855205011cad546da044198af244ccb",
+      "schoolBackground": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/bfkf-blue-1432f5/school-room.webp",
+      "schoolBackgroundSha256": "51ca38c4968673728549af5db5231081bcbebb2289987e22b735238575575e4b",
+      "houseHall": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/bfkf-blue-1432f5/house-hall.webp",
+      "houseHallSha256": "99424769997d73de3660bfecd84ee6c76405f9462ab62c8c6ba64b9a046b6722",
+      "schoolHall": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/bfkf-blue-1432f5/school-hall.webp",
+      "schoolHallSha256": "3ac5850cd85659e3ee05504cef7a913fe9422dcde31ee38cb436c1af1d3d0bb3"
+    },
+    "bfkf-pink-eb52f7": {
+      "characterHex": "#EB52F7",
+      "schoolRoomSource": "assets/home_school/furnished_color_group_preview/bfkf-pink-eb52f7/school_room_subtle_palette_wall_matched_pillows_v12.webp",
+      "schoolRoomSourceSha256": "18dd268c50db590c12327c49cf2284367b36b38c49d644fd651a16019ca8fbd3",
+      "schoolBackground": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/bfkf-pink-eb52f7/school-room.webp",
+      "schoolBackgroundSha256": "3b5f293b0d177830f58196d4222d78acdb78777a8fb19c7fc4afca41d19f0a5e",
+      "houseHall": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/bfkf-pink-eb52f7/house-hall.webp",
+      "houseHallSha256": "2ee09e7a59d8fc1e0b0e2e84b2996b53eefab80cf5b37fd2004e5e84a7a46b15",
+      "schoolHall": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/bfkf-pink-eb52f7/school-hall.webp",
+      "schoolHallSha256": "23f78720d3ee164809b3f69663f75354ca151b2b13530f0520aeb12d1e850939"
+    },
+    "dkb-green-4ca98f": {
+      "characterHex": "#4CA98F",
+      "schoolRoomSource": "assets/home_school/furnished_color_group_preview/dkb-green-4ca98f/school_room_subtle_palette_wall_matched_pillows_v12.webp",
+      "schoolRoomSourceSha256": "d9b4b532ca81724598e60aa54bf8855be51f546ce6fb9102736b085633b1d3a2",
+      "schoolBackground": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/dkb-green-4ca98f/school-room.webp",
+      "schoolBackgroundSha256": "8b20bdd7b28e27bb97532ec2a35041130ec69bf8c0bb2973ace7fab6c863e1e5",
+      "houseHall": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/dkb-green-4ca98f/house-hall.webp",
+      "houseHallSha256": "5d1ad3b34e712ecccd425f2c322d0ba0749e9c8f7d145989b40e74d05559e252",
+      "schoolHall": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/dkb-green-4ca98f/school-hall.webp",
+      "schoolHallSha256": "f8685133c09b10cac69a01e93ca6c1057d3183bb29e342ed4779e2bb4e3f9dea"
+    },
+    "dkb-purple-893df6": {
+      "characterHex": "#893DF6",
+      "schoolRoomSource": "assets/home_school/furnished_color_group_preview/dkb-purple-893df6/school_room_subtle_palette_wall_matched_pillows_v12.webp",
+      "schoolRoomSourceSha256": "1b1fb3d351374015708d671748caadab16382aa6bde69f923007c1d18ffb2b06",
+      "schoolBackground": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/dkb-purple-893df6/school-room.webp",
+      "schoolBackgroundSha256": "f969f9c5414fcfce442094ac2a95cf8191b52ce92e74bbe2ae2bc039b06af4c3",
+      "houseHall": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/dkb-purple-893df6/house-hall.webp",
+      "houseHallSha256": "29513ca746629415838aeb196be6bb9da244274cac601d9e0a1c27de2805ae1f",
+      "schoolHall": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/dkb-purple-893df6/school-hall.webp",
+      "schoolHallSha256": "73a726046c81a34c977351fa4bdbf3d37fb38e7a7a1e01a5f358aa455d82ca14"
+    },
+    "dkt-bkf-gray-a9a9a9": {
+      "characterHex": "#A9A9A9",
+      "schoolRoomSource": "assets/home_school/furnished_color_group_preview/dkt-bkf-gray-a9a9a9/school_room_subtle_palette_wall_matched_pillows_v12.webp",
+      "schoolRoomSourceSha256": "2dd4d378e346e03f859fcd3860807d6a9dfa939d5bd7bc14a7f1a9a6ff45378f",
+      "schoolBackground": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/dkt-bkf-gray-a9a9a9/school-room.webp",
+      "schoolBackgroundSha256": "47260d29e02af3b00b5bee49ff98922859f5e341efc971059ff01e73019a4505",
+      "houseHall": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/dkt-bkf-gray-a9a9a9/house-hall.webp",
+      "houseHallSha256": "552dc3d7cdd47cdb56b0d6fb763f29766094279d7d9c1031fa9e3bd29a43a4c1",
+      "schoolHall": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/dkt-bkf-gray-a9a9a9/school-hall.webp",
+      "schoolHallSha256": "187b418d686ca68a802ddbc6fcd76bc877274e5202c9acd0fae8f738c853df66"
+    },
+    "dkt-bkf-green-92902c": {
+      "characterHex": "#92902C",
+      "schoolRoomSource": "assets/home_school/furnished_color_group_preview/dkt-bkf-green-92902c/school_room_subtle_palette_wall_matched_pillows_v12.webp",
+      "schoolRoomSourceSha256": "4a22a14211abfa7e0861334d08221821661267e12438506f0d989a297fe570f7",
+      "schoolBackground": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/dkt-bkf-green-92902c/school-room.webp",
+      "schoolBackgroundSha256": "ad65b9e57cc46847a001f1c90f0bbc5f25ddd6455f408600130055a6f71191e8",
+      "houseHall": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/dkt-bkf-green-92902c/house-hall.webp",
+      "houseHallSha256": "d71b7ad95d63f13d93587d844f6661dc01e80abc59a5e4e7b1b1e2db3463c9fd",
+      "schoolHall": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/dkt-bkf-green-92902c/school-hall.webp",
+      "schoolHallSha256": "85e42e0c0f8999f29731968f69b8f798cfe5805a23abc01d34c20b8851b7c38e"
+    },
+    "dmk-ttk-blue-64d4ce": {
+      "characterHex": "#64D4CE",
+      "schoolRoomSource": "assets/home_school/furnished_color_group_preview/dmk-ttk-blue-64d4ce/school_room_subtle_palette_wall_matched_pillows_v12.webp",
+      "schoolRoomSourceSha256": "cae2477faa5e4a427b6dc47dfb602418a5bd4b745196927cbf58dae746aee391",
+      "schoolBackground": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/dmk-ttk-blue-64d4ce/school-room.webp",
+      "schoolBackgroundSha256": "5172741054f6a7d520140895731020ecb854263a9173c813f7a5e655480bbffc",
+      "houseHall": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/dmk-ttk-blue-64d4ce/house-hall.webp",
+      "houseHallSha256": "23595591ede6062e5ee1e5c086693e9686e2df6b07b55cbd95c04b962dc4bec8",
+      "schoolHall": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/dmk-ttk-blue-64d4ce/school-hall.webp",
+      "schoolHallSha256": "6dc112502269170bcf223f0bf183d58f0869cd02ec5b93c901449f837bd1247e"
+    },
+    "dmk-ttk-purple-7b80f7": {
+      "characterHex": "#7B80F7",
+      "schoolRoomSource": "assets/home_school/furnished_color_group_preview/dmk-ttk-purple-7b80f7/school_room_subtle_palette_wall_matched_pillows_v12.webp",
+      "schoolRoomSourceSha256": "5c2e15128a34fb83b3f4d99c382d8d638c4c8612506ed867ffb9525771f9a069",
+      "schoolBackground": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/dmk-ttk-purple-7b80f7/school-room.webp",
+      "schoolBackgroundSha256": "dfecebd4e49069effc910e6b687e16c1a7aee46463a1475d9cc821f388b8fc2f",
+      "houseHall": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/dmk-ttk-purple-7b80f7/house-hall.webp",
+      "houseHallSha256": "7391547f030315e3ee3298bec1323530fb69444db70fd373bd5fef91b07fbb7f",
+      "schoolHall": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/dmk-ttk-purple-7b80f7/school-hall.webp",
+      "schoolHallSha256": "1a68b19564da5e14c4720c9328dc7c7fa5301a8c1deb5b256db54a8f855391c9"
+    },
+    "mdk-blue-22528e": {
+      "characterHex": "#22528E",
+      "schoolRoomSource": "assets/home_school/furnished_color_group_preview/mdk-blue-22528e/school_room_subtle_palette_wall_matched_pillows_v12.webp",
+      "schoolRoomSourceSha256": "cf6cd4c4445727af56b92ef418098f47f9a48ecc6f1b4fc17e282a1d98f4a429",
+      "schoolBackground": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/mdk-blue-22528e/school-room.webp",
+      "schoolBackgroundSha256": "35cd55d80ab07c7faf3cd3624c2df0bcf54dfd811a1ebc43b8a497ed5b18dfbf",
+      "houseHall": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/mdk-blue-22528e/house-hall.webp",
+      "houseHallSha256": "e0f5494129b6565da19adc2aa26b8c8cf247907bdc9de12304caef1c981554e3",
+      "schoolHall": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/mdk-blue-22528e/school-hall.webp",
+      "schoolHallSha256": "f280669c504d78f9d4db84eb1f38f634615ca2b107cdd7786edf5b9bd94d3741"
+    },
+    "mdk-red-a62b17": {
+      "characterHex": "#A62B17",
+      "schoolRoomSource": "assets/home_school/furnished_color_group_preview/mdk-red-a62b17/school_room_subtle_palette_wall_matched_pillows_v12.webp",
+      "schoolRoomSourceSha256": "4cf8db455419ca459d13480c477a0067a027effa04efc1713a67cf71531b3450",
+      "schoolBackground": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/mdk-red-a62b17/school-room.webp",
+      "schoolBackgroundSha256": "be694583502a00a0289ef040a930718172249652d05da507df1337338f4b3ca6",
+      "houseHall": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/mdk-red-a62b17/house-hall.webp",
+      "houseHallSha256": "de93931fad6c9b2fa5cdb9c4d5ea2ca8de54b780ee26833f1ca64f63120e4442",
+      "schoolHall": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/mdk-red-a62b17/school-hall.webp",
+      "schoolHallSha256": "af6dae4c6e8de6d8c64010efaff46bd1b8bbde5bee8ba77888b6ac2179b708fe"
+    },
+    "mkd-skb-blue-8dd3fb": {
+      "characterHex": "#8DD3FB",
+      "schoolRoomSource": "assets/home_school/furnished_color_group_preview/mkd-skb-blue-8dd3fb/school_room_subtle_palette_wall_matched_pillows_v12.webp",
+      "schoolRoomSourceSha256": "1e807bc263096cb5a4845839ffa660d67151d21a68c93679eede74aa9e364752",
+      "schoolBackground": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/mkd-skb-blue-8dd3fb/school-room.webp",
+      "schoolBackgroundSha256": "11d40075b433828174398bffda3144874b423fe486ddebd740c832fc7fcd2be1",
+      "houseHall": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/mkd-skb-blue-8dd3fb/house-hall.webp",
+      "houseHallSha256": "c483cc9eda62115f2b34073434b6183a1ee02ce70f163f7239c3d53c3cc5b96f",
+      "schoolHall": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/mkd-skb-blue-8dd3fb/school-hall.webp",
+      "schoolHallSha256": "89428132fdfd683a134c9d0609ef79cd1d03813bb34db56e0e5dd705632e2d7c"
+    },
+    "mkd-skb-pink-f19ac8": {
+      "characterHex": "#F19AC8",
+      "schoolRoomSource": "assets/home_school/furnished_color_group_preview/mkd-skb-pink-f19ac8/school_room_subtle_palette_wall_matched_pillows_v12.webp",
+      "schoolRoomSourceSha256": "0be75c53a27133f44cbf87884a71f33ab14fecdce24856e47ae18c8e2a1f675f",
+      "schoolBackground": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/mkd-skb-pink-f19ac8/school-room.webp",
+      "schoolBackgroundSha256": "2194841003f0a87594bb4270b9554ecc14d6ea2775c1be07c2ab5e00a29c8ba7",
+      "houseHall": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/mkd-skb-pink-f19ac8/house-hall.webp",
+      "houseHallSha256": "663fc9053b4992c1cee2430fd04d194050f8d85e9d7e9fec715f6729ea7a9736",
+      "schoolHall": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/mkd-skb-pink-f19ac8/school-hall.webp",
+      "schoolHallSha256": "439e9e1dcdb2cbdabefb4272aaddcfdb200dd322105f5c1f9545f79f033a0db3"
+    },
+    "mks-tkf-orange-f2b13d": {
+      "characterHex": "#F2B13D",
+      "schoolRoomSource": "assets/home_school/furnished_color_group_preview/mks-tkf-orange-f2b13d/school_room_subtle_palette_wall_matched_pillows_v12.webp",
+      "schoolRoomSourceSha256": "8632669dec6683416bcd7a130f7b8282038e2ea6b1f645cadf786a5f37c2513d",
+      "schoolBackground": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/mks-tkf-orange-f2b13d/school-room.webp",
+      "schoolBackgroundSha256": "a093ccb501410c9f5705c4100463ebe22d88d9efeb142e6928b8e716fceec4fc",
+      "houseHall": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/mks-tkf-orange-f2b13d/house-hall.webp",
+      "houseHallSha256": "506107b54f7fcdf0093ff75cb94fbc0e569b6e49c7eb7ca0aaba9e4a4ebdd0ff",
+      "schoolHall": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/mks-tkf-orange-f2b13d/school-hall.webp",
+      "schoolHallSha256": "be45dcd4356b987bab840a9fcedb217d61dac71235a42e3306af8e309898f9ad"
+    },
+    "mks-tkf-red-ed6e57": {
+      "characterHex": "#ED6E57",
+      "schoolRoomSource": "assets/home_school/furnished_color_group_preview/mks-tkf-red-ed6e57/school_room_subtle_palette_wall_matched_pillows_v12.webp",
+      "schoolRoomSourceSha256": "44990d55d269fab0e7d3590a7e061a489c3bdeb4dc510c986dcbe29cca9a68d8",
+      "schoolBackground": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/mks-tkf-red-ed6e57/school-room.webp",
+      "schoolBackgroundSha256": "796cd971789d48d3b78806a09254767dfb71875751d80dc9a06ec357c40018d1",
+      "houseHall": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/mks-tkf-red-ed6e57/house-hall.webp",
+      "houseHallSha256": "289fc97772949a420e8b57216f7f21889fe4d66e157734900d1ea6c9e5dc079b",
+      "schoolHall": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/mks-tkf-red-ed6e57/school-hall.webp",
+      "schoolHallSha256": "3cd0b8dede0acea8211dec60e8a915d18ad36db22964e64de2dc6ea3bd5be14a"
+    },
+    "mkt-skf-green-81d653": {
+      "characterHex": "#81D653",
+      "schoolRoomSource": "assets/home_school/furnished_color_group_preview/mkt-skf-green-81d653/school_room_subtle_palette_wall_matched_pillows_v12.webp",
+      "schoolRoomSourceSha256": "1c20b1530a850113277b4c2b172e1d60ac904a56d04373e3c450e2949759c276",
+      "schoolBackground": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/mkt-skf-green-81d653/school-room.webp",
+      "schoolBackgroundSha256": "f7e23e04d3013ca9984c3515db8569a2337a7bfd351f86dd9ec6767076a44e87",
+      "houseHall": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/mkt-skf-green-81d653/house-hall.webp",
+      "houseHallSha256": "2b3c1169d65fe21e7844d9337fa353ee3ed46da73a3fb01bf3d9d18071a9f17a",
+      "schoolHall": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/mkt-skf-green-81d653/school-hall.webp",
+      "schoolHallSha256": "b4577e93e92ae49ca072446ae7f95bc6a488cf46f205e3ce946d53f8465fe442"
+    },
+    "mkt-skf-yellow-ffd100": {
+      "characterHex": "#FFD100",
+      "schoolRoomSource": "assets/home_school/furnished_color_group_preview/mkt-skf-yellow-ffd100/school_room_subtle_palette_wall_matched_pillows_v12.webp",
+      "schoolRoomSourceSha256": "a61bb9180e6abd4ad5b7c09b174d2503680dc84759d26b8ee65d5ff4af75f7be",
+      "schoolBackground": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/mkt-skf-yellow-ffd100/school-room.webp",
+      "schoolBackgroundSha256": "870c539ddd2f76ea3bfa7ff07308605c66e0aedb35029775aec8a8f3168e3d19",
+      "houseHall": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/mkt-skf-yellow-ffd100/house-hall.webp",
+      "houseHallSha256": "0997921b42a78871a0e47eb57a2373605a332a8994d151ce9c979e60d85cde50",
+      "schoolHall": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/mkt-skf-yellow-ffd100/school-hall.webp",
+      "schoolHallSha256": "64e1dc8f28db665d8585efdbe6a0dd8d20050b27af541ecc331f19a2a169f0f5"
+    },
+    "tkc-plum-8e2d94": {
+      "characterHex": "#8E2D94",
+      "schoolRoomSource": "assets/home_school/furnished_color_group_preview/tkc-plum-8e2d94/school_room_subtle_palette_wall_matched_pillows_v12.webp",
+      "schoolRoomSourceSha256": "405712e7956a7d35a6ec30a8b3ee2d0dd73128e43cee7bef88d7d76b91c02296",
+      "schoolBackground": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/tkc-plum-8e2d94/school-room.webp",
+      "schoolBackgroundSha256": "17b99943f048273cd5f26fc1b4c9c42b74ae21c791e252ae6165aad4ece408dd",
+      "houseHall": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/tkc-plum-8e2d94/house-hall.webp",
+      "houseHallSha256": "d8a3d2185214449d0b4621717714f24fdb7a39591f5a0d0e763eb16e04d3ba65",
+      "schoolHall": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/tkc-plum-8e2d94/school-hall.webp",
+      "schoolHallSha256": "a4b9927d302384c78acdd1094d6281c8981b99b79c97a8829d328244982e9694"
+    }
+  }
+}

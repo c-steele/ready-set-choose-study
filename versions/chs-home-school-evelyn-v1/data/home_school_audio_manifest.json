@@ -422,13 +422,15 @@
       "revision": "r17-entrance-house"
     },
     {
-      "id": "hs_r17_002",
+      "id": "hs_r18_school_exterior",
       "text": "Oh look! Here is a school.",
-      "output": "assets/home_school/generated/audio/hs_r17_002_school_exterior.mp3",
-      "bytes": 126477,
-      "durationSeconds": 3.1608,
-      "sha256": "aa0ff6be619aa047e82056cdd067df9f9b92174b441f113e6bbede38e0de9551",
-      "revision": "r17-entrance-house"
+      "sourceText": "Oh, look. Here is a school.",
+      "output": "versions/chs-home-school-evelyn-v1/assets/audio-r18/school-exterior-evelyn-gentle.mp3",
+      "bytes": 130656,
+      "durationSeconds": 3.239184,
+      "sha256": "cec01ff6f5373cd18d9026f503e7acbbd1fb6d9a58c66e67c5fc366fc5c992d6",
+      "revision": "r18-school-exterior-natural-punctuation",
+      "receipt": "data/school_exterior_audio_revision_r18.json"
     },
     {
       "id": "hs_r17_003",

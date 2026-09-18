@@ -104,7 +104,7 @@ assert.equal(metadata.chsSubmissionStatus, "not_submitted");
 assert.equal(metadata.published, true);
 assert.equal(metadata.publishedOn, "2026-09-17");
 assert.equal(metadata.lastPublishedRelease, "chs-home-school-evelyn-v1-r17-entrance-preview-1");
-assert.equal(metadata.candidateRelease, "chs-home-school-evelyn-v1-r17-entrance-preview-1");
+assert.equal(metadata.candidateRelease, "chs-home-school-evelyn-v1-r18-preview-polish-1");
 assert.equal(metadata.latestRevisionOn, "2026-09-17");
 assert.equal(metadata.storyCount, 12);
 assert.equal(metadata.storyCountPerContext, 6);
@@ -143,7 +143,7 @@ assert.match(
   /\["intro", "exterior", "room_entry"\]\.includes\(slideKind\)[\s\S]*?text \|\| ""[\s\S]*?slideKind === "context_intro"[\s\S]*?slideKind === "story"[\s\S]*?slideKind === "response_choices"/,
   "Every Home/School story heading must use the same in-scene caption banner",
 );
-assert.match(indexHtml, /app\.js\?v=chs-home-school-evelyn-v1-r17-entrance-preview-1/);
+assert.match(indexHtml, /app\.js\?v=chs-home-school-evelyn-v1-r18-preview-polish-1/);
 assert.doesNotMatch(app, /contextIntro \? `<div class="ksize-context-intro-cue"/);
 assert.match(app, /fileAudio\.addEventListener\("playing",[\s\S]*?setMouthPlaying\(true\)/);
 assert.match(app, /fileAudio\.addEventListener\("waiting", \(\) => setMouthPlaying\(false\)\)/);

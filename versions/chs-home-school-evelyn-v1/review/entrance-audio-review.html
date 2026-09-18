@@ -12,12 +12,13 @@ body{font:18px/1.5 system-ui,sans-serif;color:#233746;background:#f7f5f9;margin:
 <p>NaturalReaders Commercial · Evelyn · Soft · 0.90× (180 WPM). These are the actual recordings used by the revised study. Please listen for wording and pacing.</p>
 <div id="openings"></div>
 <details><summary>Review the 21 “house” wording replacements</summary><div id="replacements"></div></details>
-<p><a href="../../../screen-share-study/home-school-review.html?v=who-takes-care-entrance-review-r17">Open all 72 complete study previews</a></p>
+<details><summary>Compare the previous school opening</summary><p>The revised school opening uses gentler punctuation with the same words and no inserted silence. The previous take is preserved here for comparison.</p><audio controls preload="none" src="../../../assets/home_school/generated/audio/hs_r17_002_school_exterior.mp3" aria-label="Previous school opening"></audio></details>
+<p><a href="../../../screen-share-study/home-school-review.html?v=who-helps-where-review-r18">Open all 72 complete study previews</a></p>
 <small>This page does not submit or save anything to CHS.</small>
 </main>
 <script>
-fetch('../data/entrance_house_audio_import_receipt.json?v=r17').then(response=>{if(!response.ok)throw new Error('Audio list unavailable');return response.json()}).then(receipt=>{
- for(const clip of receipt.clips){const item=document.createElement('article');const text=document.createElement('p');text.textContent=clip.text;const audio=document.createElement('audio');audio.controls=true;audio.preload='none';audio.src='../../../'+clip.output;audio.setAttribute('aria-label',clip.text);item.append(text,audio);document.getElementById(clip.index<=4?'openings':'replacements').append(item);}
+Promise.all(['entrance_house_audio_import_receipt.json','school_exterior_audio_revision_r18.json'].map(name=>fetch('../data/'+name+'?v=r18').then(response=>{if(!response.ok)throw new Error('Audio list unavailable');return response.json()}))).then(([receipt,revised])=>{
+ for(const source of receipt.clips){const clip=source.index===2?{...source,...revised,text:revised.displayText}:source;const item=document.createElement('article');const text=document.createElement('p');text.textContent=clip.text;const audio=document.createElement('audio');audio.controls=true;audio.preload='none';audio.src='../../../'+clip.output;audio.setAttribute('aria-label',clip.text);item.append(text,audio);document.getElementById(clip.index<=4?'openings':'replacements').append(item);}
 }).catch(error=>{document.getElementById('openings').textContent=error.message;});
 </script>
 </html>

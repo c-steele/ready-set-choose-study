@@ -19,6 +19,7 @@ const contextManifest = readJson("home_school_context_manifest.json");
 const canonicalAudio = readJson("canonical_audio_manifest_evelyn.json");
 const teacherAudio = readJson("teacher_classmate_audio_manifest.json");
 const contextAudio = readJson("home_school_audio_manifest.json");
+const visualRepair = readJson("visual_repair_manifest.json");
 const plain = (value) => JSON.parse(JSON.stringify(value));
 const DIRECTIONS = new Set(["DAD-KID", "MOM-KID", "TEACHER-KID"]);
 const STORY_KINDS = ["exterior", "room_entry", "intro", "intro", "intro", "context_intro", "story", "response_choices"];
@@ -144,10 +145,23 @@ function assertStory(nodes, trial, event, contextName, label) {
   assert.equal(nodes.at(-1).data.suffix, event, `${label}: wrong event DV`);
   assert.ok(nodes.every((node) => node.data.context === contextName), `${label}: context changed inside story`);
   assert.equal(nodes.filter((node) => node.data.slide_kind === "response_choices").length, 1);
+  const palette = trial.homeSchoolFurnished.paletteSlug;
+  const place = contextName === "HOME" ? "house" : "school";
+  const expectedHall = `versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/${palette}/${place}-hall.webp`;
+  const expectedRoom = contextName === "HOME" ? trial.homeSchoolFurnished.homeBackground
+    : `versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/${palette}/school-room.webp`;
+  assert.equal(trial.homeSchoolFurnished.schoolBackground, visualRepair.palettes[palette].schoolBackground,
+    `${label}: trial is not mapped to the corrected school room`);
+  for (const node of nodes) {
+    const room = node.stimulus.match(/<img[^>]*class="ksize-furnished-room"[^>]*src="([^"]+)"/)?.[1]?.split("?")[0];
+    assert.equal(room, expectedRoom, `${label}: ${node.data.slide_kind} has the wrong room/palette`);
+  }
   for (const index of [0, 1]) {
     assert.deepEqual(plain(nodes[index].data.revealed_character_slots || []), [], `${label}: entrance revealed characters`);
     assert.doesNotMatch(nodes[index].stimulus, /<canvas[^>]*ksize-character-reveal|<img[^>]*ksize-furnished-foreground/,
       `${label}: entrance rendered a character foreground`);
+    const hall = nodes[index].stimulus.match(/<img[^>]*class="ksize-entry-hall"[^>]*src="([^"]+)"/)?.[1]?.split("?")[0];
+    assert.equal(hall, expectedHall, `${label}: entrance does not use the assigned hallway palette`);
   }
   const intros = nodes.slice(2, 5);
   for (const [index, node] of intros.entries()) {
@@ -169,6 +183,9 @@ function assertStory(nodes, trial, event, contextName, label) {
 // are easily missed by a single six-story example session.
 const completeTrials = eventManifest.trials.filter((trial) => trial.isComplete);
 assert.equal(completeTrials.length, 56);
+const coveredPalettes = { HOME: new Set(), SCHOOL: new Set() };
+const expectedPalettes = Object.keys(visualRepair.palettes).sort();
+assert.equal(expectedPalettes.length, 17);
 const runtime = loadRuntime("?contextStudy=1&withinChildContexts=1&context=HOME&researcherTools=1&entranceVisualOnly=1");
 let sourceStoryCount = 0;
 for (const contextName of ["HOME", "SCHOOL"]) {
@@ -177,6 +194,11 @@ for (const contextName of ["HOME", "SCHOOL"]) {
     for (const trial of completeTrials) {
       const nodes = Array.from(runtime.api.buildEventTrialNodes({}, trial, 0, 12, event, "events", 1, contextName, 1, 1));
       assertStory(nodes, trial, event, contextName, `${trial.id}/${event}/${contextName}`);
+      const palette = trial.homeSchoolFurnished.paletteSlug;
+      coveredPalettes[contextName].add(palette);
+      const place = contextName === "HOME" ? "house" : "school";
+      assert.equal(runtime.api.entranceAssets(contextName, palette).hall,
+        `versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/${palette}/${place}-hall.webp`);
       for (const sourceIndex of [1, 2, 3]) {
         assert.deepEqual(plain(runtime.api.introRevealedSlots(trial, sourceIndex)).sort(), expectedReveal(trial, sourceIndex));
       }
@@ -185,6 +207,10 @@ for (const contextName of ["HOME", "SCHOOL"]) {
   }
 }
 assert.equal(sourceStoryCount, 336);
+for (const contextName of ["HOME", "SCHOOL"]) {
+  assert.deepEqual([...coveredPalettes[contextName]].sort(), expectedPalettes,
+    `${contextName}: source story checks must cover every hallway palette`);
+}
 
 // Run exactly the review board's 3 × 3 × 4 × 2 launch configurations.
 const reviewSource = fs.readFileSync(path.join(root, "screen-share-study/home-school-review.js"), "utf8");
@@ -233,12 +259,22 @@ for (const entry of entries) {
       assertStory(nodes, trial, entry.event, storyNumber <= 6 ? firstContext : secondContext, `${entry.id}/${firstContext}/story${storyNumber}`);
     }
     const preloaded = new Set((timeline[0]?.images || []).map((src) => String(src).split("?")[0]));
+    const expectedHalls = new Set();
     for (const contextName of ["HOME", "SCHOOL"]) {
-      for (const src of Object.values(runtime.api.entranceAssets(contextName))) {
-        assert.ok(fs.existsSync(path.join(root, src)), `Missing entrance asset: ${src}`);
-        assert.ok(preloaded.has(src), `${entry.id}: entrance image not preloaded: ${src}`);
+      for (const story of firstBlock) {
+        const assets = runtime.api.entranceAssets(contextName, story.palette);
+        expectedHalls.add(assets.hall);
+        for (const src of Object.values(assets)) {
+          assert.ok(fs.existsSync(path.join(root, src)), `Missing entrance asset: ${src}`);
+          assert.ok(preloaded.has(src), `${entry.id}: assigned entrance image not preloaded: ${src}`);
+        }
+        const trial = completeTrials.find((candidate) => candidate.id === story.trial);
+        const room = contextName === "HOME" ? trial.homeSchoolFurnished.homeBackground : trial.homeSchoolFurnished.schoolBackground;
+        assert.ok(preloaded.has(room), `${entry.id}: assigned room not preloaded: ${room}`);
       }
     }
+    assert.deepEqual([...preloaded].filter((src) => /\/(?:house|school)-hall\.webp$/.test(src)).sort(),
+      [...expectedHalls].sort(), `${entry.id}: preloaded hallways differ from the selected story palettes`);
     matchedAcrossOrders.push(firstBlock);
     choiceCount += choices.length;
     storyPageCount += storyNodes.length;
@@ -247,16 +283,34 @@ for (const entry of entries) {
 }
 assert.equal(seenReviewUrls.size, 72);
 
-// Verify all 25 new exports and their exact manifest pointer targets. Original
-// recordings remain intact and traceable through the replacement provenance.
+// Preserve the full r17 audit. The one r18 school-opening replacement has a
+// separate receipt; no other r17 mapping may move, and all originals must remain.
 const entranceRequirements = readJson("entrance_house_audio_requirements.json");
 const entranceReceipt = readJson("entrance_house_audio_import_receipt.json");
+const schoolOpeningRevision = readJson("school_exterior_audio_revision_r18.json");
 assert.equal(entranceRequirements.lines.length, 25);
 assert.equal(entranceReceipt.importedClipCount, 25);
 assert.equal(entranceReceipt.clips.length, 25);
 assert.equal(new Set(entranceReceipt.clips.map((clip) => clip.sha256)).size, 25);
 assert.equal(entranceReceipt.voice, "Evelyn");
 assert.equal(entranceReceipt.service, "NaturalReaders Commercial");
+const originalSchoolOpening = entranceReceipt.clips.find((clip) => clip.id === "hs_r17_002");
+assert.ok(originalSchoolOpening);
+assert.equal(schoolOpeningRevision.displayText, originalSchoolOpening.text);
+assert.equal(schoolOpeningRevision.displayText, "Oh look! Here is a school.");
+const words = (text) => String(text).toLowerCase().match(/[\p{L}\p{N}]+/gu);
+assert.deepEqual(words(schoolOpeningRevision.sourceText), words(schoolOpeningRevision.displayText),
+  "School opening may change delivery punctuation, but not its words");
+assert.equal(schoolOpeningRevision.replaces.output, originalSchoolOpening.output);
+assert.equal(schoolOpeningRevision.replaces.sha256, originalSchoolOpening.sha256);
+assert.notEqual(schoolOpeningRevision.output, originalSchoolOpening.output, "Replacement must preserve the original recording");
+assert.notEqual(schoolOpeningRevision.sha256, originalSchoolOpening.sha256, "School replacement must be a distinct export");
+assert.match(schoolOpeningRevision.output, /^versions\/chs-home-school-evelyn-v1\/assets\/audio-r18\/[^/]+\.mp3$/);
+const replacementBytes = fs.readFileSync(path.join(root, schoolOpeningRevision.output));
+assert.equal(replacementBytes.length, schoolOpeningRevision.bytes);
+assert.equal(createHash("sha256").update(replacementBytes).digest("hex"), schoolOpeningRevision.sha256);
+assert.ok(schoolOpeningRevision.durationSeconds >= 1 && schoolOpeningRevision.durationSeconds <= 12);
+let replacedMappingCount = 0;
 const atPointer = (object, pointer) => pointer.split("/").slice(1).reduce((value, key) => value[key.replace(/~1/g, "/").replace(/~0/g, "~")], object);
 for (const line of entranceRequirements.lines) {
   const clip = entranceReceipt.clips.find((candidate) => candidate.id === line.id);
@@ -270,17 +324,26 @@ for (const line of entranceRequirements.lines) {
   assert.equal(clip.channels, 1);
   assert.equal(clip.bitrateKbps, 320);
   assert.ok(clip.durationSeconds >= 1 && clip.durationSeconds <= 12);
-  assert.ok(contextAudio.lines.some((active) => active.text === line.text && active.output === clip.output), `New audio not active: ${line.id}`);
+  const isSchoolOpening = line.id === "hs_r17_002";
+  const activeClip = isSchoolOpening ? schoolOpeningRevision : clip;
+  if (isSchoolOpening) replacedMappingCount += 1;
+  const activeMappings = contextAudio.lines.filter((active) => active.text === line.text && active.active !== false);
+  assert.equal(activeMappings.length, 1, `Narration must have exactly one active mapping: ${line.id}`);
+  assert.equal(activeMappings[0].output, activeClip.output, `Unexpected audio mapping: ${line.id}`);
+  assert.equal(activeMappings[0].sha256, activeClip.sha256, `Unexpected mapped audio hash: ${line.id}`);
+  assert.equal(runtime.api.canonicalAudioPathForText(line.text), activeClip.output,
+    `Runtime canonical mapping differs from the approved recording: ${line.id}`);
   for (const target of line.contextManifestLocations || []) {
     const manifest = JSON.parse(fs.readFileSync(path.join(root, target.manifest), "utf8"));
     assert.equal(atPointer(manifest, target.textPointer), line.text);
-    assert.equal(atPointer(manifest, target.audioPointer), clip.output);
+    assert.equal(atPointer(manifest, target.audioPointer), activeClip.output);
   }
   if (clip.replaces?.sha256) {
     const original = fs.readFileSync(path.join(root, clip.replaces.output));
     assert.equal(createHash("sha256").update(original).digest("hex"), clip.replaces.sha256, `Original recording changed: ${clip.replaces.output}`);
   }
 }
+assert.equal(replacedMappingCount, 1, "Only the school exterior may replace an r17 audio mapping");
 
 // Deleting a required approved mapping must fail closed, even when someone
 // adds the visual-only query flag without researcher mode.
@@ -443,6 +506,9 @@ console.log(JSON.stringify({
   sourceTrials: completeTrials.length,
   sourceEventContextStories: sourceStoryCount,
   importedEntranceHouseRecordings: entranceReceipt.clips.length,
+  revisedSchoolOpeningRecordings: replacedMappingCount,
+  hallwayPalettesPerContext: expectedPalettes.length,
+  matchedHallwaysAndCorrectedSchoolRooms: true,
   reviewConfigurations: seenReviewUrls.size,
   helperChoicesAcrossReviewConfigurations: choiceCount,
   storyPagesAcrossReviewConfigurations: storyPageCount,

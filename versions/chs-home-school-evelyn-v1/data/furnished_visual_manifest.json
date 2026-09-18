@@ -16,9 +16,11 @@
       "neutral couch and cast shadow"
     ],
     "homeBackgroundFilename": "home_room_subtle_palette_wall_matched_pillows_palette_picture_floor_clean_v17.webp",
-    "schoolBackgroundFilename": "school_room_subtle_palette_wall_matched_pillows_v12.webp",
+    "schoolBackgroundFilename": "school-room.webp",
     "pillows": "matched gray",
-    "characters": "original RGB and geometry unchanged"
+    "characters": "original RGB and geometry unchanged",
+    "schoolBackgroundRepairVersion": "who-takes-care-visual-repair-v1",
+    "schoolBackgroundRepairManifest": "data/visual_repair_manifest.json"
   },
   "coverage": {
     "trialCount": 56,

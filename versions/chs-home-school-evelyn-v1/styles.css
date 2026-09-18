@@ -334,6 +334,7 @@ body {
 
 .ksize-contextual-stimulus {
   position: relative;
+  container-type: inline-size;
 }
 
 .ksize-slide-image.ksize-contextual-stimulus {
@@ -350,6 +351,7 @@ body {
    a separate transparent layer. */
 .ksize-furnished-scene {
   position: relative;
+  container-type: inline-size;
   width: min(100%, 1080px, calc(56vh * 16 / 9));
   aspect-ratio: 16 / 9;
   overflow: hidden;
@@ -388,9 +390,9 @@ body {
   z-index: 5;
 }
 
-/* The source raster still contains the original non-contextual sentence.
-   Cover that header with the exact line the Evelyn clip speaks so printed and
-   audio wording cannot disagree. */
+/* Use the same picture-relative type and spacing on every narrated page,
+   including the entrance. The minimum covers the source raster's 100px header
+   at 1920px wide; longer questions grow by wrapping at the same font size. */
 .ksize-context-spoken-banner {
   position: absolute;
   z-index: 5;
@@ -398,14 +400,14 @@ body {
   right: 0;
   left: 0;
   display: grid;
-  min-height: 12.5%;
+  min-height: 5.3cqw;
   box-sizing: border-box;
   place-items: center;
-  padding: 7px 10px;
+  padding: 0.65cqw 1cqw;
   background: #8e2d94;
   color: #fff;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: clamp(20px, 2.2vw, 30px);
+  font-size: 2.8cqw;
   font-weight: 700;
   line-height: 1.12;
   text-align: center;

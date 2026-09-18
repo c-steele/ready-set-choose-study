@@ -9,17 +9,19 @@ const TEACHER_CLASSMATE_GENERATED_ROOT = "assets/teacher_classmate/generated/";
 const TEACHER_CLASSMATE_V78_REVISION_ROOT = "versions/chs-v78-teacher-classmate-evelyn-unique-roles/assets/teacher_classmate/generated/";
 const TEACHER_CLASSMATE_V78_DYAD_REVISION = /^dyads\/classmate-kid_0(?:1_tkc-deep-purple-a|2_tkc-deep-purple-b)\/slide_(?:0[3-9]|1[0-3])\.svg$/;
 const TEACHER_CLASSMATE_V78_TRIAL_REVISION = /^trials\/14(?:[ab]\/intro_04|[cd]\/intro_0[34]|[abcd]\/(?:hug|food|help)_screen_2)\.svg$/;
-const HOME_SCHOOL_ASSET_VERSION = "chs-home-school-evelyn-v1-r17-entrance-preview-1";
+const HOME_SCHOOL_ASSET_VERSION = "chs-home-school-evelyn-v1-r18-preview-polish-1";
 const HOME_SCHOOL_DESIGN_VERSION = "home_school_context_chs_candidate_v1";
 const HOME_SCHOOL_WITHIN_CHILD_DESIGN_VERSION = "home_school_within_child_counterbalanced_context_order_v1";
 const HOME_SCHOOL_CONTEXT_SCRIPT_VERSION = "home_school_house_entrance_recipient_aware_v6";
 const HOME_SCHOOL_FURNISHED_VISUAL_VERSION = "home_school_furnished_palette_picture_v38";
 const RATING_SCHEDULE_VERSION = "unique_focal_role_per_set_v1";
 const HOME_SCHOOL_GENERATED_ROOT = "assets/home_school/generated/";
+const HOME_SCHOOL_REVISED_AUDIO_ROOT = "versions/chs-home-school-evelyn-v1/assets/audio-r18/";
 const HOME_SCHOOL_FURNISHED_FOREGROUND_ROOT = "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/";
 const HOME_SCHOOL_FURNISHED_ROOM_ROOT = "assets/home_school/furnished_color_group_preview/";
 const HOME_SCHOOL_ENTRANCE_ROOT = "versions/chs-home-school-evelyn-v1/assets/entrance/";
-const HOME_SCHOOL_ENTRANCE_VERSION = "who-takes-care-entry-halls-v1";
+const HOME_SCHOOL_VISUAL_REPAIR_ROOT = "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/";
+const HOME_SCHOOL_ENTRANCE_VERSION = "who-takes-care-palette-entry-halls-v2";
 const ENTRANCE_DURATION_MS = 10100;
 const DYAD_MANIFEST_URL = runtimeConfig.dyadManifestUrl
   || `data/dyad_manifest.json?v=${TEACHER_CLASSMATE_ASSET_VERSION}`;
@@ -518,7 +520,8 @@ function installCanonicalAudioMap(manifest, ...extensionManifests) {
       for (const line of extensionManifest?.lines || []) {
         const previewPath = normalizeAudioSrc(line.output);
         const isApprovedExtensionPath = previewPath.startsWith(TEACHER_CLASSMATE_GENERATED_ROOT)
-          || previewPath.startsWith(HOME_SCHOOL_GENERATED_ROOT);
+          || previewPath.startsWith(HOME_SCHOOL_GENERATED_ROOT)
+          || previewPath.startsWith(HOME_SCHOOL_REVISED_AUDIO_ROOT);
         if (!isApprovedExtensionPath) continue;
         canonicalAudioByText.set(normalizeAudioText(line.text), previewPath);
       }
@@ -744,7 +747,8 @@ function audioPathForText(text) {
 function versionedAudioSrc(src) {
   if (!src) return src;
   const normalizedSrc = normalizeAudioSrc(src);
-  const version = normalizedSrc.startsWith(HOME_SCHOOL_GENERATED_ROOT)
+  const version = (normalizedSrc.startsWith(HOME_SCHOOL_GENERATED_ROOT)
+    || normalizedSrc.startsWith(HOME_SCHOOL_REVISED_AUDIO_ROOT))
     ? HOME_SCHOOL_ASSET_VERSION
     : (normalizedSrc.startsWith(TEACHER_CLASSMATE_GENERATED_ROOT)
       ? TEACHER_CLASSMATE_ASSET_VERSION
@@ -1589,6 +1593,7 @@ function displayImageSrc(src) {
     : ((source.startsWith(HOME_SCHOOL_GENERATED_ROOT)
       || source.startsWith(HOME_SCHOOL_FURNISHED_FOREGROUND_ROOT)
       || source.startsWith(HOME_SCHOOL_ENTRANCE_ROOT)
+      || source.startsWith(HOME_SCHOOL_VISUAL_REPAIR_ROOT)
       || source.startsWith(HOME_SCHOOL_FURNISHED_ROOM_ROOT))
       ? HOME_SCHOOL_ASSET_VERSION
       : "");
@@ -2412,11 +2417,13 @@ function entranceNarrationSpec(context, kind) {
   return { text, audio: supplied.audio || canonicalAudioPathForText(text) || "" };
 }
 
-function entranceAssets(context) {
+function entranceAssets(context, paletteSlug = "") {
   const place = context === "HOME" ? "house" : "school";
   return {
     exterior: `${HOME_SCHOOL_ENTRANCE_ROOT}${place}-exterior.webp`,
-    hall: `${HOME_SCHOOL_ENTRANCE_ROOT}${place}-hall.webp`,
+    hall: paletteSlug
+      ? `${HOME_SCHOOL_VISUAL_REPAIR_ROOT}${paletteSlug}/${place}-hall.webp`
+      : `${HOME_SCHOOL_ENTRANCE_ROOT}${place}-hall.webp`,
   };
 }
 
@@ -2500,8 +2507,8 @@ function prepareIntroReveal(canvas) {
   });
 }
 
-function entranceLayersHtml(context) {
-  const assets = entranceAssets(context);
+function entranceLayersHtml(context, paletteSlug = "") {
+  const assets = entranceAssets(context, paletteSlug);
   const house = context === "HOME";
   const g = house ? { x: 752, y: 375, w: 162, h: 307 } : { x: 725, y: 440, w: 220, h: 202 };
   const src = escapeHtml(displayImageSrc(assets.exterior));
@@ -2618,7 +2625,7 @@ function renderKidSlide({ trial = null, image, text, choices = [], overlayChoice
         ${contextOverlayHtml}
         <div class="ksize-entry-stage">
           ${furnishedImageLayersHtml(furnishedScene)}
-          ${entranceLayersHtml(studyContext)}
+          ${entranceLayersHtml(studyContext, furnishedScene.paletteSlug)}
         </div>
       </div>`
     : overlayChoices && image
@@ -2722,6 +2729,7 @@ function makeKidNode(jsPsych, { trial, block, suffix, image, text, audioSegments
       context_event_line_1: contextEvent?.eventText || null,
       context_event_line_2: contextEvent?.questionText || null,
       context_visual_version: studyContext ? trial?.homeSchoolFurnished?.version || null : null,
+      context_visual_repair_version: studyContext ? trial?.homeSchoolFurnished?.backgroundRepairVersion || null : null,
       context_palette_slug: studyContext ? trial?.homeSchoolFurnished?.paletteSlug || null : null,
       context_character_hex: studyContext ? trial?.homeSchoolFurnished?.characterHex || null : null,
       entrance_version: studyContext ? HOME_SCHOOL_ENTRANCE_VERSION : null,
@@ -3729,7 +3737,9 @@ async function main() {
       }))
     : [];
   const imagePaths = [
-    ...contextOrder.flatMap((context) => Object.values(entranceAssets(context)).map(displayImageSrc)),
+    ...new Set(contextOrder.flatMap((context) => eventPlan.flatMap((trial) =>
+      Object.values(entranceAssets(context, trial.homeSchoolFurnished?.paletteSlug)).map(displayImageSrc)
+    ))),
     ...contextOrder.map((context) => displayImageSrc(contextBadgeSrc(context))).filter(Boolean),
     ...allDyadSlides.flatMap(({ chunk, slide }) => {
       if (!selectedContext) return [displayImageSrc(slide.src)];

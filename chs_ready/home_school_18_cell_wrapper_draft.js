@@ -27,9 +27,12 @@ var HOME_SCHOOL_CANDIDATE_ROOT_URL =
 var HOME_SCHOOL_CANDIDATE_ORIGIN = "https://c-steele.github.io";
 
 var HOME_SCHOOL_STUDY_VERSION = "chs-home-school-evelyn-v1";
-var HOME_SCHOOL_CANDIDATE_RELEASE = "chs-home-school-evelyn-v1-r17-entrance-preview-1";
+var HOME_SCHOOL_CANDIDATE_RELEASE = "chs-home-school-evelyn-v1-r18-preview-polish-1";
 var HOME_SCHOOL_CONTEXT_SCRIPT_VERSION = "home_school_house_entrance_recipient_aware_v6";
 var HOME_SCHOOL_DESIGN_VERSION = "home_school_within_child_counterbalanced_context_order_v1";
+/* Temporary editing aid: enable Back/Skip only on CHS's Preview Study route.
+   Set false to remove it after review. Live participant URLs never enable it. */
+var HOME_SCHOOL_TEMPORARY_CHS_PREVIEW_CONTROLS = true;
 /* Intentionally blank for study 6349. Google mirroring is disabled and CHS
    remains the complete, authoritative primary record. */
 var HOME_SCHOOL_SHEETS_WEBHOOK = "";
@@ -225,8 +228,13 @@ var assignedCell = assignmentKey ? assignHomeSchoolCell(assignmentKey) : null;
    candidate derives the second block when withinChildContexts=1. */
 var assignedEntrypoint = "index.html";
 var candidateRoot = HOME_SCHOOL_CANDIDATE_ROOT_URL.replace(/\/$/, "");
-/* CHS launches never expose researcher Back/Skip controls. Those controls
-   remain available only through the separate review board URLs. */
+/* Only the actual CHS preview route may expose the temporary Back/Skip bar.
+   Ignore all researcher flags in the parent URL; they cannot enable live tools. */
+var temporaryChsPreviewControls = HOME_SCHOOL_TEMPORARY_CHS_PREVIEW_CONTROLS === true
+  && isChsPreviewContext && isInternalChsOrigin(window.location.origin);
+var previewNavigationParams = temporaryChsPreviewControls
+  ? "&researcherTools=1&researcherToolbar=back-skip"
+  : "";
 var sheetsWebhook = String(HOME_SCHOOL_SHEETS_WEBHOOK || "").trim();
 if (sheetsWebhook && !/^https:\/\/script\.google\.com\/macros\/s\/[A-Za-z0-9_-]+\/exec$/.test(sheetsWebhook)) {
   throw new Error("The approved Google Sheets receiver must be a deployed script.google.com /exec URL.");
@@ -249,6 +257,7 @@ var gameUrl = assignedCell
     "&assignmentCell=" + encodeURIComponent(assignedCell.assignmentCell) +
     "&child=" + encodeURIComponent(chsChildId) +
     "&response=" + encodeURIComponent(chsResponseId) +
+    previewNavigationParams +
     dataMirrorParams
   : "about:blank";
 
