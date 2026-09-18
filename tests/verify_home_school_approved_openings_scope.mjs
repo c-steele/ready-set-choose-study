@@ -100,6 +100,7 @@ const allowedTrackedChanges = new Set([
   ...approved.map((clip) => clip.output),
   `${candidate}/app.js`, `${candidate}/index.html`, `${candidate}/candidate.json`,
   audioPath, contextPath, `${candidate}/data/exterior_audio_revision_r20.json`,
+  `${candidate}/review/chs-draft-save-r20.md`,
   "chs_ready/home_school_18_cell_wrapper_draft.js",
   "tests/verify_home_school_approved_openings_scope.mjs",
   "tests/verify_home_school_directional_audio_import.mjs",
