@@ -45,7 +45,7 @@ assert.equal(candidate.candidateId, "chs-home-school-evelyn-v1");
 assert.equal(candidate.activeChsStudyChanged, false);
 assert.equal(candidate.published, true);
 assert.equal(candidate.publishedOn, "2026-09-17");
-assert.equal(candidate.lastPublishedRelease, "chs-home-school-evelyn-v1-r17-entrance-preview-1");
+assert.equal(candidate.lastPublishedRelease, "chs-home-school-evelyn-v1-r18-preview-polish-1");
 assert.equal(candidate.candidateRelease, "chs-home-school-evelyn-v1-r18-preview-polish-1");
 assert.equal(candidate.status, "published_chs_draft_saved_not_submitted");
 assert.equal(candidate.missingEvelynClipCount, 0);

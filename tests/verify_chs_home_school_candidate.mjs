@@ -103,7 +103,7 @@ assert.equal(metadata.chsDraftSavedOn, "2026-09-17");
 assert.equal(metadata.chsSubmissionStatus, "not_submitted");
 assert.equal(metadata.published, true);
 assert.equal(metadata.publishedOn, "2026-09-17");
-assert.equal(metadata.lastPublishedRelease, "chs-home-school-evelyn-v1-r17-entrance-preview-1");
+assert.equal(metadata.lastPublishedRelease, "chs-home-school-evelyn-v1-r18-preview-polish-1");
 assert.equal(metadata.candidateRelease, "chs-home-school-evelyn-v1-r18-preview-polish-1");
 assert.equal(metadata.latestRevisionOn, "2026-09-17");
 assert.equal(metadata.storyCount, 12);
