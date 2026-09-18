@@ -15,6 +15,9 @@ const entranceRequirements = JSON.parse(fs.readFileSync(path.join(dataRoot, "ent
 const entranceReceipt = JSON.parse(fs.readFileSync(path.join(dataRoot, "entrance_house_audio_import_receipt.json"), "utf8"));
 const schoolOpeningRevision = JSON.parse(fs.readFileSync(path.join(dataRoot, "school_exterior_audio_revision_r18.json"), "utf8"));
 const exteriorRevision = JSON.parse(fs.readFileSync(path.join(dataRoot, "exterior_audio_revision_r20.json"), "utf8"));
+const eventRevision = JSON.parse(fs.readFileSync(path.join(dataRoot, "event_audio_revision_r22.json"), "utf8"));
+const eventRevisionByReplacedOutput = new Map(eventRevision.files.map((clip) => [clip.replaces.output, clip]));
+assert.equal(eventRevisionByReplacedOutput.size, 5, "Only the five r22 event revisions may supersede prior event mappings");
 
 function sha256(bytes) {
   return createHash("sha256").update(bytes).digest("hex");
@@ -76,9 +79,10 @@ for (const clip of exteriorRevision.files) {
   assertFileMatches(clip, `approved r20 ${clip.id}`);
 }
 
-// Check every original clip and its exact current context mapping, including the four
-// entrance lines and six kid-recipient replacements outside the old 30-line pack.
+// Check every original clip and exact current mapping. R20 replaces two exterior
+// lines; r22 replaces only the specifically approved House/Kid/HELP event here.
 let replacedMappingCount = 0;
+let replacedEventMappingCount = 0;
 for (const [index, clip] of entranceReceipt.clips.entries()) {
   const required = entranceRequirements.lines[index];
   assert.equal(clip.index, index + 1);
@@ -91,7 +95,8 @@ for (const [index, clip] of entranceReceipt.clips.entries()) {
   assert.equal(clip.channels, 1);
   assertFileMatches(clip, `r17 ${clip.id}`);
   const replacement = exteriorByText.get(clip.text);
-  const expected = replacement || clip;
+  const eventReplacement = eventRevisionByReplacedOutput.get(clip.output);
+  const expected = replacement || eventReplacement || clip;
   const active = activeByOutput.get(expected.output);
   assert.ok(active, `Missing approved active mapping ${clip.id}`);
   assertActiveMatches(active, expected);
@@ -102,6 +107,12 @@ for (const [index, clip] of entranceReceipt.clips.entries()) {
     assert.equal(activeByOutput.has(clip.output), false, `${clip.id}: superseded r17 exterior remains active`);
     assert.notEqual(replacement.sha256, clip.sha256, `${clip.id}: replacement is not a distinct export`);
     assert.equal(active.sourceText, replacement.sourceText);
+  } else if (eventReplacement) {
+    replacedEventMappingCount += 1;
+    assert.equal(clip.id, "hs_r17_009", "No other r17 event may be replaced in r22");
+    assert.equal(activeByOutput.has(clip.output), false, "Superseded r17 House/HELP remains active");
+    assertFileMatches(eventReplacement, "approved r22 House/HELP event");
+    assert.equal(eventReplacement.replaces.sha256, clip.sha256);
   } else {
     assert.equal(active.revision, "r17-entrance-house");
   }
@@ -118,6 +129,7 @@ for (const [index, clip] of entranceReceipt.clips.entries()) {
   }
 }
 assert.equal(replacedMappingCount, 2, "Only the two exterior lines may replace r17 mappings");
+assert.equal(replacedEventMappingCount, 1, "Exactly the approved House/Kid/HELP event may additionally replace an r17 mapping");
 
 for (const line of requirements.lines) {
   const contextEvent = contextManifest.contexts[line.context].recipientEvents[line.recipient][line.event];
@@ -161,13 +173,18 @@ for (const line of requirements.lines) {
     else assert.equal(active.questionRevision, "r15-context-first");
     assert.notEqual(active.sha256, imported.sha256, `${line.id} still uses the superseded context-last question`);
   } else {
-    const expected = line.context === "HOME" ? houseByReplacedOutput.get(imported.output) : imported;
-    assert.ok(expected, `${line.id} lacks its current event recording`);
+    const previous = line.context === "HOME" ? houseByReplacedOutput.get(imported.output) : imported;
+    assert.ok(previous, `${line.id} lacks its historical event recording`);
+    const expected = eventRevisionByReplacedOutput.get(previous.output) || previous;
+    if (expected !== previous) {
+      assert.equal(expected.replaces.sha256, previous.sha256, `${line.id}: r22 replacement lacks exact provenance`);
+      assertFileMatches(expected, `approved r22 event ${line.id}`);
+    }
     assertActiveMatches(active, expected);
   }
 }
 
-console.log("PASS: historical directional/r15/r17/r18 provenance and approved r20 exterior recordings are release-wired");
+console.log("PASS: historical directional/r15/r17/r18 provenance, r20 exterior recordings and approved r22 event mappings are release-wired");
 console.log("- All 30 original NaturalReaders files still match the immutable directional import receipt.");
-console.log("- All 25 r17 sources match their receipt; 23 remain active and exactly two exterior lines use approved r20 exports.");
-console.log("- Historical r18 and all 21 replaced files retain their hashes; event/question recordings and natural timing are unchanged.");
+console.log("- All 25 r17 sources match their receipt; 22 remain active, two exteriors use r20 and House/Kid/HELP uses r22.");
+console.log("- Historical r18 and all 21 replaced files retain their hashes; all question recordings remain unchanged.");

@@ -102,10 +102,11 @@
     },
     {
       "text": "Oh no! At the kid's school, the kid in the middle is hungry now!",
-      "output": "assets/home_school/generated/audio/hs_009_school_food_event.mp3",
-      "bytes": 199620,
-      "durationSeconds": 4.989375,
-      "sha256": "e9c5e6f8d75dfa8971dac259fa4342a4bfeada8baed5d53db6a76814680134dd"
+      "output": "assets/home_school/generated/audio/hs_r22_001_school_kid_food_event_split.mp3",
+      "bytes": 198574,
+      "durationSeconds": 4.937143,
+      "sha256": "d248ec113498810d67573e26116564ce2c96b6a2b8502ebafe1315becf7f8646",
+      "eventRevision": "r22-clear-at-events"
     },
     {
       "text": "At the kid's school, who will give the kid in the middle strawberries now that they're hungry?",
@@ -118,11 +119,12 @@
     {
       "id": "hs_r17_009",
       "text": "Oh no! At the kid's house, the kid in the middle dropped a heavy box!",
-      "output": "assets/home_school/generated/audio/hs_r17_009_house_help_event.mp3",
-      "bytes": 212159,
-      "durationSeconds": 5.30285,
-      "sha256": "2f9d6bbe81b41e5174d0d17937b07df2b9ecfb81495272bbd02e6d63faf824f0",
-      "revision": "r17-entrance-house"
+      "output": "assets/home_school/generated/audio/hs_r22_003_house_kid_help_event_split.mp3",
+      "bytes": 207978,
+      "durationSeconds": 5.172245,
+      "sha256": "934ea3006ac618427620b40d224aae47f8cdeb568e6cbaa6ffc250ce0b781e12",
+      "revision": "r17-entrance-house",
+      "eventRevision": "r22-clear-at-events"
     },
     {
       "id": "hs_r17_010",
@@ -135,10 +137,11 @@
     },
     {
       "text": "Oh no! At the kid's school, the kid in the middle dropped a heavy box!",
-      "output": "assets/home_school/generated/audio/hs_013_school_help_event.mp3",
-      "bytes": 211114,
-      "durationSeconds": 5.276725,
-      "sha256": "f9825979c6934ad9481418129cd5dbfa82faa0815e262ba4e0516a9d3f8aff21"
+      "output": "assets/home_school/generated/audio/hs_r22_002_school_kid_help_event_split.mp3",
+      "bytes": 209023,
+      "durationSeconds": 5.198367,
+      "sha256": "fef5effd8ab7f2c3a1d4df4df1a9e91e6c6957c9450fcd30049ec4bc65062cd7",
+      "eventRevision": "r22-clear-at-events"
     },
     {
       "text": "At the kid's school, who will help the kid in the middle pick up the heavy box?",
@@ -312,10 +315,11 @@
     {
       "id": "hs_v2_033",
       "text": "Oh no! At the kid's school, the mom in the middle dropped a heavy box!",
-      "output": "assets/home_school/generated/audio/hs_v2_033_school_mom_help_event.mp3",
-      "bytes": 215294,
-      "durationSeconds": 5.381225,
-      "sha256": "221ff3ae00a61e8b8c81cad2e4357b4fafe896f74d376de3b48c840a05e42676"
+      "output": "assets/home_school/generated/audio/hs_r22_004_school_mom_help_event_split.mp3",
+      "bytes": 211113,
+      "durationSeconds": 5.250612,
+      "sha256": "b0debe35bd984e5a78dcf806552b3894a433b49c580998a2f2c5fc775623bc50",
+      "eventRevision": "r22-clear-at-events"
     },
     {
       "id": "hs_v2_034",
@@ -355,10 +359,11 @@
     {
       "id": "hs_v2_038",
       "text": "Oh no! At the kid's school, the dad in the middle dropped a heavy box!",
-      "output": "assets/home_school/generated/audio/hs_v2_038_school_dad_help_event.mp3",
-      "bytes": 213204,
-      "durationSeconds": 5.328975,
-      "sha256": "620edf664b701f4c15f6699000cc2ba2223451a76c8054359654d74f02f139d3"
+      "output": "assets/home_school/generated/audio/hs_r22_005_school_dad_help_event_split.mp3",
+      "bytes": 210068,
+      "durationSeconds": 5.22449,
+      "sha256": "2aeb623028ca7a880d52d10c2741ae9a829f8588965ba7b2f7b056ad7d54de58",
+      "eventRevision": "r22-clear-at-events"
     },
     {
       "id": "hs_v2_039",

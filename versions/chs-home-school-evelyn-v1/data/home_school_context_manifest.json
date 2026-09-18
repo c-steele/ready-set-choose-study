@@ -79,7 +79,7 @@
         },
         "HELP": {
           "eventText": "Oh no! At the kid's house, the kid in the middle dropped a heavy box!",
-          "eventAudio": "assets/home_school/generated/audio/hs_r17_009_house_help_event.mp3",
+          "eventAudio": "assets/home_school/generated/audio/hs_r22_003_house_kid_help_event_split.mp3",
           "questionText": "At the kid's house, who will help the kid in the middle pick up the heavy box?",
           "questionAudio": "assets/home_school/generated/audio/hs_r17_010_house_kid_help_question.mp3"
         }
@@ -177,13 +177,13 @@
         },
         "FOOD": {
           "eventText": "Oh no! At the kid's school, the kid in the middle is hungry now!",
-          "eventAudio": "assets/home_school/generated/audio/hs_009_school_food_event.mp3",
+          "eventAudio": "assets/home_school/generated/audio/hs_r22_001_school_kid_food_event_split.mp3",
           "questionText": "At the kid's school, who will give the kid in the middle strawberries now that they're hungry?",
           "questionAudio": "assets/home_school/generated/audio/hs_r15_014_school_kid_food_question_context_first.mp3"
         },
         "HELP": {
           "eventText": "Oh no! At the kid's school, the kid in the middle dropped a heavy box!",
-          "eventAudio": "assets/home_school/generated/audio/hs_013_school_help_event.mp3",
+          "eventAudio": "assets/home_school/generated/audio/hs_r22_002_school_kid_help_event_split.mp3",
           "questionText": "At the kid's school, who will help the kid in the middle pick up the heavy box?",
           "questionAudio": "assets/home_school/generated/audio/hs_r15_015_school_kid_help_question_context_first.mp3"
         }
@@ -204,7 +204,7 @@
           },
           "HELP": {
             "eventText": "Oh no! At the kid's school, the mom in the middle dropped a heavy box!",
-            "eventAudio": "assets/home_school/generated/audio/hs_v2_033_school_mom_help_event.mp3",
+            "eventAudio": "assets/home_school/generated/audio/hs_r22_004_school_mom_help_event_split.mp3",
             "questionText": "At the kid's school, who will help the mom in the middle pick up the heavy box?",
             "questionAudio": "assets/home_school/generated/audio/hs_r15_018_school_mom_help_question_context_first.mp3"
           }
@@ -224,7 +224,7 @@
           },
           "HELP": {
             "eventText": "Oh no! At the kid's school, the dad in the middle dropped a heavy box!",
-            "eventAudio": "assets/home_school/generated/audio/hs_v2_038_school_dad_help_event.mp3",
+            "eventAudio": "assets/home_school/generated/audio/hs_r22_005_school_dad_help_event_split.mp3",
             "questionText": "At the kid's school, who will help the dad in the middle pick up the heavy box?",
             "questionAudio": "assets/home_school/generated/audio/hs_r15_021_school_dad_help_question_context_first.mp3"
           }

@@ -1,0 +1,353 @@
+{
+  "schemaVersion": 1,
+  "candidateId": "chs-home-school-evelyn-v1",
+  "revision": "r22-clear-at-events",
+  "status": "approved_sources_joined_for_chs_draft",
+  "approvedOn": "2026-09-18",
+  "service": "NaturalReaders Commercial",
+  "voice": "Evelyn",
+  "style": "Soft",
+  "speed": 0.9,
+  "wordsPerMinute": 180,
+  "pauseBetweenParagraphsSeconds": 0,
+  "sampleRateHz": 44100,
+  "channels": 1,
+  "bitrateKbps": 320,
+  "sourceApproval": "User approved the six separate v3 recordings: yes this works.",
+  "sourceExport": "Ohno!Atthekids (1).zip",
+  "sourceExportSha256": "349067c5e05fd1e1d50e06c9f93e4fe1ebf4aed049d7980f3278822fb9eef70f",
+  "processing": "Decoded approved MP3s at native44.1kHz mono to float32 PCM. Retained shared prefix through a near-zero quiet-tail sample; retained every suffix sample including original leading silence and At. Concatenated PCM, wrote lossless float32 WAV, encoded exactly once to320kbps mono MP3. No gain, speed change, pitch change, crossfade, or added silence.",
+  "prefixEdit": {
+    "source": "review-at-split-v3/1.Oh_no!.mp3",
+    "sourceSha256": "f9a722c291b6568e7cb759aecc336fdf009f971c9649db7e6c18ad20e4595d1e",
+    "sourceDecodedSamples": 65664,
+    "retainedSamples": 46766,
+    "removedTailSamples": 18898,
+    "removedTailSeconds": 0.4285260770975057,
+    "removedTailMaximumAmplitude": 0.0004909118288196623,
+    "removedTailPeakDbfs": -66.17993006367732,
+    "originalTrailingQuietInterval": {
+      "startSeconds": 0.949252,
+      "endSeconds": 1.48898,
+      "durationSeconds": 0.539728
+    },
+    "silenceThresholdDbfs": -50,
+    "minimumQuietMarginRetainedAfterSpeechSeconds": 0.11120151473922912
+  },
+  "scope": "Only five flagged event recordings. All captions, questions, exterior openings, assignments, runtime sequencing, visuals, and historical audio files remain unchanged.",
+  "listeningReview": "separate_sources_approved_by_researcher; joined_files_machine_checked_pending_researcher_preview",
+  "screening": {
+    "model": "openai/whisper-base.en",
+    "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+    "expectedCaptionsProvidedToModel": false,
+    "audioUploaded": false,
+    "caveat": "Unprompted machine transcription and signal checks are not listener certification."
+  },
+  "files": [
+    {
+      "id": "hs_r22_001",
+      "context": "SCHOOL",
+      "recipient": "KID",
+      "event": "FOOD",
+      "index": 1,
+      "text": "Oh no! At the kid's school, the kid in the middle is hungry now!",
+      "output": "assets/home_school/generated/audio/hs_r22_001_school_kid_food_event_split.mp3",
+      "bytes": 198574,
+      "sha256": "d248ec113498810d67573e26116564ce2c96b6a2b8502ebafe1315becf7f8646",
+      "durationSeconds": 4.937143,
+      "decodedDurationSeconds": 4.900453514739229,
+      "sampleRateHz": 44100,
+      "channels": 1,
+      "bitrateKbps": 320,
+      "replaces": {
+        "output": "assets/home_school/generated/audio/hs_009_school_food_event.mp3",
+        "sha256": "e9c5e6f8d75dfa8971dac259fa4342a4bfeada8baed5d53db6a76814680134dd"
+      },
+      "sources": [
+        {
+          "path": "review-at-split-v3/1.Oh_no!.mp3",
+          "sha256": "f9a722c291b6568e7cb759aecc336fdf009f971c9649db7e6c18ad20e4595d1e",
+          "retainedSampleRange": [
+            0,
+            46766
+          ]
+        },
+        {
+          "path": "review-at-split-v3/2.At_the_kids_school,_the_kid_i.mp3",
+          "sha256": "adecfbb5bedc9ecb03f6279b46bcf28508711c80a8dcda24183d2d75db8b150b",
+          "retainedSampleRange": [
+            0,
+            169344
+          ]
+        }
+      ],
+      "losslessWorkingCopy": "review-at-split-v3/joined-lossless/hs_r22_001_school_kid_food_event_split.wav",
+      "losslessSha256": "8625d44438f52c7af51f9f11f75dc3b65335cedc60fbfb7576b57e3babbdc1b1",
+      "joinedPcmSha256": "a9c1c03f8330e6757636e77828eb4ed3ec45a2cfb4cdbbf08861488213e714d4",
+      "decodedOutputPcmSha256": "266d91d9249b7e6ef54d6c6f832bd039c6ad7236200c80f65a3247987cba793e",
+      "joinSample": 46766,
+      "joinSeconds": 1.060453514739229,
+      "suffixSpeechSamplesRetainedWithoutModification": true,
+      "retainedPrefixSamplesUnchanged": true,
+      "silenceAddedSamples": 0,
+      "predictedGapSeconds": 0.30163251473922914,
+      "measuredEncodedGap": {
+        "startSeconds": 0.949252,
+        "endSeconds": 1.25088,
+        "durationSeconds": 0.301633
+      },
+      "pcmJoinDiscontinuityAmplitude": 6.904620164505104e-8,
+      "outputPeakDbfs": -4.392743930663966,
+      "fullScaleClippedSamples": 0,
+      "singleReencodeSnrDb": 68.78555498808142,
+      "sourceIntegrityRechecked": true,
+      "listeningCaveat": "The six source recordings were user-approved. These joins require playback review; signal checks and ASR do not certify perceived naturalness or absence of audible artifacts.",
+      "machineTranscript": "Oh no! At the kids school, the kid in the middle is hungry now.",
+      "atRecognized": true
+    },
+    {
+      "id": "hs_r22_002",
+      "context": "SCHOOL",
+      "recipient": "KID",
+      "event": "HELP",
+      "index": 2,
+      "text": "Oh no! At the kid's school, the kid in the middle dropped a heavy box!",
+      "output": "assets/home_school/generated/audio/hs_r22_002_school_kid_help_event_split.mp3",
+      "bytes": 209023,
+      "sha256": "fef5effd8ab7f2c3a1d4df4df1a9e91e6c6957c9450fcd30049ec4bc65062cd7",
+      "durationSeconds": 5.198367,
+      "decodedDurationSeconds": 5.161678004535148,
+      "sampleRateHz": 44100,
+      "channels": 1,
+      "bitrateKbps": 320,
+      "replaces": {
+        "output": "assets/home_school/generated/audio/hs_013_school_help_event.mp3",
+        "sha256": "f9825979c6934ad9481418129cd5dbfa82faa0815e262ba4e0516a9d3f8aff21"
+      },
+      "sources": [
+        {
+          "path": "review-at-split-v3/1.Oh_no!.mp3",
+          "sha256": "f9a722c291b6568e7cb759aecc336fdf009f971c9649db7e6c18ad20e4595d1e",
+          "retainedSampleRange": [
+            0,
+            46766
+          ]
+        },
+        {
+          "path": "review-at-split-v3/3.At_the_kids_school,_the_kid_i.mp3",
+          "sha256": "9cbc999396de3c5e7a69635d6e8769f1feee6d3aad5ede45b464249a19a03d08",
+          "retainedSampleRange": [
+            0,
+            180864
+          ]
+        }
+      ],
+      "losslessWorkingCopy": "review-at-split-v3/joined-lossless/hs_r22_002_school_kid_help_event_split.wav",
+      "losslessSha256": "e0e5fbcd1e7b8134555a68bf08be62a99b22a5598eb0307d16eaa518688887e1",
+      "joinedPcmSha256": "dd2cbced72745f0405022bb6b986709527b64c0706dedd9416076c1a0400bafb",
+      "decodedOutputPcmSha256": "2aca7f5c0f5062e986d3cac546cef842c02745f6858548394f75437d9b044144",
+      "joinSample": 46766,
+      "joinSeconds": 1.060453514739229,
+      "suffixSpeechSamplesRetainedWithoutModification": true,
+      "retainedPrefixSamplesUnchanged": true,
+      "silenceAddedSamples": 0,
+      "predictedGapSeconds": 0.2959635147392291,
+      "measuredEncodedGap": {
+        "startSeconds": 0.949252,
+        "endSeconds": 1.24522,
+        "durationSeconds": 0.295964
+      },
+      "pcmJoinDiscontinuityAmplitude": 6.904620164505104e-8,
+      "outputPeakDbfs": -4.440665907481442,
+      "fullScaleClippedSamples": 0,
+      "singleReencodeSnrDb": 68.59964094417974,
+      "sourceIntegrityRechecked": true,
+      "listeningCaveat": "The six source recordings were user-approved. These joins require playback review; signal checks and ASR do not certify perceived naturalness or absence of audible artifacts.",
+      "machineTranscript": "Oh no! At the kid's school, the kid in the middle dropped a heavy box.",
+      "atRecognized": true
+    },
+    {
+      "id": "hs_r22_003",
+      "context": "HOME",
+      "recipient": "KID",
+      "event": "HELP",
+      "index": 3,
+      "text": "Oh no! At the kid's house, the kid in the middle dropped a heavy box!",
+      "output": "assets/home_school/generated/audio/hs_r22_003_house_kid_help_event_split.mp3",
+      "bytes": 207978,
+      "sha256": "934ea3006ac618427620b40d224aae47f8cdeb568e6cbaa6ffc250ce0b781e12",
+      "durationSeconds": 5.172245,
+      "decodedDurationSeconds": 5.135555555555555,
+      "sampleRateHz": 44100,
+      "channels": 1,
+      "bitrateKbps": 320,
+      "replaces": {
+        "output": "assets/home_school/generated/audio/hs_r17_009_house_help_event.mp3",
+        "sha256": "2f9d6bbe81b41e5174d0d17937b07df2b9ecfb81495272bbd02e6d63faf824f0"
+      },
+      "sources": [
+        {
+          "path": "review-at-split-v3/1.Oh_no!.mp3",
+          "sha256": "f9a722c291b6568e7cb759aecc336fdf009f971c9649db7e6c18ad20e4595d1e",
+          "retainedSampleRange": [
+            0,
+            46766
+          ]
+        },
+        {
+          "path": "review-at-split-v3/4.At_the_kids_house,_the_kid_in.mp3",
+          "sha256": "d529070f3f49c19645ad04ed4ebec69779a2d60070dc3458af169463804ade9c",
+          "retainedSampleRange": [
+            0,
+            179712
+          ]
+        }
+      ],
+      "losslessWorkingCopy": "review-at-split-v3/joined-lossless/hs_r22_003_house_kid_help_event_split.wav",
+      "losslessSha256": "285c84261dec66e8261b7f48bc87c2668173b26884f6ae4909e1f5852b4f0341",
+      "joinedPcmSha256": "ed794061516208bbeb376988238af0852cbf4a261729f0c7a434634a55bcc8af",
+      "decodedOutputPcmSha256": "bc68661aeeb2dc397d9bd877fd4866b6891f4f43318a02c05d7b045c30728f8f",
+      "joinSample": 46766,
+      "joinSeconds": 1.060453514739229,
+      "suffixSpeechSamplesRetainedWithoutModification": true,
+      "retainedPrefixSamplesUnchanged": true,
+      "silenceAddedSamples": 0,
+      "predictedGapSeconds": 0.3014505147392291,
+      "measuredEncodedGap": {
+        "startSeconds": 0.949252,
+        "endSeconds": 1.2507,
+        "durationSeconds": 0.301451
+      },
+      "pcmJoinDiscontinuityAmplitude": 6.904620164505104e-8,
+      "outputPeakDbfs": -4.401683618709308,
+      "fullScaleClippedSamples": 0,
+      "singleReencodeSnrDb": 68.19734670874685,
+      "sourceIntegrityRechecked": true,
+      "listeningCaveat": "The six source recordings were user-approved. These joins require playback review; signal checks and ASR do not certify perceived naturalness or absence of audible artifacts.",
+      "machineTranscript": "Oh no! At the kid's house, the kid in the middle dropped a heavy box.",
+      "atRecognized": true
+    },
+    {
+      "id": "hs_r22_004",
+      "context": "SCHOOL",
+      "recipient": "MOM",
+      "event": "HELP",
+      "index": 4,
+      "text": "Oh no! At the kid's school, the mom in the middle dropped a heavy box!",
+      "output": "assets/home_school/generated/audio/hs_r22_004_school_mom_help_event_split.mp3",
+      "bytes": 211113,
+      "sha256": "b0debe35bd984e5a78dcf806552b3894a433b49c580998a2f2c5fc775623bc50",
+      "durationSeconds": 5.250612,
+      "decodedDurationSeconds": 5.213922902494331,
+      "sampleRateHz": 44100,
+      "channels": 1,
+      "bitrateKbps": 320,
+      "replaces": {
+        "output": "assets/home_school/generated/audio/hs_v2_033_school_mom_help_event.mp3",
+        "sha256": "221ff3ae00a61e8b8c81cad2e4357b4fafe896f74d376de3b48c840a05e42676"
+      },
+      "sources": [
+        {
+          "path": "review-at-split-v3/1.Oh_no!.mp3",
+          "sha256": "f9a722c291b6568e7cb759aecc336fdf009f971c9649db7e6c18ad20e4595d1e",
+          "retainedSampleRange": [
+            0,
+            46766
+          ]
+        },
+        {
+          "path": "review-at-split-v3/5.At_the_kids_school,_the_mom_i.mp3",
+          "sha256": "8bbcac8f5868ed6eff039ca2cda44d6abac298150dbde28244c9adcd9a9378d1",
+          "retainedSampleRange": [
+            0,
+            183168
+          ]
+        }
+      ],
+      "losslessWorkingCopy": "review-at-split-v3/joined-lossless/hs_r22_004_school_mom_help_event_split.wav",
+      "losslessSha256": "e63476e9cb32334cbf6674289bce76e477aaca71f60c7b48a5123a9d2d672dbe",
+      "joinedPcmSha256": "c3043edcff155ca699141a7e460443ef5f6f315fe7f6b2c44cab52627739e6e8",
+      "decodedOutputPcmSha256": "ce6666c458381a02451eaead60a88bdd5cd4c23eb2d63c6b04ae294b62f350b6",
+      "joinSample": 46766,
+      "joinSeconds": 1.060453514739229,
+      "suffixSpeechSamplesRetainedWithoutModification": true,
+      "retainedPrefixSamplesUnchanged": true,
+      "silenceAddedSamples": 0,
+      "predictedGapSeconds": 0.29589551473922915,
+      "measuredEncodedGap": {
+        "startSeconds": 0.949252,
+        "endSeconds": 1.24515,
+        "durationSeconds": 0.295896
+      },
+      "pcmJoinDiscontinuityAmplitude": 6.904620164505104e-8,
+      "outputPeakDbfs": -4.5291030133282995,
+      "fullScaleClippedSamples": 0,
+      "singleReencodeSnrDb": 69.1842448740905,
+      "sourceIntegrityRechecked": true,
+      "listeningCaveat": "The six source recordings were user-approved. These joins require playback review; signal checks and ASR do not certify perceived naturalness or absence of audible artifacts.",
+      "machineTranscript": "Oh no! At the kids school, the mom in the middle dropped a heavy box.",
+      "atRecognized": true
+    },
+    {
+      "id": "hs_r22_005",
+      "context": "SCHOOL",
+      "recipient": "DAD",
+      "event": "HELP",
+      "index": 5,
+      "text": "Oh no! At the kid's school, the dad in the middle dropped a heavy box!",
+      "output": "assets/home_school/generated/audio/hs_r22_005_school_dad_help_event_split.mp3",
+      "bytes": 210068,
+      "sha256": "2aeb623028ca7a880d52d10c2741ae9a829f8588965ba7b2f7b056ad7d54de58",
+      "durationSeconds": 5.22449,
+      "decodedDurationSeconds": 5.187800453514739,
+      "sampleRateHz": 44100,
+      "channels": 1,
+      "bitrateKbps": 320,
+      "replaces": {
+        "output": "assets/home_school/generated/audio/hs_v2_038_school_dad_help_event.mp3",
+        "sha256": "620edf664b701f4c15f6699000cc2ba2223451a76c8054359654d74f02f139d3"
+      },
+      "sources": [
+        {
+          "path": "review-at-split-v3/1.Oh_no!.mp3",
+          "sha256": "f9a722c291b6568e7cb759aecc336fdf009f971c9649db7e6c18ad20e4595d1e",
+          "retainedSampleRange": [
+            0,
+            46766
+          ]
+        },
+        {
+          "path": "review-at-split-v3/6.At_the_kids_school,_the_dad_i.mp3",
+          "sha256": "a506b513ca842eaa4664a04b367717a4318c153927daf7f4e309aae50ca5a661",
+          "retainedSampleRange": [
+            0,
+            182016
+          ]
+        }
+      ],
+      "losslessWorkingCopy": "review-at-split-v3/joined-lossless/hs_r22_005_school_dad_help_event_split.wav",
+      "losslessSha256": "53edb7c9320f90108a16b5e5bae52c56d4947745c3def057fee9631e0dcc01ad",
+      "joinedPcmSha256": "c51b2ea64046311bff12b6927d5924ad9e499508f5d0a7b9593ebb6fe8f41bc7",
+      "decodedOutputPcmSha256": "7b70225f77cb70b77b58b41aa495f13d611c63a97b48c0f9595fbcee1e2c88d5",
+      "joinSample": 46766,
+      "joinSeconds": 1.060453514739229,
+      "suffixSpeechSamplesRetainedWithoutModification": true,
+      "retainedPrefixSamplesUnchanged": true,
+      "silenceAddedSamples": 0,
+      "predictedGapSeconds": 0.29591851473922914,
+      "measuredEncodedGap": {
+        "startSeconds": 0.949252,
+        "endSeconds": 1.24517,
+        "durationSeconds": 0.295918
+      },
+      "pcmJoinDiscontinuityAmplitude": 6.904620164505104e-8,
+      "outputPeakDbfs": -4.808265925348445,
+      "fullScaleClippedSamples": 0,
+      "singleReencodeSnrDb": 68.8419488152043,
+      "sourceIntegrityRechecked": true,
+      "listeningCaveat": "The six source recordings were user-approved. These joins require playback review; signal checks and ASR do not certify perceived naturalness or absence of audible artifacts.",
+      "machineTranscript": "Oh no! At the kids school, the dad in the middle dropped a heavy box.",
+      "atRecognized": true
+    }
+  ]
+}

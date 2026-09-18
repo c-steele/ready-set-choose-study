@@ -18,6 +18,9 @@ const directionalAudioReceipt = JSON.parse(fs.readFileSync(path.join(dataRoot, "
 const contextFirstQuestionReceipt = JSON.parse(fs.readFileSync(path.join(dataRoot, "context_first_question_audio_import_receipt.json"), "utf8"));
 const entranceHouseReceipt = JSON.parse(fs.readFileSync(path.join(dataRoot, "entrance_house_audio_import_receipt.json"), "utf8"));
 const entranceHouseByReplacedOutput = new Map(entranceHouseReceipt.clips.filter((clip) => clip.replaces).map((clip) => [clip.replaces.output, clip]));
+const eventRevision = JSON.parse(fs.readFileSync(path.join(dataRoot, "event_audio_revision_r22.json"), "utf8"));
+const eventRevisionByReplacedOutput = new Map(eventRevision.files.map((clip) => [clip.replaces.output, clip]));
+assert.equal(eventRevisionByReplacedOutput.size, 5, "Exactly five approved event clips may change in r22");
 const historicalPauseManifest = JSON.parse(fs.readFileSync(path.join(dataRoot, "home_school_question_pause_manifest.json"), "utf8"));
 const canonicalAudio = JSON.parse(fs.readFileSync(path.join(dataRoot, "canonical_audio_manifest_evelyn.json"), "utf8"));
 const teacherClassmateAudio = JSON.parse(fs.readFileSync(path.join(dataRoot, "teacher_classmate_audio_manifest.json"), "utf8"));
@@ -96,21 +99,21 @@ function plain(value) {
 
 assert.equal(metadata.candidateId, "chs-home-school-evelyn-v1");
 const verifiedSaved = metadata.status === "published_chs_draft_saved_not_submitted";
-assert.ok(verifiedSaved || metadata.status === "local_r21_prepared_chs_access_blocked");
+assert.ok(verifiedSaved || metadata.status === "prepared_for_chs_draft_update");
 assert.equal(metadata.activeChsStudyChanged, false);
-assert.equal(metadata.chsDraftConfigurationUpdated, verifiedSaved);
+assert.equal(metadata.chsDraftConfigurationUpdated, true, "The prior r21 draft remains saved while r22 is prepared");
 assert.equal(metadata.chsDraftStudyId, 6349);
 assert.equal(metadata.chsDraftSavedOn, "2026-09-18");
 assert.equal(metadata.chsSubmissionStatus, "not_submitted");
-assert.equal(metadata.published, verifiedSaved);
+assert.equal(metadata.published, true, "The prior r21 release remains published while r22 is prepared");
 assert.equal(metadata.publishedOn, "2026-09-18");
-assert.equal(metadata.lastPublishedRelease, verifiedSaved ? "chs-home-school-evelyn-v1-r21-visual-fixes-1" : "chs-home-school-evelyn-v1-r20-approved-openings-1");
-assert.equal(metadata.candidateRelease, "chs-home-school-evelyn-v1-r21-visual-fixes-1");
+assert.equal(metadata.lastPublishedRelease, verifiedSaved ? "chs-home-school-evelyn-v1-r22-clear-at-events-1" : "chs-home-school-evelyn-v1-r21-visual-fixes-1");
+assert.equal(metadata.candidateRelease, "chs-home-school-evelyn-v1-r22-clear-at-events-1");
 assert.equal(metadata.revisionPendingPublication, !verifiedSaved);
-assert.equal(metadata.chsDraftRelease, verifiedSaved ? "chs-home-school-evelyn-v1-r21-visual-fixes-1" : "chs-home-school-evelyn-v1-r20-approved-openings-1");
-assert.equal(metadata.latestChsDraftSaveReceipt, verifiedSaved ? "review/chs-draft-save-r21.md" : "review/chs-draft-save-r20.md");
+assert.equal(metadata.chsDraftRelease, verifiedSaved ? "chs-home-school-evelyn-v1-r22-clear-at-events-1" : "chs-home-school-evelyn-v1-r21-visual-fixes-1");
+assert.equal(metadata.latestChsDraftSaveReceipt, verifiedSaved ? "review/chs-draft-save-r22.md" : "review/chs-draft-save-r21.md");
 if (verifiedSaved) assert.equal(Object.hasOwn(metadata, "pendingReason"), false);
-else assert.match(metadata.pendingReason, /no hosted publication or CHS save attempted for r21/);
+else assert.match(metadata.pendingReason, /Five researcher-approved split event recordings.*deployment and CHS draft save pending verification/);
 assert.equal(metadata.latestRevisionOn, "2026-09-18");
 assert.equal(metadata.storyCount, 12);
 assert.equal(metadata.storyCountPerContext, 6);
@@ -149,7 +152,7 @@ assert.match(
   /\["intro", "exterior", "room_entry"\]\.includes\(slideKind\)[\s\S]*?text \|\| ""[\s\S]*?slideKind === "context_intro"[\s\S]*?slideKind === "story"[\s\S]*?slideKind === "response_choices"/,
   "Every Home/School story heading must use the same in-scene caption banner",
 );
-assert.match(indexHtml, /app\.js\?v=chs-home-school-evelyn-v1-r21-visual-fixes-1/);
+assert.match(indexHtml, /app\.js\?v=chs-home-school-evelyn-v1-r22-clear-at-events-1/);
 assert.doesNotMatch(app, /contextIntro \? `<div class="ksize-context-intro-cue"/);
 assert.match(app, /fileAudio\.addEventListener\("playing",[\s\S]*?setMouthPlaying\(true\)/);
 assert.match(app, /fileAudio\.addEventListener\("waiting", \(\) => setMouthPlaying\(false\)\)/);
@@ -369,7 +372,8 @@ for (const line of missingAudio.lines) {
   const imported = directionalAudioReceipt.clips.find((clip) => clip.id === line.id);
   const priorClip = line.kind === "question" ? contextFirstByLegacyOutput.get(line.output) : imported;
   const houseReplacement = entranceHouseByReplacedOutput.get(priorClip?.output);
-  const active = houseReplacement
+  const eventReplacement = line.kind === "event" ? eventRevisionByReplacedOutput.get(houseReplacement?.output || imported.output) : null;
+  const active = eventReplacement ? homeSchoolAudio.lines.find((clip) => clip.output === eventReplacement.output) : houseReplacement
     ? homeSchoolAudio.lines.find((clip) => clip.output === houseReplacement.output)
     : activeAudioById.get(line.id);
   assert.ok(active, `${line.id} is missing from the active audio manifest`);
@@ -390,7 +394,8 @@ for (const line of missingAudio.lines) {
     else assert.equal(active.questionRevision, "r15-context-first");
     assert.notEqual(active.sha256, imported.sha256, `${line.id} must not retain the superseded context-last recording`);
   } else {
-    const currentClip = entranceHouseByReplacedOutput.get(imported.output) || imported;
+    const priorEventClip = entranceHouseByReplacedOutput.get(imported.output) || imported;
+    const currentClip = eventRevisionByReplacedOutput.get(priorEventClip.output) || priorEventClip;
     assert.equal(availableAudio.get(normalizeText(currentClip.text)), active.output, `${line.id} is not active in the audio map`);
     assert.equal(active.output, currentClip.output, `${line.id} output path drifted`);
     assert.equal(active.text, currentClip.text, `${line.id} event wording drifted`);

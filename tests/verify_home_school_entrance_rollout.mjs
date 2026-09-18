@@ -283,12 +283,15 @@ for (const entry of entries) {
 }
 assert.equal(seenReviewUrls.size, 72);
 
-// Preserve the full r17/r18 audit. Only the two approved r20 exterior mappings
-// may move; all earlier recordings remain immutable historical evidence.
+// Preserve the full r17/r18 audit. R20 replaces two exteriors, and r22 replaces
+// House/Kid/HELP; all earlier recordings remain immutable historical evidence.
 const entranceRequirements = readJson("entrance_house_audio_requirements.json");
 const entranceReceipt = readJson("entrance_house_audio_import_receipt.json");
 const schoolOpeningRevision = readJson("school_exterior_audio_revision_r18.json");
 const exteriorRevision = readJson("exterior_audio_revision_r20.json");
+const eventRevision = readJson("event_audio_revision_r22.json");
+const eventRevisionByReplacedOutput = new Map(eventRevision.files.map((clip) => [clip.replaces.output, clip]));
+assert.equal(eventRevisionByReplacedOutput.size, 5);
 assert.equal(entranceRequirements.lines.length, 25);
 assert.equal(entranceReceipt.importedClipCount, 25);
 assert.equal(entranceReceipt.clips.length, 25);
@@ -328,6 +331,7 @@ for (const clip of exteriorRevision.files) {
 assert.equal(contextAudio.lines.some((clip) => clip.output === schoolOpeningRevision.output), false,
   "Historical r18 school export must not remain an active mapping");
 let replacedMappingCount = 0;
+let replacedEventMappingCount = 0;
 const atPointer = (object, pointer) => pointer.split("/").slice(1).reduce((value, key) => value[key.replace(/~1/g, "/").replace(/~0/g, "~")], object);
 for (const line of entranceRequirements.lines) {
   const clip = entranceReceipt.clips.find((candidate) => candidate.id === line.id);
@@ -342,13 +346,24 @@ for (const line of entranceRequirements.lines) {
   assert.equal(clip.bitrateKbps, 320);
   assert.ok(clip.durationSeconds >= 1 && clip.durationSeconds <= 12);
   const replacement = exteriorByText.get(line.text);
-  const activeClip = replacement || clip;
+  const eventReplacement = eventRevisionByReplacedOutput.get(clip.output);
+  const activeClip = replacement || eventReplacement || clip;
   if (replacement) {
     replacedMappingCount += 1;
     assert.notEqual(activeClip.output, clip.output, "Preserve the original exterior filename");
     assert.notEqual(activeClip.sha256, clip.sha256, "Approved exterior must be a distinct export");
     assert.equal(contextAudio.lines.some((active) => active.output === clip.output), false,
       `${line.id}: superseded r17 exterior remains active`);
+  }
+  if (eventReplacement) {
+    replacedEventMappingCount += 1;
+    assert.equal(line.id, "hs_r17_009", "Only House/Kid/HELP is an r22 replacement of an r17 event");
+    assert.equal(eventReplacement.replaces.sha256, clip.sha256);
+    const revisedBytes = fs.readFileSync(path.join(root, eventReplacement.output));
+    assert.equal(revisedBytes.length, eventReplacement.bytes);
+    assert.equal(createHash("sha256").update(revisedBytes).digest("hex"), eventReplacement.sha256);
+    assert.equal(contextAudio.lines.some((active) => active.output === clip.output), false,
+      "Superseded House/HELP event must not remain active");
   }
   const activeMappings = contextAudio.lines.filter((active) => active.text === line.text && active.active !== false);
   assert.equal(activeMappings.length, 1, `Narration must have exactly one active mapping: ${line.id}`);
@@ -367,6 +382,7 @@ for (const line of entranceRequirements.lines) {
   }
 }
 assert.equal(replacedMappingCount, 2, "Only the two approved exterior lines may replace r17 audio mappings");
+assert.equal(replacedEventMappingCount, 1, "Exactly one approved r22 event supersedes an r17 event");
 
 // Deleting a required approved mapping must fail closed, even when someone
 // adds the visual-only query flag without researcher mode.

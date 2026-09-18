@@ -1,7 +1,7 @@
 /*
   PRODUCTION-READY CHS WRAPPER SOURCE FOR STUDY 6349.
 
-  This source targets the r21 within-child House/School entrance candidate.
+  This source targets the r22 within-child House/School entrance candidate.
   Installing it in CHS remains a separate researcher-controlled action.
 
   Public title: Who Helps Where?
@@ -27,7 +27,7 @@ var HOME_SCHOOL_CANDIDATE_ROOT_URL =
 var HOME_SCHOOL_CANDIDATE_ORIGIN = "https://c-steele.github.io";
 
 var HOME_SCHOOL_STUDY_VERSION = "chs-home-school-evelyn-v1";
-var HOME_SCHOOL_CANDIDATE_RELEASE = "chs-home-school-evelyn-v1-r21-visual-fixes-1";
+var HOME_SCHOOL_CANDIDATE_RELEASE = "chs-home-school-evelyn-v1-r22-clear-at-events-1";
 var HOME_SCHOOL_CONTEXT_SCRIPT_VERSION = "home_school_house_entrance_recipient_aware_v6";
 var HOME_SCHOOL_DESIGN_VERSION = "home_school_within_child_counterbalanced_context_order_v1";
 /* Temporary editing aid: enable Back/Skip only on CHS's Preview Study route.
