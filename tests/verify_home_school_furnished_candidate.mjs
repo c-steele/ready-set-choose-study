@@ -43,11 +43,11 @@ function readPngHeader(filePath) {
 
 assert.equal(candidate.candidateId, "chs-home-school-evelyn-v1");
 assert.equal(candidate.activeChsStudyChanged, false);
-assert.equal(candidate.published, false);
-assert.equal(candidate.publishedOn, "2026-09-15");
-assert.equal(candidate.lastPublishedRelease, "chs-home-school-evelyn-v1-r16-within-child-preview-1");
+assert.equal(candidate.published, true);
+assert.equal(candidate.publishedOn, "2026-09-17");
+assert.equal(candidate.lastPublishedRelease, "chs-home-school-evelyn-v1-r17-entrance-preview-1");
 assert.equal(candidate.candidateRelease, "chs-home-school-evelyn-v1-r17-entrance-preview-1");
-assert.equal(candidate.status, "local_entrance_review_pending_verification");
+assert.equal(candidate.status, "published_chs_draft_saved_not_submitted");
 assert.equal(candidate.missingEvelynClipCount, 0);
 assert.equal(candidate.directionalEvelynClipCount, 30);
 assert.equal(missingAudio.missingClipCount, 30);
@@ -225,5 +225,5 @@ console.log(JSON.stringify({
   followupForegroundPages: 448,
   followupAuxiliaryLayers: 1,
   contextualFollowupScenes: 896,
-  published: false,
+  published: candidate.published,
 }, null, 2));

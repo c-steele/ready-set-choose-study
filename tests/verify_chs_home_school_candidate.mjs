@@ -95,13 +95,15 @@ function plain(value) {
 }
 
 assert.equal(metadata.candidateId, "chs-home-school-evelyn-v1");
-assert.equal(metadata.status, "local_entrance_review_pending_verification");
+assert.equal(metadata.status, "published_chs_draft_saved_not_submitted");
 assert.equal(metadata.activeChsStudyChanged, false);
-assert.equal(metadata.chsDraftConfigurationUpdated, false);
+assert.equal(metadata.chsDraftConfigurationUpdated, true);
+assert.equal(metadata.chsDraftStudyId, 6349);
+assert.equal(metadata.chsDraftSavedOn, "2026-09-17");
 assert.equal(metadata.chsSubmissionStatus, "not_submitted");
-assert.equal(metadata.published, false);
-assert.equal(metadata.publishedOn, "2026-09-15");
-assert.equal(metadata.lastPublishedRelease, "chs-home-school-evelyn-v1-r16-within-child-preview-1");
+assert.equal(metadata.published, true);
+assert.equal(metadata.publishedOn, "2026-09-17");
+assert.equal(metadata.lastPublishedRelease, "chs-home-school-evelyn-v1-r17-entrance-preview-1");
 assert.equal(metadata.candidateRelease, "chs-home-school-evelyn-v1-r17-entrance-preview-1");
 assert.equal(metadata.latestRevisionOn, "2026-09-17");
 assert.equal(metadata.storyCount, 12);
@@ -422,6 +424,9 @@ for (const output of activeQuestionOutputs) {
 console.log(JSON.stringify({
   status: "PASS",
   candidateId: metadata.candidateId,
+  published: metadata.published,
+  chsDraftConfigurationUpdated: metadata.chsDraftConfigurationUpdated,
+  chsSubmissionStatus: metadata.chsSubmissionStatus,
   assignmentCells: metadata.assignmentCellCount,
   storiesPerRoleSet: metadata.storyCount,
   pairings: metadata.pairings,

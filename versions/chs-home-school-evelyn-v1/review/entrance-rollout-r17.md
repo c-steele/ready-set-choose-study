@@ -25,4 +25,11 @@ Participant playback requires real prerecorded audio. Browser speech is not subs
 
 ## Protected scope
 
-Find the Caregiver runtime and review versions are unchanged. No CHS form was saved or submitted during this rollout. Researcher Back/Skip controls remain review-only; participant launch restrictions are preserved.
+Find the Caregiver runtime and review versions are unchanged. CHS study 6349 was saved as a draft, with no active study changed and no submission for approval. Researcher Back/Skip controls remain review-only; participant launch restrictions are preserved.
+
+## Deployment and draft-save receipt — September 17, 2026
+
+- Commits `2d4f9bb` (entrance runtime/assets/audio) and `8f11329` (r17 Lookit wrapper) were pushed to GitHub Pages `main`. The public r17 index was verified; entrance images and Evelyn audio returned HTTP 200.
+- The Who Takes Care design wrapper was saved in Lookit/CHS study 6349 and checked against an exact copy of the saved code. Saved listing descriptions now describe 12 stories, both settings, and no character ratings.
+- The study overview remained **Created / not submitted for approval** after saving. No active CHS study or Find the Caregiver configuration was changed.
+- A full CHS participant run has not been verified. Researcher listening review of the new Evelyn recordings remains pending.
