@@ -95,7 +95,7 @@ function plain(value) {
 }
 
 assert.equal(metadata.candidateId, "chs-home-school-evelyn-v1");
-assert.equal(metadata.status, "published_chs_draft_saved_not_submitted");
+assert.equal(metadata.status, "approved_openings_ready_for_publication_and_chs_draft_save");
 assert.equal(metadata.activeChsStudyChanged, false);
 assert.equal(metadata.chsDraftConfigurationUpdated, true);
 assert.equal(metadata.chsDraftStudyId, 6349);
@@ -104,7 +104,10 @@ assert.equal(metadata.chsSubmissionStatus, "not_submitted");
 assert.equal(metadata.published, true);
 assert.equal(metadata.publishedOn, "2026-09-18");
 assert.equal(metadata.lastPublishedRelease, "chs-home-school-evelyn-v1-r19-who-helps-where-1");
-assert.equal(metadata.candidateRelease, "chs-home-school-evelyn-v1-r19-who-helps-where-1");
+assert.equal(metadata.candidateRelease, "chs-home-school-evelyn-v1-r20-approved-openings-1");
+assert.equal(metadata.revisionPendingPublication, true);
+assert.equal(metadata.chsDraftRelease, "chs-home-school-evelyn-v1-r19-who-helps-where-1");
+assert.equal(metadata.latestChsDraftSaveReceipt, "review/chs-draft-save-r19.md");
 assert.equal(metadata.latestRevisionOn, "2026-09-18");
 assert.equal(metadata.storyCount, 12);
 assert.equal(metadata.storyCountPerContext, 6);
@@ -143,7 +146,7 @@ assert.match(
   /\["intro", "exterior", "room_entry"\]\.includes\(slideKind\)[\s\S]*?text \|\| ""[\s\S]*?slideKind === "context_intro"[\s\S]*?slideKind === "story"[\s\S]*?slideKind === "response_choices"/,
   "Every Home/School story heading must use the same in-scene caption banner",
 );
-assert.match(indexHtml, /app\.js\?v=chs-home-school-evelyn-v1-r19-who-helps-where-1/);
+assert.match(indexHtml, /app\.js\?v=chs-home-school-evelyn-v1-r20-approved-openings-1/);
 assert.doesNotMatch(app, /contextIntro \? `<div class="ksize-context-intro-cue"/);
 assert.match(app, /fileAudio\.addEventListener\("playing",[\s\S]*?setMouthPlaying\(true\)/);
 assert.match(app, /fileAudio\.addEventListener\("waiting", \(\) => setMouthPlaying\(false\)\)/);

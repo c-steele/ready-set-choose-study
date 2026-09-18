@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "candidateId": "chs-home-school-evelyn-v1",
+  "revision": "r20-approved-exterior-openings",
+  "status": "approved_for_chs_draft",
+  "approvedOn": "2026-09-18",
+  "service": "NaturalReaders Commercial",
+  "voice": "Evelyn",
+  "style": "Soft",
+  "speed": 0.9,
+  "wordsPerMinute": 180,
+  "pauseBetweenParagraphsSeconds": 0,
+  "sampleRateHz": 44100,
+  "channels": 1,
+  "bitrateKbps": 320,
+  "sourceExport": "Ohlook.Hereisa.zip",
+  "sourceExportSha256": "ba18ea3c7e4c39d71d9a8272a9f896226d70f3938eec6a9bda01726a40320d5d",
+  "processing": "Original NaturalReaders exports, without trimming, splicing, normalization or rate changes. A sentence break after Oh look creates a clearer pause before Here is. Captions and spoken words are unchanged.",
+  "scope": "Only the two exterior openings. No question, character, room or other narration changes; historical recordings preserved.",
+  "listeningReview": "approved_by_researcher",
+  "files": [
+    {
+      "id": "hs_r20_001",
+      "context": "HOME",
+      "text": "Oh look! Here is a house.",
+      "sourceText": "Oh look. Here is a house.",
+      "output": "assets/home_school/generated/audio/hs_r20_001_house_exterior_approved.mp3",
+      "bytes": 124387,
+      "durationSeconds": 3.10855,
+      "sha256": "161d7baa744264751c6199b22801d36e26bd2b4ade5933caf7dc715ed5aa38de",
+      "replaces": {
+        "output": "assets/home_school/generated/audio/hs_r17_001_house_exterior.mp3",
+        "sha256": "7a9bae252308e31907b131b031fbd59edb5402e4cddf0d9b35af137e032dcc3f"
+      }
+    },
+    {
+      "id": "hs_r20_002",
+      "context": "SCHOOL",
+      "text": "Oh look! Here is a school.",
+      "sourceText": "Oh look. Here is a school.",
+      "output": "assets/home_school/generated/audio/hs_r20_002_school_exterior_approved.mp3",
+      "bytes": 125432,
+      "durationSeconds": 3.134675,
+      "sha256": "c2ba588b936caa76be7bde77a7e5ef5e5d89170b89e19b1715c56defd6f7e2bd",
+      "replaces": {
+        "output": "versions/chs-home-school-evelyn-v1/assets/audio-r18/school-exterior-evelyn-gentle.mp3",
+        "sha256": "cec01ff6f5373cd18d9026f503e7acbbd1fb6d9a58c66e67c5fc366fc5c992d6"
+      }
+    }
+  ]
+}

@@ -13,6 +13,8 @@ const receipt = JSON.parse(fs.readFileSync(path.join(dataRoot, "directional_audi
 const contextFirstReceipt = JSON.parse(fs.readFileSync(path.join(dataRoot, "context_first_question_audio_import_receipt.json"), "utf8"));
 const entranceRequirements = JSON.parse(fs.readFileSync(path.join(dataRoot, "entrance_house_audio_requirements.json"), "utf8"));
 const entranceReceipt = JSON.parse(fs.readFileSync(path.join(dataRoot, "entrance_house_audio_import_receipt.json"), "utf8"));
+const schoolOpeningRevision = JSON.parse(fs.readFileSync(path.join(dataRoot, "school_exterior_audio_revision_r18.json"), "utf8"));
+const exteriorRevision = JSON.parse(fs.readFileSync(path.join(dataRoot, "exterior_audio_revision_r20.json"), "utf8"));
 
 function sha256(bytes) {
   return createHash("sha256").update(bytes).digest("hex");
@@ -53,8 +55,30 @@ assert.equal(entranceReceipt.clips.length, 25);
 assert.equal(houseByReplacedOutput.size, 21);
 assert.equal(new Set(entranceReceipt.clips.map((clip) => clip.sha256)).size, 25);
 
-// Check every new clip and its exact context mapping, including the four
+// The r18 school export remains immutable historical evidence after r20.
+const originalSchoolOpening = entranceReceipt.clips.find((clip) => clip.id === "hs_r17_002");
+assert.ok(originalSchoolOpening);
+assert.equal(schoolOpeningRevision.displayText, originalSchoolOpening.text);
+assert.equal(schoolOpeningRevision.replaces.output, originalSchoolOpening.output);
+assert.equal(schoolOpeningRevision.replaces.sha256, originalSchoolOpening.sha256);
+assertFileMatches(schoolOpeningRevision, "historical r18 school opening");
+assert.equal(activeByOutput.has(schoolOpeningRevision.output), false, "Superseded r18 school opening must not remain active");
+assert.equal(exteriorRevision.status, "approved_for_chs_draft");
+assert.equal(exteriorRevision.voice, "Evelyn");
+assert.equal(exteriorRevision.style, "Soft");
+assert.equal(exteriorRevision.speed, 0.9);
+assert.equal(exteriorRevision.files.length, 2);
+const exteriorByText = new Map(exteriorRevision.files.map((clip) => [clip.text, clip]));
+assert.deepEqual([...exteriorByText.keys()].sort(), ["Oh look! Here is a house.", "Oh look! Here is a school."]);
+const words = (text) => String(text).toLowerCase().match(/[\p{L}\p{N}]+/gu);
+for (const clip of exteriorRevision.files) {
+  assert.deepEqual(words(clip.sourceText), words(clip.text), "Only delivery punctuation may change");
+  assertFileMatches(clip, `approved r20 ${clip.id}`);
+}
+
+// Check every original clip and its exact current context mapping, including the four
 // entrance lines and six kid-recipient replacements outside the old 30-line pack.
+let replacedMappingCount = 0;
 for (const [index, clip] of entranceReceipt.clips.entries()) {
   const required = entranceRequirements.lines[index];
   assert.equal(clip.index, index + 1);
@@ -66,10 +90,21 @@ for (const [index, clip] of entranceReceipt.clips.entries()) {
   assert.equal(clip.sampleRateHz, 44100);
   assert.equal(clip.channels, 1);
   assertFileMatches(clip, `r17 ${clip.id}`);
-  const active = activeByOutput.get(clip.output);
-  assert.ok(active, `Missing r17 active mapping ${clip.id}`);
-  assertActiveMatches(active, clip);
-  assert.equal(active.revision, "r17-entrance-house");
+  const replacement = exteriorByText.get(clip.text);
+  const expected = replacement || clip;
+  const active = activeByOutput.get(expected.output);
+  assert.ok(active, `Missing approved active mapping ${clip.id}`);
+  assertActiveMatches(active, expected);
+  assert.equal(activeAudio.lines.filter((line) => line.text === clip.text && line.active !== false).length, 1,
+    `${clip.id}: exactly one canonical text mapping`);
+  if (replacement) {
+    replacedMappingCount += 1;
+    assert.equal(activeByOutput.has(clip.output), false, `${clip.id}: superseded r17 exterior remains active`);
+    assert.notEqual(replacement.sha256, clip.sha256, `${clip.id}: replacement is not a distinct export`);
+    assert.equal(active.sourceText, replacement.sourceText);
+  } else {
+    assert.equal(active.revision, "r17-entrance-house");
+  }
   assert.equal(active.audioEdit, undefined);
   if (clip.replaces) {
     assert.equal(clip.text, clip.replaces.text.replace(/home/g, "house"));
@@ -79,9 +114,10 @@ for (const [index, clip] of entranceReceipt.clips.entries()) {
   for (const location of required.contextManifestLocations) {
     const at = (pointer) => pointer.split("/").slice(1).reduce((value, key) => value[key], contextManifest);
     assert.equal(at(location.textPointer), clip.text, `${clip.id}: runtime text`);
-    assert.equal(at(location.audioPointer), clip.output, `${clip.id}: runtime audio`);
+    assert.equal(at(location.audioPointer), expected.output, `${clip.id}: runtime audio`);
   }
 }
+assert.equal(replacedMappingCount, 2, "Only the two exterior lines may replace r17 mappings");
 
 for (const line of requirements.lines) {
   const contextEvent = contextManifest.contexts[line.context].recipientEvents[line.recipient][line.event];
@@ -131,7 +167,7 @@ for (const line of requirements.lines) {
   }
 }
 
-console.log("PASS: historical directional/r15 provenance and current r17 House recordings are release-wired");
+console.log("PASS: historical directional/r15/r17/r18 provenance and approved r20 exterior recordings are release-wired");
 console.log("- All 30 original NaturalReaders files still match the immutable directional import receipt.");
-console.log("- All 25 r17 clips match their receipt and runtime mappings; all 21 replaced files retain their original hashes.");
-console.log("- School recordings are unchanged; House events and context-first questions use r17 recordings with no synthetic pause edit.");
+console.log("- All 25 r17 sources match their receipt; 23 remain active and exactly two exterior lines use approved r20 exports.");
+console.log("- Historical r18 and all 21 replaced files retain their hashes; event/question recordings and natural timing are unchanged.");

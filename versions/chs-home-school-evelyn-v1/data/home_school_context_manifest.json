@@ -148,7 +148,7 @@
       },
       "exterior": {
         "text": "Oh look! Here is a house.",
-        "audio": "assets/home_school/generated/audio/hs_r17_001_house_exterior.mp3"
+        "audio": "assets/home_school/generated/audio/hs_r20_001_house_exterior_approved.mp3"
       },
       "room": {
         "text": "This is a room inside the house.",
@@ -252,7 +252,7 @@
       },
       "exterior": {
         "text": "Oh look! Here is a school.",
-        "audio": "versions/chs-home-school-evelyn-v1/assets/audio-r18/school-exterior-evelyn-gentle.mp3"
+        "audio": "assets/home_school/generated/audio/hs_r20_002_school_exterior_approved.mp3"
       },
       "room": {
         "text": "This is a room inside the school.",
