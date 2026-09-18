@@ -161,9 +161,9 @@ assert.equal(recorded.properties.context_order_condition, context.assignedCell.c
 assert.equal(recorded.properties.first_context, context.assignedCell.firstContext);
 assert.equal(recorded.properties.second_context, context.assignedCell.secondContext);
 assert.equal(recorded.properties.design_version, "home_school_within_child_counterbalanced_context_order_v1");
-assert.equal(recorded.properties.candidate_release, "chs-home-school-evelyn-v1-r20-approved-openings-1");
+assert.equal(recorded.properties.candidate_release, "chs-home-school-evelyn-v1-r21-visual-fixes-1");
 assert.equal(recorded.properties.context_script_version, "home_school_house_entrance_recipient_aware_v6");
-assert.match(context.gameUrl, /[?&]v=chs-home-school-evelyn-v1-r20-approved-openings-1(?:&|$)/);
+assert.match(context.gameUrl, /[?&]v=chs-home-school-evelyn-v1-r21-visual-fixes-1(?:&|$)/);
 assert.match(context.gameUrl, /[?&]syntheticSpeech=0(?:&|$)/);
 assert.doesNotMatch(context.gameUrl, /[?&](?:entranceVisualOnly|facilitator|liveShare)=/, "CHS must not enable silent or facilitator previews");
 assert.doesNotMatch(context.gameUrl, /researcherTools=1/, "live CHS runs must not expose researcher controls");
@@ -182,7 +182,7 @@ assert.doesNotMatch(source, /assignedEntrypoint[^;]*(?:home\.html|school\.html)/
 assert.match(source, /context="\s*\+\s*encodeURIComponent\(assignedCell\.firstContext\)/);
 assert.match(source, /HOME_SCHOOL_STUDY_VERSION\s*=\s*"chs-home-school-evelyn-v1"/);
 assert.match(source, /HOME_SCHOOL_CONTEXT_SCRIPT_VERSION\s*=\s*"home_school_house_entrance_recipient_aware_v6"/);
-assert.match(source, /HOME_SCHOOL_CANDIDATE_RELEASE\s*=\s*"chs-home-school-evelyn-v1-r20-approved-openings-1"/);
+assert.match(source, /HOME_SCHOOL_CANDIDATE_RELEASE\s*=\s*"chs-home-school-evelyn-v1-r21-visual-fixes-1"/);
 assert.match(source, /HOME_SCHOOL_TEMPORARY_CHS_PREVIEW_CONTROLS\s*=\s*true/);
 assert.match(source, /HOME_SCHOOL_TEMPORARY_CHS_PREVIEW_CONTROLS === true\s*&& isChsPreviewContext && isInternalChsOrigin\(window\.location\.origin\)/);
 assert.doesNotMatch(source, /researcherJump=|skipParentSetup=/, "the CHS wrapper must not bypass parent setup or launch at a skipped screen");

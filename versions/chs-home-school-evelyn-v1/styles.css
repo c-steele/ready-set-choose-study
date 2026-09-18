@@ -191,6 +191,8 @@ body {
 /* Who Helps Where child welcome only; the narrator and Start keep their
    familiar yellow and green, and story palettes retain their own colours. */
 .ksize-who-helps-where-welcome {
+  /* Match story panels while allowing short screens to grow with content. */
+  min-height: calc(100vh - 42px);
   background: linear-gradient(135deg, #eee5f5 0%, #fff9f3 52%, #f8ddd0 100%);
   border-color: #d9c5e1;
   box-shadow: 0 14px 34px rgba(86, 54, 111, 0.13);
@@ -460,7 +462,8 @@ body {
 }
 
 .ksize-furnished-scene .ksize-char-btn {
-  z-index: 4;
+  /* Glowing and bouncing choice boxes stay in front when they cross text. */
+  z-index: 6;
 }
 
 .ksize-furnished-scene .ksize-context-spoken-banner {

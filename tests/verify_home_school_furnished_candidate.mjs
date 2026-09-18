@@ -43,12 +43,12 @@ function readPngHeader(filePath) {
 
 assert.equal(candidate.candidateId, "chs-home-school-evelyn-v1");
 assert.equal(candidate.activeChsStudyChanged, false);
-assert.equal(candidate.published, true);
+assert.equal(candidate.published, false);
 assert.equal(candidate.publishedOn, "2026-09-18");
 assert.equal(candidate.lastPublishedRelease, "chs-home-school-evelyn-v1-r20-approved-openings-1");
-assert.equal(candidate.candidateRelease, "chs-home-school-evelyn-v1-r20-approved-openings-1");
-assert.equal(candidate.status, "published_chs_draft_saved_not_submitted");
-assert.equal(candidate.revisionPendingPublication, false);
+assert.equal(candidate.candidateRelease, "chs-home-school-evelyn-v1-r21-visual-fixes-1");
+assert.equal(candidate.status, "local_r21_prepared_chs_access_blocked");
+assert.equal(candidate.revisionPendingPublication, true);
 assert.equal(candidate.chsDraftRelease, "chs-home-school-evelyn-v1-r20-approved-openings-1");
 assert.equal(candidate.latestChsDraftSaveReceipt, "review/chs-draft-save-r20.md");
 assert.equal(candidate.missingEvelynClipCount, 0);
@@ -178,7 +178,7 @@ assert.ok(fs.existsSync(contactSheet), "Missing all-pairings Home/School contact
 assert.ok(fs.statSync(contactSheet).size > 100_000, "Contact sheet is unexpectedly small");
 
 assert.match(app, /function furnishedSceneSpec\(/);
-assert.match(app, /const HOME_SCHOOL_ASSET_VERSION = "chs-home-school-evelyn-v1-r20-approved-openings-1"/);
+assert.match(app, /const HOME_SCHOOL_ASSET_VERSION = "chs-home-school-evelyn-v1-r21-visual-fixes-1"/);
 assert.match(app, /slideIndex === block\.introSlides\.length - 1 && studyContext/);
 assert.doesNotMatch(app, /slideIndex === 0 && (?:activeStudyContext|studyContext)/);
 assert.doesNotMatch(css, /text-wrap:\s*balance/);
@@ -209,7 +209,7 @@ assert.match(css, /\.ksize-image-wrap \.ksize-rating-furnished-scene/);
 assert.match(css, /\.ksize-furnished-scene \.ksize-char-btn/);
 assert.match(css, /\.ksize-screen\[data-context="HOME"\],[\s\S]*?\.ksize-screen\[data-context="SCHOOL"\][\s\S]*?justify-content:\s*flex-start/);
 assert.match(css, /\.ksize-screen\[data-context="HOME"\] \.ksize-bottom-area,[\s\S]*?\.ksize-screen\[data-context="SCHOOL"\] \.ksize-bottom-area[\s\S]*?margin-top:\s*8px/);
-assert.match(html, /chs-home-school-evelyn-v1-r20-approved-openings-1/g);
+assert.match(html, /chs-home-school-evelyn-v1-r21-visual-fixes-1/g);
 assert.doesNotMatch(html, /chs-home-school-evelyn-v1-r(?:[1-9])(?!\d)/);
 
 console.log(JSON.stringify({

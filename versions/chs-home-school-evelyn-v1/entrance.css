@@ -1,14 +1,18 @@
 /* Who Takes Care only: approved house/school entry-hall animation. */
-.ksize-slide-image.ksize-furnished-scene.ksize-entry-shell { display:block; aspect-ratio:auto; overflow:hidden; }
-.ksize-entry-shell > .ksize-context-spoken-banner { position:relative; display:grid; width:100%; inset:auto; }
-.ksize-entry-stage { display:block; position:relative; width:100%; aspect-ratio:16 / 9; overflow:hidden; }
+.ksize-slide-image.ksize-furnished-scene.ksize-entry-shell { display:block; aspect-ratio:16 / 9; overflow:hidden; }
+/* Entrance and character pages share one frame. The empty room fills that
+   frame; the exterior and hallway begin below its existing caption strip. */
+.ksize-entry-stage { display:block; position:absolute; inset:0; width:100%; height:100%; overflow:hidden; }
 .ksize-entry-stage > .ksize-furnished-room { position:absolute; inset:0; display:block; width:100%; height:100%; max-height:none; object-fit:cover; object-position:50% 57%; }
-.ksize-entry-layers { position:absolute; inset:0; z-index:2; pointer-events:none; overflow:hidden; }
+.ksize-entry-layers { position:absolute; inset:5.3cqw 0 0; z-index:2; pointer-events:none; overflow:hidden; }
 .ksize-entry-layers [hidden] { display:none !important; }
 .ksize-entry-backing, .ksize-entry-world, .ksize-entry-fade { position:absolute; inset:0; }
+/* Keep the original building and door-crop proportions. The smaller visible
+   viewport trims only the lower foreground rather than covering the roof. */
+.ksize-entry-world { bottom:auto; width:100%; aspect-ratio:1672 / 941; }
 .ksize-entry-backing { overflow:hidden; background:#b9aac6; }
 .ksize-entry-hall, .ksize-entry-building { display:block; width:100%; height:100%; max-height:none; }
-.ksize-entry-stage .ksize-entry-hall { object-fit:fill; transform-origin:50% 45%; }
+.ksize-entry-stage .ksize-entry-hall { object-fit:cover; transform-origin:50% 45%; }
 .ksize-entry-building { overflow:visible; }
 .ksize-entry-doorway { position:absolute; overflow:hidden; perspective-origin:50% 50%; }
 .ksize-entry-door { position:absolute; top:0; height:100%; backface-visibility:hidden; }

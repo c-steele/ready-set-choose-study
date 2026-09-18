@@ -1,0 +1,38 @@
+import assert from "node:assert/strict";
+import fs from "node:fs";
+import path from "node:path";
+import vm from "node:vm";
+import {fileURLToPath} from "node:url";
+const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
+const c = path.join(root, "versions/chs-home-school-evelyn-v1");
+const sandbox = {window:{}};
+vm.runInNewContext(fs.readFileSync(path.join(c,"window-greenery.js"),"utf8"),sandbox);
+const helper = sandbox.window.WTCWindowGreenery;
+const manifest = JSON.parse(fs.readFileSync(path.join(c,"data/ksize_manifest.json"),"utf8"));
+const original = structuredClone(manifest);
+helper.applyToManifest(manifest);
+let mapped = 0;
+for (let i=0;i<manifest.trials.length;i++) {
+  const trial=manifest.trials[i], before=original.trials[i];
+  if (!trial.homeSchoolFurnished) continue;
+  const v=trial.homeSchoolFurnished;
+  assert.equal(v.schoolBackgroundBeforeWindowRepair,before.homeSchoolFurnished.schoolBackground);
+  assert.equal(v.schoolBackground,`versions/chs-home-school-evelyn-v1/assets/window-greenery-v1/${v.paletteSlug}/school-room.svg`);
+  assert.equal(v.windowGreeneryRepairVersion,helper.version);
+  const rest=structuredClone(trial);
+  rest.homeSchoolFurnished.schoolBackground=before.homeSchoolFurnished.schoolBackground;
+  delete rest.homeSchoolFurnished.schoolBackgroundBeforeWindowRepair;
+  delete rest.homeSchoolFurnished.windowGreeneryRepairVersion;
+  assert.deepEqual(rest,before,"Only School background routing and repair provenance may change");
+  mapped++;
+}
+assert.equal(mapped,56);
+const once=JSON.stringify(manifest);
+helper.applyToManifest(manifest);
+assert.equal(JSON.stringify(manifest),once,"Mapping must be idempotent");
+for(const value of [undefined,null,"", "https://example.com/school-room.webp", "assets/home_room.webp", "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/not-a-palette/school-room.webp"]) assert.equal(helper.correctedRoomPath(value),value);
+const app=fs.readFileSync(path.join(c,"app.js"),"utf8");
+assert.ok(app.indexOf("WTCWindowGreenery?.applyToManifest(eventManifest)")<app.indexOf("const eventPlan = planEventSession(eventManifest"));
+const index=fs.readFileSync(path.join(c,"index.html"),"utf8");
+assert.ok(index.indexOf('src="window-greenery.js')<index.indexOf('src="app.js'));
+console.log(JSON.stringify({status:"PASS",mappedTrials:mapped,homeAndStoryDataUnchanged:true,idempotent:true,preloadUsesCorrectedSources:true}));

@@ -95,17 +95,17 @@ function plain(value) {
 }
 
 assert.equal(metadata.candidateId, "chs-home-school-evelyn-v1");
-assert.equal(metadata.status, "published_chs_draft_saved_not_submitted");
+assert.equal(metadata.status, "local_r21_prepared_chs_access_blocked");
 assert.equal(metadata.activeChsStudyChanged, false);
-assert.equal(metadata.chsDraftConfigurationUpdated, true);
+assert.equal(metadata.chsDraftConfigurationUpdated, false);
 assert.equal(metadata.chsDraftStudyId, 6349);
 assert.equal(metadata.chsDraftSavedOn, "2026-09-18");
 assert.equal(metadata.chsSubmissionStatus, "not_submitted");
-assert.equal(metadata.published, true);
+assert.equal(metadata.published, false);
 assert.equal(metadata.publishedOn, "2026-09-18");
 assert.equal(metadata.lastPublishedRelease, "chs-home-school-evelyn-v1-r20-approved-openings-1");
-assert.equal(metadata.candidateRelease, "chs-home-school-evelyn-v1-r20-approved-openings-1");
-assert.equal(metadata.revisionPendingPublication, false);
+assert.equal(metadata.candidateRelease, "chs-home-school-evelyn-v1-r21-visual-fixes-1");
+assert.equal(metadata.revisionPendingPublication, true);
 assert.equal(metadata.chsDraftRelease, "chs-home-school-evelyn-v1-r20-approved-openings-1");
 assert.equal(metadata.latestChsDraftSaveReceipt, "review/chs-draft-save-r20.md");
 assert.equal(metadata.latestRevisionOn, "2026-09-18");
@@ -146,7 +146,7 @@ assert.match(
   /\["intro", "exterior", "room_entry"\]\.includes\(slideKind\)[\s\S]*?text \|\| ""[\s\S]*?slideKind === "context_intro"[\s\S]*?slideKind === "story"[\s\S]*?slideKind === "response_choices"/,
   "Every Home/School story heading must use the same in-scene caption banner",
 );
-assert.match(indexHtml, /app\.js\?v=chs-home-school-evelyn-v1-r20-approved-openings-1/);
+assert.match(indexHtml, /app\.js\?v=chs-home-school-evelyn-v1-r21-visual-fixes-1/);
 assert.doesNotMatch(app, /contextIntro \? `<div class="ksize-context-intro-cue"/);
 assert.match(app, /fileAudio\.addEventListener\("playing",[\s\S]*?setMouthPlaying\(true\)/);
 assert.match(app, /fileAudio\.addEventListener\("waiting", \(\) => setMouthPlaying\(false\)\)/);

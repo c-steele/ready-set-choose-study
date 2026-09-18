@@ -9,7 +9,7 @@ const TEACHER_CLASSMATE_GENERATED_ROOT = "assets/teacher_classmate/generated/";
 const TEACHER_CLASSMATE_V78_REVISION_ROOT = "versions/chs-v78-teacher-classmate-evelyn-unique-roles/assets/teacher_classmate/generated/";
 const TEACHER_CLASSMATE_V78_DYAD_REVISION = /^dyads\/classmate-kid_0(?:1_tkc-deep-purple-a|2_tkc-deep-purple-b)\/slide_(?:0[3-9]|1[0-3])\.svg$/;
 const TEACHER_CLASSMATE_V78_TRIAL_REVISION = /^trials\/14(?:[ab]\/intro_04|[cd]\/intro_0[34]|[abcd]\/(?:hug|food|help)_screen_2)\.svg$/;
-const HOME_SCHOOL_ASSET_VERSION = "chs-home-school-evelyn-v1-r20-approved-openings-1";
+const HOME_SCHOOL_ASSET_VERSION = "chs-home-school-evelyn-v1-r21-visual-fixes-1";
 const HOME_SCHOOL_DESIGN_VERSION = "home_school_context_chs_candidate_v1";
 const HOME_SCHOOL_WITHIN_CHILD_DESIGN_VERSION = "home_school_within_child_counterbalanced_context_order_v1";
 const HOME_SCHOOL_CONTEXT_SCRIPT_VERSION = "home_school_house_entrance_recipient_aware_v6";
@@ -2507,16 +2507,22 @@ function prepareIntroReveal(canvas) {
   });
 }
 
-function entranceLayersHtml(context, paletteSlug = "") {
+function entranceLayersHtml(context, paletteSlug = "", characterHex = "") {
   const assets = entranceAssets(context, paletteSlug);
   const house = context === "HOME";
   const g = house ? { x: 752, y: 375, w: 162, h: 307 } : { x: 725, y: 440, w: 220, h: 202 };
   const src = escapeHtml(displayImageSrc(assets.exterior));
-  const leaf = (x, width) => `<svg viewBox="${x} ${g.y} ${width} ${g.h}" preserveAspectRatio="none"><image href="${src}" width="1672" height="941" preserveAspectRatio="none"/></svg>`;
+  const exterior = window.WTCExteriorPalette?.create({ context, href: displayImageSrc(assets.exterior), characterHex });
+  const leaf = (x, width) => exterior
+    ? exterior.svg({ viewBox: [x, g.y, width, g.h] })
+    : `<svg viewBox="${x} ${g.y} ${width} ${g.h}" preserveAspectRatio="none"><image href="${src}" width="1672" height="941" preserveAspectRatio="none"/></svg>`;
+  const building = exterior
+    ? exterior.svg({ className: "ksize-entry-building", opening: g })
+    : `<svg class="ksize-entry-building" viewBox="0 0 1672 941" preserveAspectRatio="none"><defs><mask id="ksize-entry-opening"><rect width="1672" height="941" fill="white"/><rect x="${g.x}" y="${g.y}" width="${g.w}" height="${g.h}" fill="black"/></mask></defs><image href="${src}" width="1672" height="941" preserveAspectRatio="none" mask="url(#ksize-entry-opening)"/></svg>`;
   return `<div class="ksize-entry-layers" data-entry-context="${context}" data-entrance-progress="0" aria-label="Outside the ${house ? "house" : "school"}; no characters are visible">
     <div class="ksize-entry-backing"><img class="ksize-entry-hall" src="${escapeHtml(displayImageSrc(assets.hall))}" alt=""></div>
     <div class="ksize-entry-world">
-      <svg class="ksize-entry-building" viewBox="0 0 1672 941" preserveAspectRatio="none"><defs><mask id="ksize-entry-opening"><rect width="1672" height="941" fill="white"/><rect x="${g.x}" y="${g.y}" width="${g.w}" height="${g.h}" fill="black"/></mask></defs><image href="${src}" width="1672" height="941" preserveAspectRatio="none" mask="url(#ksize-entry-opening)"/></svg>
+      ${building}
       <div class="ksize-entry-doorway" style="left:${g.x / 1672 * 100}%;top:${g.y / 941 * 100}%;width:${g.w / 1672 * 100}%;height:${g.h / 941 * 100}%">
         <div class="ksize-entry-door ksize-entry-door-left" style="width:${house ? 100 : 50}%">${leaf(g.x, house ? g.w : g.w / 2)}</div>
         ${house ? "" : `<div class="ksize-entry-door ksize-entry-door-right">${leaf(g.x + g.w / 2, g.w / 2)}</div>`}
@@ -2625,7 +2631,7 @@ function renderKidSlide({ trial = null, image, text, choices = [], overlayChoice
         ${contextOverlayHtml}
         <div class="ksize-entry-stage">
           ${furnishedImageLayersHtml(furnishedScene)}
-          ${entranceLayersHtml(studyContext, furnishedScene.paletteSlug)}
+          ${entranceLayersHtml(studyContext, furnishedScene.paletteSlug, furnishedScene.accent)}
         </div>
       </div>`
     : overlayChoices && image
@@ -2730,6 +2736,8 @@ function makeKidNode(jsPsych, { trial, block, suffix, image, text, audioSegments
       context_event_line_2: contextEvent?.questionText || null,
       context_visual_version: studyContext ? trial?.homeSchoolFurnished?.version || null : null,
       context_visual_repair_version: studyContext ? trial?.homeSchoolFurnished?.backgroundRepairVersion || null : null,
+      context_window_greenery_repair_version: studyContext === "SCHOOL" ? trial?.homeSchoolFurnished?.windowGreeneryRepairVersion || null : null,
+      context_help_gap_repair_version: studyContext && suffix === "HELP" ? trial?.homeSchoolFurnished?.helpGapRepairVersion || null : null,
       context_palette_slug: studyContext ? trial?.homeSchoolFurnished?.paletteSlug || null : null,
       context_character_hex: studyContext ? trial?.homeSchoolFurnished?.characterHex || null : null,
       entrance_version: studyContext ? HOME_SCHOOL_ENTRANCE_VERSION : null,
@@ -3598,6 +3606,10 @@ async function main() {
     : (selectedContext ? [selectedContext] : []);
   activeStudyContext = selectedContext;
   activeStudyRoleSet = selectedRoleSet;
+  // Route every School page and its preloader through the original-green bush correction.
+  window.WTCWindowGreenery?.applyToManifest(eventManifest);
+  // Remove only enclosed white source-background gaps on the box story layers.
+  window.WTCHelpGapRepair?.applyToManifest(eventManifest);
   const eventPlan = planEventSession(eventManifest, requestedSeed, requestedVariant, requestedSet, selectedRoleSet);
   const selectedEventSuffix = assignment.eventSuffix;
   activeStudyEvent = selectedEventSuffix;
