@@ -161,7 +161,11 @@ assert.equal(recorded.properties.context_order_condition, context.assignedCell.c
 assert.equal(recorded.properties.first_context, context.assignedCell.firstContext);
 assert.equal(recorded.properties.second_context, context.assignedCell.secondContext);
 assert.equal(recorded.properties.design_version, "home_school_within_child_counterbalanced_context_order_v1");
-assert.equal(recorded.properties.candidate_release, "chs-home-school-evelyn-v1-r16-within-child-preview-1");
+assert.equal(recorded.properties.candidate_release, "chs-home-school-evelyn-v1-r17-entrance-preview-1");
+assert.equal(recorded.properties.context_script_version, "home_school_house_entrance_recipient_aware_v6");
+assert.match(context.gameUrl, /[?&]v=chs-home-school-evelyn-v1-r17-entrance-preview-1(?:&|$)/);
+assert.match(context.gameUrl, /[?&]syntheticSpeech=0(?:&|$)/);
+assert.doesNotMatch(context.gameUrl, /[?&](?:entranceVisualOnly|facilitator|liveShare)=/, "CHS must not enable silent or facilitator previews");
 assert.doesNotMatch(context.gameUrl, /researcherTools=1/, "live CHS runs must not expose researcher controls");
 assert.doesNotMatch(context.gameUrl, /[?&](?:researcherToolbar|researcherJump|skipParentSetup)=/, "live CHS runs must not expose any researcher navigation parameters");
 assert.match(context.gameUrl, /[?&]contextStudy=1(?:&|$)/);
@@ -177,8 +181,8 @@ assert.match(source, /assignedEntrypoint\s*=\s*"index\.html"/);
 assert.doesNotMatch(source, /assignedEntrypoint[^;]*(?:home\.html|school\.html)/);
 assert.match(source, /context="\s*\+\s*encodeURIComponent\(assignedCell\.firstContext\)/);
 assert.match(source, /HOME_SCHOOL_STUDY_VERSION\s*=\s*"chs-home-school-evelyn-v1"/);
-assert.match(source, /HOME_SCHOOL_CONTEXT_SCRIPT_VERSION\s*=\s*"home_school_context_first_recipient_aware_v5"/);
-assert.match(source, /HOME_SCHOOL_CANDIDATE_RELEASE\s*=\s*"chs-home-school-evelyn-v1-r16-within-child-preview-1"/);
+assert.match(source, /HOME_SCHOOL_CONTEXT_SCRIPT_VERSION\s*=\s*"home_school_house_entrance_recipient_aware_v6"/);
+assert.match(source, /HOME_SCHOOL_CANDIDATE_RELEASE\s*=\s*"chs-home-school-evelyn-v1-r17-entrance-preview-1"/);
 assert.doesNotMatch(source, /researcher(?:Tools|Toolbar|Jump)=|skipParentSetup=/, "the CHS wrapper must never append researcher navigation parameters");
 assert.match(source, /HOME_SCHOOL_DESIGN_VERSION\s*=\s*"home_school_within_child_counterbalanced_context_order_v1"/);
 assert.doesNotMatch(source, /chs-home-school-evelyn-v1-r(?:[1-9])(?!\d)/);
@@ -201,7 +205,7 @@ assert.match(source, /gamePayload\.assignment_cell/);
 assert.doesNotMatch(source, /15[\u2013-]20 minutes/);
 assert.doesNotMatch(source, /who is in charge|how much one character loves|authority and affection|answer questions about the characters/i);
 assert.match(source, /12 picture stories/);
-assert.match(source, /six set at the kid's home and six set at the kid's school/);
+assert.match(source, /six set at the kid's house and six set at the kid's school/);
 assert.match(source, /Every child sees both settings/);
 
 function loadIdentityScenario({ origin, pathname, search = "", runtimeChildId = "", responseId }) {
@@ -305,7 +309,7 @@ assert.doesNotMatch(localReview.context.gameUrl, /researcherTools=1/, "local rev
 const liveResearcherParam = loadIdentityScenario({
   origin: "https://childrenhelpingscience.com",
   pathname: "/studies/6349/run/",
-  search: "?researcherTools=1",
+  search: "?researcherTools=1&entranceVisualOnly=1&facilitator=1&syntheticSpeech=1",
   runtimeChildId: "LIVE-TOOLS-CHILD",
   responseId: "LIVE-TOOLS-RESPONSE",
 });
@@ -314,6 +318,8 @@ assert.doesNotMatch(
   /[?&]researcherTools=1(?:&|$)/,
   "a live CHS query parameter must not enable preview-only researcher controls",
 );
+assert.doesNotMatch(liveResearcherParam.context.gameUrl, /[?&](?:entranceVisualOnly|facilitator|liveShare)=/);
+assert.match(liveResearcherParam.context.gameUrl, /[?&]syntheticSpeech=0(?:&|$)/);
 
 const iframeTrial = recorded.timeline[3];
 assert.equal(iframeTrial.data.trial_type, "ready_set_choose_home_school_iframe");
