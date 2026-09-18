@@ -42,15 +42,20 @@ function readPngHeader(filePath) {
 }
 
 assert.equal(candidate.candidateId, "chs-home-school-evelyn-v1");
+const verifiedSaved = candidate.status === "published_chs_draft_saved_not_submitted";
+assert.ok(verifiedSaved || candidate.status === "local_r21_prepared_chs_access_blocked");
 assert.equal(candidate.activeChsStudyChanged, false);
-assert.equal(candidate.published, false);
+assert.equal(candidate.published, verifiedSaved);
+assert.equal(candidate.chsDraftConfigurationUpdated, verifiedSaved);
+assert.equal(candidate.chsSubmissionStatus, "not_submitted");
 assert.equal(candidate.publishedOn, "2026-09-18");
-assert.equal(candidate.lastPublishedRelease, "chs-home-school-evelyn-v1-r20-approved-openings-1");
+assert.equal(candidate.lastPublishedRelease, verifiedSaved ? "chs-home-school-evelyn-v1-r21-visual-fixes-1" : "chs-home-school-evelyn-v1-r20-approved-openings-1");
 assert.equal(candidate.candidateRelease, "chs-home-school-evelyn-v1-r21-visual-fixes-1");
-assert.equal(candidate.status, "local_r21_prepared_chs_access_blocked");
-assert.equal(candidate.revisionPendingPublication, true);
-assert.equal(candidate.chsDraftRelease, "chs-home-school-evelyn-v1-r20-approved-openings-1");
-assert.equal(candidate.latestChsDraftSaveReceipt, "review/chs-draft-save-r20.md");
+assert.equal(candidate.revisionPendingPublication, !verifiedSaved);
+assert.equal(candidate.chsDraftRelease, verifiedSaved ? "chs-home-school-evelyn-v1-r21-visual-fixes-1" : "chs-home-school-evelyn-v1-r20-approved-openings-1");
+assert.equal(candidate.latestChsDraftSaveReceipt, verifiedSaved ? "review/chs-draft-save-r21.md" : "review/chs-draft-save-r20.md");
+if (verifiedSaved) assert.equal(Object.hasOwn(candidate, "pendingReason"), false);
+else assert.match(candidate.pendingReason, /no hosted publication or CHS save attempted for r21/);
 assert.equal(candidate.missingEvelynClipCount, 0);
 assert.equal(candidate.directionalEvelynClipCount, 30);
 assert.equal(missingAudio.missingClipCount, 30);

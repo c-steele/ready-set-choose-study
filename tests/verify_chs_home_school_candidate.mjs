@@ -95,19 +95,22 @@ function plain(value) {
 }
 
 assert.equal(metadata.candidateId, "chs-home-school-evelyn-v1");
-assert.equal(metadata.status, "local_r21_prepared_chs_access_blocked");
+const verifiedSaved = metadata.status === "published_chs_draft_saved_not_submitted";
+assert.ok(verifiedSaved || metadata.status === "local_r21_prepared_chs_access_blocked");
 assert.equal(metadata.activeChsStudyChanged, false);
-assert.equal(metadata.chsDraftConfigurationUpdated, false);
+assert.equal(metadata.chsDraftConfigurationUpdated, verifiedSaved);
 assert.equal(metadata.chsDraftStudyId, 6349);
 assert.equal(metadata.chsDraftSavedOn, "2026-09-18");
 assert.equal(metadata.chsSubmissionStatus, "not_submitted");
-assert.equal(metadata.published, false);
+assert.equal(metadata.published, verifiedSaved);
 assert.equal(metadata.publishedOn, "2026-09-18");
-assert.equal(metadata.lastPublishedRelease, "chs-home-school-evelyn-v1-r20-approved-openings-1");
+assert.equal(metadata.lastPublishedRelease, verifiedSaved ? "chs-home-school-evelyn-v1-r21-visual-fixes-1" : "chs-home-school-evelyn-v1-r20-approved-openings-1");
 assert.equal(metadata.candidateRelease, "chs-home-school-evelyn-v1-r21-visual-fixes-1");
-assert.equal(metadata.revisionPendingPublication, true);
-assert.equal(metadata.chsDraftRelease, "chs-home-school-evelyn-v1-r20-approved-openings-1");
-assert.equal(metadata.latestChsDraftSaveReceipt, "review/chs-draft-save-r20.md");
+assert.equal(metadata.revisionPendingPublication, !verifiedSaved);
+assert.equal(metadata.chsDraftRelease, verifiedSaved ? "chs-home-school-evelyn-v1-r21-visual-fixes-1" : "chs-home-school-evelyn-v1-r20-approved-openings-1");
+assert.equal(metadata.latestChsDraftSaveReceipt, verifiedSaved ? "review/chs-draft-save-r21.md" : "review/chs-draft-save-r20.md");
+if (verifiedSaved) assert.equal(Object.hasOwn(metadata, "pendingReason"), false);
+else assert.match(metadata.pendingReason, /no hosted publication or CHS save attempted for r21/);
 assert.equal(metadata.latestRevisionOn, "2026-09-18");
 assert.equal(metadata.storyCount, 12);
 assert.equal(metadata.storyCountPerContext, 6);

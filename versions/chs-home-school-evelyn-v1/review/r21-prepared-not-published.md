@@ -1,5 +1,7 @@
 # Who Helps Where? — prepared visual correction, NOT saved on CHS
 
+**Historical preparation log — superseded:** normal browser access recovered later on September 18. R21 was subsequently browser-verified, deployed, and saved to the CHS draft without submission. See `chs-draft-save-r21.md` and `r21-browser-verification.md` for the current verified status. The entries below document the earlier blocked preparation phase.
+
 Prepared September 18, 2026, from the verified r20 baseline `1eb0344`.
 
 Candidate release: `chs-home-school-evelyn-v1-r21-visual-fixes-1`.
