@@ -1,11 +1,11 @@
 /*
   PRODUCTION-READY CHS WRAPPER SOURCE FOR STUDY 6349.
 
-  This source targets the r17 within-child House/School entrance candidate.
+  This source targets the r19 within-child House/School entrance candidate.
   Installing it in CHS remains a separate researcher-controlled action.
 
-  Public title: Who Takes Care? A Colorful Story Game
-  Child task name: Who Takes Care?
+  Public title: Who Helps Where?
+  Child task name: Who Helps Where?
 
   CHS handles webcam configuration, guardian video consent, recording,
   participant messaging, the exit survey, and debrief. The child task is
@@ -27,7 +27,7 @@ var HOME_SCHOOL_CANDIDATE_ROOT_URL =
 var HOME_SCHOOL_CANDIDATE_ORIGIN = "https://c-steele.github.io";
 
 var HOME_SCHOOL_STUDY_VERSION = "chs-home-school-evelyn-v1";
-var HOME_SCHOOL_CANDIDATE_RELEASE = "chs-home-school-evelyn-v1-r18-preview-polish-1";
+var HOME_SCHOOL_CANDIDATE_RELEASE = "chs-home-school-evelyn-v1-r19-who-helps-where-1";
 var HOME_SCHOOL_CONTEXT_SCRIPT_VERSION = "home_school_house_entrance_recipient_aware_v6";
 var HOME_SCHOOL_DESIGN_VERSION = "home_school_within_child_counterbalanced_context_order_v1";
 /* Temporary editing aid: enable Back/Skip only on CHS's Preview Study route.
@@ -459,7 +459,7 @@ var videoConsent = {
   PIContact: "athomas@g.harvard.edu",
   summary_statement: "<h2>Before you begin</h2><ul><li>This is a recorded picture game about who children expect to help at the kid's house and at the kid's school.</li><li>Your child will hear 12 picture stories.</li><li>It takes about 15 minutes.</li><li>You and your child may stop at any time.</li><li>There are no right or wrong answers in this game.</li></ul>",
   payment: "You will receive a $5 Amazon.com gift card after participating. Families may still receive compensation if they stop early. To be eligible, your child must be within the study age range and visible in the study video, including any portion recorded before stopping. Each child can receive one gift card. The gift card will be sent through Children Helping Science messaging within 2 weeks.",
-  procedures: "Your participation is completely voluntary; you and your child can choose not to take part. You and your child can agree to take part and later change your mind. The study session will be conducted remotely and recorded through Children Helping Science, an online platform for developmental research studies. During the study, your child will play a picture game called Who Takes Care? The game includes colorful pictures and prerecorded narration. Your child will hear 12 picture stories: six set at the kid's house and six set at the kid's school. Every child sees both settings. Some children see the house stories first, and others see the school stories first. The stories focus on one type of need—comfort, food, or help—depending on the version assigned to your child. In each story, two characters could respond, and your child will choose who is more likely to help. Children do not need to be able to read to participate. Different versions include different relationship sets, types of need, and setting orders. The study takes about 15 minutes. Please keep the sound on and let the game audio play. A grown-up may help with the device, but please do not suggest answers or point to a choice. All responses are stored automatically and uploaded to the research team. The recording is used for research purposes so the team can check how children responded during the task. We do not believe there are any risks for your child from participating in this research. Participation is completely voluntary. You and your child can stop at any time without penalty or loss of benefits to which you are otherwise entitled.",
+  procedures: "Your participation is completely voluntary; you and your child can choose not to take part. You and your child can agree to take part and later change your mind. The study session will be conducted remotely and recorded through Children Helping Science, an online platform for developmental research studies. During the study, your child will play a picture game called Who Helps Where? The game includes colorful pictures and prerecorded narration. Your child will hear 12 picture stories: six set at the kid's house and six set at the kid's school. Every child sees both settings. Some children see the house stories first, and others see the school stories first. The stories focus on one type of need—comfort, food, or help—depending on the version assigned to your child. In each story, two characters could respond, and your child will choose who is more likely to help. Children do not need to be able to read to participate. Different versions include different relationship sets, types of need, and setting orders. The study takes about 15 minutes. Please keep the sound on and let the game audio play. A grown-up may help with the device, but please do not suggest answers or point to a choice. All responses are stored automatically and uploaded to the research team. The recording is used for research purposes so the team can check how children responded during the task. We do not believe there are any risks for your child from participating in this research. Participation is completely voluntary. You and your child can stop at any time without penalty or loss of benefits to which you are otherwise entitled.",
   purpose: "We invite your child to take part in a research study about how social settings can shape children's caregiving expectations. Children notice social roles, relationships, and locations and use them to make predictions about what people will do. By comparing children's choices in matched stories set at the kid's house and at the kid's school, we can learn whether social setting shapes whom children expect to provide care.",
   research_rights_statement: "You are not waiving any legal claims, rights, or remedies because of your participation in this research study. If you have questions, concerns, or complaints, or think the research has hurt your child, talk to the research team at 617-384-7777. You can also contact the PI, Ashley Thomas, at athomas@g.harvard.edu. This research has been reviewed and approved by the Harvard University Area Institutional Review Board. You may talk to them at (617) 496-2847 or cuhs@harvard.edu if: <ul><li>Your questions, concerns, or complaints are not being answered by the research team.</li><li>You cannot reach the research team.</li><li>You want to talk to someone besides the research team.</li><li>You have questions about your child's rights as a research subject.</li><li>You want to get information or provide input about this research.</li></ul>"
 };
@@ -472,7 +472,7 @@ var readySetChooseGame = {
   type: jsPsychHtmlButtonResponse,
   choices: [],
   stimulus: '<div style="position:fixed;inset:0;background:#f7fbfb;z-index:9999;">' +
-    '<iframe id="ready-set-choose-frame" title="Who Takes Care? child game" ' +
+    '<iframe id="ready-set-choose-frame" title="Who Helps Where? child game" ' +
     'allow="autoplay; fullscreen; camera; microphone" ' +
     'style="width:100%;height:100%;border:0;display:block;" ' +
     'src="' + gameUrl + '"></iframe>' +

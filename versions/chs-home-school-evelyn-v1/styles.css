@@ -188,6 +188,83 @@ body {
   text-align: center;
 }
 
+/* Who Helps Where child welcome only; the narrator and Start keep their
+   familiar yellow and green, and story palettes retain their own colours. */
+.ksize-who-helps-where-welcome {
+  background: linear-gradient(135deg, #eee5f5 0%, #fff9f3 52%, #f8ddd0 100%);
+  border-color: #d9c5e1;
+  box-shadow: 0 14px 34px rgba(86, 54, 111, 0.13);
+}
+
+.ksize-who-helps-where-welcome .ksize-title {
+  color: #56366f;
+}
+
+.ksize-who-helps-where-welcome .ksize-text {
+  color: #5b4265;
+}
+
+.ksize-who-helps-where-welcome .ksize-child-turn-badge {
+  background: #e5d5ee;
+  color: #5b3b73;
+}
+
+.ksize-who-helps-where-welcome .ksize-start-cue {
+  background: #f8dfd2;
+  color: #643e52;
+}
+
+.ksize-who-helps-where-welcome .ksize-helper-bubble {
+  background: #fffaf5;
+  border-color: #dcc6e8;
+  color: #5b3b73;
+}
+
+.ksize-who-helps-where-welcome .ksize-welcome-star {
+  color: #d3a185;
+}
+
+.ksize-who-helps-where-welcome .ksize-welcome-circle {
+  border-color: #b596ca;
+}
+
+.ksize-who-helps-where-welcome .ksize-welcome-diamond {
+  background: #c9aad8;
+}
+
+.ksize-who-helps-where-welcome .ksize-welcome-triangle {
+  border-bottom-color: #dcac99;
+}
+
+.ksize-who-helps-where-welcome .ksize-audio-btn {
+  background: #77508f;
+  box-shadow: 0 8px 18px rgba(86, 54, 111, 0.2);
+}
+
+.ksize-who-helps-where-welcome .ksize-audio-btn:hover {
+  background: #603a79;
+}
+
+.ksize-who-helps-where-welcome .ksize-audio-btn:focus-visible {
+  outline: 3px solid #56366f;
+  outline-offset: 4px;
+}
+
+.ksize-who-helps-where-welcome .ksize-audio-btn.ksize-prompt-glow {
+  animation-name: ksize-who-helps-where-replay-glow;
+}
+
+@keyframes ksize-who-helps-where-replay-glow {
+  0%, 100% {
+    box-shadow: 0 8px 18px rgba(86, 54, 111, 0.2), 0 0 0 0 rgba(119, 80, 143, 0.2);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 12px 26px rgba(86, 54, 111, 0.26), 0 0 0 10px rgba(119, 80, 143, 0.2);
+    transform: scale(1.06);
+  }
+}
+
 .ksize-researcher-tools {
   position: fixed;
   right: 12px;

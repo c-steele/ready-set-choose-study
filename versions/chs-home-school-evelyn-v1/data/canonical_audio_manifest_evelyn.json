@@ -22461,19 +22461,19 @@
       "note": null
     },
     {
-      "id": "wtc_001",
-      "text": "Hi there! Welcome to Who Takes Care? We are going to look at pictures and play a choosing game. Listen to each page. When you see choices, choose the one you pick. When you are ready, hit the green button to start.",
-      "normalizedText": "hi there! welcome to who takes care? we are going to look at pictures and play a choosing game. listen to each page. when you see choices, choose the one you pick. when you are ready, hit the green button to start.",
+      "id": "whw_001",
+      "text": "Hi there! Welcome to Who Helps Where? We are going to look at pictures and play a choosing game. Listen to each page. When you see choices, choose the one you pick. When you are ready, hit the green button to start.",
+      "normalizedText": "hi there! welcome to who helps where? we are going to look at pictures and play a choosing game. listen to each page. when you see choices, choose the one you pick. when you are ready, hit the green button to start.",
       "category": "child-welcome",
       "runtimeGroup": "active_support",
       "active": true,
       "conditional": false,
       "plannedForNarration": false,
-      "output": "audio_evelyn/wtc_001_child_welcome_01_hi_there_welcome_to_who_takes_care.mp3",
-      "sha256": "c885914207ed8f376e14cd41528a4d396a3ae37ab643f30b9937acadb807bb24",
-      "bytes": 619669,
-      "sourceKey": "who-takes-care-child-welcome",
-      "note": null
+      "output": "audio_evelyn/whw_001_child_welcome_who_helps_where.mp3",
+      "sha256": "13378d652f12b9971a78ab2148a6f9d9fa04735cf3a3ace5554c176a9894963f",
+      "bytes": 620713,
+      "sourceKey": "who-helps-where-child-welcome",
+      "note": "NaturalReaders Evelyn title update; see child_welcome_audio_revision_r19.json"
     },
     {
       "id": "ftc_151",
@@ -22746,7 +22746,7 @@
     "before you begin: this is a recorded picture game about social relationships. it takes about ten to fifteen minutes. you and your child may stop at any time. there are no right or wrong answers in this game. the pages are read aloud, so your child does not need to read. most pages in the game move on by themselves after a few moments, but you can press replay to hear it again or press next to move on sooner when it appears. now, three quick checks. use one screen and place it in front of your child. turn the sound to a comfortable volume. stay close to help with the device, but let your child choose the answers.": "audio_evelyn/ftc_147_parent_setup_02_before_you_begin_this_is_a_recorded_picture_game_about_social.mp3",
     "let's check the camera. put the screen directly in front of your child. keep their full face and shoulders in view, and avoid a bright window behind them. use one screen, and keep the webcam centered above the screen your child is watching.": "audio_evelyn/ftc_148_parent_setup_03_lets_check_the_camera_put_the_screen_directly_in_front_of_your.mp3",
     "grown-up setup is finished. now it's your child's turn. please invite your child to sit in front of the screen. grown-ups, you may help with the device, but please let your child choose. there are no right or wrong answers. the pages are read aloud. most pages move on by themselves. press replay to hear it again, or next to move on sooner. when your child is ready, press the green button to continue.": "audio_evelyn/ftc_149_parent_setup_04_grown_up_setup_is_finished_now_its_your_childs_turn_please_inv.mp3",
-    "hi there! welcome to who takes care? we are going to look at pictures and play a choosing game. listen to each page. when you see choices, choose the one you pick. when you are ready, hit the green button to start.": "audio_evelyn/wtc_001_child_welcome_01_hi_there_welcome_to_who_takes_care.mp3",
+    "hi there! welcome to who helps where? we are going to look at pictures and play a choosing game. listen to each page. when you see choices, choose the one you pick. when you are ready, hit the green button to start.": "audio_evelyn/whw_001_child_welcome_who_helps_where.mp3",
     "thank you for playing!": "audio_evelyn/ftc_151_ending_child_01_thank_you_for_playing.mp3",
     "we're all done!": "audio_evelyn/ftc_152_ending_child_02_were_all_done.mp3",
     "great job—you finished the game! the final questions are for your grown-up to do. your grown-up may already be with you.": "audio_evelyn/ftc_153_ending_child_03_great_job_you_finished_the_game_the_final_questions_are_for_yo.mp3",

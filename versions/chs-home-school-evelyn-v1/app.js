@@ -9,7 +9,7 @@ const TEACHER_CLASSMATE_GENERATED_ROOT = "assets/teacher_classmate/generated/";
 const TEACHER_CLASSMATE_V78_REVISION_ROOT = "versions/chs-v78-teacher-classmate-evelyn-unique-roles/assets/teacher_classmate/generated/";
 const TEACHER_CLASSMATE_V78_DYAD_REVISION = /^dyads\/classmate-kid_0(?:1_tkc-deep-purple-a|2_tkc-deep-purple-b)\/slide_(?:0[3-9]|1[0-3])\.svg$/;
 const TEACHER_CLASSMATE_V78_TRIAL_REVISION = /^trials\/14(?:[ab]\/intro_04|[cd]\/intro_0[34]|[abcd]\/(?:hug|food|help)_screen_2)\.svg$/;
-const HOME_SCHOOL_ASSET_VERSION = "chs-home-school-evelyn-v1-r18-preview-polish-1";
+const HOME_SCHOOL_ASSET_VERSION = "chs-home-school-evelyn-v1-r19-who-helps-where-1";
 const HOME_SCHOOL_DESIGN_VERSION = "home_school_context_chs_candidate_v1";
 const HOME_SCHOOL_WITHIN_CHILD_DESIGN_VERSION = "home_school_within_child_counterbalanced_context_order_v1";
 const HOME_SCHOOL_CONTEXT_SCRIPT_VERSION = "home_school_house_entrance_recipient_aware_v6";
@@ -53,8 +53,8 @@ const BROWSER_DATASET_STORE = "sessions";
 const AUTO_ADVANCE_PAUSE_MS = 1200;
 const PARENT_AUTOPLAY_NOTE = "Most pages in the game move on by themselves after a few moments, but you can press Replay to hear it again or press Next to move on sooner when it appears.";
 const PARENT_AUTOPLAY_NOTE_SHORT = "Most pages move on by themselves. Press Replay to hear it again, or Next to move on sooner.";
-const START_INTRO_TEXT = "Hi there! Welcome to Who Takes Care? We are going to look at pictures and play a choosing game. Listen to each page. When you see choices, choose the one you pick. When you are ready, hit the green button to start.";
-const START_INTRO_AUDIO = "audio_evelyn/wtc_001_child_welcome_01_hi_there_welcome_to_who_takes_care.mp3";
+const START_INTRO_TEXT = "Hi there! Welcome to Who Helps Where? We are going to look at pictures and play a choosing game. Listen to each page. When you see choices, choose the one you pick. When you are ready, hit the green button to start.";
+const START_INTRO_AUDIO = "audio_evelyn/whw_001_child_welcome_who_helps_where.mp3";
 const GAME_START_TEXT = "Let’s play. Listen to the story, then answer the questions. Hit the green button to start.";
 const GAME_START_AUDIO = requestedVoiceProfile === "relkind"
   ? `${PREFERRED_AUDIO_DIR}/081_game_start_Lets_play.mp3`
@@ -4055,7 +4055,7 @@ async function main() {
           <section class="ksize-screen ksize-setup-screen ksize-parent-welcome-screen">
             ${parentProgressHtml(1)}
             <header class="ksize-parent-welcome-header">
-              <span class="ksize-setup-eyebrow">Who Takes Care?</span>
+              <span class="ksize-setup-eyebrow">Who Helps Where?</span>
               <h1 class="ksize-setup-title">Welcome, grown-ups!</h1>
               <p class="ksize-parent-welcome-lead">Thank you for helping your child take part. We’ll get set up together.</p>
             </header>
@@ -4404,7 +4404,7 @@ async function main() {
       type: jsPsychHtmlButtonResponse,
       stimulus: `
         <main class="ksize-shell">
-          <section class="ksize-screen ksize-start-screen ksize-welcome-screen">
+          <section class="ksize-screen ksize-start-screen ksize-welcome-screen ksize-who-helps-where-welcome">
             <div class="ksize-welcome-sky" aria-hidden="true">
               <span class="ksize-welcome-floater ksize-welcome-star ksize-welcome-floater-1">★</span>
               <span class="ksize-welcome-floater ksize-welcome-circle ksize-welcome-floater-2"></span>
@@ -4426,7 +4426,7 @@ async function main() {
               </div>
               <div class="ksize-helper-bubble">Ready?</div>
           </div>
-          <h1 class="ksize-title">Who Takes Care?</h1>
+          <h1 class="ksize-title">Who Helps Where?</h1>
           <p class="ksize-text">${requestedWithinChildContexts
             ? "Listen to each story and choose who you think will help."
             : "Listen to each story, choose who you think will help, and answer questions about the people."}</p>

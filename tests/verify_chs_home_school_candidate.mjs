@@ -104,8 +104,8 @@ assert.equal(metadata.chsSubmissionStatus, "not_submitted");
 assert.equal(metadata.published, true);
 assert.equal(metadata.publishedOn, "2026-09-17");
 assert.equal(metadata.lastPublishedRelease, "chs-home-school-evelyn-v1-r18-preview-polish-1");
-assert.equal(metadata.candidateRelease, "chs-home-school-evelyn-v1-r18-preview-polish-1");
-assert.equal(metadata.latestRevisionOn, "2026-09-17");
+assert.equal(metadata.candidateRelease, "chs-home-school-evelyn-v1-r19-who-helps-where-1");
+assert.equal(metadata.latestRevisionOn, "2026-09-18");
 assert.equal(metadata.storyCount, 12);
 assert.equal(metadata.storyCountPerContext, 6);
 assert.equal(metadata.ratingMode, "none");
@@ -122,15 +122,15 @@ assert.equal(metadata.contextFirstQuestionAudioReceipt, "data/context_first_ques
 assert.equal(metadata.artificialQuestionPauseSeconds, 0);
 
 assert.match(indexHtml, /lockedStudyVersion:\s*"home-school"/);
-assert.match(indexHtml, /<title>Who Takes Care\? — CHS Home \/ School candidate<\/title>/);
+assert.match(indexHtml, /<title>Who Helps Where\? — CHS Home \/ School candidate<\/title>/);
 assert.match(indexHtml, /lockedDataStudyVersion:\s*"chs-home-school-evelyn-v1"/);
 assert.match(indexHtml, /homeSchoolContextManifestUrl:\s*versionedDataUrl\("home_school_context_manifest\.json"\)/);
 assert.match(indexHtml, /missingHomeSchoolAudioManifestUrl:\s*versionedDataUrl\("missing_home_school_directional_audio_manifest\.json"\)/);
 assert.doesNotMatch(indexHtml, /facilitator=1|liveShare=1|syntheticSpeech=1/);
 assert.match(app, /const useSyntheticSpeech = showResearcherTools && configValue\("syntheticSpeech"\) === "1"/);
-assert.match(app, /const START_INTRO_TEXT = "Hi there! Welcome to Who Takes Care\?/);
-assert.match(app, /<span class="ksize-setup-eyebrow">Who Takes Care\?<\/span>/);
-assert.match(app, /<h1 class="ksize-title">Who Takes Care\?<\/h1>/);
+assert.match(app, /const START_INTRO_TEXT = "Hi there! Welcome to Who Helps Where\?/);
+assert.match(app, /<span class="ksize-setup-eyebrow">Who Helps Where\?<\/span>/);
+assert.match(app, /<h1 class="ksize-title">Who Helps Where\?<\/h1>/);
 assert.doesNotMatch(app, /Welcome to Find the Caregiver|>Find the Caregiver!</);
 assert.match(app, /if \(autoPlay && !isFacilitatorMode\)/);
 assert.match(app, /if \(!isFacilitatorMode\) setTimeout\(\(\) => playAudio\(\{ advanceWhenDone: true \}\), 250\)/);
@@ -143,7 +143,7 @@ assert.match(
   /\["intro", "exterior", "room_entry"\]\.includes\(slideKind\)[\s\S]*?text \|\| ""[\s\S]*?slideKind === "context_intro"[\s\S]*?slideKind === "story"[\s\S]*?slideKind === "response_choices"/,
   "Every Home/School story heading must use the same in-scene caption banner",
 );
-assert.match(indexHtml, /app\.js\?v=chs-home-school-evelyn-v1-r18-preview-polish-1/);
+assert.match(indexHtml, /app\.js\?v=chs-home-school-evelyn-v1-r19-who-helps-where-1/);
 assert.doesNotMatch(app, /contextIntro \? `<div class="ksize-context-intro-cue"/);
 assert.match(app, /fileAudio\.addEventListener\("playing",[\s\S]*?setMouthPlaying\(true\)/);
 assert.match(app, /fileAudio\.addEventListener\("waiting", \(\) => setMouthPlaying\(false\)\)/);
@@ -291,15 +291,15 @@ for (const [text, output] of Object.entries(canonicalAudio.normalizedTextToOutpu
   availableAudio.set(normalizeText(text), output);
 }
 
-const welcomeText = "Hi there! Welcome to Who Takes Care? We are going to look at pictures and play a choosing game. Listen to each page. When you see choices, choose the one you pick. When you are ready, hit the green button to start.";
+const welcomeText = "Hi there! Welcome to Who Helps Where? We are going to look at pictures and play a choosing game. Listen to each page. When you see choices, choose the one you pick. When you are ready, hit the green button to start.";
 const welcomeOutput = canonicalAudio.normalizedTextToOutput[normalizeText(welcomeText)];
-assert.equal(welcomeOutput, "audio_evelyn/wtc_001_child_welcome_01_hi_there_welcome_to_who_takes_care.mp3");
+assert.equal(welcomeOutput, "audio_evelyn/whw_001_child_welcome_who_helps_where.mp3");
 const welcomePath = path.join(root, welcomeOutput);
 assert.ok(fs.existsSync(welcomePath), `Missing revised welcome audio ${welcomeOutput}`);
-assert.equal(fs.statSync(welcomePath).size, 619669);
+assert.equal(fs.statSync(welcomePath).size, 620713);
 assert.equal(
   crypto.createHash("sha256").update(fs.readFileSync(welcomePath)).digest("hex"),
-  "c885914207ed8f376e14cd41528a4d396a3ae37ab643f30b9937acadb807bb24",
+  "13378d652f12b9971a78ab2148a6f9d9fa04735cf3a3ace5554c176a9894963f",
 );
 assert.doesNotMatch(JSON.stringify(canonicalAudio), /welcome to find the caregiver/i);
 for (const manifest of [teacherClassmateAudio, homeSchoolAudio]) {

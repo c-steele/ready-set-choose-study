@@ -1,0 +1,20 @@
+{
+  "revision": "who-helps-where-child-welcome-r19",
+  "recordedOn": "2026-09-18",
+  "provider": "NaturalReaders Commercial",
+  "voice": "Evelyn",
+  "style": "Soft",
+  "projectSpeed": "0.90x / 180 WPM",
+  "paragraphPauseSeconds": 0,
+  "text": "Hi there! Welcome to Who Helps Where? We are going to look at pictures and play a choosing game. Listen to each page. When you see choices, choose the one you pick. When you are ready, hit the green button to start.",
+  "output": "audio_evelyn/whw_001_child_welcome_who_helps_where.mp3",
+  "durationSeconds": 15.490612,
+  "bytes": 620713,
+  "sha256": "13378d652f12b9971a78ab2148a6f9d9fa04735cf3a3ace5554c176a9894963f",
+  "exportFormat": "MP3 / 320 KBPS",
+  "exportTextVerified": true,
+  "replaces": "audio_evelyn/wtc_001_child_welcome_01_hi_there_welcome_to_who_takes_care.mp3",
+  "originalRetained": true,
+  "processing": "Unmodified export; no splicing, added silence, or browser-generated speech.",
+  "scope": "Who Helps Where candidate only; Find the Caregiver unchanged."
+}
