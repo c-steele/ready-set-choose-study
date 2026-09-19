@@ -23,7 +23,7 @@ const visualRepair = readJson("visual_repair_manifest.json");
 const plain = (value) => JSON.parse(JSON.stringify(value));
 const DIRECTIONS = new Set(["DAD-KID", "MOM-KID", "TEACHER-KID"]);
 const STORY_KINDS = ["exterior", "room_entry", "intro", "intro", "intro", "context_intro", "story", "response_choices"];
-const CURRENT_RELEASE = "chs-home-school-evelyn-v1-r24-yellow-cleanup-1";
+const CURRENT_RELEASE = "chs-home-school-evelyn-v1-r25-yellow-door-cleanup-1";
 const CURRENT_DESIGN = "home_school_within_child_two_role_sets_v2";
 const CURRENT_SCHEMA = "one_based_role_major_2_role_sets_x_3_events_x_2_context_orders";
 const ACTIVE_CONDITIONS = {

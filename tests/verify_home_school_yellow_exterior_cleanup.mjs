@@ -16,7 +16,7 @@ const sha=b=>crypto.createHash('sha256').update(b).digest('hex');
 const before=p=>execFileSync('git',['show',`${baseline}:${p}`],{cwd:root,maxBuffer:64*1024*1024});
 const load=source=>{const box={window:{}};vm.runInNewContext(String(source),box);return box.window.WTCExteriorPalette;};
 const old=load(before(candidate+'exterior-palette.js')),api=load(read(candidate+'exterior-palette.js'));
-assert.equal(api.yellowCleanupVersion,'yellow-exterior-cleanup-v3');
+assert.equal(api.yellowCleanupVersion,'yellow-exterior-cleanup-v4-door-frames');
 const palettes=JSON.parse(read(candidate+'data/visual_repair_manifest.json')).palettes;
 const WIDTH=1672,HEIGHT=941;
 const pixel=(data,x,y)=>Array.from(data.subarray((y*WIDTH+x)*4,(y*WIDTH+x)*4+3));
@@ -71,7 +71,7 @@ for(const context of ['HOME','SCHOOL']){
  for(let p=0;p<WIDTH*HEIGHT;p++)assert.equal(result.data[p*4+3],255,'Exterior became transparent');
  if(context==='SCHOOL'){
   assert.doesNotMatch(svg,/windowInteriorPigment|softYellowCurtain/,'School glazing must have no recoloring layer');
-  assert.equal((svg.match(/<image /g)||[]).length,2);
+  assert.equal((svg.match(/<image /g)||[]).length,3);
   for(const [left,top,width,height]of schoolGlass)for(let y=top+1;y<top+height-1;y++)for(let x=left+1;x<left+width-1;x++){
    samePixel(result.data,original,x,y,'School glazing');glassPixels++;
   }

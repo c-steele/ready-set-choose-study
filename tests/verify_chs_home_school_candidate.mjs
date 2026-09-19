@@ -101,17 +101,17 @@ assert.equal(metadata.candidateId, "chs-home-school-evelyn-v1");
 const verifiedSaved = metadata.status === "published_chs_draft_saved_not_submitted";
 assert.ok(verifiedSaved || metadata.status === "prepared_for_chs_draft_update");
 assert.equal(metadata.activeChsStudyChanged, false);
-assert.equal(metadata.chsDraftConfigurationUpdated, verifiedSaved, "The r24 saved flag may be true only after its CHS save is verified");
+assert.equal(metadata.chsDraftConfigurationUpdated, verifiedSaved, "The r25 saved flag may be true only after its CHS save is verified");
 assert.equal(metadata.chsDraftStudyId, 6349);
 assert.equal(metadata.chsDraftSavedOn, "2026-09-18");
 assert.equal(metadata.chsSubmissionStatus, "not_submitted");
-assert.equal(metadata.published, true, "The prior r23 release remains published while r24 is prepared");
+assert.equal(metadata.published, true, "The prior r24 release remains published while r25 is prepared");
 assert.equal(metadata.publishedOn, "2026-09-18");
-assert.equal(metadata.lastPublishedRelease, verifiedSaved ? "chs-home-school-evelyn-v1-r24-yellow-cleanup-1" : "chs-home-school-evelyn-v1-r23-two-role-sets-1");
-assert.equal(metadata.candidateRelease, "chs-home-school-evelyn-v1-r24-yellow-cleanup-1");
+assert.equal(metadata.lastPublishedRelease, verifiedSaved ? "chs-home-school-evelyn-v1-r25-yellow-door-cleanup-1" : "chs-home-school-evelyn-v1-r24-yellow-cleanup-1");
+assert.equal(metadata.candidateRelease, "chs-home-school-evelyn-v1-r25-yellow-door-cleanup-1");
 assert.equal(metadata.revisionPendingPublication, !verifiedSaved);
-assert.equal(metadata.chsDraftRelease, verifiedSaved ? "chs-home-school-evelyn-v1-r24-yellow-cleanup-1" : "chs-home-school-evelyn-v1-r23-two-role-sets-1");
-assert.equal(metadata.latestChsDraftSaveReceipt, verifiedSaved ? "review/chs-draft-save-r24.md" : "review/chs-draft-save-r23.md");
+assert.equal(metadata.chsDraftRelease, verifiedSaved ? "chs-home-school-evelyn-v1-r25-yellow-door-cleanup-1" : "chs-home-school-evelyn-v1-r24-yellow-cleanup-1");
+assert.equal(metadata.latestChsDraftSaveReceipt, verifiedSaved ? "review/chs-draft-save-r25.md" : "review/chs-draft-save-r24.md");
 if (verifiedSaved) assert.equal(Object.hasOwn(metadata, "pendingReason"), false);
 else assert.match(metadata.pendingReason, /yellow.*cleanup.*deployment and CHS draft save pending verification/i);
 assert.equal(metadata.latestRevisionOn, "2026-09-18");
@@ -153,7 +153,7 @@ assert.match(
   /\["intro", "exterior", "room_entry"\]\.includes\(slideKind\)[\s\S]*?text \|\| ""[\s\S]*?slideKind === "context_intro"[\s\S]*?slideKind === "story"[\s\S]*?slideKind === "response_choices"/,
   "Every Home/School story heading must use the same in-scene caption banner",
 );
-assert.match(indexHtml, /app\.js\?v=chs-home-school-evelyn-v1-r24-yellow-cleanup-1/);
+assert.match(indexHtml, /app\.js\?v=chs-home-school-evelyn-v1-r25-yellow-door-cleanup-1/);
 assert.doesNotMatch(app, /contextIntro \? `<div class="ksize-context-intro-cue"/);
 assert.match(app, /fileAudio\.addEventListener\("playing",[\s\S]*?setMouthPlaying\(true\)/);
 assert.match(app, /fileAudio\.addEventListener\("waiting", \(\) => setMouthPlaying\(false\)\)/);

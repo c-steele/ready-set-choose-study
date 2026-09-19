@@ -6,12 +6,13 @@ import crypto from 'node:crypto';
 import {execFileSync} from 'node:child_process';
 import {fileURLToPath} from 'node:url';
 
-// R24 has its own gate: do not rewrite the frozen r23 design-only gate.
+// Yellow releases have their own gate: do not rewrite the frozen r23 design-only gate.
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
 const baseline='87a8fba20d5ffe0e5d00e886aab476ae6a4c9e63';
 const candidate='versions/chs-home-school-evelyn-v1/';
 const previousRelease='chs-home-school-evelyn-v1-r23-two-role-sets-1';
-const release='chs-home-school-evelyn-v1-r24-yellow-cleanup-1';
+const lastVerifiedRelease='chs-home-school-evelyn-v1-r24-yellow-cleanup-1';
+const release='chs-home-school-evelyn-v1-r25-yellow-door-cleanup-1';
 const git=(...args)=>execFileSync('git',args,{cwd:root,encoding:'utf8',maxBuffer:64*1024*1024});
 const read=file=>fs.readFileSync(path.join(root,file),'utf8');
 const before=file=>git('show',`${baseline}:${file}`);
@@ -23,15 +24,15 @@ const metadata=json(candidate+'candidate.json');
 const oldMetadata=JSON.parse(before(candidate+'candidate.json'));
 assert.equal(metadata.candidateRelease,release);
 assert.equal(metadata.yellowBackgroundVersion,'yellow-interior-cleanup-v4');
-assert.equal(metadata.yellowExteriorCleanupVersion,'yellow-exterior-cleanup-v3');
+assert.equal(metadata.yellowExteriorCleanupVersion,'yellow-exterior-cleanup-v4-door-frames');
 assert.equal(metadata.yellowBackgroundManifest,'data/yellow_warmth_manifest.json');
 const saved=metadata.status==='published_chs_draft_saved_not_submitted';
 assert.ok(saved||metadata.status==='prepared_for_chs_draft_update');
 assert.equal(metadata.chsDraftConfigurationUpdated,saved);
 assert.equal(metadata.revisionPendingPublication,!saved);
-assert.equal(metadata.lastPublishedRelease,saved?release:previousRelease);
-assert.equal(metadata.chsDraftRelease,saved?release:previousRelease);
-assert.equal(metadata.latestChsDraftSaveReceipt,saved?'review/chs-draft-save-r24.md':'review/chs-draft-save-r23.md');
+assert.equal(metadata.lastPublishedRelease,saved?release:lastVerifiedRelease);
+assert.equal(metadata.chsDraftRelease,saved?release:lastVerifiedRelease);
+assert.equal(metadata.latestChsDraftSaveReceipt,saved?'review/chs-draft-save-r25.md':'review/chs-draft-save-r24.md');
 assert.equal(metadata.chsSubmissionStatus,'not_submitted');
 assert.equal(metadata.activeChsStudyChanged,false);
 if(saved){
@@ -95,7 +96,7 @@ assert.equal(read(candidate+'index.html'),expectedIndex,'Only unified cache toke
 const wrapperPath='chs_ready/home_school_12_cell_wrapper_draft.js';
 const expectedWrapper=before(wrapperPath).replaceAll(previousRelease,release)
   .replace('This source targets the r23 two-role-set within-child House/School candidate.',
-    'This source targets the r24 yellow-cleanup two-role-set within-child House/School candidate.');
+    'This source targets the r25 yellow-door-cleanup two-role-set within-child House/School candidate.');
 assert.equal(read(wrapperPath),expectedWrapper,'CHS assignment, consent, data transport, preview controls and all study text must remain byte-identical');
 
 const manifest=json(candidate+'data/ksize_manifest.json');

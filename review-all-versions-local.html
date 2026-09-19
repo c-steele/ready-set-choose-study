@@ -53,7 +53,7 @@
 <body>
 <main>
   <header>
-    <div class="eyebrow">r24 · yellow cleanup · researcher previews</div>
+    <div class="eyebrow">r25 · yellow door cleanup · researcher previews</div>
     <h1>Who Helps Where?</h1>
     <p class="intro">Choose a character set, a kind of story, and which setting comes first. Each A–D button opens a complete 12-story preview with the updated recordings, captions and artwork, plus researcher <strong>Back and Skip</strong> controls.</p>
     <div class="counts" aria-label="Version counts">
@@ -81,16 +81,16 @@
   <section class="grid" id="grid" aria-label="All study condition previews"></section>
   <noscript><p>Please enable JavaScript to show the preview links.</p></noscript>
   <footer>
-    <a href="https://childrenhelpingscience.com/exp/studies/981133ce-7d08-4801-9c31-0ae72400e135/preview-detail/" target="_blank" rel="noopener">Open the official CHS preview page</a> · These links target r24 and bypass parent setup for researcher review. Check the version status above before comparing with CHS. They do not submit or activate the study.
+    <a href="https://childrenhelpingscience.com/exp/studies/981133ce-7d08-4801-9c31-0ae72400e135/preview-detail/" target="_blank" rel="noopener">Open the official CHS preview page</a> · These links target r25 and bypass parent setup for researcher review. Check the version status above before comparing with CHS. They do not submit or activate the study.
   </footer>
 </main>
 <script>
 (function installPreviewDirectory(global, document) {
   "use strict";
-  const RELEASE = "chs-home-school-evelyn-v1-r24-yellow-cleanup-1";
+  const RELEASE = "chs-home-school-evelyn-v1-r25-yellow-door-cleanup-1";
   const STUDY = "versions/chs-home-school-evelyn-v1/";
   // New-release reviews start separately; earlier review checkmarks are retained.
-  const STORAGE = "who-helps-where:r24:all-version-review";
+  const STORAGE = "who-helps-where:r25:all-version-review";
   const roles = [
     {value: "woman", label: "Mom / sister set", set: "role", pairs: ["Mom + Teacher", "Sister + Friend", "Best friend + Friend", "Teacher + Friend", "Mom + Sister", "Teacher + Classmate"]},
     {value: "man", label: "Dad / brother set", set: "role", pairs: ["Dad + Teacher", "Brother + Friend", "Best friend + Friend", "Teacher + Friend", "Dad + Brother", "Teacher + Classmate"]}
@@ -163,11 +163,11 @@
   global.fetch(STUDY + "candidate.json", {cache: "no-store"}).then(r => { if (!r.ok) throw new Error("Unavailable"); return r.json(); }).then(candidate => {
     const status = document.getElementById("release-status");
     if (candidate.candidateRelease === RELEASE && candidate.lastPublishedRelease === RELEASE && candidate.chsDraftRelease === RELEASE && candidate.chsDraftConfigurationUpdated === true && candidate.revisionPendingPublication === false && candidate.status === "published_chs_draft_saved_not_submitted") {
-      status.textContent = "Version checked: r24 — the same release saved to the CHS draft, with two role sets and 12 study conditions. The study is not submitted.";
+      status.textContent = "Version checked: r25 — the same release saved to the CHS draft, with two role sets and 12 study conditions. The study is not submitted.";
     } else {
-      status.textContent = "Version notice: this directory targets r24. Publication and a matching saved CHS draft have not both been verified yet. The last verified CHS draft is " + (candidate.chsDraftRelease || "not recorded") + ".";
+      status.textContent = "Version notice: this directory targets r25. Publication and a matching saved CHS draft have not both been verified yet. The last verified CHS draft is " + (candidate.chsDraftRelease || "not recorded") + ".";
     }
-  }).catch(() => { document.getElementById("release-status").textContent = "This directory targets r24, but its saved-draft status could not be checked. Reload this page and check the official CHS preview before comparing."; });
+  }).catch(() => { document.getElementById("release-status").textContent = "This directory targets r25, but its saved-draft status could not be checked. Reload this page and check the official CHS preview before comparing."; });
 })(window, document);
 </script>
 </body>

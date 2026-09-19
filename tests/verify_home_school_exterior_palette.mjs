@@ -84,7 +84,7 @@ for (const [slug, record] of Object.entries(manifest.palettes)) {
       assert.match(svg, /color-interpolation-filters="sRGB"/);
       assert.match(svg, /127\.5 -127\.5 0 0 -1" result="redOverGreen"/);
       const yellow = record.characterHex.toUpperCase() === "#FFD100";
-      assert.equal((svg.match(/<image /g) || []).length, yellow && context === "SCHOOL" ? 2 : 3, `${slug}/${context}: required image layers differ`);
+      assert.equal((svg.match(/<image /g) || []).length, 3, `${slug}/${context}: required image layers differ`);
       if (!yellow) {
         assert.match(svg,/result="excludeBrightWhites"/);
         assert.match(svg,/result="windowInteriorPigment"/);

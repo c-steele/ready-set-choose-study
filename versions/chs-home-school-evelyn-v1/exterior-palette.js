@@ -55,6 +55,18 @@
     "1298,383 1325,383 1325,474 1312,474 1305,437",
     "1312,483 1325,483 1325,572 1301,572 1307,539",
   ]);
+  // The low-chroma painted door is a continuous surface. A pixel color key
+  // fragments its highlights into gray/yellow islands when viewed up close.
+  // Recolor the frame geometrically; preserve entire panes and metal handles.
+  const YELLOW_SCHOOL_DOOR = Object.freeze({
+    frame: Object.freeze([716, 392, 238, 251]),
+    glass: Object.freeze([
+      [726, 400, 218, 34],
+      [743, 458, 77, 94], [853, 458, 77, 94],
+      [743, 563, 77, 53], [853, 563, 77, 53],
+    ]),
+    handles: Object.freeze([[820, 536, 14, 45], [838, 536, 15, 45]]),
+  });
   let nextInstance = 0;
 
   function escapeAttribute(value) {
@@ -118,6 +130,7 @@
       + (yellow && context === "SCHOOL"
         ? `<polygon points="0,0 1672,0 1672,316 1154,316 1154,284 836,132 518,282 518,316 0,316" fill="black"/>`
           + `<circle cx="836" cy="252" r="42" fill="black"/>`
+          + rectHtml(YELLOW_SCHOOL_DOOR.frame, "black")
         : "")
       + "</mask>";
   }
@@ -138,6 +151,15 @@
       + `<feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 21.25 -21.25 0 0 0" result="curtainPigment"/>`
       + `<feColorMatrix in="SourceGraphic" type="matrix" values="0.1196 0.2348 0.0456 0 0.60 0.19435 0.38155 0.0741 0 0.30 0.299 0.587 0.114 0 -0.20 0 0 0 1 0" result="softYellowCurtain"/>`
       + `<feComposite in="softYellowCurtain" in2="curtainPigment" operator="in"/></filter>`;
+  }
+
+  function yellowSchoolDoorDefs(maskId, filterId, matrix) {
+    return `<mask id="${maskId}" maskUnits="userSpaceOnUse" x="0" y="0" width="1672" height="941" style="mask-type:luminance">`
+      + rectHtml(YELLOW_SCHOOL_DOOR.frame, "white")
+      + YELLOW_SCHOOL_DOOR.glass.map(([x,y,width,height]) => `<rect x="${x}" y="${y}" width="${width}" height="${height}" rx="1" fill="black"/>`).join("")
+      + YELLOW_SCHOOL_DOOR.handles.map(([x,y,width,height]) => `<rect x="${x}" y="${y}" width="${width}" height="${height}" rx="5" fill="black"/>`).join("")
+      + `</mask><filter id="${filterId}" filterUnits="userSpaceOnUse" x="0" y="0" width="1672" height="941" color-interpolation-filters="sRGB">`
+      + `<feColorMatrix in="SourceGraphic" type="matrix" values="${matrix.map(value => Number(value.toFixed(9))).join(" ")}"/></filter>`;
   }
 
   function filterHtml(matrix, id, windowInterior = false) {
@@ -186,6 +208,8 @@
         const windowId = `${id}-window-interiors`;
         const windowFilterId = `${id}-window-pigment`;
         const openingId = `${id}-opening`;
+        const doorMaskId = `${id}-yellow-door`;
+        const doorFilterId = `${id}-yellow-door-paint`;
         const openingRect = opening ? [opening.x, opening.y, opening.width ?? opening.w, opening.height ?? opening.h] : null;
         if (openingRect && (!openingRect.every(Number.isFinite) || openingRect[2] <= 0 || openingRect[3] <= 0)) {
           throw new Error("Exterior opening must contain finite positive source-space dimensions");
@@ -194,11 +218,13 @@
           ? (resolvedContext === "HOME" ? yellowCurtainDefs(windowId, windowFilterId) : "")
           : windowInteriorMaskHtml(resolvedContext, windowId) + filterHtml(matrix, windowFilterId, true);
         const defs = (matrix ? architectureMaskHtml(resolvedContext, architectureId, yellow) + filterHtml(matrix, filterId)
-          + windowDefs : "")
+          + windowDefs
+          + (yellow && resolvedContext === "SCHOOL" ? yellowSchoolDoorDefs(doorMaskId, doorFilterId, matrix) : "") : "")
           + (openingRect ? `<mask id="${openingId}" maskUnits="userSpaceOnUse" x="0" y="0" width="1672" height="941" style="mask-type:luminance"><rect width="1672" height="941" fill="white"/>${rectHtml(openingRect, "black")}</mask>` : "");
         const image = `<image href="${source}" width="1672" height="941" preserveAspectRatio="none"`;
         const layers = `${image}/>` + (matrix ? `${image} filter="url(#${filterId})" mask="url(#${architectureId})"/>`
-          + ((!yellow || resolvedContext === "HOME") ? `${image} filter="url(#${windowFilterId})" mask="url(#${windowId})"/>` : "") : "");
+          + ((!yellow || resolvedContext === "HOME") ? `${image} filter="url(#${windowFilterId})" mask="url(#${windowId})"/>` : "")
+          + (yellow && resolvedContext === "SCHOOL" ? `${image} filter="url(#${doorFilterId})" mask="url(#${doorMaskId})"/>` : "") : "");
         return `<svg${className ? ` class="${escapeAttribute(className)}"` : ""} viewBox="${viewBox.join(" ")}" preserveAspectRatio="none" data-exterior-palette="${hex}" data-exterior-context="${resolvedContext}" aria-hidden="true"><defs>${defs}</defs><g${openingRect ? ` mask="url(#${openingId})"` : ""}>${layers}</g></svg>`;
       },
     });
@@ -206,7 +232,7 @@
 
   globalObject.WTCExteriorPalette = Object.freeze({
     version: "who-takes-care-selective-exterior-palette-v2-window-interiors",
-    yellowCleanupVersion: "yellow-exterior-cleanup-v3",
+    yellowCleanupVersion: "yellow-exterior-cleanup-v4-door-frames",
     sourceSize: SOURCE_SIZE,
     doorCrops: DOOR_CROPS,
     maskGeometry: MASK_GEOMETRY,

@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Who Helps Where? — yellow door correction</title>
+<style>*{box-sizing:border-box}body{margin:0;background:#f8f8f4;color:#25353b;font:16px/1.5 system-ui,sans-serif}main{max-width:1450px;margin:auto;padding:26px 22px}h1{margin:0 0 12px;font-size:30px}h2{font-size:22px}.comparison{display:grid;grid-template-columns:1fr 1fr;gap:22px}figure{margin:0;min-width:0}figcaption{font-weight:700;margin:10px 0}.picture{width:100%;display:block;border-radius:6px}.caption{background:#ffd100;color:white;text-align:center;font-size:clamp(18px,2.4vw,34px);font-weight:750;padding:10px}.phases{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.stage{aspect-ratio:1672/941;position:relative;overflow:hidden;background:#fff}.world,.backing{position:absolute;inset:0}.backing img{width:100%;height:100%}.world{transform-origin:49.940191% 57.49203%;transform:translate(.059809%,-7.49203%) scale(3.8)}.world>svg{width:100%;height:100%;display:block}.doors{position:absolute;left:43.361244%;top:46.758767%;width:13.157895%;height:21.466525%;perspective:190px;transform-style:preserve-3d}.leaf{position:absolute;top:0;bottom:0;width:50%;backface-visibility:hidden}.leaf svg{width:100%;height:100%;display:block}.left{left:0;transform-origin:left center}.right{left:50%;transform-origin:right center}a{color:#176954}@media(max-width:750px){.comparison,.phases{grid-template-columns:1fr}main{padding:20px 14px}}</style>
+</head><body><main>
+<h1>Yellow school entrance — door correction</h1>
+<p>The patched paint edges are replaced by continuous yellow paint. The original glass, reflections and metal handles are preserved.</p>
+<div class="comparison">
+<figure><figcaption>Before — patchy frames and handles</figcaption><img class="picture" src="versions/chs-home-school-evelyn-v1/review/yellow-door-cleanup-v4/school-door-before.png" alt="Previous yellow door showing irregular gray patches and yellow-tinted metal handles"></figure>
+<figure><figcaption>Corrected — smooth frames, neutral handles</figcaption><img class="picture" src="versions/chs-home-school-evelyn-v1/review/yellow-door-cleanup-v4/school-door-after.png" alt="Corrected yellow school door with smooth paint, intact blue glass and gray handles"></figure>
+</div>
+<h2>Door-opening views</h2><p>These use the study's actual door crops and palette renderer at the closed, halfway-open and open angles.</p><div class="phases" id="phases"></div>
+<h2>Full school exterior</h2><div class="caption">Oh look! Here is a school.</div><img class="picture" src="versions/chs-home-school-evelyn-v1/review/yellow-door-cleanup-v4/school-exterior-after.png" alt="Yellow school exterior with the corrected entrance doors">
+<p><a href="review-all-versions-local.html">All study previews and saved-version status</a> · <a href="https://childrenhelpingscience.com/exp/studies/981133ce-7d08-4801-9c31-0ae72400e135/preview-detail/">Lookit preview</a></p>
+</main><script src="versions/chs-home-school-evelyn-v1/exterior-palette.js?v=yellow-door-v4"></script><script>
+const root='versions/chs-home-school-evelyn-v1/';
+for(const [label,angle] of [['Closed',0],['Halfway open',44],['Open',88]]){
+ const api=WTCExteriorPalette.create({context:'SCHOOL',href:root+'assets/entrance/school-exterior.webp',characterHex:'#FFD100'});
+ const fig=document.createElement('figure');fig.innerHTML='<figcaption>'+label+'</figcaption><div class="stage"><div class="backing"><img src="'+root+'assets/yellow-interior-cleanup-v4/school-hall.svg" alt="Yellow school hallway behind the doors"></div><div class="world">'+api.svg({opening:{x:725,y:440,width:220,height:202}})+'<div class="doors"><div class="leaf left" style="transform:rotateY('+angle+'deg)">'+api.svg({viewBox:[725,440,110,202]})+'</div><div class="leaf right" style="transform:rotateY('+(-angle)+'deg)">'+api.svg({viewBox:[835,440,110,202]})+'</div></div></div></div>';
+ document.getElementById('phases').append(fig);
+ const doors=fig.querySelector('.doors');new ResizeObserver(()=>{doors.style.perspective=(doors.offsetHeight*2.2)+'px';}).observe(doors);
+}
+</script></body></html>
