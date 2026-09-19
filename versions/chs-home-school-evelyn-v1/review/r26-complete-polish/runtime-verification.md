@@ -44,18 +44,24 @@ The final selected non-pixel acceptance batch is **13/13 PASS**, with details in
 
 ## Remaining verification boundaries
 
-- Real-browser cold-cache timing, responsive layout, continuous audio listening, animated border painting and CHS saved-draft checks are handled separately by the main review. A VM test cannot establish those facts.
+- Real-browser cold-cache timing, responsive layout, continuous audio listening and animated border painting remain separate checks. Publication and the CHS saved draft have now been verified as recorded below; VM tests alone do not establish those facts.
 - With the final flattened/self-contained artwork wrappers, preview image payloads are roughly 21.3–30.8 MB, plus 4.1–4.34 MB of assigned audio (parent setup adds more). Therefore this change fixes missing preloads and recovery, but does **not** justify an unconditional speed claim on slow networks. The 90-second loader deadline remains explicit and fail-closed.
 - Browser screenshots captured through rapid researcher Skip are suitable for visual/routing checks, not natural playback timing or audio intelligibility. A transient loading notice during such skipping is not by itself evidence of a participant-facing freeze.
 
-## Pending handoff — browser access interrupted
+## Browser coverage and remaining handoff
 
 The collected r26 local browser records cover **15/48 profiles**, **1,440 pages**, and **180 questions**. All 1,440 recorded pages have the expected caption, context, palette, final image routes, caption color and stable scene geometry. The 360 recorded choice buttons have the expected labels and foreground stacking order. No incomplete images, caption overflows, page-sequence skips/duplicates, browser logs or non-loading error notices were recorded. Eighty-seven transient loading notices were recorded during rapid navigation before the final notice-debounce refinement; these are counted separately, not silently dropped. This is **not** complete browser coverage.
 
-Browser security-policy verification subsequently became unavailable. No alternative browser-control route was used to bypass it. Still required when browser access is restored:
+Browser security-policy verification subsequently became unavailable. No alternative browser-control route was used to bypass it. The incomplete browser coverage remains an open verification boundary:
 
 1. Continue local browser traversal for profiles 16–48 and finish visual review.
 2. Run hosted, normal-paced cold-cache/audio and responsive-layout checks.
-3. Publish the verified update, update the CHS draft link, save, and verify the saved draft. **Do not submit.**
+3. Continue the actual embedded CHS preview with the researcher; the verified portal requires child selection before **Preview now**. No child was selected, and no consent, camera, recording or participant response action was taken. **Do not submit or activate.**
 
-No r26 CHS save, submission or external publication has been verified by this subtask. The work is ready for that remaining verification/handoff, not a claim of end-to-end completion.
+## Publication and CHS saved-draft verification
+
+Implementation commit `b81f71a68cd46e08ff79f135d4bb8538e08561c3` was published successfully in Pages run `35448035457` at 14:14:04 UTC on 19 September 2026. All 15 selected hosted files returned HTTP 200 and matched local SHA256 hashes at 14:18:05 UTC: entry, app, three changed repair helpers, two manifests, both new audio files, two yellow FOOD contrast files, both repaired strawberry variants, CHS wrapper and review page.
+
+CHS study 6349 was saved through **Save Changes** and the editor reopened. The persisted 32,677-character source matched the intended wrapper after `trimEnd()`, SHA256 `388c528f23b6bdf9cf8659cfa42be8ac1c82861d05451144dc579c1a3394728b`. The saved release is `chs-home-school-evelyn-v1-r26-complete-polish-1`. CHS remains **created**, **Private**, **not active**, and **not submitted for approval**. The official preview portal loaded the correct title and description; the embedded study flow remains a researcher handoff. See the [save receipt](../chs-draft-save-r26.md).
+
+This verifies publication and draft persistence without claiming complete browser or normal-playback coverage. The proposed 12 unique story colors were not implemented; study design and matched Home/School palettes are unchanged.
