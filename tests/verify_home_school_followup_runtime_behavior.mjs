@@ -194,8 +194,8 @@ async function runMain(search) {
 function queryFor(context = "") {
   const params = new URLSearchParams({
     seed: "followup-runtime-association",
-    set: "family",
-    roleSet: "family",
+    set: context ? "role" : "family",
+    roleSet: context ? "woman" : "family",
     event: "HUG",
     ratingMode: "one-after-story",
     researcherTools: "1",
@@ -208,7 +208,7 @@ function queryFor(context = "") {
   return `?${params.toString()}`;
 }
 
-function withinChildQuery(firstContext, roleSet = "family", variant = "") {
+function withinChildQuery(firstContext, roleSet = "woman", variant = "") {
   const params = new URLSearchParams({
     seed: `within-child-runtime-${firstContext.toLowerCase()}-${roleSet}-${variant || "random"}`,
     set: roleSet === "family" ? "family" : "role",
@@ -332,7 +332,7 @@ for (const contextName of ["HOME", "SCHOOL"]) {
   }
 }
 
-// The revised Who Takes Care preview presents the same six matched stories in
+// The revised Who Helps Where preview presents the same six matched stories in
 // both settings, counterbalances which six-story block comes first, and omits
 // every dyad/Likert follow-up.
 for (const firstContext of ["HOME", "SCHOOL"]) {
@@ -351,9 +351,9 @@ for (const firstContext of ["HOME", "SCHOOL"]) {
   assert.equal(properties.first_context, firstContext);
   assert.equal(properties.second_context, secondContext);
   assert.equal(properties.context_order_condition, `${firstContext}_FIRST`);
-  assert.equal(properties.assignment_cell_schema, "one_based_role_major_3_role_sets_x_3_events_x_2_context_orders");
+  assert.equal(properties.assignment_cell_schema, "one_based_role_major_2_role_sets_x_3_events_x_2_context_orders");
   assert.equal(properties.context_manipulation, "within_child_two_six_story_blocks_counterbalanced_order");
-  assert.equal(properties.design_version, "home_school_within_child_counterbalanced_context_order_v1");
+  assert.equal(properties.design_version, "home_school_within_child_two_role_sets_v2");
   assert.equal(properties.rating_mode, "none");
   assert.equal(properties.part_order, "stories-only");
   assert.equal(properties.n_event_trials, 12);
@@ -400,7 +400,7 @@ for (const firstContext of ["HOME", "SCHOOL"]) {
 // The review profiles may request a left- or right-placement rendition. The
 // planner may mix the two same-side source variants, but must still retain six
 // genuinely distinct visual palettes in every role set.
-for (const roleSet of ["woman", "man", "family"]) {
+for (const roleSet of ["woman", "man"]) {
   for (const variant of ["a", "b", "c", "d"]) {
     const { timeline } = await runMain(withinChildQuery("HOME", roleSet, variant));
     const choices = Array.from(timeline).filter((node) => node?.data?.slide_kind === "response_choices");
@@ -411,6 +411,13 @@ for (const roleSet of ["woman", "man", "family"]) {
       `${roleSet}/${variant} mixed left and right placement within one review profile`);
     assert.equal(firstBlock[0]?.data?.side, ["a", "b"].includes(variant) ? "LEFT" : "RIGHT");
   }
+}
+
+// Archived Family data remains intact, but current Home/School previews must
+// reject the retired set rather than silently substitute another condition.
+for (const contextName of ["HOME", "SCHOOL"]) {
+  await assert.rejects(runMain(withinChildQuery(contextName, "family")),
+    (error) => error?.code === "HOME_SCHOOL_UNAVAILABLE_ROLE_SET");
 }
 
 // The yellow narrator's mouth follows actual media state, not the request to

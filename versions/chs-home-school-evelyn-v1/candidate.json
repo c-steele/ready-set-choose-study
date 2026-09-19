@@ -7,7 +7,7 @@
   "childWelcomeTheme": "Lavender, peach and plum; green Start and yellow narrator unchanged. Story palettes unchanged.",
   "sourceRuntime": "screen-share-study/app.js",
   "sourceStimulusCandidate": "chs-v78-teacher-classmate-evelyn-unique-roles",
-  "status": "published_chs_draft_saved_not_submitted",
+  "status": "prepared_for_chs_draft_update",
   "activeChsStudyChanged": false,
   "chsDraftConfigurationUpdated": true,
   "chsDraftStudyId": 6349,
@@ -16,12 +16,18 @@
   "published": true,
   "publishedOn": "2026-09-18",
   "lastPublishedRelease": "chs-home-school-evelyn-v1-r22-clear-at-events-1",
-  "candidateRelease": "chs-home-school-evelyn-v1-r22-clear-at-events-1",
-  "revisionPendingPublication": false,
+  "candidateRelease": "chs-home-school-evelyn-v1-r23-two-role-sets-1",
+  "revisionPendingPublication": true,
+  "pendingReason": "Two role sets only; deployment and CHS draft save pending verification.",
   "chsDraftRelease": "chs-home-school-evelyn-v1-r22-clear-at-events-1",
   "latestChsDraftSaveReceipt": "review/chs-draft-save-r22.md",
   "latestRevisionOn": "2026-09-18",
-  "description": "Review-only Who Helps Where candidate. Every child receives the same matched six-story set at Home and at School, for twelve helping-choice stories total. Home-first versus School-first is counterbalanced. Character ratings and all Likert follow-ups are removed.",
+  "description": "Review-only Who Helps Where candidate with Woman and Man role sets only. The kid needs care in every story. Every child receives the same matched six-story set at Home and at School, for twelve helping-choice stories total. Home-first versus School-first is counterbalanced. Character ratings and all Likert follow-ups are removed.",
+  "designVersion": "home_school_within_child_two_role_sets_v2",
+  "recipientRole": "KID",
+  "activePairingCount": 9,
+  "activeTrialVariantCount": 36,
+  "previewCount": 48,
   "storyCount": 12,
   "storyCountPerContext": 6,
   "ratingMode": "none",
@@ -41,10 +47,9 @@
   ],
   "roleSets": [
     "woman",
-    "man",
-    "family"
+    "man"
   ],
-  "assignmentCellCount": 18,
+  "assignmentCellCount": 12,
   "assignmentCellFormula": "role_index * 6 + event_index * 2 + context_order_index + 1",
   "queryOverrides": [
     "context",
@@ -70,21 +75,10 @@
       "TEACHER-FRIEND",
       "DAD-BROTHER",
       "TEACHER-CLASSMATE"
-    ],
-    "family": [
-      "MOM-DAD",
-      "SISTER-BROTHER",
-      "DAD-KID",
-      "MOM-KID",
-      "TEACHER-KID",
-      "TEACHER-CLASSMATE"
     ]
   },
-  "directionalRecipients": {
-    "DAD-KID": "MOM",
-    "MOM-KID": "DAD",
-    "TEACHER-KID": "TEACHER"
-  },
+  "directionalRecipients": {},
+  "inactiveAssetRetention": "The former Family/Teacher set and its adult-recipient audio/art remain archived in shared manifests for historical preservation, but cannot be selected or assigned in this Home/School design. visualCoverage describes the retained asset inventory; activePairingCount and activeTrialVariantCount describe current eligibility.",
   "teacherClassmateRelationshipWording": "classmate",
   "voice": "Evelyn — NaturalReaders Commercial",
   "syntheticSpeech": false,
@@ -129,7 +123,7 @@
   "directionalEvelynAudioStatus": "complete",
   "directionalEvelynRequirementsManifest": "data/missing_home_school_directional_audio_manifest.json",
   "directionalEvelynImportReceipt": "data/directional_audio_import_receipt.json",
-  "participantSafety": "The runtime preflights prerecorded Evelyn narration for both Home and School before starting. All 18 role-set by event by context-order cells have complete coverage; browser speech is not substituted.",
+  "participantSafety": "The runtime preflights prerecorded Evelyn narration for both Home and School before starting. All 12 role-set by event by context-order cells have complete coverage; browser speech is not substituted. Removed Family/Teacher preview overrides are rejected rather than silently remapped.",
   "palettePlan": "Each six-story block uses six distinct exact palette slugs. The matched Home and School versions of a story deliberately keep the same palette, side, and rendition so only setting changes.",
   "localParticipantBaseUrl": "versions/chs-home-school-evelyn-v1/index.html?syntheticSpeech=0&contextStudy=1&withinChildContexts=1&ratingMode=none",
   "reviewParticipantBaseUrl": "https://c-steele.github.io/ready-set-choose-study/versions/chs-home-school-evelyn-v1/index.html?syntheticSpeech=0&contextStudy=1&withinChildContexts=1&ratingMode=none",

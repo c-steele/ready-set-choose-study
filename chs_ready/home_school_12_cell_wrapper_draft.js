@@ -1,7 +1,7 @@
 /*
   PRODUCTION-READY CHS WRAPPER SOURCE FOR STUDY 6349.
 
-  This source targets the r22 within-child House/School entrance candidate.
+  This source targets the r23 two-role-set within-child House/School candidate.
   Installing it in CHS remains a separate researcher-controlled action.
 
   Public title: Who Helps Where?
@@ -12,7 +12,8 @@
   hosted in an isolated GitHub Pages candidate and runs inside an iframe.
 
   Within-child context design with between-child counterbalancing:
-    3 role sets × 3 events × 2 context orders = 18 cells.
+    2 role sets × 3 events × 2 context orders = 12 cells.
+  Only Woman and Man role sets are included; the kid always needs care.
   Every child receives the same six matched stories at HOME and SCHOOL. The
   assigned context-order cell determines whether HOME or SCHOOL is presented
   first. No Likert or other character-rating trials are included.
@@ -27,9 +28,9 @@ var HOME_SCHOOL_CANDIDATE_ROOT_URL =
 var HOME_SCHOOL_CANDIDATE_ORIGIN = "https://c-steele.github.io";
 
 var HOME_SCHOOL_STUDY_VERSION = "chs-home-school-evelyn-v1";
-var HOME_SCHOOL_CANDIDATE_RELEASE = "chs-home-school-evelyn-v1-r22-clear-at-events-1";
+var HOME_SCHOOL_CANDIDATE_RELEASE = "chs-home-school-evelyn-v1-r23-two-role-sets-1";
 var HOME_SCHOOL_CONTEXT_SCRIPT_VERSION = "home_school_house_entrance_recipient_aware_v6";
-var HOME_SCHOOL_DESIGN_VERSION = "home_school_within_child_counterbalanced_context_order_v1";
+var HOME_SCHOOL_DESIGN_VERSION = "home_school_within_child_two_role_sets_v2";
 /* Temporary editing aid: enable Back/Skip only on CHS's Preview Study route.
    Set false to remove it after review. Live participant URLs never enable it. */
 var HOME_SCHOOL_TEMPORARY_CHS_PREVIEW_CONTROLS = true;
@@ -167,18 +168,17 @@ var HOME_SCHOOL_CONTEXT_ORDERS = [
 ];
 var HOME_SCHOOL_ROLE_SETS = [
   { dataLabel: "WOMAN", urlValue: "woman", conditionSet: "role" },
-  { dataLabel: "MAN", urlValue: "man", conditionSet: "role" },
-  { dataLabel: "FAMILY_TEACHER", urlValue: "family", conditionSet: "family" }
+  { dataLabel: "MAN", urlValue: "man", conditionSet: "role" }
 ];
 var HOME_SCHOOL_EVENTS = ["HUG", "FOOD", "HELP"];
 
 /* Cell numbering is fixed for the review candidate:
    1 Woman/Hug/Home-first, 2 Woman/Hug/School-first, ...,
-   17 Family-Teacher/Help/Home-first, 18 Family-Teacher/Help/School-first. */
+   11 Man/Help/Home-first, 12 Man/Help/School-first. */
 function assignmentFromCellIndex(zeroBasedCellIndex) {
   var cellIndex = Number(zeroBasedCellIndex);
-  if (cellIndex < 0 || cellIndex >= 18 || Math.floor(cellIndex) !== cellIndex) {
-    throw new Error("Home/School assignment cell index must be an integer from 0 through 17.");
+  if (!Number.isFinite(cellIndex) || cellIndex < 0 || cellIndex >= 12 || Math.floor(cellIndex) !== cellIndex) {
+    throw new Error("Home/School assignment cell index must be an integer from 0 through 11.");
   }
   var roleSetIndex = Math.floor(cellIndex / 6);
   var eventIndex = Math.floor((cellIndex % 6) / 2);
@@ -203,7 +203,7 @@ function assignmentFromCellIndex(zeroBasedCellIndex) {
 }
 
 function assignHomeSchoolCell(childLevelKey) {
-  return assignmentFromCellIndex(stableHash(childLevelKey) % 18);
+  return assignmentFromCellIndex(stableHash(childLevelKey) % 12);
 }
 
 var isChsPreviewContext = window.location.pathname.split("/").indexOf("preview") !== -1;
@@ -277,7 +277,7 @@ var assignmentData = {
   assigned_event: assignedCell ? assignedCell.event : "",
   assigned_study_variant: assignedCell ? assignedCell.variantId : "",
   assigned_condition_set: assignedCell ? assignedCell.conditionSet : "",
-  assignment_method: "fnv1a_mod_18",
+  assignment_method: "fnv1a_mod_12",
   assignment_key_type: assignmentKeyType,
   chs_child_id: chsChildId,
   chs_response_id: chsResponseId,
@@ -494,7 +494,7 @@ var readySetChooseGame = {
     assigned_event: assignedCell ? assignedCell.event : "",
     assigned_study_variant: assignedCell ? assignedCell.variantId : "",
     assigned_condition_set: assignedCell ? assignedCell.conditionSet : "",
-    assignment_method: "fnv1a_mod_18",
+    assignment_method: "fnv1a_mod_12",
     assignment_key_type: assignmentKeyType,
     chs_child_id: chsChildId,
     chs_response_id: chsResponseId,
@@ -554,7 +554,7 @@ var readySetChooseGame = {
         assigned_event: assignedCell.event,
         assigned_study_variant: assignedCell.variantId,
         assigned_condition_set: assignedCell.conditionSet,
-        assignment_method: "fnv1a_mod_18",
+        assignment_method: "fnv1a_mod_12",
         assignment_key_type: assignmentKeyType,
         data_posted: event.data.data_posted || false,
         data_post_status: event.data.data_post_status || "",

@@ -5,7 +5,7 @@ import vm from "node:vm";
 import { fileURLToPath } from "node:url";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
-const wrapperPath = path.resolve(here, "../chs_ready/home_school_18_cell_wrapper_draft.js");
+const wrapperPath = path.resolve(here, "../chs_ready/home_school_12_cell_wrapper_draft.js");
 const source = fs.readFileSync(wrapperPath, "utf8");
 
 const recorded = { properties: null, timeline: null, finishTrials: [] };
@@ -94,7 +94,7 @@ assert.equal(context.assignmentKeyType, "chs_hash_child_id");
 assert.doesNotMatch(context.gameUrl, /SPOOFED-QUERY/);
 assert.equal(recorded.timeline.length, 7, "consent/recording/game/exit/debrief architecture must remain intact");
 
-const expectedRoleSets = ["WOMAN", "MAN", "FAMILY_TEACHER"];
+const expectedRoleSets = ["WOMAN", "MAN"];
 const expectedEvents = ["HUG", "FOOD", "HELP"];
 const expectedContextOrders = [
   { condition: "HOME_FIRST", contexts: ["HOME", "SCHOOL"] },
@@ -102,7 +102,7 @@ const expectedContextOrders = [
 ];
 const seenCells = new Set();
 
-for (let index = 0; index < 18; index += 1) {
+for (let index = 0; index < 12; index += 1) {
   const cell = context.assignmentFromCellIndex(index);
   assert.equal(cell.assignmentCell, index + 1);
   assert.equal(cell.roleSet, expectedRoleSets[Math.floor(index / 6)]);
@@ -116,9 +116,18 @@ for (let index = 0; index < 18; index += 1) {
   assert.equal(cell.secondContext, expectedOrder.contexts[1]);
   seenCells.add(cell.assignmentCell);
 }
-assert.equal(seenCells.size, 18);
+assert.equal(seenCells.size, 12);
+for (const invalidIndex of [-1, 12, 13, 17, 18, 0.5, NaN, Infinity]) {
+  assert.throws(() => context.assignmentFromCellIndex(invalidIndex), /integer from 0 through 11/);
+}
+for (let childIndex = 0; childIndex < 12000; childIndex += 1) {
+  const assignment = context.assignHomeSchoolCell(`R23-CHILD-${childIndex}`);
+  assert.ok(["WOMAN", "MAN"].includes(assignment.roleSet));
+  assert.ok(assignment.assignmentCell >= 1 && assignment.assignmentCell <= 12);
+  assert.equal(assignment.conditionSet, "role");
+}
 
-for (let targetCell = 1; targetCell <= 18; targetCell += 1) {
+for (let targetCell = 1; targetCell <= 12; targetCell += 1) {
   let matchingKey = "";
   for (let suffix = 0; suffix < 10000; suffix += 1) {
     const key = `CHILD-${targetCell}-${suffix}`;
@@ -160,10 +169,11 @@ assert.equal(recorded.properties.context_order, context.assignedCell.contextOrde
 assert.equal(recorded.properties.context_order_condition, context.assignedCell.contextOrderCondition);
 assert.equal(recorded.properties.first_context, context.assignedCell.firstContext);
 assert.equal(recorded.properties.second_context, context.assignedCell.secondContext);
-assert.equal(recorded.properties.design_version, "home_school_within_child_counterbalanced_context_order_v1");
-assert.equal(recorded.properties.candidate_release, "chs-home-school-evelyn-v1-r22-clear-at-events-1");
+assert.equal(recorded.properties.design_version, "home_school_within_child_two_role_sets_v2");
+assert.equal(recorded.properties.assignment_method, "fnv1a_mod_12");
+assert.equal(recorded.properties.candidate_release, "chs-home-school-evelyn-v1-r23-two-role-sets-1");
 assert.equal(recorded.properties.context_script_version, "home_school_house_entrance_recipient_aware_v6");
-assert.match(context.gameUrl, /[?&]v=chs-home-school-evelyn-v1-r22-clear-at-events-1(?:&|$)/);
+assert.match(context.gameUrl, /[?&]v=chs-home-school-evelyn-v1-r23-two-role-sets-1(?:&|$)/);
 assert.match(context.gameUrl, /[?&]syntheticSpeech=0(?:&|$)/);
 assert.doesNotMatch(context.gameUrl, /[?&](?:entranceVisualOnly|facilitator|liveShare)=/, "CHS must not enable silent or facilitator previews");
 assert.doesNotMatch(context.gameUrl, /researcherTools=1/, "live CHS runs must not expose researcher controls");
@@ -182,11 +192,11 @@ assert.doesNotMatch(source, /assignedEntrypoint[^;]*(?:home\.html|school\.html)/
 assert.match(source, /context="\s*\+\s*encodeURIComponent\(assignedCell\.firstContext\)/);
 assert.match(source, /HOME_SCHOOL_STUDY_VERSION\s*=\s*"chs-home-school-evelyn-v1"/);
 assert.match(source, /HOME_SCHOOL_CONTEXT_SCRIPT_VERSION\s*=\s*"home_school_house_entrance_recipient_aware_v6"/);
-assert.match(source, /HOME_SCHOOL_CANDIDATE_RELEASE\s*=\s*"chs-home-school-evelyn-v1-r22-clear-at-events-1"/);
+assert.match(source, /HOME_SCHOOL_CANDIDATE_RELEASE\s*=\s*"chs-home-school-evelyn-v1-r23-two-role-sets-1"/);
 assert.match(source, /HOME_SCHOOL_TEMPORARY_CHS_PREVIEW_CONTROLS\s*=\s*true/);
 assert.match(source, /HOME_SCHOOL_TEMPORARY_CHS_PREVIEW_CONTROLS === true\s*&& isChsPreviewContext && isInternalChsOrigin\(window\.location\.origin\)/);
 assert.doesNotMatch(source, /researcherJump=|skipParentSetup=/, "the CHS wrapper must not bypass parent setup or launch at a skipped screen");
-assert.match(source, /HOME_SCHOOL_DESIGN_VERSION\s*=\s*"home_school_within_child_counterbalanced_context_order_v1"/);
+assert.match(source, /HOME_SCHOOL_DESIGN_VERSION\s*=\s*"home_school_within_child_two_role_sets_v2"/);
 assert.doesNotMatch(source, /chs-home-school-evelyn-v1-r(?:[1-9])(?!\d)/);
 assert.match(source, /Who Helps Where\? child game/);
 assert.match(source, /HOME_SCHOOL_SHEETS_WEBHOOK\s*=\s*""/);
@@ -444,4 +454,4 @@ assert.match(source, /StopRecordPlugin/);
 assert.match(source, /ExitSurveyPlugin/);
 assert.match(source, /GAME_COMPLETE/);
 
-console.log("Verified local CHS study 6349 wrapper draft: trusted live identity, 18 role/event/context-order cells, 12-story within-child context design, no rating trials, temporary preview-only Back/Skip, tool-free live runs, and intact CHS recording flow.");
+console.log("Verified local CHS study 6349 wrapper draft: trusted live identity, 12 role/event/context-order cells, 12-story within-child context design, no rating trials, temporary preview-only Back/Skip, tool-free live runs, and intact CHS recording flow.");

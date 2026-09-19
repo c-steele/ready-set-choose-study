@@ -23,6 +23,13 @@ const visualRepair = readJson("visual_repair_manifest.json");
 const plain = (value) => JSON.parse(JSON.stringify(value));
 const DIRECTIONS = new Set(["DAD-KID", "MOM-KID", "TEACHER-KID"]);
 const STORY_KINDS = ["exterior", "room_entry", "intro", "intro", "intro", "context_intro", "story", "response_choices"];
+const CURRENT_RELEASE = "chs-home-school-evelyn-v1-r23-two-role-sets-1";
+const CURRENT_DESIGN = "home_school_within_child_two_role_sets_v2";
+const CURRENT_SCHEMA = "one_based_role_major_2_role_sets_x_3_events_x_2_context_orders";
+const ACTIVE_CONDITIONS = {
+  woman: ["MOM-TEACHER", "SISTER-FRIEND", "BESTFRIEND-FRIEND", "TEACHER-FRIEND", "MOM-SISTER", "TEACHER-CLASSMATE"],
+  man: ["DAD-TEACHER", "BROTHER-FRIEND", "BESTFRIEND-FRIEND", "TEACHER-FRIEND", "DAD-BROTHER", "TEACHER-CLASSMATE"],
+};
 
 function makeHost(search = "") {
   const classes = new Set();
@@ -87,6 +94,8 @@ const testExports = `
     entranceAssets, entranceController, prepareIntroReveal,
     missingContextAudioForPlan, assertParticipantContextAudioCoverage,
     installCanonicalAudioMap, canonicalAudioPathForText,
+    validateHomeSchoolRoleSelection, selectRoleSet, selectedConditionsForSet,
+    balancedAssignment, describeActualAssignment, planEventSession, recipientKeyForCondition,
     configure(context, event, manifest, canonical, teacher, audioManifest) {
       activeStudyContext = context;
       activeStudyEvent = event;
@@ -97,8 +106,9 @@ const testExports = `
   };
 `;
 
-function loadRuntime(search = "") {
+function loadRuntime(search = "", runtimeConfig = {}) {
   const host = makeHost(search);
+  host.context.window.KSIZE_RUNTIME_CONFIG = runtimeConfig;
   new vm.Script(`${appSource.slice(0, mainCallIndex)}\n${testExports}`, { filename: appPath }).runInContext(host.context);
   return { ...host, api: host.context.__ENTRANCE_TEST_API__ };
 }
@@ -179,8 +189,8 @@ function assertStory(nodes, trial, event, contextName, label) {
   assert.match(nodes[5].stimulus, /<img[^>]*ksize-furnished-foreground/, `${label}: context page must display the complete foreground`);
 }
 
-// Every original trial is covered, including the directional family cases that
-// are easily missed by a single six-story example session.
+// Keep every original source asset covered, including archived Family/teacher
+// cases. Rendering an archived asset does not make it eligible for assignment.
 const completeTrials = eventManifest.trials.filter((trial) => trial.isComplete);
 assert.equal(completeTrials.length, 56);
 const coveredPalettes = { HOME: new Set(), SCHOOL: new Set() };
@@ -212,15 +222,91 @@ for (const contextName of ["HOME", "SCHOOL"]) {
     `${contextName}: source story checks must cover every hallway palette`);
 }
 
-// Run exactly the review board's 3 × 3 × 4 × 2 launch configurations.
+// R23 narrows eligibility, not the retained assets or their narration. Exercise
+// every assignment/planner entry point, including obsolete override aliases.
+const activePairings = new Set(Object.values(ACTIVE_CONDITIONS).flat());
+const eligibleTrials = completeTrials.filter((trial) => activePairings.has(trial.blocks.INTRO.condition));
+assert.equal(activePairings.size, 9);
+assert.equal(eligibleTrials.length, 36);
+assert.equal(new Set(eligibleTrials.map((trial) => trial.homeSchoolFurnished.paletteSlug)).size, 11);
+assert.ok(eligibleTrials.every((trial) => runtime.api.recipientKeyForCondition(trial.blocks.INTRO.condition) === "KID"));
+const assignmentCells = new Set();
+const seedForAssignmentCell = new Map();
+for (let index = 0; index < 512; index += 1) {
+  const seed = `r23-hash-${index}`;
+  const assignment = runtime.api.balancedAssignment(seed, "", "", "", true, "explicit_seed");
+  assert.ok(["woman", "man"].includes(assignment.roleSet));
+  assert.ok(["HUG", "FOOD", "HELP"].includes(assignment.eventSuffix));
+  assert.ok(["HOME", "SCHOOL"].includes(assignment.context));
+  assert.ok(assignment.cell >= 0 && assignment.cell < 12);
+  const metadata = runtime.api.describeActualAssignment(assignment, assignment.roleSet, assignment.eventSuffix,
+    false, false, assignment.context, false, true, true);
+  assert.equal(metadata.cell, assignment.cell + 1);
+  assert.equal(metadata.cellSchema, CURRENT_SCHEMA);
+  assignmentCells.add(metadata.cell);
+  if (!seedForAssignmentCell.has(metadata.cell)) seedForAssignmentCell.set(metadata.cell, seed);
+}
+assert.deepEqual([...assignmentCells].sort((a, b) => a - b), Array.from({ length: 12 }, (_, index) => index + 1));
+for (const [role, aliases] of Object.entries({ woman: ["woman", "women", "female", "mom", " WOMAN "], man: ["man", "men", "male", "dad", " MAN "] })) {
+  for (const alias of aliases) {
+    assert.equal(runtime.api.validateHomeSchoolRoleSelection("role", alias), role);
+    assert.equal(runtime.api.selectRoleSet("r23-alias", alias), role);
+    assert.equal(runtime.api.balancedAssignment("r23-alias", alias, "HELP", "HOME", true).roleSet, role);
+    assert.deepEqual(plain(runtime.api.selectedConditionsForSet("role", alias)), ACTIVE_CONDITIONS[role]);
+  }
+}
+const obsoleteRoles = ["family", "family-teacher", "family_teacher", "mixed", "third", "parent-peer", " FAMILY ", "all", "unknown"];
+const unavailableRole = (error) => error?.code === "HOME_SCHOOL_UNAVAILABLE_ROLE_SET";
+for (const role of obsoleteRoles) {
+  assert.throws(() => runtime.api.validateHomeSchoolRoleSelection("role", role), unavailableRole);
+  assert.throws(() => runtime.api.selectRoleSet("r23-obsolete", role), unavailableRole);
+  assert.throws(() => runtime.api.balancedAssignment("r23-obsolete", role, "HELP", "HOME", true), unavailableRole);
+  assert.throws(() => runtime.api.describeActualAssignment({}, role, "HELP", true, true, "HOME", true, true, true), unavailableRole);
+  assert.throws(() => runtime.api.planEventSession(eventManifest, "r23-obsolete", "a", "role", role), unavailableRole);
+}
+const obsoleteSets = ["family", "mixed", "third", "parent-peer", "all", "unknown", " FAMILY "];
+for (const set of obsoleteSets) {
+  assert.throws(() => runtime.api.planEventSession(eventManifest, "r23-obsolete", "a", set, "woman"), unavailableRole);
+}
+let rejectedMainOverrides = 0;
+async function assertMainRejects(search, runtimeConfig = {}) {
+  const host = loadRuntime(search, runtimeConfig);
+  let fetchCount = 0;
+  let initializationCount = 0;
+  host.context.fetch = async () => { fetchCount += 1; throw new Error("Invalid role reached asset loading"); };
+  host.context.initJsPsych = () => { initializationCount += 1; throw new Error("Invalid role started a session"); };
+  await assert.rejects(host.api.main(), unavailableRole);
+  assert.equal(fetchCount, 0, "Obsolete links must fail before loading assets");
+  assert.equal(initializationCount, 0, "Obsolete links must never start a mislabeled session");
+  rejectedMainOverrides += 1;
+}
+for (const role of obsoleteRoles) {
+  for (const parameter of ["roleSet", "role"]) {
+    await assertMainRejects(`?contextStudy=1&withinChildContexts=1&${parameter}=${encodeURIComponent(role)}`);
+    await assertMainRejects("", { lockedStudyVersion: "home-school", withinChildContexts: "1", [parameter]: role });
+  }
+}
+for (const set of obsoleteSets) {
+  await assertMainRejects(`?contextStudy=1&withinChildContexts=1&roleSet=woman&set=${encodeURIComponent(set)}`);
+  await assertMainRejects("", { lockedStudyVersion: "home-school", withinChildContexts: "1", roleSet: "man", set });
+}
+const legacyRuntime = loadRuntime();
+assert.equal(legacyRuntime.api.selectRoleSet("legacy", "family"), "family");
+assert.equal(legacyRuntime.api.balancedAssignment("legacy", "family", "HELP", "", false).roleSet, "family");
+assert.deepEqual(plain(legacyRuntime.api.selectedConditionsForSet("family", "family")),
+  ["MOM-DAD", "SISTER-BROTHER", "DAD-KID", "MOM-KID", "TEACHER-KID", "TEACHER-CLASSMATE"]);
+assert.equal(legacyRuntime.api.selectedConditionsForSet("all", ""), null);
+
+// Run exactly the current review board's 2 × 3 × 4 × 2 launch configurations.
 const reviewSource = fs.readFileSync(path.join(root, "screen-share-study/home-school-review.js"), "utf8");
 const reviewHost = { window: { location: { href: "https://entrance.test/screen-share-study/home-school-review.html" } }, document: null, URL };
 vm.runInNewContext(reviewSource, reviewHost);
 const review = reviewHost.window.FTCHomeSchoolReview;
 assert.ok(review);
 const entries = Array.from(review.renditionEntries());
-assert.equal(entries.length, 36);
+assert.equal(entries.length, 24);
 const seenReviewUrls = new Set();
+const reviewCells = new Set();
 let choiceCount = 0;
 let storyPageCount = 0;
 for (const entry of entries) {
@@ -230,6 +316,9 @@ for (const entry of entries) {
     assert.equal(url.searchParams.get("researcherTools"), "1");
     assert.equal(url.searchParams.get("syntheticSpeech"), "0");
     assert.equal(url.searchParams.get("ratingMode"), "none");
+    assert.equal(url.searchParams.get("v"), CURRENT_RELEASE);
+    assert.equal(url.searchParams.get("set"), "role");
+    assert.ok(Object.hasOwn(ACTIVE_CONDITIONS, entry.role));
     seenReviewUrls.add(url.href);
     const { timeline, properties } = await runMain(url.search);
     const storyNodes = timeline.filter((node) => node?.data?.trial_key && node.data.story_number);
@@ -239,6 +328,14 @@ for (const entry of entries) {
     assert.equal(properties.n_event_trials, 12);
     assert.equal(properties.n_dyads, 0);
     assert.equal(properties.rating_mode, "none");
+    assert.equal(properties.role_set, entry.role);
+    assert.equal(properties.design_version, CURRENT_DESIGN);
+    assert.equal(properties.assignment_cell_schema, CURRENT_SCHEMA);
+    const expectedCell = ["woman", "man"].indexOf(entry.role) * 6
+      + ["HUG", "FOOD", "HELP"].indexOf(entry.event) * 2 + ["HOME", "SCHOOL"].indexOf(firstContext) + 1;
+    assert.equal(properties.assignment_cell, expectedCell);
+    assert.equal(url.searchParams.get("assignmentCell"), String(expectedCell));
+    reviewCells.add(properties.assignment_cell);
     assert.equal(timeline.filter((node) => node?.data?.dyad_id || node?.data?.rating_value != null).length, 0);
     const secondContext = firstContext === "HOME" ? "SCHOOL" : "HOME";
     assert.deepEqual(choices.map((node) => node.data.context), [...Array(6).fill(firstContext), ...Array(6).fill(secondContext)]);
@@ -251,6 +348,8 @@ for (const entry of entries) {
     assert.deepEqual(blockIdentity(choices.slice(6)), firstBlock, `${entry.id}/${firstContext}: order, colors, or side changed across contexts`);
     assert.equal(new Set(firstBlock.map((story) => story.hex)).size, 6, `${entry.id}/${firstContext}: duplicate character color`);
     assert.equal(new Set(firstBlock.map((story) => story.palette)).size, 6);
+    assert.deepEqual(firstBlock.map((story) => story.condition).sort(), [...ACTIVE_CONDITIONS[entry.role]].sort());
+    assert.ok(firstBlock.every((story) => runtime.api.recipientKeyForCondition(story.condition) === "KID"));
     assert.ok(firstBlock.every((story) => story.side === (["a", "b"].includes(entry.variant) ? "LEFT" : "RIGHT")));
     for (let storyNumber = 1; storyNumber <= 12; storyNumber += 1) {
       const nodes = storyNodes.filter((node) => node.data.story_number === storyNumber);
@@ -281,7 +380,56 @@ for (const entry of entries) {
   }
   assert.deepEqual(matchedAcrossOrders[0], matchedAcrossOrders[1], `${entry.id}: reversing context order changed matched story assignment`);
 }
-assert.equal(seenReviewUrls.size, 72);
+assert.equal(seenReviewUrls.size, 48);
+assert.deepEqual([...reviewCells].sort((a, b) => a - b), [...assignmentCells].sort((a, b) => a - b));
+
+// Participant sessions do not force A–D. Confirm all twelve actual conditions
+// still receive six unique-color Kid-recipient stories, identically repeated.
+let participantConfigurations = 0;
+for (const role of ["woman", "man"]) {
+  for (const event of ["HUG", "FOOD", "HELP"]) {
+    for (const context of ["HOME", "SCHOOL"]) {
+      const query = new URLSearchParams({ contextStudy: "1", withinChildContexts: "1", roleSet: role,
+        event, context, seed: `r23-participant-${role}-${event}`, ratingMode: "none", syntheticSpeech: "0" });
+      const { timeline, properties } = await runMain(`?${query}`);
+      const choices = timeline.filter((node) => node?.data?.slide_kind === "response_choices");
+      assert.equal(choices.length, 12);
+      assert.equal(properties.role_set, role);
+      assert.equal(properties.design_version, CURRENT_DESIGN);
+      assert.equal(properties.assignment_cell_schema, CURRENT_SCHEMA);
+      const firstBlock = choices.slice(0, 6).map((node) => node.data);
+      assert.deepEqual(firstBlock.map((story) => story.condition_pairing).sort(), [...ACTIVE_CONDITIONS[role]].sort());
+      assert.ok(firstBlock.every((story) => runtime.api.recipientKeyForCondition(story.condition_pairing) === "KID"));
+      assert.equal(new Set(firstBlock.map((story) => story.context_palette_slug)).size, 6);
+      assert.equal(new Set(firstBlock.map((story) => story.context_character_hex)).size, 6);
+      assert.deepEqual(choices.slice(6).map((node) => node.data.trial_key), firstBlock.map((story) => story.trial_key));
+      assert.deepEqual(choices.map((node) => node.data.context), [...Array(6).fill(context), ...Array(6).fill(context === "HOME" ? "SCHOOL" : "HOME")]);
+      participantConfigurations += 1;
+    }
+  }
+}
+assert.equal(participantConfigurations, 12);
+
+// Also run main() without a forced role, event, or context. This catches fallback
+// branches that helper-level hash tests alone cannot exercise.
+for (const [cell, seed] of seedForAssignmentCell) {
+  const { timeline, properties } = await runMain(`?contextStudy=1&withinChildContexts=1&seed=${seed}&ratingMode=none`);
+  assert.equal(properties.assignment_cell, cell);
+  assert.equal(properties.assignment_cell_schema, CURRENT_SCHEMA);
+  assert.equal(properties.design_version, CURRENT_DESIGN);
+  const role = cell <= 6 ? "woman" : "man";
+  const event = ["HUG", "FOOD", "HELP"][Math.floor(((cell - 1) % 6) / 2)];
+  const context = cell % 2 ? "HOME" : "SCHOOL";
+  assert.equal(properties.role_set, role);
+  assert.equal(properties.event_suffix, event);
+  assert.equal(properties.first_context, context);
+  const choices = timeline.filter((node) => node?.data?.slide_kind === "response_choices");
+  assert.equal(choices.length, 12);
+  const firstBlock = choices.slice(0, 6).map((node) => node.data);
+  assert.deepEqual(firstBlock.map((story) => story.condition_pairing).sort(), [...ACTIVE_CONDITIONS[role]].sort());
+  assert.equal(new Set(firstBlock.map((story) => story.context_character_hex)).size, 6);
+  assert.deepEqual(choices.slice(6).map((node) => node.data.trial_key), firstBlock.map((story) => story.trial_key));
+}
 
 // Preserve the full r17/r18 audit. R20 replaces two exteriors, and r22 replaces
 // House/Kid/HELP; all earlier recordings remain immutable historical evidence.
@@ -543,6 +691,13 @@ for (const contextName of ["HOME", "SCHOOL"]) {
 console.log(JSON.stringify({
   status: "PASS",
   sourceTrials: completeTrials.length,
+  activePairings: activePairings.size,
+  eligibleSourceTrials: eligibleTrials.length,
+  assignmentCells: assignmentCells.size,
+  rejectedObsoleteMainOverrides: rejectedMainOverrides,
+  unforcedVariantParticipantConfigurations: participantConfigurations,
+  fullyHashedParticipantConfigurations: seedForAssignmentCell.size,
+  activeRecipientsAllKid: true,
   sourceEventContextStories: sourceStoryCount,
   importedEntranceHouseRecordings: entranceReceipt.clips.length,
   approvedExteriorOpeningRecordings: replacedMappingCount,

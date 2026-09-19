@@ -27,7 +27,7 @@ assert.match(welcome, /<h1 class="ksize-title">Who Helps Where\?<\/h1>/);
 assert.match(app, /<span class="ksize-setup-eyebrow">Who Helps Where\?<\/span>/);
 assert.match(read("index.html"), /<title>Who Helps Where\?/);
 assert.doesNotMatch(app, /Who Takes Care\?|Welcome to Find the Caregiver/i);
-const wrapper = fs.readFileSync(path.join(root, "chs_ready/home_school_18_cell_wrapper_draft.js"), "utf8");
+const wrapper = fs.readFileSync(path.join(root, "chs_ready/home_school_12_cell_wrapper_draft.js"), "utf8");
 assert.match(wrapper, /picture game called Who Helps Where\?/);
 assert.match(wrapper, /title="Who Helps Where\? child game"/);
 assert.doesNotMatch(wrapper, /Who Takes Care\?/);

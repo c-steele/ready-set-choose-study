@@ -9,9 +9,9 @@ const TEACHER_CLASSMATE_GENERATED_ROOT = "assets/teacher_classmate/generated/";
 const TEACHER_CLASSMATE_V78_REVISION_ROOT = "versions/chs-v78-teacher-classmate-evelyn-unique-roles/assets/teacher_classmate/generated/";
 const TEACHER_CLASSMATE_V78_DYAD_REVISION = /^dyads\/classmate-kid_0(?:1_tkc-deep-purple-a|2_tkc-deep-purple-b)\/slide_(?:0[3-9]|1[0-3])\.svg$/;
 const TEACHER_CLASSMATE_V78_TRIAL_REVISION = /^trials\/14(?:[ab]\/intro_04|[cd]\/intro_0[34]|[abcd]\/(?:hug|food|help)_screen_2)\.svg$/;
-const HOME_SCHOOL_ASSET_VERSION = "chs-home-school-evelyn-v1-r22-clear-at-events-1";
+const HOME_SCHOOL_ASSET_VERSION = "chs-home-school-evelyn-v1-r23-two-role-sets-1";
 const HOME_SCHOOL_DESIGN_VERSION = "home_school_context_chs_candidate_v1";
-const HOME_SCHOOL_WITHIN_CHILD_DESIGN_VERSION = "home_school_within_child_counterbalanced_context_order_v1";
+const HOME_SCHOOL_WITHIN_CHILD_DESIGN_VERSION = "home_school_within_child_two_role_sets_v2";
 const HOME_SCHOOL_CONTEXT_SCRIPT_VERSION = "home_school_house_entrance_recipient_aware_v6";
 const HOME_SCHOOL_FURNISHED_VISUAL_VERSION = "home_school_furnished_palette_picture_v38";
 const RATING_SCHEDULE_VERSION = "unique_focal_role_per_set_v1";
@@ -1626,7 +1626,23 @@ function introImageForSlide(trial, slide, slideIndex) {
   };
 }
 
+function validateHomeSchoolRoleSelection(setName = "role", roleSet = "") {
+  const normalizedSet = String(setName || "role").trim().toLowerCase();
+  const suppliedRole = String(roleSet || "").trim();
+  const normalizedRole = normalizeRoleSet(suppliedRole);
+  if (normalizedSet !== "role" || (suppliedRole && !["woman", "man"].includes(normalizedRole))) {
+    const error = new Error("This preview link uses a character set that is no longer available in Who Helps Where? Please open a current Mom / sister or Dad / brother preview. Family / teacher and all-pair previews are not part of this study.");
+    error.code = "HOME_SCHOOL_UNAVAILABLE_ROLE_SET";
+    throw error;
+  }
+  return normalizedRole;
+}
+
 function selectRoleSet(seedText, forcedRoleSet) {
+  if (isHomeSchoolStudy) {
+    const selected = validateHomeSchoolRoleSelection("role", forcedRoleSet);
+    if (selected) return selected;
+  }
   const normalized = String(forcedRoleSet || "").toLowerCase();
   if (["woman", "women", "female", "mom"].includes(normalized)) return "woman";
   if (["man", "men", "male", "dad"].includes(normalized)) return "man";
@@ -1644,10 +1660,12 @@ function normalizeRoleSet(roleSet) {
 }
 
 function balancedAssignment(assignmentKey, forcedRoleSet, forcedEvent, forcedContext = "", contextStudyActive = false, assignmentKeySource = "") {
-  const roleOptions = contextStudyActive ? ["woman", "man", "family"] : ["woman", "man"];
+  const roleOptions = ["woman", "man"];
   const eventOptions = EVENT_SUFFIXES;
   const contextOptions = contextStudyActive ? STUDY_CONTEXTS : [""];
-  const roleForced = normalizeRoleSet(forcedRoleSet);
+  const roleForced = contextStudyActive
+    ? validateHomeSchoolRoleSelection("role", forcedRoleSet)
+    : normalizeRoleSet(forcedRoleSet);
   const eventForced = EVENT_SUFFIXES.includes(forcedEvent) ? forcedEvent : "";
   const contextForced = normalizeStudyContext(forcedContext);
   const baseHash = hashSeed(assignmentKey || requestedSeed);
@@ -1679,7 +1697,8 @@ function describeActualAssignment(
   contextStudyActive = false,
   withinChildContexts = false,
 ) {
-  const roleOptions = ["woman", "man", "family"];
+  const roleOptions = contextStudyActive ? ["woman", "man"] : ["woman", "man", "family"];
+  if (contextStudyActive) validateHomeSchoolRoleSelection("role", selectedRoleSet);
   const eventOptions = ["HUG", "FOOD", "HELP"];
   const roleIndex = roleOptions.indexOf(selectedRoleSet);
   const eventIndex = eventOptions.indexOf(selectedEventSuffix);
@@ -1710,8 +1729,8 @@ function describeActualAssignment(
       : (roleIndex >= 0 && eventIndex >= 0 ? eventIndex * roleOptions.length + roleIndex : null),
     cellSchema: contextStudyActive
       ? (withinChildContexts
-        ? "one_based_role_major_3_role_sets_x_3_events_x_2_context_orders"
-        : "one_based_role_major_3_role_sets_x_3_events_x_2_contexts")
+        ? "one_based_role_major_2_role_sets_x_3_events_x_2_context_orders"
+        : "one_based_role_major_2_role_sets_x_3_events_x_2_contexts")
       : "zero_based_event_major_3_role_sets_x_3_events",
     internalHashCell: internalAssignment.cell,
     internalHashMethod: internalAssignment.method,
@@ -1726,6 +1745,10 @@ function selectPartOrder(seedText, forcedPartOrder) {
 }
 
 function selectedConditionsForSet(setName, roleSet) {
+  if (isHomeSchoolStudy) {
+    const selected = validateHomeSchoolRoleSelection(setName, roleSet);
+    return selected === "man" ? MAN_ROLE_CONDITIONS : CORE_CONDITIONS;
+  }
   const normalizedSet = String(setName || "").toLowerCase();
   if (normalizedSet === "all" && !isCurrentChsV76Study) return null;
   const withoutTeacherClassmate = (conditions) => isCurrentChsV76Study
@@ -3558,6 +3581,9 @@ function makePartBreakNode(jsPsych, partKind, partNumber, eventSuffix) {
 }
 
 async function main() {
+  // Reject obsolete Family/all-pair links before loading or starting a session;
+  // never silently reinterpret an old preview as a different assigned set.
+  if (isHomeSchoolStudy) validateHomeSchoolRoleSelection(requestedSet, requestedRoleSet);
   const [
     dyadManifest,
     eventManifest,
@@ -3591,7 +3617,7 @@ async function main() {
     isHomeSchoolStudy,
     isHomeSchoolStudy ? requestedAssignmentIdentity.source : "",
   );
-  const selectedRoleSet = isFamilyConditionSet(requestedSet, requestedRoleSet)
+  const selectedRoleSet = !isHomeSchoolStudy && isFamilyConditionSet(requestedSet, requestedRoleSet)
     ? "family"
     : assignment.roleSet;
   const selectedContext = isHomeSchoolStudy ? normalizeStudyContext(assignment.context) : "";
@@ -4652,5 +4678,9 @@ async function main() {
 }
 
 main().catch((error) => {
+  if (error.code === "HOME_SCHOOL_UNAVAILABLE_ROLE_SET") {
+    document.body.innerHTML = `<main class="ksize-shell"><section class="ksize-screen" role="alert"><h1>This preview link is out of date</h1><p>${escapeHtml(error.message)}</p></section></main>`;
+    return;
+  }
   document.body.innerHTML = `<pre>${escapeHtml(error.stack || error.message || error)}</pre>`;
 });

@@ -1,8 +1,8 @@
 (function installHomeSchoolReview(globalObject, documentObject) {
   "use strict";
 
-  const REVIEW_VERSION = "who-helps-where-review-r19";
-  const STUDY_RUNTIME_VERSION = "chs-home-school-evelyn-v1-r19-who-helps-where-1";
+  const REVIEW_VERSION = "who-helps-where-review-r23";
+  const STUDY_RUNTIME_VERSION = "chs-home-school-evelyn-v1-r23-two-role-sets-1";
   const STORAGE_KEY = `${REVIEW_VERSION}:checked`;
   const STUDY_ENTRYPOINT = "../versions/chs-home-school-evelyn-v1/index.html";
   const CONTEXT_ORDERS = Object.freeze([
@@ -24,14 +24,12 @@
   const ROLE_SETS = Object.freeze([
     Object.freeze({ value: "woman", label: "Woman", set: "role" }),
     Object.freeze({ value: "man", label: "Man", set: "role" }),
-    Object.freeze({ value: "family", label: "Family–teacher", set: "family" }),
   ]);
   const EVENTS = Object.freeze(["HUG", "FOOD", "HELP"]);
   const VARIANTS = Object.freeze(["a", "b", "c", "d"]);
   const ROLE_CONDITIONS = Object.freeze({
     woman: Object.freeze(["MOM-TEACHER", "SISTER-FRIEND", "BESTFRIEND-FRIEND", "TEACHER-FRIEND", "MOM-SISTER", "TEACHER-CLASSMATE"]),
     man: Object.freeze(["DAD-TEACHER", "BROTHER-FRIEND", "BESTFRIEND-FRIEND", "TEACHER-FRIEND", "DAD-BROTHER", "TEACHER-CLASSMATE"]),
-    family: Object.freeze(["MOM-DAD", "SISTER-BROTHER", "DAD-KID", "MOM-KID", "TEACHER-KID", "TEACHER-CLASSMATE"]),
   });
 
   function stableHash(text) {

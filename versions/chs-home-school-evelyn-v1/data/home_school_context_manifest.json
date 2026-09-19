@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "status": "review_ready_not_submitted",
-  "designVersion": "home_school_within_child_counterbalanced_context_order_v1",
+  "designVersion": "home_school_within_child_two_role_sets_v2",
   "scriptVersion": "home_school_house_entrance_recipient_aware_v6",
   "assignment": {
     "design": "within-child",
@@ -11,15 +11,14 @@
     ],
     "roleSets": [
       "WOMAN",
-      "MAN",
-      "FAMILY_TEACHER"
+      "MAN"
     ],
     "events": [
       "HUG",
       "FOOD",
       "HELP"
     ],
-    "cellCount": 18,
+    "cellCount": 12,
     "cellBase": 1,
     "cellFormula": "role_index * 6 + event_index * 2 + context_order_index + 1",
     "contextOrders": [

@@ -101,25 +101,26 @@ assert.equal(metadata.candidateId, "chs-home-school-evelyn-v1");
 const verifiedSaved = metadata.status === "published_chs_draft_saved_not_submitted";
 assert.ok(verifiedSaved || metadata.status === "prepared_for_chs_draft_update");
 assert.equal(metadata.activeChsStudyChanged, false);
-assert.equal(metadata.chsDraftConfigurationUpdated, true, "The prior r21 draft remains saved while r22 is prepared");
+assert.equal(metadata.chsDraftConfigurationUpdated, true, "The prior r22 draft remains saved while r23 is prepared");
 assert.equal(metadata.chsDraftStudyId, 6349);
 assert.equal(metadata.chsDraftSavedOn, "2026-09-18");
 assert.equal(metadata.chsSubmissionStatus, "not_submitted");
-assert.equal(metadata.published, true, "The prior r21 release remains published while r22 is prepared");
+assert.equal(metadata.published, true, "The prior r22 release remains published while r23 is prepared");
 assert.equal(metadata.publishedOn, "2026-09-18");
-assert.equal(metadata.lastPublishedRelease, verifiedSaved ? "chs-home-school-evelyn-v1-r22-clear-at-events-1" : "chs-home-school-evelyn-v1-r21-visual-fixes-1");
-assert.equal(metadata.candidateRelease, "chs-home-school-evelyn-v1-r22-clear-at-events-1");
+assert.equal(metadata.lastPublishedRelease, verifiedSaved ? "chs-home-school-evelyn-v1-r23-two-role-sets-1" : "chs-home-school-evelyn-v1-r22-clear-at-events-1");
+assert.equal(metadata.candidateRelease, "chs-home-school-evelyn-v1-r23-two-role-sets-1");
 assert.equal(metadata.revisionPendingPublication, !verifiedSaved);
-assert.equal(metadata.chsDraftRelease, verifiedSaved ? "chs-home-school-evelyn-v1-r22-clear-at-events-1" : "chs-home-school-evelyn-v1-r21-visual-fixes-1");
-assert.equal(metadata.latestChsDraftSaveReceipt, verifiedSaved ? "review/chs-draft-save-r22.md" : "review/chs-draft-save-r21.md");
+assert.equal(metadata.chsDraftRelease, verifiedSaved ? "chs-home-school-evelyn-v1-r23-two-role-sets-1" : "chs-home-school-evelyn-v1-r22-clear-at-events-1");
+assert.equal(metadata.latestChsDraftSaveReceipt, verifiedSaved ? "review/chs-draft-save-r23.md" : "review/chs-draft-save-r22.md");
 if (verifiedSaved) assert.equal(Object.hasOwn(metadata, "pendingReason"), false);
-else assert.match(metadata.pendingReason, /Five researcher-approved split event recordings.*deployment and CHS draft save pending verification/);
+else assert.match(metadata.pendingReason, /two.*role.*sets.*deployment and CHS draft save pending verification/i);
 assert.equal(metadata.latestRevisionOn, "2026-09-18");
 assert.equal(metadata.storyCount, 12);
 assert.equal(metadata.storyCountPerContext, 6);
 assert.equal(metadata.ratingMode, "none");
 assert.equal(metadata.contextDesign, "within-child");
-assert.equal(metadata.assignmentCellCount, 18);
+assert.equal(metadata.assignmentCellCount, 12);
+assert.deepEqual(metadata.roleSets, ["woman", "man"]);
 assert.equal(metadata.participantAutoplay, true);
 assert.equal(metadata.syntheticSpeech, false);
 assert.equal(metadata.missingEvelynClipCount, 0);
@@ -152,7 +153,7 @@ assert.match(
   /\["intro", "exterior", "room_entry"\]\.includes\(slideKind\)[\s\S]*?text \|\| ""[\s\S]*?slideKind === "context_intro"[\s\S]*?slideKind === "story"[\s\S]*?slideKind === "response_choices"/,
   "Every Home/School story heading must use the same in-scene caption banner",
 );
-assert.match(indexHtml, /app\.js\?v=chs-home-school-evelyn-v1-r22-clear-at-events-1/);
+assert.match(indexHtml, /app\.js\?v=chs-home-school-evelyn-v1-r23-two-role-sets-1/);
 assert.doesNotMatch(app, /contextIntro \? `<div class="ksize-context-intro-cue"/);
 assert.match(app, /fileAudio\.addEventListener\("playing",[\s\S]*?setMouthPlaying\(true\)/);
 assert.match(app, /fileAudio\.addEventListener\("waiting", \(\) => setMouthPlaying\(false\)\)/);
@@ -166,7 +167,11 @@ assert.doesNotMatch(app, /topHudHtml\(storyNumber, storyTotal, \{ showContext: B
 const expectedPairings = plain(literalConst(reviewSource, "ROLE_CONDITIONS"));
 assert.deepEqual(plain(literalConst(app, "CORE_CONDITIONS")), expectedPairings.woman);
 assert.deepEqual(plain(literalConst(app, "MAN_ROLE_CONDITIONS")), expectedPairings.man);
-assert.deepEqual(plain(literalConst(app, "FAMILY_ROLE_CONDITIONS")), expectedPairings.family);
+assert.deepEqual(Object.keys(expectedPairings), ["woman", "man"]);
+assert.equal(new Set(Object.values(expectedPairings).flat()).size, 9);
+assert.deepEqual(plain(literalConst(app, "FAMILY_ROLE_CONDITIONS")), [
+  "MOM-DAD", "SISTER-BROTHER", "DAD-KID", "MOM-KID", "TEACHER-KID", "TEACHER-CLASSMATE",
+], "Historical Family assets remain available in the source, not in Home/School assignments");
 assert.deepEqual(metadata.pairings, expectedPairings);
 assert.equal(literalConst(app, "ONE_PAIR_SCRIPT_SCHEDULES").length, 2);
 assert.equal(literalConst(app, "FAMILY_ONE_PAIR_SCRIPT_SCHEDULES").length, 4);
@@ -181,11 +186,13 @@ assert.match(allCandidateText, /kid's classmate/i);
 
 assert.equal(contextManifest.schemaVersion, 3);
 assert.equal(contextManifest.status, "review_ready_not_submitted");
-assert.equal(contextManifest.designVersion, "home_school_within_child_counterbalanced_context_order_v1");
+assert.equal(contextManifest.designVersion, "home_school_within_child_two_role_sets_v2");
 assert.equal(contextManifest.assignment.design, "within-child");
 assert.equal(contextManifest.assignment.storyCount, 12);
 assert.equal(contextManifest.assignment.storyCountPerContext, 6);
 assert.equal(contextManifest.assignment.ratings, "none");
+assert.deepEqual(contextManifest.assignment.roleSets, ["WOMAN", "MAN"]);
+assert.equal(contextManifest.assignment.cellCount, 12);
 assert.equal(contextManifest.scriptVersion, "home_school_house_entrance_recipient_aware_v6");
 assert.deepEqual(Object.keys(contextManifest.contexts).sort(), ["HOME", "SCHOOL"]);
 
@@ -268,6 +275,7 @@ for (const context of ["HOME", "SCHOOL"]) {
 const assignmentFunctions = vm.runInNewContext(`
   ${functionDeclaration(app, "hashSeed")}
   ${functionDeclaration(app, "normalizeRoleSet")}
+  ${functionDeclaration(app, "validateHomeSchoolRoleSelection")}
   ${functionDeclaration(app, "balancedAssignment")}
   ({ balancedAssignment });
 `, {
@@ -282,7 +290,7 @@ const assignmentFunctions = vm.runInNewContext(`
     return "";
   },
 });
-for (const roleSet of ["woman", "man", "family"]) {
+for (const roleSet of ["woman", "man"]) {
   for (const event of ["HUG", "FOOD", "HELP"]) {
     for (const context of ["HOME", "SCHOOL"]) {
       const first = plain(assignmentFunctions.balancedAssignment("CHS-CHILD-42", roleSet, event, context, true, "chs_child_id"));
@@ -294,6 +302,15 @@ for (const roleSet of ["woman", "man", "family"]) {
     }
   }
 }
+assert.throws(() => assignmentFunctions.balancedAssignment("CHS-CHILD-42", "family", "HUG", "HOME", true, "chs_child_id"),
+  /no longer available/, "Old Family links must not silently become a different assigned role set");
+const generatedCells = new Set();
+for (let child = 0; child < 600; child += 1) {
+  const assigned = plain(assignmentFunctions.balancedAssignment(`CHS-CHILD-${child}`, "", "", "", true, "chs_child_id"));
+  assert.ok(["woman", "man"].includes(assigned.roleSet));
+  generatedCells.add([assigned.roleSet, assigned.eventSuffix, assigned.context].join("/"));
+}
+assert.equal(generatedCells.size, 12, "Unforced assignment must cover exactly the 12 approved cells");
 
 const availableAudio = new Map();
 for (const [text, output] of Object.entries(canonicalAudio.normalizedTextToOutput || {})) {
@@ -449,5 +466,5 @@ console.log(JSON.stringify({
   missingDirectionalEvelynClips: metadata.missingEvelynClipCount,
   participantAutoplay: true,
   browserSpeech: false,
-  collectionSafety: "all_18_cells_pass_audio_preflight_without_browser_speech",
+  collectionSafety: "all_12_cells_have_recorded_audio_without_browser_speech; historical_family_recordings_retained",
 }, null, 2));

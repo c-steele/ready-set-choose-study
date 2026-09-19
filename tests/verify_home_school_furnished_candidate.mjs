@@ -45,17 +45,17 @@ assert.equal(candidate.candidateId, "chs-home-school-evelyn-v1");
 const verifiedSaved = candidate.status === "published_chs_draft_saved_not_submitted";
 assert.ok(verifiedSaved || candidate.status === "prepared_for_chs_draft_update");
 assert.equal(candidate.activeChsStudyChanged, false);
-assert.equal(candidate.published, true, "The prior r21 release remains published while r22 is prepared");
-assert.equal(candidate.chsDraftConfigurationUpdated, true, "The prior r21 draft remains saved while r22 is prepared");
+assert.equal(candidate.published, true, "The prior r22 release remains published while r23 is prepared");
+assert.equal(candidate.chsDraftConfigurationUpdated, true, "The prior r22 draft remains saved while r23 is prepared");
 assert.equal(candidate.chsSubmissionStatus, "not_submitted");
 assert.equal(candidate.publishedOn, "2026-09-18");
-assert.equal(candidate.lastPublishedRelease, verifiedSaved ? "chs-home-school-evelyn-v1-r22-clear-at-events-1" : "chs-home-school-evelyn-v1-r21-visual-fixes-1");
-assert.equal(candidate.candidateRelease, "chs-home-school-evelyn-v1-r22-clear-at-events-1");
+assert.equal(candidate.lastPublishedRelease, verifiedSaved ? "chs-home-school-evelyn-v1-r23-two-role-sets-1" : "chs-home-school-evelyn-v1-r22-clear-at-events-1");
+assert.equal(candidate.candidateRelease, "chs-home-school-evelyn-v1-r23-two-role-sets-1");
 assert.equal(candidate.revisionPendingPublication, !verifiedSaved);
-assert.equal(candidate.chsDraftRelease, verifiedSaved ? "chs-home-school-evelyn-v1-r22-clear-at-events-1" : "chs-home-school-evelyn-v1-r21-visual-fixes-1");
-assert.equal(candidate.latestChsDraftSaveReceipt, verifiedSaved ? "review/chs-draft-save-r22.md" : "review/chs-draft-save-r21.md");
+assert.equal(candidate.chsDraftRelease, verifiedSaved ? "chs-home-school-evelyn-v1-r23-two-role-sets-1" : "chs-home-school-evelyn-v1-r22-clear-at-events-1");
+assert.equal(candidate.latestChsDraftSaveReceipt, verifiedSaved ? "review/chs-draft-save-r23.md" : "review/chs-draft-save-r22.md");
 if (verifiedSaved) assert.equal(Object.hasOwn(candidate, "pendingReason"), false);
-else assert.match(candidate.pendingReason, /Five researcher-approved split event recordings.*deployment and CHS draft save pending verification/);
+else assert.match(candidate.pendingReason, /two.*role.*sets.*deployment and CHS draft save pending verification/i);
 assert.equal(candidate.missingEvelynClipCount, 0);
 assert.equal(candidate.directionalEvelynClipCount, 30);
 assert.equal(missingAudio.missingClipCount, 30);
@@ -183,7 +183,7 @@ assert.ok(fs.existsSync(contactSheet), "Missing all-pairings Home/School contact
 assert.ok(fs.statSync(contactSheet).size > 100_000, "Contact sheet is unexpectedly small");
 
 assert.match(app, /function furnishedSceneSpec\(/);
-assert.match(app, /const HOME_SCHOOL_ASSET_VERSION = "chs-home-school-evelyn-v1-r22-clear-at-events-1"/);
+assert.match(app, /const HOME_SCHOOL_ASSET_VERSION = "chs-home-school-evelyn-v1-r23-two-role-sets-1"/);
 assert.match(app, /slideIndex === block\.introSlides\.length - 1 && studyContext/);
 assert.doesNotMatch(app, /slideIndex === 0 && (?:activeStudyContext|studyContext)/);
 assert.doesNotMatch(css, /text-wrap:\s*balance/);
@@ -214,7 +214,7 @@ assert.match(css, /\.ksize-image-wrap \.ksize-rating-furnished-scene/);
 assert.match(css, /\.ksize-furnished-scene \.ksize-char-btn/);
 assert.match(css, /\.ksize-screen\[data-context="HOME"\],[\s\S]*?\.ksize-screen\[data-context="SCHOOL"\][\s\S]*?justify-content:\s*flex-start/);
 assert.match(css, /\.ksize-screen\[data-context="HOME"\] \.ksize-bottom-area,[\s\S]*?\.ksize-screen\[data-context="SCHOOL"\] \.ksize-bottom-area[\s\S]*?margin-top:\s*8px/);
-assert.match(html, /chs-home-school-evelyn-v1-r22-clear-at-events-1/g);
+assert.match(html, /chs-home-school-evelyn-v1-r23-two-role-sets-1/g);
 assert.doesNotMatch(html, /chs-home-school-evelyn-v1-r(?:[1-9])(?!\d)/);
 
 console.log(JSON.stringify({
