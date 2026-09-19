@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Who Helps Where? — Butter-yellow revision 2</title>
+<style>
+*{box-sizing:border-box}body{margin:0;padding:24px;background:#faf9f3;color:#29363b;font:16px/1.45 Arial,sans-serif}main{max-width:1280px;margin:auto}h1{font-size:27px;margin:0 0 6px}p{margin:0 0 20px}h2{font-size:20px;margin:22px 0 8px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}figure{margin:0;min-width:0}figcaption{font-weight:bold;margin:0 0 6px}.scene{position:relative;aspect-ratio:16/9;overflow:hidden;border-radius:6px;background:#fff}.scene img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 57%}.scene .character{object-fit:contain}.caption{position:absolute;top:0;left:0;right:0;background:#FFD100;color:#fff;text-align:center;font-size:clamp(12px,1.7vw,23px);font-weight:bold;padding:4px 7px;line-height:1.15}.note{color:#5c665f;font-size:14px;margin-top:22px}a{color:#365d73}@media(max-width:650px){.grid{grid-template-columns:1fr}.caption{font-size:3vw}}
+</style></head><body><main>
+<h1>Yellow backgrounds — clearer butter yellow</h1>
+<p>Only the yellow-themed accents have changed. Characters, captions, plants, and the other color sets stay the same. <a href="review-green-yellow-characters-local.html">See all green/yellow characters</a> · <a href="review-yellow-exteriors-local.html?v=clean-windows-roof-v3">See cleaned windows and roofs up close</a>.</p>
+<div id="scenes"></div><p class="note">Cleaned yellow interiors and hallways, with revision 3 exterior window and roof cleanup. The previous tint is on the left; the current version is on the right. <a href="review-all-versions-local.html">Check the current CHS draft status</a>.</p></main>
+<script>
+const c='versions/chs-home-school-evelyn-v1/',slug='mkt-skf-yellow-ffd100',r=c+'assets/visual-repair-v1/'+slug+'/';
+const scenes=[
+{title:'School — with characters',kind:'school-room',before:c+'assets/window-greenery-v1/'+slug+'/school-room.svg',caption:"They are all at the kid's school.",characters:true},
+{title:'Home — with characters',kind:'house-room',before:'assets/home_school/furnished_color_group_preview/'+slug+'/home_room_subtle_palette_wall_matched_pillows_palette_picture_floor_clean_v17.webp',caption:"They are all at the kid's house.",characters:true},
+{title:'School exterior',kind:'school-exterior',exterior:true,caption:'Oh look! Here is a school.'},
+{title:'School hallway',kind:'school-hall',before:r+'school-hall.webp',caption:'Oh look! Here is a school.'},
+{title:'Home exterior',kind:'house-exterior',exterior:true,caption:'Oh look! Here is a house.'},
+{title:'Home hallway',kind:'house-hall',before:r+'house-hall.webp',caption:'Oh look! Here is a house.'},
+{title:'School room — background detail',kind:'school-room',before:c+'assets/window-greenery-v1/'+slug+'/school-room.svg',caption:'This is a room inside the school.'},
+{title:'Home room — background detail',kind:'house-room',before:'assets/home_school/furnished_color_group_preview/'+slug+'/home_room_subtle_palette_wall_matched_pillows_palette_picture_floor_clean_v17.webp',caption:'This is a room inside the house.'},
+];
+for(const scene of scenes){
+const section=document.createElement('section'),h=document.createElement('h2'),grid=document.createElement('div');h.textContent=scene.title;grid.className='grid';
+for(const state of ['before','after']){
+const figure=document.createElement('figure'),label=document.createElement('figcaption'),frame=document.createElement('div'),img=document.createElement('img'),banner=document.createElement('div');
+label.textContent=state==='before'?'Previous tint':'New butter yellow';frame.className='scene';img.alt=scene.title+' — '+label.textContent;
+img.src=scene.exterior?(state==='after'?c+'review/yellow-exterior-cleanup-v3/'+scene.kind+'-after.png':c+'review/yellow-warmth-v2/'+scene.kind+'-before.svg'):c+'assets/'+(state==='before'?'yellow-warmth-v1':'yellow-interior-cleanup-v4')+'/'+scene.kind+'.svg';
+frame.append(img);if(scene.characters){const chars=document.createElement('img');chars.className='character';chars.src=c+'assets/home_school/foregrounds/5b/intro_04.png';chars.alt='Mom, Kid, Teacher';frame.append(chars)}
+banner.className='caption';banner.textContent=scene.caption;frame.append(banner);figure.append(label,frame);grid.append(figure)}section.append(h,grid);document.getElementById('scenes').append(section)}
+</script></body></html>

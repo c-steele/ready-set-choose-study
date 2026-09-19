@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Who Helps Where? — Green and yellow characters</title>
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; padding: 24px; background: #f7f7f4; color: #25353b; font: 16px/1.45 Arial, sans-serif; }
+    main { max-width: 1260px; margin: auto; }
+    h1 { margin: 0 0 8px; font-size: 28px; }
+    p { margin: 0 0 20px; }
+    section { margin: 24px 0 32px; }
+    h2 { display: flex; align-items: center; gap: 10px; margin: 0 0 12px; font-size: 21px; }
+    .swatch { width: 26px; height: 26px; display: inline-block; border-radius: 5px; background: var(--theme); border: 1px solid #67716c; }
+    .grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px; }
+    figure { margin: 0; min-width: 0; }
+    figcaption { font-weight: bold; margin-bottom: 7px; }
+    .scene { position: relative; width: 100%; aspect-ratio: 16/9; overflow: hidden; border-radius: 6px; background: white; }
+    .scene img { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+    .room { object-fit: cover; object-position: 50% 57%; }
+    .characters { object-fit: contain; }
+    .banner { position: absolute; left: 0; right: 0; top: 0; min-height: 9.5%; display: flex; align-items: center; justify-content: center; background: var(--theme); color: white; text-align: center; font-weight: bold; font-size: clamp(12px,1.7vw,23px); line-height: 1.12; padding: 3px 8px; }
+    .note { font-size: 14px; color: #4b5b60; }
+    @media(max-width:700px) { body { padding: 16px; } .grid { grid-template-columns: 1fr; } .banner { font-size: clamp(12px,3vw,21px); } }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Green and yellow: which characters go together?</h1>
+    <p>The yellow set uses butter-yellow backgrounds and golden accents. All other color sets, characters, and captions are unchanged. The outside characters can swap sides. <a href="review-yellow-cleanup-local.html?v=r24">See the cleaned rooms, both hallways, and exteriors</a> · <a href="review-study-audit-local.html">Read the issue log</a>.</p>
+    <div id="comparisons"></div>
+    <p class="note">The same color assignment is used for each matched Home and School story. <a href="review-all-versions-local.html">Check the current CHS draft version and open all 48 previews</a>.</p>
+  </main>
+  <script>
+    const candidate = 'versions/chs-home-school-evelyn-v1/';
+    const groups = [
+      {name:'Yellow',hex:'#FFD100',slug:'mkt-skf-yellow-ffd100',scenes:[['5b','Mom – Kid – Teacher'],['6b','Sister – Kid – Friend']]},
+      {name:'Light green',hex:'#81D653',slug:'mkt-skf-green-81d653',scenes:[['5a','Mom – Kid – Teacher'],['6a','Sister – Kid – Friend']]},
+      {name:'Olive green',hex:'#92902C',slug:'dkt-bkf-green-92902c',scenes:[['9b','Dad – Kid – Teacher'],['10b','Brother – Kid – Friend']]},
+      {name:'Teal green',hex:'#4CA98F',slug:'dkb-green-4ca98f',scenes:[['7b','Dad – Kid – Brother']]},
+    ];
+    const root = document.getElementById('comparisons');
+    for (const group of groups) {
+      const section = document.createElement('section');
+      section.style.setProperty('--theme',group.hex);
+      const title = document.createElement('h2');
+      const swatch = document.createElement('span');
+      swatch.className = 'swatch'; swatch.setAttribute('aria-hidden','true');
+      title.append(swatch,document.createTextNode(group.name+' · '+group.hex));
+      const grid = document.createElement('div'); grid.className = 'grid';
+      for (const [trial,label] of group.scenes) {
+        const figure = document.createElement('figure');
+        const caption = document.createElement('figcaption'); caption.textContent = label;
+        const scene = document.createElement('div'); scene.className = 'scene';
+        const room = document.createElement('img'); room.className = 'room'; room.alt = '';
+        room.src = group.hex==='#FFD100' ? candidate+'assets/yellow-interior-cleanup-v4/school-room.svg' : candidate+'assets/window-greenery-v1/'+group.slug+'/school-room.svg';
+        const characters = document.createElement('img'); characters.className = 'characters';
+        characters.alt = label+' characters in the '+group.name.toLowerCase()+' classroom';
+        characters.src = candidate+'assets/home_school/foregrounds/'+trial+'/intro_04.png';
+        const banner = document.createElement('div'); banner.className = 'banner'; banner.textContent = "They are all at the kid's school.";
+        scene.append(room,characters,banner); figure.append(caption,scene); grid.append(figure);
+      }
+      section.append(title,grid); root.append(section);
+    }
+  </script>
+</body>
+</html>

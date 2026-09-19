@@ -1,7 +1,7 @@
 /*
   PRODUCTION-READY CHS WRAPPER SOURCE FOR STUDY 6349.
 
-  This source targets the r23 two-role-set within-child House/School candidate.
+  This source targets the r24 yellow-cleanup two-role-set within-child House/School candidate.
   Installing it in CHS remains a separate researcher-controlled action.
 
   Public title: Who Helps Where?
@@ -28,7 +28,7 @@ var HOME_SCHOOL_CANDIDATE_ROOT_URL =
 var HOME_SCHOOL_CANDIDATE_ORIGIN = "https://c-steele.github.io";
 
 var HOME_SCHOOL_STUDY_VERSION = "chs-home-school-evelyn-v1";
-var HOME_SCHOOL_CANDIDATE_RELEASE = "chs-home-school-evelyn-v1-r23-two-role-sets-1";
+var HOME_SCHOOL_CANDIDATE_RELEASE = "chs-home-school-evelyn-v1-r24-yellow-cleanup-1";
 var HOME_SCHOOL_CONTEXT_SCRIPT_VERSION = "home_school_house_entrance_recipient_aware_v6";
 var HOME_SCHOOL_DESIGN_VERSION = "home_school_within_child_two_role_sets_v2";
 /* Temporary editing aid: enable Back/Skip only on CHS's Preview Study route.

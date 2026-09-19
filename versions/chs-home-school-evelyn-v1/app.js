@@ -9,7 +9,7 @@ const TEACHER_CLASSMATE_GENERATED_ROOT = "assets/teacher_classmate/generated/";
 const TEACHER_CLASSMATE_V78_REVISION_ROOT = "versions/chs-v78-teacher-classmate-evelyn-unique-roles/assets/teacher_classmate/generated/";
 const TEACHER_CLASSMATE_V78_DYAD_REVISION = /^dyads\/classmate-kid_0(?:1_tkc-deep-purple-a|2_tkc-deep-purple-b)\/slide_(?:0[3-9]|1[0-3])\.svg$/;
 const TEACHER_CLASSMATE_V78_TRIAL_REVISION = /^trials\/14(?:[ab]\/intro_04|[cd]\/intro_0[34]|[abcd]\/(?:hug|food|help)_screen_2)\.svg$/;
-const HOME_SCHOOL_ASSET_VERSION = "chs-home-school-evelyn-v1-r23-two-role-sets-1";
+const HOME_SCHOOL_ASSET_VERSION = "chs-home-school-evelyn-v1-r24-yellow-cleanup-1";
 const HOME_SCHOOL_DESIGN_VERSION = "home_school_context_chs_candidate_v1";
 const HOME_SCHOOL_WITHIN_CHILD_DESIGN_VERSION = "home_school_within_child_two_role_sets_v2";
 const HOME_SCHOOL_CONTEXT_SCRIPT_VERSION = "home_school_house_entrance_recipient_aware_v6";
@@ -2442,11 +2442,12 @@ function entranceNarrationSpec(context, kind) {
 
 function entranceAssets(context, paletteSlug = "") {
   const place = context === "HOME" ? "house" : "school";
+  const hall = paletteSlug
+    ? `${HOME_SCHOOL_VISUAL_REPAIR_ROOT}${paletteSlug}/${place}-hall.webp`
+    : `${HOME_SCHOOL_ENTRANCE_ROOT}${place}-hall.webp`;
   return {
     exterior: `${HOME_SCHOOL_ENTRANCE_ROOT}${place}-exterior.webp`,
-    hall: paletteSlug
-      ? `${HOME_SCHOOL_VISUAL_REPAIR_ROOT}${paletteSlug}/${place}-hall.webp`
-      : `${HOME_SCHOOL_ENTRANCE_ROOT}${place}-hall.webp`,
+    hall: window.WTCYellowBackgrounds?.correctedPath(hall) || hall,
   };
 }
 
@@ -3634,6 +3635,7 @@ async function main() {
   activeStudyRoleSet = selectedRoleSet;
   // Route every School page and its preloader through the original-green bush correction.
   window.WTCWindowGreenery?.applyToManifest(eventManifest);
+  window.WTCYellowBackgrounds?.applyToManifest(eventManifest);
   // Remove only enclosed white source-background gaps on the box story layers.
   window.WTCHelpGapRepair?.applyToManifest(eventManifest);
   const eventPlan = planEventSession(eventManifest, requestedSeed, requestedVariant, requestedSet, selectedRoleSet);

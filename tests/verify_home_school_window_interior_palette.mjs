@@ -96,6 +96,9 @@ function independentExpectedRGB(sourceRGB, hex) {
   const span = Math.max(...target) - Math.min(...target);
   const sourceY = luminance(sourceRGB);
   const sourceChroma = (sourceRGB[0] + sourceRGB[2]) / 2 - sourceRGB[1];
+  // The sixteen unchanged palettes retain their exact equal-luminance
+  // expectation. Yellow's protected glazing/curtain-only treatment is tested
+  // independently in the dedicated branches below.
   return target.map((channel) => sourceY + (span ? (channel - targetY) / span * sourceChroma : 0));
 }
 
@@ -110,6 +113,7 @@ let selectedChecks = 0;
 let protectedChecks = 0;
 let outsideGeometryChecks = 0;
 let maxSelectedLuminanceDrift = 0;
+let maxYellowSelectedLuminanceLift = 0;
 let maxLavenderBlindHighlightDrift = 0;
 for (const context of ["HOME", "SCHOOL"]) {
   const place = context === "HOME" ? "house" : "school";
@@ -134,8 +138,19 @@ for (const context of ["HOME", "SCHOOL"]) {
     assert.equal(result.info.width, WIDTH, `${slug}/${context}: exterior width changed`);
     assert.equal(result.info.height, HEIGHT, `${slug}/${context}: exterior height changed`);
     assert.equal(result.info.channels, 4);
+    const yellow = palette.characterHex.toUpperCase() === "#FFD100";
     for (const [x, y, rgb] of selected[context]) {
       const actual = pixelAt(result.data, x, y);
+      if (yellow) {
+        if (context === "SCHOOL") {
+          assert.deepEqual(actual, rgb, `Yellow School glazing must remain original at ${x},${y}`);
+          selectedChecks += 1;
+        }
+        // The old Home probes include new silhouette/feather boundaries;
+        // replace them with eight interior curtain probes below, not a
+        // relaxed tolerance over entire glass panes.
+        continue;
+      }
       const expected = independentExpectedRGB(rgb, palette.characterHex);
       assert.ok(maxDelta(actual, rgb) >= 3, `${slug}/${context}/${x},${y}: selected curtain/interior remained unthemed`);
       assert.ok(maxDelta(actual, expected) <= 2, `${slug}/${context}/${x},${y}: raster hue differs from the exact target palette: ${actual} vs ${expected}`);
@@ -144,6 +159,18 @@ for (const context of ["HOME", "SCHOOL"]) {
       assert.ok(drift <= 1.1, `${slug}/${context}/${x},${y}: selected pigment brightness moved by ${drift}`);
       if (palette.characterHex === "#A9A9A9") assert.ok(Math.max(...actual) - Math.min(...actual) <= 1, "Gray window interior retains purple hue");
       selectedChecks += 1;
+    }
+    if (yellow && context === "HOME") {
+      for (const [x,y] of [[347,405],[504,405],[343,548],[508,548],[1157,405],[1318,405],[1156,550],[1318,550]]) {
+        const rgb=pixelAt(original,x,y), actual=pixelAt(result.data,x,y), ySource=luminance(rgb);
+        const tint=[.4*ySource+.6*255,.65*ySource+.3*255,ySource-.2*255].map(v=>Math.max(0,Math.min(255,v)));
+        const alpha=Math.max(0,Math.min(1,(rgb[0]-rgb[1])/12));
+        const expected=rgb.map((value,c)=>value+(tint[c]-value)*alpha);
+        assert.ok(maxDelta(actual,expected)<=2,`Yellow curtain differs at ${x},${y}: ${actual} vs ${expected}`);
+        assert.ok(maxDelta(actual,rgb)>=3,`Yellow curtain not themed at ${x},${y}`);
+        maxYellowSelectedLuminanceLift=Math.max(maxYellowSelectedLuminanceLift,Math.abs(luminance(actual)-luminance(rgb)));
+        selectedChecks+=1;
+      }
     }
     for (const [x, y, rgb, label] of protectedProbes[context]) {
       assert.deepEqual(pixelAt(result.data, x, y), rgb, `${slug}/${context}: protected ${label} changed at ${x},${y}`);
@@ -178,4 +205,4 @@ for (const relative of roomPaths) {
   assert.equal(metadata.width, 1536, `Room master width changed: ${relative}`);
   assert.equal(metadata.height, 1024, `Room master height changed: ${relative}`);
 }
-console.log(JSON.stringify({ status: "PASS", renderer: "sharp/libRSVG with PNG-embedded immutable sources", palettes: 17, rasterScenes, selectedCurtainInteriorChecks: selectedChecks, exactProtectedPixelChecks: protectedChecks, outsideGeometryChecks, roomMastersChecked: roomPaths.length, maxSelectedLuminanceDrift: Number(maxSelectedLuminanceDrift.toFixed(3)), maxLavenderBlindHighlightChannelDrift: maxLavenderBlindHighlightDrift, caveat: "No broad School glazing gate: blue reflections and neutral blinds are intentionally retained; this is not browser animation verification." }));
+console.log(JSON.stringify({ status: "PASS", renderer: "sharp/libRSVG with PNG-embedded immutable sources", palettes: 17, rasterScenes, selectedCurtainInteriorChecks: selectedChecks, exactProtectedPixelChecks: protectedChecks, outsideGeometryChecks, roomMastersChecked: roomPaths.length, maxSelectedLuminanceDrift: Number(maxSelectedLuminanceDrift.toFixed(3)), maxYellowSelectedLuminanceLift: Number(maxYellowSelectedLuminanceLift.toFixed(3)), maxLavenderBlindHighlightChannelDrift: maxLavenderBlindHighlightDrift, caveat: "No broad School glazing gate: blue reflections and neutral blinds are intentionally retained; this is not browser animation verification." }));

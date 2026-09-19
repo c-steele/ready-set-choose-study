@@ -1,0 +1,61 @@
+{
+  "version": "yellow-interior-cleanup-v4",
+  "characterHex": "#FFD100",
+  "paletteSlug": "mkt-skf-yellow-ffd100",
+  "treatment": "Chroma-proportional yellow warmth, smooth theme selection and explicit neutral-object protections; source artwork, geometry and other color sets unchanged",
+  "matrix": "2 0.3 -1.3 0 0 0.4 1.1 -0.5 0 0 -0.35 0 1.35 0 0 0 0 0 1 0",
+  "scenes": {
+    "house-room": {
+      "name": "house-room",
+      "source": "assets/home_school/furnished_color_group_preview/mkt-skf-yellow-ffd100/home_room_subtle_palette_wall_matched_pillows_palette_picture_floor_clean_v17.webp",
+      "reference": "assets/home_school/furnished_color_group_preview/dkt-bkf-gray-a9a9a9/home_room_subtle_palette_wall_matched_pillows_palette_picture_floor_clean_v17.webp",
+      "width": 1536,
+      "height": 1024,
+      "matrix": "2 0.3 -1.3 0 0 0.4 1.1 -0.5 0 0 -0.35 0 1.35 0 0 0 0 0 1 0",
+      "maskMethod": "chroma-proportional-with-neutral-object-restoration",
+      "sourceSha256": "582a72683792ac31841ed574a8e6e485d014223720aae9a48dfc18959739b302",
+      "output": "versions/chs-home-school-evelyn-v1/assets/yellow-interior-cleanup-v4/house-room.svg",
+      "outputSha256": "abcac8f0093c56856181f10829690e8e574ebdf8e6dc952dbe20cee019f82d00",
+      "selectedPixels": 598193
+    },
+    "school-room": {
+      "name": "school-room",
+      "source": "versions/chs-home-school-evelyn-v1/assets/window-greenery-v1/mkt-skf-yellow-ffd100/school-room.svg",
+      "reference": "versions/chs-home-school-evelyn-v1/assets/window-greenery-v1/dkt-bkf-gray-a9a9a9/school-room.svg",
+      "width": 1536,
+      "height": 1024,
+      "matrix": "2 0.3 -1.3 0 0 0.4 1.1 -0.5 0 0 -0.35 0 1.35 0 0 0 0 0 1 0",
+      "maskMethod": "chroma-proportional-with-neutral-object-restoration",
+      "sourceSha256": "b998310b1eaf7ef6d127baad61e83e1cb73642deaaa425416660d60ee212008d",
+      "output": "versions/chs-home-school-evelyn-v1/assets/yellow-interior-cleanup-v4/school-room.svg",
+      "outputSha256": "37a16d5857762ce4b783b79c12e73aae1571b51c6f3e3dbbf61162df7200211f",
+      "selectedPixels": 566196
+    },
+    "house-hall": {
+      "name": "house-hall",
+      "source": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/mkt-skf-yellow-ffd100/house-hall.webp",
+      "mask": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/house-hall-palette-mask.png",
+      "width": 1672,
+      "height": 941,
+      "matrix": "0.08073 0.15849 0.03078 0 0.73 0.17342 0.34046 0.06612 0 0.40 0.299 0.587 0.114 0 -0.24 0 0 0 1 0",
+      "maskMethod": "hand-traced-vector-regions",
+      "sourceSha256": "0997921b42a78871a0e47eb57a2373605a332a8994d151ce9c979e60d85cde50",
+      "output": "versions/chs-home-school-evelyn-v1/assets/yellow-interior-cleanup-v4/house-hall.svg",
+      "outputSha256": "441074b2009e46ab5d1f7b88f704992b1bf15e02a9eae1f664d125bcd85621a8",
+      "selectedPixels": 799292
+    },
+    "school-hall": {
+      "name": "school-hall",
+      "source": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/mkt-skf-yellow-ffd100/school-hall.webp",
+      "mask": "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/school-hall-palette-mask.png",
+      "width": 1672,
+      "height": 941,
+      "matrix": "0.08073 0.15849 0.03078 0 0.73 0.17342 0.34046 0.06612 0 0.40 0.299 0.587 0.114 0 -0.24 0 0 0 1 0",
+      "maskMethod": "hand-traced-vector-regions",
+      "sourceSha256": "64e1dc8f28db665d8585efdbe6a0dd8d20050b27af541ecc331f19a2a169f0f5",
+      "output": "versions/chs-home-school-evelyn-v1/assets/yellow-interior-cleanup-v4/school-hall.svg",
+      "outputSha256": "ce0da597042ff19e5aead5328e0d19eb3f49cfffc3468b95e8575887006e5a0b",
+      "selectedPixels": 562643
+    }
+  }
+}

@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Who Helps Where? — all current previews</title>
+  <style>
+    :root { color-scheme: light; font-family: system-ui, sans-serif; color: #243238; background: #f5f8f7; }
+    * { box-sizing: border-box; }
+    body { margin: 0; }
+    main { max-width: 1260px; margin: auto; padding: 36px 24px 70px; }
+    h1 { margin: 6px 0 14px; font-size: clamp(28px, 4vw, 42px); letter-spacing: -.04em; }
+    h2 { font-size: 19px; margin: 0 0 12px; }
+    p { line-height: 1.6; }
+    a { color: #166953; }
+    .eyebrow { color: #486d61; font-weight: 700; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; }
+    .intro { max-width: 870px; }
+    .counts { display: flex; flex-wrap: wrap; gap: 12px; margin: 24px 0; }
+    .count { padding: 15px 20px; border: 1px solid #d6e3de; background: white; border-radius: 14px; }
+    .count strong { font-size: 25px; padding-right: 8px; }
+    .notice { border-left: 4px solid #81b4a0; padding: 10px 16px; background: #e9f3ee; line-height: 1.6; }
+    .status { color: #53665f; font-size: 14px; }
+    .toolbar { display: flex; flex-wrap: wrap; gap: 16px; align-items: end; margin: 26px 0 18px; }
+    label { display: grid; gap: 6px; font-size: 13px; font-weight: 700; }
+    select, button, .launch { font: inherit; border: 1px solid #bccfc6; border-radius: 9px; background: white; padding: 11px 13px; color: inherit; }
+    select { max-width: 100%; }
+    button { cursor: pointer; }
+    button:hover { background: #e6f1eb; }
+    :focus-visible { outline: 3px solid #c1682b; outline-offset: 3px; }
+    .progress { margin-left: auto; color: #426454; padding-bottom: 12px; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+    .card { padding: 23px; background: white; border: 1px solid #d8e2dd; border-radius: 16px; }
+    .card .subtitle { margin: 0 0 14px; color: #596c63; font-size: 14px; }
+    .order { display: inline-block; background: #edf2fb; color: #345275; padding: 5px 10px; border-radius: 8px; font-size: 13px; margin-bottom: 17px; }
+    .order.school { background: #f1ebf7; color: #6c447c; }
+    .profiles { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+    .profile { background: #f7f9f8; border: 1px solid #e0e7e3; border-radius: 10px; padding: 8px; text-align: center; }
+    .profile:has(input:checked) { background: #e9f5ed; border-color: #7dac8a; }
+    .launch { display: block; text-decoration: none; background: #226f59; color: white; font-weight: 700; padding: 11px 3px; border-color: #226f59; }
+    .launch:hover { background: #185440; }
+    .profile label { display: flex; align-items: center; justify-content: center; margin-top: 10px; font-weight: 500; font-size: 12px; cursor: pointer; }
+    input[type=checkbox] { accent-color: #226f59; width: 17px; height: 17px; }
+    details { margin-top: 16px; color: #53665f; font-size: 13px; }
+    summary { cursor: pointer; }
+    details p { margin-bottom: 0; }
+    .empty { padding: 30px; background: white; }
+    footer { margin-top: 25px; font-size: 13px; color: #67736e; line-height: 1.6; }
+    @media (max-width: 790px) { .grid { grid-template-columns: 1fr; } .progress { margin-left: 0; } }
+    @media (max-width: 420px) { main { padding: 24px 14px; } .card { padding: 17px; } .profiles { gap: 6px; } .profile { padding: 5px; } }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <div class="eyebrow">r24 · yellow cleanup · researcher previews</div>
+    <h1>Who Helps Where?</h1>
+    <p class="intro">Choose a character set, a kind of story, and which setting comes first. Each A–D button opens a complete 12-story preview with the updated recordings, captions and artwork, plus researcher <strong>Back and Skip</strong> controls.</p>
+    <div class="counts" aria-label="Version counts">
+      <div class="count"><strong>12</strong> study conditions</div>
+      <div class="count"><strong>48</strong> organized previews</div>
+      <div class="count"><strong>96</strong> story pages per run</div>
+    </div>
+    <p class="notice"><strong>Why these counts?</strong> 2 character sets × 3 kinds of story × 2 setting orders = 12 conditions. Four repeatable visual profiles per condition give 48 previews. The two sets include 9 unique relationship pairings in total. Each run contains six home stories and six school stories, with eight pages per story: 12 × 8 = 96 story pages.</p>
+    <p class="intro status">Profiles A–D cover the available character/layout variants. They are organized examples, not every possible shuffled sequence a child could receive. Matching Home-first and School-first links use the same stories, colors and arrangements in the opposite setting order.</p>
+    <p class="status" id="release-status" role="status">Checking the current draft version…</p>
+    <p class="status"><a href="review-study-audit-local.html">Read the audit and remaining issues</a> · <a href="review-yellow-cleanup-local.html">See the cleaned yellow rooms and both hallways</a>. Food-picture cutouts and two current “At” recordings remain flagged for review.</p>
+    <p class="status">Exterior accents and curtains seen through the windows, entry halls, rooms, captions, and characters follow each story’s palette. The original woman/man review seeds are preserved.</p>
+    <p class="status"><strong>Historical audio note:</strong> the older School / Dad / Hug question has an unclear opening “At.” That recording has not been fixed, but it is no longer reachable here: the family condition and its adult-recipient stories have been removed. Every story in these two role sets asks about helping the kid.</p>
+    <p class="status">The links below open in a separate preview tab, so this list stays available. Use Next within a story or researcher Skip to move through it. You can mark each run “Reviewed” here; those checkmarks stay on this browser only.</p>
+  </header>
+  <section class="toolbar" aria-label="Filter previews">
+    <label>Character set<select id="role"><option value="all">Both sets</option><option value="woman">Mom / sister set</option><option value="man">Dad / brother set</option></select></label>
+    <label>Kind of story<select id="event"><option value="all">Hugs, food and help</option><option value="HUG">Comfort — a hug</option><option value="FOOD">Sharing food</option><option value="HELP">Help with a heavy box</option></select></label>
+    <label>Setting order<select id="order"><option value="all">Both orders</option><option value="HOME">Home → School</option><option value="SCHOOL">School → Home</option></select></label>
+    <label>Show<select id="reviewed"><option value="all">All previews</option><option value="remaining">Not fully reviewed</option></select></label>
+    <button id="reset-filters" type="button">Clear filters</button>
+    <div class="progress" id="progress" aria-live="polite"></div>
+  </section>
+  <p class="status" id="visible-count" aria-live="polite"></p>
+  <section class="grid" id="grid" aria-label="All study condition previews"></section>
+  <noscript><p>Please enable JavaScript to show the preview links.</p></noscript>
+  <footer>
+    <a href="https://childrenhelpingscience.com/exp/studies/981133ce-7d08-4801-9c31-0ae72400e135/preview-detail/" target="_blank" rel="noopener">Open the official CHS preview page</a> · These links target r24 and bypass parent setup for researcher review. Check the version status above before comparing with CHS. They do not submit or activate the study.
+  </footer>
+</main>
+<script>
+(function installPreviewDirectory(global, document) {
+  "use strict";
+  const RELEASE = "chs-home-school-evelyn-v1-r24-yellow-cleanup-1";
+  const STUDY = "versions/chs-home-school-evelyn-v1/";
+  // New-release reviews start separately; earlier review checkmarks are retained.
+  const STORAGE = "who-helps-where:r24:all-version-review";
+  const roles = [
+    {value: "woman", label: "Mom / sister set", set: "role", pairs: ["Mom + Teacher", "Sister + Friend", "Best friend + Friend", "Teacher + Friend", "Mom + Sister", "Teacher + Classmate"]},
+    {value: "man", label: "Dad / brother set", set: "role", pairs: ["Dad + Teacher", "Brother + Friend", "Best friend + Friend", "Teacher + Friend", "Dad + Brother", "Teacher + Classmate"]}
+  ];
+  const events = [{value: "HUG", label: "Comfort — a hug"}, {value: "FOOD", label: "Sharing food"}, {value: "HELP", label: "Help with a heavy box"}];
+  const orders = [{value: "HOME", label: "Home → School"}, {value: "SCHOOL", label: "School → Home"}];
+  const profiles = ["a", "b", "c", "d"];
+  function seedFor(role, event, profile) {
+    const stem = `WTC-BOTH-${role.toUpperCase()}-${event}-${profile.toUpperCase()}`;
+    let hash = 2166136261;
+    for (let i = 0; i < stem.length; i++) { hash ^= stem.charCodeAt(i); hash = Math.imul(hash, 16777619); }
+    return `${stem}-${(hash >>> 0).toString(36).toUpperCase()}`;
+  }
+  const conditions = roles.flatMap((role, ri) => events.flatMap((event, ei) => orders.map((order, oi) => ({role, event, order, cell: ri * 6 + ei * 2 + oi + 1}))));
+  function previewUrl(condition, profile, base) {
+    const {role, event, order, cell} = condition;
+    const url = new URL(STUDY + "index.html", base);
+    const reviewId = `wtc-${role.value}-${event.value.toLowerCase()}-${profile}-${order.value.toLowerCase()}-first`;
+    const params = {
+      v: RELEASE, syntheticSpeech: "0", ratingMode: "none", contextStudy: "1", withinChildContexts: "1",
+      context: order.value, roleSet: role.value, set: role.set, event: event.value, variant: profile,
+      seed: seedFor(role.value, event.value, profile), assignmentCell: String(cell), child: reviewId, response: reviewId,
+      researcherTools: "1", researcherToolbar: "back-skip", researcherJump: "1", skipParentSetup: "1",
+      previewIndex: "0", showReadAloud: "0", downloadData: "0", showDataStatus: "0", exportFormat: "csv"
+    };
+    Object.entries(params).forEach(([key, value]) => url.searchParams.set(key, value));
+    return url.href;
+  }
+  global.WHWPreviewDirectory = Object.freeze({RELEASE, roles, events, orders, profiles, conditions, seedFor, previewUrl});
+  if (!document) return;
+  const grid = document.getElementById("grid");
+  const filters = ["role", "event", "order", "reviewed"].map(id => document.getElementById(id));
+  let checks = {};
+  try { const stored = JSON.parse(global.localStorage.getItem(STORAGE) || "{}"); if (stored && typeof stored === "object") checks = stored; } catch (_) {}
+  const checkKey = (condition, profile) => `${condition.cell}:${profile}`;
+  function updateProgress() {
+    const count = conditions.reduce((sum, c) => sum + profiles.filter(p => checks[checkKey(c, p)]).length, 0);
+    document.getElementById("progress").textContent = `${count} / ${conditions.length * profiles.length} reviewed`;
+  }
+  function render() {
+    const [role, event, order, reviewed] = filters.map(f => f.value);
+    const visible = conditions.filter(c => (role === "all" || c.role.value === role) && (event === "all" || c.event.value === event) && (order === "all" || c.order.value === order) && (reviewed === "all" || profiles.some(p => !checks[checkKey(c, p)])));
+    grid.replaceChildren();
+    for (const c of visible) {
+      const card = document.createElement("article"); card.className = "card";
+      const heading = document.createElement("h2"); heading.textContent = c.role.label;
+      const subtitle = document.createElement("p"); subtitle.className = "subtitle"; subtitle.textContent = `${c.event.label} · Condition ${c.cell} of ${conditions.length}`;
+      const orderBadge = document.createElement("span"); orderBadge.className = "order" + (c.order.value === "SCHOOL" ? " school" : ""); orderBadge.textContent = c.order.label;
+      const links = document.createElement("div"); links.className = "profiles";
+      for (const p of profiles) {
+        const tile = document.createElement("div"); tile.className = "profile";
+        const a = document.createElement("a"); a.className = "launch"; a.href = previewUrl(c, p, global.location.href); a.target = "_blank"; a.rel = "noopener";
+        a.textContent = `Open ${p.toUpperCase()}`; a.setAttribute("aria-label", `${c.role.label}, ${c.event.label}, ${c.order.label}, profile ${p.toUpperCase()}`);
+        const label = document.createElement("label"); const check = document.createElement("input"); check.type = "checkbox"; check.checked = Boolean(checks[checkKey(c, p)]);
+        check.setAttribute("aria-label", `Reviewed condition ${c.cell}, profile ${p.toUpperCase()}`);
+        check.addEventListener("change", () => { checks[checkKey(c, p)] = check.checked; try { global.localStorage.setItem(STORAGE, JSON.stringify(checks)); } catch (_) {} updateProgress(); });
+        label.append(check, "Reviewed"); tile.append(a, label); links.append(tile);
+      }
+      const details = document.createElement("details"); const summary = document.createElement("summary"); summary.textContent = "See the six pairings used in both settings";
+      const pairs = document.createElement("p"); pairs.textContent = c.role.pairs.join(" · "); details.append(summary, pairs);
+      card.append(heading, subtitle, orderBadge, links, details); grid.append(card);
+    }
+    document.getElementById("visible-count").textContent = `${visible.length} ${visible.length === 1 ? "condition" : "conditions"} shown · ${visible.length * profiles.length} preview links. Each link includes both home and school.`;
+    if (!visible.length) { const empty = document.createElement("p"); empty.className = "empty"; empty.textContent = "No previews match these filters."; grid.append(empty); }
+    updateProgress();
+  }
+  filters.forEach(f => f.addEventListener("change", render));
+  document.getElementById("reset-filters").addEventListener("click", () => { filters.forEach(f => f.value = "all"); render(); });
+  render();
+  global.fetch(STUDY + "candidate.json", {cache: "no-store"}).then(r => { if (!r.ok) throw new Error("Unavailable"); return r.json(); }).then(candidate => {
+    const status = document.getElementById("release-status");
+    if (candidate.candidateRelease === RELEASE && candidate.lastPublishedRelease === RELEASE && candidate.chsDraftRelease === RELEASE && candidate.chsDraftConfigurationUpdated === true && candidate.revisionPendingPublication === false && candidate.status === "published_chs_draft_saved_not_submitted") {
+      status.textContent = "Version checked: r24 — the same release saved to the CHS draft, with two role sets and 12 study conditions. The study is not submitted.";
+    } else {
+      status.textContent = "Version notice: this directory targets r24. Publication and a matching saved CHS draft have not both been verified yet. The last verified CHS draft is " + (candidate.chsDraftRelease || "not recorded") + ".";
+    }
+  }).catch(() => { document.getElementById("release-status").textContent = "This directory targets r24, but its saved-draft status could not be checked. Reload this page and check the official CHS preview before comparing."; });
+})(window, document);
+</script>
+</body>
+</html>

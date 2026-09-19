@@ -43,6 +43,18 @@
   });
   const LUMINANCE = Object.freeze([0.299, 0.587, 0.114]);
   const PURPLE_CHROMA = Object.freeze([0.5, -1, 0.5]);
+  // Explicit curtain silhouettes avoid color-keying the translucent glass.
+  // Coordinates are traced from the immutable Home exterior, behind mullions.
+  const YELLOW_HOME_CURTAINS = Object.freeze([
+    "338,383 366,383 362,421 356,442 350,463 348,474 338,474",
+    "338,483 348,483 345,500 347,523 351,543 357,558 353,572 338,572",
+    "488,383 514,383 514,474 502,474 497,451 493,426",
+    "502,483 514,483 514,572 501,572 502,541 504,517",
+    "1151,383 1179,383 1175,413 1168,441 1159,474 1151,474",
+    "1151,483 1159,483 1158,513 1162,543 1167,572 1151,572",
+    "1298,383 1325,383 1325,474 1312,474 1305,437",
+    "1312,483 1325,483 1325,572 1301,572 1307,539",
+  ]);
   let nextInstance = 0;
 
   function escapeAttribute(value) {
@@ -97,18 +109,35 @@
     return `<rect x="${x}" y="${y}" width="${width}" height="${height}" fill="${fill}"/>`;
   }
 
-  function architectureMaskHtml(context, id) {
+  function architectureMaskHtml(context, id, yellow = false) {
     const geometry = MASK_GEOMETRY[context];
     return `<mask id="${id}" maskUnits="userSpaceOnUse" x="0" y="0" width="1672" height="941" style="mask-type:luminance">`
       + geometry.rectangles.map((rect) => rectHtml(rect, "white")).join("")
       + geometry.polygons.map((points) => `<polygon points="${points}" fill="white"/>`).join("")
       + geometry.exclusions.map((rect) => rectHtml(rect, "black")).join("")
+      + (yellow && context === "SCHOOL"
+        ? `<polygon points="0,0 1672,0 1672,316 1154,316 1154,284 836,132 518,282 518,316 0,316" fill="black"/>`
+          + `<circle cx="836" cy="252" r="42" fill="black"/>`
+        : "")
       + "</mask>";
   }
 
   function windowInteriorMaskHtml(context, id) {
     return `<mask id="${id}" maskUnits="userSpaceOnUse" x="0" y="0" width="1672" height="941" style="mask-type:luminance">`
       + WINDOW_INTERIORS[context].map((rect) => rectHtml(rect, "white")).join("") + "</mask>";
+  }
+
+  function yellowCurtainDefs(maskId, filterId) {
+    const softenId = `${maskId}-soften`;
+    return `<filter id="${softenId}" x="-2%" y="-2%" width="104%" height="104%"><feGaussianBlur stdDeviation="0.7"/></filter>`
+      + `<mask id="${maskId}" maskUnits="userSpaceOnUse" x="0" y="0" width="1672" height="941" style="mask-type:luminance"><g filter="url(#${softenId})">`
+      + YELLOW_HOME_CURTAINS.map(points => `<polygon points="${points}" fill="white"/>`).join("")
+      // Protect the lamp in front of the left curtain.
+      + `<polygon points="356,421 387,421 396,468 345,468" fill="black"/></g></mask>`
+      + `<filter id="${filterId}" filterUnits="userSpaceOnUse" x="0" y="0" width="1672" height="941" color-interpolation-filters="sRGB">`
+      + `<feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 21.25 -21.25 0 0 0" result="curtainPigment"/>`
+      + `<feColorMatrix in="SourceGraphic" type="matrix" values="0.1196 0.2348 0.0456 0 0.60 0.19435 0.38155 0.0741 0 0.30 0.299 0.587 0.114 0 -0.20 0 0 0 1 0" result="softYellowCurtain"/>`
+      + `<feComposite in="softYellowCurtain" in2="curtainPigment" operator="in"/></filter>`;
   }
 
   function filterHtml(matrix, id, windowInterior = false) {
@@ -131,6 +160,18 @@
     const hex = normalizedHex(characterHex);
     const source = escapeAttribute(href);
     const matrix = hex ? matrixForHex(hex) : null;
+    const yellow = hex === "#FFD100";
+    // Yellow alone needs butter-yellow highlights and golden shadows rather
+    // than olive tones. Retain the exact source-pigment and geometry masks.
+    if (matrix && hex === "#FFD100") {
+      const base = matrix.slice();
+      [0.27, 0.58, 1].forEach((gain, row) => {
+        for (let column = 0; column < 5; column++) {
+          matrix[row * 5 + column] = gain * LUMINANCE.reduce((sum, weight, channel) => sum + weight * base[channel * 5 + column], 0);
+        }
+        matrix[row * 5 + 4] += [0.73, 0.40, -0.24][row];
+      });
+    }
     return Object.freeze({
       context: resolvedContext,
       characterHex: hex,
@@ -149,12 +190,15 @@
         if (openingRect && (!openingRect.every(Number.isFinite) || openingRect[2] <= 0 || openingRect[3] <= 0)) {
           throw new Error("Exterior opening must contain finite positive source-space dimensions");
         }
-        const defs = (matrix ? architectureMaskHtml(resolvedContext, architectureId) + filterHtml(matrix, filterId)
-          + windowInteriorMaskHtml(resolvedContext, windowId) + filterHtml(matrix, windowFilterId, true) : "")
+        const windowDefs = !matrix ? "" : yellow
+          ? (resolvedContext === "HOME" ? yellowCurtainDefs(windowId, windowFilterId) : "")
+          : windowInteriorMaskHtml(resolvedContext, windowId) + filterHtml(matrix, windowFilterId, true);
+        const defs = (matrix ? architectureMaskHtml(resolvedContext, architectureId, yellow) + filterHtml(matrix, filterId)
+          + windowDefs : "")
           + (openingRect ? `<mask id="${openingId}" maskUnits="userSpaceOnUse" x="0" y="0" width="1672" height="941" style="mask-type:luminance"><rect width="1672" height="941" fill="white"/>${rectHtml(openingRect, "black")}</mask>` : "");
         const image = `<image href="${source}" width="1672" height="941" preserveAspectRatio="none"`;
         const layers = `${image}/>` + (matrix ? `${image} filter="url(#${filterId})" mask="url(#${architectureId})"/>`
-          + `${image} filter="url(#${windowFilterId})" mask="url(#${windowId})"/>` : "");
+          + ((!yellow || resolvedContext === "HOME") ? `${image} filter="url(#${windowFilterId})" mask="url(#${windowId})"/>` : "") : "");
         return `<svg${className ? ` class="${escapeAttribute(className)}"` : ""} viewBox="${viewBox.join(" ")}" preserveAspectRatio="none" data-exterior-palette="${hex}" data-exterior-context="${resolvedContext}" aria-hidden="true"><defs>${defs}</defs><g${openingRect ? ` mask="url(#${openingId})"` : ""}>${layers}</g></svg>`;
       },
     });
@@ -162,6 +206,7 @@
 
   globalObject.WTCExteriorPalette = Object.freeze({
     version: "who-takes-care-selective-exterior-palette-v2-window-interiors",
+    yellowCleanupVersion: "yellow-exterior-cleanup-v3",
     sourceSize: SOURCE_SIZE,
     doorCrops: DOOR_CROPS,
     maskGeometry: MASK_GEOMETRY,

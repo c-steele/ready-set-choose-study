@@ -83,9 +83,16 @@ for (const [slug, record] of Object.entries(manifest.palettes)) {
     for (const svg of [full, leaf]) {
       assert.match(svg, /color-interpolation-filters="sRGB"/);
       assert.match(svg, /127\.5 -127\.5 0 0 -1" result="redOverGreen"/);
-      assert.equal((svg.match(/<image /g) || []).length, 3, `${slug}/${context}: original, architecture or window-interior layer missing`);
-      assert.match(svg,/result="excludeBrightWhites"/);
-      assert.match(svg,/result="windowInteriorPigment"/);
+      const yellow = record.characterHex.toUpperCase() === "#FFD100";
+      assert.equal((svg.match(/<image /g) || []).length, yellow && context === "SCHOOL" ? 2 : 3, `${slug}/${context}: required image layers differ`);
+      if (!yellow) {
+        assert.match(svg,/result="excludeBrightWhites"/);
+        assert.match(svg,/result="windowInteriorPigment"/);
+      } else {
+        assert.doesNotMatch(svg,/result="windowInteriorPigment"/);
+        if (context === "HOME") assert.match(svg,/result="softYellowCurtain"/);
+        else assert.doesNotMatch(svg,/result="softYellowCurtain"/);
+      }
       assert.match(svg, /preserveAspectRatio="none"/);
       assert.match(svg, new RegExp(`data-exterior-palette="${record.characterHex}"`, "i"));
       assert.match(svg, /&amp;test=&quot;escaped&quot;/);
