@@ -172,7 +172,7 @@
           "eventText": "Oh no! The kid in the middle is sad now!",
           "eventAudio": "audio_evelyn/ftc_005_story_event_01_oh_no_the_kid_in_the_middle_is_sad_now.mp3",
           "questionText": "At the kid's school, who will give the kid in the middle a hug now that they're sad?",
-          "questionAudio": "assets/home_school/generated/audio/hs_r15_013_school_kid_hug_question_context_first.mp3"
+          "questionAudio": "assets/home_school/generated/audio/hs_r26_001_school_kid_hug_question_clear_at.mp3"
         },
         "FOOD": {
           "eventText": "Oh no! At the kid's school, the kid in the middle is hungry now!",
@@ -184,7 +184,7 @@
           "eventText": "Oh no! At the kid's school, the kid in the middle dropped a heavy box!",
           "eventAudio": "assets/home_school/generated/audio/hs_r22_002_school_kid_help_event_split.mp3",
           "questionText": "At the kid's school, who will help the kid in the middle pick up the heavy box?",
-          "questionAudio": "assets/home_school/generated/audio/hs_r15_015_school_kid_help_question_context_first.mp3"
+          "questionAudio": "assets/home_school/generated/audio/hs_r26_002_school_kid_help_question_clear_at.mp3"
         }
       },
       "recipientEvents": {

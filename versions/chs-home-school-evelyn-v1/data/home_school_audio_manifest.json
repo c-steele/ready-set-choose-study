@@ -76,11 +76,11 @@
     },
     {
       "text": "At the kid's school, who will give the kid in the middle a hug now that they're sad?",
-      "output": "assets/home_school/generated/audio/hs_r15_013_school_kid_hug_question_context_first.mp3",
-      "bytes": 175587,
-      "durationSeconds": 4.362449,
-      "sha256": "fac54d5949f7854f92c8557e6640984857dc2aca325ca50a0e3ad942031b59a0",
-      "questionRevision": "r15-context-first"
+      "output": "assets/home_school/generated/audio/hs_r26_001_school_kid_hug_question_clear_at.mp3",
+      "bytes": 191261,
+      "durationSeconds": 4.7804,
+      "sha256": "64ff8c83d28f7b6c4de7dcd1ef0b6c451ac614b3f5e55d31f482fa9a4edf92da",
+      "questionRevision": "r26-clear-at-school-kid-questions"
     },
     {
       "id": "hs_r17_007",
@@ -145,11 +145,11 @@
     },
     {
       "text": "At the kid's school, who will help the kid in the middle pick up the heavy box?",
-      "output": "assets/home_school/generated/audio/hs_r15_015_school_kid_help_question_context_first.mp3",
-      "bytes": 167227,
-      "durationSeconds": 4.153469,
-      "sha256": "f0e759d4622a7519500e990f66cbf91d4c9d0127ec6a1ff86f2a1bf5d2454532",
-      "questionRevision": "r15-context-first"
+      "output": "assets/home_school/generated/audio/hs_r26_002_school_kid_help_question_clear_at.mp3",
+      "bytes": 190216,
+      "durationSeconds": 4.754275,
+      "sha256": "db0025573952468c21ad05102383ae379d191b58ca3ec35e1c76544aaa2356d1",
+      "questionRevision": "r26-clear-at-school-kid-questions"
     },
     {
       "id": "hs_r17_011",

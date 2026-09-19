@@ -13,7 +13,7 @@ const manifest = JSON.parse(fs.readFileSync(path.join(candidate, "data/visual_re
 const sandbox = { window: {} };
 vm.runInNewContext(source, sandbox, { filename: "exterior-palette.js" });
 const api = sandbox.window.WTCExteriorPalette;
-assert.equal(api.version, "who-takes-care-selective-exterior-palette-v2-window-interiors");
+assert.equal(api.version, "who-helps-where-selective-exterior-palette-v3-curtain-silhouettes");
 assert.deepEqual({ ...api.sourceSize }, { width: 1672, height: 941 });
 assert.equal(Object.keys(manifest.palettes).length, 17);
 assert.doesNotMatch(source, /hue-rotate|mix-blend-mode|drawImage|putImageData|fetch\(/);
@@ -84,10 +84,10 @@ for (const [slug, record] of Object.entries(manifest.palettes)) {
       assert.match(svg, /color-interpolation-filters="sRGB"/);
       assert.match(svg, /127\.5 -127\.5 0 0 -1" result="redOverGreen"/);
       const yellow = record.characterHex.toUpperCase() === "#FFD100";
-      assert.equal((svg.match(/<image /g) || []).length, 3, `${slug}/${context}: required image layers differ`);
+      assert.equal((svg.match(/<image /g) || []).length, context === "HOME" || yellow ? 3 : 2, `${slug}/${context}: required image layers differ`);
       if (!yellow) {
-        assert.match(svg,/result="excludeBrightWhites"/);
-        assert.match(svg,/result="windowInteriorPigment"/);
+        assert.doesNotMatch(svg,/result="excludeBrightWhites"|result="windowInteriorPigment"/);
+        if (context === "HOME") assert.match(svg,/stdDeviation="0.7"/);
       } else {
         assert.doesNotMatch(svg,/result="windowInteriorPigment"/);
         if (context === "HOME") assert.match(svg,/result="softYellowCurtain"/);

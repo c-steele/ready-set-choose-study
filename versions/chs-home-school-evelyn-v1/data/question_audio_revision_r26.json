@@ -1,0 +1,67 @@
+{
+  "revision": "r26-clear-at-school-kid-questions",
+  "status": "selected_for_draft_human_naturalness_preview_pending",
+  "sourceExport": "Ohno.Atthekids.zip",
+  "sourceExportSha256": "bafbc13f2ee323f15859b50828b8cac48e52407774a70d6f0264ac27b2d61972",
+  "sourceDate": "2026-09-18",
+  "importedOn": "2026-09-19",
+  "provider": "NaturalReaders Commercial",
+  "voice": "Evelyn",
+  "style": "Soft",
+  "speed": 0.9,
+  "wordsPerMinute": 180,
+  "paragraphPauseSeconds": 0,
+  "format": "mp3",
+  "bitrateKbps": 320,
+  "voiceSettingsEvidence": "review-at-audio-status.md: first retake batch UI verification; researcher-supplied source export",
+  "processing": "Byte-for-byte whole-sentence import. No splicing, silence trimming, gain, speed, pitch change, crossfade, or re-encoding. Original recordings and source exports preserved.",
+  "listeningReview": "Whole-sentence retakes machine checked; researcher naturalness preview required before submission.",
+  "files": [
+    {
+      "event": "HUG",
+      "source": "review-at-retakes-v1/3.At_the_kids_school,_who_will_.mp3",
+      "sha256": "64ff8c83d28f7b6c4de7dcd1ef0b6c451ac614b3f5e55d31f482fa9a4edf92da",
+      "output": "assets/home_school/generated/audio/hs_r26_001_school_kid_hug_question_clear_at.mp3",
+      "text": "At the kid's school, who will give the kid in the middle a hug now that they're sad?",
+      "replaces": {
+        "output": "assets/home_school/generated/audio/hs_r15_013_school_kid_hug_question_context_first.mp3",
+        "sha256": "fac54d5949f7854f92c8557e6640984857dc2aca325ca50a0e3ad942031b59a0"
+      },
+      "context": "SCHOOL",
+      "recipient": "KID",
+      "bytes": 191261,
+      "durationSeconds": 4.7804,
+      "sampleRateHz": 44100,
+      "channels": 1,
+      "decodedSampleCount": 210816,
+      "decodedPeakDbfs": -4.049946750672191,
+      "fullScaleClippedSamples": 0,
+      "encodedBytesIdenticalToSource": true,
+      "join": "not_applicable_whole_sentence",
+      "priorUnpromptedTranscript": "At the kids school, who will give the kid in the middle a hug now that they're sad?"
+    },
+    {
+      "event": "HELP",
+      "source": "review-at-retakes-v1/4.At_the_kids_school,_who_will_.mp3",
+      "sha256": "db0025573952468c21ad05102383ae379d191b58ca3ec35e1c76544aaa2356d1",
+      "output": "assets/home_school/generated/audio/hs_r26_002_school_kid_help_question_clear_at.mp3",
+      "text": "At the kid's school, who will help the kid in the middle pick up the heavy box?",
+      "replaces": {
+        "output": "assets/home_school/generated/audio/hs_r15_015_school_kid_help_question_context_first.mp3",
+        "sha256": "f0e759d4622a7519500e990f66cbf91d4c9d0127ec6a1ff86f2a1bf5d2454532"
+      },
+      "context": "SCHOOL",
+      "recipient": "KID",
+      "bytes": 190216,
+      "durationSeconds": 4.754275,
+      "sampleRateHz": 44100,
+      "channels": 1,
+      "decodedSampleCount": 209664,
+      "decodedPeakDbfs": -3.9427769690552754,
+      "fullScaleClippedSamples": 0,
+      "encodedBytesIdenticalToSource": true,
+      "join": "not_applicable_whole_sentence",
+      "priorUnpromptedTranscript": "At the kids school, who will help the kid in the middle pick up the heavy box?"
+    }
+  ]
+}

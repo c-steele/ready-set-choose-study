@@ -1,0 +1,407 @@
+{
+  "release": "chs-home-school-evelyn-v1-r26-complete-polish-1",
+  "generated": "2026-09-19T05:20:29.598Z",
+  "complete": false,
+  "runs": [
+    {
+      "run": 1,
+      "label": "Mom / sister set, Comfort — a hug, Home → School, profile A",
+      "cell": 1,
+      "profile": "a",
+      "pages": 96,
+      "questions": 12,
+      "sceneMeasurements": 96,
+      "captionColorChecks": 96,
+      "captionOverflows": 0,
+      "incompleteImages": 0,
+      "transientLoadingNotices": 1,
+      "otherErrors": 0,
+      "logs": 0,
+      "choiceZChecks": 24,
+      "dimensions": [
+        "716.797x403.195@281.602,88.797"
+      ],
+      "captionFonts": [
+        "20.0703px"
+      ],
+      "issues": []
+    },
+    {
+      "run": 2,
+      "label": "Mom / sister set, Comfort — a hug, Home → School, profile B",
+      "cell": 1,
+      "profile": "b",
+      "pages": 96,
+      "questions": 12,
+      "sceneMeasurements": 96,
+      "captionColorChecks": 96,
+      "captionOverflows": 0,
+      "incompleteImages": 0,
+      "transientLoadingNotices": 3,
+      "otherErrors": 0,
+      "logs": 0,
+      "choiceZChecks": 24,
+      "dimensions": [
+        "716.797x403.195@281.602,88.797"
+      ],
+      "captionFonts": [
+        "20.0703px"
+      ],
+      "issues": []
+    },
+    {
+      "run": 3,
+      "label": "Mom / sister set, Comfort — a hug, Home → School, profile C",
+      "cell": 1,
+      "profile": "c",
+      "pages": 96,
+      "questions": 12,
+      "sceneMeasurements": 96,
+      "captionColorChecks": 96,
+      "captionOverflows": 0,
+      "incompleteImages": 0,
+      "transientLoadingNotices": 1,
+      "otherErrors": 0,
+      "logs": 0,
+      "choiceZChecks": 24,
+      "dimensions": [
+        "716.797x403.195@281.602,88.797"
+      ],
+      "captionFonts": [
+        "20.0703px"
+      ],
+      "issues": []
+    },
+    {
+      "run": 4,
+      "label": "Mom / sister set, Comfort — a hug, Home → School, profile D",
+      "cell": 1,
+      "profile": "d",
+      "pages": 96,
+      "questions": 12,
+      "sceneMeasurements": 96,
+      "captionColorChecks": 96,
+      "captionOverflows": 0,
+      "incompleteImages": 0,
+      "transientLoadingNotices": 9,
+      "otherErrors": 0,
+      "logs": 0,
+      "choiceZChecks": 24,
+      "dimensions": [
+        "716.797x403.195@281.602,88.797"
+      ],
+      "captionFonts": [
+        "20.0703px"
+      ],
+      "issues": []
+    },
+    {
+      "run": 5,
+      "label": "Mom / sister set, Comfort — a hug, School → Home, profile A",
+      "cell": 2,
+      "profile": "a",
+      "pages": 96,
+      "questions": 12,
+      "sceneMeasurements": 96,
+      "captionColorChecks": 96,
+      "captionOverflows": 0,
+      "incompleteImages": 0,
+      "transientLoadingNotices": 8,
+      "otherErrors": 0,
+      "logs": 0,
+      "choiceZChecks": 24,
+      "dimensions": [
+        "716.797x403.195@281.602,88.797"
+      ],
+      "captionFonts": [
+        "20.0703px"
+      ],
+      "issues": []
+    },
+    {
+      "run": 6,
+      "label": "Mom / sister set, Comfort — a hug, School → Home, profile B",
+      "cell": 2,
+      "profile": "b",
+      "pages": 96,
+      "questions": 12,
+      "sceneMeasurements": 96,
+      "captionColorChecks": 96,
+      "captionOverflows": 0,
+      "incompleteImages": 0,
+      "transientLoadingNotices": 13,
+      "otherErrors": 0,
+      "logs": 0,
+      "choiceZChecks": 24,
+      "dimensions": [
+        "716.797x403.195@281.602,88.797"
+      ],
+      "captionFonts": [
+        "20.0703px"
+      ],
+      "issues": []
+    },
+    {
+      "run": 7,
+      "label": "Mom / sister set, Comfort — a hug, School → Home, profile C",
+      "cell": 2,
+      "profile": "c",
+      "pages": 96,
+      "questions": 12,
+      "sceneMeasurements": 96,
+      "captionColorChecks": 96,
+      "captionOverflows": 0,
+      "incompleteImages": 0,
+      "transientLoadingNotices": 3,
+      "otherErrors": 0,
+      "logs": 0,
+      "choiceZChecks": 24,
+      "dimensions": [
+        "716.797x403.195@281.602,88.797"
+      ],
+      "captionFonts": [
+        "20.0703px"
+      ],
+      "issues": []
+    },
+    {
+      "run": 8,
+      "label": "Mom / sister set, Comfort — a hug, School → Home, profile D",
+      "cell": 2,
+      "profile": "d",
+      "pages": 96,
+      "questions": 12,
+      "sceneMeasurements": 96,
+      "captionColorChecks": 96,
+      "captionOverflows": 0,
+      "incompleteImages": 0,
+      "transientLoadingNotices": 0,
+      "otherErrors": 0,
+      "logs": 0,
+      "choiceZChecks": 24,
+      "dimensions": [
+        "716.797x403.195@281.602,88.797"
+      ],
+      "captionFonts": [
+        "20.0703px"
+      ],
+      "issues": []
+    },
+    {
+      "run": 9,
+      "label": "Mom / sister set, Sharing food, Home → School, profile A",
+      "cell": 3,
+      "profile": "a",
+      "pages": 96,
+      "questions": 12,
+      "sceneMeasurements": 96,
+      "captionColorChecks": 96,
+      "captionOverflows": 0,
+      "incompleteImages": 0,
+      "transientLoadingNotices": 4,
+      "otherErrors": 0,
+      "logs": 0,
+      "choiceZChecks": 24,
+      "dimensions": [
+        "716.797x403.195@281.602,88.797"
+      ],
+      "captionFonts": [
+        "20.0703px"
+      ],
+      "issues": []
+    },
+    {
+      "run": 10,
+      "label": "Mom / sister set, Sharing food, Home → School, profile B",
+      "cell": 3,
+      "profile": "b",
+      "pages": 96,
+      "questions": 12,
+      "sceneMeasurements": 96,
+      "captionColorChecks": 96,
+      "captionOverflows": 0,
+      "incompleteImages": 0,
+      "transientLoadingNotices": 8,
+      "otherErrors": 0,
+      "logs": 0,
+      "choiceZChecks": 24,
+      "dimensions": [
+        "716.797x403.195@281.602,88.797"
+      ],
+      "captionFonts": [
+        "20.0703px"
+      ],
+      "issues": []
+    },
+    {
+      "run": 11,
+      "label": "Mom / sister set, Sharing food, Home → School, profile C",
+      "cell": 3,
+      "profile": "c",
+      "pages": 96,
+      "questions": 12,
+      "sceneMeasurements": 96,
+      "captionColorChecks": 96,
+      "captionOverflows": 0,
+      "incompleteImages": 0,
+      "transientLoadingNotices": 6,
+      "otherErrors": 0,
+      "logs": 0,
+      "choiceZChecks": 24,
+      "dimensions": [
+        "716.797x403.195@281.602,88.797"
+      ],
+      "captionFonts": [
+        "20.0703px"
+      ],
+      "issues": []
+    },
+    {
+      "run": 12,
+      "label": "Mom / sister set, Sharing food, Home → School, profile D",
+      "cell": 3,
+      "profile": "d",
+      "pages": 96,
+      "questions": 12,
+      "sceneMeasurements": 96,
+      "captionColorChecks": 96,
+      "captionOverflows": 0,
+      "incompleteImages": 0,
+      "transientLoadingNotices": 5,
+      "otherErrors": 0,
+      "logs": 0,
+      "choiceZChecks": 24,
+      "dimensions": [
+        "716.797x403.195@281.602,88.797"
+      ],
+      "captionFonts": [
+        "20.0703px"
+      ],
+      "issues": []
+    },
+    {
+      "run": 13,
+      "label": "Mom / sister set, Sharing food, School → Home, profile A",
+      "cell": 4,
+      "profile": "a",
+      "pages": 96,
+      "questions": 12,
+      "sceneMeasurements": 96,
+      "captionColorChecks": 96,
+      "captionOverflows": 0,
+      "incompleteImages": 0,
+      "transientLoadingNotices": 7,
+      "otherErrors": 0,
+      "logs": 0,
+      "choiceZChecks": 24,
+      "dimensions": [
+        "716.797x403.195@281.602,88.797"
+      ],
+      "captionFonts": [
+        "20.0703px"
+      ],
+      "issues": []
+    },
+    {
+      "run": 14,
+      "label": "Mom / sister set, Sharing food, School → Home, profile B",
+      "cell": 4,
+      "profile": "b",
+      "pages": 96,
+      "questions": 12,
+      "sceneMeasurements": 96,
+      "captionColorChecks": 96,
+      "captionOverflows": 0,
+      "incompleteImages": 0,
+      "transientLoadingNotices": 10,
+      "otherErrors": 0,
+      "logs": 0,
+      "choiceZChecks": 24,
+      "dimensions": [
+        "716.797x403.195@281.602,88.797"
+      ],
+      "captionFonts": [
+        "20.0703px"
+      ],
+      "issues": []
+    },
+    {
+      "run": 15,
+      "label": "Mom / sister set, Sharing food, School → Home, profile C",
+      "cell": 4,
+      "profile": "c",
+      "pages": 96,
+      "questions": 12,
+      "sceneMeasurements": 96,
+      "captionColorChecks": 96,
+      "captionOverflows": 0,
+      "incompleteImages": 0,
+      "transientLoadingNotices": 9,
+      "otherErrors": 0,
+      "logs": 0,
+      "choiceZChecks": 24,
+      "dimensions": [
+        "716.797x403.195@281.602,88.797"
+      ],
+      "captionFonts": [
+        "20.0703px"
+      ],
+      "issues": []
+    }
+  ],
+  "issues": [],
+  "totals": {
+    "runs": 15,
+    "pages": 1440,
+    "questions": 180,
+    "sceneMeasurements": 1440,
+    "captionColorChecks": 1440,
+    "captionOverflows": 0,
+    "incompleteImages": 0,
+    "transientLoadingNotices": 87,
+    "otherErrors": 0,
+    "logs": 0,
+    "choiceZChecks": 360
+  },
+  "limits": [
+    "Researcher Skip traversal verifies structure and rendering records, not continuous listening or natural audio pacing.",
+    "Only exact transient “Loading the sound… Please wait.” notices are excluded from errors; they are counted separately.",
+    "Question buttons disabled before narration finishes are expected and are not treated as a failure.",
+    "Screenshot pixel review and responsive/natural-time checks are separate tasks."
+  ],
+  "missingRuns": [
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48
+  ]
+}

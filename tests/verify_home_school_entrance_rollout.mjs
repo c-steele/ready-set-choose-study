@@ -23,7 +23,7 @@ const visualRepair = readJson("visual_repair_manifest.json");
 const plain = (value) => JSON.parse(JSON.stringify(value));
 const DIRECTIONS = new Set(["DAD-KID", "MOM-KID", "TEACHER-KID"]);
 const STORY_KINDS = ["exterior", "room_entry", "intro", "intro", "intro", "context_intro", "story", "response_choices"];
-const CURRENT_RELEASE = "chs-home-school-evelyn-v1-r25-yellow-door-cleanup-1";
+const CURRENT_RELEASE = "chs-home-school-evelyn-v1-r26-complete-polish-1";
 const CURRENT_DESIGN = "home_school_within_child_two_role_sets_v2";
 const CURRENT_SCHEMA = "one_based_role_major_2_role_sets_x_3_events_x_2_context_orders";
 const ACTIVE_CONDITIONS = {
@@ -581,7 +581,7 @@ for (const researcher of [false, true]) {
   await new Promise(setImmediate);
   assert.equal(calls.length, researcher ? 0 : 1);
   if (!researcher) assert.equal(calls[0].text, "Oh look! Here is a house.");
-  assert.equal([...scheduled.values()].some((timer) => timer.delay === 1200), !researcher);
+  assert.equal([...scheduled.values()].some((timer) => timer.delay === 400), !researcher);
   exterior.on_finish({});
   assert.equal(scheduled.size, 0, "Page teardown must cancel outstanding timers");
 }
@@ -604,7 +604,7 @@ for (const contextName of ["HOME", "SCHOOL"]) {
   const element = animationElement();
   const controller = host.api.entranceController(element, contextName);
   const playback = controller.play();
-  for (const [timestamp, phase] of [[0, "approaching"], [4000, "opening"], [5500, "crossing_doorway"], [6500, "entry_hall"], [8000, "moving_through_hall"], [9600, "entering_room"], [10100, "empty_room"]]) {
+  for (const [timestamp, phase] of [[0, "approaching"], [2500, "opening"], [3500, "crossing_doorway"], [4200, "entry_hall"], [5200, "moving_through_hall"], [6100, "entering_room"], [6500, "empty_room"]]) {
     host.tick(timestamp);
     assert.equal(element.dataset.phase, phase, `${contextName}: animation phase at ${timestamp}`);
   }

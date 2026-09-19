@@ -49,11 +49,15 @@ class FakeSpeechSynthesisUtterance {
 
 function makeDocument() {
   return {
-    body: { classList: quietClassList, innerHTML: "" },
+    body: { classList: quietClassList, innerHTML: "", appendChild() {} },
     querySelector: () => null,
     querySelectorAll: () => [],
     addEventListener() {},
+    removeEventListener() {},
     createElement: () => ({
+      style: {},
+      setAttribute() {},
+      appendChild() {},
       addEventListener() {},
       append() {},
       click() {},

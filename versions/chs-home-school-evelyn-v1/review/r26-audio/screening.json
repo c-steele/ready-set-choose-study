@@ -1,0 +1,149 @@
+{
+  "date": "2026-09-19T04:57:26.712443+00:00",
+  "model": "openai/whisper-base.en",
+  "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+  "expectedCaptionsProvidedToModel": false,
+  "audioUploaded": false,
+  "status": "machine_screening_only_human_naturalness_preview_pending",
+  "clips": [
+    {
+      "output": "assets/home_school/generated/audio/hs_r26_001_school_kid_hug_question_clear_at.mp3",
+      "sha256": "64ff8c83d28f7b6c4de7dcd1ef0b6c451ac614b3f5e55d31f482fa9a4edf92da",
+      "caption": "At the kid's school, who will give the kid in the middle a hug now that they're sad?",
+      "transcript": "At the kids school, who will give the kid in the middle a hug now that they're sad?",
+      "wordsMatch": true,
+      "startsWithAt": true,
+      "silenceCriterionDbfs": -38,
+      "silences": [
+        {
+          "start": 0.0,
+          "end": 0.192381,
+          "duration": 0.192381
+        },
+        {
+          "start": 0.275737,
+          "end": 0.335057,
+          "duration": 0.0593197
+        },
+        {
+          "start": 0.390545,
+          "end": 0.441565,
+          "duration": 0.0510204
+        },
+        {
+          "start": 0.649365,
+          "end": 0.684943,
+          "duration": 0.0355782
+        },
+        {
+          "start": 0.825646,
+          "end": 0.884671,
+          "duration": 0.0590249
+        },
+        {
+          "start": 1.225211,
+          "end": 1.43215,
+          "duration": 0.206939
+        },
+        {
+          "start": 1.935099,
+          "end": 1.99714,
+          "duration": 0.0620408
+        },
+        {
+          "start": 3.502247,
+          "end": 3.56524,
+          "duration": 0.0629932
+        },
+        {
+          "start": 4.206646,
+          "end": 4.78041,
+          "duration": 0.573764
+        }
+      ],
+      "internalSilencesOver400ms": []
+    },
+    {
+      "output": "assets/home_school/generated/audio/hs_r26_002_school_kid_help_question_clear_at.mp3",
+      "sha256": "db0025573952468c21ad05102383ae379d191b58ca3ec35e1c76544aaa2356d1",
+      "caption": "At the kid's school, who will help the kid in the middle pick up the heavy box?",
+      "transcript": "At the kids school, who will help the kid in the middle pick up the heavy box?",
+      "wordsMatch": true,
+      "startsWithAt": true,
+      "silenceCriterionDbfs": -38,
+      "silences": [
+        {
+          "start": 0.0,
+          "end": 0.190249,
+          "duration": 0.190249
+        },
+        {
+          "start": 0.275579,
+          "end": 0.334989,
+          "duration": 0.0594104
+        },
+        {
+          "start": 0.391927,
+          "end": 0.439932,
+          "duration": 0.0480045
+        },
+        {
+          "start": 0.663492,
+          "end": 0.69746,
+          "duration": 0.0339683
+        },
+        {
+          "start": 0.838775,
+          "end": 0.897959,
+          "duration": 0.0591837
+        },
+        {
+          "start": 1.265234,
+          "end": 1.47435,
+          "duration": 0.209116
+        },
+        {
+          "start": 1.914984,
+          "end": 2.01995,
+          "duration": 0.104966
+        },
+        {
+          "start": 2.081401,
+          "end": 2.14156,
+          "duration": 0.0601587
+        },
+        {
+          "start": 2.883156,
+          "end": 2.96497,
+          "duration": 0.0818141
+        },
+        {
+          "start": 3.072339,
+          "end": 3.12574,
+          "duration": 0.0534014
+        },
+        {
+          "start": 3.210088,
+          "end": 3.3046,
+          "duration": 0.0945125
+        },
+        {
+          "start": 3.660179,
+          "end": 3.69519,
+          "duration": 0.0350113
+        },
+        {
+          "start": 3.924852,
+          "end": 4.01043,
+          "duration": 0.0855782
+        },
+        {
+          "start": 4.175446,
+          "end": 4.75429,
+          "duration": 0.578844
+        }
+      ],
+      "internalSilencesOver400ms": []
+    }
+  ]
+}

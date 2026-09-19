@@ -19,6 +19,8 @@ const contextFirstQuestionReceipt = JSON.parse(fs.readFileSync(path.join(dataRoo
 const entranceHouseReceipt = JSON.parse(fs.readFileSync(path.join(dataRoot, "entrance_house_audio_import_receipt.json"), "utf8"));
 const entranceHouseByReplacedOutput = new Map(entranceHouseReceipt.clips.filter((clip) => clip.replaces).map((clip) => [clip.replaces.output, clip]));
 const eventRevision = JSON.parse(fs.readFileSync(path.join(dataRoot, "event_audio_revision_r22.json"), "utf8"));
+const r26Questions = JSON.parse(fs.readFileSync(path.join(dataRoot, "question_audio_revision_r26.json"), "utf8"));
+assert.equal(r26Questions.files.length, 2);
 const eventRevisionByReplacedOutput = new Map(eventRevision.files.map((clip) => [clip.replaces.output, clip]));
 assert.equal(eventRevisionByReplacedOutput.size, 5, "Exactly five approved event clips may change in r22");
 const historicalPauseManifest = JSON.parse(fs.readFileSync(path.join(dataRoot, "home_school_question_pause_manifest.json"), "utf8"));
@@ -101,20 +103,20 @@ assert.equal(metadata.candidateId, "chs-home-school-evelyn-v1");
 const verifiedSaved = metadata.status === "published_chs_draft_saved_not_submitted";
 assert.ok(verifiedSaved || metadata.status === "prepared_for_chs_draft_update");
 assert.equal(metadata.activeChsStudyChanged, false);
-assert.equal(metadata.chsDraftConfigurationUpdated, verifiedSaved, "The r25 saved flag may be true only after its CHS save is verified");
+assert.equal(metadata.chsDraftConfigurationUpdated, verifiedSaved, "The r26 saved flag may be true only after its CHS save is verified");
 assert.equal(metadata.chsDraftStudyId, 6349);
-assert.equal(metadata.chsDraftSavedOn, verifiedSaved ? "2026-09-19" : "2026-09-18");
+assert.equal(metadata.chsDraftSavedOn, verifiedSaved ? "2026-09-19" : "2026-09-19");
 assert.equal(metadata.chsSubmissionStatus, "not_submitted");
-assert.equal(metadata.published, true, "The prior r24 release remains published while r25 is prepared");
-assert.equal(metadata.publishedOn, verifiedSaved ? "2026-09-19" : "2026-09-18");
-assert.equal(metadata.lastPublishedRelease, verifiedSaved ? "chs-home-school-evelyn-v1-r25-yellow-door-cleanup-1" : "chs-home-school-evelyn-v1-r24-yellow-cleanup-1");
-assert.equal(metadata.candidateRelease, "chs-home-school-evelyn-v1-r25-yellow-door-cleanup-1");
+assert.equal(metadata.published, true, "The prior r25 release remains published while r26 is prepared");
+assert.equal(metadata.publishedOn, verifiedSaved ? "2026-09-19" : "2026-09-19");
+assert.equal(metadata.lastPublishedRelease, verifiedSaved ? "chs-home-school-evelyn-v1-r26-complete-polish-1" : "chs-home-school-evelyn-v1-r25-yellow-door-cleanup-1");
+assert.equal(metadata.candidateRelease, "chs-home-school-evelyn-v1-r26-complete-polish-1");
 assert.equal(metadata.revisionPendingPublication, !verifiedSaved);
-assert.equal(metadata.chsDraftRelease, verifiedSaved ? "chs-home-school-evelyn-v1-r25-yellow-door-cleanup-1" : "chs-home-school-evelyn-v1-r24-yellow-cleanup-1");
-assert.equal(metadata.latestChsDraftSaveReceipt, verifiedSaved ? "review/chs-draft-save-r25.md" : "review/chs-draft-save-r24.md");
+assert.equal(metadata.chsDraftRelease, verifiedSaved ? "chs-home-school-evelyn-v1-r26-complete-polish-1" : "chs-home-school-evelyn-v1-r25-yellow-door-cleanup-1");
+assert.equal(metadata.latestChsDraftSaveReceipt, verifiedSaved ? "review/chs-draft-save-r26.md" : "review/chs-draft-save-r25.md");
 if (verifiedSaved) assert.equal(Object.hasOwn(metadata, "pendingReason"), false);
-else assert.match(metadata.pendingReason, /yellow.*cleanup.*deployment and CHS draft save pending verification/i);
-assert.equal(metadata.latestRevisionOn, verifiedSaved ? "2026-09-19" : "2026-09-18");
+else assert.match(metadata.pendingReason, /complete-polish deployment and CHS draft save pending verification/i);
+assert.equal(metadata.latestRevisionOn, verifiedSaved ? "2026-09-19" : "2026-09-19");
 assert.equal(metadata.storyCount, 12);
 assert.equal(metadata.storyCountPerContext, 6);
 assert.equal(metadata.ratingMode, "none");
@@ -153,11 +155,11 @@ assert.match(
   /\["intro", "exterior", "room_entry"\]\.includes\(slideKind\)[\s\S]*?text \|\| ""[\s\S]*?slideKind === "context_intro"[\s\S]*?slideKind === "story"[\s\S]*?slideKind === "response_choices"/,
   "Every Home/School story heading must use the same in-scene caption banner",
 );
-assert.match(indexHtml, /app\.js\?v=chs-home-school-evelyn-v1-r25-yellow-door-cleanup-1/);
+assert.match(indexHtml, /app\.js\?v=chs-home-school-evelyn-v1-r26-complete-polish-1/);
 assert.doesNotMatch(app, /contextIntro \? `<div class="ksize-context-intro-cue"/);
-assert.match(app, /fileAudio\.addEventListener\("playing",[\s\S]*?setMouthPlaying\(true\)/);
-assert.match(app, /fileAudio\.addEventListener\("waiting", \(\) => setMouthPlaying\(false\)\)/);
-assert.match(app, /fileAudio\.addEventListener\("pause", \(\) => setMouthPlaying\(false\)\)/);
+assert.match(app, /fileAudio\.addEventListener\("playing",[\s\S]*?setNarratorMouthPlaying\(true\)/);
+assert.match(app, /const buffering = \(\) => \{[\s\S]*?setNarratorMouthPlaying\(false\)/);
+assert.match(app, /\["waiting", "stalled", "pause", "emptied"\]\.forEach/);
 assert.doesNotMatch(app, /this\.current = fileAudio;\s*document\.body\.classList\.add\("ksize-audio-playing"\)/);
 assert.match(app, /if \(!context \|\| entranceVisualOnly\) return \[\]/);
 assert.match(app, /lockedDataStudyVersion \|\| `home_school_context_\$\{selectedContext\.toLowerCase\(\)\}_preview_v1`/);
@@ -442,8 +444,16 @@ assert.equal(new Set(activeQuestionOutputs).size, 24);
 for (const output of activeQuestionOutputs) {
   assert.match(output, /^assets\/home_school\/generated\/audio\/[^/]+\.mp3$/);
   assert.equal(fs.existsSync(path.join(root, output)), true, `Missing context-first question audio ${output}`);
-  const imported = entranceHouseReceipt.clips.find((clip) => clip.output === output) || contextFirstByOutput.get(output);
-  assert.ok(imported, `Question output is absent from the r15/r17 receipts: ${output}`);
+  const imported = r26Questions.files.find(clip => clip.output === output) || entranceHouseReceipt.clips.find((clip) => clip.output === output) || contextFirstByOutput.get(output);
+  assert.ok(imported, `Question output is absent from the r15/r17/r26 receipts: ${output}`);
+  if (r26Questions.files.includes(imported)) {
+    const original = contextFirstByOutput.get(imported.replaces.output);
+    assert.equal(imported.replaces.sha256, original.sha256);
+    assert.equal(imported.text, original.text);
+    assert.equal(imported.recipient, "KID");
+    assert.equal(imported.context, "SCHOOL");
+    assert.ok(["HUG", "HELP"].includes(imported.event));
+  }
   const bytes = fs.readFileSync(path.join(root, output));
   assert.equal(bytes.length, imported.bytes, `Context-first byte count drifted: ${output}`);
   assert.equal(crypto.createHash("sha256").update(bytes).digest("hex"), imported.sha256, `Context-first hash drifted: ${output}`);

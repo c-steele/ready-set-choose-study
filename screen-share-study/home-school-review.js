@@ -1,8 +1,8 @@
 (function installHomeSchoolReview(globalObject, documentObject) {
   "use strict";
 
-  const REVIEW_VERSION = "who-helps-where-review-r25";
-  const STUDY_RUNTIME_VERSION = "chs-home-school-evelyn-v1-r25-yellow-door-cleanup-1";
+  const REVIEW_VERSION = "who-helps-where-review-r26";
+  const STUDY_RUNTIME_VERSION = "chs-home-school-evelyn-v1-r26-complete-polish-1";
   const STORAGE_KEY = `${REVIEW_VERSION}:checked`;
   const STUDY_ENTRYPOINT = "../versions/chs-home-school-evelyn-v1/index.html";
   const CONTEXT_ORDERS = Object.freeze([

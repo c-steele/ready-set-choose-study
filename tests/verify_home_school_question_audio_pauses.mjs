@@ -15,6 +15,9 @@ const activeAudio = JSON.parse(fs.readFileSync(path.join(candidateDataRoot, "hom
 const contextManifest = JSON.parse(fs.readFileSync(path.join(candidateDataRoot, "home_school_context_manifest.json"), "utf8"));
 const contextFirstReceipt = JSON.parse(fs.readFileSync(path.join(candidateDataRoot, "context_first_question_audio_import_receipt.json"), "utf8"));
 const entranceReceipt = JSON.parse(fs.readFileSync(path.join(candidateDataRoot, "entrance_house_audio_import_receipt.json"), "utf8"));
+const r26Receipt = JSON.parse(fs.readFileSync(path.join(candidateDataRoot, "question_audio_revision_r26.json"), "utf8"));
+const r26ByOutput = new Map(r26Receipt.files.map(clip => [clip.output, clip]));
+assert.equal(r26ByOutput.size, 2);
 
 function sha256(bytes) {
   return createHash("sha256").update(bytes).digest("hex");
@@ -114,7 +117,7 @@ for (const spec of specs) {
   assert.match(spec.questionText, new RegExp(`^At the kid's ${place}, who will `));
   const active = activeByText.get(spec.questionText);
   assert.ok(active, `Missing active audio record for ${spec.questionText}`);
-  const clip = spec.context === "HOME" ? entranceByOutput.get(active.output) : contextFirstByOutput.get(active.output);
+  const clip = spec.context === "HOME" ? entranceByOutput.get(active.output) : (r26ByOutput.get(active.output) || contextFirstByOutput.get(active.output));
   assert.ok(clip, `Missing current context-first receipt record for ${spec.questionText}`);
   assert.equal(clip.text, spec.questionText);
   assert.equal(spec.questionAudio, clip.output);
@@ -129,7 +132,14 @@ for (const spec of specs) {
     assert.equal(clip.replaces.sha256, original.sha256);
     assert.equal(clip.text, original.text.replace(/home/g, "house"));
   } else {
-    assert.equal(active.questionRevision, "r15-context-first");
+    assert.equal(active.questionRevision, r26ByOutput.has(active.output) ? "r26-clear-at-school-kid-questions" : "r15-context-first");
+    if (r26ByOutput.has(active.output)) {
+      const previous = contextFirstByOutput.get(clip.replaces.output);
+      assert.equal(previous.sha256, clip.replaces.sha256);
+      assert.equal(previous.text, clip.text);
+      assert.equal(spec.recipient, "KID");
+      assert.ok(["HUG", "HELP"].includes(spec.event));
+    }
   }
   assert.equal(active.audioEdit, undefined);
   assert.equal(active.sourceOutput, undefined);
@@ -174,6 +184,6 @@ for (const line of nonQuestionLines) {
 }
 
 console.log("PASS: 24 House/School questions use context-first NaturalReaders comma timing");
-console.log("- Twelve r17 House and twelve r15 School questions cover Kid, Mom, Dad, and Teacher recipients.");
+console.log("- Twelve r17 House, ten retained r15 School and two r26 School/Kid questions cover retained and active recipients.");
 console.log("- Independent decoding found a short natural opening-context boundary and no >=400 ms pause in every active recording.");
 console.log("- All 24 former derivatives and all 24 r15 sources remain hash-verified as historical evidence; all 24 current non-question clips match their manifest hashes.");

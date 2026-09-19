@@ -15,7 +15,7 @@ const trialManifest = JSON.parse(fs.readFileSync(path.join(candidate, "data/ksiz
 const sandbox = { window: {} };
 vm.runInNewContext(fs.readFileSync(path.join(candidate, "exterior-palette.js"), "utf8"), sandbox);
 const api = sandbox.window.WTCExteriorPalette;
-assert.equal(api.version, "who-takes-care-selective-exterior-palette-v2-window-interiors");
+assert.equal(api.version, "who-helps-where-selective-exterior-palette-v3-curtain-silhouettes");
 assert.equal(Object.keys(manifest.palettes).length, 17);
 const WIDTH = 1672;
 const HEIGHT = 941;
@@ -141,7 +141,12 @@ for (const context of ["HOME", "SCHOOL"]) {
     const yellow = palette.characterHex.toUpperCase() === "#FFD100";
     for (const [x, y, rgb] of selected[context]) {
       const actual = pixelAt(result.data, x, y);
-      if (yellow) {
+      if (context === "SCHOOL") {
+        assert.deepEqual(actual, rgb, `School glazing must remain original at ${x},${y}`);
+        selectedChecks += 1;
+        continue;
+      }
+      if (yellow || context === "HOME") {
         if (context === "SCHOOL") {
           assert.deepEqual(actual, rgb, `Yellow School glazing must remain original at ${x},${y}`);
           selectedChecks += 1;
@@ -160,14 +165,14 @@ for (const context of ["HOME", "SCHOOL"]) {
       if (palette.characterHex === "#A9A9A9") assert.ok(Math.max(...actual) - Math.min(...actual) <= 1, "Gray window interior retains purple hue");
       selectedChecks += 1;
     }
-    if (yellow && context === "HOME") {
+    if (context === "HOME") {
       for (const [x,y] of [[347,405],[504,405],[343,548],[508,548],[1157,405],[1318,405],[1156,550],[1318,550]]) {
         const rgb=pixelAt(original,x,y), actual=pixelAt(result.data,x,y), ySource=luminance(rgb);
         const tint=[.4*ySource+.6*255,.65*ySource+.3*255,ySource-.2*255].map(v=>Math.max(0,Math.min(255,v)));
         const alpha=Math.max(0,Math.min(1,(rgb[0]-rgb[1])/12));
-        const expected=rgb.map((value,c)=>value+(tint[c]-value)*alpha);
-        assert.ok(maxDelta(actual,expected)<=2,`Yellow curtain differs at ${x},${y}: ${actual} vs ${expected}`);
-        assert.ok(maxDelta(actual,rgb)>=3,`Yellow curtain not themed at ${x},${y}`);
+        const expected=yellow ? rgb.map((value,c)=>value+(tint[c]-value)*alpha) : independentExpectedRGB(rgb, palette.characterHex);
+        assert.ok(maxDelta(actual,expected)<=2,`Curtain differs at ${x},${y}: ${actual} vs ${expected}`);
+        assert.ok(maxDelta(actual,rgb)>=3,`Curtain not themed at ${x},${y}`);
         maxYellowSelectedLuminanceLift=Math.max(maxYellowSelectedLuminanceLift,Math.abs(luminance(actual)-luminance(rgb)));
         selectedChecks+=1;
       }

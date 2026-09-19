@@ -10,7 +10,7 @@ const html = fs.readFileSync(path.join(reviewRoot, "home-school-review.html"), "
 const css = fs.readFileSync(path.join(reviewRoot, "review.css"), "utf8");
 const source = fs.readFileSync(path.join(reviewRoot, "home-school-review.js"), "utf8");
 
-const expectedRelease = "chs-home-school-evelyn-v1-r25-yellow-door-cleanup-1";
+const expectedRelease = "chs-home-school-evelyn-v1-r26-complete-polish-1";
 assert.match(html, /48 Home \/ School order previews/);
 assert.match(html, /24 matched visual configurations/);
 assert.match(html, /12 study conditions/);
@@ -22,8 +22,8 @@ assert.match(html, /School → Home/);
 assert.match(html, /Back and Skip buttons/);
 assert.match(html, /no longer includes any Likert rating questions/);
 assert.match(html, /Visual profiles A–D/);
-assert.match(html, /home-school-review\.js\?v=who-helps-where-review-r25/);
-assert.match(html, /review\.css\?v=who-helps-where-review-r25/);
+assert.match(html, /home-school-review\.js\?v=who-helps-where-review-r26/);
+assert.match(html, /review\.css\?v=who-helps-where-review-r26/);
 assert.match(html, /curtains seen through the windows/);
 assert.match(html, /recording has not been fixed, but it is no longer reachable/);
 assert.doesNotMatch(html, /value="family"|72 order-specific|36 matched|96 versions|exterior art is shared/);
@@ -44,7 +44,7 @@ const sandbox = {
 vm.runInNewContext(source, sandbox, { filename: "home-school-review.js" });
 const api = sandbox.window.FTCHomeSchoolReview;
 assert.ok(api, "Home/School review API should be exported");
-assert.equal(api.REVIEW_VERSION, "who-helps-where-review-r25");
+assert.equal(api.REVIEW_VERSION, "who-helps-where-review-r26");
 assert.equal(api.STUDY_RUNTIME_VERSION, expectedRelease);
 
 const orderValues = Array.from(api.CONTEXT_ORDERS, (order) => order.value);

@@ -9,7 +9,7 @@ const TEACHER_CLASSMATE_GENERATED_ROOT = "assets/teacher_classmate/generated/";
 const TEACHER_CLASSMATE_V78_REVISION_ROOT = "versions/chs-v78-teacher-classmate-evelyn-unique-roles/assets/teacher_classmate/generated/";
 const TEACHER_CLASSMATE_V78_DYAD_REVISION = /^dyads\/classmate-kid_0(?:1_tkc-deep-purple-a|2_tkc-deep-purple-b)\/slide_(?:0[3-9]|1[0-3])\.svg$/;
 const TEACHER_CLASSMATE_V78_TRIAL_REVISION = /^trials\/14(?:[ab]\/intro_04|[cd]\/intro_0[34]|[abcd]\/(?:hug|food|help)_screen_2)\.svg$/;
-const HOME_SCHOOL_ASSET_VERSION = "chs-home-school-evelyn-v1-r25-yellow-door-cleanup-1";
+const HOME_SCHOOL_ASSET_VERSION = "chs-home-school-evelyn-v1-r26-complete-polish-1";
 const HOME_SCHOOL_DESIGN_VERSION = "home_school_context_chs_candidate_v1";
 const HOME_SCHOOL_WITHIN_CHILD_DESIGN_VERSION = "home_school_within_child_two_role_sets_v2";
 const HOME_SCHOOL_CONTEXT_SCRIPT_VERSION = "home_school_house_entrance_recipient_aware_v6";
@@ -22,7 +22,7 @@ const HOME_SCHOOL_FURNISHED_ROOM_ROOT = "assets/home_school/furnished_color_grou
 const HOME_SCHOOL_ENTRANCE_ROOT = "versions/chs-home-school-evelyn-v1/assets/entrance/";
 const HOME_SCHOOL_VISUAL_REPAIR_ROOT = "versions/chs-home-school-evelyn-v1/assets/visual-repair-v1/";
 const HOME_SCHOOL_ENTRANCE_VERSION = "who-takes-care-palette-entry-halls-v2";
-const ENTRANCE_DURATION_MS = 10100;
+const ENTRANCE_DURATION_MS = 6500;
 const DYAD_MANIFEST_URL = runtimeConfig.dyadManifestUrl
   || `data/dyad_manifest.json?v=${TEACHER_CLASSMATE_ASSET_VERSION}`;
 const EVENT_MANIFEST_URL = runtimeConfig.eventManifestUrl
@@ -50,7 +50,7 @@ const DATA_MIRROR_CONTRACT = "find-the-caregiver-sheets-v1";
 const BROWSER_DATASET_DB_NAME = "find-the-caregiver-researcher-data";
 const BROWSER_DATASET_DB_VERSION = 1;
 const BROWSER_DATASET_STORE = "sessions";
-const AUTO_ADVANCE_PAUSE_MS = 1200;
+const AUTO_ADVANCE_PAUSE_MS = 400;
 const PARENT_AUTOPLAY_NOTE = "Most pages in the game move on by themselves after a few moments, but you can press Replay to hear it again or press Next to move on sooner when it appears.";
 const PARENT_AUTOPLAY_NOTE_SHORT = "Most pages move on by themselves. Press Replay to hear it again, or Next to move on sooner.";
 const START_INTRO_TEXT = "Hi there! Welcome to Who Helps Where? We are going to look at pictures and play a choosing game. Listen to each page. When you see choices, choose the one you pick. When you are ready, hit the green button to start.";
@@ -2011,10 +2011,106 @@ function setNarratorMouthPlaying(playing) {
   else classes.remove("ksize-audio-playing");
 }
 
+const MEDIA_START_TIMEOUT_MS = 10000;
+const MEDIA_STALL_TIMEOUT_MS = 7000;
+const MEDIA_MAX_PLAYBACK_MS = 120000;
+const MEDIA_STARTUP_TIMEOUT_MS = 90000;
+
+function showMediaStatus(message = "", retry = null, retryLabel = "Try audio again") {
+  document.querySelector(".ksize-media-status")?.remove();
+  if (!message) return;
+  const notice = document.createElement("div");
+  notice.className = "ksize-media-status";
+  notice.setAttribute("role", "status");
+  notice.setAttribute("aria-live", "polite");
+  notice.style.cssText = "position:fixed;bottom:12px;left:50%;transform:translateX(-50%);z-index:10000;max-width:90vw;padding:12px 18px;border:2px solid #174563;border-radius:12px;background:white;color:#173b53;box-shadow:0 3px 18px #0003;font:600 16px/1.4 system-ui;text-align:center";
+  const label = document.createElement("span");
+  label.textContent = message;
+  notice.appendChild(label);
+  if (retry) {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.textContent = retryLabel;
+    button.style.cssText = "margin-left:12px;padding:8px 12px;font:inherit;cursor:pointer";
+    button.addEventListener("click", retry);
+    notice.appendChild(button);
+  }
+  document.body.appendChild(notice);
+}
+
+function resolvedNarrationSrc(src, text) {
+  const mapped = canonicalAudioPathForText(text);
+  const supplied = normalizeAudioSrc(src);
+  const extension = supplied.startsWith("assets/teacher_classmate/generated/audio/")
+    || supplied.startsWith("assets/home_school/generated/audio/");
+  return requestedVoiceProfile === "relkind"
+    ? (mapped || canonicalAudioPathForSrc(src) || src)
+    : (mapped || ((supplied.startsWith("audio_evelyn/") || extension) ? src : ""));
+}
+
+function mediaForAssignedNodes(nodes) {
+  const images = new Set();
+  const recordings = new Set();
+  const decodeAttribute = (value) => value.replaceAll("&amp;", "&").replaceAll("&quot;", '"').replaceAll("&#39;", "'");
+  for (const node of nodes) {
+    // Inspect the final composed markup, after palette/foreground repairs have
+    // been applied. Raw source slides and unassigned events are not requested.
+    for (const match of String(node.stimulus || "").matchAll(/\b(?:src|href|data-source)=["']([^"']+)["']/g)) {
+      const src = decodeAttribute(match[1]);
+      if (!/^(?:data:|blob:|#)/i.test(src) && /\.(?:png|webp|jpe?g|svg)(?:[?#]|$)/i.test(src)) images.add(src);
+    }
+    const lines = node._ksizeNarration || String(node.data?.facilitator_script || "").split("\n").filter(Boolean).map((text) => ({ text }));
+    if (entranceVisualOnly || isFacilitatorMode) continue;
+    for (const line of lines) {
+      const src = resolvedNarrationSrc(line.src, line.text);
+      if (!src) throw new Error(`Required study recording is unavailable: ${line.text || line.src}`);
+      recordings.add(versionedAudioSrc(src));
+    }
+  }
+  return { images: [...images], audio: [...recordings] };
+}
+
+function makeStudyPreloader(media) {
+  const retry = (event) => {
+    if (event.target?.closest?.(".ksize-retry-study-loading")) window.location.reload();
+  };
+  return {
+    type: jsPsychPreload,
+    images: media.images,
+    audio: media.audio,
+    show_progress_bar: true,
+    max_load_time: MEDIA_STARTUP_TIMEOUT_MS,
+    continue_after_error: false,
+    message: '<p role="status">Getting the pictures and recordings ready…</p>',
+    error_message: '<section role="alert"><h2>The study could not finish loading</h2><p>Please check your connection, then try loading again. Your child’s game has not started.</p><button class="ksize-retry-study-loading" type="button">Try loading again</button><p>If this continues, stop and contact the researcher.</p></section>',
+    on_load: () => document.addEventListener("click", retry),
+    on_finish: () => document.removeEventListener("click", retry),
+  };
+}
+
+async function fetchStudyJson(url) {
+  let lastError;
+  for (let attempt = 0; attempt < 2; attempt += 1) {
+    const controller = new AbortController();
+    const timeout = window.setTimeout(() => controller.abort(), 15000);
+    try {
+      const response = await fetch(assetUrl(url), { signal: controller.signal });
+      if (!response.ok) throw new Error(`Required study file could not load: ${url}`);
+      return await response.json();
+    } catch (error) {
+      lastError = error;
+    } finally {
+      window.clearTimeout(timeout);
+    }
+  }
+  throw lastError;
+}
+
 const audio = {
   voice: null,
   current: null,
   token: 0,
+  cancelCurrent: null,
   init() {
     if (isFacilitatorMode) return;
     if (!("speechSynthesis" in window)) return;
@@ -2027,6 +2123,9 @@ const audio = {
   },
   stop() {
     this.token += 1;
+    this.cancelCurrent?.();
+    this.cancelCurrent = null;
+    showMediaStatus();
     setNarratorMouthPlaying(false);
     if (this.current) {
       this.current.pause();
@@ -2076,13 +2175,8 @@ const audio = {
     }
     const token = this.token;
     return new Promise((resolve) => {
-      const mappedTextSrc = canonicalAudioPathForText(text);
-      const suppliedSrc = normalizeAudioSrc(src);
-      const isPreviewExtensionAudio = suppliedSrc.startsWith("assets/teacher_classmate/generated/audio/")
-        || suppliedSrc.startsWith("assets/home_school/generated/audio/");
-      const resolvedSrc = requestedVoiceProfile === "relkind"
-        ? (mappedTextSrc || canonicalAudioPathForSrc(src) || src)
-        : (mappedTextSrc || ((suppliedSrc.startsWith("audio_evelyn/") || isPreviewExtensionAudio) ? src : ""));
+      const resolvedSrc = resolvedNarrationSrc(src, text);
+      const retryFromPage = () => options.onRetry ? options.onRetry() : this.playFile(src, text, options);
       if (!resolvedSrc) {
         options.onFallback?.();
         if (useSyntheticSpeech && text) {
@@ -2092,61 +2186,120 @@ const audio = {
           return;
         }
         console.error(`Missing Evelyn narration for: ${text || src || "unknown text"}`);
+        showMediaStatus("The recording is unavailable. Please try again; if this continues, stop and contact the researcher.", retryFromPage);
         resolve(false);
         return;
       }
-      const fileAudio = new Audio(versionedAudioSrc(resolvedSrc));
-      fileAudio.volume = options.volume ?? 1;
-      fileAudio.playbackRate = options.playbackRate ?? 1;
-      if (options.preservePitch === false) {
-        fileAudio.preservesPitch = false;
-        fileAudio.mozPreservesPitch = false;
-        fileAudio.webkitPreservesPitch = false;
-      }
-      this.current = fileAudio;
-      const isCurrentAudio = () => token === this.token && this.current === fileAudio;
-      const setMouthPlaying = (playing) => {
-        if (!isCurrentAudio()) return;
-        setNarratorMouthPlaying(playing);
-      };
-      let didStart = false;
-      const reportPlaybackTime = () => {
-        if (!isCurrentAudio()) return;
-        options.onTimeUpdate?.(fileAudio.currentTime, fileAudio.duration);
-      };
-      fileAudio.addEventListener("playing", () => {
-        if (!isCurrentAudio()) return;
-        setMouthPlaying(true);
-        if (!didStart) {
-          didStart = true;
-          options.onStart?.();
+      let settled = false;
+      let cleanupAttempt = () => {};
+      const finish = (played) => {
+        if (settled) return;
+        settled = true;
+        cleanupAttempt();
+        if (token === this.token) {
+          this.cancelCurrent = null;
+          setNarratorMouthPlaying(false);
+          if (played) showMediaStatus();
         }
-        reportPlaybackTime();
-      });
-      fileAudio.addEventListener("waiting", () => setMouthPlaying(false));
-      fileAudio.addEventListener("pause", () => setMouthPlaying(false));
-      fileAudio.addEventListener("abort", () => setMouthPlaying(false), { once: true });
-      fileAudio.addEventListener("emptied", () => setMouthPlaying(false));
-      fileAudio.addEventListener("timeupdate", reportPlaybackTime);
-      fileAudio.addEventListener("ended", () => {
-        setMouthPlaying(false);
-        options.onEnd?.();
-        resolve(true);
-      }, { once: true });
-      fileAudio.addEventListener("error", async () => {
-        setMouthPlaying(false);
-        if (!isCurrentAudio()) return resolve(false);
-        options.onFallback?.();
-        options.onStart?.();
-        resolve(await this.playSpeech(text));
-      }, { once: true });
-      fileAudio.play().catch(async () => {
-        setMouthPlaying(false);
-        if (!isCurrentAudio()) return resolve(false);
-        options.onFallback?.();
-        options.onStart?.();
-        resolve(await this.playSpeech(text));
-      });
+        resolve(played);
+      };
+      this.cancelCurrent = () => finish(false);
+      const attempt = (number) => {
+        const fileAudio = new Audio(versionedAudioSrc(resolvedSrc));
+        fileAudio.volume = options.volume ?? 1;
+        fileAudio.playbackRate = options.playbackRate ?? 1;
+        if (options.preservePitch === false) {
+          fileAudio.preservesPitch = false;
+          fileAudio.mozPreservesPitch = false;
+          fileAudio.webkitPreservesPitch = false;
+        }
+        this.current = fileAudio;
+        let active = true;
+        let didStart = false;
+        let lastTime = -1;
+        let watchdog, noticeTimer = null, totalTimer;
+        const current = () => active && !settled && token === this.token && this.current === fileAudio;
+        const clearNotice = () => {
+          window.clearTimeout(noticeTimer);
+          noticeTimer = null;
+        };
+        const scheduleLoadingNotice = () => {
+          if (noticeTimer !== null) return;
+          noticeTimer = window.setTimeout(() => {
+            noticeTimer = null;
+            if (current()) showMediaStatus("Loading the sound… Please wait.");
+          }, 1800);
+        };
+        cleanupAttempt = () => {
+          active = false;
+          [watchdog, noticeTimer, totalTimer].forEach((timer) => window.clearTimeout(timer));
+          fileAudio.pause();
+        };
+        const fail = async () => {
+          if (!current()) return;
+          cleanupAttempt();
+          setNarratorMouthPlaying(false);
+          options.onEnd?.();
+          if (number < 2) {
+            showMediaStatus("The sound is taking longer to load. Trying it again…");
+            attempt(number + 1);
+            return;
+          }
+          options.onFallback?.();
+          if (useSyntheticSpeech && text) {
+            options.onStart?.();
+            const played = await this.playSpeech(text);
+            if (token !== this.token || settled) return;
+            if (played) { options.onEnd?.(); finish(true); return; }
+          }
+          showMediaStatus("The sound could not play. Please try the audio again. Your child’s answer is still waiting.", retryFromPage);
+          finish(false);
+        };
+        const armWatchdog = (duration) => {
+          window.clearTimeout(watchdog);
+          watchdog = window.setTimeout(fail, duration);
+        };
+        const buffering = () => {
+          if (!current()) return;
+          setNarratorMouthPlaying(false);
+          // Do not extend the deadline on repeated waiting/stalled events.
+          scheduleLoadingNotice();
+        };
+        fileAudio.addEventListener("playing", () => {
+          if (!current()) return;
+          clearNotice();
+          showMediaStatus();
+          setNarratorMouthPlaying(true);
+          if (!didStart) {
+            didStart = true;
+            options.onStart?.();
+          }
+          armWatchdog(MEDIA_STALL_TIMEOUT_MS);
+        });
+        fileAudio.addEventListener("timeupdate", () => {
+          if (!current()) return;
+          if (fileAudio.currentTime > lastTime) {
+            lastTime = fileAudio.currentTime;
+            clearNotice();
+            showMediaStatus();
+            armWatchdog(MEDIA_STALL_TIMEOUT_MS);
+          }
+          options.onTimeUpdate?.(fileAudio.currentTime, fileAudio.duration);
+        });
+        ["waiting", "stalled", "pause", "emptied"].forEach((event) => fileAudio.addEventListener(event, buffering));
+        ["error", "abort"].forEach((event) => fileAudio.addEventListener(event, fail));
+        fileAudio.addEventListener("ended", () => {
+          if (!current()) return;
+          setNarratorMouthPlaying(false);
+          options.onEnd?.();
+          finish(true);
+        });
+        scheduleLoadingNotice();
+        armWatchdog(MEDIA_START_TIMEOUT_MS);
+        totalTimer = window.setTimeout(fail, MEDIA_MAX_PLAYBACK_MS);
+        try { Promise.resolve(fileAudio.play()).catch(fail); } catch { fail(); }
+      };
+      attempt(1);
     });
   },
   speak(text) {
@@ -2470,7 +2623,13 @@ function prepareIntroReveal(canvas) {
   if (!introRevealCache.has(source)) {
     introRevealCache.set(source, new Promise((resolve, reject) => {
       const image = new Image();
+      const timer = window.setTimeout(() => {
+        image.onload = null;
+        image.onerror = null;
+        reject(new Error(`Character foreground load timed out: ${source}`));
+      }, MEDIA_START_TIMEOUT_MS);
       image.onload = () => {
+        window.clearTimeout(timer);
         try {
           const scratch = document.createElement("canvas");
           scratch.width = image.naturalWidth;
@@ -2507,8 +2666,15 @@ function prepareIntroReveal(canvas) {
           resolve({ pixels, groups });
         } catch (error) { reject(error); }
       };
-      image.onerror = () => reject(new Error(`Character foreground could not load: ${source}`));
+      image.onerror = () => {
+        window.clearTimeout(timer);
+        reject(new Error(`Character foreground could not load: ${source}`));
+      };
       image.src = source;
+    }).catch((error) => {
+      // Failed attempts must not permanently poison Replay's reveal cache.
+      introRevealCache.delete(source);
+      throw error;
     }));
   }
   return introRevealCache.get(source).then(({ pixels, groups }) => {
@@ -2648,7 +2814,7 @@ function renderKidSlide({ trial = null, image, text, choices = [], overlayChoice
           : (slideKind === "response_choices" ? contextEvent?.questionText || "" : ""))))
     : "";
   const contextOverlayHtml = contextOverlayText
-    ? `<div class="ksize-context-spoken-banner"${furnishedScene ? ` style="background:${escapeHtml(furnishedScene.accent)}"` : ""}>${escapeHtml(contextOverlayText)}</div>`
+    ? `<div class="ksize-context-spoken-banner"${furnishedScene ? ` style="background:${escapeHtml(furnishedScene.accent)};color:${window.WTCCaptionContrast?.textColorForHex(furnishedScene.accent) || '#fff'}"` : ""}>${escapeHtml(contextOverlayText)}</div>`
     : "";
   const imageBlock = isEntranceSlide && furnishedScene
     ? `<div class="ksize-slide-image ksize-furnished-scene ksize-entry-shell" data-palette="${escapeHtml(furnishedScene.paletteSlug)}" data-visual-version="${escapeHtml(furnishedScene.visualVersion)}">
@@ -2727,6 +2893,9 @@ function makeKidNode(jsPsych, { trial, block, suffix, image, text, audioSegments
   let disposeNode = () => {};
   return {
     type: jsPsychHtmlButtonResponse,
+    _ksizeNarration: audioTexts.length
+      ? audioTexts.map((audioText, index) => ({ text: audioText, src: audioSegments[index] }))
+      : audioSegments.map((src) => ({ src, text: text || "" })),
     stimulus: renderKidSlide({ trial, image, text, choices, overlayChoices, showText, slideKind, showNext: !hasChoices, visualChoices, contextIntro, contextCondition, studyContext, storyNumber, storyTotal }),
     choices: [],
     data: {
@@ -2762,6 +2931,11 @@ function makeKidNode(jsPsych, { trial, block, suffix, image, text, audioSegments
       context_visual_repair_version: studyContext ? trial?.homeSchoolFurnished?.backgroundRepairVersion || null : null,
       context_window_greenery_repair_version: studyContext === "SCHOOL" ? trial?.homeSchoolFurnished?.windowGreeneryRepairVersion || null : null,
       context_help_gap_repair_version: studyContext && suffix === "HELP" ? trial?.homeSchoolFurnished?.helpGapRepairVersion || null : null,
+      context_food_artwork_repair_version: studyContext && suffix === "FOOD" ? trial?.homeSchoolFurnished?.foodArtworkRepairVersion || null : null,
+      context_caption_contrast_version: studyContext ? trial?.homeSchoolFurnished?.captionContrastVersion || null : null,
+      exterior_palette_version: studyContext ? window.WTCExteriorPalette?.version || null : null,
+      entrance_duration_ms: studyContext ? ENTRANCE_DURATION_MS : null,
+      auto_advance_pause_ms: AUTO_ADVANCE_PAUSE_MS,
       context_palette_slug: studyContext ? trial?.homeSchoolFurnished?.paletteSlug || null : null,
       context_character_hex: studyContext ? trial?.homeSchoolFurnished?.characterHex || null : null,
       entrance_version: studyContext ? HOME_SCHOOL_ENTRANCE_VERSION : null,
@@ -2792,7 +2966,11 @@ function makeKidNode(jsPsych, { trial, block, suffix, image, text, audioSegments
         pauseButton.textContent = "Pause entrance";
         pauseButton.setAttribute("aria-label", "Pause entrance");
       };
-      const revealReady = prepareIntroReveal(document.querySelector(".ksize-character-reveal"));
+      let revealReady = prepareIntroReveal(document.querySelector(".ksize-character-reveal"));
+      // A rapid researcher Skip can remove the 250ms play timer before it
+      // awaits this eager decode. Mark that promise handled immediately while
+      // preserving its rejection for playAudio's visible recovery path.
+      revealReady.catch(() => {});
       // Register immediately so a rapid Skip/Back/reload cannot leave a running
       // animation or a pending advance from the page that was just removed.
       disposeNode = () => {
@@ -2857,9 +3035,14 @@ function makeKidNode(jsPsych, { trial, block, suffix, image, text, audioSegments
         clearHighlights();
         setContextChoicesEnabled(false);
         let attemptFailed = false;
-        try { await revealReady; } catch (error) {
+        try {
+          revealReady ||= prepareIntroReveal(document.querySelector(".ksize-character-reveal"));
+          await revealReady;
+        } catch (error) {
+          revealReady = null;
           audioPlaybackOrLoadFailure = true;
-          if (caption) caption.textContent = "This picture could not load. Please reload the study.";
+          if (didFinish || generation !== playbackGeneration) return;
+          showMediaStatus("This picture could not load. Please try again before continuing.", () => playAudio({ advanceWhenDone }), "Try picture again");
           console.error(error);
           return;
         }
@@ -2882,10 +3065,11 @@ function makeKidNode(jsPsych, { trial, block, suffix, image, text, audioSegments
           if (entranceVisualOnly) continue;
           if (didFinish || generation !== playbackGeneration) return;
           const isChoiceOptions = highlightChoices && index === narrationItems.length - 1;
-          const played = await audio.playFile(item.src, item.text, isChoiceOptions ? {
-            onStart: highlightChoiceNames,
-            onEnd: clearHighlights,
-          } : {});
+          const played = await audio.playFile(item.src, item.text, {
+            onRetry: () => playAudio({ advanceWhenDone }),
+            ...(isChoiceOptions ? { onStart: highlightChoiceNames, onEnd: clearHighlights } : {}),
+          });
+          if (didFinish || generation !== playbackGeneration) return;
           if (!played) {
             attemptFailed = true;
             audioPlaybackOrLoadFailure = true;
@@ -3223,6 +3407,7 @@ function makeFollowupTransitionNode(jsPsych, trial, chunk, storyNumber, storyTot
         playToken += 1;
         const token = playToken;
         const choicePlayed = await playReviewNarration(choiceText, choiceAudio);
+        if (token !== playToken || didFinish) return;
         if (!choicePlayed) {
           audioPlaybackOrLoadFailure = true;
           audioPlaybackFailureCount += 1;
@@ -3232,6 +3417,7 @@ function makeFollowupTransitionNode(jsPsych, trial, chunk, storyNumber, storyTot
         await new Promise((resolve) => window.setTimeout(resolve, 140));
         if (token !== playToken || didFinish) return;
         const followupPlayed = await playReviewNarration(followupText);
+        if (token !== playToken || didFinish) return;
         if (!followupPlayed) {
           audioPlaybackOrLoadFailure = true;
           audioPlaybackFailureCount += 1;
@@ -3241,6 +3427,7 @@ function makeFollowupTransitionNode(jsPsych, trial, chunk, storyNumber, storyTot
         await new Promise((resolve) => window.setTimeout(resolve, 140));
         if (token !== playToken || didFinish) return;
         const meetPlayed = await playReviewNarration(FOLLOWUP_MEET_TEXT);
+        if (token !== playToken || didFinish) return;
         if (!meetPlayed) {
           audioPlaybackOrLoadFailure = true;
           audioPlaybackFailureCount += 1;
@@ -3432,6 +3619,7 @@ function makeSlideNode(jsPsych, trial, chunk, slide, index, total, storyNumber =
           const questionText = questionTextForResponse(chunk, slide);
           if (questionText) {
             const questionPlayed = await audio.play(questionText);
+            if (token !== playToken || didFinish) return;
             if (!questionPlayed) {
               audioPlaybackOrLoadFailure = true;
               audioPlaybackFailureCount += 1;
@@ -3594,22 +3782,22 @@ async function main() {
     loadedHomeSchoolContextManifest,
     ratingOptionCues,
   ] = await Promise.all([
-    fetch(assetUrl(DYAD_MANIFEST_URL)).then((res) => res.json()),
-    fetch(assetUrl(EVENT_MANIFEST_URL)).then((res) => res.json()),
-    fetch(assetUrl(CANONICAL_AUDIO_MANIFEST_URL)).then((res) => res.json()),
-    fetch(assetUrl(TEACHER_CLASSMATE_AUDIO_MANIFEST_URL)).then((res) => res.json()),
+    fetchStudyJson(DYAD_MANIFEST_URL),
+    fetchStudyJson(EVENT_MANIFEST_URL),
+    fetchStudyJson(CANONICAL_AUDIO_MANIFEST_URL),
+    fetchStudyJson(TEACHER_CLASSMATE_AUDIO_MANIFEST_URL),
     isHomeSchoolStudy
-      ? fetch(assetUrl(HOME_SCHOOL_AUDIO_MANIFEST_URL)).then((res) => res.json())
+      ? fetchStudyJson(HOME_SCHOOL_AUDIO_MANIFEST_URL)
       : Promise.resolve({ lines: [] }),
     isHomeSchoolStudy
-      ? fetch(assetUrl(HOME_SCHOOL_CONTEXT_MANIFEST_URL)).then((res) => res.json())
+      ? fetchStudyJson(HOME_SCHOOL_CONTEXT_MANIFEST_URL)
       : Promise.resolve({ contexts: {} }),
-    fetch(assetUrl(RATING_OPTION_CUES_URL)).then((res) => res.ok ? res.json() : {}).catch(() => ({})),
+    fetchStudyJson(RATING_OPTION_CUES_URL).catch(() => ({})),
   ]);
   homeSchoolContextManifest = loadedHomeSchoolContextManifest;
   installCanonicalAudioMap(canonicalAudioManifest, teacherClassmateAudioManifest, homeSchoolAudioManifest);
   ratingOptionCueManifest = ratingOptionCues;
-  introImageFixes = await fetch(assetUrl(INTRO_IMAGE_FIXES_URL)).then((res) => res.json()).catch(() => ({}));
+  introImageFixes = await fetchStudyJson(INTRO_IMAGE_FIXES_URL).catch(() => ({}));
   const assignment = balancedAssignment(
     isHomeSchoolStudy ? requestedAssignmentIdentity.seed : requestedParticipantId,
     requestedRoleSet,
@@ -3638,6 +3826,8 @@ async function main() {
   window.WTCYellowBackgrounds?.applyToManifest(eventManifest);
   // Remove only enclosed white source-background gaps on the box story layers.
   window.WTCHelpGapRepair?.applyToManifest(eventManifest);
+  window.WTCFoodArtworkRepair?.applyToManifest(eventManifest);
+  window.WTCCaptionContrast?.applyToManifest(eventManifest);
   const eventPlan = planEventSession(eventManifest, requestedSeed, requestedVariant, requestedSet, selectedRoleSet);
   const selectedEventSuffix = assignment.eventSuffix;
   activeStudyEvent = selectedEventSuffix;
@@ -3761,58 +3951,6 @@ async function main() {
       ? "interleaved-one-after-story"
       : selectedPartOrder);
   currentSessionParams.partOrder = resolvedPartOrder;
-  const furnishedImagePaths = selectedContext
-    ? contextOrder.flatMap((context) => eventPlan.flatMap((trial) => {
-        const visual = trial.homeSchoolFurnished;
-        const background = context === "HOME" ? visual?.homeBackground : visual?.schoolBackground;
-        const introForegrounds = (trial.blocks.INTRO?.introSlides || [])
-          .flatMap((slide) => slide.images || [])
-          .map((image) => image.homeSchoolForegroundSrc);
-        const eventForegrounds = trial.blockOrder
-          .flatMap((suffix) => trial.blocks[suffix]?.images || [])
-          .map((image) => image.homeSchoolForegroundSrc);
-        return [background, ...introForegrounds, ...eventForegrounds]
-          .filter(Boolean)
-          .map(displayImageSrc);
-      }))
-    : [];
-  const imagePaths = [
-    ...new Set(contextOrder.flatMap((context) => eventPlan.flatMap((trial) =>
-      Object.values(entranceAssets(context, trial.homeSchoolFurnished?.paletteSlug)).map(displayImageSrc)
-    ))),
-    ...contextOrder.map((context) => displayImageSrc(contextBadgeSrc(context))).filter(Boolean),
-    ...allDyadSlides.flatMap(({ chunk, slide }) => {
-      if (!selectedContext) return [displayImageSrc(slide.src)];
-      const paths = [displayImageSrc(followupForegroundSrc(chunk, slide))];
-      if (String(slide.src || "").split("?")[0] === ORANGE_SISTER_OUTLINE_FIX_TARGET) {
-        paths.push(displayImageSrc(followupForegroundSrc(chunk, ORANGE_SISTER_OUTLINE_FIX_REFERENCE)));
-      }
-      return paths;
-    }),
-    ...eventPlan.flatMap((trial) =>
-      [
-        introImageFixes[`${trial.id}|3`]
-          ? displayImageSrc(introImageFixes[`${trial.id}|3`])
-          : null,
-        ...trial.blockOrder.flatMap((suffix) => {
-          const block = trial.blocks[suffix];
-          if (!block) return [];
-          return [
-            ...block.images.map((img) => displayImageSrc(img.src)),
-            ...block.choices.flatMap((choice) => choice.images.map((img) => displayImageSrc(img.src))),
-          ];
-        }),
-      ].filter(Boolean)
-    ),
-    ...furnishedImagePaths,
-  ];
-  const contextAudioPaths = [...new Set(contextOrder.flatMap((context) => {
-    const spec = contextSpec(context);
-    return [spec?.exterior?.text, spec?.room?.text, spec?.intro?.text,
-      ...Object.values(spec?.events || {}).flatMap((event) => [event.eventText, event.questionText]),
-      ...Object.values(spec?.recipientEvents || {}).flatMap((events) =>
-        Object.values(events).flatMap((event) => [event.eventText, event.questionText]))];
-  }).filter(Boolean).map(canonicalAudioPathForText).filter(Boolean).map(versionedAudioSrc))];
   audio.init();
 
   const jsPsych = initJsPsych({
@@ -4502,8 +4640,8 @@ async function main() {
           if (sequenceToken !== welcomeSequenceToken) return;
           stopIntroMusic();
           playButton?.classList.remove("ksize-prompt-glow");
-          await audio.playFile(START_INTRO_AUDIO, START_INTRO_TEXT);
-          if (sequenceToken !== welcomeSequenceToken) return;
+          const played = await audio.playFile(START_INTRO_AUDIO, START_INTRO_TEXT);
+          if (!played || sequenceToken !== welcomeSequenceToken) return;
           playIntroOpeningMusic();
           startButton?.classList.add("ksize-prompt-glow");
         };
@@ -4515,10 +4653,12 @@ async function main() {
         }
         playButton?.addEventListener("click", async () => {
           welcomeSequenceToken += 1;
+          const sequenceToken = welcomeSequenceToken;
           stopIntroMusic();
           audio.stop();
           playButton.classList.remove("ksize-prompt-glow");
-          await audio.playFile(START_INTRO_AUDIO, START_INTRO_TEXT);
+          const played = await audio.playFile(START_INTRO_AUDIO, START_INTRO_TEXT);
+          if (!played || sequenceToken !== welcomeSequenceToken) return;
           playIntroOpeningMusic();
           startButton?.classList.add("ksize-prompt-glow");
         });
@@ -4535,6 +4675,7 @@ async function main() {
         audio.stop();
       },
     };
+  let doneSequenceToken = 0;
   const doneNode = {
       type: jsPsychHtmlButtonResponse,
       stimulus: `
@@ -4585,25 +4726,31 @@ async function main() {
         installResearcherSkip(jsPsych);
         stopOutroMusic();
         audio.stop();
+        const sequenceToken = ++doneSequenceToken;
         const grownupHereButton = document.querySelector(".ksize-grownup-here-btn");
         const grownupPanel = document.querySelector(".ksize-final-grownup-panel");
         const continueButton = document.querySelector(".ksize-final-grownup-continue");
         if (!isFacilitatorMode) {
           (async () => {
             await new Promise((resolve) => window.setTimeout(resolve, 350));
+            if (sequenceToken !== doneSequenceToken) return;
             for (const [index, line] of ALL_DONE_AUDIO_SEQUENCE.entries()) {
               if (index > 0) await new Promise((resolve) => window.setTimeout(resolve, 180));
-              await audio.playFile(line.src, line.text, {
+              if (sequenceToken !== doneSequenceToken) return;
+              const played = await audio.playFile(line.src, line.text, {
                 volume: line.volume ?? 0.8,
                 playbackRate: line.playbackRate ?? 1,
                 preservePitch: line.preservePitch ?? true,
               });
+              if (!played || sequenceToken !== doneSequenceToken) return;
             }
-            await playReviewNarration(CHILD_GROWNUP_HANDOFF_TEXT);
+            const played = await playReviewNarration(CHILD_GROWNUP_HANDOFF_TEXT);
+            if (!played || sequenceToken !== doneSequenceToken) return;
             playOutroMusic();
           })();
         }
         grownupHereButton?.addEventListener("click", () => {
+          const grownupSequenceToken = ++doneSequenceToken;
           audio.stop();
           stopOutroMusic();
           grownupHereButton.hidden = true;
@@ -4611,7 +4758,7 @@ async function main() {
           continueButton?.focus();
           if (!isFacilitatorMode) {
             window.setTimeout(() => {
-              audio.playFile(FINAL_GROWNUP_AUDIO, FINAL_GROWNUP_TEXT);
+              if (grownupSequenceToken === doneSequenceToken) audio.playFile(FINAL_GROWNUP_AUDIO, FINAL_GROWNUP_TEXT);
             }, 250);
           }
         });
@@ -4620,10 +4767,26 @@ async function main() {
         });
       },
       on_finish: () => {
+        doneSequenceToken += 1;
         stopOutroMusic();
         audio.stop();
       },
     };
+  // Explicit sources keep setup/ending clips in the same preload contract as
+  // story narration, including lines not looked up by their whole caption.
+  for (const [node, src, text] of [
+    [parentWelcomeNode, PARENT_WELCOME_AUDIO, parentWelcomeScript],
+    [setupNode, PARENT_QUICK_CHECKS_AUDIO, parentQuickChecksScript],
+    [cameraSetupNode, PARENT_CAMERA_AUDIO, PARENT_CAMERA_TEXT],
+    [childHandoffNode, PARENT_HANDOFF_AUDIO, parentHandoffScript],
+    [childAssentNode, CHILD_ASSENT_AUDIO, CHILD_ASSENT_TEXT],
+    [welcomeNode, START_INTRO_AUDIO, START_INTRO_TEXT],
+  ]) node._ksizeNarration = [{ src, text }];
+  doneNode._ksizeNarration = [
+    ...ALL_DONE_AUDIO_SEQUENCE,
+    { text: CHILD_GROWNUP_HANDOFF_TEXT },
+    { src: FINAL_GROWNUP_AUDIO, text: FINAL_GROWNUP_TEXT },
+  ];
   const firstPartKind = selectedPartOrder === "ratings-first" ? PART_DYAD : PART_EVENT;
   const secondPartKind = selectedPartOrder === "ratings-first" ? PART_EVENT : PART_DYAD;
   const firstPartNodes = selectedPartOrder === "ratings-first" ? ratingNodes : storyNodes;
@@ -4671,10 +4834,8 @@ async function main() {
   const startIndex = Math.min(safeRequestedPreviewIndex, Math.max(0, reviewNodes.length - 1));
   currentPreviewIndex = startIndex;
 
-  const timeline = [
-    { type: jsPsychPreload, images: imagePaths, audio: entranceVisualOnly ? [] : contextAudioPaths, show_progress_bar: true },
-    ...reviewNodes.slice(startIndex),
-  ];
+  const assignedNodes = reviewNodes.slice(startIndex);
+  const timeline = [makeStudyPreloader(mediaForAssignedNodes(assignedNodes)), ...assignedNodes];
 
   jsPsych.run(timeline);
 }
@@ -4684,5 +4845,7 @@ main().catch((error) => {
     document.body.innerHTML = `<main class="ksize-shell"><section class="ksize-screen" role="alert"><h1>This preview link is out of date</h1><p>${escapeHtml(error.message)}</p></section></main>`;
     return;
   }
-  document.body.innerHTML = `<pre>${escapeHtml(error.stack || error.message || error)}</pre>`;
+  console.error(error);
+  document.body.innerHTML = '<main class="ksize-shell"><section class="ksize-screen" role="alert"><h1>The study could not finish loading</h1><p>Please check your connection, then try loading again. The game has not started.</p><button class="ksize-retry-study-loading" type="button">Try loading again</button><p>If this continues, stop and contact the researcher.</p></section></main>';
+  document.querySelector(".ksize-retry-study-loading")?.addEventListener("click", () => window.location.reload());
 });

@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "wrappersRendered": 180,
+  "immutableRasterAssetsVerified": 560,
+  "routedTrials": 20,
+  "routedReferences": 180,
+  "helpRepairPreserved": 40,
+  "foodRepairPreserved": 40,
+  "changedGlyphPixels": 3544759,
+  "protectedOpaquePixels": 130975217,
+  "protectedTransparentPixels": 238728024,
+  "alphaChanges": 0,
+  "rgbChangesOutsideLetterMasks": 0,
+  "contrast": [
+    {
+      "hex": "#F2B13D",
+      "oldWhiteContrast": 1.89,
+      "newDarkContrast": 8.33
+    },
+    {
+      "hex": "#81D653",
+      "oldWhiteContrast": 1.8,
+      "newDarkContrast": 8.74
+    },
+    {
+      "hex": "#FFD100",
+      "oldWhiteContrast": 1.46,
+      "newDarkContrast": 10.76
+    },
+    {
+      "hex": "#4CA98F",
+      "oldWhiteContrast": 2.85,
+      "newDarkContrast": 5.52
+    },
+    {
+      "hex": "#A9A9A9",
+      "oldWhiteContrast": 2.35,
+      "newDarkContrast": 6.69
+    },
+    {
+      "hex": "#EB52F7",
+      "oldWhiteContrast": 2.97,
+      "newDarkContrast": 5.3
+    }
+  ]
+}

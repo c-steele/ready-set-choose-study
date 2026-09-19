@@ -53,7 +53,7 @@
 <body>
 <main>
   <header>
-    <div class="eyebrow">r25 · yellow door cleanup · researcher previews</div>
+    <div class="eyebrow">r26 · complete polish · researcher previews</div>
     <h1>Who Helps Where?</h1>
     <p class="intro">Choose a character set, a kind of story, and which setting comes first. Each A–D button opens a complete 12-story preview with the updated recordings, captions and artwork, plus researcher <strong>Back and Skip</strong> controls.</p>
     <div class="counts" aria-label="Version counts">
@@ -64,7 +64,7 @@
     <p class="notice"><strong>Why these counts?</strong> 2 character sets × 3 kinds of story × 2 setting orders = 12 conditions. Four repeatable visual profiles per condition give 48 previews. The two sets include 9 unique relationship pairings in total. Each run contains six home stories and six school stories, with eight pages per story: 12 × 8 = 96 story pages.</p>
     <p class="intro status">Profiles A–D cover the available character/layout variants. They are organized examples, not every possible shuffled sequence a child could receive. Matching Home-first and School-first links use the same stories, colors and arrangements in the opposite setting order.</p>
     <p class="status" id="release-status" role="status">Checking the current draft version…</p>
-    <p class="status"><a href="review-study-audit-local.html">Read the audit and remaining issues</a> · <a href="review-yellow-cleanup-local.html">See the cleaned yellow rooms and both hallways</a>. Food-picture cutouts and two current “At” recordings remain flagged for review.</p>
+    <p class="status"><a href="review-r26-fixes.html">Review the r26 fixes and verification</a> · <a href="review-yellow-cleanup-local.html">See the yellow rooms and both hallways</a>. The r26 revision repairs the food-picture cutouts and window artifacts, improves text contrast and media recovery, and replaces two unclear “At” recordings.</p>
     <p class="status">Exterior accents and curtains seen through the windows, entry halls, rooms, captions, and characters follow each story’s palette. The original woman/man review seeds are preserved.</p>
     <p class="status"><strong>Historical audio note:</strong> the older School / Dad / Hug question has an unclear opening “At.” That recording has not been fixed, but it is no longer reachable here: the family condition and its adult-recipient stories have been removed. Every story in these two role sets asks about helping the kid.</p>
     <p class="status">The links below open in a separate preview tab, so this list stays available. Use Next within a story or researcher Skip to move through it. You can mark each run “Reviewed” here; those checkmarks stay on this browser only.</p>
@@ -81,16 +81,16 @@
   <section class="grid" id="grid" aria-label="All study condition previews"></section>
   <noscript><p>Please enable JavaScript to show the preview links.</p></noscript>
   <footer>
-    <a href="https://childrenhelpingscience.com/exp/studies/981133ce-7d08-4801-9c31-0ae72400e135/preview-detail/" target="_blank" rel="noopener">Open the official CHS preview page</a> · These links target r25 and bypass parent setup for researcher review. Check the version status above before comparing with CHS. They do not submit or activate the study.
+    <a href="https://childrenhelpingscience.com/exp/studies/981133ce-7d08-4801-9c31-0ae72400e135/preview-detail/" target="_blank" rel="noopener">Open the official CHS preview page</a> · These links target r26 and bypass parent setup for researcher review. Check the version status above before comparing with CHS. They do not submit or activate the study.
   </footer>
 </main>
 <script>
 (function installPreviewDirectory(global, document) {
   "use strict";
-  const RELEASE = "chs-home-school-evelyn-v1-r25-yellow-door-cleanup-1";
+  const RELEASE = "chs-home-school-evelyn-v1-r26-complete-polish-1";
   const STUDY = "versions/chs-home-school-evelyn-v1/";
   // New-release reviews start separately; earlier review checkmarks are retained.
-  const STORAGE = "who-helps-where:r25:all-version-review";
+  const STORAGE = "who-helps-where:r26:all-version-review";
   const roles = [
     {value: "woman", label: "Mom / sister set", set: "role", pairs: ["Mom + Teacher", "Sister + Friend", "Best friend + Friend", "Teacher + Friend", "Mom + Sister", "Teacher + Classmate"]},
     {value: "man", label: "Dad / brother set", set: "role", pairs: ["Dad + Teacher", "Brother + Friend", "Best friend + Friend", "Teacher + Friend", "Dad + Brother", "Teacher + Classmate"]}
@@ -163,11 +163,11 @@
   global.fetch(STUDY + "candidate.json", {cache: "no-store"}).then(r => { if (!r.ok) throw new Error("Unavailable"); return r.json(); }).then(candidate => {
     const status = document.getElementById("release-status");
     if (candidate.candidateRelease === RELEASE && candidate.lastPublishedRelease === RELEASE && candidate.chsDraftRelease === RELEASE && candidate.chsDraftConfigurationUpdated === true && candidate.revisionPendingPublication === false && candidate.status === "published_chs_draft_saved_not_submitted") {
-      status.textContent = "Version checked: r25 — the same release saved to the CHS draft, with two role sets and 12 study conditions. The study is not submitted.";
+      status.textContent = "Version checked: r26 — the same release saved to the CHS draft, with two role sets and 12 study conditions. The study is not submitted.";
     } else {
-      status.textContent = "Version notice: this directory targets r25. Publication and a matching saved CHS draft have not both been verified yet. The last verified CHS draft is " + (candidate.chsDraftRelease || "not recorded") + ".";
+      status.textContent = "Version notice: this directory targets r26. Publication and a matching saved CHS draft have not both been verified yet. The last verified CHS draft is " + (candidate.chsDraftRelease || "not recorded") + ".";
     }
-  }).catch(() => { document.getElementById("release-status").textContent = "This directory targets r25, but its saved-draft status could not be checked. Reload this page and check the official CHS preview before comparing."; });
+  }).catch(() => { document.getElementById("release-status").textContent = "This directory targets r26, but its saved-draft status could not be checked. Reload this page and check the official CHS preview before comparing."; });
 })(window, document);
 </script>
 </body>

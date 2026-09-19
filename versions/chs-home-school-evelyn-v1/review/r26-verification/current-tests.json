@@ -1,0 +1,145 @@
+{
+  "generated": "2026-09-19T05:21:46.498Z",
+  "release": "chs-home-school-evelyn-v1-r26-complete-polish-1",
+  "results": [
+    {
+      "name": "verify_home_school_furnished_candidate",
+      "status": "PASS",
+      "exitCode": 0,
+      "seconds": 1.674,
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"candidate\": \"chs-home-school-evelyn-v1\",\n  \"visualVersion\": \"home_school_furnished_palette_picture_v38\",\n  \"pairings\": 14,\n  \"trials\": 56,\n  \"palettes\": 17,\n  \"foregroundPages\": 560,\n  \"contextualScenes\": 1120,\n  \"contactSheet\": \"versions/chs-home-school-evelyn-v1/review/all_pairings_home_school_contact_sheet_v5.jpg\",\n  \"originalOpaqueRgbPixelsChanged\": 0,\n  \"importedDirectionalEvelynClips\": 30,\n  \"missingDirectionalEvelynClips\": 0,\n  \"followupForegroundPages\": 448,\n  \"followupAuxiliaryLayers\": 1,\n  \"contextualFollowupScenes\": 896,\n  \"published\": true\n}\n",
+      "stderr": ""
+    },
+    {
+      "name": "verify_home_school_review_board",
+      "status": "PASS",
+      "exitCode": 0,
+      "seconds": 0.214,
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"baseConfigurations\": 24,\n  \"orderSpecificRuns\": 48,\n  \"assignmentCells\": 12,\n  \"uniquePairs\": 9,\n  \"historicalSeedsPreserved\": 24,\n  \"localDirectoryChecked\": true,\n  \"roleCounts\": {\n    \"woman\": 12,\n    \"man\": 12\n  },\n  \"orders\": [\n    \"HOME\",\n    \"SCHOOL\"\n  ],\n  \"events\": [\n    \"HUG\",\n    \"FOOD\",\n    \"HELP\"\n  ],\n  \"visualProfiles\": [\n    \"a\",\n    \"b\",\n    \"c\",\n    \"d\"\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "name": "verify_who_helps_where_welcome",
+      "status": "PASS",
+      "exitCode": 0,
+      "seconds": 0.39,
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"welcomeTitle\": \"Who Helps Where?\",\n  \"scopedWelcomePalette\": true,\n  \"parentAndChildNamesAgree\": true,\n  \"canonicalEvelynRecordingVerified\": true,\n  \"autoplayAndReplayShareRecording\": true,\n  \"originalExportRetained\": true,\n  \"bytes\": 620713,\n  \"durationSeconds\": 15.490612\n}\n",
+      "stderr": ""
+    },
+    {
+      "name": "verify_home_school_directional_audio_import",
+      "status": "PASS",
+      "exitCode": 0,
+      "seconds": 2.993,
+      "stdout": "PASS: historical directional/r15/r17/r18 provenance, r20 exterior recordings and approved r22 event mappings are release-wired\n- All 30 original NaturalReaders files still match the immutable directional import receipt.\n- All 25 r17 sources match their receipt; 22 remain active, two exteriors use r20 and House/Kid/HELP uses r22.\n- Historical r18 and all 21 replaced files retain their hashes; archived adult-recipient questions remain unchanged. The separate r26 clear-At test validates the two active School/Kid replacements.\n",
+      "stderr": ""
+    },
+    {
+      "name": "verify_home_school_question_audio_pauses",
+      "status": "PASS",
+      "exitCode": 0,
+      "seconds": 37.568,
+      "stdout": "PASS: 24 House/School questions use context-first NaturalReaders comma timing\n- Twelve r17 House, ten retained r15 School and two r26 School/Kid questions cover retained and active recipients.\n- Independent decoding found a short natural opening-context boundary and no >=400 ms pause in every active recording.\n- All 24 former derivatives and all 24 r15 sources remain hash-verified as historical evidence; all 24 current non-question clips match their manifest hashes.\n",
+      "stderr": ""
+    },
+    {
+      "name": "verify_home_school_r26_clear_at_questions",
+      "status": "PASS",
+      "exitCode": 0,
+      "seconds": 1.317,
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"baseline\": \"535da1c94ac5ef0978fa5346fb3c50e65340f06c\",\n  \"replacedCurrentQuestionMappings\": 2,\n  \"captionChanges\": 0,\n  \"wholeSentenceCopies\": true,\n  \"oldContextRecordingsUnchanged\": 48,\n  \"canonicalMappings\": 48,\n  \"newAtRecognized\": 2,\n  \"newWordsMatch\": 2,\n  \"clippedSamples\": 0,\n  \"internalLongSilences\": 0,\n  \"listeningStatus\": \"Human naturalness preview still required before submission\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "name": "verify_home_school_exterior_palette",
+      "status": "PASS",
+      "exitCode": 0,
+      "seconds": 0.308,
+      "stdout": "{\"status\":\"PASS\",\"palettes\":17,\"exteriorScenes\":34,\"protectedRGBProbes\":13,\"curtainProbes\":7,\"protectedWindowProbes\":8,\"schoolDoorFrameProbes\":4,\"rendering\":\"inline-svg\"}\n",
+      "stderr": ""
+    },
+    {
+      "name": "verify_home_school_window_greenery_routing",
+      "status": "PASS",
+      "exitCode": 0,
+      "seconds": 0.642,
+      "stdout": "{\"status\":\"PASS\",\"mappedTrials\":56,\"homeAndStoryDataUnchanged\":true,\"idempotent\":true,\"preloadUsesCorrectedSources\":true}\n",
+      "stderr": ""
+    },
+    {
+      "name": "verify_home_school_media_recovery",
+      "status": "PASS",
+      "exitCode": 0,
+      "seconds": 3.461,
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"configurations\": 48,\n  \"storyNarrationSegments\": 5184,\n  \"preloadImages\": 58,\n  \"preloadAudio\": 31,\n  \"preloadImageBytes\": 15465122,\n  \"preloadAudioBytes\": 8367876,\n  \"startTimeout\": \"two attempts, 10s each\",\n  \"stallTimeout\": \"two attempts, 7s without progress\",\n  \"startupTimeout\": \"90s, fail closed with retry\",\n  \"browserColdCacheCheck\": \"required separately through CUA\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "name": "verify_home_school_entrance_rollout",
+      "status": "PASS",
+      "exitCode": 0,
+      "seconds": 8.833,
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"sourceTrials\": 56,\n  \"activePairings\": 9,\n  \"eligibleSourceTrials\": 36,\n  \"assignmentCells\": 12,\n  \"rejectedObsoleteMainOverrides\": 50,\n  \"unforcedVariantParticipantConfigurations\": 12,\n  \"fullyHashedParticipantConfigurations\": 12,\n  \"activeRecipientsAllKid\": true,\n  \"sourceEventContextStories\": 336,\n  \"importedEntranceHouseRecordings\": 25,\n  \"approvedExteriorOpeningRecordings\": 2,\n  \"hallwayPalettesPerContext\": 17,\n  \"matchedHallwaysAndCorrectedSchoolRooms\": true,\n  \"reviewConfigurations\": 48,\n  \"helperChoicesAcrossReviewConfigurations\": 576,\n  \"storyPagesAcrossReviewConfigurations\": 4608,\n  \"pagesPerStory\": 8,\n  \"likertPages\": 0,\n  \"matchedContextBlocks\": true,\n  \"directionalRevealOrder\": true,\n  \"audioReadinessFailsClosed\": true,\n  \"researcherOnlyVisualBypass\": true,\n  \"animationLifecycle\": true,\n  \"roomNarrationWaitsForEntrance\": true,\n  \"replayAndTeardownCancelStaleNarration\": true,\n  \"browserVisualVerification\": \"not performed by this test\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "name": "verify_home_school_followup_runtime_behavior",
+      "status": "PASS",
+      "exitCode": 0,
+      "seconds": 0.812,
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"verified\": [\n    \"HOME follow-ups use each story trial's home room\",\n    \"SCHOOL follow-ups use each story trial's school room\",\n    \"non-context follow-ups keep the original dyad image\",\n    \"dyad intro and response nodes retain their own story trial association\",\n    \"location sentence renders once in the colored top caption with no lower card\",\n    \"yellow narrator mouth follows media playback state\"\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "name": "verify_home_school_chs_wrapper",
+      "status": "PASS",
+      "exitCode": 0,
+      "seconds": 0.236,
+      "stdout": "Verified local CHS study 6349 wrapper draft: trusted live identity, 12 role/event/context-order cells, 12-story within-child context design, no rating trials, temporary preview-only Back/Skip, tool-free live runs, and intact CHS recording flow.\n",
+      "stderr": ""
+    },
+    {
+      "name": "verify_chs_home_school_candidate",
+      "status": "PASS",
+      "exitCode": 0,
+      "seconds": 0.269,
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"candidateId\": \"chs-home-school-evelyn-v1\",\n  \"published\": true,\n  \"chsDraftConfigurationUpdated\": false,\n  \"chsSubmissionStatus\": \"not_submitted\",\n  \"assignmentCells\": 12,\n  \"storiesPerRoleSet\": 12,\n  \"pairings\": {\n    \"woman\": [\n      \"MOM-TEACHER\",\n      \"SISTER-FRIEND\",\n      \"BESTFRIEND-FRIEND\",\n      \"TEACHER-FRIEND\",\n      \"MOM-SISTER\",\n      \"TEACHER-CLASSMATE\"\n    ],\n    \"man\": [\n      \"DAD-TEACHER\",\n      \"BROTHER-FRIEND\",\n      \"BESTFRIEND-FRIEND\",\n      \"TEACHER-FRIEND\",\n      \"DAD-BROTHER\",\n      \"TEACHER-CLASSMATE\"\n    ]\n  },\n  \"directionalRecipients\": {\n    \"DAD-KID\": \"mom\",\n    \"MOM-KID\": \"dad\",\n    \"TEACHER-KID\": \"teacher\"\n  },\n  \"existingContextClipsVerified\": 46,\n  \"teacherClassmateClipsVerified\": 10,\n  \"importedDirectionalEvelynClips\": 30,\n  \"contextFirstNaturalReadersQuestionClips\": 24,\n  \"missingDirectionalEvelynClips\": 0,\n  \"participantAutoplay\": true,\n  \"browserSpeech\": false,\n  \"collectionSafety\": \"all_12_cells_have_recorded_audio_without_browser_speech; historical_family_recordings_retained\"\n}\n",
+      "stderr": ""
+    }
+  ],
+  "deferredToParallelArtReview": [
+    "verify_home_school_food_artwork_repair",
+    "verify_home_school_caption_contrast",
+    "verify_home_school_yellow_release_scope",
+    "verify_home_school_yellow_warmth",
+    "verify_home_school_yellow_exterior_cleanup",
+    "verify_home_school_yellow_door_cleanup",
+    "verify_home_school_yellow_interior_cleanup",
+    "verify_home_school_window_greenery",
+    "verify_home_school_window_interior_palette",
+    "verify_home_school_r26_clean_windows",
+    "verify_home_school_help_gap_masks"
+  ],
+  "intentionallyNotRun": [
+    {
+      "name": "verify_home_school_caption_layout",
+      "reason": "Starts a browser outside CUA; live browser layout is being verified separately via CUA."
+    },
+    {
+      "name": "verify_home_school_approved_openings_scope",
+      "reason": "Historical frozen-release change-scope gate (r20/r22/r23/r21), not the current r26 acceptance test. Historical assertions are preserved, not weakened."
+    },
+    {
+      "name": "verify_home_school_clear_at_events_scope",
+      "reason": "Historical frozen-release change-scope gate (r20/r22/r23/r21), not the current r26 acceptance test. Historical assertions are preserved, not weakened."
+    },
+    {
+      "name": "verify_home_school_two_role_scope",
+      "reason": "Historical frozen-release change-scope gate (r20/r22/r23/r21), not the current r26 acceptance test. Historical assertions are preserved, not weakened."
+    },
+    {
+      "name": "verify_home_school_visual_fixes_scope",
+      "reason": "Historical frozen-release change-scope gate (r20/r22/r23/r21), not the current r26 acceptance test. Historical assertions are preserved, not weakened."
+    }
+  ]
+}

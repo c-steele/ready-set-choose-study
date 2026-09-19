@@ -187,4 +187,4 @@ for (const line of requirements.lines) {
 console.log("PASS: historical directional/r15/r17/r18 provenance, r20 exterior recordings and approved r22 event mappings are release-wired");
 console.log("- All 30 original NaturalReaders files still match the immutable directional import receipt.");
 console.log("- All 25 r17 sources match their receipt; 22 remain active, two exteriors use r20 and House/Kid/HELP uses r22.");
-console.log("- Historical r18 and all 21 replaced files retain their hashes; all question recordings remain unchanged.");
+console.log("- Historical r18 and all 21 replaced files retain their hashes; archived adult-recipient questions remain unchanged. The separate r26 clear-At test validates the two active School/Kid replacements.");

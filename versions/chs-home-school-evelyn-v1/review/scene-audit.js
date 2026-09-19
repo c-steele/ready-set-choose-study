@@ -1,6 +1,15 @@
 (async function installSceneAudit() {
   "use strict";
 
+  const archiveNotice = document.createElement("p");
+  archiveNotice.style.cssText = "padding:18px;background:#fff3cd;color:#332b15;border:2px solid #b28a2b;font:600 17px/1.5 system-ui";
+  archiveNotice.append("Archived r11 artwork viewer — not the current CHS runtime. It does not include later repairs. ");
+  const currentLink = document.createElement("a");
+  currentLink.href = new URL("../../../review-all-versions-local.html", window.location.href).href;
+  currentLink.textContent = "Open all current study previews";
+  archiveNotice.append(currentLink);
+  document.body.prepend(archiveNotice);
+
   const VISUAL_RELEASE = "chs-home-school-evelyn-v1-r11";
   const STORAGE_KEY = `${VISUAL_RELEASE}:scene-audit-reviewed`;
   const candidateRoot = new URL("../", window.location.href);

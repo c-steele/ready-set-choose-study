@@ -1,0 +1,2053 @@
+{
+  "release": "chs-home-school-evelyn-v1-r26-complete-polish-1",
+  "generated": "2026-09-19T05:21:52.874Z",
+  "exactIndexScripts": [
+    "exterior-palette.js",
+    "window-greenery.js",
+    "yellow-backgrounds.js",
+    "help-gap-repair.js",
+    "food-artwork-repair.js",
+    "caption-contrast.js"
+  ],
+  "profiles": 48,
+  "storyPages": 4608,
+  "questions": 576,
+  "eligibleTrialIds": [
+    "10a",
+    "10b",
+    "10c",
+    "10d",
+    "13a",
+    "13b",
+    "13c",
+    "13d",
+    "14a",
+    "14b",
+    "14c",
+    "14d",
+    "1a",
+    "1b",
+    "1c",
+    "1d",
+    "2a",
+    "2b",
+    "2c",
+    "2d",
+    "5a",
+    "5b",
+    "5c",
+    "5d",
+    "6a",
+    "6b",
+    "6c",
+    "6d",
+    "7a",
+    "7b",
+    "7c",
+    "7d",
+    "9a",
+    "9b",
+    "9c",
+    "9d"
+  ],
+  "palettes": [
+    "bfkf-blue-1432f5",
+    "bfkf-pink-eb52f7",
+    "dkb-green-4ca98f",
+    "dkb-purple-893df6",
+    "dkt-bkf-gray-a9a9a9",
+    "dkt-bkf-green-92902c",
+    "mks-tkf-orange-f2b13d",
+    "mks-tkf-red-ed6e57",
+    "mkt-skf-green-81d653",
+    "mkt-skf-yellow-ffd100",
+    "tkc-plum-8e2d94"
+  ],
+  "svgResources": 258,
+  "svgExternalDependencies": 0,
+  "preloads": [
+    {
+      "cell": 1,
+      "profile": "a",
+      "images": 56,
+      "imageBytes": 27203042,
+      "audio": 27,
+      "audioBytes": 4073167,
+      "missingNarration": 0
+    },
+    {
+      "cell": 1,
+      "profile": "b",
+      "images": 56,
+      "imageBytes": 27656014,
+      "audio": 27,
+      "audioBytes": 4073167,
+      "missingNarration": 0
+    },
+    {
+      "cell": 1,
+      "profile": "c",
+      "images": 56,
+      "imageBytes": 27211281,
+      "audio": 27,
+      "audioBytes": 4074211,
+      "missingNarration": 0
+    },
+    {
+      "cell": 1,
+      "profile": "d",
+      "images": 56,
+      "imageBytes": 27660513,
+      "audio": 27,
+      "audioBytes": 4074211,
+      "missingNarration": 0
+    },
+    {
+      "cell": 2,
+      "profile": "a",
+      "images": 56,
+      "imageBytes": 27203042,
+      "audio": 27,
+      "audioBytes": 4073167,
+      "missingNarration": 0
+    },
+    {
+      "cell": 2,
+      "profile": "b",
+      "images": 56,
+      "imageBytes": 27656014,
+      "audio": 27,
+      "audioBytes": 4073167,
+      "missingNarration": 0
+    },
+    {
+      "cell": 2,
+      "profile": "c",
+      "images": 56,
+      "imageBytes": 27211281,
+      "audio": 27,
+      "audioBytes": 4074211,
+      "missingNarration": 0
+    },
+    {
+      "cell": 2,
+      "profile": "d",
+      "images": 56,
+      "imageBytes": 27660513,
+      "audio": 27,
+      "audioBytes": 4074211,
+      "missingNarration": 0
+    },
+    {
+      "cell": 3,
+      "profile": "a",
+      "images": 56,
+      "imageBytes": 29393159,
+      "audio": 28,
+      "audioBytes": 4339659,
+      "missingNarration": 0
+    },
+    {
+      "cell": 3,
+      "profile": "b",
+      "images": 56,
+      "imageBytes": 30808066,
+      "audio": 28,
+      "audioBytes": 4339659,
+      "missingNarration": 0
+    },
+    {
+      "cell": 3,
+      "profile": "c",
+      "images": 56,
+      "imageBytes": 29390535,
+      "audio": 28,
+      "audioBytes": 4340703,
+      "missingNarration": 0
+    },
+    {
+      "cell": 3,
+      "profile": "d",
+      "images": 56,
+      "imageBytes": 30801032,
+      "audio": 28,
+      "audioBytes": 4340703,
+      "missingNarration": 0
+    },
+    {
+      "cell": 4,
+      "profile": "a",
+      "images": 56,
+      "imageBytes": 29393159,
+      "audio": 28,
+      "audioBytes": 4339659,
+      "missingNarration": 0
+    },
+    {
+      "cell": 4,
+      "profile": "b",
+      "images": 56,
+      "imageBytes": 30808066,
+      "audio": 28,
+      "audioBytes": 4339659,
+      "missingNarration": 0
+    },
+    {
+      "cell": 4,
+      "profile": "c",
+      "images": 56,
+      "imageBytes": 29390535,
+      "audio": 28,
+      "audioBytes": 4340703,
+      "missingNarration": 0
+    },
+    {
+      "cell": 4,
+      "profile": "d",
+      "images": 56,
+      "imageBytes": 30801032,
+      "audio": 28,
+      "audioBytes": 4340703,
+      "missingNarration": 0
+    },
+    {
+      "cell": 5,
+      "profile": "a",
+      "images": 56,
+      "imageBytes": 28430906,
+      "audio": 28,
+      "audioBytes": 4330254,
+      "missingNarration": 0
+    },
+    {
+      "cell": 5,
+      "profile": "b",
+      "images": 56,
+      "imageBytes": 28799639,
+      "audio": 28,
+      "audioBytes": 4330254,
+      "missingNarration": 0
+    },
+    {
+      "cell": 5,
+      "profile": "c",
+      "images": 56,
+      "imageBytes": 28439350,
+      "audio": 28,
+      "audioBytes": 4331298,
+      "missingNarration": 0
+    },
+    {
+      "cell": 5,
+      "profile": "d",
+      "images": 56,
+      "imageBytes": 28804170,
+      "audio": 28,
+      "audioBytes": 4331298,
+      "missingNarration": 0
+    },
+    {
+      "cell": 6,
+      "profile": "a",
+      "images": 56,
+      "imageBytes": 28430906,
+      "audio": 28,
+      "audioBytes": 4330254,
+      "missingNarration": 0
+    },
+    {
+      "cell": 6,
+      "profile": "b",
+      "images": 56,
+      "imageBytes": 28799639,
+      "audio": 28,
+      "audioBytes": 4330254,
+      "missingNarration": 0
+    },
+    {
+      "cell": 6,
+      "profile": "c",
+      "images": 56,
+      "imageBytes": 28439350,
+      "audio": 28,
+      "audioBytes": 4331298,
+      "missingNarration": 0
+    },
+    {
+      "cell": 6,
+      "profile": "d",
+      "images": 56,
+      "imageBytes": 28804170,
+      "audio": 28,
+      "audioBytes": 4331298,
+      "missingNarration": 0
+    },
+    {
+      "cell": 7,
+      "profile": "a",
+      "images": 56,
+      "imageBytes": 21310723,
+      "audio": 27,
+      "audioBytes": 4070032,
+      "missingNarration": 0
+    },
+    {
+      "cell": 7,
+      "profile": "b",
+      "images": 56,
+      "imageBytes": 21781154,
+      "audio": 27,
+      "audioBytes": 4070032,
+      "missingNarration": 0
+    },
+    {
+      "cell": 7,
+      "profile": "c",
+      "images": 56,
+      "imageBytes": 21324193,
+      "audio": 27,
+      "audioBytes": 4070033,
+      "missingNarration": 0
+    },
+    {
+      "cell": 7,
+      "profile": "d",
+      "images": 56,
+      "imageBytes": 21787613,
+      "audio": 27,
+      "audioBytes": 4070033,
+      "missingNarration": 0
+    },
+    {
+      "cell": 8,
+      "profile": "a",
+      "images": 56,
+      "imageBytes": 21310723,
+      "audio": 27,
+      "audioBytes": 4070032,
+      "missingNarration": 0
+    },
+    {
+      "cell": 8,
+      "profile": "b",
+      "images": 56,
+      "imageBytes": 21781154,
+      "audio": 27,
+      "audioBytes": 4070032,
+      "missingNarration": 0
+    },
+    {
+      "cell": 8,
+      "profile": "c",
+      "images": 56,
+      "imageBytes": 21324193,
+      "audio": 27,
+      "audioBytes": 4070033,
+      "missingNarration": 0
+    },
+    {
+      "cell": 8,
+      "profile": "d",
+      "images": 56,
+      "imageBytes": 21787613,
+      "audio": 27,
+      "audioBytes": 4070033,
+      "missingNarration": 0
+    },
+    {
+      "cell": 9,
+      "profile": "a",
+      "images": 56,
+      "imageBytes": 23560705,
+      "audio": 28,
+      "audioBytes": 4336524,
+      "missingNarration": 0
+    },
+    {
+      "cell": 9,
+      "profile": "b",
+      "images": 56,
+      "imageBytes": 25008783,
+      "audio": 28,
+      "audioBytes": 4336524,
+      "missingNarration": 0
+    },
+    {
+      "cell": 9,
+      "profile": "c",
+      "images": 56,
+      "imageBytes": 23563356,
+      "audio": 28,
+      "audioBytes": 4336525,
+      "missingNarration": 0
+    },
+    {
+      "cell": 9,
+      "profile": "d",
+      "images": 56,
+      "imageBytes": 25003693,
+      "audio": 28,
+      "audioBytes": 4336525,
+      "missingNarration": 0
+    },
+    {
+      "cell": 10,
+      "profile": "a",
+      "images": 56,
+      "imageBytes": 23560705,
+      "audio": 28,
+      "audioBytes": 4336524,
+      "missingNarration": 0
+    },
+    {
+      "cell": 10,
+      "profile": "b",
+      "images": 56,
+      "imageBytes": 25008783,
+      "audio": 28,
+      "audioBytes": 4336524,
+      "missingNarration": 0
+    },
+    {
+      "cell": 10,
+      "profile": "c",
+      "images": 56,
+      "imageBytes": 23563356,
+      "audio": 28,
+      "audioBytes": 4336525,
+      "missingNarration": 0
+    },
+    {
+      "cell": 10,
+      "profile": "d",
+      "images": 56,
+      "imageBytes": 25003693,
+      "audio": 28,
+      "audioBytes": 4336525,
+      "missingNarration": 0
+    },
+    {
+      "cell": 11,
+      "profile": "a",
+      "images": 56,
+      "imageBytes": 22618224,
+      "audio": 28,
+      "audioBytes": 4327119,
+      "missingNarration": 0
+    },
+    {
+      "cell": 11,
+      "profile": "b",
+      "images": 56,
+      "imageBytes": 23016858,
+      "audio": 28,
+      "audioBytes": 4327119,
+      "missingNarration": 0
+    },
+    {
+      "cell": 11,
+      "profile": "c",
+      "images": 56,
+      "imageBytes": 22632721,
+      "audio": 28,
+      "audioBytes": 4327120,
+      "missingNarration": 0
+    },
+    {
+      "cell": 11,
+      "profile": "d",
+      "images": 56,
+      "imageBytes": 23023521,
+      "audio": 28,
+      "audioBytes": 4327120,
+      "missingNarration": 0
+    },
+    {
+      "cell": 12,
+      "profile": "a",
+      "images": 56,
+      "imageBytes": 22618224,
+      "audio": 28,
+      "audioBytes": 4327119,
+      "missingNarration": 0
+    },
+    {
+      "cell": 12,
+      "profile": "b",
+      "images": 56,
+      "imageBytes": 23016858,
+      "audio": 28,
+      "audioBytes": 4327119,
+      "missingNarration": 0
+    },
+    {
+      "cell": 12,
+      "profile": "c",
+      "images": 56,
+      "imageBytes": 22632721,
+      "audio": 28,
+      "audioBytes": 4327120,
+      "missingNarration": 0
+    },
+    {
+      "cell": 12,
+      "profile": "d",
+      "images": 56,
+      "imageBytes": 23023521,
+      "audio": 28,
+      "audioBytes": 4327120,
+      "missingNarration": 0
+    }
+  ],
+  "svgDetails": [
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/yellow-interior-cleanup-v4/house-room.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 3,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/yellow-interior-cleanup-v4/house-hall.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 2,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/6b/intro_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/6b/intro_03.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/6b/intro_04.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/6b/hug_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/6b/hug_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/2a/intro_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/2a/intro_03.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/2a/intro_04.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/2a/hug_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/2a/hug_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/5a/intro_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/5a/intro_03.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/5a/intro_04.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/5a/hug_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/5a/hug_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/window-greenery-v1/mks-tkf-red-ed6e57/school-room.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 2,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/yellow-interior-cleanup-v4/school-room.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 3,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/yellow-interior-cleanup-v4/school-hall.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 2,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/window-greenery-v1/tkc-plum-8e2d94/school-room.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 2,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/window-greenery-v1/mks-tkf-orange-f2b13d/school-room.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 2,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/window-greenery-v1/mkt-skf-green-81d653/school-room.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 2,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/window-greenery-v1/bfkf-blue-1432f5/school-room.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 2,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/6a/intro_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/6a/intro_03.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/6a/intro_04.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/6a/hug_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/6a/hug_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/13b/intro_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/13b/intro_03.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/13b/intro_04.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/13b/hug_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/13b/hug_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/1a/intro_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/1a/intro_03.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/1a/intro_04.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/1a/hug_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/1a/hug_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/5b/intro_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/5b/intro_03.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/5b/intro_04.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/5b/hug_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/5b/hug_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/window-greenery-v1/bfkf-pink-eb52f7/school-room.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 2,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/2c/intro_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/2c/intro_03.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/2c/intro_04.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/2c/hug_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/2c/hug_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/6d/intro_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/6d/intro_03.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/6d/intro_04.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/6d/hug_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/6d/hug_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/5c/intro_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/5c/intro_03.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/5c/intro_04.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/5c/hug_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/5c/hug_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/13d/intro_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/13d/intro_03.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/13d/intro_04.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/13d/hug_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/13d/hug_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/6c/intro_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/6c/intro_03.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/6c/intro_04.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/6c/hug_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/6c/hug_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/1c/intro_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/1c/intro_03.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/1c/intro_04.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/1c/hug_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/1c/hug_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/5d/intro_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/5d/intro_03.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/5d/intro_04.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/5d/hug_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/5d/hug_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/food-repair-v1/13a/food_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/food-repair-v1/13a/food_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/2a/food_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/2a/food_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/6b/food_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/6b/food_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/5a/food_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/5a/food_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/food-repair-v1/14a/food_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/food-repair-v1/14a/food_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/food-repair-v1/1b/food_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/food-repair-v1/1b/food_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/13b/food_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/13b/food_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/1a/food_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/1a/food_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/5b/food_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/5b/food_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/6a/food_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/6a/food_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/food-repair-v1/14b/food_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 2,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/food-repair-v1/14b/food_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 2,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/food-repair-v1/2b/food_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/food-repair-v1/2b/food_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/2c/food_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/2c/food_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/food-repair-v1/1d/food_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/food-repair-v1/1d/food_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/food-repair-v1/14c/food_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/food-repair-v1/14c/food_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/6d/food_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/6d/food_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/food-repair-v1/13c/food_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/food-repair-v1/13c/food_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/5c/food_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/5c/food_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/1c/food_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/1c/food_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/13d/food_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/13d/food_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/5d/food_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/5d/food_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/food-repair-v1/14d/food_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 2,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/food-repair-v1/14d/food_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 2,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/food-repair-v1/2d/food_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/food-repair-v1/2d/food_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/6c/food_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/6c/food_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/2a/help_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/2a/help_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/help-gaps-v1/1b/help_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/help-gaps-v1/1b/help_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/6b/help_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/6b/help_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/5a/help_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/5a/help_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/help-gaps-v1/13a/help_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/help-gaps-v1/13a/help_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/help-gaps-v1/14a/help_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/help-gaps-v1/14a/help_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/6a/help_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/6a/help_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/help-gaps-v1/2b/help_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/help-gaps-v1/2b/help_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/1a/help_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/1a/help_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/13b/help_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/13b/help_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/5b/help_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/5b/help_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/help-gaps-v1/14b/help_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/help-gaps-v1/14b/help_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/help-gaps-v1/14c/help_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/help-gaps-v1/14c/help_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/help-gaps-v1/1d/help_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/help-gaps-v1/1d/help_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/6d/help_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/6d/help_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/help-gaps-v1/13c/help_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/help-gaps-v1/13c/help_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/2c/help_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/2c/help_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/5c/help_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/5c/help_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/13d/help_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/13d/help_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/5d/help_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/5d/help_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/1c/help_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/1c/help_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/6c/help_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/6c/help_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/help-gaps-v1/14d/help_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/help-gaps-v1/14d/help_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/help-gaps-v1/2d/help_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/help-gaps-v1/2d/help_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/9a/intro_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/9a/intro_03.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/9a/intro_04.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/9a/hug_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/9a/hug_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/window-greenery-v1/dkt-bkf-green-92902c/school-room.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 2,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/window-greenery-v1/dkt-bkf-gray-a9a9a9/school-room.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 2,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/window-greenery-v1/dkb-purple-893df6/school-room.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 2,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/7b/intro_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/7b/intro_03.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/7b/intro_04.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/7b/hug_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/7b/hug_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/10a/intro_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/10a/intro_03.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/10a/intro_04.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/10a/hug_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/10a/hug_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/window-greenery-v1/dkb-green-4ca98f/school-room.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 2,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/9c/intro_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/9c/intro_03.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/9c/intro_04.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/9c/hug_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/9c/hug_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/7d/intro_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/7d/intro_03.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/7d/intro_04.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/7d/hug_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/7d/hug_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/10c/intro_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/10c/intro_03.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/10c/intro_04.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/10c/hug_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/10c/hug_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/food-repair-v1/7a/food_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/food-repair-v1/7a/food_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/food-repair-v1/10b/food_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/food-repair-v1/10b/food_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/9a/food_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/9a/food_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/10a/food_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/10a/food_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/7b/food_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/7b/food_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/food-repair-v1/9b/food_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/food-repair-v1/9b/food_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/food-repair-v1/7c/food_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/food-repair-v1/7c/food_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/9c/food_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/9c/food_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/food-repair-v1/10d/food_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/food-repair-v1/10d/food_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/7d/food_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/7d/food_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/10c/food_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/10c/food_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/food-repair-v1/9d/food_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/food-repair-v1/9d/food_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/help-gaps-v1/7a/help_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/help-gaps-v1/7a/help_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/help-gaps-v1/10b/help_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/help-gaps-v1/10b/help_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/9a/help_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/9a/help_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/7b/help_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/7b/help_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/help-gaps-v1/9b/help_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/help-gaps-v1/9b/help_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/10a/help_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/10a/help_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/help-gaps-v1/7c/help_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/help-gaps-v1/7c/help_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/9c/help_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/9c/help_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/help-gaps-v1/10d/help_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/help-gaps-v1/10d/help_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/10c/help_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/10c/help_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/help-gaps-v1/9d/help_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/help-gaps-v1/9d/help_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/7d/help_01.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    },
+    {
+      "file": "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/caption-contrast-v1/7d/help_02.svg",
+      "embeddedSvgCount": 0,
+      "embeddedRasterCount": 1,
+      "external": []
+    }
+  ],
+  "scope": "Executes real app with exact index configuration and all six visual helper modules; not a browser rendering or audio-listening test."
+}
