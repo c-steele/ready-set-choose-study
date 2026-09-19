@@ -35,6 +35,8 @@ assert.equal(metadata.chsDraftRelease,saved?release:lastVerifiedRelease);
 assert.equal(metadata.latestChsDraftSaveReceipt,saved?'review/chs-draft-save-r25.md':'review/chs-draft-save-r24.md');
 assert.equal(metadata.chsSubmissionStatus,'not_submitted');
 assert.equal(metadata.activeChsStudyChanged,false);
+for(const field of ['chsDraftSavedOn','publishedOn','latestRevisionOn'])
+  assert.equal(metadata[field],saved?'2026-09-19':'2026-09-18');
 if(saved){
   assert.equal(Object.hasOwn(metadata,'pendingReason'),false);
   const receipt=read(candidate+metadata.latestChsDraftSaveReceipt);
@@ -44,7 +46,8 @@ if(saved){
 const restoredMetadata=structuredClone(metadata);
 for(const key of ['status','candidateRelease','revisionPendingPublication','lastPublishedRelease','chsDraftRelease',
   'chsDraftConfigurationUpdated','latestChsDraftSaveReceipt','pendingReason','yellowBackgroundManifest',
-  'yellowBackgroundVersion','yellowExteriorCleanupVersion','yellowVisualRevisionScope']){
+  'yellowBackgroundVersion','yellowExteriorCleanupVersion','yellowVisualRevisionScope',
+  'chsDraftSavedOn','publishedOn','latestRevisionOn']){
   if(Object.hasOwn(oldMetadata,key))restoredMetadata[key]=oldMetadata[key];
   else delete restoredMetadata[key];
 }
