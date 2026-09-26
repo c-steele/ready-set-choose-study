@@ -9,7 +9,7 @@ const TEACHER_CLASSMATE_GENERATED_ROOT = "assets/teacher_classmate/generated/";
 const TEACHER_CLASSMATE_V78_REVISION_ROOT = "versions/chs-v78-teacher-classmate-evelyn-unique-roles/assets/teacher_classmate/generated/";
 const TEACHER_CLASSMATE_V78_DYAD_REVISION = /^dyads\/classmate-kid_0(?:1_tkc-deep-purple-a|2_tkc-deep-purple-b)\/slide_(?:0[3-9]|1[0-3])\.svg$/;
 const TEACHER_CLASSMATE_V78_TRIAL_REVISION = /^trials\/14(?:[ab]\/intro_04|[cd]\/intro_0[34]|[abcd]\/(?:hug|food|help)_screen_2)\.svg$/;
-const HOME_SCHOOL_ASSET_VERSION = "chs-home-school-evelyn-v1-r26-complete-polish-1";
+const HOME_SCHOOL_ASSET_VERSION = "chs-home-school-evelyn-v1-r27-peer-review-1";
 const HOME_SCHOOL_DESIGN_VERSION = "home_school_context_chs_candidate_v1";
 const HOME_SCHOOL_WITHIN_CHILD_DESIGN_VERSION = "home_school_within_child_two_role_sets_v2";
 const HOME_SCHOOL_CONTEXT_SCRIPT_VERSION = "home_school_house_entrance_recipient_aware_v6";
@@ -2015,6 +2015,71 @@ const MEDIA_START_TIMEOUT_MS = 10000;
 const MEDIA_STALL_TIMEOUT_MS = 7000;
 const MEDIA_MAX_PLAYBACK_MS = 120000;
 const MEDIA_STARTUP_TIMEOUT_MS = 90000;
+let parentNarrationEnabled = true;
+
+function parentNarrationControlsHtml(text) {
+  if (isFacilitatorMode) return "";
+  return `<aside class="ksize-parent-narration-controls">
+    <button class="ksize-parent-narration-toggle" type="button" aria-pressed="false">Read instructions without narration</button>
+    <p>Parent instructions only. Your child’s stories will still be read aloud.</p>
+    <details class="ksize-parent-transcript"><summary>Read the instructions</summary><p>${escapeHtml(text)}</p></details>
+  </aside>`;
+}
+
+// Each page owns its pending autoplay and Listen callbacks. Cancelling active
+// audio alone is not enough: an old timer must never interrupt the next page.
+function attachPageNarration(node, { src, text, listenSelector, parentOnly = false }) {
+  const previousLoad = node.on_load;
+  const previousFinish = node.on_finish;
+  let dispose = () => {};
+  node.on_load = () => {
+    dispose();
+    let active = true;
+    let timer = null;
+    const cancelTimer = () => { window.clearTimeout(timer); timer = null; };
+    dispose = () => { active = false; cancelTimer(); audio.stop(); };
+    previousLoad?.();
+    const play = () => {
+      cancelTimer();
+      if (!active || isFacilitatorMode) return Promise.resolve(false);
+      return audio.playFile(src, text, {
+        onRetry: play,
+        failureMessage: parentOnly ? "The parent narration could not play. You can read the instructions or try the audio again." : undefined,
+        onFallback: () => {
+          const transcript = parentOnly && active && document.querySelector(".ksize-parent-transcript");
+          if (transcript) transcript.open = true;
+        },
+      });
+    };
+    document.querySelector(listenSelector)?.addEventListener("click", play);
+    if (parentOnly && !isFacilitatorMode) {
+      const toggle = document.querySelector(".ksize-parent-narration-toggle");
+      const transcript = document.querySelector(".ksize-parent-transcript");
+      const updateControls = () => {
+        if (toggle) {
+          toggle.textContent = parentNarrationEnabled ? "Read instructions without narration" : "Turn parent narration on";
+          toggle.setAttribute("aria-pressed", String(!parentNarrationEnabled));
+        }
+        if (transcript && !parentNarrationEnabled) transcript.open = true;
+      };
+      updateControls();
+      toggle?.addEventListener("click", () => {
+        if (!active) return;
+        parentNarrationEnabled = !parentNarrationEnabled;
+        cancelTimer();
+        audio.stop();
+        updateControls();
+        if (parentNarrationEnabled) play();
+      });
+    }
+    if (!isFacilitatorMode && (!parentOnly || parentNarrationEnabled)) timer = window.setTimeout(play, 500);
+  };
+  node.on_finish = (data) => {
+    dispose();
+    if (parentOnly && data) data.parent_instruction_narration_enabled = parentNarrationEnabled;
+    previousFinish?.(data);
+  };
+}
 
 function showMediaStatus(message = "", retry = null, retryLabel = "Try audio again") {
   document.querySelector(".ksize-media-status")?.remove();
@@ -2216,8 +2281,10 @@ const audio = {
         this.current = fileAudio;
         let active = true;
         let didStart = false;
-        let lastTime = -1;
+        let lastTime = 0;
         let watchdog, noticeTimer = null, totalTimer;
+        const attemptStartedAt = Date.now();
+        let totalBudget = MEDIA_MAX_PLAYBACK_MS;
         const current = () => active && !settled && token === this.token && this.current === fileAudio;
         const clearNotice = () => {
           window.clearTimeout(noticeTimer);
@@ -2231,9 +2298,15 @@ const audio = {
           }, 1800);
         };
         cleanupAttempt = () => {
+          if (!active) return;
           active = false;
           [watchdog, noticeTimer, totalTimer].forEach((timer) => window.clearTimeout(timer));
           fileAudio.pause();
+          // Mark inactive before load(), whose abort/emptied events can fire
+          // synchronously. Release interrupted requests as well as playback.
+          fileAudio.removeAttribute?.("src");
+          fileAudio.load?.();
+          if (this.current === fileAudio) this.current = null;
         };
         const fail = async () => {
           if (!current()) return;
@@ -2252,12 +2325,21 @@ const audio = {
             if (token !== this.token || settled) return;
             if (played) { options.onEnd?.(); finish(true); return; }
           }
-          showMediaStatus("The sound could not play. Please try the audio again. Your child’s answer is still waiting.", retryFromPage);
+          showMediaStatus(options.failureMessage || "The sound could not play. Please try the audio again. Your child’s answer is still waiting.", retryFromPage);
           finish(false);
         };
         const armWatchdog = (duration) => {
           window.clearTimeout(watchdog);
           watchdog = window.setTimeout(fail, duration);
+        };
+        const shortenTotalDeadline = () => {
+          const duration = fileAudio.duration;
+          if (!current() || !Number.isFinite(duration) || duration <= 0) return;
+          const budget = Math.min(MEDIA_MAX_PLAYBACK_MS, Math.max(20000, duration / fileAudio.playbackRate * 1000 + 2 * MEDIA_STALL_TIMEOUT_MS));
+          if (budget >= totalBudget) return;
+          totalBudget = budget;
+          window.clearTimeout(totalTimer);
+          totalTimer = window.setTimeout(fail, Math.max(0, budget - (Date.now() - attemptStartedAt)));
         };
         const buffering = () => {
           if (!current()) return;
@@ -2273,12 +2355,14 @@ const audio = {
           if (!didStart) {
             didStart = true;
             options.onStart?.();
+            armWatchdog(MEDIA_STALL_TIMEOUT_MS);
           }
-          armWatchdog(MEDIA_STALL_TIMEOUT_MS);
+          // Repeated playing events without progress must not postpone retry.
+          shortenTotalDeadline();
         });
         fileAudio.addEventListener("timeupdate", () => {
           if (!current()) return;
-          if (fileAudio.currentTime > lastTime) {
+          if (fileAudio.currentTime - lastTime >= 0.1) {
             lastTime = fileAudio.currentTime;
             clearNotice();
             showMediaStatus();
@@ -2288,6 +2372,7 @@ const audio = {
         });
         ["waiting", "stalled", "pause", "emptied"].forEach((event) => fileAudio.addEventListener(event, buffering));
         ["error", "abort"].forEach((event) => fileAudio.addEventListener(event, fail));
+        ["loadedmetadata", "durationchange"].forEach((event) => fileAudio.addEventListener(event, shortenTotalDeadline));
         fileAudio.addEventListener("ended", () => {
           if (!current()) return;
           setNarratorMouthPlaying(false);
@@ -2297,6 +2382,7 @@ const audio = {
         scheduleLoadingNotice();
         armWatchdog(MEDIA_START_TIMEOUT_MS);
         totalTimer = window.setTimeout(fail, MEDIA_MAX_PLAYBACK_MS);
+        shortenTotalDeadline();
         try { Promise.resolve(fileAudio.play()).catch(fail); } catch { fail(); }
       };
       attempt(1);
@@ -4232,6 +4318,7 @@ async function main() {
         <main class="ksize-shell ksize-setup-shell">
           <section class="ksize-screen ksize-setup-screen ksize-parent-welcome-screen">
             ${parentProgressHtml(1)}
+            ${parentNarrationControlsHtml(parentWelcomeScript)}
             <header class="ksize-parent-welcome-header">
               <span class="ksize-setup-eyebrow">Who Helps Where?</span>
               <h1 class="ksize-setup-title">Welcome, grown-ups!</h1>
@@ -4274,9 +4361,6 @@ async function main() {
       },
       on_load: () => {
         installResearcherSkip(jsPsych);
-        const playParentWelcomeAudio = () => audio.playFile(PARENT_WELCOME_AUDIO, parentWelcomeScript);
-        document.querySelector(".ksize-parent-welcome-audio")?.addEventListener("click", playParentWelcomeAudio);
-        if (!isFacilitatorMode) window.setTimeout(playParentWelcomeAudio, 500);
         document.querySelector(".ksize-parent-welcome-next")?.addEventListener("click", () => {
           audio.stop();
           finishParticipantTrial(jsPsych, { response: "parent_welcome_continue" }, 0, "parent_welcome");
@@ -4290,6 +4374,7 @@ async function main() {
         <main class="ksize-shell ksize-setup-shell">
           <section class="ksize-screen ksize-setup-screen">
             ${parentProgressHtml(2)}
+            ${parentNarrationControlsHtml(parentQuickChecksScript)}
             <header class="ksize-setup-heading">
               <span class="ksize-setup-eyebrow">A quick note for the grown-up</span>
               <h1 class="ksize-setup-title">Get ready to play</h1>
@@ -4363,9 +4448,6 @@ async function main() {
       },
       on_load: () => {
         installResearcherSkip(jsPsych);
-        const playQuickChecksAudio = () => audio.playFile(PARENT_QUICK_CHECKS_AUDIO, parentQuickChecksScript);
-        document.querySelector(".ksize-quick-checks-audio")?.addEventListener("click", playQuickChecksAudio);
-        if (!isFacilitatorMode) window.setTimeout(playQuickChecksAudio, 500);
         document.querySelector(".ksize-setup-next")?.addEventListener("click", () => {
           audio.stop();
           finishParticipantTrial(jsPsych, { response: "setup_ready" }, 0, "setup_ready");
@@ -4379,6 +4461,7 @@ async function main() {
         <main class="ksize-shell ksize-setup-shell">
           <section class="ksize-screen ksize-setup-screen ksize-camera-screen">
             ${parentProgressHtml(3)}
+            ${parentNarrationControlsHtml(PARENT_CAMERA_TEXT)}
             <header class="ksize-setup-heading">
               <span class="ksize-setup-eyebrow">Camera check</span>
               <h1 class="ksize-setup-title">${cameraSetupTitle}</h1>
@@ -4448,9 +4531,6 @@ async function main() {
       },
       on_load: () => {
         installResearcherSkip(jsPsych);
-        const playCameraAudio = () => audio.playFile(PARENT_CAMERA_AUDIO, PARENT_CAMERA_TEXT);
-        document.querySelector(".ksize-camera-audio")?.addEventListener("click", playCameraAudio);
-        if (!isFacilitatorMode) window.setTimeout(playCameraAudio, 500);
         document.querySelector(".ksize-camera-next")?.addEventListener("click", () => {
           audio.stop();
           finishParticipantTrial(jsPsych, { response: "camera_setup_continue" }, 0, "camera_setup");
@@ -4464,6 +4544,7 @@ async function main() {
         <main class="ksize-shell ksize-setup-shell">
           <section class="ksize-screen ksize-setup-screen ksize-handoff-screen">
             ${parentProgressHtml(4)}
+            ${parentNarrationControlsHtml(parentHandoffScript)}
             <div class="ksize-handoff-complete"><span aria-hidden="true">✓</span> Grown-up setup complete</div>
             <div class="ksize-handoff-visual" aria-hidden="true">
               <div class="ksize-handoff-person ksize-handoff-grownup"><span></span><b></b></div>
@@ -4499,9 +4580,6 @@ async function main() {
       },
       on_load: () => {
         installResearcherSkip(jsPsych);
-        const playHandoffAudio = () => audio.playFile(PARENT_HANDOFF_AUDIO, parentHandoffScript);
-        document.querySelector(".ksize-handoff-audio")?.addEventListener("click", playHandoffAudio);
-        if (!isFacilitatorMode) window.setTimeout(playHandoffAudio, 500);
         document.querySelector(".ksize-handoff-next")?.addEventListener("click", () => {
           audio.stop();
           finishParticipantTrial(jsPsych, { response: "child_ready" }, 0, "child_handoff");
@@ -4548,9 +4626,6 @@ async function main() {
       },
       on_load: () => {
         installResearcherSkip(jsPsych);
-        const playAssentAudio = () => audio.playFile(CHILD_ASSENT_AUDIO, CHILD_ASSENT_TEXT);
-        document.querySelector(".ksize-assent-audio")?.addEventListener("click", playAssentAudio);
-        if (!isFacilitatorMode) window.setTimeout(playAssentAudio, 500);
         document.querySelector(".ksize-assent-yes")?.addEventListener("click", () => {
           audio.stop();
           playIntroOpeningMusic();
@@ -4774,6 +4849,13 @@ async function main() {
     };
   // Explicit sources keep setup/ending clips in the same preload contract as
   // story narration, including lines not looked up by their whole caption.
+  for (const [node, src, text, listenSelector] of [
+    [parentWelcomeNode, PARENT_WELCOME_AUDIO, parentWelcomeScript, ".ksize-parent-welcome-audio"],
+    [setupNode, PARENT_QUICK_CHECKS_AUDIO, parentQuickChecksScript, ".ksize-quick-checks-audio"],
+    [cameraSetupNode, PARENT_CAMERA_AUDIO, PARENT_CAMERA_TEXT, ".ksize-camera-audio"],
+    [childHandoffNode, PARENT_HANDOFF_AUDIO, parentHandoffScript, ".ksize-handoff-audio"],
+  ]) attachPageNarration(node, { src, text, listenSelector, parentOnly: true });
+  attachPageNarration(childAssentNode, { src: CHILD_ASSENT_AUDIO, text: CHILD_ASSENT_TEXT, listenSelector: ".ksize-assent-audio" });
   for (const [node, src, text] of [
     [parentWelcomeNode, PARENT_WELCOME_AUDIO, parentWelcomeScript],
     [setupNode, PARENT_QUICK_CHECKS_AUDIO, parentQuickChecksScript],

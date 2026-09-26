@@ -43,19 +43,24 @@ function readPngHeader(filePath) {
 
 assert.equal(candidate.candidateId, "chs-home-school-evelyn-v1");
 const verifiedSaved = candidate.status === "published_chs_draft_saved_not_submitted";
+const revisionPublished = candidate.revisionPendingPublication === false;
 assert.ok(verifiedSaved || candidate.status === "prepared_for_chs_draft_update");
 assert.equal(candidate.activeChsStudyChanged, false);
-assert.equal(candidate.published, true, "The prior r25 release remains published while r26 is prepared");
-assert.equal(candidate.chsDraftConfigurationUpdated, verifiedSaved, "The r26 saved flag may be true only after its CHS save is verified");
+assert.equal(candidate.published, true, "The prior r26 release remains published while r27 is prepared");
+assert.equal(candidate.chsDraftConfigurationUpdated, verifiedSaved, "The r27 saved flag may be true only after its CHS save is verified");
 assert.equal(candidate.chsSubmissionStatus, "not_submitted");
-assert.equal(candidate.publishedOn, "2026-09-19");
-assert.equal(candidate.lastPublishedRelease, verifiedSaved ? "chs-home-school-evelyn-v1-r26-complete-polish-1" : "chs-home-school-evelyn-v1-r25-yellow-door-cleanup-1");
-assert.equal(candidate.candidateRelease, "chs-home-school-evelyn-v1-r26-complete-polish-1");
-assert.equal(candidate.revisionPendingPublication, !verifiedSaved);
-assert.equal(candidate.chsDraftRelease, verifiedSaved ? "chs-home-school-evelyn-v1-r26-complete-polish-1" : "chs-home-school-evelyn-v1-r25-yellow-door-cleanup-1");
-assert.equal(candidate.latestChsDraftSaveReceipt, verifiedSaved ? "review/chs-draft-save-r26.md" : "review/chs-draft-save-r25.md");
+assert.equal(candidate.publishedOn, revisionPublished ? "2026-09-26" : "2026-09-19");
+assert.equal(candidate.lastPublishedRelease, revisionPublished ? "chs-home-school-evelyn-v1-r27-peer-review-1" : "chs-home-school-evelyn-v1-r26-complete-polish-1");
+assert.equal(candidate.candidateRelease, "chs-home-school-evelyn-v1-r27-peer-review-1");
+assert.equal(typeof candidate.revisionPendingPublication, "boolean");
+if (verifiedSaved) assert.equal(revisionPublished, true, "a completed release must have verified publication as well as a CHS save");
+assert.equal(candidate.chsDraftRelease, verifiedSaved ? "chs-home-school-evelyn-v1-r27-peer-review-1" : "chs-home-school-evelyn-v1-r26-complete-polish-1");
+assert.equal(candidate.latestChsDraftSaveReceipt, verifiedSaved ? "review/chs-draft-save-r27.md" : "review/chs-draft-save-r26.md");
 if (verifiedSaved) assert.equal(Object.hasOwn(candidate, "pendingReason"), false);
-else assert.match(candidate.pendingReason, /complete-polish deployment and CHS draft save pending verification/i);
+else {
+  assert.match(candidate.pendingReason, /CHS draft save pending verification/i);
+  if (!revisionPublished) assert.match(candidate.pendingReason, /r27 peer-review deployment and CHS draft save pending verification/i);
+}
 assert.equal(candidate.missingEvelynClipCount, 0);
 assert.equal(candidate.directionalEvelynClipCount, 30);
 assert.equal(missingAudio.missingClipCount, 30);
@@ -183,7 +188,7 @@ assert.ok(fs.existsSync(contactSheet), "Missing all-pairings Home/School contact
 assert.ok(fs.statSync(contactSheet).size > 100_000, "Contact sheet is unexpectedly small");
 
 assert.match(app, /function furnishedSceneSpec\(/);
-assert.match(app, /const HOME_SCHOOL_ASSET_VERSION = "chs-home-school-evelyn-v1-r26-complete-polish-1"/);
+assert.match(app, /const HOME_SCHOOL_ASSET_VERSION = "chs-home-school-evelyn-v1-r27-peer-review-1"/);
 assert.match(app, /slideIndex === block\.introSlides\.length - 1 && studyContext/);
 assert.doesNotMatch(app, /slideIndex === 0 && (?:activeStudyContext|studyContext)/);
 assert.doesNotMatch(css, /text-wrap:\s*balance/);
@@ -218,7 +223,12 @@ assert.match(css, /\.ksize-image-wrap \.ksize-rating-furnished-scene/);
 assert.match(css, /\.ksize-furnished-scene \.ksize-char-btn/);
 assert.match(css, /\.ksize-screen\[data-context="HOME"\],[\s\S]*?\.ksize-screen\[data-context="SCHOOL"\][\s\S]*?justify-content:\s*flex-start/);
 assert.match(css, /\.ksize-screen\[data-context="HOME"\] \.ksize-bottom-area,[\s\S]*?\.ksize-screen\[data-context="SCHOOL"\] \.ksize-bottom-area[\s\S]*?margin-top:\s*8px/);
-assert.match(html, /chs-home-school-evelyn-v1-r26-complete-polish-1/g);
+assert.match(html, /const runtimeVersion = "chs-home-school-evelyn-v1-r27-peer-review-1"/);
+const entrypointAssetUrls = Array.from(html.matchAll(/(?:src|href)="([^"]+)"/g), (match) => new URL(match[1], "https://example.test/versions/chs-home-school-evelyn-v1/index.html"));
+assert.equal(entrypointAssetUrls.length, 13, "the candidate must load its complete set of scripts and styles");
+for (const assetUrl of entrypointAssetUrls) {
+  assert.equal(assetUrl.searchParams.get("v"), candidate.candidateRelease, "every entrypoint asset must use the candidate release cache token");
+}
 assert.doesNotMatch(html, /chs-home-school-evelyn-v1-r(?:[1-9])(?!\d)/);
 
 console.log(JSON.stringify({

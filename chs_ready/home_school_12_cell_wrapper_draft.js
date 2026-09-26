@@ -1,7 +1,7 @@
 /*
   PRODUCTION-READY CHS WRAPPER SOURCE FOR STUDY 6349.
 
-  This source targets the r26 complete-polish two-role-set within-child House/School candidate.
+  This source targets the r27 peer-review two-role-set within-child House/School candidate.
   Installing it in CHS remains a separate researcher-controlled action.
 
   Public title: Who Helps Where?
@@ -28,12 +28,12 @@ var HOME_SCHOOL_CANDIDATE_ROOT_URL =
 var HOME_SCHOOL_CANDIDATE_ORIGIN = "https://c-steele.github.io";
 
 var HOME_SCHOOL_STUDY_VERSION = "chs-home-school-evelyn-v1";
-var HOME_SCHOOL_CANDIDATE_RELEASE = "chs-home-school-evelyn-v1-r26-complete-polish-1";
+var HOME_SCHOOL_CANDIDATE_RELEASE = "chs-home-school-evelyn-v1-r27-peer-review-1";
 var HOME_SCHOOL_CONTEXT_SCRIPT_VERSION = "home_school_house_entrance_recipient_aware_v6";
 var HOME_SCHOOL_DESIGN_VERSION = "home_school_within_child_two_role_sets_v2";
-/* Temporary editing aid: enable Back/Skip only on CHS's Preview Study route.
-   Set false to remove it after review. Live participant URLs never enable it. */
-var HOME_SCHOOL_TEMPORARY_CHS_PREVIEW_CONTROLS = true;
+/* CHS previews and participant launches have no researcher Back/Skip controls.
+   Separate GitHub collaborator preview links keep their own navigation tools. */
+var HOME_SCHOOL_TEMPORARY_CHS_PREVIEW_CONTROLS = false;
 /* Intentionally blank for study 6349. Google mirroring is disabled and CHS
    remains the complete, authoritative primary record. */
 var HOME_SCHOOL_SHEETS_WEBHOOK = "";
@@ -594,7 +594,7 @@ var debrief = {
       '</header>' +
       '<section style="display:grid;gap:14px;">' +
         '<article style="padding:22px 24px;border-left:7px solid #4f91c8;border-radius:16px;background:#fff;box-shadow:0 8px 22px rgba(41,62,82,.08);"><h3 style="margin:0 0 8px;font-size:22px;color:#17466f;">1. What we are studying</h3><p style="margin:0;font-size:17px;line-height:1.55;">This study asks whether children’s expectations about who helps, comforts, or shares food differ when at home or at school. By comparing children’s choices, we can learn how social setting can shape children’s understanding of caregiving.</p></article>' +
-        '<article style="padding:22px 24px;border-left:7px solid #57ad95;border-radius:16px;background:#fff;box-shadow:0 8px 22px rgba(41,62,82,.08);"><h3 style="margin:0 0 8px;font-size:22px;color:#245c50;">2. What your child did</h3><p style="margin:0;font-size:17px;line-height:1.55;">Your child heard 12 stories about family members, friends, a teacher, and a classmate: six at the kid\'s house and six at the kid\'s school. In each story, your child chose which of two characters was more likely to help.</p></article>' +
+        '<article style="padding:22px 24px;border-left:7px solid #57ad95;border-radius:16px;background:#fff;box-shadow:0 8px 22px rgba(41,62,82,.08);"><h3 style="margin:0 0 8px;font-size:22px;color:#245c50;">2. What your child did</h3><p style="margin:0;font-size:17px;line-height:1.55;">Your child heard 12 stories about family members, friends, a teacher, and a classmate: six at the kid\'s house and six at the kid\'s school. In each story, your child chose which of two characters was more likely to help.</p><p style="margin:12px 0 0;font-size:17px;line-height:1.55;">Some children see the house stories first, and others see the school stories first. Varying the order helps us distinguish differences related to the setting from differences caused by practice or tiredness.</p></article>' +
         '<article style="padding:22px 24px;border-left:7px solid #9a7bd5;border-radius:16px;background:#fff;box-shadow:0 8px 22px rgba(41,62,82,.08);"><h3 style="margin:0 0 8px;font-size:22px;color:#5b438e;">3. How we interpret the answers</h3><p style="margin:0;font-size:17px;line-height:1.55;">Children may make different choices for many reasons, and every answer is okay. We look at patterns across many children rather than judging any individual response.</p></article>' +
         '<article style="padding:22px 24px;border-left:7px solid #e3ad39;border-radius:16px;background:#fff;box-shadow:0 8px 22px rgba(41,62,82,.08);"><h3 style="margin:0 0 8px;font-size:22px;color:#755619;">4. Gift card</h3><p style="margin:0;font-size:17px;line-height:1.55;">Your $5 Amazon.com gift card will be sent through Children Helping Science messaging within 2 weeks. Families may still receive compensation if they stop early, provided the child is within the study age range and visible in the portion of video recorded before stopping.</p></article>' +
         '<article style="padding:22px 24px;border-left:7px solid #f07b6d;border-radius:16px;background:#fff;box-shadow:0 8px 22px rgba(41,62,82,.08);"><h3 style="margin:0 0 8px;font-size:22px;color:#994235;">5. Learn more</h3><p style="margin:0;font-size:17px;line-height:1.55;">If you would like to learn more about this topic, please watch this short video: <a href="https://www.youtube.com/watch?v=-G-kVhEqAtE" target="_blank" rel="noopener" style="color:#17466f;font-weight:700;">https://www.youtube.com/watch?v=-G-kVhEqAtE</a><br><br>Thank you again for your participation!</p></article>' +

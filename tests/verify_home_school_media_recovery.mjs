@@ -62,10 +62,11 @@ function fakeClock() {
     clearTimeout(id){jobs.delete(id);},
     async advance(ms){const end=now+ms;for(let n=0;n<1000;n++){const due=[...jobs].filter(([,j])=>j.at<=end).sort((a,b)=>a[1].at-b[1].at)[0];if(!due)break;now=due[1].at;jobs.delete(due[0]);due[1].fn();await Promise.resolve();await Promise.resolve();}now=end;},
     get pending(){return jobs.size;},
+    get now(){return now;},
   };
 }
-function playbackHost() {
-  const host=h.loadRuntime(search);h.configure(host.api,'HOME','HUG');
+function playbackHost(host=h.loadRuntime(search)) {
+  h.configure(host.api,'HOME','HUG');
   const clock=fakeClock(),clips=[],notices=[];
   let notice=null;
   const element=()=>({style:{},children:[],textContent:'',setAttribute(){},appendChild(child){this.children.push(child);},addEventListener(event,fn){this[event]=fn;},remove(){if(notice===this)notice=null;}});
@@ -73,15 +74,36 @@ function playbackHost() {
   host.context.document.querySelector=selector=>selector==='.ksize-media-status'?notice:null;
   host.context.document.body.appendChild=el=>{notice=el;notices.push(el.children[0]?.textContent);};
   Object.assign(host.context.window,{setTimeout:clock.setTimeout,clearTimeout:clock.clearTimeout});
+  Object.assign(host.context,{setTimeout:clock.setTimeout,clearTimeout:clock.clearTimeout});
+  host.context.Date=class extends Date {
+    constructor(...args){super(...(args.length?args:[clock.now]));}
+    static now(){return clock.now;}
+  };
   class FakeAudio {
-    constructor(src){this.src=src;this.currentTime=0;this.duration=5;this.events={};clips.push(this);}
+    constructor(src){this.src=src;this.currentTime=0;this.duration=5;this.events={};this.loadCalls=0;this.released=false;clips.push(this);}
     addEventListener(name,fn){(this.events[name] ||= []).push(fn);}
     emit(name){for(const fn of this.events[name]||[])fn();}
     play(){return Promise.resolve();}
     pause(){this.emit('pause');}
+    removeAttribute(name){if(name==='src'){this.src='';this.released=true;}}
+    // Browsers can emit these events synchronously while releasing a source.
+    load(){this.loadCalls++;this.emit('abort');this.emit('emptied');}
   }
   host.context.Audio=FakeAudio;
   return {...host,clock,clips,notices,get notice(){return notice;}};
+}
+function mountControls(host,selectors) {
+  const controls=Object.fromEntries(selectors.map(selector=>{
+    const classes=new Set();
+    return [selector,{disabled:false,textContent:'',dataset:{},attributes:{},
+      classList:{add(...names){names.forEach(name=>classes.add(name));},remove(...names){names.forEach(name=>classes.delete(name));},contains(name){return classes.has(name);}},
+      setAttribute(name,value){this.attributes[name]=String(value);},
+      addEventListener(type,fn){this[type]=fn;},focus(){},
+    }];
+  }));
+  const query=host.context.document.querySelector;
+  host.context.document.querySelector=selector=>controls[selector]||query(selector);
+  return controls;
 }
 const caption='Oh look! Here is a house.';
 // Never-starting playback resolves false after two bounded tries, not forever.
@@ -103,6 +125,37 @@ const caption='Oh look! Here is a house.';
   assert.equal(resolved,undefined);x.clips[1].emit('playing');x.clips[1].emit('ended');await Promise.resolve();
   assert.equal(resolved,true);assert.equal(starts,2);assert.equal(ends,2);assert.equal(x.clock.pending,0);
 }
+// Repeated browser "playing" events are not evidence that the recording is
+// advancing. They must not stretch a silent stall to the total playback cap.
+{
+  const x=playbackHost();let resolved,starts=0;
+  x.api.audio.play(caption,{onStart(){starts++;}}).then(value=>{resolved=value;});
+  for(let attempt=0;attempt<2;attempt++) {
+    const clip=x.clips[attempt];clip.emit('playing');
+    for(let second=0;second<6;second++) {
+      await x.clock.advance(1000);clip.emit('playing');clip.emit('timeupdate');
+    }
+    assert.equal(x.clips.length,attempt+1);
+    await x.clock.advance(1000);
+    assert.ok(clip.released,'Timed-out playback kept its network source');
+    assert.ok(clip.loadCalls>0,'Timed-out playback did not release its media request');
+  }
+  assert.equal(x.clips.length,2);assert.equal(starts,2);
+  assert.equal(resolved,false);assert.equal(x.clock.pending,0);
+}
+// A known short recording cannot remain alive indefinitely on tiny genuine
+// progress. Later metadata must not move its already established deadline.
+{
+  const x=playbackHost();const result=x.api.audio.play(caption);
+  const clip=x.clips[0];clip.emit('playing');
+  for(let step=1;step<=3;step++) {
+    await x.clock.advance(6000);clip.currentTime=step;clip.emit('timeupdate');
+    clip.duration=300;clip.emit('durationchange');
+  }
+  await x.clock.advance(1999);assert.equal(x.clips.length,1);
+  await x.clock.advance(1);assert.equal(x.clips.length,2);
+  x.api.audio.stop();assert.equal(await result,false);assert.equal(x.clock.pending,0);
+}
 // Brief start/buffering transitions do not flash a warning. Repeated stalled
 // events do not postpone the recovery deadline; real progress clears notices.
 {
@@ -119,8 +172,24 @@ const caption='Oh look! Here is a house.';
   const x=playbackHost();let resolved,ended=0;
   x.api.audio.play(caption,{onEnd(){ended++;}}).then(v=>{resolved=v;});
   x.api.audio.stop();await Promise.resolve();assert.equal(resolved,false);
+  assert.equal(x.clips[0].src,'');assert.equal(x.clips[0].released,true);
+  assert.ok(x.clips[0].loadCalls>0);assert.equal(x.api.audio.current,null);
   x.clips[0].emit('ended');await x.clock.advance(50000);
   assert.equal(ended,0);assert.equal(x.clips.length,1);assert.equal(x.clock.pending,0);
+}
+// Replacing a clip releases the previous request before starting the new one;
+// late failure or progress events from that released element are harmless.
+{
+  const x=playbackHost();let starts=0,ends=0;
+  const first=x.api.audio.play(caption);
+  const second=x.api.audio.play(caption,{onStart(){starts++;},onEnd(){ends++;}});
+  assert.equal(await first,false);assert.equal(x.clips.length,2);
+  const [old,current]=x.clips;
+  assert.ok(old.released);assert.ok(old.loadCalls>0);assert.ok(current.src);
+  old.emit('error');old.emit('playing');old.emit('ended');
+  assert.equal(starts,0);assert.equal(ends,0);assert.equal(x.clips.length,2);
+  current.emit('playing');current.emit('ended');assert.equal(await second,true);
+  assert.equal(starts,1);assert.equal(ends,1);assert.equal(x.clock.pending,0);
 }
 // Network error is retried once, and the final notice uses the node-level replay.
 {
@@ -149,6 +218,95 @@ const caption='Oh look! Here is a house.';
   vm.runInContext('fetchStudyJson("required.json")',x.context).catch(e=>{result=e.message;});
   await clock.advance(15000);await clock.advance(15000);await Promise.resolve();
   assert.equal(calls,2);assert.equal(result,'timeout');assert.equal(clock.pending,0);
+}
+const parentPages=[
+  ['parent_welcome','.ksize-parent-welcome-audio'],
+  ['parent_quick_checks','.ksize-quick-checks-audio'],
+  ['camera_setup','.ksize-camera-audio'],
+  ['child_handoff','.ksize-handoff-audio'],
+];
+// Leaving any parent page before its delayed autoplay must invalidate both
+// the timer and the old page's Listen/toggle event handlers.
+for(const [kind,listenSelector] of parentPages) {
+  const run=await h.runMain(search),x=playbackHost(run.host);
+  const controls=mountControls(x,[listenSelector,'.ksize-parent-narration-toggle','.ksize-parent-transcript']);
+  const page=run.timeline.find(node=>node.data?.slide_kind===kind);
+  assert.match(page.stimulus,/ksize-parent-narration-toggle/);
+  assert.match(page.stimulus,/ksize-parent-transcript/);
+  page.on_load();await x.clock.advance(499);assert.equal(x.clips.length,0);
+  page.on_finish({});await x.clock.advance(1000);
+  await controls[listenSelector].click();controls['.ksize-parent-narration-toggle'].click();
+  assert.equal(x.clips.length,0,`${kind}: departed page restarted its recording`);
+  assert.equal(vm.runInContext('parentNarrationEnabled',x.context),true);
+  assert.equal(x.clock.pending,0);
+}
+// Parent narration-off persists between setup pages, opens the transcript,
+// and still permits an explicit Listen. Turning it back on starts one clip.
+{
+  const run=await h.runMain(search),x=playbackHost(run.host);
+  const controls=mountControls(x,['.ksize-parent-welcome-audio','.ksize-parent-narration-toggle','.ksize-parent-transcript']);
+  const welcome=run.timeline.find(node=>node.data?.slide_kind==='parent_welcome');
+  welcome.on_load();controls['.ksize-parent-narration-toggle'].click();
+  assert.equal(controls['.ksize-parent-transcript'].open,true);
+  assert.equal(controls['.ksize-parent-narration-toggle'].attributes['aria-pressed'],'true');
+  await x.clock.advance(1000);assert.equal(x.clips.length,0);
+  const manual=controls['.ksize-parent-welcome-audio'].click();
+  assert.equal(x.clips.length,1);assert.equal(vm.runInContext('parentNarrationEnabled',x.context),false);
+  controls['.ksize-parent-narration-toggle'].click();assert.equal(await manual,false);
+  assert.ok(x.clips[0].released);assert.equal(x.clips.length,2);
+  assert.equal(controls['.ksize-parent-narration-toggle'].attributes['aria-pressed'],'false');
+  controls['.ksize-parent-narration-toggle'].click();assert.ok(x.clips[1].released);
+  const data={};welcome.on_finish(data);assert.equal(data.parent_instruction_narration_enabled,false);
+  const nextControls=mountControls(x,['.ksize-quick-checks-audio','.ksize-parent-narration-toggle','.ksize-parent-transcript']);
+  const next=run.timeline.find(node=>node.data?.slide_kind==='parent_quick_checks');
+  next.on_load();await x.clock.advance(1000);
+  assert.equal(x.clips.length,2);assert.equal(nextControls['.ksize-parent-transcript'].open,true);
+  next.on_finish({});assert.equal(x.clock.pending,0);
+}
+// The parent preference must not silence child questions/options or unlock
+// choices before every recording ends successfully, including a failed replay.
+{
+  const run=await h.runMain(search),x=playbackHost(run.host);
+  const parentControls=mountControls(x,['.ksize-parent-welcome-audio','.ksize-parent-narration-toggle','.ksize-parent-transcript']);
+  const parent=run.timeline.find(node=>node.data?.slide_kind==='parent_welcome');
+  parent.on_load();parentControls['.ksize-parent-narration-toggle'].click();parent.on_finish({});
+  const controls=mountControls(x,['.ksize-audio-btn','#test-choice-a','#test-choice-b']);
+  const choices=[controls['#test-choice-a'],controls['#test-choice-b']];
+  choices.forEach((choice,index)=>{choice.dataset.choiceIndex=String(index);});
+  x.context.document.querySelectorAll=selector=>selector==='.ksize-char-btn'?choices:[];
+  const page=run.timeline.find(node=>node.data?.slide_kind==='response_choices');
+  const segments=page._ksizeNarration.length;assert.ok(segments>=2);
+  page.on_load();assert.ok(choices.every(choice=>choice.disabled));
+  await x.clock.advance(250);assert.equal(x.clips.length,1);
+  for(let index=0;index<segments;index++) {
+    assert.ok(choices.every(choice=>choice.disabled),`Choice enabled before child segment ${index+1}`);
+    assert.ok(x.clips[index],`Child segment ${index+1}/${segments} did not start; ${x.clips.length} clips were constructed`);
+    x.clips[index].emit('playing');x.clips[index].emit('ended');
+    await new Promise(setImmediate);
+  }
+  assert.equal(x.clips.length,segments);assert.ok(choices.every(choice=>!choice.disabled));
+  controls['.ksize-audio-btn'].click();await new Promise(setImmediate);
+  assert.ok(choices.every(choice=>choice.disabled));assert.equal(x.clips.length,segments+1);
+  x.clips.at(-1).emit('error');x.clips.at(-1).emit('error');
+  await new Promise(setImmediate);
+  assert.ok(choices.every(choice=>choice.disabled),'Failed child replay unlocked responses');
+  const data={};page.on_finish(data);assert.equal(data.audio_playback_or_load_failure,true);
+  assert.equal(vm.runInContext('parentNarrationEnabled',x.context),false);assert.equal(x.clock.pending,0);
+}
+// Assent is disabled in this release's timeline. Exercise the same attached
+// child-page narration lifecycle directly, with the parent preference off.
+{
+  const x=playbackHost();const controls=mountControls(x,['.ksize-assent-audio']);
+  const page=vm.runInContext(`(() => {
+    parentNarrationEnabled = false;
+    const node = {};
+    attachPageNarration(node, {src: CHILD_ASSENT_AUDIO, text: CHILD_ASSENT_TEXT, listenSelector: '.ksize-assent-audio'});
+    return node;
+  })()`,x.context);
+  page.on_load();await x.clock.advance(500);assert.equal(x.clips.length,1);
+  page.on_finish({});assert.ok(x.clips[0].released);
+  await controls['.ksize-assent-audio'].click();await x.clock.advance(1000);
+  assert.equal(x.clips.length,1);assert.equal(x.clock.pending,0);
 }
 // A post-preload character-image failure cannot hang revealReady or poison its
 // cache: a second explicit try must construct a fresh image request.
