@@ -20,6 +20,14 @@ Prepared September 26, 2026. Release: `chs-home-school-evelyn-v1-r27-peer-review
 - Local browser: quiet reading carried through all four parent pages; complete transcript visible; child welcome Replay activated the narrator playback indicator; no parent mute control or researcher toolbar in the child section. This is a functional playback check, not a new perceptual audio-quality audit.
 - The peer's exact frozen session was not reproduced. A stale-page narration defect was reproduced in a controlled regression; it is a plausible contributor, not a proven diagnosis of that session.
 
-## Release status at preparation
+## Publication verification
 
-Publication and CHS r27 save have not yet been confirmed. CHS requested researcher sign-in. The previous verified CHS navigation-only save was September 23, 2026; no study submission or activation is authorized.
+- Implementation commit: `02c3164507d2bb4b3c630e5f41782400fa91ebd8`.
+- GitHub Pages deployment **36233912559** completed successfully September 26, 2026 at **09:50:42 UTC**.
+- The hosted candidate entry, app, styles and CHS wrapper all returned HTTP 200 and exactly matched the tested local bytes (SHA256 comparison).
+- Local browser first story: choice buttons enabled after narration, disabled during Replay, enabled afterward, and selection advanced to story two. No browser error logs were present at that check. This does not claim all 48 conditions were traversed in a browser.
+- Publication was verified independently of these subsequent status/documentation edits.
+
+## CHS save still pending
+
+CHS r27 save has **not** been confirmed. CHS requested researcher sign-in. The new debrief is in the prepared wrapper but not saved in the CHS editor. The previous verified CHS navigation-only save was September 23, 2026; no study submission or activation was performed.
