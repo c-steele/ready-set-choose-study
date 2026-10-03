@@ -321,7 +321,7 @@ body.child-view .practice-setup {
   line-height: 1.25;
 }
 
-body.child-view .practice-illustration img {
+body.child-view .practice-artwork {
   max-width: 660px;
   max-height: min(34vh, 285px);
   object-fit: contain;
@@ -346,7 +346,7 @@ body.child-view .stage:has(.feedback) .picture {
   width: min(100%, 1000px, calc((100dvh - 520px) * 2.285714));
 }
 
-body.child-view .stage:has(.feedback) .practice-illustration img {
+body.child-view .stage:has(.feedback) .practice-artwork {
   max-height: min(22vh, 175px);
 }
 

@@ -11,8 +11,7 @@
   const narration=window.ObligationNarration;
   const roleNames={woman:'Mom / sister set',man:'Dad / brother set',family:'Family set',all:'All three sets · review only'};
   function storyAccent(s){
-    // Practice has its own orange illustration; story screens match their stimuli.
-    return s.localId.startsWith('practice-')?'#f5b236':s.pairing?.visualHex||'#f5b236';
+    return s.pairing?.visualHex||'#f5b236';
   }
   function isCharacterIntro(s){return Boolean(s.pairing&&s.point&&s.localId.startsWith('intro-'));}
   // Bounds include each character, their existing outline and their role label.
@@ -73,8 +72,28 @@
     });
   }
   function actors(s){return s.pairing?[s.pairing.recipient,...s.pairing.helpers]:[];}
+  function practiceArtwork(s){
+    // Reuse the original FTC teacher and kid pixels, rather than redrawing them.
+    const source=window.ObligationPairings.pairings.find(p=>p.id==='woman-mom-teacher').images.group;
+    const sourceColor=[129,214,83].map(n=>n/255),accent=storyAccent(s);
+    const targetColor=accent.match(/[a-f\d]{2}/gi).map(n=>parseInt(n,16)/255);
+    const mean=sourceColor.reduce((a,b)=>a+b,0)/3,direction=sourceColor.map(n=>n-mean);
+    const norm=direction.reduce((a,b)=>a+b*b,0),vector=direction.map(n=>n/norm);
+    // This linear map preserves black, white, and their antialias blends.
+    const matrix=targetColor.flatMap((n,i)=>[...vector.map((v,j)=>(i===j?1:0)+(n-sourceColor[i])*v),0,0]).concat([0,0,0,1,0]).join(' ');
+    const filterId='practice-palette-'+s.id.replace(/[^a-z\d-]/gi,'-');
+    return `<svg class="practice-artwork" viewBox="0 0 900 390" role="img" aria-label="A teacher tells a child, Stop being mean. The child is labeled YOU." xmlns="http://www.w3.org/2000/svg">
+      <defs><filter id="${filterId}" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="${matrix}"/></filter></defs>
+      <svg x="145" y="62" width="215" height="281" viewBox="100 160 490 640"><image href="${esc(source)}" width="1920" height="1080" filter="url(#${filterId})"/></svg>
+      <svg x="595" y="179" width="180" height="172" viewBox="760 390 410 390"><image href="${esc(source)}" width="1920" height="1080" filter="url(#${filterId})"/></svg>
+      <path class="practice-bubble" d="M350 25 H660 Q677 25 677 42 V89 Q677 106 660 106 H362 L326 133 L340 100 Q333 95 333 85 V42 Q333 25 350 25Z"/>
+      <text class="practice-bubble-text" x="505" y="76" text-anchor="middle">Stop being mean.</text>
+      <rect x="173" y="350" width="159" height="34" fill="${accent}"/><rect x="631" y="350" width="108" height="34" fill="${accent}"/>
+      <text class="practice-role-label" x="252.5" y="376" text-anchor="middle">TEACHER</text><text class="practice-role-label" x="685" y="376" text-anchor="middle">YOU</text>
+    </svg>`;
+  }
   function scene(s,interactive=false){
-    if(s.visual==='teacher-practice')return `<div class="practice-illustration"><p class="practice-setup">${esc(s.displaySetup)}</p><img src="assets/practice-teacher.svg" alt="A teacher tells a child, Stop being mean. The child is labeled YOU."><h2 class="practice-question">${esc(s.displayQuestion)}</h2></div>`;
+    if(s.visual==='teacher-practice')return `<div class="practice-illustration"><p class="practice-setup">${esc(s.displaySetup)}</p>${practiceArtwork(s)}<h2 class="practice-question">${esc(s.displayQuestion)}</h2></div>`;
     if(!s.image)return '<div class="practice-space" aria-hidden="true"></div>';
     const introduction=isCharacterIntro(s),guided=introduction||s.localId==='group';
     const visible=visibleIntroActors(s),allActors=actors(s),current=allActors.find(a=>a.id===s.point);
