@@ -81,3 +81,8 @@ The child captions and full read-aloud script capitalize **HAVE TO** and **HAS T
 ## Follow-up captions (October 3)
 
 Obligation-strength and individual-meanness-strength captions include the full relationship directly in the question, such as “How much do you think the kid’s teacher HAS TO?” The separate role label above the caption is omitted. These display adaptations preserve role clarity for every pairing, including follow-ups whose recorded question uses “she” or “he.” The existing read-aloud text, spoken context, response options, branching and narration mappings are unchanged; the full-script exports document the distinct display wording.
+
+
+## Slower neither-helped reminders (October 3)
+
+The four corrective reminders after the neither-helped recall check use the original Evelyn recording with pitch-preserving slower pacing. The first sentence plays at 68% of its previous tempo and the question at 76%, with an approximately 1.2-second sentence pause. The kid reminder is 10.14 seconds (previously 7.16). Words, captions, response options and branching remain unchanged. Original files and offline transcription verification are archived in the CHS output folder. These reminders occur after an incorrect recall response and do not affect the displayed correct-response session timing ranges.

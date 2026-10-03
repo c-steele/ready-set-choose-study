@@ -31,7 +31,8 @@
     "The existing opening is the only recording reused. Similar older role introductions and Likert recordings are not substitutes.",
     "Binary options already included in a prompt need not be spoken a second time. Individual option clips are available for other occurrences.",
     "A manifest entry marked pending is a recording request, not generated audio.",
-    "HAVE TO/HAS TO capitalization is live; 32 associated recordings retain the verified original audio while the edited NaturalReaders emphasis project awaits successful export. Audio availability does not imply audible emphasis."
+    "HAVE TO/HAS TO capitalization is live; 32 associated recordings retain the verified original audio while the edited NaturalReaders emphasis project awaits successful export. Audio availability does not imply audible emphasis.",
+    "Four neither-helped corrective reminders retain the original Evelyn voice and wording, with locally processed pitch-preserving slower speech and a longer sentence pause; original recordings and independent offline word-sequence checks are archived."
   ],
   "clips": [
     {
@@ -5807,9 +5808,9 @@
           "part": "reminder"
         }
       ],
-      "sha256": "794fb472a8a56932cc6824bf22d689d2988244618f6a8512c25d40e63e8a7fce",
-      "bytes": 286347,
-      "durationSeconds": 7.15755,
+      "sha256": "626d0f8ee15359cccf323868a027e9bb58662ed4792361516dab7bd9650b19f7",
+      "bytes": 406509,
+      "durationSeconds": 10.13551,
       "provenance": {
         "provider": "NaturalReaders Commercial",
         "voice": {
@@ -5829,7 +5830,31 @@
         "archiveMember": "30.Actually,_remember,_neither_of.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
-        "copiedWithoutReencoding": true
+        "copiedWithoutReencoding": false,
+        "originalRecordingSha256": "794fb472a8a56932cc6824bf22d689d2988244618f6a8512c25d40e63e8a7fce",
+        "audioProcessing": {
+          "sourceSha256": "794fb472a8a56932cc6824bf22d689d2988244618f6a8512c25d40e63e8a7fce",
+          "firstSentenceTempo": 0.68,
+          "questionTempo": 0.76,
+          "originalSentencePause": [
+            2.99698,
+            3.71524
+          ],
+          "splitWithinSilence": 3.35611,
+          "addedSilenceSeconds": 0.19932817337461306,
+          "targetSentencePauseSeconds": 1.2,
+          "processing": "FFmpeg atempo: pitch-preserving tempo adjustment, split within intersentence silence",
+          "decodeVerified": true,
+          "wordBoundariesSpliced": false
+        },
+        "offlineAdjustedWordSequenceVerified": true
+      },
+      "audioTreatment": {
+        "kind": "slow-neither-reminder",
+        "firstSentenceTempo": 0.68,
+        "questionTempo": 0.76,
+        "originalDurationSeconds": 7.15755,
+        "targetSentencePauseSeconds": 1.2
       }
     },
     {
@@ -13013,9 +13038,9 @@
           "part": "reminder"
         }
       ],
-      "sha256": "2e7da638a49b5d1467e8e5dd012f2530fa8485034de692639e5196e72063e45e",
-      "bytes": 288436,
-      "durationSeconds": 7.209775,
+      "sha256": "e3780dddc9f195aa78be6be68631abec90578104ec63c35cefe0d96d568d14a9",
+      "bytes": 409644,
+      "durationSeconds": 10.213878,
       "provenance": {
         "provider": "NaturalReaders Commercial",
         "voice": {
@@ -13035,7 +13060,31 @@
         "archiveMember": "43.Actually,_remember,_neither_of.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
-        "copiedWithoutReencoding": true
+        "copiedWithoutReencoding": false,
+        "originalRecordingSha256": "2e7da638a49b5d1467e8e5dd012f2530fa8485034de692639e5196e72063e45e",
+        "audioProcessing": {
+          "sourceSha256": "2e7da638a49b5d1467e8e5dd012f2530fa8485034de692639e5196e72063e45e",
+          "firstSentenceTempo": 0.68,
+          "questionTempo": 0.76,
+          "originalSentencePause": [
+            3.04444,
+            3.75791
+          ],
+          "splitWithinSilence": 3.401175,
+          "addedSilenceSeconds": 0.20600154798761605,
+          "targetSentencePauseSeconds": 1.2,
+          "processing": "FFmpeg atempo: pitch-preserving tempo adjustment, split within intersentence silence",
+          "decodeVerified": true,
+          "wordBoundariesSpliced": false
+        },
+        "offlineAdjustedWordSequenceVerified": true
+      },
+      "audioTreatment": {
+        "kind": "slow-neither-reminder",
+        "firstSentenceTempo": 0.68,
+        "questionTempo": 0.76,
+        "originalDurationSeconds": 7.209775,
+        "targetSentencePauseSeconds": 1.2
       }
     },
     {
@@ -13806,9 +13855,9 @@
           "part": "reminder"
         }
       ],
-      "sha256": "0d4079a060c109a814c91bcccb4bfd7fab774af02c8f07851d1dc2ea33bc65ea",
-      "bytes": 288436,
-      "durationSeconds": 7.209775,
+      "sha256": "b44314a3a85b881f6949ff4a603a9d59ed359969698dcaf00df8aa2dc7b04597",
+      "bytes": 410689,
+      "durationSeconds": 10.24,
       "provenance": {
         "provider": "NaturalReaders Commercial",
         "voice": {
@@ -13828,7 +13877,31 @@
         "archiveMember": "63.Actually,_remember,_neither_of.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
-        "copiedWithoutReencoding": true
+        "copiedWithoutReencoding": false,
+        "originalRecordingSha256": "0d4079a060c109a814c91bcccb4bfd7fab774af02c8f07851d1dc2ea33bc65ea",
+        "audioProcessing": {
+          "sourceSha256": "0d4079a060c109a814c91bcccb4bfd7fab774af02c8f07851d1dc2ea33bc65ea",
+          "firstSentenceTempo": 0.68,
+          "questionTempo": 0.76,
+          "originalSentencePause": [
+            3.04277,
+            3.74503
+          ],
+          "splitWithinSilence": 3.3939,
+          "addedSilenceSeconds": 0.2216191950464398,
+          "targetSentencePauseSeconds": 1.2,
+          "processing": "FFmpeg atempo: pitch-preserving tempo adjustment, split within intersentence silence",
+          "decodeVerified": true,
+          "wordBoundariesSpliced": false
+        },
+        "offlineAdjustedWordSequenceVerified": true
+      },
+      "audioTreatment": {
+        "kind": "slow-neither-reminder",
+        "firstSentenceTempo": 0.68,
+        "questionTempo": 0.76,
+        "originalDurationSeconds": 7.209775,
+        "targetSentencePauseSeconds": 1.2
       }
     },
     {
@@ -14619,9 +14692,9 @@
           "part": "reminder"
         }
       ],
-      "sha256": "f2bee0193cb37a594b6935135dc2e55e6f749174695d920446b3248019b45840",
-      "bytes": 342771,
-      "durationSeconds": 8.56815,
+      "sha256": "5f50c02f6765102aa3a4d8350df6bef1d8ec388a60dc8a4e47c8ffdf7a2c2e66",
+      "bytes": 482787,
+      "durationSeconds": 12.042449,
       "provenance": {
         "provider": "NaturalReaders Commercial",
         "voice": {
@@ -14641,7 +14714,31 @@
         "archiveMember": "84.Actually,_remember,_neither_of.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
-        "copiedWithoutReencoding": true
+        "copiedWithoutReencoding": false,
+        "originalRecordingSha256": "f2bee0193cb37a594b6935135dc2e55e6f749174695d920446b3248019b45840",
+        "audioProcessing": {
+          "sourceSha256": "f2bee0193cb37a594b6935135dc2e55e6f749174695d920446b3248019b45840",
+          "firstSentenceTempo": 0.68,
+          "questionTempo": 0.76,
+          "originalSentencePause": [
+            3.71429,
+            4.47794
+          ],
+          "splitWithinSilence": 4.096115,
+          "addedSilenceSeconds": 0.13609133126934947,
+          "targetSentencePauseSeconds": 1.2,
+          "processing": "FFmpeg atempo: pitch-preserving tempo adjustment, split within intersentence silence",
+          "decodeVerified": true,
+          "wordBoundariesSpliced": false
+        },
+        "offlineAdjustedWordSequenceVerified": true
+      },
+      "audioTreatment": {
+        "kind": "slow-neither-reminder",
+        "firstSentenceTempo": 0.68,
+        "questionTempo": 0.76,
+        "originalDurationSeconds": 8.56815,
+        "targetSentencePauseSeconds": 1.2
       }
     },
     {

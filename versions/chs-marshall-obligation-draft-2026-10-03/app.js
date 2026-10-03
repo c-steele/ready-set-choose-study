@@ -57,7 +57,8 @@
   function narrationStatus(){
     const ids=narrationIds(steps[index]),ready=ids.length>0&&ids.every(id=>narration.clipsById[id]?.src);
     $('play-narration').textContent='Play narration';$('play-narration').disabled=!ready;$('stop-narration').disabled=!narrationPlaying;
-    $('narration-status').textContent=ready?'NaturalReader · Evelyn · Soft · 0.90×':'NaturalReader recordings are pending for this screen. Read aloud to review.';
+    const slowerReminder=ids.some(id=>narration.clipsById[id]?.audioTreatment?.kind==='slow-neither-reminder');
+    $('narration-status').textContent=ready?(slowerReminder?'NaturalReader · Evelyn · Slower reminder':'NaturalReader · Evelyn · Soft · 0.90×'):'NaturalReader recordings are pending for this screen. Read aloud to review.';
     syncChildControls();
     return ready;
   }
