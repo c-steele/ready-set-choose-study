@@ -57,11 +57,11 @@
     for (const helper of helpers) {
       add(`obligation-${helper.id}`, 'obligation-mom', {
         phase:`Obligation · ${helperTitle(helper)}`,
-        text:`Now, do you think ${helper.description} HAS to help ${recipient.description}? Yes or No.`
+        text:`Now, do you think ${helper.description} HAS TO help ${recipient.description}? Yes or No.`
       });
       add(`obligation-${helper.id}-amount`, 'obligation-mom-amount', {
         phase:`Obligation strength · ${helperTitle(helper)}`,
-        text:`How much do you think ${helper.pronoun === 'they' ? helper.description : helper.pronoun} has to?`,
+        text:`How much do you think ${helper.pronoun === 'they' ? helper.description : helper.pronoun} HAS TO?`,
         context:upper(helper.description), when:[`obligation-${helper.id}`, 'Yes']
       });
     }

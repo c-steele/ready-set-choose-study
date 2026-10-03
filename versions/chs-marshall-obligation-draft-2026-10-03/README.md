@@ -72,3 +72,8 @@ The introduction now builds the scene one character at a time. The first actor i
 There is no **Show everyone** control. Narration temporarily locks the current tap target and unlocks it when the prompt ends; audio completion never reveals another character. Without narration, the target is immediately tappable. The storyboard shows the same cumulative sequence. Source stimulus files, judgment flow, screen identifiers and question counts remain unchanged. The spoken introduction wording has been adapted from “Select” to “Tap” for young children. These glowing targets provide guided orientation rather than uncued identity checks. All 26 affected introduction and reminder recordings were regenerated in NaturalReader with the same voice settings; all 195 current clips and their screen mappings were verified.
 
 Static verification checked JavaScript syntax, all 54 actor cue bounds, all pairing introduction orders, and removal of the old reveal transition. Live browser verification is recorded separately with the CHS draft update.
+
+
+## Obligation emphasis (October 3)
+
+The child captions and full read-aloud script capitalize **HAVE TO** and **HAS TO** throughout practice, reminders, obligation judgments and their strength follow-ups. This emphasis treatment is an adaptation; the words, response options, branches and scoring are unchanged. The corresponding 32 unique NaturalReaders recordings require replacement so auditory emphasis can be reviewed separately from visual capitalization. Original export scripts and audio provenance remain archived.

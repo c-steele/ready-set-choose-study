@@ -100,15 +100,15 @@ Choices: Yes / No.
 
 Choices: Yes / No.
 
-### 9. “Have to” practice
+### 9. “HAVE TO” practice
 
-“Now, sometimes people have to do things.”
+“Now, sometimes people HAVE TO do things.”
 
 *Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
 ### 10. Practice · Stop being mean
 
-“When a teacher tells you to stop being mean to someone, do you have to stop being mean? Yes or No.”
+“When a teacher tells you to stop being mean to someone, do you HAVE TO stop being mean? Yes or No.”
 
 Display treatment: Let’s practice! / A teacher tells you to stop being mean to someone. / Do you HAVE TO stop being mean?
 
@@ -116,7 +116,7 @@ Choices: Yes / No.
 
 Expected check/practice answer: Yes.
 
-Reminder if needed: “When a teacher tells you to stop being mean to someone, you have to stop being mean. Let’s try that question again.”
+Reminder if needed: “When a teacher tells you to stop being mean to someone, you HAVE TO stop being mean. Let’s try that question again.”
 
 *Practice, not a study outcome. The illustration and split display wording are new adaptations. The downloaded script retains the full Marshall practice prompt. Reminder wording is a draft implementation choice. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
@@ -124,7 +124,7 @@ Reminder if needed: “When a teacher tells you to stop being mean to someone, y
 
 *Only after “Yes” to Practice · Stop being mean.*
 
-“How much do you think you have to stop being mean?”
+“How much do you think you HAVE TO stop being mean?”
 
 Choices: A teeny bit / A little bit / A lot.
 
@@ -132,13 +132,13 @@ Choices: A teeny bit / A little bit / A lot.
 
 ### 12. Practice · Lie
 
-“When someone asks you a question, do you have to lie? Yes or No.”
+“When someone asks you a question, do you HAVE TO lie? Yes or No.”
 
 Choices: Yes / No.
 
 Expected check/practice answer: No.
 
-Reminder if needed: “When someone asks you a question, you do not have to lie. Let’s try that question again.”
+Reminder if needed: “When someone asks you a question, you do not HAVE TO lie. Let’s try that question again.”
 
 *Practice, not a study outcome. Reminder wording is a draft implementation choice. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
@@ -146,7 +146,7 @@ Reminder if needed: “When someone asks you a question, you do not have to lie.
 
 *Only after “Yes” to Practice · Lie.*
 
-“How much do you think you have to lie?”
+“How much do you think you HAVE TO lie?”
 
 Choices: A teeny bit / A little bit / A lot.
 
@@ -154,13 +154,13 @@ Choices: A teeny bit / A little bit / A lot.
 
 ### 14. Back to our story
 
-“So now, I’m going to ask you some questions about whether people have to do things.”
+“So now, I’m going to ask you some questions about whether people HAVE TO do things.”
 
 *Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
 ### 15. Obligation · Teacher
 
-“Now, do you think the kid’s teacher HAS to help the kid? Yes or No.”
+“Now, do you think the kid’s teacher HAS TO help the kid? Yes or No.”
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/5c/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -172,7 +172,7 @@ Choices: Yes / No.
 
 **The kid’s teacher**
 
-“How much do you think the kid’s teacher has to?”
+“How much do you think the kid’s teacher HAS TO?”
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/5c/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -180,7 +180,7 @@ Choices: A teeny bit / A little bit / A lot.
 
 ### 17. Obligation · Mom
 
-“Now, do you think the kid’s mom HAS to help the kid? Yes or No.”
+“Now, do you think the kid’s mom HAS TO help the kid? Yes or No.”
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/5c/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -192,7 +192,7 @@ Choices: Yes / No.
 
 **The kid’s mom**
 
-“How much do you think she has to?”
+“How much do you think she HAS TO?”
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/5c/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -392,15 +392,15 @@ Choices: Yes / No.
 
 Choices: Yes / No.
 
-### 38. “Have to” practice
+### 38. “HAVE TO” practice
 
-“Now, sometimes people have to do things.”
+“Now, sometimes people HAVE TO do things.”
 
 *Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
 ### 39. Practice · Stop being mean
 
-“When a teacher tells you to stop being mean to someone, do you have to stop being mean? Yes or No.”
+“When a teacher tells you to stop being mean to someone, do you HAVE TO stop being mean? Yes or No.”
 
 Display treatment: Let’s practice! / A teacher tells you to stop being mean to someone. / Do you HAVE TO stop being mean?
 
@@ -408,7 +408,7 @@ Choices: Yes / No.
 
 Expected check/practice answer: Yes.
 
-Reminder if needed: “When a teacher tells you to stop being mean to someone, you have to stop being mean. Let’s try that question again.”
+Reminder if needed: “When a teacher tells you to stop being mean to someone, you HAVE TO stop being mean. Let’s try that question again.”
 
 *Practice, not a study outcome. The illustration and split display wording are new adaptations. The downloaded script retains the full Marshall practice prompt. Reminder wording is a draft implementation choice. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
@@ -416,7 +416,7 @@ Reminder if needed: “When a teacher tells you to stop being mean to someone, y
 
 *Only after “Yes” to Practice · Stop being mean.*
 
-“How much do you think you have to stop being mean?”
+“How much do you think you HAVE TO stop being mean?”
 
 Choices: A teeny bit / A little bit / A lot.
 
@@ -424,13 +424,13 @@ Choices: A teeny bit / A little bit / A lot.
 
 ### 41. Practice · Lie
 
-“When someone asks you a question, do you have to lie? Yes or No.”
+“When someone asks you a question, do you HAVE TO lie? Yes or No.”
 
 Choices: Yes / No.
 
 Expected check/practice answer: No.
 
-Reminder if needed: “When someone asks you a question, you do not have to lie. Let’s try that question again.”
+Reminder if needed: “When someone asks you a question, you do not HAVE TO lie. Let’s try that question again.”
 
 *Practice, not a study outcome. Reminder wording is a draft implementation choice. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
@@ -438,7 +438,7 @@ Reminder if needed: “When someone asks you a question, you do not have to lie.
 
 *Only after “Yes” to Practice · Lie.*
 
-“How much do you think you have to lie?”
+“How much do you think you HAVE TO lie?”
 
 Choices: A teeny bit / A little bit / A lot.
 
@@ -446,13 +446,13 @@ Choices: A teeny bit / A little bit / A lot.
 
 ### 43. Back to our story
 
-“So now, I’m going to ask you some questions about whether people have to do things.”
+“So now, I’m going to ask you some questions about whether people HAVE TO do things.”
 
 *Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
 ### 44. Obligation · Sister
 
-“Now, do you think the kid’s sister HAS to help the kid? Yes or No.”
+“Now, do you think the kid’s sister HAS TO help the kid? Yes or No.”
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/6b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -464,7 +464,7 @@ Choices: Yes / No.
 
 **The kid’s sister**
 
-“How much do you think she has to?”
+“How much do you think she HAS TO?”
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/6b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -472,7 +472,7 @@ Choices: A teeny bit / A little bit / A lot.
 
 ### 46. Obligation · Friend
 
-“Now, do you think the kid’s friend HAS to help the kid? Yes or No.”
+“Now, do you think the kid’s friend HAS TO help the kid? Yes or No.”
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/6b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -484,7 +484,7 @@ Choices: Yes / No.
 
 **The kid’s friend**
 
-“How much do you think the kid’s friend has to?”
+“How much do you think the kid’s friend HAS TO?”
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/6b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -684,15 +684,15 @@ Choices: Yes / No.
 
 Choices: Yes / No.
 
-### 67. “Have to” practice
+### 67. “HAVE TO” practice
 
-“Now, sometimes people have to do things.”
+“Now, sometimes people HAVE TO do things.”
 
 *Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
 ### 68. Practice · Stop being mean
 
-“When a teacher tells you to stop being mean to someone, do you have to stop being mean? Yes or No.”
+“When a teacher tells you to stop being mean to someone, do you HAVE TO stop being mean? Yes or No.”
 
 Display treatment: Let’s practice! / A teacher tells you to stop being mean to someone. / Do you HAVE TO stop being mean?
 
@@ -700,7 +700,7 @@ Choices: Yes / No.
 
 Expected check/practice answer: Yes.
 
-Reminder if needed: “When a teacher tells you to stop being mean to someone, you have to stop being mean. Let’s try that question again.”
+Reminder if needed: “When a teacher tells you to stop being mean to someone, you HAVE TO stop being mean. Let’s try that question again.”
 
 *Practice, not a study outcome. The illustration and split display wording are new adaptations. The downloaded script retains the full Marshall practice prompt. Reminder wording is a draft implementation choice. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
@@ -708,7 +708,7 @@ Reminder if needed: “When a teacher tells you to stop being mean to someone, y
 
 *Only after “Yes” to Practice · Stop being mean.*
 
-“How much do you think you have to stop being mean?”
+“How much do you think you HAVE TO stop being mean?”
 
 Choices: A teeny bit / A little bit / A lot.
 
@@ -716,13 +716,13 @@ Choices: A teeny bit / A little bit / A lot.
 
 ### 70. Practice · Lie
 
-“When someone asks you a question, do you have to lie? Yes or No.”
+“When someone asks you a question, do you HAVE TO lie? Yes or No.”
 
 Choices: Yes / No.
 
 Expected check/practice answer: No.
 
-Reminder if needed: “When someone asks you a question, you do not have to lie. Let’s try that question again.”
+Reminder if needed: “When someone asks you a question, you do not HAVE TO lie. Let’s try that question again.”
 
 *Practice, not a study outcome. Reminder wording is a draft implementation choice. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
@@ -730,7 +730,7 @@ Reminder if needed: “When someone asks you a question, you do not have to lie.
 
 *Only after “Yes” to Practice · Lie.*
 
-“How much do you think you have to lie?”
+“How much do you think you HAVE TO lie?”
 
 Choices: A teeny bit / A little bit / A lot.
 
@@ -738,13 +738,13 @@ Choices: A teeny bit / A little bit / A lot.
 
 ### 72. Back to our story
 
-“So now, I’m going to ask you some questions about whether people have to do things.”
+“So now, I’m going to ask you some questions about whether people HAVE TO do things.”
 
 *Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
 ### 73. Obligation · Friend
 
-“Now, do you think the kid’s friend HAS to help the kid? Yes or No.”
+“Now, do you think the kid’s friend HAS TO help the kid? Yes or No.”
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/13d/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -756,7 +756,7 @@ Choices: Yes / No.
 
 **The kid’s friend**
 
-“How much do you think the kid’s friend has to?”
+“How much do you think the kid’s friend HAS TO?”
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/13d/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -764,7 +764,7 @@ Choices: A teeny bit / A little bit / A lot.
 
 ### 75. Obligation · Best friend
 
-“Now, do you think the kid’s best friend HAS to help the kid? Yes or No.”
+“Now, do you think the kid’s best friend HAS TO help the kid? Yes or No.”
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/13d/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -776,7 +776,7 @@ Choices: Yes / No.
 
 **The kid’s best friend**
 
-“How much do you think the kid’s best friend has to?”
+“How much do you think the kid’s best friend HAS TO?”
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/13d/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -976,15 +976,15 @@ Choices: Yes / No.
 
 Choices: Yes / No.
 
-### 96. “Have to” practice
+### 96. “HAVE TO” practice
 
-“Now, sometimes people have to do things.”
+“Now, sometimes people HAVE TO do things.”
 
 *Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
 ### 97. Practice · Stop being mean
 
-“When a teacher tells you to stop being mean to someone, do you have to stop being mean? Yes or No.”
+“When a teacher tells you to stop being mean to someone, do you HAVE TO stop being mean? Yes or No.”
 
 Display treatment: Let’s practice! / A teacher tells you to stop being mean to someone. / Do you HAVE TO stop being mean?
 
@@ -992,7 +992,7 @@ Choices: Yes / No.
 
 Expected check/practice answer: Yes.
 
-Reminder if needed: “When a teacher tells you to stop being mean to someone, you have to stop being mean. Let’s try that question again.”
+Reminder if needed: “When a teacher tells you to stop being mean to someone, you HAVE TO stop being mean. Let’s try that question again.”
 
 *Practice, not a study outcome. The illustration and split display wording are new adaptations. The downloaded script retains the full Marshall practice prompt. Reminder wording is a draft implementation choice. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
@@ -1000,7 +1000,7 @@ Reminder if needed: “When a teacher tells you to stop being mean to someone, y
 
 *Only after “Yes” to Practice · Stop being mean.*
 
-“How much do you think you have to stop being mean?”
+“How much do you think you HAVE TO stop being mean?”
 
 Choices: A teeny bit / A little bit / A lot.
 
@@ -1008,13 +1008,13 @@ Choices: A teeny bit / A little bit / A lot.
 
 ### 99. Practice · Lie
 
-“When someone asks you a question, do you have to lie? Yes or No.”
+“When someone asks you a question, do you HAVE TO lie? Yes or No.”
 
 Choices: Yes / No.
 
 Expected check/practice answer: No.
 
-Reminder if needed: “When someone asks you a question, you do not have to lie. Let’s try that question again.”
+Reminder if needed: “When someone asks you a question, you do not HAVE TO lie. Let’s try that question again.”
 
 *Practice, not a study outcome. Reminder wording is a draft implementation choice. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
@@ -1022,7 +1022,7 @@ Reminder if needed: “When someone asks you a question, you do not have to lie.
 
 *Only after “Yes” to Practice · Lie.*
 
-“How much do you think you have to lie?”
+“How much do you think you HAVE TO lie?”
 
 Choices: A teeny bit / A little bit / A lot.
 
@@ -1030,13 +1030,13 @@ Choices: A teeny bit / A little bit / A lot.
 
 ### 101. Back to our story
 
-“So now, I’m going to ask you some questions about whether people have to do things.”
+“So now, I’m going to ask you some questions about whether people HAVE TO do things.”
 
 *Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
 ### 102. Obligation · Teacher
 
-“Now, do you think the kid’s teacher HAS to help the kid? Yes or No.”
+“Now, do you think the kid’s teacher HAS TO help the kid? Yes or No.”
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/2b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1048,7 +1048,7 @@ Choices: Yes / No.
 
 **The kid’s teacher**
 
-“How much do you think the kid’s teacher has to?”
+“How much do you think the kid’s teacher HAS TO?”
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/2b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1056,7 +1056,7 @@ Choices: A teeny bit / A little bit / A lot.
 
 ### 104. Obligation · Friend
 
-“Now, do you think the kid’s friend HAS to help the kid? Yes or No.”
+“Now, do you think the kid’s friend HAS TO help the kid? Yes or No.”
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/2b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1068,7 +1068,7 @@ Choices: Yes / No.
 
 **The kid’s friend**
 
-“How much do you think the kid’s friend has to?”
+“How much do you think the kid’s friend HAS TO?”
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/2b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1268,15 +1268,15 @@ Choices: Yes / No.
 
 Choices: Yes / No.
 
-### 125. “Have to” practice
+### 125. “HAVE TO” practice
 
-“Now, sometimes people have to do things.”
+“Now, sometimes people HAVE TO do things.”
 
 *Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
 ### 126. Practice · Stop being mean
 
-“When a teacher tells you to stop being mean to someone, do you have to stop being mean? Yes or No.”
+“When a teacher tells you to stop being mean to someone, do you HAVE TO stop being mean? Yes or No.”
 
 Display treatment: Let’s practice! / A teacher tells you to stop being mean to someone. / Do you HAVE TO stop being mean?
 
@@ -1284,7 +1284,7 @@ Choices: Yes / No.
 
 Expected check/practice answer: Yes.
 
-Reminder if needed: “When a teacher tells you to stop being mean to someone, you have to stop being mean. Let’s try that question again.”
+Reminder if needed: “When a teacher tells you to stop being mean to someone, you HAVE TO stop being mean. Let’s try that question again.”
 
 *Practice, not a study outcome. The illustration and split display wording are new adaptations. The downloaded script retains the full Marshall practice prompt. Reminder wording is a draft implementation choice. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
@@ -1292,7 +1292,7 @@ Reminder if needed: “When a teacher tells you to stop being mean to someone, y
 
 *Only after “Yes” to Practice · Stop being mean.*
 
-“How much do you think you have to stop being mean?”
+“How much do you think you HAVE TO stop being mean?”
 
 Choices: A teeny bit / A little bit / A lot.
 
@@ -1300,13 +1300,13 @@ Choices: A teeny bit / A little bit / A lot.
 
 ### 128. Practice · Lie
 
-“When someone asks you a question, do you have to lie? Yes or No.”
+“When someone asks you a question, do you HAVE TO lie? Yes or No.”
 
 Choices: Yes / No.
 
 Expected check/practice answer: No.
 
-Reminder if needed: “When someone asks you a question, you do not have to lie. Let’s try that question again.”
+Reminder if needed: “When someone asks you a question, you do not HAVE TO lie. Let’s try that question again.”
 
 *Practice, not a study outcome. Reminder wording is a draft implementation choice. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
@@ -1314,7 +1314,7 @@ Reminder if needed: “When someone asks you a question, you do not have to lie.
 
 *Only after “Yes” to Practice · Lie.*
 
-“How much do you think you have to lie?”
+“How much do you think you HAVE TO lie?”
 
 Choices: A teeny bit / A little bit / A lot.
 
@@ -1322,13 +1322,13 @@ Choices: A teeny bit / A little bit / A lot.
 
 ### 130. Back to our story
 
-“So now, I’m going to ask you some questions about whether people have to do things.”
+“So now, I’m going to ask you some questions about whether people HAVE TO do things.”
 
 *Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
 ### 131. Obligation · Mom
 
-“Now, do you think the kid’s mom HAS to help the kid? Yes or No.”
+“Now, do you think the kid’s mom HAS TO help the kid? Yes or No.”
 
 [Stimulus source](../find_the_caregiver_story_screens_2026-09-26/mom-sister-orange-sad/05-sad.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1340,7 +1340,7 @@ Choices: Yes / No.
 
 **The kid’s mom**
 
-“How much do you think she has to?”
+“How much do you think she HAS TO?”
 
 [Stimulus source](../find_the_caregiver_story_screens_2026-09-26/mom-sister-orange-sad/05-sad.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1348,7 +1348,7 @@ Choices: A teeny bit / A little bit / A lot.
 
 ### 133. Obligation · Sister
 
-“Now, do you think the kid’s sister HAS to help the kid? Yes or No.”
+“Now, do you think the kid’s sister HAS TO help the kid? Yes or No.”
 
 [Stimulus source](../find_the_caregiver_story_screens_2026-09-26/mom-sister-orange-sad/05-sad.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1360,7 +1360,7 @@ Choices: Yes / No.
 
 **The kid’s sister**
 
-“How much do you think she has to?”
+“How much do you think she HAS TO?”
 
 [Stimulus source](../find_the_caregiver_story_screens_2026-09-26/mom-sister-orange-sad/05-sad.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1560,15 +1560,15 @@ Choices: Yes / No.
 
 Choices: Yes / No.
 
-### 154. “Have to” practice
+### 154. “HAVE TO” practice
 
-“Now, sometimes people have to do things.”
+“Now, sometimes people HAVE TO do things.”
 
 *Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
 ### 155. Practice · Stop being mean
 
-“When a teacher tells you to stop being mean to someone, do you have to stop being mean? Yes or No.”
+“When a teacher tells you to stop being mean to someone, do you HAVE TO stop being mean? Yes or No.”
 
 Display treatment: Let’s practice! / A teacher tells you to stop being mean to someone. / Do you HAVE TO stop being mean?
 
@@ -1576,7 +1576,7 @@ Choices: Yes / No.
 
 Expected check/practice answer: Yes.
 
-Reminder if needed: “When a teacher tells you to stop being mean to someone, you have to stop being mean. Let’s try that question again.”
+Reminder if needed: “When a teacher tells you to stop being mean to someone, you HAVE TO stop being mean. Let’s try that question again.”
 
 *Practice, not a study outcome. The illustration and split display wording are new adaptations. The downloaded script retains the full Marshall practice prompt. Reminder wording is a draft implementation choice. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
@@ -1584,7 +1584,7 @@ Reminder if needed: “When a teacher tells you to stop being mean to someone, y
 
 *Only after “Yes” to Practice · Stop being mean.*
 
-“How much do you think you have to stop being mean?”
+“How much do you think you HAVE TO stop being mean?”
 
 Choices: A teeny bit / A little bit / A lot.
 
@@ -1592,13 +1592,13 @@ Choices: A teeny bit / A little bit / A lot.
 
 ### 157. Practice · Lie
 
-“When someone asks you a question, do you have to lie? Yes or No.”
+“When someone asks you a question, do you HAVE TO lie? Yes or No.”
 
 Choices: Yes / No.
 
 Expected check/practice answer: No.
 
-Reminder if needed: “When someone asks you a question, you do not have to lie. Let’s try that question again.”
+Reminder if needed: “When someone asks you a question, you do not HAVE TO lie. Let’s try that question again.”
 
 *Practice, not a study outcome. Reminder wording is a draft implementation choice. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
@@ -1606,7 +1606,7 @@ Reminder if needed: “When someone asks you a question, you do not have to lie.
 
 *Only after “Yes” to Practice · Lie.*
 
-“How much do you think you have to lie?”
+“How much do you think you HAVE TO lie?”
 
 Choices: A teeny bit / A little bit / A lot.
 
@@ -1614,13 +1614,13 @@ Choices: A teeny bit / A little bit / A lot.
 
 ### 159. Back to our story
 
-“So now, I’m going to ask you some questions about whether people have to do things.”
+“So now, I’m going to ask you some questions about whether people HAVE TO do things.”
 
 *Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
 ### 160. Obligation · Classmate
 
-“Now, do you think the kid’s classmate HAS to help the kid? Yes or No.”
+“Now, do you think the kid’s classmate HAS TO help the kid? Yes or No.”
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/assets/teacher_classmate/generated/trials/14d/hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1632,7 +1632,7 @@ Choices: Yes / No.
 
 **The kid’s classmate**
 
-“How much do you think the kid’s classmate has to?”
+“How much do you think the kid’s classmate HAS TO?”
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/assets/teacher_classmate/generated/trials/14d/hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1640,7 +1640,7 @@ Choices: A teeny bit / A little bit / A lot.
 
 ### 162. Obligation · Teacher
 
-“Now, do you think the kid’s teacher HAS to help the kid? Yes or No.”
+“Now, do you think the kid’s teacher HAS TO help the kid? Yes or No.”
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/assets/teacher_classmate/generated/trials/14d/hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1652,7 +1652,7 @@ Choices: Yes / No.
 
 **The kid’s teacher**
 
-“How much do you think the kid’s teacher has to?”
+“How much do you think the kid’s teacher HAS TO?”
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/assets/teacher_classmate/generated/trials/14d/hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 

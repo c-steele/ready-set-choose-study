@@ -14,189 +14,231 @@
     "preferredBitrateKbps": 320,
     "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
   },
-  "clipCount": 26,
+  "clipCount": 32,
   "note": "Export only these paragraphs, in this order, as separate MP3s. The numeric export index maps to the stable clip ID; do not read the index aloud.",
   "entries": [
     {
       "exportIndex": 1,
-      "clipId": "nr_002",
-      "text": "This little one is a kid. Tap the kid.",
-      "targetFile": "assets/narration/nr_002.mp3",
+      "clipId": "nr_014",
+      "text": "Now, sometimes people HAVE TO do things.",
+      "targetFile": "assets/narration/nr_014.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 2,
-      "clipId": "nr_003",
-      "text": "This little one is a kid. This one is the kid. Tap the kid.",
-      "targetFile": "assets/narration/nr_003.mp3",
+      "clipId": "nr_015",
+      "text": "When a teacher tells you to stop being mean to someone, do you HAVE TO stop being mean? Yes or No.",
+      "targetFile": "assets/narration/nr_015.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 3,
-      "clipId": "nr_004",
-      "text": "This big one is this kid’s teacher. Tap the kid’s teacher.",
-      "targetFile": "assets/narration/nr_004.mp3",
+      "clipId": "nr_016",
+      "text": "When a teacher tells you to stop being mean to someone, you HAVE TO stop being mean. Let’s try that question again.",
+      "targetFile": "assets/narration/nr_016.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 4,
-      "clipId": "nr_005",
-      "text": "This big one is this kid’s teacher. This one is the kid’s teacher. Tap the kid’s teacher.",
-      "targetFile": "assets/narration/nr_005.mp3",
+      "clipId": "nr_017",
+      "text": "How much do you think you HAVE TO stop being mean?",
+      "targetFile": "assets/narration/nr_017.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 5,
-      "clipId": "nr_006",
-      "text": "This big one is this kid’s mom. Tap the kid’s mom.",
-      "targetFile": "assets/narration/nr_006.mp3",
+      "clipId": "nr_021",
+      "text": "When someone asks you a question, do you HAVE TO lie? Yes or No.",
+      "targetFile": "assets/narration/nr_021.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 6,
-      "clipId": "nr_007",
-      "text": "This big one is this kid’s mom. This one is the kid’s mom. Tap the kid’s mom.",
-      "targetFile": "assets/narration/nr_007.mp3",
+      "clipId": "nr_022",
+      "text": "When someone asks you a question, you do not HAVE TO lie. Let’s try that question again.",
+      "targetFile": "assets/narration/nr_022.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 7,
-      "clipId": "nr_053",
-      "text": "This little one is this kid’s sister. Tap the kid’s sister.",
-      "targetFile": "assets/narration/nr_053.mp3",
+      "clipId": "nr_023",
+      "text": "How much do you think you HAVE TO lie?",
+      "targetFile": "assets/narration/nr_023.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 8,
-      "clipId": "nr_054",
-      "text": "This little one is this kid’s sister. This one is the kid’s sister. Tap the kid’s sister.",
-      "targetFile": "assets/narration/nr_054.mp3",
+      "clipId": "nr_024",
+      "text": "So now, I’m going to ask you some questions about whether people HAVE TO do things.",
+      "targetFile": "assets/narration/nr_024.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 9,
-      "clipId": "nr_055",
-      "text": "This little one is this kid’s friend. Tap the kid’s friend.",
-      "targetFile": "assets/narration/nr_055.mp3",
+      "clipId": "nr_025",
+      "text": "Now, do you think the kid’s teacher HAS TO help the kid? Yes or No.",
+      "targetFile": "assets/narration/nr_025.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 10,
-      "clipId": "nr_056",
-      "text": "This little one is this kid’s friend. This one is the kid’s friend. Tap the kid’s friend.",
-      "targetFile": "assets/narration/nr_056.mp3",
+      "clipId": "nr_026",
+      "text": "The kid’s teacher. How much do you think the kid’s teacher HAS TO?",
+      "targetFile": "assets/narration/nr_026.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 11,
-      "clipId": "nr_075",
-      "text": "This little one is this kid’s best friend. Tap the kid’s best friend.",
-      "targetFile": "assets/narration/nr_075.mp3",
+      "clipId": "nr_027",
+      "text": "Now, do you think the kid’s mom HAS TO help the kid? Yes or No.",
+      "targetFile": "assets/narration/nr_027.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 12,
-      "clipId": "nr_076",
-      "text": "This little one is this kid’s best friend. This one is the kid’s best friend. Tap the kid’s best friend.",
-      "targetFile": "assets/narration/nr_076.mp3",
+      "clipId": "nr_028",
+      "text": "The kid’s mom. How much do you think she HAS TO?",
+      "targetFile": "assets/narration/nr_028.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 13,
-      "clipId": "nr_091",
-      "text": "This little one is this kid’s classmate. Tap the kid’s classmate.",
-      "targetFile": "assets/narration/nr_091.mp3",
+      "clipId": "nr_060",
+      "text": "Now, do you think the kid’s sister HAS TO help the kid? Yes or No.",
+      "targetFile": "assets/narration/nr_060.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 14,
-      "clipId": "nr_092",
-      "text": "This little one is this kid’s classmate. This one is the kid’s classmate. Tap the kid’s classmate.",
-      "targetFile": "assets/narration/nr_092.mp3",
+      "clipId": "nr_061",
+      "text": "The kid’s sister. How much do you think she HAS TO?",
+      "targetFile": "assets/narration/nr_061.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 15,
-      "clipId": "nr_103",
-      "text": "This big one is this kid’s dad. Tap the kid’s dad.",
-      "targetFile": "assets/narration/nr_103.mp3",
+      "clipId": "nr_062",
+      "text": "Now, do you think the kid’s friend HAS TO help the kid? Yes or No.",
+      "targetFile": "assets/narration/nr_062.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 16,
-      "clipId": "nr_104",
-      "text": "This big one is this kid’s dad. This one is the kid’s dad. Tap the kid’s dad.",
-      "targetFile": "assets/narration/nr_104.mp3",
+      "clipId": "nr_063",
+      "text": "The kid’s friend. How much do you think the kid’s friend HAS TO?",
+      "targetFile": "assets/narration/nr_063.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 17,
-      "clipId": "nr_115",
-      "text": "This little one is this kid’s brother. Tap the kid’s brother.",
-      "targetFile": "assets/narration/nr_115.mp3",
+      "clipId": "nr_079",
+      "text": "Now, do you think the kid’s best friend HAS TO help the kid? Yes or No.",
+      "targetFile": "assets/narration/nr_079.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 18,
-      "clipId": "nr_116",
-      "text": "This little one is this kid’s brother. This one is the kid’s brother. Tap the kid’s brother.",
-      "targetFile": "assets/narration/nr_116.mp3",
+      "clipId": "nr_080",
+      "text": "The kid’s best friend. How much do you think the kid’s best friend HAS TO?",
+      "targetFile": "assets/narration/nr_080.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 19,
-      "clipId": "nr_133",
-      "text": "This big one is this kid’s mom. Tap the mom.",
-      "targetFile": "assets/narration/nr_133.mp3",
+      "clipId": "nr_095",
+      "text": "Now, do you think the kid’s classmate HAS TO help the kid? Yes or No.",
+      "targetFile": "assets/narration/nr_095.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 20,
-      "clipId": "nr_134",
-      "text": "This big one is this kid’s mom. This one is the mom. Tap the mom.",
-      "targetFile": "assets/narration/nr_134.mp3",
+      "clipId": "nr_096",
+      "text": "The kid’s classmate. How much do you think the kid’s classmate HAS TO?",
+      "targetFile": "assets/narration/nr_096.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 21,
-      "clipId": "nr_154",
-      "text": "This big one is this kid’s dad. Tap the dad.",
-      "targetFile": "assets/narration/nr_154.mp3",
+      "clipId": "nr_107",
+      "text": "Now, do you think the kid’s dad HAS TO help the kid? Yes or No.",
+      "targetFile": "assets/narration/nr_107.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 22,
-      "clipId": "nr_155",
-      "text": "This big one is this kid’s dad. This one is the dad. Tap the dad.",
-      "targetFile": "assets/narration/nr_155.mp3",
+      "clipId": "nr_108",
+      "text": "The kid’s dad. How much do you think he HAS TO?",
+      "targetFile": "assets/narration/nr_108.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 23,
-      "clipId": "nr_172",
-      "text": "This big one is this kid’s teacher. Tap the teacher on the left.",
-      "targetFile": "assets/narration/nr_172.mp3",
+      "clipId": "nr_119",
+      "text": "Now, do you think the kid’s brother HAS TO help the kid? Yes or No.",
+      "targetFile": "assets/narration/nr_119.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 24,
-      "clipId": "nr_173",
-      "text": "This big one is this kid’s teacher. This one is the teacher on the left. Tap the teacher on the left.",
-      "targetFile": "assets/narration/nr_173.mp3",
+      "clipId": "nr_120",
+      "text": "The kid’s brother. How much do you think he HAS TO?",
+      "targetFile": "assets/narration/nr_120.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 25,
-      "clipId": "nr_174",
-      "text": "This big one is this kid’s teacher too. Tap the teacher in the middle.",
-      "targetFile": "assets/narration/nr_174.mp3",
+      "clipId": "nr_139",
+      "text": "Now, do you think the kid’s dad HAS TO help the mom? Yes or No.",
+      "targetFile": "assets/narration/nr_139.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 26,
-      "clipId": "nr_175",
-      "text": "This big one is this kid’s teacher too. This one is the teacher in the middle. Tap the teacher in the middle.",
-      "targetFile": "assets/narration/nr_175.mp3",
+      "clipId": "nr_140",
+      "text": "Now, do you think the kid HAS TO help the mom? Yes or No.",
+      "targetFile": "assets/narration/nr_140.mp3",
+      "proposedWording": false
+    },
+    {
+      "exportIndex": 27,
+      "clipId": "nr_141",
+      "text": "The kid. How much do you think the kid HAS TO?",
+      "targetFile": "assets/narration/nr_141.mp3",
+      "proposedWording": false
+    },
+    {
+      "exportIndex": 28,
+      "clipId": "nr_160",
+      "text": "Now, do you think the kid HAS TO help the dad? Yes or No.",
+      "targetFile": "assets/narration/nr_160.mp3",
+      "proposedWording": false
+    },
+    {
+      "exportIndex": 29,
+      "clipId": "nr_161",
+      "text": "Now, do you think the kid’s mom HAS TO help the dad? Yes or No.",
+      "targetFile": "assets/narration/nr_161.mp3",
+      "proposedWording": false
+    },
+    {
+      "exportIndex": 30,
+      "clipId": "nr_180",
+      "text": "Now, do you think the teacher on the left HAS TO help the teacher in the middle? Yes or No.",
+      "targetFile": "assets/narration/nr_180.mp3",
+      "proposedWording": false
+    },
+    {
+      "exportIndex": 31,
+      "clipId": "nr_181",
+      "text": "The teacher on the left. How much do you think the teacher on the left HAS TO?",
+      "targetFile": "assets/narration/nr_181.mp3",
+      "proposedWording": false
+    },
+    {
+      "exportIndex": 32,
+      "clipId": "nr_182",
+      "text": "Now, do you think the kid HAS TO help the teacher in the middle? Yes or No.",
+      "targetFile": "assets/narration/nr_182.mp3",
       "proposedWording": false
     }
   ]

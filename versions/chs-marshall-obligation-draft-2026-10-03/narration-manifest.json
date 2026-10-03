@@ -20,7 +20,8 @@
     "screenCount": 523,
     "clipCount": 195,
     "readyCount": 195,
-    "pendingCount": 0
+    "pendingCount": 0,
+    "emphasisPendingCount": 32
   },
   "notes": [
     "One clip per complete prompt, reminder, or individual response option. Repeated text shares one recording.",
@@ -29,7 +30,8 @@
     "The narration preserves the current full script. The illustrated practice screen has a shorter visual display but retains its full spoken prompt.",
     "The existing opening is the only recording reused. Similar older role introductions and Likert recordings are not substitutes.",
     "Binary options already included in a prompt need not be spoken a second time. Individual option clips are available for other occurrences.",
-    "A manifest entry marked pending is a recording request, not generated audio."
+    "A manifest entry marked pending is a recording request, not generated audio.",
+    "HAVE TO/HAS TO capitalization is live; 32 associated recordings retain the verified original audio while the edited NaturalReaders emphasis project awaits successful export. Audio availability does not imply audible emphasis."
   ],
   "clips": [
     {
@@ -2902,7 +2904,7 @@
     },
     {
       "id": "nr_014",
-      "text": "Now, sometimes people have to do things.",
+      "text": "Now, sometimes people HAVE TO do things.",
       "src": "assets/narration/nr_014.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -3021,11 +3023,16 @@
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
+      },
+      "narrationEmphasis": {
+        "status": "awaiting-new-recording",
+        "originalRecordedText": "Now, sometimes people have to do things.",
+        "visualCaseOnly": true
       }
     },
     {
       "id": "nr_015",
-      "text": "When a teacher tells you to stop being mean to someone, do you have to stop being mean? Yes or No.",
+      "text": "When a teacher tells you to stop being mean to someone, do you HAVE TO stop being mean? Yes or No.",
       "src": "assets/narration/nr_015.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -3144,11 +3151,16 @@
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
+      },
+      "narrationEmphasis": {
+        "status": "awaiting-new-recording",
+        "originalRecordedText": "When a teacher tells you to stop being mean to someone, do you have to stop being mean? Yes or No.",
+        "visualCaseOnly": true
       }
     },
     {
       "id": "nr_016",
-      "text": "When a teacher tells you to stop being mean to someone, you have to stop being mean. Let’s try that question again.",
+      "text": "When a teacher tells you to stop being mean to someone, you HAVE TO stop being mean. Let’s try that question again.",
       "src": "assets/narration/nr_016.mp3",
       "kind": "reminder",
       "status": "imported",
@@ -3267,11 +3279,16 @@
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
+      },
+      "narrationEmphasis": {
+        "status": "awaiting-new-recording",
+        "originalRecordedText": "When a teacher tells you to stop being mean to someone, you have to stop being mean. Let’s try that question again.",
+        "visualCaseOnly": true
       }
     },
     {
       "id": "nr_017",
-      "text": "How much do you think you have to stop being mean?",
+      "text": "How much do you think you HAVE TO stop being mean?",
       "src": "assets/narration/nr_017.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -3390,6 +3407,11 @@
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
+      },
+      "narrationEmphasis": {
+        "status": "awaiting-new-recording",
+        "originalRecordedText": "How much do you think you have to stop being mean?",
+        "visualCaseOnly": true
       }
     },
     {
@@ -4789,7 +4811,7 @@
     },
     {
       "id": "nr_021",
-      "text": "When someone asks you a question, do you have to lie? Yes or No.",
+      "text": "When someone asks you a question, do you HAVE TO lie? Yes or No.",
       "src": "assets/narration/nr_021.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -4908,11 +4930,16 @@
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
+      },
+      "narrationEmphasis": {
+        "status": "awaiting-new-recording",
+        "originalRecordedText": "When someone asks you a question, do you have to lie? Yes or No.",
+        "visualCaseOnly": true
       }
     },
     {
       "id": "nr_022",
-      "text": "When someone asks you a question, you do not have to lie. Let’s try that question again.",
+      "text": "When someone asks you a question, you do not HAVE TO lie. Let’s try that question again.",
       "src": "assets/narration/nr_022.mp3",
       "kind": "reminder",
       "status": "imported",
@@ -5031,11 +5058,16 @@
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
+      },
+      "narrationEmphasis": {
+        "status": "awaiting-new-recording",
+        "originalRecordedText": "When someone asks you a question, you do not have to lie. Let’s try that question again.",
+        "visualCaseOnly": true
       }
     },
     {
       "id": "nr_023",
-      "text": "How much do you think you have to lie?",
+      "text": "How much do you think you HAVE TO lie?",
       "src": "assets/narration/nr_023.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -5154,11 +5186,16 @@
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
+      },
+      "narrationEmphasis": {
+        "status": "awaiting-new-recording",
+        "originalRecordedText": "How much do you think you have to lie?",
+        "visualCaseOnly": true
       }
     },
     {
       "id": "nr_024",
-      "text": "So now, I’m going to ask you some questions about whether people have to do things.",
+      "text": "So now, I’m going to ask you some questions about whether people HAVE TO do things.",
       "src": "assets/narration/nr_024.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -5277,11 +5314,16 @@
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
+      },
+      "narrationEmphasis": {
+        "status": "awaiting-new-recording",
+        "originalRecordedText": "So now, I’m going to ask you some questions about whether people have to do things.",
+        "visualCaseOnly": true
       }
     },
     {
       "id": "nr_025",
-      "text": "Now, do you think the kid’s teacher HAS to help the kid? Yes or No.",
+      "text": "Now, do you think the kid’s teacher HAS TO help the kid? Yes or No.",
       "src": "assets/narration/nr_025.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -5345,11 +5387,16 @@
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
+      },
+      "narrationEmphasis": {
+        "status": "awaiting-new-recording",
+        "originalRecordedText": "Now, do you think the kid’s teacher HAS to help the kid? Yes or No.",
+        "visualCaseOnly": true
       }
     },
     {
       "id": "nr_026",
-      "text": "The kid’s teacher. How much do you think the kid’s teacher has to?",
+      "text": "The kid’s teacher. How much do you think the kid’s teacher HAS TO?",
       "src": "assets/narration/nr_026.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -5413,11 +5460,16 @@
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
+      },
+      "narrationEmphasis": {
+        "status": "awaiting-new-recording",
+        "originalRecordedText": "The kid’s teacher. How much do you think the kid’s teacher has to?",
+        "visualCaseOnly": true
       }
     },
     {
       "id": "nr_027",
-      "text": "Now, do you think the kid’s mom HAS to help the kid? Yes or No.",
+      "text": "Now, do you think the kid’s mom HAS TO help the kid? Yes or No.",
       "src": "assets/narration/nr_027.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -5461,11 +5513,16 @@
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
+      },
+      "narrationEmphasis": {
+        "status": "awaiting-new-recording",
+        "originalRecordedText": "Now, do you think the kid’s mom HAS to help the kid? Yes or No.",
+        "visualCaseOnly": true
       }
     },
     {
       "id": "nr_028",
-      "text": "The kid’s mom. How much do you think she has to?",
+      "text": "The kid’s mom. How much do you think she HAS TO?",
       "src": "assets/narration/nr_028.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -5514,6 +5571,11 @@
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
+      },
+      "narrationEmphasis": {
+        "status": "awaiting-new-recording",
+        "originalRecordedText": "The kid’s mom. How much do you think she has to?",
+        "visualCaseOnly": true
       }
     },
     {
@@ -8982,7 +9044,7 @@
     },
     {
       "id": "nr_060",
-      "text": "Now, do you think the kid’s sister HAS to help the kid? Yes or No.",
+      "text": "Now, do you think the kid’s sister HAS TO help the kid? Yes or No.",
       "src": "assets/narration/nr_060.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -9026,11 +9088,16 @@
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
+      },
+      "narrationEmphasis": {
+        "status": "awaiting-new-recording",
+        "originalRecordedText": "Now, do you think the kid’s sister HAS to help the kid? Yes or No.",
+        "visualCaseOnly": true
       }
     },
     {
       "id": "nr_061",
-      "text": "The kid’s sister. How much do you think she has to?",
+      "text": "The kid’s sister. How much do you think she HAS TO?",
       "src": "assets/narration/nr_061.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -9074,11 +9141,16 @@
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
+      },
+      "narrationEmphasis": {
+        "status": "awaiting-new-recording",
+        "originalRecordedText": "The kid’s sister. How much do you think she has to?",
+        "visualCaseOnly": true
       }
     },
     {
       "id": "nr_062",
-      "text": "Now, do you think the kid’s friend HAS to help the kid? Yes or No.",
+      "text": "Now, do you think the kid’s friend HAS TO help the kid? Yes or No.",
       "src": "assets/narration/nr_062.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -9137,11 +9209,16 @@
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
+      },
+      "narrationEmphasis": {
+        "status": "awaiting-new-recording",
+        "originalRecordedText": "Now, do you think the kid’s friend HAS to help the kid? Yes or No.",
+        "visualCaseOnly": true
       }
     },
     {
       "id": "nr_063",
-      "text": "The kid’s friend. How much do you think the kid’s friend has to?",
+      "text": "The kid’s friend. How much do you think the kid’s friend HAS TO?",
       "src": "assets/narration/nr_063.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -9200,6 +9277,11 @@
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
+      },
+      "narrationEmphasis": {
+        "status": "awaiting-new-recording",
+        "originalRecordedText": "The kid’s friend. How much do you think the kid’s friend has to?",
+        "visualCaseOnly": true
       }
     },
     {
@@ -9978,7 +10060,7 @@
     },
     {
       "id": "nr_079",
-      "text": "Now, do you think the kid’s best friend HAS to help the kid? Yes or No.",
+      "text": "Now, do you think the kid’s best friend HAS TO help the kid? Yes or No.",
       "src": "assets/narration/nr_079.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -10017,11 +10099,16 @@
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
+      },
+      "narrationEmphasis": {
+        "status": "awaiting-new-recording",
+        "originalRecordedText": "Now, do you think the kid’s best friend HAS to help the kid? Yes or No.",
+        "visualCaseOnly": true
       }
     },
     {
       "id": "nr_080",
-      "text": "The kid’s best friend. How much do you think the kid’s best friend has to?",
+      "text": "The kid’s best friend. How much do you think the kid’s best friend HAS TO?",
       "src": "assets/narration/nr_080.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -10060,6 +10147,11 @@
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
+      },
+      "narrationEmphasis": {
+        "status": "awaiting-new-recording",
+        "originalRecordedText": "The kid’s best friend. How much do you think the kid’s best friend has to?",
+        "visualCaseOnly": true
       }
     },
     {
@@ -10678,7 +10770,7 @@
     },
     {
       "id": "nr_095",
-      "text": "Now, do you think the kid’s classmate HAS to help the kid? Yes or No.",
+      "text": "Now, do you think the kid’s classmate HAS TO help the kid? Yes or No.",
       "src": "assets/narration/nr_095.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -10722,11 +10814,16 @@
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
+      },
+      "narrationEmphasis": {
+        "status": "awaiting-new-recording",
+        "originalRecordedText": "Now, do you think the kid’s classmate HAS to help the kid? Yes or No.",
+        "visualCaseOnly": true
       }
     },
     {
       "id": "nr_096",
-      "text": "The kid’s classmate. How much do you think the kid’s classmate has to?",
+      "text": "The kid’s classmate. How much do you think the kid’s classmate HAS TO?",
       "src": "assets/narration/nr_096.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -10770,6 +10867,11 @@
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
+      },
+      "narrationEmphasis": {
+        "status": "awaiting-new-recording",
+        "originalRecordedText": "The kid’s classmate. How much do you think the kid’s classmate has to?",
+        "visualCaseOnly": true
       }
     },
     {
@@ -11257,7 +11359,7 @@
     },
     {
       "id": "nr_107",
-      "text": "Now, do you think the kid’s dad HAS to help the kid? Yes or No.",
+      "text": "Now, do you think the kid’s dad HAS TO help the kid? Yes or No.",
       "src": "assets/narration/nr_107.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -11301,11 +11403,16 @@
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
+      },
+      "narrationEmphasis": {
+        "status": "awaiting-new-recording",
+        "originalRecordedText": "Now, do you think the kid’s dad HAS to help the kid? Yes or No.",
+        "visualCaseOnly": true
       }
     },
     {
       "id": "nr_108",
-      "text": "The kid’s dad. How much do you think he has to?",
+      "text": "The kid’s dad. How much do you think he HAS TO?",
       "src": "assets/narration/nr_108.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -11354,6 +11461,11 @@
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
+      },
+      "narrationEmphasis": {
+        "status": "awaiting-new-recording",
+        "originalRecordedText": "The kid’s dad. How much do you think he has to?",
+        "visualCaseOnly": true
       }
     },
     {
@@ -11832,7 +11944,7 @@
     },
     {
       "id": "nr_119",
-      "text": "Now, do you think the kid’s brother HAS to help the kid? Yes or No.",
+      "text": "Now, do you think the kid’s brother HAS TO help the kid? Yes or No.",
       "src": "assets/narration/nr_119.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -11876,11 +11988,16 @@
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
+      },
+      "narrationEmphasis": {
+        "status": "awaiting-new-recording",
+        "originalRecordedText": "Now, do you think the kid’s brother HAS to help the kid? Yes or No.",
+        "visualCaseOnly": true
       }
     },
     {
       "id": "nr_120",
-      "text": "The kid’s brother. How much do you think he has to?",
+      "text": "The kid’s brother. How much do you think he HAS TO?",
       "src": "assets/narration/nr_120.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -11924,6 +12041,11 @@
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
+      },
+      "narrationEmphasis": {
+        "status": "awaiting-new-recording",
+        "originalRecordedText": "The kid’s brother. How much do you think he has to?",
+        "visualCaseOnly": true
       }
     },
     {
@@ -12665,7 +12787,7 @@
     },
     {
       "id": "nr_139",
-      "text": "Now, do you think the kid’s dad HAS to help the mom? Yes or No.",
+      "text": "Now, do you think the kid’s dad HAS TO help the mom? Yes or No.",
       "src": "assets/narration/nr_139.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -12699,11 +12821,16 @@
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
+      },
+      "narrationEmphasis": {
+        "status": "awaiting-new-recording",
+        "originalRecordedText": "Now, do you think the kid’s dad HAS to help the mom? Yes or No.",
+        "visualCaseOnly": true
       }
     },
     {
       "id": "nr_140",
-      "text": "Now, do you think the kid HAS to help the mom? Yes or No.",
+      "text": "Now, do you think the kid HAS TO help the mom? Yes or No.",
       "src": "assets/narration/nr_140.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -12737,11 +12864,16 @@
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
+      },
+      "narrationEmphasis": {
+        "status": "awaiting-new-recording",
+        "originalRecordedText": "Now, do you think the kid HAS to help the mom? Yes or No.",
+        "visualCaseOnly": true
       }
     },
     {
       "id": "nr_141",
-      "text": "The kid. How much do you think the kid has to?",
+      "text": "The kid. How much do you think the kid HAS TO?",
       "src": "assets/narration/nr_141.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -12785,6 +12917,11 @@
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
+      },
+      "narrationEmphasis": {
+        "status": "awaiting-new-recording",
+        "originalRecordedText": "The kid. How much do you think the kid has to?",
+        "visualCaseOnly": true
       }
     },
     {
@@ -13496,7 +13633,7 @@
     },
     {
       "id": "nr_160",
-      "text": "Now, do you think the kid HAS to help the dad? Yes or No.",
+      "text": "Now, do you think the kid HAS TO help the dad? Yes or No.",
       "src": "assets/narration/nr_160.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -13530,11 +13667,16 @@
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
+      },
+      "narrationEmphasis": {
+        "status": "awaiting-new-recording",
+        "originalRecordedText": "Now, do you think the kid HAS to help the dad? Yes or No.",
+        "visualCaseOnly": true
       }
     },
     {
       "id": "nr_161",
-      "text": "Now, do you think the kid’s mom HAS to help the dad? Yes or No.",
+      "text": "Now, do you think the kid’s mom HAS TO help the dad? Yes or No.",
       "src": "assets/narration/nr_161.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -13568,6 +13710,11 @@
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
+      },
+      "narrationEmphasis": {
+        "status": "awaiting-new-recording",
+        "originalRecordedText": "Now, do you think the kid’s mom HAS to help the dad? Yes or No.",
+        "visualCaseOnly": true
       }
     },
     {
@@ -14256,7 +14403,7 @@
     },
     {
       "id": "nr_180",
-      "text": "Now, do you think the teacher on the left HAS to help the teacher in the middle? Yes or No.",
+      "text": "Now, do you think the teacher on the left HAS TO help the teacher in the middle? Yes or No.",
       "src": "assets/narration/nr_180.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -14290,11 +14437,16 @@
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
+      },
+      "narrationEmphasis": {
+        "status": "awaiting-new-recording",
+        "originalRecordedText": "Now, do you think the teacher on the left HAS to help the teacher in the middle? Yes or No.",
+        "visualCaseOnly": true
       }
     },
     {
       "id": "nr_181",
-      "text": "The teacher on the left. How much do you think the teacher on the left has to?",
+      "text": "The teacher on the left. How much do you think the teacher on the left HAS TO?",
       "src": "assets/narration/nr_181.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -14328,11 +14480,16 @@
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
+      },
+      "narrationEmphasis": {
+        "status": "awaiting-new-recording",
+        "originalRecordedText": "The teacher on the left. How much do you think the teacher on the left has to?",
+        "visualCaseOnly": true
       }
     },
     {
       "id": "nr_182",
-      "text": "Now, do you think the kid HAS to help the teacher in the middle? Yes or No.",
+      "text": "Now, do you think the kid HAS TO help the teacher in the middle? Yes or No.",
       "src": "assets/narration/nr_182.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -14366,6 +14523,11 @@
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
+      },
+      "narrationEmphasis": {
+        "status": "awaiting-new-recording",
+        "originalRecordedText": "Now, do you think the kid HAS to help the teacher in the middle? Yes or No.",
+        "visualCaseOnly": true
       }
     },
     {
