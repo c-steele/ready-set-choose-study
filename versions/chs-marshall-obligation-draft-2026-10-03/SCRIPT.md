@@ -174,6 +174,8 @@ Choices: Yes / No.
 
 “How much do you think the kid’s teacher HAS TO?”
 
+Display wording: “How much do you think the kid’s teacher HAS TO?” The role is included in the question; no separate role label is displayed above it.
+
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/5c/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: A teeny bit / A little bit / A lot.
@@ -193,6 +195,8 @@ Choices: Yes / No.
 **The kid’s mom**
 
 “How much do you think she HAS TO?”
+
+Display wording: “How much do you think the kid’s mom HAS TO?” The role is included in the question; no separate role label is displayed above it.
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/5c/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -270,6 +274,8 @@ Choices: Mean / Not Mean.
 
 “How mean do you think the kid’s teacher was?”
 
+Display wording: “How mean do you think the kid’s teacher was?” The role is included in the question; no separate role label is displayed above it.
+
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/5c/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: A teeny bit mean / A little bit mean / Very mean.
@@ -301,6 +307,8 @@ Choices: Mean / Not Mean.
 **The kid’s mom**
 
 “How mean do you think she was?”
+
+Display wording: “How mean do you think the kid’s mom was?” The role is included in the question; no separate role label is displayed above it.
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/5c/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -466,6 +474,8 @@ Choices: Yes / No.
 
 “How much do you think she HAS TO?”
 
+Display wording: “How much do you think the kid’s sister HAS TO?” The role is included in the question; no separate role label is displayed above it.
+
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/6b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: A teeny bit / A little bit / A lot.
@@ -485,6 +495,8 @@ Choices: Yes / No.
 **The kid’s friend**
 
 “How much do you think the kid’s friend HAS TO?”
+
+Display wording: “How much do you think the kid’s friend HAS TO?” The role is included in the question; no separate role label is displayed above it.
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/6b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -562,6 +574,8 @@ Choices: Mean / Not Mean.
 
 “How mean do you think she was?”
 
+Display wording: “How mean do you think the kid’s sister was?” The role is included in the question; no separate role label is displayed above it.
+
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/6b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: A teeny bit mean / A little bit mean / Very mean.
@@ -593,6 +607,8 @@ Choices: Mean / Not Mean.
 **The kid’s friend**
 
 “How mean do you think the kid’s friend was?”
+
+Display wording: “How mean do you think the kid’s friend was?” The role is included in the question; no separate role label is displayed above it.
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/6b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -758,6 +774,8 @@ Choices: Yes / No.
 
 “How much do you think the kid’s friend HAS TO?”
 
+Display wording: “How much do you think the kid’s friend HAS TO?” The role is included in the question; no separate role label is displayed above it.
+
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/13d/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: A teeny bit / A little bit / A lot.
@@ -777,6 +795,8 @@ Choices: Yes / No.
 **The kid’s best friend**
 
 “How much do you think the kid’s best friend HAS TO?”
+
+Display wording: “How much do you think the kid’s best friend HAS TO?” The role is included in the question; no separate role label is displayed above it.
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/13d/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -854,6 +874,8 @@ Choices: Mean / Not Mean.
 
 “How mean do you think the kid’s friend was?”
 
+Display wording: “How mean do you think the kid’s friend was?” The role is included in the question; no separate role label is displayed above it.
+
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/13d/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: A teeny bit mean / A little bit mean / Very mean.
@@ -885,6 +907,8 @@ Choices: Mean / Not Mean.
 **The kid’s best friend**
 
 “How mean do you think the kid’s best friend was?”
+
+Display wording: “How mean do you think the kid’s best friend was?” The role is included in the question; no separate role label is displayed above it.
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/13d/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1050,6 +1074,8 @@ Choices: Yes / No.
 
 “How much do you think the kid’s teacher HAS TO?”
 
+Display wording: “How much do you think the kid’s teacher HAS TO?” The role is included in the question; no separate role label is displayed above it.
+
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/2b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: A teeny bit / A little bit / A lot.
@@ -1069,6 +1095,8 @@ Choices: Yes / No.
 **The kid’s friend**
 
 “How much do you think the kid’s friend HAS TO?”
+
+Display wording: “How much do you think the kid’s friend HAS TO?” The role is included in the question; no separate role label is displayed above it.
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/2b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1146,6 +1174,8 @@ Choices: Mean / Not Mean.
 
 “How mean do you think the kid’s teacher was?”
 
+Display wording: “How mean do you think the kid’s teacher was?” The role is included in the question; no separate role label is displayed above it.
+
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/2b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: A teeny bit mean / A little bit mean / Very mean.
@@ -1177,6 +1207,8 @@ Choices: Mean / Not Mean.
 **The kid’s friend**
 
 “How mean do you think the kid’s friend was?”
+
+Display wording: “How mean do you think the kid’s friend was?” The role is included in the question; no separate role label is displayed above it.
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/2b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1342,6 +1374,8 @@ Choices: Yes / No.
 
 “How much do you think she HAS TO?”
 
+Display wording: “How much do you think the kid’s mom HAS TO?” The role is included in the question; no separate role label is displayed above it.
+
 [Stimulus source](../find_the_caregiver_story_screens_2026-09-26/mom-sister-orange-sad/05-sad.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: A teeny bit / A little bit / A lot.
@@ -1361,6 +1395,8 @@ Choices: Yes / No.
 **The kid’s sister**
 
 “How much do you think she HAS TO?”
+
+Display wording: “How much do you think the kid’s sister HAS TO?” The role is included in the question; no separate role label is displayed above it.
 
 [Stimulus source](../find_the_caregiver_story_screens_2026-09-26/mom-sister-orange-sad/05-sad.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1438,6 +1474,8 @@ Choices: Mean / Not Mean.
 
 “How mean do you think she was?”
 
+Display wording: “How mean do you think the kid’s mom was?” The role is included in the question; no separate role label is displayed above it.
+
 [Stimulus source](../find_the_caregiver_story_screens_2026-09-26/mom-sister-orange-sad/05-sad.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: A teeny bit mean / A little bit mean / Very mean.
@@ -1469,6 +1507,8 @@ Choices: Mean / Not Mean.
 **The kid’s sister**
 
 “How mean do you think she was?”
+
+Display wording: “How mean do you think the kid’s sister was?” The role is included in the question; no separate role label is displayed above it.
 
 [Stimulus source](../find_the_caregiver_story_screens_2026-09-26/mom-sister-orange-sad/05-sad.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1634,6 +1674,8 @@ Choices: Yes / No.
 
 “How much do you think the kid’s classmate HAS TO?”
 
+Display wording: “How much do you think the kid’s classmate HAS TO?” The role is included in the question; no separate role label is displayed above it.
+
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/assets/teacher_classmate/generated/trials/14d/hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: A teeny bit / A little bit / A lot.
@@ -1653,6 +1695,8 @@ Choices: Yes / No.
 **The kid’s teacher**
 
 “How much do you think the kid’s teacher HAS TO?”
+
+Display wording: “How much do you think the kid’s teacher HAS TO?” The role is included in the question; no separate role label is displayed above it.
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/assets/teacher_classmate/generated/trials/14d/hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1730,6 +1774,8 @@ Choices: Mean / Not Mean.
 
 “How mean do you think the kid’s classmate was?”
 
+Display wording: “How mean do you think the kid’s classmate was?” The role is included in the question; no separate role label is displayed above it.
+
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/assets/teacher_classmate/generated/trials/14d/hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: A teeny bit mean / A little bit mean / Very mean.
@@ -1761,6 +1807,8 @@ Choices: Mean / Not Mean.
 **The kid’s teacher**
 
 “How mean do you think the kid’s teacher was?”
+
+Display wording: “How mean do you think the kid’s teacher was?” The role is included in the question; no separate role label is displayed above it.
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/assets/teacher_classmate/generated/trials/14d/hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 

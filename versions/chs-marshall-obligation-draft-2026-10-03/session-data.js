@@ -62,6 +62,7 @@
       add(`obligation-${helper.id}-amount`, 'obligation-mom-amount', {
         phase:`Obligation strength · ${helperTitle(helper)}`,
         text:`How much do you think ${helper.pronoun === 'they' ? helper.description : helper.pronoun} HAS TO?`,
+        displayText:`How much do you think ${helper.description} HAS TO?`,
         context:upper(helper.description), when:[`obligation-${helper.id}`, 'Yes']
       });
     }
@@ -85,6 +86,7 @@
       add(`evaluation-${helper.id}-amount`, 'evaluation-mom-amount', {
         phase:`Meanness strength · ${helperTitle(helper)}`,
         text:`How mean do you think ${helper.pronoun === 'they' ? helper.description : helper.pronoun} was?`,
+        displayText:`How mean do you think ${helper.description} was?`,
         context:upper(helper.description), when:[`evaluation-${helper.id}`, 'Mean']
       });
     }
@@ -202,6 +204,7 @@
       if (step.preface) lines.push(step.preface, '');
       lines.push(`“${step.text}”`, '');
       if (step.displayTitle) lines.push(`Display treatment: ${step.displayTitle} / ${step.displaySetup} / ${step.displayQuestion}`, '');
+      if (step.displayText) lines.push(`Display wording: “${step.displayText}” The role is included in the question; no separate role label is displayed above it.`, '');
       if (step.image) lines.push(`[Stimulus source](${step.image}) — original reference image; the preview replaces its caption with the wording above.`, '');
       if (step.choices) lines.push(`Choices: ${step.choices.join(' / ')}.`, '');
       if (step.point) lines.push(`Selection check: ${step.point}.`, '');

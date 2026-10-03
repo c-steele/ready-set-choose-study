@@ -77,3 +77,7 @@ Static verification checked JavaScript syntax, all 54 actor cue bounds, all pair
 ## Obligation emphasis (October 3)
 
 The child captions and full read-aloud script capitalize **HAVE TO** and **HAS TO** throughout practice, reminders, obligation judgments and their strength follow-ups. This emphasis treatment is an adaptation; the words, response options, branches and scoring are unchanged. The corresponding 32 unique NaturalReaders recordings require replacement so auditory emphasis can be reviewed separately from visual capitalization. Original export scripts and audio provenance remain archived.
+
+## Follow-up captions (October 3)
+
+Obligation-strength and individual-meanness-strength captions include the full relationship directly in the question, such as “How much do you think the kid’s teacher HAS TO?” The separate role label above the caption is omitted. These display adaptations preserve role clarity for every pairing, including follow-ups whose recorded question uses “she” or “he.” The existing read-aloud text, spoken context, response options, branching and narration mappings are unchanged; the full-script exports document the distinct display wording.
