@@ -66,12 +66,13 @@
         context:upper(helper.description), when:[`obligation-${helper.id}`, 'Yes']
       });
     }
-    add('outcome', 'outcome', {text:`Now let’s say that ${helpers[0].description} and ${helpers[1].description} do NOT help ${recipient.description}.`});
+    const explicitOutcome = `No one helped ${recipient.description}. ${upper(helpers[0].description)} did NOT help ${recipient.description}. ${upper(helpers[1].description)} did NOT help ${recipient.description}.`;
+    add('outcome', 'outcome', {text:explicitOutcome});
     add('recall-all', 'recall-all', {
       text:`Can you tell me, did either of these people help ${recipient.description}?`,
-      reminder:`Actually, remember, neither of these people helped ${recipient.description}. Can you tell me, did either of these people help ${recipient.description}?`
+      reminder:`Actually, remember, no one helped ${recipient.description}. ${upper(helpers[0].description)} did NOT help ${recipient.description}. ${upper(helpers[1].description)} did NOT help ${recipient.description}. Can you tell me, did either of these people help ${recipient.description}?`
     });
-    add('overall', 'overall', {preface:`Neither of these people helped ${recipient.description}.`});
+    add('overall', 'overall', {preface:`No one helped ${recipient.description}.`});
     add('overall-amount', 'overall-amount');
     for (const helper of helpers) {
       add(`recall-${helper.id}`, 'recall-mom', {
@@ -81,13 +82,13 @@
       });
       add(`evaluation-${helper.id}`, 'evaluation-mom', {
         phase:`Individual evaluation · ${helperTitle(helper)}`,
-        text:`Was ${helper.description} Mean or Not Mean for NOT helping ${recipient.reference}?`
+        text:`Do you think it was Mean or Not Mean that ${helper.description} did NOT help ${recipient.reference}?`
       });
       add(`evaluation-${helper.id}-amount`, 'evaluation-mom-amount', {
         phase:`Meanness strength · ${helperTitle(helper)}`,
-        text:`How mean do you think ${helper.pronoun === 'they' ? helper.description : helper.pronoun} was?`,
-        displayText:`How mean do you think ${helper.description} was?`,
-        context:upper(helper.description), when:[`evaluation-${helper.id}`, 'Mean']
+        text:`How mean do you think ${helper.description} was for NOT helping ${recipient.reference}?`,
+        displayText:`How mean do you think ${helper.description} was for NOT helping ${recipient.reference}?`,
+        when:[`evaluation-${helper.id}`, 'Mean']
       });
     }
     add('compare', 'compare', {

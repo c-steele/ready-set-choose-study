@@ -61,3 +61,14 @@
 @keyframes introduction-glow{0%,100%{box-shadow:0 0 0 4px #2477b82e,0 0 13px 3px #2477b83d}50%{box-shadow:0 0 0 7px #2477b84d,0 0 24px 5px #2477b86b}}
 @media(prefers-reduced-motion:reduce){.introduction-target{animation:none}}
 @media print{.introduction-target{animation:none}.introduction-cue{box-shadow:none}}
+
+/* Names and response labels light up only during their recorded spoken span.
+   These actor overlays never intercept taps or replace the original artwork. */
+.narration-actor-cue{position:absolute;z-index:2;border:4px solid transparent;border-radius:8px;pointer-events:none;opacity:0}
+.narration-actor-cue.narration-actor-current{opacity:1;border-color:#2477b8;box-shadow:0 0 0 5px #2477b833,0 0 18px 4px #2477b855;animation:introduction-glow 1.2s ease-in-out infinite}
+.practice-actor-cue{fill:none;stroke:transparent;stroke-width:5;pointer-events:none}
+.practice-actor-cue.narration-actor-current{stroke:#2477b8;filter:drop-shadow(0 0 4px #2477b888)}
+.answers button.spoken-choice.option-visible{opacity:1}
+.answers button.spoken-choice.option-current,.rating-answer.option-current{opacity:1;background:#eaf7ff!important;border-color:#2477b8!important;box-shadow:0 0 0 5px #2477b833,0 9px 20px #2477b833;animation:introduction-glow 1.2s ease-in-out infinite}
+@media(prefers-reduced-motion:reduce){.narration-actor-cue.narration-actor-current,.answers button.spoken-choice.option-current,.rating-answer.option-current{animation:none}}
+@media print{.narration-actor-cue,.practice-actor-cue{display:none}.answers button.spoken-choice.option-current,.rating-answer.option-current{animation:none}}

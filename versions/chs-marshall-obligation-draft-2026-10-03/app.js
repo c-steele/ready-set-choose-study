@@ -29,6 +29,89 @@
     const bounds=introActorBounds[s.pairing.id]?.[actor.id];
     return bounds?` style="left:${bounds[0]}%;top:${bounds[1]}%;width:${bounds[2]}%;height:${bounds[3]}%"`:'';
   }
+  const cueTokens=text=>(String(text).toLowerCase().replace(/[’‘']/g,'').match(/[\p{L}\p{N}]+/gu)||[]);
+  function phraseMatches(words,phrase){
+    const tokens=cueTokens(phrase),result=[];
+    if(!tokens.length)return result;
+    for(let at=0;at<=words.length-tokens.length;at++){
+      if(tokens.every((token,n)=>words[at+n].token===token))result.push({at,length:tokens.length,start:words[at].start,end:words[at+tokens.length-1].end});
+    }
+    return result;
+  }
+  function embeddedChoices(s){
+    if(s.choices?.length!==2)return false;
+    const words=cueTokens(s.text).map(token=>({token,start:0,end:0}));
+    return phraseMatches(words,`${s.choices[0]} or ${s.choices[1]}`).length>0;
+  }
+  function recordingWords(clipId,allowRecognizedMismatch=false){
+    const clip=narration.clipsById[clipId],entry=window.ObligationNarrationCues?.clips?.[clipId];
+    if(!clip?.sha256||entry?.sha256!==clip.sha256||(!allowRecognizedMismatch&&entry.exactNormalizedWordMatch===false)||entry.alignmentValid===false||!Array.isArray(entry.words))return [];
+    if(entry.expectedText&&cueTokens(entry.expectedText).join(' ')!==cueTokens(clip.text).join(' '))return [];
+    const duration=clip.durationSeconds||entry.durationSeconds;
+    const words=[];
+    for(const word of entry.words){
+      if(!Number.isFinite(word.start)||!Number.isFinite(word.end)||word.start<0||word.end<word.start||(Number.isFinite(duration)&&word.end>duration+.08))return [];
+      for(const token of cueTokens(word.word))words.push({token,start:word.start,end:word.end});
+    }
+    return words;
+  }
+  function spokenCueSpans(s,clipId,optionIndex=null){
+    const words=recordingWords(clipId,optionIndex!==null),spans=[];
+    if(!words.length)return spans;
+    if(optionIndex!==null){
+      // Each option is a separate verified recording. A recognizer spelling
+      // error (for example Mean/Meen) need not suppress its voiced interval.
+      if(cueTokens(narration.clipsById[clipId]?.text).join(' ')!==cueTokens(s.choices[optionIndex]).join(' '))return spans;
+      spans.push({start:words[0].start,end:words[words.length-1].end,optionIndex,...(s.localId==='compare'?{actorId:s.pairing.helpers[optionIndex].id}:{})});
+      return spans;
+    }
+    // Whole relationship names win over the possessive kid word inside them.
+    // The current scene resolves shared clips to its own helper IDs and sides.
+    const candidates=[];
+    for(const actor of actors(s)){
+      const names=[actor.description,actor.reference].filter(Boolean);
+      if(actor.role==='KID')names.push('this kid','a kid');
+      names.push(actor.description.replace(/^the /,'this '));
+      for(const name of new Set(names))candidates.push({actorId:actor.id,tokens:cueTokens(name)});
+    }
+    if(isCharacterIntro(s)){
+      const intro=s.pairing.intros.find(value=>value.actorId===s.point);
+      const name=intro.sourceText.split(/\bis\s+/i).pop();
+      candidates.push({actorId:s.point,tokens:cueTokens(name)});
+    }
+    if(s.visual==='teacher-practice'){
+      candidates.length=0;
+      candidates.push({actorId:'practice-teacher',tokens:cueTokens('a teacher')},{actorId:'practice-you',tokens:cueTokens('you')});
+    }
+    candidates.sort((a,b)=>b.tokens.length-a.tokens.length);
+    for(let at=0;at<words.length;){
+      const match=candidates.find(candidate=>candidate.tokens.length&&candidate.tokens.every((token,n)=>words[at+n]?.token===token));
+      if(!match){at++;continue;}
+      spans.push({actorId:match.actorId,start:words[at].start,end:words[at+match.tokens.length-1].end});
+      at+=match.tokens.length;
+    }
+    // Only the adjacent response-label phrase lights embedded binary choices.
+    // In particular, "No one helped" is story text, not the No response option.
+    if(s.choices?.length===2){
+      const pair=phraseMatches(words,`${s.choices[0]} or ${s.choices[1]}`);
+      for(const range of pair){
+        const firstLength=cueTokens(s.choices[0]).length,secondStart=range.at+firstLength+1;
+        spans.push({optionIndex:0,start:words[range.at].start,end:words[range.at+firstLength-1].end});
+        spans.push({optionIndex:1,start:words[secondStart].start,end:words[range.at+range.length-1].end});
+      }
+    }
+    return spans;
+  }
+  function clearSpokenCues(){
+    stage.querySelectorAll('.narration-actor-current,.option-current').forEach(element=>element.classList.remove('narration-actor-current','option-current'));
+  }
+  function showSpokenCues(spans,seconds){
+    const current=spans.filter(cue=>seconds>=cue.start&&seconds<cue.end),actorIds=new Set(current.map(cue=>cue.actorId).filter(Boolean)),optionIndexes=new Set(current.map(cue=>cue.optionIndex).filter(value=>value!==undefined));
+    stage.querySelectorAll('[data-narration-actor]').forEach(element=>element.classList.toggle('narration-actor-current',actorIds.has(element.dataset.narrationActor)));
+    stage.querySelectorAll('[data-answer]:not(.continue-answer)').forEach(button=>button.classList.toggle('option-current',optionIndexes.has(Number(button.dataset.answer))));
+  }
+  // Expose pure cue mapping for local regression checks and review diagnostics.
+  window.ObligationSpokenCues={recordingWords,spansFor:spokenCueSpans,embeddedChoices};
   function syncChildControls(){
     const replay=stage.querySelector('.child-replay'),stop=stage.querySelector('.child-stop');
     if(!replay)return;
@@ -49,13 +132,12 @@
   function childFooter(s){return `<div class="child-session-footer"><div class="child-helper" aria-hidden="true"><span class="child-helper-face"><i></i></span><span class="child-helper-bubble">Listen and look!</span></div><div class="child-audio-controls"><button class="child-replay" type="button"><span class="child-control-symbol" aria-hidden="true">▶</span><span class="child-control-label">Listen</span></button>${!s.choices&&!s.point?'<div class="answers child-continue"><button class="continue-answer" data-answer="0">Continue</button></div>':''}<button class="child-stop" type="button" hidden>Stop</button></div></div>`;}
   function narrationIds(s){
     const map=narration.screenFor(s), id=wrong&&map.reminder?map.reminder:map.prompt;
-    const spokenBinary=/Yes or No\.?$/i.test(s.text)||/Mean or Not Mean/i.test(s.text);
-    return [id,...(!wrong&&s.choices?.length===2&&!spokenBinary?map.options:[])].filter(Boolean);
+    return [id].filter(Boolean);
   }
-  function gateNarration(locked){stage.querySelectorAll('.answers button,[data-point],#continue-check').forEach(b=>b.disabled=locked);}
-  function stopNarration(){narrationRun?.cancel();narrationRun=null;narration.stop();narrationPlaying=false;gateNarration(false);$('stop-narration').disabled=true;syncChildControls();}
+  function gateNarration(locked){stage.querySelectorAll('[data-answer],[data-point],#continue-check').forEach(b=>b.disabled=locked);}
+  function stopNarration(){narrationRun?.cancel();narrationRun=null;narration.stop();narrationPlaying=false;clearSpokenCues();gateNarration(false);$('stop-narration').disabled=true;syncChildControls();}
   function narrationStatus(){
-    const ids=narrationIds(steps[index]),ready=ids.length>0&&ids.every(id=>narration.clipsById[id]?.src);
+    const s=steps[index],ids=[...narrationIds(s),...(!wrong&&s.choices&&!embeddedChoices(s)?narration.screenFor(s).options:[])],ready=ids.length>0&&ids.every(id=>narration.clipsById[id]?.src);
     $('play-narration').textContent='Play narration';$('play-narration').disabled=!ready;$('stop-narration').disabled=!narrationPlaying;
     const slowerReminder=ids.some(id=>narration.clipsById[id]?.audioTreatment?.kind==='slow-neither-reminder');
     $('narration-status').textContent=ready?(slowerReminder?'NaturalReader · Evelyn · Slower reminder':'NaturalReader · Evelyn · Soft · 0.90×'):'NaturalReader recordings are pending for this screen. Read aloud to review.';
@@ -64,12 +146,15 @@
   }
   function playNarration(){
     stopNarration();if(!narrationStatus())return;
-    const s=steps[index],screenId=s.id;narrationEnabled=true;narrationPlaying=true;gateNarration(true);optionReader?.reset();
+    const s=steps[index],screenId=s.id;narrationEnabled=true;narrationPlaying=true;optionReader?.prepare();gateNarration(true);
     $('stop-narration').disabled=false;$('play-narration').textContent='Replay narration';$('narration-status').textContent='Listen to Evelyn…';
     syncChildControls();
+    const clipSpans=new Map();
     narrationRun=narration.play(narrationIds(s),{
-      onEnd(){if(steps[index].id!==screenId)return;narrationRun=null;narrationPlaying=false;gateNarration(false);$('stop-narration').disabled=true;$('narration-status').textContent='Narration finished.';if(!wrong&&s.choices?.length===3)optionReader?.read();syncChildControls();},
-      onError(){if(steps[index].id!==screenId)return;narrationRun=null;narrationPlaying=false;gateNarration(false);$('stop-narration').disabled=true;$('narration-status').textContent='Audio could not play. Try replaying, or read this screen aloud.';syncChildControls();}
+      onClipTime(id,clipIndex,seconds){if(steps[index].id!==screenId)return;if(!clipSpans.has(id))clipSpans.set(id,spokenCueSpans(s,id));showSpokenCues(clipSpans.get(id),seconds);},
+      onClipClear:clearSpokenCues,
+      onEnd(){if(steps[index].id!==screenId)return;narrationRun=null;clearSpokenCues();if(!wrong&&s.choices&&!embeddedChoices(s)){if(optionReader?.read())return;narrationPlaying=false;$('narration-status').textContent='Read the choices aloud, or try Replay.';}else{narrationPlaying=false;optionReader?.ready();gateNarration(false);$('narration-status').textContent='Narration finished.';}$('stop-narration').disabled=true;syncChildControls();},
+      onError(){if(steps[index].id!==screenId)return;narrationRun=null;narrationPlaying=false;clearSpokenCues();$('stop-narration').disabled=true;$('narration-status').textContent='Audio could not play. Try replaying, or read this screen aloud.';syncChildControls();}
     });
   }
   function actors(s){return s.pairing?[s.pairing.recipient,...s.pairing.helpers]:[];}
@@ -91,6 +176,8 @@
       <text class="practice-bubble-text" x="505" y="76" text-anchor="middle">Stop being mean.</text>
       <rect x="173" y="350" width="159" height="34" fill="${accent}"/><rect x="631" y="350" width="108" height="34" fill="${accent}"/>
       <text class="practice-role-label" x="252.5" y="376" text-anchor="middle">TEACHER</text><text class="practice-role-label" x="685" y="376" text-anchor="middle">YOU</text>
+      <rect class="practice-actor-cue" data-narration-actor="practice-teacher" x="140" y="59" width="225" height="329" rx="8" aria-hidden="true"/>
+      <rect class="practice-actor-cue" data-narration-actor="practice-you" x="589" y="175" width="191" height="213" rx="8" aria-hidden="true"/>
     </svg>`;
   }
   function scene(s,interactive=false){
@@ -106,14 +193,16 @@
     const tapActors=introduction?[current]:allActors;
     const buttons=interactive&&s.point?tapActors.map(a=>`<button class="point-target side-${a.side}${introduction?' introduction-target':''}${wrong&&a.id===s.point?' reveal':''}"${introduction?actorTargetStyle(s,a):''} data-point="${a.id}" aria-label="Tap ${esc(a.description)}"></button>`).join(''):'';
     const cue=introduction&&!interactive?`<span class="point-target introduction-cue"${actorTargetStyle(s,current)} aria-hidden="true"></span>`:'';
+    const spokenCues=interactive?shownActors.map(actor=>`<span class="narration-actor-cue" data-narration-actor="${actor.id}"${actorTargetStyle(s,actor)} aria-hidden="true"></span>`).join(''):'';
     const alt=shownActors.map(a=>`${a.description} ${a.side==='middle'?'in the middle':'on the '+a.side}`).join('; ');
-    return `<div class="picture${guided?' character-introduction':''}"><img ${interactive?'':'loading="lazy"'} src="${esc(image)}" alt="${esc(alt)}.${s.image===s.pairing.images.need?' '+esc(s.pairing.recipient.reference)+' is sad.':''}">${masks}${buttons}${cue}</div>`;
+    return `<div class="picture${guided?' character-introduction':''}"><img ${interactive?'':'loading="lazy"'} src="${esc(image)}" alt="${esc(alt)}.${s.image===s.pairing.images.need?' '+esc(s.pairing.recipient.reference)+' is sad.':''}">${masks}${buttons}${cue}${spokenCues}</div>`;
   }
   function prompt(s){return `<div class="prompt">${s.context&&!s.displayText?`<p class="referent">${esc(s.context)}</p>`:''}${s.preface?`<p class="preface">${esc(s.preface)}</p>`:''}<h2>${esc(s.displayTitle||s.displayText||s.text)}</h2></div>`;}
   function branchNote(s){if(!s.when)return '';const parent=steps.find(p=>p.id===s.when[0]);return `Only after “${s.when[1]}” to ${parent.phase.toLowerCase()}. `;}
+  function choiceReaderControls(binary=false){return `<div class="option-reader-controls${binary?' binary-reader-controls':''}"><button data-read-options type="button">Read choices</button><button data-read-manually type="button">Read myself</button></div><p class="reader-status${binary?' binary-reader-status':''}" data-reader-status role="status">Listen to each choice, then pick one.</p>`;}
   function scaleOptions(s,interactive=false){
     const cards=s.choices.map((c,i)=>interactive?`<button class="rating-answer" data-answer="${i}" disabled><span class="amount-marker marker-${i}" aria-hidden="true"></span><span>${esc(c)}</span></button>`:`<div class="rating-answer option-visible"><span class="amount-marker marker-${i}" aria-hidden="true"></span><span>${esc(c)}</span></div>`).join('');
-    return `<div class="rating-options">${cards}</div>${interactive?'<div class="option-reader-controls"><button data-read-options type="button">Read choices</button><button data-read-manually type="button">Read myself</button></div><p class="reader-status" data-reader-status role="status">Listen to each choice, then pick one.</p>':''}`;
+    return `<div class="rating-options">${cards}</div>${interactive?choiceReaderControls():''}`;
   }
   function render(){
     stopNarration();optionReader?.dispose();optionReader=null;
@@ -125,7 +214,7 @@
     $('child-story-label').textContent=s.pairing?`Story ${s.storyIndex+1} of ${session.pairings.length}`:'All done!';
     $('progress-bar').style.width=`${100*(index+1)/steps.length}%`;
     $('progress-bar').style.backgroundColor=storyAccent(s);
-    let options=s.point?`<p class="point-instruction">Tap ${esc(actors(s).find(a=>a.id===s.point).description)}.</p>`:`<div class="answers">${(s.choices||[s.localId==='end'?'Read the full storyboard':'Continue']).map((c,i)=>`<button ${s.choices?'':'class="continue-answer"'} data-answer="${i}">${esc(c)}</button>`).join('')}</div>`;
+    let options=s.point?`<p class="point-instruction">Tap ${esc(actors(s).find(a=>a.id===s.point).description)}.</p>`:`<div class="answers">${(s.choices||[s.localId==='end'?'Read the full storyboard':'Continue']).map((c,i)=>`<button class="${s.choices?'spoken-choice option-visible':'continue-answer'}" data-answer="${i}">${esc(c)}</button>`).join('')}</div>${s.choices?choiceReaderControls(true):''}`;
     if(s.choices?.length===3)options=scaleOptions(s,true);
     const feedback=wrong?`<p class="feedback">${esc(s.reminder)}</p><div class="facilitator-controls"><span>Facilitator review</span><button id="continue-check">Continue after reminder</button></div>`:'';
     stage.dataset.screenKind=s.visual==='teacher-practice'?'illustrated-practice':s.image?'story':'practice';
@@ -137,7 +226,19 @@
     stage.querySelectorAll('[data-answer]').forEach(b=>b.addEventListener('click',()=>respond((s.choices||['Continue'])[Number(b.dataset.answer)])));
     stage.querySelectorAll('[data-point]').forEach(b=>b.addEventListener('click',()=>respond(b.dataset.point)));
     $('continue-check')?.addEventListener('click',()=>commit(wrong));
-    if(s.choices?.length===3){try{optionReader=window.createOptionReader(stage,s.choices,{clipIds:narration.screenFor(s).options,onManualStart:()=>{stopNarration();$('narration-status').textContent='Reading choices manually.';},onReadStart:()=>{stopNarration();narrationPlaying=true;$('stop-narration').disabled=false;$('narration-status').textContent='Listen to Evelyn read each choice…';syncChildControls();},onComplete:()=>{narrationPlaying=false;$('stop-narration').disabled=true;$('narration-status').textContent='Choose an answer.';syncChildControls();},onError:()=>{narrationPlaying=false;$('stop-narration').disabled=true;$('narration-status').textContent='Choice audio could not play. Try again or read the choices aloud.';syncChildControls();}});}catch(error){stage.querySelector('[data-reader-status]').textContent='Option reading could not start. Please refresh this draft.';}}
+    if(s.choices){
+      const optionSpans=new Map();
+      try{optionReader=window.createOptionReader(stage,s.choices,{
+        clipIds:narration.screenFor(s).options,
+        onClipTime(id,choiceIndex,seconds){if(steps[index].id!==s.id)return;const key=id+':'+choiceIndex;if(!optionSpans.has(key))optionSpans.set(key,spokenCueSpans(s,id,choiceIndex));showSpokenCues(optionSpans.get(key),seconds);},
+        onClipClear:clearSpokenCues,
+        onManualCue(choiceIndex){showSpokenCues([{start:0,end:1,optionIndex:choiceIndex,...(s.localId==='compare'?{actorId:s.pairing.helpers[choiceIndex].id}:{})}],0);},
+        onManualStart:()=>{stopNarration();$('narration-status').textContent='Reading choices manually.';},
+        onReadStart:()=>{stopNarration();narrationPlaying=true;gateNarration(true);$('stop-narration').disabled=false;$('narration-status').textContent='Listen to Evelyn read each choice…';syncChildControls();},
+        onComplete:()=>{clearSpokenCues();narrationPlaying=false;gateNarration(false);$('stop-narration').disabled=true;$('narration-status').textContent='Choose an answer.';syncChildControls();},
+        onError:()=>{clearSpokenCues();narrationPlaying=false;$('stop-narration').disabled=true;$('narration-status').textContent='Choice audio could not play. Try again or read the choices aloud.';syncChildControls();}
+      });}catch(error){stage.querySelector('[data-reader-status]').textContent='Option reading could not start. Please refresh this draft.';}
+    }
     if(completed)pauseTimer();else updateTimer();
     narrationStatus();if(narrationEnabled&&$('auto-narration').checked&&!$('player').hidden)playNarration();
   }
@@ -149,7 +250,7 @@
     if(value){stopNarration();optionReader?.dispose();optionReader=null;if(!completed)markBrowse();}
     $('player').hidden=value;$('storyboard').hidden=!value;
     for(const [id,active]of[['story-tab',!value],['board-tab',value]]){const e=$(id);e.classList.toggle('selected',active);e.setAttribute('aria-pressed',String(active));}
-    if(!value&&!optionReader&&steps[index].choices?.length===3)render();
+    if(!value&&!optionReader&&steps[index].choices)render();
   }
   function card(s,i){return `<article class="story-card" style="--story-accent:${esc(storyAccent(s))}"><h3 class="card-heading">${String(i+1).padStart(2,'0')} · ${esc(s.phase)}${s.proposed?' · PROPOSED WORDING':''}</h3>${prompt(s)}${scene(s)}${s.choices?.length===3?scaleOptions(s):`<p class="card-options">${s.point?'Tap '+esc(actors(s).find(a=>a.id===s.point).description):s.choices?s.choices.map(esc).join(' &nbsp; / &nbsp; '):'Narration'}</p>`}${s.when||s.note||s.expected||s.point?`<p class="card-note">${esc(branchNote(s)+(s.note||''))}${s.expected?' Check answer: '+esc(s.expected)+'.':''}${s.reminder?' Reminder if needed: “'+esc(s.reminder)+'”':''}</p>`:''}</article>`;}
   function buildBoard(){

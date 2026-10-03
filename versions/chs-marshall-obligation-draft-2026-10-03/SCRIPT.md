@@ -14,7 +14,7 @@ Expected path range: **139–169 screens**, **102–132 responses**.
 
 48 main judgments + 36 identity/recall checks + 18 practice responses + 0–30 conditional study-strength responses.
 
-Illustrative duration: **19.7–33.8 minutes**, based on 1895–2507 spoken words.
+Illustrative duration: **20.3–35.1 minutes**, based on 1973–2652 spoken words.
 
 - Illustrative estimate, not observed child-session duration.
 - Read-aloud pace: 110–130 words per minute; response time: 3–5 seconds per selection.
@@ -204,13 +204,13 @@ Choices: A teeny bit / A little bit / A lot.
 
 ### 19. What happens next
 
-“Now let’s say that the kid’s teacher and the kid’s mom do NOT help the kid.”
+“No one helped the kid. The kid’s teacher did NOT help the kid. The kid’s mom did NOT help the kid.”
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/5c/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 *Every response path reaches this same outcome, regardless of prediction or obligation answers.*
 
-### 20. Recall · Neither helped
+### 20. Recall · No one helped
 
 “Can you tell me, did either of these people help the kid?”
 
@@ -220,11 +220,11 @@ Choices: Yes / No.
 
 Expected check/practice answer: No.
 
-Reminder if needed: “Actually, remember, neither of these people helped the kid. Can you tell me, did either of these people help the kid?”
+Reminder if needed: “Actually, remember, no one helped the kid. The kid’s teacher did NOT help the kid. The kid’s mom did NOT help the kid. Can you tell me, did either of these people help the kid?”
 
 ### 21. Overall evaluation
 
-Neither of these people helped the kid.
+No one helped the kid.
 
 “Do you think this was a mean or nice thing that happened?”
 
@@ -260,7 +260,7 @@ Reminder if needed: “Remember, the kid’s teacher did not help the kid. Do yo
 
 ### 24. Individual evaluation · Teacher
 
-“Was the kid’s teacher Mean or Not Mean for NOT helping the kid in the middle?”
+“Do you think it was Mean or Not Mean that the kid’s teacher did NOT help the kid in the middle?”
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/5c/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -270,11 +270,9 @@ Choices: Mean / Not Mean.
 
 *Only after “Mean” to Individual evaluation · Teacher.*
 
-**The kid’s teacher**
+“How mean do you think the kid’s teacher was for NOT helping the kid in the middle?”
 
-“How mean do you think the kid’s teacher was?”
-
-Display wording: “How mean do you think the kid’s teacher was?” The role is included in the question; no separate role label is displayed above it.
+Display wording: “How mean do you think the kid’s teacher was for NOT helping the kid in the middle?” The role is included in the question; no separate role label is displayed above it.
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/5c/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -294,7 +292,7 @@ Reminder if needed: “Remember, the kid’s mom did not help the kid. Do you re
 
 ### 27. Individual evaluation · Mom
 
-“Was the kid’s mom Mean or Not Mean for NOT helping the kid in the middle?”
+“Do you think it was Mean or Not Mean that the kid’s mom did NOT help the kid in the middle?”
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/5c/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -304,11 +302,9 @@ Choices: Mean / Not Mean.
 
 *Only after “Mean” to Individual evaluation · Mom.*
 
-**The kid’s mom**
+“How mean do you think the kid’s mom was for NOT helping the kid in the middle?”
 
-“How mean do you think she was?”
-
-Display wording: “How mean do you think the kid’s mom was?” The role is included in the question; no separate role label is displayed above it.
+Display wording: “How mean do you think the kid’s mom was for NOT helping the kid in the middle?” The role is included in the question; no separate role label is displayed above it.
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/5c/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -504,13 +500,13 @@ Choices: A teeny bit / A little bit / A lot.
 
 ### 48. What happens next
 
-“Now let’s say that the kid’s sister and the kid’s friend do NOT help the kid.”
+“No one helped the kid. The kid’s sister did NOT help the kid. The kid’s friend did NOT help the kid.”
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/6b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 *Every response path reaches this same outcome, regardless of prediction or obligation answers.*
 
-### 49. Recall · Neither helped
+### 49. Recall · No one helped
 
 “Can you tell me, did either of these people help the kid?”
 
@@ -520,11 +516,11 @@ Choices: Yes / No.
 
 Expected check/practice answer: No.
 
-Reminder if needed: “Actually, remember, neither of these people helped the kid. Can you tell me, did either of these people help the kid?”
+Reminder if needed: “Actually, remember, no one helped the kid. The kid’s sister did NOT help the kid. The kid’s friend did NOT help the kid. Can you tell me, did either of these people help the kid?”
 
 ### 50. Overall evaluation
 
-Neither of these people helped the kid.
+No one helped the kid.
 
 “Do you think this was a mean or nice thing that happened?”
 
@@ -560,7 +556,7 @@ Reminder if needed: “Remember, the kid’s sister did not help the kid. Do you
 
 ### 53. Individual evaluation · Sister
 
-“Was the kid’s sister Mean or Not Mean for NOT helping the kid in the middle?”
+“Do you think it was Mean or Not Mean that the kid’s sister did NOT help the kid in the middle?”
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/6b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -570,11 +566,9 @@ Choices: Mean / Not Mean.
 
 *Only after “Mean” to Individual evaluation · Sister.*
 
-**The kid’s sister**
+“How mean do you think the kid’s sister was for NOT helping the kid in the middle?”
 
-“How mean do you think she was?”
-
-Display wording: “How mean do you think the kid’s sister was?” The role is included in the question; no separate role label is displayed above it.
+Display wording: “How mean do you think the kid’s sister was for NOT helping the kid in the middle?” The role is included in the question; no separate role label is displayed above it.
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/6b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -594,7 +588,7 @@ Reminder if needed: “Remember, the kid’s friend did not help the kid. Do you
 
 ### 56. Individual evaluation · Friend
 
-“Was the kid’s friend Mean or Not Mean for NOT helping the kid in the middle?”
+“Do you think it was Mean or Not Mean that the kid’s friend did NOT help the kid in the middle?”
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/6b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -604,11 +598,9 @@ Choices: Mean / Not Mean.
 
 *Only after “Mean” to Individual evaluation · Friend.*
 
-**The kid’s friend**
+“How mean do you think the kid’s friend was for NOT helping the kid in the middle?”
 
-“How mean do you think the kid’s friend was?”
-
-Display wording: “How mean do you think the kid’s friend was?” The role is included in the question; no separate role label is displayed above it.
+Display wording: “How mean do you think the kid’s friend was for NOT helping the kid in the middle?” The role is included in the question; no separate role label is displayed above it.
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/6b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -804,13 +796,13 @@ Choices: A teeny bit / A little bit / A lot.
 
 ### 77. What happens next
 
-“Now let’s say that the kid’s friend and the kid’s best friend do NOT help the kid.”
+“No one helped the kid. The kid’s friend did NOT help the kid. The kid’s best friend did NOT help the kid.”
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/13d/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 *Every response path reaches this same outcome, regardless of prediction or obligation answers.*
 
-### 78. Recall · Neither helped
+### 78. Recall · No one helped
 
 “Can you tell me, did either of these people help the kid?”
 
@@ -820,11 +812,11 @@ Choices: Yes / No.
 
 Expected check/practice answer: No.
 
-Reminder if needed: “Actually, remember, neither of these people helped the kid. Can you tell me, did either of these people help the kid?”
+Reminder if needed: “Actually, remember, no one helped the kid. The kid’s friend did NOT help the kid. The kid’s best friend did NOT help the kid. Can you tell me, did either of these people help the kid?”
 
 ### 79. Overall evaluation
 
-Neither of these people helped the kid.
+No one helped the kid.
 
 “Do you think this was a mean or nice thing that happened?”
 
@@ -860,7 +852,7 @@ Reminder if needed: “Remember, the kid’s friend did not help the kid. Do you
 
 ### 82. Individual evaluation · Friend
 
-“Was the kid’s friend Mean or Not Mean for NOT helping the kid in the middle?”
+“Do you think it was Mean or Not Mean that the kid’s friend did NOT help the kid in the middle?”
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/13d/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -870,11 +862,9 @@ Choices: Mean / Not Mean.
 
 *Only after “Mean” to Individual evaluation · Friend.*
 
-**The kid’s friend**
+“How mean do you think the kid’s friend was for NOT helping the kid in the middle?”
 
-“How mean do you think the kid’s friend was?”
-
-Display wording: “How mean do you think the kid’s friend was?” The role is included in the question; no separate role label is displayed above it.
+Display wording: “How mean do you think the kid’s friend was for NOT helping the kid in the middle?” The role is included in the question; no separate role label is displayed above it.
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/13d/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -894,7 +884,7 @@ Reminder if needed: “Remember, the kid’s best friend did not help the kid. D
 
 ### 85. Individual evaluation · Best friend
 
-“Was the kid’s best friend Mean or Not Mean for NOT helping the kid in the middle?”
+“Do you think it was Mean or Not Mean that the kid’s best friend did NOT help the kid in the middle?”
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/13d/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -904,11 +894,9 @@ Choices: Mean / Not Mean.
 
 *Only after “Mean” to Individual evaluation · Best friend.*
 
-**The kid’s best friend**
+“How mean do you think the kid’s best friend was for NOT helping the kid in the middle?”
 
-“How mean do you think the kid’s best friend was?”
-
-Display wording: “How mean do you think the kid’s best friend was?” The role is included in the question; no separate role label is displayed above it.
+Display wording: “How mean do you think the kid’s best friend was for NOT helping the kid in the middle?” The role is included in the question; no separate role label is displayed above it.
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/13d/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1104,13 +1092,13 @@ Choices: A teeny bit / A little bit / A lot.
 
 ### 106. What happens next
 
-“Now let’s say that the kid’s teacher and the kid’s friend do NOT help the kid.”
+“No one helped the kid. The kid’s teacher did NOT help the kid. The kid’s friend did NOT help the kid.”
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/2b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 *Every response path reaches this same outcome, regardless of prediction or obligation answers.*
 
-### 107. Recall · Neither helped
+### 107. Recall · No one helped
 
 “Can you tell me, did either of these people help the kid?”
 
@@ -1120,11 +1108,11 @@ Choices: Yes / No.
 
 Expected check/practice answer: No.
 
-Reminder if needed: “Actually, remember, neither of these people helped the kid. Can you tell me, did either of these people help the kid?”
+Reminder if needed: “Actually, remember, no one helped the kid. The kid’s teacher did NOT help the kid. The kid’s friend did NOT help the kid. Can you tell me, did either of these people help the kid?”
 
 ### 108. Overall evaluation
 
-Neither of these people helped the kid.
+No one helped the kid.
 
 “Do you think this was a mean or nice thing that happened?”
 
@@ -1160,7 +1148,7 @@ Reminder if needed: “Remember, the kid’s teacher did not help the kid. Do yo
 
 ### 111. Individual evaluation · Teacher
 
-“Was the kid’s teacher Mean or Not Mean for NOT helping the kid in the middle?”
+“Do you think it was Mean or Not Mean that the kid’s teacher did NOT help the kid in the middle?”
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/2b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1170,11 +1158,9 @@ Choices: Mean / Not Mean.
 
 *Only after “Mean” to Individual evaluation · Teacher.*
 
-**The kid’s teacher**
+“How mean do you think the kid’s teacher was for NOT helping the kid in the middle?”
 
-“How mean do you think the kid’s teacher was?”
-
-Display wording: “How mean do you think the kid’s teacher was?” The role is included in the question; no separate role label is displayed above it.
+Display wording: “How mean do you think the kid’s teacher was for NOT helping the kid in the middle?” The role is included in the question; no separate role label is displayed above it.
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/2b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1194,7 +1180,7 @@ Reminder if needed: “Remember, the kid’s friend did not help the kid. Do you
 
 ### 114. Individual evaluation · Friend
 
-“Was the kid’s friend Mean or Not Mean for NOT helping the kid in the middle?”
+“Do you think it was Mean or Not Mean that the kid’s friend did NOT help the kid in the middle?”
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/2b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1204,11 +1190,9 @@ Choices: Mean / Not Mean.
 
 *Only after “Mean” to Individual evaluation · Friend.*
 
-**The kid’s friend**
+“How mean do you think the kid’s friend was for NOT helping the kid in the middle?”
 
-“How mean do you think the kid’s friend was?”
-
-Display wording: “How mean do you think the kid’s friend was?” The role is included in the question; no separate role label is displayed above it.
+Display wording: “How mean do you think the kid’s friend was for NOT helping the kid in the middle?” The role is included in the question; no separate role label is displayed above it.
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/2b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1404,13 +1388,13 @@ Choices: A teeny bit / A little bit / A lot.
 
 ### 135. What happens next
 
-“Now let’s say that the kid’s mom and the kid’s sister do NOT help the kid.”
+“No one helped the kid. The kid’s mom did NOT help the kid. The kid’s sister did NOT help the kid.”
 
 [Stimulus source](../find_the_caregiver_story_screens_2026-09-26/mom-sister-orange-sad/05-sad.png) — original reference image; the preview replaces its caption with the wording above.
 
 *Every response path reaches this same outcome, regardless of prediction or obligation answers.*
 
-### 136. Recall · Neither helped
+### 136. Recall · No one helped
 
 “Can you tell me, did either of these people help the kid?”
 
@@ -1420,11 +1404,11 @@ Choices: Yes / No.
 
 Expected check/practice answer: No.
 
-Reminder if needed: “Actually, remember, neither of these people helped the kid. Can you tell me, did either of these people help the kid?”
+Reminder if needed: “Actually, remember, no one helped the kid. The kid’s mom did NOT help the kid. The kid’s sister did NOT help the kid. Can you tell me, did either of these people help the kid?”
 
 ### 137. Overall evaluation
 
-Neither of these people helped the kid.
+No one helped the kid.
 
 “Do you think this was a mean or nice thing that happened?”
 
@@ -1460,7 +1444,7 @@ Reminder if needed: “Remember, the kid’s mom did not help the kid. Do you re
 
 ### 140. Individual evaluation · Mom
 
-“Was the kid’s mom Mean or Not Mean for NOT helping the kid in the middle?”
+“Do you think it was Mean or Not Mean that the kid’s mom did NOT help the kid in the middle?”
 
 [Stimulus source](../find_the_caregiver_story_screens_2026-09-26/mom-sister-orange-sad/05-sad.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1470,11 +1454,9 @@ Choices: Mean / Not Mean.
 
 *Only after “Mean” to Individual evaluation · Mom.*
 
-**The kid’s mom**
+“How mean do you think the kid’s mom was for NOT helping the kid in the middle?”
 
-“How mean do you think she was?”
-
-Display wording: “How mean do you think the kid’s mom was?” The role is included in the question; no separate role label is displayed above it.
+Display wording: “How mean do you think the kid’s mom was for NOT helping the kid in the middle?” The role is included in the question; no separate role label is displayed above it.
 
 [Stimulus source](../find_the_caregiver_story_screens_2026-09-26/mom-sister-orange-sad/05-sad.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1494,7 +1476,7 @@ Reminder if needed: “Remember, the kid’s sister did not help the kid. Do you
 
 ### 143. Individual evaluation · Sister
 
-“Was the kid’s sister Mean or Not Mean for NOT helping the kid in the middle?”
+“Do you think it was Mean or Not Mean that the kid’s sister did NOT help the kid in the middle?”
 
 [Stimulus source](../find_the_caregiver_story_screens_2026-09-26/mom-sister-orange-sad/05-sad.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1504,11 +1486,9 @@ Choices: Mean / Not Mean.
 
 *Only after “Mean” to Individual evaluation · Sister.*
 
-**The kid’s sister**
+“How mean do you think the kid’s sister was for NOT helping the kid in the middle?”
 
-“How mean do you think she was?”
-
-Display wording: “How mean do you think the kid’s sister was?” The role is included in the question; no separate role label is displayed above it.
+Display wording: “How mean do you think the kid’s sister was for NOT helping the kid in the middle?” The role is included in the question; no separate role label is displayed above it.
 
 [Stimulus source](../find_the_caregiver_story_screens_2026-09-26/mom-sister-orange-sad/05-sad.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1704,13 +1684,13 @@ Choices: A teeny bit / A little bit / A lot.
 
 ### 164. What happens next
 
-“Now let’s say that the kid’s classmate and the kid’s teacher do NOT help the kid.”
+“No one helped the kid. The kid’s classmate did NOT help the kid. The kid’s teacher did NOT help the kid.”
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/assets/teacher_classmate/generated/trials/14d/hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
 *Every response path reaches this same outcome, regardless of prediction or obligation answers.*
 
-### 165. Recall · Neither helped
+### 165. Recall · No one helped
 
 “Can you tell me, did either of these people help the kid?”
 
@@ -1720,11 +1700,11 @@ Choices: Yes / No.
 
 Expected check/practice answer: No.
 
-Reminder if needed: “Actually, remember, neither of these people helped the kid. Can you tell me, did either of these people help the kid?”
+Reminder if needed: “Actually, remember, no one helped the kid. The kid’s classmate did NOT help the kid. The kid’s teacher did NOT help the kid. Can you tell me, did either of these people help the kid?”
 
 ### 166. Overall evaluation
 
-Neither of these people helped the kid.
+No one helped the kid.
 
 “Do you think this was a mean or nice thing that happened?”
 
@@ -1760,7 +1740,7 @@ Reminder if needed: “Remember, the kid’s classmate did not help the kid. Do 
 
 ### 169. Individual evaluation · Classmate
 
-“Was the kid’s classmate Mean or Not Mean for NOT helping the kid in the middle?”
+“Do you think it was Mean or Not Mean that the kid’s classmate did NOT help the kid in the middle?”
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/assets/teacher_classmate/generated/trials/14d/hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1770,11 +1750,9 @@ Choices: Mean / Not Mean.
 
 *Only after “Mean” to Individual evaluation · Classmate.*
 
-**The kid’s classmate**
+“How mean do you think the kid’s classmate was for NOT helping the kid in the middle?”
 
-“How mean do you think the kid’s classmate was?”
-
-Display wording: “How mean do you think the kid’s classmate was?” The role is included in the question; no separate role label is displayed above it.
+Display wording: “How mean do you think the kid’s classmate was for NOT helping the kid in the middle?” The role is included in the question; no separate role label is displayed above it.
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/assets/teacher_classmate/generated/trials/14d/hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1794,7 +1772,7 @@ Reminder if needed: “Remember, the kid’s teacher did not help the kid. Do yo
 
 ### 172. Individual evaluation · Teacher
 
-“Was the kid’s teacher Mean or Not Mean for NOT helping the kid in the middle?”
+“Do you think it was Mean or Not Mean that the kid’s teacher did NOT help the kid in the middle?”
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/assets/teacher_classmate/generated/trials/14d/hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1804,11 +1782,9 @@ Choices: Mean / Not Mean.
 
 *Only after “Mean” to Individual evaluation · Teacher.*
 
-**The kid’s teacher**
+“How mean do you think the kid’s teacher was for NOT helping the kid in the middle?”
 
-“How mean do you think the kid’s teacher was?”
-
-Display wording: “How mean do you think the kid’s teacher was?” The role is included in the question; no separate role label is displayed above it.
+Display wording: “How mean do you think the kid’s teacher was for NOT helping the kid in the middle?” The role is included in the question; no separate role label is displayed above it.
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/assets/teacher_classmate/generated/trials/14d/hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 

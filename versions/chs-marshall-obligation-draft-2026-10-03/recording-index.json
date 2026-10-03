@@ -1,244 +1,442 @@
 {
   "schemaVersion": 1,
-  "title": "Find the Caregiver × Marshall obligation draft — full narration",
+  "title": "Explicit helping outcome and full-role evaluation narration",
   "voice": {
     "provider": "NaturalReaders Commercial",
     "name": "Evelyn",
     "style": "Soft",
-    "speed": 0.9,
-    "wordsPerMinuteSetting": 180,
+    "speed": 0.8,
+    "wordsPerMinuteSetting": 160,
     "paragraphPauseSeconds": 0,
     "exportFormat": "MP3",
     "exportMode": "separate files ZIP",
     "exportNaming": "Index + Segment",
     "preferredBitrateKbps": 320,
-    "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
+    "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+    "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+    "savedProjectTextVerified": true
   },
-  "clipCount": 32,
-  "note": "Export only these paragraphs, in this order, as separate MP3s. The numeric export index maps to the stable clip ID; do not read the index aloud.",
+  "clipCount": 60,
+  "note": "New paragraphs only, in this order. Export Index + Segment numbered MP3s. This recording plan is separate from the pending HAVE TO/HAS TO emphasis batch.",
   "entries": [
     {
       "exportIndex": 1,
-      "clipId": "nr_014",
-      "text": "Now, sometimes people HAVE TO do things.",
-      "targetFile": "assets/narration/nr_014.mp3",
+      "clipId": "nr_196",
+      "text": "No one helped the kid. The kid’s teacher did NOT help the kid. The kid’s mom did NOT help the kid.",
+      "targetFile": "assets/narration/nr_196.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 2,
-      "clipId": "nr_015",
-      "text": "When a teacher tells you to stop being mean to someone, do you HAVE TO stop being mean? Yes or No.",
-      "targetFile": "assets/narration/nr_015.mp3",
+      "clipId": "nr_197",
+      "text": "Actually, remember, no one helped the kid. The kid’s teacher did NOT help the kid. The kid’s mom did NOT help the kid. Can you tell me, did either of these people help the kid?",
+      "targetFile": "assets/narration/nr_197.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 3,
-      "clipId": "nr_016",
-      "text": "When a teacher tells you to stop being mean to someone, you HAVE TO stop being mean. Let’s try that question again.",
-      "targetFile": "assets/narration/nr_016.mp3",
+      "clipId": "nr_198",
+      "text": "No one helped the kid. Do you think this was a mean or nice thing that happened?",
+      "targetFile": "assets/narration/nr_198.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 4,
-      "clipId": "nr_017",
-      "text": "How much do you think you HAVE TO stop being mean?",
-      "targetFile": "assets/narration/nr_017.mp3",
+      "clipId": "nr_199",
+      "text": "Do you think it was Mean or Not Mean that the kid’s teacher did NOT help the kid in the middle?",
+      "targetFile": "assets/narration/nr_199.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 5,
-      "clipId": "nr_021",
-      "text": "When someone asks you a question, do you HAVE TO lie? Yes or No.",
-      "targetFile": "assets/narration/nr_021.mp3",
+      "clipId": "nr_200",
+      "text": "How mean do you think the kid’s teacher was for NOT helping the kid in the middle?",
+      "targetFile": "assets/narration/nr_200.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 6,
-      "clipId": "nr_022",
-      "text": "When someone asks you a question, you do not HAVE TO lie. Let’s try that question again.",
-      "targetFile": "assets/narration/nr_022.mp3",
+      "clipId": "nr_201",
+      "text": "Do you think it was Mean or Not Mean that the kid’s mom did NOT help the kid in the middle?",
+      "targetFile": "assets/narration/nr_201.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 7,
-      "clipId": "nr_023",
-      "text": "How much do you think you HAVE TO lie?",
-      "targetFile": "assets/narration/nr_023.mp3",
+      "clipId": "nr_202",
+      "text": "How mean do you think the kid’s mom was for NOT helping the kid in the middle?",
+      "targetFile": "assets/narration/nr_202.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 8,
-      "clipId": "nr_024",
-      "text": "So now, I’m going to ask you some questions about whether people HAVE TO do things.",
-      "targetFile": "assets/narration/nr_024.mp3",
+      "clipId": "nr_203",
+      "text": "No one helped the kid. The kid’s sister did NOT help the kid. The kid’s friend did NOT help the kid.",
+      "targetFile": "assets/narration/nr_203.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 9,
-      "clipId": "nr_025",
-      "text": "Now, do you think the kid’s teacher HAS TO help the kid? Yes or No.",
-      "targetFile": "assets/narration/nr_025.mp3",
+      "clipId": "nr_204",
+      "text": "Actually, remember, no one helped the kid. The kid’s sister did NOT help the kid. The kid’s friend did NOT help the kid. Can you tell me, did either of these people help the kid?",
+      "targetFile": "assets/narration/nr_204.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 10,
-      "clipId": "nr_026",
-      "text": "The kid’s teacher. How much do you think the kid’s teacher HAS TO?",
-      "targetFile": "assets/narration/nr_026.mp3",
+      "clipId": "nr_205",
+      "text": "Do you think it was Mean or Not Mean that the kid’s sister did NOT help the kid in the middle?",
+      "targetFile": "assets/narration/nr_205.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 11,
-      "clipId": "nr_027",
-      "text": "Now, do you think the kid’s mom HAS TO help the kid? Yes or No.",
-      "targetFile": "assets/narration/nr_027.mp3",
+      "clipId": "nr_206",
+      "text": "How mean do you think the kid’s sister was for NOT helping the kid in the middle?",
+      "targetFile": "assets/narration/nr_206.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 12,
-      "clipId": "nr_028",
-      "text": "The kid’s mom. How much do you think she HAS TO?",
-      "targetFile": "assets/narration/nr_028.mp3",
+      "clipId": "nr_207",
+      "text": "Do you think it was Mean or Not Mean that the kid’s friend did NOT help the kid in the middle?",
+      "targetFile": "assets/narration/nr_207.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 13,
-      "clipId": "nr_060",
-      "text": "Now, do you think the kid’s sister HAS TO help the kid? Yes or No.",
-      "targetFile": "assets/narration/nr_060.mp3",
+      "clipId": "nr_208",
+      "text": "How mean do you think the kid’s friend was for NOT helping the kid in the middle?",
+      "targetFile": "assets/narration/nr_208.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 14,
-      "clipId": "nr_061",
-      "text": "The kid’s sister. How much do you think she HAS TO?",
-      "targetFile": "assets/narration/nr_061.mp3",
+      "clipId": "nr_209",
+      "text": "No one helped the kid. The kid’s friend did NOT help the kid. The kid’s best friend did NOT help the kid.",
+      "targetFile": "assets/narration/nr_209.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 15,
-      "clipId": "nr_062",
-      "text": "Now, do you think the kid’s friend HAS TO help the kid? Yes or No.",
-      "targetFile": "assets/narration/nr_062.mp3",
+      "clipId": "nr_210",
+      "text": "Actually, remember, no one helped the kid. The kid’s friend did NOT help the kid. The kid’s best friend did NOT help the kid. Can you tell me, did either of these people help the kid?",
+      "targetFile": "assets/narration/nr_210.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 16,
-      "clipId": "nr_063",
-      "text": "The kid’s friend. How much do you think the kid’s friend HAS TO?",
-      "targetFile": "assets/narration/nr_063.mp3",
+      "clipId": "nr_211",
+      "text": "Do you think it was Mean or Not Mean that the kid’s best friend did NOT help the kid in the middle?",
+      "targetFile": "assets/narration/nr_211.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 17,
-      "clipId": "nr_079",
-      "text": "Now, do you think the kid’s best friend HAS TO help the kid? Yes or No.",
-      "targetFile": "assets/narration/nr_079.mp3",
+      "clipId": "nr_212",
+      "text": "How mean do you think the kid’s best friend was for NOT helping the kid in the middle?",
+      "targetFile": "assets/narration/nr_212.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 18,
-      "clipId": "nr_080",
-      "text": "The kid’s best friend. How much do you think the kid’s best friend HAS TO?",
-      "targetFile": "assets/narration/nr_080.mp3",
+      "clipId": "nr_213",
+      "text": "No one helped the kid. The kid’s teacher did NOT help the kid. The kid’s friend did NOT help the kid.",
+      "targetFile": "assets/narration/nr_213.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 19,
-      "clipId": "nr_095",
-      "text": "Now, do you think the kid’s classmate HAS TO help the kid? Yes or No.",
-      "targetFile": "assets/narration/nr_095.mp3",
+      "clipId": "nr_214",
+      "text": "Actually, remember, no one helped the kid. The kid’s teacher did NOT help the kid. The kid’s friend did NOT help the kid. Can you tell me, did either of these people help the kid?",
+      "targetFile": "assets/narration/nr_214.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 20,
-      "clipId": "nr_096",
-      "text": "The kid’s classmate. How much do you think the kid’s classmate HAS TO?",
-      "targetFile": "assets/narration/nr_096.mp3",
+      "clipId": "nr_215",
+      "text": "No one helped the kid. The kid’s mom did NOT help the kid. The kid’s sister did NOT help the kid.",
+      "targetFile": "assets/narration/nr_215.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 21,
-      "clipId": "nr_107",
-      "text": "Now, do you think the kid’s dad HAS TO help the kid? Yes or No.",
-      "targetFile": "assets/narration/nr_107.mp3",
+      "clipId": "nr_216",
+      "text": "Actually, remember, no one helped the kid. The kid’s mom did NOT help the kid. The kid’s sister did NOT help the kid. Can you tell me, did either of these people help the kid?",
+      "targetFile": "assets/narration/nr_216.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 22,
-      "clipId": "nr_108",
-      "text": "The kid’s dad. How much do you think he HAS TO?",
-      "targetFile": "assets/narration/nr_108.mp3",
+      "clipId": "nr_217",
+      "text": "No one helped the kid. The kid’s classmate did NOT help the kid. The kid’s teacher did NOT help the kid.",
+      "targetFile": "assets/narration/nr_217.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 23,
-      "clipId": "nr_119",
-      "text": "Now, do you think the kid’s brother HAS TO help the kid? Yes or No.",
-      "targetFile": "assets/narration/nr_119.mp3",
+      "clipId": "nr_218",
+      "text": "Actually, remember, no one helped the kid. The kid’s classmate did NOT help the kid. The kid’s teacher did NOT help the kid. Can you tell me, did either of these people help the kid?",
+      "targetFile": "assets/narration/nr_218.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 24,
-      "clipId": "nr_120",
-      "text": "The kid’s brother. How much do you think he HAS TO?",
-      "targetFile": "assets/narration/nr_120.mp3",
+      "clipId": "nr_219",
+      "text": "Do you think it was Mean or Not Mean that the kid’s classmate did NOT help the kid in the middle?",
+      "targetFile": "assets/narration/nr_219.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 25,
-      "clipId": "nr_139",
-      "text": "Now, do you think the kid’s dad HAS TO help the mom? Yes or No.",
-      "targetFile": "assets/narration/nr_139.mp3",
+      "clipId": "nr_220",
+      "text": "How mean do you think the kid’s classmate was for NOT helping the kid in the middle?",
+      "targetFile": "assets/narration/nr_220.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 26,
-      "clipId": "nr_140",
-      "text": "Now, do you think the kid HAS TO help the mom? Yes or No.",
-      "targetFile": "assets/narration/nr_140.mp3",
+      "clipId": "nr_221",
+      "text": "No one helped the kid. The kid’s teacher did NOT help the kid. The kid’s dad did NOT help the kid.",
+      "targetFile": "assets/narration/nr_221.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 27,
-      "clipId": "nr_141",
-      "text": "The kid. How much do you think the kid HAS TO?",
-      "targetFile": "assets/narration/nr_141.mp3",
+      "clipId": "nr_222",
+      "text": "Actually, remember, no one helped the kid. The kid’s teacher did NOT help the kid. The kid’s dad did NOT help the kid. Can you tell me, did either of these people help the kid?",
+      "targetFile": "assets/narration/nr_222.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 28,
-      "clipId": "nr_160",
-      "text": "Now, do you think the kid HAS TO help the dad? Yes or No.",
-      "targetFile": "assets/narration/nr_160.mp3",
+      "clipId": "nr_223",
+      "text": "Do you think it was Mean or Not Mean that the kid’s dad did NOT help the kid in the middle?",
+      "targetFile": "assets/narration/nr_223.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 29,
-      "clipId": "nr_161",
-      "text": "Now, do you think the kid’s mom HAS TO help the dad? Yes or No.",
-      "targetFile": "assets/narration/nr_161.mp3",
+      "clipId": "nr_224",
+      "text": "How mean do you think the kid’s dad was for NOT helping the kid in the middle?",
+      "targetFile": "assets/narration/nr_224.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 30,
-      "clipId": "nr_180",
-      "text": "Now, do you think the teacher on the left HAS TO help the teacher in the middle? Yes or No.",
-      "targetFile": "assets/narration/nr_180.mp3",
+      "clipId": "nr_225",
+      "text": "No one helped the kid. The kid’s brother did NOT help the kid. The kid’s friend did NOT help the kid.",
+      "targetFile": "assets/narration/nr_225.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 31,
-      "clipId": "nr_181",
-      "text": "The teacher on the left. How much do you think the teacher on the left HAS TO?",
-      "targetFile": "assets/narration/nr_181.mp3",
+      "clipId": "nr_226",
+      "text": "Actually, remember, no one helped the kid. The kid’s brother did NOT help the kid. The kid’s friend did NOT help the kid. Can you tell me, did either of these people help the kid?",
+      "targetFile": "assets/narration/nr_226.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 32,
-      "clipId": "nr_182",
-      "text": "Now, do you think the kid HAS TO help the teacher in the middle? Yes or No.",
-      "targetFile": "assets/narration/nr_182.mp3",
+      "clipId": "nr_227",
+      "text": "Do you think it was Mean or Not Mean that the kid’s brother did NOT help the kid in the middle?",
+      "targetFile": "assets/narration/nr_227.mp3",
+      "proposedWording": false
+    },
+    {
+      "exportIndex": 33,
+      "clipId": "nr_228",
+      "text": "How mean do you think the kid’s brother was for NOT helping the kid in the middle?",
+      "targetFile": "assets/narration/nr_228.mp3",
+      "proposedWording": false
+    },
+    {
+      "exportIndex": 34,
+      "clipId": "nr_229",
+      "text": "No one helped the kid. The kid’s dad did NOT help the kid. The kid’s brother did NOT help the kid.",
+      "targetFile": "assets/narration/nr_229.mp3",
+      "proposedWording": false
+    },
+    {
+      "exportIndex": 35,
+      "clipId": "nr_230",
+      "text": "Actually, remember, no one helped the kid. The kid’s dad did NOT help the kid. The kid’s brother did NOT help the kid. Can you tell me, did either of these people help the kid?",
+      "targetFile": "assets/narration/nr_230.mp3",
+      "proposedWording": false
+    },
+    {
+      "exportIndex": 36,
+      "clipId": "nr_231",
+      "text": "No one helped the kid. The kid’s dad did NOT help the kid. The kid’s mom did NOT help the kid.",
+      "targetFile": "assets/narration/nr_231.mp3",
+      "proposedWording": false
+    },
+    {
+      "exportIndex": 37,
+      "clipId": "nr_232",
+      "text": "Actually, remember, no one helped the kid. The kid’s dad did NOT help the kid. The kid’s mom did NOT help the kid. Can you tell me, did either of these people help the kid?",
+      "targetFile": "assets/narration/nr_232.mp3",
+      "proposedWording": false
+    },
+    {
+      "exportIndex": 38,
+      "clipId": "nr_233",
+      "text": "No one helped the kid. The kid’s sister did NOT help the kid. The kid’s brother did NOT help the kid.",
+      "targetFile": "assets/narration/nr_233.mp3",
+      "proposedWording": false
+    },
+    {
+      "exportIndex": 39,
+      "clipId": "nr_234",
+      "text": "Actually, remember, no one helped the kid. The kid’s sister did NOT help the kid. The kid’s brother did NOT help the kid. Can you tell me, did either of these people help the kid?",
+      "targetFile": "assets/narration/nr_234.mp3",
+      "proposedWording": false
+    },
+    {
+      "exportIndex": 40,
+      "clipId": "nr_235",
+      "text": "No one helped the mom. The kid’s dad did NOT help the mom. The kid did NOT help the mom.",
+      "targetFile": "assets/narration/nr_235.mp3",
+      "proposedWording": false
+    },
+    {
+      "exportIndex": 41,
+      "clipId": "nr_236",
+      "text": "Actually, remember, no one helped the mom. The kid’s dad did NOT help the mom. The kid did NOT help the mom. Can you tell me, did either of these people help the mom?",
+      "targetFile": "assets/narration/nr_236.mp3",
+      "proposedWording": false
+    },
+    {
+      "exportIndex": 42,
+      "clipId": "nr_237",
+      "text": "No one helped the mom. Do you think this was a mean or nice thing that happened?",
+      "targetFile": "assets/narration/nr_237.mp3",
+      "proposedWording": false
+    },
+    {
+      "exportIndex": 43,
+      "clipId": "nr_238",
+      "text": "Do you think it was Mean or Not Mean that the kid’s dad did NOT help the mom in the middle?",
+      "targetFile": "assets/narration/nr_238.mp3",
+      "proposedWording": false
+    },
+    {
+      "exportIndex": 44,
+      "clipId": "nr_239",
+      "text": "How mean do you think the kid’s dad was for NOT helping the mom in the middle?",
+      "targetFile": "assets/narration/nr_239.mp3",
+      "proposedWording": false
+    },
+    {
+      "exportIndex": 45,
+      "clipId": "nr_240",
+      "text": "Do you think it was Mean or Not Mean that the kid did NOT help the mom in the middle?",
+      "targetFile": "assets/narration/nr_240.mp3",
+      "proposedWording": false
+    },
+    {
+      "exportIndex": 46,
+      "clipId": "nr_241",
+      "text": "How mean do you think the kid was for NOT helping the mom in the middle?",
+      "targetFile": "assets/narration/nr_241.mp3",
+      "proposedWording": false
+    },
+    {
+      "exportIndex": 47,
+      "clipId": "nr_242",
+      "text": "No one helped the dad. The kid did NOT help the dad. The kid’s mom did NOT help the dad.",
+      "targetFile": "assets/narration/nr_242.mp3",
+      "proposedWording": false
+    },
+    {
+      "exportIndex": 48,
+      "clipId": "nr_243",
+      "text": "Actually, remember, no one helped the dad. The kid did NOT help the dad. The kid’s mom did NOT help the dad. Can you tell me, did either of these people help the dad?",
+      "targetFile": "assets/narration/nr_243.mp3",
+      "proposedWording": false
+    },
+    {
+      "exportIndex": 49,
+      "clipId": "nr_244",
+      "text": "No one helped the dad. Do you think this was a mean or nice thing that happened?",
+      "targetFile": "assets/narration/nr_244.mp3",
+      "proposedWording": false
+    },
+    {
+      "exportIndex": 50,
+      "clipId": "nr_245",
+      "text": "Do you think it was Mean or Not Mean that the kid did NOT help the dad in the middle?",
+      "targetFile": "assets/narration/nr_245.mp3",
+      "proposedWording": false
+    },
+    {
+      "exportIndex": 51,
+      "clipId": "nr_246",
+      "text": "How mean do you think the kid was for NOT helping the dad in the middle?",
+      "targetFile": "assets/narration/nr_246.mp3",
+      "proposedWording": false
+    },
+    {
+      "exportIndex": 52,
+      "clipId": "nr_247",
+      "text": "Do you think it was Mean or Not Mean that the kid’s mom did NOT help the dad in the middle?",
+      "targetFile": "assets/narration/nr_247.mp3",
+      "proposedWording": false
+    },
+    {
+      "exportIndex": 53,
+      "clipId": "nr_248",
+      "text": "How mean do you think the kid’s mom was for NOT helping the dad in the middle?",
+      "targetFile": "assets/narration/nr_248.mp3",
+      "proposedWording": false
+    },
+    {
+      "exportIndex": 54,
+      "clipId": "nr_249",
+      "text": "No one helped the teacher in the middle. The teacher on the left did NOT help the teacher in the middle. The kid did NOT help the teacher in the middle.",
+      "targetFile": "assets/narration/nr_249.mp3",
+      "proposedWording": false
+    },
+    {
+      "exportIndex": 55,
+      "clipId": "nr_250",
+      "text": "Actually, remember, no one helped the teacher in the middle. The teacher on the left did NOT help the teacher in the middle. The kid did NOT help the teacher in the middle. Can you tell me, did either of these people help the teacher in the middle?",
+      "targetFile": "assets/narration/nr_250.mp3",
+      "proposedWording": false
+    },
+    {
+      "exportIndex": 56,
+      "clipId": "nr_251",
+      "text": "No one helped the teacher in the middle. Do you think this was a mean or nice thing that happened?",
+      "targetFile": "assets/narration/nr_251.mp3",
+      "proposedWording": false
+    },
+    {
+      "exportIndex": 57,
+      "clipId": "nr_252",
+      "text": "Do you think it was Mean or Not Mean that the teacher on the left did NOT help the teacher in the middle?",
+      "targetFile": "assets/narration/nr_252.mp3",
+      "proposedWording": false
+    },
+    {
+      "exportIndex": 58,
+      "clipId": "nr_253",
+      "text": "How mean do you think the teacher on the left was for NOT helping the teacher in the middle?",
+      "targetFile": "assets/narration/nr_253.mp3",
+      "proposedWording": false
+    },
+    {
+      "exportIndex": 59,
+      "clipId": "nr_254",
+      "text": "Do you think it was Mean or Not Mean that the kid did NOT help the teacher in the middle?",
+      "targetFile": "assets/narration/nr_254.mp3",
+      "proposedWording": false
+    },
+    {
+      "exportIndex": 60,
+      "clipId": "nr_255",
+      "text": "How mean do you think the kid was for NOT helping the teacher in the middle?",
+      "targetFile": "assets/narration/nr_255.mp3",
       "proposedWording": false
     }
   ]

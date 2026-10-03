@@ -18,9 +18,9 @@
   "summary": {
     "storyCount": 18,
     "screenCount": 523,
-    "clipCount": 195,
-    "readyCount": 195,
-    "pendingCount": 0,
+    "clipCount": 209,
+    "readyCount": 149,
+    "pendingCount": 60,
     "emphasisPendingCount": 32
   },
   "notes": [
@@ -32,7 +32,10 @@
     "Binary options already included in a prompt need not be spoken a second time. Individual option clips are available for other occurrences.",
     "A manifest entry marked pending is a recording request, not generated audio.",
     "HAVE TO/HAS TO capitalization is live; 32 associated recordings retain the verified original audio while the edited NaturalReaders emphasis project awaits successful export. Audio availability does not imply audible emphasis.",
-    "Four neither-helped corrective reminders retain the original Evelyn voice and wording, with locally processed pitch-preserving slower speech and a longer sentence pause; original recordings and independent offline word-sequence checks are archived."
+    "Four neither-helped corrective reminders retain the original Evelyn voice and wording, with locally processed pitch-preserving slower speech and a longer sentence pause; original recordings and independent offline word-sequence checks are archived.",
+    "Explicit no-one-helped wording and complete helper/recipient evaluation wording are draft adaptations requested for clarity.",
+    "Planned manifest only: no source narration manifest or audio has been changed. Exact unchanged full text retains the original clip ID and audio fields; new full text receives a fresh ID.",
+    "New explicit-outcome recordings use Evelyn Soft 0.80x / 160 WPM; retained recordings preserve their original voice settings. The package contains mixed recorded pacing."
   ],
   "clips": [
     {
@@ -5580,42 +5583,33 @@
       }
     },
     {
-      "id": "nr_029",
-      "text": "Now let’s say that the kid’s teacher and the kid’s mom do NOT help the kid.",
-      "src": "assets/narration/nr_029.mp3",
+      "id": "nr_196",
+      "text": "No one helped the kid. The kid’s teacher did NOT help the kid. The kid’s mom did NOT help the kid.",
+      "src": null,
       "kind": "prompt",
-      "status": "imported",
+      "status": "pending",
+      "requestedVoice": {
+        "provider": "NaturalReaders Commercial",
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
       "uses": [
         {
           "stepId": "woman-mom-teacher:outcome",
           "proposedWording": false,
           "part": "prompt"
         }
-      ],
-      "sha256": "c8c20c0d0f7f4cc5da77893f925401bee33def0bbb3bd4cb4bbef6a2815a7abc",
-      "bytes": 188126,
-      "durationSeconds": 4.702025,
-      "provenance": {
-        "provider": "NaturalReaders Commercial",
-        "voice": {
-          "provider": "NaturalReaders Commercial",
-          "name": "Evelyn",
-          "style": "Soft",
-          "speed": 0.9,
-          "wordsPerMinuteSetting": 180,
-          "paragraphPauseSeconds": 0,
-          "exportFormat": "MP3",
-          "exportMode": "separate files ZIP",
-          "exportNaming": "Index + Segment",
-          "preferredBitrateKbps": 320,
-          "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "28.Now_let’s_say_that_the_kid’s_t.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
-      }
+      ]
     },
     {
       "id": "nr_030",
@@ -5726,143 +5720,55 @@
       }
     },
     {
-      "id": "nr_031",
-      "text": "Actually, remember, neither of these people helped the kid. Can you tell me, did either of these people help the kid?",
-      "src": "assets/narration/nr_031.mp3",
+      "id": "nr_197",
+      "text": "Actually, remember, no one helped the kid. The kid’s teacher did NOT help the kid. The kid’s mom did NOT help the kid. Can you tell me, did either of these people help the kid?",
+      "src": null,
       "kind": "reminder",
-      "status": "imported",
+      "status": "pending",
+      "requestedVoice": {
+        "provider": "NaturalReaders Commercial",
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
       "uses": [
         {
           "stepId": "woman-mom-teacher:recall-all",
           "proposedWording": false,
           "part": "reminder"
-        },
-        {
-          "stepId": "woman-sister-friend:recall-all",
-          "proposedWording": false,
-          "part": "reminder"
-        },
-        {
-          "stepId": "woman-bestfriend-friend:recall-all",
-          "proposedWording": false,
-          "part": "reminder"
-        },
-        {
-          "stepId": "woman-teacher-friend:recall-all",
-          "proposedWording": false,
-          "part": "reminder"
-        },
-        {
-          "stepId": "woman-mom-sister:recall-all",
-          "proposedWording": false,
-          "part": "reminder"
-        },
-        {
-          "stepId": "woman-teacher-classmate:recall-all",
-          "proposedWording": false,
-          "part": "reminder"
-        },
-        {
-          "stepId": "man-dad-teacher:recall-all",
-          "proposedWording": false,
-          "part": "reminder"
-        },
-        {
-          "stepId": "man-brother-friend:recall-all",
-          "proposedWording": false,
-          "part": "reminder"
-        },
-        {
-          "stepId": "man-bestfriend-friend:recall-all",
-          "proposedWording": false,
-          "part": "reminder"
-        },
-        {
-          "stepId": "man-teacher-friend:recall-all",
-          "proposedWording": false,
-          "part": "reminder"
-        },
-        {
-          "stepId": "man-dad-brother:recall-all",
-          "proposedWording": false,
-          "part": "reminder"
-        },
-        {
-          "stepId": "man-teacher-classmate:recall-all",
-          "proposedWording": false,
-          "part": "reminder"
-        },
-        {
-          "stepId": "family-mom-dad:recall-all",
-          "proposedWording": false,
-          "part": "reminder"
-        },
-        {
-          "stepId": "family-sister-brother:recall-all",
-          "proposedWording": false,
-          "part": "reminder"
-        },
-        {
-          "stepId": "family-teacher-classmate:recall-all",
-          "proposedWording": false,
-          "part": "reminder"
         }
-      ],
-      "sha256": "626d0f8ee15359cccf323868a027e9bb58662ed4792361516dab7bd9650b19f7",
-      "bytes": 406509,
-      "durationSeconds": 10.13551,
-      "provenance": {
-        "provider": "NaturalReaders Commercial",
-        "voice": {
-          "provider": "NaturalReaders Commercial",
-          "name": "Evelyn",
-          "style": "Soft",
-          "speed": 0.9,
-          "wordsPerMinuteSetting": 180,
-          "paragraphPauseSeconds": 0,
-          "exportFormat": "MP3",
-          "exportMode": "separate files ZIP",
-          "exportNaming": "Index + Segment",
-          "preferredBitrateKbps": 320,
-          "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "30.Actually,_remember,_neither_of.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": false,
-        "originalRecordingSha256": "794fb472a8a56932cc6824bf22d689d2988244618f6a8512c25d40e63e8a7fce",
-        "audioProcessing": {
-          "sourceSha256": "794fb472a8a56932cc6824bf22d689d2988244618f6a8512c25d40e63e8a7fce",
-          "firstSentenceTempo": 0.68,
-          "questionTempo": 0.76,
-          "originalSentencePause": [
-            2.99698,
-            3.71524
-          ],
-          "splitWithinSilence": 3.35611,
-          "addedSilenceSeconds": 0.19932817337461306,
-          "targetSentencePauseSeconds": 1.2,
-          "processing": "FFmpeg atempo: pitch-preserving tempo adjustment, split within intersentence silence",
-          "decodeVerified": true,
-          "wordBoundariesSpliced": false
-        },
-        "offlineAdjustedWordSequenceVerified": true
-      },
-      "audioTreatment": {
-        "kind": "slow-neither-reminder",
-        "firstSentenceTempo": 0.68,
-        "questionTempo": 0.76,
-        "originalDurationSeconds": 7.15755,
-        "targetSentencePauseSeconds": 1.2
-      }
+      ]
     },
     {
-      "id": "nr_032",
-      "text": "Neither of these people helped the kid. Do you think this was a mean or nice thing that happened?",
-      "src": "assets/narration/nr_032.mp3",
+      "id": "nr_198",
+      "text": "No one helped the kid. Do you think this was a mean or nice thing that happened?",
+      "src": null,
       "kind": "prompt",
-      "status": "imported",
+      "status": "pending",
+      "requestedVoice": {
+        "provider": "NaturalReaders Commercial",
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
       "uses": [
         {
           "stepId": "woman-mom-teacher:overall",
@@ -5939,31 +5845,7 @@
           "proposedWording": false,
           "part": "prompt"
         }
-      ],
-      "sha256": "ddd071b901c71a7e20ce19c588f85bc3adbc17cebd5777a1a3e21af0e0f8e936",
-      "bytes": 252910,
-      "durationSeconds": 6.321625,
-      "provenance": {
-        "provider": "NaturalReaders Commercial",
-        "voice": {
-          "provider": "NaturalReaders Commercial",
-          "name": "Evelyn",
-          "style": "Soft",
-          "speed": 0.9,
-          "wordsPerMinuteSetting": 180,
-          "paragraphPauseSeconds": 0,
-          "exportFormat": "MP3",
-          "exportMode": "separate files ZIP",
-          "exportNaming": "Index + Segment",
-          "preferredBitrateKbps": 320,
-          "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "31.Neither_of_these_people_helped.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
-      }
+      ]
     },
     {
       "id": "nr_033",
@@ -7362,11 +7244,26 @@
       }
     },
     {
-      "id": "nr_041",
-      "text": "Was the kid’s teacher Mean or Not Mean for NOT helping the kid in the middle?",
-      "src": "assets/narration/nr_041.mp3",
+      "id": "nr_199",
+      "text": "Do you think it was Mean or Not Mean that the kid’s teacher did NOT help the kid in the middle?",
+      "src": null,
       "kind": "prompt",
-      "status": "imported",
+      "status": "pending",
+      "requestedVoice": {
+        "provider": "NaturalReaders Commercial",
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
       "uses": [
         {
           "stepId": "woman-mom-teacher:evaluation-helper1",
@@ -7403,31 +7300,7 @@
           "proposedWording": false,
           "part": "prompt"
         }
-      ],
-      "sha256": "9a6ec9d9a519e25561317fc19c7b021c47a8957295314649e7a113a6aa8d6b75",
-      "bytes": 198575,
-      "durationSeconds": 4.96325,
-      "provenance": {
-        "provider": "NaturalReaders Commercial",
-        "voice": {
-          "provider": "NaturalReaders Commercial",
-          "name": "Evelyn",
-          "style": "Soft",
-          "speed": 0.9,
-          "wordsPerMinuteSetting": 180,
-          "paragraphPauseSeconds": 0,
-          "exportFormat": "MP3",
-          "exportMode": "separate files ZIP",
-          "exportNaming": "Index + Segment",
-          "preferredBitrateKbps": 320,
-          "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "40.Was_the_kid’s_teacher_Mean_or_.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
-      }
+      ]
     },
     {
       "id": "nr_042",
@@ -7679,11 +7552,26 @@
       }
     },
     {
-      "id": "nr_043",
-      "text": "The kid’s teacher. How mean do you think the kid’s teacher was?",
-      "src": "assets/narration/nr_043.mp3",
+      "id": "nr_200",
+      "text": "How mean do you think the kid’s teacher was for NOT helping the kid in the middle?",
+      "src": null,
       "kind": "prompt",
-      "status": "imported",
+      "status": "pending",
+      "requestedVoice": {
+        "provider": "NaturalReaders Commercial",
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
       "uses": [
         {
           "stepId": "woman-mom-teacher:evaluation-helper1-amount",
@@ -7720,31 +7608,7 @@
           "proposedWording": false,
           "part": "prompt"
         }
-      ],
-      "sha256": "63a697090135565f7d6a78c24db9234fe48625cc4ed05f7830bd318b044aa024",
-      "bytes": 190216,
-      "durationSeconds": 4.754275,
-      "provenance": {
-        "provider": "NaturalReaders Commercial",
-        "voice": {
-          "provider": "NaturalReaders Commercial",
-          "name": "Evelyn",
-          "style": "Soft",
-          "speed": 0.9,
-          "wordsPerMinuteSetting": 180,
-          "paragraphPauseSeconds": 0,
-          "exportFormat": "MP3",
-          "exportMode": "separate files ZIP",
-          "exportNaming": "Index + Segment",
-          "preferredBitrateKbps": 320,
-          "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "42.The_kid’s_teacher._How_mean_do.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
-      }
+      ]
     },
     {
       "id": "nr_044",
@@ -8341,11 +8205,26 @@
       }
     },
     {
-      "id": "nr_048",
-      "text": "Was the kid’s mom Mean or Not Mean for NOT helping the kid in the middle?",
-      "src": "assets/narration/nr_048.mp3",
+      "id": "nr_201",
+      "text": "Do you think it was Mean or Not Mean that the kid’s mom did NOT help the kid in the middle?",
+      "src": null,
       "kind": "prompt",
-      "status": "imported",
+      "status": "pending",
+      "requestedVoice": {
+        "provider": "NaturalReaders Commercial",
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
       "uses": [
         {
           "stepId": "woman-mom-teacher:evaluation-helper2",
@@ -8362,38 +8241,29 @@
           "proposedWording": false,
           "part": "prompt"
         }
-      ],
-      "sha256": "ee24925a5346ce164d9b813b1af1e3a128a7d459acfe4489026edc2a2dce70a6",
-      "bytes": 192306,
-      "durationSeconds": 4.806525,
-      "provenance": {
-        "provider": "NaturalReaders Commercial",
-        "voice": {
-          "provider": "NaturalReaders Commercial",
-          "name": "Evelyn",
-          "style": "Soft",
-          "speed": 0.9,
-          "wordsPerMinuteSetting": 180,
-          "paragraphPauseSeconds": 0,
-          "exportFormat": "MP3",
-          "exportMode": "separate files ZIP",
-          "exportNaming": "Index + Segment",
-          "preferredBitrateKbps": 320,
-          "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "47.Was_the_kid’s_mom_Mean_or_Not_.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
-      }
+      ]
     },
     {
-      "id": "nr_049",
-      "text": "The kid’s mom. How mean do you think she was?",
-      "src": "assets/narration/nr_049.mp3",
+      "id": "nr_202",
+      "text": "How mean do you think the kid’s mom was for NOT helping the kid in the middle?",
+      "src": null,
       "kind": "prompt",
-      "status": "imported",
+      "status": "pending",
+      "requestedVoice": {
+        "provider": "NaturalReaders Commercial",
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
       "uses": [
         {
           "stepId": "woman-mom-teacher:evaluation-helper2-amount",
@@ -8409,37 +8279,8 @@
           "stepId": "family-mom-dad:evaluation-helper2-amount",
           "proposedWording": false,
           "part": "prompt"
-        },
-        {
-          "stepId": "family-mom-kid:evaluation-helper2-amount",
-          "proposedWording": false,
-          "part": "prompt"
         }
-      ],
-      "sha256": "6e3428fd2ab04b95a701ae59856e63f91b5b4067b2d982ed38b206eb9f7d9d7b",
-      "bytes": 162004,
-      "durationSeconds": 4.048975,
-      "provenance": {
-        "provider": "NaturalReaders Commercial",
-        "voice": {
-          "provider": "NaturalReaders Commercial",
-          "name": "Evelyn",
-          "style": "Soft",
-          "speed": 0.9,
-          "wordsPerMinuteSetting": 180,
-          "paragraphPauseSeconds": 0,
-          "exportFormat": "MP3",
-          "exportMode": "separate files ZIP",
-          "exportNaming": "Index + Segment",
-          "preferredBitrateKbps": 320,
-          "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "48.The_kid’s_mom._How_mean_do_you.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
-      }
+      ]
     },
     {
       "id": "nr_050",
@@ -9310,42 +9151,62 @@
       }
     },
     {
-      "id": "nr_064",
-      "text": "Now let’s say that the kid’s sister and the kid’s friend do NOT help the kid.",
-      "src": "assets/narration/nr_064.mp3",
+      "id": "nr_203",
+      "text": "No one helped the kid. The kid’s sister did NOT help the kid. The kid’s friend did NOT help the kid.",
+      "src": null,
       "kind": "prompt",
-      "status": "imported",
+      "status": "pending",
+      "requestedVoice": {
+        "provider": "NaturalReaders Commercial",
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
       "uses": [
         {
           "stepId": "woman-sister-friend:outcome",
           "proposedWording": false,
           "part": "prompt"
         }
-      ],
-      "sha256": "0136bab0a08e303406d6b27d7d8f5c8ab354cecb7ff9d13f01f23e242fe6918a",
-      "bytes": 188126,
-      "durationSeconds": 4.702025,
-      "provenance": {
+      ]
+    },
+    {
+      "id": "nr_204",
+      "text": "Actually, remember, no one helped the kid. The kid’s sister did NOT help the kid. The kid’s friend did NOT help the kid. Can you tell me, did either of these people help the kid?",
+      "src": null,
+      "kind": "reminder",
+      "status": "pending",
+      "requestedVoice": {
         "provider": "NaturalReaders Commercial",
-        "voice": {
-          "provider": "NaturalReaders Commercial",
-          "name": "Evelyn",
-          "style": "Soft",
-          "speed": 0.9,
-          "wordsPerMinuteSetting": 180,
-          "paragraphPauseSeconds": 0,
-          "exportFormat": "MP3",
-          "exportMode": "separate files ZIP",
-          "exportNaming": "Index + Segment",
-          "preferredBitrateKbps": 320,
-          "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "63.Now_let’s_say_that_the_kid’s_s.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
-      }
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
+      "uses": [
+        {
+          "stepId": "woman-sister-friend:recall-all",
+          "proposedWording": false,
+          "part": "reminder"
+        }
+      ]
     },
     {
       "id": "nr_065",
@@ -9444,11 +9305,26 @@
       }
     },
     {
-      "id": "nr_067",
-      "text": "Was the kid’s sister Mean or Not Mean for NOT helping the kid in the middle?",
-      "src": "assets/narration/nr_067.mp3",
+      "id": "nr_205",
+      "text": "Do you think it was Mean or Not Mean that the kid’s sister did NOT help the kid in the middle?",
+      "src": null,
       "kind": "prompt",
-      "status": "imported",
+      "status": "pending",
+      "requestedVoice": {
+        "provider": "NaturalReaders Commercial",
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
       "uses": [
         {
           "stepId": "woman-sister-friend:evaluation-helper1",
@@ -9465,38 +9341,29 @@
           "proposedWording": false,
           "part": "prompt"
         }
-      ],
-      "sha256": "6e859e154302e5e5ed949d4349bcb353252a8a4ba011e58d038bfe171034113e",
-      "bytes": 197530,
-      "durationSeconds": 4.937125,
-      "provenance": {
-        "provider": "NaturalReaders Commercial",
-        "voice": {
-          "provider": "NaturalReaders Commercial",
-          "name": "Evelyn",
-          "style": "Soft",
-          "speed": 0.9,
-          "wordsPerMinuteSetting": 180,
-          "paragraphPauseSeconds": 0,
-          "exportFormat": "MP3",
-          "exportMode": "separate files ZIP",
-          "exportNaming": "Index + Segment",
-          "preferredBitrateKbps": 320,
-          "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "66.Was_the_kid’s_sister_Mean_or_N.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
-      }
+      ]
     },
     {
-      "id": "nr_068",
-      "text": "The kid’s sister. How mean do you think she was?",
-      "src": "assets/narration/nr_068.mp3",
+      "id": "nr_206",
+      "text": "How mean do you think the kid’s sister was for NOT helping the kid in the middle?",
+      "src": null,
       "kind": "prompt",
-      "status": "imported",
+      "status": "pending",
+      "requestedVoice": {
+        "provider": "NaturalReaders Commercial",
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
       "uses": [
         {
           "stepId": "woman-sister-friend:evaluation-helper1-amount",
@@ -9513,31 +9380,7 @@
           "proposedWording": false,
           "part": "prompt"
         }
-      ],
-      "sha256": "13bc35c6463f8511e006ca4a5dea16eec232371ff156f2a26bfc77ca2a0afa00",
-      "bytes": 167228,
-      "durationSeconds": 4.179575,
-      "provenance": {
-        "provider": "NaturalReaders Commercial",
-        "voice": {
-          "provider": "NaturalReaders Commercial",
-          "name": "Evelyn",
-          "style": "Soft",
-          "speed": 0.9,
-          "wordsPerMinuteSetting": 180,
-          "paragraphPauseSeconds": 0,
-          "exportFormat": "MP3",
-          "exportMode": "separate files ZIP",
-          "exportNaming": "Index + Segment",
-          "preferredBitrateKbps": 320,
-          "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "67.The_kid’s_sister._How_mean_do_.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
-      }
+      ]
     },
     {
       "id": "nr_069",
@@ -9666,11 +9509,26 @@
       }
     },
     {
-      "id": "nr_071",
-      "text": "Was the kid’s friend Mean or Not Mean for NOT helping the kid in the middle?",
-      "src": "assets/narration/nr_071.mp3",
+      "id": "nr_207",
+      "text": "Do you think it was Mean or Not Mean that the kid’s friend did NOT help the kid in the middle?",
+      "src": null,
       "kind": "prompt",
-      "status": "imported",
+      "status": "pending",
+      "requestedVoice": {
+        "provider": "NaturalReaders Commercial",
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
       "uses": [
         {
           "stepId": "woman-sister-friend:evaluation-helper2",
@@ -9702,38 +9560,29 @@
           "proposedWording": false,
           "part": "prompt"
         }
-      ],
-      "sha256": "7d59e854b17cbeb111b7b0d7d82cf94634f9d8405c6dbd37c9cbce2f604b70eb",
-      "bytes": 196485,
-      "durationSeconds": 4.911,
-      "provenance": {
-        "provider": "NaturalReaders Commercial",
-        "voice": {
-          "provider": "NaturalReaders Commercial",
-          "name": "Evelyn",
-          "style": "Soft",
-          "speed": 0.9,
-          "wordsPerMinuteSetting": 180,
-          "paragraphPauseSeconds": 0,
-          "exportFormat": "MP3",
-          "exportMode": "separate files ZIP",
-          "exportNaming": "Index + Segment",
-          "preferredBitrateKbps": 320,
-          "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "70.Was_the_kid’s_friend_Mean_or_N.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
-      }
+      ]
     },
     {
-      "id": "nr_072",
-      "text": "The kid’s friend. How mean do you think the kid’s friend was?",
-      "src": "assets/narration/nr_072.mp3",
+      "id": "nr_208",
+      "text": "How mean do you think the kid’s friend was for NOT helping the kid in the middle?",
+      "src": null,
       "kind": "prompt",
-      "status": "imported",
+      "status": "pending",
+      "requestedVoice": {
+        "provider": "NaturalReaders Commercial",
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
       "uses": [
         {
           "stepId": "woman-sister-friend:evaluation-helper2-amount",
@@ -9765,31 +9614,7 @@
           "proposedWording": false,
           "part": "prompt"
         }
-      ],
-      "sha256": "ace3f69e1c3a59c1eb4c7b5744ec3f56f7054c8fddb41b602f24ff44e19d13a8",
-      "bytes": 186036,
-      "durationSeconds": 4.649775,
-      "provenance": {
-        "provider": "NaturalReaders Commercial",
-        "voice": {
-          "provider": "NaturalReaders Commercial",
-          "name": "Evelyn",
-          "style": "Soft",
-          "speed": 0.9,
-          "wordsPerMinuteSetting": 180,
-          "paragraphPauseSeconds": 0,
-          "exportFormat": "MP3",
-          "exportMode": "separate files ZIP",
-          "exportNaming": "Index + Segment",
-          "preferredBitrateKbps": 320,
-          "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "71.The_kid’s_friend._How_mean_do_.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
-      }
+      ]
     },
     {
       "id": "nr_073",
@@ -10180,11 +10005,26 @@
       }
     },
     {
-      "id": "nr_081",
-      "text": "Now let’s say that the kid’s friend and the kid’s best friend do NOT help the kid.",
-      "src": "assets/narration/nr_081.mp3",
+      "id": "nr_209",
+      "text": "No one helped the kid. The kid’s friend did NOT help the kid. The kid’s best friend did NOT help the kid.",
+      "src": null,
       "kind": "prompt",
-      "status": "imported",
+      "status": "pending",
+      "requestedVoice": {
+        "provider": "NaturalReaders Commercial",
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
       "uses": [
         {
           "stepId": "woman-bestfriend-friend:outcome",
@@ -10196,31 +10036,41 @@
           "proposedWording": false,
           "part": "prompt"
         }
-      ],
-      "sha256": "84a9167adee25db1b7117ce0060aa5a61e29b5841540ee78daf6ae1ae23881b7",
-      "bytes": 197530,
-      "durationSeconds": 4.937125,
-      "provenance": {
+      ]
+    },
+    {
+      "id": "nr_210",
+      "text": "Actually, remember, no one helped the kid. The kid’s friend did NOT help the kid. The kid’s best friend did NOT help the kid. Can you tell me, did either of these people help the kid?",
+      "src": null,
+      "kind": "reminder",
+      "status": "pending",
+      "requestedVoice": {
         "provider": "NaturalReaders Commercial",
-        "voice": {
-          "provider": "NaturalReaders Commercial",
-          "name": "Evelyn",
-          "style": "Soft",
-          "speed": 0.9,
-          "wordsPerMinuteSetting": 180,
-          "paragraphPauseSeconds": 0,
-          "exportFormat": "MP3",
-          "exportMode": "separate files ZIP",
-          "exportNaming": "Index + Segment",
-          "preferredBitrateKbps": 320,
-          "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
+      "uses": [
+        {
+          "stepId": "woman-bestfriend-friend:recall-all",
+          "proposedWording": false,
+          "part": "reminder"
         },
-        "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "80.Now_let’s_say_that_the_kid’s_f.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
-      }
+        {
+          "stepId": "man-bestfriend-friend:recall-all",
+          "proposedWording": false,
+          "part": "reminder"
+        }
+      ]
     },
     {
       "id": "nr_082",
@@ -10309,11 +10159,26 @@
       }
     },
     {
-      "id": "nr_084",
-      "text": "Was the kid’s best friend Mean or Not Mean for NOT helping the kid in the middle?",
-      "src": "assets/narration/nr_084.mp3",
+      "id": "nr_211",
+      "text": "Do you think it was Mean or Not Mean that the kid’s best friend did NOT help the kid in the middle?",
+      "src": null,
       "kind": "prompt",
-      "status": "imported",
+      "status": "pending",
+      "requestedVoice": {
+        "provider": "NaturalReaders Commercial",
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
       "uses": [
         {
           "stepId": "woman-bestfriend-friend:evaluation-helper2",
@@ -10325,38 +10190,29 @@
           "proposedWording": false,
           "part": "prompt"
         }
-      ],
-      "sha256": "f2104d791ad914523f0ccacae5bbb369429cafcb8b2bf8f9035317fb804dec1c",
-      "bytes": 209024,
-      "durationSeconds": 5.224475,
-      "provenance": {
-        "provider": "NaturalReaders Commercial",
-        "voice": {
-          "provider": "NaturalReaders Commercial",
-          "name": "Evelyn",
-          "style": "Soft",
-          "speed": 0.9,
-          "wordsPerMinuteSetting": 180,
-          "paragraphPauseSeconds": 0,
-          "exportFormat": "MP3",
-          "exportMode": "separate files ZIP",
-          "exportNaming": "Index + Segment",
-          "preferredBitrateKbps": 320,
-          "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "83.Was_the_kid’s_best_friend_Mean.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
-      }
+      ]
     },
     {
-      "id": "nr_085",
-      "text": "The kid’s best friend. How mean do you think the kid’s best friend was?",
-      "src": "assets/narration/nr_085.mp3",
+      "id": "nr_212",
+      "text": "How mean do you think the kid’s best friend was for NOT helping the kid in the middle?",
+      "src": null,
       "kind": "prompt",
-      "status": "imported",
+      "status": "pending",
+      "requestedVoice": {
+        "provider": "NaturalReaders Commercial",
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
       "uses": [
         {
           "stepId": "woman-bestfriend-friend:evaluation-helper2-amount",
@@ -10368,31 +10224,7 @@
           "proposedWording": false,
           "part": "prompt"
         }
-      ],
-      "sha256": "715846674f0756405f270c6f160d945318aeddd6595c62e033c1b332e7c0e059",
-      "bytes": 207979,
-      "durationSeconds": 5.19835,
-      "provenance": {
-        "provider": "NaturalReaders Commercial",
-        "voice": {
-          "provider": "NaturalReaders Commercial",
-          "name": "Evelyn",
-          "style": "Soft",
-          "speed": 0.9,
-          "wordsPerMinuteSetting": 180,
-          "paragraphPauseSeconds": 0,
-          "exportFormat": "MP3",
-          "exportMode": "separate files ZIP",
-          "exportNaming": "Index + Segment",
-          "preferredBitrateKbps": 320,
-          "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "84.The_kid’s_best_friend._How_mea.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
-      }
+      ]
     },
     {
       "id": "nr_086",
@@ -10483,11 +10315,26 @@
       }
     },
     {
-      "id": "nr_088",
-      "text": "Now let’s say that the kid’s teacher and the kid’s friend do NOT help the kid.",
-      "src": "assets/narration/nr_088.mp3",
+      "id": "nr_213",
+      "text": "No one helped the kid. The kid’s teacher did NOT help the kid. The kid’s friend did NOT help the kid.",
+      "src": null,
       "kind": "prompt",
-      "status": "imported",
+      "status": "pending",
+      "requestedVoice": {
+        "provider": "NaturalReaders Commercial",
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
       "uses": [
         {
           "stepId": "woman-teacher-friend:outcome",
@@ -10499,31 +10346,41 @@
           "proposedWording": false,
           "part": "prompt"
         }
-      ],
-      "sha256": "0b19f88d0bc5c7876e202646a53a8656ff12b28e65a4d6054464b9dbf990f6c7",
-      "bytes": 188126,
-      "durationSeconds": 4.702025,
-      "provenance": {
+      ]
+    },
+    {
+      "id": "nr_214",
+      "text": "Actually, remember, no one helped the kid. The kid’s teacher did NOT help the kid. The kid’s friend did NOT help the kid. Can you tell me, did either of these people help the kid?",
+      "src": null,
+      "kind": "reminder",
+      "status": "pending",
+      "requestedVoice": {
         "provider": "NaturalReaders Commercial",
-        "voice": {
-          "provider": "NaturalReaders Commercial",
-          "name": "Evelyn",
-          "style": "Soft",
-          "speed": 0.9,
-          "wordsPerMinuteSetting": 180,
-          "paragraphPauseSeconds": 0,
-          "exportFormat": "MP3",
-          "exportMode": "separate files ZIP",
-          "exportNaming": "Index + Segment",
-          "preferredBitrateKbps": 320,
-          "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
+      "uses": [
+        {
+          "stepId": "woman-teacher-friend:recall-all",
+          "proposedWording": false,
+          "part": "reminder"
         },
-        "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "87.Now_let’s_say_that_the_kid’s_t.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
-      }
+        {
+          "stepId": "man-teacher-friend:recall-all",
+          "proposedWording": false,
+          "part": "reminder"
+        }
+      ]
     },
     {
       "id": "nr_089",
@@ -10564,42 +10421,62 @@
       }
     },
     {
-      "id": "nr_090",
-      "text": "Now let’s say that the kid’s mom and the kid’s sister do NOT help the kid.",
-      "src": "assets/narration/nr_090.mp3",
+      "id": "nr_215",
+      "text": "No one helped the kid. The kid’s mom did NOT help the kid. The kid’s sister did NOT help the kid.",
+      "src": null,
       "kind": "prompt",
-      "status": "imported",
+      "status": "pending",
+      "requestedVoice": {
+        "provider": "NaturalReaders Commercial",
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
       "uses": [
         {
           "stepId": "woman-mom-sister:outcome",
           "proposedWording": false,
           "part": "prompt"
         }
-      ],
-      "sha256": "ea3215721012b6f4c524d1b81eabfa3d5e7f72c2237c0f583fad5442c46ff010",
-      "bytes": 189171,
-      "durationSeconds": 4.72815,
-      "provenance": {
+      ]
+    },
+    {
+      "id": "nr_216",
+      "text": "Actually, remember, no one helped the kid. The kid’s mom did NOT help the kid. The kid’s sister did NOT help the kid. Can you tell me, did either of these people help the kid?",
+      "src": null,
+      "kind": "reminder",
+      "status": "pending",
+      "requestedVoice": {
         "provider": "NaturalReaders Commercial",
-        "voice": {
-          "provider": "NaturalReaders Commercial",
-          "name": "Evelyn",
-          "style": "Soft",
-          "speed": 0.9,
-          "wordsPerMinuteSetting": 180,
-          "paragraphPauseSeconds": 0,
-          "exportFormat": "MP3",
-          "exportMode": "separate files ZIP",
-          "exportNaming": "Index + Segment",
-          "preferredBitrateKbps": 320,
-          "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "89.Now_let’s_say_that_the_kid’s_m.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
-      }
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
+      "uses": [
+        {
+          "stepId": "woman-mom-sister:recall-all",
+          "proposedWording": false,
+          "part": "reminder"
+        }
+      ]
     },
     {
       "id": "nr_091",
@@ -10900,11 +10777,26 @@
       }
     },
     {
-      "id": "nr_097",
-      "text": "Now let’s say that the kid’s classmate and the kid’s teacher do NOT help the kid.",
-      "src": "assets/narration/nr_097.mp3",
+      "id": "nr_217",
+      "text": "No one helped the kid. The kid’s classmate did NOT help the kid. The kid’s teacher did NOT help the kid.",
+      "src": null,
       "kind": "prompt",
-      "status": "imported",
+      "status": "pending",
+      "requestedVoice": {
+        "provider": "NaturalReaders Commercial",
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
       "uses": [
         {
           "stepId": "woman-teacher-classmate:outcome",
@@ -10921,31 +10813,46 @@
           "proposedWording": false,
           "part": "prompt"
         }
-      ],
-      "sha256": "0fae4f34458a2de2f6e65b675b0a8a2ba16247428dc86faafe4a0f5d6c8e5a19",
-      "bytes": 199620,
-      "durationSeconds": 4.989375,
-      "provenance": {
+      ]
+    },
+    {
+      "id": "nr_218",
+      "text": "Actually, remember, no one helped the kid. The kid’s classmate did NOT help the kid. The kid’s teacher did NOT help the kid. Can you tell me, did either of these people help the kid?",
+      "src": null,
+      "kind": "reminder",
+      "status": "pending",
+      "requestedVoice": {
         "provider": "NaturalReaders Commercial",
-        "voice": {
-          "provider": "NaturalReaders Commercial",
-          "name": "Evelyn",
-          "style": "Soft",
-          "speed": 0.9,
-          "wordsPerMinuteSetting": 180,
-          "paragraphPauseSeconds": 0,
-          "exportFormat": "MP3",
-          "exportMode": "separate files ZIP",
-          "exportNaming": "Index + Segment",
-          "preferredBitrateKbps": 320,
-          "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
+      "uses": [
+        {
+          "stepId": "woman-teacher-classmate:recall-all",
+          "proposedWording": false,
+          "part": "reminder"
         },
-        "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "96.Now_let’s_say_that_the_kid’s_c.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
-      }
+        {
+          "stepId": "man-teacher-classmate:recall-all",
+          "proposedWording": false,
+          "part": "reminder"
+        },
+        {
+          "stepId": "family-teacher-classmate:recall-all",
+          "proposedWording": false,
+          "part": "reminder"
+        }
+      ]
     },
     {
       "id": "nr_098",
@@ -11044,11 +10951,26 @@
       }
     },
     {
-      "id": "nr_100",
-      "text": "Was the kid’s classmate Mean or Not Mean for NOT helping the kid in the middle?",
-      "src": "assets/narration/nr_100.mp3",
+      "id": "nr_219",
+      "text": "Do you think it was Mean or Not Mean that the kid’s classmate did NOT help the kid in the middle?",
+      "src": null,
       "kind": "prompt",
-      "status": "imported",
+      "status": "pending",
+      "requestedVoice": {
+        "provider": "NaturalReaders Commercial",
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
       "uses": [
         {
           "stepId": "woman-teacher-classmate:evaluation-helper1",
@@ -11065,38 +10987,29 @@
           "proposedWording": false,
           "part": "prompt"
         }
-      ],
-      "sha256": "6ea6f7fc78cc4e2d05ccde7ea1e9a10f9947831d88d70889638d6e887d42e23d",
-      "bytes": 203800,
-      "durationSeconds": 5.093875,
-      "provenance": {
-        "provider": "NaturalReaders Commercial",
-        "voice": {
-          "provider": "NaturalReaders Commercial",
-          "name": "Evelyn",
-          "style": "Soft",
-          "speed": 0.9,
-          "wordsPerMinuteSetting": 180,
-          "paragraphPauseSeconds": 0,
-          "exportFormat": "MP3",
-          "exportMode": "separate files ZIP",
-          "exportNaming": "Index + Segment",
-          "preferredBitrateKbps": 320,
-          "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "99.Was_the_kid’s_classmate_Mean_o.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
-      }
+      ]
     },
     {
-      "id": "nr_101",
-      "text": "The kid’s classmate. How mean do you think the kid’s classmate was?",
-      "src": "assets/narration/nr_101.mp3",
+      "id": "nr_220",
+      "text": "How mean do you think the kid’s classmate was for NOT helping the kid in the middle?",
+      "src": null,
       "kind": "prompt",
-      "status": "imported",
+      "status": "pending",
+      "requestedVoice": {
+        "provider": "NaturalReaders Commercial",
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
       "uses": [
         {
           "stepId": "woman-teacher-classmate:evaluation-helper1-amount",
@@ -11113,31 +11026,7 @@
           "proposedWording": false,
           "part": "prompt"
         }
-      ],
-      "sha256": "ca3f1ed1bcdbe5f4eced8355391084dde778bb48e7344c5634a9440eaf8799ce",
-      "bytes": 203800,
-      "durationSeconds": 5.093875,
-      "provenance": {
-        "provider": "NaturalReaders Commercial",
-        "voice": {
-          "provider": "NaturalReaders Commercial",
-          "name": "Evelyn",
-          "style": "Soft",
-          "speed": 0.9,
-          "wordsPerMinuteSetting": 180,
-          "paragraphPauseSeconds": 0,
-          "exportFormat": "MP3",
-          "exportMode": "separate files ZIP",
-          "exportNaming": "Index + Segment",
-          "preferredBitrateKbps": 320,
-          "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "100.The_kid’s_classmate._How_mean_.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
-      }
+      ]
     },
     {
       "id": "nr_102",
@@ -11494,42 +11383,62 @@
       }
     },
     {
-      "id": "nr_109",
-      "text": "Now let’s say that the kid’s teacher and the kid’s dad do NOT help the kid.",
-      "src": "assets/narration/nr_109.mp3",
+      "id": "nr_221",
+      "text": "No one helped the kid. The kid’s teacher did NOT help the kid. The kid’s dad did NOT help the kid.",
+      "src": null,
       "kind": "prompt",
-      "status": "imported",
+      "status": "pending",
+      "requestedVoice": {
+        "provider": "NaturalReaders Commercial",
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
       "uses": [
         {
           "stepId": "man-dad-teacher:outcome",
           "proposedWording": false,
           "part": "prompt"
         }
-      ],
-      "sha256": "e96cb22c7dcba6d2e6f910400dbf27ea4e5e62d95b227c96bb7581c1749fce48",
-      "bytes": 187081,
-      "durationSeconds": 4.6759,
-      "provenance": {
+      ]
+    },
+    {
+      "id": "nr_222",
+      "text": "Actually, remember, no one helped the kid. The kid’s teacher did NOT help the kid. The kid’s dad did NOT help the kid. Can you tell me, did either of these people help the kid?",
+      "src": null,
+      "kind": "reminder",
+      "status": "pending",
+      "requestedVoice": {
         "provider": "NaturalReaders Commercial",
-        "voice": {
-          "provider": "NaturalReaders Commercial",
-          "name": "Evelyn",
-          "style": "Soft",
-          "speed": 0.9,
-          "wordsPerMinuteSetting": 180,
-          "paragraphPauseSeconds": 0,
-          "exportFormat": "MP3",
-          "exportMode": "separate files ZIP",
-          "exportNaming": "Index + Segment",
-          "preferredBitrateKbps": 320,
-          "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "8.Now_let’s_say_that_the_kid’s_t.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
-      }
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
+      "uses": [
+        {
+          "stepId": "man-dad-teacher:recall-all",
+          "proposedWording": false,
+          "part": "reminder"
+        }
+      ]
     },
     {
       "id": "nr_110",
@@ -11628,11 +11537,26 @@
       }
     },
     {
-      "id": "nr_112",
-      "text": "Was the kid’s dad Mean or Not Mean for NOT helping the kid in the middle?",
-      "src": "assets/narration/nr_112.mp3",
+      "id": "nr_223",
+      "text": "Do you think it was Mean or Not Mean that the kid’s dad did NOT help the kid in the middle?",
+      "src": null,
       "kind": "prompt",
-      "status": "imported",
+      "status": "pending",
+      "requestedVoice": {
+        "provider": "NaturalReaders Commercial",
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
       "uses": [
         {
           "stepId": "man-dad-teacher:evaluation-helper2",
@@ -11649,38 +11573,29 @@
           "proposedWording": false,
           "part": "prompt"
         }
-      ],
-      "sha256": "a77d488ab5d754059bebeae2a50c687f787f4ccbb30e6b13b9d3a82e74a03617",
-      "bytes": 194396,
-      "durationSeconds": 4.858775,
-      "provenance": {
-        "provider": "NaturalReaders Commercial",
-        "voice": {
-          "provider": "NaturalReaders Commercial",
-          "name": "Evelyn",
-          "style": "Soft",
-          "speed": 0.9,
-          "wordsPerMinuteSetting": 180,
-          "paragraphPauseSeconds": 0,
-          "exportFormat": "MP3",
-          "exportMode": "separate files ZIP",
-          "exportNaming": "Index + Segment",
-          "preferredBitrateKbps": 320,
-          "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "11.Was_the_kid’s_dad_Mean_or_Not_.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
-      }
+      ]
     },
     {
-      "id": "nr_113",
-      "text": "The kid’s dad. How mean do you think he was?",
-      "src": "assets/narration/nr_113.mp3",
+      "id": "nr_224",
+      "text": "How mean do you think the kid’s dad was for NOT helping the kid in the middle?",
+      "src": null,
       "kind": "prompt",
-      "status": "imported",
+      "status": "pending",
+      "requestedVoice": {
+        "provider": "NaturalReaders Commercial",
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
       "uses": [
         {
           "stepId": "man-dad-teacher:evaluation-helper2-amount",
@@ -11696,37 +11611,8 @@
           "stepId": "family-mom-dad:evaluation-helper1-amount",
           "proposedWording": false,
           "part": "prompt"
-        },
-        {
-          "stepId": "family-dad-kid:evaluation-helper1-amount",
-          "proposedWording": false,
-          "part": "prompt"
         }
-      ],
-      "sha256": "d24469698bf59c7d2d18ae8eabf71fee81c490e577ca8ec3883458c67a50d3ae",
-      "bytes": 157824,
-      "durationSeconds": 3.944475,
-      "provenance": {
-        "provider": "NaturalReaders Commercial",
-        "voice": {
-          "provider": "NaturalReaders Commercial",
-          "name": "Evelyn",
-          "style": "Soft",
-          "speed": 0.9,
-          "wordsPerMinuteSetting": 180,
-          "paragraphPauseSeconds": 0,
-          "exportFormat": "MP3",
-          "exportMode": "separate files ZIP",
-          "exportNaming": "Index + Segment",
-          "preferredBitrateKbps": 320,
-          "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "12.The_kid’s_dad._How_mean_do_you.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
-      }
+      ]
     },
     {
       "id": "nr_114",
@@ -12074,42 +11960,62 @@
       }
     },
     {
-      "id": "nr_121",
-      "text": "Now let’s say that the kid’s brother and the kid’s friend do NOT help the kid.",
-      "src": "assets/narration/nr_121.mp3",
+      "id": "nr_225",
+      "text": "No one helped the kid. The kid’s brother did NOT help the kid. The kid’s friend did NOT help the kid.",
+      "src": null,
       "kind": "prompt",
-      "status": "imported",
+      "status": "pending",
+      "requestedVoice": {
+        "provider": "NaturalReaders Commercial",
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
       "uses": [
         {
           "stepId": "man-brother-friend:outcome",
           "proposedWording": false,
           "part": "prompt"
         }
-      ],
-      "sha256": "69d701732f8f91e942778e5588e78da1d7b38b05bc1fdae4417bb903da047c26",
-      "bytes": 187081,
-      "durationSeconds": 4.6759,
-      "provenance": {
+      ]
+    },
+    {
+      "id": "nr_226",
+      "text": "Actually, remember, no one helped the kid. The kid’s brother did NOT help the kid. The kid’s friend did NOT help the kid. Can you tell me, did either of these people help the kid?",
+      "src": null,
+      "kind": "reminder",
+      "status": "pending",
+      "requestedVoice": {
         "provider": "NaturalReaders Commercial",
-        "voice": {
-          "provider": "NaturalReaders Commercial",
-          "name": "Evelyn",
-          "style": "Soft",
-          "speed": 0.9,
-          "wordsPerMinuteSetting": 180,
-          "paragraphPauseSeconds": 0,
-          "exportFormat": "MP3",
-          "exportMode": "separate files ZIP",
-          "exportNaming": "Index + Segment",
-          "preferredBitrateKbps": 320,
-          "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "20.Now_let’s_say_that_the_kid’s_b.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
-      }
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
+      "uses": [
+        {
+          "stepId": "man-brother-friend:recall-all",
+          "proposedWording": false,
+          "part": "reminder"
+        }
+      ]
     },
     {
       "id": "nr_122",
@@ -12208,11 +12114,26 @@
       }
     },
     {
-      "id": "nr_124",
-      "text": "Was the kid’s brother Mean or Not Mean for NOT helping the kid in the middle?",
-      "src": "assets/narration/nr_124.mp3",
+      "id": "nr_227",
+      "text": "Do you think it was Mean or Not Mean that the kid’s brother did NOT help the kid in the middle?",
+      "src": null,
       "kind": "prompt",
-      "status": "imported",
+      "status": "pending",
+      "requestedVoice": {
+        "provider": "NaturalReaders Commercial",
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
       "uses": [
         {
           "stepId": "man-brother-friend:evaluation-helper1",
@@ -12229,38 +12150,29 @@
           "proposedWording": false,
           "part": "prompt"
         }
-      ],
-      "sha256": "eee5a5d564f70dd3f10e3d3a3deb4779c07cc59d098016fb137e3c0952072068",
-      "bytes": 200665,
-      "durationSeconds": 5.0155,
-      "provenance": {
-        "provider": "NaturalReaders Commercial",
-        "voice": {
-          "provider": "NaturalReaders Commercial",
-          "name": "Evelyn",
-          "style": "Soft",
-          "speed": 0.9,
-          "wordsPerMinuteSetting": 180,
-          "paragraphPauseSeconds": 0,
-          "exportFormat": "MP3",
-          "exportMode": "separate files ZIP",
-          "exportNaming": "Index + Segment",
-          "preferredBitrateKbps": 320,
-          "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "23.Was_the_kid’s_brother_Mean_or_.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
-      }
+      ]
     },
     {
-      "id": "nr_125",
-      "text": "The kid’s brother. How mean do you think he was?",
-      "src": "assets/narration/nr_125.mp3",
+      "id": "nr_228",
+      "text": "How mean do you think the kid’s brother was for NOT helping the kid in the middle?",
+      "src": null,
       "kind": "prompt",
-      "status": "imported",
+      "status": "pending",
+      "requestedVoice": {
+        "provider": "NaturalReaders Commercial",
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
       "uses": [
         {
           "stepId": "man-brother-friend:evaluation-helper1-amount",
@@ -12277,31 +12189,7 @@
           "proposedWording": false,
           "part": "prompt"
         }
-      ],
-      "sha256": "3135eb48b66753ad4d452f491f069faeb01c7b4ca80fb65741a3cb7d15e4aef6",
-      "bytes": 162004,
-      "durationSeconds": 4.048975,
-      "provenance": {
-        "provider": "NaturalReaders Commercial",
-        "voice": {
-          "provider": "NaturalReaders Commercial",
-          "name": "Evelyn",
-          "style": "Soft",
-          "speed": 0.9,
-          "wordsPerMinuteSetting": 180,
-          "paragraphPauseSeconds": 0,
-          "exportFormat": "MP3",
-          "exportMode": "separate files ZIP",
-          "exportNaming": "Index + Segment",
-          "preferredBitrateKbps": 320,
-          "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "24.The_kid’s_brother._How_mean_do.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
-      }
+      ]
     },
     {
       "id": "nr_126",
@@ -12393,42 +12281,62 @@
       }
     },
     {
-      "id": "nr_128",
-      "text": "Now let’s say that the kid’s dad and the kid’s brother do NOT help the kid.",
-      "src": "assets/narration/nr_128.mp3",
+      "id": "nr_229",
+      "text": "No one helped the kid. The kid’s dad did NOT help the kid. The kid’s brother did NOT help the kid.",
+      "src": null,
       "kind": "prompt",
-      "status": "imported",
+      "status": "pending",
+      "requestedVoice": {
+        "provider": "NaturalReaders Commercial",
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
       "uses": [
         {
           "stepId": "man-dad-brother:outcome",
           "proposedWording": false,
           "part": "prompt"
         }
-      ],
-      "sha256": "d010d65e131ad0a7c5dd2aa07fbe73c58ea731eb7d7eefff8e8680175901b023",
-      "bytes": 186036,
-      "durationSeconds": 4.649775,
-      "provenance": {
+      ]
+    },
+    {
+      "id": "nr_230",
+      "text": "Actually, remember, no one helped the kid. The kid’s dad did NOT help the kid. The kid’s brother did NOT help the kid. Can you tell me, did either of these people help the kid?",
+      "src": null,
+      "kind": "reminder",
+      "status": "pending",
+      "requestedVoice": {
         "provider": "NaturalReaders Commercial",
-        "voice": {
-          "provider": "NaturalReaders Commercial",
-          "name": "Evelyn",
-          "style": "Soft",
-          "speed": 0.9,
-          "wordsPerMinuteSetting": 180,
-          "paragraphPauseSeconds": 0,
-          "exportFormat": "MP3",
-          "exportMode": "separate files ZIP",
-          "exportNaming": "Index + Segment",
-          "preferredBitrateKbps": 320,
-          "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "27.Now_let’s_say_that_the_kid’s_d.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
-      }
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
+      "uses": [
+        {
+          "stepId": "man-dad-brother:recall-all",
+          "proposedWording": false,
+          "part": "reminder"
+        }
+      ]
     },
     {
       "id": "nr_129",
@@ -12469,42 +12377,62 @@
       }
     },
     {
-      "id": "nr_130",
-      "text": "Now let’s say that the kid’s dad and the kid’s mom do NOT help the kid.",
-      "src": "assets/narration/nr_130.mp3",
+      "id": "nr_231",
+      "text": "No one helped the kid. The kid’s dad did NOT help the kid. The kid’s mom did NOT help the kid.",
+      "src": null,
       "kind": "prompt",
-      "status": "imported",
+      "status": "pending",
+      "requestedVoice": {
+        "provider": "NaturalReaders Commercial",
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
       "uses": [
         {
           "stepId": "family-mom-dad:outcome",
           "proposedWording": false,
           "part": "prompt"
         }
-      ],
-      "sha256": "c37376f4c4dd3a337f051fc609529f4462ba559f5caf0e65d69d5613f522b997",
-      "bytes": 182902,
-      "durationSeconds": 4.571425,
-      "provenance": {
+      ]
+    },
+    {
+      "id": "nr_232",
+      "text": "Actually, remember, no one helped the kid. The kid’s dad did NOT help the kid. The kid’s mom did NOT help the kid. Can you tell me, did either of these people help the kid?",
+      "src": null,
+      "kind": "reminder",
+      "status": "pending",
+      "requestedVoice": {
         "provider": "NaturalReaders Commercial",
-        "voice": {
-          "provider": "NaturalReaders Commercial",
-          "name": "Evelyn",
-          "style": "Soft",
-          "speed": 0.9,
-          "wordsPerMinuteSetting": 180,
-          "paragraphPauseSeconds": 0,
-          "exportFormat": "MP3",
-          "exportMode": "separate files ZIP",
-          "exportNaming": "Index + Segment",
-          "preferredBitrateKbps": 320,
-          "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "29.Now_let’s_say_that_the_kid’s_d.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
-      }
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
+      "uses": [
+        {
+          "stepId": "family-mom-dad:recall-all",
+          "proposedWording": false,
+          "part": "reminder"
+        }
+      ]
     },
     {
       "id": "nr_131",
@@ -12545,42 +12473,62 @@
       }
     },
     {
-      "id": "nr_132",
-      "text": "Now let’s say that the kid’s sister and the kid’s brother do NOT help the kid.",
-      "src": "assets/narration/nr_132.mp3",
+      "id": "nr_233",
+      "text": "No one helped the kid. The kid’s sister did NOT help the kid. The kid’s brother did NOT help the kid.",
+      "src": null,
       "kind": "prompt",
-      "status": "imported",
+      "status": "pending",
+      "requestedVoice": {
+        "provider": "NaturalReaders Commercial",
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
       "uses": [
         {
           "stepId": "family-sister-brother:outcome",
           "proposedWording": false,
           "part": "prompt"
         }
-      ],
-      "sha256": "378bf27e31bfa504e3f0503dfd93e78a3066c31cebc56c0b3b6815de7f045858",
-      "bytes": 191261,
-      "durationSeconds": 4.7804,
-      "provenance": {
+      ]
+    },
+    {
+      "id": "nr_234",
+      "text": "Actually, remember, no one helped the kid. The kid’s sister did NOT help the kid. The kid’s brother did NOT help the kid. Can you tell me, did either of these people help the kid?",
+      "src": null,
+      "kind": "reminder",
+      "status": "pending",
+      "requestedVoice": {
         "provider": "NaturalReaders Commercial",
-        "voice": {
-          "provider": "NaturalReaders Commercial",
-          "name": "Evelyn",
-          "style": "Soft",
-          "speed": 0.9,
-          "wordsPerMinuteSetting": 180,
-          "paragraphPauseSeconds": 0,
-          "exportFormat": "MP3",
-          "exportMode": "separate files ZIP",
-          "exportNaming": "Index + Segment",
-          "preferredBitrateKbps": 320,
-          "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "31.Now_let’s_say_that_the_kid’s_s.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
-      }
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
+      "uses": [
+        {
+          "stepId": "family-sister-brother:recall-all",
+          "proposedWording": false,
+          "part": "reminder"
+        }
+      ]
     },
     {
       "id": "nr_133",
@@ -12950,42 +12898,33 @@
       }
     },
     {
-      "id": "nr_142",
-      "text": "Now let’s say that the kid’s dad and the kid do NOT help the mom.",
-      "src": "assets/narration/nr_142.mp3",
+      "id": "nr_235",
+      "text": "No one helped the mom. The kid’s dad did NOT help the mom. The kid did NOT help the mom.",
+      "src": null,
       "kind": "prompt",
-      "status": "imported",
+      "status": "pending",
+      "requestedVoice": {
+        "provider": "NaturalReaders Commercial",
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
       "uses": [
         {
           "stepId": "family-dad-kid:outcome",
           "proposedWording": false,
           "part": "prompt"
         }
-      ],
-      "sha256": "4bdd71811bbb0b50e1abf228fa240b2644582557c70bed473d9e198052817998",
-      "bytes": 169318,
-      "durationSeconds": 4.231825,
-      "provenance": {
-        "provider": "NaturalReaders Commercial",
-        "voice": {
-          "provider": "NaturalReaders Commercial",
-          "name": "Evelyn",
-          "style": "Soft",
-          "speed": 0.9,
-          "wordsPerMinuteSetting": 180,
-          "paragraphPauseSeconds": 0,
-          "exportFormat": "MP3",
-          "exportMode": "separate files ZIP",
-          "exportNaming": "Index + Segment",
-          "preferredBitrateKbps": 320,
-          "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "41.Now_let’s_say_that_the_kid’s_d.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
-      }
+      ]
     },
     {
       "id": "nr_143",
@@ -13026,104 +12965,62 @@
       }
     },
     {
-      "id": "nr_144",
-      "text": "Actually, remember, neither of these people helped the mom. Can you tell me, did either of these people help the mom?",
-      "src": "assets/narration/nr_144.mp3",
+      "id": "nr_236",
+      "text": "Actually, remember, no one helped the mom. The kid’s dad did NOT help the mom. The kid did NOT help the mom. Can you tell me, did either of these people help the mom?",
+      "src": null,
       "kind": "reminder",
-      "status": "imported",
+      "status": "pending",
+      "requestedVoice": {
+        "provider": "NaturalReaders Commercial",
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
       "uses": [
         {
           "stepId": "family-dad-kid:recall-all",
           "proposedWording": false,
           "part": "reminder"
         }
-      ],
-      "sha256": "e3780dddc9f195aa78be6be68631abec90578104ec63c35cefe0d96d568d14a9",
-      "bytes": 409644,
-      "durationSeconds": 10.213878,
-      "provenance": {
-        "provider": "NaturalReaders Commercial",
-        "voice": {
-          "provider": "NaturalReaders Commercial",
-          "name": "Evelyn",
-          "style": "Soft",
-          "speed": 0.9,
-          "wordsPerMinuteSetting": 180,
-          "paragraphPauseSeconds": 0,
-          "exportFormat": "MP3",
-          "exportMode": "separate files ZIP",
-          "exportNaming": "Index + Segment",
-          "preferredBitrateKbps": 320,
-          "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "43.Actually,_remember,_neither_of.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": false,
-        "originalRecordingSha256": "2e7da638a49b5d1467e8e5dd012f2530fa8485034de692639e5196e72063e45e",
-        "audioProcessing": {
-          "sourceSha256": "2e7da638a49b5d1467e8e5dd012f2530fa8485034de692639e5196e72063e45e",
-          "firstSentenceTempo": 0.68,
-          "questionTempo": 0.76,
-          "originalSentencePause": [
-            3.04444,
-            3.75791
-          ],
-          "splitWithinSilence": 3.401175,
-          "addedSilenceSeconds": 0.20600154798761605,
-          "targetSentencePauseSeconds": 1.2,
-          "processing": "FFmpeg atempo: pitch-preserving tempo adjustment, split within intersentence silence",
-          "decodeVerified": true,
-          "wordBoundariesSpliced": false
-        },
-        "offlineAdjustedWordSequenceVerified": true
-      },
-      "audioTreatment": {
-        "kind": "slow-neither-reminder",
-        "firstSentenceTempo": 0.68,
-        "questionTempo": 0.76,
-        "originalDurationSeconds": 7.209775,
-        "targetSentencePauseSeconds": 1.2
-      }
+      ]
     },
     {
-      "id": "nr_145",
-      "text": "Neither of these people helped the mom. Do you think this was a mean or nice thing that happened?",
-      "src": "assets/narration/nr_145.mp3",
+      "id": "nr_237",
+      "text": "No one helped the mom. Do you think this was a mean or nice thing that happened?",
+      "src": null,
       "kind": "prompt",
-      "status": "imported",
+      "status": "pending",
+      "requestedVoice": {
+        "provider": "NaturalReaders Commercial",
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
       "uses": [
         {
           "stepId": "family-dad-kid:overall",
           "proposedWording": false,
           "part": "prompt"
         }
-      ],
-      "sha256": "39249d2d5c44415d837cc77f6a2e6ec43eb5ddd10841cad4af73661dd52f269d",
-      "bytes": 252910,
-      "durationSeconds": 6.321625,
-      "provenance": {
-        "provider": "NaturalReaders Commercial",
-        "voice": {
-          "provider": "NaturalReaders Commercial",
-          "name": "Evelyn",
-          "style": "Soft",
-          "speed": 0.9,
-          "wordsPerMinuteSetting": 180,
-          "paragraphPauseSeconds": 0,
-          "exportFormat": "MP3",
-          "exportMode": "separate files ZIP",
-          "exportNaming": "Index + Segment",
-          "preferredBitrateKbps": 320,
-          "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "44.Neither_of_these_people_helped.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
-      }
+      ]
     },
     {
       "id": "nr_146",
@@ -13202,42 +13099,62 @@
       }
     },
     {
-      "id": "nr_148",
-      "text": "Was the kid’s dad Mean or Not Mean for NOT helping the mom in the middle?",
-      "src": "assets/narration/nr_148.mp3",
+      "id": "nr_238",
+      "text": "Do you think it was Mean or Not Mean that the kid’s dad did NOT help the mom in the middle?",
+      "src": null,
       "kind": "prompt",
-      "status": "imported",
+      "status": "pending",
+      "requestedVoice": {
+        "provider": "NaturalReaders Commercial",
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
       "uses": [
         {
           "stepId": "family-dad-kid:evaluation-helper1",
           "proposedWording": false,
           "part": "prompt"
         }
-      ],
-      "sha256": "af4b07489ae62bf67ba7c9f5aac957340be1b941ace0462145cb686144075b71",
-      "bytes": 196485,
-      "durationSeconds": 4.911,
-      "provenance": {
+      ]
+    },
+    {
+      "id": "nr_239",
+      "text": "How mean do you think the kid’s dad was for NOT helping the mom in the middle?",
+      "src": null,
+      "kind": "prompt",
+      "status": "pending",
+      "requestedVoice": {
         "provider": "NaturalReaders Commercial",
-        "voice": {
-          "provider": "NaturalReaders Commercial",
-          "name": "Evelyn",
-          "style": "Soft",
-          "speed": 0.9,
-          "wordsPerMinuteSetting": 180,
-          "paragraphPauseSeconds": 0,
-          "exportFormat": "MP3",
-          "exportMode": "separate files ZIP",
-          "exportNaming": "Index + Segment",
-          "preferredBitrateKbps": 320,
-          "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "47.Was_the_kid’s_dad_Mean_or_Not_.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
-      }
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
+      "uses": [
+        {
+          "stepId": "family-dad-kid:evaluation-helper1-amount",
+          "proposedWording": false,
+          "part": "prompt"
+        }
+      ]
     },
     {
       "id": "nr_149",
@@ -13316,90 +13233,62 @@
       }
     },
     {
-      "id": "nr_151",
-      "text": "Was the kid Mean or Not Mean for NOT helping the mom in the middle?",
-      "src": "assets/narration/nr_151.mp3",
+      "id": "nr_240",
+      "text": "Do you think it was Mean or Not Mean that the kid did NOT help the mom in the middle?",
+      "src": null,
       "kind": "prompt",
-      "status": "imported",
+      "status": "pending",
+      "requestedVoice": {
+        "provider": "NaturalReaders Commercial",
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
       "uses": [
         {
           "stepId": "family-dad-kid:evaluation-helper2",
           "proposedWording": false,
           "part": "prompt"
         }
-      ],
-      "sha256": "f3d85d92805ec817a4206a7ed4be4457dbd0891f656a280a425b578b0675db62",
-      "bytes": 188126,
-      "durationSeconds": 4.702025,
-      "provenance": {
-        "provider": "NaturalReaders Commercial",
-        "voice": {
-          "provider": "NaturalReaders Commercial",
-          "name": "Evelyn",
-          "style": "Soft",
-          "speed": 0.9,
-          "wordsPerMinuteSetting": 180,
-          "paragraphPauseSeconds": 0,
-          "exportFormat": "MP3",
-          "exportMode": "separate files ZIP",
-          "exportNaming": "Index + Segment",
-          "preferredBitrateKbps": 320,
-          "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "50.Was_the_kid_Mean_or_Not_Mean_f.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
-      }
+      ]
     },
     {
-      "id": "nr_152",
-      "text": "The kid. How mean do you think the kid was?",
-      "src": "assets/narration/nr_152.mp3",
+      "id": "nr_241",
+      "text": "How mean do you think the kid was for NOT helping the mom in the middle?",
+      "src": null,
       "kind": "prompt",
-      "status": "imported",
+      "status": "pending",
+      "requestedVoice": {
+        "provider": "NaturalReaders Commercial",
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
       "uses": [
         {
           "stepId": "family-dad-kid:evaluation-helper2-amount",
           "proposedWording": false,
           "part": "prompt"
-        },
-        {
-          "stepId": "family-mom-kid:evaluation-helper1-amount",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "family-teacher-kid:evaluation-helper2-amount",
-          "proposedWording": false,
-          "part": "prompt"
         }
-      ],
-      "sha256": "0f7f771591ef91c9e9d188a47a8a21c5c55deac9de45c993d58667446cd4b477",
-      "bytes": 152600,
-      "durationSeconds": 3.813875,
-      "provenance": {
-        "provider": "NaturalReaders Commercial",
-        "voice": {
-          "provider": "NaturalReaders Commercial",
-          "name": "Evelyn",
-          "style": "Soft",
-          "speed": 0.9,
-          "wordsPerMinuteSetting": 180,
-          "paragraphPauseSeconds": 0,
-          "exportFormat": "MP3",
-          "exportMode": "separate files ZIP",
-          "exportNaming": "Index + Segment",
-          "preferredBitrateKbps": 320,
-          "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "51.The_kid._How_mean_do_you_think.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
-      }
+      ]
     },
     {
       "id": "nr_153",
@@ -13767,42 +13656,33 @@
       }
     },
     {
-      "id": "nr_162",
-      "text": "Now let’s say that the kid and the kid’s mom do NOT help the dad.",
-      "src": "assets/narration/nr_162.mp3",
+      "id": "nr_242",
+      "text": "No one helped the dad. The kid did NOT help the dad. The kid’s mom did NOT help the dad.",
+      "src": null,
       "kind": "prompt",
-      "status": "imported",
+      "status": "pending",
+      "requestedVoice": {
+        "provider": "NaturalReaders Commercial",
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
       "uses": [
         {
           "stepId": "family-mom-kid:outcome",
           "proposedWording": false,
           "part": "prompt"
         }
-      ],
-      "sha256": "8a26e64e8948aab53387b90b4f04204464187cff05691a4ccbde3f104e571ab6",
-      "bytes": 170363,
-      "durationSeconds": 4.25795,
-      "provenance": {
-        "provider": "NaturalReaders Commercial",
-        "voice": {
-          "provider": "NaturalReaders Commercial",
-          "name": "Evelyn",
-          "style": "Soft",
-          "speed": 0.9,
-          "wordsPerMinuteSetting": 180,
-          "paragraphPauseSeconds": 0,
-          "exportFormat": "MP3",
-          "exportMode": "separate files ZIP",
-          "exportNaming": "Index + Segment",
-          "preferredBitrateKbps": 320,
-          "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "61.Now_let’s_say_that_the_kid_and.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
-      }
+      ]
     },
     {
       "id": "nr_163",
@@ -13843,104 +13723,62 @@
       }
     },
     {
-      "id": "nr_164",
-      "text": "Actually, remember, neither of these people helped the dad. Can you tell me, did either of these people help the dad?",
-      "src": "assets/narration/nr_164.mp3",
+      "id": "nr_243",
+      "text": "Actually, remember, no one helped the dad. The kid did NOT help the dad. The kid’s mom did NOT help the dad. Can you tell me, did either of these people help the dad?",
+      "src": null,
       "kind": "reminder",
-      "status": "imported",
+      "status": "pending",
+      "requestedVoice": {
+        "provider": "NaturalReaders Commercial",
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
       "uses": [
         {
           "stepId": "family-mom-kid:recall-all",
           "proposedWording": false,
           "part": "reminder"
         }
-      ],
-      "sha256": "b44314a3a85b881f6949ff4a603a9d59ed359969698dcaf00df8aa2dc7b04597",
-      "bytes": 410689,
-      "durationSeconds": 10.24,
-      "provenance": {
-        "provider": "NaturalReaders Commercial",
-        "voice": {
-          "provider": "NaturalReaders Commercial",
-          "name": "Evelyn",
-          "style": "Soft",
-          "speed": 0.9,
-          "wordsPerMinuteSetting": 180,
-          "paragraphPauseSeconds": 0,
-          "exportFormat": "MP3",
-          "exportMode": "separate files ZIP",
-          "exportNaming": "Index + Segment",
-          "preferredBitrateKbps": 320,
-          "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "63.Actually,_remember,_neither_of.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": false,
-        "originalRecordingSha256": "0d4079a060c109a814c91bcccb4bfd7fab774af02c8f07851d1dc2ea33bc65ea",
-        "audioProcessing": {
-          "sourceSha256": "0d4079a060c109a814c91bcccb4bfd7fab774af02c8f07851d1dc2ea33bc65ea",
-          "firstSentenceTempo": 0.68,
-          "questionTempo": 0.76,
-          "originalSentencePause": [
-            3.04277,
-            3.74503
-          ],
-          "splitWithinSilence": 3.3939,
-          "addedSilenceSeconds": 0.2216191950464398,
-          "targetSentencePauseSeconds": 1.2,
-          "processing": "FFmpeg atempo: pitch-preserving tempo adjustment, split within intersentence silence",
-          "decodeVerified": true,
-          "wordBoundariesSpliced": false
-        },
-        "offlineAdjustedWordSequenceVerified": true
-      },
-      "audioTreatment": {
-        "kind": "slow-neither-reminder",
-        "firstSentenceTempo": 0.68,
-        "questionTempo": 0.76,
-        "originalDurationSeconds": 7.209775,
-        "targetSentencePauseSeconds": 1.2
-      }
+      ]
     },
     {
-      "id": "nr_165",
-      "text": "Neither of these people helped the dad. Do you think this was a mean or nice thing that happened?",
-      "src": "assets/narration/nr_165.mp3",
+      "id": "nr_244",
+      "text": "No one helped the dad. Do you think this was a mean or nice thing that happened?",
+      "src": null,
       "kind": "prompt",
-      "status": "imported",
+      "status": "pending",
+      "requestedVoice": {
+        "provider": "NaturalReaders Commercial",
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
       "uses": [
         {
           "stepId": "family-mom-kid:overall",
           "proposedWording": false,
           "part": "prompt"
         }
-      ],
-      "sha256": "fed27cf5f14c4efbe0467df0e0277d78386e4dfd6627f7b51858b950196dcd66",
-      "bytes": 252910,
-      "durationSeconds": 6.321625,
-      "provenance": {
-        "provider": "NaturalReaders Commercial",
-        "voice": {
-          "provider": "NaturalReaders Commercial",
-          "name": "Evelyn",
-          "style": "Soft",
-          "speed": 0.9,
-          "wordsPerMinuteSetting": 180,
-          "paragraphPauseSeconds": 0,
-          "exportFormat": "MP3",
-          "exportMode": "separate files ZIP",
-          "exportNaming": "Index + Segment",
-          "preferredBitrateKbps": 320,
-          "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "64.Neither_of_these_people_helped.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
-      }
+      ]
     },
     {
       "id": "nr_166",
@@ -14019,42 +13857,62 @@
       }
     },
     {
-      "id": "nr_168",
-      "text": "Was the kid Mean or Not Mean for NOT helping the dad in the middle?",
-      "src": "assets/narration/nr_168.mp3",
+      "id": "nr_245",
+      "text": "Do you think it was Mean or Not Mean that the kid did NOT help the dad in the middle?",
+      "src": null,
       "kind": "prompt",
-      "status": "imported",
+      "status": "pending",
+      "requestedVoice": {
+        "provider": "NaturalReaders Commercial",
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
       "uses": [
         {
           "stepId": "family-mom-kid:evaluation-helper1",
           "proposedWording": false,
           "part": "prompt"
         }
-      ],
-      "sha256": "96c7cfa51bdb4ea33d262dc42cd1f1906dfcdabb2fce3edac357ff58cb64067b",
-      "bytes": 187081,
-      "durationSeconds": 4.6759,
-      "provenance": {
+      ]
+    },
+    {
+      "id": "nr_246",
+      "text": "How mean do you think the kid was for NOT helping the dad in the middle?",
+      "src": null,
+      "kind": "prompt",
+      "status": "pending",
+      "requestedVoice": {
         "provider": "NaturalReaders Commercial",
-        "voice": {
-          "provider": "NaturalReaders Commercial",
-          "name": "Evelyn",
-          "style": "Soft",
-          "speed": 0.9,
-          "wordsPerMinuteSetting": 180,
-          "paragraphPauseSeconds": 0,
-          "exportFormat": "MP3",
-          "exportMode": "separate files ZIP",
-          "exportNaming": "Index + Segment",
-          "preferredBitrateKbps": 320,
-          "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "67.Was_the_kid_Mean_or_Not_Mean_f.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
-      }
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
+      "uses": [
+        {
+          "stepId": "family-mom-kid:evaluation-helper1-amount",
+          "proposedWording": false,
+          "part": "prompt"
+        }
+      ]
     },
     {
       "id": "nr_169",
@@ -14133,42 +13991,62 @@
       }
     },
     {
-      "id": "nr_171",
-      "text": "Was the kid’s mom Mean or Not Mean for NOT helping the dad in the middle?",
-      "src": "assets/narration/nr_171.mp3",
+      "id": "nr_247",
+      "text": "Do you think it was Mean or Not Mean that the kid’s mom did NOT help the dad in the middle?",
+      "src": null,
       "kind": "prompt",
-      "status": "imported",
+      "status": "pending",
+      "requestedVoice": {
+        "provider": "NaturalReaders Commercial",
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
       "uses": [
         {
           "stepId": "family-mom-kid:evaluation-helper2",
           "proposedWording": false,
           "part": "prompt"
         }
-      ],
-      "sha256": "567748d9a5fd84a0beac10ab3167251490fbc4f10c02f3a3617527ae452ac5e0",
-      "bytes": 197530,
-      "durationSeconds": 4.937125,
-      "provenance": {
+      ]
+    },
+    {
+      "id": "nr_248",
+      "text": "How mean do you think the kid’s mom was for NOT helping the dad in the middle?",
+      "src": null,
+      "kind": "prompt",
+      "status": "pending",
+      "requestedVoice": {
         "provider": "NaturalReaders Commercial",
-        "voice": {
-          "provider": "NaturalReaders Commercial",
-          "name": "Evelyn",
-          "style": "Soft",
-          "speed": 0.9,
-          "wordsPerMinuteSetting": 180,
-          "paragraphPauseSeconds": 0,
-          "exportFormat": "MP3",
-          "exportMode": "separate files ZIP",
-          "exportNaming": "Index + Segment",
-          "preferredBitrateKbps": 320,
-          "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "70.Was_the_kid’s_mom_Mean_or_Not_.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
-      }
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
+      "uses": [
+        {
+          "stepId": "family-mom-kid:evaluation-helper2-amount",
+          "proposedWording": false,
+          "part": "prompt"
+        }
+      ]
     },
     {
       "id": "nr_172",
@@ -14604,42 +14482,33 @@
       }
     },
     {
-      "id": "nr_183",
-      "text": "Now let’s say that the teacher on the left and the kid do NOT help the teacher in the middle.",
-      "src": "assets/narration/nr_183.mp3",
+      "id": "nr_249",
+      "text": "No one helped the teacher in the middle. The teacher on the left did NOT help the teacher in the middle. The kid did NOT help the teacher in the middle.",
+      "src": null,
       "kind": "prompt",
-      "status": "imported",
+      "status": "pending",
+      "requestedVoice": {
+        "provider": "NaturalReaders Commercial",
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
       "uses": [
         {
           "stepId": "family-teacher-kid:outcome",
           "proposedWording": false,
           "part": "prompt"
         }
-      ],
-      "sha256": "df4167e5db4897516a15ae69c75fec97e8c9c76e4815ab26a4d8b23d19fe72e3",
-      "bytes": 205889,
-      "durationSeconds": 5.1461,
-      "provenance": {
-        "provider": "NaturalReaders Commercial",
-        "voice": {
-          "provider": "NaturalReaders Commercial",
-          "name": "Evelyn",
-          "style": "Soft",
-          "speed": 0.9,
-          "wordsPerMinuteSetting": 180,
-          "paragraphPauseSeconds": 0,
-          "exportFormat": "MP3",
-          "exportMode": "separate files ZIP",
-          "exportNaming": "Index + Segment",
-          "preferredBitrateKbps": 320,
-          "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "82.Now_let’s_say_that_the_teacher.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
-      }
+      ]
     },
     {
       "id": "nr_184",
@@ -14680,104 +14549,62 @@
       }
     },
     {
-      "id": "nr_185",
-      "text": "Actually, remember, neither of these people helped the teacher in the middle. Can you tell me, did either of these people help the teacher in the middle?",
-      "src": "assets/narration/nr_185.mp3",
+      "id": "nr_250",
+      "text": "Actually, remember, no one helped the teacher in the middle. The teacher on the left did NOT help the teacher in the middle. The kid did NOT help the teacher in the middle. Can you tell me, did either of these people help the teacher in the middle?",
+      "src": null,
       "kind": "reminder",
-      "status": "imported",
+      "status": "pending",
+      "requestedVoice": {
+        "provider": "NaturalReaders Commercial",
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
       "uses": [
         {
           "stepId": "family-teacher-kid:recall-all",
           "proposedWording": false,
           "part": "reminder"
         }
-      ],
-      "sha256": "5f50c02f6765102aa3a4d8350df6bef1d8ec388a60dc8a4e47c8ffdf7a2c2e66",
-      "bytes": 482787,
-      "durationSeconds": 12.042449,
-      "provenance": {
-        "provider": "NaturalReaders Commercial",
-        "voice": {
-          "provider": "NaturalReaders Commercial",
-          "name": "Evelyn",
-          "style": "Soft",
-          "speed": 0.9,
-          "wordsPerMinuteSetting": 180,
-          "paragraphPauseSeconds": 0,
-          "exportFormat": "MP3",
-          "exportMode": "separate files ZIP",
-          "exportNaming": "Index + Segment",
-          "preferredBitrateKbps": 320,
-          "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "84.Actually,_remember,_neither_of.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": false,
-        "originalRecordingSha256": "f2bee0193cb37a594b6935135dc2e55e6f749174695d920446b3248019b45840",
-        "audioProcessing": {
-          "sourceSha256": "f2bee0193cb37a594b6935135dc2e55e6f749174695d920446b3248019b45840",
-          "firstSentenceTempo": 0.68,
-          "questionTempo": 0.76,
-          "originalSentencePause": [
-            3.71429,
-            4.47794
-          ],
-          "splitWithinSilence": 4.096115,
-          "addedSilenceSeconds": 0.13609133126934947,
-          "targetSentencePauseSeconds": 1.2,
-          "processing": "FFmpeg atempo: pitch-preserving tempo adjustment, split within intersentence silence",
-          "decodeVerified": true,
-          "wordBoundariesSpliced": false
-        },
-        "offlineAdjustedWordSequenceVerified": true
-      },
-      "audioTreatment": {
-        "kind": "slow-neither-reminder",
-        "firstSentenceTempo": 0.68,
-        "questionTempo": 0.76,
-        "originalDurationSeconds": 8.56815,
-        "targetSentencePauseSeconds": 1.2
-      }
+      ]
     },
     {
-      "id": "nr_186",
-      "text": "Neither of these people helped the teacher in the middle. Do you think this was a mean or nice thing that happened?",
-      "src": "assets/narration/nr_186.mp3",
+      "id": "nr_251",
+      "text": "No one helped the teacher in the middle. Do you think this was a mean or nice thing that happened?",
+      "src": null,
       "kind": "prompt",
-      "status": "imported",
+      "status": "pending",
+      "requestedVoice": {
+        "provider": "NaturalReaders Commercial",
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
       "uses": [
         {
           "stepId": "family-teacher-kid:overall",
           "proposedWording": false,
           "part": "prompt"
         }
-      ],
-      "sha256": "5aa28ab3c4e1e86e6673c95ba6e5c9e169481c87b7493f65c84f56c0298b586d",
-      "bytes": 279032,
-      "durationSeconds": 6.974675,
-      "provenance": {
-        "provider": "NaturalReaders Commercial",
-        "voice": {
-          "provider": "NaturalReaders Commercial",
-          "name": "Evelyn",
-          "style": "Soft",
-          "speed": 0.9,
-          "wordsPerMinuteSetting": 180,
-          "paragraphPauseSeconds": 0,
-          "exportFormat": "MP3",
-          "exportMode": "separate files ZIP",
-          "exportNaming": "Index + Segment",
-          "preferredBitrateKbps": 320,
-          "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "85.Neither_of_these_people_helped.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
-      }
+      ]
     },
     {
       "id": "nr_187",
@@ -14856,80 +14683,62 @@
       }
     },
     {
-      "id": "nr_189",
-      "text": "Was the teacher on the left Mean or Not Mean for NOT helping the teacher in the middle?",
-      "src": "assets/narration/nr_189.mp3",
+      "id": "nr_252",
+      "text": "Do you think it was Mean or Not Mean that the teacher on the left did NOT help the teacher in the middle?",
+      "src": null,
       "kind": "prompt",
-      "status": "imported",
+      "status": "pending",
+      "requestedVoice": {
+        "provider": "NaturalReaders Commercial",
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
       "uses": [
         {
           "stepId": "family-teacher-kid:evaluation-helper1",
           "proposedWording": false,
           "part": "prompt"
         }
-      ],
-      "sha256": "e5ba3a5074bd4e7c0c8955255a68df1a51b2aa8c1df96c714d4d4117bbdccb68",
-      "bytes": 218428,
-      "durationSeconds": 5.459575,
-      "provenance": {
-        "provider": "NaturalReaders Commercial",
-        "voice": {
-          "provider": "NaturalReaders Commercial",
-          "name": "Evelyn",
-          "style": "Soft",
-          "speed": 0.9,
-          "wordsPerMinuteSetting": 180,
-          "paragraphPauseSeconds": 0,
-          "exportFormat": "MP3",
-          "exportMode": "separate files ZIP",
-          "exportNaming": "Index + Segment",
-          "preferredBitrateKbps": 320,
-          "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "88.Was_the_teacher_on_the_left_Me.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
-      }
+      ]
     },
     {
-      "id": "nr_190",
-      "text": "The teacher on the left. How mean do you think the teacher on the left was?",
-      "src": "assets/narration/nr_190.mp3",
+      "id": "nr_253",
+      "text": "How mean do you think the teacher on the left was for NOT helping the teacher in the middle?",
+      "src": null,
       "kind": "prompt",
-      "status": "imported",
+      "status": "pending",
+      "requestedVoice": {
+        "provider": "NaturalReaders Commercial",
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
       "uses": [
         {
           "stepId": "family-teacher-kid:evaluation-helper1-amount",
           "proposedWording": false,
           "part": "prompt"
         }
-      ],
-      "sha256": "ab58997ebc5f4b122fc5440055d36523e59d3873e4f3957b71c04368ca7484c6",
-      "bytes": 209024,
-      "durationSeconds": 5.224475,
-      "provenance": {
-        "provider": "NaturalReaders Commercial",
-        "voice": {
-          "provider": "NaturalReaders Commercial",
-          "name": "Evelyn",
-          "style": "Soft",
-          "speed": 0.9,
-          "wordsPerMinuteSetting": 180,
-          "paragraphPauseSeconds": 0,
-          "exportFormat": "MP3",
-          "exportMode": "separate files ZIP",
-          "exportNaming": "Index + Segment",
-          "preferredBitrateKbps": 320,
-          "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "89.The_teacher_on_the_left._How_m.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
-      }
+      ]
     },
     {
       "id": "nr_191",
@@ -15008,42 +14817,62 @@
       }
     },
     {
-      "id": "nr_193",
-      "text": "Was the kid Mean or Not Mean for NOT helping the teacher in the middle?",
-      "src": "assets/narration/nr_193.mp3",
+      "id": "nr_254",
+      "text": "Do you think it was Mean or Not Mean that the kid did NOT help the teacher in the middle?",
+      "src": null,
       "kind": "prompt",
-      "status": "imported",
+      "status": "pending",
+      "requestedVoice": {
+        "provider": "NaturalReaders Commercial",
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
       "uses": [
         {
           "stepId": "family-teacher-kid:evaluation-helper2",
           "proposedWording": false,
           "part": "prompt"
         }
-      ],
-      "sha256": "5dfaabc43fa4b06191eea9da3ba1afd065178370d2a94436a4c89e5b885a41a1",
-      "bytes": 194396,
-      "durationSeconds": 4.858775,
-      "provenance": {
+      ]
+    },
+    {
+      "id": "nr_255",
+      "text": "How mean do you think the kid was for NOT helping the teacher in the middle?",
+      "src": null,
+      "kind": "prompt",
+      "status": "pending",
+      "requestedVoice": {
         "provider": "NaturalReaders Commercial",
-        "voice": {
-          "provider": "NaturalReaders Commercial",
-          "name": "Evelyn",
-          "style": "Soft",
-          "speed": 0.9,
-          "wordsPerMinuteSetting": 180,
-          "paragraphPauseSeconds": 0,
-          "exportFormat": "MP3",
-          "exportMode": "separate files ZIP",
-          "exportNaming": "Index + Segment",
-          "preferredBitrateKbps": 320,
-          "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "92.Was_the_kid_Mean_or_Not_Mean_f.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
-      }
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+        "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+        "savedProjectTextVerified": true
+      },
+      "uses": [
+        {
+          "stepId": "family-teacher-kid:evaluation-helper2-amount",
+          "proposedWording": false,
+          "part": "prompt"
+        }
+      ]
     },
     {
       "id": "nr_194",
@@ -15267,14 +15096,14 @@
       "proposedWording": false
     },
     "woman-mom-teacher:outcome": {
-      "prompt": "nr_029",
+      "prompt": "nr_196",
       "reminder": null,
       "options": [],
       "proposedWording": false
     },
     "woman-mom-teacher:recall-all": {
       "prompt": "nr_030",
-      "reminder": "nr_031",
+      "reminder": "nr_197",
       "options": [
         "nr_011",
         "nr_012"
@@ -15282,7 +15111,7 @@
       "proposedWording": false
     },
     "woman-mom-teacher:overall": {
-      "prompt": "nr_032",
+      "prompt": "nr_198",
       "reminder": null,
       "options": [
         "nr_033",
@@ -15310,7 +15139,7 @@
       "proposedWording": false
     },
     "woman-mom-teacher:evaluation-helper1": {
-      "prompt": "nr_041",
+      "prompt": "nr_199",
       "reminder": null,
       "options": [
         "nr_033",
@@ -15319,7 +15148,7 @@
       "proposedWording": false
     },
     "woman-mom-teacher:evaluation-helper1-amount": {
-      "prompt": "nr_043",
+      "prompt": "nr_200",
       "reminder": null,
       "options": [
         "nr_044",
@@ -15338,7 +15167,7 @@
       "proposedWording": false
     },
     "woman-mom-teacher:evaluation-helper2": {
-      "prompt": "nr_048",
+      "prompt": "nr_201",
       "reminder": null,
       "options": [
         "nr_033",
@@ -15347,7 +15176,7 @@
       "proposedWording": false
     },
     "woman-mom-teacher:evaluation-helper2-amount": {
-      "prompt": "nr_049",
+      "prompt": "nr_202",
       "reminder": null,
       "options": [
         "nr_044",
@@ -15508,14 +15337,14 @@
       "proposedWording": false
     },
     "woman-sister-friend:outcome": {
-      "prompt": "nr_064",
+      "prompt": "nr_203",
       "reminder": null,
       "options": [],
       "proposedWording": false
     },
     "woman-sister-friend:recall-all": {
       "prompt": "nr_030",
-      "reminder": "nr_031",
+      "reminder": "nr_204",
       "options": [
         "nr_011",
         "nr_012"
@@ -15523,7 +15352,7 @@
       "proposedWording": false
     },
     "woman-sister-friend:overall": {
-      "prompt": "nr_032",
+      "prompt": "nr_198",
       "reminder": null,
       "options": [
         "nr_033",
@@ -15551,7 +15380,7 @@
       "proposedWording": false
     },
     "woman-sister-friend:evaluation-helper1": {
-      "prompt": "nr_067",
+      "prompt": "nr_205",
       "reminder": null,
       "options": [
         "nr_033",
@@ -15560,7 +15389,7 @@
       "proposedWording": false
     },
     "woman-sister-friend:evaluation-helper1-amount": {
-      "prompt": "nr_068",
+      "prompt": "nr_206",
       "reminder": null,
       "options": [
         "nr_044",
@@ -15579,7 +15408,7 @@
       "proposedWording": false
     },
     "woman-sister-friend:evaluation-helper2": {
-      "prompt": "nr_071",
+      "prompt": "nr_207",
       "reminder": null,
       "options": [
         "nr_033",
@@ -15588,7 +15417,7 @@
       "proposedWording": false
     },
     "woman-sister-friend:evaluation-helper2-amount": {
-      "prompt": "nr_072",
+      "prompt": "nr_208",
       "reminder": null,
       "options": [
         "nr_044",
@@ -15749,14 +15578,14 @@
       "proposedWording": false
     },
     "woman-bestfriend-friend:outcome": {
-      "prompt": "nr_081",
+      "prompt": "nr_209",
       "reminder": null,
       "options": [],
       "proposedWording": false
     },
     "woman-bestfriend-friend:recall-all": {
       "prompt": "nr_030",
-      "reminder": "nr_031",
+      "reminder": "nr_210",
       "options": [
         "nr_011",
         "nr_012"
@@ -15764,7 +15593,7 @@
       "proposedWording": false
     },
     "woman-bestfriend-friend:overall": {
-      "prompt": "nr_032",
+      "prompt": "nr_198",
       "reminder": null,
       "options": [
         "nr_033",
@@ -15792,7 +15621,7 @@
       "proposedWording": false
     },
     "woman-bestfriend-friend:evaluation-helper1": {
-      "prompt": "nr_071",
+      "prompt": "nr_207",
       "reminder": null,
       "options": [
         "nr_033",
@@ -15801,7 +15630,7 @@
       "proposedWording": false
     },
     "woman-bestfriend-friend:evaluation-helper1-amount": {
-      "prompt": "nr_072",
+      "prompt": "nr_208",
       "reminder": null,
       "options": [
         "nr_044",
@@ -15820,7 +15649,7 @@
       "proposedWording": false
     },
     "woman-bestfriend-friend:evaluation-helper2": {
-      "prompt": "nr_084",
+      "prompt": "nr_211",
       "reminder": null,
       "options": [
         "nr_033",
@@ -15829,7 +15658,7 @@
       "proposedWording": false
     },
     "woman-bestfriend-friend:evaluation-helper2-amount": {
-      "prompt": "nr_085",
+      "prompt": "nr_212",
       "reminder": null,
       "options": [
         "nr_044",
@@ -15990,14 +15819,14 @@
       "proposedWording": false
     },
     "woman-teacher-friend:outcome": {
-      "prompt": "nr_088",
+      "prompt": "nr_213",
       "reminder": null,
       "options": [],
       "proposedWording": false
     },
     "woman-teacher-friend:recall-all": {
       "prompt": "nr_030",
-      "reminder": "nr_031",
+      "reminder": "nr_214",
       "options": [
         "nr_011",
         "nr_012"
@@ -16005,7 +15834,7 @@
       "proposedWording": false
     },
     "woman-teacher-friend:overall": {
-      "prompt": "nr_032",
+      "prompt": "nr_198",
       "reminder": null,
       "options": [
         "nr_033",
@@ -16033,7 +15862,7 @@
       "proposedWording": false
     },
     "woman-teacher-friend:evaluation-helper1": {
-      "prompt": "nr_041",
+      "prompt": "nr_199",
       "reminder": null,
       "options": [
         "nr_033",
@@ -16042,7 +15871,7 @@
       "proposedWording": false
     },
     "woman-teacher-friend:evaluation-helper1-amount": {
-      "prompt": "nr_043",
+      "prompt": "nr_200",
       "reminder": null,
       "options": [
         "nr_044",
@@ -16061,7 +15890,7 @@
       "proposedWording": false
     },
     "woman-teacher-friend:evaluation-helper2": {
-      "prompt": "nr_071",
+      "prompt": "nr_207",
       "reminder": null,
       "options": [
         "nr_033",
@@ -16070,7 +15899,7 @@
       "proposedWording": false
     },
     "woman-teacher-friend:evaluation-helper2-amount": {
-      "prompt": "nr_072",
+      "prompt": "nr_208",
       "reminder": null,
       "options": [
         "nr_044",
@@ -16231,14 +16060,14 @@
       "proposedWording": false
     },
     "woman-mom-sister:outcome": {
-      "prompt": "nr_090",
+      "prompt": "nr_215",
       "reminder": null,
       "options": [],
       "proposedWording": false
     },
     "woman-mom-sister:recall-all": {
       "prompt": "nr_030",
-      "reminder": "nr_031",
+      "reminder": "nr_216",
       "options": [
         "nr_011",
         "nr_012"
@@ -16246,7 +16075,7 @@
       "proposedWording": false
     },
     "woman-mom-sister:overall": {
-      "prompt": "nr_032",
+      "prompt": "nr_198",
       "reminder": null,
       "options": [
         "nr_033",
@@ -16274,7 +16103,7 @@
       "proposedWording": false
     },
     "woman-mom-sister:evaluation-helper1": {
-      "prompt": "nr_048",
+      "prompt": "nr_201",
       "reminder": null,
       "options": [
         "nr_033",
@@ -16283,7 +16112,7 @@
       "proposedWording": false
     },
     "woman-mom-sister:evaluation-helper1-amount": {
-      "prompt": "nr_049",
+      "prompt": "nr_202",
       "reminder": null,
       "options": [
         "nr_044",
@@ -16302,7 +16131,7 @@
       "proposedWording": false
     },
     "woman-mom-sister:evaluation-helper2": {
-      "prompt": "nr_067",
+      "prompt": "nr_205",
       "reminder": null,
       "options": [
         "nr_033",
@@ -16311,7 +16140,7 @@
       "proposedWording": false
     },
     "woman-mom-sister:evaluation-helper2-amount": {
-      "prompt": "nr_068",
+      "prompt": "nr_206",
       "reminder": null,
       "options": [
         "nr_044",
@@ -16472,14 +16301,14 @@
       "proposedWording": false
     },
     "woman-teacher-classmate:outcome": {
-      "prompt": "nr_097",
+      "prompt": "nr_217",
       "reminder": null,
       "options": [],
       "proposedWording": false
     },
     "woman-teacher-classmate:recall-all": {
       "prompt": "nr_030",
-      "reminder": "nr_031",
+      "reminder": "nr_218",
       "options": [
         "nr_011",
         "nr_012"
@@ -16487,7 +16316,7 @@
       "proposedWording": false
     },
     "woman-teacher-classmate:overall": {
-      "prompt": "nr_032",
+      "prompt": "nr_198",
       "reminder": null,
       "options": [
         "nr_033",
@@ -16515,7 +16344,7 @@
       "proposedWording": false
     },
     "woman-teacher-classmate:evaluation-helper1": {
-      "prompt": "nr_100",
+      "prompt": "nr_219",
       "reminder": null,
       "options": [
         "nr_033",
@@ -16524,7 +16353,7 @@
       "proposedWording": false
     },
     "woman-teacher-classmate:evaluation-helper1-amount": {
-      "prompt": "nr_101",
+      "prompt": "nr_220",
       "reminder": null,
       "options": [
         "nr_044",
@@ -16543,7 +16372,7 @@
       "proposedWording": false
     },
     "woman-teacher-classmate:evaluation-helper2": {
-      "prompt": "nr_041",
+      "prompt": "nr_199",
       "reminder": null,
       "options": [
         "nr_033",
@@ -16552,7 +16381,7 @@
       "proposedWording": false
     },
     "woman-teacher-classmate:evaluation-helper2-amount": {
-      "prompt": "nr_043",
+      "prompt": "nr_200",
       "reminder": null,
       "options": [
         "nr_044",
@@ -16713,14 +16542,14 @@
       "proposedWording": false
     },
     "man-dad-teacher:outcome": {
-      "prompt": "nr_109",
+      "prompt": "nr_221",
       "reminder": null,
       "options": [],
       "proposedWording": false
     },
     "man-dad-teacher:recall-all": {
       "prompt": "nr_030",
-      "reminder": "nr_031",
+      "reminder": "nr_222",
       "options": [
         "nr_011",
         "nr_012"
@@ -16728,7 +16557,7 @@
       "proposedWording": false
     },
     "man-dad-teacher:overall": {
-      "prompt": "nr_032",
+      "prompt": "nr_198",
       "reminder": null,
       "options": [
         "nr_033",
@@ -16756,7 +16585,7 @@
       "proposedWording": false
     },
     "man-dad-teacher:evaluation-helper1": {
-      "prompt": "nr_041",
+      "prompt": "nr_199",
       "reminder": null,
       "options": [
         "nr_033",
@@ -16765,7 +16594,7 @@
       "proposedWording": false
     },
     "man-dad-teacher:evaluation-helper1-amount": {
-      "prompt": "nr_043",
+      "prompt": "nr_200",
       "reminder": null,
       "options": [
         "nr_044",
@@ -16784,7 +16613,7 @@
       "proposedWording": false
     },
     "man-dad-teacher:evaluation-helper2": {
-      "prompt": "nr_112",
+      "prompt": "nr_223",
       "reminder": null,
       "options": [
         "nr_033",
@@ -16793,7 +16622,7 @@
       "proposedWording": false
     },
     "man-dad-teacher:evaluation-helper2-amount": {
-      "prompt": "nr_113",
+      "prompt": "nr_224",
       "reminder": null,
       "options": [
         "nr_044",
@@ -16954,14 +16783,14 @@
       "proposedWording": false
     },
     "man-brother-friend:outcome": {
-      "prompt": "nr_121",
+      "prompt": "nr_225",
       "reminder": null,
       "options": [],
       "proposedWording": false
     },
     "man-brother-friend:recall-all": {
       "prompt": "nr_030",
-      "reminder": "nr_031",
+      "reminder": "nr_226",
       "options": [
         "nr_011",
         "nr_012"
@@ -16969,7 +16798,7 @@
       "proposedWording": false
     },
     "man-brother-friend:overall": {
-      "prompt": "nr_032",
+      "prompt": "nr_198",
       "reminder": null,
       "options": [
         "nr_033",
@@ -16997,7 +16826,7 @@
       "proposedWording": false
     },
     "man-brother-friend:evaluation-helper1": {
-      "prompt": "nr_124",
+      "prompt": "nr_227",
       "reminder": null,
       "options": [
         "nr_033",
@@ -17006,7 +16835,7 @@
       "proposedWording": false
     },
     "man-brother-friend:evaluation-helper1-amount": {
-      "prompt": "nr_125",
+      "prompt": "nr_228",
       "reminder": null,
       "options": [
         "nr_044",
@@ -17025,7 +16854,7 @@
       "proposedWording": false
     },
     "man-brother-friend:evaluation-helper2": {
-      "prompt": "nr_071",
+      "prompt": "nr_207",
       "reminder": null,
       "options": [
         "nr_033",
@@ -17034,7 +16863,7 @@
       "proposedWording": false
     },
     "man-brother-friend:evaluation-helper2-amount": {
-      "prompt": "nr_072",
+      "prompt": "nr_208",
       "reminder": null,
       "options": [
         "nr_044",
@@ -17195,14 +17024,14 @@
       "proposedWording": false
     },
     "man-bestfriend-friend:outcome": {
-      "prompt": "nr_081",
+      "prompt": "nr_209",
       "reminder": null,
       "options": [],
       "proposedWording": false
     },
     "man-bestfriend-friend:recall-all": {
       "prompt": "nr_030",
-      "reminder": "nr_031",
+      "reminder": "nr_210",
       "options": [
         "nr_011",
         "nr_012"
@@ -17210,7 +17039,7 @@
       "proposedWording": false
     },
     "man-bestfriend-friend:overall": {
-      "prompt": "nr_032",
+      "prompt": "nr_198",
       "reminder": null,
       "options": [
         "nr_033",
@@ -17238,7 +17067,7 @@
       "proposedWording": false
     },
     "man-bestfriend-friend:evaluation-helper1": {
-      "prompt": "nr_071",
+      "prompt": "nr_207",
       "reminder": null,
       "options": [
         "nr_033",
@@ -17247,7 +17076,7 @@
       "proposedWording": false
     },
     "man-bestfriend-friend:evaluation-helper1-amount": {
-      "prompt": "nr_072",
+      "prompt": "nr_208",
       "reminder": null,
       "options": [
         "nr_044",
@@ -17266,7 +17095,7 @@
       "proposedWording": false
     },
     "man-bestfriend-friend:evaluation-helper2": {
-      "prompt": "nr_084",
+      "prompt": "nr_211",
       "reminder": null,
       "options": [
         "nr_033",
@@ -17275,7 +17104,7 @@
       "proposedWording": false
     },
     "man-bestfriend-friend:evaluation-helper2-amount": {
-      "prompt": "nr_085",
+      "prompt": "nr_212",
       "reminder": null,
       "options": [
         "nr_044",
@@ -17436,14 +17265,14 @@
       "proposedWording": false
     },
     "man-teacher-friend:outcome": {
-      "prompt": "nr_088",
+      "prompt": "nr_213",
       "reminder": null,
       "options": [],
       "proposedWording": false
     },
     "man-teacher-friend:recall-all": {
       "prompt": "nr_030",
-      "reminder": "nr_031",
+      "reminder": "nr_214",
       "options": [
         "nr_011",
         "nr_012"
@@ -17451,7 +17280,7 @@
       "proposedWording": false
     },
     "man-teacher-friend:overall": {
-      "prompt": "nr_032",
+      "prompt": "nr_198",
       "reminder": null,
       "options": [
         "nr_033",
@@ -17479,7 +17308,7 @@
       "proposedWording": false
     },
     "man-teacher-friend:evaluation-helper1": {
-      "prompt": "nr_041",
+      "prompt": "nr_199",
       "reminder": null,
       "options": [
         "nr_033",
@@ -17488,7 +17317,7 @@
       "proposedWording": false
     },
     "man-teacher-friend:evaluation-helper1-amount": {
-      "prompt": "nr_043",
+      "prompt": "nr_200",
       "reminder": null,
       "options": [
         "nr_044",
@@ -17507,7 +17336,7 @@
       "proposedWording": false
     },
     "man-teacher-friend:evaluation-helper2": {
-      "prompt": "nr_071",
+      "prompt": "nr_207",
       "reminder": null,
       "options": [
         "nr_033",
@@ -17516,7 +17345,7 @@
       "proposedWording": false
     },
     "man-teacher-friend:evaluation-helper2-amount": {
-      "prompt": "nr_072",
+      "prompt": "nr_208",
       "reminder": null,
       "options": [
         "nr_044",
@@ -17677,14 +17506,14 @@
       "proposedWording": false
     },
     "man-dad-brother:outcome": {
-      "prompt": "nr_128",
+      "prompt": "nr_229",
       "reminder": null,
       "options": [],
       "proposedWording": false
     },
     "man-dad-brother:recall-all": {
       "prompt": "nr_030",
-      "reminder": "nr_031",
+      "reminder": "nr_230",
       "options": [
         "nr_011",
         "nr_012"
@@ -17692,7 +17521,7 @@
       "proposedWording": false
     },
     "man-dad-brother:overall": {
-      "prompt": "nr_032",
+      "prompt": "nr_198",
       "reminder": null,
       "options": [
         "nr_033",
@@ -17720,7 +17549,7 @@
       "proposedWording": false
     },
     "man-dad-brother:evaluation-helper1": {
-      "prompt": "nr_112",
+      "prompt": "nr_223",
       "reminder": null,
       "options": [
         "nr_033",
@@ -17729,7 +17558,7 @@
       "proposedWording": false
     },
     "man-dad-brother:evaluation-helper1-amount": {
-      "prompt": "nr_113",
+      "prompt": "nr_224",
       "reminder": null,
       "options": [
         "nr_044",
@@ -17748,7 +17577,7 @@
       "proposedWording": false
     },
     "man-dad-brother:evaluation-helper2": {
-      "prompt": "nr_124",
+      "prompt": "nr_227",
       "reminder": null,
       "options": [
         "nr_033",
@@ -17757,7 +17586,7 @@
       "proposedWording": false
     },
     "man-dad-brother:evaluation-helper2-amount": {
-      "prompt": "nr_125",
+      "prompt": "nr_228",
       "reminder": null,
       "options": [
         "nr_044",
@@ -17918,14 +17747,14 @@
       "proposedWording": false
     },
     "man-teacher-classmate:outcome": {
-      "prompt": "nr_097",
+      "prompt": "nr_217",
       "reminder": null,
       "options": [],
       "proposedWording": false
     },
     "man-teacher-classmate:recall-all": {
       "prompt": "nr_030",
-      "reminder": "nr_031",
+      "reminder": "nr_218",
       "options": [
         "nr_011",
         "nr_012"
@@ -17933,7 +17762,7 @@
       "proposedWording": false
     },
     "man-teacher-classmate:overall": {
-      "prompt": "nr_032",
+      "prompt": "nr_198",
       "reminder": null,
       "options": [
         "nr_033",
@@ -17961,7 +17790,7 @@
       "proposedWording": false
     },
     "man-teacher-classmate:evaluation-helper1": {
-      "prompt": "nr_100",
+      "prompt": "nr_219",
       "reminder": null,
       "options": [
         "nr_033",
@@ -17970,7 +17799,7 @@
       "proposedWording": false
     },
     "man-teacher-classmate:evaluation-helper1-amount": {
-      "prompt": "nr_101",
+      "prompt": "nr_220",
       "reminder": null,
       "options": [
         "nr_044",
@@ -17989,7 +17818,7 @@
       "proposedWording": false
     },
     "man-teacher-classmate:evaluation-helper2": {
-      "prompt": "nr_041",
+      "prompt": "nr_199",
       "reminder": null,
       "options": [
         "nr_033",
@@ -17998,7 +17827,7 @@
       "proposedWording": false
     },
     "man-teacher-classmate:evaluation-helper2-amount": {
-      "prompt": "nr_043",
+      "prompt": "nr_200",
       "reminder": null,
       "options": [
         "nr_044",
@@ -18159,14 +17988,14 @@
       "proposedWording": false
     },
     "family-mom-dad:outcome": {
-      "prompt": "nr_130",
+      "prompt": "nr_231",
       "reminder": null,
       "options": [],
       "proposedWording": false
     },
     "family-mom-dad:recall-all": {
       "prompt": "nr_030",
-      "reminder": "nr_031",
+      "reminder": "nr_232",
       "options": [
         "nr_011",
         "nr_012"
@@ -18174,7 +18003,7 @@
       "proposedWording": false
     },
     "family-mom-dad:overall": {
-      "prompt": "nr_032",
+      "prompt": "nr_198",
       "reminder": null,
       "options": [
         "nr_033",
@@ -18202,7 +18031,7 @@
       "proposedWording": false
     },
     "family-mom-dad:evaluation-helper1": {
-      "prompt": "nr_112",
+      "prompt": "nr_223",
       "reminder": null,
       "options": [
         "nr_033",
@@ -18211,7 +18040,7 @@
       "proposedWording": false
     },
     "family-mom-dad:evaluation-helper1-amount": {
-      "prompt": "nr_113",
+      "prompt": "nr_224",
       "reminder": null,
       "options": [
         "nr_044",
@@ -18230,7 +18059,7 @@
       "proposedWording": false
     },
     "family-mom-dad:evaluation-helper2": {
-      "prompt": "nr_048",
+      "prompt": "nr_201",
       "reminder": null,
       "options": [
         "nr_033",
@@ -18239,7 +18068,7 @@
       "proposedWording": false
     },
     "family-mom-dad:evaluation-helper2-amount": {
-      "prompt": "nr_049",
+      "prompt": "nr_202",
       "reminder": null,
       "options": [
         "nr_044",
@@ -18400,14 +18229,14 @@
       "proposedWording": false
     },
     "family-sister-brother:outcome": {
-      "prompt": "nr_132",
+      "prompt": "nr_233",
       "reminder": null,
       "options": [],
       "proposedWording": false
     },
     "family-sister-brother:recall-all": {
       "prompt": "nr_030",
-      "reminder": "nr_031",
+      "reminder": "nr_234",
       "options": [
         "nr_011",
         "nr_012"
@@ -18415,7 +18244,7 @@
       "proposedWording": false
     },
     "family-sister-brother:overall": {
-      "prompt": "nr_032",
+      "prompt": "nr_198",
       "reminder": null,
       "options": [
         "nr_033",
@@ -18443,7 +18272,7 @@
       "proposedWording": false
     },
     "family-sister-brother:evaluation-helper1": {
-      "prompt": "nr_067",
+      "prompt": "nr_205",
       "reminder": null,
       "options": [
         "nr_033",
@@ -18452,7 +18281,7 @@
       "proposedWording": false
     },
     "family-sister-brother:evaluation-helper1-amount": {
-      "prompt": "nr_068",
+      "prompt": "nr_206",
       "reminder": null,
       "options": [
         "nr_044",
@@ -18471,7 +18300,7 @@
       "proposedWording": false
     },
     "family-sister-brother:evaluation-helper2": {
-      "prompt": "nr_124",
+      "prompt": "nr_227",
       "reminder": null,
       "options": [
         "nr_033",
@@ -18480,7 +18309,7 @@
       "proposedWording": false
     },
     "family-sister-brother:evaluation-helper2-amount": {
-      "prompt": "nr_125",
+      "prompt": "nr_228",
       "reminder": null,
       "options": [
         "nr_044",
@@ -18641,14 +18470,14 @@
       "proposedWording": false
     },
     "family-dad-kid:outcome": {
-      "prompt": "nr_142",
+      "prompt": "nr_235",
       "reminder": null,
       "options": [],
       "proposedWording": false
     },
     "family-dad-kid:recall-all": {
       "prompt": "nr_143",
-      "reminder": "nr_144",
+      "reminder": "nr_236",
       "options": [
         "nr_011",
         "nr_012"
@@ -18656,7 +18485,7 @@
       "proposedWording": false
     },
     "family-dad-kid:overall": {
-      "prompt": "nr_145",
+      "prompt": "nr_237",
       "reminder": null,
       "options": [
         "nr_033",
@@ -18684,7 +18513,7 @@
       "proposedWording": false
     },
     "family-dad-kid:evaluation-helper1": {
-      "prompt": "nr_148",
+      "prompt": "nr_238",
       "reminder": null,
       "options": [
         "nr_033",
@@ -18693,7 +18522,7 @@
       "proposedWording": false
     },
     "family-dad-kid:evaluation-helper1-amount": {
-      "prompt": "nr_113",
+      "prompt": "nr_239",
       "reminder": null,
       "options": [
         "nr_044",
@@ -18712,7 +18541,7 @@
       "proposedWording": false
     },
     "family-dad-kid:evaluation-helper2": {
-      "prompt": "nr_151",
+      "prompt": "nr_240",
       "reminder": null,
       "options": [
         "nr_033",
@@ -18721,7 +18550,7 @@
       "proposedWording": false
     },
     "family-dad-kid:evaluation-helper2-amount": {
-      "prompt": "nr_152",
+      "prompt": "nr_241",
       "reminder": null,
       "options": [
         "nr_044",
@@ -18882,14 +18711,14 @@
       "proposedWording": false
     },
     "family-mom-kid:outcome": {
-      "prompt": "nr_162",
+      "prompt": "nr_242",
       "reminder": null,
       "options": [],
       "proposedWording": false
     },
     "family-mom-kid:recall-all": {
       "prompt": "nr_163",
-      "reminder": "nr_164",
+      "reminder": "nr_243",
       "options": [
         "nr_011",
         "nr_012"
@@ -18897,7 +18726,7 @@
       "proposedWording": false
     },
     "family-mom-kid:overall": {
-      "prompt": "nr_165",
+      "prompt": "nr_244",
       "reminder": null,
       "options": [
         "nr_033",
@@ -18925,7 +18754,7 @@
       "proposedWording": false
     },
     "family-mom-kid:evaluation-helper1": {
-      "prompt": "nr_168",
+      "prompt": "nr_245",
       "reminder": null,
       "options": [
         "nr_033",
@@ -18934,7 +18763,7 @@
       "proposedWording": false
     },
     "family-mom-kid:evaluation-helper1-amount": {
-      "prompt": "nr_152",
+      "prompt": "nr_246",
       "reminder": null,
       "options": [
         "nr_044",
@@ -18953,7 +18782,7 @@
       "proposedWording": false
     },
     "family-mom-kid:evaluation-helper2": {
-      "prompt": "nr_171",
+      "prompt": "nr_247",
       "reminder": null,
       "options": [
         "nr_033",
@@ -18962,7 +18791,7 @@
       "proposedWording": false
     },
     "family-mom-kid:evaluation-helper2-amount": {
-      "prompt": "nr_049",
+      "prompt": "nr_248",
       "reminder": null,
       "options": [
         "nr_044",
@@ -19123,14 +18952,14 @@
       "proposedWording": false
     },
     "family-teacher-kid:outcome": {
-      "prompt": "nr_183",
+      "prompt": "nr_249",
       "reminder": null,
       "options": [],
       "proposedWording": false
     },
     "family-teacher-kid:recall-all": {
       "prompt": "nr_184",
-      "reminder": "nr_185",
+      "reminder": "nr_250",
       "options": [
         "nr_011",
         "nr_012"
@@ -19138,7 +18967,7 @@
       "proposedWording": false
     },
     "family-teacher-kid:overall": {
-      "prompt": "nr_186",
+      "prompt": "nr_251",
       "reminder": null,
       "options": [
         "nr_033",
@@ -19166,7 +18995,7 @@
       "proposedWording": false
     },
     "family-teacher-kid:evaluation-helper1": {
-      "prompt": "nr_189",
+      "prompt": "nr_252",
       "reminder": null,
       "options": [
         "nr_033",
@@ -19175,7 +19004,7 @@
       "proposedWording": false
     },
     "family-teacher-kid:evaluation-helper1-amount": {
-      "prompt": "nr_190",
+      "prompt": "nr_253",
       "reminder": null,
       "options": [
         "nr_044",
@@ -19194,7 +19023,7 @@
       "proposedWording": false
     },
     "family-teacher-kid:evaluation-helper2": {
-      "prompt": "nr_193",
+      "prompt": "nr_254",
       "reminder": null,
       "options": [
         "nr_033",
@@ -19203,7 +19032,7 @@
       "proposedWording": false
     },
     "family-teacher-kid:evaluation-helper2-amount": {
-      "prompt": "nr_152",
+      "prompt": "nr_255",
       "reminder": null,
       "options": [
         "nr_044",
@@ -19364,14 +19193,14 @@
       "proposedWording": false
     },
     "family-teacher-classmate:outcome": {
-      "prompt": "nr_097",
+      "prompt": "nr_217",
       "reminder": null,
       "options": [],
       "proposedWording": false
     },
     "family-teacher-classmate:recall-all": {
       "prompt": "nr_030",
-      "reminder": "nr_031",
+      "reminder": "nr_218",
       "options": [
         "nr_011",
         "nr_012"
@@ -19379,7 +19208,7 @@
       "proposedWording": false
     },
     "family-teacher-classmate:overall": {
-      "prompt": "nr_032",
+      "prompt": "nr_198",
       "reminder": null,
       "options": [
         "nr_033",
@@ -19407,7 +19236,7 @@
       "proposedWording": false
     },
     "family-teacher-classmate:evaluation-helper1": {
-      "prompt": "nr_100",
+      "prompt": "nr_219",
       "reminder": null,
       "options": [
         "nr_033",
@@ -19416,7 +19245,7 @@
       "proposedWording": false
     },
     "family-teacher-classmate:evaluation-helper1-amount": {
-      "prompt": "nr_101",
+      "prompt": "nr_220",
       "reminder": null,
       "options": [
         "nr_044",
@@ -19435,7 +19264,7 @@
       "proposedWording": false
     },
     "family-teacher-classmate:evaluation-helper2": {
-      "prompt": "nr_041",
+      "prompt": "nr_199",
       "reminder": null,
       "options": [
         "nr_033",
@@ -19444,7 +19273,7 @@
       "proposedWording": false
     },
     "family-teacher-classmate:evaluation-helper2-amount": {
-      "prompt": "nr_043",
+      "prompt": "nr_200",
       "reminder": null,
       "options": [
         "nr_044",
@@ -19468,5 +19297,21 @@
       "options": [],
       "proposedWording": false
     }
+  },
+  "pendingRecordingVoice": {
+    "provider": "NaturalReaders Commercial",
+    "name": "Evelyn",
+    "style": "Soft",
+    "speed": 0.8,
+    "wordsPerMinuteSetting": 160,
+    "paragraphPauseSeconds": 0,
+    "exportFormat": "MP3",
+    "exportMode": "separate files ZIP",
+    "exportNaming": "Index + Segment",
+    "preferredBitrateKbps": 320,
+    "settingsBasis": "Observed saved Online NaturalReaders project: all 60 ordered paragraphs verified, Evelyn Soft 0.80x / 160 WPM / paragraph pause 0. Export file is not retrieved or imported yet; retained recordings keep their original per-clip settings.",
+    "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
+    "savedProjectTextVerified": true,
+    "status": "saved-online-export-not-retrieved"
   }
 }

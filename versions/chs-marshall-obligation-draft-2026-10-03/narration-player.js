@@ -25,7 +25,7 @@
   }
   function stop() {
     generation++;
-    if (active) active.clear();
+    if (active) { active.clear(); active.notifyCancel(); }
     active = null;
   }
   function play(ids, callbacks = {}) {
@@ -35,19 +35,27 @@
     const clips = clipsById();
     let audio = null;
     let timer = null;
+    let frame = null;
     let index = 0;
     const current = () => active === run && generation === token;
+    function clearFrame() {
+      if (frame !== null && root.cancelAnimationFrame) root.cancelAnimationFrame(frame);
+      frame = null;
+    }
     function clearAudio() {
+      clearFrame();
       if (!audio) return;
       const old = audio;
       audio = null;
-      old.onplaying = old.onended = old.onerror = old.onwaiting = old.onstalled = old.ontimeupdate = null;
+      old.onplaying = old.onended = old.onerror = old.onwaiting = old.onstalled = old.ontimeupdate = old.onpause = old.onseeked = null;
+      callbacks.onClipClear?.(sequence[index], index);
       try { old.pause(); } catch (_) { /* Already released by the browser. */ }
       try { old.removeAttribute('src'); old.load(); } catch (_) { /* Safe on simple audio mocks too. */ }
     }
     const run = {
       clear() { clearTimeout(timer); timer = null; clearAudio(); },
-      cancel() { if (current()) stop(); }
+      cancel() { if (current()) stop(); },
+      notifyCancel() { callbacks.onCancel?.(); }
     };
     active = run;
     function fail(code, message) {
@@ -75,6 +83,7 @@
       }
       const id = sequence[index];
       let announced = false;
+      let playing = false;
       try {
         const source = clips[id].src;
         const version = clips[id].sha256?.slice(0, 12);
@@ -83,17 +92,38 @@
         const currentAudio = audio;
         const clipIndex = index;
         const currentClip = () => current() && audio === currentAudio;
+        function reportTime() {
+          if (!currentClip() || !playing || currentAudio.paused || currentAudio.ended) return;
+          callbacks.onClipTime?.(id, clipIndex, Number(currentAudio.currentTime) || 0);
+        }
+        function tick() {
+          frame = null;
+          if (!currentClip() || !playing || currentAudio.paused || currentAudio.ended) return;
+          reportTime();
+          if (root.requestAnimationFrame) frame = root.requestAnimationFrame(tick);
+        }
+        function suspendCue() {
+          if (!currentClip()) return;
+          playing = false; clearFrame(); callbacks.onClipClear?.(id, clipIndex);
+        }
         audio.preload = 'auto';
         audio.onplaying = () => {
           if (!currentClip()) return;
+          playing = true;
           watch(currentAudio);
           if (!announced) { announced = true; callbacks.onClipStart?.(id, clipIndex); }
+          reportTime();
+          clearFrame();
+          if (root.requestAnimationFrame) frame = root.requestAnimationFrame(tick);
         };
-        audio.ontimeupdate = () => { if (currentClip()) watch(currentAudio); };
-        audio.onwaiting = audio.onstalled = () => { if (currentClip()) watch(currentAudio); };
+        audio.ontimeupdate = () => { if (currentClip()) { watch(currentAudio); reportTime(); } };
+        audio.onseeked = reportTime;
+        audio.onpause = suspendCue;
+        audio.onwaiting = audio.onstalled = () => { if (currentClip()) { suspendCue(); watch(currentAudio); } };
         audio.onerror = () => { if (currentClip()) fail('audio-load', 'The recording could not be loaded. Read this screen aloud, or try again.'); };
         audio.onended = () => {
           if (!currentClip()) return;
+          callbacks.onClipEnd?.(id, clipIndex);
           clearTimeout(timer); clearAudio(); index++;
           if (index === sequence.length) next();
           else timer = setTimeout(next, gapMs);

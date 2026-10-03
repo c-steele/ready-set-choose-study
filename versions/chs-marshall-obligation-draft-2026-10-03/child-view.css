@@ -398,3 +398,9 @@ body.child-view .practice-illustration{margin-block:auto}
 body.child-view .child-session-footer{margin-top:0}
 
 @media(max-width:460px){body.child-view .child-session-footer{flex-wrap:wrap}}
+
+/* Replay reads binary labels in sequence without adding researcher controls
+   to the child's Yes/No or character-choice screens. */
+body.child-view .binary-reader-controls,
+body.child-view .binary-reader-status{display:none}
+body.child-view .answers button.spoken-choice.option-current{box-shadow:0 0 0 5px #2477b833,0 9px 20px #2477b833}
