@@ -1,0 +1,66 @@
+# Full-session obligation draft
+
+Full-session revision, September 28, 2026. Open `index.html` in the local preview; choose **Try the session** or **Full storyboard**. `SCRIPT.md` contains every spoken prompt, response set, conditional rule, and reminder. The storyboard also has a print/save as PDF control.
+
+### Child view
+
+Choose **Child view**, or open `index.html?set=woman&practice=each&view=child`, to see the child-facing presentation. It follows the existing Find the Caregiver / Who Helps Where look: soft blue/cream surround, a white play area, compact captions matching the characters, a story badge, the yellow helper, blue Listen/Replay, and green Continue. **Researcher view** returns to pairing menus, jumps, script exports, timing and source notes at the current screen. The questions, branch rules, stimulus files and NaturalReader recordings are shared between both views.
+
+Visual references: `Find_the_Caregiver_Zoom_Facilitator/versions/chs-v78-teacher-classmate-evelyn-unique-roles/styles.css` (used by the v80 CHS runtime), and `work/who-helps-where-visual-fixes-r21/versions/chs-home-school-evelyn-v1/styles.css` (Who Helps Where r27). Those original studies are unchanged. This remains a local presentation draft; it is not a deployed Lookit study or participant-data collector.
+
+The preview includes three existing Find the Caregiver sets of six pairings each, plus an all-18 researcher review view (14 distinct pairing labels). It preserves visual plan 4, including the original orange mom-left/sister-right illustration. All stories use sadness on plain backgrounds. Adult recipients in the family set remain mom, dad, or teacher; their original introductions establish their relationship to the kid. It adapts the question sequence of Marshall et al. (2022), Study 1. No existing study was edited.
+
+## What is included
+
+- Character introductions and identity checks using on-screen selection.
+- Need narration, with both helpers seeing that the kid is sad.
+- Separate binary prediction questions for both helpers.
+- “Have to” practice after prediction and before obligation.
+- Separate binary obligation questions, each with a conditional strength follow-up after Yes.
+- A fixed outcome in which neither helper helps, regardless of responses.
+- Global recall and overall Mean/Nice evaluation; proposed overall strength follow-up after Mean.
+- Per-helper recall and Mean/Not mean evaluations; conditional strength after Mean.
+- One comparison between the two helpers per story.
+
+Each six-story set has 48 main judgments. With practice every story, the ordinary correct-practice path has 139–169 screens and 102–132 responses; the full storyboard has 175 possible cards. With practice once, these become 114–144 screens and 87–117 responses (145 possible cards). Conditional cards are skipped in the player according to answers.
+
+The illustrative estimate is approximately 20–35 minutes with repeated practice, or 16–29 minutes with practice once, before breaks/corrections. It counts actual script/choice words at 110–130 words/minute and 3–5 seconds per selection; it is not an observed child duration. Navigation-only delays and extra option-reading pauses are excluded. A start/pause/reset timer records the reviewer’s preview time and labels jumps or untimed progress as partial.
+
+Pairing and practice selectors rebuild the session and its script download. SCRIPT.md is the default mom/sister set with repeated practice; SCRIPT-{woman,man,family,all}-{each,once}.md provides all combinations. The full storyboard includes every possible follow-up and can be printed. Practice once is a new adaptation; the captured Marshall survey repeated practice.
+
+## Source limits and draft decisions
+
+The overall intensity prompt **and response wording** are reconstructed and visibly flagged: the supplement confirms score levels but the exact spoken follow-up was not recovered. Practice strength routing and reminder text are draft implementation choices. The published obligation-helper order was randomized; this preview fixes story order and asks helpers from left to right. Checks permit retries or facilitator continuation and do not reproduce research exclusion rules.
+
+This is a two-helper sadness adaptation, not an exact copy of the original three-helper injury/hunger stories. Generic “help” remains in the questions. Original Find the Caregiver trait/Likert questions and forced-choice hug prediction are omitted. Marshall conditional strength questions remain.
+
+September 28 presentation revision: the stop-being-mean practice item now has a new vector teacher-and-child illustration, a speech bubble, and separate setup/question text. It uses the established round-character style on white, with neutral expressions and identical Yes/No controls. The displayed wording is an adaptation; `SCRIPT.md` retains the complete original read-aloud prompt and documents the display wording. This illustration is not an original Marshall stimulus.
+
+The original images are reused unchanged via pairing-catalog.json. They come from the archived plain foreground images, the previously reviewed orange mom–sister images, the corrected brother introduction, and native teacher–classmate SVGs. The web layout hides their old banner and adds the adapted prompt as text. NaturalReader Evelyn / Soft / 0.90× narration is connected across every pairing and branch. The exact existing opening is reused, and 194 new recordings cover the remaining prompts, reminders and individual response labels. No webcam, microphone, persistent responses, or survey submission is implemented.
+
+September 28 option-cue revision: all seven three-choice strength screens now use FTC-style option boxes. **Read choices** uses the recorded NaturalReader voice; each box is revealed and glows blue as its phrase begins. After the final phrase, all boxes become selectable and the active glow clears. **Read again** resets the sequence. **Read myself** highlights the first option; **Next option** advances it; **Finish reading** enables all choices. Neutral circles of increasing size indicate magnitude, rather than the original positive thumb symbols. These visuals are adaptation choices, not original Marshall stimuli. All 195 distinct recordings are connected.
+
+The reader cancels speech and pending callbacks when navigating away, restarting, or opening the storyboard. Browser history restoration reinitializes the controls. Failed or missing recordings explicitly offer the manual path; no browser speech is substituted. The storyboard shows all options statically, without audio controls or dimming.
+
+## Verification
+
+- Verified unique screen IDs, existing image files, all five substantive intensity-branch rules, practice placement, and the fixed nonhelping outcome.
+- Walked through the browser from introduction to ending using both Yes/No and Mean/Not mean branches.
+- Checked a missed identity check and a missed recall check with reminder/continuation.
+- Verified all 18 pairing instances, all image paths, prefixed branching IDs, and 8 main judgments per story.
+- Browser-checked six-story/all-18 counts, adult-recipient wording, No skipping strength, Yes revealing it, manual option gating, fixed outcome, between-story progression, missed identity checks, and timer invalidation.
+- Confirmed 175 storyboard cards in a six-story repeated-practice set and reviewed the full-session layout.
+- Print control loads/decodes storyboard images before printing; no PDF was exported in this revision.
+
+Sources are linked in the draft and listed in `SCRIPT.md`.
+
+
+## NaturalReader narration (September 28)
+
+Use **Play narration** to begin. With **Read new screens automatically** checked, subsequent screens read after each response. Binary answers and Continue wait for the prompt/choices to finish. Three-option screens read the prompt followed by three separate option recordings, highlighting the spoken option and unlocking choices after the last clip. Replay, Stop audio, navigation, reminders, and manual reading share one audio channel and cancel previous playback.
+
+Two new NaturalReader files are saved as **Obligation Evelyn 2026-09-28 Batch 01** and **Batch 02**, using Evelyn, Soft, 0.90×, zero paragraph pause. 194 new MP3s were exported at 320 kbps in two batches; the exact previously recorded opening is retained. Saved project text was verified against the complete 194-paragraph script before import. ZIP CRC, indexed file mapping, audio decode, duration and SHA256 passed for every imported recording. Offline automated transcription spot-checked 13 clips and the three-option sequence; it is not a complete listening review.
+
+See NARRATION_README.md and the import receipts for source details. All research source caveats remain, including the explicitly proposed overall-strength wording.
+
+The overview now uses measured recording lengths plus programmed option pauses and an assumed 3–5 seconds per response: approximately 19–30 minutes with repeated practice, or 16–26 minutes with practice once. The earlier word-rate estimate remains in the read-aloud script export as a separate manual-narration estimate. Actual child duration still depends on response pace, breaks, corrections and navigation.

@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 350" width="900" height="350" role="img" aria-labelledby="title description">
+  <title id="title">A teacher speaks to a child</title>
+  <desc id="description">Two orange round characters with neutral expressions. The larger character is labeled TEACHER; the smaller character is labeled YOU. The teacher says, Stop being mean.</desc>
+  <defs>
+    <g id="person">
+      <g fill="#f5b236">
+        <path d="M-46 47H-23V129H-46ZM23 47H46V129H23Z"/>
+        <path d="M-68 20L-84 89L-89 114L-81 116L-76 90L-58 31ZM68 20L84 89L89 114L81 116L76 90L58 31Z"/>
+        <circle r="79"/>
+      </g>
+      <g fill="none" stroke="#f5b236" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M-84 94L-94 118M-84 99L-89 128M-79 99L-81 132M-74 99L-73 126M-75 94L-65 113"/>
+        <path d="M84 94L94 118M84 99L89 128M79 99L81 132M74 99L73 126M75 94L65 113"/>
+      </g>
+      <g fill="#fff"><ellipse cx="-26" cy="-17" rx="19" ry="22"/><ellipse cx="26" cy="-17" rx="19" ry="22"/></g>
+      <g fill="#111"><circle cx="-23" cy="-13" r="13"/><circle cx="29" cy="-13" r="13"/></g>
+      <path d="M-10 31H10" fill="none" stroke="#111" stroke-width="6"/>
+    </g>
+  </defs>
+  <path d="M372 30H682Q704 30 704 52V95Q704 117 682 117H372Q350 117 350 95V91L322 102L350 70V52Q350 30 372 30Z" fill="#fff8e9" stroke="#f0ca80" stroke-width="2.5"/>
+  <text x="527" y="83" font-family="Arial,Helvetica,sans-serif" font-size="29" font-weight="700" text-anchor="middle" fill="#4a3c25">Stop being mean.</text>
+  <use href="#person" transform="translate(248 151)"/>
+  <use href="#person" transform="translate(639 205) scale(.61)"/>
+  <g font-family="Arial,Helvetica,sans-serif" font-weight="700" font-size="18" text-anchor="middle">
+    <rect x="178" y="307" width="140" height="29" rx="3" fill="#f5b236"/>
+    <text x="248" y="327" fill="#fff">TEACHER</text>
+    <rect x="600" y="307" width="78" height="29" rx="3" fill="#f5b236"/>
+    <text x="639" y="327" fill="#fff">YOU</text>
+  </g>
+</svg>

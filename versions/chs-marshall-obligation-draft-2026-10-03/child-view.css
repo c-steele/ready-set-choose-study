@@ -1,0 +1,400 @@
+/* Child-facing presentation adapted from the existing Find the Caregiver
+   and Who Helps Where study shell. Researcher review retains its own layout. */
+.child-topbar,
+.child-session-footer {
+  display: none;
+}
+
+body.child-view {
+  min-height: 100vh;
+  min-height: 100dvh;
+  color: #1d2733;
+  background:
+    radial-gradient(circle at 10% 12%, #ffd15c57, transparent 22%),
+    radial-gradient(circle at 88% 18%, #77d7b447, transparent 20%),
+    linear-gradient(180deg, #eef8ff 0%, #fff8ec 100%);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body.child-view > .site-header,
+body.child-view > .toolbar,
+body.child-view .session-overview,
+body.child-view .walkthrough-timer,
+body.child-view .step-nav,
+body.child-view .story-progress,
+body.child-view .progress-track,
+body.child-view .narration-controls,
+body.child-view .step-note,
+body.child-view .research-notes,
+body.child-view > footer {
+  display: none;
+}
+
+body.child-view > main {
+  width: min(1180px, calc(100% - 24px));
+  margin: 0 auto;
+  padding: 10px 0 12px;
+}
+
+body.child-view .child-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  min-height: 42px;
+  margin-bottom: 8px;
+}
+
+body.child-view .child-story-label {
+  display: inline-flex;
+  align-items: center;
+  margin: 0;
+  padding: 7px 13px;
+  border: 3px solid #b8e4ff;
+  border-radius: 999px;
+  background: #eff9fff5;
+  color: #17466f;
+  font-size: 16px;
+  font-weight: 900;
+  box-shadow: 0 5px 14px #25314112;
+}
+
+body.child-view #researcher-view {
+  border-color: #c6d9e4;
+  background: #ffffffb8;
+  color: #536b7d;
+  font-size: 12px;
+  padding: 7px 11px;
+}
+
+body.child-view .stage {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: none;
+  min-height: calc(100vh - 82px);
+  min-height: calc(100dvh - 82px);
+  margin: 0;
+  border: 4px solid #246fb829;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 14px 34px #2531411f;
+}
+
+body.child-view .prompt {
+  flex: 0 0 auto;
+  padding: 6px 16px;
+  background: var(--story-accent);
+}
+
+body.child-view .prompt h2 {
+  font-size: clamp(20px, 2.2vw, 28px);
+  line-height: 1.13;
+  letter-spacing: -.3px;
+  text-wrap: balance;
+}
+
+body.child-view .picture {
+  flex: 0 0 auto;
+  width: min(100%, 1050px, calc((100vh - 342px) * 2.285714));
+  width: min(100%, 1050px, calc((100dvh - 342px) * 2.285714));
+  margin: 12px auto 6px;
+}
+
+body.child-view .stage:has(.rating-options) .picture {
+  width: min(100%, 1000px, calc((100vh - 474px) * 2.285714));
+  width: min(100%, 1000px, calc((100dvh - 474px) * 2.285714));
+}
+
+body.child-view .answers {
+  flex: 0 0 auto;
+  gap: 16px;
+  min-height: 68px;
+  padding: 8px 20px 10px;
+}
+
+body.child-view .answers button {
+  min-width: 150px;
+  min-height: 52px;
+  padding: 11px 24px;
+  border-width: 3px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #1d2733;
+  box-shadow: 0 5px 12px #2531410d;
+}
+
+body.child-view .answers button.continue-answer {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  min-width: 90px;
+  min-height: 68px;
+  padding: 6px 19px 9px;
+  border: 0;
+  border-radius: 999px;
+  background: #1f8b6f;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 1;
+  box-shadow: 0 8px 18px #246fb833;
+}
+
+body.child-view .answers button.continue-answer::before {
+  content: '➜';
+  font-size: 38px;
+  line-height: .9;
+}
+
+body.child-view .answers button.continue-answer:hover {
+  background: #176b56;
+}
+
+body.child-view .point-instruction {
+  padding: 8px 12px 6px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #64757d;
+}
+
+body.child-view .rating-options {
+  flex: 0 0 auto;
+  width: min(660px, calc(100% - 36px));
+  gap: 14px;
+  margin: 5px auto 4px;
+}
+
+body.child-view .rating-answer {
+  min-height: 108px;
+  gap: 5px;
+  padding: 9px;
+  font-weight: 900;
+  font-size: 19px;
+  color: #1d2733;
+}
+
+body.child-view .amount-marker {
+  height: 48px;
+}
+
+body.child-view .option-reader-controls {
+  gap: 8px;
+  margin: 5px 12px 0;
+}
+
+body.child-view .option-reader-controls button {
+  min-height: 30px;
+  padding: 5px 10px;
+  font-size: 12px;
+}
+
+body.child-view .reader-status {
+  margin: 5px 12px 7px;
+  min-height: 16px;
+  font-size: 12px;
+}
+
+body.child-view .child-session-footer {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-top: auto;
+  padding: 9px 20px 13px;
+}
+
+body.child-view .child-helper,
+body.child-view .child-audio-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+body.child-view .child-helper {
+  pointer-events: none;
+}
+
+body.child-view .child-helper-face {
+  position: relative;
+  display: block;
+  flex: 0 0 54px;
+  width: 54px;
+  height: 54px;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  background: #ffd15c;
+  box-shadow: 0 5px 14px #3141542e;
+}
+
+body.child-view .child-helper-face::before,
+body.child-view .child-helper-face::after {
+  content: '';
+  position: absolute;
+  top: 14px;
+  width: 6px;
+  height: 9px;
+  border-radius: 50%;
+  background: #203040;
+}
+
+body.child-view .child-helper-face::before { left: 11px; }
+body.child-view .child-helper-face::after { right: 11px; }
+
+body.child-view .child-helper-face i {
+  position: absolute;
+  top: 28px;
+  left: 15px;
+  display: block;
+  width: 16px;
+  height: 7px;
+  border-radius: 0 0 20px 20px;
+  background: #203040;
+}
+
+body.child-view .child-helper-bubble {
+  display: block;
+  max-width: 195px;
+  padding: 8px 12px;
+  border: 3px solid #b8e4ff;
+  border-radius: 16px;
+  background: #fff;
+  color: #17466f;
+  font-size: 17px;
+  font-weight: 900;
+  line-height: 1.2;
+  box-shadow: 0 5px 14px #3141541f;
+}
+
+body.child-view .child-replay {
+  display: inline-grid;
+  place-items: center;
+  gap: 3px;
+  min-width: 82px;
+  min-height: 68px;
+  padding: 8px 18px;
+  border: 0;
+  border-radius: 999px;
+  background: #246fb8;
+  color: #fff;
+  box-shadow: 0 8px 18px #246fb833;
+}
+
+body.child-view .child-replay:hover { background: #16538f; }
+
+body.child-view .child-control-symbol {
+  font-size: 31px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+body.child-view .child-control-label {
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 1;
+}
+
+body.child-view .child-stop {
+  min-height: 36px;
+  padding: 7px 11px;
+  border-color: #b6cfe2;
+  color: #195c8f;
+  font-size: 13px;
+}
+
+body.child-view .practice-space {
+  flex: 1 1 auto;
+  min-height: 100px;
+  max-height: 230px;
+}
+
+body.child-view .practice-illustration {
+  padding: 12px 20px 5px;
+}
+
+body.child-view .practice-setup {
+  font-size: 19px;
+  line-height: 1.25;
+}
+
+body.child-view .practice-illustration img {
+  max-width: 660px;
+  max-height: min(34vh, 285px);
+  object-fit: contain;
+}
+
+body.child-view .practice-question {
+  font-size: clamp(20px, 2.2vw, 27px);
+}
+
+body.child-view .feedback {
+  margin: 3px 18px 6px;
+  padding: 8px 14px;
+  font-size: 14px;
+}
+
+body.child-view .facilitator-controls {
+  padding: 0 12px 6px;
+}
+
+body.child-view .stage:has(.feedback) .picture {
+  width: min(100%, 1000px, calc((100vh - 520px) * 2.285714));
+  width: min(100%, 1000px, calc((100dvh - 520px) * 2.285714));
+}
+
+body.child-view .stage:has(.feedback) .practice-illustration img {
+  max-height: min(22vh, 175px);
+}
+
+@media (max-width: 750px) {
+  body.child-view > main { width: calc(100% - 20px); }
+  body.child-view .prompt h2 { font-size: 22px; }
+  body.child-view .picture { margin-top: 18px; }
+  body.child-view .answers button { font-size: 20px; }
+  body.child-view .child-session-footer { gap: 20px; }
+}
+
+@media (max-width: 460px) {
+  body.child-view .child-story-label { font-size: 14px; }
+  body.child-view .prompt h2 { font-size: 19px; }
+  body.child-view .answers { gap: 10px; padding-inline: 12px; }
+  body.child-view .answers button { min-width: 110px; font-size: 18px; padding: 10px 14px; }
+  body.child-view .rating-options { width: calc(100% - 20px); gap: 7px; }
+  body.child-view .rating-answer { font-size: 15px; min-height: 110px; padding: 7px 3px; }
+  body.child-view .child-session-footer { gap: 14px; padding-inline: 12px; }
+  body.child-view .child-helper { gap: 6px; }
+  body.child-view .child-helper-bubble { max-width: 133px; font-size: 14px; padding: 7px 8px; }
+  body.child-view .child-helper-face { flex-basis: 48px; width: 48px; height: 48px; }
+  body.child-view .child-helper-face i { left: 12px; }
+  body.child-view .child-replay { min-width: 70px; padding-inline: 13px; }
+}
+
+@media (max-height: 650px) and (min-width: 700px) {
+  body.child-view > main { padding-top: 6px; }
+  body.child-view .child-topbar { margin-bottom: 5px; min-height: 36px; }
+  body.child-view .child-story-label { padding: 5px 11px; font-size: 14px; }
+  body.child-view .stage { min-height: calc(100dvh - 66px); }
+  body.child-view .prompt h2 { font-size: 22px; }
+  body.child-view .child-session-footer { padding-block: 5px 8px; }
+  body.child-view .picture { margin-block: 6px; }
+  body.child-view .rating-answer { min-height: 95px; }
+}
+
+@media print {
+  .child-topbar,
+  .child-session-footer { display: none !important; }
+  body.child-view { background: #fff; }
+}
+
+/* Keep the familiar Replay and Continue pair together under the scene. */
+body.child-view .stage > .answers:has(.continue-answer){display:none}
+body.child-view .child-continue{padding:0;min-height:0}
+body.child-view .picture{margin-block:auto}
+body.child-view .practice-illustration{margin-block:auto}
+body.child-view .child-session-footer{margin-top:0}
+
+@media(max-width:460px){body.child-view .child-session-footer{flex-wrap:wrap}}
