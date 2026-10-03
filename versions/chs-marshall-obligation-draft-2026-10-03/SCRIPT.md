@@ -38,37 +38,37 @@ Left: the kid’s teacher. Middle: the kid. Right: the kid’s mom.
 
 ### 2. Meet the kid
 
-“This little one is a kid. Select the kid.”
+“This little one is a kid. Tap the kid.”
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/5c/intro_02.png) — original reference image; the preview replaces its caption with the wording above.
 
 Selection check: recipient.
 
-Reminder if needed: “This little one is a kid. This one is the kid. Select the kid.”
+Reminder if needed: “This little one is a kid. This one is the kid. Tap the kid.”
 
 *Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
 
 ### 3. Meet the kid’s teacher
 
-“This big one is this kid’s teacher. Select the kid’s teacher.”
+“This big one is this kid’s teacher. Tap the kid’s teacher.”
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/5c/intro_03.png) — original reference image; the preview replaces its caption with the wording above.
 
 Selection check: helper1.
 
-Reminder if needed: “This big one is this kid’s teacher. This one is the kid’s teacher. Select the kid’s teacher.”
+Reminder if needed: “This big one is this kid’s teacher. This one is the kid’s teacher. Tap the kid’s teacher.”
 
 *Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
 
 ### 4. Meet the kid’s mom
 
-“This big one is this kid’s mom. Select the kid’s mom.”
+“This big one is this kid’s mom. Tap the kid’s mom.”
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/5c/intro_04.png) — original reference image; the preview replaces its caption with the wording above.
 
 Selection check: helper2.
 
-Reminder if needed: “This big one is this kid’s mom. This one is the kid’s mom. Select the kid’s mom.”
+Reminder if needed: “This big one is this kid’s mom. This one is the kid’s mom. Tap the kid’s mom.”
 
 *Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
 
@@ -330,37 +330,37 @@ Left: the kid’s sister. Middle: the kid. Right: the kid’s friend.
 
 ### 31. Meet the kid
 
-“This little one is a kid. Select the kid.”
+“This little one is a kid. Tap the kid.”
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/6b/intro_02.png) — original reference image; the preview replaces its caption with the wording above.
 
 Selection check: recipient.
 
-Reminder if needed: “This little one is a kid. This one is the kid. Select the kid.”
+Reminder if needed: “This little one is a kid. This one is the kid. Tap the kid.”
 
 *Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
 
 ### 32. Meet the kid’s sister
 
-“This little one is this kid’s sister. Select the kid’s sister.”
+“This little one is this kid’s sister. Tap the kid’s sister.”
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/6b/intro_03.png) — original reference image; the preview replaces its caption with the wording above.
 
 Selection check: helper1.
 
-Reminder if needed: “This little one is this kid’s sister. This one is the kid’s sister. Select the kid’s sister.”
+Reminder if needed: “This little one is this kid’s sister. This one is the kid’s sister. Tap the kid’s sister.”
 
 *Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
 
 ### 33. Meet the kid’s friend
 
-“This little one is this kid’s friend. Select the kid’s friend.”
+“This little one is this kid’s friend. Tap the kid’s friend.”
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/6b/intro_04.png) — original reference image; the preview replaces its caption with the wording above.
 
 Selection check: helper2.
 
-Reminder if needed: “This little one is this kid’s friend. This one is the kid’s friend. Select the kid’s friend.”
+Reminder if needed: “This little one is this kid’s friend. This one is the kid’s friend. Tap the kid’s friend.”
 
 *Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
 
@@ -622,37 +622,37 @@ Left: the kid’s friend. Middle: the kid. Right: the kid’s best friend.
 
 ### 60. Meet the kid
 
-“This little one is a kid. Select the kid.”
+“This little one is a kid. Tap the kid.”
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/13d/intro_02.png) — original reference image; the preview replaces its caption with the wording above.
 
 Selection check: recipient.
 
-Reminder if needed: “This little one is a kid. This one is the kid. Select the kid.”
+Reminder if needed: “This little one is a kid. This one is the kid. Tap the kid.”
 
 *Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
 
 ### 61. Meet the kid’s friend
 
-“This little one is this kid’s friend. Select the kid’s friend.”
+“This little one is this kid’s friend. Tap the kid’s friend.”
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/13d/intro_03.png) — original reference image; the preview replaces its caption with the wording above.
 
 Selection check: helper1.
 
-Reminder if needed: “This little one is this kid’s friend. This one is the kid’s friend. Select the kid’s friend.”
+Reminder if needed: “This little one is this kid’s friend. This one is the kid’s friend. Tap the kid’s friend.”
 
 *Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
 
 ### 62. Meet the kid’s best friend
 
-“This little one is this kid’s best friend. Select the kid’s best friend.”
+“This little one is this kid’s best friend. Tap the kid’s best friend.”
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/13d/intro_04.png) — original reference image; the preview replaces its caption with the wording above.
 
 Selection check: helper2.
 
-Reminder if needed: “This little one is this kid’s best friend. This one is the kid’s best friend. Select the kid’s best friend.”
+Reminder if needed: “This little one is this kid’s best friend. This one is the kid’s best friend. Tap the kid’s best friend.”
 
 *Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
 
@@ -914,37 +914,37 @@ Left: the kid’s teacher. Middle: the kid. Right: the kid’s friend.
 
 ### 89. Meet the kid
 
-“This little one is a kid. Select the kid.”
+“This little one is a kid. Tap the kid.”
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/2b/intro_02.png) — original reference image; the preview replaces its caption with the wording above.
 
 Selection check: recipient.
 
-Reminder if needed: “This little one is a kid. This one is the kid. Select the kid.”
+Reminder if needed: “This little one is a kid. This one is the kid. Tap the kid.”
 
 *Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
 
 ### 90. Meet the kid’s teacher
 
-“This big one is this kid’s teacher. Select the kid’s teacher.”
+“This big one is this kid’s teacher. Tap the kid’s teacher.”
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/2b/intro_03.png) — original reference image; the preview replaces its caption with the wording above.
 
 Selection check: helper1.
 
-Reminder if needed: “This big one is this kid’s teacher. This one is the kid’s teacher. Select the kid’s teacher.”
+Reminder if needed: “This big one is this kid’s teacher. This one is the kid’s teacher. Tap the kid’s teacher.”
 
 *Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
 
 ### 91. Meet the kid’s friend
 
-“This little one is this kid’s friend. Select the kid’s friend.”
+“This little one is this kid’s friend. Tap the kid’s friend.”
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/2b/intro_04.png) — original reference image; the preview replaces its caption with the wording above.
 
 Selection check: helper2.
 
-Reminder if needed: “This little one is this kid’s friend. This one is the kid’s friend. Select the kid’s friend.”
+Reminder if needed: “This little one is this kid’s friend. This one is the kid’s friend. Tap the kid’s friend.”
 
 *Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
 
@@ -1206,37 +1206,37 @@ Left: the kid’s mom. Middle: the kid. Right: the kid’s sister.
 
 ### 118. Meet the kid
 
-“This little one is a kid. Select the kid.”
+“This little one is a kid. Tap the kid.”
 
 [Stimulus source](../find_the_caregiver_story_screens_2026-09-26/mom-sister-orange-sad/02-child.png) — original reference image; the preview replaces its caption with the wording above.
 
 Selection check: recipient.
 
-Reminder if needed: “This little one is a kid. This one is the kid. Select the kid.”
+Reminder if needed: “This little one is a kid. This one is the kid. Tap the kid.”
 
 *Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
 
 ### 119. Meet the kid’s mom
 
-“This big one is this kid’s mom. Select the kid’s mom.”
+“This big one is this kid’s mom. Tap the kid’s mom.”
 
 [Stimulus source](../find_the_caregiver_story_screens_2026-09-26/mom-sister-orange-sad/03-mom.png) — original reference image; the preview replaces its caption with the wording above.
 
 Selection check: helper1.
 
-Reminder if needed: “This big one is this kid’s mom. This one is the kid’s mom. Select the kid’s mom.”
+Reminder if needed: “This big one is this kid’s mom. This one is the kid’s mom. Tap the kid’s mom.”
 
 *Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
 
 ### 120. Meet the kid’s sister
 
-“This little one is this kid’s sister. Select the kid’s sister.”
+“This little one is this kid’s sister. Tap the kid’s sister.”
 
 [Stimulus source](../find_the_caregiver_story_screens_2026-09-26/mom-sister-orange-sad/04-sister.png) — original reference image; the preview replaces its caption with the wording above.
 
 Selection check: helper2.
 
-Reminder if needed: “This little one is this kid’s sister. This one is the kid’s sister. Select the kid’s sister.”
+Reminder if needed: “This little one is this kid’s sister. This one is the kid’s sister. Tap the kid’s sister.”
 
 *Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
 
@@ -1498,37 +1498,37 @@ Left: the kid’s classmate. Middle: the kid. Right: the kid’s teacher.
 
 ### 147. Meet the kid
 
-“This little one is a kid. Select the kid.”
+“This little one is a kid. Tap the kid.”
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/assets/teacher_classmate/generated/trials/14d/intro_02.svg) — original reference image; the preview replaces its caption with the wording above.
 
 Selection check: recipient.
 
-Reminder if needed: “This little one is a kid. This one is the kid. Select the kid.”
+Reminder if needed: “This little one is a kid. This one is the kid. Tap the kid.”
 
 *Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
 
 ### 148. Meet the kid’s classmate
 
-“This little one is this kid’s classmate. Select the kid’s classmate.”
+“This little one is this kid’s classmate. Tap the kid’s classmate.”
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/assets/teacher_classmate/generated/trials/14d/intro_03.svg) — original reference image; the preview replaces its caption with the wording above.
 
 Selection check: helper1.
 
-Reminder if needed: “This little one is this kid’s classmate. This one is the kid’s classmate. Select the kid’s classmate.”
+Reminder if needed: “This little one is this kid’s classmate. This one is the kid’s classmate. Tap the kid’s classmate.”
 
 *Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
 
 ### 149. Meet the kid’s teacher
 
-“This big one is this kid’s teacher. Select the kid’s teacher.”
+“This big one is this kid’s teacher. Tap the kid’s teacher.”
 
 [Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/assets/teacher_classmate/generated/trials/14d/intro_04.svg) — original reference image; the preview replaces its caption with the wording above.
 
 Selection check: helper2.
 
-Reminder if needed: “This big one is this kid’s teacher. This one is the kid’s teacher. Select the kid’s teacher.”
+Reminder if needed: “This big one is this kid’s teacher. This one is the kid’s teacher. Tap the kid’s teacher.”
 
 *Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
 
@@ -1781,3 +1781,4 @@ Choices: The kid’s classmate / The kid’s teacher.
 “That’s the end of our stories. Thank you!”
 
 *Draft closing wording. This is the end of the selected preview.*
+

@@ -15,22 +15,20 @@
     return s.localId.startsWith('practice-')?'#f5b236':s.pairing?.visualHex||'#f5b236';
   }
   function isCharacterIntro(s){return Boolean(s.pairing&&s.point&&s.localId.startsWith('intro-'));}
-  function revealIntroducedCharacters(){
-    const picture=stage.querySelector('.character-introduction');
-    if(!picture)return;
-    picture.classList.remove('introduction-focused');
-    const img=picture.querySelector('img');img.src=picture.dataset.selectionImage;img.alt=picture.dataset.selectionAlt;
-    stage.querySelector('[data-reveal-characters]')?.setAttribute('hidden','');
-    const instruction=stage.querySelector('.point-instruction');if(instruction)instruction.textContent='Now choose a character.';
-    gateNarration(narrationPlaying);syncChildControls();
+  // Bounds include each character, their existing outline and their role label.
+  // Measured from the unmodified final intro stimulus, inside the 1920 × 840 crop.
+  const introActorBounds={"woman-mom-teacher":{"recipient":[38.49,31.667,23.125,63.452],"helper1":[3.073,4.405,29.688,90.714],"helper2":[67.135,4.405,29.635,90.714]},"woman-sister-friend":{"recipient":[38.281,31.667,23.125,63.452],"helper1":[3.75,31.667,23.125,63.452],"helper2":[72.552,31.667,23.125,63.452]},"woman-bestfriend-friend":{"recipient":[38.281,31.667,23.125,63.452],"helper1":[3.75,31.667,23.125,63.452],"helper2":[72.5,31.667,23.177,63.452]},"woman-teacher-friend":{"recipient":[41.094,31.667,23.125,63.452],"helper1":[4.531,4.405,29.688,90.714],"helper2":[71.25,31.667,23.177,63.452]},"woman-mom-sister":{"recipient":[41.094,31.667,23.125,63.452],"helper1":[4.531,4.405,29.688,90.714],"helper2":[71.25,31.667,23.177,63.452]},"woman-teacher-classmate":{"recipient":[35.26,31.667,23.177,63.452],"helper1":[4.531,31.667,23.177,63.452],"helper2":[65.833,4.405,29.688,90.714]},"man-dad-teacher":{"recipient":[38.49,31.667,23.125,63.452],"helper1":[3.073,4.405,29.688,90.714],"helper2":[67.135,4.405,29.635,90.714]},"man-brother-friend":{"recipient":[38.281,31.667,23.125,63.452],"helper1":[3.75,31.667,23.125,63.452],"helper2":[72.5,31.667,23.177,63.452]},"man-bestfriend-friend":{"recipient":[38.281,31.667,23.125,63.452],"helper1":[3.75,31.667,23.125,63.452],"helper2":[72.5,31.667,23.177,63.452]},"man-teacher-friend":{"recipient":[41.094,31.667,23.125,63.452],"helper1":[4.531,4.405,29.688,90.714],"helper2":[71.25,31.667,23.177,63.452]},"man-dad-brother":{"recipient":[41.094,31.667,23.125,63.452],"helper1":[4.531,4.405,29.688,90.714],"helper2":[71.25,31.667,23.177,63.452]},"man-teacher-classmate":{"recipient":[35.26,31.667,23.177,63.452],"helper1":[4.531,31.667,23.177,63.452],"helper2":[65.833,4.405,29.688,90.714]},"family-mom-dad":{"recipient":[38.49,31.667,23.125,63.452],"helper1":[3.073,4.405,29.688,90.714],"helper2":[67.135,4.405,29.635,90.714]},"family-sister-brother":{"recipient":[38.281,31.667,23.125,63.452],"helper1":[3.75,31.667,23.125,63.452],"helper2":[72.552,31.667,23.125,63.452]},"family-dad-kid":{"recipient":[38.49,4.405,27.031,90.714],"helper1":[4.531,4.405,29.688,90.714],"helper2":[65.521,4.405,28.906,90.714]},"family-mom-kid":{"recipient":[34.479,4.405,26.979,90.714],"helper1":[4.375,4.405,30.104,90.714],"helper2":[65.521,4.405,29.635,90.714]},"family-teacher-kid":{"recipient":[38.49,4.405,27.031,90.714],"helper1":[4.531,4.405,29.688,90.714],"helper2":[65.521,4.405,28.906,90.714]},"family-teacher-classmate":{"recipient":[35.26,31.667,23.177,63.452],"helper1":[4.531,31.667,23.177,63.452],"helper2":[65.833,4.405,29.688,90.714]}};
+  function visibleIntroActors(s){
+    if(!s.pairing)return [];
+    const intros=s.pairing.intros;
+    if(s.localId==='group')return intros.slice(0,1).map(intro=>intro.actorId);
+    if(!isCharacterIntro(s))return actors(s).map(actor=>actor.id);
+    const current=intros.findIndex(intro=>intro.actorId===s.point);
+    return intros.slice(0,current+1).map(intro=>intro.actorId);
   }
-  function focusIntroducedCharacter(s){
-    const picture=stage.querySelector('.character-introduction');
-    if(!picture||wrong)return;
-    picture.classList.add('introduction-focused');
-    const actor=actors(s).find(a=>a.id===s.point),img=picture.querySelector('img');img.src=s.image;img.alt=`${actor.description} ${actor.side==='middle'?'in the middle':'on the '+actor.side}.`;
-    stage.querySelector('[data-reveal-characters]')?.removeAttribute('hidden');
-    const instruction=stage.querySelector('.point-instruction');if(instruction)instruction.textContent='Listen and meet this character.';
+  function actorTargetStyle(s,actor){
+    const bounds=introActorBounds[s.pairing.id]?.[actor.id];
+    return bounds?` style="left:${bounds[0]}%;top:${bounds[1]}%;width:${bounds[2]}%;height:${bounds[3]}%"`:'';
   }
   function syncChildControls(){
     const replay=stage.querySelector('.child-replay'),stop=stage.querySelector('.child-stop');
@@ -40,7 +38,7 @@
     replay.setAttribute('aria-label',narrationEnabled?'Replay narration':'Listen to the narration');
     stop.hidden=!narrationPlaying;
     const s=steps[index]||steps[0],bubble=stage.querySelector('.child-helper-bubble');
-    bubble.textContent=narrationPlaying||stage.querySelector('.rating-answer:disabled,.introduction-focused')?'Listen and look!':s.choices||s.point?'Choose one!':s.localId==='end'?'All done!':'Listen and look!';
+    bubble.textContent=narrationPlaying||stage.querySelector('.rating-answer:disabled')?'Listen and look!':s.point?'Tap '+actors(s).find(a=>a.id===s.point).description+'!':s.choices?'Tap one!':s.localId==='end'?'All done!':'Listen and look!';
     if(s.localId==='end')stage.querySelectorAll('.continue-answer').forEach(button=>button.textContent=childView?'All done!':'Read the full storyboard');
   }
   function setChildView(value){
@@ -55,7 +53,7 @@
     const spokenBinary=/Yes or No\.?$/i.test(s.text)||/Mean or Not Mean/i.test(s.text);
     return [id,...(!wrong&&s.choices?.length===2&&!spokenBinary?map.options:[])].filter(Boolean);
   }
-  function gateNarration(locked){stage.querySelectorAll('.answers button,[data-point],#continue-check,[data-reveal-characters]').forEach(b=>b.disabled=locked||b.hasAttribute('data-point')&&Boolean(stage.querySelector('.introduction-focused')));}
+  function gateNarration(locked){stage.querySelectorAll('.answers button,[data-point],#continue-check').forEach(b=>b.disabled=locked);}
   function stopNarration(){narrationRun?.cancel();narrationRun=null;narration.stop();narrationPlaying=false;gateNarration(false);$('stop-narration').disabled=true;syncChildControls();}
   function narrationStatus(){
     const ids=narrationIds(steps[index]),ready=ids.length>0&&ids.every(id=>narration.clipsById[id]?.src);
@@ -66,11 +64,11 @@
   }
   function playNarration(){
     stopNarration();if(!narrationStatus())return;
-    const s=steps[index],screenId=s.id;narrationEnabled=true;narrationPlaying=true;focusIntroducedCharacter(s);gateNarration(true);optionReader?.reset();
+    const s=steps[index],screenId=s.id;narrationEnabled=true;narrationPlaying=true;gateNarration(true);optionReader?.reset();
     $('stop-narration').disabled=false;$('play-narration').textContent='Replay narration';$('narration-status').textContent='Listen to Evelyn…';
     syncChildControls();
     narrationRun=narration.play(narrationIds(s),{
-      onEnd(){if(steps[index].id!==screenId)return;narrationRun=null;narrationPlaying=false;revealIntroducedCharacters();gateNarration(false);$('stop-narration').disabled=true;$('narration-status').textContent='Narration finished.';if(!wrong&&s.choices?.length===3)optionReader?.read();syncChildControls();},
+      onEnd(){if(steps[index].id!==screenId)return;narrationRun=null;narrationPlaying=false;gateNarration(false);$('stop-narration').disabled=true;$('narration-status').textContent='Narration finished.';if(!wrong&&s.choices?.length===3)optionReader?.read();syncChildControls();},
       onError(){if(steps[index].id!==screenId)return;narrationRun=null;narrationPlaying=false;gateNarration(false);$('stop-narration').disabled=true;$('narration-status').textContent='Audio could not play. Try replaying, or read this screen aloud.';syncChildControls();}
     });
   }
@@ -78,13 +76,18 @@
   function scene(s,interactive=false){
     if(s.visual==='teacher-practice')return `<div class="practice-illustration"><p class="practice-setup">${esc(s.displaySetup)}</p><img src="assets/practice-teacher.svg" alt="A teacher tells a child, Stop being mean. The child is labeled YOU."><h2 class="practice-question">${esc(s.displayQuestion)}</h2></div>`;
     if(!s.image)return '<div class="practice-space" aria-hidden="true"></div>';
-    const introduction=interactive&&isCharacterIntro(s),focused=introduction&&!wrong;
-    const buttons=interactive&&s.point?actors(s).map(a=>`<button class="point-target side-${a.side}${wrong&&a.id===s.point?' reveal':''}" data-point="${a.id}" ${focused?'disabled':''} aria-label="Select ${esc(a.description)}"></button>`).join(''):'';
-    const alt=actors(s).map(a=>`${a.description} ${a.side==='middle'?'in the middle':'on the '+a.side}`).join('; ');
-    const actor=focused?actors(s).find(a=>a.id===s.point):null,selectionImage=introduction?s.pairing.intros[s.pairing.intros.length-1].image:s.image;
-    const masks=focused?actors(s).filter(a=>a.id!==s.point).map(a=>`<span class="introduction-dimmer side-${a.side}" aria-hidden="true"></span>`).join(''):'';
-    const image=introduction&&!focused?selectionImage:s.image,shownAlt=actor?`${actor.description} ${actor.side==='middle'?'in the middle':'on the '+actor.side}`:alt;
-    return `<div class="picture${introduction?' character-introduction':''}${focused?' introduction-focused':''}"${introduction?` data-selection-image="${esc(selectionImage)}" data-selection-alt="${esc(alt)}."`:''}><img ${interactive?'':'loading="lazy"'} src="${esc(image)}" alt="${esc(shownAlt)}.${s.image===s.pairing.images.need?' '+esc(s.pairing.recipient.reference)+' is sad.':''}">${masks}${buttons}</div>`;
+    const introduction=isCharacterIntro(s),guided=introduction||s.localId==='group';
+    const visible=visibleIntroActors(s),allActors=actors(s),current=allActors.find(a=>a.id===s.point);
+    // Keep the final labeled cast in its original positions. Only actors not yet
+    // introduced are masked; previously tapped characters remain visible.
+    const shownActors=guided?allActors.filter(a=>visible.includes(a.id)):allActors;
+    const image=guided?s.pairing.intros[s.pairing.intros.length-1].image:s.image;
+    const masks=guided?allActors.filter(a=>!visible.includes(a.id)).map(a=>`<span class="introduction-mask side-${a.side}" aria-hidden="true"></span>`).join(''):'';
+    const tapActors=introduction?[current]:allActors;
+    const buttons=interactive&&s.point?tapActors.map(a=>`<button class="point-target side-${a.side}${introduction?' introduction-target':''}${wrong&&a.id===s.point?' reveal':''}"${introduction?actorTargetStyle(s,a):''} data-point="${a.id}" aria-label="Tap ${esc(a.description)}"></button>`).join(''):'';
+    const cue=introduction&&!interactive?`<span class="point-target introduction-cue"${actorTargetStyle(s,current)} aria-hidden="true"></span>`:'';
+    const alt=shownActors.map(a=>`${a.description} ${a.side==='middle'?'in the middle':'on the '+a.side}`).join('; ');
+    return `<div class="picture${guided?' character-introduction':''}"><img ${interactive?'':'loading="lazy"'} src="${esc(image)}" alt="${esc(alt)}.${s.image===s.pairing.images.need?' '+esc(s.pairing.recipient.reference)+' is sad.':''}">${masks}${buttons}${cue}</div>`;
   }
   function prompt(s){return `<div class="prompt">${s.context?`<p class="referent">${esc(s.context)}</p>`:''}${s.preface?`<p class="preface">${esc(s.preface)}</p>`:''}<h2>${esc(s.displayTitle||s.text)}</h2></div>`;}
   function branchNote(s){if(!s.when)return '';const parent=steps.find(p=>p.id===s.when[0]);return `Only after “${s.when[1]}” to ${parent.phase.toLowerCase()}. `;}
@@ -102,7 +105,7 @@
     $('child-story-label').textContent=s.pairing?`Story ${s.storyIndex+1} of ${session.pairings.length}`:'All done!';
     $('progress-bar').style.width=`${100*(index+1)/steps.length}%`;
     $('progress-bar').style.backgroundColor=storyAccent(s);
-    let options=s.point?`<p class="point-instruction">${isCharacterIntro(s)&&!wrong?'Listen and meet this character.':'Select a character on the screen.'}</p>${isCharacterIntro(s)&&!wrong?'<div class="introduction-controls"><button data-reveal-characters type="button">Show everyone</button></div>':''}`:`<div class="answers">${(s.choices||[s.localId==='end'?'Read the full storyboard':'Continue']).map((c,i)=>`<button ${s.choices?'':'class="continue-answer"'} data-answer="${i}">${esc(c)}</button>`).join('')}</div>`;
+    let options=s.point?`<p class="point-instruction">Tap ${esc(actors(s).find(a=>a.id===s.point).description)}.</p>`:`<div class="answers">${(s.choices||[s.localId==='end'?'Read the full storyboard':'Continue']).map((c,i)=>`<button ${s.choices?'':'class="continue-answer"'} data-answer="${i}">${esc(c)}</button>`).join('')}</div>`;
     if(s.choices?.length===3)options=scaleOptions(s,true);
     const feedback=wrong?`<p class="feedback">${esc(s.reminder)}</p><div class="facilitator-controls"><span>Facilitator review</span><button id="continue-check">Continue after reminder</button></div>`:'';
     stage.dataset.screenKind=s.visual==='teacher-practice'?'illustrated-practice':s.image?'story':'practice';
@@ -113,7 +116,6 @@
     $('step-note').innerHTML=`${s.proposed?'<strong>Proposed wording · </strong>':''}${esc(branchNote(s)+(s.note||'Adapted from Marshall Study 1.'))}`;
     stage.querySelectorAll('[data-answer]').forEach(b=>b.addEventListener('click',()=>respond((s.choices||['Continue'])[Number(b.dataset.answer)])));
     stage.querySelectorAll('[data-point]').forEach(b=>b.addEventListener('click',()=>respond(b.dataset.point)));
-    stage.querySelector('[data-reveal-characters]')?.addEventListener('click',revealIntroducedCharacters);
     $('continue-check')?.addEventListener('click',()=>commit(wrong));
     if(s.choices?.length===3){try{optionReader=window.createOptionReader(stage,s.choices,{clipIds:narration.screenFor(s).options,onManualStart:()=>{stopNarration();$('narration-status').textContent='Reading choices manually.';},onReadStart:()=>{stopNarration();narrationPlaying=true;$('stop-narration').disabled=false;$('narration-status').textContent='Listen to Evelyn read each choice…';syncChildControls();},onComplete:()=>{narrationPlaying=false;$('stop-narration').disabled=true;$('narration-status').textContent='Choose an answer.';syncChildControls();},onError:()=>{narrationPlaying=false;$('stop-narration').disabled=true;$('narration-status').textContent='Choice audio could not play. Try again or read the choices aloud.';syncChildControls();}});}catch(error){stage.querySelector('[data-reader-status]').textContent='Option reading could not start. Please refresh this draft.';}}
     if(completed)pauseTimer();else updateTimer();
@@ -129,7 +131,7 @@
     for(const [id,active]of[['story-tab',!value],['board-tab',value]]){const e=$(id);e.classList.toggle('selected',active);e.setAttribute('aria-pressed',String(active));}
     if(!value&&!optionReader&&steps[index].choices?.length===3)render();
   }
-  function card(s,i){return `<article class="story-card" style="--story-accent:${esc(storyAccent(s))}"><h3 class="card-heading">${String(i+1).padStart(2,'0')} · ${esc(s.phase)}${s.proposed?' · PROPOSED WORDING':''}</h3>${prompt(s)}${scene(s)}${s.choices?.length===3?scaleOptions(s):`<p class="card-options">${s.point?'Select '+esc(actors(s).find(a=>a.id===s.point).description):s.choices?s.choices.map(esc).join(' &nbsp; / &nbsp; '):'Narration'}</p>`}${s.when||s.note||s.expected||s.point?`<p class="card-note">${esc(branchNote(s)+(s.note||''))}${s.expected?' Check answer: '+esc(s.expected)+'.':''}${s.reminder?' Reminder if needed: “'+esc(s.reminder)+'”':''}</p>`:''}</article>`;}
+  function card(s,i){return `<article class="story-card" style="--story-accent:${esc(storyAccent(s))}"><h3 class="card-heading">${String(i+1).padStart(2,'0')} · ${esc(s.phase)}${s.proposed?' · PROPOSED WORDING':''}</h3>${prompt(s)}${scene(s)}${s.choices?.length===3?scaleOptions(s):`<p class="card-options">${s.point?'Tap '+esc(actors(s).find(a=>a.id===s.point).description):s.choices?s.choices.map(esc).join(' &nbsp; / &nbsp; '):'Narration'}</p>`}${s.when||s.note||s.expected||s.point?`<p class="card-note">${esc(branchNote(s)+(s.note||''))}${s.expected?' Check answer: '+esc(s.expected)+'.':''}${s.reminder?' Reminder if needed: “'+esc(s.reminder)+'”':''}</p>`:''}</article>`;}
   function buildBoard(){
     $('cards').innerHTML=session.pairings.map((p,n)=>`<section class="board-story" id="board-${p.id}"><h2>Story ${n+1} · ${esc(p.label)}</h2><p class="recipient-note">${esc(p.recipient.reference)} is sad.</p><div class="story-grid">${steps.filter(s=>s.pairing?.id===p.id).map(card).join('')}</div></section>`).join('')+`<div class="story-grid">${card(steps[steps.length-1],0)}</div>`;
   }

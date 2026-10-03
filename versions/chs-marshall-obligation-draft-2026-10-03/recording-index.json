@@ -14,1365 +14,189 @@
     "preferredBitrateKbps": 320,
     "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
   },
-  "clipCount": 194,
+  "clipCount": 26,
   "note": "Export only these paragraphs, in this order, as separate MP3s. The numeric export index maps to the stable clip ID; do not read the index aloud.",
   "entries": [
     {
       "exportIndex": 1,
       "clipId": "nr_002",
-      "text": "This little one is a kid. Select the kid.",
+      "text": "This little one is a kid. Tap the kid.",
       "targetFile": "assets/narration/nr_002.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 2,
       "clipId": "nr_003",
-      "text": "This little one is a kid. This one is the kid. Select the kid.",
+      "text": "This little one is a kid. This one is the kid. Tap the kid.",
       "targetFile": "assets/narration/nr_003.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 3,
       "clipId": "nr_004",
-      "text": "This big one is this kid’s teacher. Select the kid’s teacher.",
+      "text": "This big one is this kid’s teacher. Tap the kid’s teacher.",
       "targetFile": "assets/narration/nr_004.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 4,
       "clipId": "nr_005",
-      "text": "This big one is this kid’s teacher. This one is the kid’s teacher. Select the kid’s teacher.",
+      "text": "This big one is this kid’s teacher. This one is the kid’s teacher. Tap the kid’s teacher.",
       "targetFile": "assets/narration/nr_005.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 5,
       "clipId": "nr_006",
-      "text": "This big one is this kid’s mom. Select the kid’s mom.",
+      "text": "This big one is this kid’s mom. Tap the kid’s mom.",
       "targetFile": "assets/narration/nr_006.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 6,
       "clipId": "nr_007",
-      "text": "This big one is this kid’s mom. This one is the kid’s mom. Select the kid’s mom.",
+      "text": "This big one is this kid’s mom. This one is the kid’s mom. Tap the kid’s mom.",
       "targetFile": "assets/narration/nr_007.mp3",
       "proposedWording": false
     },
     {
       "exportIndex": 7,
-      "clipId": "nr_008",
-      "text": "Now let’s say that one day this kid was very sad.",
-      "targetFile": "assets/narration/nr_008.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 8,
-      "clipId": "nr_009",
-      "text": "The kid’s teacher and the kid’s mom both see that the kid is sad.",
-      "targetFile": "assets/narration/nr_009.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 9,
-      "clipId": "nr_010",
-      "text": "Now, do you think the kid’s teacher will help the kid?",
-      "targetFile": "assets/narration/nr_010.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 10,
-      "clipId": "nr_011",
-      "text": "Yes",
-      "targetFile": "assets/narration/nr_011.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 11,
-      "clipId": "nr_012",
-      "text": "No",
-      "targetFile": "assets/narration/nr_012.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 12,
-      "clipId": "nr_013",
-      "text": "Now, do you think the kid’s mom will help the kid?",
-      "targetFile": "assets/narration/nr_013.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 13,
-      "clipId": "nr_014",
-      "text": "Now, sometimes people have to do things.",
-      "targetFile": "assets/narration/nr_014.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 14,
-      "clipId": "nr_015",
-      "text": "When a teacher tells you to stop being mean to someone, do you have to stop being mean? Yes or No.",
-      "targetFile": "assets/narration/nr_015.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 15,
-      "clipId": "nr_016",
-      "text": "When a teacher tells you to stop being mean to someone, you have to stop being mean. Let’s try that question again.",
-      "targetFile": "assets/narration/nr_016.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 16,
-      "clipId": "nr_017",
-      "text": "How much do you think you have to stop being mean?",
-      "targetFile": "assets/narration/nr_017.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 17,
-      "clipId": "nr_018",
-      "text": "A teeny bit",
-      "targetFile": "assets/narration/nr_018.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 18,
-      "clipId": "nr_019",
-      "text": "A little bit",
-      "targetFile": "assets/narration/nr_019.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 19,
-      "clipId": "nr_020",
-      "text": "A lot",
-      "targetFile": "assets/narration/nr_020.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 20,
-      "clipId": "nr_021",
-      "text": "When someone asks you a question, do you have to lie? Yes or No.",
-      "targetFile": "assets/narration/nr_021.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 21,
-      "clipId": "nr_022",
-      "text": "When someone asks you a question, you do not have to lie. Let’s try that question again.",
-      "targetFile": "assets/narration/nr_022.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 22,
-      "clipId": "nr_023",
-      "text": "How much do you think you have to lie?",
-      "targetFile": "assets/narration/nr_023.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 23,
-      "clipId": "nr_024",
-      "text": "So now, I’m going to ask you some questions about whether people have to do things.",
-      "targetFile": "assets/narration/nr_024.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 24,
-      "clipId": "nr_025",
-      "text": "Now, do you think the kid’s teacher HAS to help the kid? Yes or No.",
-      "targetFile": "assets/narration/nr_025.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 25,
-      "clipId": "nr_026",
-      "text": "The kid’s teacher. How much do you think the kid’s teacher has to?",
-      "targetFile": "assets/narration/nr_026.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 26,
-      "clipId": "nr_027",
-      "text": "Now, do you think the kid’s mom HAS to help the kid? Yes or No.",
-      "targetFile": "assets/narration/nr_027.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 27,
-      "clipId": "nr_028",
-      "text": "The kid’s mom. How much do you think she has to?",
-      "targetFile": "assets/narration/nr_028.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 28,
-      "clipId": "nr_029",
-      "text": "Now let’s say that the kid’s teacher and the kid’s mom do NOT help the kid.",
-      "targetFile": "assets/narration/nr_029.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 29,
-      "clipId": "nr_030",
-      "text": "Can you tell me, did either of these people help the kid?",
-      "targetFile": "assets/narration/nr_030.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 30,
-      "clipId": "nr_031",
-      "text": "Actually, remember, neither of these people helped the kid. Can you tell me, did either of these people help the kid?",
-      "targetFile": "assets/narration/nr_031.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 31,
-      "clipId": "nr_032",
-      "text": "Neither of these people helped the kid. Do you think this was a mean or nice thing that happened?",
-      "targetFile": "assets/narration/nr_032.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 32,
-      "clipId": "nr_033",
-      "text": "Mean",
-      "targetFile": "assets/narration/nr_033.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 33,
-      "clipId": "nr_034",
-      "text": "Nice",
-      "targetFile": "assets/narration/nr_034.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 34,
-      "clipId": "nr_035",
-      "text": "How mean was the thing that happened?",
-      "targetFile": "assets/narration/nr_035.mp3",
-      "proposedWording": true
-    },
-    {
-      "exportIndex": 35,
-      "clipId": "nr_036",
-      "text": "A tiny bit mean",
-      "targetFile": "assets/narration/nr_036.mp3",
-      "proposedWording": true
-    },
-    {
-      "exportIndex": 36,
-      "clipId": "nr_037",
-      "text": "A little bit mean",
-      "targetFile": "assets/narration/nr_037.mp3",
-      "proposedWording": true
-    },
-    {
-      "exportIndex": 37,
-      "clipId": "nr_038",
-      "text": "A lot mean",
-      "targetFile": "assets/narration/nr_038.mp3",
-      "proposedWording": true
-    },
-    {
-      "exportIndex": 38,
-      "clipId": "nr_039",
-      "text": "Do you remember, did the kid’s teacher help the kid?",
-      "targetFile": "assets/narration/nr_039.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 39,
-      "clipId": "nr_040",
-      "text": "Remember, the kid’s teacher did not help the kid. Do you remember, did the kid’s teacher help the kid?",
-      "targetFile": "assets/narration/nr_040.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 40,
-      "clipId": "nr_041",
-      "text": "Was the kid’s teacher Mean or Not Mean for NOT helping the kid in the middle?",
-      "targetFile": "assets/narration/nr_041.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 41,
-      "clipId": "nr_042",
-      "text": "Not Mean",
-      "targetFile": "assets/narration/nr_042.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 42,
-      "clipId": "nr_043",
-      "text": "The kid’s teacher. How mean do you think the kid’s teacher was?",
-      "targetFile": "assets/narration/nr_043.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 43,
-      "clipId": "nr_044",
-      "text": "A teeny bit mean",
-      "targetFile": "assets/narration/nr_044.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 44,
-      "clipId": "nr_045",
-      "text": "Very mean",
-      "targetFile": "assets/narration/nr_045.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 45,
-      "clipId": "nr_046",
-      "text": "Do you remember, did the kid’s mom help the kid?",
-      "targetFile": "assets/narration/nr_046.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 46,
-      "clipId": "nr_047",
-      "text": "Remember, the kid’s mom did not help the kid. Do you remember, did the kid’s mom help the kid?",
-      "targetFile": "assets/narration/nr_047.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 47,
-      "clipId": "nr_048",
-      "text": "Was the kid’s mom Mean or Not Mean for NOT helping the kid in the middle?",
-      "targetFile": "assets/narration/nr_048.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 48,
-      "clipId": "nr_049",
-      "text": "The kid’s mom. How mean do you think she was?",
-      "targetFile": "assets/narration/nr_049.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 49,
-      "clipId": "nr_050",
-      "text": "Who was meaner for not helping?",
-      "targetFile": "assets/narration/nr_050.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 50,
-      "clipId": "nr_051",
-      "text": "The kid’s teacher",
-      "targetFile": "assets/narration/nr_051.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 51,
-      "clipId": "nr_052",
-      "text": "The kid’s mom",
-      "targetFile": "assets/narration/nr_052.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 52,
       "clipId": "nr_053",
-      "text": "This little one is this kid’s sister. Select the kid’s sister.",
+      "text": "This little one is this kid’s sister. Tap the kid’s sister.",
       "targetFile": "assets/narration/nr_053.mp3",
       "proposedWording": false
     },
     {
-      "exportIndex": 53,
+      "exportIndex": 8,
       "clipId": "nr_054",
-      "text": "This little one is this kid’s sister. This one is the kid’s sister. Select the kid’s sister.",
+      "text": "This little one is this kid’s sister. This one is the kid’s sister. Tap the kid’s sister.",
       "targetFile": "assets/narration/nr_054.mp3",
       "proposedWording": false
     },
     {
-      "exportIndex": 54,
+      "exportIndex": 9,
       "clipId": "nr_055",
-      "text": "This little one is this kid’s friend. Select the kid’s friend.",
+      "text": "This little one is this kid’s friend. Tap the kid’s friend.",
       "targetFile": "assets/narration/nr_055.mp3",
       "proposedWording": false
     },
     {
-      "exportIndex": 55,
+      "exportIndex": 10,
       "clipId": "nr_056",
-      "text": "This little one is this kid’s friend. This one is the kid’s friend. Select the kid’s friend.",
+      "text": "This little one is this kid’s friend. This one is the kid’s friend. Tap the kid’s friend.",
       "targetFile": "assets/narration/nr_056.mp3",
       "proposedWording": false
     },
     {
-      "exportIndex": 56,
-      "clipId": "nr_057",
-      "text": "The kid’s sister and the kid’s friend both see that the kid is sad.",
-      "targetFile": "assets/narration/nr_057.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 57,
-      "clipId": "nr_058",
-      "text": "Now, do you think the kid’s sister will help the kid?",
-      "targetFile": "assets/narration/nr_058.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 58,
-      "clipId": "nr_059",
-      "text": "Now, do you think the kid’s friend will help the kid?",
-      "targetFile": "assets/narration/nr_059.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 59,
-      "clipId": "nr_060",
-      "text": "Now, do you think the kid’s sister HAS to help the kid? Yes or No.",
-      "targetFile": "assets/narration/nr_060.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 60,
-      "clipId": "nr_061",
-      "text": "The kid’s sister. How much do you think she has to?",
-      "targetFile": "assets/narration/nr_061.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 61,
-      "clipId": "nr_062",
-      "text": "Now, do you think the kid’s friend HAS to help the kid? Yes or No.",
-      "targetFile": "assets/narration/nr_062.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 62,
-      "clipId": "nr_063",
-      "text": "The kid’s friend. How much do you think the kid’s friend has to?",
-      "targetFile": "assets/narration/nr_063.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 63,
-      "clipId": "nr_064",
-      "text": "Now let’s say that the kid’s sister and the kid’s friend do NOT help the kid.",
-      "targetFile": "assets/narration/nr_064.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 64,
-      "clipId": "nr_065",
-      "text": "Do you remember, did the kid’s sister help the kid?",
-      "targetFile": "assets/narration/nr_065.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 65,
-      "clipId": "nr_066",
-      "text": "Remember, the kid’s sister did not help the kid. Do you remember, did the kid’s sister help the kid?",
-      "targetFile": "assets/narration/nr_066.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 66,
-      "clipId": "nr_067",
-      "text": "Was the kid’s sister Mean or Not Mean for NOT helping the kid in the middle?",
-      "targetFile": "assets/narration/nr_067.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 67,
-      "clipId": "nr_068",
-      "text": "The kid’s sister. How mean do you think she was?",
-      "targetFile": "assets/narration/nr_068.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 68,
-      "clipId": "nr_069",
-      "text": "Do you remember, did the kid’s friend help the kid?",
-      "targetFile": "assets/narration/nr_069.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 69,
-      "clipId": "nr_070",
-      "text": "Remember, the kid’s friend did not help the kid. Do you remember, did the kid’s friend help the kid?",
-      "targetFile": "assets/narration/nr_070.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 70,
-      "clipId": "nr_071",
-      "text": "Was the kid’s friend Mean or Not Mean for NOT helping the kid in the middle?",
-      "targetFile": "assets/narration/nr_071.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 71,
-      "clipId": "nr_072",
-      "text": "The kid’s friend. How mean do you think the kid’s friend was?",
-      "targetFile": "assets/narration/nr_072.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 72,
-      "clipId": "nr_073",
-      "text": "The kid’s sister",
-      "targetFile": "assets/narration/nr_073.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 73,
-      "clipId": "nr_074",
-      "text": "The kid’s friend",
-      "targetFile": "assets/narration/nr_074.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 74,
+      "exportIndex": 11,
       "clipId": "nr_075",
-      "text": "This little one is this kid’s best friend. Select the kid’s best friend.",
+      "text": "This little one is this kid’s best friend. Tap the kid’s best friend.",
       "targetFile": "assets/narration/nr_075.mp3",
       "proposedWording": false
     },
     {
-      "exportIndex": 75,
+      "exportIndex": 12,
       "clipId": "nr_076",
-      "text": "This little one is this kid’s best friend. This one is the kid’s best friend. Select the kid’s best friend.",
+      "text": "This little one is this kid’s best friend. This one is the kid’s best friend. Tap the kid’s best friend.",
       "targetFile": "assets/narration/nr_076.mp3",
       "proposedWording": false
     },
     {
-      "exportIndex": 76,
-      "clipId": "nr_077",
-      "text": "The kid’s friend and the kid’s best friend both see that the kid is sad.",
-      "targetFile": "assets/narration/nr_077.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 77,
-      "clipId": "nr_078",
-      "text": "Now, do you think the kid’s best friend will help the kid?",
-      "targetFile": "assets/narration/nr_078.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 78,
-      "clipId": "nr_079",
-      "text": "Now, do you think the kid’s best friend HAS to help the kid? Yes or No.",
-      "targetFile": "assets/narration/nr_079.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 79,
-      "clipId": "nr_080",
-      "text": "The kid’s best friend. How much do you think the kid’s best friend has to?",
-      "targetFile": "assets/narration/nr_080.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 80,
-      "clipId": "nr_081",
-      "text": "Now let’s say that the kid’s friend and the kid’s best friend do NOT help the kid.",
-      "targetFile": "assets/narration/nr_081.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 81,
-      "clipId": "nr_082",
-      "text": "Do you remember, did the kid’s best friend help the kid?",
-      "targetFile": "assets/narration/nr_082.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 82,
-      "clipId": "nr_083",
-      "text": "Remember, the kid’s best friend did not help the kid. Do you remember, did the kid’s best friend help the kid?",
-      "targetFile": "assets/narration/nr_083.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 83,
-      "clipId": "nr_084",
-      "text": "Was the kid’s best friend Mean or Not Mean for NOT helping the kid in the middle?",
-      "targetFile": "assets/narration/nr_084.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 84,
-      "clipId": "nr_085",
-      "text": "The kid’s best friend. How mean do you think the kid’s best friend was?",
-      "targetFile": "assets/narration/nr_085.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 85,
-      "clipId": "nr_086",
-      "text": "The kid’s best friend",
-      "targetFile": "assets/narration/nr_086.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 86,
-      "clipId": "nr_087",
-      "text": "The kid’s teacher and the kid’s friend both see that the kid is sad.",
-      "targetFile": "assets/narration/nr_087.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 87,
-      "clipId": "nr_088",
-      "text": "Now let’s say that the kid’s teacher and the kid’s friend do NOT help the kid.",
-      "targetFile": "assets/narration/nr_088.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 88,
-      "clipId": "nr_089",
-      "text": "The kid’s mom and the kid’s sister both see that the kid is sad.",
-      "targetFile": "assets/narration/nr_089.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 89,
-      "clipId": "nr_090",
-      "text": "Now let’s say that the kid’s mom and the kid’s sister do NOT help the kid.",
-      "targetFile": "assets/narration/nr_090.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 90,
+      "exportIndex": 13,
       "clipId": "nr_091",
-      "text": "This little one is this kid’s classmate. Select the kid’s classmate.",
+      "text": "This little one is this kid’s classmate. Tap the kid’s classmate.",
       "targetFile": "assets/narration/nr_091.mp3",
       "proposedWording": false
     },
     {
-      "exportIndex": 91,
+      "exportIndex": 14,
       "clipId": "nr_092",
-      "text": "This little one is this kid’s classmate. This one is the kid’s classmate. Select the kid’s classmate.",
+      "text": "This little one is this kid’s classmate. This one is the kid’s classmate. Tap the kid’s classmate.",
       "targetFile": "assets/narration/nr_092.mp3",
       "proposedWording": false
     },
     {
-      "exportIndex": 92,
-      "clipId": "nr_093",
-      "text": "The kid’s classmate and the kid’s teacher both see that the kid is sad.",
-      "targetFile": "assets/narration/nr_093.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 93,
-      "clipId": "nr_094",
-      "text": "Now, do you think the kid’s classmate will help the kid?",
-      "targetFile": "assets/narration/nr_094.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 94,
-      "clipId": "nr_095",
-      "text": "Now, do you think the kid’s classmate HAS to help the kid? Yes or No.",
-      "targetFile": "assets/narration/nr_095.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 95,
-      "clipId": "nr_096",
-      "text": "The kid’s classmate. How much do you think the kid’s classmate has to?",
-      "targetFile": "assets/narration/nr_096.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 96,
-      "clipId": "nr_097",
-      "text": "Now let’s say that the kid’s classmate and the kid’s teacher do NOT help the kid.",
-      "targetFile": "assets/narration/nr_097.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 97,
-      "clipId": "nr_098",
-      "text": "Do you remember, did the kid’s classmate help the kid?",
-      "targetFile": "assets/narration/nr_098.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 98,
-      "clipId": "nr_099",
-      "text": "Remember, the kid’s classmate did not help the kid. Do you remember, did the kid’s classmate help the kid?",
-      "targetFile": "assets/narration/nr_099.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 99,
-      "clipId": "nr_100",
-      "text": "Was the kid’s classmate Mean or Not Mean for NOT helping the kid in the middle?",
-      "targetFile": "assets/narration/nr_100.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 100,
-      "clipId": "nr_101",
-      "text": "The kid’s classmate. How mean do you think the kid’s classmate was?",
-      "targetFile": "assets/narration/nr_101.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 101,
-      "clipId": "nr_102",
-      "text": "The kid’s classmate",
-      "targetFile": "assets/narration/nr_102.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 102,
+      "exportIndex": 15,
       "clipId": "nr_103",
-      "text": "This big one is this kid’s dad. Select the kid’s dad.",
+      "text": "This big one is this kid’s dad. Tap the kid’s dad.",
       "targetFile": "assets/narration/nr_103.mp3",
       "proposedWording": false
     },
     {
-      "exportIndex": 103,
+      "exportIndex": 16,
       "clipId": "nr_104",
-      "text": "This big one is this kid’s dad. This one is the kid’s dad. Select the kid’s dad.",
+      "text": "This big one is this kid’s dad. This one is the kid’s dad. Tap the kid’s dad.",
       "targetFile": "assets/narration/nr_104.mp3",
       "proposedWording": false
     },
     {
-      "exportIndex": 104,
-      "clipId": "nr_105",
-      "text": "The kid’s teacher and the kid’s dad both see that the kid is sad.",
-      "targetFile": "assets/narration/nr_105.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 105,
-      "clipId": "nr_106",
-      "text": "Now, do you think the kid’s dad will help the kid?",
-      "targetFile": "assets/narration/nr_106.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 106,
-      "clipId": "nr_107",
-      "text": "Now, do you think the kid’s dad HAS to help the kid? Yes or No.",
-      "targetFile": "assets/narration/nr_107.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 107,
-      "clipId": "nr_108",
-      "text": "The kid’s dad. How much do you think he has to?",
-      "targetFile": "assets/narration/nr_108.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 108,
-      "clipId": "nr_109",
-      "text": "Now let’s say that the kid’s teacher and the kid’s dad do NOT help the kid.",
-      "targetFile": "assets/narration/nr_109.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 109,
-      "clipId": "nr_110",
-      "text": "Do you remember, did the kid’s dad help the kid?",
-      "targetFile": "assets/narration/nr_110.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 110,
-      "clipId": "nr_111",
-      "text": "Remember, the kid’s dad did not help the kid. Do you remember, did the kid’s dad help the kid?",
-      "targetFile": "assets/narration/nr_111.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 111,
-      "clipId": "nr_112",
-      "text": "Was the kid’s dad Mean or Not Mean for NOT helping the kid in the middle?",
-      "targetFile": "assets/narration/nr_112.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 112,
-      "clipId": "nr_113",
-      "text": "The kid’s dad. How mean do you think he was?",
-      "targetFile": "assets/narration/nr_113.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 113,
-      "clipId": "nr_114",
-      "text": "The kid’s dad",
-      "targetFile": "assets/narration/nr_114.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 114,
+      "exportIndex": 17,
       "clipId": "nr_115",
-      "text": "This little one is this kid’s brother. Select the kid’s brother.",
+      "text": "This little one is this kid’s brother. Tap the kid’s brother.",
       "targetFile": "assets/narration/nr_115.mp3",
       "proposedWording": false
     },
     {
-      "exportIndex": 115,
+      "exportIndex": 18,
       "clipId": "nr_116",
-      "text": "This little one is this kid’s brother. This one is the kid’s brother. Select the kid’s brother.",
+      "text": "This little one is this kid’s brother. This one is the kid’s brother. Tap the kid’s brother.",
       "targetFile": "assets/narration/nr_116.mp3",
       "proposedWording": false
     },
     {
-      "exportIndex": 116,
-      "clipId": "nr_117",
-      "text": "The kid’s brother and the kid’s friend both see that the kid is sad.",
-      "targetFile": "assets/narration/nr_117.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 117,
-      "clipId": "nr_118",
-      "text": "Now, do you think the kid’s brother will help the kid?",
-      "targetFile": "assets/narration/nr_118.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 118,
-      "clipId": "nr_119",
-      "text": "Now, do you think the kid’s brother HAS to help the kid? Yes or No.",
-      "targetFile": "assets/narration/nr_119.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 119,
-      "clipId": "nr_120",
-      "text": "The kid’s brother. How much do you think he has to?",
-      "targetFile": "assets/narration/nr_120.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 120,
-      "clipId": "nr_121",
-      "text": "Now let’s say that the kid’s brother and the kid’s friend do NOT help the kid.",
-      "targetFile": "assets/narration/nr_121.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 121,
-      "clipId": "nr_122",
-      "text": "Do you remember, did the kid’s brother help the kid?",
-      "targetFile": "assets/narration/nr_122.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 122,
-      "clipId": "nr_123",
-      "text": "Remember, the kid’s brother did not help the kid. Do you remember, did the kid’s brother help the kid?",
-      "targetFile": "assets/narration/nr_123.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 123,
-      "clipId": "nr_124",
-      "text": "Was the kid’s brother Mean or Not Mean for NOT helping the kid in the middle?",
-      "targetFile": "assets/narration/nr_124.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 124,
-      "clipId": "nr_125",
-      "text": "The kid’s brother. How mean do you think he was?",
-      "targetFile": "assets/narration/nr_125.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 125,
-      "clipId": "nr_126",
-      "text": "The kid’s brother",
-      "targetFile": "assets/narration/nr_126.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 126,
-      "clipId": "nr_127",
-      "text": "The kid’s dad and the kid’s brother both see that the kid is sad.",
-      "targetFile": "assets/narration/nr_127.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 127,
-      "clipId": "nr_128",
-      "text": "Now let’s say that the kid’s dad and the kid’s brother do NOT help the kid.",
-      "targetFile": "assets/narration/nr_128.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 128,
-      "clipId": "nr_129",
-      "text": "The kid’s dad and the kid’s mom both see that the kid is sad.",
-      "targetFile": "assets/narration/nr_129.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 129,
-      "clipId": "nr_130",
-      "text": "Now let’s say that the kid’s dad and the kid’s mom do NOT help the kid.",
-      "targetFile": "assets/narration/nr_130.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 130,
-      "clipId": "nr_131",
-      "text": "The kid’s sister and the kid’s brother both see that the kid is sad.",
-      "targetFile": "assets/narration/nr_131.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 131,
-      "clipId": "nr_132",
-      "text": "Now let’s say that the kid’s sister and the kid’s brother do NOT help the kid.",
-      "targetFile": "assets/narration/nr_132.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 132,
+      "exportIndex": 19,
       "clipId": "nr_133",
-      "text": "This big one is this kid’s mom. Select the mom.",
+      "text": "This big one is this kid’s mom. Tap the mom.",
       "targetFile": "assets/narration/nr_133.mp3",
       "proposedWording": false
     },
     {
-      "exportIndex": 133,
+      "exportIndex": 20,
       "clipId": "nr_134",
-      "text": "This big one is this kid’s mom. This one is the mom. Select the mom.",
+      "text": "This big one is this kid’s mom. This one is the mom. Tap the mom.",
       "targetFile": "assets/narration/nr_134.mp3",
       "proposedWording": false
     },
     {
-      "exportIndex": 134,
-      "clipId": "nr_135",
-      "text": "Now let’s say that one day the mom was very sad.",
-      "targetFile": "assets/narration/nr_135.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 135,
-      "clipId": "nr_136",
-      "text": "The kid’s dad and the kid both see that the mom is sad.",
-      "targetFile": "assets/narration/nr_136.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 136,
-      "clipId": "nr_137",
-      "text": "Now, do you think the kid’s dad will help the mom?",
-      "targetFile": "assets/narration/nr_137.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 137,
-      "clipId": "nr_138",
-      "text": "Now, do you think the kid will help the mom?",
-      "targetFile": "assets/narration/nr_138.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 138,
-      "clipId": "nr_139",
-      "text": "Now, do you think the kid’s dad HAS to help the mom? Yes or No.",
-      "targetFile": "assets/narration/nr_139.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 139,
-      "clipId": "nr_140",
-      "text": "Now, do you think the kid HAS to help the mom? Yes or No.",
-      "targetFile": "assets/narration/nr_140.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 140,
-      "clipId": "nr_141",
-      "text": "The kid. How much do you think the kid has to?",
-      "targetFile": "assets/narration/nr_141.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 141,
-      "clipId": "nr_142",
-      "text": "Now let’s say that the kid’s dad and the kid do NOT help the mom.",
-      "targetFile": "assets/narration/nr_142.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 142,
-      "clipId": "nr_143",
-      "text": "Can you tell me, did either of these people help the mom?",
-      "targetFile": "assets/narration/nr_143.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 143,
-      "clipId": "nr_144",
-      "text": "Actually, remember, neither of these people helped the mom. Can you tell me, did either of these people help the mom?",
-      "targetFile": "assets/narration/nr_144.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 144,
-      "clipId": "nr_145",
-      "text": "Neither of these people helped the mom. Do you think this was a mean or nice thing that happened?",
-      "targetFile": "assets/narration/nr_145.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 145,
-      "clipId": "nr_146",
-      "text": "Do you remember, did the kid’s dad help the mom?",
-      "targetFile": "assets/narration/nr_146.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 146,
-      "clipId": "nr_147",
-      "text": "Remember, the kid’s dad did not help the mom. Do you remember, did the kid’s dad help the mom?",
-      "targetFile": "assets/narration/nr_147.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 147,
-      "clipId": "nr_148",
-      "text": "Was the kid’s dad Mean or Not Mean for NOT helping the mom in the middle?",
-      "targetFile": "assets/narration/nr_148.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 148,
-      "clipId": "nr_149",
-      "text": "Do you remember, did the kid help the mom?",
-      "targetFile": "assets/narration/nr_149.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 149,
-      "clipId": "nr_150",
-      "text": "Remember, the kid did not help the mom. Do you remember, did the kid help the mom?",
-      "targetFile": "assets/narration/nr_150.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 150,
-      "clipId": "nr_151",
-      "text": "Was the kid Mean or Not Mean for NOT helping the mom in the middle?",
-      "targetFile": "assets/narration/nr_151.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 151,
-      "clipId": "nr_152",
-      "text": "The kid. How mean do you think the kid was?",
-      "targetFile": "assets/narration/nr_152.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 152,
-      "clipId": "nr_153",
-      "text": "The kid",
-      "targetFile": "assets/narration/nr_153.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 153,
+      "exportIndex": 21,
       "clipId": "nr_154",
-      "text": "This big one is this kid’s dad. Select the dad.",
+      "text": "This big one is this kid’s dad. Tap the dad.",
       "targetFile": "assets/narration/nr_154.mp3",
       "proposedWording": false
     },
     {
-      "exportIndex": 154,
+      "exportIndex": 22,
       "clipId": "nr_155",
-      "text": "This big one is this kid’s dad. This one is the dad. Select the dad.",
+      "text": "This big one is this kid’s dad. This one is the dad. Tap the dad.",
       "targetFile": "assets/narration/nr_155.mp3",
       "proposedWording": false
     },
     {
-      "exportIndex": 155,
-      "clipId": "nr_156",
-      "text": "Now let’s say that one day the dad was very sad.",
-      "targetFile": "assets/narration/nr_156.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 156,
-      "clipId": "nr_157",
-      "text": "The kid and the kid’s mom both see that the dad is sad.",
-      "targetFile": "assets/narration/nr_157.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 157,
-      "clipId": "nr_158",
-      "text": "Now, do you think the kid will help the dad?",
-      "targetFile": "assets/narration/nr_158.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 158,
-      "clipId": "nr_159",
-      "text": "Now, do you think the kid’s mom will help the dad?",
-      "targetFile": "assets/narration/nr_159.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 159,
-      "clipId": "nr_160",
-      "text": "Now, do you think the kid HAS to help the dad? Yes or No.",
-      "targetFile": "assets/narration/nr_160.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 160,
-      "clipId": "nr_161",
-      "text": "Now, do you think the kid’s mom HAS to help the dad? Yes or No.",
-      "targetFile": "assets/narration/nr_161.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 161,
-      "clipId": "nr_162",
-      "text": "Now let’s say that the kid and the kid’s mom do NOT help the dad.",
-      "targetFile": "assets/narration/nr_162.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 162,
-      "clipId": "nr_163",
-      "text": "Can you tell me, did either of these people help the dad?",
-      "targetFile": "assets/narration/nr_163.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 163,
-      "clipId": "nr_164",
-      "text": "Actually, remember, neither of these people helped the dad. Can you tell me, did either of these people help the dad?",
-      "targetFile": "assets/narration/nr_164.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 164,
-      "clipId": "nr_165",
-      "text": "Neither of these people helped the dad. Do you think this was a mean or nice thing that happened?",
-      "targetFile": "assets/narration/nr_165.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 165,
-      "clipId": "nr_166",
-      "text": "Do you remember, did the kid help the dad?",
-      "targetFile": "assets/narration/nr_166.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 166,
-      "clipId": "nr_167",
-      "text": "Remember, the kid did not help the dad. Do you remember, did the kid help the dad?",
-      "targetFile": "assets/narration/nr_167.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 167,
-      "clipId": "nr_168",
-      "text": "Was the kid Mean or Not Mean for NOT helping the dad in the middle?",
-      "targetFile": "assets/narration/nr_168.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 168,
-      "clipId": "nr_169",
-      "text": "Do you remember, did the kid’s mom help the dad?",
-      "targetFile": "assets/narration/nr_169.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 169,
-      "clipId": "nr_170",
-      "text": "Remember, the kid’s mom did not help the dad. Do you remember, did the kid’s mom help the dad?",
-      "targetFile": "assets/narration/nr_170.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 170,
-      "clipId": "nr_171",
-      "text": "Was the kid’s mom Mean or Not Mean for NOT helping the dad in the middle?",
-      "targetFile": "assets/narration/nr_171.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 171,
+      "exportIndex": 23,
       "clipId": "nr_172",
-      "text": "This big one is this kid’s teacher. Select the teacher on the left.",
+      "text": "This big one is this kid’s teacher. Tap the teacher on the left.",
       "targetFile": "assets/narration/nr_172.mp3",
       "proposedWording": false
     },
     {
-      "exportIndex": 172,
+      "exportIndex": 24,
       "clipId": "nr_173",
-      "text": "This big one is this kid’s teacher. This one is the teacher on the left. Select the teacher on the left.",
+      "text": "This big one is this kid’s teacher. This one is the teacher on the left. Tap the teacher on the left.",
       "targetFile": "assets/narration/nr_173.mp3",
       "proposedWording": false
     },
     {
-      "exportIndex": 173,
+      "exportIndex": 25,
       "clipId": "nr_174",
-      "text": "This big one is this kid’s teacher too. Select the teacher in the middle.",
+      "text": "This big one is this kid’s teacher too. Tap the teacher in the middle.",
       "targetFile": "assets/narration/nr_174.mp3",
       "proposedWording": false
     },
     {
-      "exportIndex": 174,
+      "exportIndex": 26,
       "clipId": "nr_175",
-      "text": "This big one is this kid’s teacher too. This one is the teacher in the middle. Select the teacher in the middle.",
+      "text": "This big one is this kid’s teacher too. This one is the teacher in the middle. Tap the teacher in the middle.",
       "targetFile": "assets/narration/nr_175.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 175,
-      "clipId": "nr_176",
-      "text": "Now let’s say that one day the teacher in the middle was very sad.",
-      "targetFile": "assets/narration/nr_176.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 176,
-      "clipId": "nr_177",
-      "text": "The teacher on the left and the kid both see that the teacher in the middle is sad.",
-      "targetFile": "assets/narration/nr_177.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 177,
-      "clipId": "nr_178",
-      "text": "Now, do you think the teacher on the left will help the teacher in the middle?",
-      "targetFile": "assets/narration/nr_178.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 178,
-      "clipId": "nr_179",
-      "text": "Now, do you think the kid will help the teacher in the middle?",
-      "targetFile": "assets/narration/nr_179.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 179,
-      "clipId": "nr_180",
-      "text": "Now, do you think the teacher on the left HAS to help the teacher in the middle? Yes or No.",
-      "targetFile": "assets/narration/nr_180.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 180,
-      "clipId": "nr_181",
-      "text": "The teacher on the left. How much do you think the teacher on the left has to?",
-      "targetFile": "assets/narration/nr_181.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 181,
-      "clipId": "nr_182",
-      "text": "Now, do you think the kid HAS to help the teacher in the middle? Yes or No.",
-      "targetFile": "assets/narration/nr_182.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 182,
-      "clipId": "nr_183",
-      "text": "Now let’s say that the teacher on the left and the kid do NOT help the teacher in the middle.",
-      "targetFile": "assets/narration/nr_183.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 183,
-      "clipId": "nr_184",
-      "text": "Can you tell me, did either of these people help the teacher in the middle?",
-      "targetFile": "assets/narration/nr_184.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 184,
-      "clipId": "nr_185",
-      "text": "Actually, remember, neither of these people helped the teacher in the middle. Can you tell me, did either of these people help the teacher in the middle?",
-      "targetFile": "assets/narration/nr_185.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 185,
-      "clipId": "nr_186",
-      "text": "Neither of these people helped the teacher in the middle. Do you think this was a mean or nice thing that happened?",
-      "targetFile": "assets/narration/nr_186.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 186,
-      "clipId": "nr_187",
-      "text": "Do you remember, did the teacher on the left help the teacher in the middle?",
-      "targetFile": "assets/narration/nr_187.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 187,
-      "clipId": "nr_188",
-      "text": "Remember, the teacher on the left did not help the teacher in the middle. Do you remember, did the teacher on the left help the teacher in the middle?",
-      "targetFile": "assets/narration/nr_188.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 188,
-      "clipId": "nr_189",
-      "text": "Was the teacher on the left Mean or Not Mean for NOT helping the teacher in the middle?",
-      "targetFile": "assets/narration/nr_189.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 189,
-      "clipId": "nr_190",
-      "text": "The teacher on the left. How mean do you think the teacher on the left was?",
-      "targetFile": "assets/narration/nr_190.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 190,
-      "clipId": "nr_191",
-      "text": "Do you remember, did the kid help the teacher in the middle?",
-      "targetFile": "assets/narration/nr_191.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 191,
-      "clipId": "nr_192",
-      "text": "Remember, the kid did not help the teacher in the middle. Do you remember, did the kid help the teacher in the middle?",
-      "targetFile": "assets/narration/nr_192.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 192,
-      "clipId": "nr_193",
-      "text": "Was the kid Mean or Not Mean for NOT helping the teacher in the middle?",
-      "targetFile": "assets/narration/nr_193.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 193,
-      "clipId": "nr_194",
-      "text": "The teacher on the left",
-      "targetFile": "assets/narration/nr_194.mp3",
-      "proposedWording": false
-    },
-    {
-      "exportIndex": 194,
-      "clipId": "nr_195",
-      "text": "That’s the end of our stories. Thank you!",
-      "targetFile": "assets/narration/nr_195.mp3",
       "proposedWording": false
     }
   ]

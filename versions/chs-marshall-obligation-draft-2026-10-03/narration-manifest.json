@@ -142,7 +142,7 @@
     },
     {
       "id": "nr_002",
-      "text": "This little one is a kid. Select the kid.",
+      "text": "This little one is a kid. Tap the kid.",
       "src": "assets/narration/nr_002.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -238,9 +238,9 @@
           "part": "prompt"
         }
       ],
-      "sha256": "a12a544d0040d61b8a66b49e036ce0e622e752d9b26ca7b06f233ad8b44c864c",
-      "bytes": 163049,
-      "durationSeconds": 4.0751,
+      "sha256": "bd3526318543a95d4e886fcfacd53e549e38ff2a70c53e2e6c9b13f54e7e28ca",
+      "bytes": 158869,
+      "durationSeconds": 3.9706,
       "provenance": {
         "provider": "NaturalReaders Commercial",
         "voice": {
@@ -256,8 +256,8 @@
           "preferredBitrateKbps": 320,
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
-        "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "1.This_little_one_is_a_kid._Sele.mp3",
+        "sourceArchiveSha256": "2652a496711b81b81622e8ac9530fd2eedf3e87fae62084d458e39b3d153c15b",
+        "archiveMember": "1.This_little_one_is_a_kid._Tap_.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -265,7 +265,7 @@
     },
     {
       "id": "nr_003",
-      "text": "This little one is a kid. This one is the kid. Select the kid.",
+      "text": "This little one is a kid. This one is the kid. Tap the kid.",
       "src": "assets/narration/nr_003.mp3",
       "kind": "reminder",
       "status": "imported",
@@ -361,9 +361,9 @@
           "part": "reminder"
         }
       ],
-      "sha256": "6a50e85d292b137a61fb2ebdb974dd3757092a0470248874086c4de169ff71da",
-      "bytes": 240371,
-      "durationSeconds": 6.00815,
+      "sha256": "5ae747f02eedcb81af94df0cc6725e51fc72a36a26d8af18e1362512fc02d4ae",
+      "bytes": 236192,
+      "durationSeconds": 5.903675,
       "provenance": {
         "provider": "NaturalReaders Commercial",
         "voice": {
@@ -379,7 +379,7 @@
           "preferredBitrateKbps": 320,
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
-        "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
+        "sourceArchiveSha256": "2652a496711b81b81622e8ac9530fd2eedf3e87fae62084d458e39b3d153c15b",
         "archiveMember": "2.This_little_one_is_a_kid._This.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
@@ -388,7 +388,7 @@
     },
     {
       "id": "nr_004",
-      "text": "This big one is this kid’s teacher. Select the kid’s teacher.",
+      "text": "This big one is this kid’s teacher. Tap the kid’s teacher.",
       "src": "assets/narration/nr_004.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -429,9 +429,9 @@
           "part": "prompt"
         }
       ],
-      "sha256": "21b6b047ede29ff4af3e5aeb9363dcd9286a8e9447599d226068bca22b19571d",
-      "bytes": 204845,
-      "durationSeconds": 5.12,
+      "sha256": "ed67e6dc614f63c2f20b52ab6a7a087efbcb954ccc4219af352e2c0d74277702",
+      "bytes": 199620,
+      "durationSeconds": 4.989375,
       "provenance": {
         "provider": "NaturalReaders Commercial",
         "voice": {
@@ -447,7 +447,7 @@
           "preferredBitrateKbps": 320,
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
-        "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
+        "sourceArchiveSha256": "2652a496711b81b81622e8ac9530fd2eedf3e87fae62084d458e39b3d153c15b",
         "archiveMember": "3.This_big_one_is_this_kid’s_tea.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
@@ -456,7 +456,7 @@
     },
     {
       "id": "nr_005",
-      "text": "This big one is this kid’s teacher. This one is the kid’s teacher. Select the kid’s teacher.",
+      "text": "This big one is this kid’s teacher. This one is the kid’s teacher. Tap the kid’s teacher.",
       "src": "assets/narration/nr_005.mp3",
       "kind": "reminder",
       "status": "imported",
@@ -497,9 +497,9 @@
           "part": "reminder"
         }
       ],
-      "sha256": "1d6e854fd642504e27faa53f1749023e3010114d42a3d53dc2f27e76bd33bdb4",
-      "bytes": 302020,
-      "durationSeconds": 7.549375,
+      "sha256": "eb64755e722bba0d02f1b977f3c373c41e80fdcc12038ff28cc94dc2ae396c00",
+      "bytes": 295751,
+      "durationSeconds": 7.39265,
       "provenance": {
         "provider": "NaturalReaders Commercial",
         "voice": {
@@ -515,7 +515,7 @@
           "preferredBitrateKbps": 320,
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
-        "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
+        "sourceArchiveSha256": "2652a496711b81b81622e8ac9530fd2eedf3e87fae62084d458e39b3d153c15b",
         "archiveMember": "4.This_big_one_is_this_kid’s_tea.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
@@ -524,7 +524,7 @@
     },
     {
       "id": "nr_006",
-      "text": "This big one is this kid’s mom. Select the kid’s mom.",
+      "text": "This big one is this kid’s mom. Tap the kid’s mom.",
       "src": "assets/narration/nr_006.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -550,9 +550,9 @@
           "part": "prompt"
         }
       ],
-      "sha256": "ac3e7149330e64f1efc140b9657641999b990c745683338512b6468e02527e8f",
-      "bytes": 191261,
-      "durationSeconds": 4.7804,
+      "sha256": "6a633df319bfba4db1e6bce527143018abdc5eec4f850f5a4ef641c227dae5d1",
+      "bytes": 186036,
+      "durationSeconds": 4.649775,
       "provenance": {
         "provider": "NaturalReaders Commercial",
         "voice": {
@@ -568,7 +568,7 @@
           "preferredBitrateKbps": 320,
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
-        "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
+        "sourceArchiveSha256": "2652a496711b81b81622e8ac9530fd2eedf3e87fae62084d458e39b3d153c15b",
         "archiveMember": "5.This_big_one_is_this_kid’s_mom.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
@@ -577,7 +577,7 @@
     },
     {
       "id": "nr_007",
-      "text": "This big one is this kid’s mom. This one is the kid’s mom. Select the kid’s mom.",
+      "text": "This big one is this kid’s mom. This one is the kid’s mom. Tap the kid’s mom.",
       "src": "assets/narration/nr_007.mp3",
       "kind": "reminder",
       "status": "imported",
@@ -603,9 +603,9 @@
           "part": "reminder"
         }
       ],
-      "sha256": "c3acdf63d15590e37d36f3620606bc9d834b9dc2d3d48051340e7b077ddcc4d7",
-      "bytes": 282167,
-      "durationSeconds": 7.05305,
+      "sha256": "f6ae927601b9b28f7f26a410ee38b5c897a01578cc0ac14a273e9e3bcae879f6",
+      "bytes": 276943,
+      "durationSeconds": 6.92245,
       "provenance": {
         "provider": "NaturalReaders Commercial",
         "voice": {
@@ -621,7 +621,7 @@
           "preferredBitrateKbps": 320,
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
-        "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
+        "sourceArchiveSha256": "2652a496711b81b81622e8ac9530fd2eedf3e87fae62084d458e39b3d153c15b",
         "archiveMember": "6.This_big_one_is_this_kid’s_mom.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
@@ -8611,7 +8611,7 @@
     },
     {
       "id": "nr_053",
-      "text": "This little one is this kid’s sister. Select the kid’s sister.",
+      "text": "This little one is this kid’s sister. Tap the kid’s sister.",
       "src": "assets/narration/nr_053.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -8632,9 +8632,9 @@
           "part": "prompt"
         }
       ],
-      "sha256": "3e405cb6f397568c6c64d60403843bb2d90ab79d8b90fa21c9b6ff988fd4a632",
-      "bytes": 207979,
-      "durationSeconds": 5.19835,
+      "sha256": "89aa81dd5f5da78bfee1737020d12a43b714ae914273f04c7942798123317b43",
+      "bytes": 200665,
+      "durationSeconds": 5.0155,
       "provenance": {
         "provider": "NaturalReaders Commercial",
         "voice": {
@@ -8650,8 +8650,8 @@
           "preferredBitrateKbps": 320,
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
-        "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "52.This_little_one_is_this_kid’s_.mp3",
+        "sourceArchiveSha256": "2652a496711b81b81622e8ac9530fd2eedf3e87fae62084d458e39b3d153c15b",
+        "archiveMember": "7.This_little_one_is_this_kid’s_.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -8659,7 +8659,7 @@
     },
     {
       "id": "nr_054",
-      "text": "This little one is this kid’s sister. This one is the kid’s sister. Select the kid’s sister.",
+      "text": "This little one is this kid’s sister. This one is the kid’s sister. Tap the kid’s sister.",
       "src": "assets/narration/nr_054.mp3",
       "kind": "reminder",
       "status": "imported",
@@ -8680,9 +8680,9 @@
           "part": "reminder"
         }
       ],
-      "sha256": "8cf2f72a613139414f3c828953b80923894cb229aeab37f4931fb38a0d2d3c4b",
-      "bytes": 305155,
-      "durationSeconds": 7.62775,
+      "sha256": "6e511cbc0e17af29af8f3f3cd01654ce486ac40f38132abbf61b09c60924dba5",
+      "bytes": 297841,
+      "durationSeconds": 7.4449,
       "provenance": {
         "provider": "NaturalReaders Commercial",
         "voice": {
@@ -8698,8 +8698,8 @@
           "preferredBitrateKbps": 320,
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
-        "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "53.This_little_one_is_this_kid’s_.mp3",
+        "sourceArchiveSha256": "2652a496711b81b81622e8ac9530fd2eedf3e87fae62084d458e39b3d153c15b",
+        "archiveMember": "8.This_little_one_is_this_kid’s_.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -8707,7 +8707,7 @@
     },
     {
       "id": "nr_055",
-      "text": "This little one is this kid’s friend. Select the kid’s friend.",
+      "text": "This little one is this kid’s friend. Tap the kid’s friend.",
       "src": "assets/narration/nr_055.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -8743,9 +8743,9 @@
           "part": "prompt"
         }
       ],
-      "sha256": "5b5294efa561df166891a51c62fe99f789c13f9e784ea7d6a86b4c60190514db",
-      "bytes": 200665,
-      "durationSeconds": 5.0155,
+      "sha256": "c844b11511b90ac7c0a2de878f660ff8d4f77464a26a4aa9d0af3ace1277ff5a",
+      "bytes": 195441,
+      "durationSeconds": 4.8849,
       "provenance": {
         "provider": "NaturalReaders Commercial",
         "voice": {
@@ -8761,8 +8761,8 @@
           "preferredBitrateKbps": 320,
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
-        "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "54.This_little_one_is_this_kid’s_.mp3",
+        "sourceArchiveSha256": "2652a496711b81b81622e8ac9530fd2eedf3e87fae62084d458e39b3d153c15b",
+        "archiveMember": "9.This_little_one_is_this_kid’s_.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -8770,7 +8770,7 @@
     },
     {
       "id": "nr_056",
-      "text": "This little one is this kid’s friend. This one is the kid’s friend. Select the kid’s friend.",
+      "text": "This little one is this kid’s friend. This one is the kid’s friend. Tap the kid’s friend.",
       "src": "assets/narration/nr_056.mp3",
       "kind": "reminder",
       "status": "imported",
@@ -8806,9 +8806,9 @@
           "part": "reminder"
         }
       ],
-      "sha256": "de99598512e276d33ba4442bd2de09a2ab1901bb0ac87dece44220eec715f0cf",
-      "bytes": 294706,
-      "durationSeconds": 7.366525,
+      "sha256": "e6740b54b24e1aa7d657dbd7d82d7d4226e732cc8c54e418f592a99dad7b01bb",
+      "bytes": 289481,
+      "durationSeconds": 7.2359,
       "provenance": {
         "provider": "NaturalReaders Commercial",
         "voice": {
@@ -8824,8 +8824,8 @@
           "preferredBitrateKbps": 320,
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
-        "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "55.This_little_one_is_this_kid’s_.mp3",
+        "sourceArchiveSha256": "2652a496711b81b81622e8ac9530fd2eedf3e87fae62084d458e39b3d153c15b",
+        "archiveMember": "10.This_little_one_is_this_kid’s_.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -9806,7 +9806,7 @@
     },
     {
       "id": "nr_075",
-      "text": "This little one is this kid’s best friend. Select the kid’s best friend.",
+      "text": "This little one is this kid’s best friend. Tap the kid’s best friend.",
       "src": "assets/narration/nr_075.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -9822,9 +9822,9 @@
           "part": "prompt"
         }
       ],
-      "sha256": "ef3b20c477f4e3114c6d73ecd5a41428197e29227938c6cafcc15e148e4e50c2",
-      "bytes": 224698,
-      "durationSeconds": 5.616325,
+      "sha256": "a3a367192eca74639135d6fb87e7acfa6800d52dd226a6d99b4845ec55982ef2",
+      "bytes": 218428,
+      "durationSeconds": 5.459575,
       "provenance": {
         "provider": "NaturalReaders Commercial",
         "voice": {
@@ -9840,8 +9840,8 @@
           "preferredBitrateKbps": 320,
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
-        "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "74.This_little_one_is_this_kid’s_.mp3",
+        "sourceArchiveSha256": "2652a496711b81b81622e8ac9530fd2eedf3e87fae62084d458e39b3d153c15b",
+        "archiveMember": "11.This_little_one_is_this_kid’s_.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -9849,7 +9849,7 @@
     },
     {
       "id": "nr_076",
-      "text": "This little one is this kid’s best friend. This one is the kid’s best friend. Select the kid’s best friend.",
+      "text": "This little one is this kid’s best friend. This one is the kid’s best friend. Tap the kid’s best friend.",
       "src": "assets/narration/nr_076.mp3",
       "kind": "reminder",
       "status": "imported",
@@ -9865,9 +9865,9 @@
           "part": "reminder"
         }
       ],
-      "sha256": "51cdd65725cefad4e8d6bb3b71376f2adf8c64065049acabd70ad682cd7b0b74",
-      "bytes": 331277,
-      "durationSeconds": 8.2808,
+      "sha256": "5db237487f2a113c65165698de4466cf8b11891d0291c2d0b78b8d78bda309c3",
+      "bytes": 326053,
+      "durationSeconds": 8.1502,
       "provenance": {
         "provider": "NaturalReaders Commercial",
         "voice": {
@@ -9883,8 +9883,8 @@
           "preferredBitrateKbps": 320,
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
-        "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "75.This_little_one_is_this_kid’s_.mp3",
+        "sourceArchiveSha256": "2652a496711b81b81622e8ac9530fd2eedf3e87fae62084d458e39b3d153c15b",
+        "archiveMember": "12.This_little_one_is_this_kid’s_.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -10486,7 +10486,7 @@
     },
     {
       "id": "nr_091",
-      "text": "This little one is this kid’s classmate. Select the kid’s classmate.",
+      "text": "This little one is this kid’s classmate. Tap the kid’s classmate.",
       "src": "assets/narration/nr_091.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -10507,9 +10507,9 @@
           "part": "prompt"
         }
       ],
-      "sha256": "8b7b5156f3ac67923e203e230910aa6ba7573bb5d4cb315fd5f848fe1edaf23f",
-      "bytes": 218428,
-      "durationSeconds": 5.459575,
+      "sha256": "0e8253d9e1d60c2ba4f8e92aa503a7618c0b6cd69c71c9f78abc52e64f6ab787",
+      "bytes": 212159,
+      "durationSeconds": 5.30285,
       "provenance": {
         "provider": "NaturalReaders Commercial",
         "voice": {
@@ -10525,8 +10525,8 @@
           "preferredBitrateKbps": 320,
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
-        "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "90.This_little_one_is_this_kid’s_.mp3",
+        "sourceArchiveSha256": "2652a496711b81b81622e8ac9530fd2eedf3e87fae62084d458e39b3d153c15b",
+        "archiveMember": "13.This_little_one_is_this_kid’s_.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -10534,7 +10534,7 @@
     },
     {
       "id": "nr_092",
-      "text": "This little one is this kid’s classmate. This one is the kid’s classmate. Select the kid’s classmate.",
+      "text": "This little one is this kid’s classmate. This one is the kid’s classmate. Tap the kid’s classmate.",
       "src": "assets/narration/nr_092.mp3",
       "kind": "reminder",
       "status": "imported",
@@ -10555,9 +10555,9 @@
           "part": "reminder"
         }
       ],
-      "sha256": "3072c445fb6039fbff63ab203b458954a9b784ca7cc567b2d6017f79ba496615",
-      "bytes": 320828,
-      "durationSeconds": 8.019575,
+      "sha256": "dd592c22312ad652f071fc65ec7b302de19e615368b78f645ef9cba7de5bf700",
+      "bytes": 315604,
+      "durationSeconds": 7.888975,
       "provenance": {
         "provider": "NaturalReaders Commercial",
         "voice": {
@@ -10573,8 +10573,8 @@
           "preferredBitrateKbps": 320,
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
-        "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "91.This_little_one_is_this_kid’s_.mp3",
+        "sourceArchiveSha256": "2652a496711b81b81622e8ac9530fd2eedf3e87fae62084d458e39b3d153c15b",
+        "archiveMember": "14.This_little_one_is_this_kid’s_.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -11065,7 +11065,7 @@
     },
     {
       "id": "nr_103",
-      "text": "This big one is this kid’s dad. Select the kid’s dad.",
+      "text": "This big one is this kid’s dad. Tap the kid’s dad.",
       "src": "assets/narration/nr_103.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -11091,9 +11091,9 @@
           "part": "prompt"
         }
       ],
-      "sha256": "272dfcde0b99f0c8762c432b2ce8b2fe45fc61b88441cadb0dd011dfd2e855ab",
-      "bytes": 193351,
-      "durationSeconds": 4.83265,
+      "sha256": "cf7ce697b8b58ac7022e63e8e52d30e254ef0768eddc7266e9ea98d6940ae930",
+      "bytes": 188126,
+      "durationSeconds": 4.702025,
       "provenance": {
         "provider": "NaturalReaders Commercial",
         "voice": {
@@ -11109,8 +11109,8 @@
           "preferredBitrateKbps": 320,
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
-        "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "2.This_big_one_is_this_kid’s_dad.mp3",
+        "sourceArchiveSha256": "2652a496711b81b81622e8ac9530fd2eedf3e87fae62084d458e39b3d153c15b",
+        "archiveMember": "15.This_big_one_is_this_kid’s_dad.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -11118,7 +11118,7 @@
     },
     {
       "id": "nr_104",
-      "text": "This big one is this kid’s dad. This one is the kid’s dad. Select the kid’s dad.",
+      "text": "This big one is this kid’s dad. This one is the kid’s dad. Tap the kid’s dad.",
       "src": "assets/narration/nr_104.mp3",
       "kind": "reminder",
       "status": "imported",
@@ -11144,9 +11144,9 @@
           "part": "reminder"
         }
       ],
-      "sha256": "43433cb57aa727bc7b2300cf84d51b4c0490b0550ac60078c404baf938be3ae9",
-      "bytes": 284257,
-      "durationSeconds": 7.1053,
+      "sha256": "65990b392b41bd2ae4d334ea6f9267d0546da403e54186362e0b0f189c49f69d",
+      "bytes": 279032,
+      "durationSeconds": 6.974675,
       "provenance": {
         "provider": "NaturalReaders Commercial",
         "voice": {
@@ -11162,8 +11162,8 @@
           "preferredBitrateKbps": 320,
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
-        "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "3.This_big_one_is_this_kid’s_dad.mp3",
+        "sourceArchiveSha256": "2652a496711b81b81622e8ac9530fd2eedf3e87fae62084d458e39b3d153c15b",
+        "archiveMember": "16.This_big_one_is_this_kid’s_dad.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -11650,7 +11650,7 @@
     },
     {
       "id": "nr_115",
-      "text": "This little one is this kid’s brother. Select the kid’s brother.",
+      "text": "This little one is this kid’s brother. Tap the kid’s brother.",
       "src": "assets/narration/nr_115.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -11671,9 +11671,9 @@
           "part": "prompt"
         }
       ],
-      "sha256": "6d711488f07466dea438925a2581d4924d22a6ffcf2adabe069fb3fbafe19b94",
-      "bytes": 205889,
-      "durationSeconds": 5.1461,
+      "sha256": "6533696f8ff7cb488dc2a46cb87effeb64ac99657e14991f56b2642edb3b0765",
+      "bytes": 199620,
+      "durationSeconds": 4.989375,
       "provenance": {
         "provider": "NaturalReaders Commercial",
         "voice": {
@@ -11689,8 +11689,8 @@
           "preferredBitrateKbps": 320,
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
-        "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "14.This_little_one_is_this_kid’s_.mp3",
+        "sourceArchiveSha256": "2652a496711b81b81622e8ac9530fd2eedf3e87fae62084d458e39b3d153c15b",
+        "archiveMember": "17.This_little_one_is_this_kid’s_.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -11698,7 +11698,7 @@
     },
     {
       "id": "nr_116",
-      "text": "This little one is this kid’s brother. This one is the kid’s brother. Select the kid’s brother.",
+      "text": "This little one is this kid’s brother. This one is the kid’s brother. Tap the kid’s brother.",
       "src": "assets/narration/nr_116.mp3",
       "kind": "reminder",
       "status": "imported",
@@ -11719,9 +11719,9 @@
           "part": "reminder"
         }
       ],
-      "sha256": "1c7d25d0b26310e45e3fbf496dacef77373f5742d2cef5ebec14f7c5a78d06ba",
-      "bytes": 303065,
-      "durationSeconds": 7.5755,
+      "sha256": "c8523fb11df8e377d5bda12ce4a91bb62b58e39f3d87c1390f9a3c6903a21487",
+      "bytes": 295751,
+      "durationSeconds": 7.39265,
       "provenance": {
         "provider": "NaturalReaders Commercial",
         "voice": {
@@ -11737,8 +11737,8 @@
           "preferredBitrateKbps": 320,
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
-        "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "15.This_little_one_is_this_kid’s_.mp3",
+        "sourceArchiveSha256": "2652a496711b81b81622e8ac9530fd2eedf3e87fae62084d458e39b3d153c15b",
+        "archiveMember": "18.This_little_one_is_this_kid’s_.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -12437,7 +12437,7 @@
     },
     {
       "id": "nr_133",
-      "text": "This big one is this kid’s mom. Select the mom.",
+      "text": "This big one is this kid’s mom. Tap the mom.",
       "src": "assets/narration/nr_133.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -12448,9 +12448,9 @@
           "part": "prompt"
         }
       ],
-      "sha256": "32becaae6634f3d7534b39519466468a2fc3c926b46fe965ac3bef06a4dac2d3",
-      "bytes": 178722,
-      "durationSeconds": 4.466925,
+      "sha256": "b71088b32f0601ea9837400ceb297002f036ceb460ac9d73c3df5bb988e8fb44",
+      "bytes": 174543,
+      "durationSeconds": 4.36245,
       "provenance": {
         "provider": "NaturalReaders Commercial",
         "voice": {
@@ -12466,8 +12466,8 @@
           "preferredBitrateKbps": 320,
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
-        "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "32.This_big_one_is_this_kid’s_mom.mp3",
+        "sourceArchiveSha256": "2652a496711b81b81622e8ac9530fd2eedf3e87fae62084d458e39b3d153c15b",
+        "archiveMember": "19.This_big_one_is_this_kid’s_mom.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -12475,7 +12475,7 @@
     },
     {
       "id": "nr_134",
-      "text": "This big one is this kid’s mom. This one is the mom. Select the mom.",
+      "text": "This big one is this kid’s mom. This one is the mom. Tap the mom.",
       "src": "assets/narration/nr_134.mp3",
       "kind": "reminder",
       "status": "imported",
@@ -12486,9 +12486,9 @@
           "part": "reminder"
         }
       ],
-      "sha256": "1996f2ee53d2df64838e69a61e0b85b03b27f13b0c0f96f9fed9c6913290c4c8",
-      "bytes": 255000,
-      "durationSeconds": 6.373875,
+      "sha256": "4f58373ea9910694a1b22585a7ed34897e5aa7b0d8ae6a60517787965a67c993",
+      "bytes": 249775,
+      "durationSeconds": 6.24325,
       "provenance": {
         "provider": "NaturalReaders Commercial",
         "voice": {
@@ -12504,8 +12504,8 @@
           "preferredBitrateKbps": 320,
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
-        "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "33.This_big_one_is_this_kid’s_mom.mp3",
+        "sourceArchiveSha256": "2652a496711b81b81622e8ac9530fd2eedf3e87fae62084d458e39b3d153c15b",
+        "archiveMember": "20.This_big_one_is_this_kid’s_mom.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -13268,7 +13268,7 @@
     },
     {
       "id": "nr_154",
-      "text": "This big one is this kid’s dad. Select the dad.",
+      "text": "This big one is this kid’s dad. Tap the dad.",
       "src": "assets/narration/nr_154.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -13279,9 +13279,9 @@
           "part": "prompt"
         }
       ],
-      "sha256": "f6db95219e6a86ed679f7fb92cc757557c84a1c80397e2ad38538c3bea6bb494",
-      "bytes": 182902,
-      "durationSeconds": 4.571425,
+      "sha256": "47b5a5ee0cbacdfc0ad0b472e6452f7ab2fae1af5ad21c2038bac208f89a4d60",
+      "bytes": 176632,
+      "durationSeconds": 4.414675,
       "provenance": {
         "provider": "NaturalReaders Commercial",
         "voice": {
@@ -13297,8 +13297,8 @@
           "preferredBitrateKbps": 320,
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
-        "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "53.This_big_one_is_this_kid’s_dad.mp3",
+        "sourceArchiveSha256": "2652a496711b81b81622e8ac9530fd2eedf3e87fae62084d458e39b3d153c15b",
+        "archiveMember": "21.This_big_one_is_this_kid’s_dad.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -13306,7 +13306,7 @@
     },
     {
       "id": "nr_155",
-      "text": "This big one is this kid’s dad. This one is the dad. Select the dad.",
+      "text": "This big one is this kid’s dad. This one is the dad. Tap the dad.",
       "src": "assets/narration/nr_155.mp3",
       "kind": "reminder",
       "status": "imported",
@@ -13317,9 +13317,9 @@
           "part": "reminder"
         }
       ],
-      "sha256": "a206a080b82d7573850ca25f3718f0eecc9ef8e26ae89737da4e72b8139119a5",
-      "bytes": 261269,
-      "durationSeconds": 6.5306,
+      "sha256": "9fcfaf503a77b7296d665f378b235d7be38201eac37cd214767dba0b62efcfb3",
+      "bytes": 256045,
+      "durationSeconds": 6.4,
       "provenance": {
         "provider": "NaturalReaders Commercial",
         "voice": {
@@ -13335,8 +13335,8 @@
           "preferredBitrateKbps": 320,
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
-        "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "54.This_big_one_is_this_kid’s_dad.mp3",
+        "sourceArchiveSha256": "2652a496711b81b81622e8ac9530fd2eedf3e87fae62084d458e39b3d153c15b",
+        "archiveMember": "22.This_big_one_is_this_kid’s_dad.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -13952,7 +13952,7 @@
     },
     {
       "id": "nr_172",
-      "text": "This big one is this kid’s teacher. Select the teacher on the left.",
+      "text": "This big one is this kid’s teacher. Tap the teacher on the left.",
       "src": "assets/narration/nr_172.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -13963,9 +13963,9 @@
           "part": "prompt"
         }
       ],
-      "sha256": "7ad5998b952961daa08b24cb20c1aeadee635635080f02b58a3b5c5daa351bd6",
-      "bytes": 215294,
-      "durationSeconds": 5.381225,
+      "sha256": "537c55ce61f6e586eb78476b4c0245538ca642863a9d58f6e65519b895e76660",
+      "bytes": 209024,
+      "durationSeconds": 5.224475,
       "provenance": {
         "provider": "NaturalReaders Commercial",
         "voice": {
@@ -13981,8 +13981,8 @@
           "preferredBitrateKbps": 320,
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
-        "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "71.This_big_one_is_this_kid’s_tea.mp3",
+        "sourceArchiveSha256": "2652a496711b81b81622e8ac9530fd2eedf3e87fae62084d458e39b3d153c15b",
+        "archiveMember": "23.This_big_one_is_this_kid’s_tea.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -13990,7 +13990,7 @@
     },
     {
       "id": "nr_173",
-      "text": "This big one is this kid’s teacher. This one is the teacher on the left. Select the teacher on the left.",
+      "text": "This big one is this kid’s teacher. This one is the teacher on the left. Tap the teacher on the left.",
       "src": "assets/narration/nr_173.mp3",
       "kind": "reminder",
       "status": "imported",
@@ -14001,9 +14001,9 @@
           "part": "reminder"
         }
       ],
-      "sha256": "d04318ea03231f58f80f6ab5640ff6452d924c9f279f468ed513c59e11805d3f",
-      "bytes": 321873,
-      "durationSeconds": 8.0457,
+      "sha256": "4a8bfb8dd43248732496f2ba711d75d28e7620473b3e0e134cee0d16ece9945c",
+      "bytes": 315604,
+      "durationSeconds": 7.888975,
       "provenance": {
         "provider": "NaturalReaders Commercial",
         "voice": {
@@ -14019,8 +14019,8 @@
           "preferredBitrateKbps": 320,
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
-        "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "72.This_big_one_is_this_kid’s_tea.mp3",
+        "sourceArchiveSha256": "2652a496711b81b81622e8ac9530fd2eedf3e87fae62084d458e39b3d153c15b",
+        "archiveMember": "24.This_big_one_is_this_kid’s_tea.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -14028,7 +14028,7 @@
     },
     {
       "id": "nr_174",
-      "text": "This big one is this kid’s teacher too. Select the teacher in the middle.",
+      "text": "This big one is this kid’s teacher too. Tap the teacher in the middle.",
       "src": "assets/narration/nr_174.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -14039,9 +14039,9 @@
           "part": "prompt"
         }
       ],
-      "sha256": "181ba83747d7a22be40576d990ded9c41003460223561f6968e419960c92c6c4",
-      "bytes": 224698,
-      "durationSeconds": 5.616325,
+      "sha256": "025443a2edb680d2130ae9bdfa22cd58a2a4fd772ab74b74e9c80d8fe93db3a9",
+      "bytes": 217383,
+      "durationSeconds": 5.43345,
       "provenance": {
         "provider": "NaturalReaders Commercial",
         "voice": {
@@ -14057,8 +14057,8 @@
           "preferredBitrateKbps": 320,
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
-        "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "73.This_big_one_is_this_kid’s_tea.mp3",
+        "sourceArchiveSha256": "2652a496711b81b81622e8ac9530fd2eedf3e87fae62084d458e39b3d153c15b",
+        "archiveMember": "25.This_big_one_is_this_kid’s_tea.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -14066,7 +14066,7 @@
     },
     {
       "id": "nr_175",
-      "text": "This big one is this kid’s teacher too. This one is the teacher in the middle. Select the teacher in the middle.",
+      "text": "This big one is this kid’s teacher too. This one is the teacher in the middle. Tap the teacher in the middle.",
       "src": "assets/narration/nr_175.mp3",
       "kind": "reminder",
       "status": "imported",
@@ -14077,9 +14077,9 @@
           "part": "reminder"
         }
       ],
-      "sha256": "23c396feb4046417a8e9cf430b055a45c0a7b9507a9bdfbe90c9e19acfb0f98c",
-      "bytes": 327098,
-      "durationSeconds": 8.176325,
+      "sha256": "0b958d37da97263b7a3722b882822b38270881ed46b772443419b801239cf883",
+      "bytes": 319783,
+      "durationSeconds": 7.99345,
       "provenance": {
         "provider": "NaturalReaders Commercial",
         "voice": {
@@ -14095,8 +14095,8 @@
           "preferredBitrateKbps": 320,
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
-        "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "74.This_big_one_is_this_kid’s_tea.mp3",
+        "sourceArchiveSha256": "2652a496711b81b81622e8ac9530fd2eedf3e87fae62084d458e39b3d153c15b",
+        "archiveMember": "26.This_big_one_is_this_kid’s_tea.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true

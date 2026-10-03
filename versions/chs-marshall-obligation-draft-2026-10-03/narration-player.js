@@ -76,7 +76,10 @@
       const id = sequence[index];
       let announced = false;
       try {
-        audio = new root.Audio(clips[id].src);
+        const source = clips[id].src;
+        const version = clips[id].sha256?.slice(0, 12);
+        const audioSource = version ? `${source}${source.includes('?') ? '&' : '?'}v=${version}` : source;
+        audio = new root.Audio(audioSource);
         const currentAudio = audio;
         const clipIndex = index;
         const currentClip = () => current() && audio === currentAudio;
@@ -99,7 +102,7 @@
         const started = audio.play();
         if (started?.catch) started.catch(error => {
           if (currentClip()) fail(error?.name === 'NotAllowedError' ? 'audio-blocked' : 'audio-play',
-            error?.name === 'NotAllowedError' ? 'Select the play button to allow this recording to play.' : 'The recording could not play. Read this screen aloud, or try again.');
+            error?.name === 'NotAllowedError' ? 'Tap Listen to hear the story.' : 'The recording could not play. Read this screen aloud, or try again.');
         });
       } catch (_) {
         fail('audio-unavailable', 'Recorded audio is unavailable in this browser. Read this screen aloud.');

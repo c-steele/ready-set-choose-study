@@ -12,7 +12,7 @@ The preview includes three existing Find the Caregiver sets of six pairings each
 
 ## What is included
 
-- Character introductions and identity checks using on-screen selection.
+- Guided character introductions using cumulative reveals and on-screen taps.
 - Need narration, with both helpers seeing that the kid is sad.
 - Separate binary prediction questions for both helpers.
 - “Have to” practice after prediction and before obligation.
@@ -64,3 +64,11 @@ Two new NaturalReader files are saved as **Obligation Evelyn 2026-09-28 Batch 01
 See NARRATION_README.md and the import receipts for source details. All research source caveats remain, including the explicitly proposed overall-strength wording.
 
 The overview now uses measured recording lengths plus programmed option pauses and an assumed 3–5 seconds per response: approximately 19–30 minutes with repeated practice, or 16–26 minutes with practice once. The earlier word-rate estimate remains in the read-aloud script export as a separate manual-narration estimate. Actual child duration still depends on response pace, breaks, corrections and navigation.
+
+## Character introductions (October 3)
+
+The introduction now builds the scene one character at a time. The first actor is visible on the opening screen; their introduction asks the child to **Tap** that actor. Once tapped, the next actor appears while the first stays visible. Each pairing preserves its original introduction order, positions, sizes, colors and role labels. Only the newly introduced actor is tappable, with a blue glowing box fitted around the character and label. That glow remains until the child taps it. Unintroduced actors stay hidden; the full cast is present only after the last introduction and on later story screens.
+
+There is no **Show everyone** control. Narration temporarily locks the current tap target and unlocks it when the prompt ends; audio completion never reveals another character. Without narration, the target is immediately tappable. The storyboard shows the same cumulative sequence. Source stimulus files, judgment flow, screen identifiers and question counts remain unchanged. The spoken introduction wording has been adapted from “Select” to “Tap” for young children. These glowing targets provide guided orientation rather than uncued identity checks. All 26 affected introduction and reminder recordings were regenerated in NaturalReader with the same voice settings; all 195 current clips and their screen mappings were verified.
+
+Static verification checked JavaScript syntax, all 54 actor cue bounds, all pairing introduction orders, and removal of the old reveal transition. Live browser verification is recorded separately with the CHS draft update.

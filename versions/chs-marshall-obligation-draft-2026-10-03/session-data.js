@@ -36,8 +36,8 @@
       const sourceText = apostrophes(intro.sourceText);
       add(`intro-${intro.actorId}`, 'kid', {
         phase:`Meet ${intro.description}`, image:intro.image, point:intro.actorId,
-        text:`${sourceText} Select ${intro.description}.`,
-        reminder:`${sourceText} This one is ${intro.description}. Select ${intro.description}.`,
+        text:`${sourceText} Tap ${intro.description}.`,
+        reminder:`${sourceText} This one is ${intro.description}. Tap ${intro.description}.`,
         note:`Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation. ${actor.isAdult && intro.actorId === 'recipient' ? 'The person who needs help is an adult in this story.' : ''}`.trim()
       });
     }
