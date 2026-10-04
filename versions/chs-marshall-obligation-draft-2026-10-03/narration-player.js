@@ -60,6 +60,7 @@
     active = run;
     function fail(code, message) {
       if (!current()) return;
+      root.console?.warn?.('Recorded narration could not finish', {code, clipId: sequence[index] || null, readyState: audio?.readyState, networkState: audio?.networkState, currentTime: audio?.currentTime, mediaError: audio?.error?.code});
       run.clear();
       active = null;
       const error = new Error(message);
