@@ -15,7 +15,7 @@
     "settingsBasis": "Requested Evelyn Soft 0.80x / 160 WPM / zero paragraph pause for this forced-choice batch. New paragraphs have not been generated or exported yet."
   },
   "clipCount": 42,
-  "note": "Export these unique pending paragraphs in this exact order as separate MP3s using Index + Segment. Stable clip IDs differ from numbered export indices. Existing pending explicit-outcome paragraphs are included so this variant can be completed independently. Appended nr_269 is a local recording request only; it has not been saved online or exported, and the earlier export indices are preserved. Fourteen complete native outcome paragraphs are now installed. Original export indices remain intact for the saved project; installed entries are marked and are not new recording requests.",
+  "note": "Export these unique pending paragraphs in this exact order as separate MP3s using Index + Segment. Stable clip IDs differ from numbered export indices. Existing pending explicit-outcome paragraphs are included so this variant can be completed independently. Appended nr_269 is a local recording request only; it has not been saved online or exported, and the earlier export indices are preserved. Fourteen complete native outcome paragraphs are now installed. Original export indices remain intact for the saved project; installed entries are marked and are not new recording requests. The prior outcome clips missing The have been replaced by strict verified complete-sentence derivatives; export indices are preserved.",
   "entries": [
     {
       "exportIndex": 1,
@@ -37,9 +37,9 @@
       "text": "No one helped the kid. The kid’s teacher did NOT help the kid. The kid’s mom did NOT help the kid.",
       "targetFile": "assets/narration/nr_196.mp3",
       "proposedWording": false,
-      "audioStatus": "imported-native-paragraph",
-      "installedFile": "assets/narration/nr_196-outcome.mp3",
-      "sha256": "4c7a4a5d90accdfdcb8bd8abde8715de13eea8a72fb701d6c7b4772f8cb64533"
+      "audioStatus": "verified-complete-sentence-audio-derivative",
+      "installedFile": "assets/narration/nr_196-full-the.mp3",
+      "sha256": "39ed1e65fc1aa87a5b28d363a6be802e6740a773b63520196da8778d7cbc18f4"
     },
     {
       "exportIndex": 4,
@@ -61,9 +61,9 @@
       "text": "No one helped the kid. The kid’s sister did NOT help the kid. The kid’s friend did NOT help the kid.",
       "targetFile": "assets/narration/nr_203.mp3",
       "proposedWording": false,
-      "audioStatus": "imported-native-paragraph",
-      "installedFile": "assets/narration/nr_203-outcome.mp3",
-      "sha256": "c48e587a3decb47d2980ad27e5a592a4df6b864fb0e54c68e9d2c378bd32e11b"
+      "audioStatus": "verified-complete-sentence-audio-derivative",
+      "installedFile": "assets/narration/nr_203-full-the.mp3",
+      "sha256": "dcc7eabc2bedf2d7a92c56a6acb87adc8b27df8638946af00abe86ebad874a62"
     },
     {
       "exportIndex": 7,
@@ -78,9 +78,9 @@
       "text": "No one helped the kid. The kid’s friend did NOT help the kid. The kid’s best friend did NOT help the kid.",
       "targetFile": "assets/narration/nr_209.mp3",
       "proposedWording": false,
-      "audioStatus": "imported-native-paragraph",
-      "installedFile": "assets/narration/nr_209-outcome.mp3",
-      "sha256": "f39156c0174f1da13d78201a8a92260289a44026ae27306c29a5601ee899f04a"
+      "audioStatus": "verified-complete-sentence-audio-derivative",
+      "installedFile": "assets/narration/nr_209-full-the.mp3",
+      "sha256": "d1e43a6d480382722cde4efef2a50bc79de15a4eb4a3802ae5dec724e50d06e8"
     },
     {
       "exportIndex": 9,
@@ -95,9 +95,9 @@
       "text": "No one helped the kid. The kid’s teacher did NOT help the kid. The kid’s friend did NOT help the kid.",
       "targetFile": "assets/narration/nr_213.mp3",
       "proposedWording": false,
-      "audioStatus": "imported-native-paragraph",
-      "installedFile": "assets/narration/nr_213-outcome.mp3",
-      "sha256": "dff3e617f4f42b85fc6e296e01041c6e27592434479750edab686c21b7d5d173"
+      "audioStatus": "verified-complete-sentence-audio-derivative",
+      "installedFile": "assets/narration/nr_213-full-the.mp3",
+      "sha256": "dc6bb91106809c2d4b0f246cd09d2c57e0da3a62b151028e6e3897a5b783ed07"
     },
     {
       "exportIndex": 11,
@@ -112,9 +112,9 @@
       "text": "No one helped the kid. The kid’s mom did NOT help the kid. The kid’s sister did NOT help the kid.",
       "targetFile": "assets/narration/nr_215.mp3",
       "proposedWording": false,
-      "audioStatus": "imported-native-paragraph",
-      "installedFile": "assets/narration/nr_215-outcome.mp3",
-      "sha256": "1e5786fbf60d4aace90776ac77e71cdf8263971543eb3633495e936a78a24add"
+      "audioStatus": "verified-complete-sentence-audio-derivative",
+      "installedFile": "assets/narration/nr_215-full-the.mp3",
+      "sha256": "5c2f4a0e68d6cdec56709daef5a340b6a925ab96f64c0e1e8298a06ffbd740f0"
     },
     {
       "exportIndex": 13,
@@ -129,9 +129,9 @@
       "text": "No one helped the kid. The kid’s classmate did NOT help the kid. The kid’s teacher did NOT help the kid.",
       "targetFile": "assets/narration/nr_217.mp3",
       "proposedWording": false,
-      "audioStatus": "imported-native-paragraph",
-      "installedFile": "assets/narration/nr_217-outcome.mp3",
-      "sha256": "be67a97808e571fc726946c2524452966706794c9b7cb918918f42e4ef7a199f"
+      "audioStatus": "verified-complete-sentence-audio-derivative",
+      "installedFile": "assets/narration/nr_217-full-the.mp3",
+      "sha256": "6c1d66dac31d001193cae8d49cc76d30e131b23393a526cc6eae4d68df163263"
     },
     {
       "exportIndex": 15,
@@ -146,9 +146,9 @@
       "text": "No one helped the kid. The kid’s teacher did NOT help the kid. The kid’s dad did NOT help the kid.",
       "targetFile": "assets/narration/nr_221.mp3",
       "proposedWording": false,
-      "audioStatus": "imported-native-paragraph",
-      "installedFile": "assets/narration/nr_221-outcome.mp3",
-      "sha256": "71b86a57f6d594e22778e67012d0e5f6e1b800a6c20909af74deb17106951ac9"
+      "audioStatus": "verified-complete-sentence-audio-derivative",
+      "installedFile": "assets/narration/nr_221-full-the.mp3",
+      "sha256": "c822243d1239b06cedf39742e3951dfab51f56e8cdb260d0a3460dabbd581d65"
     },
     {
       "exportIndex": 17,
@@ -163,9 +163,9 @@
       "text": "No one helped the kid. The kid’s brother did NOT help the kid. The kid’s friend did NOT help the kid.",
       "targetFile": "assets/narration/nr_225.mp3",
       "proposedWording": false,
-      "audioStatus": "imported-native-paragraph",
-      "installedFile": "assets/narration/nr_225-outcome.mp3",
-      "sha256": "4b48b366adfbfb8687e8033503857867778e1ef260b17cdb02770ab1a2645871"
+      "audioStatus": "verified-complete-sentence-audio-derivative",
+      "installedFile": "assets/narration/nr_225-full-the.mp3",
+      "sha256": "8c0849212abd5d7d9a1bb376b4d72e982b065ec51c4332610f802f03fc47b7d9"
     },
     {
       "exportIndex": 19,
@@ -180,9 +180,9 @@
       "text": "No one helped the kid. The kid’s dad did NOT help the kid. The kid’s brother did NOT help the kid.",
       "targetFile": "assets/narration/nr_229.mp3",
       "proposedWording": false,
-      "audioStatus": "imported-native-paragraph",
-      "installedFile": "assets/narration/nr_229-outcome.mp3",
-      "sha256": "6405b71674d351a3feb71179c1387e529b7465b4fae574bd588f2be2e7ebe8ec"
+      "audioStatus": "verified-complete-sentence-audio-derivative",
+      "installedFile": "assets/narration/nr_229-full-the.mp3",
+      "sha256": "2cf33bc2abdf5dc8050fc16289252beabdc07641c0f7350b54ae123e5fc7db69"
     },
     {
       "exportIndex": 21,
@@ -197,9 +197,9 @@
       "text": "No one helped the kid. The kid’s dad did NOT help the kid. The kid’s mom did NOT help the kid.",
       "targetFile": "assets/narration/nr_231.mp3",
       "proposedWording": false,
-      "audioStatus": "imported-native-paragraph",
-      "installedFile": "assets/narration/nr_231-outcome.mp3",
-      "sha256": "cd860ef3f16d07cf079c1c35f7b7a71851b0f4c88229108a91e187e998dba047"
+      "audioStatus": "verified-complete-sentence-audio-derivative",
+      "installedFile": "assets/narration/nr_231-full-the.mp3",
+      "sha256": "3194eb1e02983167ec69cc47babc5ed62e47ded67b0c32de71326e09706c3404"
     },
     {
       "exportIndex": 23,
@@ -214,9 +214,9 @@
       "text": "No one helped the kid. The kid’s sister did NOT help the kid. The kid’s brother did NOT help the kid.",
       "targetFile": "assets/narration/nr_233.mp3",
       "proposedWording": false,
-      "audioStatus": "imported-native-paragraph",
-      "installedFile": "assets/narration/nr_233-outcome.mp3",
-      "sha256": "3971446ce2a9d6d70eeba2865aa498db279cbc630956c2be265b54314f7ea6e2"
+      "audioStatus": "verified-complete-sentence-audio-derivative",
+      "installedFile": "assets/narration/nr_233-full-the.mp3",
+      "sha256": "fe1d7197a95809db85eb0c3b01dd0c6611796b3fc245bacedeae1de0de9ecd06"
     },
     {
       "exportIndex": 25,
@@ -245,9 +245,9 @@
       "text": "No one helped the mom. The kid’s dad did NOT help the mom. The kid did NOT help the mom.",
       "targetFile": "assets/narration/nr_235.mp3",
       "proposedWording": false,
-      "audioStatus": "imported-native-paragraph",
-      "installedFile": "assets/narration/nr_235-outcome.mp3",
-      "sha256": "dcf89bc4d606e602a71f5a56de7671f07330567784a894cf47cfd60543c487ea"
+      "audioStatus": "verified-complete-sentence-audio-derivative",
+      "installedFile": "assets/narration/nr_235-full-the.mp3",
+      "sha256": "08917b1fcb27ad607030bc080d1a5186d87c5b31dbb732f6e859f8689f09845d"
     },
     {
       "exportIndex": 29,
@@ -283,9 +283,9 @@
       "text": "No one helped the dad. The kid did NOT help the dad. The kid’s mom did NOT help the dad.",
       "targetFile": "assets/narration/nr_242.mp3",
       "proposedWording": false,
-      "audioStatus": "imported-native-paragraph",
-      "installedFile": "assets/narration/nr_242-outcome.mp3",
-      "sha256": "a3f28430944ee92436b7814dcadcf7d4a3c945051a80ab203ae8b3602c42d82f"
+      "audioStatus": "verified-complete-sentence-audio-derivative",
+      "installedFile": "assets/narration/nr_242-full-the.mp3",
+      "sha256": "6ab276e6149f2f2f27a6c8809ea92e7428a6d05c782c7f14a0a07c247c24900e"
     },
     {
       "exportIndex": 34,
@@ -321,9 +321,9 @@
       "text": "No one helped the teacher in the middle. The teacher on the left did NOT help the teacher in the middle. The kid did NOT help the teacher in the middle.",
       "targetFile": "assets/narration/nr_249.mp3",
       "proposedWording": false,
-      "audioStatus": "imported-native-paragraph",
-      "installedFile": "assets/narration/nr_249-outcome.mp3",
-      "sha256": "979d9e95d1720c533adfab17f12239ddeb4173c982887ccce8c7b53a3e24ae33"
+      "audioStatus": "verified-complete-sentence-audio-derivative",
+      "installedFile": "assets/narration/nr_249-full-the.mp3",
+      "sha256": "94f988e980df2019212a598899c5ce47cc0eb6c43d30086f65fa663b6161833d"
     },
     {
       "exportIndex": 39,

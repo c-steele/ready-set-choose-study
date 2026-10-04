@@ -56,7 +56,7 @@
   }
   function recordingWords(clipId,allowRecognizedMismatch=false){
     const clip=narration.clipsById[clipId],entry=window.ObligationNarrationCues?.clips?.[clipId];
-    if(!clip?.sha256||entry?.sha256!==clip.sha256||(!allowRecognizedMismatch&&entry.exactNormalizedWordMatch===false&&!(entry.articleOmissionsOnly===true&&entry.cueAlignmentApproved===true&&clip.provenance?.fullProjectTextVerified===true&&clip.provenance?.nativeNaturalReadersRecording===true))||entry.alignmentValid===false||!Array.isArray(entry.words))return [];
+    if(!clip?.sha256||entry?.sha256!==clip.sha256||(!allowRecognizedMismatch&&entry.exactNormalizedWordMatch===false)||entry.alignmentValid===false||!Array.isArray(entry.words))return [];
     if(entry.expectedText&&cueTokens(entry.expectedText).join(' ')!==cueTokens(clip.text).join(' '))return [];
     const duration=clip.durationSeconds||entry.durationSeconds;
     const words=[];
@@ -83,7 +83,6 @@
       const names=[actor.description,actor.reference].filter(Boolean);
       if(actor.role==='KID')names.push('this kid','a kid');
       names.push(actor.description.replace(/^the /,'this '));
-      if(s.outcomeVisual)names.push(...[actor.description,actor.reference].filter(Boolean).map(name=>name.replace(/^the /,'')));
       for(const name of new Set(names))candidates.push({actorId:actor.id,tokens:cueTokens(name)});
     }
     if(isCharacterIntro(s)){
@@ -106,10 +105,7 @@
     if(s.outcomeVisual){
       for(const helper of s.pairing.helpers){
         const fullClause=`${helper.description} did NOT help ${s.pairing.recipient.description}`;
-        let ranges=phraseMatches(words,fullClause);
-        // An independent recognizer can miss a weak initial 'the'. All role,
-        // action, negation and recipient words must still match the native clip.
-        if(!ranges.length)ranges=phraseMatches(words,fullClause.replace(/^the /,''));
+        const ranges=phraseMatches(words,fullClause);
         for(const range of ranges)spans.push({outcomeHelperId:helper.id,start:range.start,end:range.end});
       }
     }
