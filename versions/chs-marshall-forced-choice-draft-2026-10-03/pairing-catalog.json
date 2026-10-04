@@ -1,0 +1,1691 @@
+{
+  "schemaVersion": 1,
+  "sourceVersion": "chs-v80-balanced-assignment",
+  "sourceVisualPlan": 4,
+  "event": "HUG",
+  "background": "white",
+  "notes": [
+    "Six stories per assigned role set. The 18 entries cover all three role sets; shared pairings recur across sets. This is not a proposed 18-story child session.",
+    "Entries preserve source visual plan 4 and source condition list order. Randomized story order is a separate session implementation choice.",
+    "The original relationship descriptions establish relationships to the kid. No spousal or other inferred relationship to an adult recipient is added.",
+    "Gendered pronouns are assigned only to kinship roles explicitly specifying gender; ungendered roles use singular they.",
+    "Source PNG captions remain baked in files and must be hidden by the existing scene crop. All filenames are relative to this draft directory."
+  ],
+  "roleSets": [
+    {
+      "id": "woman",
+      "label": "Woman set",
+      "pairingIds": [
+        "woman-mom-teacher",
+        "woman-sister-friend",
+        "woman-bestfriend-friend",
+        "woman-teacher-friend",
+        "woman-mom-sister",
+        "woman-teacher-classmate"
+      ]
+    },
+    {
+      "id": "man",
+      "label": "Man set",
+      "pairingIds": [
+        "man-dad-teacher",
+        "man-brother-friend",
+        "man-bestfriend-friend",
+        "man-teacher-friend",
+        "man-dad-brother",
+        "man-teacher-classmate"
+      ]
+    },
+    {
+      "id": "family",
+      "label": "Family set",
+      "pairingIds": [
+        "family-mom-dad",
+        "family-sister-brother",
+        "family-dad-kid",
+        "family-mom-kid",
+        "family-teacher-kid",
+        "family-teacher-classmate"
+      ]
+    }
+  ],
+  "pairings": [
+    {
+      "id": "woman-mom-teacher",
+      "roleSet": "woman",
+      "condition": "MOM-TEACHER",
+      "label": "Mom–Teacher",
+      "trialId": "5c",
+      "variant": "c",
+      "visualPlan": 4,
+      "color": "GREEN",
+      "visualHex": "#81d653",
+      "recipient": {
+        "id": "recipient",
+        "role": "KID",
+        "label": "kid",
+        "description": "the kid",
+        "pronoun": "they",
+        "side": "middle",
+        "isAdult": false,
+        "reference": "the kid in the middle"
+      },
+      "helpers": [
+        {
+          "id": "helper1",
+          "role": "TEACHER",
+          "label": "teacher",
+          "description": "the kid’s teacher",
+          "pronoun": "they",
+          "side": "left",
+          "isAdult": true
+        },
+        {
+          "id": "helper2",
+          "role": "MOM",
+          "label": "mom",
+          "description": "the kid’s mom",
+          "pronoun": "she",
+          "side": "right",
+          "isAdult": true
+        }
+      ],
+      "intros": [
+        {
+          "actorId": "recipient",
+          "sourceText": "This little one is a kid.",
+          "description": "the kid",
+          "image": "assets/stimuli/940e415d531b-intro_02.png"
+        },
+        {
+          "actorId": "helper1",
+          "sourceText": "This big one is this kid's teacher.",
+          "description": "the kid’s teacher",
+          "image": "assets/stimuli/ca7e452610f7-intro_03.png"
+        },
+        {
+          "actorId": "helper2",
+          "sourceText": "This big one is this kid's mom.",
+          "description": "the kid’s mom",
+          "image": "assets/stimuli/97ccc74e9132-intro_04.png"
+        }
+      ],
+      "images": {
+        "group": "assets/stimuli/5698e7ccf886-intro_01.png",
+        "need": "assets/stimuli/ef6ceaf063c6-hug_01.png",
+        "recipient": "assets/stimuli/940e415d531b-intro_02.png",
+        "helper1": "assets/stimuli/ca7e452610f7-intro_03.png",
+        "helper2": "assets/stimuli/97ccc74e9132-intro_04.png"
+      },
+      "imageType": "png",
+      "imageDimensions": {
+        "width": 1920,
+        "height": 1080
+      },
+      "imageCrop": {
+        "top": 120,
+        "bottom": 120,
+        "note": "Keep existing CSS crop to hide original baked caption. No source pixels edited."
+      },
+      "sourceIntroOrder": [
+        "recipient",
+        "helper1",
+        "helper2"
+      ],
+      "sourceNeedText": "Oh no! The kid in the middle is sad now!",
+      "sourceHugQuestion": "Oh no! The kid in the middle is sad now!\nWho will give the kid in the middle a hug now that they're sad?\nThe kid's teacher or the kid's mom?",
+      "originalHelperOrder": [
+        "TEACHER",
+        "MOM"
+      ],
+      "notes": []
+    },
+    {
+      "id": "woman-sister-friend",
+      "roleSet": "woman",
+      "condition": "SISTER-FRIEND",
+      "label": "Sister–Friend",
+      "trialId": "6b",
+      "variant": "b",
+      "visualPlan": 4,
+      "color": "YELLOW",
+      "visualHex": "#ffd100",
+      "recipient": {
+        "id": "recipient",
+        "role": "KID",
+        "label": "kid",
+        "description": "the kid",
+        "pronoun": "they",
+        "side": "middle",
+        "isAdult": false,
+        "reference": "the kid in the middle"
+      },
+      "helpers": [
+        {
+          "id": "helper1",
+          "role": "SISTER",
+          "label": "sister",
+          "description": "the kid’s sister",
+          "pronoun": "she",
+          "side": "left",
+          "isAdult": false
+        },
+        {
+          "id": "helper2",
+          "role": "FRIEND",
+          "label": "friend",
+          "description": "the kid’s friend",
+          "pronoun": "they",
+          "side": "right",
+          "isAdult": false
+        }
+      ],
+      "intros": [
+        {
+          "actorId": "recipient",
+          "sourceText": "This little one is a kid.",
+          "description": "the kid",
+          "image": "assets/stimuli/7f8866f99c37-intro_02.png"
+        },
+        {
+          "actorId": "helper1",
+          "sourceText": "This little one is this kid's sister.",
+          "description": "the kid’s sister",
+          "image": "assets/stimuli/3a352d5b3f7d-intro_03.png"
+        },
+        {
+          "actorId": "helper2",
+          "sourceText": "This little one is this kid's friend.",
+          "description": "the kid’s friend",
+          "image": "assets/stimuli/a646d1973c19-intro_04.png"
+        }
+      ],
+      "images": {
+        "group": "assets/stimuli/a247914f8341-intro_01.png",
+        "need": "assets/stimuli/d8367f1a225f-hug_01.png",
+        "recipient": "assets/stimuli/7f8866f99c37-intro_02.png",
+        "helper1": "assets/stimuli/3a352d5b3f7d-intro_03.png",
+        "helper2": "assets/stimuli/a646d1973c19-intro_04.png"
+      },
+      "imageType": "png",
+      "imageDimensions": {
+        "width": 1920,
+        "height": 1080
+      },
+      "imageCrop": {
+        "top": 120,
+        "bottom": 120,
+        "note": "Keep existing CSS crop to hide original baked caption. No source pixels edited."
+      },
+      "sourceIntroOrder": [
+        "recipient",
+        "helper1",
+        "helper2"
+      ],
+      "sourceNeedText": "Oh no! The kid in the middle is sad now!",
+      "sourceHugQuestion": "Oh no! The kid in the middle is sad now!\nWho will give the kid in the middle a hug now that they're sad?\nThe kid's sister or the kid's friend?",
+      "originalHelperOrder": [
+        "SISTER",
+        "FRIEND"
+      ],
+      "notes": []
+    },
+    {
+      "id": "woman-bestfriend-friend",
+      "roleSet": "woman",
+      "condition": "BESTFRIEND-FRIEND",
+      "label": "Best Friend–Friend",
+      "trialId": "13d",
+      "variant": "d",
+      "visualPlan": 4,
+      "color": "PINK",
+      "visualHex": "#eb52f7",
+      "recipient": {
+        "id": "recipient",
+        "role": "KID",
+        "label": "kid",
+        "description": "the kid",
+        "pronoun": "they",
+        "side": "middle",
+        "isAdult": false,
+        "reference": "the kid in the middle"
+      },
+      "helpers": [
+        {
+          "id": "helper1",
+          "role": "FRIEND",
+          "label": "friend",
+          "description": "the kid’s friend",
+          "pronoun": "they",
+          "side": "left",
+          "isAdult": false
+        },
+        {
+          "id": "helper2",
+          "role": "BEST FRIEND",
+          "label": "best friend",
+          "description": "the kid’s best friend",
+          "pronoun": "they",
+          "side": "right",
+          "isAdult": false
+        }
+      ],
+      "intros": [
+        {
+          "actorId": "recipient",
+          "sourceText": "This little one is a kid.",
+          "description": "the kid",
+          "image": "assets/stimuli/b1248cc0a0b3-intro_02.png"
+        },
+        {
+          "actorId": "helper1",
+          "sourceText": "This little one is this kid's friend.",
+          "description": "the kid’s friend",
+          "image": "assets/stimuli/87de30905e8d-intro_03.png"
+        },
+        {
+          "actorId": "helper2",
+          "sourceText": "This little one is this kid's best friend.",
+          "description": "the kid’s best friend",
+          "image": "assets/stimuli/54819c159fd8-intro_04.png"
+        }
+      ],
+      "images": {
+        "group": "assets/stimuli/d45a1ece9a16-intro_01.png",
+        "need": "assets/stimuli/520e21f5de44-hug_01.png",
+        "recipient": "assets/stimuli/b1248cc0a0b3-intro_02.png",
+        "helper1": "assets/stimuli/87de30905e8d-intro_03.png",
+        "helper2": "assets/stimuli/54819c159fd8-intro_04.png"
+      },
+      "imageType": "png",
+      "imageDimensions": {
+        "width": 1920,
+        "height": 1080
+      },
+      "imageCrop": {
+        "top": 120,
+        "bottom": 120,
+        "note": "Keep existing CSS crop to hide original baked caption. No source pixels edited."
+      },
+      "sourceIntroOrder": [
+        "recipient",
+        "helper1",
+        "helper2"
+      ],
+      "sourceNeedText": "Oh no! The kid in the middle is sad now!",
+      "sourceHugQuestion": "Oh no! The kid in the middle is sad now!\nWho will give the kid in the middle a hug now that they're sad?\nThe kid's friend or the kid's best friend?",
+      "originalHelperOrder": [
+        "FRIEND",
+        "BEST FRIEND"
+      ],
+      "notes": []
+    },
+    {
+      "id": "woman-teacher-friend",
+      "roleSet": "woman",
+      "condition": "TEACHER-FRIEND",
+      "label": "Teacher–Friend",
+      "trialId": "2b",
+      "variant": "b",
+      "visualPlan": 4,
+      "color": "RED",
+      "visualHex": "#ed6e57",
+      "recipient": {
+        "id": "recipient",
+        "role": "KID",
+        "label": "kid",
+        "description": "the kid",
+        "pronoun": "they",
+        "side": "middle",
+        "isAdult": false,
+        "reference": "the kid in the middle"
+      },
+      "helpers": [
+        {
+          "id": "helper1",
+          "role": "TEACHER",
+          "label": "teacher",
+          "description": "the kid’s teacher",
+          "pronoun": "they",
+          "side": "left",
+          "isAdult": true
+        },
+        {
+          "id": "helper2",
+          "role": "FRIEND",
+          "label": "friend",
+          "description": "the kid’s friend",
+          "pronoun": "they",
+          "side": "right",
+          "isAdult": false
+        }
+      ],
+      "intros": [
+        {
+          "actorId": "recipient",
+          "sourceText": "This little one is a kid.",
+          "description": "the kid",
+          "image": "assets/stimuli/034f00b997ea-intro_02.png"
+        },
+        {
+          "actorId": "helper1",
+          "sourceText": "This big one is this kid's teacher.",
+          "description": "the kid’s teacher",
+          "image": "assets/stimuli/b3c03b18f90c-intro_03.png"
+        },
+        {
+          "actorId": "helper2",
+          "sourceText": "This little one is this kid's friend.",
+          "description": "the kid’s friend",
+          "image": "assets/stimuli/9c8f0bba75ed-intro_04.png"
+        }
+      ],
+      "images": {
+        "group": "assets/stimuli/5ab48f0b29ed-intro_01.png",
+        "need": "assets/stimuli/5d5c93a1f149-hug_01.png",
+        "recipient": "assets/stimuli/034f00b997ea-intro_02.png",
+        "helper1": "assets/stimuli/b3c03b18f90c-intro_03.png",
+        "helper2": "assets/stimuli/9c8f0bba75ed-intro_04.png"
+      },
+      "imageType": "png",
+      "imageDimensions": {
+        "width": 1920,
+        "height": 1080
+      },
+      "imageCrop": {
+        "top": 120,
+        "bottom": 120,
+        "note": "Keep existing CSS crop to hide original baked caption. No source pixels edited."
+      },
+      "sourceIntroOrder": [
+        "recipient",
+        "helper1",
+        "helper2"
+      ],
+      "sourceNeedText": "Oh no! The kid in the middle is sad now!",
+      "sourceHugQuestion": "Oh no! The kid in the middle is sad now!\nWho will give the kid in the middle a hug now that they're sad?\nThe kid's teacher or the kid's friend?",
+      "originalHelperOrder": [
+        "TEACHER",
+        "FRIEND"
+      ],
+      "notes": []
+    },
+    {
+      "id": "woman-mom-sister",
+      "roleSet": "woman",
+      "condition": "MOM-SISTER",
+      "label": "Mom–Sister",
+      "trialId": "1a",
+      "variant": "a",
+      "visualPlan": 4,
+      "color": "ORANGE",
+      "visualHex": "#f2b13d",
+      "recipient": {
+        "id": "recipient",
+        "role": "KID",
+        "label": "kid",
+        "description": "the kid",
+        "pronoun": "they",
+        "side": "middle",
+        "isAdult": false,
+        "reference": "the kid in the middle"
+      },
+      "helpers": [
+        {
+          "id": "helper1",
+          "role": "MOM",
+          "label": "mom",
+          "description": "the kid’s mom",
+          "pronoun": "she",
+          "side": "left",
+          "isAdult": true
+        },
+        {
+          "id": "helper2",
+          "role": "SISTER",
+          "label": "sister",
+          "description": "the kid’s sister",
+          "pronoun": "she",
+          "side": "right",
+          "isAdult": false
+        }
+      ],
+      "intros": [
+        {
+          "actorId": "recipient",
+          "sourceText": "This little one is a kid.",
+          "description": "the kid",
+          "image": "assets/stimuli/abff16b4e820-02-child.png"
+        },
+        {
+          "actorId": "helper1",
+          "sourceText": "This big one is this kid's mom.",
+          "description": "the kid’s mom",
+          "image": "assets/stimuli/1f4a6786d185-03-mom.png"
+        },
+        {
+          "actorId": "helper2",
+          "sourceText": "This little one is this kid's sister.",
+          "description": "the kid’s sister",
+          "image": "assets/stimuli/de928ad71b66-04-sister.png"
+        }
+      ],
+      "images": {
+        "group": "assets/stimuli/2fa20e069eca-01-group.png",
+        "need": "assets/stimuli/cf266d33caca-05-sad.png",
+        "recipient": "assets/stimuli/abff16b4e820-02-child.png",
+        "helper1": "assets/stimuli/1f4a6786d185-03-mom.png",
+        "helper2": "assets/stimuli/de928ad71b66-04-sister.png"
+      },
+      "imageType": "png",
+      "imageDimensions": {
+        "width": 1920,
+        "height": 1080
+      },
+      "imageCrop": {
+        "top": 120,
+        "bottom": 120,
+        "note": "Keep existing CSS crop to hide original baked caption. No source pixels edited."
+      },
+      "sourceIntroOrder": [
+        "recipient",
+        "helper1",
+        "helper2"
+      ],
+      "sourceNeedText": "Oh no! The kid in the middle is sad now!",
+      "sourceHugQuestion": "Oh no! The kid in the middle is sad now!\nWho will give the kid in the middle a hug now that they're sad?\nThe kid's mom or the kid's sister?",
+      "originalHelperOrder": [
+        "MOM",
+        "SISTER"
+      ],
+      "notes": [
+        "Uses the already reviewed orange mom-left original PNG files, preserving the current draft’s exact artwork."
+      ]
+    },
+    {
+      "id": "woman-teacher-classmate",
+      "roleSet": "woman",
+      "condition": "TEACHER-CLASSMATE",
+      "label": "Teacher–Classmate",
+      "trialId": "14d",
+      "variant": "d",
+      "visualPlan": 4,
+      "color": "DEEP_PURPLE",
+      "visualHex": "#8e2d94",
+      "recipient": {
+        "id": "recipient",
+        "role": "KID",
+        "label": "kid",
+        "description": "the kid",
+        "pronoun": "they",
+        "side": "middle",
+        "isAdult": false,
+        "reference": "the kid in the middle"
+      },
+      "helpers": [
+        {
+          "id": "helper1",
+          "role": "CLASSMATE",
+          "label": "classmate",
+          "description": "the kid’s classmate",
+          "pronoun": "they",
+          "side": "left",
+          "isAdult": false
+        },
+        {
+          "id": "helper2",
+          "role": "TEACHER",
+          "label": "teacher",
+          "description": "the kid’s teacher",
+          "pronoun": "they",
+          "side": "right",
+          "isAdult": true
+        }
+      ],
+      "intros": [
+        {
+          "actorId": "recipient",
+          "sourceText": "This little one is a kid.",
+          "description": "the kid",
+          "image": "assets/stimuli/4e621f5d72b5-intro_02.svg"
+        },
+        {
+          "actorId": "helper1",
+          "sourceText": "This little one is this kid's classmate.",
+          "description": "the kid’s classmate",
+          "image": "assets/stimuli/2867c2e0bd9c-intro_03.svg"
+        },
+        {
+          "actorId": "helper2",
+          "sourceText": "This big one is this kid's teacher.",
+          "description": "the kid’s teacher",
+          "image": "assets/stimuli/a5206d48c30f-intro_04.svg"
+        }
+      ],
+      "images": {
+        "group": "assets/stimuli/44d39b1df683-intro_01.svg",
+        "need": "assets/stimuli/bd2a372b55b6-hug_story.svg",
+        "recipient": "assets/stimuli/4e621f5d72b5-intro_02.svg",
+        "helper1": "assets/stimuli/2867c2e0bd9c-intro_03.svg",
+        "helper2": "assets/stimuli/a5206d48c30f-intro_04.svg"
+      },
+      "imageType": "svg",
+      "imageDimensions": {
+        "width": 1920,
+        "height": 1080
+      },
+      "imageCrop": {
+        "top": 120,
+        "bottom": 120,
+        "note": "Keep existing CSS crop to hide original baked caption. No source pixels edited."
+      },
+      "sourceIntroOrder": [
+        "recipient",
+        "helper1",
+        "helper2"
+      ],
+      "sourceNeedText": "Oh no! The kid in the middle is sad now!",
+      "sourceHugQuestion": "Oh no! The kid in the middle is sad now!\nWho will give the kid in the middle a hug now that they're sad?\nThe kid's classmate or the kid's teacher?",
+      "originalHelperOrder": [
+        "CLASSMATE",
+        "TEACHER"
+      ],
+      "notes": [
+        "Uses existing native teacher–classmate SVGs, not a raster conversion or newly drawn illustration."
+      ]
+    },
+    {
+      "id": "man-dad-teacher",
+      "roleSet": "man",
+      "condition": "DAD-TEACHER",
+      "label": "Dad–Teacher",
+      "trialId": "9c",
+      "variant": "c",
+      "visualPlan": 4,
+      "color": "GRAY",
+      "visualHex": "#a9a9a9",
+      "recipient": {
+        "id": "recipient",
+        "role": "KID",
+        "label": "kid",
+        "description": "the kid",
+        "pronoun": "they",
+        "side": "middle",
+        "isAdult": false,
+        "reference": "the kid in the middle"
+      },
+      "helpers": [
+        {
+          "id": "helper1",
+          "role": "TEACHER",
+          "label": "teacher",
+          "description": "the kid’s teacher",
+          "pronoun": "they",
+          "side": "left",
+          "isAdult": true
+        },
+        {
+          "id": "helper2",
+          "role": "DAD",
+          "label": "dad",
+          "description": "the kid’s dad",
+          "pronoun": "he",
+          "side": "right",
+          "isAdult": true
+        }
+      ],
+      "intros": [
+        {
+          "actorId": "recipient",
+          "sourceText": "This little one is a kid.",
+          "description": "the kid",
+          "image": "assets/stimuli/4af918001f03-intro_02.png"
+        },
+        {
+          "actorId": "helper1",
+          "sourceText": "This big one is this kid's teacher.",
+          "description": "the kid’s teacher",
+          "image": "assets/stimuli/c9c880b0628e-intro_03.png"
+        },
+        {
+          "actorId": "helper2",
+          "sourceText": "This big one is this kid's dad.",
+          "description": "the kid’s dad",
+          "image": "assets/stimuli/7192fa43b60d-intro_04.png"
+        }
+      ],
+      "images": {
+        "group": "assets/stimuli/677804bb653c-intro_01.png",
+        "need": "assets/stimuli/ee15b1b5be65-hug_01.png",
+        "recipient": "assets/stimuli/4af918001f03-intro_02.png",
+        "helper1": "assets/stimuli/c9c880b0628e-intro_03.png",
+        "helper2": "assets/stimuli/7192fa43b60d-intro_04.png"
+      },
+      "imageType": "png",
+      "imageDimensions": {
+        "width": 1920,
+        "height": 1080
+      },
+      "imageCrop": {
+        "top": 120,
+        "bottom": 120,
+        "note": "Keep existing CSS crop to hide original baked caption. No source pixels edited."
+      },
+      "sourceIntroOrder": [
+        "recipient",
+        "helper1",
+        "helper2"
+      ],
+      "sourceNeedText": "Oh no! The kid in the middle is sad now!",
+      "sourceHugQuestion": "Oh no! The kid in the middle is sad now!\nWho will give the kid in the middle a hug now that they're sad?\nThe kid's teacher or the kid's dad?",
+      "originalHelperOrder": [
+        "TEACHER",
+        "DAD"
+      ],
+      "notes": []
+    },
+    {
+      "id": "man-brother-friend",
+      "roleSet": "man",
+      "condition": "BROTHER-FRIEND",
+      "label": "Brother–Friend",
+      "trialId": "10b",
+      "variant": "b",
+      "visualPlan": 4,
+      "color": "GREEN",
+      "visualHex": "#92902c",
+      "recipient": {
+        "id": "recipient",
+        "role": "KID",
+        "label": "kid",
+        "description": "the kid",
+        "pronoun": "they",
+        "side": "middle",
+        "isAdult": false,
+        "reference": "the kid in the middle"
+      },
+      "helpers": [
+        {
+          "id": "helper1",
+          "role": "BROTHER",
+          "label": "brother",
+          "description": "the kid’s brother",
+          "pronoun": "he",
+          "side": "left",
+          "isAdult": false
+        },
+        {
+          "id": "helper2",
+          "role": "FRIEND",
+          "label": "friend",
+          "description": "the kid’s friend",
+          "pronoun": "they",
+          "side": "right",
+          "isAdult": false
+        }
+      ],
+      "intros": [
+        {
+          "actorId": "recipient",
+          "sourceText": "This little one is a kid.",
+          "description": "the kid",
+          "image": "assets/stimuli/7ee73e71762e-intro_02.png"
+        },
+        {
+          "actorId": "helper1",
+          "sourceText": "This little one is this kid's brother.",
+          "description": "the kid’s brother",
+          "image": "assets/stimuli/ea0f47bb1dfa-intro_03.png"
+        },
+        {
+          "actorId": "helper2",
+          "sourceText": "This little one is this kid's friend.",
+          "description": "the kid’s friend",
+          "image": "assets/stimuli/82961f4d97a6-intro_04.png"
+        }
+      ],
+      "images": {
+        "group": "assets/stimuli/bb199acadbc5-intro_01.png",
+        "need": "assets/stimuli/3538d8e77c34-hug_01.png",
+        "recipient": "assets/stimuli/7ee73e71762e-intro_02.png",
+        "helper1": "assets/stimuli/ea0f47bb1dfa-intro_03.png",
+        "helper2": "assets/stimuli/82961f4d97a6-intro_04.png"
+      },
+      "imageType": "png",
+      "imageDimensions": {
+        "width": 1920,
+        "height": 1080
+      },
+      "imageCrop": {
+        "top": 120,
+        "bottom": 120,
+        "note": "Keep existing CSS crop to hide original baked caption. No source pixels edited."
+      },
+      "sourceIntroOrder": [
+        "recipient",
+        "helper1",
+        "helper2"
+      ],
+      "sourceNeedText": "Oh no! The kid in the middle is sad now!",
+      "sourceHugQuestion": "Oh no! The kid in the middle is sad now!\nWho will give the kid in the middle a hug now that they're sad?\nThe kid's brother or the kid's friend?",
+      "originalHelperOrder": [
+        "BROTHER",
+        "FRIEND"
+      ],
+      "notes": []
+    },
+    {
+      "id": "man-bestfriend-friend",
+      "roleSet": "man",
+      "condition": "BESTFRIEND-FRIEND",
+      "label": "Best Friend–Friend",
+      "trialId": "13d",
+      "variant": "d",
+      "visualPlan": 4,
+      "color": "PINK",
+      "visualHex": "#eb52f7",
+      "recipient": {
+        "id": "recipient",
+        "role": "KID",
+        "label": "kid",
+        "description": "the kid",
+        "pronoun": "they",
+        "side": "middle",
+        "isAdult": false,
+        "reference": "the kid in the middle"
+      },
+      "helpers": [
+        {
+          "id": "helper1",
+          "role": "FRIEND",
+          "label": "friend",
+          "description": "the kid’s friend",
+          "pronoun": "they",
+          "side": "left",
+          "isAdult": false
+        },
+        {
+          "id": "helper2",
+          "role": "BEST FRIEND",
+          "label": "best friend",
+          "description": "the kid’s best friend",
+          "pronoun": "they",
+          "side": "right",
+          "isAdult": false
+        }
+      ],
+      "intros": [
+        {
+          "actorId": "recipient",
+          "sourceText": "This little one is a kid.",
+          "description": "the kid",
+          "image": "assets/stimuli/b1248cc0a0b3-intro_02.png"
+        },
+        {
+          "actorId": "helper1",
+          "sourceText": "This little one is this kid's friend.",
+          "description": "the kid’s friend",
+          "image": "assets/stimuli/87de30905e8d-intro_03.png"
+        },
+        {
+          "actorId": "helper2",
+          "sourceText": "This little one is this kid's best friend.",
+          "description": "the kid’s best friend",
+          "image": "assets/stimuli/54819c159fd8-intro_04.png"
+        }
+      ],
+      "images": {
+        "group": "assets/stimuli/d45a1ece9a16-intro_01.png",
+        "need": "assets/stimuli/520e21f5de44-hug_01.png",
+        "recipient": "assets/stimuli/b1248cc0a0b3-intro_02.png",
+        "helper1": "assets/stimuli/87de30905e8d-intro_03.png",
+        "helper2": "assets/stimuli/54819c159fd8-intro_04.png"
+      },
+      "imageType": "png",
+      "imageDimensions": {
+        "width": 1920,
+        "height": 1080
+      },
+      "imageCrop": {
+        "top": 120,
+        "bottom": 120,
+        "note": "Keep existing CSS crop to hide original baked caption. No source pixels edited."
+      },
+      "sourceIntroOrder": [
+        "recipient",
+        "helper1",
+        "helper2"
+      ],
+      "sourceNeedText": "Oh no! The kid in the middle is sad now!",
+      "sourceHugQuestion": "Oh no! The kid in the middle is sad now!\nWho will give the kid in the middle a hug now that they're sad?\nThe kid's friend or the kid's best friend?",
+      "originalHelperOrder": [
+        "FRIEND",
+        "BEST FRIEND"
+      ],
+      "notes": []
+    },
+    {
+      "id": "man-teacher-friend",
+      "roleSet": "man",
+      "condition": "TEACHER-FRIEND",
+      "label": "Teacher–Friend",
+      "trialId": "2b",
+      "variant": "b",
+      "visualPlan": 4,
+      "color": "RED",
+      "visualHex": "#ed6e57",
+      "recipient": {
+        "id": "recipient",
+        "role": "KID",
+        "label": "kid",
+        "description": "the kid",
+        "pronoun": "they",
+        "side": "middle",
+        "isAdult": false,
+        "reference": "the kid in the middle"
+      },
+      "helpers": [
+        {
+          "id": "helper1",
+          "role": "TEACHER",
+          "label": "teacher",
+          "description": "the kid’s teacher",
+          "pronoun": "they",
+          "side": "left",
+          "isAdult": true
+        },
+        {
+          "id": "helper2",
+          "role": "FRIEND",
+          "label": "friend",
+          "description": "the kid’s friend",
+          "pronoun": "they",
+          "side": "right",
+          "isAdult": false
+        }
+      ],
+      "intros": [
+        {
+          "actorId": "recipient",
+          "sourceText": "This little one is a kid.",
+          "description": "the kid",
+          "image": "assets/stimuli/034f00b997ea-intro_02.png"
+        },
+        {
+          "actorId": "helper1",
+          "sourceText": "This big one is this kid's teacher.",
+          "description": "the kid’s teacher",
+          "image": "assets/stimuli/b3c03b18f90c-intro_03.png"
+        },
+        {
+          "actorId": "helper2",
+          "sourceText": "This little one is this kid's friend.",
+          "description": "the kid’s friend",
+          "image": "assets/stimuli/9c8f0bba75ed-intro_04.png"
+        }
+      ],
+      "images": {
+        "group": "assets/stimuli/5ab48f0b29ed-intro_01.png",
+        "need": "assets/stimuli/5d5c93a1f149-hug_01.png",
+        "recipient": "assets/stimuli/034f00b997ea-intro_02.png",
+        "helper1": "assets/stimuli/b3c03b18f90c-intro_03.png",
+        "helper2": "assets/stimuli/9c8f0bba75ed-intro_04.png"
+      },
+      "imageType": "png",
+      "imageDimensions": {
+        "width": 1920,
+        "height": 1080
+      },
+      "imageCrop": {
+        "top": 120,
+        "bottom": 120,
+        "note": "Keep existing CSS crop to hide original baked caption. No source pixels edited."
+      },
+      "sourceIntroOrder": [
+        "recipient",
+        "helper1",
+        "helper2"
+      ],
+      "sourceNeedText": "Oh no! The kid in the middle is sad now!",
+      "sourceHugQuestion": "Oh no! The kid in the middle is sad now!\nWho will give the kid in the middle a hug now that they're sad?\nThe kid's teacher or the kid's friend?",
+      "originalHelperOrder": [
+        "TEACHER",
+        "FRIEND"
+      ],
+      "notes": []
+    },
+    {
+      "id": "man-dad-brother",
+      "roleSet": "man",
+      "condition": "DAD-BROTHER",
+      "label": "Dad–Brother",
+      "trialId": "7a",
+      "variant": "a",
+      "visualPlan": 4,
+      "color": "PURPLE",
+      "visualHex": "#893df6",
+      "recipient": {
+        "id": "recipient",
+        "role": "KID",
+        "label": "kid",
+        "description": "the kid",
+        "pronoun": "they",
+        "side": "middle",
+        "isAdult": false,
+        "reference": "the kid in the middle"
+      },
+      "helpers": [
+        {
+          "id": "helper1",
+          "role": "DAD",
+          "label": "dad",
+          "description": "the kid’s dad",
+          "pronoun": "he",
+          "side": "left",
+          "isAdult": true
+        },
+        {
+          "id": "helper2",
+          "role": "BROTHER",
+          "label": "brother",
+          "description": "the kid’s brother",
+          "pronoun": "he",
+          "side": "right",
+          "isAdult": false
+        }
+      ],
+      "intros": [
+        {
+          "actorId": "recipient",
+          "sourceText": "This little one is a kid.",
+          "description": "the kid",
+          "image": "assets/stimuli/5173e613fe51-intro_02.png"
+        },
+        {
+          "actorId": "helper1",
+          "sourceText": "This big one is this kid's dad.",
+          "description": "the kid’s dad",
+          "image": "assets/stimuli/8af685be55d9-intro_03.png"
+        },
+        {
+          "actorId": "helper2",
+          "sourceText": "This little one is this kid's brother.",
+          "description": "the kid’s brother",
+          "image": "assets/stimuli/5430b5b95950-7a_brother_intro.png"
+        }
+      ],
+      "images": {
+        "group": "assets/stimuli/ebcc9f9f7d93-intro_01.png",
+        "need": "assets/stimuli/09b52ae33b24-hug_01.png",
+        "recipient": "assets/stimuli/5173e613fe51-intro_02.png",
+        "helper1": "assets/stimuli/8af685be55d9-intro_03.png",
+        "helper2": "assets/stimuli/5430b5b95950-7a_brother_intro.png"
+      },
+      "imageType": "png",
+      "imageDimensions": {
+        "width": 1920,
+        "height": 1080
+      },
+      "imageCrop": {
+        "top": 120,
+        "bottom": 120,
+        "note": "Keep existing CSS crop to hide original baked caption. No source pixels edited."
+      },
+      "sourceIntroOrder": [
+        "recipient",
+        "helper1",
+        "helper2"
+      ],
+      "sourceNeedText": "Oh no! The kid in the middle is sad now!",
+      "sourceHugQuestion": "Oh no! The kid in the middle is sad now!\nWho will give the kid in the middle a hug now that they're sad?\nThe kid's dad or the kid's brother?",
+      "originalHelperOrder": [
+        "DAD",
+        "BROTHER"
+      ],
+      "notes": [
+        "The fourth intro uses v80 intro_image_fixes.json override for the brother introduction."
+      ]
+    },
+    {
+      "id": "man-teacher-classmate",
+      "roleSet": "man",
+      "condition": "TEACHER-CLASSMATE",
+      "label": "Teacher–Classmate",
+      "trialId": "14d",
+      "variant": "d",
+      "visualPlan": 4,
+      "color": "DEEP_PURPLE",
+      "visualHex": "#8e2d94",
+      "recipient": {
+        "id": "recipient",
+        "role": "KID",
+        "label": "kid",
+        "description": "the kid",
+        "pronoun": "they",
+        "side": "middle",
+        "isAdult": false,
+        "reference": "the kid in the middle"
+      },
+      "helpers": [
+        {
+          "id": "helper1",
+          "role": "CLASSMATE",
+          "label": "classmate",
+          "description": "the kid’s classmate",
+          "pronoun": "they",
+          "side": "left",
+          "isAdult": false
+        },
+        {
+          "id": "helper2",
+          "role": "TEACHER",
+          "label": "teacher",
+          "description": "the kid’s teacher",
+          "pronoun": "they",
+          "side": "right",
+          "isAdult": true
+        }
+      ],
+      "intros": [
+        {
+          "actorId": "recipient",
+          "sourceText": "This little one is a kid.",
+          "description": "the kid",
+          "image": "assets/stimuli/4e621f5d72b5-intro_02.svg"
+        },
+        {
+          "actorId": "helper1",
+          "sourceText": "This little one is this kid's classmate.",
+          "description": "the kid’s classmate",
+          "image": "assets/stimuli/2867c2e0bd9c-intro_03.svg"
+        },
+        {
+          "actorId": "helper2",
+          "sourceText": "This big one is this kid's teacher.",
+          "description": "the kid’s teacher",
+          "image": "assets/stimuli/a5206d48c30f-intro_04.svg"
+        }
+      ],
+      "images": {
+        "group": "assets/stimuli/44d39b1df683-intro_01.svg",
+        "need": "assets/stimuli/bd2a372b55b6-hug_story.svg",
+        "recipient": "assets/stimuli/4e621f5d72b5-intro_02.svg",
+        "helper1": "assets/stimuli/2867c2e0bd9c-intro_03.svg",
+        "helper2": "assets/stimuli/a5206d48c30f-intro_04.svg"
+      },
+      "imageType": "svg",
+      "imageDimensions": {
+        "width": 1920,
+        "height": 1080
+      },
+      "imageCrop": {
+        "top": 120,
+        "bottom": 120,
+        "note": "Keep existing CSS crop to hide original baked caption. No source pixels edited."
+      },
+      "sourceIntroOrder": [
+        "recipient",
+        "helper1",
+        "helper2"
+      ],
+      "sourceNeedText": "Oh no! The kid in the middle is sad now!",
+      "sourceHugQuestion": "Oh no! The kid in the middle is sad now!\nWho will give the kid in the middle a hug now that they're sad?\nThe kid's classmate or the kid's teacher?",
+      "originalHelperOrder": [
+        "CLASSMATE",
+        "TEACHER"
+      ],
+      "notes": [
+        "Uses existing native teacher–classmate SVGs, not a raster conversion or newly drawn illustration."
+      ]
+    },
+    {
+      "id": "family-mom-dad",
+      "roleSet": "family",
+      "condition": "MOM-DAD",
+      "label": "Mom–Dad",
+      "trialId": "11c",
+      "variant": "c",
+      "visualPlan": 4,
+      "color": "BLUE",
+      "visualHex": "#8dd3fb",
+      "recipient": {
+        "id": "recipient",
+        "role": "KID",
+        "label": "kid",
+        "description": "the kid",
+        "pronoun": "they",
+        "side": "middle",
+        "isAdult": false,
+        "reference": "the kid in the middle"
+      },
+      "helpers": [
+        {
+          "id": "helper1",
+          "role": "DAD",
+          "label": "dad",
+          "description": "the kid’s dad",
+          "pronoun": "he",
+          "side": "left",
+          "isAdult": true
+        },
+        {
+          "id": "helper2",
+          "role": "MOM",
+          "label": "mom",
+          "description": "the kid’s mom",
+          "pronoun": "she",
+          "side": "right",
+          "isAdult": true
+        }
+      ],
+      "intros": [
+        {
+          "actorId": "recipient",
+          "sourceText": "This little one is a kid.",
+          "description": "the kid",
+          "image": "assets/stimuli/3ee3708abba0-intro_02.png"
+        },
+        {
+          "actorId": "helper1",
+          "sourceText": "This big one is this kid's dad.",
+          "description": "the kid’s dad",
+          "image": "assets/stimuli/1e980c95dcac-intro_03.png"
+        },
+        {
+          "actorId": "helper2",
+          "sourceText": "This big one is this kid's mom.",
+          "description": "the kid’s mom",
+          "image": "assets/stimuli/ef70b2fc2757-intro_04.png"
+        }
+      ],
+      "images": {
+        "group": "assets/stimuli/a536bea376a4-intro_01.png",
+        "need": "assets/stimuli/443991b4edc3-hug_01.png",
+        "recipient": "assets/stimuli/3ee3708abba0-intro_02.png",
+        "helper1": "assets/stimuli/1e980c95dcac-intro_03.png",
+        "helper2": "assets/stimuli/ef70b2fc2757-intro_04.png"
+      },
+      "imageType": "png",
+      "imageDimensions": {
+        "width": 1920,
+        "height": 1080
+      },
+      "imageCrop": {
+        "top": 120,
+        "bottom": 120,
+        "note": "Keep existing CSS crop to hide original baked caption. No source pixels edited."
+      },
+      "sourceIntroOrder": [
+        "recipient",
+        "helper1",
+        "helper2"
+      ],
+      "sourceNeedText": "Oh no! The kid in the middle is sad now!",
+      "sourceHugQuestion": "Oh no! The kid in the middle is sad now!\nWho will give the kid in the middle a hug now that they're sad?\nThe kid's dad or the kid's mom?",
+      "originalHelperOrder": [
+        "DAD",
+        "MOM"
+      ],
+      "notes": []
+    },
+    {
+      "id": "family-sister-brother",
+      "roleSet": "family",
+      "condition": "SISTER-BROTHER",
+      "label": "Sister–Brother",
+      "trialId": "12b",
+      "variant": "b",
+      "visualPlan": 4,
+      "color": "PINK",
+      "visualHex": "#f19ac8",
+      "recipient": {
+        "id": "recipient",
+        "role": "KID",
+        "label": "kid",
+        "description": "the kid",
+        "pronoun": "they",
+        "side": "middle",
+        "isAdult": false,
+        "reference": "the kid in the middle"
+      },
+      "helpers": [
+        {
+          "id": "helper1",
+          "role": "SISTER",
+          "label": "sister",
+          "description": "the kid’s sister",
+          "pronoun": "she",
+          "side": "left",
+          "isAdult": false
+        },
+        {
+          "id": "helper2",
+          "role": "BROTHER",
+          "label": "brother",
+          "description": "the kid’s brother",
+          "pronoun": "he",
+          "side": "right",
+          "isAdult": false
+        }
+      ],
+      "intros": [
+        {
+          "actorId": "recipient",
+          "sourceText": "This little one is a kid.",
+          "description": "the kid",
+          "image": "assets/stimuli/b22dc4ce9487-intro_02.png"
+        },
+        {
+          "actorId": "helper1",
+          "sourceText": "This little one is this kid's sister.",
+          "description": "the kid’s sister",
+          "image": "assets/stimuli/6a31a255e09e-intro_03.png"
+        },
+        {
+          "actorId": "helper2",
+          "sourceText": "This little one is this kid's brother.",
+          "description": "the kid’s brother",
+          "image": "assets/stimuli/118cdfcb8a13-intro_04.png"
+        }
+      ],
+      "images": {
+        "group": "assets/stimuli/931a3ff701b0-intro_01.png",
+        "need": "assets/stimuli/fac075f520aa-hug_01.png",
+        "recipient": "assets/stimuli/b22dc4ce9487-intro_02.png",
+        "helper1": "assets/stimuli/6a31a255e09e-intro_03.png",
+        "helper2": "assets/stimuli/118cdfcb8a13-intro_04.png"
+      },
+      "imageType": "png",
+      "imageDimensions": {
+        "width": 1920,
+        "height": 1080
+      },
+      "imageCrop": {
+        "top": 120,
+        "bottom": 120,
+        "note": "Keep existing CSS crop to hide original baked caption. No source pixels edited."
+      },
+      "sourceIntroOrder": [
+        "recipient",
+        "helper1",
+        "helper2"
+      ],
+      "sourceNeedText": "Oh no! The kid in the middle is sad now!",
+      "sourceHugQuestion": "Oh no! The kid in the middle is sad now!\nWho will give the kid in the middle a hug now that they're sad?\nThe kid's sister or the kid's brother?",
+      "originalHelperOrder": [
+        "SISTER",
+        "BROTHER"
+      ],
+      "notes": []
+    },
+    {
+      "id": "family-dad-kid",
+      "roleSet": "family",
+      "condition": "DAD-KID",
+      "label": "Dad–Kid",
+      "trialId": "3b",
+      "variant": "b",
+      "visualPlan": 4,
+      "color": "BLUE",
+      "visualHex": "#64d4ce",
+      "recipient": {
+        "id": "recipient",
+        "role": "MOM",
+        "label": "mom",
+        "description": "the mom",
+        "pronoun": "she",
+        "side": "middle",
+        "isAdult": true,
+        "reference": "the mom in the middle"
+      },
+      "helpers": [
+        {
+          "id": "helper1",
+          "role": "DAD",
+          "label": "dad",
+          "description": "the kid’s dad",
+          "pronoun": "he",
+          "side": "left",
+          "isAdult": true
+        },
+        {
+          "id": "helper2",
+          "role": "KID",
+          "label": "kid",
+          "description": "the kid",
+          "pronoun": "they",
+          "side": "right",
+          "isAdult": false
+        }
+      ],
+      "intros": [
+        {
+          "actorId": "helper2",
+          "sourceText": "This little one is a kid.",
+          "description": "the kid",
+          "image": "assets/stimuli/7849c46a23c8-intro_02.png"
+        },
+        {
+          "actorId": "helper1",
+          "sourceText": "This big one is this kid's dad.",
+          "description": "the kid’s dad",
+          "image": "assets/stimuli/c5c6407132b2-intro_03.png"
+        },
+        {
+          "actorId": "recipient",
+          "sourceText": "This big one is this kid's mom.",
+          "description": "the mom",
+          "image": "assets/stimuli/a581aa99f6cf-intro_04.png"
+        }
+      ],
+      "images": {
+        "group": "assets/stimuli/966365322eff-intro_01.png",
+        "need": "assets/stimuli/b1ba34666825-hug_01.png",
+        "helper2": "assets/stimuli/7849c46a23c8-intro_02.png",
+        "helper1": "assets/stimuli/c5c6407132b2-intro_03.png",
+        "recipient": "assets/stimuli/a581aa99f6cf-intro_04.png"
+      },
+      "imageType": "png",
+      "imageDimensions": {
+        "width": 1920,
+        "height": 1080
+      },
+      "imageCrop": {
+        "top": 120,
+        "bottom": 120,
+        "note": "Keep existing CSS crop to hide original baked caption. No source pixels edited."
+      },
+      "sourceIntroOrder": [
+        "helper2",
+        "helper1",
+        "recipient"
+      ],
+      "sourceNeedText": "Oh no! The mom in the middle is sad now!",
+      "sourceHugQuestion": "Oh no! The mom in the middle is sad now!\nWho will give the mom in the middle a hug now that they're sad?\nThe kid's dad or the kid?",
+      "originalHelperOrder": [
+        "DAD",
+        "KID"
+      ],
+      "notes": [
+        "Original family story: the middle recipient is an adult. The kid is one of the two helpers; retain source intro order."
+      ]
+    },
+    {
+      "id": "family-mom-kid",
+      "roleSet": "family",
+      "condition": "MOM-KID",
+      "label": "Mom–Kid",
+      "trialId": "8d",
+      "variant": "d",
+      "visualPlan": 4,
+      "color": "BLUE",
+      "visualHex": "#22528e",
+      "recipient": {
+        "id": "recipient",
+        "role": "DAD",
+        "label": "dad",
+        "description": "the dad",
+        "pronoun": "he",
+        "side": "middle",
+        "isAdult": true,
+        "reference": "the dad in the middle"
+      },
+      "helpers": [
+        {
+          "id": "helper1",
+          "role": "KID",
+          "label": "kid",
+          "description": "the kid",
+          "pronoun": "they",
+          "side": "left",
+          "isAdult": false
+        },
+        {
+          "id": "helper2",
+          "role": "MOM",
+          "label": "mom",
+          "description": "the kid’s mom",
+          "pronoun": "she",
+          "side": "right",
+          "isAdult": true
+        }
+      ],
+      "intros": [
+        {
+          "actorId": "helper1",
+          "sourceText": "This little one is a kid.",
+          "description": "the kid",
+          "image": "assets/stimuli/84bb858d2543-intro_02.png"
+        },
+        {
+          "actorId": "recipient",
+          "sourceText": "This big one is this kid's dad.",
+          "description": "the dad",
+          "image": "assets/stimuli/136f25127d00-intro_03.png"
+        },
+        {
+          "actorId": "helper2",
+          "sourceText": "This big one is this kid's mom.",
+          "description": "the kid’s mom",
+          "image": "assets/stimuli/bcf1701cd885-intro_04.png"
+        }
+      ],
+      "images": {
+        "group": "assets/stimuli/0b393251d294-intro_01.png",
+        "need": "assets/stimuli/a47ed9f1306d-hug_01.png",
+        "helper1": "assets/stimuli/84bb858d2543-intro_02.png",
+        "recipient": "assets/stimuli/136f25127d00-intro_03.png",
+        "helper2": "assets/stimuli/bcf1701cd885-intro_04.png"
+      },
+      "imageType": "png",
+      "imageDimensions": {
+        "width": 1920,
+        "height": 1080
+      },
+      "imageCrop": {
+        "top": 120,
+        "bottom": 120,
+        "note": "Keep existing CSS crop to hide original baked caption. No source pixels edited."
+      },
+      "sourceIntroOrder": [
+        "helper1",
+        "recipient",
+        "helper2"
+      ],
+      "sourceNeedText": "Oh no! The dad in the middle is sad now!",
+      "sourceHugQuestion": "Oh no! The dad in the middle is sad now!\nWho will give the dad in the middle a hug now that they're sad?\nThe kid or the kid's mom?",
+      "originalHelperOrder": [
+        "KID",
+        "MOM"
+      ],
+      "notes": [
+        "Original family story: the middle recipient is an adult. The kid is one of the two helpers; retain source intro order."
+      ]
+    },
+    {
+      "id": "family-teacher-kid",
+      "roleSet": "family",
+      "condition": "TEACHER-KID",
+      "label": "Teacher–Kid",
+      "trialId": "4a",
+      "variant": "a",
+      "visualPlan": 4,
+      "color": "PURPLE",
+      "visualHex": "#7b80f7",
+      "recipient": {
+        "id": "recipient",
+        "role": "TEACHER",
+        "label": "teacher",
+        "description": "the teacher in the middle",
+        "pronoun": "they",
+        "side": "middle",
+        "isAdult": true,
+        "reference": "the teacher in the middle"
+      },
+      "helpers": [
+        {
+          "id": "helper1",
+          "role": "TEACHER",
+          "label": "teacher",
+          "description": "the teacher on the left",
+          "pronoun": "they",
+          "side": "left",
+          "isAdult": true
+        },
+        {
+          "id": "helper2",
+          "role": "KID",
+          "label": "kid",
+          "description": "the kid",
+          "pronoun": "they",
+          "side": "right",
+          "isAdult": false
+        }
+      ],
+      "intros": [
+        {
+          "actorId": "helper2",
+          "sourceText": "This little one is a kid.",
+          "description": "the kid",
+          "image": "assets/stimuli/4e0d14a1cfbf-intro_02.png"
+        },
+        {
+          "actorId": "helper1",
+          "sourceText": "This big one is this kid's teacher.",
+          "description": "the teacher on the left",
+          "image": "assets/stimuli/e25b10adebd9-intro_03.png"
+        },
+        {
+          "actorId": "recipient",
+          "sourceText": "This big one is this kid's teacher too.",
+          "description": "the teacher in the middle",
+          "image": "assets/stimuli/d1392c7313eb-intro_04.png"
+        }
+      ],
+      "images": {
+        "group": "assets/stimuli/448d8507c0ab-intro_01.png",
+        "need": "assets/stimuli/4bb031a656d9-hug_01.png",
+        "helper2": "assets/stimuli/4e0d14a1cfbf-intro_02.png",
+        "helper1": "assets/stimuli/e25b10adebd9-intro_03.png",
+        "recipient": "assets/stimuli/d1392c7313eb-intro_04.png"
+      },
+      "imageType": "png",
+      "imageDimensions": {
+        "width": 1920,
+        "height": 1080
+      },
+      "imageCrop": {
+        "top": 120,
+        "bottom": 120,
+        "note": "Keep existing CSS crop to hide original baked caption. No source pixels edited."
+      },
+      "sourceIntroOrder": [
+        "helper2",
+        "helper1",
+        "recipient"
+      ],
+      "sourceNeedText": "Oh no! The teacher in the middle is sad now!",
+      "sourceHugQuestion": "Oh no! The teacher in the middle is sad now!\nWho will give the teacher in the middle a hug now that they're sad?\nThe kid's teacher or the kid?",
+      "originalHelperOrder": [
+        "TEACHER",
+        "KID"
+      ],
+      "notes": [
+        "Original family story: the middle recipient is an adult. The kid is one of the two helpers; retain source intro order.",
+        "Two teachers: original third intro introduces helper teacher on left; fourth introduces recipient teacher in middle as this kid’s teacher too. Side descriptions disambiguate."
+      ]
+    },
+    {
+      "id": "family-teacher-classmate",
+      "roleSet": "family",
+      "condition": "TEACHER-CLASSMATE",
+      "label": "Teacher–Classmate",
+      "trialId": "14d",
+      "variant": "d",
+      "visualPlan": 4,
+      "color": "DEEP_PURPLE",
+      "visualHex": "#8e2d94",
+      "recipient": {
+        "id": "recipient",
+        "role": "KID",
+        "label": "kid",
+        "description": "the kid",
+        "pronoun": "they",
+        "side": "middle",
+        "isAdult": false,
+        "reference": "the kid in the middle"
+      },
+      "helpers": [
+        {
+          "id": "helper1",
+          "role": "CLASSMATE",
+          "label": "classmate",
+          "description": "the kid’s classmate",
+          "pronoun": "they",
+          "side": "left",
+          "isAdult": false
+        },
+        {
+          "id": "helper2",
+          "role": "TEACHER",
+          "label": "teacher",
+          "description": "the kid’s teacher",
+          "pronoun": "they",
+          "side": "right",
+          "isAdult": true
+        }
+      ],
+      "intros": [
+        {
+          "actorId": "recipient",
+          "sourceText": "This little one is a kid.",
+          "description": "the kid",
+          "image": "assets/stimuli/4e621f5d72b5-intro_02.svg"
+        },
+        {
+          "actorId": "helper1",
+          "sourceText": "This little one is this kid's classmate.",
+          "description": "the kid’s classmate",
+          "image": "assets/stimuli/2867c2e0bd9c-intro_03.svg"
+        },
+        {
+          "actorId": "helper2",
+          "sourceText": "This big one is this kid's teacher.",
+          "description": "the kid’s teacher",
+          "image": "assets/stimuli/a5206d48c30f-intro_04.svg"
+        }
+      ],
+      "images": {
+        "group": "assets/stimuli/44d39b1df683-intro_01.svg",
+        "need": "assets/stimuli/bd2a372b55b6-hug_story.svg",
+        "recipient": "assets/stimuli/4e621f5d72b5-intro_02.svg",
+        "helper1": "assets/stimuli/2867c2e0bd9c-intro_03.svg",
+        "helper2": "assets/stimuli/a5206d48c30f-intro_04.svg"
+      },
+      "imageType": "svg",
+      "imageDimensions": {
+        "width": 1920,
+        "height": 1080
+      },
+      "imageCrop": {
+        "top": 120,
+        "bottom": 120,
+        "note": "Keep existing CSS crop to hide original baked caption. No source pixels edited."
+      },
+      "sourceIntroOrder": [
+        "recipient",
+        "helper1",
+        "helper2"
+      ],
+      "sourceNeedText": "Oh no! The kid in the middle is sad now!",
+      "sourceHugQuestion": "Oh no! The kid in the middle is sad now!\nWho will give the kid in the middle a hug now that they're sad?\nThe kid's classmate or the kid's teacher?",
+      "originalHelperOrder": [
+        "CLASSMATE",
+        "TEACHER"
+      ],
+      "notes": [
+        "Uses existing native teacher–classmate SVGs, not a raster conversion or newly drawn illustration."
+      ]
+    }
+  ]
+}

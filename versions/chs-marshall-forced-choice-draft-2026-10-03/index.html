@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Who has to help? · Forced-choice draft</title>
+  <link rel="stylesheet" href="style.css?v=20261003-forced-choice-r1">
+  <link rel="stylesheet" href="child-view.css?v=20261003-forced-choice-r1">
+</head>
+<body>
+  <header class="site-header">
+    <div><p class="eyebrow">FIND THE CAREGIVER × MARSHALL · FORCED-CHOICE ADAPTATION</p><h1>Who has to help?</h1><p id="session-subtitle" class="subtitle">Full session · Sadness stories</p></div>
+    <span class="draft-badge">Forced-choice draft</span>
+  </header>
+  <nav class="toolbar" aria-label="Review views">
+    <div class="view-tabs"><button id="child-view">Child view</button><button id="story-tab" class="selected" aria-pressed="true">Try the session</button><button id="board-tab" aria-pressed="false">Full storyboard</button></div>
+    <div><a id="download-script" href="SCRIPT.md" download>Download script</a><button id="restart">Restart</button></div>
+  </nav>
+  <main>
+    <details class="session-overview" open>
+      <summary>Session overview &amp; pairings</summary>
+      <div class="session-settings"><label>Pairing set<select id="set-select"><option value="woman">Mom / sister set · 6 stories</option><option value="man">Dad / brother set · 6 stories</option><option value="family">Family set · 6 stories</option><option value="all">All three sets · 18 stories · Review only</option></select></label><label>“Have to” practice<select id="practice-select"><option value="each">Every story · Brief practice</option><option value="once">First story only · Default</option></select></label></div>
+      <p id="session-warning" class="session-explainer"></p><div id="session-stats" class="session-stats"></div>
+      <p id="practice-note" class="session-explainer"></p>
+      <details class="timing-explanation"><summary>What the estimate includes</summary><p id="timing-details"></p></details>
+      <div id="pairing-list" class="pairing-list"></div>
+    </details>
+    <div class="walkthrough-timer"><span>Your preview time <strong id="elapsed">0:00</strong></span><button id="timer-toggle">Start timer</button><button id="timer-reset">Reset timer</button><small id="timer-note"></small></div>
+    <section id="player" aria-label="Interactive story draft">
+      <p id="story-progress" class="story-progress"></p><div class="progress-track"><span id="progress-bar"></span></div><div class="step-nav"><button id="back" aria-label="Previous screen">← Back</button><label for="story-jump">Story</label><select id="story-jump"></select><label for="jump">Screen</label><select id="jump"></select></div>
+      <div class="narration-controls"><div><button id="play-narration">Play narration</button><button id="stop-narration" disabled>Stop audio</button><label><input id="auto-narration" type="checkbox" checked> Read new screens automatically</label></div><p id="narration-status" role="status"></p></div>
+      <div class="child-topbar"><p id="child-story-label" class="child-story-label"></p><button id="researcher-view">Researcher view</button></div>
+      <article id="stage" class="stage" aria-live="polite"></article>
+      <p id="step-note" class="step-note"></p>
+    </section>
+    <section id="storyboard" hidden aria-label="All prompts and branches">
+      <div class="board-intro"><h2>The full forced-choice session</h2><p>Read in order. Each story has three main comparisons and an explicit no-one-helped outcome. The grey notes describe the adaptation and comprehension checks.</p><button id="print">Print / save as PDF</button></div>
+      <div id="cards"></div>
+    </section>
+    <details class="research-notes"><summary>Draft decisions &amp; sources</summary>
+      <p>This is a review adaptation of Marshall et al. (2022), Study 1, using all three existing Find the Caregiver pairing sets. Each assigned set has six stories; the combined 18-story view is for review. Colors and character positions follow one existing balanced visual plan. The orange mom–sister story keeps mom on the left. Every story uses sadness, two helpers, and a plain background. Original study files are unchanged.</p>
+      <p>Each story asks three main questions: “Who do you think will help…?”, “Who do you think HAS TO help…?”, and “Who was meaner for NOT helping…?” Children choose between the two helpers. There are 18 main judgments in a six-story session, plus introductions, comprehension checks and brief practice. Individual Yes/No ratings and strength scales are omitted.</p>
+      <p><strong>Adaptation:</strong> Marshall Study 1 asked individual prediction and obligation questions. This version measures relative helper choice. Choosing one helper does not establish that the other helper has no obligation. All stories continue with the same explicit outcome: no one helps.</p>
+      <p><strong>Review choices:</strong> stories use a fixed review order; the two choices follow the helpers’ left and right positions in the scene. The brief HAVE TO practice runs once by default; the review control also allows repetition in every story. Checks offer a reminder and allow a retry or facilitator continuation. This private preview does not implement research exclusion rules.</p>
+      <p id="recording-coverage"></p><p><a href="naturalreader-recording-script.txt" download>NaturalReader recording script</a> · <a href="recording-index.json" download>Recording index</a></p><p>Use <strong>Play narration</strong> to hear the NaturalReader recording. After starting, the checked automatic-reading option reads each new screen. Stop audio or turn off automatic reading to review manually. On response screens, <strong>Read choices</strong> uses the recorded NaturalReader voice: each option gains a blue glow as it is spoken, and choices unlock after both. On the three main questions, the matching character glows with its option. <strong>Read myself</strong> lets the facilitator advance each glow manually. Each option is a separate recording, so the glow follows the spoken choice. Missing recordings are labeled explicitly; there is no automatic substitute voice. Answers remain in memory during researcher review. When embedded in the CHS draft, answer records are passed to the parent review frame; this draft does not start a camera, collect consent, or submit participant responses.</p>
+      <p>Researcher draft adapted from Marshall et al. (2022), Study 1. Official supplement: <a href="https://supp.apa.org/psycarticles/supplemental/xge0001136/xge0001136.docx">Supplemental materials</a>.</p>
+    </details>
+  </main>
+  <footer>Researcher review · Three forced choices per story · Adapted wording</footer>
+  <script src="chs-bridge.js?v=20261003-forced-choice-r1"></script><script src="script-data.js?v=20261003-forced-choice-r1"></script><script src="pairing-catalog.js?v=20261003-forced-choice-r1"></script><script src="session-data.js?v=20261003-forced-choice-r1"></script><script src="narration-manifest.js?v=20261003-forced-choice-r1"></script><script src="narration-timing.js?v=20261003-forced-choice-r1"></script><script src="narration-player.js?v=20261003-forced-choice-r1"></script><script src="option-reader.js?v=20261003-forced-choice-r1"></script><script src="narration-cues.js?v=20261003-forced-choice-r1"></script><script src="app.js?v=20261003-forced-choice-r1"></script>
+</body>
+</html>
