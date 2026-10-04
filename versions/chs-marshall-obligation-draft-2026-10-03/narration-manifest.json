@@ -24,8 +24,9 @@
     "emphasisPendingCount": 32,
     "pauseAdjustedReadyCount": 1,
     "nativeProsodyPendingCount": 32,
-    "emphasisPendingBasis": "Native NaturalReaders prosody exports remain pending; nr_014 uses inserted pauses and nr_274 uses a verified exact teacher clause joined to the existing strength prompt.",
-    "assembledContextReadyCount": 1
+    "emphasisPendingBasis": "Native NaturalReaders prosody exports remain pending. Local derivatives retain Evelyn speech: nr_014 inserted pauses, nr_274 expanded teacher context, and nr_275\u2013nr_284 obligation-strength questions with obsolete separate role headings removed.",
+    "assembledContextReadyCount": 1,
+    "roleHeadingRemovedReadyCount": 10
   },
   "notes": [
     "One clip per complete prompt, reminder, or individual response option. Repeated text shares one recording.",
@@ -42,7 +43,8 @@
     "The opening now says \"Oh look! Here is a kid.\" in all 18 stories. The old some-people recording is inactive; the revised complete sentence is pending under nr_268.",
     "The revised kid sadness prompt nr_269 is a new pending recording. The retired nr_008 recording and word cues are not used for this changed wording; no cloud save or export is claimed for the replacement paragraph.",
     "Prediction confidence is proposed wording added to this adaptation after each individual prediction question: How sure are you? Not sure / A little sure / Very sure. The four new clips nr_270\u2013nr_273 remain pending and are not claimed as Marshall source wording or as generated/cloud-saved recordings.",
-    "The adapted teacher-practice strength prompt nr_274 reiterates the teacher context and uses exact existing Evelyn speech joined with a 300 ms pause. A fresh full NaturalReaders prosody recording remains pending; this is a documented local audio derivative."
+    "The adapted teacher-practice strength prompt nr_274 reiterates the teacher context and uses exact existing Evelyn speech joined with a 300 ms pause. A fresh full NaturalReaders prosody recording remains pending; this is a documented local audio derivative.",
+    "Obligation strength narration now states each role once within the question, matching the caption. nr_275\u2013nr_284 are verified local derivatives of existing Evelyn speech; obsolete standalone role headings are removed. Original files are retained, cue hashes and timings follow the new assets, and native full-question prosody replacements remain pending."
   ],
   "clips": [
     {
@@ -5328,11 +5330,11 @@
       }
     },
     {
-      "id": "nr_026",
-      "text": "The kid\u2019s teacher. How much do you think the kid\u2019s teacher HAS TO?",
-      "src": "assets/narration/nr_026.mp3",
+      "id": "nr_275",
+      "text": "How much do you think the kid\u2019s teacher HAS TO?",
+      "src": "assets/narration/nr_275.mp3",
       "kind": "prompt",
-      "status": "imported",
+      "status": "verified-local-audio-derivative",
       "uses": [
         {
           "stepId": "woman-mom-teacher:obligation-helper1-amount",
@@ -5370,12 +5372,33 @@
           "part": "prompt"
         }
       ],
-      "sha256": "50a48afee3ac7ebe35e74ab8fce65daecff5e17ad027f9b58879fb6a6605d7ef",
-      "bytes": 199620,
-      "durationSeconds": 4.989375,
+      "sha256": "b5342ce2d302b3f20e6955633f9545965f354f2cdc3140190ff5187cb6f45242",
+      "bytes": 141105,
+      "durationSeconds": 3.500408,
       "provenance": {
+        "copiedWithoutReencoding": false,
+        "localAudioDerivative": true,
+        "decodeVerified": true,
+        "offlineAdjustedWordSequenceVerified": true,
+        "nativeProsodyReplacementStillPending": true,
+        "audioProcessing": {
+          "kind": "leading-role-context-trimmed-from-existing-Evelyn-recording",
+          "sourceRecording": {
+            "id": "nr_026",
+            "sha256": "50a48afee3ac7ebe35e74ab8fce65daecff5e17ad027f9b58879fb6a6605d7ef",
+            "src": "assets/narration/nr_026.mp3",
+            "retainedSourceStartSeconds": 1.54,
+            "retainedSourceEndSeconds": 4.989387755102041,
+            "retainedDecodedSamples": 152118
+          },
+          "originalRetainedPcmSamplesPreservedBeforeEncoding": true,
+          "speechPitchShifted": false,
+          "speechTimeStretched": false,
+          "encoder": "ffmpeg libmp3lame 320 kbps mono",
+          "verification": "Unprompted offline Whisper-base.en normalized full word sequence; original source hash and retained PCM verification. Human listening verification not claimed."
+        },
         "provider": "NaturalReaders Commercial",
-        "voice": {
+        "sourceVoice": {
           "provider": "NaturalReaders Commercial",
           "name": "Evelyn",
           "style": "Soft",
@@ -5387,17 +5410,17 @@
           "exportNaming": "Index + Segment",
           "preferredBitrateKbps": 320,
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "25.The_kid\u2019s_teacher._How_much_do.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
+        }
       },
       "narrationEmphasis": {
-        "status": "awaiting-new-recording",
-        "originalRecordedText": "The kid\u2019s teacher. How much do you think the kid\u2019s teacher has to?",
-        "visualCaseOnly": true
+        "status": "verified-local-audio-derivative",
+        "visualCaseOnly": false,
+        "nativeProsodyReplacementStillPending": true
+      },
+      "decodedDurationSeconds": 3.4493877551020407,
+      "audioTreatment": {
+        "kind": "leading-role-context-trimmed-from-existing-Evelyn-recording",
+        "extraRoleHeadingRemoved": true
       }
     },
     {
@@ -5454,11 +5477,11 @@
       }
     },
     {
-      "id": "nr_028",
-      "text": "The kid\u2019s mom. How much do you think she HAS TO?",
-      "src": "assets/narration/nr_028.mp3",
+      "id": "nr_276",
+      "text": "How much do you think the kid\u2019s mom HAS TO?",
+      "src": "assets/narration/nr_276.mp3",
       "kind": "prompt",
-      "status": "imported",
+      "status": "verified-local-audio-derivative",
       "uses": [
         {
           "stepId": "woman-mom-teacher:obligation-helper2-amount",
@@ -5481,12 +5504,87 @@
           "part": "prompt"
         }
       ],
-      "sha256": "0b817c2f279e268b7c8e578a6f23f8428d096a94f5a49cb0b4daa227c47d26a6",
-      "bytes": 168273,
-      "durationSeconds": 4.2057,
+      "sha256": "7c4d7b7188f16880f9c376a115f0be6386b525b2873102a3acdbe652664abecf",
+      "bytes": 153644,
+      "durationSeconds": 3.813878,
       "provenance": {
+        "copiedWithoutReencoding": false,
+        "localAudioDerivative": true,
+        "decodeVerified": true,
+        "offlineAdjustedWordSequenceVerified": true,
+        "nativeProsodyReplacementStillPending": true,
+        "audioProcessing": {
+          "kind": "assembled-full-role-question-from-existing-Evelyn-recordings",
+          "sourceRecordings": [
+            {
+              "id": "nr_028",
+              "sha256": "0b817c2f279e268b7c8e578a6f23f8428d096a94f5a49cb0b4daa227c47d26a6",
+              "retainedSourceStartSeconds": 1.5980045351473924,
+              "retainedSourceEndSeconds": 2.7343310657596374,
+              "retainedDecodedSamples": 50112,
+              "role": "Complete How much do you think clause",
+              "nominalCandidateStartSeconds": 1.6,
+              "nominalCandidateEndSeconds": 2.735,
+              "startCutAdjustmentSeconds": -0.00199546485260771,
+              "endCutAdjustmentSeconds": -0.0006802721088435374,
+              "firstRetainedPcmSample": 0.0,
+              "lastRetainedPcmSample": -4.1114012674370315e-06,
+              "first10msRms": 0.0,
+              "last10msRms": 0.030810827389359474
+            },
+            {
+              "id": "nr_028",
+              "sha256": "0b817c2f279e268b7c8e578a6f23f8428d096a94f5a49cb0b4daa227c47d26a6",
+              "retainedSourceStartSeconds": 0.0,
+              "retainedSourceEndSeconds": 1.3186167800453514,
+              "retainedDecodedSamples": 58151,
+              "role": "Complete full role phrase from original heading",
+              "nominalCandidateStartSeconds": 0,
+              "nominalCandidateEndSeconds": 1.32,
+              "startCutAdjustmentSeconds": 0.0,
+              "endCutAdjustmentSeconds": -0.001383219954648526,
+              "firstRetainedPcmSample": 0.0,
+              "lastRetainedPcmSample": 3.7275088971000514e-07,
+              "first10msRms": 0.0,
+              "last10msRms": 0.0001069478239514865
+            },
+            {
+              "id": "nr_028",
+              "sha256": "0b817c2f279e268b7c8e578a6f23f8428d096a94f5a49cb0b4daa227c47d26a6",
+              "retainedSourceStartSeconds": 3.01687074829932,
+              "retainedSourceEndSeconds": 4.2057142857142855,
+              "retainedDecodedSamples": 52428,
+              "role": "HAS TO tail from original question",
+              "nominalCandidateStartSeconds": 3.015,
+              "nominalCandidateEndSeconds": 4.2057142857142855,
+              "startCutAdjustmentSeconds": 0.0018594104308390022,
+              "endCutAdjustmentSeconds": 0.0,
+              "firstRetainedPcmSample": -2.3863605747465044e-05,
+              "lastRetainedPcmSample": 0.0,
+              "first10msRms": 0.029518399387598038,
+              "last10msRms": 0.0
+            }
+          ],
+          "joinPauses": [
+            {
+              "start": 1.136326530612245,
+              "end": 1.1913378684807256
+            },
+            {
+              "start": 2.5099546485260773,
+              "end": 2.589954648526077
+            }
+          ],
+          "originalRetainedPcmSamplesPreservedBeforeEncoding": true,
+          "speechPitchShifted": false,
+          "speechTimeStretched": false,
+          "encoder": "ffmpeg libmp3lame 320 kbps mono",
+          "zeroCrossingCutRefinementMaxSeconds": 0.002,
+          "verification": "Unprompted offline Whisper-base.en exact normalized full word sequence; measured join silence; source hashes and retained PCM verified. Human listening verification not claimed.",
+          "intonationLimit": "Role phrase retains its original sentence-level inflection; a native full-question NaturalReaders recording is still pending."
+        },
         "provider": "NaturalReaders Commercial",
-        "voice": {
+        "sourceVoice": {
           "provider": "NaturalReaders Commercial",
           "name": "Evelyn",
           "style": "Soft",
@@ -5498,17 +5596,17 @@
           "exportNaming": "Index + Segment",
           "preferredBitrateKbps": 320,
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "27.The_kid\u2019s_mom._How_much_do_you.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
+        }
       },
       "narrationEmphasis": {
-        "status": "awaiting-new-recording",
-        "originalRecordedText": "The kid\u2019s mom. How much do you think she has to?",
-        "visualCaseOnly": true
+        "status": "verified-local-audio-derivative",
+        "visualCaseOnly": false,
+        "nativeProsodyReplacementStillPending": true
+      },
+      "decodedDurationSeconds": 3.778798185941043,
+      "audioTreatment": {
+        "kind": "assembled-full-role-question-from-existing-Evelyn-recordings",
+        "extraRoleHeadingRemoved": true
       }
     },
     {
@@ -8891,11 +8989,11 @@
       }
     },
     {
-      "id": "nr_061",
-      "text": "The kid\u2019s sister. How much do you think she HAS TO?",
-      "src": "assets/narration/nr_061.mp3",
+      "id": "nr_277",
+      "text": "How much do you think the kid\u2019s sister HAS TO?",
+      "src": "assets/narration/nr_277.mp3",
       "kind": "prompt",
-      "status": "imported",
+      "status": "verified-local-audio-derivative",
       "uses": [
         {
           "stepId": "woman-sister-friend:obligation-helper1-amount",
@@ -8913,12 +9011,87 @@
           "part": "prompt"
         }
       ],
-      "sha256": "65707bbd7dca7c34d3129c87040d81fecafed07b3a230ccec93147e6a9e17229",
-      "bytes": 173498,
-      "durationSeconds": 4.336325,
+      "sha256": "1a033cb0de0dfcf813c8f02fffd6d029b318747ead05a4b18cff1196338b35ea",
+      "bytes": 159913,
+      "durationSeconds": 3.970612,
       "provenance": {
+        "copiedWithoutReencoding": false,
+        "localAudioDerivative": true,
+        "decodeVerified": true,
+        "offlineAdjustedWordSequenceVerified": true,
+        "nativeProsodyReplacementStillPending": true,
+        "audioProcessing": {
+          "kind": "assembled-full-role-question-from-existing-Evelyn-recordings",
+          "sourceRecordings": [
+            {
+              "id": "nr_061",
+              "sha256": "65707bbd7dca7c34d3129c87040d81fecafed07b3a230ccec93147e6a9e17229",
+              "retainedSourceStartSeconds": 1.7180045351473923,
+              "retainedSourceEndSeconds": 2.875328798185941,
+              "retainedDecodedSamples": 51038,
+              "role": "Complete How much do you think clause",
+              "nominalCandidateStartSeconds": 1.72,
+              "nominalCandidateEndSeconds": 2.875,
+              "startCutAdjustmentSeconds": -0.00199546485260771,
+              "endCutAdjustmentSeconds": 0.00031746031746031746,
+              "firstRetainedPcmSample": 0.0,
+              "lastRetainedPcmSample": -5.421851165010594e-05,
+              "first10msRms": 0.0,
+              "last10msRms": 0.015088824555277824
+            },
+            {
+              "id": "nr_061",
+              "sha256": "65707bbd7dca7c34d3129c87040d81fecafed07b3a230ccec93147e6a9e17229",
+              "retainedSourceStartSeconds": 0.0,
+              "retainedSourceEndSeconds": 1.450702947845805,
+              "retainedDecodedSamples": 63976,
+              "role": "Complete full role phrase from original heading",
+              "nominalCandidateStartSeconds": 0,
+              "nominalCandidateEndSeconds": 1.45,
+              "startCutAdjustmentSeconds": 0.0,
+              "endCutAdjustmentSeconds": 0.0007029478458049886,
+              "firstRetainedPcmSample": 0.0,
+              "lastRetainedPcmSample": -2.2273621880231076e-07,
+              "first10msRms": 0.0,
+              "last10msRms": 0.00010193140769843012
+            },
+            {
+              "id": "nr_061",
+              "sha256": "65707bbd7dca7c34d3129c87040d81fecafed07b3a230ccec93147e6a9e17229",
+              "retainedSourceStartSeconds": 3.1541950113378685,
+              "retainedSourceEndSeconds": 4.3363265306122445,
+              "retainedDecodedSamples": 52132,
+              "role": "HAS TO tail from original question",
+              "nominalCandidateStartSeconds": 3.155,
+              "nominalCandidateEndSeconds": 4.3363265306122445,
+              "startCutAdjustmentSeconds": -0.0008163265306122449,
+              "endCutAdjustmentSeconds": 0.0,
+              "firstRetainedPcmSample": -8.303220238303766e-05,
+              "lastRetainedPcmSample": 0.0,
+              "first10msRms": 0.029435647651553154,
+              "last10msRms": 0.0
+            }
+          ],
+          "joinPauses": [
+            {
+              "start": 1.1573242630385487,
+              "end": 1.2123356009070294
+            },
+            {
+              "start": 2.6630385487528345,
+              "end": 2.7430385487528346
+            }
+          ],
+          "originalRetainedPcmSamplesPreservedBeforeEncoding": true,
+          "speechPitchShifted": false,
+          "speechTimeStretched": false,
+          "encoder": "ffmpeg libmp3lame 320 kbps mono",
+          "zeroCrossingCutRefinementMaxSeconds": 0.002,
+          "verification": "Unprompted offline Whisper-base.en exact normalized full word sequence; measured join silence; source hashes and retained PCM verified. Human listening verification not claimed.",
+          "intonationLimit": "Role phrase retains its original sentence-level inflection; a native full-question NaturalReaders recording is still pending."
+        },
         "provider": "NaturalReaders Commercial",
-        "voice": {
+        "sourceVoice": {
           "provider": "NaturalReaders Commercial",
           "name": "Evelyn",
           "style": "Soft",
@@ -8930,17 +9103,17 @@
           "exportNaming": "Index + Segment",
           "preferredBitrateKbps": 320,
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "60.The_kid\u2019s_sister._How_much_do_.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
+        }
       },
       "narrationEmphasis": {
-        "status": "awaiting-new-recording",
-        "originalRecordedText": "The kid\u2019s sister. How much do you think she has to?",
-        "visualCaseOnly": true
+        "status": "verified-local-audio-derivative",
+        "visualCaseOnly": false,
+        "nativeProsodyReplacementStillPending": true
+      },
+      "decodedDurationSeconds": 3.925170068027211,
+      "audioTreatment": {
+        "kind": "assembled-full-role-question-from-existing-Evelyn-recordings",
+        "extraRoleHeadingRemoved": true
       }
     },
     {
@@ -9012,11 +9185,11 @@
       }
     },
     {
-      "id": "nr_063",
-      "text": "The kid\u2019s friend. How much do you think the kid\u2019s friend HAS TO?",
-      "src": "assets/narration/nr_063.mp3",
+      "id": "nr_278",
+      "text": "How much do you think the kid\u2019s friend HAS TO?",
+      "src": "assets/narration/nr_278.mp3",
       "kind": "prompt",
-      "status": "imported",
+      "status": "verified-local-audio-derivative",
       "uses": [
         {
           "stepId": "woman-sister-friend:obligation-helper2-amount",
@@ -9049,12 +9222,33 @@
           "part": "prompt"
         }
       ],
-      "sha256": "98ef5a4d1dab4b4eecf2abe0cfbcf7ecdf6eafc7e79215e98f433398d6df91b6",
-      "bytes": 195441,
-      "durationSeconds": 4.8849,
+      "sha256": "2c73b089a34f37997480658a1e0c2f37817e97e8ce830f2b5362344886f62815",
+      "bytes": 136925,
+      "durationSeconds": 3.395918,
       "provenance": {
+        "copiedWithoutReencoding": false,
+        "localAudioDerivative": true,
+        "decodeVerified": true,
+        "offlineAdjustedWordSequenceVerified": true,
+        "nativeProsodyReplacementStillPending": true,
+        "audioProcessing": {
+          "kind": "leading-role-context-trimmed-from-existing-Evelyn-recording",
+          "sourceRecording": {
+            "id": "nr_063",
+            "sha256": "98ef5a4d1dab4b4eecf2abe0cfbcf7ecdf6eafc7e79215e98f433398d6df91b6",
+            "src": "assets/narration/nr_063.mp3",
+            "retainedSourceStartSeconds": 1.52,
+            "retainedSourceEndSeconds": 4.884897959183673,
+            "retainedDecodedSamples": 148392
+          },
+          "originalRetainedPcmSamplesPreservedBeforeEncoding": true,
+          "speechPitchShifted": false,
+          "speechTimeStretched": false,
+          "encoder": "ffmpeg libmp3lame 320 kbps mono",
+          "verification": "Unprompted offline Whisper-base.en normalized full word sequence; original source hash and retained PCM verification. Human listening verification not claimed."
+        },
         "provider": "NaturalReaders Commercial",
-        "voice": {
+        "sourceVoice": {
           "provider": "NaturalReaders Commercial",
           "name": "Evelyn",
           "style": "Soft",
@@ -9066,17 +9260,17 @@
           "exportNaming": "Index + Segment",
           "preferredBitrateKbps": 320,
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "62.The_kid\u2019s_friend._How_much_do_.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
+        }
       },
       "narrationEmphasis": {
-        "status": "awaiting-new-recording",
-        "originalRecordedText": "The kid\u2019s friend. How much do you think the kid\u2019s friend has to?",
-        "visualCaseOnly": true
+        "status": "verified-local-audio-derivative",
+        "visualCaseOnly": false,
+        "nativeProsodyReplacementStillPending": true
+      },
+      "decodedDurationSeconds": 3.3648979591836734,
+      "audioTreatment": {
+        "kind": "leading-role-context-trimmed-from-existing-Evelyn-recording",
+        "extraRoleHeadingRemoved": true
       }
     },
     {
@@ -9886,11 +10080,11 @@
       }
     },
     {
-      "id": "nr_080",
-      "text": "The kid\u2019s best friend. How much do you think the kid\u2019s best friend HAS TO?",
-      "src": "assets/narration/nr_080.mp3",
+      "id": "nr_279",
+      "text": "How much do you think the kid\u2019s best friend HAS TO?",
+      "src": "assets/narration/nr_279.mp3",
       "kind": "prompt",
-      "status": "imported",
+      "status": "verified-local-audio-derivative",
       "uses": [
         {
           "stepId": "woman-bestfriend-friend:obligation-helper2-amount",
@@ -9903,12 +10097,33 @@
           "part": "prompt"
         }
       ],
-      "sha256": "3d4c678ba09e54b2b680a0dd44f2671fc5197ab54bebc5907032822cc711047d",
-      "bytes": 216338,
-      "durationSeconds": 5.407325,
+      "sha256": "5201868a415df9c5170561e8f9fc5dd7213bd264d4956581589d1b4100c5bea8",
+      "bytes": 145285,
+      "durationSeconds": 3.604898,
       "provenance": {
+        "copiedWithoutReencoding": false,
+        "localAudioDerivative": true,
+        "decodeVerified": true,
+        "offlineAdjustedWordSequenceVerified": true,
+        "nativeProsodyReplacementStillPending": true,
+        "audioProcessing": {
+          "kind": "leading-role-context-trimmed-from-existing-Evelyn-recording",
+          "sourceRecording": {
+            "id": "nr_080",
+            "sha256": "3d4c678ba09e54b2b680a0dd44f2671fc5197ab54bebc5907032822cc711047d",
+            "src": "assets/narration/nr_080.mp3",
+            "retainedSourceStartSeconds": 1.84,
+            "retainedSourceEndSeconds": 5.40734693877551,
+            "retainedDecodedSamples": 157320
+          },
+          "originalRetainedPcmSamplesPreservedBeforeEncoding": true,
+          "speechPitchShifted": false,
+          "speechTimeStretched": false,
+          "encoder": "ffmpeg libmp3lame 320 kbps mono",
+          "verification": "Unprompted offline Whisper-base.en normalized full word sequence; original source hash and retained PCM verification. Human listening verification not claimed."
+        },
         "provider": "NaturalReaders Commercial",
-        "voice": {
+        "sourceVoice": {
           "provider": "NaturalReaders Commercial",
           "name": "Evelyn",
           "style": "Soft",
@@ -9920,17 +10135,17 @@
           "exportNaming": "Index + Segment",
           "preferredBitrateKbps": 320,
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "79.The_kid\u2019s_best_friend._How_muc.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
+        }
       },
       "narrationEmphasis": {
-        "status": "awaiting-new-recording",
-        "originalRecordedText": "The kid\u2019s best friend. How much do you think the kid\u2019s best friend has to?",
-        "visualCaseOnly": true
+        "status": "verified-local-audio-derivative",
+        "visualCaseOnly": false,
+        "nativeProsodyReplacementStillPending": true
+      },
+      "decodedDurationSeconds": 3.5673469387755103,
+      "audioTreatment": {
+        "kind": "leading-role-context-trimmed-from-existing-Evelyn-recording",
+        "extraRoleHeadingRemoved": true
       }
     },
     {
@@ -10653,11 +10868,11 @@
       }
     },
     {
-      "id": "nr_096",
-      "text": "The kid\u2019s classmate. How much do you think the kid\u2019s classmate HAS TO?",
-      "src": "assets/narration/nr_096.mp3",
+      "id": "nr_280",
+      "text": "How much do you think the kid\u2019s classmate HAS TO?",
+      "src": "assets/narration/nr_280.mp3",
       "kind": "prompt",
-      "status": "imported",
+      "status": "verified-local-audio-derivative",
       "uses": [
         {
           "stepId": "woman-teacher-classmate:obligation-helper1-amount",
@@ -10675,12 +10890,33 @@
           "part": "prompt"
         }
       ],
-      "sha256": "665cdbd1af96f080798db11cad81b32d9f2bb554aa6495c8297b5f31ea420640",
-      "bytes": 214249,
-      "durationSeconds": 5.3551,
+      "sha256": "d2834219d554d8f00e6a3b838971cc95f64eada3ed84f513773fbf62ab2c8e52",
+      "bytes": 146329,
+      "durationSeconds": 3.63102,
       "provenance": {
+        "copiedWithoutReencoding": false,
+        "localAudioDerivative": true,
+        "decodeVerified": true,
+        "offlineAdjustedWordSequenceVerified": true,
+        "nativeProsodyReplacementStillPending": true,
+        "audioProcessing": {
+          "kind": "leading-role-context-trimmed-from-existing-Evelyn-recording",
+          "sourceRecording": {
+            "id": "nr_096",
+            "sha256": "665cdbd1af96f080798db11cad81b32d9f2bb554aa6495c8297b5f31ea420640",
+            "src": "assets/narration/nr_096.mp3",
+            "retainedSourceStartSeconds": 1.76,
+            "retainedSourceEndSeconds": 5.355102040816327,
+            "retainedDecodedSamples": 158544
+          },
+          "originalRetainedPcmSamplesPreservedBeforeEncoding": true,
+          "speechPitchShifted": false,
+          "speechTimeStretched": false,
+          "encoder": "ffmpeg libmp3lame 320 kbps mono",
+          "verification": "Unprompted offline Whisper-base.en normalized full word sequence; original source hash and retained PCM verification. Human listening verification not claimed."
+        },
         "provider": "NaturalReaders Commercial",
-        "voice": {
+        "sourceVoice": {
           "provider": "NaturalReaders Commercial",
           "name": "Evelyn",
           "style": "Soft",
@@ -10692,17 +10928,17 @@
           "exportNaming": "Index + Segment",
           "preferredBitrateKbps": 320,
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "95.The_kid\u2019s_classmate._How_much_.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
+        }
       },
       "narrationEmphasis": {
-        "status": "awaiting-new-recording",
-        "originalRecordedText": "The kid\u2019s classmate. How much do you think the kid\u2019s classmate has to?",
-        "visualCaseOnly": true
+        "status": "verified-local-audio-derivative",
+        "visualCaseOnly": false,
+        "nativeProsodyReplacementStillPending": true
+      },
+      "decodedDurationSeconds": 3.5951020408163266,
+      "audioTreatment": {
+        "kind": "leading-role-context-trimmed-from-existing-Evelyn-recording",
+        "extraRoleHeadingRemoved": true
       }
     },
     {
@@ -11254,11 +11490,11 @@
       }
     },
     {
-      "id": "nr_108",
-      "text": "The kid\u2019s dad. How much do you think he HAS TO?",
-      "src": "assets/narration/nr_108.mp3",
+      "id": "nr_281",
+      "text": "How much do you think the kid\u2019s dad HAS TO?",
+      "src": "assets/narration/nr_281.mp3",
       "kind": "prompt",
-      "status": "imported",
+      "status": "verified-local-audio-derivative",
       "uses": [
         {
           "stepId": "man-dad-teacher:obligation-helper2-amount",
@@ -11281,12 +11517,87 @@
           "part": "prompt"
         }
       ],
-      "sha256": "8e2418be2e26ae7ebce9be3427e2858f7eb1ef05683a60d363dbf17916cfdbb7",
-      "bytes": 165138,
-      "durationSeconds": 4.127325,
+      "sha256": "2ad47034b2f6b75d86b9cb6c4d25699b8a9e90ea8863c839d0e7eff1f8d0c9df",
+      "bytes": 153644,
+      "durationSeconds": 3.813878,
       "provenance": {
+        "copiedWithoutReencoding": false,
+        "localAudioDerivative": true,
+        "decodeVerified": true,
+        "offlineAdjustedWordSequenceVerified": true,
+        "nativeProsodyReplacementStillPending": true,
+        "audioProcessing": {
+          "kind": "assembled-full-role-question-from-existing-Evelyn-recordings",
+          "sourceRecordings": [
+            {
+              "id": "nr_108",
+              "sha256": "8e2418be2e26ae7ebce9be3427e2858f7eb1ef05683a60d363dbf17916cfdbb7",
+              "retainedSourceStartSeconds": 1.6013378684807256,
+              "retainedSourceEndSeconds": 2.696190476190476,
+              "retainedDecodedSamples": 48283,
+              "role": "Complete How much do you think clause",
+              "nominalCandidateStartSeconds": 1.6,
+              "nominalCandidateEndSeconds": 2.695,
+              "startCutAdjustmentSeconds": 0.0013378684807256237,
+              "endCutAdjustmentSeconds": 0.001179138321995465,
+              "firstRetainedPcmSample": -5.717719275821764e-08,
+              "lastRetainedPcmSample": -4.493275440609068e-08,
+              "first10msRms": 2.7225563826505095e-05,
+              "last10msRms": 0.0013035362353548408
+            },
+            {
+              "id": "nr_108",
+              "sha256": "8e2418be2e26ae7ebce9be3427e2858f7eb1ef05683a60d363dbf17916cfdbb7",
+              "retainedSourceStartSeconds": 0.0,
+              "retainedSourceEndSeconds": 1.341814058956916,
+              "retainedDecodedSamples": 59174,
+              "role": "Complete full role phrase from original heading",
+              "nominalCandidateStartSeconds": 0,
+              "nominalCandidateEndSeconds": 1.34,
+              "startCutAdjustmentSeconds": 0.0,
+              "endCutAdjustmentSeconds": 0.0018140589569160999,
+              "firstRetainedPcmSample": 0.0,
+              "lastRetainedPcmSample": -3.7123447782505536e-06,
+              "first10msRms": 0.0,
+              "last10msRms": 0.00021172073320485651
+            },
+            {
+              "id": "nr_108",
+              "sha256": "8e2418be2e26ae7ebce9be3427e2858f7eb1ef05683a60d363dbf17916cfdbb7",
+              "retainedSourceStartSeconds": 2.925918367346939,
+              "retainedSourceEndSeconds": 4.12734693877551,
+              "retainedDecodedSamples": 52983,
+              "role": "HAS TO tail from original question",
+              "nominalCandidateStartSeconds": 2.925,
+              "nominalCandidateEndSeconds": 4.12734693877551,
+              "startCutAdjustmentSeconds": 0.0009297052154195011,
+              "endCutAdjustmentSeconds": 0.0,
+              "firstRetainedPcmSample": 2.9342361813178286e-05,
+              "lastRetainedPcmSample": 0.0,
+              "first10msRms": 0.03695383295416832,
+              "last10msRms": 0.0
+            }
+          ],
+          "joinPauses": [
+            {
+              "start": 1.0948526077097505,
+              "end": 1.1498639455782314
+            },
+            {
+              "start": 2.491678004535147,
+              "end": 2.5716780045351473
+            }
+          ],
+          "originalRetainedPcmSamplesPreservedBeforeEncoding": true,
+          "speechPitchShifted": false,
+          "speechTimeStretched": false,
+          "encoder": "ffmpeg libmp3lame 320 kbps mono",
+          "zeroCrossingCutRefinementMaxSeconds": 0.002,
+          "verification": "Unprompted offline Whisper-base.en exact normalized full word sequence; measured join silence; source hashes and retained PCM verified. Human listening verification not claimed.",
+          "intonationLimit": "Role phrase retains its original sentence-level inflection; a native full-question NaturalReaders recording is still pending."
+        },
         "provider": "NaturalReaders Commercial",
-        "voice": {
+        "sourceVoice": {
           "provider": "NaturalReaders Commercial",
           "name": "Evelyn",
           "style": "Soft",
@@ -11298,17 +11609,17 @@
           "exportNaming": "Index + Segment",
           "preferredBitrateKbps": 320,
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "7.The_kid\u2019s_dad._How_much_do_you.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
+        }
       },
       "narrationEmphasis": {
-        "status": "awaiting-new-recording",
-        "originalRecordedText": "The kid\u2019s dad. How much do you think he has to?",
-        "visualCaseOnly": true
+        "status": "verified-local-audio-derivative",
+        "visualCaseOnly": false,
+        "nativeProsodyReplacementStillPending": true
+      },
+      "decodedDurationSeconds": 3.773106575963719,
+      "audioTreatment": {
+        "kind": "assembled-full-role-question-from-existing-Evelyn-recordings",
+        "extraRoleHeadingRemoved": true
       }
     },
     {
@@ -11836,11 +12147,11 @@
       }
     },
     {
-      "id": "nr_120",
-      "text": "The kid\u2019s brother. How much do you think he HAS TO?",
-      "src": "assets/narration/nr_120.mp3",
+      "id": "nr_282",
+      "text": "How much do you think the kid\u2019s brother HAS TO?",
+      "src": "assets/narration/nr_282.mp3",
       "kind": "prompt",
-      "status": "imported",
+      "status": "verified-local-audio-derivative",
       "uses": [
         {
           "stepId": "man-brother-friend:obligation-helper1-amount",
@@ -11858,12 +12169,87 @@
           "part": "prompt"
         }
       ],
-      "sha256": "02dc37620d16194c21172146ad1af79479da70fcd7ea471eb0c3a95aa0241275",
-      "bytes": 169318,
-      "durationSeconds": 4.231825,
+      "sha256": "3cd2263735d6d0d2ba599eb19d4ac7882b46d34120678faa96cfbd23d92a65ac",
+      "bytes": 155733,
+      "durationSeconds": 3.866122,
       "provenance": {
+        "copiedWithoutReencoding": false,
+        "localAudioDerivative": true,
+        "decodeVerified": true,
+        "offlineAdjustedWordSequenceVerified": true,
+        "nativeProsodyReplacementStillPending": true,
+        "audioProcessing": {
+          "kind": "assembled-full-role-question-from-existing-Evelyn-recordings",
+          "sourceRecordings": [
+            {
+              "id": "nr_120",
+              "sha256": "02dc37620d16194c21172146ad1af79479da70fcd7ea471eb0c3a95aa0241275",
+              "retainedSourceStartSeconds": 1.6996598639455782,
+              "retainedSourceEndSeconds": 2.7962131519274376,
+              "retainedDecodedSamples": 48358,
+              "role": "Complete How much do you think clause",
+              "nominalCandidateStartSeconds": 1.7,
+              "nominalCandidateEndSeconds": 2.795,
+              "startCutAdjustmentSeconds": -0.0003401360544217687,
+              "endCutAdjustmentSeconds": 0.001201814058956916,
+              "firstRetainedPcmSample": 4.159294686445492e-09,
+              "lastRetainedPcmSample": -6.379314640980738e-07,
+              "first10msRms": 2.75282818620326e-05,
+              "last10msRms": 0.001303798402659595
+            },
+            {
+              "id": "nr_120",
+              "sha256": "02dc37620d16194c21172146ad1af79479da70fcd7ea471eb0c3a95aa0241275",
+              "retainedSourceStartSeconds": 0.0,
+              "retainedSourceEndSeconds": 1.3986167800453515,
+              "retainedDecodedSamples": 61679,
+              "role": "Complete full role phrase from original heading",
+              "nominalCandidateStartSeconds": 0,
+              "nominalCandidateEndSeconds": 1.4,
+              "startCutAdjustmentSeconds": 0.0,
+              "endCutAdjustmentSeconds": -0.001383219954648526,
+              "firstRetainedPcmSample": 0.0,
+              "lastRetainedPcmSample": 4.997554583496822e-07,
+              "first10msRms": 0.0,
+              "last10msRms": 0.00017130789638031274
+            },
+            {
+              "id": "nr_120",
+              "sha256": "02dc37620d16194c21172146ad1af79479da70fcd7ea471eb0c3a95aa0241275",
+              "retainedSourceStartSeconds": 3.025918367346939,
+              "retainedSourceEndSeconds": 4.231836734693878,
+              "retainedDecodedSamples": 53181,
+              "role": "HAS TO tail from original question",
+              "nominalCandidateStartSeconds": 3.025,
+              "nominalCandidateEndSeconds": 4.231836734693878,
+              "startCutAdjustmentSeconds": 0.0009297052154195011,
+              "endCutAdjustmentSeconds": 0.0,
+              "firstRetainedPcmSample": 1.575846181367524e-05,
+              "lastRetainedPcmSample": 0.0,
+              "first10msRms": 0.03695818781852722,
+              "last10msRms": 0.0
+            }
+          ],
+          "joinPauses": [
+            {
+              "start": 1.0965532879818594,
+              "end": 1.15156462585034
+            },
+            {
+              "start": 2.5501814058956915,
+              "end": 2.6301814058956916
+            }
+          ],
+          "originalRetainedPcmSamplesPreservedBeforeEncoding": true,
+          "speechPitchShifted": false,
+          "speechTimeStretched": false,
+          "encoder": "ffmpeg libmp3lame 320 kbps mono",
+          "zeroCrossingCutRefinementMaxSeconds": 0.002,
+          "verification": "Unprompted offline Whisper-base.en exact normalized full word sequence; measured join silence; source hashes and retained PCM verified. Human listening verification not claimed.",
+          "intonationLimit": "Role phrase retains its original sentence-level inflection; a native full-question NaturalReaders recording is still pending."
+        },
         "provider": "NaturalReaders Commercial",
-        "voice": {
+        "sourceVoice": {
           "provider": "NaturalReaders Commercial",
           "name": "Evelyn",
           "style": "Soft",
@@ -11875,17 +12261,17 @@
           "exportNaming": "Index + Segment",
           "preferredBitrateKbps": 320,
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "19.The_kid\u2019s_brother._How_much_do.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
+        }
       },
       "narrationEmphasis": {
-        "status": "awaiting-new-recording",
-        "originalRecordedText": "The kid\u2019s brother. How much do you think he has to?",
-        "visualCaseOnly": true
+        "status": "verified-local-audio-derivative",
+        "visualCaseOnly": false,
+        "nativeProsodyReplacementStillPending": true
+      },
+      "decodedDurationSeconds": 3.8360997732426303,
+      "audioTreatment": {
+        "kind": "assembled-full-role-question-from-existing-Evelyn-recordings",
+        "extraRoleHeadingRemoved": true
       }
     },
     {
@@ -12774,11 +13160,11 @@
       }
     },
     {
-      "id": "nr_141",
-      "text": "The kid. How much do you think the kid HAS TO?",
-      "src": "assets/narration/nr_141.mp3",
+      "id": "nr_283",
+      "text": "How much do you think the kid HAS TO?",
+      "src": "assets/narration/nr_283.mp3",
       "kind": "prompt",
-      "status": "imported",
+      "status": "verified-local-audio-derivative",
       "uses": [
         {
           "stepId": "family-dad-kid:obligation-helper2-amount",
@@ -12796,12 +13182,33 @@
           "part": "prompt"
         }
       ],
-      "sha256": "e271faabbd36a0a87b0f46935ed5d88009bcb89cf8e9a323b676287c28aec782",
-      "bytes": 162004,
-      "durationSeconds": 4.048975,
+      "sha256": "f5212abe4a544a898c4423f559e3385192c3eb169209b863a9bd1384fea2804e",
+      "bytes": 117072,
+      "durationSeconds": 2.899592,
       "provenance": {
+        "copiedWithoutReencoding": false,
+        "localAudioDerivative": true,
+        "decodeVerified": true,
+        "offlineAdjustedWordSequenceVerified": true,
+        "nativeProsodyReplacementStillPending": true,
+        "audioProcessing": {
+          "kind": "leading-role-context-trimmed-from-existing-Evelyn-recording",
+          "sourceRecording": {
+            "id": "nr_141",
+            "sha256": "e271faabbd36a0a87b0f46935ed5d88009bcb89cf8e9a323b676287c28aec782",
+            "src": "assets/narration/nr_141.mp3",
+            "retainedSourceStartSeconds": 1.2,
+            "retainedSourceEndSeconds": 4.048979591836734,
+            "retainedDecodedSamples": 125640
+          },
+          "originalRetainedPcmSamplesPreservedBeforeEncoding": true,
+          "speechPitchShifted": false,
+          "speechTimeStretched": false,
+          "encoder": "ffmpeg libmp3lame 320 kbps mono",
+          "verification": "Unprompted offline Whisper-base.en normalized full word sequence; original source hash and retained PCM verification. Human listening verification not claimed."
+        },
         "provider": "NaturalReaders Commercial",
-        "voice": {
+        "sourceVoice": {
           "provider": "NaturalReaders Commercial",
           "name": "Evelyn",
           "style": "Soft",
@@ -12813,17 +13220,17 @@
           "exportNaming": "Index + Segment",
           "preferredBitrateKbps": 320,
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "40.The_kid._How_much_do_you_think.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
+        }
       },
       "narrationEmphasis": {
-        "status": "awaiting-new-recording",
-        "originalRecordedText": "The kid. How much do you think the kid has to?",
-        "visualCaseOnly": true
+        "status": "verified-local-audio-derivative",
+        "visualCaseOnly": false,
+        "nativeProsodyReplacementStillPending": true
+      },
+      "decodedDurationSeconds": 2.8489795918367347,
+      "audioTreatment": {
+        "kind": "leading-role-context-trimmed-from-existing-Evelyn-recording",
+        "extraRoleHeadingRemoved": true
       }
     },
     {
@@ -14325,11 +14732,11 @@
       }
     },
     {
-      "id": "nr_181",
-      "text": "The teacher on the left. How much do you think the teacher on the left HAS TO?",
-      "src": "assets/narration/nr_181.mp3",
+      "id": "nr_284",
+      "text": "How much do you think the teacher on the left HAS TO?",
+      "src": "assets/narration/nr_284.mp3",
       "kind": "prompt",
-      "status": "imported",
+      "status": "verified-local-audio-derivative",
       "uses": [
         {
           "stepId": "family-teacher-kid:obligation-helper1-amount",
@@ -14337,12 +14744,33 @@
           "part": "prompt"
         }
       ],
-      "sha256": "1bf85ffd9e61f7fa400c351fea9fa43617061f7eb970d3bab21b0924d57b8999",
-      "bytes": 217383,
-      "durationSeconds": 5.43345,
+      "sha256": "8c9a8b0688764991604dcd7f2a93d93e55d46bf7b028ddfdf92ae2507409d33b",
+      "bytes": 139015,
+      "durationSeconds": 3.448163,
       "provenance": {
+        "copiedWithoutReencoding": false,
+        "localAudioDerivative": true,
+        "decodeVerified": true,
+        "offlineAdjustedWordSequenceVerified": true,
+        "nativeProsodyReplacementStillPending": true,
+        "audioProcessing": {
+          "kind": "leading-role-context-trimmed-from-existing-Evelyn-recording",
+          "sourceRecording": {
+            "id": "nr_181",
+            "sha256": "1bf85ffd9e61f7fa400c351fea9fa43617061f7eb970d3bab21b0924d57b8999",
+            "src": "assets/narration/nr_181.mp3",
+            "retainedSourceStartSeconds": 2.02,
+            "retainedSourceEndSeconds": 5.433469387755102,
+            "retainedDecodedSamples": 150534
+          },
+          "originalRetainedPcmSamplesPreservedBeforeEncoding": true,
+          "speechPitchShifted": false,
+          "speechTimeStretched": false,
+          "encoder": "ffmpeg libmp3lame 320 kbps mono",
+          "verification": "Unprompted offline Whisper-base.en normalized full word sequence; original source hash and retained PCM verification. Human listening verification not claimed."
+        },
         "provider": "NaturalReaders Commercial",
-        "voice": {
+        "sourceVoice": {
           "provider": "NaturalReaders Commercial",
           "name": "Evelyn",
           "style": "Soft",
@@ -14354,17 +14782,17 @@
           "exportNaming": "Index + Segment",
           "preferredBitrateKbps": 320,
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "80.The_teacher_on_the_left._How_m.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
+        }
       },
       "narrationEmphasis": {
-        "status": "awaiting-new-recording",
-        "originalRecordedText": "The teacher on the left. How much do you think the teacher on the left has to?",
-        "visualCaseOnly": true
+        "status": "verified-local-audio-derivative",
+        "visualCaseOnly": false,
+        "nativeProsodyReplacementStillPending": true
+      },
+      "decodedDurationSeconds": 3.413469387755102,
+      "audioTreatment": {
+        "kind": "leading-role-context-trimmed-from-existing-Evelyn-recording",
+        "extraRoleHeadingRemoved": true
       }
     },
     {
@@ -16092,7 +16520,7 @@
       "proposedWording": false
     },
     "woman-mom-teacher:obligation-helper1-amount": {
-      "prompt": "nr_026",
+      "prompt": "nr_275",
       "reminder": null,
       "options": [
         "nr_018",
@@ -16111,7 +16539,7 @@
       "proposedWording": false
     },
     "woman-mom-teacher:obligation-helper2-amount": {
-      "prompt": "nr_028",
+      "prompt": "nr_276",
       "reminder": null,
       "options": [
         "nr_018",
@@ -16353,7 +16781,7 @@
       "proposedWording": false
     },
     "woman-sister-friend:obligation-helper1-amount": {
-      "prompt": "nr_061",
+      "prompt": "nr_277",
       "reminder": null,
       "options": [
         "nr_018",
@@ -16372,7 +16800,7 @@
       "proposedWording": false
     },
     "woman-sister-friend:obligation-helper2-amount": {
-      "prompt": "nr_063",
+      "prompt": "nr_278",
       "reminder": null,
       "options": [
         "nr_018",
@@ -16614,7 +17042,7 @@
       "proposedWording": false
     },
     "woman-bestfriend-friend:obligation-helper1-amount": {
-      "prompt": "nr_063",
+      "prompt": "nr_278",
       "reminder": null,
       "options": [
         "nr_018",
@@ -16633,7 +17061,7 @@
       "proposedWording": false
     },
     "woman-bestfriend-friend:obligation-helper2-amount": {
-      "prompt": "nr_080",
+      "prompt": "nr_279",
       "reminder": null,
       "options": [
         "nr_018",
@@ -16875,7 +17303,7 @@
       "proposedWording": false
     },
     "woman-teacher-friend:obligation-helper1-amount": {
-      "prompt": "nr_026",
+      "prompt": "nr_275",
       "reminder": null,
       "options": [
         "nr_018",
@@ -16894,7 +17322,7 @@
       "proposedWording": false
     },
     "woman-teacher-friend:obligation-helper2-amount": {
-      "prompt": "nr_063",
+      "prompt": "nr_278",
       "reminder": null,
       "options": [
         "nr_018",
@@ -17136,7 +17564,7 @@
       "proposedWording": false
     },
     "woman-mom-sister:obligation-helper1-amount": {
-      "prompt": "nr_028",
+      "prompt": "nr_276",
       "reminder": null,
       "options": [
         "nr_018",
@@ -17155,7 +17583,7 @@
       "proposedWording": false
     },
     "woman-mom-sister:obligation-helper2-amount": {
-      "prompt": "nr_061",
+      "prompt": "nr_277",
       "reminder": null,
       "options": [
         "nr_018",
@@ -17397,7 +17825,7 @@
       "proposedWording": false
     },
     "woman-teacher-classmate:obligation-helper1-amount": {
-      "prompt": "nr_096",
+      "prompt": "nr_280",
       "reminder": null,
       "options": [
         "nr_018",
@@ -17416,7 +17844,7 @@
       "proposedWording": false
     },
     "woman-teacher-classmate:obligation-helper2-amount": {
-      "prompt": "nr_026",
+      "prompt": "nr_275",
       "reminder": null,
       "options": [
         "nr_018",
@@ -17658,7 +18086,7 @@
       "proposedWording": false
     },
     "man-dad-teacher:obligation-helper1-amount": {
-      "prompt": "nr_026",
+      "prompt": "nr_275",
       "reminder": null,
       "options": [
         "nr_018",
@@ -17677,7 +18105,7 @@
       "proposedWording": false
     },
     "man-dad-teacher:obligation-helper2-amount": {
-      "prompt": "nr_108",
+      "prompt": "nr_281",
       "reminder": null,
       "options": [
         "nr_018",
@@ -17919,7 +18347,7 @@
       "proposedWording": false
     },
     "man-brother-friend:obligation-helper1-amount": {
-      "prompt": "nr_120",
+      "prompt": "nr_282",
       "reminder": null,
       "options": [
         "nr_018",
@@ -17938,7 +18366,7 @@
       "proposedWording": false
     },
     "man-brother-friend:obligation-helper2-amount": {
-      "prompt": "nr_063",
+      "prompt": "nr_278",
       "reminder": null,
       "options": [
         "nr_018",
@@ -18180,7 +18608,7 @@
       "proposedWording": false
     },
     "man-bestfriend-friend:obligation-helper1-amount": {
-      "prompt": "nr_063",
+      "prompt": "nr_278",
       "reminder": null,
       "options": [
         "nr_018",
@@ -18199,7 +18627,7 @@
       "proposedWording": false
     },
     "man-bestfriend-friend:obligation-helper2-amount": {
-      "prompt": "nr_080",
+      "prompt": "nr_279",
       "reminder": null,
       "options": [
         "nr_018",
@@ -18441,7 +18869,7 @@
       "proposedWording": false
     },
     "man-teacher-friend:obligation-helper1-amount": {
-      "prompt": "nr_026",
+      "prompt": "nr_275",
       "reminder": null,
       "options": [
         "nr_018",
@@ -18460,7 +18888,7 @@
       "proposedWording": false
     },
     "man-teacher-friend:obligation-helper2-amount": {
-      "prompt": "nr_063",
+      "prompt": "nr_278",
       "reminder": null,
       "options": [
         "nr_018",
@@ -18702,7 +19130,7 @@
       "proposedWording": false
     },
     "man-dad-brother:obligation-helper1-amount": {
-      "prompt": "nr_108",
+      "prompt": "nr_281",
       "reminder": null,
       "options": [
         "nr_018",
@@ -18721,7 +19149,7 @@
       "proposedWording": false
     },
     "man-dad-brother:obligation-helper2-amount": {
-      "prompt": "nr_120",
+      "prompt": "nr_282",
       "reminder": null,
       "options": [
         "nr_018",
@@ -18963,7 +19391,7 @@
       "proposedWording": false
     },
     "man-teacher-classmate:obligation-helper1-amount": {
-      "prompt": "nr_096",
+      "prompt": "nr_280",
       "reminder": null,
       "options": [
         "nr_018",
@@ -18982,7 +19410,7 @@
       "proposedWording": false
     },
     "man-teacher-classmate:obligation-helper2-amount": {
-      "prompt": "nr_026",
+      "prompt": "nr_275",
       "reminder": null,
       "options": [
         "nr_018",
@@ -19224,7 +19652,7 @@
       "proposedWording": false
     },
     "family-mom-dad:obligation-helper1-amount": {
-      "prompt": "nr_108",
+      "prompt": "nr_281",
       "reminder": null,
       "options": [
         "nr_018",
@@ -19243,7 +19671,7 @@
       "proposedWording": false
     },
     "family-mom-dad:obligation-helper2-amount": {
-      "prompt": "nr_028",
+      "prompt": "nr_276",
       "reminder": null,
       "options": [
         "nr_018",
@@ -19485,7 +19913,7 @@
       "proposedWording": false
     },
     "family-sister-brother:obligation-helper1-amount": {
-      "prompt": "nr_061",
+      "prompt": "nr_277",
       "reminder": null,
       "options": [
         "nr_018",
@@ -19504,7 +19932,7 @@
       "proposedWording": false
     },
     "family-sister-brother:obligation-helper2-amount": {
-      "prompt": "nr_120",
+      "prompt": "nr_282",
       "reminder": null,
       "options": [
         "nr_018",
@@ -19746,7 +20174,7 @@
       "proposedWording": false
     },
     "family-dad-kid:obligation-helper1-amount": {
-      "prompt": "nr_108",
+      "prompt": "nr_281",
       "reminder": null,
       "options": [
         "nr_018",
@@ -19765,7 +20193,7 @@
       "proposedWording": false
     },
     "family-dad-kid:obligation-helper2-amount": {
-      "prompt": "nr_141",
+      "prompt": "nr_283",
       "reminder": null,
       "options": [
         "nr_018",
@@ -20007,7 +20435,7 @@
       "proposedWording": false
     },
     "family-mom-kid:obligation-helper1-amount": {
-      "prompt": "nr_141",
+      "prompt": "nr_283",
       "reminder": null,
       "options": [
         "nr_018",
@@ -20026,7 +20454,7 @@
       "proposedWording": false
     },
     "family-mom-kid:obligation-helper2-amount": {
-      "prompt": "nr_028",
+      "prompt": "nr_276",
       "reminder": null,
       "options": [
         "nr_018",
@@ -20268,7 +20696,7 @@
       "proposedWording": false
     },
     "family-teacher-kid:obligation-helper1-amount": {
-      "prompt": "nr_181",
+      "prompt": "nr_284",
       "reminder": null,
       "options": [
         "nr_018",
@@ -20287,7 +20715,7 @@
       "proposedWording": false
     },
     "family-teacher-kid:obligation-helper2-amount": {
-      "prompt": "nr_141",
+      "prompt": "nr_283",
       "reminder": null,
       "options": [
         "nr_018",
@@ -20529,7 +20957,7 @@
       "proposedWording": false
     },
     "family-teacher-classmate:obligation-helper1-amount": {
-      "prompt": "nr_096",
+      "prompt": "nr_280",
       "reminder": null,
       "options": [
         "nr_018",
@@ -20548,7 +20976,7 @@
       "proposedWording": false
     },
     "family-teacher-classmate:obligation-helper2-amount": {
-      "prompt": "nr_026",
+      "prompt": "nr_275",
       "reminder": null,
       "options": [
         "nr_018",

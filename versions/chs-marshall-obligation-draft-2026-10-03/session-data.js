@@ -67,9 +67,9 @@
       });
       add(`obligation-${helper.id}-amount`, 'obligation-mom-amount', {
         phase:`Obligation strength · ${helperTitle(helper)}`,
-        text:`How much do you think ${helper.pronoun === 'they' ? helper.description : helper.pronoun} HAS TO?`,
+        text:`How much do you think ${helper.description} HAS TO?`,
         displayText:`How much do you think ${helper.description} HAS TO?`,
-        context:upper(helper.description), when:[`obligation-${helper.id}`, 'Yes']
+        when:[`obligation-${helper.id}`, 'Yes']
       });
     }
     const explicitOutcome = `No one helped ${recipient.description}. ${upper(helpers[0].description)} did NOT help ${recipient.description}. ${upper(helpers[1].description)} did NOT help ${recipient.description}.`;

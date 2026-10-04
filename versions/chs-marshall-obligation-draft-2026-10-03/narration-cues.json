@@ -1636,86 +1636,6 @@
       "alignmentFailures": [],
       "zeroDurationWordCount": 0
     },
-    "nr_026": {
-      "sha256": "50a48afee3ac7ebe35e74ab8fce65daecff5e17ad027f9b58879fb6a6605d7ef",
-      "durationSeconds": 4.989375,
-      "recognizedText": "The kids teacher. How much do you think the kids teacher has to?",
-      "words": [
-        {
-          "word": "The",
-          "start": 0.0,
-          "end": 0.26
-        },
-        {
-          "word": "kids",
-          "start": 0.26,
-          "end": 0.48
-        },
-        {
-          "word": "teacher.",
-          "start": 0.48,
-          "end": 1.54
-        },
-        {
-          "word": "How",
-          "start": 1.54,
-          "end": 2.08
-        },
-        {
-          "word": "much",
-          "start": 2.08,
-          "end": 2.26
-        },
-        {
-          "word": "do",
-          "start": 2.26,
-          "end": 2.48
-        },
-        {
-          "word": "you",
-          "start": 2.48,
-          "end": 2.56
-        },
-        {
-          "word": "think",
-          "start": 2.56,
-          "end": 2.78
-        },
-        {
-          "word": "the",
-          "start": 2.78,
-          "end": 2.96
-        },
-        {
-          "word": "kids",
-          "start": 2.96,
-          "end": 3.18
-        },
-        {
-          "word": "teacher",
-          "start": 3.18,
-          "end": 3.6
-        },
-        {
-          "word": "has",
-          "start": 3.6,
-          "end": 3.9
-        },
-        {
-          "word": "to?",
-          "start": 3.9,
-          "end": 4.52
-        }
-      ],
-      "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
-      "alignmentAudioFrames": 250,
-      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "The kid\u2019s teacher. How much do you think the kid\u2019s teacher HAS TO?",
-      "exactNormalizedWordMatch": true,
-      "alignmentValid": true,
-      "alignmentFailures": [],
-      "zeroDurationWordCount": 0
-    },
     "nr_027": {
       "sha256": "edeceb590267abd7cbe51b59df23ea42dd024067934bc07e100357a8617d3367",
       "durationSeconds": 5.276725,
@@ -1801,76 +1721,6 @@
       "alignmentAudioFrames": 264,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
       "expectedText": "Now, do you think the kid\u2019s mom HAS TO help the kid? Yes or No.",
-      "exactNormalizedWordMatch": true,
-      "alignmentValid": true,
-      "alignmentFailures": [],
-      "zeroDurationWordCount": 0
-    },
-    "nr_028": {
-      "sha256": "0b817c2f279e268b7c8e578a6f23f8428d096a94f5a49cb0b4daa227c47d26a6",
-      "durationSeconds": 4.2057,
-      "recognizedText": "The kids mom. How much do you think she has to?",
-      "words": [
-        {
-          "word": "The",
-          "start": 0.0,
-          "end": 0.26
-        },
-        {
-          "word": "kids",
-          "start": 0.26,
-          "end": 0.5
-        },
-        {
-          "word": "mom.",
-          "start": 0.5,
-          "end": 1.5
-        },
-        {
-          "word": "How",
-          "start": 1.5,
-          "end": 1.94
-        },
-        {
-          "word": "much",
-          "start": 1.94,
-          "end": 2.14
-        },
-        {
-          "word": "do",
-          "start": 2.14,
-          "end": 2.4
-        },
-        {
-          "word": "you",
-          "start": 2.4,
-          "end": 2.48
-        },
-        {
-          "word": "think",
-          "start": 2.48,
-          "end": 2.68
-        },
-        {
-          "word": "she",
-          "start": 2.68,
-          "end": 2.88
-        },
-        {
-          "word": "has",
-          "start": 2.88,
-          "end": 3.14
-        },
-        {
-          "word": "to?",
-          "start": 3.14,
-          "end": 3.72
-        }
-      ],
-      "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
-      "alignmentAudioFrames": 211,
-      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "The kid\u2019s mom. How much do you think she HAS TO?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -3993,76 +3843,6 @@
       "alignmentFailures": [],
       "zeroDurationWordCount": 0
     },
-    "nr_061": {
-      "sha256": "65707bbd7dca7c34d3129c87040d81fecafed07b3a230ccec93147e6a9e17229",
-      "durationSeconds": 4.336325,
-      "recognizedText": "The Kid's Sister. How much do you think she has to?",
-      "words": [
-        {
-          "word": "The",
-          "start": 0.0,
-          "end": 0.26
-        },
-        {
-          "word": "Kid's",
-          "start": 0.26,
-          "end": 0.66
-        },
-        {
-          "word": "Sister.",
-          "start": 0.66,
-          "end": 1.6
-        },
-        {
-          "word": "How",
-          "start": 1.6,
-          "end": 2.08
-        },
-        {
-          "word": "much",
-          "start": 2.08,
-          "end": 2.28
-        },
-        {
-          "word": "do",
-          "start": 2.28,
-          "end": 2.52
-        },
-        {
-          "word": "you",
-          "start": 2.52,
-          "end": 2.6
-        },
-        {
-          "word": "think",
-          "start": 2.6,
-          "end": 2.82
-        },
-        {
-          "word": "she",
-          "start": 2.82,
-          "end": 3.02
-        },
-        {
-          "word": "has",
-          "start": 3.02,
-          "end": 3.28
-        },
-        {
-          "word": "to?",
-          "start": 3.28,
-          "end": 3.86
-        }
-      ],
-      "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
-      "alignmentAudioFrames": 217,
-      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "The kid\u2019s sister. How much do you think she HAS TO?",
-      "exactNormalizedWordMatch": true,
-      "alignmentValid": true,
-      "alignmentFailures": [],
-      "zeroDurationWordCount": 0
-    },
     "nr_062": {
       "sha256": "9ebefcb879769cc77db5c6fd8c4122e972c0330dc6b2128204a00472025fc021",
       "durationSeconds": 5.276725,
@@ -4148,86 +3928,6 @@
       "alignmentAudioFrames": 264,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
       "expectedText": "Now, do you think the kid\u2019s friend HAS TO help the kid? Yes or No.",
-      "exactNormalizedWordMatch": true,
-      "alignmentValid": true,
-      "alignmentFailures": [],
-      "zeroDurationWordCount": 0
-    },
-    "nr_063": {
-      "sha256": "98ef5a4d1dab4b4eecf2abe0cfbcf7ecdf6eafc7e79215e98f433398d6df91b6",
-      "durationSeconds": 4.8849,
-      "recognizedText": "The kids' friend. How much do you think the kids' friend has to?",
-      "words": [
-        {
-          "word": "The",
-          "start": 0.0,
-          "end": 0.26
-        },
-        {
-          "word": "kids'",
-          "start": 0.26,
-          "end": 0.76
-        },
-        {
-          "word": "friend.",
-          "start": 0.76,
-          "end": 1.52
-        },
-        {
-          "word": "How",
-          "start": 1.52,
-          "end": 2.04
-        },
-        {
-          "word": "much",
-          "start": 2.04,
-          "end": 2.22
-        },
-        {
-          "word": "do",
-          "start": 2.22,
-          "end": 2.46
-        },
-        {
-          "word": "you",
-          "start": 2.46,
-          "end": 2.54
-        },
-        {
-          "word": "think",
-          "start": 2.54,
-          "end": 2.76
-        },
-        {
-          "word": "the",
-          "start": 2.76,
-          "end": 2.92
-        },
-        {
-          "word": "kids'",
-          "start": 2.92,
-          "end": 3.26
-        },
-        {
-          "word": "friend",
-          "start": 3.26,
-          "end": 3.54
-        },
-        {
-          "word": "has",
-          "start": 3.54,
-          "end": 3.8
-        },
-        {
-          "word": "to?",
-          "start": 3.8,
-          "end": 4.38
-        }
-      ],
-      "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
-      "alignmentAudioFrames": 245,
-      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "The kid\u2019s friend. How much do you think the kid\u2019s friend HAS TO?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -5523,96 +5223,6 @@
       "alignmentFailures": [],
       "zeroDurationWordCount": 0
     },
-    "nr_080": {
-      "sha256": "3d4c678ba09e54b2b680a0dd44f2671fc5197ab54bebc5907032822cc711047d",
-      "durationSeconds": 5.407325,
-      "recognizedText": "The kids best friend. How much do you think the kids best friend has to?",
-      "words": [
-        {
-          "word": "The",
-          "start": 0.0,
-          "end": 0.26
-        },
-        {
-          "word": "kids",
-          "start": 0.26,
-          "end": 0.48
-        },
-        {
-          "word": "best",
-          "start": 0.48,
-          "end": 0.8
-        },
-        {
-          "word": "friend.",
-          "start": 0.8,
-          "end": 1.84
-        },
-        {
-          "word": "How",
-          "start": 1.84,
-          "end": 2.3
-        },
-        {
-          "word": "much",
-          "start": 2.3,
-          "end": 2.48
-        },
-        {
-          "word": "do",
-          "start": 2.48,
-          "end": 2.72
-        },
-        {
-          "word": "you",
-          "start": 2.72,
-          "end": 2.8
-        },
-        {
-          "word": "think",
-          "start": 2.8,
-          "end": 3.0
-        },
-        {
-          "word": "the",
-          "start": 3.0,
-          "end": 3.16
-        },
-        {
-          "word": "kids",
-          "start": 3.16,
-          "end": 3.44
-        },
-        {
-          "word": "best",
-          "start": 3.44,
-          "end": 3.7
-        },
-        {
-          "word": "friend",
-          "start": 3.7,
-          "end": 4.06
-        },
-        {
-          "word": "has",
-          "start": 4.06,
-          "end": 4.36
-        },
-        {
-          "word": "to?",
-          "start": 4.36,
-          "end": 4.96
-        }
-      ],
-      "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
-      "alignmentAudioFrames": 271,
-      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "The kid\u2019s best friend. How much do you think the kid\u2019s best friend HAS TO?",
-      "exactNormalizedWordMatch": true,
-      "alignmentValid": true,
-      "alignmentFailures": [],
-      "zeroDurationWordCount": 0
-    },
     "nr_081": {
       "sha256": "84a9167adee25db1b7117ce0060aa5a61e29b5841540ee78daf6ae1ae23881b7",
       "durationSeconds": 4.937125,
@@ -6898,86 +6508,6 @@
       "alignmentFailures": [],
       "zeroDurationWordCount": 0
     },
-    "nr_096": {
-      "sha256": "665cdbd1af96f080798db11cad81b32d9f2bb554aa6495c8297b5f31ea420640",
-      "durationSeconds": 5.3551,
-      "recognizedText": "The Kids Classmate. How much do you think the Kids Classmate has to?",
-      "words": [
-        {
-          "word": "The",
-          "start": 0.0,
-          "end": 0.26
-        },
-        {
-          "word": "Kids",
-          "start": 0.26,
-          "end": 0.54
-        },
-        {
-          "word": "Classmate.",
-          "start": 0.54,
-          "end": 1.76
-        },
-        {
-          "word": "How",
-          "start": 1.76,
-          "end": 2.26
-        },
-        {
-          "word": "much",
-          "start": 2.26,
-          "end": 2.42
-        },
-        {
-          "word": "do",
-          "start": 2.42,
-          "end": 2.66
-        },
-        {
-          "word": "you",
-          "start": 2.66,
-          "end": 2.74
-        },
-        {
-          "word": "think",
-          "start": 2.74,
-          "end": 2.96
-        },
-        {
-          "word": "the",
-          "start": 2.96,
-          "end": 3.14
-        },
-        {
-          "word": "Kids",
-          "start": 3.14,
-          "end": 3.38
-        },
-        {
-          "word": "Classmate",
-          "start": 3.38,
-          "end": 4.02
-        },
-        {
-          "word": "has",
-          "start": 4.02,
-          "end": 4.3
-        },
-        {
-          "word": "to?",
-          "start": 4.3,
-          "end": 4.88
-        }
-      ],
-      "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
-      "alignmentAudioFrames": 268,
-      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "The kid\u2019s classmate. How much do you think the kid\u2019s classmate HAS TO?",
-      "exactNormalizedWordMatch": true,
-      "alignmentValid": true,
-      "alignmentFailures": [],
-      "zeroDurationWordCount": 0
-    },
     "nr_097": {
       "sha256": "0fae4f34458a2de2f6e65b675b0a8a2ba16247428dc86faafe4a0f5d6c8e5a19",
       "durationSeconds": 4.989375,
@@ -7869,76 +7399,6 @@
       "alignmentFailures": [],
       "zeroDurationWordCount": 0
     },
-    "nr_108": {
-      "sha256": "8e2418be2e26ae7ebce9be3427e2858f7eb1ef05683a60d363dbf17916cfdbb7",
-      "durationSeconds": 4.127325,
-      "recognizedText": "The kids' dad. How much do you think he has to?",
-      "words": [
-        {
-          "word": "The",
-          "start": 0.0,
-          "end": 0.24
-        },
-        {
-          "word": "kids'",
-          "start": 0.24,
-          "end": 0.7
-        },
-        {
-          "word": "dad.",
-          "start": 0.7,
-          "end": 1.48
-        },
-        {
-          "word": "How",
-          "start": 1.48,
-          "end": 1.9
-        },
-        {
-          "word": "much",
-          "start": 1.9,
-          "end": 2.1
-        },
-        {
-          "word": "do",
-          "start": 2.1,
-          "end": 2.36
-        },
-        {
-          "word": "you",
-          "start": 2.36,
-          "end": 2.42
-        },
-        {
-          "word": "think",
-          "start": 2.42,
-          "end": 2.64
-        },
-        {
-          "word": "he",
-          "start": 2.64,
-          "end": 2.8
-        },
-        {
-          "word": "has",
-          "start": 2.8,
-          "end": 3.04
-        },
-        {
-          "word": "to?",
-          "start": 3.04,
-          "end": 3.64
-        }
-      ],
-      "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
-      "alignmentAudioFrames": 207,
-      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "The kid\u2019s dad. How much do you think he HAS TO?",
-      "exactNormalizedWordMatch": true,
-      "alignmentValid": true,
-      "alignmentFailures": [],
-      "zeroDurationWordCount": 0
-    },
     "nr_109": {
       "sha256": "e96cb22c7dcba6d2e6f910400dbf27ea4e5e62d95b227c96bb7581c1749fce48",
       "durationSeconds": 4.6759,
@@ -8809,76 +8269,6 @@
       "alignmentAudioFrames": 268,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
       "expectedText": "Now, do you think the kid\u2019s brother HAS TO help the kid? Yes or No.",
-      "exactNormalizedWordMatch": true,
-      "alignmentValid": true,
-      "alignmentFailures": [],
-      "zeroDurationWordCount": 0
-    },
-    "nr_120": {
-      "sha256": "02dc37620d16194c21172146ad1af79479da70fcd7ea471eb0c3a95aa0241275",
-      "durationSeconds": 4.231825,
-      "recognizedText": "The Kids Brother. How much do you think he has to?",
-      "words": [
-        {
-          "word": "The",
-          "start": 0.0,
-          "end": 0.24
-        },
-        {
-          "word": "Kids",
-          "start": 0.24,
-          "end": 0.5
-        },
-        {
-          "word": "Brother.",
-          "start": 0.5,
-          "end": 1.54
-        },
-        {
-          "word": "How",
-          "start": 1.54,
-          "end": 2.02
-        },
-        {
-          "word": "much",
-          "start": 2.02,
-          "end": 2.2
-        },
-        {
-          "word": "do",
-          "start": 2.2,
-          "end": 2.46
-        },
-        {
-          "word": "you",
-          "start": 2.46,
-          "end": 2.52
-        },
-        {
-          "word": "think",
-          "start": 2.52,
-          "end": 2.74
-        },
-        {
-          "word": "he",
-          "start": 2.74,
-          "end": 2.9
-        },
-        {
-          "word": "has",
-          "start": 2.9,
-          "end": 3.14
-        },
-        {
-          "word": "to?",
-          "start": 3.14,
-          "end": 3.74
-        }
-      ],
-      "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
-      "alignmentAudioFrames": 212,
-      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "The kid\u2019s brother. How much do you think he HAS TO?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -10496,76 +9886,6 @@
       "alignmentAudioFrames": 250,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
       "expectedText": "Now, do you think the kid HAS TO help the mom? Yes or No.",
-      "exactNormalizedWordMatch": true,
-      "alignmentValid": true,
-      "alignmentFailures": [],
-      "zeroDurationWordCount": 0
-    },
-    "nr_141": {
-      "sha256": "e271faabbd36a0a87b0f46935ed5d88009bcb89cf8e9a323b676287c28aec782",
-      "durationSeconds": 4.048975,
-      "recognizedText": "The Kid. How much do you think the kid has to?",
-      "words": [
-        {
-          "word": "The",
-          "start": 0.0,
-          "end": 0.28
-        },
-        {
-          "word": "Kid.",
-          "start": 0.28,
-          "end": 1.2
-        },
-        {
-          "word": "How",
-          "start": 1.2,
-          "end": 1.64
-        },
-        {
-          "word": "much",
-          "start": 1.64,
-          "end": 1.82
-        },
-        {
-          "word": "do",
-          "start": 1.82,
-          "end": 2.06
-        },
-        {
-          "word": "you",
-          "start": 2.06,
-          "end": 2.12
-        },
-        {
-          "word": "think",
-          "start": 2.12,
-          "end": 2.34
-        },
-        {
-          "word": "the",
-          "start": 2.34,
-          "end": 2.5
-        },
-        {
-          "word": "kid",
-          "start": 2.5,
-          "end": 2.72
-        },
-        {
-          "word": "has",
-          "start": 2.72,
-          "end": 3.02
-        },
-        {
-          "word": "to?",
-          "start": 3.02,
-          "end": 3.54
-        }
-      ],
-      "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
-      "alignmentAudioFrames": 203,
-      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "The kid. How much do you think the kid HAS TO?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -13998,106 +13318,6 @@
       "alignmentFailures": [],
       "zeroDurationWordCount": 0
     },
-    "nr_181": {
-      "sha256": "1bf85ffd9e61f7fa400c351fea9fa43617061f7eb970d3bab21b0924d57b8999",
-      "durationSeconds": 5.43345,
-      "recognizedText": "The teacher on the left. How much do you think the teacher on the left has to?",
-      "words": [
-        {
-          "word": "The",
-          "start": 0.0,
-          "end": 0.28
-        },
-        {
-          "word": "teacher",
-          "start": 0.28,
-          "end": 0.64
-        },
-        {
-          "word": "on",
-          "start": 0.64,
-          "end": 0.92
-        },
-        {
-          "word": "the",
-          "start": 0.92,
-          "end": 1.04
-        },
-        {
-          "word": "left.",
-          "start": 1.04,
-          "end": 2.02
-        },
-        {
-          "word": "How",
-          "start": 2.02,
-          "end": 2.36
-        },
-        {
-          "word": "much",
-          "start": 2.36,
-          "end": 2.56
-        },
-        {
-          "word": "do",
-          "start": 2.56,
-          "end": 2.78
-        },
-        {
-          "word": "you",
-          "start": 2.78,
-          "end": 2.86
-        },
-        {
-          "word": "think",
-          "start": 2.86,
-          "end": 3.04
-        },
-        {
-          "word": "the",
-          "start": 3.04,
-          "end": 3.2
-        },
-        {
-          "word": "teacher",
-          "start": 3.2,
-          "end": 3.52
-        },
-        {
-          "word": "on",
-          "start": 3.52,
-          "end": 3.76
-        },
-        {
-          "word": "the",
-          "start": 3.76,
-          "end": 3.86
-        },
-        {
-          "word": "left",
-          "start": 3.86,
-          "end": 4.1
-        },
-        {
-          "word": "has",
-          "start": 4.1,
-          "end": 4.4
-        },
-        {
-          "word": "to?",
-          "start": 4.4,
-          "end": 4.96
-        }
-      ],
-      "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
-      "alignmentAudioFrames": 272,
-      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "The teacher on the left. How much do you think the teacher on the left HAS TO?",
-      "exactNormalizedWordMatch": true,
-      "alignmentValid": true,
-      "alignmentFailures": [],
-      "zeroDurationWordCount": 0
-    },
     "nr_182": {
       "sha256": "3226c3e2b0edf2a402a9df8487435d9cf322c5a2c6659297874a654dcbd7e1ef",
       "durationSeconds": 5.616325,
@@ -15695,6 +14915,1130 @@
             ]
           }
         ]
+      }
+    },
+    "nr_275": {
+      "sha256": "b5342ce2d302b3f20e6955633f9545965f354f2cdc3140190ff5187cb6f45242",
+      "durationSeconds": 3.500408,
+      "decodedDurationSeconds": 3.4493877551020407,
+      "recognizedText": "How much do you think the kids teacher has to?",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.56
+        },
+        {
+          "word": "much",
+          "start": 0.56,
+          "end": 0.72
+        },
+        {
+          "word": "do",
+          "start": 0.72,
+          "end": 0.94
+        },
+        {
+          "word": "you",
+          "start": 0.94,
+          "end": 1.02
+        },
+        {
+          "word": "think",
+          "start": 1.02,
+          "end": 1.24
+        },
+        {
+          "word": "the",
+          "start": 1.24,
+          "end": 1.42
+        },
+        {
+          "word": "kids",
+          "start": 1.42,
+          "end": 1.64
+        },
+        {
+          "word": "teacher",
+          "start": 1.64,
+          "end": 1.96
+        },
+        {
+          "word": "has",
+          "start": 1.96,
+          "end": 2.4
+        },
+        {
+          "word": "to?",
+          "start": 2.4,
+          "end": 3.04
+        }
+      ],
+      "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "recognitionNumBeams": 1,
+      "alignmentTokensOrigin": "unprompted audio recognition, never expected text",
+      "recognitionTempo": 1,
+      "generationTimestampTokens": false,
+      "alignmentAudioFrames": 173,
+      "alignmentMethod": "Independent Whisper cross-attention DTW cropped to decoded audio duration, nominal 20 ms grid. Original leading context sentence removed at quiet boundary.",
+      "expectedText": "How much do you think the kid\u2019s teacher HAS TO?",
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "audioEdit": {
+        "kind": "leading-role-context-trimmed-from-existing-Evelyn-recording",
+        "sourceRecording": {
+          "id": "nr_026",
+          "sha256": "50a48afee3ac7ebe35e74ab8fce65daecff5e17ad027f9b58879fb6a6605d7ef",
+          "src": "assets/narration/nr_026.mp3",
+          "retainedSourceStartSeconds": 1.54,
+          "retainedSourceEndSeconds": 4.989387755102041,
+          "retainedDecodedSamples": 152118
+        }
+      }
+    },
+    "nr_276": {
+      "sha256": "7c4d7b7188f16880f9c376a115f0be6386b525b2873102a3acdbe652664abecf",
+      "durationSeconds": 3.813878,
+      "decodedDurationSeconds": 3.778798185941043,
+      "recognizedText": "How much do you think the kids mom has to?",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.36
+        },
+        {
+          "word": "much",
+          "start": 0.36,
+          "end": 0.54
+        },
+        {
+          "word": "do",
+          "start": 0.54,
+          "end": 0.8
+        },
+        {
+          "word": "you",
+          "start": 0.8,
+          "end": 0.88
+        },
+        {
+          "word": "think",
+          "start": 0.88,
+          "end": 1.08
+        },
+        {
+          "word": "the",
+          "start": 1.191338,
+          "end": 1.42
+        },
+        {
+          "word": "kids",
+          "start": 1.42,
+          "end": 1.7
+        },
+        {
+          "word": "mom",
+          "start": 1.7,
+          "end": 2.04
+        },
+        {
+          "word": "has",
+          "start": 2.589955,
+          "end": 2.72
+        },
+        {
+          "word": "to?",
+          "start": 2.72,
+          "end": 3.4
+        }
+      ],
+      "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "recognitionNumBeams": 1,
+      "alignmentTokensOrigin": "unprompted audio recognition, never expected text",
+      "recognitionTempo": 1,
+      "generationTimestampTokens": false,
+      "alignmentAudioFrames": 189,
+      "alignmentMethod": "Independent Whisper cross-attention DTW cropped to decoded audio duration, nominal 20 ms grid; intervals constrained to retained phrase chunks and outside known inserted join silence.",
+      "expectedText": "How much do you think the kid\u2019s mom HAS TO?",
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "audioEdit": {
+        "kind": "assembled-full-role-question-from-existing-Evelyn-recordings",
+        "sourceRecordings": [
+          {
+            "id": "nr_028",
+            "sha256": "0b817c2f279e268b7c8e578a6f23f8428d096a94f5a49cb0b4daa227c47d26a6",
+            "retainedSourceStartSeconds": 1.5980045351473924,
+            "retainedSourceEndSeconds": 2.7343310657596374,
+            "retainedDecodedSamples": 50112,
+            "role": "Complete How much do you think clause",
+            "nominalCandidateStartSeconds": 1.6,
+            "nominalCandidateEndSeconds": 2.735,
+            "startCutAdjustmentSeconds": -0.00199546485260771,
+            "endCutAdjustmentSeconds": -0.0006802721088435374,
+            "firstRetainedPcmSample": 0.0,
+            "lastRetainedPcmSample": -4.1114012674370315e-06,
+            "first10msRms": 0.0,
+            "last10msRms": 0.030810827389359474
+          },
+          {
+            "id": "nr_028",
+            "sha256": "0b817c2f279e268b7c8e578a6f23f8428d096a94f5a49cb0b4daa227c47d26a6",
+            "retainedSourceStartSeconds": 0.0,
+            "retainedSourceEndSeconds": 1.3186167800453514,
+            "retainedDecodedSamples": 58151,
+            "role": "Complete full role phrase from original heading",
+            "nominalCandidateStartSeconds": 0,
+            "nominalCandidateEndSeconds": 1.32,
+            "startCutAdjustmentSeconds": 0.0,
+            "endCutAdjustmentSeconds": -0.001383219954648526,
+            "firstRetainedPcmSample": 0.0,
+            "lastRetainedPcmSample": 3.7275088971000514e-07,
+            "first10msRms": 0.0,
+            "last10msRms": 0.0001069478239514865
+          },
+          {
+            "id": "nr_028",
+            "sha256": "0b817c2f279e268b7c8e578a6f23f8428d096a94f5a49cb0b4daa227c47d26a6",
+            "retainedSourceStartSeconds": 3.01687074829932,
+            "retainedSourceEndSeconds": 4.2057142857142855,
+            "retainedDecodedSamples": 52428,
+            "role": "HAS TO tail from original question",
+            "nominalCandidateStartSeconds": 3.015,
+            "nominalCandidateEndSeconds": 4.2057142857142855,
+            "startCutAdjustmentSeconds": 0.0018594104308390022,
+            "endCutAdjustmentSeconds": 0.0,
+            "firstRetainedPcmSample": -2.3863605747465044e-05,
+            "lastRetainedPcmSample": 0.0,
+            "first10msRms": 0.029518399387598038,
+            "last10msRms": 0.0
+          }
+        ],
+        "joinPauses": [
+          {
+            "start": 1.136326530612245,
+            "end": 1.1913378684807256
+          },
+          {
+            "start": 2.5099546485260773,
+            "end": 2.589954648526077
+          }
+        ],
+        "phraseConstrainedWordTimes": [
+          {
+            "word": "the",
+            "asrInterval": [
+              1.08,
+              1.42
+            ],
+            "speechChunkConstrainedInterval": [
+              1.191338,
+              1.42
+            ]
+          },
+          {
+            "word": "has",
+            "asrInterval": [
+              2.04,
+              2.72
+            ],
+            "speechChunkConstrainedInterval": [
+              2.589955,
+              2.72
+            ]
+          }
+        ]
+      }
+    },
+    "nr_277": {
+      "sha256": "1a033cb0de0dfcf813c8f02fffd6d029b318747ead05a4b18cff1196338b35ea",
+      "durationSeconds": 3.970612,
+      "decodedDurationSeconds": 3.925170068027211,
+      "recognizedText": "How much do you think the kid's sister has to?",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.38
+        },
+        {
+          "word": "much",
+          "start": 0.38,
+          "end": 0.56
+        },
+        {
+          "word": "do",
+          "start": 0.56,
+          "end": 0.82
+        },
+        {
+          "word": "you",
+          "start": 0.82,
+          "end": 0.9
+        },
+        {
+          "word": "think",
+          "start": 0.9,
+          "end": 1.1
+        },
+        {
+          "word": "the",
+          "start": 1.212336,
+          "end": 1.46
+        },
+        {
+          "word": "kid's",
+          "start": 1.46,
+          "end": 1.86
+        },
+        {
+          "word": "sister",
+          "start": 1.86,
+          "end": 2.28
+        },
+        {
+          "word": "has",
+          "start": 2.743039,
+          "end": 2.86
+        },
+        {
+          "word": "to?",
+          "start": 2.86,
+          "end": 3.54
+        }
+      ],
+      "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "recognitionNumBeams": 1,
+      "alignmentTokensOrigin": "unprompted audio recognition, never expected text",
+      "recognitionTempo": 1,
+      "generationTimestampTokens": false,
+      "alignmentAudioFrames": 197,
+      "alignmentMethod": "Independent Whisper cross-attention DTW cropped to decoded audio duration, nominal 20 ms grid; intervals constrained to retained phrase chunks and outside known inserted join silence.",
+      "expectedText": "How much do you think the kid\u2019s sister HAS TO?",
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "audioEdit": {
+        "kind": "assembled-full-role-question-from-existing-Evelyn-recordings",
+        "sourceRecordings": [
+          {
+            "id": "nr_061",
+            "sha256": "65707bbd7dca7c34d3129c87040d81fecafed07b3a230ccec93147e6a9e17229",
+            "retainedSourceStartSeconds": 1.7180045351473923,
+            "retainedSourceEndSeconds": 2.875328798185941,
+            "retainedDecodedSamples": 51038,
+            "role": "Complete How much do you think clause",
+            "nominalCandidateStartSeconds": 1.72,
+            "nominalCandidateEndSeconds": 2.875,
+            "startCutAdjustmentSeconds": -0.00199546485260771,
+            "endCutAdjustmentSeconds": 0.00031746031746031746,
+            "firstRetainedPcmSample": 0.0,
+            "lastRetainedPcmSample": -5.421851165010594e-05,
+            "first10msRms": 0.0,
+            "last10msRms": 0.015088824555277824
+          },
+          {
+            "id": "nr_061",
+            "sha256": "65707bbd7dca7c34d3129c87040d81fecafed07b3a230ccec93147e6a9e17229",
+            "retainedSourceStartSeconds": 0.0,
+            "retainedSourceEndSeconds": 1.450702947845805,
+            "retainedDecodedSamples": 63976,
+            "role": "Complete full role phrase from original heading",
+            "nominalCandidateStartSeconds": 0,
+            "nominalCandidateEndSeconds": 1.45,
+            "startCutAdjustmentSeconds": 0.0,
+            "endCutAdjustmentSeconds": 0.0007029478458049886,
+            "firstRetainedPcmSample": 0.0,
+            "lastRetainedPcmSample": -2.2273621880231076e-07,
+            "first10msRms": 0.0,
+            "last10msRms": 0.00010193140769843012
+          },
+          {
+            "id": "nr_061",
+            "sha256": "65707bbd7dca7c34d3129c87040d81fecafed07b3a230ccec93147e6a9e17229",
+            "retainedSourceStartSeconds": 3.1541950113378685,
+            "retainedSourceEndSeconds": 4.3363265306122445,
+            "retainedDecodedSamples": 52132,
+            "role": "HAS TO tail from original question",
+            "nominalCandidateStartSeconds": 3.155,
+            "nominalCandidateEndSeconds": 4.3363265306122445,
+            "startCutAdjustmentSeconds": -0.0008163265306122449,
+            "endCutAdjustmentSeconds": 0.0,
+            "firstRetainedPcmSample": -8.303220238303766e-05,
+            "lastRetainedPcmSample": 0.0,
+            "first10msRms": 0.029435647651553154,
+            "last10msRms": 0.0
+          }
+        ],
+        "joinPauses": [
+          {
+            "start": 1.1573242630385487,
+            "end": 1.2123356009070294
+          },
+          {
+            "start": 2.6630385487528345,
+            "end": 2.7430385487528346
+          }
+        ],
+        "phraseConstrainedWordTimes": [
+          {
+            "word": "the",
+            "asrInterval": [
+              1.1,
+              1.46
+            ],
+            "speechChunkConstrainedInterval": [
+              1.212336,
+              1.46
+            ]
+          },
+          {
+            "word": "has",
+            "asrInterval": [
+              2.28,
+              2.86
+            ],
+            "speechChunkConstrainedInterval": [
+              2.743039,
+              2.86
+            ]
+          }
+        ]
+      }
+    },
+    "nr_278": {
+      "sha256": "2c73b089a34f37997480658a1e0c2f37817e97e8ce830f2b5362344886f62815",
+      "durationSeconds": 3.395918,
+      "decodedDurationSeconds": 3.3648979591836734,
+      "recognizedText": "How much do you think the kid's friend has to?",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.54
+        },
+        {
+          "word": "much",
+          "start": 0.54,
+          "end": 0.7
+        },
+        {
+          "word": "do",
+          "start": 0.7,
+          "end": 0.94
+        },
+        {
+          "word": "you",
+          "start": 0.94,
+          "end": 1.02
+        },
+        {
+          "word": "think",
+          "start": 1.02,
+          "end": 1.24
+        },
+        {
+          "word": "the",
+          "start": 1.24,
+          "end": 1.42
+        },
+        {
+          "word": "kid's",
+          "start": 1.42,
+          "end": 1.76
+        },
+        {
+          "word": "friend",
+          "start": 1.76,
+          "end": 2.0
+        },
+        {
+          "word": "has",
+          "start": 2.0,
+          "end": 2.3
+        },
+        {
+          "word": "to?",
+          "start": 2.3,
+          "end": 2.96
+        }
+      ],
+      "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "recognitionNumBeams": 1,
+      "alignmentTokensOrigin": "unprompted audio recognition, never expected text",
+      "recognitionTempo": 1,
+      "generationTimestampTokens": false,
+      "alignmentAudioFrames": 169,
+      "alignmentMethod": "Independent Whisper cross-attention DTW cropped to decoded audio duration, nominal 20 ms grid. Original leading context sentence removed at quiet boundary.",
+      "expectedText": "How much do you think the kid\u2019s friend HAS TO?",
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "audioEdit": {
+        "kind": "leading-role-context-trimmed-from-existing-Evelyn-recording",
+        "sourceRecording": {
+          "id": "nr_063",
+          "sha256": "98ef5a4d1dab4b4eecf2abe0cfbcf7ecdf6eafc7e79215e98f433398d6df91b6",
+          "src": "assets/narration/nr_063.mp3",
+          "retainedSourceStartSeconds": 1.52,
+          "retainedSourceEndSeconds": 4.884897959183673,
+          "retainedDecodedSamples": 148392
+        }
+      }
+    },
+    "nr_279": {
+      "sha256": "5201868a415df9c5170561e8f9fc5dd7213bd264d4956581589d1b4100c5bea8",
+      "durationSeconds": 3.604898,
+      "decodedDurationSeconds": 3.5673469387755103,
+      "recognizedText": "How much do you think the kid's best friend has to?",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.5
+        },
+        {
+          "word": "much",
+          "start": 0.5,
+          "end": 0.64
+        },
+        {
+          "word": "do",
+          "start": 0.64,
+          "end": 0.88
+        },
+        {
+          "word": "you",
+          "start": 0.88,
+          "end": 0.96
+        },
+        {
+          "word": "think",
+          "start": 0.96,
+          "end": 1.16
+        },
+        {
+          "word": "the",
+          "start": 1.16,
+          "end": 1.32
+        },
+        {
+          "word": "kid's",
+          "start": 1.32,
+          "end": 1.7
+        },
+        {
+          "word": "best",
+          "start": 1.7,
+          "end": 1.86
+        },
+        {
+          "word": "friend",
+          "start": 1.86,
+          "end": 2.26
+        },
+        {
+          "word": "has",
+          "start": 2.26,
+          "end": 2.54
+        },
+        {
+          "word": "to?",
+          "start": 2.54,
+          "end": 3.16
+        }
+      ],
+      "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "recognitionNumBeams": 1,
+      "alignmentTokensOrigin": "unprompted audio recognition, never expected text",
+      "recognitionTempo": 1,
+      "generationTimestampTokens": false,
+      "alignmentAudioFrames": 179,
+      "alignmentMethod": "Independent Whisper cross-attention DTW cropped to decoded audio duration, nominal 20 ms grid. Original leading context sentence removed at quiet boundary.",
+      "expectedText": "How much do you think the kid\u2019s best friend HAS TO?",
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "audioEdit": {
+        "kind": "leading-role-context-trimmed-from-existing-Evelyn-recording",
+        "sourceRecording": {
+          "id": "nr_080",
+          "sha256": "3d4c678ba09e54b2b680a0dd44f2671fc5197ab54bebc5907032822cc711047d",
+          "src": "assets/narration/nr_080.mp3",
+          "retainedSourceStartSeconds": 1.84,
+          "retainedSourceEndSeconds": 5.40734693877551,
+          "retainedDecodedSamples": 157320
+        }
+      }
+    },
+    "nr_280": {
+      "sha256": "d2834219d554d8f00e6a3b838971cc95f64eada3ed84f513773fbf62ab2c8e52",
+      "durationSeconds": 3.63102,
+      "decodedDurationSeconds": 3.5951020408163266,
+      "recognizedText": "How much do you think the kids' classmate has to?",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.52
+        },
+        {
+          "word": "much",
+          "start": 0.52,
+          "end": 0.68
+        },
+        {
+          "word": "do",
+          "start": 0.68,
+          "end": 0.9
+        },
+        {
+          "word": "you",
+          "start": 0.9,
+          "end": 0.98
+        },
+        {
+          "word": "think",
+          "start": 0.98,
+          "end": 1.2
+        },
+        {
+          "word": "the",
+          "start": 1.2,
+          "end": 1.38
+        },
+        {
+          "word": "kids'",
+          "start": 1.38,
+          "end": 1.78
+        },
+        {
+          "word": "classmate",
+          "start": 1.78,
+          "end": 1.98
+        },
+        {
+          "word": "has",
+          "start": 1.98,
+          "end": 2.56
+        },
+        {
+          "word": "to?",
+          "start": 2.56,
+          "end": 3.2
+        }
+      ],
+      "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "recognitionNumBeams": 1,
+      "alignmentTokensOrigin": "unprompted audio recognition, never expected text",
+      "recognitionTempo": 1,
+      "generationTimestampTokens": false,
+      "alignmentAudioFrames": 180,
+      "alignmentMethod": "Independent Whisper cross-attention DTW cropped to decoded audio duration, nominal 20 ms grid. Original leading context sentence removed at quiet boundary.",
+      "expectedText": "How much do you think the kid\u2019s classmate HAS TO?",
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "audioEdit": {
+        "kind": "leading-role-context-trimmed-from-existing-Evelyn-recording",
+        "sourceRecording": {
+          "id": "nr_096",
+          "sha256": "665cdbd1af96f080798db11cad81b32d9f2bb554aa6495c8297b5f31ea420640",
+          "src": "assets/narration/nr_096.mp3",
+          "retainedSourceStartSeconds": 1.76,
+          "retainedSourceEndSeconds": 5.355102040816327,
+          "retainedDecodedSamples": 158544
+        }
+      }
+    },
+    "nr_281": {
+      "sha256": "2ad47034b2f6b75d86b9cb6c4d25699b8a9e90ea8863c839d0e7eff1f8d0c9df",
+      "durationSeconds": 3.813878,
+      "decodedDurationSeconds": 3.773106575963719,
+      "recognizedText": "How much do you think the kids' dad has to?",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.34
+        },
+        {
+          "word": "much",
+          "start": 0.34,
+          "end": 0.5
+        },
+        {
+          "word": "do",
+          "start": 0.5,
+          "end": 0.76
+        },
+        {
+          "word": "you",
+          "start": 0.76,
+          "end": 0.84
+        },
+        {
+          "word": "think",
+          "start": 0.84,
+          "end": 1.04
+        },
+        {
+          "word": "the",
+          "start": 1.149864,
+          "end": 1.38
+        },
+        {
+          "word": "kids'",
+          "start": 1.38,
+          "end": 1.88
+        },
+        {
+          "word": "dad",
+          "start": 1.88,
+          "end": 2.06
+        },
+        {
+          "word": "has",
+          "start": 2.571678,
+          "end": 2.7
+        },
+        {
+          "word": "to?",
+          "start": 2.7,
+          "end": 3.36
+        }
+      ],
+      "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "recognitionNumBeams": 1,
+      "alignmentTokensOrigin": "unprompted audio recognition, never expected text",
+      "recognitionTempo": 1,
+      "generationTimestampTokens": false,
+      "alignmentAudioFrames": 189,
+      "alignmentMethod": "Independent Whisper cross-attention DTW cropped to decoded audio duration, nominal 20 ms grid; intervals constrained to retained phrase chunks and outside known inserted join silence.",
+      "expectedText": "How much do you think the kid\u2019s dad HAS TO?",
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "audioEdit": {
+        "kind": "assembled-full-role-question-from-existing-Evelyn-recordings",
+        "sourceRecordings": [
+          {
+            "id": "nr_108",
+            "sha256": "8e2418be2e26ae7ebce9be3427e2858f7eb1ef05683a60d363dbf17916cfdbb7",
+            "retainedSourceStartSeconds": 1.6013378684807256,
+            "retainedSourceEndSeconds": 2.696190476190476,
+            "retainedDecodedSamples": 48283,
+            "role": "Complete How much do you think clause",
+            "nominalCandidateStartSeconds": 1.6,
+            "nominalCandidateEndSeconds": 2.695,
+            "startCutAdjustmentSeconds": 0.0013378684807256237,
+            "endCutAdjustmentSeconds": 0.001179138321995465,
+            "firstRetainedPcmSample": -5.717719275821764e-08,
+            "lastRetainedPcmSample": -4.493275440609068e-08,
+            "first10msRms": 2.7225563826505095e-05,
+            "last10msRms": 0.0013035362353548408
+          },
+          {
+            "id": "nr_108",
+            "sha256": "8e2418be2e26ae7ebce9be3427e2858f7eb1ef05683a60d363dbf17916cfdbb7",
+            "retainedSourceStartSeconds": 0.0,
+            "retainedSourceEndSeconds": 1.341814058956916,
+            "retainedDecodedSamples": 59174,
+            "role": "Complete full role phrase from original heading",
+            "nominalCandidateStartSeconds": 0,
+            "nominalCandidateEndSeconds": 1.34,
+            "startCutAdjustmentSeconds": 0.0,
+            "endCutAdjustmentSeconds": 0.0018140589569160999,
+            "firstRetainedPcmSample": 0.0,
+            "lastRetainedPcmSample": -3.7123447782505536e-06,
+            "first10msRms": 0.0,
+            "last10msRms": 0.00021172073320485651
+          },
+          {
+            "id": "nr_108",
+            "sha256": "8e2418be2e26ae7ebce9be3427e2858f7eb1ef05683a60d363dbf17916cfdbb7",
+            "retainedSourceStartSeconds": 2.925918367346939,
+            "retainedSourceEndSeconds": 4.12734693877551,
+            "retainedDecodedSamples": 52983,
+            "role": "HAS TO tail from original question",
+            "nominalCandidateStartSeconds": 2.925,
+            "nominalCandidateEndSeconds": 4.12734693877551,
+            "startCutAdjustmentSeconds": 0.0009297052154195011,
+            "endCutAdjustmentSeconds": 0.0,
+            "firstRetainedPcmSample": 2.9342361813178286e-05,
+            "lastRetainedPcmSample": 0.0,
+            "first10msRms": 0.03695383295416832,
+            "last10msRms": 0.0
+          }
+        ],
+        "joinPauses": [
+          {
+            "start": 1.0948526077097505,
+            "end": 1.1498639455782314
+          },
+          {
+            "start": 2.491678004535147,
+            "end": 2.5716780045351473
+          }
+        ],
+        "phraseConstrainedWordTimes": [
+          {
+            "word": "the",
+            "asrInterval": [
+              1.04,
+              1.38
+            ],
+            "speechChunkConstrainedInterval": [
+              1.149864,
+              1.38
+            ]
+          },
+          {
+            "word": "has",
+            "asrInterval": [
+              2.06,
+              2.7
+            ],
+            "speechChunkConstrainedInterval": [
+              2.571678,
+              2.7
+            ]
+          }
+        ]
+      }
+    },
+    "nr_282": {
+      "sha256": "3cd2263735d6d0d2ba599eb19d4ac7882b46d34120678faa96cfbd23d92a65ac",
+      "durationSeconds": 3.866122,
+      "decodedDurationSeconds": 3.8360997732426303,
+      "recognizedText": "How much do you think the kid's brother has to?",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.34
+        },
+        {
+          "word": "much",
+          "start": 0.34,
+          "end": 0.5
+        },
+        {
+          "word": "do",
+          "start": 0.5,
+          "end": 0.76
+        },
+        {
+          "word": "you",
+          "start": 0.76,
+          "end": 0.84
+        },
+        {
+          "word": "think",
+          "start": 0.84,
+          "end": 1.04
+        },
+        {
+          "word": "the",
+          "start": 1.151565,
+          "end": 1.38
+        },
+        {
+          "word": "kid's",
+          "start": 1.38,
+          "end": 1.78
+        },
+        {
+          "word": "brother",
+          "start": 1.78,
+          "end": 2.12
+        },
+        {
+          "word": "has",
+          "start": 2.630181,
+          "end": 2.74
+        },
+        {
+          "word": "to?",
+          "start": 2.74,
+          "end": 3.44
+        }
+      ],
+      "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "recognitionNumBeams": 1,
+      "alignmentTokensOrigin": "unprompted audio recognition, never expected text",
+      "recognitionTempo": 1,
+      "generationTimestampTokens": false,
+      "alignmentAudioFrames": 192,
+      "alignmentMethod": "Independent Whisper cross-attention DTW cropped to decoded audio duration, nominal 20 ms grid; intervals constrained to retained phrase chunks and outside known inserted join silence.",
+      "expectedText": "How much do you think the kid\u2019s brother HAS TO?",
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "audioEdit": {
+        "kind": "assembled-full-role-question-from-existing-Evelyn-recordings",
+        "sourceRecordings": [
+          {
+            "id": "nr_120",
+            "sha256": "02dc37620d16194c21172146ad1af79479da70fcd7ea471eb0c3a95aa0241275",
+            "retainedSourceStartSeconds": 1.6996598639455782,
+            "retainedSourceEndSeconds": 2.7962131519274376,
+            "retainedDecodedSamples": 48358,
+            "role": "Complete How much do you think clause",
+            "nominalCandidateStartSeconds": 1.7,
+            "nominalCandidateEndSeconds": 2.795,
+            "startCutAdjustmentSeconds": -0.0003401360544217687,
+            "endCutAdjustmentSeconds": 0.001201814058956916,
+            "firstRetainedPcmSample": 4.159294686445492e-09,
+            "lastRetainedPcmSample": -6.379314640980738e-07,
+            "first10msRms": 2.75282818620326e-05,
+            "last10msRms": 0.001303798402659595
+          },
+          {
+            "id": "nr_120",
+            "sha256": "02dc37620d16194c21172146ad1af79479da70fcd7ea471eb0c3a95aa0241275",
+            "retainedSourceStartSeconds": 0.0,
+            "retainedSourceEndSeconds": 1.3986167800453515,
+            "retainedDecodedSamples": 61679,
+            "role": "Complete full role phrase from original heading",
+            "nominalCandidateStartSeconds": 0,
+            "nominalCandidateEndSeconds": 1.4,
+            "startCutAdjustmentSeconds": 0.0,
+            "endCutAdjustmentSeconds": -0.001383219954648526,
+            "firstRetainedPcmSample": 0.0,
+            "lastRetainedPcmSample": 4.997554583496822e-07,
+            "first10msRms": 0.0,
+            "last10msRms": 0.00017130789638031274
+          },
+          {
+            "id": "nr_120",
+            "sha256": "02dc37620d16194c21172146ad1af79479da70fcd7ea471eb0c3a95aa0241275",
+            "retainedSourceStartSeconds": 3.025918367346939,
+            "retainedSourceEndSeconds": 4.231836734693878,
+            "retainedDecodedSamples": 53181,
+            "role": "HAS TO tail from original question",
+            "nominalCandidateStartSeconds": 3.025,
+            "nominalCandidateEndSeconds": 4.231836734693878,
+            "startCutAdjustmentSeconds": 0.0009297052154195011,
+            "endCutAdjustmentSeconds": 0.0,
+            "firstRetainedPcmSample": 1.575846181367524e-05,
+            "lastRetainedPcmSample": 0.0,
+            "first10msRms": 0.03695818781852722,
+            "last10msRms": 0.0
+          }
+        ],
+        "joinPauses": [
+          {
+            "start": 1.0965532879818594,
+            "end": 1.15156462585034
+          },
+          {
+            "start": 2.5501814058956915,
+            "end": 2.6301814058956916
+          }
+        ],
+        "phraseConstrainedWordTimes": [
+          {
+            "word": "the",
+            "asrInterval": [
+              1.04,
+              1.38
+            ],
+            "speechChunkConstrainedInterval": [
+              1.151565,
+              1.38
+            ]
+          },
+          {
+            "word": "has",
+            "asrInterval": [
+              2.12,
+              2.74
+            ],
+            "speechChunkConstrainedInterval": [
+              2.630181,
+              2.74
+            ]
+          }
+        ]
+      }
+    },
+    "nr_283": {
+      "sha256": "f5212abe4a544a898c4423f559e3385192c3eb169209b863a9bd1384fea2804e",
+      "durationSeconds": 2.899592,
+      "decodedDurationSeconds": 2.8489795918367347,
+      "recognizedText": "How much do you think the kid has to?",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.46
+        },
+        {
+          "word": "much",
+          "start": 0.46,
+          "end": 0.62
+        },
+        {
+          "word": "do",
+          "start": 0.62,
+          "end": 0.86
+        },
+        {
+          "word": "you",
+          "start": 0.86,
+          "end": 0.94
+        },
+        {
+          "word": "think",
+          "start": 0.94,
+          "end": 1.14
+        },
+        {
+          "word": "the",
+          "start": 1.14,
+          "end": 1.3
+        },
+        {
+          "word": "kid",
+          "start": 1.3,
+          "end": 1.52
+        },
+        {
+          "word": "has",
+          "start": 1.52,
+          "end": 1.82
+        },
+        {
+          "word": "to?",
+          "start": 1.82,
+          "end": 2.46
+        }
+      ],
+      "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "recognitionNumBeams": 1,
+      "alignmentTokensOrigin": "unprompted audio recognition, never expected text",
+      "recognitionTempo": 1,
+      "generationTimestampTokens": false,
+      "alignmentAudioFrames": 143,
+      "alignmentMethod": "Independent Whisper cross-attention DTW cropped to decoded audio duration, nominal 20 ms grid. Original leading context sentence removed at quiet boundary.",
+      "expectedText": "How much do you think the kid HAS TO?",
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "audioEdit": {
+        "kind": "leading-role-context-trimmed-from-existing-Evelyn-recording",
+        "sourceRecording": {
+          "id": "nr_141",
+          "sha256": "e271faabbd36a0a87b0f46935ed5d88009bcb89cf8e9a323b676287c28aec782",
+          "src": "assets/narration/nr_141.mp3",
+          "retainedSourceStartSeconds": 1.2,
+          "retainedSourceEndSeconds": 4.048979591836734,
+          "retainedDecodedSamples": 125640
+        }
+      }
+    },
+    "nr_284": {
+      "sha256": "8c9a8b0688764991604dcd7f2a93d93e55d46bf7b028ddfdf92ae2507409d33b",
+      "durationSeconds": 3.448163,
+      "decodedDurationSeconds": 3.413469387755102,
+      "recognizedText": "How much do you think the teacher on the left has to?",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.38
+        },
+        {
+          "word": "much",
+          "start": 0.38,
+          "end": 0.54
+        },
+        {
+          "word": "do",
+          "start": 0.54,
+          "end": 0.76
+        },
+        {
+          "word": "you",
+          "start": 0.76,
+          "end": 0.84
+        },
+        {
+          "word": "think",
+          "start": 0.84,
+          "end": 1.02
+        },
+        {
+          "word": "the",
+          "start": 1.02,
+          "end": 1.18
+        },
+        {
+          "word": "teacher",
+          "start": 1.18,
+          "end": 1.48
+        },
+        {
+          "word": "on",
+          "start": 1.48,
+          "end": 1.76
+        },
+        {
+          "word": "the",
+          "start": 1.76,
+          "end": 1.86
+        },
+        {
+          "word": "left",
+          "start": 1.86,
+          "end": 2.06
+        },
+        {
+          "word": "has",
+          "start": 2.06,
+          "end": 2.4
+        },
+        {
+          "word": "to?",
+          "start": 2.4,
+          "end": 2.96
+        }
+      ],
+      "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "recognitionNumBeams": 1,
+      "alignmentTokensOrigin": "unprompted audio recognition, never expected text",
+      "recognitionTempo": 1,
+      "generationTimestampTokens": false,
+      "alignmentAudioFrames": 171,
+      "alignmentMethod": "Independent Whisper cross-attention DTW cropped to decoded audio duration, nominal 20 ms grid. Original leading context sentence removed at quiet boundary.",
+      "expectedText": "How much do you think the teacher on the left HAS TO?",
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "audioEdit": {
+        "kind": "leading-role-context-trimmed-from-existing-Evelyn-recording",
+        "sourceRecording": {
+          "id": "nr_181",
+          "sha256": "1bf85ffd9e61f7fa400c351fea9fa43617061f7eb970d3bab21b0924d57b8999",
+          "src": "assets/narration/nr_181.mp3",
+          "retainedSourceStartSeconds": 2.02,
+          "retainedSourceEndSeconds": 5.433469387755102,
+          "retainedDecodedSamples": 150534
+        }
       }
     }
   }

@@ -15,7 +15,7 @@ Expected path range: **151–181 screens**, **114–144 responses**.
 
 60 main judgments (including 12 prediction-confidence responses) + 36 identity/recall checks + 18 practice responses + 0–30 conditional study-strength responses.
 
-Illustrative duration: **22.6–38.1 minutes**, based on 2195–2874 spoken words.
+Illustrative duration: **22.6–37.9 minutes**, based on 2195–2845 spoken words.
 
 - Illustrative estimate, not observed child-session duration.
 - Read-aloud pace: 110–130 words per minute; response time: 3–5 seconds per selection.
@@ -201,8 +201,6 @@ Choices: Yes / No.
 
 *Only after “Yes” to Obligation · Teacher.*
 
-**The kid’s teacher**
-
 “How much do you think the kid’s teacher HAS TO?”
 
 Display wording: “How much do you think the kid’s teacher HAS TO?” The role is included in the question; no separate role label is displayed above it.
@@ -210,6 +208,8 @@ Display wording: “How much do you think the kid’s teacher HAS TO?” The rol
 [Stimulus source](assets/stimuli/ef6ceaf063c6-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: A teeny bit / A little bit / A lot.
+
+*Role is stated once within the question, matching the caption; the earlier separate spoken role heading is omitted.*
 
 ### 19. Obligation · Mom
 
@@ -223,15 +223,15 @@ Choices: Yes / No.
 
 *Only after “Yes” to Obligation · Mom.*
 
-**The kid’s mom**
-
-“How much do you think she HAS TO?”
+“How much do you think the kid’s mom HAS TO?”
 
 Display wording: “How much do you think the kid’s mom HAS TO?” The role is included in the question; no separate role label is displayed above it.
 
 [Stimulus source](assets/stimuli/ef6ceaf063c6-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: A teeny bit / A little bit / A lot.
+
+*Role is stated once within the question, matching the caption; the earlier separate spoken role heading is omitted.*
 
 ### 21. What happens next
 
@@ -527,15 +527,15 @@ Choices: Yes / No.
 
 *Only after “Yes” to Obligation · Sister.*
 
-**The kid’s sister**
-
-“How much do you think she HAS TO?”
+“How much do you think the kid’s sister HAS TO?”
 
 Display wording: “How much do you think the kid’s sister HAS TO?” The role is included in the question; no separate role label is displayed above it.
 
 [Stimulus source](assets/stimuli/d8367f1a225f-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: A teeny bit / A little bit / A lot.
+
+*Role is stated once within the question, matching the caption; the earlier separate spoken role heading is omitted.*
 
 ### 50. Obligation · Friend
 
@@ -549,8 +549,6 @@ Choices: Yes / No.
 
 *Only after “Yes” to Obligation · Friend.*
 
-**The kid’s friend**
-
 “How much do you think the kid’s friend HAS TO?”
 
 Display wording: “How much do you think the kid’s friend HAS TO?” The role is included in the question; no separate role label is displayed above it.
@@ -558,6 +556,8 @@ Display wording: “How much do you think the kid’s friend HAS TO?” The role
 [Stimulus source](assets/stimuli/d8367f1a225f-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: A teeny bit / A little bit / A lot.
+
+*Role is stated once within the question, matching the caption; the earlier separate spoken role heading is omitted.*
 
 ### 52. What happens next
 
@@ -853,8 +853,6 @@ Choices: Yes / No.
 
 *Only after “Yes” to Obligation · Friend.*
 
-**The kid’s friend**
-
 “How much do you think the kid’s friend HAS TO?”
 
 Display wording: “How much do you think the kid’s friend HAS TO?” The role is included in the question; no separate role label is displayed above it.
@@ -862,6 +860,8 @@ Display wording: “How much do you think the kid’s friend HAS TO?” The role
 [Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: A teeny bit / A little bit / A lot.
+
+*Role is stated once within the question, matching the caption; the earlier separate spoken role heading is omitted.*
 
 ### 81. Obligation · Best friend
 
@@ -875,8 +875,6 @@ Choices: Yes / No.
 
 *Only after “Yes” to Obligation · Best friend.*
 
-**The kid’s best friend**
-
 “How much do you think the kid’s best friend HAS TO?”
 
 Display wording: “How much do you think the kid’s best friend HAS TO?” The role is included in the question; no separate role label is displayed above it.
@@ -884,6 +882,8 @@ Display wording: “How much do you think the kid’s best friend HAS TO?” The
 [Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: A teeny bit / A little bit / A lot.
+
+*Role is stated once within the question, matching the caption; the earlier separate spoken role heading is omitted.*
 
 ### 83. What happens next
 
@@ -1179,8 +1179,6 @@ Choices: Yes / No.
 
 *Only after “Yes” to Obligation · Teacher.*
 
-**The kid’s teacher**
-
 “How much do you think the kid’s teacher HAS TO?”
 
 Display wording: “How much do you think the kid’s teacher HAS TO?” The role is included in the question; no separate role label is displayed above it.
@@ -1188,6 +1186,8 @@ Display wording: “How much do you think the kid’s teacher HAS TO?” The rol
 [Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: A teeny bit / A little bit / A lot.
+
+*Role is stated once within the question, matching the caption; the earlier separate spoken role heading is omitted.*
 
 ### 112. Obligation · Friend
 
@@ -1201,8 +1201,6 @@ Choices: Yes / No.
 
 *Only after “Yes” to Obligation · Friend.*
 
-**The kid’s friend**
-
 “How much do you think the kid’s friend HAS TO?”
 
 Display wording: “How much do you think the kid’s friend HAS TO?” The role is included in the question; no separate role label is displayed above it.
@@ -1210,6 +1208,8 @@ Display wording: “How much do you think the kid’s friend HAS TO?” The role
 [Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: A teeny bit / A little bit / A lot.
+
+*Role is stated once within the question, matching the caption; the earlier separate spoken role heading is omitted.*
 
 ### 114. What happens next
 
@@ -1505,15 +1505,15 @@ Choices: Yes / No.
 
 *Only after “Yes” to Obligation · Mom.*
 
-**The kid’s mom**
-
-“How much do you think she HAS TO?”
+“How much do you think the kid’s mom HAS TO?”
 
 Display wording: “How much do you think the kid’s mom HAS TO?” The role is included in the question; no separate role label is displayed above it.
 
 [Stimulus source](assets/stimuli/cf266d33caca-05-sad.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: A teeny bit / A little bit / A lot.
+
+*Role is stated once within the question, matching the caption; the earlier separate spoken role heading is omitted.*
 
 ### 143. Obligation · Sister
 
@@ -1527,15 +1527,15 @@ Choices: Yes / No.
 
 *Only after “Yes” to Obligation · Sister.*
 
-**The kid’s sister**
-
-“How much do you think she HAS TO?”
+“How much do you think the kid’s sister HAS TO?”
 
 Display wording: “How much do you think the kid’s sister HAS TO?” The role is included in the question; no separate role label is displayed above it.
 
 [Stimulus source](assets/stimuli/cf266d33caca-05-sad.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: A teeny bit / A little bit / A lot.
+
+*Role is stated once within the question, matching the caption; the earlier separate spoken role heading is omitted.*
 
 ### 145. What happens next
 
@@ -1831,8 +1831,6 @@ Choices: Yes / No.
 
 *Only after “Yes” to Obligation · Classmate.*
 
-**The kid’s classmate**
-
 “How much do you think the kid’s classmate HAS TO?”
 
 Display wording: “How much do you think the kid’s classmate HAS TO?” The role is included in the question; no separate role label is displayed above it.
@@ -1840,6 +1838,8 @@ Display wording: “How much do you think the kid’s classmate HAS TO?” The r
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: A teeny bit / A little bit / A lot.
+
+*Role is stated once within the question, matching the caption; the earlier separate spoken role heading is omitted.*
 
 ### 174. Obligation · Teacher
 
@@ -1853,8 +1853,6 @@ Choices: Yes / No.
 
 *Only after “Yes” to Obligation · Teacher.*
 
-**The kid’s teacher**
-
 “How much do you think the kid’s teacher HAS TO?”
 
 Display wording: “How much do you think the kid’s teacher HAS TO?” The role is included in the question; no separate role label is displayed above it.
@@ -1862,6 +1860,8 @@ Display wording: “How much do you think the kid’s teacher HAS TO?” The rol
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: A teeny bit / A little bit / A lot.
+
+*Role is stated once within the question, matching the caption; the earlier separate spoken role heading is omitted.*
 
 ### 176. What happens next
 
