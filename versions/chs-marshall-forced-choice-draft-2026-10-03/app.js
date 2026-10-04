@@ -110,6 +110,10 @@
         for(const range of ranges)spans.push({outcomeHelperId:helper.id,start:range.start,end:range.end});
       }
     }
+    if(s.outcomeCaptions){
+      for(const sentence of s.outcomeCaptions)for(const range of phraseMatches(words,sentence))
+        spans.push({captionText:sentence,start:range.start,end:range.end});
+    }
     // Only the adjacent response-label phrase lights embedded binary choices.
     // In particular, "No one helped" is story text, not the No response option.
     if(s.choices?.length===2){
@@ -127,6 +131,8 @@
   }
   function showSpokenCues(spans,seconds){
     const current=spans.filter(cue=>seconds>=cue.start&&seconds<cue.end),actorIds=new Set(current.map(cue=>cue.actorId).filter(Boolean)),optionIndexes=new Set(current.map(cue=>cue.optionIndex).filter(value=>value!==undefined));
+    const captionCue=current.find(cue=>cue.captionText),heading=stage.querySelector('.prompt h2');
+    if(captionCue&&heading&&heading.textContent!==captionCue.captionText)heading.textContent=captionCue.captionText;
     const outcomeHelpers=new Set(current.map(cue=>cue.outcomeHelperId).filter(Boolean));
     stage.querySelectorAll('[data-outcome-helper]').forEach(element=>element.classList.toggle('outcome-spoken',outcomeHelpers.has(element.dataset.outcomeHelper)));
     stage.querySelectorAll('[data-narration-actor]').forEach(element=>element.classList.toggle('narration-actor-current',actorIds.has(element.dataset.narrationActor)));

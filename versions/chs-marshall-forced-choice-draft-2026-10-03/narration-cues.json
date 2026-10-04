@@ -5037,17 +5037,17 @@
       "alignmentFailures": [],
       "zeroDurationWordCount": 0
     },
-    "nr_196": {
-      "id": "nr_196",
-      "sha256": "39ed1e65fc1aa87a5b28d363a6be802e6740a773b63520196da8778d7cbc18f4",
+    "nr_285": {
+      "id": "nr_285",
+      "sha256": "cf91a1a0994b5237cd8849a07af4b82a1e3379081179ff63706da39be0d8507f",
       "model": "openai/whisper-base.en",
       "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "offline": true,
       "expectedTextProvidedToRecognizer": false,
-      "durationSeconds": 7.601633,
-      "decodedDurationSeconds": 7.5679375,
-      "recognizedText": "No one helped the kid. The kids teacher did not help the kid. The kids mom did not help the kid.",
-      "expectedText": "No one helped the kid. The kid’s teacher did NOT help the kid. The kid’s mom did NOT help the kid.",
+      "durationSeconds": 2.089796,
+      "decodedDurationSeconds": 2.04,
+      "recognizedText": "No one helped the kid.",
+      "expectedText": "No one helped the kid.",
       "words": [
         {
           "word": "No",
@@ -5062,97 +5062,17 @@
         {
           "word": "helped",
           "start": 0.86,
-          "end": 1.14
+          "end": 1.16
         },
         {
           "word": "the",
-          "start": 1.14,
+          "start": 1.16,
           "end": 1.4
         },
         {
           "word": "kid.",
           "start": 1.4,
-          "end": 2.34
-        },
-        {
-          "word": "The",
-          "start": 2.34,
-          "end": 2.44
-        },
-        {
-          "word": "kids",
-          "start": 2.44,
-          "end": 2.7
-        },
-        {
-          "word": "teacher",
-          "start": 2.7,
-          "end": 3.06
-        },
-        {
-          "word": "did",
-          "start": 3.06,
-          "end": 3.4
-        },
-        {
-          "word": "not",
-          "start": 3.4,
-          "end": 3.58
-        },
-        {
-          "word": "help",
-          "start": 3.58,
-          "end": 3.86
-        },
-        {
-          "word": "the",
-          "start": 3.86,
-          "end": 4.04
-        },
-        {
-          "word": "kid.",
-          "start": 4.04,
-          "end": 5.08
-        },
-        {
-          "word": "The",
-          "start": 5.08,
-          "end": 5.24
-        },
-        {
-          "word": "kids",
-          "start": 5.24,
-          "end": 5.48
-        },
-        {
-          "word": "mom",
-          "start": 5.48,
-          "end": 5.84
-        },
-        {
-          "word": "did",
-          "start": 5.84,
-          "end": 6.12
-        },
-        {
-          "word": "not",
-          "start": 6.12,
-          "end": 6.3
-        },
-        {
-          "word": "help",
-          "start": 6.3,
-          "end": 6.58
-        },
-        {
-          "word": "the",
-          "start": 6.58,
-          "end": 6.76
-        },
-        {
-          "word": "kid.",
-          "start": 6.76,
-          "end": 7.56
+          "end": 2.02
         }
       ],
       "exactNormalizedWordMatch": true,
@@ -5160,995 +5080,31 @@
       "alignmentFailures": [],
       "zeroDurationWordCount": 0,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration; approximate boundaries nominal20msgrid",
-      "alignmentAudioFrames": 379,
+      "alignmentAudioFrames": 102,
       "numBeams": 1,
       "generationTimestampTokens": false,
       "recognitionTempo": 1,
       "recognitionTests": [
         {
           "numBeams": 1,
-          "recognizedText": "No one helped the kid. The kids teacher did not help the kid. The kids mom did not help the kid.",
+          "recognizedText": "No one helped the kid.",
           "exactNormalizedWordMatch": true
         }
       ],
       "articleOmissionExceptionsAllowed": false,
       "cueAlignmentApproved": true
     },
-    "nr_203": {
-      "id": "nr_203",
-      "sha256": "dcc7eabc2bedf2d7a92c56a6acb87adc8b27df8638946af00abe86ebad874a62",
+    "nr_286": {
+      "id": "nr_286",
+      "sha256": "67da14ed8e1afda3e43284e9e9fa753c1973405d5315e94dad8760feac70b5d7",
       "model": "openai/whisper-base.en",
       "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "offline": true,
       "expectedTextProvidedToRecognizer": false,
-      "durationSeconds": 7.78449,
-      "decodedDurationSeconds": 7.7480625,
-      "recognizedText": "No one helped the kid. The kid's sister did not help the kid. The kid's friend did not help the kid.",
-      "expectedText": "No one helped the kid. The kid’s sister did NOT help the kid. The kid’s friend did NOT help the kid.",
-      "words": [
-        {
-          "word": "No",
-          "start": 0.0,
-          "end": 0.8
-        },
-        {
-          "word": "one",
-          "start": 0.8,
-          "end": 1.1
-        },
-        {
-          "word": "helped",
-          "start": 1.1,
-          "end": 1.36
-        },
-        {
-          "word": "the",
-          "start": 1.36,
-          "end": 1.62
-        },
-        {
-          "word": "kid.",
-          "start": 1.62,
-          "end": 2.6
-        },
-        {
-          "word": "The",
-          "start": 2.6,
-          "end": 2.68
-        },
-        {
-          "word": "kid's",
-          "start": 2.68,
-          "end": 3.1
-        },
-        {
-          "word": "sister",
-          "start": 3.1,
-          "end": 3.48
-        },
-        {
-          "word": "did",
-          "start": 3.48,
-          "end": 3.66
-        },
-        {
-          "word": "not",
-          "start": 3.66,
-          "end": 3.84
-        },
-        {
-          "word": "help",
-          "start": 3.84,
-          "end": 4.12
-        },
-        {
-          "word": "the",
-          "start": 4.12,
-          "end": 4.28
-        },
-        {
-          "word": "kid.",
-          "start": 4.28,
-          "end": 5.32
-        },
-        {
-          "word": "The",
-          "start": 5.32,
-          "end": 5.48
-        },
-        {
-          "word": "kid's",
-          "start": 5.48,
-          "end": 5.88
-        },
-        {
-          "word": "friend",
-          "start": 5.88,
-          "end": 6.08
-        },
-        {
-          "word": "did",
-          "start": 6.08,
-          "end": 6.34
-        },
-        {
-          "word": "not",
-          "start": 6.34,
-          "end": 6.5
-        },
-        {
-          "word": "help",
-          "start": 6.5,
-          "end": 6.76
-        },
-        {
-          "word": "the",
-          "start": 6.76,
-          "end": 6.92
-        },
-        {
-          "word": "kid.",
-          "start": 6.92,
-          "end": 7.74
-        }
-      ],
-      "exactNormalizedWordMatch": true,
-      "alignmentValid": true,
-      "alignmentFailures": [],
-      "zeroDurationWordCount": 0,
-      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration; approximate boundaries nominal20msgrid",
-      "alignmentAudioFrames": 388,
-      "numBeams": 1,
-      "generationTimestampTokens": false,
-      "recognitionTempo": 1,
-      "recognitionTests": [
-        {
-          "numBeams": 1,
-          "recognizedText": "No one helped the kid. The kid's sister did not help the kid. The kid's friend did not help the kid.",
-          "exactNormalizedWordMatch": true
-        }
-      ],
-      "articleOmissionExceptionsAllowed": false,
-      "cueAlignmentApproved": true
-    },
-    "nr_209": {
-      "id": "nr_209",
-      "sha256": "d1e43a6d480382722cde4efef2a50bc79de15a4eb4a3802ae5dec724e50d06e8",
-      "model": "openai/whisper-base.en",
-      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
-      "offline": true,
-      "expectedTextProvidedToRecognizer": false,
-      "durationSeconds": 7.993469,
-      "decodedDurationSeconds": 7.943,
-      "recognizedText": "No one helped the kid. The kid's friend did not help the kid. The kid's best friend did not help the kid.",
-      "expectedText": "No one helped the kid. The kid’s friend did NOT help the kid. The kid’s best friend did NOT help the kid.",
-      "words": [
-        {
-          "word": "No",
-          "start": 0.0,
-          "end": 0.8
-        },
-        {
-          "word": "one",
-          "start": 0.8,
-          "end": 1.1
-        },
-        {
-          "word": "helped",
-          "start": 1.1,
-          "end": 1.36
-        },
-        {
-          "word": "the",
-          "start": 1.36,
-          "end": 1.64
-        },
-        {
-          "word": "kid.",
-          "start": 1.64,
-          "end": 2.62
-        },
-        {
-          "word": "The",
-          "start": 2.62,
-          "end": 2.68
-        },
-        {
-          "word": "kid's",
-          "start": 2.68,
-          "end": 3.08
-        },
-        {
-          "word": "friend",
-          "start": 3.08,
-          "end": 3.3
-        },
-        {
-          "word": "did",
-          "start": 3.3,
-          "end": 3.56
-        },
-        {
-          "word": "not",
-          "start": 3.56,
-          "end": 3.7
-        },
-        {
-          "word": "help",
-          "start": 3.7,
-          "end": 3.96
-        },
-        {
-          "word": "the",
-          "start": 3.96,
-          "end": 4.14
-        },
-        {
-          "word": "kid.",
-          "start": 4.14,
-          "end": 5.18
-        },
-        {
-          "word": "The",
-          "start": 5.18,
-          "end": 5.36
-        },
-        {
-          "word": "kid's",
-          "start": 5.36,
-          "end": 5.78
-        },
-        {
-          "word": "best",
-          "start": 5.78,
-          "end": 5.94
-        },
-        {
-          "word": "friend",
-          "start": 5.94,
-          "end": 6.36
-        },
-        {
-          "word": "did",
-          "start": 6.36,
-          "end": 6.56
-        },
-        {
-          "word": "not",
-          "start": 6.56,
-          "end": 6.72
-        },
-        {
-          "word": "help",
-          "start": 6.72,
-          "end": 7.0
-        },
-        {
-          "word": "the",
-          "start": 7.0,
-          "end": 7.16
-        },
-        {
-          "word": "kid.",
-          "start": 7.16,
-          "end": 7.94
-        }
-      ],
-      "exactNormalizedWordMatch": true,
-      "alignmentValid": true,
-      "alignmentFailures": [],
-      "zeroDurationWordCount": 0,
-      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration; approximate boundaries nominal20msgrid",
-      "alignmentAudioFrames": 398,
-      "numBeams": 1,
-      "generationTimestampTokens": false,
-      "recognitionTempo": 1,
-      "recognitionTests": [
-        {
-          "numBeams": 1,
-          "recognizedText": "No one helped the kid. The kid's friend did not help the kid. The kid's best friend did not help the kid.",
-          "exactNormalizedWordMatch": true
-        }
-      ],
-      "articleOmissionExceptionsAllowed": false,
-      "cueAlignmentApproved": true
-    },
-    "nr_213": {
-      "id": "nr_213",
-      "sha256": "dc6bb91106809c2d4b0f246cd09d2c57e0da3a62b151028e6e3897a5b783ed07",
-      "model": "openai/whisper-base.en",
-      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
-      "offline": true,
-      "expectedTextProvidedToRecognizer": false,
-      "durationSeconds": 7.78449,
-      "decodedDurationSeconds": 7.7443125,
-      "recognizedText": "No one helped the kid. The kids teacher did not help the kid. The kids friend did not help the kid.",
-      "expectedText": "No one helped the kid. The kid’s teacher did NOT help the kid. The kid’s friend did NOT help the kid.",
-      "words": [
-        {
-          "word": "No",
-          "start": 0.0,
-          "end": 0.78
-        },
-        {
-          "word": "one",
-          "start": 0.78,
-          "end": 1.08
-        },
-        {
-          "word": "helped",
-          "start": 1.08,
-          "end": 1.36
-        },
-        {
-          "word": "the",
-          "start": 1.36,
-          "end": 1.62
-        },
-        {
-          "word": "kid.",
-          "start": 1.62,
-          "end": 2.58
-        },
-        {
-          "word": "The",
-          "start": 2.58,
-          "end": 2.68
-        },
-        {
-          "word": "kids",
-          "start": 2.68,
-          "end": 2.92
-        },
-        {
-          "word": "teacher",
-          "start": 2.92,
-          "end": 3.3
-        },
-        {
-          "word": "did",
-          "start": 3.3,
-          "end": 3.62
-        },
-        {
-          "word": "not",
-          "start": 3.62,
-          "end": 3.8
-        },
-        {
-          "word": "help",
-          "start": 3.8,
-          "end": 4.1
-        },
-        {
-          "word": "the",
-          "start": 4.1,
-          "end": 4.28
-        },
-        {
-          "word": "kid.",
-          "start": 4.28,
-          "end": 5.34
-        },
-        {
-          "word": "The",
-          "start": 5.34,
-          "end": 5.48
-        },
-        {
-          "word": "kids",
-          "start": 5.48,
-          "end": 5.7
-        },
-        {
-          "word": "friend",
-          "start": 5.7,
-          "end": 6.06
-        },
-        {
-          "word": "did",
-          "start": 6.06,
-          "end": 6.34
-        },
-        {
-          "word": "not",
-          "start": 6.34,
-          "end": 6.5
-        },
-        {
-          "word": "help",
-          "start": 6.5,
-          "end": 6.76
-        },
-        {
-          "word": "the",
-          "start": 6.76,
-          "end": 6.92
-        },
-        {
-          "word": "kid.",
-          "start": 6.92,
-          "end": 7.74
-        }
-      ],
-      "exactNormalizedWordMatch": true,
-      "alignmentValid": true,
-      "alignmentFailures": [],
-      "zeroDurationWordCount": 0,
-      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration; approximate boundaries nominal20msgrid",
-      "alignmentAudioFrames": 388,
-      "numBeams": 1,
-      "generationTimestampTokens": false,
-      "recognitionTempo": 1,
-      "recognitionTests": [
-        {
-          "numBeams": 1,
-          "recognizedText": "No one helped the kid. The kids teacher did not help the kid. The kids friend did not help the kid.",
-          "exactNormalizedWordMatch": true
-        }
-      ],
-      "articleOmissionExceptionsAllowed": false,
-      "cueAlignmentApproved": true
-    },
-    "nr_215": {
-      "id": "nr_215",
-      "sha256": "5c2f4a0e68d6cdec56709daef5a340b6a925ab96f64c0e1e8298a06ffbd740f0",
-      "model": "openai/whisper-base.en",
-      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
-      "offline": true,
-      "expectedTextProvidedToRecognizer": false,
-      "durationSeconds": 7.836735,
-      "decodedDurationSeconds": 7.8021875,
-      "recognizedText": "No one helped the kid. The kid's mom did not help the kid. The kid's sister did not help the kid.",
-      "expectedText": "No one helped the kid. The kid’s mom did NOT help the kid. The kid’s sister did NOT help the kid.",
-      "words": [
-        {
-          "word": "No",
-          "start": 0.0,
-          "end": 0.8
-        },
-        {
-          "word": "one",
-          "start": 0.8,
-          "end": 1.1
-        },
-        {
-          "word": "helped",
-          "start": 1.1,
-          "end": 1.36
-        },
-        {
-          "word": "the",
-          "start": 1.36,
-          "end": 1.62
-        },
-        {
-          "word": "kid.",
-          "start": 1.62,
-          "end": 2.6
-        },
-        {
-          "word": "The",
-          "start": 2.6,
-          "end": 2.68
-        },
-        {
-          "word": "kid's",
-          "start": 2.68,
-          "end": 3.1
-        },
-        {
-          "word": "mom",
-          "start": 3.1,
-          "end": 3.32
-        },
-        {
-          "word": "did",
-          "start": 3.32,
-          "end": 3.56
-        },
-        {
-          "word": "not",
-          "start": 3.56,
-          "end": 3.74
-        },
-        {
-          "word": "help",
-          "start": 3.74,
-          "end": 4.02
-        },
-        {
-          "word": "the",
-          "start": 4.02,
-          "end": 4.2
-        },
-        {
-          "word": "kid.",
-          "start": 4.2,
-          "end": 5.28
-        },
-        {
-          "word": "The",
-          "start": 5.28,
-          "end": 5.42
-        },
-        {
-          "word": "kid's",
-          "start": 5.42,
-          "end": 5.82
-        },
-        {
-          "word": "sister",
-          "start": 5.82,
-          "end": 6.18
-        },
-        {
-          "word": "did",
-          "start": 6.18,
-          "end": 6.38
-        },
-        {
-          "word": "not",
-          "start": 6.38,
-          "end": 6.56
-        },
-        {
-          "word": "help",
-          "start": 6.56,
-          "end": 6.84
-        },
-        {
-          "word": "the",
-          "start": 6.84,
-          "end": 7.0
-        },
-        {
-          "word": "kid.",
-          "start": 7.0,
-          "end": 7.8
-        }
-      ],
-      "exactNormalizedWordMatch": true,
-      "alignmentValid": true,
-      "alignmentFailures": [],
-      "zeroDurationWordCount": 0,
-      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration; approximate boundaries nominal20msgrid",
-      "alignmentAudioFrames": 391,
-      "numBeams": 1,
-      "generationTimestampTokens": false,
-      "recognitionTempo": 1,
-      "recognitionTests": [
-        {
-          "numBeams": 1,
-          "recognizedText": "No one helped the kid. The kid's mom did not help the kid. The kid's sister did not help the kid.",
-          "exactNormalizedWordMatch": true
-        }
-      ],
-      "articleOmissionExceptionsAllowed": false,
-      "cueAlignmentApproved": true
-    },
-    "nr_217": {
-      "id": "nr_217",
-      "sha256": "6c1d66dac31d001193cae8d49cc76d30e131b23393a526cc6eae4d68df163263",
-      "model": "openai/whisper-base.en",
-      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
-      "offline": true,
-      "expectedTextProvidedToRecognizer": false,
-      "durationSeconds": 8.097959,
-      "decodedDurationSeconds": 8.0686875,
-      "recognizedText": "No one helped the kid. The kids classmate did not help the kid. The kids teacher did not help the kid.",
-      "expectedText": "No one helped the kid. The kid’s classmate did NOT help the kid. The kid’s teacher did NOT help the kid.",
-      "words": [
-        {
-          "word": "No",
-          "start": 0.0,
-          "end": 0.8
-        },
-        {
-          "word": "one",
-          "start": 0.8,
-          "end": 1.1
-        },
-        {
-          "word": "helped",
-          "start": 1.1,
-          "end": 1.36
-        },
-        {
-          "word": "the",
-          "start": 1.36,
-          "end": 1.64
-        },
-        {
-          "word": "kid.",
-          "start": 1.64,
-          "end": 2.64
-        },
-        {
-          "word": "The",
-          "start": 2.64,
-          "end": 2.7
-        },
-        {
-          "word": "kids",
-          "start": 2.7,
-          "end": 2.96
-        },
-        {
-          "word": "classmate",
-          "start": 2.96,
-          "end": 3.46
-        },
-        {
-          "word": "did",
-          "start": 3.46,
-          "end": 3.88
-        },
-        {
-          "word": "not",
-          "start": 3.88,
-          "end": 4.02
-        },
-        {
-          "word": "help",
-          "start": 4.02,
-          "end": 4.32
-        },
-        {
-          "word": "the",
-          "start": 4.32,
-          "end": 4.48
-        },
-        {
-          "word": "kid.",
-          "start": 4.48,
-          "end": 5.56
-        },
-        {
-          "word": "The",
-          "start": 5.56,
-          "end": 5.68
-        },
-        {
-          "word": "kids",
-          "start": 5.68,
-          "end": 5.9
-        },
-        {
-          "word": "teacher",
-          "start": 5.9,
-          "end": 6.28
-        },
-        {
-          "word": "did",
-          "start": 6.28,
-          "end": 6.62
-        },
-        {
-          "word": "not",
-          "start": 6.62,
-          "end": 6.8
-        },
-        {
-          "word": "help",
-          "start": 6.8,
-          "end": 7.08
-        },
-        {
-          "word": "the",
-          "start": 7.08,
-          "end": 7.26
-        },
-        {
-          "word": "kid.",
-          "start": 7.26,
-          "end": 8.06
-        }
-      ],
-      "exactNormalizedWordMatch": true,
-      "alignmentValid": true,
-      "alignmentFailures": [],
-      "zeroDurationWordCount": 0,
-      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration; approximate boundaries nominal20msgrid",
-      "alignmentAudioFrames": 404,
-      "numBeams": 1,
-      "generationTimestampTokens": false,
-      "recognitionTempo": 1,
-      "recognitionTests": [
-        {
-          "numBeams": 1,
-          "recognizedText": "No one helped the kid. The kids classmate did not help the kid. The kids teacher did not help the kid.",
-          "exactNormalizedWordMatch": true
-        }
-      ],
-      "articleOmissionExceptionsAllowed": false,
-      "cueAlignmentApproved": true
-    },
-    "nr_221": {
-      "id": "nr_221",
-      "sha256": "c822243d1239b06cedf39742e3951dfab51f56e8cdb260d0a3460dabbd581d65",
-      "model": "openai/whisper-base.en",
-      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
-      "offline": true,
-      "expectedTextProvidedToRecognizer": false,
-      "durationSeconds": 7.810612,
-      "decodedDurationSeconds": 7.76875,
-      "recognizedText": "No one helped the kid. The kids teacher did not help the kid. The kids dad did not help the kid.",
-      "expectedText": "No one helped the kid. The kid’s teacher did NOT help the kid. The kid’s dad did NOT help the kid.",
-      "words": [
-        {
-          "word": "No",
-          "start": 0.0,
-          "end": 0.78
-        },
-        {
-          "word": "one",
-          "start": 0.78,
-          "end": 1.08
-        },
-        {
-          "word": "helped",
-          "start": 1.08,
-          "end": 1.36
-        },
-        {
-          "word": "the",
-          "start": 1.36,
-          "end": 1.62
-        },
-        {
-          "word": "kid.",
-          "start": 1.62,
-          "end": 2.58
-        },
-        {
-          "word": "The",
-          "start": 2.58,
-          "end": 2.68
-        },
-        {
-          "word": "kids",
-          "start": 2.68,
-          "end": 2.92
-        },
-        {
-          "word": "teacher",
-          "start": 2.92,
-          "end": 3.3
-        },
-        {
-          "word": "did",
-          "start": 3.3,
-          "end": 3.62
-        },
-        {
-          "word": "not",
-          "start": 3.62,
-          "end": 3.8
-        },
-        {
-          "word": "help",
-          "start": 3.8,
-          "end": 4.1
-        },
-        {
-          "word": "the",
-          "start": 4.1,
-          "end": 4.28
-        },
-        {
-          "word": "kid.",
-          "start": 4.28,
-          "end": 5.32
-        },
-        {
-          "word": "The",
-          "start": 5.32,
-          "end": 5.48
-        },
-        {
-          "word": "kids",
-          "start": 5.48,
-          "end": 5.74
-        },
-        {
-          "word": "dad",
-          "start": 5.74,
-          "end": 6.16
-        },
-        {
-          "word": "did",
-          "start": 6.16,
-          "end": 6.38
-        },
-        {
-          "word": "not",
-          "start": 6.38,
-          "end": 6.54
-        },
-        {
-          "word": "help",
-          "start": 6.54,
-          "end": 6.8
-        },
-        {
-          "word": "the",
-          "start": 6.8,
-          "end": 6.98
-        },
-        {
-          "word": "kid.",
-          "start": 6.98,
-          "end": 7.76
-        }
-      ],
-      "exactNormalizedWordMatch": true,
-      "alignmentValid": true,
-      "alignmentFailures": [],
-      "zeroDurationWordCount": 0,
-      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration; approximate boundaries nominal20msgrid",
-      "alignmentAudioFrames": 389,
-      "numBeams": 1,
-      "generationTimestampTokens": false,
-      "recognitionTempo": 1,
-      "recognitionTests": [
-        {
-          "numBeams": 1,
-          "recognizedText": "No one helped the kid. The kids teacher did not help the kid. The kids dad did not help the kid.",
-          "exactNormalizedWordMatch": true
-        }
-      ],
-      "articleOmissionExceptionsAllowed": false,
-      "cueAlignmentApproved": true
-    },
-    "nr_225": {
-      "id": "nr_225",
-      "sha256": "8c0849212abd5d7d9a1bb376b4d72e982b065ec51c4332610f802f03fc47b7d9",
-      "model": "openai/whisper-base.en",
-      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
-      "offline": true,
-      "expectedTextProvidedToRecognizer": false,
-      "durationSeconds": 7.78449,
-      "decodedDurationSeconds": 7.7429375,
-      "recognizedText": "No one helped the kid. The kid's brother did not help the kid. The kid's friend did not help the kid.",
-      "expectedText": "No one helped the kid. The kid’s brother did NOT help the kid. The kid’s friend did NOT help the kid.",
-      "words": [
-        {
-          "word": "No",
-          "start": 0.0,
-          "end": 0.78
-        },
-        {
-          "word": "one",
-          "start": 0.78,
-          "end": 1.08
-        },
-        {
-          "word": "helped",
-          "start": 1.08,
-          "end": 1.36
-        },
-        {
-          "word": "the",
-          "start": 1.36,
-          "end": 1.62
-        },
-        {
-          "word": "kid.",
-          "start": 1.62,
-          "end": 2.6
-        },
-        {
-          "word": "The",
-          "start": 2.6,
-          "end": 2.68
-        },
-        {
-          "word": "kid's",
-          "start": 2.68,
-          "end": 3.08
-        },
-        {
-          "word": "brother",
-          "start": 3.08,
-          "end": 3.4
-        },
-        {
-          "word": "did",
-          "start": 3.4,
-          "end": 3.64
-        },
-        {
-          "word": "not",
-          "start": 3.64,
-          "end": 3.82
-        },
-        {
-          "word": "help",
-          "start": 3.82,
-          "end": 4.1
-        },
-        {
-          "word": "the",
-          "start": 4.1,
-          "end": 4.28
-        },
-        {
-          "word": "kid.",
-          "start": 4.28,
-          "end": 5.32
-        },
-        {
-          "word": "The",
-          "start": 5.32,
-          "end": 5.48
-        },
-        {
-          "word": "kid's",
-          "start": 5.48,
-          "end": 5.88
-        },
-        {
-          "word": "friend",
-          "start": 5.88,
-          "end": 6.1
-        },
-        {
-          "word": "did",
-          "start": 6.1,
-          "end": 6.34
-        },
-        {
-          "word": "not",
-          "start": 6.34,
-          "end": 6.5
-        },
-        {
-          "word": "help",
-          "start": 6.5,
-          "end": 6.74
-        },
-        {
-          "word": "the",
-          "start": 6.74,
-          "end": 6.92
-        },
-        {
-          "word": "kid.",
-          "start": 6.92,
-          "end": 7.74
-        }
-      ],
-      "exactNormalizedWordMatch": true,
-      "alignmentValid": true,
-      "alignmentFailures": [],
-      "zeroDurationWordCount": 0,
-      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration; approximate boundaries nominal20msgrid",
-      "alignmentAudioFrames": 388,
-      "numBeams": 1,
-      "generationTimestampTokens": false,
-      "recognitionTempo": 1,
-      "recognitionTests": [
-        {
-          "numBeams": 1,
-          "recognizedText": "No one helped the kid. The kid's brother did not help the kid. The kid's friend did not help the kid.",
-          "exactNormalizedWordMatch": true
-        }
-      ],
-      "articleOmissionExceptionsAllowed": false,
-      "cueAlignmentApproved": true
-    },
-    "nr_229": {
-      "id": "nr_229",
-      "sha256": "2cf33bc2abdf5dc8050fc16289252beabdc07641c0f7350b54ae123e5fc7db69",
-      "model": "openai/whisper-base.en",
-      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
-      "offline": true,
-      "expectedTextProvidedToRecognizer": false,
-      "durationSeconds": 7.810612,
-      "decodedDurationSeconds": 7.7771875,
-      "recognizedText": "No one helped the kid. The kid's dad did not help the kid. The kid's brother did not help the kid.",
-      "expectedText": "No one helped the kid. The kid’s dad did NOT help the kid. The kid’s brother did NOT help the kid.",
+      "durationSeconds": 2.272653,
+      "decodedDurationSeconds": 2.24,
+      "recognizedText": "No one helped the mom.",
+      "expectedText": "No one helped the mom.",
       "words": [
         {
           "word": "No",
@@ -6168,498 +5124,12 @@
         {
           "word": "the",
           "start": 1.36,
-          "end": 1.62
-        },
-        {
-          "word": "kid.",
-          "start": 1.62,
-          "end": 2.62
-        },
-        {
-          "word": "The",
-          "start": 2.62,
-          "end": 2.7
-        },
-        {
-          "word": "kid's",
-          "start": 2.7,
-          "end": 3.12
-        },
-        {
-          "word": "dad",
-          "start": 3.12,
-          "end": 3.38
-        },
-        {
-          "word": "did",
-          "start": 3.38,
-          "end": 3.6
-        },
-        {
-          "word": "not",
-          "start": 3.6,
-          "end": 3.76
-        },
-        {
-          "word": "help",
-          "start": 3.76,
-          "end": 4.0
-        },
-        {
-          "word": "the",
-          "start": 4.0,
-          "end": 4.18
-        },
-        {
-          "word": "kid.",
-          "start": 4.18,
-          "end": 5.22
-        },
-        {
-          "word": "The",
-          "start": 5.22,
-          "end": 5.38
-        },
-        {
-          "word": "kid's",
-          "start": 5.38,
-          "end": 5.8
-        },
-        {
-          "word": "brother",
-          "start": 5.8,
-          "end": 6.08
-        },
-        {
-          "word": "did",
-          "start": 6.08,
-          "end": 6.34
-        },
-        {
-          "word": "not",
-          "start": 6.34,
-          "end": 6.52
-        },
-        {
-          "word": "help",
-          "start": 6.52,
-          "end": 6.8
-        },
-        {
-          "word": "the",
-          "start": 6.8,
-          "end": 6.98
-        },
-        {
-          "word": "kid.",
-          "start": 6.98,
-          "end": 7.76
-        }
-      ],
-      "exactNormalizedWordMatch": true,
-      "alignmentValid": true,
-      "alignmentFailures": [],
-      "zeroDurationWordCount": 0,
-      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration; approximate boundaries nominal20msgrid",
-      "alignmentAudioFrames": 389,
-      "numBeams": 1,
-      "generationTimestampTokens": false,
-      "recognitionTempo": 1,
-      "recognitionTests": [
-        {
-          "numBeams": 1,
-          "recognizedText": "No one helped the kid. The kid's dad did not help the kid. The kid's brother did not help the kid.",
-          "exactNormalizedWordMatch": true
-        }
-      ],
-      "articleOmissionExceptionsAllowed": false,
-      "cueAlignmentApproved": true
-    },
-    "nr_231": {
-      "id": "nr_231",
-      "sha256": "3194eb1e02983167ec69cc47babc5ed62e47ded67b0c32de71326e09706c3404",
-      "model": "openai/whisper-base.en",
-      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
-      "offline": true,
-      "expectedTextProvidedToRecognizer": false,
-      "durationSeconds": 7.732245,
-      "decodedDurationSeconds": 7.6989375,
-      "recognizedText": "No one helped the kid. The kids' dad did not help the kid. The kids' mom did not help the kid.",
-      "expectedText": "No one helped the kid. The kid’s dad did NOT help the kid. The kid’s mom did NOT help the kid.",
-      "words": [
-        {
-          "word": "No",
-          "start": 0.0,
-          "end": 0.8
-        },
-        {
-          "word": "one",
-          "start": 0.8,
-          "end": 1.1
-        },
-        {
-          "word": "helped",
-          "start": 1.1,
-          "end": 1.36
-        },
-        {
-          "word": "the",
-          "start": 1.36,
-          "end": 1.62
-        },
-        {
-          "word": "kid.",
-          "start": 1.62,
-          "end": 2.62
-        },
-        {
-          "word": "The",
-          "start": 2.62,
-          "end": 2.7
-        },
-        {
-          "word": "kids'",
-          "start": 2.7,
-          "end": 3.18
-        },
-        {
-          "word": "dad",
-          "start": 3.18,
-          "end": 3.4
-        },
-        {
-          "word": "did",
-          "start": 3.4,
-          "end": 3.6
-        },
-        {
-          "word": "not",
-          "start": 3.6,
-          "end": 3.74
-        },
-        {
-          "word": "help",
-          "start": 3.74,
-          "end": 4.0
-        },
-        {
-          "word": "the",
-          "start": 4.0,
-          "end": 4.18
-        },
-        {
-          "word": "kid.",
-          "start": 4.18,
-          "end": 5.2
-        },
-        {
-          "word": "The",
-          "start": 5.2,
-          "end": 5.38
-        },
-        {
-          "word": "kids'",
-          "start": 5.38,
-          "end": 5.84
-        },
-        {
-          "word": "mom",
-          "start": 5.84,
-          "end": 6.04
-        },
-        {
-          "word": "did",
-          "start": 6.04,
-          "end": 6.26
-        },
-        {
-          "word": "not",
-          "start": 6.26,
-          "end": 6.44
-        },
-        {
-          "word": "help",
-          "start": 6.44,
-          "end": 6.72
-        },
-        {
-          "word": "the",
-          "start": 6.72,
-          "end": 6.9
-        },
-        {
-          "word": "kid.",
-          "start": 6.9,
-          "end": 7.68
-        }
-      ],
-      "exactNormalizedWordMatch": true,
-      "alignmentValid": true,
-      "alignmentFailures": [],
-      "zeroDurationWordCount": 0,
-      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration; approximate boundaries nominal20msgrid",
-      "alignmentAudioFrames": 385,
-      "numBeams": 1,
-      "generationTimestampTokens": false,
-      "recognitionTempo": 1,
-      "recognitionTests": [
-        {
-          "numBeams": 1,
-          "recognizedText": "No one helped the kid. The kids' dad did not help the kid. The kids' mom did not help the kid.",
-          "exactNormalizedWordMatch": true
-        }
-      ],
-      "articleOmissionExceptionsAllowed": false,
-      "cueAlignmentApproved": true
-    },
-    "nr_233": {
-      "id": "nr_233",
-      "sha256": "fe1d7197a95809db85eb0c3b01dd0c6611796b3fc245bacedeae1de0de9ecd06",
-      "model": "openai/whisper-base.en",
-      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
-      "offline": true,
-      "expectedTextProvidedToRecognizer": false,
-      "durationSeconds": 7.915102,
-      "decodedDurationSeconds": 7.8778125,
-      "recognizedText": "No one helped the kid. The kid's sister did not help the kid. The kid's brother did not help the kid.",
-      "expectedText": "No one helped the kid. The kid’s sister did NOT help the kid. The kid’s brother did NOT help the kid.",
-      "words": [
-        {
-          "word": "No",
-          "start": 0.0,
-          "end": 0.8
-        },
-        {
-          "word": "one",
-          "start": 0.8,
-          "end": 1.1
-        },
-        {
-          "word": "helped",
-          "start": 1.1,
-          "end": 1.36
-        },
-        {
-          "word": "the",
-          "start": 1.36,
-          "end": 1.62
-        },
-        {
-          "word": "kid.",
-          "start": 1.62,
-          "end": 2.6
-        },
-        {
-          "word": "The",
-          "start": 2.6,
-          "end": 2.68
-        },
-        {
-          "word": "kid's",
-          "start": 2.68,
-          "end": 3.1
-        },
-        {
-          "word": "sister",
-          "start": 3.1,
-          "end": 3.48
-        },
-        {
-          "word": "did",
-          "start": 3.48,
-          "end": 3.66
-        },
-        {
-          "word": "not",
-          "start": 3.66,
-          "end": 3.84
-        },
-        {
-          "word": "help",
-          "start": 3.84,
-          "end": 4.12
-        },
-        {
-          "word": "the",
-          "start": 4.12,
-          "end": 4.28
-        },
-        {
-          "word": "kid.",
-          "start": 4.28,
-          "end": 5.32
-        },
-        {
-          "word": "The",
-          "start": 5.32,
-          "end": 5.48
-        },
-        {
-          "word": "kid's",
-          "start": 5.48,
-          "end": 5.9
-        },
-        {
-          "word": "brother",
-          "start": 5.9,
-          "end": 6.14
-        },
-        {
-          "word": "did",
-          "start": 6.14,
-          "end": 6.44
-        },
-        {
-          "word": "not",
-          "start": 6.44,
-          "end": 6.62
-        },
-        {
-          "word": "help",
-          "start": 6.62,
-          "end": 6.9
-        },
-        {
-          "word": "the",
-          "start": 6.9,
-          "end": 7.08
-        },
-        {
-          "word": "kid.",
-          "start": 7.08,
-          "end": 7.86
-        }
-      ],
-      "exactNormalizedWordMatch": true,
-      "alignmentValid": true,
-      "alignmentFailures": [],
-      "zeroDurationWordCount": 0,
-      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration; approximate boundaries nominal20msgrid",
-      "alignmentAudioFrames": 394,
-      "numBeams": 1,
-      "generationTimestampTokens": false,
-      "recognitionTempo": 1,
-      "recognitionTests": [
-        {
-          "numBeams": 1,
-          "recognizedText": "No one helped the kid. The kid's sister did not help the kid. The kid's brother did not help the kid.",
-          "exactNormalizedWordMatch": true
-        }
-      ],
-      "articleOmissionExceptionsAllowed": false,
-      "cueAlignmentApproved": true
-    },
-    "nr_235": {
-      "id": "nr_235",
-      "sha256": "08917b1fcb27ad607030bc080d1a5186d87c5b31dbb732f6e859f8689f09845d",
-      "model": "openai/whisper-base.en",
-      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
-      "offline": true,
-      "expectedTextProvidedToRecognizer": false,
-      "durationSeconds": 7.288163,
-      "decodedDurationSeconds": 7.2580625,
-      "recognizedText": "No one helped the mom. The kids' dad did not help the mom. The kid did not help the mom.",
-      "expectedText": "No one helped the mom. The kid’s dad did NOT help the mom. The kid did NOT help the mom.",
-      "words": [
-        {
-          "word": "No",
-          "start": 0.0,
-          "end": 0.76
-        },
-        {
-          "word": "one",
-          "start": 0.76,
-          "end": 1.08
-        },
-        {
-          "word": "helped",
-          "start": 1.08,
-          "end": 1.34
-        },
-        {
-          "word": "the",
-          "start": 1.34,
           "end": 1.62
         },
         {
           "word": "mom.",
           "start": 1.62,
-          "end": 2.52
-        },
-        {
-          "word": "The",
-          "start": 2.52,
-          "end": 2.66
-        },
-        {
-          "word": "kids'",
-          "start": 2.66,
-          "end": 3.14
-        },
-        {
-          "word": "dad",
-          "start": 3.14,
-          "end": 3.36
-        },
-        {
-          "word": "did",
-          "start": 3.36,
-          "end": 3.54
-        },
-        {
-          "word": "not",
-          "start": 3.54,
-          "end": 3.68
-        },
-        {
-          "word": "help",
-          "start": 3.68,
-          "end": 3.94
-        },
-        {
-          "word": "the",
-          "start": 3.94,
-          "end": 4.12
-        },
-        {
-          "word": "mom.",
-          "start": 4.12,
-          "end": 5.08
-        },
-        {
-          "word": "The",
-          "start": 5.08,
-          "end": 5.28
-        },
-        {
-          "word": "kid",
-          "start": 5.28,
-          "end": 5.56
-        },
-        {
-          "word": "did",
-          "start": 5.56,
-          "end": 5.84
-        },
-        {
-          "word": "not",
-          "start": 5.84,
-          "end": 6.0
-        },
-        {
-          "word": "help",
-          "start": 6.0,
-          "end": 6.3
-        },
-        {
-          "word": "the",
-          "start": 6.3,
-          "end": 6.48
-        },
-        {
-          "word": "mom.",
-          "start": 6.48,
-          "end": 7.24
+          "end": 2.22
         }
       ],
       "exactNormalizedWordMatch": true,
@@ -6667,31 +5137,31 @@
       "alignmentFailures": [],
       "zeroDurationWordCount": 0,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration; approximate boundaries nominal20msgrid",
-      "alignmentAudioFrames": 363,
+      "alignmentAudioFrames": 112,
       "numBeams": 1,
       "generationTimestampTokens": false,
       "recognitionTempo": 1,
       "recognitionTests": [
         {
           "numBeams": 1,
-          "recognizedText": "No one helped the mom. The kids' dad did not help the mom. The kid did not help the mom.",
+          "recognizedText": "No one helped the mom.",
           "exactNormalizedWordMatch": true
         }
       ],
       "articleOmissionExceptionsAllowed": false,
       "cueAlignmentApproved": true
     },
-    "nr_242": {
-      "id": "nr_242",
-      "sha256": "6ab276e6149f2f2f27a6c8809ea92e7428a6d05c782c7f14a0a07c247c24900e",
+    "nr_287": {
+      "id": "nr_287",
+      "sha256": "4b1a61536e3d2114c99a55d8d2045e90308827933f2bdffd51cf82e0a3f4ac81",
       "model": "openai/whisper-base.en",
       "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "offline": true,
       "expectedTextProvidedToRecognizer": false,
-      "durationSeconds": 7.47102,
-      "decodedDurationSeconds": 7.419875,
-      "recognizedText": "No one helped the dad. The kid did not help the dad. The kid's mom did not help the dad.",
-      "expectedText": "No one helped the dad. The kid did NOT help the dad. The kid’s mom did NOT help the dad.",
+      "durationSeconds": 2.298776,
+      "decodedDurationSeconds": 2.25,
+      "recognizedText": "No one helped the dad.",
+      "expectedText": "No one helped the dad.",
       "words": [
         {
           "word": "No",
@@ -6716,82 +5186,7 @@
         {
           "word": "dad.",
           "start": 1.58,
-          "end": 2.58
-        },
-        {
-          "word": "The",
-          "start": 2.58,
-          "end": 2.66
-        },
-        {
-          "word": "kid",
-          "start": 2.66,
-          "end": 2.98
-        },
-        {
-          "word": "did",
-          "start": 2.98,
-          "end": 3.2
-        },
-        {
-          "word": "not",
-          "start": 3.2,
-          "end": 3.36
-        },
-        {
-          "word": "help",
-          "start": 3.36,
-          "end": 3.7
-        },
-        {
-          "word": "the",
-          "start": 3.7,
-          "end": 3.9
-        },
-        {
-          "word": "dad.",
-          "start": 3.9,
-          "end": 4.86
-        },
-        {
-          "word": "The",
-          "start": 4.86,
-          "end": 5.06
-        },
-        {
-          "word": "kid's",
-          "start": 5.06,
-          "end": 5.46
-        },
-        {
-          "word": "mom",
-          "start": 5.46,
-          "end": 5.7
-        },
-        {
-          "word": "did",
-          "start": 5.7,
-          "end": 5.94
-        },
-        {
-          "word": "not",
-          "start": 5.94,
-          "end": 6.12
-        },
-        {
-          "word": "help",
-          "start": 6.12,
-          "end": 6.44
-        },
-        {
-          "word": "the",
-          "start": 6.44,
-          "end": 6.62
-        },
-        {
-          "word": "dad.",
-          "start": 6.62,
-          "end": 7.4
+          "end": 2.24
         }
       ],
       "exactNormalizedWordMatch": true,
@@ -6799,40 +5194,40 @@
       "alignmentFailures": [],
       "zeroDurationWordCount": 0,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration; approximate boundaries nominal20msgrid",
-      "alignmentAudioFrames": 371,
+      "alignmentAudioFrames": 113,
       "numBeams": 1,
       "generationTimestampTokens": false,
       "recognitionTempo": 1,
       "recognitionTests": [
         {
           "numBeams": 1,
-          "recognizedText": "No one helped the dad. The kid did not help the dad. The kid's mom did not help the dad.",
+          "recognizedText": "No one helped the dad.",
           "exactNormalizedWordMatch": true
         }
       ],
       "articleOmissionExceptionsAllowed": false,
       "cueAlignmentApproved": true
     },
-    "nr_249": {
-      "id": "nr_249",
-      "sha256": "94f988e980df2019212a598899c5ce47cc0eb6c43d30086f65fa663b6161833d",
+    "nr_288": {
+      "id": "nr_288",
+      "sha256": "2844e64c0515606019b2cc29214eb7c98638b04a368a3b2dbf6224c2707a14cb",
       "model": "openai/whisper-base.en",
       "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "offline": true,
       "expectedTextProvidedToRecognizer": false,
-      "durationSeconds": 9.665306,
-      "decodedDurationSeconds": 9.614125,
-      "recognizedText": "No one helped the teacher in the middle. The teacher on the left did not help the teacher in the middle. The kid did not help the teacher in the middle.",
-      "expectedText": "No one helped the teacher in the middle. The teacher on the left did NOT help the teacher in the middle. The kid did NOT help the teacher in the middle.",
+      "durationSeconds": 2.977959,
+      "decodedDurationSeconds": 2.9399375,
+      "recognizedText": "No one helped the teacher in the middle.",
+      "expectedText": "No one helped the teacher in the middle.",
       "words": [
         {
           "word": "No",
           "start": 0.0,
-          "end": 0.74
+          "end": 0.76
         },
         {
           "word": "one",
-          "start": 0.74,
+          "start": 0.76,
           "end": 1.06
         },
         {
@@ -6863,121 +5258,2142 @@
         {
           "word": "middle.",
           "start": 2.3,
-          "end": 3.3
-        },
+          "end": 2.92
+        }
+      ],
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration; approximate boundaries nominal20msgrid",
+      "alignmentAudioFrames": 147,
+      "numBeams": 1,
+      "generationTimestampTokens": false,
+      "recognitionTempo": 1,
+      "recognitionTests": [
+        {
+          "numBeams": 1,
+          "recognizedText": "No one helped the teacher in the middle.",
+          "exactNormalizedWordMatch": true
+        }
+      ],
+      "articleOmissionExceptionsAllowed": false,
+      "cueAlignmentApproved": true
+    },
+    "nr_289": {
+      "id": "nr_289",
+      "sha256": "13d2928a36d3c54c2592df4db86a553e4090c37d5fbd1d6e362c8fd018acdb8f",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "durationSeconds": 7.601633,
+      "decodedDurationSeconds": 7.5679375,
+      "recognizedText": "The kids teacher did not help the kid. The kids mom did not help the kid. No one helped the kid.",
+      "expectedText": "The kid’s teacher did NOT help the kid. The kid’s mom did NOT help the kid. No one helped the kid.",
+      "words": [
         {
           "word": "The",
-          "start": 3.3,
-          "end": 3.36
+          "start": 0.0,
+          "end": 0.08
+        },
+        {
+          "word": "kids",
+          "start": 0.08,
+          "end": 0.3
         },
         {
           "word": "teacher",
-          "start": 3.36,
-          "end": 3.62
+          "start": 0.3,
+          "end": 0.72
         },
         {
-          "word": "on",
-          "start": 3.62,
+          "word": "did",
+          "start": 0.72,
+          "end": 1.0
+        },
+        {
+          "word": "not",
+          "start": 1.0,
+          "end": 1.2
+        },
+        {
+          "word": "help",
+          "start": 1.2,
+          "end": 1.46
+        },
+        {
+          "word": "the",
+          "start": 1.46,
+          "end": 1.66
+        },
+        {
+          "word": "kid.",
+          "start": 1.66,
+          "end": 2.74
+        },
+        {
+          "word": "The",
+          "start": 2.74,
+          "end": 2.86
+        },
+        {
+          "word": "kids",
+          "start": 2.86,
+          "end": 3.1
+        },
+        {
+          "word": "mom",
+          "start": 3.1,
+          "end": 3.44
+        },
+        {
+          "word": "did",
+          "start": 3.44,
+          "end": 3.74
+        },
+        {
+          "word": "not",
+          "start": 3.74,
           "end": 3.92
         },
         {
-          "word": "the",
-          "start": 3.92,
-          "end": 4.02
-        },
-        {
-          "word": "left",
-          "start": 4.02,
-          "end": 4.32
-        },
-        {
-          "word": "did",
-          "start": 4.32,
-          "end": 4.56
-        },
-        {
-          "word": "not",
-          "start": 4.56,
-          "end": 4.68
-        },
-        {
           "word": "help",
-          "start": 4.68,
-          "end": 4.96
+          "start": 3.92,
+          "end": 4.2
         },
         {
           "word": "the",
-          "start": 4.96,
-          "end": 5.12
+          "start": 4.2,
+          "end": 4.38
         },
         {
-          "word": "teacher",
-          "start": 5.12,
-          "end": 5.44
-        },
-        {
-          "word": "in",
-          "start": 5.44,
-          "end": 5.62
-        },
-        {
-          "word": "the",
-          "start": 5.62,
+          "word": "kid.",
+          "start": 4.38,
           "end": 5.68
         },
         {
-          "word": "middle.",
+          "word": "No",
           "start": 5.68,
-          "end": 6.84
+          "end": 6.06
         },
+        {
+          "word": "one",
+          "start": 6.06,
+          "end": 6.38
+        },
+        {
+          "word": "helped",
+          "start": 6.38,
+          "end": 6.66
+        },
+        {
+          "word": "the",
+          "start": 6.66,
+          "end": 6.92
+        },
+        {
+          "word": "kid.",
+          "start": 6.92,
+          "end": 7.56
+        }
+      ],
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration; approximate boundaries nominal20msgrid",
+      "alignmentAudioFrames": 379,
+      "numBeams": 1,
+      "generationTimestampTokens": false,
+      "recognitionTempo": 1,
+      "recognitionTests": [
+        {
+          "numBeams": 1,
+          "recognizedText": "The kids teacher did not help the kid. The kids mom did not help the kid. No one helped the kid.",
+          "exactNormalizedWordMatch": true
+        }
+      ],
+      "articleOmissionExceptionsAllowed": false,
+      "cueAlignmentApproved": true
+    },
+    "nr_290": {
+      "id": "nr_290",
+      "sha256": "4d860d58ea4a4f28f89d324358fa913ef50f6538fb9791568d388b4e3389037f",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "durationSeconds": 7.549388,
+      "decodedDurationSeconds": 7.508625,
+      "recognizedText": "The kids' sister did not help the kid. The kids' friend did not help the kid. No one helped the kid.",
+      "expectedText": "The kid’s sister did NOT help the kid. The kid’s friend did NOT help the kid. No one helped the kid.",
+      "words": [
         {
           "word": "The",
-          "start": 6.84,
-          "end": 7.0
+          "start": 0.0,
+          "end": 0.08
         },
         {
-          "word": "kid",
-          "start": 7.0,
-          "end": 7.3
+          "word": "kids'",
+          "start": 0.08,
+          "end": 0.48
+        },
+        {
+          "word": "sister",
+          "start": 0.48,
+          "end": 0.86
         },
         {
           "word": "did",
-          "start": 7.3,
-          "end": 7.54
+          "start": 0.86,
+          "end": 1.04
         },
         {
           "word": "not",
-          "start": 7.54,
-          "end": 7.68
+          "start": 1.04,
+          "end": 1.22
         },
         {
           "word": "help",
-          "start": 7.68,
-          "end": 7.96
+          "start": 1.22,
+          "end": 1.46
         },
         {
           "word": "the",
-          "start": 7.96,
-          "end": 8.14
+          "start": 1.46,
+          "end": 1.66
+        },
+        {
+          "word": "kid.",
+          "start": 1.66,
+          "end": 2.72
+        },
+        {
+          "word": "The",
+          "start": 2.72,
+          "end": 2.84
+        },
+        {
+          "word": "kids'",
+          "start": 2.84,
+          "end": 3.32
+        },
+        {
+          "word": "friend",
+          "start": 3.32,
+          "end": 3.54
+        },
+        {
+          "word": "did",
+          "start": 3.54,
+          "end": 3.72
+        },
+        {
+          "word": "not",
+          "start": 3.72,
+          "end": 3.86
+        },
+        {
+          "word": "help",
+          "start": 3.86,
+          "end": 4.14
+        },
+        {
+          "word": "the",
+          "start": 4.14,
+          "end": 4.3
+        },
+        {
+          "word": "kid.",
+          "start": 4.3,
+          "end": 5.58
+        },
+        {
+          "word": "No",
+          "start": 5.58,
+          "end": 6.0
+        },
+        {
+          "word": "one",
+          "start": 6.0,
+          "end": 6.32
+        },
+        {
+          "word": "helped",
+          "start": 6.32,
+          "end": 6.6
+        },
+        {
+          "word": "the",
+          "start": 6.6,
+          "end": 6.86
+        },
+        {
+          "word": "kid.",
+          "start": 6.86,
+          "end": 7.5
+        }
+      ],
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration; approximate boundaries nominal20msgrid",
+      "alignmentAudioFrames": 376,
+      "numBeams": 1,
+      "generationTimestampTokens": false,
+      "recognitionTempo": 1,
+      "recognitionTests": [
+        {
+          "numBeams": 1,
+          "recognizedText": "The kids' sister did not help the kid. The kids' friend did not help the kid. No one helped the kid.",
+          "exactNormalizedWordMatch": true
+        }
+      ],
+      "articleOmissionExceptionsAllowed": false,
+      "cueAlignmentApproved": true
+    },
+    "nr_291": {
+      "id": "nr_291",
+      "sha256": "0a704dabc29e5ddf1746bfcd22c09928f2147358e7bf0af2c99ce7f61eef4c7c",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "durationSeconds": 7.732245,
+      "decodedDurationSeconds": 7.703,
+      "recognizedText": "The kids' friend did not help the kid. The kids' best friend did not help the kid. No one helped the kid.",
+      "expectedText": "The kid’s friend did NOT help the kid. The kid’s best friend did NOT help the kid. No one helped the kid.",
+      "words": [
+        {
+          "word": "The",
+          "start": 0.0,
+          "end": 0.08
+        },
+        {
+          "word": "kids'",
+          "start": 0.08,
+          "end": 0.52
+        },
+        {
+          "word": "friend",
+          "start": 0.52,
+          "end": 0.7
+        },
+        {
+          "word": "did",
+          "start": 0.7,
+          "end": 0.92
+        },
+        {
+          "word": "not",
+          "start": 0.92,
+          "end": 1.08
+        },
+        {
+          "word": "help",
+          "start": 1.08,
+          "end": 1.32
+        },
+        {
+          "word": "the",
+          "start": 1.32,
+          "end": 1.52
+        },
+        {
+          "word": "kid.",
+          "start": 1.52,
+          "end": 2.48
+        },
+        {
+          "word": "The",
+          "start": 2.48,
+          "end": 2.72
+        },
+        {
+          "word": "kids'",
+          "start": 2.72,
+          "end": 3.2
+        },
+        {
+          "word": "best",
+          "start": 3.2,
+          "end": 3.32
+        },
+        {
+          "word": "friend",
+          "start": 3.32,
+          "end": 3.74
+        },
+        {
+          "word": "did",
+          "start": 3.74,
+          "end": 3.94
+        },
+        {
+          "word": "not",
+          "start": 3.94,
+          "end": 4.1
+        },
+        {
+          "word": "help",
+          "start": 4.1,
+          "end": 4.36
+        },
+        {
+          "word": "the",
+          "start": 4.36,
+          "end": 4.54
+        },
+        {
+          "word": "kid.",
+          "start": 4.54,
+          "end": 5.78
+        },
+        {
+          "word": "No",
+          "start": 5.78,
+          "end": 6.2
+        },
+        {
+          "word": "one",
+          "start": 6.2,
+          "end": 6.52
+        },
+        {
+          "word": "helped",
+          "start": 6.52,
+          "end": 6.8
+        },
+        {
+          "word": "the",
+          "start": 6.8,
+          "end": 7.06
+        },
+        {
+          "word": "kid.",
+          "start": 7.06,
+          "end": 7.7
+        }
+      ],
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration; approximate boundaries nominal20msgrid",
+      "alignmentAudioFrames": 386,
+      "numBeams": 5,
+      "generationTimestampTokens": false,
+      "recognitionTempo": 1,
+      "recognitionTests": [
+        {
+          "numBeams": 1,
+          "recognizedText": "The kids' friend did not help the kid. No one helped the kid.",
+          "exactNormalizedWordMatch": false
+        },
+        {
+          "numBeams": 5,
+          "recognizedText": "The kids' friend did not help the kid. The kids' best friend did not help the kid. No one helped the kid.",
+          "exactNormalizedWordMatch": true
+        }
+      ],
+      "articleOmissionExceptionsAllowed": false,
+      "cueAlignmentApproved": true
+    },
+    "nr_292": {
+      "id": "nr_292",
+      "sha256": "de711e8622d6c15780c46eed1ce33635523eceab43696d4e6c48f60ae2cc7cab",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "durationSeconds": 7.549388,
+      "decodedDurationSeconds": 7.5143125,
+      "recognizedText": "The kids teacher did not help the kid. The kids friend did not help the kid. No one helped the kid.",
+      "expectedText": "The kid’s teacher did NOT help the kid. The kid’s friend did NOT help the kid. No one helped the kid.",
+      "words": [
+        {
+          "word": "The",
+          "start": 0.0,
+          "end": 0.08
+        },
+        {
+          "word": "kids",
+          "start": 0.08,
+          "end": 0.3
         },
         {
           "word": "teacher",
-          "start": 8.14,
-          "end": 8.48
+          "start": 0.3,
+          "end": 0.72
         },
         {
-          "word": "in",
-          "start": 8.48,
-          "end": 8.68
+          "word": "did",
+          "start": 0.72,
+          "end": 1.0
+        },
+        {
+          "word": "not",
+          "start": 1.0,
+          "end": 1.18
+        },
+        {
+          "word": "help",
+          "start": 1.18,
+          "end": 1.46
         },
         {
           "word": "the",
-          "start": 8.68,
-          "end": 8.76
+          "start": 1.46,
+          "end": 1.66
+        },
+        {
+          "word": "kid.",
+          "start": 1.66,
+          "end": 2.72
+        },
+        {
+          "word": "The",
+          "start": 2.72,
+          "end": 2.86
+        },
+        {
+          "word": "kids",
+          "start": 2.86,
+          "end": 3.1
+        },
+        {
+          "word": "friend",
+          "start": 3.1,
+          "end": 3.44
+        },
+        {
+          "word": "did",
+          "start": 3.44,
+          "end": 3.72
+        },
+        {
+          "word": "not",
+          "start": 3.72,
+          "end": 3.88
+        },
+        {
+          "word": "help",
+          "start": 3.88,
+          "end": 4.14
+        },
+        {
+          "word": "the",
+          "start": 4.14,
+          "end": 4.32
+        },
+        {
+          "word": "kid.",
+          "start": 4.32,
+          "end": 5.6
+        },
+        {
+          "word": "No",
+          "start": 5.6,
+          "end": 6.02
+        },
+        {
+          "word": "one",
+          "start": 6.02,
+          "end": 6.32
+        },
+        {
+          "word": "helped",
+          "start": 6.32,
+          "end": 6.6
+        },
+        {
+          "word": "the",
+          "start": 6.6,
+          "end": 6.86
+        },
+        {
+          "word": "kid.",
+          "start": 6.86,
+          "end": 7.5
+        }
+      ],
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration; approximate boundaries nominal20msgrid",
+      "alignmentAudioFrames": 376,
+      "numBeams": 1,
+      "generationTimestampTokens": false,
+      "recognitionTempo": 1,
+      "recognitionTests": [
+        {
+          "numBeams": 1,
+          "recognizedText": "The kids teacher did not help the kid. The kids friend did not help the kid. No one helped the kid.",
+          "exactNormalizedWordMatch": true
+        }
+      ],
+      "articleOmissionExceptionsAllowed": false,
+      "cueAlignmentApproved": true
+    },
+    "nr_293": {
+      "id": "nr_293",
+      "sha256": "eb6d14fae4dd266436baef6d402a0069305971801361cdf6f1ded69610275b34",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "durationSeconds": 7.601633,
+      "decodedDurationSeconds": 7.5621875,
+      "recognizedText": "The kids mom did not help the kid. The kids sister did not help the kid. No one helped the kid.",
+      "expectedText": "The kid’s mom did NOT help the kid. The kid’s sister did NOT help the kid. No one helped the kid.",
+      "words": [
+        {
+          "word": "The",
+          "start": 0.0,
+          "end": 0.08
+        },
+        {
+          "word": "kids",
+          "start": 0.08,
+          "end": 0.32
+        },
+        {
+          "word": "mom",
+          "start": 0.32,
+          "end": 0.62
+        },
+        {
+          "word": "did",
+          "start": 0.62,
+          "end": 0.94
+        },
+        {
+          "word": "not",
+          "start": 0.94,
+          "end": 1.12
+        },
+        {
+          "word": "help",
+          "start": 1.12,
+          "end": 1.38
+        },
+        {
+          "word": "the",
+          "start": 1.38,
+          "end": 1.58
+        },
+        {
+          "word": "kid.",
+          "start": 1.58,
+          "end": 2.66
+        },
+        {
+          "word": "The",
+          "start": 2.66,
+          "end": 2.78
+        },
+        {
+          "word": "kids",
+          "start": 2.78,
+          "end": 3.04
+        },
+        {
+          "word": "sister",
+          "start": 3.04,
+          "end": 3.54
+        },
+        {
+          "word": "did",
+          "start": 3.54,
+          "end": 3.76
+        },
+        {
+          "word": "not",
+          "start": 3.76,
+          "end": 3.94
+        },
+        {
+          "word": "help",
+          "start": 3.94,
+          "end": 4.22
+        },
+        {
+          "word": "the",
+          "start": 4.22,
+          "end": 4.38
+        },
+        {
+          "word": "kid.",
+          "start": 4.38,
+          "end": 5.64
+        },
+        {
+          "word": "No",
+          "start": 5.64,
+          "end": 6.06
+        },
+        {
+          "word": "one",
+          "start": 6.06,
+          "end": 6.38
+        },
+        {
+          "word": "helped",
+          "start": 6.38,
+          "end": 6.66
+        },
+        {
+          "word": "the",
+          "start": 6.66,
+          "end": 6.92
+        },
+        {
+          "word": "kid.",
+          "start": 6.92,
+          "end": 7.56
+        }
+      ],
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration; approximate boundaries nominal20msgrid",
+      "alignmentAudioFrames": 379,
+      "numBeams": 1,
+      "generationTimestampTokens": false,
+      "recognitionTempo": 1,
+      "recognitionTests": [
+        {
+          "numBeams": 1,
+          "recognizedText": "The kids mom did not help the kid. The kids sister did not help the kid. No one helped the kid.",
+          "exactNormalizedWordMatch": true
+        }
+      ],
+      "articleOmissionExceptionsAllowed": false,
+      "cueAlignmentApproved": true
+    },
+    "nr_294": {
+      "id": "nr_294",
+      "sha256": "9c516b11b2a22eb0295cbbd72ce0f265e06fd9d6c4ae4c6ad5bcb76d976c5a76",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "durationSeconds": 7.862857,
+      "decodedDurationSeconds": 7.8186875,
+      "recognizedText": "The kids classmate did not help the kid. The kids teacher did not help the kid. No one helped the kid.",
+      "expectedText": "The kid’s classmate did NOT help the kid. The kid’s teacher did NOT help the kid. No one helped the kid.",
+      "words": [
+        {
+          "word": "The",
+          "start": 0.0,
+          "end": 0.08
+        },
+        {
+          "word": "kids",
+          "start": 0.08,
+          "end": 0.34
+        },
+        {
+          "word": "classmate",
+          "start": 0.34,
+          "end": 0.82
+        },
+        {
+          "word": "did",
+          "start": 0.82,
+          "end": 1.24
+        },
+        {
+          "word": "not",
+          "start": 1.24,
+          "end": 1.4
+        },
+        {
+          "word": "help",
+          "start": 1.4,
+          "end": 1.66
+        },
+        {
+          "word": "the",
+          "start": 1.66,
+          "end": 1.86
+        },
+        {
+          "word": "kid.",
+          "start": 1.86,
+          "end": 2.92
+        },
+        {
+          "word": "The",
+          "start": 2.92,
+          "end": 3.02
+        },
+        {
+          "word": "kids",
+          "start": 3.02,
+          "end": 3.26
+        },
+        {
+          "word": "teacher",
+          "start": 3.26,
+          "end": 3.64
+        },
+        {
+          "word": "did",
+          "start": 3.64,
+          "end": 3.98
+        },
+        {
+          "word": "not",
+          "start": 3.98,
+          "end": 4.16
+        },
+        {
+          "word": "help",
+          "start": 4.16,
+          "end": 4.46
+        },
+        {
+          "word": "the",
+          "start": 4.46,
+          "end": 4.64
+        },
+        {
+          "word": "kid.",
+          "start": 4.64,
+          "end": 5.92
+        },
+        {
+          "word": "No",
+          "start": 5.92,
+          "end": 6.32
+        },
+        {
+          "word": "one",
+          "start": 6.32,
+          "end": 6.62
+        },
+        {
+          "word": "helped",
+          "start": 6.62,
+          "end": 6.9
+        },
+        {
+          "word": "the",
+          "start": 6.9,
+          "end": 7.16
+        },
+        {
+          "word": "kid.",
+          "start": 7.16,
+          "end": 7.8
+        }
+      ],
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration; approximate boundaries nominal20msgrid",
+      "alignmentAudioFrames": 391,
+      "numBeams": 1,
+      "generationTimestampTokens": false,
+      "recognitionTempo": 1,
+      "recognitionTests": [
+        {
+          "numBeams": 1,
+          "recognizedText": "The kids classmate did not help the kid. The kids teacher did not help the kid. No one helped the kid.",
+          "exactNormalizedWordMatch": true
+        }
+      ],
+      "articleOmissionExceptionsAllowed": false,
+      "cueAlignmentApproved": true
+    },
+    "nr_295": {
+      "id": "nr_295",
+      "sha256": "f2ea1e698f009e79e55e84e1408bee3118e5cc2c979abe1810252095d3ef84eb",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "durationSeconds": 7.57551,
+      "decodedDurationSeconds": 7.538125,
+      "recognizedText": "The kids teacher did not help the kid. The kids dad did not help the kid. No one helped the kid.",
+      "expectedText": "The kid’s teacher did NOT help the kid. The kid’s dad did NOT help the kid. No one helped the kid.",
+      "words": [
+        {
+          "word": "The",
+          "start": 0.0,
+          "end": 0.08
+        },
+        {
+          "word": "kids",
+          "start": 0.08,
+          "end": 0.32
+        },
+        {
+          "word": "teacher",
+          "start": 0.32,
+          "end": 0.66
+        },
+        {
+          "word": "did",
+          "start": 0.66,
+          "end": 1.0
+        },
+        {
+          "word": "not",
+          "start": 1.0,
+          "end": 1.18
+        },
+        {
+          "word": "help",
+          "start": 1.18,
+          "end": 1.46
+        },
+        {
+          "word": "the",
+          "start": 1.46,
+          "end": 1.66
+        },
+        {
+          "word": "kid.",
+          "start": 1.66,
+          "end": 2.74
+        },
+        {
+          "word": "The",
+          "start": 2.74,
+          "end": 2.86
+        },
+        {
+          "word": "kids",
+          "start": 2.86,
+          "end": 3.12
+        },
+        {
+          "word": "dad",
+          "start": 3.12,
+          "end": 3.54
+        },
+        {
+          "word": "did",
+          "start": 3.54,
+          "end": 3.76
+        },
+        {
+          "word": "not",
+          "start": 3.76,
+          "end": 3.92
+        },
+        {
+          "word": "help",
+          "start": 3.92,
+          "end": 4.18
+        },
+        {
+          "word": "the",
+          "start": 4.18,
+          "end": 4.36
+        },
+        {
+          "word": "kid.",
+          "start": 4.36,
+          "end": 5.64
+        },
+        {
+          "word": "No",
+          "start": 5.64,
+          "end": 6.04
+        },
+        {
+          "word": "one",
+          "start": 6.04,
+          "end": 6.34
+        },
+        {
+          "word": "helped",
+          "start": 6.34,
+          "end": 6.64
+        },
+        {
+          "word": "the",
+          "start": 6.64,
+          "end": 6.88
+        },
+        {
+          "word": "kid.",
+          "start": 6.88,
+          "end": 7.52
+        }
+      ],
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration; approximate boundaries nominal20msgrid",
+      "alignmentAudioFrames": 377,
+      "numBeams": 1,
+      "generationTimestampTokens": false,
+      "recognitionTempo": 1,
+      "recognitionTests": [
+        {
+          "numBeams": 1,
+          "recognizedText": "The kids teacher did not help the kid. The kids dad did not help the kid. No one helped the kid.",
+          "exactNormalizedWordMatch": true
+        }
+      ],
+      "articleOmissionExceptionsAllowed": false,
+      "cueAlignmentApproved": true
+    },
+    "nr_296": {
+      "id": "nr_296",
+      "sha256": "0d20bd4f85f5ac07dccde91128360ab02c0804581dfa9dc5a9e11d565521da55",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "durationSeconds": 7.549388,
+      "decodedDurationSeconds": 7.5134375,
+      "recognizedText": "The kid's brother did not help the kid. The kid's friend did not help the kid. No one helped the kid.",
+      "expectedText": "The kid’s brother did NOT help the kid. The kid’s friend did NOT help the kid. No one helped the kid.",
+      "words": [
+        {
+          "word": "The",
+          "start": 0.0,
+          "end": 0.08
+        },
+        {
+          "word": "kid's",
+          "start": 0.08,
+          "end": 0.48
+        },
+        {
+          "word": "brother",
+          "start": 0.48,
+          "end": 0.76
+        },
+        {
+          "word": "did",
+          "start": 0.76,
+          "end": 1.02
+        },
+        {
+          "word": "not",
+          "start": 1.02,
+          "end": 1.2
+        },
+        {
+          "word": "help",
+          "start": 1.2,
+          "end": 1.46
+        },
+        {
+          "word": "the",
+          "start": 1.46,
+          "end": 1.66
+        },
+        {
+          "word": "kid.",
+          "start": 1.66,
+          "end": 2.7
+        },
+        {
+          "word": "The",
+          "start": 2.7,
+          "end": 2.86
+        },
+        {
+          "word": "kid's",
+          "start": 2.86,
+          "end": 3.26
+        },
+        {
+          "word": "friend",
+          "start": 3.26,
+          "end": 3.46
+        },
+        {
+          "word": "did",
+          "start": 3.46,
+          "end": 3.72
+        },
+        {
+          "word": "not",
+          "start": 3.72,
+          "end": 3.88
+        },
+        {
+          "word": "help",
+          "start": 3.88,
+          "end": 4.14
+        },
+        {
+          "word": "the",
+          "start": 4.14,
+          "end": 4.32
+        },
+        {
+          "word": "kid.",
+          "start": 4.32,
+          "end": 5.58
+        },
+        {
+          "word": "No",
+          "start": 5.58,
+          "end": 6.02
+        },
+        {
+          "word": "one",
+          "start": 6.02,
+          "end": 6.32
+        },
+        {
+          "word": "helped",
+          "start": 6.32,
+          "end": 6.6
+        },
+        {
+          "word": "the",
+          "start": 6.6,
+          "end": 6.86
+        },
+        {
+          "word": "kid.",
+          "start": 6.86,
+          "end": 7.5
+        }
+      ],
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration; approximate boundaries nominal20msgrid",
+      "alignmentAudioFrames": 376,
+      "numBeams": 5,
+      "generationTimestampTokens": false,
+      "recognitionTempo": 1,
+      "recognitionTests": [
+        {
+          "numBeams": 1,
+          "recognizedText": "The kids brother did not help the kid. No one helped the kid.",
+          "exactNormalizedWordMatch": false
+        },
+        {
+          "numBeams": 5,
+          "recognizedText": "The kid's brother did not help the kid. The kid's friend did not help the kid. No one helped the kid.",
+          "exactNormalizedWordMatch": true
+        }
+      ],
+      "articleOmissionExceptionsAllowed": false,
+      "cueAlignmentApproved": true
+    },
+    "nr_297": {
+      "id": "nr_297",
+      "sha256": "0c0cf347f5046354169cf5c30a2ed3076aa06a18dfe717e139e8476eb6192527",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "durationSeconds": 7.57551,
+      "decodedDurationSeconds": 7.53725,
+      "recognizedText": "The kids' dad did not help the kid. The kids' brother did not help the kid. No one helped the kid.",
+      "expectedText": "The kid’s dad did NOT help the kid. The kid’s brother did NOT help the kid. No one helped the kid.",
+      "words": [
+        {
+          "word": "The",
+          "start": 0.0,
+          "end": 0.08
+        },
+        {
+          "word": "kids'",
+          "start": 0.08,
+          "end": 0.52
+        },
+        {
+          "word": "dad",
+          "start": 0.52,
+          "end": 0.76
+        },
+        {
+          "word": "did",
+          "start": 0.76,
+          "end": 0.96
+        },
+        {
+          "word": "not",
+          "start": 0.96,
+          "end": 1.12
+        },
+        {
+          "word": "help",
+          "start": 1.12,
+          "end": 1.36
+        },
+        {
+          "word": "the",
+          "start": 1.36,
+          "end": 1.56
+        },
+        {
+          "word": "kid.",
+          "start": 1.56,
+          "end": 2.64
+        },
+        {
+          "word": "The",
+          "start": 2.64,
+          "end": 2.74
+        },
+        {
+          "word": "kids'",
+          "start": 2.74,
+          "end": 3.22
+        },
+        {
+          "word": "brother",
+          "start": 3.22,
+          "end": 3.52
+        },
+        {
+          "word": "did",
+          "start": 3.52,
+          "end": 3.7
+        },
+        {
+          "word": "not",
+          "start": 3.7,
+          "end": 3.9
+        },
+        {
+          "word": "help",
+          "start": 3.9,
+          "end": 4.18
+        },
+        {
+          "word": "the",
+          "start": 4.18,
+          "end": 4.36
+        },
+        {
+          "word": "kid.",
+          "start": 4.36,
+          "end": 5.6
+        },
+        {
+          "word": "No",
+          "start": 5.6,
+          "end": 6.04
+        },
+        {
+          "word": "one",
+          "start": 6.04,
+          "end": 6.34
+        },
+        {
+          "word": "helped",
+          "start": 6.34,
+          "end": 6.62
+        },
+        {
+          "word": "the",
+          "start": 6.62,
+          "end": 6.88
+        },
+        {
+          "word": "kid.",
+          "start": 6.88,
+          "end": 7.52
+        }
+      ],
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration; approximate boundaries nominal20msgrid",
+      "alignmentAudioFrames": 377,
+      "numBeams": 1,
+      "generationTimestampTokens": false,
+      "recognitionTempo": 1,
+      "recognitionTests": [
+        {
+          "numBeams": 1,
+          "recognizedText": "The kids' dad did not help the kid. The kids' brother did not help the kid. No one helped the kid.",
+          "exactNormalizedWordMatch": true
+        }
+      ],
+      "articleOmissionExceptionsAllowed": false,
+      "cueAlignmentApproved": true
+    },
+    "nr_298": {
+      "id": "nr_298",
+      "sha256": "741b0a9d30872c12ea0a00ef726ac45e2383f233b0c34d24c06baf198ddbef5c",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "durationSeconds": 7.497143,
+      "decodedDurationSeconds": 7.4603125,
+      "recognizedText": "The kids' dad did not help the kid. The kids' mom did not help the kid. No one helped the kid.",
+      "expectedText": "The kid’s dad did NOT help the kid. The kid’s mom did NOT help the kid. No one helped the kid.",
+      "words": [
+        {
+          "word": "The",
+          "start": 0.0,
+          "end": 0.08
+        },
+        {
+          "word": "kids'",
+          "start": 0.08,
+          "end": 0.52
+        },
+        {
+          "word": "dad",
+          "start": 0.52,
+          "end": 0.76
+        },
+        {
+          "word": "did",
+          "start": 0.76,
+          "end": 0.96
+        },
+        {
+          "word": "not",
+          "start": 0.96,
+          "end": 1.12
+        },
+        {
+          "word": "help",
+          "start": 1.12,
+          "end": 1.36
+        },
+        {
+          "word": "the",
+          "start": 1.36,
+          "end": 1.56
+        },
+        {
+          "word": "kid.",
+          "start": 1.56,
+          "end": 2.62
+        },
+        {
+          "word": "The",
+          "start": 2.62,
+          "end": 2.74
+        },
+        {
+          "word": "kids'",
+          "start": 2.74,
+          "end": 3.22
+        },
+        {
+          "word": "mom",
+          "start": 3.22,
+          "end": 3.4
+        },
+        {
+          "word": "did",
+          "start": 3.4,
+          "end": 3.64
+        },
+        {
+          "word": "not",
+          "start": 3.64,
+          "end": 3.8
+        },
+        {
+          "word": "help",
+          "start": 3.8,
+          "end": 4.08
+        },
+        {
+          "word": "the",
+          "start": 4.08,
+          "end": 4.26
+        },
+        {
+          "word": "kid.",
+          "start": 4.26,
+          "end": 5.52
+        },
+        {
+          "word": "No",
+          "start": 5.52,
+          "end": 5.96
+        },
+        {
+          "word": "one",
+          "start": 5.96,
+          "end": 6.28
+        },
+        {
+          "word": "helped",
+          "start": 6.28,
+          "end": 6.56
+        },
+        {
+          "word": "the",
+          "start": 6.56,
+          "end": 6.8
+        },
+        {
+          "word": "kid.",
+          "start": 6.8,
+          "end": 7.46
+        }
+      ],
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration; approximate boundaries nominal20msgrid",
+      "alignmentAudioFrames": 374,
+      "numBeams": 1,
+      "generationTimestampTokens": false,
+      "recognitionTempo": 1,
+      "recognitionTests": [
+        {
+          "numBeams": 1,
+          "recognizedText": "The kids' dad did not help the kid. The kids' mom did not help the kid. No one helped the kid.",
+          "exactNormalizedWordMatch": true
+        }
+      ],
+      "articleOmissionExceptionsAllowed": false,
+      "cueAlignmentApproved": true
+    },
+    "nr_299": {
+      "id": "nr_299",
+      "sha256": "7285983020c5f54c5283efa86824ed65bdc8dcf80834054fdcb370f4cc9f7cc2",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "durationSeconds": 7.68,
+      "decodedDurationSeconds": 7.6391875,
+      "recognizedText": "The kid's sister did not help the kid. The kid's brother did not help the kid. No one helped the kid.",
+      "expectedText": "The kid’s sister did NOT help the kid. The kid’s brother did NOT help the kid. No one helped the kid.",
+      "words": [
+        {
+          "word": "The",
+          "start": 0.0,
+          "end": 0.08
+        },
+        {
+          "word": "kid's",
+          "start": 0.08,
+          "end": 0.48
+        },
+        {
+          "word": "sister",
+          "start": 0.48,
+          "end": 0.82
+        },
+        {
+          "word": "did",
+          "start": 0.82,
+          "end": 1.04
+        },
+        {
+          "word": "not",
+          "start": 1.04,
+          "end": 1.22
+        },
+        {
+          "word": "help",
+          "start": 1.22,
+          "end": 1.46
+        },
+        {
+          "word": "the",
+          "start": 1.46,
+          "end": 1.66
+        },
+        {
+          "word": "kid.",
+          "start": 1.66,
+          "end": 2.72
+        },
+        {
+          "word": "The",
+          "start": 2.72,
+          "end": 2.86
+        },
+        {
+          "word": "kid's",
+          "start": 2.86,
+          "end": 3.28
+        },
+        {
+          "word": "brother",
+          "start": 3.28,
+          "end": 3.52
+        },
+        {
+          "word": "did",
+          "start": 3.52,
+          "end": 3.8
+        },
+        {
+          "word": "not",
+          "start": 3.8,
+          "end": 4.0
+        },
+        {
+          "word": "help",
+          "start": 4.0,
+          "end": 4.28
+        },
+        {
+          "word": "the",
+          "start": 4.28,
+          "end": 4.46
+        },
+        {
+          "word": "kid.",
+          "start": 4.46,
+          "end": 5.7
+        },
+        {
+          "word": "No",
+          "start": 5.7,
+          "end": 6.14
+        },
+        {
+          "word": "one",
+          "start": 6.14,
+          "end": 6.46
+        },
+        {
+          "word": "helped",
+          "start": 6.46,
+          "end": 6.72
+        },
+        {
+          "word": "the",
+          "start": 6.72,
+          "end": 6.98
+        },
+        {
+          "word": "kid.",
+          "start": 6.98,
+          "end": 7.62
+        }
+      ],
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration; approximate boundaries nominal20msgrid",
+      "alignmentAudioFrames": 382,
+      "numBeams": 5,
+      "generationTimestampTokens": false,
+      "recognitionTempo": 1,
+      "recognitionTests": [
+        {
+          "numBeams": 1,
+          "recognizedText": "The kids sister did not help the kid. No one helped the kid.",
+          "exactNormalizedWordMatch": false
+        },
+        {
+          "numBeams": 5,
+          "recognizedText": "The kid's sister did not help the kid. The kid's brother did not help the kid. No one helped the kid.",
+          "exactNormalizedWordMatch": true
+        }
+      ],
+      "articleOmissionExceptionsAllowed": false,
+      "cueAlignmentApproved": true
+    },
+    "nr_300": {
+      "id": "nr_300",
+      "sha256": "6da6388bb8fa7b57e786cef0db4d3a32366684f112f6ffd1297787896e3d3f9e",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "durationSeconds": 7.288163,
+      "decodedDurationSeconds": 7.2580625,
+      "recognizedText": "the kids' dad did not help the mom. The kid did not help the mom. No one helped the mom.",
+      "expectedText": "The kid’s dad did NOT help the mom. The kid did NOT help the mom. No one helped the mom.",
+      "words": [
+        {
+          "word": "the",
+          "start": 0.0,
+          "end": 0.08
+        },
+        {
+          "word": "kids'",
+          "start": 0.08,
+          "end": 0.5
+        },
+        {
+          "word": "dad",
+          "start": 0.5,
+          "end": 0.76
+        },
+        {
+          "word": "did",
+          "start": 0.76,
+          "end": 0.94
+        },
+        {
+          "word": "not",
+          "start": 0.94,
+          "end": 1.1
+        },
+        {
+          "word": "help",
+          "start": 1.1,
+          "end": 1.34
+        },
+        {
+          "word": "the",
+          "start": 1.34,
+          "end": 1.54
+        },
+        {
+          "word": "mom.",
+          "start": 1.54,
+          "end": 2.18
+        },
+        {
+          "word": "The",
+          "start": 2.4615,
+          "end": 2.7215
+        },
+        {
+          "word": "kid",
+          "start": 2.7215,
+          "end": 3.0015
+        },
+        {
+          "word": "did",
+          "start": 3.0015,
+          "end": 3.2415000000000003
+        },
+        {
+          "word": "not",
+          "start": 3.2415000000000003,
+          "end": 3.4215
+        },
+        {
+          "word": "help",
+          "start": 3.4215,
+          "end": 3.7015000000000002
+        },
+        {
+          "word": "the",
+          "start": 3.7015000000000002,
+          "end": 3.9015
+        },
+        {
+          "word": "mom.",
+          "start": 3.9015,
+          "end": 4.6815
+        },
+        {
+          "word": "No",
+          "start": 4.8430625,
+          "end": 5.8030625
+        },
+        {
+          "word": "one",
+          "start": 5.8030625,
+          "end": 6.1030625
+        },
+        {
+          "word": "helped",
+          "start": 6.1030625,
+          "end": 6.3630625
+        },
+        {
+          "word": "the",
+          "start": 6.3630625,
+          "end": 6.6430625
+        },
+        {
+          "word": "mom.",
+          "start": 6.6430625,
+          "end": 7.243062500000001
+        }
+      ],
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "alignmentMethod": "Each complete sentence independently recognized from final encoded MP3, sliced only at inserted-silence midpoints; Whisper cross-attention DTW cropped to each decoded block, offsets mapped back into final audio. Approximate boundaries nominal20msgrid.",
+      "recognitionMethod": "unprompted complete-sentence block recognition from final MP3; concatenate transcripts in actual file order",
+      "fullContextAsrExactMatch": false,
+      "fullContextAsrLimitation": "The full-context recognizer collapses the middle repeated helper clause into the first. No spoken text or word timings were reconstructed to correct that failed pass.",
+      "sentenceBlockReports": [
+        {
+          "sentenceIndex": 0,
+          "finalAudioStartSeconds": 0.0,
+          "finalAudioEndSeconds": 2.4615,
+          "expectedText": "The kid’s dad did NOT help the mom.",
+          "recognizedText": "the kids' dad did not help the mom.",
+          "exactNormalizedWordMatch": true,
+          "words": [
+            {
+              "word": "the",
+              "start": 0.0,
+              "end": 0.08
+            },
+            {
+              "word": "kids'",
+              "start": 0.08,
+              "end": 0.5
+            },
+            {
+              "word": "dad",
+              "start": 0.5,
+              "end": 0.76
+            },
+            {
+              "word": "did",
+              "start": 0.76,
+              "end": 0.94
+            },
+            {
+              "word": "not",
+              "start": 0.94,
+              "end": 1.1
+            },
+            {
+              "word": "help",
+              "start": 1.1,
+              "end": 1.34
+            },
+            {
+              "word": "the",
+              "start": 1.34,
+              "end": 1.54
+            },
+            {
+              "word": "mom.",
+              "start": 1.54,
+              "end": 2.18
+            }
+          ],
+          "numBeams": 1,
+          "recognitionTests": [
+            {
+              "numBeams": 1,
+              "recognizedText": "the kids' dad did not help the mom.",
+              "exactNormalizedWordMatch": true
+            }
+          ],
+          "expectedTextProvidedToRecognizer": false,
+          "cutAtInsertedSilenceMidpoint": true
+        },
+        {
+          "sentenceIndex": 1,
+          "finalAudioStartSeconds": 2.4615,
+          "finalAudioEndSeconds": 4.8430625,
+          "expectedText": "The kid did NOT help the mom.",
+          "recognizedText": "The kid did not help the mom.",
+          "exactNormalizedWordMatch": true,
+          "words": [
+            {
+              "word": "The",
+              "start": 2.4615,
+              "end": 2.7215
+            },
+            {
+              "word": "kid",
+              "start": 2.7215,
+              "end": 3.0015
+            },
+            {
+              "word": "did",
+              "start": 3.0015,
+              "end": 3.2415000000000003
+            },
+            {
+              "word": "not",
+              "start": 3.2415000000000003,
+              "end": 3.4215
+            },
+            {
+              "word": "help",
+              "start": 3.4215,
+              "end": 3.7015000000000002
+            },
+            {
+              "word": "the",
+              "start": 3.7015000000000002,
+              "end": 3.9015
+            },
+            {
+              "word": "mom.",
+              "start": 3.9015,
+              "end": 4.6815
+            }
+          ],
+          "numBeams": 1,
+          "recognitionTests": [
+            {
+              "numBeams": 1,
+              "recognizedText": "The kid did not help the mom.",
+              "exactNormalizedWordMatch": true
+            }
+          ],
+          "expectedTextProvidedToRecognizer": false,
+          "cutAtInsertedSilenceMidpoint": true
+        },
+        {
+          "sentenceIndex": 2,
+          "finalAudioStartSeconds": 4.8430625,
+          "finalAudioEndSeconds": 7.2580625,
+          "expectedText": "No one helped the mom.",
+          "recognizedText": "No one helped the mom.",
+          "exactNormalizedWordMatch": true,
+          "words": [
+            {
+              "word": "No",
+              "start": 4.8430625,
+              "end": 5.8030625
+            },
+            {
+              "word": "one",
+              "start": 5.8030625,
+              "end": 6.1030625
+            },
+            {
+              "word": "helped",
+              "start": 6.1030625,
+              "end": 6.3630625
+            },
+            {
+              "word": "the",
+              "start": 6.3630625,
+              "end": 6.6430625
+            },
+            {
+              "word": "mom.",
+              "start": 6.6430625,
+              "end": 7.243062500000001
+            }
+          ],
+          "numBeams": 1,
+          "recognitionTests": [
+            {
+              "numBeams": 1,
+              "recognizedText": "No one helped the mom.",
+              "exactNormalizedWordMatch": true
+            }
+          ],
+          "expectedTextProvidedToRecognizer": false,
+          "cutAtInsertedSilenceMidpoint": true
+        }
+      ],
+      "numBeams": 1,
+      "generationTimestampTokens": false,
+      "recognitionTempo": 1,
+      "articleOmissionExceptionsAllowed": false,
+      "wordLevelSlicing": false,
+      "cueAlignmentApproved": true
+    },
+    "nr_301": {
+      "id": "nr_301",
+      "sha256": "8c2f582d6ca958624cdf25b3031396e99c35566c26534b8d4b1e272071e69ccb",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "durationSeconds": 7.47102,
+      "decodedDurationSeconds": 7.419875,
+      "recognizedText": "The kid did not help the dad. The kid's mom did not help the dad. No one helped the dad.",
+      "expectedText": "The kid did NOT help the dad. The kid’s mom did NOT help the dad. No one helped the dad.",
+      "words": [
+        {
+          "word": "The",
+          "start": 0.0,
+          "end": 0.06
+        },
+        {
+          "word": "kid",
+          "start": 0.06,
+          "end": 0.38
+        },
+        {
+          "word": "did",
+          "start": 0.38,
+          "end": 0.6
+        },
+        {
+          "word": "not",
+          "start": 0.6,
+          "end": 0.76
+        },
+        {
+          "word": "help",
+          "start": 0.76,
+          "end": 1.08
+        },
+        {
+          "word": "the",
+          "start": 1.08,
+          "end": 1.3
+        },
+        {
+          "word": "dad.",
+          "start": 1.3,
+          "end": 2.3
+        },
+        {
+          "word": "The",
+          "start": 2.3,
+          "end": 2.46
+        },
+        {
+          "word": "kid's",
+          "start": 2.46,
+          "end": 2.88
+        },
+        {
+          "word": "mom",
+          "start": 2.88,
+          "end": 3.08
+        },
+        {
+          "word": "did",
+          "start": 3.08,
+          "end": 3.34
+        },
+        {
+          "word": "not",
+          "start": 3.34,
+          "end": 3.52
+        },
+        {
+          "word": "help",
+          "start": 3.52,
+          "end": 3.84
+        },
+        {
+          "word": "the",
+          "start": 3.84,
+          "end": 4.02
+        },
+        {
+          "word": "dad.",
+          "start": 4.02,
+          "end": 4.94
+        },
+        {
+          "word": "No",
+          "start": 4.94,
+          "end": 5.92
+        },
+        {
+          "word": "one",
+          "start": 5.92,
+          "end": 6.2
+        },
+        {
+          "word": "helped",
+          "start": 6.2,
+          "end": 6.46
+        },
+        {
+          "word": "the",
+          "start": 6.46,
+          "end": 6.76
+        },
+        {
+          "word": "dad.",
+          "start": 6.76,
+          "end": 7.4
+        }
+      ],
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration; approximate boundaries nominal20msgrid",
+      "alignmentAudioFrames": 371,
+      "numBeams": 1,
+      "generationTimestampTokens": false,
+      "recognitionTempo": 1,
+      "recognitionTests": [
+        {
+          "numBeams": 1,
+          "recognizedText": "The kid did not help the dad. The kid's mom did not help the dad. No one helped the dad.",
+          "exactNormalizedWordMatch": true
+        }
+      ],
+      "articleOmissionExceptionsAllowed": false,
+      "cueAlignmentApproved": true
+    },
+    "nr_302": {
+      "id": "nr_302",
+      "sha256": "498c7e8994b8862f04d6c53a6b642e9a93f65f0e791daa0d75c37687587bd81a",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "durationSeconds": 9.665306,
+      "decodedDurationSeconds": 9.614125,
+      "recognizedText": "The teacher on the left did not help the teacher in the middle. The kid did not help the teacher in the middle. No one helped the teacher in the middle.",
+      "expectedText": "The teacher on the left did NOT help the teacher in the middle. The kid did NOT help the teacher in the middle. No one helped the teacher in the middle.",
+      "words": [
+        {
+          "word": "The",
+          "start": 0.0,
+          "end": 0.08
+        },
+        {
+          "word": "teacher",
+          "start": 0.08,
+          "end": 0.4
+        },
+        {
+          "word": "on",
+          "start": 0.4,
+          "end": 0.64
+        },
+        {
+          "word": "the",
+          "start": 0.64,
+          "end": 0.74
+        },
+        {
+          "word": "left",
+          "start": 0.74,
+          "end": 1.04
+        },
+        {
+          "word": "did",
+          "start": 1.04,
+          "end": 1.28
+        },
+        {
+          "word": "not",
+          "start": 1.28,
+          "end": 1.4
+        },
+        {
+          "word": "help",
+          "start": 1.4,
+          "end": 1.66
+        },
+        {
+          "word": "the",
+          "start": 1.66,
+          "end": 1.82
+        },
+        {
+          "word": "teacher",
+          "start": 1.82,
+          "end": 2.16
+        },
+        {
+          "word": "in",
+          "start": 2.16,
+          "end": 2.32
+        },
+        {
+          "word": "the",
+          "start": 2.32,
+          "end": 2.4
         },
         {
           "word": "middle.",
-          "start": 8.76,
+          "start": 2.4,
+          "end": 3.64
+        },
+        {
+          "word": "The",
+          "start": 3.64,
+          "end": 3.7
+        },
+        {
+          "word": "kid",
+          "start": 3.7,
+          "end": 3.98
+        },
+        {
+          "word": "did",
+          "start": 3.98,
+          "end": 4.24
+        },
+        {
+          "word": "not",
+          "start": 4.24,
+          "end": 4.4
+        },
+        {
+          "word": "help",
+          "start": 4.4,
+          "end": 4.68
+        },
+        {
+          "word": "the",
+          "start": 4.68,
+          "end": 4.86
+        },
+        {
+          "word": "teacher",
+          "start": 4.86,
+          "end": 5.18
+        },
+        {
+          "word": "in",
+          "start": 5.18,
+          "end": 5.4
+        },
+        {
+          "word": "the",
+          "start": 5.4,
+          "end": 5.48
+        },
+        {
+          "word": "middle.",
+          "start": 5.48,
+          "end": 6.8
+        },
+        {
+          "word": "No",
+          "start": 6.8,
+          "end": 7.42
+        },
+        {
+          "word": "one",
+          "start": 7.42,
+          "end": 7.72
+        },
+        {
+          "word": "helped",
+          "start": 7.72,
+          "end": 7.98
+        },
+        {
+          "word": "the",
+          "start": 7.98,
+          "end": 8.26
+        },
+        {
+          "word": "teacher",
+          "start": 8.26,
+          "end": 8.64
+        },
+        {
+          "word": "in",
+          "start": 8.64,
+          "end": 8.88
+        },
+        {
+          "word": "the",
+          "start": 8.88,
+          "end": 8.98
+        },
+        {
+          "word": "middle.",
+          "start": 8.98,
           "end": 9.6
         }
       ],
@@ -6993,7 +7409,7 @@
       "recognitionTests": [
         {
           "numBeams": 1,
-          "recognizedText": "No one helped the teacher in the middle. The teacher on the left did not help the teacher in the middle. The kid did not help the teacher in the middle.",
+          "recognizedText": "The teacher on the left did not help the teacher in the middle. The kid did not help the teacher in the middle. No one helped the teacher in the middle.",
           "exactNormalizedWordMatch": true
         }
       ],

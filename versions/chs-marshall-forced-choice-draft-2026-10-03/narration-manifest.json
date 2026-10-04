@@ -31,9 +31,9 @@
   },
   "summary": {
     "storyCount": 18,
-    "screenCount": 271,
-    "clipCount": 108,
-    "readyCount": 80,
+    "screenCount": 289,
+    "clipCount": 112,
+    "readyCount": 84,
     "pendingCount": 28,
     "inheritedPendingCount": 30,
     "newForcedChoiceRecordingCount": 12,
@@ -41,7 +41,11 @@
     "pauseAdjustedReadyCount": 1,
     "nativeProsodyPendingCount": 6,
     "emphasisPendingBasis": "Native NaturalReaders prosody exports remain pending; nr_014 uses locally inserted pauses from its existing Evelyn recording.",
-    "completeSentenceOutcomeReadyCount": 14
+    "completeSentenceOutcomeReadyCount": 18,
+    "standaloneOutcomeReadyCount": 4,
+    "standaloneOutcomeScreenCount": 18,
+    "closingOutcomeReadyCount": 14,
+    "closingOutcomeScreenCount": 18
   },
   "notes": [
     "This is the separate forced-choice adaptation. Each story has one prediction, one obligation, and one comparative evaluation choice between its two helpers.",
@@ -54,8 +58,10 @@
     "Narration timing remains unmeasured for the complete new script while required recordings are missing. The preview uses its stated read-aloud estimate.",
     "The opening now says \"Oh look! Here is a kid.\" in all 18 stories. The old some-people recording is inactive; the revised complete sentence is pending under nr_268.",
     "The revised kid sadness prompt nr_269 is a new pending recording. The retired nr_008 recording and word cues are not used for this changed wording; no cloud save or export is claimed for the replacement paragraph.",
-    "Each outcome displays a compact no-one-helped caption and two neutral did-NOT-help cues beneath the unchanged sad scene. Each cue glows during its full helper clause. This visual is an adaptation, not an original Marshall stimulus.",
-    "All 18 outcome screens now use 14 corrected recordings made from three complete Evelyn sentences with two 350 ms pauses. Every word, including every helper-clause initial The, passes strict independent recognition. Prior native paragraphs missing The are inactive; no article-omission exception remains. No word-level splicing."
+    "Each story now has two outcome screens: a standalone No one helped sentence, then one complete sentence for each helper who did NOT help and a repeated No one helped sentence at the end. No question is added; one six-story session gains six brief screens.",
+    "The second outcome caption follows the recorded sentence: helper 1, helper 2, then No one helped. Both neutral helper cues remain below the unchanged sad scene; each cue glows only during its own complete helper clause. These are draft adaptations, not original Marshall stimuli.",
+    "All 18 two-screen sequences use 18 verified recordings: four shared complete native No one sentences and 14 paragraphs assembled from complete Evelyn helper sentences plus the closing No one sentence. Every word, including each initial The, passes independent exact recognition. No article exception or word-level splicing is used. Earlier outcome assets are retained as historical sources but inactive.",
+    "The current recording index and paragraph script list only the remaining pending active recordings. The earlier saved NaturalReaders project index is archived unchanged and is not a valid mapping for the new sequence."
   ],
   "clips": [
     {
@@ -2791,106 +2797,6 @@
       ]
     },
     {
-      "id": "nr_196",
-      "text": "No one helped the kid. The kid’s teacher did NOT help the kid. The kid’s mom did NOT help the kid.",
-      "src": "assets/narration/nr_196-full-the.mp3",
-      "kind": "prompt",
-      "status": "verified-complete-sentence-audio-derivative",
-      "uses": [
-        {
-          "stepId": "woman-mom-teacher:outcome",
-          "proposedWording": false,
-          "part": "prompt"
-        }
-      ],
-      "sha256": "39ed1e65fc1aa87a5b28d363a6be802e6740a773b63520196da8778d7cbc18f4",
-      "bytes": 305154,
-      "durationSeconds": 7.601633,
-      "decodedDurationSeconds": 7.5679138321995465,
-      "provenance": {
-        "sampleRate": 44100,
-        "channels": 1,
-        "nativeNaturalReadersRecording": false,
-        "assembledCompleteSentencesFromExistingEvelynRecordings": true,
-        "wholeSentenceSpeechPreserved": true,
-        "wordLevelSplicing": false,
-        "pitchShifted": false,
-        "timeStretched": false,
-        "copiedWithoutReencoding": false,
-        "kind": "three complete sentences: native No one opening plus exact existing full-The helper clauses",
-        "encoder": "ffmpeg libmp3lame320kbpsmono44100Hz",
-        "sourceSegments": [
-          {
-            "text": "No one helped the kid.",
-            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_outcome_audio_visual_2026-10-03/processed/nr_196-outcome.mp3",
-            "sourceClipId": "nr_196-native",
-            "sourceSha256": "4c7a4a5d90accdfdcb8bd8abde8715de13eea8a72fb701d6c7b4772f8cb64533",
-            "retainedSourceStartSample": 0,
-            "retainedSourceEndSample": 89964,
-            "retainedSourceStartSeconds": 0,
-            "retainedSourceEndSeconds": 2.04,
-            "firstNativeSentenceSilence": {
-              "start": 1.98,
-              "end": 2.72,
-              "duration": 0.74
-            },
-            "completeSentencePcmUnchangedBeforeEncoding": true,
-            "sourceVoice": "Evelyn Soft native combined export",
-            "kind": "whole No one sentence"
-          },
-          {
-            "text": "The kid’s teacher did NOT help the kid.",
-            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_chs_draft_2026-10-03/runner/assets/narration/nr_040.mp3",
-            "sourceClipId": "nr_040",
-            "sourceSha256": "6b3af187bc148cf2cd2cee9535c9e5f1f2cfd0e80f557a649b2abfc573b968c0",
-            "retainedSourceStartSample": 33830,
-            "retainedSourceEndSample": 142002,
-            "retainedSourceStartSeconds": 0.7671201814058957,
-            "retainedSourceEndSeconds": 3.22,
-            "destinationStartSeconds": 2.39,
-            "destinationEndSeconds": 4.842879818594104,
-            "insertedPauseBeforeSeconds": 0.35,
-            "completeSentencePcmUnchangedBeforeEncoding": true,
-            "sourceVoice": "Existing Evelyn Soft original ready recall reminder",
-            "kind": "whole helper clause including The; preceding Remember and following question excluded",
-            "cutBasis": "Early low-energy valley refined to nearest zero crossing before full The onset; whole final recording independently verified"
-          },
-          {
-            "text": "The kid’s mom did NOT help the kid.",
-            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_chs_draft_2026-10-03/runner/assets/narration/nr_047.mp3",
-            "sourceClipId": "nr_047",
-            "sourceSha256": "5d74063db90f1c6601e54167ac0957274cbedbe7b7f90a7fbc18a6992e7e6dac",
-            "retainedSourceStartSample": 31971,
-            "retainedSourceEndSample": 136710,
-            "retainedSourceStartSeconds": 0.7249659863945578,
-            "retainedSourceEndSeconds": 3.1,
-            "destinationStartSeconds": 5.192879818594104,
-            "destinationEndSeconds": 7.5679138321995465,
-            "insertedPauseBeforeSeconds": 0.35,
-            "completeSentencePcmUnchangedBeforeEncoding": true,
-            "sourceVoice": "Existing Evelyn Soft original ready recall reminder",
-            "kind": "whole helper clause including The; preceding Remember and following question excluded",
-            "cutBasis": "Early low-energy valley refined to nearest zero crossing before full The onset; whole final recording independently verified"
-          }
-        ],
-        "sourceFilesUnchanged": true,
-        "status": "verified strict full spoken word sequence, including every The",
-        "independentExactNormalizedRecognition": true,
-        "articleOmissionExceptionsAllowed": false,
-        "cueAlignmentApproved": true,
-        "provider": "NaturalReaders Commercial",
-        "sourceVoice": "Evelyn Soft",
-        "decodeVerified": true,
-        "localAudioDerivative": true,
-        "correctionReason": "Replaces prior full-paragraph clips missing The before each helper. Corrected clip includes every word with strict independent recognition."
-      },
-      "audioTreatment": {
-        "kind": "three complete Evelyn sentences joined with two 350 ms pauses",
-        "wordLevelSplicing": false,
-        "allInitialTheArticlesPresent": true
-      }
-    },
-    {
       "id": "nr_030",
       "text": "Can you tell me, did either of these people help the kid?",
       "src": "assets/narration/nr_030.mp3",
@@ -3613,106 +3519,6 @@
       }
     },
     {
-      "id": "nr_203",
-      "text": "No one helped the kid. The kid’s sister did NOT help the kid. The kid’s friend did NOT help the kid.",
-      "src": "assets/narration/nr_203-full-the.mp3",
-      "kind": "prompt",
-      "status": "verified-complete-sentence-audio-derivative",
-      "uses": [
-        {
-          "stepId": "woman-sister-friend:outcome",
-          "proposedWording": false,
-          "part": "prompt"
-        }
-      ],
-      "sha256": "dcc7eabc2bedf2d7a92c56a6acb87adc8b27df8638946af00abe86ebad874a62",
-      "bytes": 312468,
-      "durationSeconds": 7.78449,
-      "decodedDurationSeconds": 7.748072562358277,
-      "provenance": {
-        "sampleRate": 44100,
-        "channels": 1,
-        "nativeNaturalReadersRecording": false,
-        "assembledCompleteSentencesFromExistingEvelynRecordings": true,
-        "wholeSentenceSpeechPreserved": true,
-        "wordLevelSplicing": false,
-        "pitchShifted": false,
-        "timeStretched": false,
-        "copiedWithoutReencoding": false,
-        "kind": "three complete sentences: native No one opening plus exact existing full-The helper clauses",
-        "encoder": "ffmpeg libmp3lame320kbpsmono44100Hz",
-        "sourceSegments": [
-          {
-            "text": "No one helped the kid.",
-            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_outcome_audio_visual_2026-10-03/processed/nr_203-outcome.mp3",
-            "sourceClipId": "nr_203-native",
-            "sourceSha256": "c48e587a3decb47d2980ad27e5a592a4df6b864fb0e54c68e9d2c378bd32e11b",
-            "retainedSourceStartSample": 0,
-            "retainedSourceEndSample": 100525,
-            "retainedSourceStartSeconds": 0,
-            "retainedSourceEndSeconds": 2.2794784580498866,
-            "firstNativeSentenceSilence": {
-              "start": 2.22,
-              "end": 2.96,
-              "duration": 0.74
-            },
-            "completeSentencePcmUnchangedBeforeEncoding": true,
-            "sourceVoice": "Evelyn Soft native combined export",
-            "kind": "whole No one sentence"
-          },
-          {
-            "text": "The kid’s sister did NOT help the kid.",
-            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_chs_draft_2026-10-03/runner/assets/narration/nr_066.mp3",
-            "sourceClipId": "nr_066",
-            "sourceSha256": "700b6cc03a34097519560b4337ac9cb2dfc34eb11d00c7ff5008db88e342a543",
-            "retainedSourceStartSample": 33200,
-            "retainedSourceEndSample": 141120,
-            "retainedSourceStartSeconds": 0.7528344671201814,
-            "retainedSourceEndSeconds": 3.2,
-            "destinationStartSeconds": 2.6294784580498867,
-            "destinationEndSeconds": 5.076643990929705,
-            "insertedPauseBeforeSeconds": 0.35,
-            "completeSentencePcmUnchangedBeforeEncoding": true,
-            "sourceVoice": "Existing Evelyn Soft original ready recall reminder",
-            "kind": "whole helper clause including The; preceding Remember and following question excluded",
-            "cutBasis": "Early low-energy valley refined to nearest zero crossing before full The onset; whole final recording independently verified"
-          },
-          {
-            "text": "The kid’s friend did NOT help the kid.",
-            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_chs_draft_2026-10-03/runner/assets/narration/nr_070.mp3",
-            "sourceClipId": "nr_070",
-            "sourceSha256": "4669ffe13893165dd8e698c0a03af350edc5c0a9aadbcb11f79af253d271b7b3",
-            "retainedSourceStartSample": 32571,
-            "retainedSourceEndSample": 134946,
-            "retainedSourceStartSeconds": 0.7385714285714285,
-            "retainedSourceEndSeconds": 3.06,
-            "destinationStartSeconds": 5.426643990929705,
-            "destinationEndSeconds": 7.748072562358277,
-            "insertedPauseBeforeSeconds": 0.35,
-            "completeSentencePcmUnchangedBeforeEncoding": true,
-            "sourceVoice": "Existing Evelyn Soft original ready recall reminder",
-            "kind": "whole helper clause including The; preceding Remember and following question excluded",
-            "cutBasis": "Early low-energy valley refined to nearest zero crossing before full The onset; whole final recording independently verified"
-          }
-        ],
-        "sourceFilesUnchanged": true,
-        "status": "verified strict full spoken word sequence, including every The",
-        "independentExactNormalizedRecognition": true,
-        "articleOmissionExceptionsAllowed": false,
-        "cueAlignmentApproved": true,
-        "provider": "NaturalReaders Commercial",
-        "sourceVoice": "Evelyn Soft",
-        "decodeVerified": true,
-        "localAudioDerivative": true,
-        "correctionReason": "Replaces prior full-paragraph clips missing The before each helper. Corrected clip includes every word with strict independent recognition."
-      },
-      "audioTreatment": {
-        "kind": "three complete Evelyn sentences joined with two 350 ms pauses",
-        "wordLevelSplicing": false,
-        "allInitialTheArticlesPresent": true
-      }
-    },
-    {
       "id": "nr_204",
       "text": "Actually, remember, no one helped the kid. The kid’s sister did NOT help the kid. The kid’s friend did NOT help the kid. Can you tell me, did either of these people help the kid?",
       "src": null,
@@ -3940,111 +3746,6 @@
       }
     },
     {
-      "id": "nr_209",
-      "text": "No one helped the kid. The kid’s friend did NOT help the kid. The kid’s best friend did NOT help the kid.",
-      "src": "assets/narration/nr_209-full-the.mp3",
-      "kind": "prompt",
-      "status": "verified-complete-sentence-audio-derivative",
-      "uses": [
-        {
-          "stepId": "woman-bestfriend-friend:outcome",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-bestfriend-friend:outcome",
-          "proposedWording": false,
-          "part": "prompt"
-        }
-      ],
-      "sha256": "d1e43a6d480382722cde4efef2a50bc79de15a4eb4a3802ae5dec724e50d06e8",
-      "bytes": 320827,
-      "durationSeconds": 7.993469,
-      "decodedDurationSeconds": 7.94297052154195,
-      "provenance": {
-        "sampleRate": 44100,
-        "channels": 1,
-        "nativeNaturalReadersRecording": false,
-        "assembledCompleteSentencesFromExistingEvelynRecordings": true,
-        "wholeSentenceSpeechPreserved": true,
-        "wordLevelSplicing": false,
-        "pitchShifted": false,
-        "timeStretched": false,
-        "copiedWithoutReencoding": false,
-        "kind": "three complete sentences: native No one opening plus exact existing full-The helper clauses",
-        "encoder": "ffmpeg libmp3lame320kbpsmono44100Hz",
-        "sourceSegments": [
-          {
-            "text": "No one helped the kid.",
-            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_outcome_audio_visual_2026-10-03/processed/nr_209-outcome.mp3",
-            "sourceClipId": "nr_209-native",
-            "sourceSha256": "f39156c0174f1da13d78201a8a92260289a44026ae27306c29a5601ee899f04a",
-            "retainedSourceStartSample": 0,
-            "retainedSourceEndSample": 100547,
-            "retainedSourceStartSeconds": 0,
-            "retainedSourceEndSeconds": 2.2799773242630383,
-            "firstNativeSentenceSilence": {
-              "start": 2.22,
-              "end": 2.95,
-              "duration": 0.73
-            },
-            "completeSentencePcmUnchangedBeforeEncoding": true,
-            "sourceVoice": "Evelyn Soft native combined export",
-            "kind": "whole No one sentence"
-          },
-          {
-            "text": "The kid’s friend did NOT help the kid.",
-            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_chs_draft_2026-10-03/runner/assets/narration/nr_070.mp3",
-            "sourceClipId": "nr_070",
-            "sourceSha256": "4669ffe13893165dd8e698c0a03af350edc5c0a9aadbcb11f79af253d271b7b3",
-            "retainedSourceStartSample": 32571,
-            "retainedSourceEndSample": 134946,
-            "retainedSourceStartSeconds": 0.7385714285714285,
-            "retainedSourceEndSeconds": 3.06,
-            "destinationStartSeconds": 2.6299773242630384,
-            "destinationEndSeconds": 4.95140589569161,
-            "insertedPauseBeforeSeconds": 0.35,
-            "completeSentencePcmUnchangedBeforeEncoding": true,
-            "sourceVoice": "Existing Evelyn Soft original ready recall reminder",
-            "kind": "whole helper clause including The; preceding Remember and following question excluded",
-            "cutBasis": "Early low-energy valley refined to nearest zero crossing before full The onset; whole final recording independently verified"
-          },
-          {
-            "text": "The kid’s best friend did NOT help the kid.",
-            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_chs_draft_2026-10-03/runner/assets/narration/nr_083.mp3",
-            "sourceClipId": "nr_083",
-            "sourceSha256": "2db9bcdb5c0baa71f54f2529961bab4a101b144d9b981179a3a94ae226d3d93b",
-            "retainedSourceStartSample": 32565,
-            "retainedSourceEndSample": 149058,
-            "retainedSourceStartSeconds": 0.7384353741496599,
-            "retainedSourceEndSeconds": 3.38,
-            "destinationStartSeconds": 5.30140589569161,
-            "destinationEndSeconds": 7.94297052154195,
-            "insertedPauseBeforeSeconds": 0.35,
-            "completeSentencePcmUnchangedBeforeEncoding": true,
-            "sourceVoice": "Existing Evelyn Soft original ready recall reminder",
-            "kind": "whole helper clause including The; preceding Remember and following question excluded",
-            "cutBasis": "Early low-energy valley refined to nearest zero crossing before full The onset; whole final recording independently verified"
-          }
-        ],
-        "sourceFilesUnchanged": true,
-        "status": "verified strict full spoken word sequence, including every The",
-        "independentExactNormalizedRecognition": true,
-        "articleOmissionExceptionsAllowed": false,
-        "cueAlignmentApproved": true,
-        "provider": "NaturalReaders Commercial",
-        "sourceVoice": "Evelyn Soft",
-        "decodeVerified": true,
-        "localAudioDerivative": true,
-        "correctionReason": "Replaces prior full-paragraph clips missing The before each helper. Corrected clip includes every word with strict independent recognition."
-      },
-      "audioTreatment": {
-        "kind": "three complete Evelyn sentences joined with two 350 ms pauses",
-        "wordLevelSplicing": false,
-        "allInitialTheArticlesPresent": true
-      }
-    },
-    {
       "id": "nr_210",
       "text": "Actually, remember, no one helped the kid. The kid’s friend did NOT help the kid. The kid’s best friend did NOT help the kid. Can you tell me, did either of these people help the kid?",
       "src": null,
@@ -4122,111 +3823,6 @@
       }
     },
     {
-      "id": "nr_213",
-      "text": "No one helped the kid. The kid’s teacher did NOT help the kid. The kid’s friend did NOT help the kid.",
-      "src": "assets/narration/nr_213-full-the.mp3",
-      "kind": "prompt",
-      "status": "verified-complete-sentence-audio-derivative",
-      "uses": [
-        {
-          "stepId": "woman-teacher-friend:outcome",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-teacher-friend:outcome",
-          "proposedWording": false,
-          "part": "prompt"
-        }
-      ],
-      "sha256": "dc6bb91106809c2d4b0f246cd09d2c57e0da3a62b151028e6e3897a5b783ed07",
-      "bytes": 312468,
-      "durationSeconds": 7.78449,
-      "decodedDurationSeconds": 7.744285714285715,
-      "provenance": {
-        "sampleRate": 44100,
-        "channels": 1,
-        "nativeNaturalReadersRecording": false,
-        "assembledCompleteSentencesFromExistingEvelynRecordings": true,
-        "wholeSentenceSpeechPreserved": true,
-        "wordLevelSplicing": false,
-        "pitchShifted": false,
-        "timeStretched": false,
-        "copiedWithoutReencoding": false,
-        "kind": "three complete sentences: native No one opening plus exact existing full-The helper clauses",
-        "encoder": "ffmpeg libmp3lame320kbpsmono44100Hz",
-        "sourceSegments": [
-          {
-            "text": "No one helped the kid.",
-            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_outcome_audio_visual_2026-10-03/processed/nr_213-outcome.mp3",
-            "sourceClipId": "nr_213-native",
-            "sourceSha256": "dff3e617f4f42b85fc6e296e01041c6e27592434479750edab686c21b7d5d173",
-            "retainedSourceStartSample": 0,
-            "retainedSourceEndSample": 100106,
-            "retainedSourceStartSeconds": 0,
-            "retainedSourceEndSeconds": 2.2699773242630386,
-            "firstNativeSentenceSilence": {
-              "start": 2.21,
-              "end": 2.95,
-              "duration": 0.74
-            },
-            "completeSentencePcmUnchangedBeforeEncoding": true,
-            "sourceVoice": "Evelyn Soft native combined export",
-            "kind": "whole No one sentence"
-          },
-          {
-            "text": "The kid’s teacher did NOT help the kid.",
-            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_chs_draft_2026-10-03/runner/assets/narration/nr_040.mp3",
-            "sourceClipId": "nr_040",
-            "sourceSha256": "6b3af187bc148cf2cd2cee9535c9e5f1f2cfd0e80f557a649b2abfc573b968c0",
-            "retainedSourceStartSample": 33830,
-            "retainedSourceEndSample": 142002,
-            "retainedSourceStartSeconds": 0.7671201814058957,
-            "retainedSourceEndSeconds": 3.22,
-            "destinationStartSeconds": 2.6199773242630386,
-            "destinationEndSeconds": 5.072857142857143,
-            "insertedPauseBeforeSeconds": 0.35,
-            "completeSentencePcmUnchangedBeforeEncoding": true,
-            "sourceVoice": "Existing Evelyn Soft original ready recall reminder",
-            "kind": "whole helper clause including The; preceding Remember and following question excluded",
-            "cutBasis": "Early low-energy valley refined to nearest zero crossing before full The onset; whole final recording independently verified"
-          },
-          {
-            "text": "The kid’s friend did NOT help the kid.",
-            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_chs_draft_2026-10-03/runner/assets/narration/nr_070.mp3",
-            "sourceClipId": "nr_070",
-            "sourceSha256": "4669ffe13893165dd8e698c0a03af350edc5c0a9aadbcb11f79af253d271b7b3",
-            "retainedSourceStartSample": 32571,
-            "retainedSourceEndSample": 134946,
-            "retainedSourceStartSeconds": 0.7385714285714285,
-            "retainedSourceEndSeconds": 3.06,
-            "destinationStartSeconds": 5.422857142857143,
-            "destinationEndSeconds": 7.744285714285715,
-            "insertedPauseBeforeSeconds": 0.35,
-            "completeSentencePcmUnchangedBeforeEncoding": true,
-            "sourceVoice": "Existing Evelyn Soft original ready recall reminder",
-            "kind": "whole helper clause including The; preceding Remember and following question excluded",
-            "cutBasis": "Early low-energy valley refined to nearest zero crossing before full The onset; whole final recording independently verified"
-          }
-        ],
-        "sourceFilesUnchanged": true,
-        "status": "verified strict full spoken word sequence, including every The",
-        "independentExactNormalizedRecognition": true,
-        "articleOmissionExceptionsAllowed": false,
-        "cueAlignmentApproved": true,
-        "provider": "NaturalReaders Commercial",
-        "sourceVoice": "Evelyn Soft",
-        "decodeVerified": true,
-        "localAudioDerivative": true,
-        "correctionReason": "Replaces prior full-paragraph clips missing The before each helper. Corrected clip includes every word with strict independent recognition."
-      },
-      "audioTreatment": {
-        "kind": "three complete Evelyn sentences joined with two 350 ms pauses",
-        "wordLevelSplicing": false,
-        "allInitialTheArticlesPresent": true
-      }
-    },
-    {
       "id": "nr_214",
       "text": "Actually, remember, no one helped the kid. The kid’s teacher did NOT help the kid. The kid’s friend did NOT help the kid. Can you tell me, did either of these people help the kid?",
       "src": null,
@@ -4296,106 +3892,6 @@
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
-      }
-    },
-    {
-      "id": "nr_215",
-      "text": "No one helped the kid. The kid’s mom did NOT help the kid. The kid’s sister did NOT help the kid.",
-      "src": "assets/narration/nr_215-full-the.mp3",
-      "kind": "prompt",
-      "status": "verified-complete-sentence-audio-derivative",
-      "uses": [
-        {
-          "stepId": "woman-mom-sister:outcome",
-          "proposedWording": false,
-          "part": "prompt"
-        }
-      ],
-      "sha256": "5c2f4a0e68d6cdec56709daef5a340b6a925ab96f64c0e1e8298a06ffbd740f0",
-      "bytes": 314558,
-      "durationSeconds": 7.836735,
-      "decodedDurationSeconds": 7.8021995464852605,
-      "provenance": {
-        "sampleRate": 44100,
-        "channels": 1,
-        "nativeNaturalReadersRecording": false,
-        "assembledCompleteSentencesFromExistingEvelynRecordings": true,
-        "wholeSentenceSpeechPreserved": true,
-        "wordLevelSplicing": false,
-        "pitchShifted": false,
-        "timeStretched": false,
-        "copiedWithoutReencoding": false,
-        "kind": "three complete sentences: native No one opening plus exact existing full-The helper clauses",
-        "encoder": "ffmpeg libmp3lame320kbpsmono44100Hz",
-        "sourceSegments": [
-          {
-            "text": "No one helped the kid.",
-            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_outcome_audio_visual_2026-10-03/processed/nr_215-outcome.mp3",
-            "sourceClipId": "nr_215-native",
-            "sourceSha256": "1e5786fbf60d4aace90776ac77e71cdf8263971543eb3633495e936a78a24add",
-            "retainedSourceStartSample": 0,
-            "retainedSourceEndSample": 100548,
-            "retainedSourceStartSeconds": 0,
-            "retainedSourceEndSeconds": 2.28,
-            "firstNativeSentenceSilence": {
-              "start": 2.22,
-              "end": 2.94,
-              "duration": 0.72
-            },
-            "completeSentencePcmUnchangedBeforeEncoding": true,
-            "sourceVoice": "Evelyn Soft native combined export",
-            "kind": "whole No one sentence"
-          },
-          {
-            "text": "The kid’s mom did NOT help the kid.",
-            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_chs_draft_2026-10-03/runner/assets/narration/nr_047.mp3",
-            "sourceClipId": "nr_047",
-            "sourceSha256": "5d74063db90f1c6601e54167ac0957274cbedbe7b7f90a7fbc18a6992e7e6dac",
-            "retainedSourceStartSample": 31971,
-            "retainedSourceEndSample": 136710,
-            "retainedSourceStartSeconds": 0.7249659863945578,
-            "retainedSourceEndSeconds": 3.1,
-            "destinationStartSeconds": 2.63,
-            "destinationEndSeconds": 5.005034013605442,
-            "insertedPauseBeforeSeconds": 0.35,
-            "completeSentencePcmUnchangedBeforeEncoding": true,
-            "sourceVoice": "Existing Evelyn Soft original ready recall reminder",
-            "kind": "whole helper clause including The; preceding Remember and following question excluded",
-            "cutBasis": "Early low-energy valley refined to nearest zero crossing before full The onset; whole final recording independently verified"
-          },
-          {
-            "text": "The kid’s sister did NOT help the kid.",
-            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_chs_draft_2026-10-03/runner/assets/narration/nr_066.mp3",
-            "sourceClipId": "nr_066",
-            "sourceSha256": "700b6cc03a34097519560b4337ac9cb2dfc34eb11d00c7ff5008db88e342a543",
-            "retainedSourceStartSample": 33200,
-            "retainedSourceEndSample": 141120,
-            "retainedSourceStartSeconds": 0.7528344671201814,
-            "retainedSourceEndSeconds": 3.2,
-            "destinationStartSeconds": 5.355034013605442,
-            "destinationEndSeconds": 7.8021995464852605,
-            "insertedPauseBeforeSeconds": 0.35,
-            "completeSentencePcmUnchangedBeforeEncoding": true,
-            "sourceVoice": "Existing Evelyn Soft original ready recall reminder",
-            "kind": "whole helper clause including The; preceding Remember and following question excluded",
-            "cutBasis": "Early low-energy valley refined to nearest zero crossing before full The onset; whole final recording independently verified"
-          }
-        ],
-        "sourceFilesUnchanged": true,
-        "status": "verified strict full spoken word sequence, including every The",
-        "independentExactNormalizedRecognition": true,
-        "articleOmissionExceptionsAllowed": false,
-        "cueAlignmentApproved": true,
-        "provider": "NaturalReaders Commercial",
-        "sourceVoice": "Evelyn Soft",
-        "decodeVerified": true,
-        "localAudioDerivative": true,
-        "correctionReason": "Replaces prior full-paragraph clips missing The before each helper. Corrected clip includes every word with strict independent recognition."
-      },
-      "audioTreatment": {
-        "kind": "three complete Evelyn sentences joined with two 350 ms pauses",
-        "wordLevelSplicing": false,
-        "allInitialTheArticlesPresent": true
       }
     },
     {
@@ -4656,116 +4152,6 @@
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
-      }
-    },
-    {
-      "id": "nr_217",
-      "text": "No one helped the kid. The kid’s classmate did NOT help the kid. The kid’s teacher did NOT help the kid.",
-      "src": "assets/narration/nr_217-full-the.mp3",
-      "kind": "prompt",
-      "status": "verified-complete-sentence-audio-derivative",
-      "uses": [
-        {
-          "stepId": "woman-teacher-classmate:outcome",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-teacher-classmate:outcome",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "family-teacher-classmate:outcome",
-          "proposedWording": false,
-          "part": "prompt"
-        }
-      ],
-      "sha256": "6c1d66dac31d001193cae8d49cc76d30e131b23393a526cc6eae4d68df163263",
-      "bytes": 325007,
-      "durationSeconds": 8.097959,
-      "decodedDurationSeconds": 8.068707482993197,
-      "provenance": {
-        "sampleRate": 44100,
-        "channels": 1,
-        "nativeNaturalReadersRecording": false,
-        "assembledCompleteSentencesFromExistingEvelynRecordings": true,
-        "wholeSentenceSpeechPreserved": true,
-        "wordLevelSplicing": false,
-        "pitchShifted": false,
-        "timeStretched": false,
-        "copiedWithoutReencoding": false,
-        "kind": "three complete sentences: native No one opening plus exact existing full-The helper clauses",
-        "encoder": "ffmpeg libmp3lame320kbpsmono44100Hz",
-        "sourceSegments": [
-          {
-            "text": "No one helped the kid.",
-            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_outcome_audio_visual_2026-10-03/processed/nr_217-outcome.mp3",
-            "sourceClipId": "nr_217-native",
-            "sourceSha256": "be67a97808e571fc726946c2524452966706794c9b7cb918918f42e4ef7a199f",
-            "retainedSourceStartSample": 0,
-            "retainedSourceEndSample": 100989,
-            "retainedSourceStartSeconds": 0,
-            "retainedSourceEndSeconds": 2.29,
-            "firstNativeSentenceSilence": {
-              "start": 2.23,
-              "end": 2.98,
-              "duration": 0.75
-            },
-            "completeSentencePcmUnchangedBeforeEncoding": true,
-            "sourceVoice": "Evelyn Soft native combined export",
-            "kind": "whole No one sentence"
-          },
-          {
-            "text": "The kid’s classmate did NOT help the kid.",
-            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_chs_draft_2026-10-03/runner/assets/narration/nr_099.mp3",
-            "sourceClipId": "nr_099",
-            "sourceSha256": "5869dd1575edc3074bf74369c588c2053130c87ee70b52f0d7dfd16916db0f8e",
-            "retainedSourceStartSample": 34141,
-            "retainedSourceEndSample": 149940,
-            "retainedSourceStartSeconds": 0.774172335600907,
-            "retainedSourceEndSeconds": 3.4,
-            "destinationStartSeconds": 2.64,
-            "destinationEndSeconds": 5.265827664399093,
-            "insertedPauseBeforeSeconds": 0.35,
-            "completeSentencePcmUnchangedBeforeEncoding": true,
-            "sourceVoice": "Existing Evelyn Soft original ready recall reminder",
-            "kind": "whole helper clause including The; preceding Remember and following question excluded",
-            "cutBasis": "Early low-energy valley refined to nearest zero crossing before full The onset; whole final recording independently verified"
-          },
-          {
-            "text": "The kid’s teacher did NOT help the kid.",
-            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_chs_draft_2026-10-03/runner/assets/narration/nr_040.mp3",
-            "sourceClipId": "nr_040",
-            "sourceSha256": "6b3af187bc148cf2cd2cee9535c9e5f1f2cfd0e80f557a649b2abfc573b968c0",
-            "retainedSourceStartSample": 33830,
-            "retainedSourceEndSample": 142002,
-            "retainedSourceStartSeconds": 0.7671201814058957,
-            "retainedSourceEndSeconds": 3.22,
-            "destinationStartSeconds": 5.6158276643990925,
-            "destinationEndSeconds": 8.068707482993197,
-            "insertedPauseBeforeSeconds": 0.35,
-            "completeSentencePcmUnchangedBeforeEncoding": true,
-            "sourceVoice": "Existing Evelyn Soft original ready recall reminder",
-            "kind": "whole helper clause including The; preceding Remember and following question excluded",
-            "cutBasis": "Early low-energy valley refined to nearest zero crossing before full The onset; whole final recording independently verified"
-          }
-        ],
-        "sourceFilesUnchanged": true,
-        "status": "verified strict full spoken word sequence, including every The",
-        "independentExactNormalizedRecognition": true,
-        "articleOmissionExceptionsAllowed": false,
-        "cueAlignmentApproved": true,
-        "provider": "NaturalReaders Commercial",
-        "sourceVoice": "Evelyn Soft",
-        "decodeVerified": true,
-        "localAudioDerivative": true,
-        "correctionReason": "Replaces prior full-paragraph clips missing The before each helper. Corrected clip includes every word with strict independent recognition."
-      },
-      "audioTreatment": {
-        "kind": "three complete Evelyn sentences joined with two 350 ms pauses",
-        "wordLevelSplicing": false,
-        "allInitialTheArticlesPresent": true
       }
     },
     {
@@ -5057,106 +4443,6 @@
       }
     },
     {
-      "id": "nr_221",
-      "text": "No one helped the kid. The kid’s teacher did NOT help the kid. The kid’s dad did NOT help the kid.",
-      "src": "assets/narration/nr_221-full-the.mp3",
-      "kind": "prompt",
-      "status": "verified-complete-sentence-audio-derivative",
-      "uses": [
-        {
-          "stepId": "man-dad-teacher:outcome",
-          "proposedWording": false,
-          "part": "prompt"
-        }
-      ],
-      "sha256": "c822243d1239b06cedf39742e3951dfab51f56e8cdb260d0a3460dabbd581d65",
-      "bytes": 313513,
-      "durationSeconds": 7.810612,
-      "decodedDurationSeconds": 7.7687301587301585,
-      "provenance": {
-        "sampleRate": 44100,
-        "channels": 1,
-        "nativeNaturalReadersRecording": false,
-        "assembledCompleteSentencesFromExistingEvelynRecordings": true,
-        "wholeSentenceSpeechPreserved": true,
-        "wordLevelSplicing": false,
-        "pitchShifted": false,
-        "timeStretched": false,
-        "copiedWithoutReencoding": false,
-        "kind": "three complete sentences: native No one opening plus exact existing full-The helper clauses",
-        "encoder": "ffmpeg libmp3lame320kbpsmono44100Hz",
-        "sourceSegments": [
-          {
-            "text": "No one helped the kid.",
-            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_outcome_audio_visual_2026-10-03/processed/nr_221-outcome.mp3",
-            "sourceClipId": "nr_221-native",
-            "sourceSha256": "71b86a57f6d594e22778e67012d0e5f6e1b800a6c20909af74deb17106951ac9",
-            "retainedSourceStartSample": 0,
-            "retainedSourceEndSample": 100134,
-            "retainedSourceStartSeconds": 0,
-            "retainedSourceEndSeconds": 2.270612244897959,
-            "firstNativeSentenceSilence": {
-              "start": 2.21,
-              "end": 2.94,
-              "duration": 0.73
-            },
-            "completeSentencePcmUnchangedBeforeEncoding": true,
-            "sourceVoice": "Evelyn Soft native combined export",
-            "kind": "whole No one sentence"
-          },
-          {
-            "text": "The kid’s teacher did NOT help the kid.",
-            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_chs_draft_2026-10-03/runner/assets/narration/nr_040.mp3",
-            "sourceClipId": "nr_040",
-            "sourceSha256": "6b3af187bc148cf2cd2cee9535c9e5f1f2cfd0e80f557a649b2abfc573b968c0",
-            "retainedSourceStartSample": 33830,
-            "retainedSourceEndSample": 142002,
-            "retainedSourceStartSeconds": 0.7671201814058957,
-            "retainedSourceEndSeconds": 3.22,
-            "destinationStartSeconds": 2.620612244897959,
-            "destinationEndSeconds": 5.073492063492063,
-            "insertedPauseBeforeSeconds": 0.35,
-            "completeSentencePcmUnchangedBeforeEncoding": true,
-            "sourceVoice": "Existing Evelyn Soft original ready recall reminder",
-            "kind": "whole helper clause including The; preceding Remember and following question excluded",
-            "cutBasis": "Early low-energy valley refined to nearest zero crossing before full The onset; whole final recording independently verified"
-          },
-          {
-            "text": "The kid’s dad did NOT help the kid.",
-            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_chs_draft_2026-10-03/runner/assets/narration/nr_111.mp3",
-            "sourceClipId": "nr_111",
-            "sourceSha256": "04633f74b153106b0eb92e28da9ae70da16fc6cacfa607a73348f815500c64c9",
-            "retainedSourceStartSample": 30639,
-            "retainedSourceEndSample": 134064,
-            "retainedSourceStartSeconds": 0.6947619047619048,
-            "retainedSourceEndSeconds": 3.04,
-            "destinationStartSeconds": 5.423492063492064,
-            "destinationEndSeconds": 7.7687301587301585,
-            "insertedPauseBeforeSeconds": 0.35,
-            "completeSentencePcmUnchangedBeforeEncoding": true,
-            "sourceVoice": "Existing Evelyn Soft original ready recall reminder",
-            "kind": "whole helper clause including The; preceding Remember and following question excluded",
-            "cutBasis": "Early low-energy valley refined to nearest zero crossing before full The onset; whole final recording independently verified"
-          }
-        ],
-        "sourceFilesUnchanged": true,
-        "status": "verified strict full spoken word sequence, including every The",
-        "independentExactNormalizedRecognition": true,
-        "articleOmissionExceptionsAllowed": false,
-        "cueAlignmentApproved": true,
-        "provider": "NaturalReaders Commercial",
-        "sourceVoice": "Evelyn Soft",
-        "decodeVerified": true,
-        "localAudioDerivative": true,
-        "correctionReason": "Replaces prior full-paragraph clips missing The before each helper. Corrected clip includes every word with strict independent recognition."
-      },
-      "audioTreatment": {
-        "kind": "three complete Evelyn sentences joined with two 350 ms pauses",
-        "wordLevelSplicing": false,
-        "allInitialTheArticlesPresent": true
-      }
-    },
-    {
       "id": "nr_222",
       "text": "Actually, remember, no one helped the kid. The kid’s teacher did NOT help the kid. The kid’s dad did NOT help the kid. Can you tell me, did either of these people help the kid?",
       "src": null,
@@ -5407,106 +4693,6 @@
       }
     },
     {
-      "id": "nr_225",
-      "text": "No one helped the kid. The kid’s brother did NOT help the kid. The kid’s friend did NOT help the kid.",
-      "src": "assets/narration/nr_225-full-the.mp3",
-      "kind": "prompt",
-      "status": "verified-complete-sentence-audio-derivative",
-      "uses": [
-        {
-          "stepId": "man-brother-friend:outcome",
-          "proposedWording": false,
-          "part": "prompt"
-        }
-      ],
-      "sha256": "8c0849212abd5d7d9a1bb376b4d72e982b065ec51c4332610f802f03fc47b7d9",
-      "bytes": 312468,
-      "durationSeconds": 7.78449,
-      "decodedDurationSeconds": 7.742902494331066,
-      "provenance": {
-        "sampleRate": 44100,
-        "channels": 1,
-        "nativeNaturalReadersRecording": false,
-        "assembledCompleteSentencesFromExistingEvelynRecordings": true,
-        "wholeSentenceSpeechPreserved": true,
-        "wordLevelSplicing": false,
-        "pitchShifted": false,
-        "timeStretched": false,
-        "copiedWithoutReencoding": false,
-        "kind": "three complete sentences: native No one opening plus exact existing full-The helper clauses",
-        "encoder": "ffmpeg libmp3lame320kbpsmono44100Hz",
-        "sourceSegments": [
-          {
-            "text": "No one helped the kid.",
-            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_outcome_audio_visual_2026-10-03/processed/nr_225-outcome.mp3",
-            "sourceClipId": "nr_225-native",
-            "sourceSha256": "4b48b366adfbfb8687e8033503857867778e1ef260b17cdb02770ab1a2645871",
-            "retainedSourceStartSample": 0,
-            "retainedSourceEndSample": 100084,
-            "retainedSourceStartSeconds": 0,
-            "retainedSourceEndSeconds": 2.269478458049887,
-            "firstNativeSentenceSilence": {
-              "start": 2.21,
-              "end": 2.96,
-              "duration": 0.75
-            },
-            "completeSentencePcmUnchangedBeforeEncoding": true,
-            "sourceVoice": "Evelyn Soft native combined export",
-            "kind": "whole No one sentence"
-          },
-          {
-            "text": "The kid’s brother did NOT help the kid.",
-            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_chs_draft_2026-10-03/runner/assets/narration/nr_123.mp3",
-            "sourceClipId": "nr_123",
-            "sourceSha256": "4c55c7990842cfbc3442fd52af68905190d11d07db053fd15449f9a2edd9bbf2",
-            "retainedSourceStartSample": 34751,
-            "retainedSourceEndSample": 142884,
-            "retainedSourceStartSeconds": 0.7880045351473923,
-            "retainedSourceEndSeconds": 3.24,
-            "destinationStartSeconds": 2.6194784580498864,
-            "destinationEndSeconds": 5.071473922902494,
-            "insertedPauseBeforeSeconds": 0.35,
-            "completeSentencePcmUnchangedBeforeEncoding": true,
-            "sourceVoice": "Existing Evelyn Soft original ready recall reminder",
-            "kind": "whole helper clause including The; preceding Remember and following question excluded",
-            "cutBasis": "Early low-energy valley refined to nearest zero crossing before full The onset; whole final recording independently verified"
-          },
-          {
-            "text": "The kid’s friend did NOT help the kid.",
-            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_chs_draft_2026-10-03/runner/assets/narration/nr_070.mp3",
-            "sourceClipId": "nr_070",
-            "sourceSha256": "4669ffe13893165dd8e698c0a03af350edc5c0a9aadbcb11f79af253d271b7b3",
-            "retainedSourceStartSample": 32571,
-            "retainedSourceEndSample": 134946,
-            "retainedSourceStartSeconds": 0.7385714285714285,
-            "retainedSourceEndSeconds": 3.06,
-            "destinationStartSeconds": 5.421473922902495,
-            "destinationEndSeconds": 7.742902494331066,
-            "insertedPauseBeforeSeconds": 0.35,
-            "completeSentencePcmUnchangedBeforeEncoding": true,
-            "sourceVoice": "Existing Evelyn Soft original ready recall reminder",
-            "kind": "whole helper clause including The; preceding Remember and following question excluded",
-            "cutBasis": "Early low-energy valley refined to nearest zero crossing before full The onset; whole final recording independently verified"
-          }
-        ],
-        "sourceFilesUnchanged": true,
-        "status": "verified strict full spoken word sequence, including every The",
-        "independentExactNormalizedRecognition": true,
-        "articleOmissionExceptionsAllowed": false,
-        "cueAlignmentApproved": true,
-        "provider": "NaturalReaders Commercial",
-        "sourceVoice": "Evelyn Soft",
-        "decodeVerified": true,
-        "localAudioDerivative": true,
-        "correctionReason": "Replaces prior full-paragraph clips missing The before each helper. Corrected clip includes every word with strict independent recognition."
-      },
-      "audioTreatment": {
-        "kind": "three complete Evelyn sentences joined with two 350 ms pauses",
-        "wordLevelSplicing": false,
-        "allInitialTheArticlesPresent": true
-      }
-    },
-    {
       "id": "nr_226",
       "text": "Actually, remember, no one helped the kid. The kid’s brother did NOT help the kid. The kid’s friend did NOT help the kid. Can you tell me, did either of these people help the kid?",
       "src": null,
@@ -5571,106 +4757,6 @@
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
-      }
-    },
-    {
-      "id": "nr_229",
-      "text": "No one helped the kid. The kid’s dad did NOT help the kid. The kid’s brother did NOT help the kid.",
-      "src": "assets/narration/nr_229-full-the.mp3",
-      "kind": "prompt",
-      "status": "verified-complete-sentence-audio-derivative",
-      "uses": [
-        {
-          "stepId": "man-dad-brother:outcome",
-          "proposedWording": false,
-          "part": "prompt"
-        }
-      ],
-      "sha256": "2cf33bc2abdf5dc8050fc16289252beabdc07641c0f7350b54ae123e5fc7db69",
-      "bytes": 313513,
-      "durationSeconds": 7.810612,
-      "decodedDurationSeconds": 7.777165532879819,
-      "provenance": {
-        "sampleRate": 44100,
-        "channels": 1,
-        "nativeNaturalReadersRecording": false,
-        "assembledCompleteSentencesFromExistingEvelynRecordings": true,
-        "wholeSentenceSpeechPreserved": true,
-        "wordLevelSplicing": false,
-        "pitchShifted": false,
-        "timeStretched": false,
-        "copiedWithoutReencoding": false,
-        "kind": "three complete sentences: native No one opening plus exact existing full-The helper clauses",
-        "encoder": "ffmpeg libmp3lame320kbpsmono44100Hz",
-        "sourceSegments": [
-          {
-            "text": "No one helped the kid.",
-            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_outcome_audio_visual_2026-10-03/processed/nr_229-outcome.mp3",
-            "sourceClipId": "nr_229-native",
-            "sourceSha256": "6405b71674d351a3feb71179c1387e529b7465b4fae574bd588f2be2e7ebe8ec",
-            "retainedSourceStartSample": 0,
-            "retainedSourceEndSample": 100545,
-            "retainedSourceStartSeconds": 0,
-            "retainedSourceEndSeconds": 2.279931972789116,
-            "firstNativeSentenceSilence": {
-              "start": 2.22,
-              "end": 2.94,
-              "duration": 0.72
-            },
-            "completeSentencePcmUnchangedBeforeEncoding": true,
-            "sourceVoice": "Evelyn Soft native combined export",
-            "kind": "whole No one sentence"
-          },
-          {
-            "text": "The kid’s dad did NOT help the kid.",
-            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_chs_draft_2026-10-03/runner/assets/narration/nr_111.mp3",
-            "sourceClipId": "nr_111",
-            "sourceSha256": "04633f74b153106b0eb92e28da9ae70da16fc6cacfa607a73348f815500c64c9",
-            "retainedSourceStartSample": 30639,
-            "retainedSourceEndSample": 134064,
-            "retainedSourceStartSeconds": 0.6947619047619048,
-            "retainedSourceEndSeconds": 3.04,
-            "destinationStartSeconds": 2.6299319727891155,
-            "destinationEndSeconds": 4.975170068027211,
-            "insertedPauseBeforeSeconds": 0.35,
-            "completeSentencePcmUnchangedBeforeEncoding": true,
-            "sourceVoice": "Existing Evelyn Soft original ready recall reminder",
-            "kind": "whole helper clause including The; preceding Remember and following question excluded",
-            "cutBasis": "Early low-energy valley refined to nearest zero crossing before full The onset; whole final recording independently verified"
-          },
-          {
-            "text": "The kid’s brother did NOT help the kid.",
-            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_chs_draft_2026-10-03/runner/assets/narration/nr_123.mp3",
-            "sourceClipId": "nr_123",
-            "sourceSha256": "4c55c7990842cfbc3442fd52af68905190d11d07db053fd15449f9a2edd9bbf2",
-            "retainedSourceStartSample": 34751,
-            "retainedSourceEndSample": 142884,
-            "retainedSourceStartSeconds": 0.7880045351473923,
-            "retainedSourceEndSeconds": 3.24,
-            "destinationStartSeconds": 5.3251700680272105,
-            "destinationEndSeconds": 7.777165532879819,
-            "insertedPauseBeforeSeconds": 0.35,
-            "completeSentencePcmUnchangedBeforeEncoding": true,
-            "sourceVoice": "Existing Evelyn Soft original ready recall reminder",
-            "kind": "whole helper clause including The; preceding Remember and following question excluded",
-            "cutBasis": "Early low-energy valley refined to nearest zero crossing before full The onset; whole final recording independently verified"
-          }
-        ],
-        "sourceFilesUnchanged": true,
-        "status": "verified strict full spoken word sequence, including every The",
-        "independentExactNormalizedRecognition": true,
-        "articleOmissionExceptionsAllowed": false,
-        "cueAlignmentApproved": true,
-        "provider": "NaturalReaders Commercial",
-        "sourceVoice": "Evelyn Soft",
-        "decodeVerified": true,
-        "localAudioDerivative": true,
-        "correctionReason": "Replaces prior full-paragraph clips missing The before each helper. Corrected clip includes every word with strict independent recognition."
-      },
-      "audioTreatment": {
-        "kind": "three complete Evelyn sentences joined with two 350 ms pauses",
-        "wordLevelSplicing": false,
-        "allInitialTheArticlesPresent": true
       }
     },
     {
@@ -5741,106 +4827,6 @@
       }
     },
     {
-      "id": "nr_231",
-      "text": "No one helped the kid. The kid’s dad did NOT help the kid. The kid’s mom did NOT help the kid.",
-      "src": "assets/narration/nr_231-full-the.mp3",
-      "kind": "prompt",
-      "status": "verified-complete-sentence-audio-derivative",
-      "uses": [
-        {
-          "stepId": "family-mom-dad:outcome",
-          "proposedWording": false,
-          "part": "prompt"
-        }
-      ],
-      "sha256": "3194eb1e02983167ec69cc47babc5ed62e47ded67b0c32de71326e09706c3404",
-      "bytes": 310378,
-      "durationSeconds": 7.732245,
-      "decodedDurationSeconds": 7.698934240362812,
-      "provenance": {
-        "sampleRate": 44100,
-        "channels": 1,
-        "nativeNaturalReadersRecording": false,
-        "assembledCompleteSentencesFromExistingEvelynRecordings": true,
-        "wholeSentenceSpeechPreserved": true,
-        "wordLevelSplicing": false,
-        "pitchShifted": false,
-        "timeStretched": false,
-        "copiedWithoutReencoding": false,
-        "kind": "three complete sentences: native No one opening plus exact existing full-The helper clauses",
-        "encoder": "ffmpeg libmp3lame320kbpsmono44100Hz",
-        "sourceSegments": [
-          {
-            "text": "No one helped the kid.",
-            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_outcome_audio_visual_2026-10-03/processed/nr_231-outcome.mp3",
-            "sourceClipId": "nr_231-native",
-            "sourceSha256": "cd860ef3f16d07cf079c1c35f7b7a71851b0f4c88229108a91e187e998dba047",
-            "retainedSourceStartSample": 0,
-            "retainedSourceEndSample": 100489,
-            "retainedSourceStartSeconds": 0,
-            "retainedSourceEndSeconds": 2.2786621315192743,
-            "firstNativeSentenceSilence": {
-              "start": 2.22,
-              "end": 2.94,
-              "duration": 0.72
-            },
-            "completeSentencePcmUnchangedBeforeEncoding": true,
-            "sourceVoice": "Evelyn Soft native combined export",
-            "kind": "whole No one sentence"
-          },
-          {
-            "text": "The kid’s dad did NOT help the kid.",
-            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_chs_draft_2026-10-03/runner/assets/narration/nr_111.mp3",
-            "sourceClipId": "nr_111",
-            "sourceSha256": "04633f74b153106b0eb92e28da9ae70da16fc6cacfa607a73348f815500c64c9",
-            "retainedSourceStartSample": 30639,
-            "retainedSourceEndSample": 134064,
-            "retainedSourceStartSeconds": 0.6947619047619048,
-            "retainedSourceEndSeconds": 3.04,
-            "destinationStartSeconds": 2.6286621315192744,
-            "destinationEndSeconds": 4.97390022675737,
-            "insertedPauseBeforeSeconds": 0.35,
-            "completeSentencePcmUnchangedBeforeEncoding": true,
-            "sourceVoice": "Existing Evelyn Soft original ready recall reminder",
-            "kind": "whole helper clause including The; preceding Remember and following question excluded",
-            "cutBasis": "Early low-energy valley refined to nearest zero crossing before full The onset; whole final recording independently verified"
-          },
-          {
-            "text": "The kid’s mom did NOT help the kid.",
-            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_chs_draft_2026-10-03/runner/assets/narration/nr_047.mp3",
-            "sourceClipId": "nr_047",
-            "sourceSha256": "5d74063db90f1c6601e54167ac0957274cbedbe7b7f90a7fbc18a6992e7e6dac",
-            "retainedSourceStartSample": 31971,
-            "retainedSourceEndSample": 136710,
-            "retainedSourceStartSeconds": 0.7249659863945578,
-            "retainedSourceEndSeconds": 3.1,
-            "destinationStartSeconds": 5.323900226757369,
-            "destinationEndSeconds": 7.698934240362812,
-            "insertedPauseBeforeSeconds": 0.35,
-            "completeSentencePcmUnchangedBeforeEncoding": true,
-            "sourceVoice": "Existing Evelyn Soft original ready recall reminder",
-            "kind": "whole helper clause including The; preceding Remember and following question excluded",
-            "cutBasis": "Early low-energy valley refined to nearest zero crossing before full The onset; whole final recording independently verified"
-          }
-        ],
-        "sourceFilesUnchanged": true,
-        "status": "verified strict full spoken word sequence, including every The",
-        "independentExactNormalizedRecognition": true,
-        "articleOmissionExceptionsAllowed": false,
-        "cueAlignmentApproved": true,
-        "provider": "NaturalReaders Commercial",
-        "sourceVoice": "Evelyn Soft",
-        "decodeVerified": true,
-        "localAudioDerivative": true,
-        "correctionReason": "Replaces prior full-paragraph clips missing The before each helper. Corrected clip includes every word with strict independent recognition."
-      },
-      "audioTreatment": {
-        "kind": "three complete Evelyn sentences joined with two 350 ms pauses",
-        "wordLevelSplicing": false,
-        "allInitialTheArticlesPresent": true
-      }
-    },
-    {
       "id": "nr_232",
       "text": "Actually, remember, no one helped the kid. The kid’s dad did NOT help the kid. The kid’s mom did NOT help the kid. Can you tell me, did either of these people help the kid?",
       "src": null,
@@ -5905,106 +4891,6 @@
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
-      }
-    },
-    {
-      "id": "nr_233",
-      "text": "No one helped the kid. The kid’s sister did NOT help the kid. The kid’s brother did NOT help the kid.",
-      "src": "assets/narration/nr_233-full-the.mp3",
-      "kind": "prompt",
-      "status": "verified-complete-sentence-audio-derivative",
-      "uses": [
-        {
-          "stepId": "family-sister-brother:outcome",
-          "proposedWording": false,
-          "part": "prompt"
-        }
-      ],
-      "sha256": "fe1d7197a95809db85eb0c3b01dd0c6611796b3fc245bacedeae1de0de9ecd06",
-      "bytes": 317693,
-      "durationSeconds": 7.915102,
-      "decodedDurationSeconds": 7.8778231292517,
-      "provenance": {
-        "sampleRate": 44100,
-        "channels": 1,
-        "nativeNaturalReadersRecording": false,
-        "assembledCompleteSentencesFromExistingEvelynRecordings": true,
-        "wholeSentenceSpeechPreserved": true,
-        "wordLevelSplicing": false,
-        "pitchShifted": false,
-        "timeStretched": false,
-        "copiedWithoutReencoding": false,
-        "kind": "three complete sentences: native No one opening plus exact existing full-The helper clauses",
-        "encoder": "ffmpeg libmp3lame320kbpsmono44100Hz",
-        "sourceSegments": [
-          {
-            "text": "No one helped the kid.",
-            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_outcome_audio_visual_2026-10-03/processed/nr_233-outcome.mp3",
-            "sourceClipId": "nr_233-native",
-            "sourceSha256": "3971446ce2a9d6d70eeba2865aa498db279cbc630956c2be265b54314f7ea6e2",
-            "retainedSourceStartSample": 0,
-            "retainedSourceEndSample": 100489,
-            "retainedSourceStartSeconds": 0,
-            "retainedSourceEndSeconds": 2.2786621315192743,
-            "firstNativeSentenceSilence": {
-              "start": 2.22,
-              "end": 2.96,
-              "duration": 0.74
-            },
-            "completeSentencePcmUnchangedBeforeEncoding": true,
-            "sourceVoice": "Evelyn Soft native combined export",
-            "kind": "whole No one sentence"
-          },
-          {
-            "text": "The kid’s sister did NOT help the kid.",
-            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_chs_draft_2026-10-03/runner/assets/narration/nr_066.mp3",
-            "sourceClipId": "nr_066",
-            "sourceSha256": "700b6cc03a34097519560b4337ac9cb2dfc34eb11d00c7ff5008db88e342a543",
-            "retainedSourceStartSample": 33200,
-            "retainedSourceEndSample": 141120,
-            "retainedSourceStartSeconds": 0.7528344671201814,
-            "retainedSourceEndSeconds": 3.2,
-            "destinationStartSeconds": 2.6286621315192744,
-            "destinationEndSeconds": 5.075827664399093,
-            "insertedPauseBeforeSeconds": 0.35,
-            "completeSentencePcmUnchangedBeforeEncoding": true,
-            "sourceVoice": "Existing Evelyn Soft original ready recall reminder",
-            "kind": "whole helper clause including The; preceding Remember and following question excluded",
-            "cutBasis": "Early low-energy valley refined to nearest zero crossing before full The onset; whole final recording independently verified"
-          },
-          {
-            "text": "The kid’s brother did NOT help the kid.",
-            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_chs_draft_2026-10-03/runner/assets/narration/nr_123.mp3",
-            "sourceClipId": "nr_123",
-            "sourceSha256": "4c55c7990842cfbc3442fd52af68905190d11d07db053fd15449f9a2edd9bbf2",
-            "retainedSourceStartSample": 34751,
-            "retainedSourceEndSample": 142884,
-            "retainedSourceStartSeconds": 0.7880045351473923,
-            "retainedSourceEndSeconds": 3.24,
-            "destinationStartSeconds": 5.425827664399093,
-            "destinationEndSeconds": 7.8778231292517,
-            "insertedPauseBeforeSeconds": 0.35,
-            "completeSentencePcmUnchangedBeforeEncoding": true,
-            "sourceVoice": "Existing Evelyn Soft original ready recall reminder",
-            "kind": "whole helper clause including The; preceding Remember and following question excluded",
-            "cutBasis": "Early low-energy valley refined to nearest zero crossing before full The onset; whole final recording independently verified"
-          }
-        ],
-        "sourceFilesUnchanged": true,
-        "status": "verified strict full spoken word sequence, including every The",
-        "independentExactNormalizedRecognition": true,
-        "articleOmissionExceptionsAllowed": false,
-        "cueAlignmentApproved": true,
-        "provider": "NaturalReaders Commercial",
-        "sourceVoice": "Evelyn Soft",
-        "decodeVerified": true,
-        "localAudioDerivative": true,
-        "correctionReason": "Replaces prior full-paragraph clips missing The before each helper. Corrected clip includes every word with strict independent recognition."
-      },
-      "audioTreatment": {
-        "kind": "three complete Evelyn sentences joined with two 350 ms pauses",
-        "wordLevelSplicing": false,
-        "allInitialTheArticlesPresent": true
       }
     },
     {
@@ -6330,106 +5216,6 @@
       ]
     },
     {
-      "id": "nr_235",
-      "text": "No one helped the mom. The kid’s dad did NOT help the mom. The kid did NOT help the mom.",
-      "src": "assets/narration/nr_235-full-the.mp3",
-      "kind": "prompt",
-      "status": "verified-complete-sentence-audio-derivative",
-      "uses": [
-        {
-          "stepId": "family-dad-kid:outcome",
-          "proposedWording": false,
-          "part": "prompt"
-        }
-      ],
-      "sha256": "08917b1fcb27ad607030bc080d1a5186d87c5b31dbb732f6e859f8689f09845d",
-      "bytes": 292615,
-      "durationSeconds": 7.288163,
-      "decodedDurationSeconds": 7.258027210884354,
-      "provenance": {
-        "sampleRate": 44100,
-        "channels": 1,
-        "nativeNaturalReadersRecording": false,
-        "assembledCompleteSentencesFromExistingEvelynRecordings": true,
-        "wholeSentenceSpeechPreserved": true,
-        "wordLevelSplicing": false,
-        "pitchShifted": false,
-        "timeStretched": false,
-        "copiedWithoutReencoding": false,
-        "kind": "three complete sentences: native No one opening plus exact existing full-The helper clauses",
-        "encoder": "ffmpeg libmp3lame320kbpsmono44100Hz",
-        "sourceSegments": [
-          {
-            "text": "No one helped the mom.",
-            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_outcome_audio_visual_2026-10-03/processed/nr_235-outcome.mp3",
-            "sourceClipId": "nr_235-native",
-            "sourceSha256": "dcf89bc4d606e602a71f5a56de7671f07330567784a894cf47cfd60543c487ea",
-            "retainedSourceStartSample": 0,
-            "retainedSourceEndSample": 98783,
-            "retainedSourceStartSeconds": 0,
-            "retainedSourceEndSeconds": 2.2399773242630387,
-            "firstNativeSentenceSilence": {
-              "start": 2.18,
-              "end": 2.91,
-              "duration": 0.73
-            },
-            "completeSentencePcmUnchangedBeforeEncoding": true,
-            "sourceVoice": "Evelyn Soft native combined export",
-            "kind": "whole No one sentence"
-          },
-          {
-            "text": "The kid’s dad did NOT help the mom.",
-            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_chs_draft_2026-10-03/runner/assets/narration/nr_147.mp3",
-            "sourceClipId": "nr_147",
-            "sourceSha256": "88c7486006395b2634983685dedea05614215fbf7a0de6559da98309285cc757",
-            "retainedSourceStartSample": 30584,
-            "retainedSourceEndSample": 131418,
-            "retainedSourceStartSeconds": 0.693514739229025,
-            "retainedSourceEndSeconds": 2.98,
-            "destinationStartSeconds": 2.5899773242630384,
-            "destinationEndSeconds": 4.876462585034013,
-            "insertedPauseBeforeSeconds": 0.35,
-            "completeSentencePcmUnchangedBeforeEncoding": true,
-            "sourceVoice": "Existing Evelyn Soft original ready recall reminder",
-            "kind": "whole helper clause including The; preceding Remember and following question excluded",
-            "cutBasis": "Early low-energy valley refined to nearest zero crossing before full The onset; whole final recording independently verified"
-          },
-          {
-            "text": "The kid did NOT help the mom.",
-            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_chs_draft_2026-10-03/runner/assets/narration/nr_150.mp3",
-            "sourceClipId": "nr_150",
-            "sourceSha256": "4407d09d65b56d6f99d3f65f084f1b2a3eb24de0f2fc6f746459aeb1d9014008",
-            "retainedSourceStartSample": 32124,
-            "retainedSourceEndSample": 121716,
-            "retainedSourceStartSeconds": 0.7284353741496599,
-            "retainedSourceEndSeconds": 2.76,
-            "destinationStartSeconds": 5.226462585034014,
-            "destinationEndSeconds": 7.258027210884354,
-            "insertedPauseBeforeSeconds": 0.35,
-            "completeSentencePcmUnchangedBeforeEncoding": true,
-            "sourceVoice": "Existing Evelyn Soft original ready recall reminder",
-            "kind": "whole helper clause including The; preceding Remember and following question excluded",
-            "cutBasis": "Early low-energy valley refined to nearest zero crossing before full The onset; whole final recording independently verified"
-          }
-        ],
-        "sourceFilesUnchanged": true,
-        "status": "verified strict full spoken word sequence, including every The",
-        "independentExactNormalizedRecognition": true,
-        "articleOmissionExceptionsAllowed": false,
-        "cueAlignmentApproved": true,
-        "provider": "NaturalReaders Commercial",
-        "sourceVoice": "Evelyn Soft",
-        "decodeVerified": true,
-        "localAudioDerivative": true,
-        "correctionReason": "Replaces prior full-paragraph clips missing The before each helper. Corrected clip includes every word with strict independent recognition."
-      },
-      "audioTreatment": {
-        "kind": "three complete Evelyn sentences joined with two 350 ms pauses",
-        "wordLevelSplicing": false,
-        "allInitialTheArticlesPresent": true
-      }
-    },
-    {
       "id": "nr_143",
       "text": "Can you tell me, did either of these people help the mom?",
       "src": "assets/narration/nr_143.mp3",
@@ -6728,106 +5514,6 @@
           "part": "prompt"
         }
       ]
-    },
-    {
-      "id": "nr_242",
-      "text": "No one helped the dad. The kid did NOT help the dad. The kid’s mom did NOT help the dad.",
-      "src": "assets/narration/nr_242-full-the.mp3",
-      "kind": "prompt",
-      "status": "verified-complete-sentence-audio-derivative",
-      "uses": [
-        {
-          "stepId": "family-mom-kid:outcome",
-          "proposedWording": false,
-          "part": "prompt"
-        }
-      ],
-      "sha256": "6ab276e6149f2f2f27a6c8809ea92e7428a6d05c782c7f14a0a07c247c24900e",
-      "bytes": 299929,
-      "durationSeconds": 7.47102,
-      "decodedDurationSeconds": 7.419047619047619,
-      "provenance": {
-        "sampleRate": 44100,
-        "channels": 1,
-        "nativeNaturalReadersRecording": false,
-        "assembledCompleteSentencesFromExistingEvelynRecordings": true,
-        "wholeSentenceSpeechPreserved": true,
-        "wordLevelSplicing": false,
-        "pitchShifted": false,
-        "timeStretched": false,
-        "copiedWithoutReencoding": false,
-        "kind": "three complete sentences: native No one opening plus exact existing full-The helper clauses",
-        "encoder": "ffmpeg libmp3lame320kbpsmono44100Hz",
-        "sourceSegments": [
-          {
-            "text": "No one helped the dad.",
-            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_outcome_audio_visual_2026-10-03/processed/nr_242-outcome.mp3",
-            "sourceClipId": "nr_242-native",
-            "sourceSha256": "a3f28430944ee92436b7814dcadcf7d4a3c945051a80ab203ae8b3602c42d82f",
-            "retainedSourceStartSample": 0,
-            "retainedSourceEndSample": 99224,
-            "retainedSourceStartSeconds": 0,
-            "retainedSourceEndSeconds": 2.2499773242630385,
-            "firstNativeSentenceSilence": {
-              "start": 2.19,
-              "end": 2.9,
-              "duration": 0.71
-            },
-            "completeSentencePcmUnchangedBeforeEncoding": true,
-            "sourceVoice": "Evelyn Soft native combined export",
-            "kind": "whole No one sentence"
-          },
-          {
-            "text": "The kid did NOT help the dad.",
-            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_chs_draft_2026-10-03/runner/assets/narration/nr_167.mp3",
-            "sourceClipId": "nr_167",
-            "sourceSha256": "c2922db3a9567851273c7d9720ac218e85810fbb920e5a7a30802508b192955c",
-            "retainedSourceStartSample": 29723,
-            "retainedSourceEndSample": 120847,
-            "retainedSourceStartSeconds": 0.6739909297052155,
-            "retainedSourceEndSeconds": 2.740294784580499,
-            "destinationStartSeconds": 2.5999773242630386,
-            "destinationEndSeconds": 4.666281179138322,
-            "insertedPauseBeforeSeconds": 0.35,
-            "completeSentencePcmUnchangedBeforeEncoding": true,
-            "sourceVoice": "Existing Evelyn Soft original ready recall reminder",
-            "kind": "whole helper clause including The; preceding Remember and following question excluded",
-            "cutBasis": "Early low-energy valley refined to nearest zero crossing before full The onset; whole final recording independently verified"
-          },
-          {
-            "text": "The kid’s mom did NOT help the dad.",
-            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_chs_draft_2026-10-03/runner/assets/narration/nr_170.mp3",
-            "sourceClipId": "nr_170",
-            "sourceSha256": "6dba8f4977b58faf98a2f5e043f8f8e123563c84db6b52ddb13d5f6338cb96cb",
-            "retainedSourceStartSample": 30699,
-            "retainedSourceEndSample": 136661,
-            "retainedSourceStartSeconds": 0.6961224489795919,
-            "retainedSourceEndSeconds": 3.098888888888889,
-            "destinationStartSeconds": 5.016281179138322,
-            "destinationEndSeconds": 7.419047619047619,
-            "insertedPauseBeforeSeconds": 0.35,
-            "completeSentencePcmUnchangedBeforeEncoding": true,
-            "sourceVoice": "Existing Evelyn Soft original ready recall reminder",
-            "kind": "whole helper clause including The; preceding Remember and following question excluded",
-            "cutBasis": "Early low-energy valley refined to nearest zero crossing before full The onset; whole final recording independently verified"
-          }
-        ],
-        "sourceFilesUnchanged": true,
-        "status": "verified strict full spoken word sequence, including every The",
-        "independentExactNormalizedRecognition": true,
-        "articleOmissionExceptionsAllowed": false,
-        "cueAlignmentApproved": true,
-        "provider": "NaturalReaders Commercial",
-        "sourceVoice": "Evelyn Soft",
-        "decodeVerified": true,
-        "localAudioDerivative": true,
-        "correctionReason": "Replaces prior full-paragraph clips missing The before each helper. Corrected clip includes every word with strict independent recognition."
-      },
-      "audioTreatment": {
-        "kind": "three complete Evelyn sentences joined with two 350 ms pauses",
-        "wordLevelSplicing": false,
-        "allInitialTheArticlesPresent": true
-      }
     },
     {
       "id": "nr_163",
@@ -7257,106 +5943,6 @@
       ]
     },
     {
-      "id": "nr_249",
-      "text": "No one helped the teacher in the middle. The teacher on the left did NOT help the teacher in the middle. The kid did NOT help the teacher in the middle.",
-      "src": "assets/narration/nr_249-full-the.mp3",
-      "kind": "prompt",
-      "status": "verified-complete-sentence-audio-derivative",
-      "uses": [
-        {
-          "stepId": "family-teacher-kid:outcome",
-          "proposedWording": false,
-          "part": "prompt"
-        }
-      ],
-      "sha256": "94f988e980df2019212a598899c5ce47cc0eb6c43d30086f65fa663b6161833d",
-      "bytes": 387701,
-      "durationSeconds": 9.665306,
-      "decodedDurationSeconds": 9.613809523809524,
-      "provenance": {
-        "sampleRate": 44100,
-        "channels": 1,
-        "nativeNaturalReadersRecording": false,
-        "assembledCompleteSentencesFromExistingEvelynRecordings": true,
-        "wholeSentenceSpeechPreserved": true,
-        "wordLevelSplicing": false,
-        "pitchShifted": false,
-        "timeStretched": false,
-        "copiedWithoutReencoding": false,
-        "kind": "three complete sentences: native No one opening plus exact existing full-The helper clauses",
-        "encoder": "ffmpeg libmp3lame320kbpsmono44100Hz",
-        "sourceSegments": [
-          {
-            "text": "No one helped the teacher in the middle.",
-            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_outcome_audio_visual_2026-10-03/processed/nr_249-outcome.mp3",
-            "sourceClipId": "nr_249-native",
-            "sourceSha256": "979d9e95d1720c533adfab17f12239ddeb4173c982887ccce8c7b53a3e24ae33",
-            "retainedSourceStartSample": 0,
-            "retainedSourceEndSample": 129651,
-            "retainedSourceStartSeconds": 0,
-            "retainedSourceEndSeconds": 2.9399319727891156,
-            "firstNativeSentenceSilence": {
-              "start": 2.88,
-              "end": 3.64,
-              "duration": 0.76
-            },
-            "completeSentencePcmUnchangedBeforeEncoding": true,
-            "sourceVoice": "Evelyn Soft native combined export",
-            "kind": "whole No one sentence"
-          },
-          {
-            "text": "The teacher on the left did NOT help the teacher in the middle.",
-            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_chs_draft_2026-10-03/runner/assets/narration/nr_188.mp3",
-            "sourceClipId": "nr_188",
-            "sourceSha256": "14b166129d5a0b5b18939fde9202d105256ae76df54a915a7ff146ee48e3f908",
-            "retainedSourceStartSample": 32225,
-            "retainedSourceEndSample": 177282,
-            "retainedSourceStartSeconds": 0.7307256235827665,
-            "retainedSourceEndSeconds": 4.02,
-            "destinationStartSeconds": 3.2899319727891156,
-            "destinationEndSeconds": 6.579206349206349,
-            "insertedPauseBeforeSeconds": 0.35,
-            "completeSentencePcmUnchangedBeforeEncoding": true,
-            "sourceVoice": "Existing Evelyn Soft original ready recall reminder",
-            "kind": "whole helper clause including The; preceding Remember and following question excluded",
-            "cutBasis": "Early low-energy valley refined to nearest zero crossing before full The onset; whole final recording independently verified"
-          },
-          {
-            "text": "The kid did NOT help the teacher in the middle.",
-            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_chs_draft_2026-10-03/runner/assets/narration/nr_192.mp3",
-            "sourceClipId": "nr_192",
-            "sourceSha256": "290ac393f410820ba4150b462a268bc13c87086cbd3605d5b61ec921e9d523eb",
-            "retainedSourceStartSample": 33313,
-            "retainedSourceEndSample": 151704,
-            "retainedSourceStartSeconds": 0.7553968253968254,
-            "retainedSourceEndSeconds": 3.44,
-            "destinationStartSeconds": 6.929206349206349,
-            "destinationEndSeconds": 9.613809523809524,
-            "insertedPauseBeforeSeconds": 0.35,
-            "completeSentencePcmUnchangedBeforeEncoding": true,
-            "sourceVoice": "Existing Evelyn Soft original ready recall reminder",
-            "kind": "whole helper clause including The; preceding Remember and following question excluded",
-            "cutBasis": "Early low-energy valley refined to nearest zero crossing before full The onset; whole final recording independently verified"
-          }
-        ],
-        "sourceFilesUnchanged": true,
-        "status": "verified strict full spoken word sequence, including every The",
-        "independentExactNormalizedRecognition": true,
-        "articleOmissionExceptionsAllowed": false,
-        "cueAlignmentApproved": true,
-        "provider": "NaturalReaders Commercial",
-        "sourceVoice": "Evelyn Soft",
-        "decodeVerified": true,
-        "localAudioDerivative": true,
-        "correctionReason": "Replaces prior full-paragraph clips missing The before each helper. Corrected clip includes every word with strict independent recognition."
-      },
-      "audioTreatment": {
-        "kind": "three complete Evelyn sentences joined with two 350 ms pauses",
-        "wordLevelSplicing": false,
-        "allInitialTheArticlesPresent": true
-      }
-    },
-    {
       "id": "nr_184",
       "text": "Can you tell me, did either of these people help the teacher in the middle?",
       "src": "assets/narration/nr_184.mp3",
@@ -7487,6 +6073,1921 @@
         "decodeVerified": true,
         "copiedWithoutReencoding": true
       }
+    },
+    {
+      "id": "nr_285",
+      "text": "No one helped the kid.",
+      "src": "assets/narration/nr_285-sequence.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-sentence-audio-derivative",
+      "uses": [
+        {
+          "stepId": "woman-mom-teacher:outcome-summary",
+          "proposedWording": false,
+          "part": "prompt"
+        },
+        {
+          "stepId": "woman-sister-friend:outcome-summary",
+          "proposedWording": false,
+          "part": "prompt"
+        },
+        {
+          "stepId": "woman-bestfriend-friend:outcome-summary",
+          "proposedWording": false,
+          "part": "prompt"
+        },
+        {
+          "stepId": "woman-teacher-friend:outcome-summary",
+          "proposedWording": false,
+          "part": "prompt"
+        },
+        {
+          "stepId": "woman-mom-sister:outcome-summary",
+          "proposedWording": false,
+          "part": "prompt"
+        },
+        {
+          "stepId": "woman-teacher-classmate:outcome-summary",
+          "proposedWording": false,
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-dad-teacher:outcome-summary",
+          "proposedWording": false,
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-brother-friend:outcome-summary",
+          "proposedWording": false,
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-bestfriend-friend:outcome-summary",
+          "proposedWording": false,
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-teacher-friend:outcome-summary",
+          "proposedWording": false,
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-dad-brother:outcome-summary",
+          "proposedWording": false,
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-teacher-classmate:outcome-summary",
+          "proposedWording": false,
+          "part": "prompt"
+        },
+        {
+          "stepId": "family-mom-dad:outcome-summary",
+          "proposedWording": false,
+          "part": "prompt"
+        },
+        {
+          "stepId": "family-sister-brother:outcome-summary",
+          "proposedWording": false,
+          "part": "prompt"
+        },
+        {
+          "stepId": "family-teacher-classmate:outcome-summary",
+          "proposedWording": false,
+          "part": "prompt"
+        }
+      ],
+      "sha256": "cf91a1a0994b5237cd8849a07af4b82a1e3379081179ff63706da39be0d8507f",
+      "bytes": 84680,
+      "durationSeconds": 2.089796,
+      "decodedDurationSeconds": 2.04,
+      "provenance": {
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "assembledCompleteSentencesFromExistingEvelynRecordings": false,
+        "wholeSentenceSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "pitchShifted": false,
+        "timeStretched": false,
+        "copiedWithoutReencoding": false,
+        "kind": "opening-native-whole-sentence",
+        "encoder": "ffmpeg libmp3lame320kbpsmono44100Hz",
+        "sourceSegments": [
+          {
+            "text": "No one helped the kid.",
+            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_outcome_audio_visual_2026-10-03/processed/nr_196-outcome.mp3",
+            "sourceClipId": "nr_196-native",
+            "sourceSha256": "4c7a4a5d90accdfdcb8bd8abde8715de13eea8a72fb701d6c7b4772f8cb64533",
+            "retainedSourceStartSample": 0,
+            "retainedSourceEndSample": 89964,
+            "retainedSourceStartSeconds": 0,
+            "retainedSourceEndSeconds": 2.04,
+            "firstNativeSentenceSilence": {
+              "start": 1.98,
+              "end": 2.72,
+              "duration": 0.74
+            },
+            "completeSentencePcmUnchangedBeforeEncoding": true,
+            "sourceVoice": "Evelyn Soft native combined export",
+            "kind": "whole No one sentence",
+            "destinationStartSeconds": 0,
+            "destinationEndSeconds": 2.04,
+            "sourceIsWholeNativeNoOneSentence": true
+          }
+        ],
+        "sourceFilesUnchanged": true,
+        "status": "verified strict full spoken word sequence, including every The",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "strictFinalSpokenSequenceMatches": true,
+        "allSentenceInitialTheArticlesVerified": true,
+        "nativeVoiceSource": "Existing NaturalReaders Evelyn Soft recordings; no assistant-generated substitute voice",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "localAudioDerivative": true,
+        "sequencePurpose": "Standalone No one slide, followed by both full helper sentences and repeated No one ending."
+      },
+      "audioTreatment": {
+        "kind": "opening-native-whole-sentence",
+        "wholeSentenceSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "allInitialTheArticlesPresent": true
+      }
+    },
+    {
+      "id": "nr_286",
+      "text": "No one helped the mom.",
+      "src": "assets/narration/nr_286-sequence.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-sentence-audio-derivative",
+      "uses": [
+        {
+          "stepId": "family-dad-kid:outcome-summary",
+          "proposedWording": false,
+          "part": "prompt"
+        }
+      ],
+      "sha256": "67da14ed8e1afda3e43284e9e9fa753c1973405d5315e94dad8760feac70b5d7",
+      "bytes": 91995,
+      "durationSeconds": 2.272653,
+      "decodedDurationSeconds": 2.2399773242630387,
+      "provenance": {
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "assembledCompleteSentencesFromExistingEvelynRecordings": false,
+        "wholeSentenceSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "pitchShifted": false,
+        "timeStretched": false,
+        "copiedWithoutReencoding": false,
+        "kind": "opening-native-whole-sentence",
+        "encoder": "ffmpeg libmp3lame320kbpsmono44100Hz",
+        "sourceSegments": [
+          {
+            "text": "No one helped the mom.",
+            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_outcome_audio_visual_2026-10-03/processed/nr_235-outcome.mp3",
+            "sourceClipId": "nr_235-native",
+            "sourceSha256": "dcf89bc4d606e602a71f5a56de7671f07330567784a894cf47cfd60543c487ea",
+            "retainedSourceStartSample": 0,
+            "retainedSourceEndSample": 98783,
+            "retainedSourceStartSeconds": 0,
+            "retainedSourceEndSeconds": 2.2399773242630387,
+            "firstNativeSentenceSilence": {
+              "start": 2.18,
+              "end": 2.91,
+              "duration": 0.73
+            },
+            "completeSentencePcmUnchangedBeforeEncoding": true,
+            "sourceVoice": "Evelyn Soft native combined export",
+            "kind": "whole No one sentence",
+            "destinationStartSeconds": 0,
+            "destinationEndSeconds": 2.2399773242630387,
+            "sourceIsWholeNativeNoOneSentence": true
+          }
+        ],
+        "sourceFilesUnchanged": true,
+        "status": "verified strict full spoken word sequence, including every The",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "strictFinalSpokenSequenceMatches": true,
+        "allSentenceInitialTheArticlesVerified": true,
+        "nativeVoiceSource": "Existing NaturalReaders Evelyn Soft recordings; no assistant-generated substitute voice",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "localAudioDerivative": true,
+        "sequencePurpose": "Standalone No one slide, followed by both full helper sentences and repeated No one ending."
+      },
+      "audioTreatment": {
+        "kind": "opening-native-whole-sentence",
+        "wholeSentenceSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "allInitialTheArticlesPresent": true
+      }
+    },
+    {
+      "id": "nr_287",
+      "text": "No one helped the dad.",
+      "src": "assets/narration/nr_287-sequence.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-sentence-audio-derivative",
+      "uses": [
+        {
+          "stepId": "family-mom-kid:outcome-summary",
+          "proposedWording": false,
+          "part": "prompt"
+        }
+      ],
+      "sha256": "4b1a61536e3d2114c99a55d8d2045e90308827933f2bdffd51cf82e0a3f4ac81",
+      "bytes": 93040,
+      "durationSeconds": 2.298776,
+      "decodedDurationSeconds": 2.2499773242630385,
+      "provenance": {
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "assembledCompleteSentencesFromExistingEvelynRecordings": false,
+        "wholeSentenceSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "pitchShifted": false,
+        "timeStretched": false,
+        "copiedWithoutReencoding": false,
+        "kind": "opening-native-whole-sentence",
+        "encoder": "ffmpeg libmp3lame320kbpsmono44100Hz",
+        "sourceSegments": [
+          {
+            "text": "No one helped the dad.",
+            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_outcome_audio_visual_2026-10-03/processed/nr_242-outcome.mp3",
+            "sourceClipId": "nr_242-native",
+            "sourceSha256": "a3f28430944ee92436b7814dcadcf7d4a3c945051a80ab203ae8b3602c42d82f",
+            "retainedSourceStartSample": 0,
+            "retainedSourceEndSample": 99224,
+            "retainedSourceStartSeconds": 0,
+            "retainedSourceEndSeconds": 2.2499773242630385,
+            "firstNativeSentenceSilence": {
+              "start": 2.19,
+              "end": 2.9,
+              "duration": 0.71
+            },
+            "completeSentencePcmUnchangedBeforeEncoding": true,
+            "sourceVoice": "Evelyn Soft native combined export",
+            "kind": "whole No one sentence",
+            "destinationStartSeconds": 0,
+            "destinationEndSeconds": 2.2499773242630385,
+            "sourceIsWholeNativeNoOneSentence": true
+          }
+        ],
+        "sourceFilesUnchanged": true,
+        "status": "verified strict full spoken word sequence, including every The",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "strictFinalSpokenSequenceMatches": true,
+        "allSentenceInitialTheArticlesVerified": true,
+        "nativeVoiceSource": "Existing NaturalReaders Evelyn Soft recordings; no assistant-generated substitute voice",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "localAudioDerivative": true,
+        "sequencePurpose": "Standalone No one slide, followed by both full helper sentences and repeated No one ending."
+      },
+      "audioTreatment": {
+        "kind": "opening-native-whole-sentence",
+        "wholeSentenceSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "allInitialTheArticlesPresent": true
+      }
+    },
+    {
+      "id": "nr_288",
+      "text": "No one helped the teacher in the middle.",
+      "src": "assets/narration/nr_288-sequence.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-sentence-audio-derivative",
+      "uses": [
+        {
+          "stepId": "family-teacher-kid:outcome-summary",
+          "proposedWording": false,
+          "part": "prompt"
+        }
+      ],
+      "sha256": "2844e64c0515606019b2cc29214eb7c98638b04a368a3b2dbf6224c2707a14cb",
+      "bytes": 120207,
+      "durationSeconds": 2.977959,
+      "decodedDurationSeconds": 2.9399319727891156,
+      "provenance": {
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "assembledCompleteSentencesFromExistingEvelynRecordings": false,
+        "wholeSentenceSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "pitchShifted": false,
+        "timeStretched": false,
+        "copiedWithoutReencoding": false,
+        "kind": "opening-native-whole-sentence",
+        "encoder": "ffmpeg libmp3lame320kbpsmono44100Hz",
+        "sourceSegments": [
+          {
+            "text": "No one helped the teacher in the middle.",
+            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_outcome_audio_visual_2026-10-03/processed/nr_249-outcome.mp3",
+            "sourceClipId": "nr_249-native",
+            "sourceSha256": "979d9e95d1720c533adfab17f12239ddeb4173c982887ccce8c7b53a3e24ae33",
+            "retainedSourceStartSample": 0,
+            "retainedSourceEndSample": 129651,
+            "retainedSourceStartSeconds": 0,
+            "retainedSourceEndSeconds": 2.9399319727891156,
+            "firstNativeSentenceSilence": {
+              "start": 2.88,
+              "end": 3.64,
+              "duration": 0.76
+            },
+            "completeSentencePcmUnchangedBeforeEncoding": true,
+            "sourceVoice": "Evelyn Soft native combined export",
+            "kind": "whole No one sentence",
+            "destinationStartSeconds": 0,
+            "destinationEndSeconds": 2.9399319727891156,
+            "sourceIsWholeNativeNoOneSentence": true
+          }
+        ],
+        "sourceFilesUnchanged": true,
+        "status": "verified strict full spoken word sequence, including every The",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "strictFinalSpokenSequenceMatches": true,
+        "allSentenceInitialTheArticlesVerified": true,
+        "nativeVoiceSource": "Existing NaturalReaders Evelyn Soft recordings; no assistant-generated substitute voice",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "localAudioDerivative": true,
+        "sequencePurpose": "Standalone No one slide, followed by both full helper sentences and repeated No one ending."
+      },
+      "audioTreatment": {
+        "kind": "opening-native-whole-sentence",
+        "wholeSentenceSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "allInitialTheArticlesPresent": true
+      }
+    },
+    {
+      "id": "nr_289",
+      "text": "The kid’s teacher did NOT help the kid. The kid’s mom did NOT help the kid. No one helped the kid.",
+      "src": "assets/narration/nr_289-sequence.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-sentence-audio-derivative",
+      "uses": [
+        {
+          "stepId": "woman-mom-teacher:outcome",
+          "proposedWording": false,
+          "part": "prompt"
+        }
+      ],
+      "sha256": "13d2928a36d3c54c2592df4db86a553e4090c37d5fbd1d6e362c8fd018acdb8f",
+      "bytes": 305154,
+      "durationSeconds": 7.601633,
+      "decodedDurationSeconds": 7.5679138321995465,
+      "provenance": {
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": false,
+        "assembledCompleteSentencesFromExistingEvelynRecordings": true,
+        "wholeSentenceSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "pitchShifted": false,
+        "timeStretched": false,
+        "copiedWithoutReencoding": false,
+        "kind": "two whole full-The helper sentences followed by repeated whole native No one sentence",
+        "encoder": "ffmpeg libmp3lame320kbpsmono44100Hz",
+        "sourceSegments": [
+          {
+            "text": "The kid’s teacher did NOT help the kid.",
+            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_chs_draft_2026-10-03/runner/assets/narration/nr_040.mp3",
+            "sourceClipId": "nr_040",
+            "sourceSha256": "6b3af187bc148cf2cd2cee9535c9e5f1f2cfd0e80f557a649b2abfc573b968c0",
+            "retainedSourceStartSample": 33830,
+            "retainedSourceEndSample": 142002,
+            "retainedSourceStartSeconds": 0.7671201814058957,
+            "retainedSourceEndSeconds": 3.22,
+            "destinationStartSeconds": 0.0,
+            "destinationEndSeconds": 2.4528798185941043,
+            "insertedPauseBeforeSeconds": 0,
+            "completeSentencePcmUnchangedBeforeEncoding": true,
+            "sourceVoice": "Existing Evelyn Soft original ready recall reminder",
+            "kind": "whole helper clause including The; preceding Remember and following question excluded",
+            "cutBasis": "Early low-energy valley refined to nearest zero crossing before full The onset; whole final recording independently verified"
+          },
+          {
+            "text": "The kid’s mom did NOT help the kid.",
+            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_chs_draft_2026-10-03/runner/assets/narration/nr_047.mp3",
+            "sourceClipId": "nr_047",
+            "sourceSha256": "5d74063db90f1c6601e54167ac0957274cbedbe7b7f90a7fbc18a6992e7e6dac",
+            "retainedSourceStartSample": 31971,
+            "retainedSourceEndSample": 136710,
+            "retainedSourceStartSeconds": 0.7249659863945578,
+            "retainedSourceEndSeconds": 3.1,
+            "destinationStartSeconds": 2.8028798185941044,
+            "destinationEndSeconds": 5.177913832199547,
+            "insertedPauseBeforeSeconds": 0.35,
+            "completeSentencePcmUnchangedBeforeEncoding": true,
+            "sourceVoice": "Existing Evelyn Soft original ready recall reminder",
+            "kind": "whole helper clause including The; preceding Remember and following question excluded",
+            "cutBasis": "Early low-energy valley refined to nearest zero crossing before full The onset; whole final recording independently verified"
+          },
+          {
+            "text": "No one helped the kid.",
+            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_outcome_audio_visual_2026-10-03/processed/nr_196-outcome.mp3",
+            "sourceClipId": "nr_196-native",
+            "sourceSha256": "4c7a4a5d90accdfdcb8bd8abde8715de13eea8a72fb701d6c7b4772f8cb64533",
+            "retainedSourceStartSample": 0,
+            "retainedSourceEndSample": 89964,
+            "retainedSourceStartSeconds": 0,
+            "retainedSourceEndSeconds": 2.04,
+            "firstNativeSentenceSilence": {
+              "start": 1.98,
+              "end": 2.72,
+              "duration": 0.74
+            },
+            "completeSentencePcmUnchangedBeforeEncoding": true,
+            "sourceVoice": "Evelyn Soft native combined export",
+            "kind": "whole No one sentence",
+            "destinationStartSeconds": 5.5279138321995465,
+            "destinationEndSeconds": 7.5679138321995465,
+            "sourceIsWholeNativeNoOneSentence": true,
+            "insertedPauseBeforeSeconds": 0.35
+          }
+        ],
+        "sourceFilesUnchanged": true,
+        "status": "verified strict full spoken word sequence, including every The",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "strictFinalSpokenSequenceMatches": true,
+        "allSentenceInitialTheArticlesVerified": true,
+        "nativeVoiceSource": "Existing NaturalReaders Evelyn Soft recordings; no assistant-generated substitute voice",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "localAudioDerivative": true,
+        "sequencePurpose": "Standalone No one slide, followed by both full helper sentences and repeated No one ending."
+      },
+      "audioTreatment": {
+        "kind": "two whole full-The helper sentences followed by repeated whole native No one sentence",
+        "wholeSentenceSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "allInitialTheArticlesPresent": true
+      }
+    },
+    {
+      "id": "nr_290",
+      "text": "The kid’s sister did NOT help the kid. The kid’s friend did NOT help the kid. No one helped the kid.",
+      "src": "assets/narration/nr_290-sequence.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-sentence-audio-derivative",
+      "uses": [
+        {
+          "stepId": "woman-sister-friend:outcome",
+          "proposedWording": false,
+          "part": "prompt"
+        }
+      ],
+      "sha256": "4d860d58ea4a4f28f89d324358fa913ef50f6538fb9791568d388b4e3389037f",
+      "bytes": 303064,
+      "durationSeconds": 7.549388,
+      "decodedDurationSeconds": 7.50859410430839,
+      "provenance": {
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": false,
+        "assembledCompleteSentencesFromExistingEvelynRecordings": true,
+        "wholeSentenceSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "pitchShifted": false,
+        "timeStretched": false,
+        "copiedWithoutReencoding": false,
+        "kind": "two whole full-The helper sentences followed by repeated whole native No one sentence",
+        "encoder": "ffmpeg libmp3lame320kbpsmono44100Hz",
+        "sourceSegments": [
+          {
+            "text": "The kid’s sister did NOT help the kid.",
+            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_chs_draft_2026-10-03/runner/assets/narration/nr_066.mp3",
+            "sourceClipId": "nr_066",
+            "sourceSha256": "700b6cc03a34097519560b4337ac9cb2dfc34eb11d00c7ff5008db88e342a543",
+            "retainedSourceStartSample": 33200,
+            "retainedSourceEndSample": 141120,
+            "retainedSourceStartSeconds": 0.7528344671201814,
+            "retainedSourceEndSeconds": 3.2,
+            "destinationStartSeconds": 0.0,
+            "destinationEndSeconds": 2.4471655328798185,
+            "insertedPauseBeforeSeconds": 0,
+            "completeSentencePcmUnchangedBeforeEncoding": true,
+            "sourceVoice": "Existing Evelyn Soft original ready recall reminder",
+            "kind": "whole helper clause including The; preceding Remember and following question excluded",
+            "cutBasis": "Early low-energy valley refined to nearest zero crossing before full The onset; whole final recording independently verified"
+          },
+          {
+            "text": "The kid’s friend did NOT help the kid.",
+            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_chs_draft_2026-10-03/runner/assets/narration/nr_070.mp3",
+            "sourceClipId": "nr_070",
+            "sourceSha256": "4669ffe13893165dd8e698c0a03af350edc5c0a9aadbcb11f79af253d271b7b3",
+            "retainedSourceStartSample": 32571,
+            "retainedSourceEndSample": 134946,
+            "retainedSourceStartSeconds": 0.7385714285714285,
+            "retainedSourceEndSeconds": 3.06,
+            "destinationStartSeconds": 2.7971655328798186,
+            "destinationEndSeconds": 5.11859410430839,
+            "insertedPauseBeforeSeconds": 0.35,
+            "completeSentencePcmUnchangedBeforeEncoding": true,
+            "sourceVoice": "Existing Evelyn Soft original ready recall reminder",
+            "kind": "whole helper clause including The; preceding Remember and following question excluded",
+            "cutBasis": "Early low-energy valley refined to nearest zero crossing before full The onset; whole final recording independently verified"
+          },
+          {
+            "text": "No one helped the kid.",
+            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_outcome_audio_visual_2026-10-03/processed/nr_196-outcome.mp3",
+            "sourceClipId": "nr_196-native",
+            "sourceSha256": "4c7a4a5d90accdfdcb8bd8abde8715de13eea8a72fb701d6c7b4772f8cb64533",
+            "retainedSourceStartSample": 0,
+            "retainedSourceEndSample": 89964,
+            "retainedSourceStartSeconds": 0,
+            "retainedSourceEndSeconds": 2.04,
+            "firstNativeSentenceSilence": {
+              "start": 1.98,
+              "end": 2.72,
+              "duration": 0.74
+            },
+            "completeSentencePcmUnchangedBeforeEncoding": true,
+            "sourceVoice": "Evelyn Soft native combined export",
+            "kind": "whole No one sentence",
+            "destinationStartSeconds": 5.46859410430839,
+            "destinationEndSeconds": 7.50859410430839,
+            "sourceIsWholeNativeNoOneSentence": true,
+            "insertedPauseBeforeSeconds": 0.35
+          }
+        ],
+        "sourceFilesUnchanged": true,
+        "status": "verified strict full spoken word sequence, including every The",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "strictFinalSpokenSequenceMatches": true,
+        "allSentenceInitialTheArticlesVerified": true,
+        "nativeVoiceSource": "Existing NaturalReaders Evelyn Soft recordings; no assistant-generated substitute voice",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "localAudioDerivative": true,
+        "sequencePurpose": "Standalone No one slide, followed by both full helper sentences and repeated No one ending."
+      },
+      "audioTreatment": {
+        "kind": "two whole full-The helper sentences followed by repeated whole native No one sentence",
+        "wholeSentenceSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "allInitialTheArticlesPresent": true
+      }
+    },
+    {
+      "id": "nr_291",
+      "text": "The kid’s friend did NOT help the kid. The kid’s best friend did NOT help the kid. No one helped the kid.",
+      "src": "assets/narration/nr_291-sequence.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-sentence-audio-derivative",
+      "uses": [
+        {
+          "stepId": "woman-bestfriend-friend:outcome",
+          "proposedWording": false,
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-bestfriend-friend:outcome",
+          "proposedWording": false,
+          "part": "prompt"
+        }
+      ],
+      "sha256": "0a704dabc29e5ddf1746bfcd22c09928f2147358e7bf0af2c99ce7f61eef4c7c",
+      "bytes": 310378,
+      "durationSeconds": 7.732245,
+      "decodedDurationSeconds": 7.702993197278912,
+      "provenance": {
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": false,
+        "assembledCompleteSentencesFromExistingEvelynRecordings": true,
+        "wholeSentenceSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "pitchShifted": false,
+        "timeStretched": false,
+        "copiedWithoutReencoding": false,
+        "kind": "two whole full-The helper sentences followed by repeated whole native No one sentence",
+        "encoder": "ffmpeg libmp3lame320kbpsmono44100Hz",
+        "sourceSegments": [
+          {
+            "text": "The kid’s friend did NOT help the kid.",
+            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_chs_draft_2026-10-03/runner/assets/narration/nr_070.mp3",
+            "sourceClipId": "nr_070",
+            "sourceSha256": "4669ffe13893165dd8e698c0a03af350edc5c0a9aadbcb11f79af253d271b7b3",
+            "retainedSourceStartSample": 32571,
+            "retainedSourceEndSample": 134946,
+            "retainedSourceStartSeconds": 0.7385714285714285,
+            "retainedSourceEndSeconds": 3.06,
+            "destinationStartSeconds": 0.0,
+            "destinationEndSeconds": 2.3214285714285716,
+            "insertedPauseBeforeSeconds": 0,
+            "completeSentencePcmUnchangedBeforeEncoding": true,
+            "sourceVoice": "Existing Evelyn Soft original ready recall reminder",
+            "kind": "whole helper clause including The; preceding Remember and following question excluded",
+            "cutBasis": "Early low-energy valley refined to nearest zero crossing before full The onset; whole final recording independently verified"
+          },
+          {
+            "text": "The kid’s best friend did NOT help the kid.",
+            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_chs_draft_2026-10-03/runner/assets/narration/nr_083.mp3",
+            "sourceClipId": "nr_083",
+            "sourceSha256": "2db9bcdb5c0baa71f54f2529961bab4a101b144d9b981179a3a94ae226d3d93b",
+            "retainedSourceStartSample": 32565,
+            "retainedSourceEndSample": 149058,
+            "retainedSourceStartSeconds": 0.7384353741496599,
+            "retainedSourceEndSeconds": 3.38,
+            "destinationStartSeconds": 2.6714285714285713,
+            "destinationEndSeconds": 5.312993197278912,
+            "insertedPauseBeforeSeconds": 0.35,
+            "completeSentencePcmUnchangedBeforeEncoding": true,
+            "sourceVoice": "Existing Evelyn Soft original ready recall reminder",
+            "kind": "whole helper clause including The; preceding Remember and following question excluded",
+            "cutBasis": "Early low-energy valley refined to nearest zero crossing before full The onset; whole final recording independently verified"
+          },
+          {
+            "text": "No one helped the kid.",
+            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_outcome_audio_visual_2026-10-03/processed/nr_196-outcome.mp3",
+            "sourceClipId": "nr_196-native",
+            "sourceSha256": "4c7a4a5d90accdfdcb8bd8abde8715de13eea8a72fb701d6c7b4772f8cb64533",
+            "retainedSourceStartSample": 0,
+            "retainedSourceEndSample": 89964,
+            "retainedSourceStartSeconds": 0,
+            "retainedSourceEndSeconds": 2.04,
+            "firstNativeSentenceSilence": {
+              "start": 1.98,
+              "end": 2.72,
+              "duration": 0.74
+            },
+            "completeSentencePcmUnchangedBeforeEncoding": true,
+            "sourceVoice": "Evelyn Soft native combined export",
+            "kind": "whole No one sentence",
+            "destinationStartSeconds": 5.662993197278912,
+            "destinationEndSeconds": 7.702993197278912,
+            "sourceIsWholeNativeNoOneSentence": true,
+            "insertedPauseBeforeSeconds": 0.35
+          }
+        ],
+        "sourceFilesUnchanged": true,
+        "status": "verified strict full spoken word sequence, including every The",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "strictFinalSpokenSequenceMatches": true,
+        "allSentenceInitialTheArticlesVerified": true,
+        "nativeVoiceSource": "Existing NaturalReaders Evelyn Soft recordings; no assistant-generated substitute voice",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "localAudioDerivative": true,
+        "sequencePurpose": "Standalone No one slide, followed by both full helper sentences and repeated No one ending."
+      },
+      "audioTreatment": {
+        "kind": "two whole full-The helper sentences followed by repeated whole native No one sentence",
+        "wholeSentenceSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "allInitialTheArticlesPresent": true
+      }
+    },
+    {
+      "id": "nr_292",
+      "text": "The kid’s teacher did NOT help the kid. The kid’s friend did NOT help the kid. No one helped the kid.",
+      "src": "assets/narration/nr_292-sequence.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-sentence-audio-derivative",
+      "uses": [
+        {
+          "stepId": "woman-teacher-friend:outcome",
+          "proposedWording": false,
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-teacher-friend:outcome",
+          "proposedWording": false,
+          "part": "prompt"
+        }
+      ],
+      "sha256": "de711e8622d6c15780c46eed1ce33635523eceab43696d4e6c48f60ae2cc7cab",
+      "bytes": 303064,
+      "durationSeconds": 7.549388,
+      "decodedDurationSeconds": 7.514308390022676,
+      "provenance": {
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": false,
+        "assembledCompleteSentencesFromExistingEvelynRecordings": true,
+        "wholeSentenceSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "pitchShifted": false,
+        "timeStretched": false,
+        "copiedWithoutReencoding": false,
+        "kind": "two whole full-The helper sentences followed by repeated whole native No one sentence",
+        "encoder": "ffmpeg libmp3lame320kbpsmono44100Hz",
+        "sourceSegments": [
+          {
+            "text": "The kid’s teacher did NOT help the kid.",
+            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_chs_draft_2026-10-03/runner/assets/narration/nr_040.mp3",
+            "sourceClipId": "nr_040",
+            "sourceSha256": "6b3af187bc148cf2cd2cee9535c9e5f1f2cfd0e80f557a649b2abfc573b968c0",
+            "retainedSourceStartSample": 33830,
+            "retainedSourceEndSample": 142002,
+            "retainedSourceStartSeconds": 0.7671201814058957,
+            "retainedSourceEndSeconds": 3.22,
+            "destinationStartSeconds": 0.0,
+            "destinationEndSeconds": 2.4528798185941043,
+            "insertedPauseBeforeSeconds": 0,
+            "completeSentencePcmUnchangedBeforeEncoding": true,
+            "sourceVoice": "Existing Evelyn Soft original ready recall reminder",
+            "kind": "whole helper clause including The; preceding Remember and following question excluded",
+            "cutBasis": "Early low-energy valley refined to nearest zero crossing before full The onset; whole final recording independently verified"
+          },
+          {
+            "text": "The kid’s friend did NOT help the kid.",
+            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_chs_draft_2026-10-03/runner/assets/narration/nr_070.mp3",
+            "sourceClipId": "nr_070",
+            "sourceSha256": "4669ffe13893165dd8e698c0a03af350edc5c0a9aadbcb11f79af253d271b7b3",
+            "retainedSourceStartSample": 32571,
+            "retainedSourceEndSample": 134946,
+            "retainedSourceStartSeconds": 0.7385714285714285,
+            "retainedSourceEndSeconds": 3.06,
+            "destinationStartSeconds": 2.8028798185941044,
+            "destinationEndSeconds": 5.124308390022676,
+            "insertedPauseBeforeSeconds": 0.35,
+            "completeSentencePcmUnchangedBeforeEncoding": true,
+            "sourceVoice": "Existing Evelyn Soft original ready recall reminder",
+            "kind": "whole helper clause including The; preceding Remember and following question excluded",
+            "cutBasis": "Early low-energy valley refined to nearest zero crossing before full The onset; whole final recording independently verified"
+          },
+          {
+            "text": "No one helped the kid.",
+            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_outcome_audio_visual_2026-10-03/processed/nr_196-outcome.mp3",
+            "sourceClipId": "nr_196-native",
+            "sourceSha256": "4c7a4a5d90accdfdcb8bd8abde8715de13eea8a72fb701d6c7b4772f8cb64533",
+            "retainedSourceStartSample": 0,
+            "retainedSourceEndSample": 89964,
+            "retainedSourceStartSeconds": 0,
+            "retainedSourceEndSeconds": 2.04,
+            "firstNativeSentenceSilence": {
+              "start": 1.98,
+              "end": 2.72,
+              "duration": 0.74
+            },
+            "completeSentencePcmUnchangedBeforeEncoding": true,
+            "sourceVoice": "Evelyn Soft native combined export",
+            "kind": "whole No one sentence",
+            "destinationStartSeconds": 5.474308390022676,
+            "destinationEndSeconds": 7.514308390022676,
+            "sourceIsWholeNativeNoOneSentence": true,
+            "insertedPauseBeforeSeconds": 0.35
+          }
+        ],
+        "sourceFilesUnchanged": true,
+        "status": "verified strict full spoken word sequence, including every The",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "strictFinalSpokenSequenceMatches": true,
+        "allSentenceInitialTheArticlesVerified": true,
+        "nativeVoiceSource": "Existing NaturalReaders Evelyn Soft recordings; no assistant-generated substitute voice",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "localAudioDerivative": true,
+        "sequencePurpose": "Standalone No one slide, followed by both full helper sentences and repeated No one ending."
+      },
+      "audioTreatment": {
+        "kind": "two whole full-The helper sentences followed by repeated whole native No one sentence",
+        "wholeSentenceSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "allInitialTheArticlesPresent": true
+      }
+    },
+    {
+      "id": "nr_293",
+      "text": "The kid’s mom did NOT help the kid. The kid’s sister did NOT help the kid. No one helped the kid.",
+      "src": "assets/narration/nr_293-sequence.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-sentence-audio-derivative",
+      "uses": [
+        {
+          "stepId": "woman-mom-sister:outcome",
+          "proposedWording": false,
+          "part": "prompt"
+        }
+      ],
+      "sha256": "eb6d14fae4dd266436baef6d402a0069305971801361cdf6f1ded69610275b34",
+      "bytes": 305154,
+      "durationSeconds": 7.601633,
+      "decodedDurationSeconds": 7.562199546485261,
+      "provenance": {
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": false,
+        "assembledCompleteSentencesFromExistingEvelynRecordings": true,
+        "wholeSentenceSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "pitchShifted": false,
+        "timeStretched": false,
+        "copiedWithoutReencoding": false,
+        "kind": "two whole full-The helper sentences followed by repeated whole native No one sentence",
+        "encoder": "ffmpeg libmp3lame320kbpsmono44100Hz",
+        "sourceSegments": [
+          {
+            "text": "The kid’s mom did NOT help the kid.",
+            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_chs_draft_2026-10-03/runner/assets/narration/nr_047.mp3",
+            "sourceClipId": "nr_047",
+            "sourceSha256": "5d74063db90f1c6601e54167ac0957274cbedbe7b7f90a7fbc18a6992e7e6dac",
+            "retainedSourceStartSample": 31971,
+            "retainedSourceEndSample": 136710,
+            "retainedSourceStartSeconds": 0.7249659863945578,
+            "retainedSourceEndSeconds": 3.1,
+            "destinationStartSeconds": 0.0,
+            "destinationEndSeconds": 2.375034013605442,
+            "insertedPauseBeforeSeconds": 0,
+            "completeSentencePcmUnchangedBeforeEncoding": true,
+            "sourceVoice": "Existing Evelyn Soft original ready recall reminder",
+            "kind": "whole helper clause including The; preceding Remember and following question excluded",
+            "cutBasis": "Early low-energy valley refined to nearest zero crossing before full The onset; whole final recording independently verified"
+          },
+          {
+            "text": "The kid’s sister did NOT help the kid.",
+            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_chs_draft_2026-10-03/runner/assets/narration/nr_066.mp3",
+            "sourceClipId": "nr_066",
+            "sourceSha256": "700b6cc03a34097519560b4337ac9cb2dfc34eb11d00c7ff5008db88e342a543",
+            "retainedSourceStartSample": 33200,
+            "retainedSourceEndSample": 141120,
+            "retainedSourceStartSeconds": 0.7528344671201814,
+            "retainedSourceEndSeconds": 3.2,
+            "destinationStartSeconds": 2.725034013605442,
+            "destinationEndSeconds": 5.172199546485261,
+            "insertedPauseBeforeSeconds": 0.35,
+            "completeSentencePcmUnchangedBeforeEncoding": true,
+            "sourceVoice": "Existing Evelyn Soft original ready recall reminder",
+            "kind": "whole helper clause including The; preceding Remember and following question excluded",
+            "cutBasis": "Early low-energy valley refined to nearest zero crossing before full The onset; whole final recording independently verified"
+          },
+          {
+            "text": "No one helped the kid.",
+            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_outcome_audio_visual_2026-10-03/processed/nr_196-outcome.mp3",
+            "sourceClipId": "nr_196-native",
+            "sourceSha256": "4c7a4a5d90accdfdcb8bd8abde8715de13eea8a72fb701d6c7b4772f8cb64533",
+            "retainedSourceStartSample": 0,
+            "retainedSourceEndSample": 89964,
+            "retainedSourceStartSeconds": 0,
+            "retainedSourceEndSeconds": 2.04,
+            "firstNativeSentenceSilence": {
+              "start": 1.98,
+              "end": 2.72,
+              "duration": 0.74
+            },
+            "completeSentencePcmUnchangedBeforeEncoding": true,
+            "sourceVoice": "Evelyn Soft native combined export",
+            "kind": "whole No one sentence",
+            "destinationStartSeconds": 5.522199546485261,
+            "destinationEndSeconds": 7.562199546485261,
+            "sourceIsWholeNativeNoOneSentence": true,
+            "insertedPauseBeforeSeconds": 0.35
+          }
+        ],
+        "sourceFilesUnchanged": true,
+        "status": "verified strict full spoken word sequence, including every The",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "strictFinalSpokenSequenceMatches": true,
+        "allSentenceInitialTheArticlesVerified": true,
+        "nativeVoiceSource": "Existing NaturalReaders Evelyn Soft recordings; no assistant-generated substitute voice",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "localAudioDerivative": true,
+        "sequencePurpose": "Standalone No one slide, followed by both full helper sentences and repeated No one ending."
+      },
+      "audioTreatment": {
+        "kind": "two whole full-The helper sentences followed by repeated whole native No one sentence",
+        "wholeSentenceSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "allInitialTheArticlesPresent": true
+      }
+    },
+    {
+      "id": "nr_294",
+      "text": "The kid’s classmate did NOT help the kid. The kid’s teacher did NOT help the kid. No one helped the kid.",
+      "src": "assets/narration/nr_294-sequence.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-sentence-audio-derivative",
+      "uses": [
+        {
+          "stepId": "woman-teacher-classmate:outcome",
+          "proposedWording": false,
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-teacher-classmate:outcome",
+          "proposedWording": false,
+          "part": "prompt"
+        },
+        {
+          "stepId": "family-teacher-classmate:outcome",
+          "proposedWording": false,
+          "part": "prompt"
+        }
+      ],
+      "sha256": "9c516b11b2a22eb0295cbbd72ce0f265e06fd9d6c4ae4c6ad5bcb76d976c5a76",
+      "bytes": 315603,
+      "durationSeconds": 7.862857,
+      "decodedDurationSeconds": 7.818707482993197,
+      "provenance": {
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": false,
+        "assembledCompleteSentencesFromExistingEvelynRecordings": true,
+        "wholeSentenceSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "pitchShifted": false,
+        "timeStretched": false,
+        "copiedWithoutReencoding": false,
+        "kind": "two whole full-The helper sentences followed by repeated whole native No one sentence",
+        "encoder": "ffmpeg libmp3lame320kbpsmono44100Hz",
+        "sourceSegments": [
+          {
+            "text": "The kid’s classmate did NOT help the kid.",
+            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_chs_draft_2026-10-03/runner/assets/narration/nr_099.mp3",
+            "sourceClipId": "nr_099",
+            "sourceSha256": "5869dd1575edc3074bf74369c588c2053130c87ee70b52f0d7dfd16916db0f8e",
+            "retainedSourceStartSample": 34141,
+            "retainedSourceEndSample": 149940,
+            "retainedSourceStartSeconds": 0.774172335600907,
+            "retainedSourceEndSeconds": 3.4,
+            "destinationStartSeconds": 0.0,
+            "destinationEndSeconds": 2.6258276643990928,
+            "insertedPauseBeforeSeconds": 0,
+            "completeSentencePcmUnchangedBeforeEncoding": true,
+            "sourceVoice": "Existing Evelyn Soft original ready recall reminder",
+            "kind": "whole helper clause including The; preceding Remember and following question excluded",
+            "cutBasis": "Early low-energy valley refined to nearest zero crossing before full The onset; whole final recording independently verified"
+          },
+          {
+            "text": "The kid’s teacher did NOT help the kid.",
+            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_chs_draft_2026-10-03/runner/assets/narration/nr_040.mp3",
+            "sourceClipId": "nr_040",
+            "sourceSha256": "6b3af187bc148cf2cd2cee9535c9e5f1f2cfd0e80f557a649b2abfc573b968c0",
+            "retainedSourceStartSample": 33830,
+            "retainedSourceEndSample": 142002,
+            "retainedSourceStartSeconds": 0.7671201814058957,
+            "retainedSourceEndSeconds": 3.22,
+            "destinationStartSeconds": 2.975827664399093,
+            "destinationEndSeconds": 5.428707482993198,
+            "insertedPauseBeforeSeconds": 0.35,
+            "completeSentencePcmUnchangedBeforeEncoding": true,
+            "sourceVoice": "Existing Evelyn Soft original ready recall reminder",
+            "kind": "whole helper clause including The; preceding Remember and following question excluded",
+            "cutBasis": "Early low-energy valley refined to nearest zero crossing before full The onset; whole final recording independently verified"
+          },
+          {
+            "text": "No one helped the kid.",
+            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_outcome_audio_visual_2026-10-03/processed/nr_196-outcome.mp3",
+            "sourceClipId": "nr_196-native",
+            "sourceSha256": "4c7a4a5d90accdfdcb8bd8abde8715de13eea8a72fb701d6c7b4772f8cb64533",
+            "retainedSourceStartSample": 0,
+            "retainedSourceEndSample": 89964,
+            "retainedSourceStartSeconds": 0,
+            "retainedSourceEndSeconds": 2.04,
+            "firstNativeSentenceSilence": {
+              "start": 1.98,
+              "end": 2.72,
+              "duration": 0.74
+            },
+            "completeSentencePcmUnchangedBeforeEncoding": true,
+            "sourceVoice": "Evelyn Soft native combined export",
+            "kind": "whole No one sentence",
+            "destinationStartSeconds": 5.778707482993197,
+            "destinationEndSeconds": 7.818707482993197,
+            "sourceIsWholeNativeNoOneSentence": true,
+            "insertedPauseBeforeSeconds": 0.35
+          }
+        ],
+        "sourceFilesUnchanged": true,
+        "status": "verified strict full spoken word sequence, including every The",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "strictFinalSpokenSequenceMatches": true,
+        "allSentenceInitialTheArticlesVerified": true,
+        "nativeVoiceSource": "Existing NaturalReaders Evelyn Soft recordings; no assistant-generated substitute voice",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "localAudioDerivative": true,
+        "sequencePurpose": "Standalone No one slide, followed by both full helper sentences and repeated No one ending."
+      },
+      "audioTreatment": {
+        "kind": "two whole full-The helper sentences followed by repeated whole native No one sentence",
+        "wholeSentenceSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "allInitialTheArticlesPresent": true
+      }
+    },
+    {
+      "id": "nr_295",
+      "text": "The kid’s teacher did NOT help the kid. The kid’s dad did NOT help the kid. No one helped the kid.",
+      "src": "assets/narration/nr_295-sequence.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-sentence-audio-derivative",
+      "uses": [
+        {
+          "stepId": "man-dad-teacher:outcome",
+          "proposedWording": false,
+          "part": "prompt"
+        }
+      ],
+      "sha256": "f2ea1e698f009e79e55e84e1408bee3118e5cc2c979abe1810252095d3ef84eb",
+      "bytes": 304109,
+      "durationSeconds": 7.57551,
+      "decodedDurationSeconds": 7.5381179138322,
+      "provenance": {
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": false,
+        "assembledCompleteSentencesFromExistingEvelynRecordings": true,
+        "wholeSentenceSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "pitchShifted": false,
+        "timeStretched": false,
+        "copiedWithoutReencoding": false,
+        "kind": "two whole full-The helper sentences followed by repeated whole native No one sentence",
+        "encoder": "ffmpeg libmp3lame320kbpsmono44100Hz",
+        "sourceSegments": [
+          {
+            "text": "The kid’s teacher did NOT help the kid.",
+            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_chs_draft_2026-10-03/runner/assets/narration/nr_040.mp3",
+            "sourceClipId": "nr_040",
+            "sourceSha256": "6b3af187bc148cf2cd2cee9535c9e5f1f2cfd0e80f557a649b2abfc573b968c0",
+            "retainedSourceStartSample": 33830,
+            "retainedSourceEndSample": 142002,
+            "retainedSourceStartSeconds": 0.7671201814058957,
+            "retainedSourceEndSeconds": 3.22,
+            "destinationStartSeconds": 0.0,
+            "destinationEndSeconds": 2.4528798185941043,
+            "insertedPauseBeforeSeconds": 0,
+            "completeSentencePcmUnchangedBeforeEncoding": true,
+            "sourceVoice": "Existing Evelyn Soft original ready recall reminder",
+            "kind": "whole helper clause including The; preceding Remember and following question excluded",
+            "cutBasis": "Early low-energy valley refined to nearest zero crossing before full The onset; whole final recording independently verified"
+          },
+          {
+            "text": "The kid’s dad did NOT help the kid.",
+            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_chs_draft_2026-10-03/runner/assets/narration/nr_111.mp3",
+            "sourceClipId": "nr_111",
+            "sourceSha256": "04633f74b153106b0eb92e28da9ae70da16fc6cacfa607a73348f815500c64c9",
+            "retainedSourceStartSample": 30639,
+            "retainedSourceEndSample": 134064,
+            "retainedSourceStartSeconds": 0.6947619047619048,
+            "retainedSourceEndSeconds": 3.04,
+            "destinationStartSeconds": 2.8028798185941044,
+            "destinationEndSeconds": 5.148117913832199,
+            "insertedPauseBeforeSeconds": 0.35,
+            "completeSentencePcmUnchangedBeforeEncoding": true,
+            "sourceVoice": "Existing Evelyn Soft original ready recall reminder",
+            "kind": "whole helper clause including The; preceding Remember and following question excluded",
+            "cutBasis": "Early low-energy valley refined to nearest zero crossing before full The onset; whole final recording independently verified"
+          },
+          {
+            "text": "No one helped the kid.",
+            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_outcome_audio_visual_2026-10-03/processed/nr_196-outcome.mp3",
+            "sourceClipId": "nr_196-native",
+            "sourceSha256": "4c7a4a5d90accdfdcb8bd8abde8715de13eea8a72fb701d6c7b4772f8cb64533",
+            "retainedSourceStartSample": 0,
+            "retainedSourceEndSample": 89964,
+            "retainedSourceStartSeconds": 0,
+            "retainedSourceEndSeconds": 2.04,
+            "firstNativeSentenceSilence": {
+              "start": 1.98,
+              "end": 2.72,
+              "duration": 0.74
+            },
+            "completeSentencePcmUnchangedBeforeEncoding": true,
+            "sourceVoice": "Evelyn Soft native combined export",
+            "kind": "whole No one sentence",
+            "destinationStartSeconds": 5.4981179138322,
+            "destinationEndSeconds": 7.5381179138322,
+            "sourceIsWholeNativeNoOneSentence": true,
+            "insertedPauseBeforeSeconds": 0.35
+          }
+        ],
+        "sourceFilesUnchanged": true,
+        "status": "verified strict full spoken word sequence, including every The",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "strictFinalSpokenSequenceMatches": true,
+        "allSentenceInitialTheArticlesVerified": true,
+        "nativeVoiceSource": "Existing NaturalReaders Evelyn Soft recordings; no assistant-generated substitute voice",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "localAudioDerivative": true,
+        "sequencePurpose": "Standalone No one slide, followed by both full helper sentences and repeated No one ending."
+      },
+      "audioTreatment": {
+        "kind": "two whole full-The helper sentences followed by repeated whole native No one sentence",
+        "wholeSentenceSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "allInitialTheArticlesPresent": true
+      }
+    },
+    {
+      "id": "nr_296",
+      "text": "The kid’s brother did NOT help the kid. The kid’s friend did NOT help the kid. No one helped the kid.",
+      "src": "assets/narration/nr_296-sequence.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-sentence-audio-derivative",
+      "uses": [
+        {
+          "stepId": "man-brother-friend:outcome",
+          "proposedWording": false,
+          "part": "prompt"
+        }
+      ],
+      "sha256": "0d20bd4f85f5ac07dccde91128360ab02c0804581dfa9dc5a9e11d565521da55",
+      "bytes": 303064,
+      "durationSeconds": 7.549388,
+      "decodedDurationSeconds": 7.5134240362811795,
+      "provenance": {
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": false,
+        "assembledCompleteSentencesFromExistingEvelynRecordings": true,
+        "wholeSentenceSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "pitchShifted": false,
+        "timeStretched": false,
+        "copiedWithoutReencoding": false,
+        "kind": "two whole full-The helper sentences followed by repeated whole native No one sentence",
+        "encoder": "ffmpeg libmp3lame320kbpsmono44100Hz",
+        "sourceSegments": [
+          {
+            "text": "The kid’s brother did NOT help the kid.",
+            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_chs_draft_2026-10-03/runner/assets/narration/nr_123.mp3",
+            "sourceClipId": "nr_123",
+            "sourceSha256": "4c55c7990842cfbc3442fd52af68905190d11d07db053fd15449f9a2edd9bbf2",
+            "retainedSourceStartSample": 34751,
+            "retainedSourceEndSample": 142884,
+            "retainedSourceStartSeconds": 0.7880045351473923,
+            "retainedSourceEndSeconds": 3.24,
+            "destinationStartSeconds": 0.0,
+            "destinationEndSeconds": 2.4519954648526077,
+            "insertedPauseBeforeSeconds": 0,
+            "completeSentencePcmUnchangedBeforeEncoding": true,
+            "sourceVoice": "Existing Evelyn Soft original ready recall reminder",
+            "kind": "whole helper clause including The; preceding Remember and following question excluded",
+            "cutBasis": "Early low-energy valley refined to nearest zero crossing before full The onset; whole final recording independently verified"
+          },
+          {
+            "text": "The kid’s friend did NOT help the kid.",
+            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_chs_draft_2026-10-03/runner/assets/narration/nr_070.mp3",
+            "sourceClipId": "nr_070",
+            "sourceSha256": "4669ffe13893165dd8e698c0a03af350edc5c0a9aadbcb11f79af253d271b7b3",
+            "retainedSourceStartSample": 32571,
+            "retainedSourceEndSample": 134946,
+            "retainedSourceStartSeconds": 0.7385714285714285,
+            "retainedSourceEndSeconds": 3.06,
+            "destinationStartSeconds": 2.8019954648526078,
+            "destinationEndSeconds": 5.123424036281179,
+            "insertedPauseBeforeSeconds": 0.35,
+            "completeSentencePcmUnchangedBeforeEncoding": true,
+            "sourceVoice": "Existing Evelyn Soft original ready recall reminder",
+            "kind": "whole helper clause including The; preceding Remember and following question excluded",
+            "cutBasis": "Early low-energy valley refined to nearest zero crossing before full The onset; whole final recording independently verified"
+          },
+          {
+            "text": "No one helped the kid.",
+            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_outcome_audio_visual_2026-10-03/processed/nr_196-outcome.mp3",
+            "sourceClipId": "nr_196-native",
+            "sourceSha256": "4c7a4a5d90accdfdcb8bd8abde8715de13eea8a72fb701d6c7b4772f8cb64533",
+            "retainedSourceStartSample": 0,
+            "retainedSourceEndSample": 89964,
+            "retainedSourceStartSeconds": 0,
+            "retainedSourceEndSeconds": 2.04,
+            "firstNativeSentenceSilence": {
+              "start": 1.98,
+              "end": 2.72,
+              "duration": 0.74
+            },
+            "completeSentencePcmUnchangedBeforeEncoding": true,
+            "sourceVoice": "Evelyn Soft native combined export",
+            "kind": "whole No one sentence",
+            "destinationStartSeconds": 5.4734240362811795,
+            "destinationEndSeconds": 7.5134240362811795,
+            "sourceIsWholeNativeNoOneSentence": true,
+            "insertedPauseBeforeSeconds": 0.35
+          }
+        ],
+        "sourceFilesUnchanged": true,
+        "status": "verified strict full spoken word sequence, including every The",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "strictFinalSpokenSequenceMatches": true,
+        "allSentenceInitialTheArticlesVerified": true,
+        "nativeVoiceSource": "Existing NaturalReaders Evelyn Soft recordings; no assistant-generated substitute voice",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "localAudioDerivative": true,
+        "sequencePurpose": "Standalone No one slide, followed by both full helper sentences and repeated No one ending."
+      },
+      "audioTreatment": {
+        "kind": "two whole full-The helper sentences followed by repeated whole native No one sentence",
+        "wholeSentenceSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "allInitialTheArticlesPresent": true
+      }
+    },
+    {
+      "id": "nr_297",
+      "text": "The kid’s dad did NOT help the kid. The kid’s brother did NOT help the kid. No one helped the kid.",
+      "src": "assets/narration/nr_297-sequence.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-sentence-audio-derivative",
+      "uses": [
+        {
+          "stepId": "man-dad-brother:outcome",
+          "proposedWording": false,
+          "part": "prompt"
+        }
+      ],
+      "sha256": "0c0cf347f5046354169cf5c30a2ed3076aa06a18dfe717e139e8476eb6192527",
+      "bytes": 304109,
+      "durationSeconds": 7.57551,
+      "decodedDurationSeconds": 7.537233560090703,
+      "provenance": {
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": false,
+        "assembledCompleteSentencesFromExistingEvelynRecordings": true,
+        "wholeSentenceSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "pitchShifted": false,
+        "timeStretched": false,
+        "copiedWithoutReencoding": false,
+        "kind": "two whole full-The helper sentences followed by repeated whole native No one sentence",
+        "encoder": "ffmpeg libmp3lame320kbpsmono44100Hz",
+        "sourceSegments": [
+          {
+            "text": "The kid’s dad did NOT help the kid.",
+            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_chs_draft_2026-10-03/runner/assets/narration/nr_111.mp3",
+            "sourceClipId": "nr_111",
+            "sourceSha256": "04633f74b153106b0eb92e28da9ae70da16fc6cacfa607a73348f815500c64c9",
+            "retainedSourceStartSample": 30639,
+            "retainedSourceEndSample": 134064,
+            "retainedSourceStartSeconds": 0.6947619047619048,
+            "retainedSourceEndSeconds": 3.04,
+            "destinationStartSeconds": 0.0,
+            "destinationEndSeconds": 2.3452380952380953,
+            "insertedPauseBeforeSeconds": 0,
+            "completeSentencePcmUnchangedBeforeEncoding": true,
+            "sourceVoice": "Existing Evelyn Soft original ready recall reminder",
+            "kind": "whole helper clause including The; preceding Remember and following question excluded",
+            "cutBasis": "Early low-energy valley refined to nearest zero crossing before full The onset; whole final recording independently verified"
+          },
+          {
+            "text": "The kid’s brother did NOT help the kid.",
+            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_chs_draft_2026-10-03/runner/assets/narration/nr_123.mp3",
+            "sourceClipId": "nr_123",
+            "sourceSha256": "4c55c7990842cfbc3442fd52af68905190d11d07db053fd15449f9a2edd9bbf2",
+            "retainedSourceStartSample": 34751,
+            "retainedSourceEndSample": 142884,
+            "retainedSourceStartSeconds": 0.7880045351473923,
+            "retainedSourceEndSeconds": 3.24,
+            "destinationStartSeconds": 2.6952380952380954,
+            "destinationEndSeconds": 5.147233560090703,
+            "insertedPauseBeforeSeconds": 0.35,
+            "completeSentencePcmUnchangedBeforeEncoding": true,
+            "sourceVoice": "Existing Evelyn Soft original ready recall reminder",
+            "kind": "whole helper clause including The; preceding Remember and following question excluded",
+            "cutBasis": "Early low-energy valley refined to nearest zero crossing before full The onset; whole final recording independently verified"
+          },
+          {
+            "text": "No one helped the kid.",
+            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_outcome_audio_visual_2026-10-03/processed/nr_196-outcome.mp3",
+            "sourceClipId": "nr_196-native",
+            "sourceSha256": "4c7a4a5d90accdfdcb8bd8abde8715de13eea8a72fb701d6c7b4772f8cb64533",
+            "retainedSourceStartSample": 0,
+            "retainedSourceEndSample": 89964,
+            "retainedSourceStartSeconds": 0,
+            "retainedSourceEndSeconds": 2.04,
+            "firstNativeSentenceSilence": {
+              "start": 1.98,
+              "end": 2.72,
+              "duration": 0.74
+            },
+            "completeSentencePcmUnchangedBeforeEncoding": true,
+            "sourceVoice": "Evelyn Soft native combined export",
+            "kind": "whole No one sentence",
+            "destinationStartSeconds": 5.497233560090703,
+            "destinationEndSeconds": 7.537233560090703,
+            "sourceIsWholeNativeNoOneSentence": true,
+            "insertedPauseBeforeSeconds": 0.35
+          }
+        ],
+        "sourceFilesUnchanged": true,
+        "status": "verified strict full spoken word sequence, including every The",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "strictFinalSpokenSequenceMatches": true,
+        "allSentenceInitialTheArticlesVerified": true,
+        "nativeVoiceSource": "Existing NaturalReaders Evelyn Soft recordings; no assistant-generated substitute voice",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "localAudioDerivative": true,
+        "sequencePurpose": "Standalone No one slide, followed by both full helper sentences and repeated No one ending."
+      },
+      "audioTreatment": {
+        "kind": "two whole full-The helper sentences followed by repeated whole native No one sentence",
+        "wholeSentenceSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "allInitialTheArticlesPresent": true
+      }
+    },
+    {
+      "id": "nr_298",
+      "text": "The kid’s dad did NOT help the kid. The kid’s mom did NOT help the kid. No one helped the kid.",
+      "src": "assets/narration/nr_298-sequence.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-sentence-audio-derivative",
+      "uses": [
+        {
+          "stepId": "family-mom-dad:outcome",
+          "proposedWording": false,
+          "part": "prompt"
+        }
+      ],
+      "sha256": "741b0a9d30872c12ea0a00ef726ac45e2383f233b0c34d24c06baf198ddbef5c",
+      "bytes": 300974,
+      "durationSeconds": 7.497143,
+      "decodedDurationSeconds": 7.4602721088435375,
+      "provenance": {
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": false,
+        "assembledCompleteSentencesFromExistingEvelynRecordings": true,
+        "wholeSentenceSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "pitchShifted": false,
+        "timeStretched": false,
+        "copiedWithoutReencoding": false,
+        "kind": "two whole full-The helper sentences followed by repeated whole native No one sentence",
+        "encoder": "ffmpeg libmp3lame320kbpsmono44100Hz",
+        "sourceSegments": [
+          {
+            "text": "The kid’s dad did NOT help the kid.",
+            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_chs_draft_2026-10-03/runner/assets/narration/nr_111.mp3",
+            "sourceClipId": "nr_111",
+            "sourceSha256": "04633f74b153106b0eb92e28da9ae70da16fc6cacfa607a73348f815500c64c9",
+            "retainedSourceStartSample": 30639,
+            "retainedSourceEndSample": 134064,
+            "retainedSourceStartSeconds": 0.6947619047619048,
+            "retainedSourceEndSeconds": 3.04,
+            "destinationStartSeconds": 0.0,
+            "destinationEndSeconds": 2.3452380952380953,
+            "insertedPauseBeforeSeconds": 0,
+            "completeSentencePcmUnchangedBeforeEncoding": true,
+            "sourceVoice": "Existing Evelyn Soft original ready recall reminder",
+            "kind": "whole helper clause including The; preceding Remember and following question excluded",
+            "cutBasis": "Early low-energy valley refined to nearest zero crossing before full The onset; whole final recording independently verified"
+          },
+          {
+            "text": "The kid’s mom did NOT help the kid.",
+            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_chs_draft_2026-10-03/runner/assets/narration/nr_047.mp3",
+            "sourceClipId": "nr_047",
+            "sourceSha256": "5d74063db90f1c6601e54167ac0957274cbedbe7b7f90a7fbc18a6992e7e6dac",
+            "retainedSourceStartSample": 31971,
+            "retainedSourceEndSample": 136710,
+            "retainedSourceStartSeconds": 0.7249659863945578,
+            "retainedSourceEndSeconds": 3.1,
+            "destinationStartSeconds": 2.6952380952380954,
+            "destinationEndSeconds": 5.070272108843538,
+            "insertedPauseBeforeSeconds": 0.35,
+            "completeSentencePcmUnchangedBeforeEncoding": true,
+            "sourceVoice": "Existing Evelyn Soft original ready recall reminder",
+            "kind": "whole helper clause including The; preceding Remember and following question excluded",
+            "cutBasis": "Early low-energy valley refined to nearest zero crossing before full The onset; whole final recording independently verified"
+          },
+          {
+            "text": "No one helped the kid.",
+            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_outcome_audio_visual_2026-10-03/processed/nr_196-outcome.mp3",
+            "sourceClipId": "nr_196-native",
+            "sourceSha256": "4c7a4a5d90accdfdcb8bd8abde8715de13eea8a72fb701d6c7b4772f8cb64533",
+            "retainedSourceStartSample": 0,
+            "retainedSourceEndSample": 89964,
+            "retainedSourceStartSeconds": 0,
+            "retainedSourceEndSeconds": 2.04,
+            "firstNativeSentenceSilence": {
+              "start": 1.98,
+              "end": 2.72,
+              "duration": 0.74
+            },
+            "completeSentencePcmUnchangedBeforeEncoding": true,
+            "sourceVoice": "Evelyn Soft native combined export",
+            "kind": "whole No one sentence",
+            "destinationStartSeconds": 5.4202721088435375,
+            "destinationEndSeconds": 7.4602721088435375,
+            "sourceIsWholeNativeNoOneSentence": true,
+            "insertedPauseBeforeSeconds": 0.35
+          }
+        ],
+        "sourceFilesUnchanged": true,
+        "status": "verified strict full spoken word sequence, including every The",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "strictFinalSpokenSequenceMatches": true,
+        "allSentenceInitialTheArticlesVerified": true,
+        "nativeVoiceSource": "Existing NaturalReaders Evelyn Soft recordings; no assistant-generated substitute voice",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "localAudioDerivative": true,
+        "sequencePurpose": "Standalone No one slide, followed by both full helper sentences and repeated No one ending."
+      },
+      "audioTreatment": {
+        "kind": "two whole full-The helper sentences followed by repeated whole native No one sentence",
+        "wholeSentenceSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "allInitialTheArticlesPresent": true
+      }
+    },
+    {
+      "id": "nr_299",
+      "text": "The kid’s sister did NOT help the kid. The kid’s brother did NOT help the kid. No one helped the kid.",
+      "src": "assets/narration/nr_299-sequence.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-sentence-audio-derivative",
+      "uses": [
+        {
+          "stepId": "family-sister-brother:outcome",
+          "proposedWording": false,
+          "part": "prompt"
+        }
+      ],
+      "sha256": "7285983020c5f54c5283efa86824ed65bdc8dcf80834054fdcb370f4cc9f7cc2",
+      "bytes": 308289,
+      "durationSeconds": 7.68,
+      "decodedDurationSeconds": 7.639160997732426,
+      "provenance": {
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": false,
+        "assembledCompleteSentencesFromExistingEvelynRecordings": true,
+        "wholeSentenceSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "pitchShifted": false,
+        "timeStretched": false,
+        "copiedWithoutReencoding": false,
+        "kind": "two whole full-The helper sentences followed by repeated whole native No one sentence",
+        "encoder": "ffmpeg libmp3lame320kbpsmono44100Hz",
+        "sourceSegments": [
+          {
+            "text": "The kid’s sister did NOT help the kid.",
+            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_chs_draft_2026-10-03/runner/assets/narration/nr_066.mp3",
+            "sourceClipId": "nr_066",
+            "sourceSha256": "700b6cc03a34097519560b4337ac9cb2dfc34eb11d00c7ff5008db88e342a543",
+            "retainedSourceStartSample": 33200,
+            "retainedSourceEndSample": 141120,
+            "retainedSourceStartSeconds": 0.7528344671201814,
+            "retainedSourceEndSeconds": 3.2,
+            "destinationStartSeconds": 0.0,
+            "destinationEndSeconds": 2.4471655328798185,
+            "insertedPauseBeforeSeconds": 0,
+            "completeSentencePcmUnchangedBeforeEncoding": true,
+            "sourceVoice": "Existing Evelyn Soft original ready recall reminder",
+            "kind": "whole helper clause including The; preceding Remember and following question excluded",
+            "cutBasis": "Early low-energy valley refined to nearest zero crossing before full The onset; whole final recording independently verified"
+          },
+          {
+            "text": "The kid’s brother did NOT help the kid.",
+            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_chs_draft_2026-10-03/runner/assets/narration/nr_123.mp3",
+            "sourceClipId": "nr_123",
+            "sourceSha256": "4c55c7990842cfbc3442fd52af68905190d11d07db053fd15449f9a2edd9bbf2",
+            "retainedSourceStartSample": 34751,
+            "retainedSourceEndSample": 142884,
+            "retainedSourceStartSeconds": 0.7880045351473923,
+            "retainedSourceEndSeconds": 3.24,
+            "destinationStartSeconds": 2.7971655328798186,
+            "destinationEndSeconds": 5.249160997732426,
+            "insertedPauseBeforeSeconds": 0.35,
+            "completeSentencePcmUnchangedBeforeEncoding": true,
+            "sourceVoice": "Existing Evelyn Soft original ready recall reminder",
+            "kind": "whole helper clause including The; preceding Remember and following question excluded",
+            "cutBasis": "Early low-energy valley refined to nearest zero crossing before full The onset; whole final recording independently verified"
+          },
+          {
+            "text": "No one helped the kid.",
+            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_outcome_audio_visual_2026-10-03/processed/nr_196-outcome.mp3",
+            "sourceClipId": "nr_196-native",
+            "sourceSha256": "4c7a4a5d90accdfdcb8bd8abde8715de13eea8a72fb701d6c7b4772f8cb64533",
+            "retainedSourceStartSample": 0,
+            "retainedSourceEndSample": 89964,
+            "retainedSourceStartSeconds": 0,
+            "retainedSourceEndSeconds": 2.04,
+            "firstNativeSentenceSilence": {
+              "start": 1.98,
+              "end": 2.72,
+              "duration": 0.74
+            },
+            "completeSentencePcmUnchangedBeforeEncoding": true,
+            "sourceVoice": "Evelyn Soft native combined export",
+            "kind": "whole No one sentence",
+            "destinationStartSeconds": 5.599160997732426,
+            "destinationEndSeconds": 7.639160997732426,
+            "sourceIsWholeNativeNoOneSentence": true,
+            "insertedPauseBeforeSeconds": 0.35
+          }
+        ],
+        "sourceFilesUnchanged": true,
+        "status": "verified strict full spoken word sequence, including every The",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "strictFinalSpokenSequenceMatches": true,
+        "allSentenceInitialTheArticlesVerified": true,
+        "nativeVoiceSource": "Existing NaturalReaders Evelyn Soft recordings; no assistant-generated substitute voice",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "localAudioDerivative": true,
+        "sequencePurpose": "Standalone No one slide, followed by both full helper sentences and repeated No one ending."
+      },
+      "audioTreatment": {
+        "kind": "two whole full-The helper sentences followed by repeated whole native No one sentence",
+        "wholeSentenceSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "allInitialTheArticlesPresent": true
+      }
+    },
+    {
+      "id": "nr_300",
+      "text": "The kid’s dad did NOT help the mom. The kid did NOT help the mom. No one helped the mom.",
+      "src": "assets/narration/nr_300-sequence.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-sentence-audio-derivative",
+      "uses": [
+        {
+          "stepId": "family-dad-kid:outcome",
+          "proposedWording": false,
+          "part": "prompt"
+        }
+      ],
+      "sha256": "6da6388bb8fa7b57e786cef0db4d3a32366684f112f6ffd1297787896e3d3f9e",
+      "bytes": 292615,
+      "durationSeconds": 7.288163,
+      "decodedDurationSeconds": 7.258027210884354,
+      "provenance": {
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": false,
+        "assembledCompleteSentencesFromExistingEvelynRecordings": true,
+        "wholeSentenceSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "pitchShifted": false,
+        "timeStretched": false,
+        "copiedWithoutReencoding": false,
+        "kind": "two whole full-The helper sentences followed by repeated whole native No one sentence",
+        "encoder": "ffmpeg libmp3lame320kbpsmono44100Hz",
+        "sourceSegments": [
+          {
+            "text": "The kid’s dad did NOT help the mom.",
+            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_chs_draft_2026-10-03/runner/assets/narration/nr_147.mp3",
+            "sourceClipId": "nr_147",
+            "sourceSha256": "88c7486006395b2634983685dedea05614215fbf7a0de6559da98309285cc757",
+            "retainedSourceStartSample": 30584,
+            "retainedSourceEndSample": 131418,
+            "retainedSourceStartSeconds": 0.693514739229025,
+            "retainedSourceEndSeconds": 2.98,
+            "destinationStartSeconds": 0.0,
+            "destinationEndSeconds": 2.286485260770975,
+            "insertedPauseBeforeSeconds": 0,
+            "completeSentencePcmUnchangedBeforeEncoding": true,
+            "sourceVoice": "Existing Evelyn Soft original ready recall reminder",
+            "kind": "whole helper clause including The; preceding Remember and following question excluded",
+            "cutBasis": "Early low-energy valley refined to nearest zero crossing before full The onset; whole final recording independently verified"
+          },
+          {
+            "text": "The kid did NOT help the mom.",
+            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_chs_draft_2026-10-03/runner/assets/narration/nr_150.mp3",
+            "sourceClipId": "nr_150",
+            "sourceSha256": "4407d09d65b56d6f99d3f65f084f1b2a3eb24de0f2fc6f746459aeb1d9014008",
+            "retainedSourceStartSample": 32124,
+            "retainedSourceEndSample": 121716,
+            "retainedSourceStartSeconds": 0.7284353741496599,
+            "retainedSourceEndSeconds": 2.76,
+            "destinationStartSeconds": 2.636485260770975,
+            "destinationEndSeconds": 4.668049886621315,
+            "insertedPauseBeforeSeconds": 0.35,
+            "completeSentencePcmUnchangedBeforeEncoding": true,
+            "sourceVoice": "Existing Evelyn Soft original ready recall reminder",
+            "kind": "whole helper clause including The; preceding Remember and following question excluded",
+            "cutBasis": "Early low-energy valley refined to nearest zero crossing before full The onset; whole final recording independently verified"
+          },
+          {
+            "text": "No one helped the mom.",
+            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_outcome_audio_visual_2026-10-03/processed/nr_235-outcome.mp3",
+            "sourceClipId": "nr_235-native",
+            "sourceSha256": "dcf89bc4d606e602a71f5a56de7671f07330567784a894cf47cfd60543c487ea",
+            "retainedSourceStartSample": 0,
+            "retainedSourceEndSample": 98783,
+            "retainedSourceStartSeconds": 0,
+            "retainedSourceEndSeconds": 2.2399773242630387,
+            "firstNativeSentenceSilence": {
+              "start": 2.18,
+              "end": 2.91,
+              "duration": 0.73
+            },
+            "completeSentencePcmUnchangedBeforeEncoding": true,
+            "sourceVoice": "Evelyn Soft native combined export",
+            "kind": "whole No one sentence",
+            "destinationStartSeconds": 5.0180498866213155,
+            "destinationEndSeconds": 7.258027210884354,
+            "sourceIsWholeNativeNoOneSentence": true,
+            "insertedPauseBeforeSeconds": 0.35
+          }
+        ],
+        "sourceFilesUnchanged": true,
+        "status": "verified strict full spoken sequence by independent complete-sentence blocks from final MP3, including every The",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "recognitionMethod": "unprompted complete-sentence block recognition from final MP3; concatenate transcripts in actual file order",
+        "fullContextAsrExactMatch": false,
+        "fullContextAsrLimitation": "The full-context recognizer collapses the middle repeated helper clause into the first. No spoken text or word timings were reconstructed to correct that failed pass.",
+        "recordingWordCheckMethod": "unprompted complete-sentence block recognition from final MP3; concatenate transcripts in actual file order",
+        "strictFinalSpokenSequenceMatches": true,
+        "allSentenceInitialTheArticlesVerified": true,
+        "nativeVoiceSource": "Existing NaturalReaders Evelyn Soft recordings; no assistant-generated substitute voice",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "localAudioDerivative": true,
+        "sequencePurpose": "Standalone No one slide, followed by both full helper sentences and repeated No one ending."
+      },
+      "audioTreatment": {
+        "kind": "two whole full-The helper sentences followed by repeated whole native No one sentence",
+        "wholeSentenceSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "allInitialTheArticlesPresent": true
+      }
+    },
+    {
+      "id": "nr_301",
+      "text": "The kid did NOT help the dad. The kid’s mom did NOT help the dad. No one helped the dad.",
+      "src": "assets/narration/nr_301-sequence.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-sentence-audio-derivative",
+      "uses": [
+        {
+          "stepId": "family-mom-kid:outcome",
+          "proposedWording": false,
+          "part": "prompt"
+        }
+      ],
+      "sha256": "8c2f582d6ca958624cdf25b3031396e99c35566c26534b8d4b1e272071e69ccb",
+      "bytes": 299929,
+      "durationSeconds": 7.47102,
+      "decodedDurationSeconds": 7.419047619047619,
+      "provenance": {
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": false,
+        "assembledCompleteSentencesFromExistingEvelynRecordings": true,
+        "wholeSentenceSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "pitchShifted": false,
+        "timeStretched": false,
+        "copiedWithoutReencoding": false,
+        "kind": "two whole full-The helper sentences followed by repeated whole native No one sentence",
+        "encoder": "ffmpeg libmp3lame320kbpsmono44100Hz",
+        "sourceSegments": [
+          {
+            "text": "The kid did NOT help the dad.",
+            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_chs_draft_2026-10-03/runner/assets/narration/nr_167.mp3",
+            "sourceClipId": "nr_167",
+            "sourceSha256": "c2922db3a9567851273c7d9720ac218e85810fbb920e5a7a30802508b192955c",
+            "retainedSourceStartSample": 29723,
+            "retainedSourceEndSample": 120847,
+            "retainedSourceStartSeconds": 0.6739909297052155,
+            "retainedSourceEndSeconds": 2.740294784580499,
+            "destinationStartSeconds": 0.0,
+            "destinationEndSeconds": 2.0663038548752835,
+            "insertedPauseBeforeSeconds": 0,
+            "completeSentencePcmUnchangedBeforeEncoding": true,
+            "sourceVoice": "Existing Evelyn Soft original ready recall reminder",
+            "kind": "whole helper clause including The; preceding Remember and following question excluded",
+            "cutBasis": "Early low-energy valley refined to nearest zero crossing before full The onset; whole final recording independently verified"
+          },
+          {
+            "text": "The kid’s mom did NOT help the dad.",
+            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_chs_draft_2026-10-03/runner/assets/narration/nr_170.mp3",
+            "sourceClipId": "nr_170",
+            "sourceSha256": "6dba8f4977b58faf98a2f5e043f8f8e123563c84db6b52ddb13d5f6338cb96cb",
+            "retainedSourceStartSample": 30699,
+            "retainedSourceEndSample": 136661,
+            "retainedSourceStartSeconds": 0.6961224489795919,
+            "retainedSourceEndSeconds": 3.098888888888889,
+            "destinationStartSeconds": 2.4163038548752835,
+            "destinationEndSeconds": 4.819070294784581,
+            "insertedPauseBeforeSeconds": 0.35,
+            "completeSentencePcmUnchangedBeforeEncoding": true,
+            "sourceVoice": "Existing Evelyn Soft original ready recall reminder",
+            "kind": "whole helper clause including The; preceding Remember and following question excluded",
+            "cutBasis": "Early low-energy valley refined to nearest zero crossing before full The onset; whole final recording independently verified"
+          },
+          {
+            "text": "No one helped the dad.",
+            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_outcome_audio_visual_2026-10-03/processed/nr_242-outcome.mp3",
+            "sourceClipId": "nr_242-native",
+            "sourceSha256": "a3f28430944ee92436b7814dcadcf7d4a3c945051a80ab203ae8b3602c42d82f",
+            "retainedSourceStartSample": 0,
+            "retainedSourceEndSample": 99224,
+            "retainedSourceStartSeconds": 0,
+            "retainedSourceEndSeconds": 2.2499773242630385,
+            "firstNativeSentenceSilence": {
+              "start": 2.19,
+              "end": 2.9,
+              "duration": 0.71
+            },
+            "completeSentencePcmUnchangedBeforeEncoding": true,
+            "sourceVoice": "Evelyn Soft native combined export",
+            "kind": "whole No one sentence",
+            "destinationStartSeconds": 5.16907029478458,
+            "destinationEndSeconds": 7.419047619047619,
+            "sourceIsWholeNativeNoOneSentence": true,
+            "insertedPauseBeforeSeconds": 0.35
+          }
+        ],
+        "sourceFilesUnchanged": true,
+        "status": "verified strict full spoken word sequence, including every The",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "strictFinalSpokenSequenceMatches": true,
+        "allSentenceInitialTheArticlesVerified": true,
+        "nativeVoiceSource": "Existing NaturalReaders Evelyn Soft recordings; no assistant-generated substitute voice",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "localAudioDerivative": true,
+        "sequencePurpose": "Standalone No one slide, followed by both full helper sentences and repeated No one ending."
+      },
+      "audioTreatment": {
+        "kind": "two whole full-The helper sentences followed by repeated whole native No one sentence",
+        "wholeSentenceSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "allInitialTheArticlesPresent": true
+      }
+    },
+    {
+      "id": "nr_302",
+      "text": "The teacher on the left did NOT help the teacher in the middle. The kid did NOT help the teacher in the middle. No one helped the teacher in the middle.",
+      "src": "assets/narration/nr_302-sequence.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-sentence-audio-derivative",
+      "uses": [
+        {
+          "stepId": "family-teacher-kid:outcome",
+          "proposedWording": false,
+          "part": "prompt"
+        }
+      ],
+      "sha256": "498c7e8994b8862f04d6c53a6b642e9a93f65f0e791daa0d75c37687587bd81a",
+      "bytes": 387701,
+      "durationSeconds": 9.665306,
+      "decodedDurationSeconds": 9.613809523809524,
+      "provenance": {
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": false,
+        "assembledCompleteSentencesFromExistingEvelynRecordings": true,
+        "wholeSentenceSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "pitchShifted": false,
+        "timeStretched": false,
+        "copiedWithoutReencoding": false,
+        "kind": "two whole full-The helper sentences followed by repeated whole native No one sentence",
+        "encoder": "ffmpeg libmp3lame320kbpsmono44100Hz",
+        "sourceSegments": [
+          {
+            "text": "The teacher on the left did NOT help the teacher in the middle.",
+            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_chs_draft_2026-10-03/runner/assets/narration/nr_188.mp3",
+            "sourceClipId": "nr_188",
+            "sourceSha256": "14b166129d5a0b5b18939fde9202d105256ae76df54a915a7ff146ee48e3f908",
+            "retainedSourceStartSample": 32225,
+            "retainedSourceEndSample": 177282,
+            "retainedSourceStartSeconds": 0.7307256235827665,
+            "retainedSourceEndSeconds": 4.02,
+            "destinationStartSeconds": 0.0,
+            "destinationEndSeconds": 3.2892743764172336,
+            "insertedPauseBeforeSeconds": 0,
+            "completeSentencePcmUnchangedBeforeEncoding": true,
+            "sourceVoice": "Existing Evelyn Soft original ready recall reminder",
+            "kind": "whole helper clause including The; preceding Remember and following question excluded",
+            "cutBasis": "Early low-energy valley refined to nearest zero crossing before full The onset; whole final recording independently verified"
+          },
+          {
+            "text": "The kid did NOT help the teacher in the middle.",
+            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_chs_draft_2026-10-03/runner/assets/narration/nr_192.mp3",
+            "sourceClipId": "nr_192",
+            "sourceSha256": "290ac393f410820ba4150b462a268bc13c87086cbd3605d5b61ec921e9d523eb",
+            "retainedSourceStartSample": 33313,
+            "retainedSourceEndSample": 151704,
+            "retainedSourceStartSeconds": 0.7553968253968254,
+            "retainedSourceEndSeconds": 3.44,
+            "destinationStartSeconds": 3.6392743764172337,
+            "destinationEndSeconds": 6.323877551020408,
+            "insertedPauseBeforeSeconds": 0.35,
+            "completeSentencePcmUnchangedBeforeEncoding": true,
+            "sourceVoice": "Existing Evelyn Soft original ready recall reminder",
+            "kind": "whole helper clause including The; preceding Remember and following question excluded",
+            "cutBasis": "Early low-energy valley refined to nearest zero crossing before full The onset; whole final recording independently verified"
+          },
+          {
+            "text": "No one helped the teacher in the middle.",
+            "sourcePath": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_outcome_audio_visual_2026-10-03/processed/nr_249-outcome.mp3",
+            "sourceClipId": "nr_249-native",
+            "sourceSha256": "979d9e95d1720c533adfab17f12239ddeb4173c982887ccce8c7b53a3e24ae33",
+            "retainedSourceStartSample": 0,
+            "retainedSourceEndSample": 129651,
+            "retainedSourceStartSeconds": 0,
+            "retainedSourceEndSeconds": 2.9399319727891156,
+            "firstNativeSentenceSilence": {
+              "start": 2.88,
+              "end": 3.64,
+              "duration": 0.76
+            },
+            "completeSentencePcmUnchangedBeforeEncoding": true,
+            "sourceVoice": "Evelyn Soft native combined export",
+            "kind": "whole No one sentence",
+            "destinationStartSeconds": 6.673877551020408,
+            "destinationEndSeconds": 9.613809523809524,
+            "sourceIsWholeNativeNoOneSentence": true,
+            "insertedPauseBeforeSeconds": 0.35
+          }
+        ],
+        "sourceFilesUnchanged": true,
+        "status": "verified strict full spoken word sequence, including every The",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "strictFinalSpokenSequenceMatches": true,
+        "allSentenceInitialTheArticlesVerified": true,
+        "nativeVoiceSource": "Existing NaturalReaders Evelyn Soft recordings; no assistant-generated substitute voice",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "localAudioDerivative": true,
+        "sequencePurpose": "Standalone No one slide, followed by both full helper sentences and repeated No one ending."
+      },
+      "audioTreatment": {
+        "kind": "two whole full-The helper sentences followed by repeated whole native No one sentence",
+        "wholeSentenceSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "allInitialTheArticlesPresent": true
+      }
     }
   ],
   "screens": {
@@ -7575,7 +8076,7 @@
       "proposedWording": true
     },
     "woman-mom-teacher:outcome": {
-      "prompt": "nr_196",
+      "prompt": "nr_289",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -7683,7 +8184,7 @@
       "proposedWording": true
     },
     "woman-sister-friend:outcome": {
-      "prompt": "nr_203",
+      "prompt": "nr_290",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -7791,7 +8292,7 @@
       "proposedWording": true
     },
     "woman-bestfriend-friend:outcome": {
-      "prompt": "nr_209",
+      "prompt": "nr_291",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -7899,7 +8400,7 @@
       "proposedWording": true
     },
     "woman-teacher-friend:outcome": {
-      "prompt": "nr_213",
+      "prompt": "nr_292",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -8007,7 +8508,7 @@
       "proposedWording": true
     },
     "woman-mom-sister:outcome": {
-      "prompt": "nr_215",
+      "prompt": "nr_293",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -8115,7 +8616,7 @@
       "proposedWording": true
     },
     "woman-teacher-classmate:outcome": {
-      "prompt": "nr_217",
+      "prompt": "nr_294",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -8223,7 +8724,7 @@
       "proposedWording": true
     },
     "man-dad-teacher:outcome": {
-      "prompt": "nr_221",
+      "prompt": "nr_295",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -8331,7 +8832,7 @@
       "proposedWording": true
     },
     "man-brother-friend:outcome": {
-      "prompt": "nr_225",
+      "prompt": "nr_296",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -8439,7 +8940,7 @@
       "proposedWording": true
     },
     "man-bestfriend-friend:outcome": {
-      "prompt": "nr_209",
+      "prompt": "nr_291",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -8547,7 +9048,7 @@
       "proposedWording": true
     },
     "man-teacher-friend:outcome": {
-      "prompt": "nr_213",
+      "prompt": "nr_292",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -8655,7 +9156,7 @@
       "proposedWording": true
     },
     "man-dad-brother:outcome": {
-      "prompt": "nr_229",
+      "prompt": "nr_297",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -8763,7 +9264,7 @@
       "proposedWording": true
     },
     "man-teacher-classmate:outcome": {
-      "prompt": "nr_217",
+      "prompt": "nr_294",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -8871,7 +9372,7 @@
       "proposedWording": true
     },
     "family-mom-dad:outcome": {
-      "prompt": "nr_231",
+      "prompt": "nr_298",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -8979,7 +9480,7 @@
       "proposedWording": true
     },
     "family-sister-brother:outcome": {
-      "prompt": "nr_233",
+      "prompt": "nr_299",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -9087,7 +9588,7 @@
       "proposedWording": true
     },
     "family-dad-kid:outcome": {
-      "prompt": "nr_235",
+      "prompt": "nr_300",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -9195,7 +9696,7 @@
       "proposedWording": true
     },
     "family-mom-kid:outcome": {
-      "prompt": "nr_242",
+      "prompt": "nr_301",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -9303,7 +9804,7 @@
       "proposedWording": true
     },
     "family-teacher-kid:outcome": {
-      "prompt": "nr_249",
+      "prompt": "nr_302",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -9411,7 +9912,7 @@
       "proposedWording": true
     },
     "family-teacher-classmate:outcome": {
-      "prompt": "nr_217",
+      "prompt": "nr_294",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -9436,6 +9937,114 @@
     },
     "session-end": {
       "prompt": "nr_195",
+      "reminder": null,
+      "options": [],
+      "proposedWording": false
+    },
+    "woman-mom-teacher:outcome-summary": {
+      "prompt": "nr_285",
+      "reminder": null,
+      "options": [],
+      "proposedWording": false
+    },
+    "woman-sister-friend:outcome-summary": {
+      "prompt": "nr_285",
+      "reminder": null,
+      "options": [],
+      "proposedWording": false
+    },
+    "woman-bestfriend-friend:outcome-summary": {
+      "prompt": "nr_285",
+      "reminder": null,
+      "options": [],
+      "proposedWording": false
+    },
+    "woman-teacher-friend:outcome-summary": {
+      "prompt": "nr_285",
+      "reminder": null,
+      "options": [],
+      "proposedWording": false
+    },
+    "woman-mom-sister:outcome-summary": {
+      "prompt": "nr_285",
+      "reminder": null,
+      "options": [],
+      "proposedWording": false
+    },
+    "woman-teacher-classmate:outcome-summary": {
+      "prompt": "nr_285",
+      "reminder": null,
+      "options": [],
+      "proposedWording": false
+    },
+    "man-dad-teacher:outcome-summary": {
+      "prompt": "nr_285",
+      "reminder": null,
+      "options": [],
+      "proposedWording": false
+    },
+    "man-brother-friend:outcome-summary": {
+      "prompt": "nr_285",
+      "reminder": null,
+      "options": [],
+      "proposedWording": false
+    },
+    "man-bestfriend-friend:outcome-summary": {
+      "prompt": "nr_285",
+      "reminder": null,
+      "options": [],
+      "proposedWording": false
+    },
+    "man-teacher-friend:outcome-summary": {
+      "prompt": "nr_285",
+      "reminder": null,
+      "options": [],
+      "proposedWording": false
+    },
+    "man-dad-brother:outcome-summary": {
+      "prompt": "nr_285",
+      "reminder": null,
+      "options": [],
+      "proposedWording": false
+    },
+    "man-teacher-classmate:outcome-summary": {
+      "prompt": "nr_285",
+      "reminder": null,
+      "options": [],
+      "proposedWording": false
+    },
+    "family-mom-dad:outcome-summary": {
+      "prompt": "nr_285",
+      "reminder": null,
+      "options": [],
+      "proposedWording": false
+    },
+    "family-sister-brother:outcome-summary": {
+      "prompt": "nr_285",
+      "reminder": null,
+      "options": [],
+      "proposedWording": false
+    },
+    "family-dad-kid:outcome-summary": {
+      "prompt": "nr_286",
+      "reminder": null,
+      "options": [],
+      "proposedWording": false
+    },
+    "family-mom-kid:outcome-summary": {
+      "prompt": "nr_287",
+      "reminder": null,
+      "options": [],
+      "proposedWording": false
+    },
+    "family-teacher-kid:outcome-summary": {
+      "prompt": "nr_288",
+      "reminder": null,
+      "options": [],
+      "proposedWording": false
+    },
+    "family-teacher-classmate:outcome-summary": {
+      "prompt": "nr_285",
       "reminder": null,
       "options": [],
       "proposedWording": false

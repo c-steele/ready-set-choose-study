@@ -12,11 +12,11 @@
 - Brief HAVE TO comprehension practice occurs before the first obligation comparison only.
 - This preview contains the six pairings from one role set in a fixed review order.
 
-Expected path range: **71–71 screens**, **44–44 responses**.
+Expected path range: **77–77 screens**, **44–44 responses**.
 
 18 forced-choice main judgments + 24 identity/recall checks + 2 brief practice responses. No strength scales.
 
-Illustrative duration: **9.8–12.6 minutes**, based on 985–985 spoken words.
+Illustrative duration: **10–12.9 minutes**, based on 1018–1018 spoken words.
 
 - Illustrative estimate, not observed child-session duration.
 - Read-aloud pace: 110–130 words per minute; response time: 3–5 seconds per selection.
@@ -148,17 +148,29 @@ Choices: The kid’s dad / The kid’s mom.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No obligation question.*
 
-### 13. What happens next
+### 13. No one helped
 
-“No one helped the kid. The kid’s dad did NOT help the kid. The kid’s mom did NOT help the kid.”
+“No one helped the kid.”
 
-Display wording: “No one helped the kid.” Both helper cues remain visible beneath the original sad scene; each cue glows during its complete did-NOT-help sentence.
+Display wording: “No one helped the kid.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+
+[Stimulus source](assets/stimuli/443991b4edc3-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+
+*Standalone outcome statement. Continue after the sentence to hear each helper’s action and the repeated no-one-helped statement.*
+
+### 14. Each helper did NOT help
+
+“The kid’s dad did NOT help the kid. The kid’s mom did NOT help the kid. No one helped the kid.”
+
+Display wording: “The kid’s dad did NOT help the kid.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+
+Captions follow the narration, in order: “The kid’s dad did NOT help the kid.” → “The kid’s mom did NOT help the kid.” → “No one helped the kid.”.
 
 [Stimulus source](assets/stimuli/443991b4edc3-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 *Every response path reaches this same outcome, regardless of prediction or obligation choices.*
 
-### 14. Recall · No one helped
+### 15. Recall · No one helped
 
 “Can you tell me, did either of these people help the kid?”
 
@@ -170,7 +182,7 @@ Expected check/practice answer: No.
 
 Reminder if needed: “Actually, remember, no one helped the kid. The kid’s dad did NOT help the kid. The kid’s mom did NOT help the kid. Can you tell me, did either of these people help the kid?”
 
-### 15. Who was meaner? — PROPOSED WORDING
+### 16. Who was meaner? — PROPOSED WORDING
 
 “Who was meaner for NOT helping the kid in the middle?”
 
@@ -184,7 +196,7 @@ Choices: The kid’s dad / The kid’s mom.
 
 Left: the kid’s sister. Middle: the kid. Right: the kid’s brother.
 
-### 16. Meet the characters
+### 17. Meet the characters
 
 “Oh look! Here is a kid.”
 
@@ -192,7 +204,7 @@ Left: the kid’s sister. Middle: the kid. Right: the kid’s brother.
 
 *Opening adapted to the single kid shown on screen.*
 
-### 17. Meet the kid
+### 18. Meet the kid
 
 “This little one is a kid. Tap the kid.”
 
@@ -204,7 +216,7 @@ Reminder if needed: “This little one is a kid. This one is the kid. Tap the ki
 
 *Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
 
-### 18. Meet the kid’s sister
+### 19. Meet the kid’s sister
 
 “This little one is this kid’s sister. Tap the kid’s sister.”
 
@@ -216,7 +228,7 @@ Reminder if needed: “This little one is this kid’s sister. This one is the k
 
 *Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
 
-### 19. Meet the kid’s brother
+### 20. Meet the kid’s brother
 
 “This little one is this kid’s brother. Tap the kid’s brother.”
 
@@ -228,19 +240,19 @@ Reminder if needed: “This little one is this kid’s brother. This one is the 
 
 *Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
 
-### 20. The kid needs help
+### 21. The kid needs help
 
 “Now let’s say that one day the kid in the middle was very sad.”
 
 [Stimulus source](assets/stimuli/fac075f520aa-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-### 21. Both helpers see
+### 22. Both helpers see
 
 “The kid’s sister and the kid’s brother both see that the kid is sad.”
 
 [Stimulus source](assets/stimuli/fac075f520aa-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-### 22. Who will help? — PROPOSED WORDING
+### 23. Who will help? — PROPOSED WORDING
 
 “Who do you think will help the kid in the middle?”
 
@@ -250,7 +262,7 @@ Choices: The kid’s sister / The kid’s brother.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No prediction question.*
 
-### 23. Who HAS TO help? — PROPOSED WORDING
+### 24. Who HAS TO help? — PROPOSED WORDING
 
 “Who do you think HAS TO help the kid in the middle?”
 
@@ -260,17 +272,29 @@ Choices: The kid’s sister / The kid’s brother.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No obligation question.*
 
-### 24. What happens next
+### 25. No one helped
 
-“No one helped the kid. The kid’s sister did NOT help the kid. The kid’s brother did NOT help the kid.”
+“No one helped the kid.”
 
-Display wording: “No one helped the kid.” Both helper cues remain visible beneath the original sad scene; each cue glows during its complete did-NOT-help sentence.
+Display wording: “No one helped the kid.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+
+[Stimulus source](assets/stimuli/fac075f520aa-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+
+*Standalone outcome statement. Continue after the sentence to hear each helper’s action and the repeated no-one-helped statement.*
+
+### 26. Each helper did NOT help
+
+“The kid’s sister did NOT help the kid. The kid’s brother did NOT help the kid. No one helped the kid.”
+
+Display wording: “The kid’s sister did NOT help the kid.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+
+Captions follow the narration, in order: “The kid’s sister did NOT help the kid.” → “The kid’s brother did NOT help the kid.” → “No one helped the kid.”.
 
 [Stimulus source](assets/stimuli/fac075f520aa-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 *Every response path reaches this same outcome, regardless of prediction or obligation choices.*
 
-### 25. Recall · No one helped
+### 27. Recall · No one helped
 
 “Can you tell me, did either of these people help the kid?”
 
@@ -282,7 +306,7 @@ Expected check/practice answer: No.
 
 Reminder if needed: “Actually, remember, no one helped the kid. The kid’s sister did NOT help the kid. The kid’s brother did NOT help the kid. Can you tell me, did either of these people help the kid?”
 
-### 26. Who was meaner? — PROPOSED WORDING
+### 28. Who was meaner? — PROPOSED WORDING
 
 “Who was meaner for NOT helping the kid in the middle?”
 
@@ -296,7 +320,7 @@ Choices: The kid’s sister / The kid’s brother.
 
 Left: the kid’s dad. Middle: the mom. Right: the kid.
 
-### 27. Meet the characters
+### 29. Meet the characters
 
 “Oh look! Here is a kid.”
 
@@ -304,7 +328,7 @@ Left: the kid’s dad. Middle: the mom. Right: the kid.
 
 *Opening adapted to the single kid shown on screen.*
 
-### 28. Meet the kid
+### 30. Meet the kid
 
 “This little one is a kid. Tap the kid.”
 
@@ -316,7 +340,7 @@ Reminder if needed: “This little one is a kid. This one is the kid. Tap the ki
 
 *Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
 
-### 29. Meet the kid’s dad
+### 31. Meet the kid’s dad
 
 “This big one is this kid’s dad. Tap the kid’s dad.”
 
@@ -328,7 +352,7 @@ Reminder if needed: “This big one is this kid’s dad. This one is the kid’s
 
 *Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
 
-### 30. Meet the mom
+### 32. Meet the mom
 
 “This big one is this kid’s mom. Tap the mom.”
 
@@ -340,19 +364,19 @@ Reminder if needed: “This big one is this kid’s mom. This one is the mom. Ta
 
 *Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation. The person who needs help is an adult in this story.*
 
-### 31. The mom needs help
+### 33. The mom needs help
 
 “Now let’s say that one day the mom was very sad.”
 
 [Stimulus source](assets/stimuli/b1ba34666825-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-### 32. Both helpers see
+### 34. Both helpers see
 
 “The kid’s dad and the kid both see that the mom is sad.”
 
 [Stimulus source](assets/stimuli/b1ba34666825-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-### 33. Who will help? — PROPOSED WORDING
+### 35. Who will help? — PROPOSED WORDING
 
 “Who do you think will help the mom in the middle?”
 
@@ -362,7 +386,7 @@ Choices: The kid’s dad / The kid.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No prediction question.*
 
-### 34. Who HAS TO help? — PROPOSED WORDING
+### 36. Who HAS TO help? — PROPOSED WORDING
 
 “Who do you think HAS TO help the mom in the middle?”
 
@@ -372,17 +396,29 @@ Choices: The kid’s dad / The kid.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No obligation question.*
 
-### 35. What happens next
+### 37. No one helped
 
-“No one helped the mom. The kid’s dad did NOT help the mom. The kid did NOT help the mom.”
+“No one helped the mom.”
 
-Display wording: “No one helped the mom.” Both helper cues remain visible beneath the original sad scene; each cue glows during its complete did-NOT-help sentence.
+Display wording: “No one helped the mom.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+
+[Stimulus source](assets/stimuli/b1ba34666825-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+
+*Standalone outcome statement. Continue after the sentence to hear each helper’s action and the repeated no-one-helped statement.*
+
+### 38. Each helper did NOT help
+
+“The kid’s dad did NOT help the mom. The kid did NOT help the mom. No one helped the mom.”
+
+Display wording: “The kid’s dad did NOT help the mom.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+
+Captions follow the narration, in order: “The kid’s dad did NOT help the mom.” → “The kid did NOT help the mom.” → “No one helped the mom.”.
 
 [Stimulus source](assets/stimuli/b1ba34666825-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 *Every response path reaches this same outcome, regardless of prediction or obligation choices.*
 
-### 36. Recall · No one helped
+### 39. Recall · No one helped
 
 “Can you tell me, did either of these people help the mom?”
 
@@ -394,7 +430,7 @@ Expected check/practice answer: No.
 
 Reminder if needed: “Actually, remember, no one helped the mom. The kid’s dad did NOT help the mom. The kid did NOT help the mom. Can you tell me, did either of these people help the mom?”
 
-### 37. Who was meaner? — PROPOSED WORDING
+### 40. Who was meaner? — PROPOSED WORDING
 
 “Who was meaner for NOT helping the mom in the middle?”
 
@@ -408,7 +444,7 @@ Choices: The kid’s dad / The kid.
 
 Left: the kid. Middle: the dad. Right: the kid’s mom.
 
-### 38. Meet the characters
+### 41. Meet the characters
 
 “Oh look! Here is a kid.”
 
@@ -416,7 +452,7 @@ Left: the kid. Middle: the dad. Right: the kid’s mom.
 
 *Opening adapted to the single kid shown on screen.*
 
-### 39. Meet the kid
+### 42. Meet the kid
 
 “This little one is a kid. Tap the kid.”
 
@@ -428,7 +464,7 @@ Reminder if needed: “This little one is a kid. This one is the kid. Tap the ki
 
 *Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
 
-### 40. Meet the dad
+### 43. Meet the dad
 
 “This big one is this kid’s dad. Tap the dad.”
 
@@ -440,7 +476,7 @@ Reminder if needed: “This big one is this kid’s dad. This one is the dad. Ta
 
 *Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation. The person who needs help is an adult in this story.*
 
-### 41. Meet the kid’s mom
+### 44. Meet the kid’s mom
 
 “This big one is this kid’s mom. Tap the kid’s mom.”
 
@@ -452,19 +488,19 @@ Reminder if needed: “This big one is this kid’s mom. This one is the kid’s
 
 *Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
 
-### 42. The dad needs help
+### 45. The dad needs help
 
 “Now let’s say that one day the dad was very sad.”
 
 [Stimulus source](assets/stimuli/a47ed9f1306d-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-### 43. Both helpers see
+### 46. Both helpers see
 
 “The kid and the kid’s mom both see that the dad is sad.”
 
 [Stimulus source](assets/stimuli/a47ed9f1306d-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-### 44. Who will help? — PROPOSED WORDING
+### 47. Who will help? — PROPOSED WORDING
 
 “Who do you think will help the dad in the middle?”
 
@@ -474,7 +510,7 @@ Choices: The kid / The kid’s mom.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No prediction question.*
 
-### 45. Who HAS TO help? — PROPOSED WORDING
+### 48. Who HAS TO help? — PROPOSED WORDING
 
 “Who do you think HAS TO help the dad in the middle?”
 
@@ -484,17 +520,29 @@ Choices: The kid / The kid’s mom.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No obligation question.*
 
-### 46. What happens next
+### 49. No one helped
 
-“No one helped the dad. The kid did NOT help the dad. The kid’s mom did NOT help the dad.”
+“No one helped the dad.”
 
-Display wording: “No one helped the dad.” Both helper cues remain visible beneath the original sad scene; each cue glows during its complete did-NOT-help sentence.
+Display wording: “No one helped the dad.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+
+[Stimulus source](assets/stimuli/a47ed9f1306d-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+
+*Standalone outcome statement. Continue after the sentence to hear each helper’s action and the repeated no-one-helped statement.*
+
+### 50. Each helper did NOT help
+
+“The kid did NOT help the dad. The kid’s mom did NOT help the dad. No one helped the dad.”
+
+Display wording: “The kid did NOT help the dad.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+
+Captions follow the narration, in order: “The kid did NOT help the dad.” → “The kid’s mom did NOT help the dad.” → “No one helped the dad.”.
 
 [Stimulus source](assets/stimuli/a47ed9f1306d-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 *Every response path reaches this same outcome, regardless of prediction or obligation choices.*
 
-### 47. Recall · No one helped
+### 51. Recall · No one helped
 
 “Can you tell me, did either of these people help the dad?”
 
@@ -506,7 +554,7 @@ Expected check/practice answer: No.
 
 Reminder if needed: “Actually, remember, no one helped the dad. The kid did NOT help the dad. The kid’s mom did NOT help the dad. Can you tell me, did either of these people help the dad?”
 
-### 48. Who was meaner? — PROPOSED WORDING
+### 52. Who was meaner? — PROPOSED WORDING
 
 “Who was meaner for NOT helping the dad in the middle?”
 
@@ -520,7 +568,7 @@ Choices: The kid / The kid’s mom.
 
 Left: the teacher on the left. Middle: the teacher in the middle. Right: the kid.
 
-### 49. Meet the characters
+### 53. Meet the characters
 
 “Oh look! Here is a kid.”
 
@@ -528,7 +576,7 @@ Left: the teacher on the left. Middle: the teacher in the middle. Right: the kid
 
 *Opening adapted to the single kid shown on screen.*
 
-### 50. Meet the kid
+### 54. Meet the kid
 
 “This little one is a kid. Tap the kid.”
 
@@ -540,7 +588,7 @@ Reminder if needed: “This little one is a kid. This one is the kid. Tap the ki
 
 *Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
 
-### 51. Meet the teacher on the left
+### 55. Meet the teacher on the left
 
 “This big one is this kid’s teacher. Tap the teacher on the left.”
 
@@ -552,7 +600,7 @@ Reminder if needed: “This big one is this kid’s teacher. This one is the tea
 
 *Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
 
-### 52. Meet the teacher in the middle
+### 56. Meet the teacher in the middle
 
 “This big one is this kid’s teacher too. Tap the teacher in the middle.”
 
@@ -564,19 +612,19 @@ Reminder if needed: “This big one is this kid’s teacher too. This one is the
 
 *Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation. The person who needs help is an adult in this story.*
 
-### 53. The teacher in the middle needs help
+### 57. The teacher in the middle needs help
 
 “Now let’s say that one day the teacher in the middle was very sad.”
 
 [Stimulus source](assets/stimuli/4bb031a656d9-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-### 54. Both helpers see
+### 58. Both helpers see
 
 “The teacher on the left and the kid both see that the teacher in the middle is sad.”
 
 [Stimulus source](assets/stimuli/4bb031a656d9-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-### 55. Who will help? — PROPOSED WORDING
+### 59. Who will help? — PROPOSED WORDING
 
 “Who do you think will help the teacher in the middle?”
 
@@ -586,7 +634,7 @@ Choices: The teacher on the left / The kid.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No prediction question.*
 
-### 56. Who HAS TO help? — PROPOSED WORDING
+### 60. Who HAS TO help? — PROPOSED WORDING
 
 “Who do you think HAS TO help the teacher in the middle?”
 
@@ -596,17 +644,29 @@ Choices: The teacher on the left / The kid.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No obligation question.*
 
-### 57. What happens next
+### 61. No one helped
 
-“No one helped the teacher in the middle. The teacher on the left did NOT help the teacher in the middle. The kid did NOT help the teacher in the middle.”
+“No one helped the teacher in the middle.”
 
-Display wording: “No one helped the teacher in the middle.” Both helper cues remain visible beneath the original sad scene; each cue glows during its complete did-NOT-help sentence.
+Display wording: “No one helped the teacher in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+
+[Stimulus source](assets/stimuli/4bb031a656d9-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+
+*Standalone outcome statement. Continue after the sentence to hear each helper’s action and the repeated no-one-helped statement.*
+
+### 62. Each helper did NOT help
+
+“The teacher on the left did NOT help the teacher in the middle. The kid did NOT help the teacher in the middle. No one helped the teacher in the middle.”
+
+Display wording: “The teacher on the left did NOT help the teacher in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+
+Captions follow the narration, in order: “The teacher on the left did NOT help the teacher in the middle.” → “The kid did NOT help the teacher in the middle.” → “No one helped the teacher in the middle.”.
 
 [Stimulus source](assets/stimuli/4bb031a656d9-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 *Every response path reaches this same outcome, regardless of prediction or obligation choices.*
 
-### 58. Recall · No one helped
+### 63. Recall · No one helped
 
 “Can you tell me, did either of these people help the teacher in the middle?”
 
@@ -618,7 +678,7 @@ Expected check/practice answer: No.
 
 Reminder if needed: “Actually, remember, no one helped the teacher in the middle. The teacher on the left did NOT help the teacher in the middle. The kid did NOT help the teacher in the middle. Can you tell me, did either of these people help the teacher in the middle?”
 
-### 59. Who was meaner? — PROPOSED WORDING
+### 64. Who was meaner? — PROPOSED WORDING
 
 “Who was meaner for NOT helping the teacher in the middle?”
 
@@ -632,7 +692,7 @@ Choices: The teacher on the left / The kid.
 
 Left: the kid’s classmate. Middle: the kid. Right: the kid’s teacher.
 
-### 60. Meet the characters
+### 65. Meet the characters
 
 “Oh look! Here is a kid.”
 
@@ -640,7 +700,7 @@ Left: the kid’s classmate. Middle: the kid. Right: the kid’s teacher.
 
 *Opening adapted to the single kid shown on screen.*
 
-### 61. Meet the kid
+### 66. Meet the kid
 
 “This little one is a kid. Tap the kid.”
 
@@ -652,7 +712,7 @@ Reminder if needed: “This little one is a kid. This one is the kid. Tap the ki
 
 *Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
 
-### 62. Meet the kid’s classmate
+### 67. Meet the kid’s classmate
 
 “This little one is this kid’s classmate. Tap the kid’s classmate.”
 
@@ -664,7 +724,7 @@ Reminder if needed: “This little one is this kid’s classmate. This one is th
 
 *Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
 
-### 63. Meet the kid’s teacher
+### 68. Meet the kid’s teacher
 
 “This big one is this kid’s teacher. Tap the kid’s teacher.”
 
@@ -676,19 +736,19 @@ Reminder if needed: “This big one is this kid’s teacher. This one is the kid
 
 *Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
 
-### 64. The kid needs help
+### 69. The kid needs help
 
 “Now let’s say that one day the kid in the middle was very sad.”
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
-### 65. Both helpers see
+### 70. Both helpers see
 
 “The kid’s classmate and the kid’s teacher both see that the kid is sad.”
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
-### 66. Who will help? — PROPOSED WORDING
+### 71. Who will help? — PROPOSED WORDING
 
 “Who do you think will help the kid in the middle?”
 
@@ -698,7 +758,7 @@ Choices: The kid’s classmate / The kid’s teacher.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No prediction question.*
 
-### 67. Who HAS TO help? — PROPOSED WORDING
+### 72. Who HAS TO help? — PROPOSED WORDING
 
 “Who do you think HAS TO help the kid in the middle?”
 
@@ -708,17 +768,29 @@ Choices: The kid’s classmate / The kid’s teacher.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No obligation question.*
 
-### 68. What happens next
+### 73. No one helped
 
-“No one helped the kid. The kid’s classmate did NOT help the kid. The kid’s teacher did NOT help the kid.”
+“No one helped the kid.”
 
-Display wording: “No one helped the kid.” Both helper cues remain visible beneath the original sad scene; each cue glows during its complete did-NOT-help sentence.
+Display wording: “No one helped the kid.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+
+[Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
+
+*Standalone outcome statement. Continue after the sentence to hear each helper’s action and the repeated no-one-helped statement.*
+
+### 74. Each helper did NOT help
+
+“The kid’s classmate did NOT help the kid. The kid’s teacher did NOT help the kid. No one helped the kid.”
+
+Display wording: “The kid’s classmate did NOT help the kid.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+
+Captions follow the narration, in order: “The kid’s classmate did NOT help the kid.” → “The kid’s teacher did NOT help the kid.” → “No one helped the kid.”.
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
 *Every response path reaches this same outcome, regardless of prediction or obligation choices.*
 
-### 69. Recall · No one helped
+### 75. Recall · No one helped
 
 “Can you tell me, did either of these people help the kid?”
 
@@ -730,7 +802,7 @@ Expected check/practice answer: No.
 
 Reminder if needed: “Actually, remember, no one helped the kid. The kid’s classmate did NOT help the kid. The kid’s teacher did NOT help the kid. Can you tell me, did either of these people help the kid?”
 
-### 70. Who was meaner? — PROPOSED WORDING
+### 76. Who was meaner? — PROPOSED WORDING
 
 “Who was meaner for NOT helping the kid in the middle?”
 
@@ -740,7 +812,7 @@ Choices: The kid’s classmate / The kid’s teacher.
 
 *Two-helper comparison adapted from Marshall. Buttons follow the scene: the kid’s classmate left, the kid’s teacher right.*
 
-### 71. End of this session
+### 77. End of this session
 
 “That’s the end of our stories. Thank you!”
 
