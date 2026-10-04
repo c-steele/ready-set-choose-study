@@ -72,3 +72,13 @@
 .answers button.spoken-choice.option-current,.rating-answer.option-current{opacity:1;background:#eaf7ff!important;border-color:#2477b8!important;box-shadow:0 0 0 5px #2477b833,0 9px 20px #2477b833;animation:introduction-glow 1.2s ease-in-out infinite}
 @media(prefers-reduced-motion:reduce){.narration-actor-cue.narration-actor-current,.answers button.spoken-choice.option-current,.rating-answer.option-current{animation:none}}
 @media print{.narration-actor-cue,.practice-actor-cue{display:none}.answers button.spoken-choice.option-current,.rating-answer.option-current{animation:none}}
+
+/* Two-helper choices are transparent tap targets around the actual characters. */
+.character-choice-target,.character-choice-cue{position:absolute;z-index:3;padding:0;border:3px solid var(--story-accent);border-radius:7px;background:transparent!important;box-shadow:none;opacity:1!important}
+.character-choice-target{cursor:pointer;touch-action:manipulation}
+.character-choice-target:disabled{cursor:default;opacity:1}
+.character-choice-target:not(:disabled):hover,.character-choice-target:focus-visible{border-color:#2477b8;box-shadow:0 0 0 4px #2477b833}
+.character-choice-target.option-current,.character-choice-target.narration-actor-current{border:4px solid #2477b8;box-shadow:0 0 0 5px #2477b833,0 0 18px 4px #2477b855;animation:introduction-glow 1.2s ease-in-out infinite}
+.character-choice-cue{pointer-events:none}
+@media(prefers-reduced-motion:reduce){.character-choice-target.option-current,.character-choice-target.narration-actor-current{animation:none}}
+@media print{.character-choice-target{animation:none;box-shadow:none}}

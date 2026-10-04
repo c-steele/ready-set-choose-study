@@ -404,3 +404,6 @@ body.child-view .child-session-footer{margin-top:0}
 body.child-view .binary-reader-controls,
 body.child-view .binary-reader-status{display:none}
 body.child-view .answers button.spoken-choice.option-current{box-shadow:0 0 0 5px #2477b833,0 9px 20px #2477b833}
+
+/* Recover the former word-button space for character-sized response targets. */
+body.child-view .stage[data-choice-location="characters"] .picture{width:min(100%,1050px,calc((100vh - 270px) * 2.285714));width:min(100%,1050px,calc((100dvh - 270px) * 2.285714))}

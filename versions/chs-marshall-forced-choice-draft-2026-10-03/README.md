@@ -43,7 +43,7 @@ Each six-story version includes 18 character-identification taps, six recall che
 
 The pairing catalog, white backgrounds, exact existing characters and palettes, plain sadness context, original character positions, and cumulative character introductions come from the existing draft. Family-set stories with an adult recipient keep that adult in the middle. The two-teacher story distinguishes the helper as “the teacher on the left” and the recipient as “the teacher in the middle.” No extra family relationship is inferred.
 
-Choices always match the two displayed helpers. Their full relationship descriptions are read and appear on buttons. Each option carries the matching actor ID so the reader can glow the button and corresponding character together. No school or home backdrop is added.
+Choices always match the two displayed helpers. Their full relationship descriptions are read aloud. Children tap transparent response targets around the actual helpers, with the original role labels preserved in the scene. The matching character outline glows as its option is read. No school or home backdrop is added.
 
 ## Scripts and narration
 

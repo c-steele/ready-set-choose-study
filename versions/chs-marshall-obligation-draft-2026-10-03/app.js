@@ -29,6 +29,17 @@
     const bounds=introActorBounds[s.pairing.id]?.[actor.id];
     return bounds?` style="left:${bounds[0]}%;top:${bounds[1]}%;width:${bounds[2]}%;height:${bounds[3]}%"`:'';
   }
+  function helperChoiceActors(s){
+    const ids=s.optionActors || (s.localId==='compare'?s.pairing?.helpers.map(actor=>actor.id):null);
+    if(!s.pairing || !ids || ids.length!==s.choices?.length)return [];
+    const helpers=ids.map(id=>s.pairing.helpers.find(actor=>actor.id===id));
+    return helpers.every(Boolean)?helpers:[];
+  }
+  // Choice boxes cover the people, while their original role labels stay below.
+  function characterChoiceStyle(s,actor){
+    const bounds=introActorBounds[s.pairing.id]?.[actor.id];
+    return bounds?` style="left:${bounds[0]}%;top:${bounds[1]}%;width:${bounds[2]}%;height:${bounds[3]-13.5}%"`:'';
+  }
   const cueTokens=text=>(String(text).toLowerCase().replace(/[’‘']/g,'').match(/[\p{L}\p{N}]+/gu)||[]);
   function phraseMatches(words,phrase){
     const tokens=cueTokens(phrase),result=[];
@@ -120,7 +131,7 @@
     replay.setAttribute('aria-label',narrationEnabled?'Replay narration':'Listen to the narration');
     stop.hidden=!narrationPlaying;
     const s=steps[index]||steps[0],bubble=stage.querySelector('.child-helper-bubble');
-    bubble.textContent=narrationPlaying||stage.querySelector('.rating-answer:disabled')?'Listen and look!':s.point?'Tap '+actors(s).find(a=>a.id===s.point).description+'!':s.choices?'Tap one!':s.localId==='end'?'All done!':'Listen and look!';
+    bubble.textContent=narrationPlaying||stage.querySelector('.rating-answer:disabled')?'Listen and look!':s.point?'Tap '+actors(s).find(a=>a.id===s.point).description+'!':helperChoiceActors(s).length?'Tap a person!':s.choices?'Tap one!':s.localId==='end'?'All done!':'Listen and look!';
     if(s.localId==='end')stage.querySelectorAll('.continue-answer').forEach(button=>button.textContent=childView?'All done!':'Read the full storyboard');
   }
   function setChildView(value){
@@ -193,9 +204,13 @@
     const tapActors=introduction?[current]:allActors;
     const buttons=interactive&&s.point?tapActors.map(a=>`<button class="point-target side-${a.side}${introduction?' introduction-target':''}${wrong&&a.id===s.point?' reveal':''}"${introduction?actorTargetStyle(s,a):''} data-point="${a.id}" aria-label="Tap ${esc(a.description)}"></button>`).join(''):'';
     const cue=introduction&&!interactive?`<span class="point-target introduction-cue"${actorTargetStyle(s,current)} aria-hidden="true"></span>`:'';
-    const spokenCues=interactive?shownActors.map(actor=>`<span class="narration-actor-cue" data-narration-actor="${actor.id}"${actorTargetStyle(s,actor)} aria-hidden="true"></span>`).join(''):'';
+    const choiceActors=helperChoiceActors(s);
+    const choiceBoxes=choiceActors.map((actor,choiceIndex)=>interactive
+      ?`<button class="character-choice-target option-visible"${characterChoiceStyle(s,actor)} data-answer="${choiceIndex}" data-narration-actor="${actor.id}" aria-label="${esc(s.choices[choiceIndex])}"></button>`
+      :`<span class="character-choice-cue"${characterChoiceStyle(s,actor)} aria-hidden="true"></span>`).join('');
+    const spokenCues=interactive?shownActors.filter(actor=>!choiceActors.some(choice=>choice.id===actor.id)).map(actor=>`<span class="narration-actor-cue" data-narration-actor="${actor.id}"${actorTargetStyle(s,actor)} aria-hidden="true"></span>`).join(''):'';
     const alt=shownActors.map(a=>`${a.description} ${a.side==='middle'?'in the middle':'on the '+a.side}`).join('; ');
-    return `<div class="picture${guided?' character-introduction':''}"><img ${interactive?'':'loading="lazy"'} src="${esc(image)}" alt="${esc(alt)}.${s.image===s.pairing.images.need?' '+esc(s.pairing.recipient.reference)+' is sad.':''}">${masks}${buttons}${cue}${spokenCues}</div>`;
+    return `<div class="picture${guided?' character-introduction':''}"><img ${interactive?'':'loading="lazy"'} src="${esc(image)}" alt="${esc(alt)}.${s.image===s.pairing.images.need?' '+esc(s.pairing.recipient.reference)+' is sad.':''}">${masks}${buttons}${choiceBoxes}${cue}${spokenCues}</div>`;
   }
   function prompt(s){return `<div class="prompt">${s.context&&!s.displayText?`<p class="referent">${esc(s.context)}</p>`:''}${s.preface?`<p class="preface">${esc(s.preface)}</p>`:''}<h2>${esc(s.displayTitle||s.displayText||s.text)}</h2></div>`;}
   function branchNote(s){if(!s.when)return '';const parent=steps.find(p=>p.id===s.when[0]);return `Only after “${s.when[1]}” to ${parent.phase.toLowerCase()}. `;}
@@ -215,8 +230,10 @@
     $('progress-bar').style.width=`${100*(index+1)/steps.length}%`;
     $('progress-bar').style.backgroundColor=storyAccent(s);
     let options=s.point?`<p class="point-instruction">Tap ${esc(actors(s).find(a=>a.id===s.point).description)}.</p>`:`<div class="answers">${(s.choices||[s.localId==='end'?'Read the full storyboard':'Continue']).map((c,i)=>`<button class="${s.choices?'spoken-choice option-visible':'continue-answer'}" data-answer="${i}">${esc(c)}</button>`).join('')}</div>${s.choices?choiceReaderControls(true):''}`;
+    if(helperChoiceActors(s).length)options=choiceReaderControls(true);
     if(s.choices?.length===3)options=scaleOptions(s,true);
     const feedback=wrong?`<p class="feedback">${esc(s.reminder)}</p><div class="facilitator-controls"><span>Facilitator review</span><button id="continue-check">Continue after reminder</button></div>`:'';
+    stage.dataset.choiceLocation=helperChoiceActors(s).length?'characters':'controls';
     stage.dataset.screenKind=s.visual==='teacher-practice'?'illustrated-practice':s.image?'story':'practice';
     stage.dataset.responseKind=s.choices?.length===3?'scale':s.point?'character':s.choices?'binary':'continue';
     stage.innerHTML=prompt(s)+scene(s,true)+feedback+options+childFooter(s);
