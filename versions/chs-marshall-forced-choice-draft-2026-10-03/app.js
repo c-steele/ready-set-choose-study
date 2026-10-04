@@ -162,8 +162,9 @@
   }
   function childFooter(s){return `<div class="child-session-footer"><div class="child-helper" aria-hidden="true"><span class="child-helper-face"><i></i></span><span class="child-helper-bubble">Listen and look!</span></div><div class="child-audio-controls"><button class="child-replay" type="button"><span class="child-control-symbol" aria-hidden="true">▶</span><span class="child-control-label">Listen</span></button>${!s.choices&&!s.point?'<div class="answers child-continue"><button class="continue-answer" data-answer="0">Continue</button></div>':''}<button class="child-stop" type="button" hidden>Stop</button></div></div>`;}
   function narrationIds(s){
-    const map=narration.screenFor(s), id=wrong&&map.reminder?map.reminder:map.prompt;
-    return [id].filter(Boolean);
+    const map=narration.screenFor(s);
+    if(wrong&&map.reminder)return [map.reminder,...(s.rereadAfterReminder?[map.prompt]:[])].filter(Boolean);
+    return [map.prompt].filter(Boolean);
   }
   function gateNarration(locked){stage.querySelectorAll('[data-answer],[data-point],#continue-check').forEach(b=>b.disabled=locked);}
   function stopNarration(){narrationRun?.cancel();narrationRun=null;narration.stop();narrationPlaying=false;clearSpokenCues();gateNarration(false);$('stop-narration').disabled=true;syncChildControls();}
@@ -286,7 +287,7 @@
       });}catch(error){stage.querySelector('[data-reader-status]').textContent='Option reading could not start. Please refresh this draft.';}
     }
     if(completed)pauseTimer();else updateTimer();
-    narrationStatus();if(narrationEnabled&&$('auto-narration').checked&&!$('player').hidden)playNarration();
+    narrationStatus();if((wrong&&s.rereadAfterReminder||narrationEnabled&&$('auto-narration').checked)&&!$('player').hidden)playNarration();
   }
   function respond(answer){const s=steps[index];if(s.localId==='end'){if(chsBridge?.embedded){stopNarration();chsBridge.complete(session,answers);return;}showBoard(true);return;}if((s.expected&&answer!==s.expected)||(s.point&&answer!==s.point)){chsBridge?.answer(s,session,answer,{accepted:false});wrong=answer;render();return;}commit(answer);}
   function commit(answer){chsBridge?.answer(steps[index],session,answer,{accepted:true,continuedAfterReminder:!!wrong});if(timerUsed&&started===null)incomplete=true;for(let n=index;n<steps.length;n++)delete answers[steps[n].id];answers[steps[index].id]=answer;history.push(index);wrong=null;index=Math.min(session.nextIndex(index,answers),steps.length-1);render();}

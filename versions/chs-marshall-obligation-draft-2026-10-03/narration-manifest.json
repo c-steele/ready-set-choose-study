@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "title": "Find the Caregiver × Marshall obligation draft — full narration",
+  "title": "Find the Caregiver \u00d7 Marshall obligation draft \u2014 full narration",
   "normalization": "Curly apostrophes/quotes become straight quotes; whitespace collapses. Case, punctuation and all spoken words are preserved.",
   "voice": {
     "provider": "NaturalReaders Commercial",
@@ -24,7 +24,8 @@
     "emphasisPendingCount": 32,
     "pauseAdjustedReadyCount": 1,
     "nativeProsodyPendingCount": 32,
-    "emphasisPendingBasis": "Native NaturalReaders prosody exports remain pending; nr_014 uses locally inserted pauses from its existing Evelyn recording."
+    "emphasisPendingBasis": "Native NaturalReaders prosody exports remain pending; nr_014 uses inserted pauses and nr_274 uses a verified exact teacher clause joined to the existing strength prompt.",
+    "assembledContextReadyCount": 1
   },
   "notes": [
     "One clip per complete prompt, reminder, or individual response option. Repeated text shares one recording.",
@@ -40,7 +41,8 @@
     "New explicit-outcome recordings use Evelyn Soft 0.80x / 160 WPM; retained recordings preserve their original voice settings. The package contains mixed recorded pacing.",
     "The opening now says \"Oh look! Here is a kid.\" in all 18 stories. The old some-people recording is inactive; the revised complete sentence is pending under nr_268.",
     "The revised kid sadness prompt nr_269 is a new pending recording. The retired nr_008 recording and word cues are not used for this changed wording; no cloud save or export is claimed for the replacement paragraph.",
-    "Prediction confidence is proposed wording added to this adaptation after each individual prediction question: How sure are you? Not sure / A little sure / Very sure. The four new clips nr_270–nr_273 remain pending and are not claimed as Marshall source wording or as generated/cloud-saved recordings."
+    "Prediction confidence is proposed wording added to this adaptation after each individual prediction question: How sure are you? Not sure / A little sure / Very sure. The four new clips nr_270\u2013nr_273 remain pending and are not claimed as Marshall source wording or as generated/cloud-saved recordings.",
+    "The adapted teacher-practice strength prompt nr_274 reiterates the teacher context and uses exact existing Evelyn speech joined with a 300 ms pause. A fresh full NaturalReaders prosody recording remains pending; this is a documented local audio derivative."
   ],
   "clips": [
     {
@@ -403,7 +405,7 @@
     },
     {
       "id": "nr_004",
-      "text": "This big one is this kid’s teacher. Tap the kid’s teacher.",
+      "text": "This big one is this kid\u2019s teacher. Tap the kid\u2019s teacher.",
       "src": "assets/narration/nr_004.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -463,7 +465,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "2652a496711b81b81622e8ac9530fd2eedf3e87fae62084d458e39b3d153c15b",
-        "archiveMember": "3.This_big_one_is_this_kid’s_tea.mp3",
+        "archiveMember": "3.This_big_one_is_this_kid\u2019s_tea.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -471,7 +473,7 @@
     },
     {
       "id": "nr_005",
-      "text": "This big one is this kid’s teacher. This one is the kid’s teacher. Tap the kid’s teacher.",
+      "text": "This big one is this kid\u2019s teacher. This one is the kid\u2019s teacher. Tap the kid\u2019s teacher.",
       "src": "assets/narration/nr_005.mp3",
       "kind": "reminder",
       "status": "imported",
@@ -531,7 +533,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "2652a496711b81b81622e8ac9530fd2eedf3e87fae62084d458e39b3d153c15b",
-        "archiveMember": "4.This_big_one_is_this_kid’s_tea.mp3",
+        "archiveMember": "4.This_big_one_is_this_kid\u2019s_tea.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -539,7 +541,7 @@
     },
     {
       "id": "nr_006",
-      "text": "This big one is this kid’s mom. Tap the kid’s mom.",
+      "text": "This big one is this kid\u2019s mom. Tap the kid\u2019s mom.",
       "src": "assets/narration/nr_006.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -584,7 +586,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "2652a496711b81b81622e8ac9530fd2eedf3e87fae62084d458e39b3d153c15b",
-        "archiveMember": "5.This_big_one_is_this_kid’s_mom.mp3",
+        "archiveMember": "5.This_big_one_is_this_kid\u2019s_mom.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -592,7 +594,7 @@
     },
     {
       "id": "nr_007",
-      "text": "This big one is this kid’s mom. This one is the kid’s mom. Tap the kid’s mom.",
+      "text": "This big one is this kid\u2019s mom. This one is the kid\u2019s mom. Tap the kid\u2019s mom.",
       "src": "assets/narration/nr_007.mp3",
       "kind": "reminder",
       "status": "imported",
@@ -637,7 +639,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "2652a496711b81b81622e8ac9530fd2eedf3e87fae62084d458e39b3d153c15b",
-        "archiveMember": "6.This_big_one_is_this_kid’s_mom.mp3",
+        "archiveMember": "6.This_big_one_is_this_kid\u2019s_mom.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -645,7 +647,7 @@
     },
     {
       "id": "nr_269",
-      "text": "Now let’s say that one day the kid in the middle was very sad.",
+      "text": "Now let\u2019s say that one day the kid in the middle was very sad.",
       "src": null,
       "kind": "prompt",
       "status": "pending",
@@ -742,7 +744,7 @@
     },
     {
       "id": "nr_009",
-      "text": "The kid’s teacher and the kid’s mom both see that the kid is sad.",
+      "text": "The kid\u2019s teacher and the kid\u2019s mom both see that the kid is sad.",
       "src": "assets/narration/nr_009.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -772,7 +774,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "8.The_kid’s_teacher_and_the_kid’.mp3",
+        "archiveMember": "8.The_kid\u2019s_teacher_and_the_kid\u2019.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -780,7 +782,7 @@
     },
     {
       "id": "nr_010",
-      "text": "Now, do you think the kid’s teacher will help the kid?",
+      "text": "Now, do you think the kid\u2019s teacher will help the kid?",
       "src": "assets/narration/nr_010.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -840,7 +842,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "9.Now,_do_you_think_the_kid’s_te.mp3",
+        "archiveMember": "9.Now,_do_you_think_the_kid\u2019s_te.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -2858,7 +2860,7 @@
     },
     {
       "id": "nr_013",
-      "text": "Now, do you think the kid’s mom will help the kid?",
+      "text": "Now, do you think the kid\u2019s mom will help the kid?",
       "src": "assets/narration/nr_013.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -2898,7 +2900,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "12.Now,_do_you_think_the_kid’s_mo.mp3",
+        "archiveMember": "12.Now,_do_you_think_the_kid\u2019s_mo.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -3219,7 +3221,7 @@
     },
     {
       "id": "nr_016",
-      "text": "When a teacher tells you to stop being mean to someone, you HAVE TO stop being mean. Let’s try that question again.",
+      "text": "When a teacher tells you to stop being mean to someone, you HAVE TO stop being mean. Let\u2019s try that question again.",
       "src": "assets/narration/nr_016.mp3",
       "kind": "reminder",
       "status": "imported",
@@ -3341,135 +3343,7 @@
       },
       "narrationEmphasis": {
         "status": "awaiting-new-recording",
-        "originalRecordedText": "When a teacher tells you to stop being mean to someone, you have to stop being mean. Let’s try that question again.",
-        "visualCaseOnly": true
-      }
-    },
-    {
-      "id": "nr_017",
-      "text": "How much do you think you HAVE TO stop being mean?",
-      "src": "assets/narration/nr_017.mp3",
-      "kind": "prompt",
-      "status": "imported",
-      "uses": [
-        {
-          "stepId": "woman-mom-teacher:practice-stop-amount",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "woman-sister-friend:practice-stop-amount",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "woman-bestfriend-friend:practice-stop-amount",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "woman-teacher-friend:practice-stop-amount",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "woman-mom-sister:practice-stop-amount",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "woman-teacher-classmate:practice-stop-amount",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-dad-teacher:practice-stop-amount",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-brother-friend:practice-stop-amount",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-bestfriend-friend:practice-stop-amount",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-teacher-friend:practice-stop-amount",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-dad-brother:practice-stop-amount",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-teacher-classmate:practice-stop-amount",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "family-mom-dad:practice-stop-amount",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "family-sister-brother:practice-stop-amount",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "family-dad-kid:practice-stop-amount",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "family-mom-kid:practice-stop-amount",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "family-teacher-kid:practice-stop-amount",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "family-teacher-classmate:practice-stop-amount",
-          "proposedWording": false,
-          "part": "prompt"
-        }
-      ],
-      "sha256": "495724c15d5a023abea2f34a1f3dcb889cd7fb1a653db229bc157653756e709c",
-      "bytes": 133792,
-      "durationSeconds": 3.343675,
-      "provenance": {
-        "provider": "NaturalReaders Commercial",
-        "voice": {
-          "provider": "NaturalReaders Commercial",
-          "name": "Evelyn",
-          "style": "Soft",
-          "speed": 0.9,
-          "wordsPerMinuteSetting": 180,
-          "paragraphPauseSeconds": 0,
-          "exportFormat": "MP3",
-          "exportMode": "separate files ZIP",
-          "exportNaming": "Index + Segment",
-          "preferredBitrateKbps": 320,
-          "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "16.How_much_do_you_think_you_have.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
-      },
-      "narrationEmphasis": {
-        "status": "awaiting-new-recording",
-        "originalRecordedText": "How much do you think you have to stop being mean?",
+        "originalRecordedText": "When a teacher tells you to stop being mean to someone, you have to stop being mean. Let\u2019s try that question again.",
         "visualCaseOnly": true
       }
     },
@@ -3482,7 +3356,7 @@
       "uses": [
         {
           "stepId": "woman-mom-teacher:practice-stop-amount",
-          "proposedWording": false,
+          "proposedWording": true,
           "part": "option",
           "optionIndex": 0
         },
@@ -3506,7 +3380,7 @@
         },
         {
           "stepId": "woman-sister-friend:practice-stop-amount",
-          "proposedWording": false,
+          "proposedWording": true,
           "part": "option",
           "optionIndex": 0
         },
@@ -3530,7 +3404,7 @@
         },
         {
           "stepId": "woman-bestfriend-friend:practice-stop-amount",
-          "proposedWording": false,
+          "proposedWording": true,
           "part": "option",
           "optionIndex": 0
         },
@@ -3554,7 +3428,7 @@
         },
         {
           "stepId": "woman-teacher-friend:practice-stop-amount",
-          "proposedWording": false,
+          "proposedWording": true,
           "part": "option",
           "optionIndex": 0
         },
@@ -3578,7 +3452,7 @@
         },
         {
           "stepId": "woman-mom-sister:practice-stop-amount",
-          "proposedWording": false,
+          "proposedWording": true,
           "part": "option",
           "optionIndex": 0
         },
@@ -3602,7 +3476,7 @@
         },
         {
           "stepId": "woman-teacher-classmate:practice-stop-amount",
-          "proposedWording": false,
+          "proposedWording": true,
           "part": "option",
           "optionIndex": 0
         },
@@ -3626,7 +3500,7 @@
         },
         {
           "stepId": "man-dad-teacher:practice-stop-amount",
-          "proposedWording": false,
+          "proposedWording": true,
           "part": "option",
           "optionIndex": 0
         },
@@ -3650,7 +3524,7 @@
         },
         {
           "stepId": "man-brother-friend:practice-stop-amount",
-          "proposedWording": false,
+          "proposedWording": true,
           "part": "option",
           "optionIndex": 0
         },
@@ -3674,7 +3548,7 @@
         },
         {
           "stepId": "man-bestfriend-friend:practice-stop-amount",
-          "proposedWording": false,
+          "proposedWording": true,
           "part": "option",
           "optionIndex": 0
         },
@@ -3698,7 +3572,7 @@
         },
         {
           "stepId": "man-teacher-friend:practice-stop-amount",
-          "proposedWording": false,
+          "proposedWording": true,
           "part": "option",
           "optionIndex": 0
         },
@@ -3722,7 +3596,7 @@
         },
         {
           "stepId": "man-dad-brother:practice-stop-amount",
-          "proposedWording": false,
+          "proposedWording": true,
           "part": "option",
           "optionIndex": 0
         },
@@ -3746,7 +3620,7 @@
         },
         {
           "stepId": "man-teacher-classmate:practice-stop-amount",
-          "proposedWording": false,
+          "proposedWording": true,
           "part": "option",
           "optionIndex": 0
         },
@@ -3770,7 +3644,7 @@
         },
         {
           "stepId": "family-mom-dad:practice-stop-amount",
-          "proposedWording": false,
+          "proposedWording": true,
           "part": "option",
           "optionIndex": 0
         },
@@ -3794,7 +3668,7 @@
         },
         {
           "stepId": "family-sister-brother:practice-stop-amount",
-          "proposedWording": false,
+          "proposedWording": true,
           "part": "option",
           "optionIndex": 0
         },
@@ -3818,7 +3692,7 @@
         },
         {
           "stepId": "family-dad-kid:practice-stop-amount",
-          "proposedWording": false,
+          "proposedWording": true,
           "part": "option",
           "optionIndex": 0
         },
@@ -3842,7 +3716,7 @@
         },
         {
           "stepId": "family-mom-kid:practice-stop-amount",
-          "proposedWording": false,
+          "proposedWording": true,
           "part": "option",
           "optionIndex": 0
         },
@@ -3866,7 +3740,7 @@
         },
         {
           "stepId": "family-teacher-kid:practice-stop-amount",
-          "proposedWording": false,
+          "proposedWording": true,
           "part": "option",
           "optionIndex": 0
         },
@@ -3890,7 +3764,7 @@
         },
         {
           "stepId": "family-teacher-classmate:practice-stop-amount",
-          "proposedWording": false,
+          "proposedWording": true,
           "part": "option",
           "optionIndex": 0
         },
@@ -3947,7 +3821,7 @@
       "uses": [
         {
           "stepId": "woman-mom-teacher:practice-stop-amount",
-          "proposedWording": false,
+          "proposedWording": true,
           "part": "option",
           "optionIndex": 1
         },
@@ -3971,7 +3845,7 @@
         },
         {
           "stepId": "woman-sister-friend:practice-stop-amount",
-          "proposedWording": false,
+          "proposedWording": true,
           "part": "option",
           "optionIndex": 1
         },
@@ -3995,7 +3869,7 @@
         },
         {
           "stepId": "woman-bestfriend-friend:practice-stop-amount",
-          "proposedWording": false,
+          "proposedWording": true,
           "part": "option",
           "optionIndex": 1
         },
@@ -4019,7 +3893,7 @@
         },
         {
           "stepId": "woman-teacher-friend:practice-stop-amount",
-          "proposedWording": false,
+          "proposedWording": true,
           "part": "option",
           "optionIndex": 1
         },
@@ -4043,7 +3917,7 @@
         },
         {
           "stepId": "woman-mom-sister:practice-stop-amount",
-          "proposedWording": false,
+          "proposedWording": true,
           "part": "option",
           "optionIndex": 1
         },
@@ -4067,7 +3941,7 @@
         },
         {
           "stepId": "woman-teacher-classmate:practice-stop-amount",
-          "proposedWording": false,
+          "proposedWording": true,
           "part": "option",
           "optionIndex": 1
         },
@@ -4091,7 +3965,7 @@
         },
         {
           "stepId": "man-dad-teacher:practice-stop-amount",
-          "proposedWording": false,
+          "proposedWording": true,
           "part": "option",
           "optionIndex": 1
         },
@@ -4115,7 +3989,7 @@
         },
         {
           "stepId": "man-brother-friend:practice-stop-amount",
-          "proposedWording": false,
+          "proposedWording": true,
           "part": "option",
           "optionIndex": 1
         },
@@ -4139,7 +4013,7 @@
         },
         {
           "stepId": "man-bestfriend-friend:practice-stop-amount",
-          "proposedWording": false,
+          "proposedWording": true,
           "part": "option",
           "optionIndex": 1
         },
@@ -4163,7 +4037,7 @@
         },
         {
           "stepId": "man-teacher-friend:practice-stop-amount",
-          "proposedWording": false,
+          "proposedWording": true,
           "part": "option",
           "optionIndex": 1
         },
@@ -4187,7 +4061,7 @@
         },
         {
           "stepId": "man-dad-brother:practice-stop-amount",
-          "proposedWording": false,
+          "proposedWording": true,
           "part": "option",
           "optionIndex": 1
         },
@@ -4211,7 +4085,7 @@
         },
         {
           "stepId": "man-teacher-classmate:practice-stop-amount",
-          "proposedWording": false,
+          "proposedWording": true,
           "part": "option",
           "optionIndex": 1
         },
@@ -4235,7 +4109,7 @@
         },
         {
           "stepId": "family-mom-dad:practice-stop-amount",
-          "proposedWording": false,
+          "proposedWording": true,
           "part": "option",
           "optionIndex": 1
         },
@@ -4259,7 +4133,7 @@
         },
         {
           "stepId": "family-sister-brother:practice-stop-amount",
-          "proposedWording": false,
+          "proposedWording": true,
           "part": "option",
           "optionIndex": 1
         },
@@ -4283,7 +4157,7 @@
         },
         {
           "stepId": "family-dad-kid:practice-stop-amount",
-          "proposedWording": false,
+          "proposedWording": true,
           "part": "option",
           "optionIndex": 1
         },
@@ -4307,7 +4181,7 @@
         },
         {
           "stepId": "family-mom-kid:practice-stop-amount",
-          "proposedWording": false,
+          "proposedWording": true,
           "part": "option",
           "optionIndex": 1
         },
@@ -4331,7 +4205,7 @@
         },
         {
           "stepId": "family-teacher-kid:practice-stop-amount",
-          "proposedWording": false,
+          "proposedWording": true,
           "part": "option",
           "optionIndex": 1
         },
@@ -4355,7 +4229,7 @@
         },
         {
           "stepId": "family-teacher-classmate:practice-stop-amount",
-          "proposedWording": false,
+          "proposedWording": true,
           "part": "option",
           "optionIndex": 1
         },
@@ -4412,7 +4286,7 @@
       "uses": [
         {
           "stepId": "woman-mom-teacher:practice-stop-amount",
-          "proposedWording": false,
+          "proposedWording": true,
           "part": "option",
           "optionIndex": 2
         },
@@ -4436,7 +4310,7 @@
         },
         {
           "stepId": "woman-sister-friend:practice-stop-amount",
-          "proposedWording": false,
+          "proposedWording": true,
           "part": "option",
           "optionIndex": 2
         },
@@ -4460,7 +4334,7 @@
         },
         {
           "stepId": "woman-bestfriend-friend:practice-stop-amount",
-          "proposedWording": false,
+          "proposedWording": true,
           "part": "option",
           "optionIndex": 2
         },
@@ -4484,7 +4358,7 @@
         },
         {
           "stepId": "woman-teacher-friend:practice-stop-amount",
-          "proposedWording": false,
+          "proposedWording": true,
           "part": "option",
           "optionIndex": 2
         },
@@ -4508,7 +4382,7 @@
         },
         {
           "stepId": "woman-mom-sister:practice-stop-amount",
-          "proposedWording": false,
+          "proposedWording": true,
           "part": "option",
           "optionIndex": 2
         },
@@ -4532,7 +4406,7 @@
         },
         {
           "stepId": "woman-teacher-classmate:practice-stop-amount",
-          "proposedWording": false,
+          "proposedWording": true,
           "part": "option",
           "optionIndex": 2
         },
@@ -4556,7 +4430,7 @@
         },
         {
           "stepId": "man-dad-teacher:practice-stop-amount",
-          "proposedWording": false,
+          "proposedWording": true,
           "part": "option",
           "optionIndex": 2
         },
@@ -4580,7 +4454,7 @@
         },
         {
           "stepId": "man-brother-friend:practice-stop-amount",
-          "proposedWording": false,
+          "proposedWording": true,
           "part": "option",
           "optionIndex": 2
         },
@@ -4604,7 +4478,7 @@
         },
         {
           "stepId": "man-bestfriend-friend:practice-stop-amount",
-          "proposedWording": false,
+          "proposedWording": true,
           "part": "option",
           "optionIndex": 2
         },
@@ -4628,7 +4502,7 @@
         },
         {
           "stepId": "man-teacher-friend:practice-stop-amount",
-          "proposedWording": false,
+          "proposedWording": true,
           "part": "option",
           "optionIndex": 2
         },
@@ -4652,7 +4526,7 @@
         },
         {
           "stepId": "man-dad-brother:practice-stop-amount",
-          "proposedWording": false,
+          "proposedWording": true,
           "part": "option",
           "optionIndex": 2
         },
@@ -4676,7 +4550,7 @@
         },
         {
           "stepId": "man-teacher-classmate:practice-stop-amount",
-          "proposedWording": false,
+          "proposedWording": true,
           "part": "option",
           "optionIndex": 2
         },
@@ -4700,7 +4574,7 @@
         },
         {
           "stepId": "family-mom-dad:practice-stop-amount",
-          "proposedWording": false,
+          "proposedWording": true,
           "part": "option",
           "optionIndex": 2
         },
@@ -4724,7 +4598,7 @@
         },
         {
           "stepId": "family-sister-brother:practice-stop-amount",
-          "proposedWording": false,
+          "proposedWording": true,
           "part": "option",
           "optionIndex": 2
         },
@@ -4748,7 +4622,7 @@
         },
         {
           "stepId": "family-dad-kid:practice-stop-amount",
-          "proposedWording": false,
+          "proposedWording": true,
           "part": "option",
           "optionIndex": 2
         },
@@ -4772,7 +4646,7 @@
         },
         {
           "stepId": "family-mom-kid:practice-stop-amount",
-          "proposedWording": false,
+          "proposedWording": true,
           "part": "option",
           "optionIndex": 2
         },
@@ -4796,7 +4670,7 @@
         },
         {
           "stepId": "family-teacher-kid:practice-stop-amount",
-          "proposedWording": false,
+          "proposedWording": true,
           "part": "option",
           "optionIndex": 2
         },
@@ -4820,7 +4694,7 @@
         },
         {
           "stepId": "family-teacher-classmate:practice-stop-amount",
-          "proposedWording": false,
+          "proposedWording": true,
           "part": "option",
           "optionIndex": 2
         },
@@ -4998,7 +4872,7 @@
     },
     {
       "id": "nr_022",
-      "text": "When someone asks you a question, you do not HAVE TO lie. Let’s try that question again.",
+      "text": "When someone asks you a question, you do not HAVE TO lie. Let\u2019s try that question again.",
       "src": "assets/narration/nr_022.mp3",
       "kind": "reminder",
       "status": "imported",
@@ -5120,7 +4994,7 @@
       },
       "narrationEmphasis": {
         "status": "awaiting-new-recording",
-        "originalRecordedText": "When someone asks you a question, you do not have to lie. Let’s try that question again.",
+        "originalRecordedText": "When someone asks you a question, you do not have to lie. Let\u2019s try that question again.",
         "visualCaseOnly": true
       }
     },
@@ -5254,7 +5128,7 @@
     },
     {
       "id": "nr_024",
-      "text": "So now, I’m going to ask you some questions about whether people HAVE TO do things.",
+      "text": "So now, I\u2019m going to ask you some questions about whether people HAVE TO do things.",
       "src": "assets/narration/nr_024.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -5369,20 +5243,20 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "23.So_now,_I’m_going_to_ask_you_s.mp3",
+        "archiveMember": "23.So_now,_I\u2019m_going_to_ask_you_s.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
       },
       "narrationEmphasis": {
         "status": "awaiting-new-recording",
-        "originalRecordedText": "So now, I’m going to ask you some questions about whether people have to do things.",
+        "originalRecordedText": "So now, I\u2019m going to ask you some questions about whether people have to do things.",
         "visualCaseOnly": true
       }
     },
     {
       "id": "nr_025",
-      "text": "Now, do you think the kid’s teacher HAS TO help the kid? Yes or No.",
+      "text": "Now, do you think the kid\u2019s teacher HAS TO help the kid? Yes or No.",
       "src": "assets/narration/nr_025.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -5442,20 +5316,20 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "24.Now,_do_you_think_the_kid’s_te.mp3",
+        "archiveMember": "24.Now,_do_you_think_the_kid\u2019s_te.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
       },
       "narrationEmphasis": {
         "status": "awaiting-new-recording",
-        "originalRecordedText": "Now, do you think the kid’s teacher HAS to help the kid? Yes or No.",
+        "originalRecordedText": "Now, do you think the kid\u2019s teacher HAS to help the kid? Yes or No.",
         "visualCaseOnly": true
       }
     },
     {
       "id": "nr_026",
-      "text": "The kid’s teacher. How much do you think the kid’s teacher HAS TO?",
+      "text": "The kid\u2019s teacher. How much do you think the kid\u2019s teacher HAS TO?",
       "src": "assets/narration/nr_026.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -5515,20 +5389,20 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "25.The_kid’s_teacher._How_much_do.mp3",
+        "archiveMember": "25.The_kid\u2019s_teacher._How_much_do.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
       },
       "narrationEmphasis": {
         "status": "awaiting-new-recording",
-        "originalRecordedText": "The kid’s teacher. How much do you think the kid’s teacher has to?",
+        "originalRecordedText": "The kid\u2019s teacher. How much do you think the kid\u2019s teacher has to?",
         "visualCaseOnly": true
       }
     },
     {
       "id": "nr_027",
-      "text": "Now, do you think the kid’s mom HAS TO help the kid? Yes or No.",
+      "text": "Now, do you think the kid\u2019s mom HAS TO help the kid? Yes or No.",
       "src": "assets/narration/nr_027.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -5568,20 +5442,20 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "26.Now,_do_you_think_the_kid’s_mo.mp3",
+        "archiveMember": "26.Now,_do_you_think_the_kid\u2019s_mo.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
       },
       "narrationEmphasis": {
         "status": "awaiting-new-recording",
-        "originalRecordedText": "Now, do you think the kid’s mom HAS to help the kid? Yes or No.",
+        "originalRecordedText": "Now, do you think the kid\u2019s mom HAS to help the kid? Yes or No.",
         "visualCaseOnly": true
       }
     },
     {
       "id": "nr_028",
-      "text": "The kid’s mom. How much do you think she HAS TO?",
+      "text": "The kid\u2019s mom. How much do you think she HAS TO?",
       "src": "assets/narration/nr_028.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -5626,20 +5500,20 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "27.The_kid’s_mom._How_much_do_you.mp3",
+        "archiveMember": "27.The_kid\u2019s_mom._How_much_do_you.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
       },
       "narrationEmphasis": {
         "status": "awaiting-new-recording",
-        "originalRecordedText": "The kid’s mom. How much do you think she has to?",
+        "originalRecordedText": "The kid\u2019s mom. How much do you think she has to?",
         "visualCaseOnly": true
       }
     },
     {
       "id": "nr_196",
-      "text": "No one helped the kid. The kid’s teacher did NOT help the kid. The kid’s mom did NOT help the kid.",
+      "text": "No one helped the kid. The kid\u2019s teacher did NOT help the kid. The kid\u2019s mom did NOT help the kid.",
       "src": null,
       "kind": "prompt",
       "status": "pending",
@@ -5776,7 +5650,7 @@
     },
     {
       "id": "nr_197",
-      "text": "Actually, remember, no one helped the kid. The kid’s teacher did NOT help the kid. The kid’s mom did NOT help the kid. Can you tell me, did either of these people help the kid?",
+      "text": "Actually, remember, no one helped the kid. The kid\u2019s teacher did NOT help the kid. The kid\u2019s mom did NOT help the kid. Can you tell me, did either of these people help the kid?",
       "src": null,
       "kind": "reminder",
       "status": "pending",
@@ -7164,7 +7038,7 @@
     },
     {
       "id": "nr_039",
-      "text": "Do you remember, did the kid’s teacher help the kid?",
+      "text": "Do you remember, did the kid\u2019s teacher help the kid?",
       "src": "assets/narration/nr_039.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -7224,7 +7098,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "38.Do_you_remember,_did_the_kid’s.mp3",
+        "archiveMember": "38.Do_you_remember,_did_the_kid\u2019s.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -7232,7 +7106,7 @@
     },
     {
       "id": "nr_040",
-      "text": "Remember, the kid’s teacher did not help the kid. Do you remember, did the kid’s teacher help the kid?",
+      "text": "Remember, the kid\u2019s teacher did not help the kid. Do you remember, did the kid\u2019s teacher help the kid?",
       "src": "assets/narration/nr_040.mp3",
       "kind": "reminder",
       "status": "imported",
@@ -7292,7 +7166,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "39.Remember,_the_kid’s_teacher_di.mp3",
+        "archiveMember": "39.Remember,_the_kid\u2019s_teacher_di.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -7300,7 +7174,7 @@
     },
     {
       "id": "nr_199",
-      "text": "Do you think it was Mean or Not Mean that the kid’s teacher did NOT help the kid in the middle?",
+      "text": "Do you think it was Mean or Not Mean that the kid\u2019s teacher did NOT help the kid in the middle?",
       "src": null,
       "kind": "prompt",
       "status": "pending",
@@ -7608,7 +7482,7 @@
     },
     {
       "id": "nr_200",
-      "text": "How mean do you think the kid’s teacher was for NOT helping the kid in the middle?",
+      "text": "How mean do you think the kid\u2019s teacher was for NOT helping the kid in the middle?",
       "src": null,
       "kind": "prompt",
       "status": "pending",
@@ -8165,7 +8039,7 @@
     },
     {
       "id": "nr_046",
-      "text": "Do you remember, did the kid’s mom help the kid?",
+      "text": "Do you remember, did the kid\u2019s mom help the kid?",
       "src": "assets/narration/nr_046.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -8205,7 +8079,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "45.Do_you_remember,_did_the_kid’s.mp3",
+        "archiveMember": "45.Do_you_remember,_did_the_kid\u2019s.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -8213,7 +8087,7 @@
     },
     {
       "id": "nr_047",
-      "text": "Remember, the kid’s mom did not help the kid. Do you remember, did the kid’s mom help the kid?",
+      "text": "Remember, the kid\u2019s mom did not help the kid. Do you remember, did the kid\u2019s mom help the kid?",
       "src": "assets/narration/nr_047.mp3",
       "kind": "reminder",
       "status": "imported",
@@ -8253,7 +8127,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "46.Remember,_the_kid’s_mom_did_no.mp3",
+        "archiveMember": "46.Remember,_the_kid\u2019s_mom_did_no.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -8261,7 +8135,7 @@
     },
     {
       "id": "nr_201",
-      "text": "Do you think it was Mean or Not Mean that the kid’s mom did NOT help the kid in the middle?",
+      "text": "Do you think it was Mean or Not Mean that the kid\u2019s mom did NOT help the kid in the middle?",
       "src": null,
       "kind": "prompt",
       "status": "pending",
@@ -8300,7 +8174,7 @@
     },
     {
       "id": "nr_202",
-      "text": "How mean do you think the kid’s mom was for NOT helping the kid in the middle?",
+      "text": "How mean do you think the kid\u2019s mom was for NOT helping the kid in the middle?",
       "src": null,
       "kind": "prompt",
       "status": "pending",
@@ -8462,7 +8336,7 @@
     },
     {
       "id": "nr_051",
-      "text": "The kid’s teacher",
+      "text": "The kid\u2019s teacher",
       "src": "assets/narration/nr_051.mp3",
       "kind": "option",
       "status": "imported",
@@ -8529,7 +8403,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "50.The_kid’s_teacher.mp3",
+        "archiveMember": "50.The_kid\u2019s_teacher.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -8537,7 +8411,7 @@
     },
     {
       "id": "nr_052",
-      "text": "The kid’s mom",
+      "text": "The kid\u2019s mom",
       "src": "assets/narration/nr_052.mp3",
       "kind": "option",
       "status": "imported",
@@ -8586,7 +8460,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "51.The_kid’s_mom.mp3",
+        "archiveMember": "51.The_kid\u2019s_mom.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -8594,7 +8468,7 @@
     },
     {
       "id": "nr_053",
-      "text": "This little one is this kid’s sister. Tap the kid’s sister.",
+      "text": "This little one is this kid\u2019s sister. Tap the kid\u2019s sister.",
       "src": "assets/narration/nr_053.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -8634,7 +8508,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "2652a496711b81b81622e8ac9530fd2eedf3e87fae62084d458e39b3d153c15b",
-        "archiveMember": "7.This_little_one_is_this_kid’s_.mp3",
+        "archiveMember": "7.This_little_one_is_this_kid\u2019s_.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -8642,7 +8516,7 @@
     },
     {
       "id": "nr_054",
-      "text": "This little one is this kid’s sister. This one is the kid’s sister. Tap the kid’s sister.",
+      "text": "This little one is this kid\u2019s sister. This one is the kid\u2019s sister. Tap the kid\u2019s sister.",
       "src": "assets/narration/nr_054.mp3",
       "kind": "reminder",
       "status": "imported",
@@ -8682,7 +8556,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "2652a496711b81b81622e8ac9530fd2eedf3e87fae62084d458e39b3d153c15b",
-        "archiveMember": "8.This_little_one_is_this_kid’s_.mp3",
+        "archiveMember": "8.This_little_one_is_this_kid\u2019s_.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -8690,7 +8564,7 @@
     },
     {
       "id": "nr_055",
-      "text": "This little one is this kid’s friend. Tap the kid’s friend.",
+      "text": "This little one is this kid\u2019s friend. Tap the kid\u2019s friend.",
       "src": "assets/narration/nr_055.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -8745,7 +8619,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "2652a496711b81b81622e8ac9530fd2eedf3e87fae62084d458e39b3d153c15b",
-        "archiveMember": "9.This_little_one_is_this_kid’s_.mp3",
+        "archiveMember": "9.This_little_one_is_this_kid\u2019s_.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -8753,7 +8627,7 @@
     },
     {
       "id": "nr_056",
-      "text": "This little one is this kid’s friend. This one is the kid’s friend. Tap the kid’s friend.",
+      "text": "This little one is this kid\u2019s friend. This one is the kid\u2019s friend. Tap the kid\u2019s friend.",
       "src": "assets/narration/nr_056.mp3",
       "kind": "reminder",
       "status": "imported",
@@ -8808,7 +8682,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "2652a496711b81b81622e8ac9530fd2eedf3e87fae62084d458e39b3d153c15b",
-        "archiveMember": "10.This_little_one_is_this_kid’s_.mp3",
+        "archiveMember": "10.This_little_one_is_this_kid\u2019s_.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -8816,7 +8690,7 @@
     },
     {
       "id": "nr_057",
-      "text": "The kid’s sister and the kid’s friend both see that the kid is sad.",
+      "text": "The kid\u2019s sister and the kid\u2019s friend both see that the kid is sad.",
       "src": "assets/narration/nr_057.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -8846,7 +8720,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "56.The_kid’s_sister_and_the_kid’s.mp3",
+        "archiveMember": "56.The_kid\u2019s_sister_and_the_kid\u2019s.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -8854,7 +8728,7 @@
     },
     {
       "id": "nr_058",
-      "text": "Now, do you think the kid’s sister will help the kid?",
+      "text": "Now, do you think the kid\u2019s sister will help the kid?",
       "src": "assets/narration/nr_058.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -8894,7 +8768,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "57.Now,_do_you_think_the_kid’s_si.mp3",
+        "archiveMember": "57.Now,_do_you_think_the_kid\u2019s_si.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -8902,7 +8776,7 @@
     },
     {
       "id": "nr_059",
-      "text": "Now, do you think the kid’s friend will help the kid?",
+      "text": "Now, do you think the kid\u2019s friend will help the kid?",
       "src": "assets/narration/nr_059.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -8957,7 +8831,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "58.Now,_do_you_think_the_kid’s_fr.mp3",
+        "archiveMember": "58.Now,_do_you_think_the_kid\u2019s_fr.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -8965,7 +8839,7 @@
     },
     {
       "id": "nr_060",
-      "text": "Now, do you think the kid’s sister HAS TO help the kid? Yes or No.",
+      "text": "Now, do you think the kid\u2019s sister HAS TO help the kid? Yes or No.",
       "src": "assets/narration/nr_060.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -9005,20 +8879,20 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "59.Now,_do_you_think_the_kid’s_si.mp3",
+        "archiveMember": "59.Now,_do_you_think_the_kid\u2019s_si.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
       },
       "narrationEmphasis": {
         "status": "awaiting-new-recording",
-        "originalRecordedText": "Now, do you think the kid’s sister HAS to help the kid? Yes or No.",
+        "originalRecordedText": "Now, do you think the kid\u2019s sister HAS to help the kid? Yes or No.",
         "visualCaseOnly": true
       }
     },
     {
       "id": "nr_061",
-      "text": "The kid’s sister. How much do you think she HAS TO?",
+      "text": "The kid\u2019s sister. How much do you think she HAS TO?",
       "src": "assets/narration/nr_061.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -9058,20 +8932,20 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "60.The_kid’s_sister._How_much_do_.mp3",
+        "archiveMember": "60.The_kid\u2019s_sister._How_much_do_.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
       },
       "narrationEmphasis": {
         "status": "awaiting-new-recording",
-        "originalRecordedText": "The kid’s sister. How much do you think she has to?",
+        "originalRecordedText": "The kid\u2019s sister. How much do you think she has to?",
         "visualCaseOnly": true
       }
     },
     {
       "id": "nr_062",
-      "text": "Now, do you think the kid’s friend HAS TO help the kid? Yes or No.",
+      "text": "Now, do you think the kid\u2019s friend HAS TO help the kid? Yes or No.",
       "src": "assets/narration/nr_062.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -9126,20 +9000,20 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "61.Now,_do_you_think_the_kid’s_fr.mp3",
+        "archiveMember": "61.Now,_do_you_think_the_kid\u2019s_fr.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
       },
       "narrationEmphasis": {
         "status": "awaiting-new-recording",
-        "originalRecordedText": "Now, do you think the kid’s friend HAS to help the kid? Yes or No.",
+        "originalRecordedText": "Now, do you think the kid\u2019s friend HAS to help the kid? Yes or No.",
         "visualCaseOnly": true
       }
     },
     {
       "id": "nr_063",
-      "text": "The kid’s friend. How much do you think the kid’s friend HAS TO?",
+      "text": "The kid\u2019s friend. How much do you think the kid\u2019s friend HAS TO?",
       "src": "assets/narration/nr_063.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -9194,20 +9068,20 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "62.The_kid’s_friend._How_much_do_.mp3",
+        "archiveMember": "62.The_kid\u2019s_friend._How_much_do_.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
       },
       "narrationEmphasis": {
         "status": "awaiting-new-recording",
-        "originalRecordedText": "The kid’s friend. How much do you think the kid’s friend has to?",
+        "originalRecordedText": "The kid\u2019s friend. How much do you think the kid\u2019s friend has to?",
         "visualCaseOnly": true
       }
     },
     {
       "id": "nr_203",
-      "text": "No one helped the kid. The kid’s sister did NOT help the kid. The kid’s friend did NOT help the kid.",
+      "text": "No one helped the kid. The kid\u2019s sister did NOT help the kid. The kid\u2019s friend did NOT help the kid.",
       "src": null,
       "kind": "prompt",
       "status": "pending",
@@ -9236,7 +9110,7 @@
     },
     {
       "id": "nr_204",
-      "text": "Actually, remember, no one helped the kid. The kid’s sister did NOT help the kid. The kid’s friend did NOT help the kid. Can you tell me, did either of these people help the kid?",
+      "text": "Actually, remember, no one helped the kid. The kid\u2019s sister did NOT help the kid. The kid\u2019s friend did NOT help the kid. Can you tell me, did either of these people help the kid?",
       "src": null,
       "kind": "reminder",
       "status": "pending",
@@ -9265,7 +9139,7 @@
     },
     {
       "id": "nr_065",
-      "text": "Do you remember, did the kid’s sister help the kid?",
+      "text": "Do you remember, did the kid\u2019s sister help the kid?",
       "src": "assets/narration/nr_065.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -9305,7 +9179,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "64.Do_you_remember,_did_the_kid’s.mp3",
+        "archiveMember": "64.Do_you_remember,_did_the_kid\u2019s.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -9313,7 +9187,7 @@
     },
     {
       "id": "nr_066",
-      "text": "Remember, the kid’s sister did not help the kid. Do you remember, did the kid’s sister help the kid?",
+      "text": "Remember, the kid\u2019s sister did not help the kid. Do you remember, did the kid\u2019s sister help the kid?",
       "src": "assets/narration/nr_066.mp3",
       "kind": "reminder",
       "status": "imported",
@@ -9353,7 +9227,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "65.Remember,_the_kid’s_sister_did.mp3",
+        "archiveMember": "65.Remember,_the_kid\u2019s_sister_did.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -9361,7 +9235,7 @@
     },
     {
       "id": "nr_205",
-      "text": "Do you think it was Mean or Not Mean that the kid’s sister did NOT help the kid in the middle?",
+      "text": "Do you think it was Mean or Not Mean that the kid\u2019s sister did NOT help the kid in the middle?",
       "src": null,
       "kind": "prompt",
       "status": "pending",
@@ -9400,7 +9274,7 @@
     },
     {
       "id": "nr_206",
-      "text": "How mean do you think the kid’s sister was for NOT helping the kid in the middle?",
+      "text": "How mean do you think the kid\u2019s sister was for NOT helping the kid in the middle?",
       "src": null,
       "kind": "prompt",
       "status": "pending",
@@ -9439,7 +9313,7 @@
     },
     {
       "id": "nr_069",
-      "text": "Do you remember, did the kid’s friend help the kid?",
+      "text": "Do you remember, did the kid\u2019s friend help the kid?",
       "src": "assets/narration/nr_069.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -9494,7 +9368,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "68.Do_you_remember,_did_the_kid’s.mp3",
+        "archiveMember": "68.Do_you_remember,_did_the_kid\u2019s.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -9502,7 +9376,7 @@
     },
     {
       "id": "nr_070",
-      "text": "Remember, the kid’s friend did not help the kid. Do you remember, did the kid’s friend help the kid?",
+      "text": "Remember, the kid\u2019s friend did not help the kid. Do you remember, did the kid\u2019s friend help the kid?",
       "src": "assets/narration/nr_070.mp3",
       "kind": "reminder",
       "status": "imported",
@@ -9557,7 +9431,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "69.Remember,_the_kid’s_friend_did.mp3",
+        "archiveMember": "69.Remember,_the_kid\u2019s_friend_did.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -9565,7 +9439,7 @@
     },
     {
       "id": "nr_207",
-      "text": "Do you think it was Mean or Not Mean that the kid’s friend did NOT help the kid in the middle?",
+      "text": "Do you think it was Mean or Not Mean that the kid\u2019s friend did NOT help the kid in the middle?",
       "src": null,
       "kind": "prompt",
       "status": "pending",
@@ -9619,7 +9493,7 @@
     },
     {
       "id": "nr_208",
-      "text": "How mean do you think the kid’s friend was for NOT helping the kid in the middle?",
+      "text": "How mean do you think the kid\u2019s friend was for NOT helping the kid in the middle?",
       "src": null,
       "kind": "prompt",
       "status": "pending",
@@ -9673,7 +9547,7 @@
     },
     {
       "id": "nr_073",
-      "text": "The kid’s sister",
+      "text": "The kid\u2019s sister",
       "src": "assets/narration/nr_073.mp3",
       "kind": "option",
       "status": "imported",
@@ -9716,7 +9590,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "72.The_kid’s_sister.mp3",
+        "archiveMember": "72.The_kid\u2019s_sister.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -9724,7 +9598,7 @@
     },
     {
       "id": "nr_074",
-      "text": "The kid’s friend",
+      "text": "The kid\u2019s friend",
       "src": "assets/narration/nr_074.mp3",
       "kind": "option",
       "status": "imported",
@@ -9785,7 +9659,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "73.The_kid’s_friend.mp3",
+        "archiveMember": "73.The_kid\u2019s_friend.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -9793,7 +9667,7 @@
     },
     {
       "id": "nr_075",
-      "text": "This little one is this kid’s best friend. Tap the kid’s best friend.",
+      "text": "This little one is this kid\u2019s best friend. Tap the kid\u2019s best friend.",
       "src": "assets/narration/nr_075.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -9828,7 +9702,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "2652a496711b81b81622e8ac9530fd2eedf3e87fae62084d458e39b3d153c15b",
-        "archiveMember": "11.This_little_one_is_this_kid’s_.mp3",
+        "archiveMember": "11.This_little_one_is_this_kid\u2019s_.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -9836,7 +9710,7 @@
     },
     {
       "id": "nr_076",
-      "text": "This little one is this kid’s best friend. This one is the kid’s best friend. Tap the kid’s best friend.",
+      "text": "This little one is this kid\u2019s best friend. This one is the kid\u2019s best friend. Tap the kid\u2019s best friend.",
       "src": "assets/narration/nr_076.mp3",
       "kind": "reminder",
       "status": "imported",
@@ -9871,7 +9745,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "2652a496711b81b81622e8ac9530fd2eedf3e87fae62084d458e39b3d153c15b",
-        "archiveMember": "12.This_little_one_is_this_kid’s_.mp3",
+        "archiveMember": "12.This_little_one_is_this_kid\u2019s_.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -9879,7 +9753,7 @@
     },
     {
       "id": "nr_077",
-      "text": "The kid’s friend and the kid’s best friend both see that the kid is sad.",
+      "text": "The kid\u2019s friend and the kid\u2019s best friend both see that the kid is sad.",
       "src": "assets/narration/nr_077.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -9914,7 +9788,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "76.The_kid’s_friend_and_the_kid’s.mp3",
+        "archiveMember": "76.The_kid\u2019s_friend_and_the_kid\u2019s.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -9922,7 +9796,7 @@
     },
     {
       "id": "nr_078",
-      "text": "Now, do you think the kid’s best friend will help the kid?",
+      "text": "Now, do you think the kid\u2019s best friend will help the kid?",
       "src": "assets/narration/nr_078.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -9957,7 +9831,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "77.Now,_do_you_think_the_kid’s_be.mp3",
+        "archiveMember": "77.Now,_do_you_think_the_kid\u2019s_be.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -9965,7 +9839,7 @@
     },
     {
       "id": "nr_079",
-      "text": "Now, do you think the kid’s best friend HAS TO help the kid? Yes or No.",
+      "text": "Now, do you think the kid\u2019s best friend HAS TO help the kid? Yes or No.",
       "src": "assets/narration/nr_079.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -10000,20 +9874,20 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "78.Now,_do_you_think_the_kid’s_be.mp3",
+        "archiveMember": "78.Now,_do_you_think_the_kid\u2019s_be.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
       },
       "narrationEmphasis": {
         "status": "awaiting-new-recording",
-        "originalRecordedText": "Now, do you think the kid’s best friend HAS to help the kid? Yes or No.",
+        "originalRecordedText": "Now, do you think the kid\u2019s best friend HAS to help the kid? Yes or No.",
         "visualCaseOnly": true
       }
     },
     {
       "id": "nr_080",
-      "text": "The kid’s best friend. How much do you think the kid’s best friend HAS TO?",
+      "text": "The kid\u2019s best friend. How much do you think the kid\u2019s best friend HAS TO?",
       "src": "assets/narration/nr_080.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -10048,20 +9922,20 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "79.The_kid’s_best_friend._How_muc.mp3",
+        "archiveMember": "79.The_kid\u2019s_best_friend._How_muc.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
       },
       "narrationEmphasis": {
         "status": "awaiting-new-recording",
-        "originalRecordedText": "The kid’s best friend. How much do you think the kid’s best friend has to?",
+        "originalRecordedText": "The kid\u2019s best friend. How much do you think the kid\u2019s best friend has to?",
         "visualCaseOnly": true
       }
     },
     {
       "id": "nr_209",
-      "text": "No one helped the kid. The kid’s friend did NOT help the kid. The kid’s best friend did NOT help the kid.",
+      "text": "No one helped the kid. The kid\u2019s friend did NOT help the kid. The kid\u2019s best friend did NOT help the kid.",
       "src": null,
       "kind": "prompt",
       "status": "pending",
@@ -10095,7 +9969,7 @@
     },
     {
       "id": "nr_210",
-      "text": "Actually, remember, no one helped the kid. The kid’s friend did NOT help the kid. The kid’s best friend did NOT help the kid. Can you tell me, did either of these people help the kid?",
+      "text": "Actually, remember, no one helped the kid. The kid\u2019s friend did NOT help the kid. The kid\u2019s best friend did NOT help the kid. Can you tell me, did either of these people help the kid?",
       "src": null,
       "kind": "reminder",
       "status": "pending",
@@ -10129,7 +10003,7 @@
     },
     {
       "id": "nr_082",
-      "text": "Do you remember, did the kid’s best friend help the kid?",
+      "text": "Do you remember, did the kid\u2019s best friend help the kid?",
       "src": "assets/narration/nr_082.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -10164,7 +10038,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "81.Do_you_remember,_did_the_kid’s.mp3",
+        "archiveMember": "81.Do_you_remember,_did_the_kid\u2019s.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -10172,7 +10046,7 @@
     },
     {
       "id": "nr_083",
-      "text": "Remember, the kid’s best friend did not help the kid. Do you remember, did the kid’s best friend help the kid?",
+      "text": "Remember, the kid\u2019s best friend did not help the kid. Do you remember, did the kid\u2019s best friend help the kid?",
       "src": "assets/narration/nr_083.mp3",
       "kind": "reminder",
       "status": "imported",
@@ -10207,7 +10081,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "82.Remember,_the_kid’s_best_frien.mp3",
+        "archiveMember": "82.Remember,_the_kid\u2019s_best_frien.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -10215,7 +10089,7 @@
     },
     {
       "id": "nr_211",
-      "text": "Do you think it was Mean or Not Mean that the kid’s best friend did NOT help the kid in the middle?",
+      "text": "Do you think it was Mean or Not Mean that the kid\u2019s best friend did NOT help the kid in the middle?",
       "src": null,
       "kind": "prompt",
       "status": "pending",
@@ -10249,7 +10123,7 @@
     },
     {
       "id": "nr_212",
-      "text": "How mean do you think the kid’s best friend was for NOT helping the kid in the middle?",
+      "text": "How mean do you think the kid\u2019s best friend was for NOT helping the kid in the middle?",
       "src": null,
       "kind": "prompt",
       "status": "pending",
@@ -10283,7 +10157,7 @@
     },
     {
       "id": "nr_086",
-      "text": "The kid’s best friend",
+      "text": "The kid\u2019s best friend",
       "src": "assets/narration/nr_086.mp3",
       "kind": "option",
       "status": "imported",
@@ -10320,7 +10194,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "85.The_kid’s_best_friend.mp3",
+        "archiveMember": "85.The_kid\u2019s_best_friend.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -10328,7 +10202,7 @@
     },
     {
       "id": "nr_087",
-      "text": "The kid’s teacher and the kid’s friend both see that the kid is sad.",
+      "text": "The kid\u2019s teacher and the kid\u2019s friend both see that the kid is sad.",
       "src": "assets/narration/nr_087.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -10363,7 +10237,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "86.The_kid’s_teacher_and_the_kid’.mp3",
+        "archiveMember": "86.The_kid\u2019s_teacher_and_the_kid\u2019.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -10371,7 +10245,7 @@
     },
     {
       "id": "nr_213",
-      "text": "No one helped the kid. The kid’s teacher did NOT help the kid. The kid’s friend did NOT help the kid.",
+      "text": "No one helped the kid. The kid\u2019s teacher did NOT help the kid. The kid\u2019s friend did NOT help the kid.",
       "src": null,
       "kind": "prompt",
       "status": "pending",
@@ -10405,7 +10279,7 @@
     },
     {
       "id": "nr_214",
-      "text": "Actually, remember, no one helped the kid. The kid’s teacher did NOT help the kid. The kid’s friend did NOT help the kid. Can you tell me, did either of these people help the kid?",
+      "text": "Actually, remember, no one helped the kid. The kid\u2019s teacher did NOT help the kid. The kid\u2019s friend did NOT help the kid. Can you tell me, did either of these people help the kid?",
       "src": null,
       "kind": "reminder",
       "status": "pending",
@@ -10439,7 +10313,7 @@
     },
     {
       "id": "nr_089",
-      "text": "The kid’s mom and the kid’s sister both see that the kid is sad.",
+      "text": "The kid\u2019s mom and the kid\u2019s sister both see that the kid is sad.",
       "src": "assets/narration/nr_089.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -10469,7 +10343,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "88.The_kid’s_mom_and_the_kid’s_si.mp3",
+        "archiveMember": "88.The_kid\u2019s_mom_and_the_kid\u2019s_si.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -10477,7 +10351,7 @@
     },
     {
       "id": "nr_215",
-      "text": "No one helped the kid. The kid’s mom did NOT help the kid. The kid’s sister did NOT help the kid.",
+      "text": "No one helped the kid. The kid\u2019s mom did NOT help the kid. The kid\u2019s sister did NOT help the kid.",
       "src": null,
       "kind": "prompt",
       "status": "pending",
@@ -10506,7 +10380,7 @@
     },
     {
       "id": "nr_216",
-      "text": "Actually, remember, no one helped the kid. The kid’s mom did NOT help the kid. The kid’s sister did NOT help the kid. Can you tell me, did either of these people help the kid?",
+      "text": "Actually, remember, no one helped the kid. The kid\u2019s mom did NOT help the kid. The kid\u2019s sister did NOT help the kid. Can you tell me, did either of these people help the kid?",
       "src": null,
       "kind": "reminder",
       "status": "pending",
@@ -10535,7 +10409,7 @@
     },
     {
       "id": "nr_091",
-      "text": "This little one is this kid’s classmate. Tap the kid’s classmate.",
+      "text": "This little one is this kid\u2019s classmate. Tap the kid\u2019s classmate.",
       "src": "assets/narration/nr_091.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -10575,7 +10449,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "2652a496711b81b81622e8ac9530fd2eedf3e87fae62084d458e39b3d153c15b",
-        "archiveMember": "13.This_little_one_is_this_kid’s_.mp3",
+        "archiveMember": "13.This_little_one_is_this_kid\u2019s_.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -10583,7 +10457,7 @@
     },
     {
       "id": "nr_092",
-      "text": "This little one is this kid’s classmate. This one is the kid’s classmate. Tap the kid’s classmate.",
+      "text": "This little one is this kid\u2019s classmate. This one is the kid\u2019s classmate. Tap the kid\u2019s classmate.",
       "src": "assets/narration/nr_092.mp3",
       "kind": "reminder",
       "status": "imported",
@@ -10623,7 +10497,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "2652a496711b81b81622e8ac9530fd2eedf3e87fae62084d458e39b3d153c15b",
-        "archiveMember": "14.This_little_one_is_this_kid’s_.mp3",
+        "archiveMember": "14.This_little_one_is_this_kid\u2019s_.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -10631,7 +10505,7 @@
     },
     {
       "id": "nr_093",
-      "text": "The kid’s classmate and the kid’s teacher both see that the kid is sad.",
+      "text": "The kid\u2019s classmate and the kid\u2019s teacher both see that the kid is sad.",
       "src": "assets/narration/nr_093.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -10671,7 +10545,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "92.The_kid’s_classmate_and_the_ki.mp3",
+        "archiveMember": "92.The_kid\u2019s_classmate_and_the_ki.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -10679,7 +10553,7 @@
     },
     {
       "id": "nr_094",
-      "text": "Now, do you think the kid’s classmate will help the kid?",
+      "text": "Now, do you think the kid\u2019s classmate will help the kid?",
       "src": "assets/narration/nr_094.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -10719,7 +10593,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "93.Now,_do_you_think_the_kid’s_cl.mp3",
+        "archiveMember": "93.Now,_do_you_think_the_kid\u2019s_cl.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -10727,7 +10601,7 @@
     },
     {
       "id": "nr_095",
-      "text": "Now, do you think the kid’s classmate HAS TO help the kid? Yes or No.",
+      "text": "Now, do you think the kid\u2019s classmate HAS TO help the kid? Yes or No.",
       "src": "assets/narration/nr_095.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -10767,20 +10641,20 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "94.Now,_do_you_think_the_kid’s_cl.mp3",
+        "archiveMember": "94.Now,_do_you_think_the_kid\u2019s_cl.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
       },
       "narrationEmphasis": {
         "status": "awaiting-new-recording",
-        "originalRecordedText": "Now, do you think the kid’s classmate HAS to help the kid? Yes or No.",
+        "originalRecordedText": "Now, do you think the kid\u2019s classmate HAS to help the kid? Yes or No.",
         "visualCaseOnly": true
       }
     },
     {
       "id": "nr_096",
-      "text": "The kid’s classmate. How much do you think the kid’s classmate HAS TO?",
+      "text": "The kid\u2019s classmate. How much do you think the kid\u2019s classmate HAS TO?",
       "src": "assets/narration/nr_096.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -10820,20 +10694,20 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "95.The_kid’s_classmate._How_much_.mp3",
+        "archiveMember": "95.The_kid\u2019s_classmate._How_much_.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
       },
       "narrationEmphasis": {
         "status": "awaiting-new-recording",
-        "originalRecordedText": "The kid’s classmate. How much do you think the kid’s classmate has to?",
+        "originalRecordedText": "The kid\u2019s classmate. How much do you think the kid\u2019s classmate has to?",
         "visualCaseOnly": true
       }
     },
     {
       "id": "nr_217",
-      "text": "No one helped the kid. The kid’s classmate did NOT help the kid. The kid’s teacher did NOT help the kid.",
+      "text": "No one helped the kid. The kid\u2019s classmate did NOT help the kid. The kid\u2019s teacher did NOT help the kid.",
       "src": null,
       "kind": "prompt",
       "status": "pending",
@@ -10872,7 +10746,7 @@
     },
     {
       "id": "nr_218",
-      "text": "Actually, remember, no one helped the kid. The kid’s classmate did NOT help the kid. The kid’s teacher did NOT help the kid. Can you tell me, did either of these people help the kid?",
+      "text": "Actually, remember, no one helped the kid. The kid\u2019s classmate did NOT help the kid. The kid\u2019s teacher did NOT help the kid. Can you tell me, did either of these people help the kid?",
       "src": null,
       "kind": "reminder",
       "status": "pending",
@@ -10911,7 +10785,7 @@
     },
     {
       "id": "nr_098",
-      "text": "Do you remember, did the kid’s classmate help the kid?",
+      "text": "Do you remember, did the kid\u2019s classmate help the kid?",
       "src": "assets/narration/nr_098.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -10951,7 +10825,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "97.Do_you_remember,_did_the_kid’s.mp3",
+        "archiveMember": "97.Do_you_remember,_did_the_kid\u2019s.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -10959,7 +10833,7 @@
     },
     {
       "id": "nr_099",
-      "text": "Remember, the kid’s classmate did not help the kid. Do you remember, did the kid’s classmate help the kid?",
+      "text": "Remember, the kid\u2019s classmate did not help the kid. Do you remember, did the kid\u2019s classmate help the kid?",
       "src": "assets/narration/nr_099.mp3",
       "kind": "reminder",
       "status": "imported",
@@ -10999,7 +10873,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "98.Remember,_the_kid’s_classmate_.mp3",
+        "archiveMember": "98.Remember,_the_kid\u2019s_classmate_.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -11007,7 +10881,7 @@
     },
     {
       "id": "nr_219",
-      "text": "Do you think it was Mean or Not Mean that the kid’s classmate did NOT help the kid in the middle?",
+      "text": "Do you think it was Mean or Not Mean that the kid\u2019s classmate did NOT help the kid in the middle?",
       "src": null,
       "kind": "prompt",
       "status": "pending",
@@ -11046,7 +10920,7 @@
     },
     {
       "id": "nr_220",
-      "text": "How mean do you think the kid’s classmate was for NOT helping the kid in the middle?",
+      "text": "How mean do you think the kid\u2019s classmate was for NOT helping the kid in the middle?",
       "src": null,
       "kind": "prompt",
       "status": "pending",
@@ -11085,7 +10959,7 @@
     },
     {
       "id": "nr_102",
-      "text": "The kid’s classmate",
+      "text": "The kid\u2019s classmate",
       "src": "assets/narration/nr_102.mp3",
       "kind": "option",
       "status": "imported",
@@ -11128,7 +11002,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "1.The_kid’s_classmate.mp3",
+        "archiveMember": "1.The_kid\u2019s_classmate.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -11136,7 +11010,7 @@
     },
     {
       "id": "nr_103",
-      "text": "This big one is this kid’s dad. Tap the kid’s dad.",
+      "text": "This big one is this kid\u2019s dad. Tap the kid\u2019s dad.",
       "src": "assets/narration/nr_103.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -11181,7 +11055,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "2652a496711b81b81622e8ac9530fd2eedf3e87fae62084d458e39b3d153c15b",
-        "archiveMember": "15.This_big_one_is_this_kid’s_dad.mp3",
+        "archiveMember": "15.This_big_one_is_this_kid\u2019s_dad.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -11189,7 +11063,7 @@
     },
     {
       "id": "nr_104",
-      "text": "This big one is this kid’s dad. This one is the kid’s dad. Tap the kid’s dad.",
+      "text": "This big one is this kid\u2019s dad. This one is the kid\u2019s dad. Tap the kid\u2019s dad.",
       "src": "assets/narration/nr_104.mp3",
       "kind": "reminder",
       "status": "imported",
@@ -11234,7 +11108,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "2652a496711b81b81622e8ac9530fd2eedf3e87fae62084d458e39b3d153c15b",
-        "archiveMember": "16.This_big_one_is_this_kid’s_dad.mp3",
+        "archiveMember": "16.This_big_one_is_this_kid\u2019s_dad.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -11242,7 +11116,7 @@
     },
     {
       "id": "nr_105",
-      "text": "The kid’s teacher and the kid’s dad both see that the kid is sad.",
+      "text": "The kid\u2019s teacher and the kid\u2019s dad both see that the kid is sad.",
       "src": "assets/narration/nr_105.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -11272,7 +11146,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "4.The_kid’s_teacher_and_the_kid’.mp3",
+        "archiveMember": "4.The_kid\u2019s_teacher_and_the_kid\u2019.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -11280,7 +11154,7 @@
     },
     {
       "id": "nr_106",
-      "text": "Now, do you think the kid’s dad will help the kid?",
+      "text": "Now, do you think the kid\u2019s dad will help the kid?",
       "src": "assets/narration/nr_106.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -11320,7 +11194,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "5.Now,_do_you_think_the_kid’s_da.mp3",
+        "archiveMember": "5.Now,_do_you_think_the_kid\u2019s_da.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -11328,7 +11202,7 @@
     },
     {
       "id": "nr_107",
-      "text": "Now, do you think the kid’s dad HAS TO help the kid? Yes or No.",
+      "text": "Now, do you think the kid\u2019s dad HAS TO help the kid? Yes or No.",
       "src": "assets/narration/nr_107.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -11368,20 +11242,20 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "6.Now,_do_you_think_the_kid’s_da.mp3",
+        "archiveMember": "6.Now,_do_you_think_the_kid\u2019s_da.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
       },
       "narrationEmphasis": {
         "status": "awaiting-new-recording",
-        "originalRecordedText": "Now, do you think the kid’s dad HAS to help the kid? Yes or No.",
+        "originalRecordedText": "Now, do you think the kid\u2019s dad HAS to help the kid? Yes or No.",
         "visualCaseOnly": true
       }
     },
     {
       "id": "nr_108",
-      "text": "The kid’s dad. How much do you think he HAS TO?",
+      "text": "The kid\u2019s dad. How much do you think he HAS TO?",
       "src": "assets/narration/nr_108.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -11426,20 +11300,20 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "7.The_kid’s_dad._How_much_do_you.mp3",
+        "archiveMember": "7.The_kid\u2019s_dad._How_much_do_you.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
       },
       "narrationEmphasis": {
         "status": "awaiting-new-recording",
-        "originalRecordedText": "The kid’s dad. How much do you think he has to?",
+        "originalRecordedText": "The kid\u2019s dad. How much do you think he has to?",
         "visualCaseOnly": true
       }
     },
     {
       "id": "nr_221",
-      "text": "No one helped the kid. The kid’s teacher did NOT help the kid. The kid’s dad did NOT help the kid.",
+      "text": "No one helped the kid. The kid\u2019s teacher did NOT help the kid. The kid\u2019s dad did NOT help the kid.",
       "src": null,
       "kind": "prompt",
       "status": "pending",
@@ -11468,7 +11342,7 @@
     },
     {
       "id": "nr_222",
-      "text": "Actually, remember, no one helped the kid. The kid’s teacher did NOT help the kid. The kid’s dad did NOT help the kid. Can you tell me, did either of these people help the kid?",
+      "text": "Actually, remember, no one helped the kid. The kid\u2019s teacher did NOT help the kid. The kid\u2019s dad did NOT help the kid. Can you tell me, did either of these people help the kid?",
       "src": null,
       "kind": "reminder",
       "status": "pending",
@@ -11497,7 +11371,7 @@
     },
     {
       "id": "nr_110",
-      "text": "Do you remember, did the kid’s dad help the kid?",
+      "text": "Do you remember, did the kid\u2019s dad help the kid?",
       "src": "assets/narration/nr_110.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -11537,7 +11411,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "9.Do_you_remember,_did_the_kid’s.mp3",
+        "archiveMember": "9.Do_you_remember,_did_the_kid\u2019s.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -11545,7 +11419,7 @@
     },
     {
       "id": "nr_111",
-      "text": "Remember, the kid’s dad did not help the kid. Do you remember, did the kid’s dad help the kid?",
+      "text": "Remember, the kid\u2019s dad did not help the kid. Do you remember, did the kid\u2019s dad help the kid?",
       "src": "assets/narration/nr_111.mp3",
       "kind": "reminder",
       "status": "imported",
@@ -11585,7 +11459,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "10.Remember,_the_kid’s_dad_did_no.mp3",
+        "archiveMember": "10.Remember,_the_kid\u2019s_dad_did_no.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -11593,7 +11467,7 @@
     },
     {
       "id": "nr_223",
-      "text": "Do you think it was Mean or Not Mean that the kid’s dad did NOT help the kid in the middle?",
+      "text": "Do you think it was Mean or Not Mean that the kid\u2019s dad did NOT help the kid in the middle?",
       "src": null,
       "kind": "prompt",
       "status": "pending",
@@ -11632,7 +11506,7 @@
     },
     {
       "id": "nr_224",
-      "text": "How mean do you think the kid’s dad was for NOT helping the kid in the middle?",
+      "text": "How mean do you think the kid\u2019s dad was for NOT helping the kid in the middle?",
       "src": null,
       "kind": "prompt",
       "status": "pending",
@@ -11671,7 +11545,7 @@
     },
     {
       "id": "nr_114",
-      "text": "The kid’s dad",
+      "text": "The kid\u2019s dad",
       "src": "assets/narration/nr_114.mp3",
       "kind": "option",
       "status": "imported",
@@ -11720,7 +11594,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "13.The_kid’s_dad.mp3",
+        "archiveMember": "13.The_kid\u2019s_dad.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -11728,7 +11602,7 @@
     },
     {
       "id": "nr_115",
-      "text": "This little one is this kid’s brother. Tap the kid’s brother.",
+      "text": "This little one is this kid\u2019s brother. Tap the kid\u2019s brother.",
       "src": "assets/narration/nr_115.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -11768,7 +11642,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "2652a496711b81b81622e8ac9530fd2eedf3e87fae62084d458e39b3d153c15b",
-        "archiveMember": "17.This_little_one_is_this_kid’s_.mp3",
+        "archiveMember": "17.This_little_one_is_this_kid\u2019s_.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -11776,7 +11650,7 @@
     },
     {
       "id": "nr_116",
-      "text": "This little one is this kid’s brother. This one is the kid’s brother. Tap the kid’s brother.",
+      "text": "This little one is this kid\u2019s brother. This one is the kid\u2019s brother. Tap the kid\u2019s brother.",
       "src": "assets/narration/nr_116.mp3",
       "kind": "reminder",
       "status": "imported",
@@ -11816,7 +11690,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "2652a496711b81b81622e8ac9530fd2eedf3e87fae62084d458e39b3d153c15b",
-        "archiveMember": "18.This_little_one_is_this_kid’s_.mp3",
+        "archiveMember": "18.This_little_one_is_this_kid\u2019s_.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -11824,7 +11698,7 @@
     },
     {
       "id": "nr_117",
-      "text": "The kid’s brother and the kid’s friend both see that the kid is sad.",
+      "text": "The kid\u2019s brother and the kid\u2019s friend both see that the kid is sad.",
       "src": "assets/narration/nr_117.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -11854,7 +11728,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "16.The_kid’s_brother_and_the_kid’.mp3",
+        "archiveMember": "16.The_kid\u2019s_brother_and_the_kid\u2019.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -11862,7 +11736,7 @@
     },
     {
       "id": "nr_118",
-      "text": "Now, do you think the kid’s brother will help the kid?",
+      "text": "Now, do you think the kid\u2019s brother will help the kid?",
       "src": "assets/narration/nr_118.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -11902,7 +11776,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "17.Now,_do_you_think_the_kid’s_br.mp3",
+        "archiveMember": "17.Now,_do_you_think_the_kid\u2019s_br.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -11910,7 +11784,7 @@
     },
     {
       "id": "nr_119",
-      "text": "Now, do you think the kid’s brother HAS TO help the kid? Yes or No.",
+      "text": "Now, do you think the kid\u2019s brother HAS TO help the kid? Yes or No.",
       "src": "assets/narration/nr_119.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -11950,20 +11824,20 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "18.Now,_do_you_think_the_kid’s_br.mp3",
+        "archiveMember": "18.Now,_do_you_think_the_kid\u2019s_br.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
       },
       "narrationEmphasis": {
         "status": "awaiting-new-recording",
-        "originalRecordedText": "Now, do you think the kid’s brother HAS to help the kid? Yes or No.",
+        "originalRecordedText": "Now, do you think the kid\u2019s brother HAS to help the kid? Yes or No.",
         "visualCaseOnly": true
       }
     },
     {
       "id": "nr_120",
-      "text": "The kid’s brother. How much do you think he HAS TO?",
+      "text": "The kid\u2019s brother. How much do you think he HAS TO?",
       "src": "assets/narration/nr_120.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -12003,20 +11877,20 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "19.The_kid’s_brother._How_much_do.mp3",
+        "archiveMember": "19.The_kid\u2019s_brother._How_much_do.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
       },
       "narrationEmphasis": {
         "status": "awaiting-new-recording",
-        "originalRecordedText": "The kid’s brother. How much do you think he has to?",
+        "originalRecordedText": "The kid\u2019s brother. How much do you think he has to?",
         "visualCaseOnly": true
       }
     },
     {
       "id": "nr_225",
-      "text": "No one helped the kid. The kid’s brother did NOT help the kid. The kid’s friend did NOT help the kid.",
+      "text": "No one helped the kid. The kid\u2019s brother did NOT help the kid. The kid\u2019s friend did NOT help the kid.",
       "src": null,
       "kind": "prompt",
       "status": "pending",
@@ -12045,7 +11919,7 @@
     },
     {
       "id": "nr_226",
-      "text": "Actually, remember, no one helped the kid. The kid’s brother did NOT help the kid. The kid’s friend did NOT help the kid. Can you tell me, did either of these people help the kid?",
+      "text": "Actually, remember, no one helped the kid. The kid\u2019s brother did NOT help the kid. The kid\u2019s friend did NOT help the kid. Can you tell me, did either of these people help the kid?",
       "src": null,
       "kind": "reminder",
       "status": "pending",
@@ -12074,7 +11948,7 @@
     },
     {
       "id": "nr_122",
-      "text": "Do you remember, did the kid’s brother help the kid?",
+      "text": "Do you remember, did the kid\u2019s brother help the kid?",
       "src": "assets/narration/nr_122.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -12114,7 +11988,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "21.Do_you_remember,_did_the_kid’s.mp3",
+        "archiveMember": "21.Do_you_remember,_did_the_kid\u2019s.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -12122,7 +11996,7 @@
     },
     {
       "id": "nr_123",
-      "text": "Remember, the kid’s brother did not help the kid. Do you remember, did the kid’s brother help the kid?",
+      "text": "Remember, the kid\u2019s brother did not help the kid. Do you remember, did the kid\u2019s brother help the kid?",
       "src": "assets/narration/nr_123.mp3",
       "kind": "reminder",
       "status": "imported",
@@ -12162,7 +12036,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "22.Remember,_the_kid’s_brother_di.mp3",
+        "archiveMember": "22.Remember,_the_kid\u2019s_brother_di.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -12170,7 +12044,7 @@
     },
     {
       "id": "nr_227",
-      "text": "Do you think it was Mean or Not Mean that the kid’s brother did NOT help the kid in the middle?",
+      "text": "Do you think it was Mean or Not Mean that the kid\u2019s brother did NOT help the kid in the middle?",
       "src": null,
       "kind": "prompt",
       "status": "pending",
@@ -12209,7 +12083,7 @@
     },
     {
       "id": "nr_228",
-      "text": "How mean do you think the kid’s brother was for NOT helping the kid in the middle?",
+      "text": "How mean do you think the kid\u2019s brother was for NOT helping the kid in the middle?",
       "src": null,
       "kind": "prompt",
       "status": "pending",
@@ -12248,7 +12122,7 @@
     },
     {
       "id": "nr_126",
-      "text": "The kid’s brother",
+      "text": "The kid\u2019s brother",
       "src": "assets/narration/nr_126.mp3",
       "kind": "option",
       "status": "imported",
@@ -12291,7 +12165,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "25.The_kid’s_brother.mp3",
+        "archiveMember": "25.The_kid\u2019s_brother.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -12299,7 +12173,7 @@
     },
     {
       "id": "nr_127",
-      "text": "The kid’s dad and the kid’s brother both see that the kid is sad.",
+      "text": "The kid\u2019s dad and the kid\u2019s brother both see that the kid is sad.",
       "src": "assets/narration/nr_127.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -12329,7 +12203,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "26.The_kid’s_dad_and_the_kid’s_br.mp3",
+        "archiveMember": "26.The_kid\u2019s_dad_and_the_kid\u2019s_br.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -12337,7 +12211,7 @@
     },
     {
       "id": "nr_229",
-      "text": "No one helped the kid. The kid’s dad did NOT help the kid. The kid’s brother did NOT help the kid.",
+      "text": "No one helped the kid. The kid\u2019s dad did NOT help the kid. The kid\u2019s brother did NOT help the kid.",
       "src": null,
       "kind": "prompt",
       "status": "pending",
@@ -12366,7 +12240,7 @@
     },
     {
       "id": "nr_230",
-      "text": "Actually, remember, no one helped the kid. The kid’s dad did NOT help the kid. The kid’s brother did NOT help the kid. Can you tell me, did either of these people help the kid?",
+      "text": "Actually, remember, no one helped the kid. The kid\u2019s dad did NOT help the kid. The kid\u2019s brother did NOT help the kid. Can you tell me, did either of these people help the kid?",
       "src": null,
       "kind": "reminder",
       "status": "pending",
@@ -12395,7 +12269,7 @@
     },
     {
       "id": "nr_129",
-      "text": "The kid’s dad and the kid’s mom both see that the kid is sad.",
+      "text": "The kid\u2019s dad and the kid\u2019s mom both see that the kid is sad.",
       "src": "assets/narration/nr_129.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -12425,7 +12299,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "28.The_kid’s_dad_and_the_kid’s_mo.mp3",
+        "archiveMember": "28.The_kid\u2019s_dad_and_the_kid\u2019s_mo.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -12433,7 +12307,7 @@
     },
     {
       "id": "nr_231",
-      "text": "No one helped the kid. The kid’s dad did NOT help the kid. The kid’s mom did NOT help the kid.",
+      "text": "No one helped the kid. The kid\u2019s dad did NOT help the kid. The kid\u2019s mom did NOT help the kid.",
       "src": null,
       "kind": "prompt",
       "status": "pending",
@@ -12462,7 +12336,7 @@
     },
     {
       "id": "nr_232",
-      "text": "Actually, remember, no one helped the kid. The kid’s dad did NOT help the kid. The kid’s mom did NOT help the kid. Can you tell me, did either of these people help the kid?",
+      "text": "Actually, remember, no one helped the kid. The kid\u2019s dad did NOT help the kid. The kid\u2019s mom did NOT help the kid. Can you tell me, did either of these people help the kid?",
       "src": null,
       "kind": "reminder",
       "status": "pending",
@@ -12491,7 +12365,7 @@
     },
     {
       "id": "nr_131",
-      "text": "The kid’s sister and the kid’s brother both see that the kid is sad.",
+      "text": "The kid\u2019s sister and the kid\u2019s brother both see that the kid is sad.",
       "src": "assets/narration/nr_131.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -12521,7 +12395,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "30.The_kid’s_sister_and_the_kid’s.mp3",
+        "archiveMember": "30.The_kid\u2019s_sister_and_the_kid\u2019s.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -12529,7 +12403,7 @@
     },
     {
       "id": "nr_233",
-      "text": "No one helped the kid. The kid’s sister did NOT help the kid. The kid’s brother did NOT help the kid.",
+      "text": "No one helped the kid. The kid\u2019s sister did NOT help the kid. The kid\u2019s brother did NOT help the kid.",
       "src": null,
       "kind": "prompt",
       "status": "pending",
@@ -12558,7 +12432,7 @@
     },
     {
       "id": "nr_234",
-      "text": "Actually, remember, no one helped the kid. The kid’s sister did NOT help the kid. The kid’s brother did NOT help the kid. Can you tell me, did either of these people help the kid?",
+      "text": "Actually, remember, no one helped the kid. The kid\u2019s sister did NOT help the kid. The kid\u2019s brother did NOT help the kid. Can you tell me, did either of these people help the kid?",
       "src": null,
       "kind": "reminder",
       "status": "pending",
@@ -12587,7 +12461,7 @@
     },
     {
       "id": "nr_133",
-      "text": "This big one is this kid’s mom. Tap the mom.",
+      "text": "This big one is this kid\u2019s mom. Tap the mom.",
       "src": "assets/narration/nr_133.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -12617,7 +12491,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "2652a496711b81b81622e8ac9530fd2eedf3e87fae62084d458e39b3d153c15b",
-        "archiveMember": "19.This_big_one_is_this_kid’s_mom.mp3",
+        "archiveMember": "19.This_big_one_is_this_kid\u2019s_mom.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -12625,7 +12499,7 @@
     },
     {
       "id": "nr_134",
-      "text": "This big one is this kid’s mom. This one is the mom. Tap the mom.",
+      "text": "This big one is this kid\u2019s mom. This one is the mom. Tap the mom.",
       "src": "assets/narration/nr_134.mp3",
       "kind": "reminder",
       "status": "imported",
@@ -12655,7 +12529,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "2652a496711b81b81622e8ac9530fd2eedf3e87fae62084d458e39b3d153c15b",
-        "archiveMember": "20.This_big_one_is_this_kid’s_mom.mp3",
+        "archiveMember": "20.This_big_one_is_this_kid\u2019s_mom.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -12663,7 +12537,7 @@
     },
     {
       "id": "nr_135",
-      "text": "Now let’s say that one day the mom was very sad.",
+      "text": "Now let\u2019s say that one day the mom was very sad.",
       "src": "assets/narration/nr_135.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -12693,7 +12567,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "34.Now_let’s_say_that_one_day_the.mp3",
+        "archiveMember": "34.Now_let\u2019s_say_that_one_day_the.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -12701,7 +12575,7 @@
     },
     {
       "id": "nr_136",
-      "text": "The kid’s dad and the kid both see that the mom is sad.",
+      "text": "The kid\u2019s dad and the kid both see that the mom is sad.",
       "src": "assets/narration/nr_136.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -12731,7 +12605,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "35.The_kid’s_dad_and_the_kid_both.mp3",
+        "archiveMember": "35.The_kid\u2019s_dad_and_the_kid_both.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -12739,7 +12613,7 @@
     },
     {
       "id": "nr_137",
-      "text": "Now, do you think the kid’s dad will help the mom?",
+      "text": "Now, do you think the kid\u2019s dad will help the mom?",
       "src": "assets/narration/nr_137.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -12769,7 +12643,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "36.Now,_do_you_think_the_kid’s_da.mp3",
+        "archiveMember": "36.Now,_do_you_think_the_kid\u2019s_da.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -12815,7 +12689,7 @@
     },
     {
       "id": "nr_139",
-      "text": "Now, do you think the kid’s dad HAS TO help the mom? Yes or No.",
+      "text": "Now, do you think the kid\u2019s dad HAS TO help the mom? Yes or No.",
       "src": "assets/narration/nr_139.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -12845,14 +12719,14 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "38.Now,_do_you_think_the_kid’s_da.mp3",
+        "archiveMember": "38.Now,_do_you_think_the_kid\u2019s_da.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
       },
       "narrationEmphasis": {
         "status": "awaiting-new-recording",
-        "originalRecordedText": "Now, do you think the kid’s dad HAS to help the mom? Yes or No.",
+        "originalRecordedText": "Now, do you think the kid\u2019s dad HAS to help the mom? Yes or No.",
         "visualCaseOnly": true
       }
     },
@@ -12954,7 +12828,7 @@
     },
     {
       "id": "nr_235",
-      "text": "No one helped the mom. The kid’s dad did NOT help the mom. The kid did NOT help the mom.",
+      "text": "No one helped the mom. The kid\u2019s dad did NOT help the mom. The kid did NOT help the mom.",
       "src": null,
       "kind": "prompt",
       "status": "pending",
@@ -13021,7 +12895,7 @@
     },
     {
       "id": "nr_236",
-      "text": "Actually, remember, no one helped the mom. The kid’s dad did NOT help the mom. The kid did NOT help the mom. Can you tell me, did either of these people help the mom?",
+      "text": "Actually, remember, no one helped the mom. The kid\u2019s dad did NOT help the mom. The kid did NOT help the mom. Can you tell me, did either of these people help the mom?",
       "src": null,
       "kind": "reminder",
       "status": "pending",
@@ -13079,7 +12953,7 @@
     },
     {
       "id": "nr_146",
-      "text": "Do you remember, did the kid’s dad help the mom?",
+      "text": "Do you remember, did the kid\u2019s dad help the mom?",
       "src": "assets/narration/nr_146.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -13109,7 +12983,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "45.Do_you_remember,_did_the_kid’s.mp3",
+        "archiveMember": "45.Do_you_remember,_did_the_kid\u2019s.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -13117,7 +12991,7 @@
     },
     {
       "id": "nr_147",
-      "text": "Remember, the kid’s dad did not help the mom. Do you remember, did the kid’s dad help the mom?",
+      "text": "Remember, the kid\u2019s dad did not help the mom. Do you remember, did the kid\u2019s dad help the mom?",
       "src": "assets/narration/nr_147.mp3",
       "kind": "reminder",
       "status": "imported",
@@ -13147,7 +13021,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "46.Remember,_the_kid’s_dad_did_no.mp3",
+        "archiveMember": "46.Remember,_the_kid\u2019s_dad_did_no.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -13155,7 +13029,7 @@
     },
     {
       "id": "nr_238",
-      "text": "Do you think it was Mean or Not Mean that the kid’s dad did NOT help the mom in the middle?",
+      "text": "Do you think it was Mean or Not Mean that the kid\u2019s dad did NOT help the mom in the middle?",
       "src": null,
       "kind": "prompt",
       "status": "pending",
@@ -13184,7 +13058,7 @@
     },
     {
       "id": "nr_239",
-      "text": "How mean do you think the kid’s dad was for NOT helping the mom in the middle?",
+      "text": "How mean do you think the kid\u2019s dad was for NOT helping the mom in the middle?",
       "src": null,
       "kind": "prompt",
       "status": "pending",
@@ -13398,7 +13272,7 @@
     },
     {
       "id": "nr_154",
-      "text": "This big one is this kid’s dad. Tap the dad.",
+      "text": "This big one is this kid\u2019s dad. Tap the dad.",
       "src": "assets/narration/nr_154.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -13428,7 +13302,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "2652a496711b81b81622e8ac9530fd2eedf3e87fae62084d458e39b3d153c15b",
-        "archiveMember": "21.This_big_one_is_this_kid’s_dad.mp3",
+        "archiveMember": "21.This_big_one_is_this_kid\u2019s_dad.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -13436,7 +13310,7 @@
     },
     {
       "id": "nr_155",
-      "text": "This big one is this kid’s dad. This one is the dad. Tap the dad.",
+      "text": "This big one is this kid\u2019s dad. This one is the dad. Tap the dad.",
       "src": "assets/narration/nr_155.mp3",
       "kind": "reminder",
       "status": "imported",
@@ -13466,7 +13340,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "2652a496711b81b81622e8ac9530fd2eedf3e87fae62084d458e39b3d153c15b",
-        "archiveMember": "22.This_big_one_is_this_kid’s_dad.mp3",
+        "archiveMember": "22.This_big_one_is_this_kid\u2019s_dad.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -13474,7 +13348,7 @@
     },
     {
       "id": "nr_156",
-      "text": "Now let’s say that one day the dad was very sad.",
+      "text": "Now let\u2019s say that one day the dad was very sad.",
       "src": "assets/narration/nr_156.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -13504,7 +13378,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "55.Now_let’s_say_that_one_day_the.mp3",
+        "archiveMember": "55.Now_let\u2019s_say_that_one_day_the.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -13512,7 +13386,7 @@
     },
     {
       "id": "nr_157",
-      "text": "The kid and the kid’s mom both see that the dad is sad.",
+      "text": "The kid and the kid\u2019s mom both see that the dad is sad.",
       "src": "assets/narration/nr_157.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -13542,7 +13416,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "56.The_kid_and_the_kid’s_mom_both.mp3",
+        "archiveMember": "56.The_kid_and_the_kid\u2019s_mom_both.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -13588,7 +13462,7 @@
     },
     {
       "id": "nr_159",
-      "text": "Now, do you think the kid’s mom will help the dad?",
+      "text": "Now, do you think the kid\u2019s mom will help the dad?",
       "src": "assets/narration/nr_159.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -13618,7 +13492,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "58.Now,_do_you_think_the_kid’s_mo.mp3",
+        "archiveMember": "58.Now,_do_you_think_the_kid\u2019s_mo.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -13669,7 +13543,7 @@
     },
     {
       "id": "nr_161",
-      "text": "Now, do you think the kid’s mom HAS TO help the dad? Yes or No.",
+      "text": "Now, do you think the kid\u2019s mom HAS TO help the dad? Yes or No.",
       "src": "assets/narration/nr_161.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -13699,20 +13573,20 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "60.Now,_do_you_think_the_kid’s_mo.mp3",
+        "archiveMember": "60.Now,_do_you_think_the_kid\u2019s_mo.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
       },
       "narrationEmphasis": {
         "status": "awaiting-new-recording",
-        "originalRecordedText": "Now, do you think the kid’s mom HAS to help the dad? Yes or No.",
+        "originalRecordedText": "Now, do you think the kid\u2019s mom HAS to help the dad? Yes or No.",
         "visualCaseOnly": true
       }
     },
     {
       "id": "nr_242",
-      "text": "No one helped the dad. The kid did NOT help the dad. The kid’s mom did NOT help the dad.",
+      "text": "No one helped the dad. The kid did NOT help the dad. The kid\u2019s mom did NOT help the dad.",
       "src": null,
       "kind": "prompt",
       "status": "pending",
@@ -13779,7 +13653,7 @@
     },
     {
       "id": "nr_243",
-      "text": "Actually, remember, no one helped the dad. The kid did NOT help the dad. The kid’s mom did NOT help the dad. Can you tell me, did either of these people help the dad?",
+      "text": "Actually, remember, no one helped the dad. The kid did NOT help the dad. The kid\u2019s mom did NOT help the dad. Can you tell me, did either of these people help the dad?",
       "src": null,
       "kind": "reminder",
       "status": "pending",
@@ -13971,7 +13845,7 @@
     },
     {
       "id": "nr_169",
-      "text": "Do you remember, did the kid’s mom help the dad?",
+      "text": "Do you remember, did the kid\u2019s mom help the dad?",
       "src": "assets/narration/nr_169.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -14001,7 +13875,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "68.Do_you_remember,_did_the_kid’s.mp3",
+        "archiveMember": "68.Do_you_remember,_did_the_kid\u2019s.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -14009,7 +13883,7 @@
     },
     {
       "id": "nr_170",
-      "text": "Remember, the kid’s mom did not help the dad. Do you remember, did the kid’s mom help the dad?",
+      "text": "Remember, the kid\u2019s mom did not help the dad. Do you remember, did the kid\u2019s mom help the dad?",
       "src": "assets/narration/nr_170.mp3",
       "kind": "reminder",
       "status": "imported",
@@ -14039,7 +13913,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "69.Remember,_the_kid’s_mom_did_no.mp3",
+        "archiveMember": "69.Remember,_the_kid\u2019s_mom_did_no.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -14047,7 +13921,7 @@
     },
     {
       "id": "nr_247",
-      "text": "Do you think it was Mean or Not Mean that the kid’s mom did NOT help the dad in the middle?",
+      "text": "Do you think it was Mean or Not Mean that the kid\u2019s mom did NOT help the dad in the middle?",
       "src": null,
       "kind": "prompt",
       "status": "pending",
@@ -14076,7 +13950,7 @@
     },
     {
       "id": "nr_248",
-      "text": "How mean do you think the kid’s mom was for NOT helping the dad in the middle?",
+      "text": "How mean do you think the kid\u2019s mom was for NOT helping the dad in the middle?",
       "src": null,
       "kind": "prompt",
       "status": "pending",
@@ -14105,7 +13979,7 @@
     },
     {
       "id": "nr_172",
-      "text": "This big one is this kid’s teacher. Tap the teacher on the left.",
+      "text": "This big one is this kid\u2019s teacher. Tap the teacher on the left.",
       "src": "assets/narration/nr_172.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -14135,7 +14009,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "2652a496711b81b81622e8ac9530fd2eedf3e87fae62084d458e39b3d153c15b",
-        "archiveMember": "23.This_big_one_is_this_kid’s_tea.mp3",
+        "archiveMember": "23.This_big_one_is_this_kid\u2019s_tea.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -14143,7 +14017,7 @@
     },
     {
       "id": "nr_173",
-      "text": "This big one is this kid’s teacher. This one is the teacher on the left. Tap the teacher on the left.",
+      "text": "This big one is this kid\u2019s teacher. This one is the teacher on the left. Tap the teacher on the left.",
       "src": "assets/narration/nr_173.mp3",
       "kind": "reminder",
       "status": "imported",
@@ -14173,7 +14047,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "2652a496711b81b81622e8ac9530fd2eedf3e87fae62084d458e39b3d153c15b",
-        "archiveMember": "24.This_big_one_is_this_kid’s_tea.mp3",
+        "archiveMember": "24.This_big_one_is_this_kid\u2019s_tea.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -14181,7 +14055,7 @@
     },
     {
       "id": "nr_174",
-      "text": "This big one is this kid’s teacher too. Tap the teacher in the middle.",
+      "text": "This big one is this kid\u2019s teacher too. Tap the teacher in the middle.",
       "src": "assets/narration/nr_174.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -14211,7 +14085,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "2652a496711b81b81622e8ac9530fd2eedf3e87fae62084d458e39b3d153c15b",
-        "archiveMember": "25.This_big_one_is_this_kid’s_tea.mp3",
+        "archiveMember": "25.This_big_one_is_this_kid\u2019s_tea.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -14219,7 +14093,7 @@
     },
     {
       "id": "nr_175",
-      "text": "This big one is this kid’s teacher too. This one is the teacher in the middle. Tap the teacher in the middle.",
+      "text": "This big one is this kid\u2019s teacher too. This one is the teacher in the middle. Tap the teacher in the middle.",
       "src": "assets/narration/nr_175.mp3",
       "kind": "reminder",
       "status": "imported",
@@ -14249,7 +14123,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "2652a496711b81b81622e8ac9530fd2eedf3e87fae62084d458e39b3d153c15b",
-        "archiveMember": "26.This_big_one_is_this_kid’s_tea.mp3",
+        "archiveMember": "26.This_big_one_is_this_kid\u2019s_tea.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -14257,7 +14131,7 @@
     },
     {
       "id": "nr_176",
-      "text": "Now let’s say that one day the teacher in the middle was very sad.",
+      "text": "Now let\u2019s say that one day the teacher in the middle was very sad.",
       "src": "assets/narration/nr_176.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -14287,7 +14161,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "75.Now_let’s_say_that_one_day_the.mp3",
+        "archiveMember": "75.Now_let\u2019s_say_that_one_day_the.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -14970,7 +14844,7 @@
     },
     {
       "id": "nr_195",
-      "text": "That’s the end of our stories. Thank you!",
+      "text": "That\u2019s the end of our stories. Thank you!",
       "src": "assets/narration/nr_195.mp3",
       "kind": "prompt",
       "status": "imported",
@@ -15000,7 +14874,7 @@
           "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
         },
         "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "94.That’s_the_end_of_our_stories..mp3",
+        "archiveMember": "94.That\u2019s_the_end_of_our_stories..mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
@@ -15921,6 +15795,166 @@
         "preferredBitrateKbps": 320,
         "settingsBasis": "Requested Evelyn Soft 0.80x / 160 WPM for proposed prediction confidence questions and response options; these paragraphs have not been generated, saved to a cloud project, exported, or imported."
       }
+    },
+    {
+      "id": "nr_274",
+      "text": "When a teacher tells you to stop being mean to someone, how much do you think you HAVE TO stop being mean?",
+      "sha256": "8c05ff9afc10daba55b63c9fb1fd6a75af3c86d6ac9b24844550c4bca0a664b3",
+      "bytes": 265448,
+      "durationSeconds": 6.60898,
+      "decodedDurationSeconds": 6.558684807256236,
+      "src": "assets/narration/nr_274.mp3",
+      "kind": "prompt",
+      "status": "assembled-existing-recordings",
+      "uses": [
+        {
+          "stepId": "woman-mom-teacher:practice-stop-amount",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "woman-sister-friend:practice-stop-amount",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "woman-bestfriend-friend:practice-stop-amount",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "woman-teacher-friend:practice-stop-amount",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "woman-mom-sister:practice-stop-amount",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "woman-teacher-classmate:practice-stop-amount",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-dad-teacher:practice-stop-amount",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-brother-friend:practice-stop-amount",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-bestfriend-friend:practice-stop-amount",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-teacher-friend:practice-stop-amount",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-dad-brother:practice-stop-amount",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-teacher-classmate:practice-stop-amount",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "family-mom-dad:practice-stop-amount",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "family-sister-brother:practice-stop-amount",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "family-dad-kid:practice-stop-amount",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "family-mom-kid:practice-stop-amount",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "family-teacher-kid:practice-stop-amount",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "family-teacher-classmate:practice-stop-amount",
+          "proposedWording": true,
+          "part": "prompt"
+        }
+      ],
+      "provenance": {
+        "copiedWithoutReencoding": false,
+        "localAudioDerivative": true,
+        "decodeVerified": true,
+        "offlineAdjustedWordSequenceVerified": true,
+        "nativeProsodyReplacementStillPending": true,
+        "audioProcessing": {
+          "kind": "assembled-context-from-existing-Evelyn-recordings",
+          "sourceRecordings": [
+            {
+              "id": "nr_015",
+              "sha256": "3c983161d356bb8a0d726b6d0d79ab1d76e85947478c012cc9ac4c36ba0b291c",
+              "retainedSourceStartSeconds": 0,
+              "retainedSourceEndSeconds": 2.9150113378684805,
+              "retainedDecodedSamples": 128552,
+              "role": "Complete opening teacher clause through someone; quiet boundary before do."
+            },
+            {
+              "id": "nr_017",
+              "sha256": "495724c15d5a023abea2f34a1f3dcb889cd7fb1a653db229bc157653756e709c",
+              "retainedSourceStartSeconds": 0,
+              "retainedSourceEndSeconds": 3.3436734693877552,
+              "retainedDecodedSamples": 147456,
+              "role": "Entire original strength question."
+            }
+          ],
+          "joinPauseSeconds": 0.3,
+          "originalRetainedPcmSamplesPreservedBeforeEncoding": true,
+          "speechPitchShifted": false,
+          "speechTimeStretched": false,
+          "encoder": "ffmpeg libmp3lame 320 kbps mono",
+          "verification": "Unprompted offline Whisper-base.en exact normalized full word sequence; measured join silence; source hash and retained PCM verification. Human listening verification not claimed."
+        },
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": {
+          "provider": "NaturalReaders Commercial",
+          "name": "Evelyn",
+          "style": "Soft",
+          "speed": 0.9,
+          "wordsPerMinuteSetting": 180,
+          "paragraphPauseSeconds": 0,
+          "exportFormat": "MP3",
+          "exportMode": "separate files ZIP",
+          "exportNaming": "Index + Segment",
+          "preferredBitrateKbps": 320,
+          "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
+        }
+      },
+      "narrationEmphasis": {
+        "status": "assembled-from-existing-recordings",
+        "visualCaseOnly": false,
+        "nativeProsodyReplacementStillPending": true
+      },
+      "audioTreatment": {
+        "kind": "assembled-context-from-existing-Evelyn-recordings",
+        "joinPauseSeconds": 0.3
+      }
     }
   ],
   "screens": {
@@ -16014,14 +16048,14 @@
       "proposedWording": false
     },
     "woman-mom-teacher:practice-stop-amount": {
-      "prompt": "nr_017",
+      "prompt": "nr_274",
       "reminder": null,
       "options": [
         "nr_018",
         "nr_019",
         "nr_020"
       ],
-      "proposedWording": false
+      "proposedWording": true
     },
     "woman-mom-teacher:practice-lie": {
       "prompt": "nr_021",
@@ -16275,14 +16309,14 @@
       "proposedWording": false
     },
     "woman-sister-friend:practice-stop-amount": {
-      "prompt": "nr_017",
+      "prompt": "nr_274",
       "reminder": null,
       "options": [
         "nr_018",
         "nr_019",
         "nr_020"
       ],
-      "proposedWording": false
+      "proposedWording": true
     },
     "woman-sister-friend:practice-lie": {
       "prompt": "nr_021",
@@ -16536,14 +16570,14 @@
       "proposedWording": false
     },
     "woman-bestfriend-friend:practice-stop-amount": {
-      "prompt": "nr_017",
+      "prompt": "nr_274",
       "reminder": null,
       "options": [
         "nr_018",
         "nr_019",
         "nr_020"
       ],
-      "proposedWording": false
+      "proposedWording": true
     },
     "woman-bestfriend-friend:practice-lie": {
       "prompt": "nr_021",
@@ -16797,14 +16831,14 @@
       "proposedWording": false
     },
     "woman-teacher-friend:practice-stop-amount": {
-      "prompt": "nr_017",
+      "prompt": "nr_274",
       "reminder": null,
       "options": [
         "nr_018",
         "nr_019",
         "nr_020"
       ],
-      "proposedWording": false
+      "proposedWording": true
     },
     "woman-teacher-friend:practice-lie": {
       "prompt": "nr_021",
@@ -17058,14 +17092,14 @@
       "proposedWording": false
     },
     "woman-mom-sister:practice-stop-amount": {
-      "prompt": "nr_017",
+      "prompt": "nr_274",
       "reminder": null,
       "options": [
         "nr_018",
         "nr_019",
         "nr_020"
       ],
-      "proposedWording": false
+      "proposedWording": true
     },
     "woman-mom-sister:practice-lie": {
       "prompt": "nr_021",
@@ -17319,14 +17353,14 @@
       "proposedWording": false
     },
     "woman-teacher-classmate:practice-stop-amount": {
-      "prompt": "nr_017",
+      "prompt": "nr_274",
       "reminder": null,
       "options": [
         "nr_018",
         "nr_019",
         "nr_020"
       ],
-      "proposedWording": false
+      "proposedWording": true
     },
     "woman-teacher-classmate:practice-lie": {
       "prompt": "nr_021",
@@ -17580,14 +17614,14 @@
       "proposedWording": false
     },
     "man-dad-teacher:practice-stop-amount": {
-      "prompt": "nr_017",
+      "prompt": "nr_274",
       "reminder": null,
       "options": [
         "nr_018",
         "nr_019",
         "nr_020"
       ],
-      "proposedWording": false
+      "proposedWording": true
     },
     "man-dad-teacher:practice-lie": {
       "prompt": "nr_021",
@@ -17841,14 +17875,14 @@
       "proposedWording": false
     },
     "man-brother-friend:practice-stop-amount": {
-      "prompt": "nr_017",
+      "prompt": "nr_274",
       "reminder": null,
       "options": [
         "nr_018",
         "nr_019",
         "nr_020"
       ],
-      "proposedWording": false
+      "proposedWording": true
     },
     "man-brother-friend:practice-lie": {
       "prompt": "nr_021",
@@ -18102,14 +18136,14 @@
       "proposedWording": false
     },
     "man-bestfriend-friend:practice-stop-amount": {
-      "prompt": "nr_017",
+      "prompt": "nr_274",
       "reminder": null,
       "options": [
         "nr_018",
         "nr_019",
         "nr_020"
       ],
-      "proposedWording": false
+      "proposedWording": true
     },
     "man-bestfriend-friend:practice-lie": {
       "prompt": "nr_021",
@@ -18363,14 +18397,14 @@
       "proposedWording": false
     },
     "man-teacher-friend:practice-stop-amount": {
-      "prompt": "nr_017",
+      "prompt": "nr_274",
       "reminder": null,
       "options": [
         "nr_018",
         "nr_019",
         "nr_020"
       ],
-      "proposedWording": false
+      "proposedWording": true
     },
     "man-teacher-friend:practice-lie": {
       "prompt": "nr_021",
@@ -18624,14 +18658,14 @@
       "proposedWording": false
     },
     "man-dad-brother:practice-stop-amount": {
-      "prompt": "nr_017",
+      "prompt": "nr_274",
       "reminder": null,
       "options": [
         "nr_018",
         "nr_019",
         "nr_020"
       ],
-      "proposedWording": false
+      "proposedWording": true
     },
     "man-dad-brother:practice-lie": {
       "prompt": "nr_021",
@@ -18885,14 +18919,14 @@
       "proposedWording": false
     },
     "man-teacher-classmate:practice-stop-amount": {
-      "prompt": "nr_017",
+      "prompt": "nr_274",
       "reminder": null,
       "options": [
         "nr_018",
         "nr_019",
         "nr_020"
       ],
-      "proposedWording": false
+      "proposedWording": true
     },
     "man-teacher-classmate:practice-lie": {
       "prompt": "nr_021",
@@ -19146,14 +19180,14 @@
       "proposedWording": false
     },
     "family-mom-dad:practice-stop-amount": {
-      "prompt": "nr_017",
+      "prompt": "nr_274",
       "reminder": null,
       "options": [
         "nr_018",
         "nr_019",
         "nr_020"
       ],
-      "proposedWording": false
+      "proposedWording": true
     },
     "family-mom-dad:practice-lie": {
       "prompt": "nr_021",
@@ -19407,14 +19441,14 @@
       "proposedWording": false
     },
     "family-sister-brother:practice-stop-amount": {
-      "prompt": "nr_017",
+      "prompt": "nr_274",
       "reminder": null,
       "options": [
         "nr_018",
         "nr_019",
         "nr_020"
       ],
-      "proposedWording": false
+      "proposedWording": true
     },
     "family-sister-brother:practice-lie": {
       "prompt": "nr_021",
@@ -19668,14 +19702,14 @@
       "proposedWording": false
     },
     "family-dad-kid:practice-stop-amount": {
-      "prompt": "nr_017",
+      "prompt": "nr_274",
       "reminder": null,
       "options": [
         "nr_018",
         "nr_019",
         "nr_020"
       ],
-      "proposedWording": false
+      "proposedWording": true
     },
     "family-dad-kid:practice-lie": {
       "prompt": "nr_021",
@@ -19929,14 +19963,14 @@
       "proposedWording": false
     },
     "family-mom-kid:practice-stop-amount": {
-      "prompt": "nr_017",
+      "prompt": "nr_274",
       "reminder": null,
       "options": [
         "nr_018",
         "nr_019",
         "nr_020"
       ],
-      "proposedWording": false
+      "proposedWording": true
     },
     "family-mom-kid:practice-lie": {
       "prompt": "nr_021",
@@ -20190,14 +20224,14 @@
       "proposedWording": false
     },
     "family-teacher-kid:practice-stop-amount": {
-      "prompt": "nr_017",
+      "prompt": "nr_274",
       "reminder": null,
       "options": [
         "nr_018",
         "nr_019",
         "nr_020"
       ],
-      "proposedWording": false
+      "proposedWording": true
     },
     "family-teacher-kid:practice-lie": {
       "prompt": "nr_021",
@@ -20451,14 +20485,14 @@
       "proposedWording": false
     },
     "family-teacher-classmate:practice-stop-amount": {
-      "prompt": "nr_017",
+      "prompt": "nr_274",
       "reminder": null,
       "options": [
         "nr_018",
         "nr_019",
         "nr_020"
       ],
-      "proposedWording": false
+      "proposedWording": true
     },
     "family-teacher-classmate:practice-lie": {
       "prompt": "nr_021",

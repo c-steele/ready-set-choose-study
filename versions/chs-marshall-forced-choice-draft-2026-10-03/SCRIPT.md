@@ -114,6 +114,8 @@ Expected check/practice answer: Yes.
 
 Reminder if needed: “When a teacher tells you to stop being mean to someone, you HAVE TO stop being mean. Let’s try that question again.”
 
+After the reminder, reread the full question and response labels before reopening the choices.
+
 *Brief comprehension practice, not a study outcome. The illustration and split display wording are adaptations. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
 ### 10. Practice · Lie
@@ -125,6 +127,8 @@ Choices: Yes / No.
 Expected check/practice answer: No.
 
 Reminder if needed: “When someone asks you a question, you do not HAVE TO lie. Let’s try that question again.”
+
+After the reminder, reread the full question and response labels before reopening the choices.
 
 *Brief comprehension practice, not a study outcome. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
@@ -729,4 +733,3 @@ Choices: The kid’s classmate / The kid’s teacher.
 “That’s the end of our stories. Thank you!”
 
 *Draft closing wording. This is the end of the selected preview.*
-

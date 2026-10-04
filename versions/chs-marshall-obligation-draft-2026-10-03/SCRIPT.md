@@ -15,7 +15,7 @@ Expected path range: **151–181 screens**, **114–144 responses**.
 
 60 main judgments (including 12 prediction-confidence responses) + 36 identity/recall checks + 18 practice responses + 0–30 conditional study-strength responses.
 
-Illustrative duration: **22.1–37.5 minutes**, based on 2129–2808 spoken words.
+Illustrative duration: **22.6–38.1 minutes**, based on 2195–2874 spoken words.
 
 - Illustrative estimate, not observed child-session duration.
 - Read-aloud pace: 110–130 words per minute; response time: 3–5 seconds per selection.
@@ -143,17 +143,21 @@ Expected check/practice answer: Yes.
 
 Reminder if needed: “When a teacher tells you to stop being mean to someone, you HAVE TO stop being mean. Let’s try that question again.”
 
+After the reminder, reread the full question and response labels before reopening the choices.
+
 *Practice, not a study outcome. The illustration and split display wording are new adaptations. The downloaded script retains the full Marshall practice prompt. Reminder wording is a draft implementation choice. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
-### 13. Practice · How much
+### 13. Practice · How much — PROPOSED WORDING
 
 *Only after “Yes” to Practice · Stop being mean.*
 
-“How much do you think you HAVE TO stop being mean?”
+“When a teacher tells you to stop being mean to someone, how much do you think you HAVE TO stop being mean?”
+
+Display treatment: Let’s practice! / A teacher tells you to stop being mean to someone. / How much do you think you HAVE TO stop being mean?
 
 Choices: A teeny bit / A little bit / A lot.
 
-*Practice routing is a draft choice; strength is not marked right or wrong. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
+*Teacher context is reiterated in this adapted follow-up. The same teacher, child, speech bubble, and palette remain visible. Practice routing is a draft choice; strength is not marked right or wrong. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
 ### 14. Practice · Lie
 
@@ -164,6 +168,8 @@ Choices: Yes / No.
 Expected check/practice answer: No.
 
 Reminder if needed: “When someone asks you a question, you do not HAVE TO lie. Let’s try that question again.”
+
+After the reminder, reread the full question and response labels before reopening the choices.
 
 *Practice, not a study outcome. Reminder wording is a draft implementation choice. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
@@ -463,17 +469,21 @@ Expected check/practice answer: Yes.
 
 Reminder if needed: “When a teacher tells you to stop being mean to someone, you HAVE TO stop being mean. Let’s try that question again.”
 
+After the reminder, reread the full question and response labels before reopening the choices.
+
 *Practice, not a study outcome. The illustration and split display wording are new adaptations. The downloaded script retains the full Marshall practice prompt. Reminder wording is a draft implementation choice. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
-### 44. Practice · How much
+### 44. Practice · How much — PROPOSED WORDING
 
 *Only after “Yes” to Practice · Stop being mean.*
 
-“How much do you think you HAVE TO stop being mean?”
+“When a teacher tells you to stop being mean to someone, how much do you think you HAVE TO stop being mean?”
+
+Display treatment: Let’s practice! / A teacher tells you to stop being mean to someone. / How much do you think you HAVE TO stop being mean?
 
 Choices: A teeny bit / A little bit / A lot.
 
-*Practice routing is a draft choice; strength is not marked right or wrong. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
+*Teacher context is reiterated in this adapted follow-up. The same teacher, child, speech bubble, and palette remain visible. Practice routing is a draft choice; strength is not marked right or wrong. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
 ### 45. Practice · Lie
 
@@ -484,6 +494,8 @@ Choices: Yes / No.
 Expected check/practice answer: No.
 
 Reminder if needed: “When someone asks you a question, you do not HAVE TO lie. Let’s try that question again.”
+
+After the reminder, reread the full question and response labels before reopening the choices.
 
 *Practice, not a study outcome. Reminder wording is a draft implementation choice. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
@@ -783,17 +795,21 @@ Expected check/practice answer: Yes.
 
 Reminder if needed: “When a teacher tells you to stop being mean to someone, you HAVE TO stop being mean. Let’s try that question again.”
 
+After the reminder, reread the full question and response labels before reopening the choices.
+
 *Practice, not a study outcome. The illustration and split display wording are new adaptations. The downloaded script retains the full Marshall practice prompt. Reminder wording is a draft implementation choice. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
-### 75. Practice · How much
+### 75. Practice · How much — PROPOSED WORDING
 
 *Only after “Yes” to Practice · Stop being mean.*
 
-“How much do you think you HAVE TO stop being mean?”
+“When a teacher tells you to stop being mean to someone, how much do you think you HAVE TO stop being mean?”
+
+Display treatment: Let’s practice! / A teacher tells you to stop being mean to someone. / How much do you think you HAVE TO stop being mean?
 
 Choices: A teeny bit / A little bit / A lot.
 
-*Practice routing is a draft choice; strength is not marked right or wrong. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
+*Teacher context is reiterated in this adapted follow-up. The same teacher, child, speech bubble, and palette remain visible. Practice routing is a draft choice; strength is not marked right or wrong. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
 ### 76. Practice · Lie
 
@@ -804,6 +820,8 @@ Choices: Yes / No.
 Expected check/practice answer: No.
 
 Reminder if needed: “When someone asks you a question, you do not HAVE TO lie. Let’s try that question again.”
+
+After the reminder, reread the full question and response labels before reopening the choices.
 
 *Practice, not a study outcome. Reminder wording is a draft implementation choice. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
@@ -1103,17 +1121,21 @@ Expected check/practice answer: Yes.
 
 Reminder if needed: “When a teacher tells you to stop being mean to someone, you HAVE TO stop being mean. Let’s try that question again.”
 
+After the reminder, reread the full question and response labels before reopening the choices.
+
 *Practice, not a study outcome. The illustration and split display wording are new adaptations. The downloaded script retains the full Marshall practice prompt. Reminder wording is a draft implementation choice. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
-### 106. Practice · How much
+### 106. Practice · How much — PROPOSED WORDING
 
 *Only after “Yes” to Practice · Stop being mean.*
 
-“How much do you think you HAVE TO stop being mean?”
+“When a teacher tells you to stop being mean to someone, how much do you think you HAVE TO stop being mean?”
+
+Display treatment: Let’s practice! / A teacher tells you to stop being mean to someone. / How much do you think you HAVE TO stop being mean?
 
 Choices: A teeny bit / A little bit / A lot.
 
-*Practice routing is a draft choice; strength is not marked right or wrong. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
+*Teacher context is reiterated in this adapted follow-up. The same teacher, child, speech bubble, and palette remain visible. Practice routing is a draft choice; strength is not marked right or wrong. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
 ### 107. Practice · Lie
 
@@ -1124,6 +1146,8 @@ Choices: Yes / No.
 Expected check/practice answer: No.
 
 Reminder if needed: “When someone asks you a question, you do not HAVE TO lie. Let’s try that question again.”
+
+After the reminder, reread the full question and response labels before reopening the choices.
 
 *Practice, not a study outcome. Reminder wording is a draft implementation choice. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
@@ -1423,17 +1447,21 @@ Expected check/practice answer: Yes.
 
 Reminder if needed: “When a teacher tells you to stop being mean to someone, you HAVE TO stop being mean. Let’s try that question again.”
 
+After the reminder, reread the full question and response labels before reopening the choices.
+
 *Practice, not a study outcome. The illustration and split display wording are new adaptations. The downloaded script retains the full Marshall practice prompt. Reminder wording is a draft implementation choice. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
-### 137. Practice · How much
+### 137. Practice · How much — PROPOSED WORDING
 
 *Only after “Yes” to Practice · Stop being mean.*
 
-“How much do you think you HAVE TO stop being mean?”
+“When a teacher tells you to stop being mean to someone, how much do you think you HAVE TO stop being mean?”
+
+Display treatment: Let’s practice! / A teacher tells you to stop being mean to someone. / How much do you think you HAVE TO stop being mean?
 
 Choices: A teeny bit / A little bit / A lot.
 
-*Practice routing is a draft choice; strength is not marked right or wrong. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
+*Teacher context is reiterated in this adapted follow-up. The same teacher, child, speech bubble, and palette remain visible. Practice routing is a draft choice; strength is not marked right or wrong. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
 ### 138. Practice · Lie
 
@@ -1444,6 +1472,8 @@ Choices: Yes / No.
 Expected check/practice answer: No.
 
 Reminder if needed: “When someone asks you a question, you do not HAVE TO lie. Let’s try that question again.”
+
+After the reminder, reread the full question and response labels before reopening the choices.
 
 *Practice, not a study outcome. Reminder wording is a draft implementation choice. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
@@ -1743,17 +1773,21 @@ Expected check/practice answer: Yes.
 
 Reminder if needed: “When a teacher tells you to stop being mean to someone, you HAVE TO stop being mean. Let’s try that question again.”
 
+After the reminder, reread the full question and response labels before reopening the choices.
+
 *Practice, not a study outcome. The illustration and split display wording are new adaptations. The downloaded script retains the full Marshall practice prompt. Reminder wording is a draft implementation choice. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
-### 168. Practice · How much
+### 168. Practice · How much — PROPOSED WORDING
 
 *Only after “Yes” to Practice · Stop being mean.*
 
-“How much do you think you HAVE TO stop being mean?”
+“When a teacher tells you to stop being mean to someone, how much do you think you HAVE TO stop being mean?”
+
+Display treatment: Let’s practice! / A teacher tells you to stop being mean to someone. / How much do you think you HAVE TO stop being mean?
 
 Choices: A teeny bit / A little bit / A lot.
 
-*Practice routing is a draft choice; strength is not marked right or wrong. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
+*Teacher context is reiterated in this adapted follow-up. The same teacher, child, speech bubble, and palette remain visible. Practice routing is a draft choice; strength is not marked right or wrong. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
 ### 169. Practice · Lie
 
@@ -1764,6 +1798,8 @@ Choices: Yes / No.
 Expected check/practice answer: No.
 
 Reminder if needed: “When someone asks you a question, you do not HAVE TO lie. Let’s try that question again.”
+
+After the reminder, reread the full question and response labels before reopening the choices.
 
 *Practice, not a study outcome. Reminder wording is a draft implementation choice. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
@@ -1950,4 +1986,3 @@ Choices: The kid’s classmate / The kid’s teacher.
 “That’s the end of our stories. Thank you!”
 
 *Draft closing wording. This is the end of the selected preview.*
-

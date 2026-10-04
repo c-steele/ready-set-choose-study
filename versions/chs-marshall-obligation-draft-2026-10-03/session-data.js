@@ -221,6 +221,7 @@
       if (step.point) lines.push(`Selection check: ${step.point}.`, '');
       if (step.expected) lines.push(`Expected check/practice answer: ${step.expected}.`, '');
       if (step.reminder) lines.push(`Reminder if needed: “${step.reminder}”`, '');
+      if (step.rereadAfterReminder) lines.push('After the reminder, reread the full question and response labels before reopening the choices.', '');
       if (step.note) lines.push(`*${step.note}*`, '');
     }
     return lines.join('\n');
