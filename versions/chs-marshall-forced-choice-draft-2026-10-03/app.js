@@ -7,7 +7,7 @@
   let childView=false,choiceConfirmation=null,correctFeedbackState=null,screenHeard=false;
   let session,steps,index=0,answers={},history=[],wrong=null,optionReader=null,downloadUrl=null;
   let elapsed=0,started=null,timerUsed=false,incomplete=false,completed=false;
-  let narrationRun=null,narrationEnabled=false,narrationPlaying=false;
+  let narrationRun=null,narrationEnabled=false,narrationPlaying=false,audioStartRequired=false,audioEverStarted=false;
   const narration=window.ObligationNarration;
   const roleNames={woman:'Mom / sister set',man:'Dad / brother set',family:'Family set',all:'All three sets · review only'};
 
@@ -175,6 +175,9 @@
   function syncChildControls(){
     const replay=stage.querySelector('.child-replay'),stop=stage.querySelector('.child-stop');
     if(!replay)return;
+    const startGate=stage.querySelector('.audio-start-gate');
+    if(startGate)startGate.hidden=!childView||!audioStartRequired;
+    stage.classList.toggle('awaiting-audio-start',childView&&audioStartRequired);
     const s=activeStep()||steps[0],mode=childAudioMode(s,!$('play-narration').disabled);
     replay.disabled=mode==='unavailable';
     replay.querySelector('.child-control-label').textContent=mode==='choices'?'Choices':narrationEnabled?'Replay':'Listen';
@@ -182,7 +185,7 @@
     replay.title=mode==='choices'?'Hear only the answer choices':'Hear the narration';
     stop.hidden=!narrationPlaying;
     const bubble=stage.querySelector('.child-helper-bubble');
-    bubble.textContent=narrationPlaying||stage.querySelector('.rating-answer:disabled')?'Listen and look!':s.point?'Tap '+actors(s).find(a=>a.id===s.point).description+'!':helperChoiceActors(s).length?'Tap a person!':s.choices?'Tap one!':s.localId==='end'?'All done!':'Listen and look!';
+    bubble.textContent=audioStartRequired?'Tap to start!':narrationPlaying||stage.querySelector('.rating-answer:disabled')?'Listen and look!':s.point?'Tap '+actors(s).find(a=>a.id===s.point).description+'!':helperChoiceActors(s).length?'Tap a person!':s.choices?'Tap one!':s.localId==='end'?'All done!':'Listen and look!';
     if(s.localId==='end')stage.querySelectorAll('.continue-answer').forEach(button=>{button.textContent='➜';button.setAttribute('aria-label','Finish');});
   }
   function setChildView(value){
@@ -207,18 +210,19 @@
     syncChildControls();
     return ready;
   }
-  function playChildNarration(){if(!$('play-narration').disabled)playNarration();}
+  function playChildNarration(){if(!$('play-narration').disabled){$('auto-narration').checked=true;playNarration();}}
   function playNarration(){
     stopNarration();if(!narrationStatus())return;
-    const s=activeStep(),screenId=s.id;screenHeard=false;narrationEnabled=true;narrationPlaying=true;optionReader?.prepare();gateNarration(true);
+    const s=activeStep(),screenId=s.id;audioStartRequired=false;screenHeard=false;narrationEnabled=true;narrationPlaying=true;optionReader?.prepare();gateNarration(true);
     $('stop-narration').disabled=false;$('play-narration').textContent='Replay narration';$('narration-status').textContent='Listen to Evelyn…';
     syncChildControls();
     const clipSpans=new Map();
     narrationRun=narration.play(narrationIds(s),{
+      onClipStart(){if(activeStep().id!==screenId)return;audioEverStarted=true;audioStartRequired=false;syncChildControls();},
       onClipTime(id,clipIndex,seconds){if(activeStep().id!==screenId)return;if(!clipSpans.has(id))clipSpans.set(id,spokenCueSpans(s,id));showSpokenCues(clipSpans.get(id),seconds);},
       onClipClear:clearSpokenCues,
       onEnd(){if(activeStep().id!==screenId)return;narrationRun=null;clearSpokenCues();if(s.virtualType==='correct-feedback'){const answer=correctFeedbackState.answer;correctFeedbackState=null;commit(answer);return;}if(s.choices&&!embeddedChoices(s)){if(optionReader?.read())return;narrationPlaying=false;gateNarration(true);$('narration-status').textContent='Choice audio is not connected yet. Try Replay.';}else{narrationPlaying=false;screenHeard=true;optionReader?.ready();gateNarration(false);$('narration-status').textContent='Narration finished.';}$('stop-narration').disabled=true;syncChildControls();},
-      onError(){if(activeStep().id!==screenId)return;narrationRun=null;narrationPlaying=false;screenHeard=false;clearSpokenCues();gateNarration(true);$('stop-narration').disabled=true;$('narration-status').textContent='Tap the play button to hear this screen.';syncChildControls();}
+      onError(error){if(activeStep().id!==screenId)return;audioStartRequired=error?.code==='audio-blocked'&&!audioEverStarted;narrationRun=null;narrationPlaying=false;screenHeard=false;clearSpokenCues();gateNarration(true);$('stop-narration').disabled=true;$('narration-status').textContent='Tap the play button to hear this screen.';syncChildControls();}
     });
   }
   function actors(s){return s.pairing?[s.pairing.recipient,...s.pairing.helpers]:[];}
@@ -300,7 +304,8 @@
     stage.dataset.screenKind=s.visual?'illustrated-practice':s.image?'story':'practice';
     stage.dataset.responseFormat=s.optionActors?'forced-choice':s.point?'character':s.choices?'check':'continue';
     stage.dataset.responseKind=s.choices?.length===3?'scale':s.point?'character':s.choices?'binary':'continue';
-    stage.innerHTML=prompt(s)+scene(s,true)+feedback+options+childFooter(s);
+    stage.innerHTML=prompt(s)+scene(s,true)+feedback+options+'<div class="audio-start-gate" hidden><button class="audio-start-button" type="button" aria-label="Start narration"><span aria-hidden="true">▶</span><strong>Let’s listen!</strong></button></div>'+childFooter(s);
+    stage.querySelector('.audio-start-button').addEventListener('click',playChildNarration);
     stage.querySelector('.child-replay').addEventListener('click',playChildNarration);
     stage.querySelector('.child-stop').addEventListener('click',()=>{stopNarration();optionReader?.reset();$('narration-status').textContent='Audio stopped. Tap Replay to hear this screen.';});
     $('step-note').innerHTML=`${s.proposed?'<strong>Proposed wording · </strong>':''}${esc(branchNote(s)+(s.note||'Adapted from Marshall Study 1.'))}`;
@@ -395,5 +400,6 @@
   $('play-narration').addEventListener('click',playNarration);$('stop-narration').addEventListener('click',()=>{stopNarration();optionReader?.reset();$('narration-status').textContent='Audio stopped. Tap Replay to hear this screen.';});
   $('auto-narration').addEventListener('change',()=>{if(!$('auto-narration').checked){stopNarration();optionReader?.reset();$('narration-status').textContent='Audio stopped. Tap Replay to hear this screen.';}});
   const recordingClips=Object.values(narration.clipsById);$('recording-coverage').textContent=`${recordingClips.filter(c=>c.src).length} of ${recordingClips.length} distinct recordings connected across all pairing sets.`;
-  configure();setInterval(updateTimer,1000);if(params.get('view')==='storyboard')showBoard(true);else if(params.get('view')==='child')setChildView(true);
+  if(params.get('view')==='child'){childView=true;document.body.classList.add('child-view');$('auto-narration').checked=true;}
+  configure();setInterval(updateTimer,1000);if(params.get('view')==='storyboard')showBoard(true);
 })();

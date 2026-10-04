@@ -4,6 +4,9 @@
   'use strict';
   let active = null;
   let generation = 0;
+  // WebKit grants playback permission per media element. Keep the same real
+  // element for prompts, choices and later screens after an authorized start.
+  let media = null;
   const gapMs = 250;
   const stallMs = 30000;
 
@@ -25,8 +28,9 @@
   }
   function stop() {
     generation++;
-    if (active) { active.clear(); active.notifyCancel(); }
+    const previous = active;
     active = null;
+    if (previous) { previous.clear(); previous.notifyCancel(); }
   }
   function play(ids, callbacks = {}) {
     stop();
@@ -37,6 +41,7 @@
     let timer = null;
     let frame = null;
     let index = 0;
+    let clipSerial = 0;
     const current = () => active === run && generation === token;
     function clearFrame() {
       if (frame !== null && root.cancelAnimationFrame) root.cancelAnimationFrame(frame);
@@ -48,9 +53,10 @@
       const old = audio;
       audio = null;
       old.onplaying = old.onended = old.onerror = old.onwaiting = old.onstalled = old.ontimeupdate = old.onpause = old.onseeked = null;
-      callbacks.onClipClear?.(sequence[index], index);
       try { old.pause(); } catch (_) { /* Already released by the browser. */ }
-      try { old.removeAttribute('src'); old.load(); } catch (_) { /* Safe on simple audio mocks too. */ }
+      // Clear the old element before notifying the caller: a callback may
+      // immediately start another run on this same element.
+      callbacks.onClipClear?.(sequence[index], index);
     }
     const run = {
       clear() { clearTimeout(timer); timer = null; clearAudio(); },
@@ -62,22 +68,24 @@
       if (!current()) return;
       root.console?.warn?.('Recorded narration could not finish: ' + JSON.stringify({code, clipId: sequence[index] || null, readyState: audio?.readyState, networkState: audio?.networkState, currentTime: audio?.currentTime, mediaError: audio?.error?.code}));
       run.clear();
+      if (!current()) return;
       active = null;
       const error = new Error(message);
       error.code = code;
       error.clipId = sequence[index] || null;
       callbacks.onError?.(error);
     }
-    function watch(watchedAudio) {
+    function watch(watchedAudio, watchedSerial) {
       clearTimeout(timer);
       timer = setTimeout(() => {
-        if (audio === watchedAudio) fail('audio-timeout', 'The recording did not finish loading or stopped playing. Read this screen aloud, or try again.');
+        if (audio === watchedAudio && clipSerial === watchedSerial) fail('audio-timeout', 'The recording did not finish loading or stopped playing. Read this screen aloud, or try again.');
       }, stallMs);
     }
     function next() {
       if (!current()) return;
       if (index >= sequence.length) {
         run.clear();
+        if (!current()) return;
         active = null;
         callbacks.onEnd?.();
         return;
@@ -89,17 +97,19 @@
         const source = clips[id].src;
         const version = clips[id].sha256?.slice(0, 12);
         const audioSource = version ? `${source}${source.includes('?') ? '&' : '?'}v=${version}` : source;
-        audio = new root.Audio(audioSource);
+        if (!media) media = new root.Audio();
+        audio = media;
         const currentAudio = audio;
         const clipIndex = index;
-        const currentClip = () => current() && audio === currentAudio;
+        const serial = ++clipSerial;
+        const currentClip = () => current() && audio === currentAudio && index === clipIndex && clipSerial === serial;
         function reportTime() {
           if (!currentClip() || !playing || currentAudio.paused || currentAudio.ended) return;
           callbacks.onClipTime?.(id, clipIndex, Number(currentAudio.currentTime) || 0);
         }
         function tick() {
-          frame = null;
           if (!currentClip() || !playing || currentAudio.paused || currentAudio.ended) return;
+          frame = null;
           reportTime();
           if (root.requestAnimationFrame) frame = root.requestAnimationFrame(tick);
         }
@@ -109,45 +119,55 @@
         }
         audio.preload = 'auto';
         audio.onplaying = () => {
-          if (!currentClip()) return;
+          if (!currentClip() || currentAudio.paused || currentAudio.ended) return;
           playing = true;
-          watch(currentAudio);
+          watch(currentAudio, serial);
           if (!announced) { announced = true; callbacks.onClipStart?.(id, clipIndex); }
           reportTime();
           clearFrame();
           if (root.requestAnimationFrame) frame = root.requestAnimationFrame(tick);
         };
-        audio.ontimeupdate = () => { if (currentClip()) { watch(currentAudio); reportTime(); } };
+        audio.ontimeupdate = () => { if (currentClip()) { watch(currentAudio, serial); reportTime(); } };
         audio.onseeked = reportTime;
-        audio.onpause = suspendCue;
-        audio.onwaiting = audio.onstalled = () => { if (currentClip()) { suspendCue(); watch(currentAudio); } };
-        audio.onerror = () => { if (currentClip()) fail('audio-load', 'The recording could not be loaded. Read this screen aloud, or try again.'); };
-        audio.onended = () => {
+        audio.onpause = () => { if (currentAudio.paused) suspendCue(); };
+        audio.onwaiting = audio.onstalled = () => {
           if (!currentClip()) return;
+          if (currentAudio.readyState < 3) suspendCue();
+          watch(currentAudio, serial);
+        };
+        audio.onerror = () => { if (currentClip() && currentAudio.error) fail('audio-load', 'The recording could not be loaded. Read this screen aloud, or try again.'); };
+        audio.onended = () => {
+          if (!currentClip() || !currentAudio.ended) return;
           callbacks.onClipEnd?.(id, clipIndex);
+          if (!currentClip()) return;
           clearTimeout(timer); clearAudio(); index++;
+          if (!current()) return;
           if (index === sequence.length) next();
           else timer = setTimeout(next, gapMs);
         };
-        watch(currentAudio);
+        // Changing the source keeps this element's browser-granted permission.
+        // The real recording starts here, without a Promise/timer before play().
+        audio.src = audioSource;
+        watch(currentAudio, serial);
         const started = audio.play();
         if (started?.catch) started.catch(error => {
           if (currentClip()) fail(error?.name === 'NotAllowedError' ? 'audio-blocked' : 'audio-play',
             error?.name === 'NotAllowedError' ? 'Tap Listen to hear the story.' : 'The recording could not play. Read this screen aloud, or try again.');
         });
       } catch (_) {
-        fail('audio-unavailable', 'Recorded audio is unavailable in this browser. Read this screen aloud.');
+        Promise.resolve().then(() => fail('audio-unavailable', 'Recorded audio is unavailable in this browser. Read this screen aloud.'));
       }
     }
-    // Delay validation until the caller receives its cancellable handle.
-    Promise.resolve().then(() => {
-      if (!current()) return;
-      if (!coverage(sequence).complete) {
-        fail('recording-missing', 'The NaturalReader recording for this screen is not available yet. Read it aloud.');
-        return;
-      }
+    if (coverage(sequence).complete) {
+      // Preserve the user gesture when this call is made by the start/replay
+      // control. A browser may still reject autoplay, which is reported above.
       next();
-    });
+    } else {
+      // Missing-recording notification waits until the caller has its handle.
+      Promise.resolve().then(() => {
+        fail('recording-missing', 'The NaturalReader recording for this screen is not available yet. Read it aloud.');
+      });
+    }
     return {cancel: run.cancel};
   }
   const api = {screenFor, coverage, stop, play};

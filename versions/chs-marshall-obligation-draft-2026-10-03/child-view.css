@@ -420,3 +420,12 @@ body.child-view .answers button.continue-answer{font-size:42px;line-height:1;fle
 body.child-view .answers button.continue-answer::before{content:none!important;display:none!important}
 @media(max-width:460px){body.child-view .stage.message-slide .prompt{padding:26px 22px}body.child-view .stage.message-slide .prompt h2{font-size:29px;max-width:22ch}}
 @media(max-height:650px) and (min-width:700px){body.child-view .stage.message-slide{min-height:calc(100dvh - 66px)}body.child-view .stage.message-slide .prompt h2{font-size:32px}body.child-view .stage.message-slide .prompt{padding-block:22px}}
+
+/* One start tap when the browser blocks sound; subsequent screens auto-read. */
+.audio-start-gate[hidden]{display:none!important}
+body.child-view .audio-start-gate{display:flex;justify-content:center;margin:10px auto;padding:4px 16px}
+body.child-view .audio-start-button{display:flex;align-items:center;justify-content:center;gap:16px;min-width:240px;min-height:96px;border:4px solid #ffffff;border-radius:24px;background:#246fb8;color:#fff;box-shadow:0 0 0 4px #b8e4ff,0 10px 24px #246fb844;font-size:24px}
+body.child-view .audio-start-button span{font-size:52px;line-height:1}
+body.child-view .audio-start-button:hover{background:#16538f}
+body.child-view .stage.awaiting-audio-start .child-replay{display:none}
+body.child-view .stage.awaiting-audio-start .child-stop{display:none}
