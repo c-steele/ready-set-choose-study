@@ -28,6 +28,7 @@
       const step = {...copy(templates[templateId]), image:p.images.need, ...overrides,
         id:prefix(localId), localId, pairing:p, storyIndex, adapted:true};
       if (step.when) step.when = [prefix(step.when[0]), step.when[1]];
+      if (step.point || step.expected) { step.requireCorrect = true; step.allowBypass = false; }
       result.push(step);
     }
     add('group', 'group', {image:p.images.group});
@@ -79,7 +80,8 @@
     add('outcome', 'outcome', {text:explicitOutcome, displayText:outcomeCaptions[0], outcomeCaptions, outcomeVisual:true});
     add('recall-all', 'recall-all', {
       text:`Can you tell me, did either of these people help ${recipient.description}?`,
-      reminder:`Actually, remember, no one helped ${recipient.description}. ${upper(helpers[0].description)} did NOT help ${recipient.description}. ${upper(helpers[1].description)} did NOT help ${recipient.description}. Can you tell me, did either of these people help ${recipient.description}?`
+      rereadAfterReminder:true,
+      reminder:`Actually, remember, no one helped ${recipient.description}. ${upper(helpers[0].description)} did NOT help ${recipient.description}. ${upper(helpers[1].description)} did NOT help ${recipient.description}. No one helped ${recipient.description}.`
     });
     add('overall', 'overall', {preface:`No one helped ${recipient.description}.`});
     add('overall-amount', 'overall-amount');
@@ -101,7 +103,12 @@
       });
     }
     add('compare', 'compare', {
-      choices:helpers.map(h => upper(h.description)),
+      text:`Who was meaner for NOT helping ${recipient.reference}?`,
+      choices:helpers.map(h => upper(h.description)), optionActors:helpers.map(h => h.id), confirmChoice:true,
+      choiceConfirmations:Object.fromEntries(helpers.map(helper => [upper(helper.description), {
+        text:`You chose ${helper.description}. Did you mean that ${helper.description} was meaner for NOT helping ${recipient.reference}? Yes or No.`,
+        choices:['Yes', 'No'], actorId:helper.id
+      }])),
       note:`Exploratory comparison. Buttons follow the scene: ${helpers[0].description} left, ${helpers[1].description} right.`
     });
     return result;
@@ -113,7 +120,7 @@
     const text = [step.context, step.preface, step.text].filter(Boolean).join(' ');
     const labelsInPrompt = /Yes or No\.?$/i.test(step.text || '') || /Mean or Not Mean/i.test(step.text || '');
     const choices = labelsInPrompt ? [] : step.choices || [];
-    return wordCount(text) + wordCount(choices.join(' '));
+    return wordCount(text) + wordCount(choices.join(' ')) + wordCount(step.correctFeedback || '');
   }
 
   function pathStats(steps, maximize) {
@@ -122,18 +129,30 @@
       const step = steps[index]; reached.push(step);
       let answer = step.expected || step.point;
       if (!answer && step.choices) {
-        const child = steps.find(s => s.when && s.when[0] === step.id);
-        answer = child ? (maximize ? child.when[1] : step.choices.find(c => c !== child.when[1])) : step.choices[0];
+        const children = steps.filter(s => s.when && s.when[0] === step.id);
+        if (step.confirmChoice) {
+          const cost = choice => wordCount(step.choiceConfirmations[choice].text) + children.filter(child => child.when[1] === choice).reduce((sum, child) => sum + spokenWords(child), 0);
+          answer = step.choices.reduce((chosen, choice) => (maximize ? cost(choice) > cost(chosen) : cost(choice) < cost(chosen)) ? choice : chosen);
+        } else {
+          const child = children[0];
+          answer = child ? (maximize ? child.when[1] : step.choices.find(c => c !== child.when[1])) : step.choices[0];
+        }
       }
       answers[step.id] = answer || 'Continue';
       index = nextIndex(steps, index, answers);
     }
     return {
-      screens:reached.length,
-      responses:reached.filter(s => s.choices || s.point).length,
-      words:reached.reduce((sum, step) => sum + spokenWords(step), 0),
+      staticScreens:reached.length,
+      virtualConfirmationScreens:reached.filter(s => s.confirmChoice).length,
+      virtualCorrectFeedbackScreens:reached.filter(s => s.correctFeedback).length,
+      screens:reached.length + reached.filter(s => s.confirmChoice).length + reached.filter(s => s.correctFeedback).length,
+      responses:reached.filter(s => s.choices || s.point).length + reached.filter(s => s.confirmChoice).length,
+      words:reached.reduce((sum, step) => sum + spokenWords(step) + (step.confirmChoice ? wordCount(step.choiceConfirmations[answers[step.id]].text) : 0), 0),
       substantive:reached.filter(s => s.measure && !s.when).length,
       confidenceResponses:reached.filter(s => s.measure === 'Prediction confidence').length,
+      forcedChoiceResponses:reached.filter(s => /^Forced-choice/.test(s.measure || '')).length,
+      individualEvaluationResponses:reached.filter(s => s.measure === 'Individual evaluation').length,
+      confirmationResponses:reached.filter(s => s.confirmChoice).length,
       checks:reached.filter(s => s.point || s.expected && !s.localId.startsWith('practice-')).length,
       practiceResponses:reached.filter(s => s.localId.startsWith('practice-') && s.choices).length,
       strengthResponses:reached.filter(s => s.when && !s.localId.startsWith('practice-')).length
@@ -143,19 +162,21 @@
   function statsFor(steps, storyCount) {
     const min = pathStats(steps, false), max = pathStats(steps, true);
     return {
-      storyCount, possibleScreens:steps.length,
+      storyCount, possibleScreens:steps.length + steps.filter(s => s.confirmChoice).length + steps.filter(s => s.correctFeedback).length,
+      possibleStaticScreens:steps.length, staticScreens:{min:min.staticScreens, max:max.staticScreens},
+      virtualConfirmationScreens:min.virtualConfirmationScreens, virtualCorrectFeedbackScreens:min.virtualCorrectFeedbackScreens,
       screens:{min:min.screens, max:max.screens}, responses:{min:min.responses, max:max.responses},
       words:{min:min.words, max:max.words},
       minutes:{min:Math.round((min.words / 130 + min.responses * 3 / 60) * 10) / 10,
         max:Math.round((max.words / 110 + max.responses * 5 / 60) * 10) / 10},
-      substantive:min.substantive, confidenceResponses:min.confidenceResponses, checks:min.checks, practiceResponses:min.practiceResponses,
+      substantive:min.substantive, confidenceResponses:min.confidenceResponses, confirmationResponses:min.confirmationResponses, checks:min.checks, practiceResponses:min.practiceResponses,
       strengthResponses:{min:min.strengthResponses, max:max.strengthResponses},
       assumptions:[
         'Illustrative estimate, not observed child-session duration.',
         'Read-aloud pace: 110–130 words per minute; response time: 3–5 seconds per selection.',
-        'Includes each response label once; excludes repeated binary labels already stated in the prompt.',
-        'Assumes correct identity, recall, and practice answers, including Yes to stopping being mean and No to lying.',
-        'Does not include correction repeats, breaks, setup, narration-only transition delays, or extra pauses between glowing options.'
+        'Includes each response label once, one accepted Yes confirmation after each helper-choice comparison, and mandatory correct-answer practice feedback; excludes repeated binary labels already stated in the prompt.',
+        'Assumes correct identity, recall, and practice answers, including Yes to stopping being mean and No to lying. Incorrect check responses require correction and retry; there is no bypass.',
+        'Does not include correction repeats, rejected helper-choice confirmations, breaks, setup, narration-only transition delays, or extra pauses between glowing options. Screen counts include required confirmation and correct-answer feedback stages; error retries are not counted.'
       ]
     };
   }
@@ -195,10 +216,11 @@
       `**${session.setLabel} · ${session.pairings.length} stories · ${session.practiceLabel}**`, '',
       ...session.notes.map(note => `- ${note}`), '',
       `Expected path range: **${stats.screens.min}–${stats.screens.max} screens**, **${stats.responses.min}–${stats.responses.max} responses**.`, '',
-      `${stats.substantive} main judgments (including ${stats.confidenceResponses} prediction-confidence responses) + ${stats.checks} identity/recall checks + ${stats.practiceResponses} practice responses + ${stats.strengthResponses.min}–${stats.strengthResponses.max} conditional study-strength responses.`, '',
+      `Includes ${stats.virtualConfirmationScreens} required choice-confirmation screens and ${stats.virtualCorrectFeedbackScreens} correct-answer practice-feedback screens in addition to the static storyboard.`, '',
+      `${stats.substantive} main judgments (including ${stats.confidenceResponses} prediction-confidence responses) + ${stats.confirmationResponses} helper-choice confirmations + ${stats.checks} identity/recall checks + ${stats.practiceResponses} practice responses + ${stats.strengthResponses.min}–${stats.strengthResponses.max} conditional study-strength responses.`, '',
       `Illustrative duration: **${stats.minutes.min}–${stats.minutes.max} minutes**, based on ${stats.words.min}–${stats.words.max} spoken words.`, '',
       ...stats.assumptions.map(note => `- ${note}`), '',
-      'The storyboard below includes all possible branches, including a practice branch that is normally skipped after a correct No answer to the lying question.', ''
+      'The storyboard below includes all possible branches. Correct No is required for the lying practice question, so its retained legacy Yes-strength card is not reached during the normal path.', ''
     ];
     let lastStory = -1;
     for (const [index, step] of session.steps.entries()) {
@@ -224,6 +246,10 @@
       if (step.choices) lines.push(`Choices: ${step.choices.join(' / ')}.`, '');
       if (step.point) lines.push(`Selection check: ${step.point}.`, '');
       if (step.expected) lines.push(`Expected check/practice answer: ${step.expected}.`, '');
+      if (step.requireCorrect) lines.push('A correct response is required to advance; there is no bypass.', '');
+      if (step.correctFeedback) lines.push(`Mandatory correct-answer feedback: “${step.correctFeedback}”`, '');
+      if (step.incorrectFeedback) lines.push(`Incorrect-answer correction: “${step.incorrectFeedback}”`, '');
+      if (step.choiceConfirmations) for (const [choice, confirmation] of Object.entries(step.choiceConfirmations)) lines.push(`After choosing “${choice}”, confirm: “${confirmation.text}” Choices: ${confirmation.choices.join(' / ')}. No returns to the original choice; Yes accepts it.`, '');
       if (step.reminder) lines.push(`Reminder if needed: “${step.reminder}”`, '');
       if (step.rereadAfterReminder) lines.push('After the reminder, reread the full question and response labels before reopening the choices.', '');
       if (step.note) lines.push(`*${step.note}*`, '');
