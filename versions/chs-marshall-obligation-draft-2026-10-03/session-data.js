@@ -73,7 +73,7 @@
       });
     }
     const explicitOutcome = `No one helped ${recipient.description}. ${upper(helpers[0].description)} did NOT help ${recipient.description}. ${upper(helpers[1].description)} did NOT help ${recipient.description}.`;
-    add('outcome', 'outcome', {text:explicitOutcome});
+    add('outcome', 'outcome', {text:explicitOutcome, displayText:`No one helped ${recipient.description}.`, outcomeVisual:true});
     add('recall-all', 'recall-all', {
       text:`Can you tell me, did either of these people help ${recipient.description}?`,
       reminder:`Actually, remember, no one helped ${recipient.description}. ${upper(helpers[0].description)} did NOT help ${recipient.description}. ${upper(helpers[1].description)} did NOT help ${recipient.description}. Can you tell me, did either of these people help ${recipient.description}?`
@@ -215,7 +215,7 @@
       const scriptText=step.captionEmphasis==='HAVE TO'?step.text.replace(/\bHAVE TO\b/g,'*HAVE TO*'):step.text;
       lines.push(`“${scriptText}”`, '');
       if (step.displayTitle) lines.push(`Display treatment: ${step.displayTitle} / ${step.displaySetup} / ${step.displayQuestion}`, '');
-      if (step.displayText) lines.push(`Display wording: “${step.displayText}” The role is included in the question; no separate role label is displayed above it.`, '');
+      if (step.displayText) lines.push(`Display wording: “${step.displayText}” ${step.outcomeVisual?'Both helper cues remain visible beneath the original sad scene; each cue glows during its complete did-NOT-help sentence.':'The role is included in the question; no separate role label is displayed above it.'}`, '');
       if (step.image) lines.push(`[Stimulus source](${step.image}) — original reference image; the preview replaces its caption with the wording above.`, '');
       if (step.choices) lines.push(`Choices: ${step.choices.join(' / ')}.`, '');
       if (step.point) lines.push(`Selection check: ${step.point}.`, '');

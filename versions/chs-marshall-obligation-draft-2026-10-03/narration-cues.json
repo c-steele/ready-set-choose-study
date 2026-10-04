@@ -217,7 +217,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 250,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "This big one is this kid\u2019s teacher. Tap the kid\u2019s teacher.",
+      "expectedText": "This big one is this kid’s teacher. Tap the kid’s teacher.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -317,7 +317,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 370,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "This big one is this kid\u2019s teacher. This one is the kid\u2019s teacher. Tap the kid\u2019s teacher.",
+      "expectedText": "This big one is this kid’s teacher. This one is the kid’s teacher. Tap the kid’s teacher.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -387,7 +387,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 233,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "This big one is this kid\u2019s mom. Tap the kid\u2019s mom.",
+      "expectedText": "This big one is this kid’s mom. Tap the kid’s mom.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -487,7 +487,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 347,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "This big one is this kid\u2019s mom. This one is the kid\u2019s mom. Tap the kid\u2019s mom.",
+      "expectedText": "This big one is this kid’s mom. This one is the kid’s mom. Tap the kid’s mom.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -572,7 +572,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 208,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "The kid\u2019s teacher and the kid\u2019s mom both see that the kid is sad.",
+      "expectedText": "The kid’s teacher and the kid’s mom both see that the kid is sad.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -642,7 +642,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 183,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Now, do you think the kid\u2019s teacher will help the kid?",
+      "expectedText": "Now, do you think the kid’s teacher will help the kid?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -752,7 +752,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 177,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Now, do you think the kid\u2019s mom will help the kid?",
+      "expectedText": "Now, do you think the kid’s mom will help the kid?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -1101,7 +1101,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 365,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "When a teacher tells you to stop being mean to someone, you HAVE TO stop being mean. Let\u2019s try that question again.",
+      "expectedText": "When a teacher tells you to stop being mean to someone, you HAVE TO stop being mean. Let’s try that question again.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -1383,7 +1383,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 314,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "When someone asks you a question, you do not HAVE TO lie. Let\u2019s try that question again.",
+      "expectedText": "When someone asks you a question, you do not HAVE TO lie. Let’s try that question again.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -1538,7 +1538,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 255,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "So now, I\u2019m going to ask you some questions about whether people HAVE TO do things.",
+      "expectedText": "So now, I’m going to ask you some questions about whether people HAVE TO do things.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -1630,7 +1630,7 @@
       "generationTimestampTokens": true,
       "alignmentAudioFrames": 352,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Now, do you think the kid\u2019s teacher HAS TO help the kid? Yes or No.",
+      "expectedText": "Now, do you think the kid’s teacher HAS TO help the kid? Yes or No.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -1720,7 +1720,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 264,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Now, do you think the kid\u2019s mom HAS TO help the kid? Yes or No.",
+      "expectedText": "Now, do you think the kid’s mom HAS TO help the kid? Yes or No.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -1815,7 +1815,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 236,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Now let\u2019s say that the kid\u2019s teacher and the kid\u2019s mom do NOT help the kid.",
+      "expectedText": "Now let’s say that the kid’s teacher and the kid’s mom do NOT help the kid.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -2377,7 +2377,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 178,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Do you remember, did the kid\u2019s teacher help the kid?",
+      "expectedText": "Do you remember, did the kid’s teacher help the kid?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -2487,7 +2487,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 351,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Remember, the kid\u2019s teacher did not help the kid. Do you remember, did the kid\u2019s teacher help the kid?",
+      "expectedText": "Remember, the kid’s teacher did not help the kid. Do you remember, did the kid’s teacher help the kid?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -2582,7 +2582,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 249,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Was the kid\u2019s teacher Mean or Not Mean for NOT helping the kid in the middle?",
+      "expectedText": "Was the kid’s teacher Mean or Not Mean for NOT helping the kid in the middle?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -2682,7 +2682,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 238,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "The kid\u2019s teacher. How mean do you think the kid\u2019s teacher was?",
+      "expectedText": "The kid’s teacher. How mean do you think the kid’s teacher was?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -2807,7 +2807,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 173,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Do you remember, did the kid\u2019s mom help the kid?",
+      "expectedText": "Do you remember, did the kid’s mom help the kid?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -2917,7 +2917,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 337,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Remember, the kid\u2019s mom did not help the kid. Do you remember, did the kid\u2019s mom help the kid?",
+      "expectedText": "Remember, the kid’s mom did not help the kid. Do you remember, did the kid’s mom help the kid?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -3012,7 +3012,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 241,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Was the kid\u2019s mom Mean or Not Mean for NOT helping the kid in the middle?",
+      "expectedText": "Was the kid’s mom Mean or Not Mean for NOT helping the kid in the middle?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -3077,7 +3077,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 203,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "The kid\u2019s mom. How mean do you think she was?",
+      "expectedText": "The kid’s mom. How mean do you think she was?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -3152,7 +3152,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 104,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "The kid\u2019s teacher",
+      "expectedText": "The kid’s teacher",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -3182,7 +3182,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 87,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "The kid\u2019s mom",
+      "expectedText": "The kid’s mom",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -3252,7 +3252,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 251,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "This little one is this kid\u2019s sister. Tap the kid\u2019s sister.",
+      "expectedText": "This little one is this kid’s sister. Tap the kid’s sister.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -3352,7 +3352,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 373,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "This little one is this kid\u2019s sister. This one is the kid\u2019s sister. Tap the kid\u2019s sister.",
+      "expectedText": "This little one is this kid’s sister. This one is the kid’s sister. Tap the kid’s sister.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -3422,7 +3422,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 245,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "This little one is this kid\u2019s friend. Tap the kid\u2019s friend.",
+      "expectedText": "This little one is this kid’s friend. Tap the kid’s friend.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -3522,7 +3522,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 362,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "This little one is this kid\u2019s friend. This one is the kid\u2019s friend. Tap the kid\u2019s friend.",
+      "expectedText": "This little one is this kid’s friend. This one is the kid’s friend. Tap the kid’s friend.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -3607,7 +3607,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 212,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "The kid\u2019s sister and the kid\u2019s friend both see that the kid is sad.",
+      "expectedText": "The kid’s sister and the kid’s friend both see that the kid is sad.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -3677,7 +3677,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 185,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Now, do you think the kid\u2019s sister will help the kid?",
+      "expectedText": "Now, do you think the kid’s sister will help the kid?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -3747,7 +3747,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 178,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Now, do you think the kid\u2019s friend will help the kid?",
+      "expectedText": "Now, do you think the kid’s friend will help the kid?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -3837,7 +3837,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 271,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Now, do you think the kid\u2019s sister HAS TO help the kid? Yes or No.",
+      "expectedText": "Now, do you think the kid’s sister HAS TO help the kid? Yes or No.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -3927,7 +3927,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 264,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Now, do you think the kid\u2019s friend HAS TO help the kid? Yes or No.",
+      "expectedText": "Now, do you think the kid’s friend HAS TO help the kid? Yes or No.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -4022,7 +4022,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 236,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Now let\u2019s say that the kid\u2019s sister and the kid\u2019s friend do NOT help the kid.",
+      "expectedText": "Now let’s say that the kid’s sister and the kid’s friend do NOT help the kid.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -4087,7 +4087,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 178,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Do you remember, did the kid\u2019s sister help the kid?",
+      "expectedText": "Do you remember, did the kid’s sister help the kid?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -4197,7 +4197,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 347,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Remember, the kid\u2019s sister did not help the kid. Do you remember, did the kid\u2019s sister help the kid?",
+      "expectedText": "Remember, the kid’s sister did not help the kid. Do you remember, did the kid’s sister help the kid?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -4292,7 +4292,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 247,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Was the kid\u2019s sister Mean or Not Mean for NOT helping the kid in the middle?",
+      "expectedText": "Was the kid’s sister Mean or Not Mean for NOT helping the kid in the middle?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -4357,7 +4357,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 209,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "The kid\u2019s sister. How mean do you think she was?",
+      "expectedText": "The kid’s sister. How mean do you think she was?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -4422,7 +4422,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 174,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Do you remember, did the kid\u2019s friend help the kid?",
+      "expectedText": "Do you remember, did the kid’s friend help the kid?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -4532,7 +4532,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 334,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Remember, the kid\u2019s friend did not help the kid. Do you remember, did the kid\u2019s friend help the kid?",
+      "expectedText": "Remember, the kid’s friend did not help the kid. Do you remember, did the kid’s friend help the kid?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -4627,7 +4627,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 246,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Was the kid\u2019s friend Mean or Not Mean for NOT helping the kid in the middle?",
+      "expectedText": "Was the kid’s friend Mean or Not Mean for NOT helping the kid in the middle?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -4702,7 +4702,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 233,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "The kid\u2019s friend. How mean do you think the kid\u2019s friend was?",
+      "expectedText": "The kid’s friend. How mean do you think the kid’s friend was?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -4732,7 +4732,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 104,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "The kid\u2019s sister",
+      "expectedText": "The kid’s sister",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -4762,7 +4762,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 91,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "The kid\u2019s friend",
+      "expectedText": "The kid’s friend",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -4842,7 +4842,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 273,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "This little one is this kid\u2019s best friend. Tap the kid\u2019s best friend.",
+      "expectedText": "This little one is this kid’s best friend. Tap the kid’s best friend.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -4957,7 +4957,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 408,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "This little one is this kid\u2019s best friend. This one is the kid\u2019s best friend. Tap the kid\u2019s best friend.",
+      "expectedText": "This little one is this kid’s best friend. This one is the kid’s best friend. Tap the kid’s best friend.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -5047,7 +5047,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 229,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "The kid\u2019s friend and the kid\u2019s best friend both see that the kid is sad.",
+      "expectedText": "The kid’s friend and the kid’s best friend both see that the kid is sad.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -5122,7 +5122,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 195,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Now, do you think the kid\u2019s best friend will help the kid?",
+      "expectedText": "Now, do you think the kid’s best friend will help the kid?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -5217,7 +5217,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 283,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Now, do you think the kid\u2019s best friend HAS TO help the kid? Yes or No.",
+      "expectedText": "Now, do you think the kid’s best friend HAS TO help the kid? Yes or No.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -5317,7 +5317,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 247,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Now let\u2019s say that the kid\u2019s friend and the kid\u2019s best friend do NOT help the kid.",
+      "expectedText": "Now let’s say that the kid’s friend and the kid’s best friend do NOT help the kid.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -5387,7 +5387,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 190,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Do you remember, did the kid\u2019s best friend help the kid?",
+      "expectedText": "Do you remember, did the kid’s best friend help the kid?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -5507,7 +5507,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 366,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Remember, the kid\u2019s best friend did not help the kid. Do you remember, did the kid\u2019s best friend help the kid?",
+      "expectedText": "Remember, the kid’s best friend did not help the kid. Do you remember, did the kid’s best friend help the kid?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -5607,7 +5607,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 262,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Was the kid\u2019s best friend Mean or Not Mean for NOT helping the kid in the middle?",
+      "expectedText": "Was the kid’s best friend Mean or Not Mean for NOT helping the kid in the middle?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -5692,7 +5692,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 260,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "The kid\u2019s best friend. How mean do you think the kid\u2019s best friend was?",
+      "expectedText": "The kid’s best friend. How mean do you think the kid’s best friend was?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -5727,7 +5727,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 105,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "The kid\u2019s best friend",
+      "expectedText": "The kid’s best friend",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -5812,7 +5812,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 216,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "The kid\u2019s teacher and the kid\u2019s friend both see that the kid is sad.",
+      "expectedText": "The kid’s teacher and the kid’s friend both see that the kid is sad.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -5907,7 +5907,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 236,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Now let\u2019s say that the kid\u2019s teacher and the kid\u2019s friend do NOT help the kid.",
+      "expectedText": "Now let’s say that the kid’s teacher and the kid’s friend do NOT help the kid.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -5992,7 +5992,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 213,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "The kid\u2019s mom and the kid\u2019s sister both see that the kid is sad.",
+      "expectedText": "The kid’s mom and the kid’s sister both see that the kid is sad.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -6087,7 +6087,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 237,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Now let\u2019s say that the kid\u2019s mom and the kid\u2019s sister do NOT help the kid.",
+      "expectedText": "Now let’s say that the kid’s mom and the kid’s sister do NOT help the kid.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -6157,7 +6157,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 266,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "This little one is this kid\u2019s classmate. Tap the kid\u2019s classmate.",
+      "expectedText": "This little one is this kid’s classmate. Tap the kid’s classmate.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -6257,7 +6257,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 395,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "This little one is this kid\u2019s classmate. This one is the kid\u2019s classmate. Tap the kid\u2019s classmate.",
+      "expectedText": "This little one is this kid’s classmate. This one is the kid’s classmate. Tap the kid’s classmate.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -6342,7 +6342,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 225,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "The kid\u2019s classmate and the kid\u2019s teacher both see that the kid is sad.",
+      "expectedText": "The kid’s classmate and the kid’s teacher both see that the kid is sad.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -6412,7 +6412,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 194,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Now, do you think the kid\u2019s classmate will help the kid?",
+      "expectedText": "Now, do you think the kid’s classmate will help the kid?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -6502,7 +6502,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 277,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Now, do you think the kid\u2019s classmate HAS TO help the kid? Yes or No.",
+      "expectedText": "Now, do you think the kid’s classmate HAS TO help the kid? Yes or No.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -6597,7 +6597,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 250,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Now let\u2019s say that the kid\u2019s classmate and the kid\u2019s teacher do NOT help the kid.",
+      "expectedText": "Now let’s say that the kid’s classmate and the kid’s teacher do NOT help the kid.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -6666,7 +6666,7 @@
       "generationTimestampTokens": true,
       "alignmentAudioFrames": 189,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Do you remember, did the kid\u2019s classmate help the kid?",
+      "expectedText": "Do you remember, did the kid’s classmate help the kid?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -6776,7 +6776,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 368,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Remember, the kid\u2019s classmate did not help the kid. Do you remember, did the kid\u2019s classmate help the kid?",
+      "expectedText": "Remember, the kid’s classmate did not help the kid. Do you remember, did the kid’s classmate help the kid?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -6871,7 +6871,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 255,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Was the kid\u2019s classmate Mean or Not Mean for NOT helping the kid in the middle?",
+      "expectedText": "Was the kid’s classmate Mean or Not Mean for NOT helping the kid in the middle?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -6946,7 +6946,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 255,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "The kid\u2019s classmate. How mean do you think the kid\u2019s classmate was?",
+      "expectedText": "The kid’s classmate. How mean do you think the kid’s classmate was?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -6976,7 +6976,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 104,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "The kid\u2019s classmate",
+      "expectedText": "The kid’s classmate",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -7046,7 +7046,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 236,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "This big one is this kid\u2019s dad. Tap the kid\u2019s dad.",
+      "expectedText": "This big one is this kid’s dad. Tap the kid’s dad.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -7146,7 +7146,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 349,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "This big one is this kid\u2019s dad. This one is the kid\u2019s dad. Tap the kid\u2019s dad.",
+      "expectedText": "This big one is this kid’s dad. This one is the kid’s dad. Tap the kid’s dad.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -7231,7 +7231,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 209,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "The kid\u2019s teacher and the kid\u2019s dad both see that the kid is sad.",
+      "expectedText": "The kid’s teacher and the kid’s dad both see that the kid is sad.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -7301,7 +7301,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 179,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Now, do you think the kid\u2019s dad will help the kid?",
+      "expectedText": "Now, do you think the kid’s dad will help the kid?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -7393,7 +7393,7 @@
       "generationTimestampTokens": true,
       "alignmentAudioFrames": 350,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Now, do you think the kid\u2019s dad HAS TO help the kid? Yes or No.",
+      "expectedText": "Now, do you think the kid’s dad HAS TO help the kid? Yes or No.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -7488,7 +7488,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 234,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Now let\u2019s say that the kid\u2019s teacher and the kid\u2019s dad do NOT help the kid.",
+      "expectedText": "Now let’s say that the kid’s teacher and the kid’s dad do NOT help the kid.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -7553,7 +7553,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 172,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Do you remember, did the kid\u2019s dad help the kid?",
+      "expectedText": "Do you remember, did the kid’s dad help the kid?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -7663,7 +7663,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 331,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Remember, the kid\u2019s dad did not help the kid. Do you remember, did the kid\u2019s dad help the kid?",
+      "expectedText": "Remember, the kid’s dad did not help the kid. Do you remember, did the kid’s dad help the kid?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -7758,7 +7758,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 243,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Was the kid\u2019s dad Mean or Not Mean for NOT helping the kid in the middle?",
+      "expectedText": "Was the kid’s dad Mean or Not Mean for NOT helping the kid in the middle?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -7823,7 +7823,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 198,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "The kid\u2019s dad. How mean do you think he was?",
+      "expectedText": "The kid’s dad. How mean do you think he was?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -7853,7 +7853,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 104,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "The kid\u2019s dad",
+      "expectedText": "The kid’s dad",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -7923,7 +7923,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 250,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "This little one is this kid\u2019s brother. Tap the kid\u2019s brother.",
+      "expectedText": "This little one is this kid’s brother. Tap the kid’s brother.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -8023,7 +8023,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 370,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "This little one is this kid\u2019s brother. This one is the kid\u2019s brother. Tap the kid\u2019s brother.",
+      "expectedText": "This little one is this kid’s brother. This one is the kid’s brother. Tap the kid’s brother.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -8108,7 +8108,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 216,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "The kid\u2019s brother and the kid\u2019s friend both see that the kid is sad.",
+      "expectedText": "The kid’s brother and the kid’s friend both see that the kid is sad.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -8178,7 +8178,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 183,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Now, do you think the kid\u2019s brother will help the kid?",
+      "expectedText": "Now, do you think the kid’s brother will help the kid?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -8268,7 +8268,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 268,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Now, do you think the kid\u2019s brother HAS TO help the kid? Yes or No.",
+      "expectedText": "Now, do you think the kid’s brother HAS TO help the kid? Yes or No.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -8363,7 +8363,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 234,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Now let\u2019s say that the kid\u2019s brother and the kid\u2019s friend do NOT help the kid.",
+      "expectedText": "Now let’s say that the kid’s brother and the kid’s friend do NOT help the kid.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -8428,7 +8428,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 174,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Do you remember, did the kid\u2019s brother help the kid?",
+      "expectedText": "Do you remember, did the kid’s brother help the kid?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -8538,7 +8538,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 347,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Remember, the kid\u2019s brother did not help the kid. Do you remember, did the kid\u2019s brother help the kid?",
+      "expectedText": "Remember, the kid’s brother did not help the kid. Do you remember, did the kid’s brother help the kid?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -8633,7 +8633,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 251,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Was the kid\u2019s brother Mean or Not Mean for NOT helping the kid in the middle?",
+      "expectedText": "Was the kid’s brother Mean or Not Mean for NOT helping the kid in the middle?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -8698,7 +8698,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 203,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "The kid\u2019s brother. How mean do you think he was?",
+      "expectedText": "The kid’s brother. How mean do you think he was?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -8728,7 +8728,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 104,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "The kid\u2019s brother",
+      "expectedText": "The kid’s brother",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -8813,7 +8813,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 211,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "The kid\u2019s dad and the kid\u2019s brother both see that the kid is sad.",
+      "expectedText": "The kid’s dad and the kid’s brother both see that the kid is sad.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -8908,7 +8908,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 233,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Now let\u2019s say that the kid\u2019s dad and the kid\u2019s brother do NOT help the kid.",
+      "expectedText": "Now let’s say that the kid’s dad and the kid’s brother do NOT help the kid.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -8993,7 +8993,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 209,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "The kid\u2019s dad and the kid\u2019s mom both see that the kid is sad.",
+      "expectedText": "The kid’s dad and the kid’s mom both see that the kid is sad.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -9088,7 +9088,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 229,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Now let\u2019s say that the kid\u2019s dad and the kid\u2019s mom do NOT help the kid.",
+      "expectedText": "Now let’s say that the kid’s dad and the kid’s mom do NOT help the kid.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -9173,7 +9173,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 211,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "The kid\u2019s sister and the kid\u2019s brother both see that the kid is sad.",
+      "expectedText": "The kid’s sister and the kid’s brother both see that the kid is sad.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -9268,7 +9268,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 240,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Now let\u2019s say that the kid\u2019s sister and the kid\u2019s brother do NOT help the kid.",
+      "expectedText": "Now let’s say that the kid’s sister and the kid’s brother do NOT help the kid.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -9333,7 +9333,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 219,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "This big one is this kid\u2019s mom. Tap the mom.",
+      "expectedText": "This big one is this kid’s mom. Tap the mom.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -9423,7 +9423,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 313,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "This big one is this kid\u2019s mom. This one is the mom. Tap the mom.",
+      "expectedText": "This big one is this kid’s mom. This one is the mom. Tap the mom.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -9493,7 +9493,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 185,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Now let\u2019s say that one day the mom was very sad.",
+      "expectedText": "Now let’s say that one day the mom was very sad.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -9573,7 +9573,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 203,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "The kid\u2019s dad and the kid both see that the mom is sad.",
+      "expectedText": "The kid’s dad and the kid both see that the mom is sad.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -9643,7 +9643,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 178,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Now, do you think the kid\u2019s dad will help the mom?",
+      "expectedText": "Now, do you think the kid’s dad will help the mom?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -9800,7 +9800,7 @@
       "generationTimestampTokens": true,
       "alignmentAudioFrames": 352,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Now, do you think the kid\u2019s dad HAS TO help the mom? Yes or No.",
+      "expectedText": "Now, do you think the kid’s dad HAS TO help the mom? Yes or No.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -9975,7 +9975,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 212,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Now let\u2019s say that the kid\u2019s dad and the kid do NOT help the mom.",
+      "expectedText": "Now let’s say that the kid’s dad and the kid do NOT help the mom.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -10345,7 +10345,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 172,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Do you remember, did the kid\u2019s dad help the mom?",
+      "expectedText": "Do you remember, did the kid’s dad help the mom?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -10455,7 +10455,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 328,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Remember, the kid\u2019s dad did not help the mom. Do you remember, did the kid\u2019s dad help the mom?",
+      "expectedText": "Remember, the kid’s dad did not help the mom. Do you remember, did the kid’s dad help the mom?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -10550,7 +10550,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 246,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Was the kid\u2019s dad Mean or Not Mean for NOT helping the mom in the middle?",
+      "expectedText": "Was the kid’s dad Mean or Not Mean for NOT helping the mom in the middle?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -10955,7 +10955,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 221,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "This big one is this kid\u2019s dad. Tap the dad.",
+      "expectedText": "This big one is this kid’s dad. Tap the dad.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -11045,7 +11045,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 320,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "This big one is this kid\u2019s dad. This one is the dad. Tap the dad.",
+      "expectedText": "This big one is this kid’s dad. This one is the dad. Tap the dad.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -11115,7 +11115,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 185,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Now let\u2019s say that one day the dad was very sad.",
+      "expectedText": "Now let’s say that one day the dad was very sad.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -11195,7 +11195,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 196,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "The kid and the kid\u2019s mom both see that the dad is sad.",
+      "expectedText": "The kid and the kid’s mom both see that the dad is sad.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -11330,7 +11330,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 178,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Now, do you think the kid\u2019s mom will help the dad?",
+      "expectedText": "Now, do you think the kid’s mom will help the dad?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -11507,7 +11507,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 264,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Now, do you think the kid\u2019s mom HAS TO help the dad? Yes or No.",
+      "expectedText": "Now, do you think the kid’s mom HAS TO help the dad? Yes or No.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -11597,7 +11597,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 213,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Now let\u2019s say that the kid and the kid\u2019s mom do NOT help the dad.",
+      "expectedText": "Now let’s say that the kid and the kid’s mom do NOT help the dad.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -12217,7 +12217,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 174,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Do you remember, did the kid\u2019s mom help the dad?",
+      "expectedText": "Do you remember, did the kid’s mom help the dad?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -12327,7 +12327,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 339,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Remember, the kid\u2019s mom did not help the dad. Do you remember, did the kid\u2019s mom help the dad?",
+      "expectedText": "Remember, the kid’s mom did not help the dad. Do you remember, did the kid’s mom help the dad?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -12422,7 +12422,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 247,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Was the kid\u2019s mom Mean or Not Mean for NOT helping the dad in the middle?",
+      "expectedText": "Was the kid’s mom Mean or Not Mean for NOT helping the dad in the middle?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -12502,7 +12502,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 262,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "This big one is this kid\u2019s teacher. Tap the teacher on the left.",
+      "expectedText": "This big one is this kid’s teacher. Tap the teacher on the left.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -12622,7 +12622,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 395,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "This big one is this kid\u2019s teacher. This one is the teacher on the left. Tap the teacher on the left.",
+      "expectedText": "This big one is this kid’s teacher. This one is the teacher on the left. Tap the teacher on the left.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -12707,7 +12707,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 272,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "This big one is this kid\u2019s teacher too. Tap the teacher in the middle.",
+      "expectedText": "This big one is this kid’s teacher too. Tap the teacher in the middle.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -12832,7 +12832,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 400,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "This big one is this kid\u2019s teacher too. This one is the teacher in the middle. Tap the teacher in the middle.",
+      "expectedText": "This big one is this kid’s teacher too. This one is the teacher in the middle. Tap the teacher in the middle.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -12917,7 +12917,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 219,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Now let\u2019s say that one day the teacher in the middle was very sad.",
+      "expectedText": "Now let’s say that one day the teacher in the middle was very sad.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -13529,7 +13529,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 258,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Now let\u2019s say that the teacher on the left and the kid do NOT help the teacher in the middle.",
+      "expectedText": "Now let’s say that the teacher on the left and the kid do NOT help the teacher in the middle.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -14734,7 +14734,7 @@
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
       "alignmentAudioFrames": 194,
       "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "That\u2019s the end of our stories. Thank you!",
+      "expectedText": "That’s the end of our stories. Thank you!",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -14981,7 +14981,7 @@
       "generationTimestampTokens": false,
       "alignmentAudioFrames": 173,
       "alignmentMethod": "Independent Whisper cross-attention DTW cropped to decoded audio duration, nominal 20 ms grid. Original leading context sentence removed at quiet boundary.",
-      "expectedText": "How much do you think the kid\u2019s teacher HAS TO?",
+      "expectedText": "How much do you think the kid’s teacher HAS TO?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -15062,7 +15062,7 @@
       "generationTimestampTokens": false,
       "alignmentAudioFrames": 189,
       "alignmentMethod": "Independent Whisper cross-attention DTW cropped to decoded audio duration, nominal 20 ms grid; intervals constrained to retained phrase chunks and outside known inserted join silence.",
-      "expectedText": "How much do you think the kid\u2019s mom HAS TO?",
+      "expectedText": "How much do you think the kid’s mom HAS TO?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -15219,7 +15219,7 @@
       "generationTimestampTokens": false,
       "alignmentAudioFrames": 197,
       "alignmentMethod": "Independent Whisper cross-attention DTW cropped to decoded audio duration, nominal 20 ms grid; intervals constrained to retained phrase chunks and outside known inserted join silence.",
-      "expectedText": "How much do you think the kid\u2019s sister HAS TO?",
+      "expectedText": "How much do you think the kid’s sister HAS TO?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -15376,7 +15376,7 @@
       "generationTimestampTokens": false,
       "alignmentAudioFrames": 169,
       "alignmentMethod": "Independent Whisper cross-attention DTW cropped to decoded audio duration, nominal 20 ms grid. Original leading context sentence removed at quiet boundary.",
-      "expectedText": "How much do you think the kid\u2019s friend HAS TO?",
+      "expectedText": "How much do you think the kid’s friend HAS TO?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -15462,7 +15462,7 @@
       "generationTimestampTokens": false,
       "alignmentAudioFrames": 179,
       "alignmentMethod": "Independent Whisper cross-attention DTW cropped to decoded audio duration, nominal 20 ms grid. Original leading context sentence removed at quiet boundary.",
-      "expectedText": "How much do you think the kid\u2019s best friend HAS TO?",
+      "expectedText": "How much do you think the kid’s best friend HAS TO?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -15543,7 +15543,7 @@
       "generationTimestampTokens": false,
       "alignmentAudioFrames": 180,
       "alignmentMethod": "Independent Whisper cross-attention DTW cropped to decoded audio duration, nominal 20 ms grid. Original leading context sentence removed at quiet boundary.",
-      "expectedText": "How much do you think the kid\u2019s classmate HAS TO?",
+      "expectedText": "How much do you think the kid’s classmate HAS TO?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -15624,7 +15624,7 @@
       "generationTimestampTokens": false,
       "alignmentAudioFrames": 189,
       "alignmentMethod": "Independent Whisper cross-attention DTW cropped to decoded audio duration, nominal 20 ms grid; intervals constrained to retained phrase chunks and outside known inserted join silence.",
-      "expectedText": "How much do you think the kid\u2019s dad HAS TO?",
+      "expectedText": "How much do you think the kid’s dad HAS TO?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -15781,7 +15781,7 @@
       "generationTimestampTokens": false,
       "alignmentAudioFrames": 192,
       "alignmentMethod": "Independent Whisper cross-attention DTW cropped to decoded audio duration, nominal 20 ms grid; intervals constrained to retained phrase chunks and outside known inserted join silence.",
-      "expectedText": "How much do you think the kid\u2019s brother HAS TO?",
+      "expectedText": "How much do you think the kid’s brother HAS TO?",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
@@ -16040,6 +16040,2104 @@
           "retainedDecodedSamples": 150534
         }
       }
+    },
+    "nr_196": {
+      "sha256": "4c7a4a5d90accdfdcb8bd8abde8715de13eea8a72fb701d6c7b4772f8cb64533",
+      "durationSeconds": 8.411429,
+      "decodedDurationSeconds": 8.38,
+      "recognizedText": "No one helped the kid. Kids teacher did not help the kid. Kids mom did not help the kid.",
+      "words": [
+        {
+          "word": "No",
+          "start": 0.0,
+          "end": 0.56
+        },
+        {
+          "word": "one",
+          "start": 0.56,
+          "end": 0.86
+        },
+        {
+          "word": "helped",
+          "start": 0.86,
+          "end": 1.16
+        },
+        {
+          "word": "the",
+          "start": 1.16,
+          "end": 1.4
+        },
+        {
+          "word": "kid.",
+          "start": 1.4,
+          "end": 2.58
+        },
+        {
+          "word": "Kids",
+          "start": 2.58,
+          "end": 2.9
+        },
+        {
+          "word": "teacher",
+          "start": 2.9,
+          "end": 3.26
+        },
+        {
+          "word": "did",
+          "start": 3.26,
+          "end": 3.68
+        },
+        {
+          "word": "not",
+          "start": 3.68,
+          "end": 3.9
+        },
+        {
+          "word": "help",
+          "start": 3.9,
+          "end": 4.22
+        },
+        {
+          "word": "the",
+          "start": 4.22,
+          "end": 4.42
+        },
+        {
+          "word": "kid.",
+          "start": 4.42,
+          "end": 5.58
+        },
+        {
+          "word": "Kids",
+          "start": 5.58,
+          "end": 5.92
+        },
+        {
+          "word": "mom",
+          "start": 5.92,
+          "end": 6.28
+        },
+        {
+          "word": "did",
+          "start": 6.28,
+          "end": 6.64
+        },
+        {
+          "word": "not",
+          "start": 6.64,
+          "end": 6.86
+        },
+        {
+          "word": "help",
+          "start": 6.86,
+          "end": 7.18
+        },
+        {
+          "word": "the",
+          "start": 7.18,
+          "end": 7.38
+        },
+        {
+          "word": "kid.",
+          "start": 7.38,
+          "end": 8.24
+        }
+      ],
+      "expectedText": "No one helped the kid. The kid’s teacher did NOT help the kid. The kid’s mom did NOT help the kid.",
+      "exactNormalizedWordMatch": false,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded duration; approximate boundaries nominal20msgrid",
+      "alignmentAudioFrames": 419,
+      "numBeams": 5,
+      "generationTimestampTokens": false,
+      "recognitionTempo": 1,
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "articleOmissionsOnly": true,
+      "allowedAsrOmittedToken": "the",
+      "allowedAsrOmissionPosition": "Only expected sentence-initial The in helper clauses",
+      "asrArticleOmissions": [
+        {
+          "expectedWordIndex": 5,
+          "word": "The",
+          "contextExpectedWords": [
+            "the",
+            "kids",
+            "teacher",
+            "did"
+          ]
+        },
+        {
+          "expectedWordIndex": 13,
+          "word": "The",
+          "contextExpectedWords": [
+            "the",
+            "kids",
+            "mom",
+            "did"
+          ]
+        }
+      ],
+      "allOtherSpokenWordTokensMatch": true,
+      "nativeOpeningExactNormalizedRecognition": true,
+      "cueAlignmentApproved": true,
+      "missingWordsNotInsertedIntoCues": true,
+      "approvalBasis": "Exact verified project wording and complete native paragraph; independent ASR differs solely by missing sentence-initial The tokens. Timings are only for recognized words."
+    },
+    "nr_203": {
+      "sha256": "c48e587a3decb47d2980ad27e5a592a4df6b864fb0e54c68e9d2c378bd32e11b",
+      "durationSeconds": 8.646531,
+      "decodedDurationSeconds": 8.61,
+      "recognizedText": "No one helped the kid. Kids sister did not help the kid. Kids friend did not help the kid.",
+      "words": [
+        {
+          "word": "No",
+          "start": 0.04,
+          "end": 0.8
+        },
+        {
+          "word": "one",
+          "start": 0.8,
+          "end": 1.1
+        },
+        {
+          "word": "helped",
+          "start": 1.1,
+          "end": 1.38
+        },
+        {
+          "word": "the",
+          "start": 1.38,
+          "end": 1.62
+        },
+        {
+          "word": "kid.",
+          "start": 1.62,
+          "end": 2.82
+        },
+        {
+          "word": "Kids",
+          "start": 2.82,
+          "end": 3.14
+        },
+        {
+          "word": "sister",
+          "start": 3.14,
+          "end": 3.7
+        },
+        {
+          "word": "did",
+          "start": 3.7,
+          "end": 3.96
+        },
+        {
+          "word": "not",
+          "start": 3.96,
+          "end": 4.18
+        },
+        {
+          "word": "help",
+          "start": 4.18,
+          "end": 4.5
+        },
+        {
+          "word": "the",
+          "start": 4.5,
+          "end": 4.7
+        },
+        {
+          "word": "kid.",
+          "start": 4.7,
+          "end": 5.88
+        },
+        {
+          "word": "Kids",
+          "start": 5.88,
+          "end": 6.16
+        },
+        {
+          "word": "friend",
+          "start": 6.16,
+          "end": 6.56
+        },
+        {
+          "word": "did",
+          "start": 6.56,
+          "end": 6.9
+        },
+        {
+          "word": "not",
+          "start": 6.9,
+          "end": 7.1
+        },
+        {
+          "word": "help",
+          "start": 7.1,
+          "end": 7.44
+        },
+        {
+          "word": "the",
+          "start": 7.44,
+          "end": 7.62
+        },
+        {
+          "word": "kid.",
+          "start": 7.62,
+          "end": 8.46
+        }
+      ],
+      "expectedText": "No one helped the kid. The kid’s sister did NOT help the kid. The kid’s friend did NOT help the kid.",
+      "exactNormalizedWordMatch": false,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded duration; approximate boundaries nominal20msgrid",
+      "alignmentAudioFrames": 431,
+      "numBeams": 5,
+      "generationTimestampTokens": false,
+      "recognitionTempo": 1,
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "articleOmissionsOnly": true,
+      "allowedAsrOmittedToken": "the",
+      "allowedAsrOmissionPosition": "Only expected sentence-initial The in helper clauses",
+      "asrArticleOmissions": [
+        {
+          "expectedWordIndex": 5,
+          "word": "The",
+          "contextExpectedWords": [
+            "the",
+            "kids",
+            "sister",
+            "did"
+          ]
+        },
+        {
+          "expectedWordIndex": 13,
+          "word": "The",
+          "contextExpectedWords": [
+            "the",
+            "kids",
+            "friend",
+            "did"
+          ]
+        }
+      ],
+      "allOtherSpokenWordTokensMatch": true,
+      "nativeOpeningExactNormalizedRecognition": true,
+      "cueAlignmentApproved": true,
+      "missingWordsNotInsertedIntoCues": true,
+      "approvalBasis": "Exact verified project wording and complete native paragraph; independent ASR differs solely by missing sentence-initial The tokens. Timings are only for recognized words."
+    },
+    "nr_209": {
+      "sha256": "f39156c0174f1da13d78201a8a92260289a44026ae27306c29a5601ee899f04a",
+      "durationSeconds": 8.803265,
+      "decodedDurationSeconds": 8.77,
+      "recognizedText": "No one helped the kid. Kids friend did not help the kid. Kids best friend did not help the kid.",
+      "words": [
+        {
+          "word": "No",
+          "start": 0.04,
+          "end": 0.78
+        },
+        {
+          "word": "one",
+          "start": 0.78,
+          "end": 1.1
+        },
+        {
+          "word": "helped",
+          "start": 1.1,
+          "end": 1.38
+        },
+        {
+          "word": "the",
+          "start": 1.38,
+          "end": 1.64
+        },
+        {
+          "word": "kid.",
+          "start": 1.64,
+          "end": 2.82
+        },
+        {
+          "word": "Kids",
+          "start": 2.82,
+          "end": 3.12
+        },
+        {
+          "word": "friend",
+          "start": 3.12,
+          "end": 3.5
+        },
+        {
+          "word": "did",
+          "start": 3.5,
+          "end": 3.84
+        },
+        {
+          "word": "not",
+          "start": 3.84,
+          "end": 4.04
+        },
+        {
+          "word": "help",
+          "start": 4.04,
+          "end": 4.38
+        },
+        {
+          "word": "the",
+          "start": 4.38,
+          "end": 4.56
+        },
+        {
+          "word": "kid.",
+          "start": 4.56,
+          "end": 5.74
+        },
+        {
+          "word": "Kids",
+          "start": 5.74,
+          "end": 6.02
+        },
+        {
+          "word": "best",
+          "start": 6.02,
+          "end": 6.36
+        },
+        {
+          "word": "friend",
+          "start": 6.36,
+          "end": 6.82
+        },
+        {
+          "word": "did",
+          "start": 6.82,
+          "end": 7.1
+        },
+        {
+          "word": "not",
+          "start": 7.1,
+          "end": 7.28
+        },
+        {
+          "word": "help",
+          "start": 7.28,
+          "end": 7.6
+        },
+        {
+          "word": "the",
+          "start": 7.6,
+          "end": 7.8
+        },
+        {
+          "word": "kid.",
+          "start": 7.8,
+          "end": 8.6
+        }
+      ],
+      "expectedText": "No one helped the kid. The kid’s friend did NOT help the kid. The kid’s best friend did NOT help the kid.",
+      "exactNormalizedWordMatch": false,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded duration; approximate boundaries nominal20msgrid",
+      "alignmentAudioFrames": 439,
+      "numBeams": 5,
+      "generationTimestampTokens": false,
+      "recognitionTempo": 1,
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "articleOmissionsOnly": true,
+      "allowedAsrOmittedToken": "the",
+      "allowedAsrOmissionPosition": "Only expected sentence-initial The in helper clauses",
+      "asrArticleOmissions": [
+        {
+          "expectedWordIndex": 5,
+          "word": "The",
+          "contextExpectedWords": [
+            "the",
+            "kids",
+            "friend",
+            "did"
+          ]
+        },
+        {
+          "expectedWordIndex": 13,
+          "word": "The",
+          "contextExpectedWords": [
+            "the",
+            "kids",
+            "best",
+            "friend"
+          ]
+        }
+      ],
+      "allOtherSpokenWordTokensMatch": true,
+      "nativeOpeningExactNormalizedRecognition": true,
+      "cueAlignmentApproved": true,
+      "missingWordsNotInsertedIntoCues": true,
+      "approvalBasis": "Exact verified project wording and complete native paragraph; independent ASR differs solely by missing sentence-initial The tokens. Timings are only for recognized words."
+    },
+    "nr_213": {
+      "sha256": "dff3e617f4f42b85fc6e296e01041c6e27592434479750edab686c21b7d5d173",
+      "durationSeconds": 8.620408,
+      "decodedDurationSeconds": 8.58,
+      "recognizedText": "No one helped the kid. Kids teacher did not help the kid. Kids friend did not help the kid.",
+      "words": [
+        {
+          "word": "No",
+          "start": 0.02,
+          "end": 0.78
+        },
+        {
+          "word": "one",
+          "start": 0.78,
+          "end": 1.08
+        },
+        {
+          "word": "helped",
+          "start": 1.08,
+          "end": 1.36
+        },
+        {
+          "word": "the",
+          "start": 1.36,
+          "end": 1.62
+        },
+        {
+          "word": "kid.",
+          "start": 1.62,
+          "end": 2.82
+        },
+        {
+          "word": "Kids",
+          "start": 2.82,
+          "end": 3.14
+        },
+        {
+          "word": "teacher",
+          "start": 3.14,
+          "end": 3.5
+        },
+        {
+          "word": "did",
+          "start": 3.5,
+          "end": 3.9
+        },
+        {
+          "word": "not",
+          "start": 3.9,
+          "end": 4.12
+        },
+        {
+          "word": "help",
+          "start": 4.12,
+          "end": 4.44
+        },
+        {
+          "word": "the",
+          "start": 4.44,
+          "end": 4.66
+        },
+        {
+          "word": "kid.",
+          "start": 4.66,
+          "end": 5.86
+        },
+        {
+          "word": "Kids",
+          "start": 5.86,
+          "end": 6.14
+        },
+        {
+          "word": "friend",
+          "start": 6.14,
+          "end": 6.52
+        },
+        {
+          "word": "did",
+          "start": 6.52,
+          "end": 6.86
+        },
+        {
+          "word": "not",
+          "start": 6.86,
+          "end": 7.08
+        },
+        {
+          "word": "help",
+          "start": 7.08,
+          "end": 7.4
+        },
+        {
+          "word": "the",
+          "start": 7.4,
+          "end": 7.6
+        },
+        {
+          "word": "kid.",
+          "start": 7.6,
+          "end": 8.44
+        }
+      ],
+      "expectedText": "No one helped the kid. The kid’s teacher did NOT help the kid. The kid’s friend did NOT help the kid.",
+      "exactNormalizedWordMatch": false,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded duration; approximate boundaries nominal20msgrid",
+      "alignmentAudioFrames": 429,
+      "numBeams": 5,
+      "generationTimestampTokens": false,
+      "recognitionTempo": 1,
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "articleOmissionsOnly": true,
+      "allowedAsrOmittedToken": "the",
+      "allowedAsrOmissionPosition": "Only expected sentence-initial The in helper clauses",
+      "asrArticleOmissions": [
+        {
+          "expectedWordIndex": 5,
+          "word": "The",
+          "contextExpectedWords": [
+            "the",
+            "kids",
+            "teacher",
+            "did"
+          ]
+        },
+        {
+          "expectedWordIndex": 13,
+          "word": "The",
+          "contextExpectedWords": [
+            "the",
+            "kids",
+            "friend",
+            "did"
+          ]
+        }
+      ],
+      "allOtherSpokenWordTokensMatch": true,
+      "nativeOpeningExactNormalizedRecognition": true,
+      "cueAlignmentApproved": true,
+      "missingWordsNotInsertedIntoCues": true,
+      "approvalBasis": "Exact verified project wording and complete native paragraph; independent ASR differs solely by missing sentence-initial The tokens. Timings are only for recognized words."
+    },
+    "nr_215": {
+      "sha256": "1e5786fbf60d4aace90776ac77e71cdf8263971543eb3633495e936a78a24add",
+      "durationSeconds": 8.672653,
+      "decodedDurationSeconds": 8.63,
+      "recognizedText": "No one helped the kid. Kids mom did not help the kid. Kids sister did not help the kid.",
+      "words": [
+        {
+          "word": "No",
+          "start": 0.02,
+          "end": 0.8
+        },
+        {
+          "word": "one",
+          "start": 0.8,
+          "end": 1.1
+        },
+        {
+          "word": "helped",
+          "start": 1.1,
+          "end": 1.38
+        },
+        {
+          "word": "the",
+          "start": 1.38,
+          "end": 1.62
+        },
+        {
+          "word": "kid.",
+          "start": 1.62,
+          "end": 2.76
+        },
+        {
+          "word": "Kids",
+          "start": 2.76,
+          "end": 3.12
+        },
+        {
+          "word": "mom",
+          "start": 3.12,
+          "end": 3.46
+        },
+        {
+          "word": "did",
+          "start": 3.46,
+          "end": 3.82
+        },
+        {
+          "word": "not",
+          "start": 3.82,
+          "end": 4.04
+        },
+        {
+          "word": "help",
+          "start": 4.04,
+          "end": 4.38
+        },
+        {
+          "word": "the",
+          "start": 4.38,
+          "end": 4.58
+        },
+        {
+          "word": "kid.",
+          "start": 4.58,
+          "end": 5.8
+        },
+        {
+          "word": "Kids",
+          "start": 5.8,
+          "end": 6.06
+        },
+        {
+          "word": "sister",
+          "start": 6.06,
+          "end": 6.64
+        },
+        {
+          "word": "did",
+          "start": 6.64,
+          "end": 6.9
+        },
+        {
+          "word": "not",
+          "start": 6.9,
+          "end": 7.12
+        },
+        {
+          "word": "help",
+          "start": 7.12,
+          "end": 7.44
+        },
+        {
+          "word": "the",
+          "start": 7.44,
+          "end": 7.64
+        },
+        {
+          "word": "kid.",
+          "start": 7.64,
+          "end": 8.46
+        }
+      ],
+      "expectedText": "No one helped the kid. The kid’s mom did NOT help the kid. The kid’s sister did NOT help the kid.",
+      "exactNormalizedWordMatch": false,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded duration; approximate boundaries nominal20msgrid",
+      "alignmentAudioFrames": 432,
+      "numBeams": 5,
+      "generationTimestampTokens": false,
+      "recognitionTempo": 1,
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "articleOmissionsOnly": true,
+      "allowedAsrOmittedToken": "the",
+      "allowedAsrOmissionPosition": "Only expected sentence-initial The in helper clauses",
+      "asrArticleOmissions": [
+        {
+          "expectedWordIndex": 5,
+          "word": "The",
+          "contextExpectedWords": [
+            "the",
+            "kids",
+            "mom",
+            "did"
+          ]
+        },
+        {
+          "expectedWordIndex": 13,
+          "word": "The",
+          "contextExpectedWords": [
+            "the",
+            "kids",
+            "sister",
+            "did"
+          ]
+        }
+      ],
+      "allOtherSpokenWordTokensMatch": true,
+      "nativeOpeningExactNormalizedRecognition": true,
+      "cueAlignmentApproved": true,
+      "missingWordsNotInsertedIntoCues": true,
+      "approvalBasis": "Exact verified project wording and complete native paragraph; independent ASR differs solely by missing sentence-initial The tokens. Timings are only for recognized words."
+    },
+    "nr_217": {
+      "sha256": "be67a97808e571fc726946c2524452966706794c9b7cb918918f42e4ef7a199f",
+      "durationSeconds": 9.038367,
+      "decodedDurationSeconds": 9.0,
+      "recognizedText": "No one helped the kid. The kid's classmate did not help the kid. Kids teacher did not help the kid.",
+      "words": [
+        {
+          "word": "No",
+          "start": 0.0,
+          "end": 0.8
+        },
+        {
+          "word": "one",
+          "start": 0.8,
+          "end": 1.1
+        },
+        {
+          "word": "helped",
+          "start": 1.1,
+          "end": 1.38
+        },
+        {
+          "word": "the",
+          "start": 1.38,
+          "end": 1.64
+        },
+        {
+          "word": "kid.",
+          "start": 1.64,
+          "end": 2.92
+        },
+        {
+          "word": "The",
+          "start": 2.92,
+          "end": 3.02
+        },
+        {
+          "word": "kid's",
+          "start": 3.02,
+          "end": 3.34
+        },
+        {
+          "word": "classmate",
+          "start": 3.34,
+          "end": 3.94
+        },
+        {
+          "word": "did",
+          "start": 3.94,
+          "end": 4.2
+        },
+        {
+          "word": "not",
+          "start": 4.2,
+          "end": 4.42
+        },
+        {
+          "word": "help",
+          "start": 4.42,
+          "end": 4.76
+        },
+        {
+          "word": "the",
+          "start": 4.76,
+          "end": 4.96
+        },
+        {
+          "word": "kid.",
+          "start": 4.96,
+          "end": 6.14
+        },
+        {
+          "word": "Kids",
+          "start": 6.14,
+          "end": 6.46
+        },
+        {
+          "word": "teacher",
+          "start": 6.46,
+          "end": 6.84
+        },
+        {
+          "word": "did",
+          "start": 6.84,
+          "end": 7.22
+        },
+        {
+          "word": "not",
+          "start": 7.22,
+          "end": 7.46
+        },
+        {
+          "word": "help",
+          "start": 7.46,
+          "end": 7.78
+        },
+        {
+          "word": "the",
+          "start": 7.78,
+          "end": 7.98
+        },
+        {
+          "word": "kid.",
+          "start": 7.98,
+          "end": 8.86
+        }
+      ],
+      "expectedText": "No one helped the kid. The kid’s classmate did NOT help the kid. The kid’s teacher did NOT help the kid.",
+      "exactNormalizedWordMatch": false,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded duration; approximate boundaries nominal20msgrid",
+      "alignmentAudioFrames": 450,
+      "numBeams": 5,
+      "generationTimestampTokens": false,
+      "recognitionTempo": 1,
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "articleOmissionsOnly": true,
+      "allowedAsrOmittedToken": "the",
+      "allowedAsrOmissionPosition": "Only expected sentence-initial The in helper clauses",
+      "asrArticleOmissions": [
+        {
+          "expectedWordIndex": 13,
+          "word": "The",
+          "contextExpectedWords": [
+            "the",
+            "kids",
+            "teacher",
+            "did"
+          ]
+        }
+      ],
+      "allOtherSpokenWordTokensMatch": true,
+      "nativeOpeningExactNormalizedRecognition": true,
+      "cueAlignmentApproved": true,
+      "missingWordsNotInsertedIntoCues": true,
+      "approvalBasis": "Exact verified project wording and complete native paragraph; independent ASR differs solely by missing sentence-initial The tokens. Timings are only for recognized words."
+    },
+    "nr_221": {
+      "sha256": "71b86a57f6d594e22778e67012d0e5f6e1b800a6c20909af74deb17106951ac9",
+      "durationSeconds": 8.594286,
+      "decodedDurationSeconds": 8.55,
+      "recognizedText": "No one helped the kid. Kids teacher did not help the kid. Kids dad did not help the kid.",
+      "words": [
+        {
+          "word": "No",
+          "start": 0.0,
+          "end": 0.78
+        },
+        {
+          "word": "one",
+          "start": 0.78,
+          "end": 1.08
+        },
+        {
+          "word": "helped",
+          "start": 1.08,
+          "end": 1.36
+        },
+        {
+          "word": "the",
+          "start": 1.36,
+          "end": 1.62
+        },
+        {
+          "word": "kid.",
+          "start": 1.62,
+          "end": 2.82
+        },
+        {
+          "word": "Kids",
+          "start": 2.82,
+          "end": 3.14
+        },
+        {
+          "word": "teacher",
+          "start": 3.14,
+          "end": 3.5
+        },
+        {
+          "word": "did",
+          "start": 3.5,
+          "end": 3.9
+        },
+        {
+          "word": "not",
+          "start": 3.9,
+          "end": 4.12
+        },
+        {
+          "word": "help",
+          "start": 4.12,
+          "end": 4.44
+        },
+        {
+          "word": "the",
+          "start": 4.44,
+          "end": 4.64
+        },
+        {
+          "word": "kid.",
+          "start": 4.64,
+          "end": 5.86
+        },
+        {
+          "word": "Kids",
+          "start": 5.86,
+          "end": 6.14
+        },
+        {
+          "word": "dad",
+          "start": 6.14,
+          "end": 6.6
+        },
+        {
+          "word": "did",
+          "start": 6.6,
+          "end": 6.86
+        },
+        {
+          "word": "not",
+          "start": 6.86,
+          "end": 7.06
+        },
+        {
+          "word": "help",
+          "start": 7.06,
+          "end": 7.38
+        },
+        {
+          "word": "the",
+          "start": 7.38,
+          "end": 7.58
+        },
+        {
+          "word": "kid.",
+          "start": 7.58,
+          "end": 8.44
+        }
+      ],
+      "expectedText": "No one helped the kid. The kid’s teacher did NOT help the kid. The kid’s dad did NOT help the kid.",
+      "exactNormalizedWordMatch": false,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded duration; approximate boundaries nominal20msgrid",
+      "alignmentAudioFrames": 428,
+      "numBeams": 5,
+      "generationTimestampTokens": false,
+      "recognitionTempo": 1,
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "articleOmissionsOnly": true,
+      "allowedAsrOmittedToken": "the",
+      "allowedAsrOmissionPosition": "Only expected sentence-initial The in helper clauses",
+      "asrArticleOmissions": [
+        {
+          "expectedWordIndex": 5,
+          "word": "The",
+          "contextExpectedWords": [
+            "the",
+            "kids",
+            "teacher",
+            "did"
+          ]
+        },
+        {
+          "expectedWordIndex": 13,
+          "word": "The",
+          "contextExpectedWords": [
+            "the",
+            "kids",
+            "dad",
+            "did"
+          ]
+        }
+      ],
+      "allOtherSpokenWordTokensMatch": true,
+      "nativeOpeningExactNormalizedRecognition": true,
+      "cueAlignmentApproved": true,
+      "missingWordsNotInsertedIntoCues": true,
+      "approvalBasis": "Exact verified project wording and complete native paragraph; independent ASR differs solely by missing sentence-initial The tokens. Timings are only for recognized words."
+    },
+    "nr_225": {
+      "sha256": "4b48b366adfbfb8687e8033503857867778e1ef260b17cdb02770ab1a2645871",
+      "durationSeconds": 8.646531,
+      "decodedDurationSeconds": 8.62,
+      "recognizedText": "No one helped the kid. Kids' brother did not help the kid. Kids' friend did not help the kid.",
+      "words": [
+        {
+          "word": "No",
+          "start": 0.02,
+          "end": 0.78
+        },
+        {
+          "word": "one",
+          "start": 0.78,
+          "end": 1.08
+        },
+        {
+          "word": "helped",
+          "start": 1.08,
+          "end": 1.36
+        },
+        {
+          "word": "the",
+          "start": 1.36,
+          "end": 1.62
+        },
+        {
+          "word": "kid.",
+          "start": 1.62,
+          "end": 2.82
+        },
+        {
+          "word": "Kids'",
+          "start": 2.82,
+          "end": 3.36
+        },
+        {
+          "word": "brother",
+          "start": 3.36,
+          "end": 3.62
+        },
+        {
+          "word": "did",
+          "start": 3.62,
+          "end": 3.94
+        },
+        {
+          "word": "not",
+          "start": 3.94,
+          "end": 4.14
+        },
+        {
+          "word": "help",
+          "start": 4.14,
+          "end": 4.48
+        },
+        {
+          "word": "the",
+          "start": 4.48,
+          "end": 4.68
+        },
+        {
+          "word": "kid.",
+          "start": 4.68,
+          "end": 5.88
+        },
+        {
+          "word": "Kids'",
+          "start": 5.88,
+          "end": 6.42
+        },
+        {
+          "word": "friend",
+          "start": 6.42,
+          "end": 6.64
+        },
+        {
+          "word": "did",
+          "start": 6.64,
+          "end": 6.9
+        },
+        {
+          "word": "not",
+          "start": 6.9,
+          "end": 7.12
+        },
+        {
+          "word": "help",
+          "start": 7.12,
+          "end": 7.44
+        },
+        {
+          "word": "the",
+          "start": 7.44,
+          "end": 7.62
+        },
+        {
+          "word": "kid.",
+          "start": 7.62,
+          "end": 8.46
+        }
+      ],
+      "expectedText": "No one helped the kid. The kid’s brother did NOT help the kid. The kid’s friend did NOT help the kid.",
+      "exactNormalizedWordMatch": false,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded duration; approximate boundaries nominal20msgrid",
+      "alignmentAudioFrames": 431,
+      "numBeams": 5,
+      "generationTimestampTokens": false,
+      "recognitionTempo": 1,
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "articleOmissionsOnly": true,
+      "allowedAsrOmittedToken": "the",
+      "allowedAsrOmissionPosition": "Only expected sentence-initial The in helper clauses",
+      "asrArticleOmissions": [
+        {
+          "expectedWordIndex": 5,
+          "word": "The",
+          "contextExpectedWords": [
+            "the",
+            "kids",
+            "brother",
+            "did"
+          ]
+        },
+        {
+          "expectedWordIndex": 13,
+          "word": "The",
+          "contextExpectedWords": [
+            "the",
+            "kids",
+            "friend",
+            "did"
+          ]
+        }
+      ],
+      "allOtherSpokenWordTokensMatch": true,
+      "nativeOpeningExactNormalizedRecognition": true,
+      "cueAlignmentApproved": true,
+      "missingWordsNotInsertedIntoCues": true,
+      "approvalBasis": "Exact verified project wording and complete native paragraph; independent ASR differs solely by missing sentence-initial The tokens. Timings are only for recognized words."
+    },
+    "nr_229": {
+      "sha256": "6405b71674d351a3feb71179c1387e529b7465b4fae574bd588f2be2e7ebe8ec",
+      "durationSeconds": 8.620408,
+      "decodedDurationSeconds": 8.57,
+      "recognizedText": "No one helped the kid. Kids dad did not help the kid. Kids brother did not help the kid.",
+      "words": [
+        {
+          "word": "No",
+          "start": 0.0,
+          "end": 0.78
+        },
+        {
+          "word": "one",
+          "start": 0.78,
+          "end": 1.1
+        },
+        {
+          "word": "helped",
+          "start": 1.1,
+          "end": 1.36
+        },
+        {
+          "word": "the",
+          "start": 1.36,
+          "end": 1.62
+        },
+        {
+          "word": "kid.",
+          "start": 1.62,
+          "end": 2.82
+        },
+        {
+          "word": "Kids",
+          "start": 2.82,
+          "end": 3.1
+        },
+        {
+          "word": "dad",
+          "start": 3.1,
+          "end": 3.56
+        },
+        {
+          "word": "did",
+          "start": 3.56,
+          "end": 3.82
+        },
+        {
+          "word": "not",
+          "start": 3.82,
+          "end": 4.02
+        },
+        {
+          "word": "help",
+          "start": 4.02,
+          "end": 4.34
+        },
+        {
+          "word": "the",
+          "start": 4.34,
+          "end": 4.54
+        },
+        {
+          "word": "kid.",
+          "start": 4.54,
+          "end": 5.72
+        },
+        {
+          "word": "Kids",
+          "start": 5.72,
+          "end": 6.02
+        },
+        {
+          "word": "brother",
+          "start": 6.02,
+          "end": 6.44
+        },
+        {
+          "word": "did",
+          "start": 6.44,
+          "end": 6.82
+        },
+        {
+          "word": "not",
+          "start": 6.82,
+          "end": 7.04
+        },
+        {
+          "word": "help",
+          "start": 7.04,
+          "end": 7.36
+        },
+        {
+          "word": "the",
+          "start": 7.36,
+          "end": 7.58
+        },
+        {
+          "word": "kid.",
+          "start": 7.58,
+          "end": 8.44
+        }
+      ],
+      "expectedText": "No one helped the kid. The kid’s dad did NOT help the kid. The kid’s brother did NOT help the kid.",
+      "exactNormalizedWordMatch": false,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded duration; approximate boundaries nominal20msgrid",
+      "alignmentAudioFrames": 429,
+      "numBeams": 5,
+      "generationTimestampTokens": false,
+      "recognitionTempo": 1,
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "articleOmissionsOnly": true,
+      "allowedAsrOmittedToken": "the",
+      "allowedAsrOmissionPosition": "Only expected sentence-initial The in helper clauses",
+      "asrArticleOmissions": [
+        {
+          "expectedWordIndex": 5,
+          "word": "The",
+          "contextExpectedWords": [
+            "the",
+            "kids",
+            "dad",
+            "did"
+          ]
+        },
+        {
+          "expectedWordIndex": 13,
+          "word": "The",
+          "contextExpectedWords": [
+            "the",
+            "kids",
+            "brother",
+            "did"
+          ]
+        }
+      ],
+      "allOtherSpokenWordTokensMatch": true,
+      "nativeOpeningExactNormalizedRecognition": true,
+      "cueAlignmentApproved": true,
+      "missingWordsNotInsertedIntoCues": true,
+      "approvalBasis": "Exact verified project wording and complete native paragraph; independent ASR differs solely by missing sentence-initial The tokens. Timings are only for recognized words."
+    },
+    "nr_231": {
+      "sha256": "cd860ef3f16d07cf079c1c35f7b7a71851b0f4c88229108a91e187e998dba047",
+      "durationSeconds": 8.515918,
+      "decodedDurationSeconds": 8.47,
+      "recognizedText": "No one helped the kid. Kids dad did not help the kid. Kids mom did not help the kid.",
+      "words": [
+        {
+          "word": "No",
+          "start": 0.0,
+          "end": 0.8
+        },
+        {
+          "word": "one",
+          "start": 0.8,
+          "end": 1.1
+        },
+        {
+          "word": "helped",
+          "start": 1.1,
+          "end": 1.38
+        },
+        {
+          "word": "the",
+          "start": 1.38,
+          "end": 1.62
+        },
+        {
+          "word": "kid.",
+          "start": 1.62,
+          "end": 2.82
+        },
+        {
+          "word": "Kids",
+          "start": 2.82,
+          "end": 3.1
+        },
+        {
+          "word": "dad",
+          "start": 3.1,
+          "end": 3.58
+        },
+        {
+          "word": "did",
+          "start": 3.58,
+          "end": 3.82
+        },
+        {
+          "word": "not",
+          "start": 3.82,
+          "end": 4.04
+        },
+        {
+          "word": "help",
+          "start": 4.04,
+          "end": 4.34
+        },
+        {
+          "word": "the",
+          "start": 4.34,
+          "end": 4.54
+        },
+        {
+          "word": "kid.",
+          "start": 4.54,
+          "end": 5.7
+        },
+        {
+          "word": "Kids",
+          "start": 5.7,
+          "end": 5.98
+        },
+        {
+          "word": "mom",
+          "start": 5.98,
+          "end": 6.38
+        },
+        {
+          "word": "did",
+          "start": 6.38,
+          "end": 6.72
+        },
+        {
+          "word": "not",
+          "start": 6.72,
+          "end": 6.94
+        },
+        {
+          "word": "help",
+          "start": 6.94,
+          "end": 7.26
+        },
+        {
+          "word": "the",
+          "start": 7.26,
+          "end": 7.46
+        },
+        {
+          "word": "kid.",
+          "start": 7.46,
+          "end": 8.32
+        }
+      ],
+      "expectedText": "No one helped the kid. The kid’s dad did NOT help the kid. The kid’s mom did NOT help the kid.",
+      "exactNormalizedWordMatch": false,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded duration; approximate boundaries nominal20msgrid",
+      "alignmentAudioFrames": 424,
+      "numBeams": 5,
+      "generationTimestampTokens": false,
+      "recognitionTempo": 1,
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "articleOmissionsOnly": true,
+      "allowedAsrOmittedToken": "the",
+      "allowedAsrOmissionPosition": "Only expected sentence-initial The in helper clauses",
+      "asrArticleOmissions": [
+        {
+          "expectedWordIndex": 5,
+          "word": "The",
+          "contextExpectedWords": [
+            "the",
+            "kids",
+            "dad",
+            "did"
+          ]
+        },
+        {
+          "expectedWordIndex": 13,
+          "word": "The",
+          "contextExpectedWords": [
+            "the",
+            "kids",
+            "mom",
+            "did"
+          ]
+        }
+      ],
+      "allOtherSpokenWordTokensMatch": true,
+      "nativeOpeningExactNormalizedRecognition": true,
+      "cueAlignmentApproved": true,
+      "missingWordsNotInsertedIntoCues": true,
+      "approvalBasis": "Exact verified project wording and complete native paragraph; independent ASR differs solely by missing sentence-initial The tokens. Timings are only for recognized words."
+    },
+    "nr_233": {
+      "sha256": "3971446ce2a9d6d70eeba2865aa498db279cbc630956c2be265b54314f7ea6e2",
+      "durationSeconds": 8.803265,
+      "decodedDurationSeconds": 8.76,
+      "recognizedText": "No one helped the kid. Kids sister did not help the kid. Kids brother did not help the kid.",
+      "words": [
+        {
+          "word": "No",
+          "start": 0.04,
+          "end": 0.8
+        },
+        {
+          "word": "one",
+          "start": 0.8,
+          "end": 1.1
+        },
+        {
+          "word": "helped",
+          "start": 1.1,
+          "end": 1.38
+        },
+        {
+          "word": "the",
+          "start": 1.38,
+          "end": 1.62
+        },
+        {
+          "word": "kid.",
+          "start": 1.62,
+          "end": 2.82
+        },
+        {
+          "word": "Kids",
+          "start": 2.82,
+          "end": 3.14
+        },
+        {
+          "word": "sister",
+          "start": 3.14,
+          "end": 3.7
+        },
+        {
+          "word": "did",
+          "start": 3.7,
+          "end": 3.96
+        },
+        {
+          "word": "not",
+          "start": 3.96,
+          "end": 4.18
+        },
+        {
+          "word": "help",
+          "start": 4.18,
+          "end": 4.5
+        },
+        {
+          "word": "the",
+          "start": 4.5,
+          "end": 4.7
+        },
+        {
+          "word": "kid.",
+          "start": 4.7,
+          "end": 5.88
+        },
+        {
+          "word": "Kids",
+          "start": 5.88,
+          "end": 6.2
+        },
+        {
+          "word": "brother",
+          "start": 6.2,
+          "end": 6.6
+        },
+        {
+          "word": "did",
+          "start": 6.6,
+          "end": 6.98
+        },
+        {
+          "word": "not",
+          "start": 6.98,
+          "end": 7.22
+        },
+        {
+          "word": "help",
+          "start": 7.22,
+          "end": 7.54
+        },
+        {
+          "word": "the",
+          "start": 7.54,
+          "end": 7.74
+        },
+        {
+          "word": "kid.",
+          "start": 7.74,
+          "end": 8.56
+        }
+      ],
+      "expectedText": "No one helped the kid. The kid’s sister did NOT help the kid. The kid’s brother did NOT help the kid.",
+      "exactNormalizedWordMatch": false,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded duration; approximate boundaries nominal20msgrid",
+      "alignmentAudioFrames": 438,
+      "numBeams": 5,
+      "generationTimestampTokens": false,
+      "recognitionTempo": 1,
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "articleOmissionsOnly": true,
+      "allowedAsrOmittedToken": "the",
+      "allowedAsrOmissionPosition": "Only expected sentence-initial The in helper clauses",
+      "asrArticleOmissions": [
+        {
+          "expectedWordIndex": 5,
+          "word": "The",
+          "contextExpectedWords": [
+            "the",
+            "kids",
+            "sister",
+            "did"
+          ]
+        },
+        {
+          "expectedWordIndex": 13,
+          "word": "The",
+          "contextExpectedWords": [
+            "the",
+            "kids",
+            "brother",
+            "did"
+          ]
+        }
+      ],
+      "allOtherSpokenWordTokensMatch": true,
+      "nativeOpeningExactNormalizedRecognition": true,
+      "cueAlignmentApproved": true,
+      "missingWordsNotInsertedIntoCues": true,
+      "approvalBasis": "Exact verified project wording and complete native paragraph; independent ASR differs solely by missing sentence-initial The tokens. Timings are only for recognized words."
+    },
+    "nr_235": {
+      "sha256": "dcf89bc4d606e602a71f5a56de7671f07330567784a894cf47cfd60543c487ea",
+      "durationSeconds": 7.941224,
+      "decodedDurationSeconds": 7.91,
+      "recognizedText": "No one helped the mom. Kids dad did not help the mom. Kid did not help the mom.",
+      "words": [
+        {
+          "word": "No",
+          "start": 0.0,
+          "end": 0.78
+        },
+        {
+          "word": "one",
+          "start": 0.78,
+          "end": 1.08
+        },
+        {
+          "word": "helped",
+          "start": 1.08,
+          "end": 1.36
+        },
+        {
+          "word": "the",
+          "start": 1.36,
+          "end": 1.62
+        },
+        {
+          "word": "mom.",
+          "start": 1.62,
+          "end": 2.74
+        },
+        {
+          "word": "Kids",
+          "start": 2.74,
+          "end": 3.08
+        },
+        {
+          "word": "dad",
+          "start": 3.08,
+          "end": 3.56
+        },
+        {
+          "word": "did",
+          "start": 3.56,
+          "end": 3.82
+        },
+        {
+          "word": "not",
+          "start": 3.82,
+          "end": 4.0
+        },
+        {
+          "word": "help",
+          "start": 4.0,
+          "end": 4.3
+        },
+        {
+          "word": "the",
+          "start": 4.3,
+          "end": 4.5
+        },
+        {
+          "word": "mom.",
+          "start": 4.5,
+          "end": 5.52
+        },
+        {
+          "word": "Kid",
+          "start": 5.52,
+          "end": 5.94
+        },
+        {
+          "word": "did",
+          "start": 5.94,
+          "end": 6.2
+        },
+        {
+          "word": "not",
+          "start": 6.2,
+          "end": 6.42
+        },
+        {
+          "word": "help",
+          "start": 6.42,
+          "end": 6.72
+        },
+        {
+          "word": "the",
+          "start": 6.72,
+          "end": 6.94
+        },
+        {
+          "word": "mom.",
+          "start": 6.94,
+          "end": 7.76
+        }
+      ],
+      "expectedText": "No one helped the mom. The kid’s dad did NOT help the mom. The kid did NOT help the mom.",
+      "exactNormalizedWordMatch": false,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded duration; approximate boundaries nominal20msgrid",
+      "alignmentAudioFrames": 396,
+      "numBeams": 5,
+      "generationTimestampTokens": false,
+      "recognitionTempo": 1,
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "articleOmissionsOnly": true,
+      "allowedAsrOmittedToken": "the",
+      "allowedAsrOmissionPosition": "Only expected sentence-initial The in helper clauses",
+      "asrArticleOmissions": [
+        {
+          "expectedWordIndex": 5,
+          "word": "The",
+          "contextExpectedWords": [
+            "the",
+            "kids",
+            "dad",
+            "did"
+          ]
+        },
+        {
+          "expectedWordIndex": 13,
+          "word": "The",
+          "contextExpectedWords": [
+            "the",
+            "kid",
+            "did",
+            "not"
+          ]
+        }
+      ],
+      "allOtherSpokenWordTokensMatch": true,
+      "nativeOpeningExactNormalizedRecognition": true,
+      "cueAlignmentApproved": true,
+      "missingWordsNotInsertedIntoCues": true,
+      "approvalBasis": "Exact verified project wording and complete native paragraph; independent ASR differs solely by missing sentence-initial The tokens. Timings are only for recognized words."
+    },
+    "nr_242": {
+      "sha256": "a3f28430944ee92436b7814dcadcf7d4a3c945051a80ab203ae8b3602c42d82f",
+      "durationSeconds": 8.124082,
+      "decodedDurationSeconds": 8.09,
+      "recognizedText": "No one helped the dad. Kid did not help the dad. Kids mom did not help the dad.",
+      "words": [
+        {
+          "word": "No",
+          "start": 0.04,
+          "end": 0.76
+        },
+        {
+          "word": "one",
+          "start": 0.76,
+          "end": 1.04
+        },
+        {
+          "word": "helped",
+          "start": 1.04,
+          "end": 1.32
+        },
+        {
+          "word": "the",
+          "start": 1.32,
+          "end": 1.58
+        },
+        {
+          "word": "dad.",
+          "start": 1.58,
+          "end": 2.76
+        },
+        {
+          "word": "Kid",
+          "start": 2.76,
+          "end": 3.08
+        },
+        {
+          "word": "did",
+          "start": 3.08,
+          "end": 3.32
+        },
+        {
+          "word": "not",
+          "start": 3.32,
+          "end": 3.52
+        },
+        {
+          "word": "help",
+          "start": 3.52,
+          "end": 3.86
+        },
+        {
+          "word": "the",
+          "start": 3.86,
+          "end": 4.08
+        },
+        {
+          "word": "dad.",
+          "start": 4.08,
+          "end": 5.24
+        },
+        {
+          "word": "Kids",
+          "start": 5.24,
+          "end": 5.58
+        },
+        {
+          "word": "mom",
+          "start": 5.58,
+          "end": 5.98
+        },
+        {
+          "word": "did",
+          "start": 5.98,
+          "end": 6.26
+        },
+        {
+          "word": "not",
+          "start": 6.26,
+          "end": 6.5
+        },
+        {
+          "word": "help",
+          "start": 6.5,
+          "end": 6.84
+        },
+        {
+          "word": "the",
+          "start": 6.84,
+          "end": 7.06
+        },
+        {
+          "word": "dad.",
+          "start": 7.06,
+          "end": 7.88
+        }
+      ],
+      "expectedText": "No one helped the dad. The kid did NOT help the dad. The kid’s mom did NOT help the dad.",
+      "exactNormalizedWordMatch": false,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded duration; approximate boundaries nominal20msgrid",
+      "alignmentAudioFrames": 405,
+      "numBeams": 5,
+      "generationTimestampTokens": false,
+      "recognitionTempo": 1,
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "articleOmissionsOnly": true,
+      "allowedAsrOmittedToken": "the",
+      "allowedAsrOmissionPosition": "Only expected sentence-initial The in helper clauses",
+      "asrArticleOmissions": [
+        {
+          "expectedWordIndex": 5,
+          "word": "The",
+          "contextExpectedWords": [
+            "the",
+            "kid",
+            "did",
+            "not"
+          ]
+        },
+        {
+          "expectedWordIndex": 12,
+          "word": "The",
+          "contextExpectedWords": [
+            "the",
+            "kids",
+            "mom",
+            "did"
+          ]
+        }
+      ],
+      "allOtherSpokenWordTokensMatch": true,
+      "nativeOpeningExactNormalizedRecognition": true,
+      "cueAlignmentApproved": true,
+      "missingWordsNotInsertedIntoCues": true,
+      "approvalBasis": "Exact verified project wording and complete native paragraph; independent ASR differs solely by missing sentence-initial The tokens. Timings are only for recognized words."
+    },
+    "nr_249": {
+      "sha256": "979d9e95d1720c533adfab17f12239ddeb4173c982887ccce8c7b53a3e24ae33",
+      "durationSeconds": 10.710204,
+      "decodedDurationSeconds": 10.66,
+      "recognizedText": "No one helped the teacher in the middle. Teacher on the left did not help the teacher in the middle. Kid did not help the teacher in the middle.",
+      "words": [
+        {
+          "word": "No",
+          "start": 0.0,
+          "end": 0.74
+        },
+        {
+          "word": "one",
+          "start": 0.74,
+          "end": 1.06
+        },
+        {
+          "word": "helped",
+          "start": 1.06,
+          "end": 1.3
+        },
+        {
+          "word": "the",
+          "start": 1.3,
+          "end": 1.58
+        },
+        {
+          "word": "teacher",
+          "start": 1.58,
+          "end": 1.98
+        },
+        {
+          "word": "in",
+          "start": 1.98,
+          "end": 2.22
+        },
+        {
+          "word": "the",
+          "start": 2.22,
+          "end": 2.3
+        },
+        {
+          "word": "middle.",
+          "start": 2.3,
+          "end": 3.5
+        },
+        {
+          "word": "Teacher",
+          "start": 3.5,
+          "end": 3.76
+        },
+        {
+          "word": "on",
+          "start": 3.76,
+          "end": 4.16
+        },
+        {
+          "word": "the",
+          "start": 4.16,
+          "end": 4.3
+        },
+        {
+          "word": "left",
+          "start": 4.3,
+          "end": 4.64
+        },
+        {
+          "word": "did",
+          "start": 4.64,
+          "end": 4.94
+        },
+        {
+          "word": "not",
+          "start": 4.94,
+          "end": 5.16
+        },
+        {
+          "word": "help",
+          "start": 5.16,
+          "end": 5.52
+        },
+        {
+          "word": "the",
+          "start": 5.52,
+          "end": 5.74
+        },
+        {
+          "word": "teacher",
+          "start": 5.74,
+          "end": 6.04
+        },
+        {
+          "word": "in",
+          "start": 6.04,
+          "end": 6.32
+        },
+        {
+          "word": "the",
+          "start": 6.32,
+          "end": 6.42
+        },
+        {
+          "word": "middle.",
+          "start": 6.42,
+          "end": 7.6
+        },
+        {
+          "word": "Kid",
+          "start": 7.6,
+          "end": 7.88
+        },
+        {
+          "word": "did",
+          "start": 7.88,
+          "end": 8.16
+        },
+        {
+          "word": "not",
+          "start": 8.16,
+          "end": 8.38
+        },
+        {
+          "word": "help",
+          "start": 8.38,
+          "end": 8.72
+        },
+        {
+          "word": "the",
+          "start": 8.72,
+          "end": 8.94
+        },
+        {
+          "word": "teacher",
+          "start": 8.94,
+          "end": 9.32
+        },
+        {
+          "word": "in",
+          "start": 9.32,
+          "end": 9.56
+        },
+        {
+          "word": "the",
+          "start": 9.56,
+          "end": 9.68
+        },
+        {
+          "word": "middle.",
+          "start": 9.68,
+          "end": 10.48
+        }
+      ],
+      "expectedText": "No one helped the teacher in the middle. The teacher on the left did NOT help the teacher in the middle. The kid did NOT help the teacher in the middle.",
+      "exactNormalizedWordMatch": false,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded duration; approximate boundaries nominal20msgrid",
+      "alignmentAudioFrames": 533,
+      "numBeams": 5,
+      "generationTimestampTokens": false,
+      "recognitionTempo": 1,
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "articleOmissionsOnly": true,
+      "allowedAsrOmittedToken": "the",
+      "allowedAsrOmissionPosition": "Only expected sentence-initial The in helper clauses",
+      "asrArticleOmissions": [
+        {
+          "expectedWordIndex": 8,
+          "word": "The",
+          "contextExpectedWords": [
+            "the",
+            "teacher",
+            "on",
+            "the"
+          ]
+        },
+        {
+          "expectedWordIndex": 21,
+          "word": "The",
+          "contextExpectedWords": [
+            "the",
+            "kid",
+            "did",
+            "not"
+          ]
+        }
+      ],
+      "allOtherSpokenWordTokensMatch": true,
+      "nativeOpeningExactNormalizedRecognition": true,
+      "cueAlignmentApproved": true,
+      "missingWordsNotInsertedIntoCues": true,
+      "approvalBasis": "Exact verified project wording and complete native paragraph; independent ASR differs solely by missing sentence-initial The tokens. Timings are only for recognized words."
     }
   }
 }

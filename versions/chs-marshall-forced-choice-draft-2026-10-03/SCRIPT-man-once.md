@@ -16,7 +16,7 @@ Expected path range: **71–71 screens**, **44–44 responses**.
 
 18 forced-choice main judgments + 24 identity/recall checks + 2 brief practice responses. No strength scales.
 
-Illustrative duration: **9.6–12.4 minutes**, based on 961–961 spoken words.
+Illustrative duration: **9.8–12.6 minutes**, based on 985–985 spoken words.
 
 - Illustrative estimate, not observed child-session duration.
 - Read-aloud pace: 110–130 words per minute; response time: 3–5 seconds per selection.
@@ -32,11 +32,11 @@ Left: the kid’s teacher. Middle: the kid. Right: the kid’s dad.
 
 ### 1. Meet the characters
 
-“Look! Here are some people.”
+“Oh look! Here is a kid.”
 
 [Stimulus source](assets/stimuli/677804bb653c-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening line from Find the Caregiver.*
+*Opening adapted to the single kid shown on screen.*
 
 ### 2. Meet the kid
 
@@ -76,7 +76,7 @@ Reminder if needed: “This big one is this kid’s dad. This one is the kid’s
 
 ### 5. The kid needs help
 
-“Now let’s say that one day this kid was very sad.”
+“Now let’s say that one day the kid in the middle was very sad.”
 
 [Stimulus source](assets/stimuli/ee15b1b5be65-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -98,9 +98,9 @@ Choices: The kid’s teacher / The kid’s dad.
 
 ### 8. “HAVE TO” practice
 
-“Now, sometimes people HAVE TO do things.”
+“Now, sometimes people *HAVE TO* do things.”
 
-*Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
+*Read with a brief pause before and after HAVE TO. Pauses have been added to the existing Evelyn recording; italic display emphasis is an adaptation. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
 ### 9. Practice · Stop being mean
 
@@ -114,6 +114,8 @@ Expected check/practice answer: Yes.
 
 Reminder if needed: “When a teacher tells you to stop being mean to someone, you HAVE TO stop being mean. Let’s try that question again.”
 
+After the reminder, reread the full question and response labels before reopening the choices.
+
 *Brief comprehension practice, not a study outcome. The illustration and split display wording are adaptations. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
 ### 10. Practice · Lie
@@ -125,6 +127,8 @@ Choices: Yes / No.
 Expected check/practice answer: No.
 
 Reminder if needed: “When someone asks you a question, you do not HAVE TO lie. Let’s try that question again.”
+
+After the reminder, reread the full question and response labels before reopening the choices.
 
 *Brief comprehension practice, not a study outcome. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
@@ -147,6 +151,8 @@ Choices: The kid’s teacher / The kid’s dad.
 ### 13. What happens next
 
 “No one helped the kid. The kid’s teacher did NOT help the kid. The kid’s dad did NOT help the kid.”
+
+Display wording: “No one helped the kid.” Both helper cues remain visible beneath the original sad scene; each cue glows during its complete did-NOT-help sentence.
 
 [Stimulus source](assets/stimuli/ee15b1b5be65-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -180,11 +186,11 @@ Left: the kid’s brother. Middle: the kid. Right: the kid’s friend.
 
 ### 16. Meet the characters
 
-“Look! Here are some people.”
+“Oh look! Here is a kid.”
 
 [Stimulus source](assets/stimuli/bb199acadbc5-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening line from Find the Caregiver.*
+*Opening adapted to the single kid shown on screen.*
 
 ### 17. Meet the kid
 
@@ -224,7 +230,7 @@ Reminder if needed: “This little one is this kid’s friend. This one is the k
 
 ### 20. The kid needs help
 
-“Now let’s say that one day this kid was very sad.”
+“Now let’s say that one day the kid in the middle was very sad.”
 
 [Stimulus source](assets/stimuli/3538d8e77c34-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -258,6 +264,8 @@ Choices: The kid’s brother / The kid’s friend.
 
 “No one helped the kid. The kid’s brother did NOT help the kid. The kid’s friend did NOT help the kid.”
 
+Display wording: “No one helped the kid.” Both helper cues remain visible beneath the original sad scene; each cue glows during its complete did-NOT-help sentence.
+
 [Stimulus source](assets/stimuli/3538d8e77c34-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 *Every response path reaches this same outcome, regardless of prediction or obligation choices.*
@@ -290,11 +298,11 @@ Left: the kid’s friend. Middle: the kid. Right: the kid’s best friend.
 
 ### 27. Meet the characters
 
-“Look! Here are some people.”
+“Oh look! Here is a kid.”
 
 [Stimulus source](assets/stimuli/d45a1ece9a16-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening line from Find the Caregiver.*
+*Opening adapted to the single kid shown on screen.*
 
 ### 28. Meet the kid
 
@@ -334,7 +342,7 @@ Reminder if needed: “This little one is this kid’s best friend. This one is 
 
 ### 31. The kid needs help
 
-“Now let’s say that one day this kid was very sad.”
+“Now let’s say that one day the kid in the middle was very sad.”
 
 [Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -368,6 +376,8 @@ Choices: The kid’s friend / The kid’s best friend.
 
 “No one helped the kid. The kid’s friend did NOT help the kid. The kid’s best friend did NOT help the kid.”
 
+Display wording: “No one helped the kid.” Both helper cues remain visible beneath the original sad scene; each cue glows during its complete did-NOT-help sentence.
+
 [Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 *Every response path reaches this same outcome, regardless of prediction or obligation choices.*
@@ -400,11 +410,11 @@ Left: the kid’s teacher. Middle: the kid. Right: the kid’s friend.
 
 ### 38. Meet the characters
 
-“Look! Here are some people.”
+“Oh look! Here is a kid.”
 
 [Stimulus source](assets/stimuli/5ab48f0b29ed-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening line from Find the Caregiver.*
+*Opening adapted to the single kid shown on screen.*
 
 ### 39. Meet the kid
 
@@ -444,7 +454,7 @@ Reminder if needed: “This little one is this kid’s friend. This one is the k
 
 ### 42. The kid needs help
 
-“Now let’s say that one day this kid was very sad.”
+“Now let’s say that one day the kid in the middle was very sad.”
 
 [Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -478,6 +488,8 @@ Choices: The kid’s teacher / The kid’s friend.
 
 “No one helped the kid. The kid’s teacher did NOT help the kid. The kid’s friend did NOT help the kid.”
 
+Display wording: “No one helped the kid.” Both helper cues remain visible beneath the original sad scene; each cue glows during its complete did-NOT-help sentence.
+
 [Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 *Every response path reaches this same outcome, regardless of prediction or obligation choices.*
@@ -510,11 +522,11 @@ Left: the kid’s dad. Middle: the kid. Right: the kid’s brother.
 
 ### 49. Meet the characters
 
-“Look! Here are some people.”
+“Oh look! Here is a kid.”
 
 [Stimulus source](assets/stimuli/ebcc9f9f7d93-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening line from Find the Caregiver.*
+*Opening adapted to the single kid shown on screen.*
 
 ### 50. Meet the kid
 
@@ -554,7 +566,7 @@ Reminder if needed: “This little one is this kid’s brother. This one is the 
 
 ### 53. The kid needs help
 
-“Now let’s say that one day this kid was very sad.”
+“Now let’s say that one day the kid in the middle was very sad.”
 
 [Stimulus source](assets/stimuli/09b52ae33b24-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -588,6 +600,8 @@ Choices: The kid’s dad / The kid’s brother.
 
 “No one helped the kid. The kid’s dad did NOT help the kid. The kid’s brother did NOT help the kid.”
 
+Display wording: “No one helped the kid.” Both helper cues remain visible beneath the original sad scene; each cue glows during its complete did-NOT-help sentence.
+
 [Stimulus source](assets/stimuli/09b52ae33b24-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 *Every response path reaches this same outcome, regardless of prediction or obligation choices.*
@@ -620,11 +634,11 @@ Left: the kid’s classmate. Middle: the kid. Right: the kid’s teacher.
 
 ### 60. Meet the characters
 
-“Look! Here are some people.”
+“Oh look! Here is a kid.”
 
 [Stimulus source](assets/stimuli/44d39b1df683-intro_01.svg) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening line from Find the Caregiver.*
+*Opening adapted to the single kid shown on screen.*
 
 ### 61. Meet the kid
 
@@ -664,7 +678,7 @@ Reminder if needed: “This big one is this kid’s teacher. This one is the kid
 
 ### 64. The kid needs help
 
-“Now let’s say that one day this kid was very sad.”
+“Now let’s say that one day the kid in the middle was very sad.”
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
@@ -698,6 +712,8 @@ Choices: The kid’s classmate / The kid’s teacher.
 
 “No one helped the kid. The kid’s classmate did NOT help the kid. The kid’s teacher did NOT help the kid.”
 
+Display wording: “No one helped the kid.” Both helper cues remain visible beneath the original sad scene; each cue glows during its complete did-NOT-help sentence.
+
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
 *Every response path reaches this same outcome, regardless of prediction or obligation choices.*
@@ -729,4 +745,3 @@ Choices: The kid’s classmate / The kid’s teacher.
 “That’s the end of our stories. Thank you!”
 
 *Draft closing wording. This is the end of the selected preview.*
-

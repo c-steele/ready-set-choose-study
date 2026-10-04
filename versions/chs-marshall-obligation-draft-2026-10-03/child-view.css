@@ -407,3 +407,7 @@ body.child-view .answers button.spoken-choice.option-current{box-shadow:0 0 0 5p
 
 /* Recover the former word-button space for character-sized response targets. */
 body.child-view .stage[data-choice-location="characters"] .picture{width:min(100%,1050px,calc((100vh - 270px) * 2.285714));width:min(100%,1050px,calc((100dvh - 270px) * 2.285714))}
+
+/* Center the complete outcome scene and its two helper cues as one unit. */
+body.child-view .outcome-scene{flex:0 0 auto;width:min(100%,1050px,calc((100vh - 342px) * 2.285714));width:min(100%,1050px,calc((100dvh - 342px) * 2.285714));margin-block:auto}
+body.child-view .outcome-scene .picture{width:100%;margin:0}

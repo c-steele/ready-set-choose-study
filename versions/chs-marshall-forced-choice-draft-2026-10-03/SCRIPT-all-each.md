@@ -16,7 +16,7 @@ Expected path range: **271–271 screens**, **162–162 responses**.
 
 54 forced-choice main judgments + 72 identity/recall checks + 36 brief practice responses. No strength scales.
 
-Illustrative duration: **36.9–47.6 minutes**, based on 3746–3746 spoken words.
+Illustrative duration: **37.4–48.1 minutes**, based on 3809–3809 spoken words.
 
 - Illustrative estimate, not observed child-session duration.
 - Read-aloud pace: 110–130 words per minute; response time: 3–5 seconds per selection.
@@ -32,11 +32,11 @@ Left: the kid’s teacher. Middle: the kid. Right: the kid’s mom.
 
 ### 1. Meet the characters
 
-“Look! Here are some people.”
+“Oh look! Here is a kid.”
 
 [Stimulus source](assets/stimuli/5698e7ccf886-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening line from Find the Caregiver.*
+*Opening adapted to the single kid shown on screen.*
 
 ### 2. Meet the kid
 
@@ -76,7 +76,7 @@ Reminder if needed: “This big one is this kid’s mom. This one is the kid’s
 
 ### 5. The kid needs help
 
-“Now let’s say that one day this kid was very sad.”
+“Now let’s say that one day the kid in the middle was very sad.”
 
 [Stimulus source](assets/stimuli/ef6ceaf063c6-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -98,9 +98,9 @@ Choices: The kid’s teacher / The kid’s mom.
 
 ### 8. “HAVE TO” practice
 
-“Now, sometimes people HAVE TO do things.”
+“Now, sometimes people *HAVE TO* do things.”
 
-*Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
+*Read with a brief pause before and after HAVE TO. Pauses have been added to the existing Evelyn recording; italic display emphasis is an adaptation. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
 ### 9. Practice · Stop being mean
 
@@ -114,6 +114,8 @@ Expected check/practice answer: Yes.
 
 Reminder if needed: “When a teacher tells you to stop being mean to someone, you HAVE TO stop being mean. Let’s try that question again.”
 
+After the reminder, reread the full question and response labels before reopening the choices.
+
 *Brief comprehension practice, not a study outcome. The illustration and split display wording are adaptations. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
 ### 10. Practice · Lie
@@ -125,6 +127,8 @@ Choices: Yes / No.
 Expected check/practice answer: No.
 
 Reminder if needed: “When someone asks you a question, you do not HAVE TO lie. Let’s try that question again.”
+
+After the reminder, reread the full question and response labels before reopening the choices.
 
 *Brief comprehension practice, not a study outcome. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
@@ -147,6 +151,8 @@ Choices: The kid’s teacher / The kid’s mom.
 ### 13. What happens next
 
 “No one helped the kid. The kid’s teacher did NOT help the kid. The kid’s mom did NOT help the kid.”
+
+Display wording: “No one helped the kid.” Both helper cues remain visible beneath the original sad scene; each cue glows during its complete did-NOT-help sentence.
 
 [Stimulus source](assets/stimuli/ef6ceaf063c6-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -180,11 +186,11 @@ Left: the kid’s sister. Middle: the kid. Right: the kid’s friend.
 
 ### 16. Meet the characters
 
-“Look! Here are some people.”
+“Oh look! Here is a kid.”
 
 [Stimulus source](assets/stimuli/a247914f8341-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening line from Find the Caregiver.*
+*Opening adapted to the single kid shown on screen.*
 
 ### 17. Meet the kid
 
@@ -224,7 +230,7 @@ Reminder if needed: “This little one is this kid’s friend. This one is the k
 
 ### 20. The kid needs help
 
-“Now let’s say that one day this kid was very sad.”
+“Now let’s say that one day the kid in the middle was very sad.”
 
 [Stimulus source](assets/stimuli/d8367f1a225f-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -246,9 +252,9 @@ Choices: The kid’s sister / The kid’s friend.
 
 ### 23. “HAVE TO” practice
 
-“Now, sometimes people HAVE TO do things.”
+“Now, sometimes people *HAVE TO* do things.”
 
-*Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
+*Read with a brief pause before and after HAVE TO. Pauses have been added to the existing Evelyn recording; italic display emphasis is an adaptation. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
 ### 24. Practice · Stop being mean
 
@@ -262,6 +268,8 @@ Expected check/practice answer: Yes.
 
 Reminder if needed: “When a teacher tells you to stop being mean to someone, you HAVE TO stop being mean. Let’s try that question again.”
 
+After the reminder, reread the full question and response labels before reopening the choices.
+
 *Brief comprehension practice, not a study outcome. The illustration and split display wording are adaptations. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
 ### 25. Practice · Lie
@@ -273,6 +281,8 @@ Choices: Yes / No.
 Expected check/practice answer: No.
 
 Reminder if needed: “When someone asks you a question, you do not HAVE TO lie. Let’s try that question again.”
+
+After the reminder, reread the full question and response labels before reopening the choices.
 
 *Brief comprehension practice, not a study outcome. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
@@ -295,6 +305,8 @@ Choices: The kid’s sister / The kid’s friend.
 ### 28. What happens next
 
 “No one helped the kid. The kid’s sister did NOT help the kid. The kid’s friend did NOT help the kid.”
+
+Display wording: “No one helped the kid.” Both helper cues remain visible beneath the original sad scene; each cue glows during its complete did-NOT-help sentence.
 
 [Stimulus source](assets/stimuli/d8367f1a225f-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -328,11 +340,11 @@ Left: the kid’s friend. Middle: the kid. Right: the kid’s best friend.
 
 ### 31. Meet the characters
 
-“Look! Here are some people.”
+“Oh look! Here is a kid.”
 
 [Stimulus source](assets/stimuli/d45a1ece9a16-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening line from Find the Caregiver.*
+*Opening adapted to the single kid shown on screen.*
 
 ### 32. Meet the kid
 
@@ -372,7 +384,7 @@ Reminder if needed: “This little one is this kid’s best friend. This one is 
 
 ### 35. The kid needs help
 
-“Now let’s say that one day this kid was very sad.”
+“Now let’s say that one day the kid in the middle was very sad.”
 
 [Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -394,9 +406,9 @@ Choices: The kid’s friend / The kid’s best friend.
 
 ### 38. “HAVE TO” practice
 
-“Now, sometimes people HAVE TO do things.”
+“Now, sometimes people *HAVE TO* do things.”
 
-*Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
+*Read with a brief pause before and after HAVE TO. Pauses have been added to the existing Evelyn recording; italic display emphasis is an adaptation. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
 ### 39. Practice · Stop being mean
 
@@ -410,6 +422,8 @@ Expected check/practice answer: Yes.
 
 Reminder if needed: “When a teacher tells you to stop being mean to someone, you HAVE TO stop being mean. Let’s try that question again.”
 
+After the reminder, reread the full question and response labels before reopening the choices.
+
 *Brief comprehension practice, not a study outcome. The illustration and split display wording are adaptations. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
 ### 40. Practice · Lie
@@ -421,6 +435,8 @@ Choices: Yes / No.
 Expected check/practice answer: No.
 
 Reminder if needed: “When someone asks you a question, you do not HAVE TO lie. Let’s try that question again.”
+
+After the reminder, reread the full question and response labels before reopening the choices.
 
 *Brief comprehension practice, not a study outcome. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
@@ -443,6 +459,8 @@ Choices: The kid’s friend / The kid’s best friend.
 ### 43. What happens next
 
 “No one helped the kid. The kid’s friend did NOT help the kid. The kid’s best friend did NOT help the kid.”
+
+Display wording: “No one helped the kid.” Both helper cues remain visible beneath the original sad scene; each cue glows during its complete did-NOT-help sentence.
 
 [Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -476,11 +494,11 @@ Left: the kid’s teacher. Middle: the kid. Right: the kid’s friend.
 
 ### 46. Meet the characters
 
-“Look! Here are some people.”
+“Oh look! Here is a kid.”
 
 [Stimulus source](assets/stimuli/5ab48f0b29ed-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening line from Find the Caregiver.*
+*Opening adapted to the single kid shown on screen.*
 
 ### 47. Meet the kid
 
@@ -520,7 +538,7 @@ Reminder if needed: “This little one is this kid’s friend. This one is the k
 
 ### 50. The kid needs help
 
-“Now let’s say that one day this kid was very sad.”
+“Now let’s say that one day the kid in the middle was very sad.”
 
 [Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -542,9 +560,9 @@ Choices: The kid’s teacher / The kid’s friend.
 
 ### 53. “HAVE TO” practice
 
-“Now, sometimes people HAVE TO do things.”
+“Now, sometimes people *HAVE TO* do things.”
 
-*Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
+*Read with a brief pause before and after HAVE TO. Pauses have been added to the existing Evelyn recording; italic display emphasis is an adaptation. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
 ### 54. Practice · Stop being mean
 
@@ -558,6 +576,8 @@ Expected check/practice answer: Yes.
 
 Reminder if needed: “When a teacher tells you to stop being mean to someone, you HAVE TO stop being mean. Let’s try that question again.”
 
+After the reminder, reread the full question and response labels before reopening the choices.
+
 *Brief comprehension practice, not a study outcome. The illustration and split display wording are adaptations. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
 ### 55. Practice · Lie
@@ -569,6 +589,8 @@ Choices: Yes / No.
 Expected check/practice answer: No.
 
 Reminder if needed: “When someone asks you a question, you do not HAVE TO lie. Let’s try that question again.”
+
+After the reminder, reread the full question and response labels before reopening the choices.
 
 *Brief comprehension practice, not a study outcome. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
@@ -591,6 +613,8 @@ Choices: The kid’s teacher / The kid’s friend.
 ### 58. What happens next
 
 “No one helped the kid. The kid’s teacher did NOT help the kid. The kid’s friend did NOT help the kid.”
+
+Display wording: “No one helped the kid.” Both helper cues remain visible beneath the original sad scene; each cue glows during its complete did-NOT-help sentence.
 
 [Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -624,11 +648,11 @@ Left: the kid’s mom. Middle: the kid. Right: the kid’s sister.
 
 ### 61. Meet the characters
 
-“Look! Here are some people.”
+“Oh look! Here is a kid.”
 
 [Stimulus source](assets/stimuli/2fa20e069eca-01-group.png) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening line from Find the Caregiver.*
+*Opening adapted to the single kid shown on screen.*
 
 ### 62. Meet the kid
 
@@ -668,7 +692,7 @@ Reminder if needed: “This little one is this kid’s sister. This one is the k
 
 ### 65. The kid needs help
 
-“Now let’s say that one day this kid was very sad.”
+“Now let’s say that one day the kid in the middle was very sad.”
 
 [Stimulus source](assets/stimuli/cf266d33caca-05-sad.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -690,9 +714,9 @@ Choices: The kid’s mom / The kid’s sister.
 
 ### 68. “HAVE TO” practice
 
-“Now, sometimes people HAVE TO do things.”
+“Now, sometimes people *HAVE TO* do things.”
 
-*Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
+*Read with a brief pause before and after HAVE TO. Pauses have been added to the existing Evelyn recording; italic display emphasis is an adaptation. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
 ### 69. Practice · Stop being mean
 
@@ -706,6 +730,8 @@ Expected check/practice answer: Yes.
 
 Reminder if needed: “When a teacher tells you to stop being mean to someone, you HAVE TO stop being mean. Let’s try that question again.”
 
+After the reminder, reread the full question and response labels before reopening the choices.
+
 *Brief comprehension practice, not a study outcome. The illustration and split display wording are adaptations. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
 ### 70. Practice · Lie
@@ -717,6 +743,8 @@ Choices: Yes / No.
 Expected check/practice answer: No.
 
 Reminder if needed: “When someone asks you a question, you do not HAVE TO lie. Let’s try that question again.”
+
+After the reminder, reread the full question and response labels before reopening the choices.
 
 *Brief comprehension practice, not a study outcome. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
@@ -739,6 +767,8 @@ Choices: The kid’s mom / The kid’s sister.
 ### 73. What happens next
 
 “No one helped the kid. The kid’s mom did NOT help the kid. The kid’s sister did NOT help the kid.”
+
+Display wording: “No one helped the kid.” Both helper cues remain visible beneath the original sad scene; each cue glows during its complete did-NOT-help sentence.
 
 [Stimulus source](assets/stimuli/cf266d33caca-05-sad.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -772,11 +802,11 @@ Left: the kid’s classmate. Middle: the kid. Right: the kid’s teacher.
 
 ### 76. Meet the characters
 
-“Look! Here are some people.”
+“Oh look! Here is a kid.”
 
 [Stimulus source](assets/stimuli/44d39b1df683-intro_01.svg) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening line from Find the Caregiver.*
+*Opening adapted to the single kid shown on screen.*
 
 ### 77. Meet the kid
 
@@ -816,7 +846,7 @@ Reminder if needed: “This big one is this kid’s teacher. This one is the kid
 
 ### 80. The kid needs help
 
-“Now let’s say that one day this kid was very sad.”
+“Now let’s say that one day the kid in the middle was very sad.”
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
@@ -838,9 +868,9 @@ Choices: The kid’s classmate / The kid’s teacher.
 
 ### 83. “HAVE TO” practice
 
-“Now, sometimes people HAVE TO do things.”
+“Now, sometimes people *HAVE TO* do things.”
 
-*Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
+*Read with a brief pause before and after HAVE TO. Pauses have been added to the existing Evelyn recording; italic display emphasis is an adaptation. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
 ### 84. Practice · Stop being mean
 
@@ -854,6 +884,8 @@ Expected check/practice answer: Yes.
 
 Reminder if needed: “When a teacher tells you to stop being mean to someone, you HAVE TO stop being mean. Let’s try that question again.”
 
+After the reminder, reread the full question and response labels before reopening the choices.
+
 *Brief comprehension practice, not a study outcome. The illustration and split display wording are adaptations. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
 ### 85. Practice · Lie
@@ -865,6 +897,8 @@ Choices: Yes / No.
 Expected check/practice answer: No.
 
 Reminder if needed: “When someone asks you a question, you do not HAVE TO lie. Let’s try that question again.”
+
+After the reminder, reread the full question and response labels before reopening the choices.
 
 *Brief comprehension practice, not a study outcome. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
@@ -887,6 +921,8 @@ Choices: The kid’s classmate / The kid’s teacher.
 ### 88. What happens next
 
 “No one helped the kid. The kid’s classmate did NOT help the kid. The kid’s teacher did NOT help the kid.”
+
+Display wording: “No one helped the kid.” Both helper cues remain visible beneath the original sad scene; each cue glows during its complete did-NOT-help sentence.
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
@@ -920,11 +956,11 @@ Left: the kid’s teacher. Middle: the kid. Right: the kid’s dad.
 
 ### 91. Meet the characters
 
-“Look! Here are some people.”
+“Oh look! Here is a kid.”
 
 [Stimulus source](assets/stimuli/677804bb653c-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening line from Find the Caregiver.*
+*Opening adapted to the single kid shown on screen.*
 
 ### 92. Meet the kid
 
@@ -964,7 +1000,7 @@ Reminder if needed: “This big one is this kid’s dad. This one is the kid’s
 
 ### 95. The kid needs help
 
-“Now let’s say that one day this kid was very sad.”
+“Now let’s say that one day the kid in the middle was very sad.”
 
 [Stimulus source](assets/stimuli/ee15b1b5be65-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -986,9 +1022,9 @@ Choices: The kid’s teacher / The kid’s dad.
 
 ### 98. “HAVE TO” practice
 
-“Now, sometimes people HAVE TO do things.”
+“Now, sometimes people *HAVE TO* do things.”
 
-*Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
+*Read with a brief pause before and after HAVE TO. Pauses have been added to the existing Evelyn recording; italic display emphasis is an adaptation. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
 ### 99. Practice · Stop being mean
 
@@ -1002,6 +1038,8 @@ Expected check/practice answer: Yes.
 
 Reminder if needed: “When a teacher tells you to stop being mean to someone, you HAVE TO stop being mean. Let’s try that question again.”
 
+After the reminder, reread the full question and response labels before reopening the choices.
+
 *Brief comprehension practice, not a study outcome. The illustration and split display wording are adaptations. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
 ### 100. Practice · Lie
@@ -1013,6 +1051,8 @@ Choices: Yes / No.
 Expected check/practice answer: No.
 
 Reminder if needed: “When someone asks you a question, you do not HAVE TO lie. Let’s try that question again.”
+
+After the reminder, reread the full question and response labels before reopening the choices.
 
 *Brief comprehension practice, not a study outcome. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
@@ -1035,6 +1075,8 @@ Choices: The kid’s teacher / The kid’s dad.
 ### 103. What happens next
 
 “No one helped the kid. The kid’s teacher did NOT help the kid. The kid’s dad did NOT help the kid.”
+
+Display wording: “No one helped the kid.” Both helper cues remain visible beneath the original sad scene; each cue glows during its complete did-NOT-help sentence.
 
 [Stimulus source](assets/stimuli/ee15b1b5be65-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1068,11 +1110,11 @@ Left: the kid’s brother. Middle: the kid. Right: the kid’s friend.
 
 ### 106. Meet the characters
 
-“Look! Here are some people.”
+“Oh look! Here is a kid.”
 
 [Stimulus source](assets/stimuli/bb199acadbc5-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening line from Find the Caregiver.*
+*Opening adapted to the single kid shown on screen.*
 
 ### 107. Meet the kid
 
@@ -1112,7 +1154,7 @@ Reminder if needed: “This little one is this kid’s friend. This one is the k
 
 ### 110. The kid needs help
 
-“Now let’s say that one day this kid was very sad.”
+“Now let’s say that one day the kid in the middle was very sad.”
 
 [Stimulus source](assets/stimuli/3538d8e77c34-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1134,9 +1176,9 @@ Choices: The kid’s brother / The kid’s friend.
 
 ### 113. “HAVE TO” practice
 
-“Now, sometimes people HAVE TO do things.”
+“Now, sometimes people *HAVE TO* do things.”
 
-*Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
+*Read with a brief pause before and after HAVE TO. Pauses have been added to the existing Evelyn recording; italic display emphasis is an adaptation. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
 ### 114. Practice · Stop being mean
 
@@ -1150,6 +1192,8 @@ Expected check/practice answer: Yes.
 
 Reminder if needed: “When a teacher tells you to stop being mean to someone, you HAVE TO stop being mean. Let’s try that question again.”
 
+After the reminder, reread the full question and response labels before reopening the choices.
+
 *Brief comprehension practice, not a study outcome. The illustration and split display wording are adaptations. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
 ### 115. Practice · Lie
@@ -1161,6 +1205,8 @@ Choices: Yes / No.
 Expected check/practice answer: No.
 
 Reminder if needed: “When someone asks you a question, you do not HAVE TO lie. Let’s try that question again.”
+
+After the reminder, reread the full question and response labels before reopening the choices.
 
 *Brief comprehension practice, not a study outcome. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
@@ -1183,6 +1229,8 @@ Choices: The kid’s brother / The kid’s friend.
 ### 118. What happens next
 
 “No one helped the kid. The kid’s brother did NOT help the kid. The kid’s friend did NOT help the kid.”
+
+Display wording: “No one helped the kid.” Both helper cues remain visible beneath the original sad scene; each cue glows during its complete did-NOT-help sentence.
 
 [Stimulus source](assets/stimuli/3538d8e77c34-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1216,11 +1264,11 @@ Left: the kid’s friend. Middle: the kid. Right: the kid’s best friend.
 
 ### 121. Meet the characters
 
-“Look! Here are some people.”
+“Oh look! Here is a kid.”
 
 [Stimulus source](assets/stimuli/d45a1ece9a16-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening line from Find the Caregiver.*
+*Opening adapted to the single kid shown on screen.*
 
 ### 122. Meet the kid
 
@@ -1260,7 +1308,7 @@ Reminder if needed: “This little one is this kid’s best friend. This one is 
 
 ### 125. The kid needs help
 
-“Now let’s say that one day this kid was very sad.”
+“Now let’s say that one day the kid in the middle was very sad.”
 
 [Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1282,9 +1330,9 @@ Choices: The kid’s friend / The kid’s best friend.
 
 ### 128. “HAVE TO” practice
 
-“Now, sometimes people HAVE TO do things.”
+“Now, sometimes people *HAVE TO* do things.”
 
-*Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
+*Read with a brief pause before and after HAVE TO. Pauses have been added to the existing Evelyn recording; italic display emphasis is an adaptation. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
 ### 129. Practice · Stop being mean
 
@@ -1298,6 +1346,8 @@ Expected check/practice answer: Yes.
 
 Reminder if needed: “When a teacher tells you to stop being mean to someone, you HAVE TO stop being mean. Let’s try that question again.”
 
+After the reminder, reread the full question and response labels before reopening the choices.
+
 *Brief comprehension practice, not a study outcome. The illustration and split display wording are adaptations. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
 ### 130. Practice · Lie
@@ -1309,6 +1359,8 @@ Choices: Yes / No.
 Expected check/practice answer: No.
 
 Reminder if needed: “When someone asks you a question, you do not HAVE TO lie. Let’s try that question again.”
+
+After the reminder, reread the full question and response labels before reopening the choices.
 
 *Brief comprehension practice, not a study outcome. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
@@ -1331,6 +1383,8 @@ Choices: The kid’s friend / The kid’s best friend.
 ### 133. What happens next
 
 “No one helped the kid. The kid’s friend did NOT help the kid. The kid’s best friend did NOT help the kid.”
+
+Display wording: “No one helped the kid.” Both helper cues remain visible beneath the original sad scene; each cue glows during its complete did-NOT-help sentence.
 
 [Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1364,11 +1418,11 @@ Left: the kid’s teacher. Middle: the kid. Right: the kid’s friend.
 
 ### 136. Meet the characters
 
-“Look! Here are some people.”
+“Oh look! Here is a kid.”
 
 [Stimulus source](assets/stimuli/5ab48f0b29ed-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening line from Find the Caregiver.*
+*Opening adapted to the single kid shown on screen.*
 
 ### 137. Meet the kid
 
@@ -1408,7 +1462,7 @@ Reminder if needed: “This little one is this kid’s friend. This one is the k
 
 ### 140. The kid needs help
 
-“Now let’s say that one day this kid was very sad.”
+“Now let’s say that one day the kid in the middle was very sad.”
 
 [Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1430,9 +1484,9 @@ Choices: The kid’s teacher / The kid’s friend.
 
 ### 143. “HAVE TO” practice
 
-“Now, sometimes people HAVE TO do things.”
+“Now, sometimes people *HAVE TO* do things.”
 
-*Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
+*Read with a brief pause before and after HAVE TO. Pauses have been added to the existing Evelyn recording; italic display emphasis is an adaptation. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
 ### 144. Practice · Stop being mean
 
@@ -1446,6 +1500,8 @@ Expected check/practice answer: Yes.
 
 Reminder if needed: “When a teacher tells you to stop being mean to someone, you HAVE TO stop being mean. Let’s try that question again.”
 
+After the reminder, reread the full question and response labels before reopening the choices.
+
 *Brief comprehension practice, not a study outcome. The illustration and split display wording are adaptations. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
 ### 145. Practice · Lie
@@ -1457,6 +1513,8 @@ Choices: Yes / No.
 Expected check/practice answer: No.
 
 Reminder if needed: “When someone asks you a question, you do not HAVE TO lie. Let’s try that question again.”
+
+After the reminder, reread the full question and response labels before reopening the choices.
 
 *Brief comprehension practice, not a study outcome. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
@@ -1479,6 +1537,8 @@ Choices: The kid’s teacher / The kid’s friend.
 ### 148. What happens next
 
 “No one helped the kid. The kid’s teacher did NOT help the kid. The kid’s friend did NOT help the kid.”
+
+Display wording: “No one helped the kid.” Both helper cues remain visible beneath the original sad scene; each cue glows during its complete did-NOT-help sentence.
 
 [Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1512,11 +1572,11 @@ Left: the kid’s dad. Middle: the kid. Right: the kid’s brother.
 
 ### 151. Meet the characters
 
-“Look! Here are some people.”
+“Oh look! Here is a kid.”
 
 [Stimulus source](assets/stimuli/ebcc9f9f7d93-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening line from Find the Caregiver.*
+*Opening adapted to the single kid shown on screen.*
 
 ### 152. Meet the kid
 
@@ -1556,7 +1616,7 @@ Reminder if needed: “This little one is this kid’s brother. This one is the 
 
 ### 155. The kid needs help
 
-“Now let’s say that one day this kid was very sad.”
+“Now let’s say that one day the kid in the middle was very sad.”
 
 [Stimulus source](assets/stimuli/09b52ae33b24-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1578,9 +1638,9 @@ Choices: The kid’s dad / The kid’s brother.
 
 ### 158. “HAVE TO” practice
 
-“Now, sometimes people HAVE TO do things.”
+“Now, sometimes people *HAVE TO* do things.”
 
-*Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
+*Read with a brief pause before and after HAVE TO. Pauses have been added to the existing Evelyn recording; italic display emphasis is an adaptation. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
 ### 159. Practice · Stop being mean
 
@@ -1594,6 +1654,8 @@ Expected check/practice answer: Yes.
 
 Reminder if needed: “When a teacher tells you to stop being mean to someone, you HAVE TO stop being mean. Let’s try that question again.”
 
+After the reminder, reread the full question and response labels before reopening the choices.
+
 *Brief comprehension practice, not a study outcome. The illustration and split display wording are adaptations. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
 ### 160. Practice · Lie
@@ -1605,6 +1667,8 @@ Choices: Yes / No.
 Expected check/practice answer: No.
 
 Reminder if needed: “When someone asks you a question, you do not HAVE TO lie. Let’s try that question again.”
+
+After the reminder, reread the full question and response labels before reopening the choices.
 
 *Brief comprehension practice, not a study outcome. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
@@ -1627,6 +1691,8 @@ Choices: The kid’s dad / The kid’s brother.
 ### 163. What happens next
 
 “No one helped the kid. The kid’s dad did NOT help the kid. The kid’s brother did NOT help the kid.”
+
+Display wording: “No one helped the kid.” Both helper cues remain visible beneath the original sad scene; each cue glows during its complete did-NOT-help sentence.
 
 [Stimulus source](assets/stimuli/09b52ae33b24-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1660,11 +1726,11 @@ Left: the kid’s classmate. Middle: the kid. Right: the kid’s teacher.
 
 ### 166. Meet the characters
 
-“Look! Here are some people.”
+“Oh look! Here is a kid.”
 
 [Stimulus source](assets/stimuli/44d39b1df683-intro_01.svg) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening line from Find the Caregiver.*
+*Opening adapted to the single kid shown on screen.*
 
 ### 167. Meet the kid
 
@@ -1704,7 +1770,7 @@ Reminder if needed: “This big one is this kid’s teacher. This one is the kid
 
 ### 170. The kid needs help
 
-“Now let’s say that one day this kid was very sad.”
+“Now let’s say that one day the kid in the middle was very sad.”
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1726,9 +1792,9 @@ Choices: The kid’s classmate / The kid’s teacher.
 
 ### 173. “HAVE TO” practice
 
-“Now, sometimes people HAVE TO do things.”
+“Now, sometimes people *HAVE TO* do things.”
 
-*Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
+*Read with a brief pause before and after HAVE TO. Pauses have been added to the existing Evelyn recording; italic display emphasis is an adaptation. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
 ### 174. Practice · Stop being mean
 
@@ -1742,6 +1808,8 @@ Expected check/practice answer: Yes.
 
 Reminder if needed: “When a teacher tells you to stop being mean to someone, you HAVE TO stop being mean. Let’s try that question again.”
 
+After the reminder, reread the full question and response labels before reopening the choices.
+
 *Brief comprehension practice, not a study outcome. The illustration and split display wording are adaptations. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
 ### 175. Practice · Lie
@@ -1753,6 +1821,8 @@ Choices: Yes / No.
 Expected check/practice answer: No.
 
 Reminder if needed: “When someone asks you a question, you do not HAVE TO lie. Let’s try that question again.”
+
+After the reminder, reread the full question and response labels before reopening the choices.
 
 *Brief comprehension practice, not a study outcome. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
@@ -1775,6 +1845,8 @@ Choices: The kid’s classmate / The kid’s teacher.
 ### 178. What happens next
 
 “No one helped the kid. The kid’s classmate did NOT help the kid. The kid’s teacher did NOT help the kid.”
+
+Display wording: “No one helped the kid.” Both helper cues remain visible beneath the original sad scene; each cue glows during its complete did-NOT-help sentence.
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1808,11 +1880,11 @@ Left: the kid’s dad. Middle: the kid. Right: the kid’s mom.
 
 ### 181. Meet the characters
 
-“Look! Here are some people.”
+“Oh look! Here is a kid.”
 
 [Stimulus source](assets/stimuli/a536bea376a4-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening line from Find the Caregiver.*
+*Opening adapted to the single kid shown on screen.*
 
 ### 182. Meet the kid
 
@@ -1852,7 +1924,7 @@ Reminder if needed: “This big one is this kid’s mom. This one is the kid’s
 
 ### 185. The kid needs help
 
-“Now let’s say that one day this kid was very sad.”
+“Now let’s say that one day the kid in the middle was very sad.”
 
 [Stimulus source](assets/stimuli/443991b4edc3-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1874,9 +1946,9 @@ Choices: The kid’s dad / The kid’s mom.
 
 ### 188. “HAVE TO” practice
 
-“Now, sometimes people HAVE TO do things.”
+“Now, sometimes people *HAVE TO* do things.”
 
-*Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
+*Read with a brief pause before and after HAVE TO. Pauses have been added to the existing Evelyn recording; italic display emphasis is an adaptation. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
 ### 189. Practice · Stop being mean
 
@@ -1890,6 +1962,8 @@ Expected check/practice answer: Yes.
 
 Reminder if needed: “When a teacher tells you to stop being mean to someone, you HAVE TO stop being mean. Let’s try that question again.”
 
+After the reminder, reread the full question and response labels before reopening the choices.
+
 *Brief comprehension practice, not a study outcome. The illustration and split display wording are adaptations. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
 ### 190. Practice · Lie
@@ -1901,6 +1975,8 @@ Choices: Yes / No.
 Expected check/practice answer: No.
 
 Reminder if needed: “When someone asks you a question, you do not HAVE TO lie. Let’s try that question again.”
+
+After the reminder, reread the full question and response labels before reopening the choices.
 
 *Brief comprehension practice, not a study outcome. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
@@ -1923,6 +1999,8 @@ Choices: The kid’s dad / The kid’s mom.
 ### 193. What happens next
 
 “No one helped the kid. The kid’s dad did NOT help the kid. The kid’s mom did NOT help the kid.”
+
+Display wording: “No one helped the kid.” Both helper cues remain visible beneath the original sad scene; each cue glows during its complete did-NOT-help sentence.
 
 [Stimulus source](assets/stimuli/443991b4edc3-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1956,11 +2034,11 @@ Left: the kid’s sister. Middle: the kid. Right: the kid’s brother.
 
 ### 196. Meet the characters
 
-“Look! Here are some people.”
+“Oh look! Here is a kid.”
 
 [Stimulus source](assets/stimuli/931a3ff701b0-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening line from Find the Caregiver.*
+*Opening adapted to the single kid shown on screen.*
 
 ### 197. Meet the kid
 
@@ -2000,7 +2078,7 @@ Reminder if needed: “This little one is this kid’s brother. This one is the 
 
 ### 200. The kid needs help
 
-“Now let’s say that one day this kid was very sad.”
+“Now let’s say that one day the kid in the middle was very sad.”
 
 [Stimulus source](assets/stimuli/fac075f520aa-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -2022,9 +2100,9 @@ Choices: The kid’s sister / The kid’s brother.
 
 ### 203. “HAVE TO” practice
 
-“Now, sometimes people HAVE TO do things.”
+“Now, sometimes people *HAVE TO* do things.”
 
-*Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
+*Read with a brief pause before and after HAVE TO. Pauses have been added to the existing Evelyn recording; italic display emphasis is an adaptation. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
 ### 204. Practice · Stop being mean
 
@@ -2038,6 +2116,8 @@ Expected check/practice answer: Yes.
 
 Reminder if needed: “When a teacher tells you to stop being mean to someone, you HAVE TO stop being mean. Let’s try that question again.”
 
+After the reminder, reread the full question and response labels before reopening the choices.
+
 *Brief comprehension practice, not a study outcome. The illustration and split display wording are adaptations. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
 ### 205. Practice · Lie
@@ -2049,6 +2129,8 @@ Choices: Yes / No.
 Expected check/practice answer: No.
 
 Reminder if needed: “When someone asks you a question, you do not HAVE TO lie. Let’s try that question again.”
+
+After the reminder, reread the full question and response labels before reopening the choices.
 
 *Brief comprehension practice, not a study outcome. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
@@ -2071,6 +2153,8 @@ Choices: The kid’s sister / The kid’s brother.
 ### 208. What happens next
 
 “No one helped the kid. The kid’s sister did NOT help the kid. The kid’s brother did NOT help the kid.”
+
+Display wording: “No one helped the kid.” Both helper cues remain visible beneath the original sad scene; each cue glows during its complete did-NOT-help sentence.
 
 [Stimulus source](assets/stimuli/fac075f520aa-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -2104,11 +2188,11 @@ Left: the kid’s dad. Middle: the mom. Right: the kid.
 
 ### 211. Meet the characters
 
-“Look! Here are some people.”
+“Oh look! Here is a kid.”
 
 [Stimulus source](assets/stimuli/966365322eff-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening line from Find the Caregiver.*
+*Opening adapted to the single kid shown on screen.*
 
 ### 212. Meet the kid
 
@@ -2170,9 +2254,9 @@ Choices: The kid’s dad / The kid.
 
 ### 218. “HAVE TO” practice
 
-“Now, sometimes people HAVE TO do things.”
+“Now, sometimes people *HAVE TO* do things.”
 
-*Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
+*Read with a brief pause before and after HAVE TO. Pauses have been added to the existing Evelyn recording; italic display emphasis is an adaptation. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
 ### 219. Practice · Stop being mean
 
@@ -2186,6 +2270,8 @@ Expected check/practice answer: Yes.
 
 Reminder if needed: “When a teacher tells you to stop being mean to someone, you HAVE TO stop being mean. Let’s try that question again.”
 
+After the reminder, reread the full question and response labels before reopening the choices.
+
 *Brief comprehension practice, not a study outcome. The illustration and split display wording are adaptations. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
 ### 220. Practice · Lie
@@ -2197,6 +2283,8 @@ Choices: Yes / No.
 Expected check/practice answer: No.
 
 Reminder if needed: “When someone asks you a question, you do not HAVE TO lie. Let’s try that question again.”
+
+After the reminder, reread the full question and response labels before reopening the choices.
 
 *Brief comprehension practice, not a study outcome. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
@@ -2219,6 +2307,8 @@ Choices: The kid’s dad / The kid.
 ### 223. What happens next
 
 “No one helped the mom. The kid’s dad did NOT help the mom. The kid did NOT help the mom.”
+
+Display wording: “No one helped the mom.” Both helper cues remain visible beneath the original sad scene; each cue glows during its complete did-NOT-help sentence.
 
 [Stimulus source](assets/stimuli/b1ba34666825-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -2252,11 +2342,11 @@ Left: the kid. Middle: the dad. Right: the kid’s mom.
 
 ### 226. Meet the characters
 
-“Look! Here are some people.”
+“Oh look! Here is a kid.”
 
 [Stimulus source](assets/stimuli/0b393251d294-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening line from Find the Caregiver.*
+*Opening adapted to the single kid shown on screen.*
 
 ### 227. Meet the kid
 
@@ -2318,9 +2408,9 @@ Choices: The kid / The kid’s mom.
 
 ### 233. “HAVE TO” practice
 
-“Now, sometimes people HAVE TO do things.”
+“Now, sometimes people *HAVE TO* do things.”
 
-*Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
+*Read with a brief pause before and after HAVE TO. Pauses have been added to the existing Evelyn recording; italic display emphasis is an adaptation. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
 ### 234. Practice · Stop being mean
 
@@ -2334,6 +2424,8 @@ Expected check/practice answer: Yes.
 
 Reminder if needed: “When a teacher tells you to stop being mean to someone, you HAVE TO stop being mean. Let’s try that question again.”
 
+After the reminder, reread the full question and response labels before reopening the choices.
+
 *Brief comprehension practice, not a study outcome. The illustration and split display wording are adaptations. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
 ### 235. Practice · Lie
@@ -2345,6 +2437,8 @@ Choices: Yes / No.
 Expected check/practice answer: No.
 
 Reminder if needed: “When someone asks you a question, you do not HAVE TO lie. Let’s try that question again.”
+
+After the reminder, reread the full question and response labels before reopening the choices.
 
 *Brief comprehension practice, not a study outcome. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
@@ -2367,6 +2461,8 @@ Choices: The kid / The kid’s mom.
 ### 238. What happens next
 
 “No one helped the dad. The kid did NOT help the dad. The kid’s mom did NOT help the dad.”
+
+Display wording: “No one helped the dad.” Both helper cues remain visible beneath the original sad scene; each cue glows during its complete did-NOT-help sentence.
 
 [Stimulus source](assets/stimuli/a47ed9f1306d-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -2400,11 +2496,11 @@ Left: the teacher on the left. Middle: the teacher in the middle. Right: the kid
 
 ### 241. Meet the characters
 
-“Look! Here are some people.”
+“Oh look! Here is a kid.”
 
 [Stimulus source](assets/stimuli/448d8507c0ab-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening line from Find the Caregiver.*
+*Opening adapted to the single kid shown on screen.*
 
 ### 242. Meet the kid
 
@@ -2466,9 +2562,9 @@ Choices: The teacher on the left / The kid.
 
 ### 248. “HAVE TO” practice
 
-“Now, sometimes people HAVE TO do things.”
+“Now, sometimes people *HAVE TO* do things.”
 
-*Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
+*Read with a brief pause before and after HAVE TO. Pauses have been added to the existing Evelyn recording; italic display emphasis is an adaptation. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
 ### 249. Practice · Stop being mean
 
@@ -2482,6 +2578,8 @@ Expected check/practice answer: Yes.
 
 Reminder if needed: “When a teacher tells you to stop being mean to someone, you HAVE TO stop being mean. Let’s try that question again.”
 
+After the reminder, reread the full question and response labels before reopening the choices.
+
 *Brief comprehension practice, not a study outcome. The illustration and split display wording are adaptations. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
 ### 250. Practice · Lie
@@ -2493,6 +2591,8 @@ Choices: Yes / No.
 Expected check/practice answer: No.
 
 Reminder if needed: “When someone asks you a question, you do not HAVE TO lie. Let’s try that question again.”
+
+After the reminder, reread the full question and response labels before reopening the choices.
 
 *Brief comprehension practice, not a study outcome. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
@@ -2515,6 +2615,8 @@ Choices: The teacher on the left / The kid.
 ### 253. What happens next
 
 “No one helped the teacher in the middle. The teacher on the left did NOT help the teacher in the middle. The kid did NOT help the teacher in the middle.”
+
+Display wording: “No one helped the teacher in the middle.” Both helper cues remain visible beneath the original sad scene; each cue glows during its complete did-NOT-help sentence.
 
 [Stimulus source](assets/stimuli/4bb031a656d9-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -2548,11 +2650,11 @@ Left: the kid’s classmate. Middle: the kid. Right: the kid’s teacher.
 
 ### 256. Meet the characters
 
-“Look! Here are some people.”
+“Oh look! Here is a kid.”
 
 [Stimulus source](assets/stimuli/44d39b1df683-intro_01.svg) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening line from Find the Caregiver.*
+*Opening adapted to the single kid shown on screen.*
 
 ### 257. Meet the kid
 
@@ -2592,7 +2694,7 @@ Reminder if needed: “This big one is this kid’s teacher. This one is the kid
 
 ### 260. The kid needs help
 
-“Now let’s say that one day this kid was very sad.”
+“Now let’s say that one day the kid in the middle was very sad.”
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
@@ -2614,9 +2716,9 @@ Choices: The kid’s classmate / The kid’s teacher.
 
 ### 263. “HAVE TO” practice
 
-“Now, sometimes people HAVE TO do things.”
+“Now, sometimes people *HAVE TO* do things.”
 
-*Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
+*Read with a brief pause before and after HAVE TO. Pauses have been added to the existing Evelyn recording; italic display emphasis is an adaptation. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
 ### 264. Practice · Stop being mean
 
@@ -2630,6 +2732,8 @@ Expected check/practice answer: Yes.
 
 Reminder if needed: “When a teacher tells you to stop being mean to someone, you HAVE TO stop being mean. Let’s try that question again.”
 
+After the reminder, reread the full question and response labels before reopening the choices.
+
 *Brief comprehension practice, not a study outcome. The illustration and split display wording are adaptations. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
 ### 265. Practice · Lie
@@ -2641,6 +2745,8 @@ Choices: Yes / No.
 Expected check/practice answer: No.
 
 Reminder if needed: “When someone asks you a question, you do not HAVE TO lie. Let’s try that question again.”
+
+After the reminder, reread the full question and response labels before reopening the choices.
 
 *Brief comprehension practice, not a study outcome. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
@@ -2663,6 +2769,8 @@ Choices: The kid’s classmate / The kid’s teacher.
 ### 268. What happens next
 
 “No one helped the kid. The kid’s classmate did NOT help the kid. The kid’s teacher did NOT help the kid.”
+
+Display wording: “No one helped the kid.” Both helper cues remain visible beneath the original sad scene; each cue glows during its complete did-NOT-help sentence.
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
@@ -2695,4 +2803,3 @@ Choices: The kid’s classmate / The kid’s teacher.
 “That’s the end of our stories. Thank you!”
 
 *Draft closing wording. This is the end of the selected preview.*
-

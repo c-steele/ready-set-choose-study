@@ -237,6 +237,8 @@ Choices: A teeny bit / A little bit / A lot.
 
 “No one helped the kid. The kid’s teacher did NOT help the kid. The kid’s mom did NOT help the kid.”
 
+Display wording: “No one helped the kid.” Both helper cues remain visible beneath the original sad scene; each cue glows during its complete did-NOT-help sentence.
+
 [Stimulus source](assets/stimuli/ef6ceaf063c6-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 *Every response path reaches this same outcome, regardless of prediction or obligation answers.*
@@ -562,6 +564,8 @@ Choices: A teeny bit / A little bit / A lot.
 ### 52. What happens next
 
 “No one helped the kid. The kid’s sister did NOT help the kid. The kid’s friend did NOT help the kid.”
+
+Display wording: “No one helped the kid.” Both helper cues remain visible beneath the original sad scene; each cue glows during its complete did-NOT-help sentence.
 
 [Stimulus source](assets/stimuli/d8367f1a225f-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -889,6 +893,8 @@ Choices: A teeny bit / A little bit / A lot.
 
 “No one helped the kid. The kid’s friend did NOT help the kid. The kid’s best friend did NOT help the kid.”
 
+Display wording: “No one helped the kid.” Both helper cues remain visible beneath the original sad scene; each cue glows during its complete did-NOT-help sentence.
+
 [Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 *Every response path reaches this same outcome, regardless of prediction or obligation answers.*
@@ -1214,6 +1220,8 @@ Choices: A teeny bit / A little bit / A lot.
 ### 114. What happens next
 
 “No one helped the kid. The kid’s teacher did NOT help the kid. The kid’s friend did NOT help the kid.”
+
+Display wording: “No one helped the kid.” Both helper cues remain visible beneath the original sad scene; each cue glows during its complete did-NOT-help sentence.
 
 [Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1541,6 +1549,8 @@ Choices: A teeny bit / A little bit / A lot.
 
 “No one helped the kid. The kid’s mom did NOT help the kid. The kid’s sister did NOT help the kid.”
 
+Display wording: “No one helped the kid.” Both helper cues remain visible beneath the original sad scene; each cue glows during its complete did-NOT-help sentence.
+
 [Stimulus source](assets/stimuli/cf266d33caca-05-sad.png) — original reference image; the preview replaces its caption with the wording above.
 
 *Every response path reaches this same outcome, regardless of prediction or obligation answers.*
@@ -1866,6 +1876,8 @@ Choices: A teeny bit / A little bit / A lot.
 ### 176. What happens next
 
 “No one helped the kid. The kid’s classmate did NOT help the kid. The kid’s teacher did NOT help the kid.”
+
+Display wording: “No one helped the kid.” Both helper cues remain visible beneath the original sad scene; each cue glows during its complete did-NOT-help sentence.
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 

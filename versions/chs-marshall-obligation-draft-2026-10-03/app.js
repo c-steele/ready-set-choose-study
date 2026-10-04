@@ -56,7 +56,7 @@
   }
   function recordingWords(clipId,allowRecognizedMismatch=false){
     const clip=narration.clipsById[clipId],entry=window.ObligationNarrationCues?.clips?.[clipId];
-    if(!clip?.sha256||entry?.sha256!==clip.sha256||(!allowRecognizedMismatch&&entry.exactNormalizedWordMatch===false)||entry.alignmentValid===false||!Array.isArray(entry.words))return [];
+    if(!clip?.sha256||entry?.sha256!==clip.sha256||(!allowRecognizedMismatch&&entry.exactNormalizedWordMatch===false&&!(entry.articleOmissionsOnly===true&&entry.cueAlignmentApproved===true&&clip.provenance?.fullProjectTextVerified===true&&clip.provenance?.nativeNaturalReadersRecording===true))||entry.alignmentValid===false||!Array.isArray(entry.words))return [];
     if(entry.expectedText&&cueTokens(entry.expectedText).join(' ')!==cueTokens(clip.text).join(' '))return [];
     const duration=clip.durationSeconds||entry.durationSeconds;
     const words=[];
@@ -83,6 +83,7 @@
       const names=[actor.description,actor.reference].filter(Boolean);
       if(actor.role==='KID')names.push('this kid','a kid');
       names.push(actor.description.replace(/^the /,'this '));
+      if(s.outcomeVisual)names.push(...[actor.description,actor.reference].filter(Boolean).map(name=>name.replace(/^the /,'')));
       for(const name of new Set(names))candidates.push({actorId:actor.id,tokens:cueTokens(name)});
     }
     if(isCharacterIntro(s)){
@@ -101,6 +102,17 @@
       spans.push({actorId:match.actorId,start:words[at].start,end:words[at+match.tokens.length-1].end});
       at+=match.tokens.length;
     }
+    // The no-help badges follow the whole negated helper clause, including NOT.
+    if(s.outcomeVisual){
+      for(const helper of s.pairing.helpers){
+        const fullClause=`${helper.description} did NOT help ${s.pairing.recipient.description}`;
+        let ranges=phraseMatches(words,fullClause);
+        // An independent recognizer can miss a weak initial 'the'. All role,
+        // action, negation and recipient words must still match the native clip.
+        if(!ranges.length)ranges=phraseMatches(words,fullClause.replace(/^the /,''));
+        for(const range of ranges)spans.push({outcomeHelperId:helper.id,start:range.start,end:range.end});
+      }
+    }
     // Only the adjacent response-label phrase lights embedded binary choices.
     // In particular, "No one helped" is story text, not the No response option.
     if(s.choices?.length===2){
@@ -114,10 +126,12 @@
     return spans;
   }
   function clearSpokenCues(){
-    stage.querySelectorAll('.narration-actor-current,.option-current,.choice-bounce-a,.choice-bounce-b').forEach(element=>element.classList.remove('narration-actor-current','option-current','choice-bounce-a','choice-bounce-b'));
+    stage.querySelectorAll('.narration-actor-current,.option-current,.choice-bounce-a,.choice-bounce-b,.outcome-spoken').forEach(element=>element.classList.remove('narration-actor-current','option-current','choice-bounce-a','choice-bounce-b','outcome-spoken'));
   }
   function showSpokenCues(spans,seconds){
     const current=spans.filter(cue=>seconds>=cue.start&&seconds<cue.end),actorIds=new Set(current.map(cue=>cue.actorId).filter(Boolean)),optionIndexes=new Set(current.map(cue=>cue.optionIndex).filter(value=>value!==undefined));
+    const outcomeHelpers=new Set(current.map(cue=>cue.outcomeHelperId).filter(Boolean));
+    stage.querySelectorAll('[data-outcome-helper]').forEach(element=>element.classList.toggle('outcome-spoken',outcomeHelpers.has(element.dataset.outcomeHelper)));
     stage.querySelectorAll('[data-narration-actor]').forEach(element=>element.classList.toggle('narration-actor-current',actorIds.has(element.dataset.narrationActor)));
     stage.querySelectorAll('[data-answer]:not(.continue-answer)').forEach(button=>{
       const answer=Number(button.dataset.answer),cue=current.find(value=>value.optionIndex===answer);
@@ -237,7 +251,13 @@
       :`<span class="character-choice-cue"${characterChoiceStyle(s,actor)} aria-hidden="true"></span>`).join('');
     const spokenCues=interactive?shownActors.filter(actor=>!choiceActors.some(choice=>choice.id===actor.id)).map(actor=>`<span class="narration-actor-cue" data-narration-actor="${actor.id}"${actorTargetStyle(s,actor)} aria-hidden="true"></span>`).join(''):'';
     const alt=shownActors.map(a=>`${a.description} ${a.side==='middle'?'in the middle':'on the '+a.side}`).join('; ');
-    return `<div class="picture${guided?' character-introduction':''}"><img ${interactive?'':'loading="lazy"'} src="${esc(image)}" alt="${esc(alt)}.${s.image===s.pairing.images.need?' '+esc(s.pairing.recipient.reference)+' is sad.':''}">${masks}${buttons}${choiceBoxes}${cue}${spokenCues}</div>`;
+    const picture=`<div class="picture${guided?' character-introduction':''}"><img ${interactive?'':'loading="lazy"'} src="${esc(image)}" alt="${esc(alt)}.${s.image===s.pairing.images.need?' '+esc(s.pairing.recipient.reference)+' is sad.':''}">${masks}${buttons}${choiceBoxes}${cue}${spokenCues}</div>`;
+    if(!s.outcomeVisual)return picture;
+    const badges=s.pairing.helpers.map(helper=>{
+      const bounds=introActorBounds[s.pairing.id][helper.id],center=bounds[0]+bounds[2]/2;
+      return `<div class="no-help-badge" style="left:${center}%" data-outcome-helper="${helper.id}" aria-label="${esc(helper.description)} did NOT help ${esc(s.pairing.recipient.description)}"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="16"/><path d="M9 9 31 31"/></svg><span>did <strong>NOT</strong> help</span></div>`;
+    }).join('');
+    return `<div class="outcome-scene">${picture}<div class="no-help-strip">${badges}</div></div>`;
   }
   function caption(s){const text=esc(s.displayTitle||s.displayText||s.text);return s.captionEmphasis==='HAVE TO'?text.replace(/\bHAVE TO\b/g,'<em class="obligation-emphasis">HAVE TO</em>'):text;}
   function prompt(s){return `<div class="prompt">${s.context&&!s.displayText?`<p class="referent">${esc(s.context)}</p>`:''}${s.preface?`<p class="preface">${esc(s.preface)}</p>`:''}<h2>${caption(s)}</h2></div>`;}
