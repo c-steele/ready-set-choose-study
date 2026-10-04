@@ -33,9 +33,9 @@
     "storyCount": 18,
     "screenCount": 271,
     "clipCount": 108,
-    "readyCount": 68,
-    "pendingCount": 40,
-    "inheritedPendingCount": 28,
+    "readyCount": 67,
+    "pendingCount": 41,
+    "inheritedPendingCount": 29,
     "newForcedChoiceRecordingCount": 12,
     "emphasisPendingCount": 6
   },
@@ -47,15 +47,16 @@
     "Some explicit outcome and corrective recall wording was already pending in the original draft. Its stable pending IDs and saved-project provenance are retained; it is not generated audio.",
     "NaturalReaders exports are currently failing in the in-app browser. New narration remains a recording request pending export access; no synthetic voice or edited-word audio is substituted.",
     "Available option-name clips are separate from prompts. Their existing word timestamps support synchronized character and option glows when those clips play.",
-    "Narration timing remains unmeasured for the complete new script while required recordings are missing. The preview uses its stated read-aloud estimate."
+    "Narration timing remains unmeasured for the complete new script while required recordings are missing. The preview uses its stated read-aloud estimate.",
+    "The opening now says \"Oh look! Here is a kid.\" in all 18 stories. The old some-people recording is inactive; the revised complete sentence is pending under nr_268."
   ],
   "clips": [
     {
-      "id": "nr_001",
-      "text": "Look! Here are some people.",
-      "src": "assets/narration/nr_001.mp3",
+      "id": "nr_268",
+      "text": "Oh look! Here is a kid.",
+      "src": null,
       "kind": "prompt",
-      "status": "reused-exact",
+      "status": "pending",
       "uses": [
         {
           "stepId": "woman-mom-teacher:group",
@@ -148,16 +149,18 @@
           "part": "prompt"
         }
       ],
-      "sha256": "ee5ecada857579aa6c41fce579febb8b44e306738c9654d7e2ac36ee2b490966",
-      "bytes": 127522,
-      "provenance": {
+      "requestedVoice": {
         "provider": "NaturalReaders Commercial",
-        "voice": "Evelyn — 90+ Languages",
-        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/Find_the_Caregiver_Zoom_Facilitator/audio_evelyn/ftc_001_story_intro_01_look_here_are_some_people.mp3",
-        "sourceManifest": "../../Find_the_Caregiver_Zoom_Facilitator/data/canonical_audio_manifest_evelyn.json",
-        "sourceEntry": "evelynLines.ftc_001",
-        "exactFullPromptMatch": true,
-        "copiedWithoutReencoding": true
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Requested Evelyn Soft 0.80x / 160 WPM for the revised kid opening; no recording has been exported or imported."
       }
     },
     {
@@ -6441,7 +6444,7 @@
   ],
   "screens": {
     "woman-mom-teacher:group": {
-      "prompt": "nr_001",
+      "prompt": "nr_268",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -6549,7 +6552,7 @@
       "proposedWording": true
     },
     "woman-sister-friend:group": {
-      "prompt": "nr_001",
+      "prompt": "nr_268",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -6657,7 +6660,7 @@
       "proposedWording": true
     },
     "woman-bestfriend-friend:group": {
-      "prompt": "nr_001",
+      "prompt": "nr_268",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -6765,7 +6768,7 @@
       "proposedWording": true
     },
     "woman-teacher-friend:group": {
-      "prompt": "nr_001",
+      "prompt": "nr_268",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -6873,7 +6876,7 @@
       "proposedWording": true
     },
     "woman-mom-sister:group": {
-      "prompt": "nr_001",
+      "prompt": "nr_268",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -6981,7 +6984,7 @@
       "proposedWording": true
     },
     "woman-teacher-classmate:group": {
-      "prompt": "nr_001",
+      "prompt": "nr_268",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -7089,7 +7092,7 @@
       "proposedWording": true
     },
     "man-dad-teacher:group": {
-      "prompt": "nr_001",
+      "prompt": "nr_268",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -7197,7 +7200,7 @@
       "proposedWording": true
     },
     "man-brother-friend:group": {
-      "prompt": "nr_001",
+      "prompt": "nr_268",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -7305,7 +7308,7 @@
       "proposedWording": true
     },
     "man-bestfriend-friend:group": {
-      "prompt": "nr_001",
+      "prompt": "nr_268",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -7413,7 +7416,7 @@
       "proposedWording": true
     },
     "man-teacher-friend:group": {
-      "prompt": "nr_001",
+      "prompt": "nr_268",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -7521,7 +7524,7 @@
       "proposedWording": true
     },
     "man-dad-brother:group": {
-      "prompt": "nr_001",
+      "prompt": "nr_268",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -7629,7 +7632,7 @@
       "proposedWording": true
     },
     "man-teacher-classmate:group": {
-      "prompt": "nr_001",
+      "prompt": "nr_268",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -7737,7 +7740,7 @@
       "proposedWording": true
     },
     "family-mom-dad:group": {
-      "prompt": "nr_001",
+      "prompt": "nr_268",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -7845,7 +7848,7 @@
       "proposedWording": true
     },
     "family-sister-brother:group": {
-      "prompt": "nr_001",
+      "prompt": "nr_268",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -7953,7 +7956,7 @@
       "proposedWording": true
     },
     "family-dad-kid:group": {
-      "prompt": "nr_001",
+      "prompt": "nr_268",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -8061,7 +8064,7 @@
       "proposedWording": true
     },
     "family-mom-kid:group": {
-      "prompt": "nr_001",
+      "prompt": "nr_268",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -8169,7 +8172,7 @@
       "proposedWording": true
     },
     "family-teacher-kid:group": {
-      "prompt": "nr_001",
+      "prompt": "nr_268",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -8277,7 +8280,7 @@
       "proposedWording": true
     },
     "family-teacher-classmate:group": {
-      "prompt": "nr_001",
+      "prompt": "nr_268",
       "reminder": null,
       "options": [],
       "proposedWording": false

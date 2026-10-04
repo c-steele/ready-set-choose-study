@@ -19,8 +19,8 @@
     "storyCount": 18,
     "screenCount": 523,
     "clipCount": 209,
-    "readyCount": 149,
-    "pendingCount": 60,
+    "readyCount": 148,
+    "pendingCount": 61,
     "emphasisPendingCount": 32
   },
   "notes": [
@@ -28,22 +28,22 @@
     "Covers all 18 researcher-review stories and every conditional branch; one child session uses one six-story set.",
     "The overall-evaluation strength prompt and response labels remain proposed wording. The uses array flags those screens.",
     "The narration preserves the current full script. The illustrated practice screen has a shorter visual display but retains its full spoken prompt.",
-    "The existing opening is the only recording reused. Similar older role introductions and Likert recordings are not substitutes.",
     "Binary options already included in a prompt need not be spoken a second time. Individual option clips are available for other occurrences.",
     "A manifest entry marked pending is a recording request, not generated audio.",
     "HAVE TO/HAS TO capitalization is live; 32 associated recordings retain the verified original audio while the edited NaturalReaders emphasis project awaits successful export. Audio availability does not imply audible emphasis.",
     "Four neither-helped corrective reminders retain the original Evelyn voice and wording, with locally processed pitch-preserving slower speech and a longer sentence pause; original recordings and independent offline word-sequence checks are archived.",
     "Explicit no-one-helped wording and complete helper/recipient evaluation wording are draft adaptations requested for clarity.",
     "Planned manifest only: no source narration manifest or audio has been changed. Exact unchanged full text retains the original clip ID and audio fields; new full text receives a fresh ID.",
-    "New explicit-outcome recordings use Evelyn Soft 0.80x / 160 WPM; retained recordings preserve their original voice settings. The package contains mixed recorded pacing."
+    "New explicit-outcome recordings use Evelyn Soft 0.80x / 160 WPM; retained recordings preserve their original voice settings. The package contains mixed recorded pacing.",
+    "The opening now says \"Oh look! Here is a kid.\" in all 18 stories. The old some-people recording is inactive; the revised complete sentence is pending under nr_268."
   ],
   "clips": [
     {
-      "id": "nr_001",
-      "text": "Look! Here are some people.",
-      "src": "assets/narration/nr_001.mp3",
+      "id": "nr_268",
+      "text": "Oh look! Here is a kid.",
+      "src": null,
       "kind": "prompt",
-      "status": "reused-exact",
+      "status": "pending",
       "uses": [
         {
           "stepId": "woman-mom-teacher:group",
@@ -136,14 +136,18 @@
           "part": "prompt"
         }
       ],
-      "sha256": "ee5ecada857579aa6c41fce579febb8b44e306738c9654d7e2ac36ee2b490966",
-      "bytes": 127522,
-      "provenance": {
+      "requestedVoice": {
         "provider": "NaturalReaders Commercial",
-        "voice": "Evelyn — 90+ Languages",
-        "sourceEntry": "evelynLines.ftc_001",
-        "exactFullPromptMatch": true,
-        "copiedWithoutReencoding": true
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Requested Evelyn Soft 0.80x / 160 WPM for the revised kid opening; no recording has been exported or imported."
       }
     },
     {
@@ -14954,7 +14958,7 @@
   ],
   "screens": {
     "woman-mom-teacher:group": {
-      "prompt": "nr_001",
+      "prompt": "nr_268",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -15195,7 +15199,7 @@
       "proposedWording": false
     },
     "woman-sister-friend:group": {
-      "prompt": "nr_001",
+      "prompt": "nr_268",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -15436,7 +15440,7 @@
       "proposedWording": false
     },
     "woman-bestfriend-friend:group": {
-      "prompt": "nr_001",
+      "prompt": "nr_268",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -15677,7 +15681,7 @@
       "proposedWording": false
     },
     "woman-teacher-friend:group": {
-      "prompt": "nr_001",
+      "prompt": "nr_268",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -15918,7 +15922,7 @@
       "proposedWording": false
     },
     "woman-mom-sister:group": {
-      "prompt": "nr_001",
+      "prompt": "nr_268",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -16159,7 +16163,7 @@
       "proposedWording": false
     },
     "woman-teacher-classmate:group": {
-      "prompt": "nr_001",
+      "prompt": "nr_268",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -16400,7 +16404,7 @@
       "proposedWording": false
     },
     "man-dad-teacher:group": {
-      "prompt": "nr_001",
+      "prompt": "nr_268",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -16641,7 +16645,7 @@
       "proposedWording": false
     },
     "man-brother-friend:group": {
-      "prompt": "nr_001",
+      "prompt": "nr_268",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -16882,7 +16886,7 @@
       "proposedWording": false
     },
     "man-bestfriend-friend:group": {
-      "prompt": "nr_001",
+      "prompt": "nr_268",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -17123,7 +17127,7 @@
       "proposedWording": false
     },
     "man-teacher-friend:group": {
-      "prompt": "nr_001",
+      "prompt": "nr_268",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -17364,7 +17368,7 @@
       "proposedWording": false
     },
     "man-dad-brother:group": {
-      "prompt": "nr_001",
+      "prompt": "nr_268",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -17605,7 +17609,7 @@
       "proposedWording": false
     },
     "man-teacher-classmate:group": {
-      "prompt": "nr_001",
+      "prompt": "nr_268",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -17846,7 +17850,7 @@
       "proposedWording": false
     },
     "family-mom-dad:group": {
-      "prompt": "nr_001",
+      "prompt": "nr_268",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -18087,7 +18091,7 @@
       "proposedWording": false
     },
     "family-sister-brother:group": {
-      "prompt": "nr_001",
+      "prompt": "nr_268",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -18328,7 +18332,7 @@
       "proposedWording": false
     },
     "family-dad-kid:group": {
-      "prompt": "nr_001",
+      "prompt": "nr_268",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -18569,7 +18573,7 @@
       "proposedWording": false
     },
     "family-mom-kid:group": {
-      "prompt": "nr_001",
+      "prompt": "nr_268",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -18810,7 +18814,7 @@
       "proposedWording": false
     },
     "family-teacher-kid:group": {
-      "prompt": "nr_001",
+      "prompt": "nr_268",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -19051,7 +19055,7 @@
       "proposedWording": false
     },
     "family-teacher-classmate:group": {
-      "prompt": "nr_001",
+      "prompt": "nr_268",
       "reminder": null,
       "options": [],
       "proposedWording": false

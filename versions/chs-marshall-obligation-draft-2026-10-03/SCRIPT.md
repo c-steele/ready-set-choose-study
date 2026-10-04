@@ -14,7 +14,7 @@ Expected path range: **139–169 screens**, **102–132 responses**.
 
 48 main judgments + 36 identity/recall checks + 18 practice responses + 0–30 conditional study-strength responses.
 
-Illustrative duration: **20.3–35.1 minutes**, based on 1973–2652 spoken words.
+Illustrative duration: **20.3–35.2 minutes**, based on 1979–2658 spoken words.
 
 - Illustrative estimate, not observed child-session duration.
 - Read-aloud pace: 110–130 words per minute; response time: 3–5 seconds per selection.
@@ -30,17 +30,17 @@ Left: the kid’s teacher. Middle: the kid. Right: the kid’s mom.
 
 ### 1. Meet the characters
 
-“Look! Here are some people.”
+“Oh look! Here is a kid.”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/5c/intro_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/5698e7ccf886-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening line from Find the Caregiver.*
+*Opening adapted to the single kid shown on screen.*
 
 ### 2. Meet the kid
 
 “This little one is a kid. Tap the kid.”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/5c/intro_02.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/940e415d531b-intro_02.png) — original reference image; the preview replaces its caption with the wording above.
 
 Selection check: recipient.
 
@@ -52,7 +52,7 @@ Reminder if needed: “This little one is a kid. This one is the kid. Tap the ki
 
 “This big one is this kid’s teacher. Tap the kid’s teacher.”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/5c/intro_03.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/ca7e452610f7-intro_03.png) — original reference image; the preview replaces its caption with the wording above.
 
 Selection check: helper1.
 
@@ -64,7 +64,7 @@ Reminder if needed: “This big one is this kid’s teacher. This one is the kid
 
 “This big one is this kid’s mom. Tap the kid’s mom.”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/5c/intro_04.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/97ccc74e9132-intro_04.png) — original reference image; the preview replaces its caption with the wording above.
 
 Selection check: helper2.
 
@@ -76,19 +76,19 @@ Reminder if needed: “This big one is this kid’s mom. This one is the kid’s
 
 “Now let’s say that one day this kid was very sad.”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/5c/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/ef6ceaf063c6-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 ### 6. Both helpers see
 
 “The kid’s teacher and the kid’s mom both see that the kid is sad.”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/5c/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/ef6ceaf063c6-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 ### 7. Prediction · Teacher
 
 “Now, do you think the kid’s teacher will help the kid?”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/5c/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/ef6ceaf063c6-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Yes / No.
 
@@ -96,7 +96,7 @@ Choices: Yes / No.
 
 “Now, do you think the kid’s mom will help the kid?”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/5c/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/ef6ceaf063c6-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Yes / No.
 
@@ -162,7 +162,7 @@ Choices: A teeny bit / A little bit / A lot.
 
 “Now, do you think the kid’s teacher HAS TO help the kid? Yes or No.”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/5c/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/ef6ceaf063c6-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Yes / No.
 
@@ -176,7 +176,7 @@ Choices: Yes / No.
 
 Display wording: “How much do you think the kid’s teacher HAS TO?” The role is included in the question; no separate role label is displayed above it.
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/5c/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/ef6ceaf063c6-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: A teeny bit / A little bit / A lot.
 
@@ -184,7 +184,7 @@ Choices: A teeny bit / A little bit / A lot.
 
 “Now, do you think the kid’s mom HAS TO help the kid? Yes or No.”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/5c/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/ef6ceaf063c6-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Yes / No.
 
@@ -198,7 +198,7 @@ Choices: Yes / No.
 
 Display wording: “How much do you think the kid’s mom HAS TO?” The role is included in the question; no separate role label is displayed above it.
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/5c/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/ef6ceaf063c6-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: A teeny bit / A little bit / A lot.
 
@@ -206,7 +206,7 @@ Choices: A teeny bit / A little bit / A lot.
 
 “No one helped the kid. The kid’s teacher did NOT help the kid. The kid’s mom did NOT help the kid.”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/5c/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/ef6ceaf063c6-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 *Every response path reaches this same outcome, regardless of prediction or obligation answers.*
 
@@ -214,7 +214,7 @@ Choices: A teeny bit / A little bit / A lot.
 
 “Can you tell me, did either of these people help the kid?”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/5c/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/ef6ceaf063c6-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Yes / No.
 
@@ -228,7 +228,7 @@ No one helped the kid.
 
 “Do you think this was a mean or nice thing that happened?”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/5c/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/ef6ceaf063c6-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Mean / Nice.
 
@@ -240,7 +240,7 @@ Choices: Mean / Nice.
 
 “How mean was the thing that happened?”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/5c/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/ef6ceaf063c6-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: A tiny bit mean / A little bit mean / A lot mean.
 
@@ -250,7 +250,7 @@ Choices: A tiny bit mean / A little bit mean / A lot mean.
 
 “Do you remember, did the kid’s teacher help the kid?”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/5c/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/ef6ceaf063c6-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Yes / No.
 
@@ -262,7 +262,7 @@ Reminder if needed: “Remember, the kid’s teacher did not help the kid. Do yo
 
 “Do you think it was Mean or Not Mean that the kid’s teacher did NOT help the kid in the middle?”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/5c/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/ef6ceaf063c6-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Mean / Not Mean.
 
@@ -274,7 +274,7 @@ Choices: Mean / Not Mean.
 
 Display wording: “How mean do you think the kid’s teacher was for NOT helping the kid in the middle?” The role is included in the question; no separate role label is displayed above it.
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/5c/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/ef6ceaf063c6-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: A teeny bit mean / A little bit mean / Very mean.
 
@@ -282,7 +282,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 “Do you remember, did the kid’s mom help the kid?”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/5c/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/ef6ceaf063c6-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Yes / No.
 
@@ -294,7 +294,7 @@ Reminder if needed: “Remember, the kid’s mom did not help the kid. Do you re
 
 “Do you think it was Mean or Not Mean that the kid’s mom did NOT help the kid in the middle?”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/5c/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/ef6ceaf063c6-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Mean / Not Mean.
 
@@ -306,7 +306,7 @@ Choices: Mean / Not Mean.
 
 Display wording: “How mean do you think the kid’s mom was for NOT helping the kid in the middle?” The role is included in the question; no separate role label is displayed above it.
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/5c/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/ef6ceaf063c6-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: A teeny bit mean / A little bit mean / Very mean.
 
@@ -314,7 +314,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 “Who was meaner for not helping?”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/5c/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/ef6ceaf063c6-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: The kid’s teacher / The kid’s mom.
 
@@ -326,17 +326,17 @@ Left: the kid’s sister. Middle: the kid. Right: the kid’s friend.
 
 ### 30. Meet the characters
 
-“Look! Here are some people.”
+“Oh look! Here is a kid.”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/6b/intro_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/a247914f8341-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening line from Find the Caregiver.*
+*Opening adapted to the single kid shown on screen.*
 
 ### 31. Meet the kid
 
 “This little one is a kid. Tap the kid.”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/6b/intro_02.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/7f8866f99c37-intro_02.png) — original reference image; the preview replaces its caption with the wording above.
 
 Selection check: recipient.
 
@@ -348,7 +348,7 @@ Reminder if needed: “This little one is a kid. This one is the kid. Tap the ki
 
 “This little one is this kid’s sister. Tap the kid’s sister.”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/6b/intro_03.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/3a352d5b3f7d-intro_03.png) — original reference image; the preview replaces its caption with the wording above.
 
 Selection check: helper1.
 
@@ -360,7 +360,7 @@ Reminder if needed: “This little one is this kid’s sister. This one is the k
 
 “This little one is this kid’s friend. Tap the kid’s friend.”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/6b/intro_04.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/a646d1973c19-intro_04.png) — original reference image; the preview replaces its caption with the wording above.
 
 Selection check: helper2.
 
@@ -372,19 +372,19 @@ Reminder if needed: “This little one is this kid’s friend. This one is the k
 
 “Now let’s say that one day this kid was very sad.”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/6b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/d8367f1a225f-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 ### 35. Both helpers see
 
 “The kid’s sister and the kid’s friend both see that the kid is sad.”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/6b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/d8367f1a225f-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 ### 36. Prediction · Sister
 
 “Now, do you think the kid’s sister will help the kid?”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/6b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/d8367f1a225f-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Yes / No.
 
@@ -392,7 +392,7 @@ Choices: Yes / No.
 
 “Now, do you think the kid’s friend will help the kid?”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/6b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/d8367f1a225f-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Yes / No.
 
@@ -458,7 +458,7 @@ Choices: A teeny bit / A little bit / A lot.
 
 “Now, do you think the kid’s sister HAS TO help the kid? Yes or No.”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/6b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/d8367f1a225f-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Yes / No.
 
@@ -472,7 +472,7 @@ Choices: Yes / No.
 
 Display wording: “How much do you think the kid’s sister HAS TO?” The role is included in the question; no separate role label is displayed above it.
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/6b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/d8367f1a225f-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: A teeny bit / A little bit / A lot.
 
@@ -480,7 +480,7 @@ Choices: A teeny bit / A little bit / A lot.
 
 “Now, do you think the kid’s friend HAS TO help the kid? Yes or No.”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/6b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/d8367f1a225f-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Yes / No.
 
@@ -494,7 +494,7 @@ Choices: Yes / No.
 
 Display wording: “How much do you think the kid’s friend HAS TO?” The role is included in the question; no separate role label is displayed above it.
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/6b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/d8367f1a225f-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: A teeny bit / A little bit / A lot.
 
@@ -502,7 +502,7 @@ Choices: A teeny bit / A little bit / A lot.
 
 “No one helped the kid. The kid’s sister did NOT help the kid. The kid’s friend did NOT help the kid.”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/6b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/d8367f1a225f-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 *Every response path reaches this same outcome, regardless of prediction or obligation answers.*
 
@@ -510,7 +510,7 @@ Choices: A teeny bit / A little bit / A lot.
 
 “Can you tell me, did either of these people help the kid?”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/6b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/d8367f1a225f-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Yes / No.
 
@@ -524,7 +524,7 @@ No one helped the kid.
 
 “Do you think this was a mean or nice thing that happened?”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/6b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/d8367f1a225f-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Mean / Nice.
 
@@ -536,7 +536,7 @@ Choices: Mean / Nice.
 
 “How mean was the thing that happened?”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/6b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/d8367f1a225f-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: A tiny bit mean / A little bit mean / A lot mean.
 
@@ -546,7 +546,7 @@ Choices: A tiny bit mean / A little bit mean / A lot mean.
 
 “Do you remember, did the kid’s sister help the kid?”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/6b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/d8367f1a225f-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Yes / No.
 
@@ -558,7 +558,7 @@ Reminder if needed: “Remember, the kid’s sister did not help the kid. Do you
 
 “Do you think it was Mean or Not Mean that the kid’s sister did NOT help the kid in the middle?”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/6b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/d8367f1a225f-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Mean / Not Mean.
 
@@ -570,7 +570,7 @@ Choices: Mean / Not Mean.
 
 Display wording: “How mean do you think the kid’s sister was for NOT helping the kid in the middle?” The role is included in the question; no separate role label is displayed above it.
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/6b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/d8367f1a225f-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: A teeny bit mean / A little bit mean / Very mean.
 
@@ -578,7 +578,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 “Do you remember, did the kid’s friend help the kid?”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/6b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/d8367f1a225f-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Yes / No.
 
@@ -590,7 +590,7 @@ Reminder if needed: “Remember, the kid’s friend did not help the kid. Do you
 
 “Do you think it was Mean or Not Mean that the kid’s friend did NOT help the kid in the middle?”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/6b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/d8367f1a225f-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Mean / Not Mean.
 
@@ -602,7 +602,7 @@ Choices: Mean / Not Mean.
 
 Display wording: “How mean do you think the kid’s friend was for NOT helping the kid in the middle?” The role is included in the question; no separate role label is displayed above it.
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/6b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/d8367f1a225f-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: A teeny bit mean / A little bit mean / Very mean.
 
@@ -610,7 +610,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 “Who was meaner for not helping?”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/6b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/d8367f1a225f-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: The kid’s sister / The kid’s friend.
 
@@ -622,17 +622,17 @@ Left: the kid’s friend. Middle: the kid. Right: the kid’s best friend.
 
 ### 59. Meet the characters
 
-“Look! Here are some people.”
+“Oh look! Here is a kid.”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/13d/intro_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/d45a1ece9a16-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening line from Find the Caregiver.*
+*Opening adapted to the single kid shown on screen.*
 
 ### 60. Meet the kid
 
 “This little one is a kid. Tap the kid.”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/13d/intro_02.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/b1248cc0a0b3-intro_02.png) — original reference image; the preview replaces its caption with the wording above.
 
 Selection check: recipient.
 
@@ -644,7 +644,7 @@ Reminder if needed: “This little one is a kid. This one is the kid. Tap the ki
 
 “This little one is this kid’s friend. Tap the kid’s friend.”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/13d/intro_03.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/87de30905e8d-intro_03.png) — original reference image; the preview replaces its caption with the wording above.
 
 Selection check: helper1.
 
@@ -656,7 +656,7 @@ Reminder if needed: “This little one is this kid’s friend. This one is the k
 
 “This little one is this kid’s best friend. Tap the kid’s best friend.”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/13d/intro_04.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/54819c159fd8-intro_04.png) — original reference image; the preview replaces its caption with the wording above.
 
 Selection check: helper2.
 
@@ -668,19 +668,19 @@ Reminder if needed: “This little one is this kid’s best friend. This one is 
 
 “Now let’s say that one day this kid was very sad.”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/13d/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 ### 64. Both helpers see
 
 “The kid’s friend and the kid’s best friend both see that the kid is sad.”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/13d/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 ### 65. Prediction · Friend
 
 “Now, do you think the kid’s friend will help the kid?”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/13d/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Yes / No.
 
@@ -688,7 +688,7 @@ Choices: Yes / No.
 
 “Now, do you think the kid’s best friend will help the kid?”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/13d/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Yes / No.
 
@@ -754,7 +754,7 @@ Choices: A teeny bit / A little bit / A lot.
 
 “Now, do you think the kid’s friend HAS TO help the kid? Yes or No.”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/13d/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Yes / No.
 
@@ -768,7 +768,7 @@ Choices: Yes / No.
 
 Display wording: “How much do you think the kid’s friend HAS TO?” The role is included in the question; no separate role label is displayed above it.
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/13d/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: A teeny bit / A little bit / A lot.
 
@@ -776,7 +776,7 @@ Choices: A teeny bit / A little bit / A lot.
 
 “Now, do you think the kid’s best friend HAS TO help the kid? Yes or No.”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/13d/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Yes / No.
 
@@ -790,7 +790,7 @@ Choices: Yes / No.
 
 Display wording: “How much do you think the kid’s best friend HAS TO?” The role is included in the question; no separate role label is displayed above it.
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/13d/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: A teeny bit / A little bit / A lot.
 
@@ -798,7 +798,7 @@ Choices: A teeny bit / A little bit / A lot.
 
 “No one helped the kid. The kid’s friend did NOT help the kid. The kid’s best friend did NOT help the kid.”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/13d/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 *Every response path reaches this same outcome, regardless of prediction or obligation answers.*
 
@@ -806,7 +806,7 @@ Choices: A teeny bit / A little bit / A lot.
 
 “Can you tell me, did either of these people help the kid?”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/13d/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Yes / No.
 
@@ -820,7 +820,7 @@ No one helped the kid.
 
 “Do you think this was a mean or nice thing that happened?”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/13d/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Mean / Nice.
 
@@ -832,7 +832,7 @@ Choices: Mean / Nice.
 
 “How mean was the thing that happened?”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/13d/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: A tiny bit mean / A little bit mean / A lot mean.
 
@@ -842,7 +842,7 @@ Choices: A tiny bit mean / A little bit mean / A lot mean.
 
 “Do you remember, did the kid’s friend help the kid?”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/13d/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Yes / No.
 
@@ -854,7 +854,7 @@ Reminder if needed: “Remember, the kid’s friend did not help the kid. Do you
 
 “Do you think it was Mean or Not Mean that the kid’s friend did NOT help the kid in the middle?”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/13d/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Mean / Not Mean.
 
@@ -866,7 +866,7 @@ Choices: Mean / Not Mean.
 
 Display wording: “How mean do you think the kid’s friend was for NOT helping the kid in the middle?” The role is included in the question; no separate role label is displayed above it.
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/13d/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: A teeny bit mean / A little bit mean / Very mean.
 
@@ -874,7 +874,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 “Do you remember, did the kid’s best friend help the kid?”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/13d/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Yes / No.
 
@@ -886,7 +886,7 @@ Reminder if needed: “Remember, the kid’s best friend did not help the kid. D
 
 “Do you think it was Mean or Not Mean that the kid’s best friend did NOT help the kid in the middle?”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/13d/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Mean / Not Mean.
 
@@ -898,7 +898,7 @@ Choices: Mean / Not Mean.
 
 Display wording: “How mean do you think the kid’s best friend was for NOT helping the kid in the middle?” The role is included in the question; no separate role label is displayed above it.
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/13d/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: A teeny bit mean / A little bit mean / Very mean.
 
@@ -906,7 +906,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 “Who was meaner for not helping?”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/13d/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: The kid’s friend / The kid’s best friend.
 
@@ -918,17 +918,17 @@ Left: the kid’s teacher. Middle: the kid. Right: the kid’s friend.
 
 ### 88. Meet the characters
 
-“Look! Here are some people.”
+“Oh look! Here is a kid.”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/2b/intro_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/5ab48f0b29ed-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening line from Find the Caregiver.*
+*Opening adapted to the single kid shown on screen.*
 
 ### 89. Meet the kid
 
 “This little one is a kid. Tap the kid.”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/2b/intro_02.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/034f00b997ea-intro_02.png) — original reference image; the preview replaces its caption with the wording above.
 
 Selection check: recipient.
 
@@ -940,7 +940,7 @@ Reminder if needed: “This little one is a kid. This one is the kid. Tap the ki
 
 “This big one is this kid’s teacher. Tap the kid’s teacher.”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/2b/intro_03.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/b3c03b18f90c-intro_03.png) — original reference image; the preview replaces its caption with the wording above.
 
 Selection check: helper1.
 
@@ -952,7 +952,7 @@ Reminder if needed: “This big one is this kid’s teacher. This one is the kid
 
 “This little one is this kid’s friend. Tap the kid’s friend.”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/2b/intro_04.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/9c8f0bba75ed-intro_04.png) — original reference image; the preview replaces its caption with the wording above.
 
 Selection check: helper2.
 
@@ -964,19 +964,19 @@ Reminder if needed: “This little one is this kid’s friend. This one is the k
 
 “Now let’s say that one day this kid was very sad.”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/2b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 ### 93. Both helpers see
 
 “The kid’s teacher and the kid’s friend both see that the kid is sad.”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/2b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 ### 94. Prediction · Teacher
 
 “Now, do you think the kid’s teacher will help the kid?”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/2b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Yes / No.
 
@@ -984,7 +984,7 @@ Choices: Yes / No.
 
 “Now, do you think the kid’s friend will help the kid?”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/2b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Yes / No.
 
@@ -1050,7 +1050,7 @@ Choices: A teeny bit / A little bit / A lot.
 
 “Now, do you think the kid’s teacher HAS TO help the kid? Yes or No.”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/2b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Yes / No.
 
@@ -1064,7 +1064,7 @@ Choices: Yes / No.
 
 Display wording: “How much do you think the kid’s teacher HAS TO?” The role is included in the question; no separate role label is displayed above it.
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/2b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: A teeny bit / A little bit / A lot.
 
@@ -1072,7 +1072,7 @@ Choices: A teeny bit / A little bit / A lot.
 
 “Now, do you think the kid’s friend HAS TO help the kid? Yes or No.”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/2b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Yes / No.
 
@@ -1086,7 +1086,7 @@ Choices: Yes / No.
 
 Display wording: “How much do you think the kid’s friend HAS TO?” The role is included in the question; no separate role label is displayed above it.
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/2b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: A teeny bit / A little bit / A lot.
 
@@ -1094,7 +1094,7 @@ Choices: A teeny bit / A little bit / A lot.
 
 “No one helped the kid. The kid’s teacher did NOT help the kid. The kid’s friend did NOT help the kid.”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/2b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 *Every response path reaches this same outcome, regardless of prediction or obligation answers.*
 
@@ -1102,7 +1102,7 @@ Choices: A teeny bit / A little bit / A lot.
 
 “Can you tell me, did either of these people help the kid?”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/2b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Yes / No.
 
@@ -1116,7 +1116,7 @@ No one helped the kid.
 
 “Do you think this was a mean or nice thing that happened?”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/2b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Mean / Nice.
 
@@ -1128,7 +1128,7 @@ Choices: Mean / Nice.
 
 “How mean was the thing that happened?”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/2b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: A tiny bit mean / A little bit mean / A lot mean.
 
@@ -1138,7 +1138,7 @@ Choices: A tiny bit mean / A little bit mean / A lot mean.
 
 “Do you remember, did the kid’s teacher help the kid?”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/2b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Yes / No.
 
@@ -1150,7 +1150,7 @@ Reminder if needed: “Remember, the kid’s teacher did not help the kid. Do yo
 
 “Do you think it was Mean or Not Mean that the kid’s teacher did NOT help the kid in the middle?”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/2b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Mean / Not Mean.
 
@@ -1162,7 +1162,7 @@ Choices: Mean / Not Mean.
 
 Display wording: “How mean do you think the kid’s teacher was for NOT helping the kid in the middle?” The role is included in the question; no separate role label is displayed above it.
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/2b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: A teeny bit mean / A little bit mean / Very mean.
 
@@ -1170,7 +1170,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 “Do you remember, did the kid’s friend help the kid?”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/2b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Yes / No.
 
@@ -1182,7 +1182,7 @@ Reminder if needed: “Remember, the kid’s friend did not help the kid. Do you
 
 “Do you think it was Mean or Not Mean that the kid’s friend did NOT help the kid in the middle?”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/2b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Mean / Not Mean.
 
@@ -1194,7 +1194,7 @@ Choices: Mean / Not Mean.
 
 Display wording: “How mean do you think the kid’s friend was for NOT helping the kid in the middle?” The role is included in the question; no separate role label is displayed above it.
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/2b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: A teeny bit mean / A little bit mean / Very mean.
 
@@ -1202,7 +1202,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 “Who was meaner for not helping?”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/versions/chs-v79-home-school-furnished-candidate/assets/home_school/foregrounds/2b/hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: The kid’s teacher / The kid’s friend.
 
@@ -1214,17 +1214,17 @@ Left: the kid’s mom. Middle: the kid. Right: the kid’s sister.
 
 ### 117. Meet the characters
 
-“Look! Here are some people.”
+“Oh look! Here is a kid.”
 
-[Stimulus source](../find_the_caregiver_story_screens_2026-09-26/mom-sister-orange-sad/01-group.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/2fa20e069eca-01-group.png) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening line from Find the Caregiver.*
+*Opening adapted to the single kid shown on screen.*
 
 ### 118. Meet the kid
 
 “This little one is a kid. Tap the kid.”
 
-[Stimulus source](../find_the_caregiver_story_screens_2026-09-26/mom-sister-orange-sad/02-child.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/abff16b4e820-02-child.png) — original reference image; the preview replaces its caption with the wording above.
 
 Selection check: recipient.
 
@@ -1236,7 +1236,7 @@ Reminder if needed: “This little one is a kid. This one is the kid. Tap the ki
 
 “This big one is this kid’s mom. Tap the kid’s mom.”
 
-[Stimulus source](../find_the_caregiver_story_screens_2026-09-26/mom-sister-orange-sad/03-mom.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/1f4a6786d185-03-mom.png) — original reference image; the preview replaces its caption with the wording above.
 
 Selection check: helper1.
 
@@ -1248,7 +1248,7 @@ Reminder if needed: “This big one is this kid’s mom. This one is the kid’s
 
 “This little one is this kid’s sister. Tap the kid’s sister.”
 
-[Stimulus source](../find_the_caregiver_story_screens_2026-09-26/mom-sister-orange-sad/04-sister.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/de928ad71b66-04-sister.png) — original reference image; the preview replaces its caption with the wording above.
 
 Selection check: helper2.
 
@@ -1260,19 +1260,19 @@ Reminder if needed: “This little one is this kid’s sister. This one is the k
 
 “Now let’s say that one day this kid was very sad.”
 
-[Stimulus source](../find_the_caregiver_story_screens_2026-09-26/mom-sister-orange-sad/05-sad.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/cf266d33caca-05-sad.png) — original reference image; the preview replaces its caption with the wording above.
 
 ### 122. Both helpers see
 
 “The kid’s mom and the kid’s sister both see that the kid is sad.”
 
-[Stimulus source](../find_the_caregiver_story_screens_2026-09-26/mom-sister-orange-sad/05-sad.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/cf266d33caca-05-sad.png) — original reference image; the preview replaces its caption with the wording above.
 
 ### 123. Prediction · Mom
 
 “Now, do you think the kid’s mom will help the kid?”
 
-[Stimulus source](../find_the_caregiver_story_screens_2026-09-26/mom-sister-orange-sad/05-sad.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/cf266d33caca-05-sad.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Yes / No.
 
@@ -1280,7 +1280,7 @@ Choices: Yes / No.
 
 “Now, do you think the kid’s sister will help the kid?”
 
-[Stimulus source](../find_the_caregiver_story_screens_2026-09-26/mom-sister-orange-sad/05-sad.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/cf266d33caca-05-sad.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Yes / No.
 
@@ -1346,7 +1346,7 @@ Choices: A teeny bit / A little bit / A lot.
 
 “Now, do you think the kid’s mom HAS TO help the kid? Yes or No.”
 
-[Stimulus source](../find_the_caregiver_story_screens_2026-09-26/mom-sister-orange-sad/05-sad.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/cf266d33caca-05-sad.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Yes / No.
 
@@ -1360,7 +1360,7 @@ Choices: Yes / No.
 
 Display wording: “How much do you think the kid’s mom HAS TO?” The role is included in the question; no separate role label is displayed above it.
 
-[Stimulus source](../find_the_caregiver_story_screens_2026-09-26/mom-sister-orange-sad/05-sad.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/cf266d33caca-05-sad.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: A teeny bit / A little bit / A lot.
 
@@ -1368,7 +1368,7 @@ Choices: A teeny bit / A little bit / A lot.
 
 “Now, do you think the kid’s sister HAS TO help the kid? Yes or No.”
 
-[Stimulus source](../find_the_caregiver_story_screens_2026-09-26/mom-sister-orange-sad/05-sad.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/cf266d33caca-05-sad.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Yes / No.
 
@@ -1382,7 +1382,7 @@ Choices: Yes / No.
 
 Display wording: “How much do you think the kid’s sister HAS TO?” The role is included in the question; no separate role label is displayed above it.
 
-[Stimulus source](../find_the_caregiver_story_screens_2026-09-26/mom-sister-orange-sad/05-sad.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/cf266d33caca-05-sad.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: A teeny bit / A little bit / A lot.
 
@@ -1390,7 +1390,7 @@ Choices: A teeny bit / A little bit / A lot.
 
 “No one helped the kid. The kid’s mom did NOT help the kid. The kid’s sister did NOT help the kid.”
 
-[Stimulus source](../find_the_caregiver_story_screens_2026-09-26/mom-sister-orange-sad/05-sad.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/cf266d33caca-05-sad.png) — original reference image; the preview replaces its caption with the wording above.
 
 *Every response path reaches this same outcome, regardless of prediction or obligation answers.*
 
@@ -1398,7 +1398,7 @@ Choices: A teeny bit / A little bit / A lot.
 
 “Can you tell me, did either of these people help the kid?”
 
-[Stimulus source](../find_the_caregiver_story_screens_2026-09-26/mom-sister-orange-sad/05-sad.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/cf266d33caca-05-sad.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Yes / No.
 
@@ -1412,7 +1412,7 @@ No one helped the kid.
 
 “Do you think this was a mean or nice thing that happened?”
 
-[Stimulus source](../find_the_caregiver_story_screens_2026-09-26/mom-sister-orange-sad/05-sad.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/cf266d33caca-05-sad.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Mean / Nice.
 
@@ -1424,7 +1424,7 @@ Choices: Mean / Nice.
 
 “How mean was the thing that happened?”
 
-[Stimulus source](../find_the_caregiver_story_screens_2026-09-26/mom-sister-orange-sad/05-sad.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/cf266d33caca-05-sad.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: A tiny bit mean / A little bit mean / A lot mean.
 
@@ -1434,7 +1434,7 @@ Choices: A tiny bit mean / A little bit mean / A lot mean.
 
 “Do you remember, did the kid’s mom help the kid?”
 
-[Stimulus source](../find_the_caregiver_story_screens_2026-09-26/mom-sister-orange-sad/05-sad.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/cf266d33caca-05-sad.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Yes / No.
 
@@ -1446,7 +1446,7 @@ Reminder if needed: “Remember, the kid’s mom did not help the kid. Do you re
 
 “Do you think it was Mean or Not Mean that the kid’s mom did NOT help the kid in the middle?”
 
-[Stimulus source](../find_the_caregiver_story_screens_2026-09-26/mom-sister-orange-sad/05-sad.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/cf266d33caca-05-sad.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Mean / Not Mean.
 
@@ -1458,7 +1458,7 @@ Choices: Mean / Not Mean.
 
 Display wording: “How mean do you think the kid’s mom was for NOT helping the kid in the middle?” The role is included in the question; no separate role label is displayed above it.
 
-[Stimulus source](../find_the_caregiver_story_screens_2026-09-26/mom-sister-orange-sad/05-sad.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/cf266d33caca-05-sad.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: A teeny bit mean / A little bit mean / Very mean.
 
@@ -1466,7 +1466,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 “Do you remember, did the kid’s sister help the kid?”
 
-[Stimulus source](../find_the_caregiver_story_screens_2026-09-26/mom-sister-orange-sad/05-sad.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/cf266d33caca-05-sad.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Yes / No.
 
@@ -1478,7 +1478,7 @@ Reminder if needed: “Remember, the kid’s sister did not help the kid. Do you
 
 “Do you think it was Mean or Not Mean that the kid’s sister did NOT help the kid in the middle?”
 
-[Stimulus source](../find_the_caregiver_story_screens_2026-09-26/mom-sister-orange-sad/05-sad.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/cf266d33caca-05-sad.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Mean / Not Mean.
 
@@ -1490,7 +1490,7 @@ Choices: Mean / Not Mean.
 
 Display wording: “How mean do you think the kid’s sister was for NOT helping the kid in the middle?” The role is included in the question; no separate role label is displayed above it.
 
-[Stimulus source](../find_the_caregiver_story_screens_2026-09-26/mom-sister-orange-sad/05-sad.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/cf266d33caca-05-sad.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: A teeny bit mean / A little bit mean / Very mean.
 
@@ -1498,7 +1498,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 “Who was meaner for not helping?”
 
-[Stimulus source](../find_the_caregiver_story_screens_2026-09-26/mom-sister-orange-sad/05-sad.png) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/cf266d33caca-05-sad.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: The kid’s mom / The kid’s sister.
 
@@ -1510,17 +1510,17 @@ Left: the kid’s classmate. Middle: the kid. Right: the kid’s teacher.
 
 ### 146. Meet the characters
 
-“Look! Here are some people.”
+“Oh look! Here is a kid.”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/assets/teacher_classmate/generated/trials/14d/intro_01.svg) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/44d39b1df683-intro_01.svg) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening line from Find the Caregiver.*
+*Opening adapted to the single kid shown on screen.*
 
 ### 147. Meet the kid
 
 “This little one is a kid. Tap the kid.”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/assets/teacher_classmate/generated/trials/14d/intro_02.svg) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/4e621f5d72b5-intro_02.svg) — original reference image; the preview replaces its caption with the wording above.
 
 Selection check: recipient.
 
@@ -1532,7 +1532,7 @@ Reminder if needed: “This little one is a kid. This one is the kid. Tap the ki
 
 “This little one is this kid’s classmate. Tap the kid’s classmate.”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/assets/teacher_classmate/generated/trials/14d/intro_03.svg) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/2867c2e0bd9c-intro_03.svg) — original reference image; the preview replaces its caption with the wording above.
 
 Selection check: helper1.
 
@@ -1544,7 +1544,7 @@ Reminder if needed: “This little one is this kid’s classmate. This one is th
 
 “This big one is this kid’s teacher. Tap the kid’s teacher.”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/assets/teacher_classmate/generated/trials/14d/intro_04.svg) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/a5206d48c30f-intro_04.svg) — original reference image; the preview replaces its caption with the wording above.
 
 Selection check: helper2.
 
@@ -1556,19 +1556,19 @@ Reminder if needed: “This big one is this kid’s teacher. This one is the kid
 
 “Now let’s say that one day this kid was very sad.”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/assets/teacher_classmate/generated/trials/14d/hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
 ### 151. Both helpers see
 
 “The kid’s classmate and the kid’s teacher both see that the kid is sad.”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/assets/teacher_classmate/generated/trials/14d/hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
 ### 152. Prediction · Classmate
 
 “Now, do you think the kid’s classmate will help the kid?”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/assets/teacher_classmate/generated/trials/14d/hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Yes / No.
 
@@ -1576,7 +1576,7 @@ Choices: Yes / No.
 
 “Now, do you think the kid’s teacher will help the kid?”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/assets/teacher_classmate/generated/trials/14d/hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Yes / No.
 
@@ -1642,7 +1642,7 @@ Choices: A teeny bit / A little bit / A lot.
 
 “Now, do you think the kid’s classmate HAS TO help the kid? Yes or No.”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/assets/teacher_classmate/generated/trials/14d/hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Yes / No.
 
@@ -1656,7 +1656,7 @@ Choices: Yes / No.
 
 Display wording: “How much do you think the kid’s classmate HAS TO?” The role is included in the question; no separate role label is displayed above it.
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/assets/teacher_classmate/generated/trials/14d/hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: A teeny bit / A little bit / A lot.
 
@@ -1664,7 +1664,7 @@ Choices: A teeny bit / A little bit / A lot.
 
 “Now, do you think the kid’s teacher HAS TO help the kid? Yes or No.”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/assets/teacher_classmate/generated/trials/14d/hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Yes / No.
 
@@ -1678,7 +1678,7 @@ Choices: Yes / No.
 
 Display wording: “How much do you think the kid’s teacher HAS TO?” The role is included in the question; no separate role label is displayed above it.
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/assets/teacher_classmate/generated/trials/14d/hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: A teeny bit / A little bit / A lot.
 
@@ -1686,7 +1686,7 @@ Choices: A teeny bit / A little bit / A lot.
 
 “No one helped the kid. The kid’s classmate did NOT help the kid. The kid’s teacher did NOT help the kid.”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/assets/teacher_classmate/generated/trials/14d/hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
 *Every response path reaches this same outcome, regardless of prediction or obligation answers.*
 
@@ -1694,7 +1694,7 @@ Choices: A teeny bit / A little bit / A lot.
 
 “Can you tell me, did either of these people help the kid?”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/assets/teacher_classmate/generated/trials/14d/hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Yes / No.
 
@@ -1708,7 +1708,7 @@ No one helped the kid.
 
 “Do you think this was a mean or nice thing that happened?”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/assets/teacher_classmate/generated/trials/14d/hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Mean / Nice.
 
@@ -1720,7 +1720,7 @@ Choices: Mean / Nice.
 
 “How mean was the thing that happened?”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/assets/teacher_classmate/generated/trials/14d/hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: A tiny bit mean / A little bit mean / A lot mean.
 
@@ -1730,7 +1730,7 @@ Choices: A tiny bit mean / A little bit mean / A lot mean.
 
 “Do you remember, did the kid’s classmate help the kid?”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/assets/teacher_classmate/generated/trials/14d/hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Yes / No.
 
@@ -1742,7 +1742,7 @@ Reminder if needed: “Remember, the kid’s classmate did not help the kid. Do 
 
 “Do you think it was Mean or Not Mean that the kid’s classmate did NOT help the kid in the middle?”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/assets/teacher_classmate/generated/trials/14d/hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Mean / Not Mean.
 
@@ -1754,7 +1754,7 @@ Choices: Mean / Not Mean.
 
 Display wording: “How mean do you think the kid’s classmate was for NOT helping the kid in the middle?” The role is included in the question; no separate role label is displayed above it.
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/assets/teacher_classmate/generated/trials/14d/hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: A teeny bit mean / A little bit mean / Very mean.
 
@@ -1762,7 +1762,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 “Do you remember, did the kid’s teacher help the kid?”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/assets/teacher_classmate/generated/trials/14d/hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Yes / No.
 
@@ -1774,7 +1774,7 @@ Reminder if needed: “Remember, the kid’s teacher did not help the kid. Do yo
 
 “Do you think it was Mean or Not Mean that the kid’s teacher did NOT help the kid in the middle?”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/assets/teacher_classmate/generated/trials/14d/hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Mean / Not Mean.
 
@@ -1786,7 +1786,7 @@ Choices: Mean / Not Mean.
 
 Display wording: “How mean do you think the kid’s teacher was for NOT helping the kid in the middle?” The role is included in the question; no separate role label is displayed above it.
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/assets/teacher_classmate/generated/trials/14d/hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: A teeny bit mean / A little bit mean / Very mean.
 
@@ -1794,7 +1794,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 “Who was meaner for not helping?”
 
-[Stimulus source](../../Find_the_Caregiver_Zoom_Facilitator/assets/teacher_classmate/generated/trials/14d/hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
+[Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: The kid’s classmate / The kid’s teacher.
 

@@ -16,7 +16,7 @@ Expected path range: **71–71 screens**, **44–44 responses**.
 
 18 forced-choice main judgments + 24 identity/recall checks + 2 brief practice responses. No strength scales.
 
-Illustrative duration: **9.6–12.4 minutes**, based on 961–961 spoken words.
+Illustrative duration: **9.6–12.5 minutes**, based on 967–967 spoken words.
 
 - Illustrative estimate, not observed child-session duration.
 - Read-aloud pace: 110–130 words per minute; response time: 3–5 seconds per selection.
@@ -32,11 +32,11 @@ Left: the kid’s teacher. Middle: the kid. Right: the kid’s mom.
 
 ### 1. Meet the characters
 
-“Look! Here are some people.”
+“Oh look! Here is a kid.”
 
 [Stimulus source](assets/stimuli/5698e7ccf886-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening line from Find the Caregiver.*
+*Opening adapted to the single kid shown on screen.*
 
 ### 2. Meet the kid
 
@@ -180,11 +180,11 @@ Left: the kid’s sister. Middle: the kid. Right: the kid’s friend.
 
 ### 16. Meet the characters
 
-“Look! Here are some people.”
+“Oh look! Here is a kid.”
 
 [Stimulus source](assets/stimuli/a247914f8341-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening line from Find the Caregiver.*
+*Opening adapted to the single kid shown on screen.*
 
 ### 17. Meet the kid
 
@@ -290,11 +290,11 @@ Left: the kid’s friend. Middle: the kid. Right: the kid’s best friend.
 
 ### 27. Meet the characters
 
-“Look! Here are some people.”
+“Oh look! Here is a kid.”
 
 [Stimulus source](assets/stimuli/d45a1ece9a16-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening line from Find the Caregiver.*
+*Opening adapted to the single kid shown on screen.*
 
 ### 28. Meet the kid
 
@@ -400,11 +400,11 @@ Left: the kid’s teacher. Middle: the kid. Right: the kid’s friend.
 
 ### 38. Meet the characters
 
-“Look! Here are some people.”
+“Oh look! Here is a kid.”
 
 [Stimulus source](assets/stimuli/5ab48f0b29ed-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening line from Find the Caregiver.*
+*Opening adapted to the single kid shown on screen.*
 
 ### 39. Meet the kid
 
@@ -510,11 +510,11 @@ Left: the kid’s mom. Middle: the kid. Right: the kid’s sister.
 
 ### 49. Meet the characters
 
-“Look! Here are some people.”
+“Oh look! Here is a kid.”
 
 [Stimulus source](assets/stimuli/2fa20e069eca-01-group.png) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening line from Find the Caregiver.*
+*Opening adapted to the single kid shown on screen.*
 
 ### 50. Meet the kid
 
@@ -620,11 +620,11 @@ Left: the kid’s classmate. Middle: the kid. Right: the kid’s teacher.
 
 ### 60. Meet the characters
 
-“Look! Here are some people.”
+“Oh look! Here is a kid.”
 
 [Stimulus source](assets/stimuli/44d39b1df683-intro_01.svg) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening line from Find the Caregiver.*
+*Opening adapted to the single kid shown on screen.*
 
 ### 61. Meet the kid
 

@@ -8,46 +8,6 @@
   "timestampMethod": "Whisper cross-attention DTW cropped to real decoded audio duration before alignment; approximate word boundaries on nominal 20ms grid, not exact phonetic alignment",
   "wordNormalization": "Ignore letter case, apostrophe position and punctuation, retaining word order and all letters/numbers",
   "clips": {
-    "nr_001": {
-      "sha256": "ee5ecada857579aa6c41fce579febb8b44e306738c9654d7e2ac36ee2b490966",
-      "durationSeconds": 3.186925,
-      "recognizedText": "Look! Here are some people.",
-      "words": [
-        {
-          "word": "Look!",
-          "start": 0,
-          "end": 1.04
-        },
-        {
-          "word": "Here",
-          "start": 1.04,
-          "end": 1.62
-        },
-        {
-          "word": "are",
-          "start": 1.62,
-          "end": 1.72
-        },
-        {
-          "word": "some",
-          "start": 1.72,
-          "end": 1.96
-        },
-        {
-          "word": "people.",
-          "start": 1.96,
-          "end": 2.8
-        }
-      ],
-      "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
-      "alignmentAudioFrames": 160,
-      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Look! Here are some people.",
-      "exactNormalizedWordMatch": true,
-      "alignmentValid": true,
-      "alignmentFailures": [],
-      "zeroDurationWordCount": 0
-    },
     "nr_002": {
       "sha256": "bd3526318543a95d4e886fcfacd53e549e38ff2a70c53e2e6c9b13f54e7e28ca",
       "durationSeconds": 3.9706,

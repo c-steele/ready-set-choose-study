@@ -4,7 +4,7 @@
   const amount = ['A teeny bit', 'A little bit', 'A lot'];
   const meanAmount = ['A teeny bit mean', 'A little bit mean', 'Very mean'];
   const steps = [
-    {id:'group', phase:'Meet the characters', image:'01-group.png', text:'Look! Here are some people.', note:'Opening line from Find the Caregiver.'},
+    {id:'group', phase:'Meet the characters', image:'01-group.png', text:'Oh look! Here is a kid.', note:'Opening adapted to the single kid shown on screen.'},
     {id:'kid', phase:'Meet the kid', image:'02-child.png', text:'This is the kid. Tap the kid.', point:'kid', reminder:'This one in the middle is the kid. Tap the kid.'},
     {id:'mom', phase:'Meet the mom', image:'03-mom.png', text:'This is the kid’s mom. Tap the kid’s mom.', point:'mom', reminder:'This one on the left is the kid’s mom. Tap the kid’s mom.'},
     {id:'sister', phase:'Meet the sister', image:'04-sister.png', text:'This is the kid’s sister. Tap the kid’s sister.', point:'sister', reminder:'This one on the right is the kid’s sister. Tap the kid’s sister.'},

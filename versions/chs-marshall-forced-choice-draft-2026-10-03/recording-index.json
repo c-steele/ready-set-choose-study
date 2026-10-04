@@ -14,7 +14,7 @@
     "preferredBitrateKbps": 320,
     "settingsBasis": "Requested Evelyn Soft 0.80x / 160 WPM / zero paragraph pause for this forced-choice batch. New paragraphs have not been generated or exported yet."
   },
-  "clipCount": 40,
+  "clipCount": 41,
   "note": "Export these unique pending paragraphs in this exact order as separate MP3s using Index + Segment. Stable clip IDs differ from numbered export indices. Existing pending explicit-outcome paragraphs are included so this variant can be completed independently.",
   "entries": [
     {
@@ -296,6 +296,13 @@
       "text": "Who was meaner for NOT helping the teacher in the middle?",
       "targetFile": "assets/narration/nr_267.mp3",
       "proposedWording": true
+    },
+    {
+      "exportIndex": 41,
+      "clipId": "nr_268",
+      "text": "Oh look! Here is a kid.",
+      "targetFile": "assets/narration/nr_268.mp3",
+      "proposedWording": false
     }
   ]
 }
