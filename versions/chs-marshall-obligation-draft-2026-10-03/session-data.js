@@ -212,7 +212,8 @@
       if (step.relatedPrediction) lines.push(`*Confidence about the immediately preceding prediction, after either Yes or No (${step.relatedPrediction}).*`, '');
       if (step.context) lines.push(`**${step.context}**`, '');
       if (step.preface) lines.push(step.preface, '');
-      lines.push(`“${step.text}”`, '');
+      const scriptText=step.captionEmphasis==='HAVE TO'?step.text.replace(/\bHAVE TO\b/g,'*HAVE TO*'):step.text;
+      lines.push(`“${scriptText}”`, '');
       if (step.displayTitle) lines.push(`Display treatment: ${step.displayTitle} / ${step.displaySetup} / ${step.displayQuestion}`, '');
       if (step.displayText) lines.push(`Display wording: “${step.displayText}” The role is included in the question; no separate role label is displayed above it.`, '');
       if (step.image) lines.push(`[Stimulus source](${step.image}) — original reference image; the preview replaces its caption with the wording above.`, '');

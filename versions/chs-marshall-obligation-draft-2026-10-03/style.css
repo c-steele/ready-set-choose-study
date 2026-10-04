@@ -90,3 +90,6 @@
 .answers button.spoken-choice.option-current.choice-bounce-b{animation:choice-word-bounce-b .32s ease-out both}
 @media(prefers-reduced-motion:reduce){.answers button.spoken-choice.option-current.choice-bounce-a,.answers button.spoken-choice.option-current.choice-bounce-b{animation:none;transform:none}}
 @media print{.answers button.spoken-choice.option-current{animation:none!important;transform:none!important}}
+
+/* Italic delivery cue for the HAVE TO practice introduction. */
+.prompt .obligation-emphasis{font-style:italic;font-weight:900}

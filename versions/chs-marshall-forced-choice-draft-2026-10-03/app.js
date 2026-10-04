@@ -239,7 +239,8 @@
     const alt=shownActors.map(a=>`${a.description} ${a.side==='middle'?'in the middle':'on the '+a.side}`).join('; ');
     return `<div class="picture${guided?' character-introduction':''}"><img ${interactive?'':'loading="lazy"'} src="${esc(image)}" alt="${esc(alt)}.${s.image===s.pairing.images.need?' '+esc(s.pairing.recipient.reference)+' is sad.':''}">${masks}${buttons}${choiceBoxes}${cue}${spokenCues}</div>`;
   }
-  function prompt(s){return `<div class="prompt">${s.context&&!s.displayText?`<p class="referent">${esc(s.context)}</p>`:''}${s.preface?`<p class="preface">${esc(s.preface)}</p>`:''}<h2>${esc(s.displayTitle||s.displayText||s.text)}</h2></div>`;}
+  function caption(s){const text=esc(s.displayTitle||s.displayText||s.text);return s.captionEmphasis==='HAVE TO'?text.replace(/\bHAVE TO\b/g,'<em class="obligation-emphasis">HAVE TO</em>'):text;}
+  function prompt(s){return `<div class="prompt">${s.context&&!s.displayText?`<p class="referent">${esc(s.context)}</p>`:''}${s.preface?`<p class="preface">${esc(s.preface)}</p>`:''}<h2>${caption(s)}</h2></div>`;}
   function branchNote(s){if(!s.when)return '';const parent=steps.find(p=>p.id===s.when[0]);return `Only after “${s.when[1]}” to ${parent.phase.toLowerCase()}. `;}
   function choiceReaderControls(binary=false){return `<div class="option-reader-controls${binary?' binary-reader-controls':''}"><button data-read-options type="button">Read choices</button><button data-read-manually type="button">Read myself</button></div><p class="reader-status${binary?' binary-reader-status':''}" data-reader-status role="status">Listen to each choice, then pick one.</p>`;}
   function scaleOptions(s,interactive=false){

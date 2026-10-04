@@ -127,9 +127,9 @@ Choices: Not sure / A little sure / Very sure.
 
 ### 11. “HAVE TO” practice
 
-“Now, sometimes people HAVE TO do things.”
+“Now, sometimes people *HAVE TO* do things.”
 
-*Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
+*Read with a brief pause before and after HAVE TO. Pauses have been added to the existing Evelyn recording; italic display emphasis is an adaptation. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
 ### 12. Practice · Stop being mean
 
@@ -447,9 +447,9 @@ Choices: Not sure / A little sure / Very sure.
 
 ### 42. “HAVE TO” practice
 
-“Now, sometimes people HAVE TO do things.”
+“Now, sometimes people *HAVE TO* do things.”
 
-*Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
+*Read with a brief pause before and after HAVE TO. Pauses have been added to the existing Evelyn recording; italic display emphasis is an adaptation. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
 ### 43. Practice · Stop being mean
 
@@ -767,9 +767,9 @@ Choices: Not sure / A little sure / Very sure.
 
 ### 73. “HAVE TO” practice
 
-“Now, sometimes people HAVE TO do things.”
+“Now, sometimes people *HAVE TO* do things.”
 
-*Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
+*Read with a brief pause before and after HAVE TO. Pauses have been added to the existing Evelyn recording; italic display emphasis is an adaptation. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
 ### 74. Practice · Stop being mean
 
@@ -1087,9 +1087,9 @@ Choices: Not sure / A little sure / Very sure.
 
 ### 104. “HAVE TO” practice
 
-“Now, sometimes people HAVE TO do things.”
+“Now, sometimes people *HAVE TO* do things.”
 
-*Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
+*Read with a brief pause before and after HAVE TO. Pauses have been added to the existing Evelyn recording; italic display emphasis is an adaptation. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
 ### 105. Practice · Stop being mean
 
@@ -1407,9 +1407,9 @@ Choices: Not sure / A little sure / Very sure.
 
 ### 135. “HAVE TO” practice
 
-“Now, sometimes people HAVE TO do things.”
+“Now, sometimes people *HAVE TO* do things.”
 
-*Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
+*Read with a brief pause before and after HAVE TO. Pauses have been added to the existing Evelyn recording; italic display emphasis is an adaptation. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
 ### 136. Practice · Stop being mean
 
@@ -1727,9 +1727,9 @@ Choices: Not sure / A little sure / Very sure.
 
 ### 166. “HAVE TO” practice
 
-“Now, sometimes people HAVE TO do things.”
+“Now, sometimes people *HAVE TO* do things.”
 
-*Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
+*Read with a brief pause before and after HAVE TO. Pauses have been added to the existing Evelyn recording; italic display emphasis is an adaptation. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
 ### 167. Practice · Stop being mean
 

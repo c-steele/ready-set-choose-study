@@ -21,7 +21,10 @@
     "clipCount": 213,
     "readyCount": 147,
     "pendingCount": 66,
-    "emphasisPendingCount": 32
+    "emphasisPendingCount": 32,
+    "pauseAdjustedReadyCount": 1,
+    "nativeProsodyPendingCount": 32,
+    "emphasisPendingBasis": "Native NaturalReaders prosody exports remain pending; nr_014 uses locally inserted pauses from its existing Evelyn recording."
   },
   "notes": [
     "One clip per complete prompt, reminder, or individual response option. Repeated text shares one recording.",
@@ -2904,7 +2907,7 @@
     {
       "id": "nr_014",
       "text": "Now, sometimes people HAVE TO do things.",
-      "src": "assets/narration/nr_014.mp3",
+      "src": "assets/narration/nr_014-paused.mp3",
       "kind": "prompt",
       "status": "imported",
       "uses": [
@@ -2999,9 +3002,9 @@
           "part": "prompt"
         }
       ],
-      "sha256": "f39ec4b7c035cbd70d80e71e3a820954f91877af250ba97d566a386f52284a05",
-      "bytes": 133792,
-      "durationSeconds": 3.343675,
+      "sha256": "1cbb203ef34626893c85a0156989429180e8356b18cec597840c957a9b250697",
+      "bytes": 159913,
+      "durationSeconds": 3.970612,
       "provenance": {
         "provider": "NaturalReaders Commercial",
         "voice": {
@@ -3021,12 +3024,69 @@
         "archiveMember": "13.Now,_sometimes_people_have_to_.mp3",
         "fullProjectTextVerified": true,
         "decodeVerified": true,
-        "copiedWithoutReencoding": true
+        "copiedWithoutReencoding": false,
+        "originalRecordingSha256": "f39ec4b7c035cbd70d80e71e3a820954f91877af250ba97d566a386f52284a05",
+        "originalRecordingAsset": "assets/narration/nr_014.mp3",
+        "localAudioDerivative": true,
+        "offlineAdjustedWordSequenceVerified": true,
+        "nativeProsodyReplacementStillPending": true,
+        "audioProcessing": {
+          "kind": "insert-silence-around-have-to",
+          "pauseBeforeSeconds": 0.3,
+          "pauseAfterSeconds": 0.3,
+          "sourceCutSeconds": [
+            1.3649433106575963,
+            2.035510204081633
+          ],
+          "sampleRate": 44100,
+          "channels": 1,
+          "originalDecodedSpeechSamplesPreserved": true,
+          "speechSamplesRemoved": 0,
+          "speechSamplesPitchShifted": false,
+          "speechSamplesTimeStretched": false,
+          "encoder": "ffmpeg libmp3lame 320kbps",
+          "verification": "Unprompted offline Whisper-base.en exact normalized word sequence; silence measurement; no human listening verification claimed"
+        }
       },
       "narrationEmphasis": {
-        "status": "awaiting-new-recording",
+        "status": "pause-edited-from-existing-recording",
         "originalRecordedText": "Now, sometimes people have to do things.",
-        "visualCaseOnly": true
+        "visualCaseOnly": false,
+        "nativeProsodyReplacement": "pending-export",
+        "pauseEditedFromExistingRecording": true,
+        "pauseBeforeSeconds": 0.3,
+        "pauseAfterSeconds": 0.3
+      },
+      "decodedDurationSeconds": 3.9436734693877553,
+      "audioTreatment": {
+        "kind": "pauses-around-have-to",
+        "sourceRecordingSha256": "f39ec4b7c035cbd70d80e71e3a820954f91877af250ba97d566a386f52284a05",
+        "wordBoundariesSpliced": true,
+        "originalDecodedSpeechSamplesPreserved": true,
+        "pitchShifted": false,
+        "timeStretched": false,
+        "pauses": [
+          {
+            "sourceCutSeconds": 1.3649433106575963,
+            "outputPauseStartSeconds": 1.3649433106575963,
+            "outputPauseEndSeconds": 1.6649433106575964,
+            "insertedSampleCount": 13230,
+            "pauseSeconds": 0.3,
+            "decodedSilenceInteriorRms": 4.8142980886047955e-09,
+            "decodedSilenceInteriorPeak": 5.781355483236439e-08,
+            "guardSeconds": 0.01
+          },
+          {
+            "sourceCutSeconds": 2.035510204081633,
+            "outputPauseStartSeconds": 2.3355102040816327,
+            "outputPauseEndSeconds": 2.6355102040816325,
+            "insertedSampleCount": 13230,
+            "pauseSeconds": 0.3,
+            "decodedSilenceInteriorRms": 3.0188410222778516e-08,
+            "decodedSilenceInteriorPeak": 4.948107061863993e-07,
+            "guardSeconds": 0.01
+          }
+        ]
       }
     },
     {

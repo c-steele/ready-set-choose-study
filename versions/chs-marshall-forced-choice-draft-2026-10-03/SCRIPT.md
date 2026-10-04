@@ -98,9 +98,9 @@ Choices: The kid’s teacher / The kid’s mom.
 
 ### 8. “HAVE TO” practice
 
-“Now, sometimes people HAVE TO do things.”
+“Now, sometimes people *HAVE TO* do things.”
 
-*Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
+*Read with a brief pause before and after HAVE TO. Pauses have been added to the existing Evelyn recording; italic display emphasis is an adaptation. Brief HAVE TO comprehension practice; no strength scale is used in this forced-choice variant.*
 
 ### 9. Practice · Stop being mean
 

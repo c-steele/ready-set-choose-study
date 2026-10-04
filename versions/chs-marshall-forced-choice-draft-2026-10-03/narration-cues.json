@@ -619,54 +619,108 @@
       "zeroDurationWordCount": 0
     },
     "nr_014": {
-      "sha256": "f39ec4b7c035cbd70d80e71e3a820954f91877af250ba97d566a386f52284a05",
-      "durationSeconds": 3.343675,
+      "sha256": "1cbb203ef34626893c85a0156989429180e8356b18cec597840c957a9b250697",
+      "durationSeconds": 3.970612,
+      "decodedDurationSeconds": 3.9436734693877553,
       "recognizedText": "Now, sometimes people have to do things.",
       "words": [
         {
           "word": "Now,",
-          "start": 0,
-          "end": 0.46
+          "start": 0.0,
+          "end": 0.66
         },
         {
           "word": "sometimes",
-          "start": 0.46,
-          "end": 1
+          "start": 0.66,
+          "end": 1.22
         },
         {
           "word": "people",
-          "start": 1,
-          "end": 1.5
+          "start": 1.22,
+          "end": 1.364943
         },
         {
           "word": "have",
-          "start": 1.5,
-          "end": 1.8
-        },
-        {
-          "word": "to",
-          "start": 1.8,
-          "end": 1.98
-        },
-        {
-          "word": "do",
-          "start": 1.98,
+          "start": 1.76,
           "end": 2.12
         },
         {
-          "word": "things.",
+          "word": "to",
           "start": 2.12,
-          "end": 2.98
+          "end": 2.3
+        },
+        {
+          "word": "do",
+          "start": 2.63551,
+          "end": 2.7
+        },
+        {
+          "word": "things.",
+          "start": 2.7,
+          "end": 3.66
         }
       ],
       "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
-      "alignmentAudioFrames": 168,
-      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
+      "recognitionNumBeams": 5,
+      "alignmentTokensOrigin": "unprompted audio recognition, never expected text",
+      "recognitionTempo": 1.0,
+      "generationTimestampTokens": false,
+      "alignmentAudioFrames": 198,
+      "alignmentMethod": "Independent Whisper cross-attention DTW cropped to decoded audio duration, nominal 20ms grid; intervals constrained outside exactly inserted silent pauses",
       "expectedText": "Now, sometimes people HAVE TO do things.",
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "alignmentFailures": [],
-      "zeroDurationWordCount": 0
+      "zeroDurationWordCount": 0,
+      "audioEdit": {
+        "kind": "pauses-around-have-to",
+        "pauses": [
+          {
+            "sourceCutSeconds": 1.3649433106575963,
+            "outputPauseStartSeconds": 1.3649433106575963,
+            "outputPauseEndSeconds": 1.6649433106575964,
+            "insertedSampleCount": 13230,
+            "pauseSeconds": 0.3,
+            "decodedSilenceInteriorRms": 4.8142980886047955e-09,
+            "decodedSilenceInteriorPeak": 5.781355483236439e-08,
+            "guardSeconds": 0.01
+          },
+          {
+            "sourceCutSeconds": 2.035510204081633,
+            "outputPauseStartSeconds": 2.3355102040816327,
+            "outputPauseEndSeconds": 2.6355102040816325,
+            "insertedSampleCount": 13230,
+            "pauseSeconds": 0.3,
+            "decodedSilenceInteriorRms": 3.0188410222778516e-08,
+            "decodedSilenceInteriorPeak": 4.948107061863993e-07,
+            "guardSeconds": 0.01
+          }
+        ],
+        "pauseConstrainedWordTimes": [
+          {
+            "word": "people",
+            "originalAsrTimes": [
+              1.22,
+              1.76
+            ],
+            "pauseConstrainedTimes": [
+              1.22,
+              1.364943
+            ]
+          },
+          {
+            "word": "do",
+            "originalAsrTimes": [
+              2.3,
+              2.7
+            ],
+            "pauseConstrainedTimes": [
+              2.63551,
+              2.7
+            ]
+          }
+        ]
+      }
     },
     "nr_015": {
       "sha256": "3c983161d356bb8a0d726b6d0d79ab1d76e85947478c012cc9ac4c36ba0b291c",
