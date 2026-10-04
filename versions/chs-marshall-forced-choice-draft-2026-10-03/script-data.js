@@ -7,7 +7,7 @@
     {id:'kid', phase:'Meet the kid', image:'02-child.png', text:'This is the kid. Tap the kid.', point:'kid', reminder:'This one in the middle is the kid. Tap the kid.'},
     {id:'mom', phase:'Meet the mom', image:'03-mom.png', text:'This is the kid’s mom. Tap the kid’s mom.', point:'mom', reminder:'This one on the left is the kid’s mom. Tap the kid’s mom.'},
     {id:'sister', phase:'Meet the sister', image:'04-sister.png', text:'This is the kid’s sister. Tap the kid’s sister.', point:'sister', reminder:'This one on the right is the kid’s sister. Tap the kid’s sister.'},
-    {id:'need', phase:'The kid needs help', text:'Now let’s say that one day this kid was very sad.'},
+    {id:'need', phase:'The kid needs help', text:'Now let’s say that one day the kid in the middle was very sad.'},
     {id:'witness', phase:'Both helpers see', text:'The kid’s mom and the kid’s sister both see that the kid is sad.'},
     {id:'predict-compare', phase:'Who will help?', text:'Who do you think will help the kid in the middle?', choices:helperChoices, optionActors:['helper1','helper2'], measure:'Forced-choice prediction', proposed:true, note:'Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No prediction question.'},
     {id:'practice-intro', phase:'“HAVE TO” practice', image:null, text:'Now, sometimes people HAVE TO do things.'},

@@ -16,8 +16,8 @@
     "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
     "savedProjectTextVerified": true
   },
-  "clipCount": 61,
-  "note": "New paragraphs only, in this order. Export Index + Segment numbered MP3s. This recording plan is separate from the pending HAVE TO/HAS TO emphasis batch.",
+  "clipCount": 62,
+  "note": "New paragraphs only, in this order. Export Index + Segment numbered MP3s. This recording plan is separate from the pending HAVE TO/HAS TO emphasis batch. Appended nr_269 is a local recording request only; it has not been saved online or exported, and the earlier export indices are preserved.",
   "entries": [
     {
       "exportIndex": 1,
@@ -444,6 +444,13 @@
       "clipId": "nr_268",
       "text": "Oh look! Here is a kid.",
       "targetFile": "assets/narration/nr_268.mp3",
+      "proposedWording": false
+    },
+    {
+      "exportIndex": 62,
+      "clipId": "nr_269",
+      "text": "Now let’s say that one day the kid in the middle was very sad.",
+      "targetFile": "assets/narration/nr_269.mp3",
       "proposedWording": false
     }
   ]

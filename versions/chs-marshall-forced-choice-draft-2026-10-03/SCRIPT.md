@@ -16,7 +16,7 @@ Expected path range: **71–71 screens**, **44–44 responses**.
 
 18 forced-choice main judgments + 24 identity/recall checks + 2 brief practice responses. No strength scales.
 
-Illustrative duration: **9.6–12.5 minutes**, based on 967–967 spoken words.
+Illustrative duration: **9.8–12.6 minutes**, based on 985–985 spoken words.
 
 - Illustrative estimate, not observed child-session duration.
 - Read-aloud pace: 110–130 words per minute; response time: 3–5 seconds per selection.
@@ -76,7 +76,7 @@ Reminder if needed: “This big one is this kid’s mom. This one is the kid’s
 
 ### 5. The kid needs help
 
-“Now let’s say that one day this kid was very sad.”
+“Now let’s say that one day the kid in the middle was very sad.”
 
 [Stimulus source](assets/stimuli/ef6ceaf063c6-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -224,7 +224,7 @@ Reminder if needed: “This little one is this kid’s friend. This one is the k
 
 ### 20. The kid needs help
 
-“Now let’s say that one day this kid was very sad.”
+“Now let’s say that one day the kid in the middle was very sad.”
 
 [Stimulus source](assets/stimuli/d8367f1a225f-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -334,7 +334,7 @@ Reminder if needed: “This little one is this kid’s best friend. This one is 
 
 ### 31. The kid needs help
 
-“Now let’s say that one day this kid was very sad.”
+“Now let’s say that one day the kid in the middle was very sad.”
 
 [Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -444,7 +444,7 @@ Reminder if needed: “This little one is this kid’s friend. This one is the k
 
 ### 42. The kid needs help
 
-“Now let’s say that one day this kid was very sad.”
+“Now let’s say that one day the kid in the middle was very sad.”
 
 [Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -554,7 +554,7 @@ Reminder if needed: “This little one is this kid’s sister. This one is the k
 
 ### 53. The kid needs help
 
-“Now let’s say that one day this kid was very sad.”
+“Now let’s say that one day the kid in the middle was very sad.”
 
 [Stimulus source](assets/stimuli/cf266d33caca-05-sad.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -664,7 +664,7 @@ Reminder if needed: “This big one is this kid’s teacher. This one is the kid
 
 ### 64. The kid needs help
 
-“Now let’s say that one day this kid was very sad.”
+“Now let’s say that one day the kid in the middle was very sad.”
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 

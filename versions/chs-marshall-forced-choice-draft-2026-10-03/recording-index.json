@@ -14,8 +14,8 @@
     "preferredBitrateKbps": 320,
     "settingsBasis": "Requested Evelyn Soft 0.80x / 160 WPM / zero paragraph pause for this forced-choice batch. New paragraphs have not been generated or exported yet."
   },
-  "clipCount": 41,
-  "note": "Export these unique pending paragraphs in this exact order as separate MP3s using Index + Segment. Stable clip IDs differ from numbered export indices. Existing pending explicit-outcome paragraphs are included so this variant can be completed independently.",
+  "clipCount": 42,
+  "note": "Export these unique pending paragraphs in this exact order as separate MP3s using Index + Segment. Stable clip IDs differ from numbered export indices. Existing pending explicit-outcome paragraphs are included so this variant can be completed independently. Appended nr_269 is a local recording request only; it has not been saved online or exported, and the earlier export indices are preserved.",
   "entries": [
     {
       "exportIndex": 1,
@@ -302,6 +302,13 @@
       "clipId": "nr_268",
       "text": "Oh look! Here is a kid.",
       "targetFile": "assets/narration/nr_268.mp3",
+      "proposedWording": false
+    },
+    {
+      "exportIndex": 42,
+      "clipId": "nr_269",
+      "text": "Now let’s say that one day the kid in the middle was very sad.",
+      "targetFile": "assets/narration/nr_269.mp3",
       "proposedWording": false
     }
   ]

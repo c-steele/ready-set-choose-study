@@ -33,9 +33,9 @@
     "storyCount": 18,
     "screenCount": 271,
     "clipCount": 108,
-    "readyCount": 67,
-    "pendingCount": 41,
-    "inheritedPendingCount": 29,
+    "readyCount": 66,
+    "pendingCount": 42,
+    "inheritedPendingCount": 30,
     "newForcedChoiceRecordingCount": 12,
     "emphasisPendingCount": 6
   },
@@ -48,7 +48,8 @@
     "NaturalReaders exports are currently failing in the in-app browser. New narration remains a recording request pending export access; no synthetic voice or edited-word audio is substituted.",
     "Available option-name clips are separate from prompts. Their existing word timestamps support synchronized character and option glows when those clips play.",
     "Narration timing remains unmeasured for the complete new script while required recordings are missing. The preview uses its stated read-aloud estimate.",
-    "The opening now says \"Oh look! Here is a kid.\" in all 18 stories. The old some-people recording is inactive; the revised complete sentence is pending under nr_268."
+    "The opening now says \"Oh look! Here is a kid.\" in all 18 stories. The old some-people recording is inactive; the revised complete sentence is pending under nr_268.",
+    "The revised kid sadness prompt nr_269 is a new pending recording. The retired nr_008 recording and word cues are not used for this changed wording; no cloud save or export is claimed for the replacement paragraph."
   ],
   "clips": [
     {
@@ -652,11 +653,11 @@
       }
     },
     {
-      "id": "nr_008",
-      "text": "Now let’s say that one day this kid was very sad.",
-      "src": "assets/narration/nr_008.mp3",
+      "id": "nr_269",
+      "text": "Now let’s say that one day the kid in the middle was very sad.",
+      "src": null,
       "kind": "prompt",
-      "status": "imported",
+      "status": "pending",
       "uses": [
         {
           "stepId": "woman-mom-teacher:need",
@@ -734,29 +735,18 @@
           "part": "prompt"
         }
       ],
-      "sha256": "ba0307f542fd92b6e3b4a346c1b574c1cd939c9328452e2661630e746c81ea3f",
-      "bytes": 150510,
-      "durationSeconds": 3.761625,
-      "provenance": {
+      "requestedVoice": {
         "provider": "NaturalReaders Commercial",
-        "voice": {
-          "provider": "NaturalReaders Commercial",
-          "name": "Evelyn",
-          "style": "Soft",
-          "speed": 0.9,
-          "wordsPerMinuteSetting": 180,
-          "paragraphPauseSeconds": 0,
-          "exportFormat": "MP3",
-          "exportMode": "separate files ZIP",
-          "exportNaming": "Index + Segment",
-          "preferredBitrateKbps": 320,
-          "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "7.Now_let’s_say_that_one_day_thi.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Requested Evelyn Soft 0.80x / 160 WPM for the revised kid-in-the-middle sadness prompt; this paragraph has not been saved to a cloud project, exported, or imported."
       }
     },
     {
@@ -6468,7 +6458,7 @@
       "proposedWording": false
     },
     "woman-mom-teacher:need": {
-      "prompt": "nr_008",
+      "prompt": "nr_269",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -6576,7 +6566,7 @@
       "proposedWording": false
     },
     "woman-sister-friend:need": {
-      "prompt": "nr_008",
+      "prompt": "nr_269",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -6684,7 +6674,7 @@
       "proposedWording": false
     },
     "woman-bestfriend-friend:need": {
-      "prompt": "nr_008",
+      "prompt": "nr_269",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -6792,7 +6782,7 @@
       "proposedWording": false
     },
     "woman-teacher-friend:need": {
-      "prompt": "nr_008",
+      "prompt": "nr_269",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -6900,7 +6890,7 @@
       "proposedWording": false
     },
     "woman-mom-sister:need": {
-      "prompt": "nr_008",
+      "prompt": "nr_269",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -7008,7 +6998,7 @@
       "proposedWording": false
     },
     "woman-teacher-classmate:need": {
-      "prompt": "nr_008",
+      "prompt": "nr_269",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -7116,7 +7106,7 @@
       "proposedWording": false
     },
     "man-dad-teacher:need": {
-      "prompt": "nr_008",
+      "prompt": "nr_269",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -7224,7 +7214,7 @@
       "proposedWording": false
     },
     "man-brother-friend:need": {
-      "prompt": "nr_008",
+      "prompt": "nr_269",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -7332,7 +7322,7 @@
       "proposedWording": false
     },
     "man-bestfriend-friend:need": {
-      "prompt": "nr_008",
+      "prompt": "nr_269",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -7440,7 +7430,7 @@
       "proposedWording": false
     },
     "man-teacher-friend:need": {
-      "prompt": "nr_008",
+      "prompt": "nr_269",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -7548,7 +7538,7 @@
       "proposedWording": false
     },
     "man-dad-brother:need": {
-      "prompt": "nr_008",
+      "prompt": "nr_269",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -7656,7 +7646,7 @@
       "proposedWording": false
     },
     "man-teacher-classmate:need": {
-      "prompt": "nr_008",
+      "prompt": "nr_269",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -7764,7 +7754,7 @@
       "proposedWording": false
     },
     "family-mom-dad:need": {
-      "prompt": "nr_008",
+      "prompt": "nr_269",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -7872,7 +7862,7 @@
       "proposedWording": false
     },
     "family-sister-brother:need": {
-      "prompt": "nr_008",
+      "prompt": "nr_269",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -8304,7 +8294,7 @@
       "proposedWording": false
     },
     "family-teacher-classmate:need": {
-      "prompt": "nr_008",
+      "prompt": "nr_269",
       "reminder": null,
       "options": [],
       "proposedWording": false
