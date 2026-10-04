@@ -73,7 +73,7 @@
       // Each option is a separate verified recording. A recognizer spelling
       // error (for example Mean/Meen) need not suppress its voiced interval.
       if(cueTokens(narration.clipsById[clipId]?.text).join(' ')!==cueTokens(s.choices[optionIndex]).join(' '))return spans;
-      spans.push({start:words[0].start,end:words[words.length-1].end,optionIndex,...(s.localId==='compare'?{actorId:s.pairing.helpers[optionIndex].id}:{})});
+      spans.push({start:words[0].start,end:words[words.length-1].end,optionIndex,wordTimes:words.map((word,wordIndex)=>({start:word.start,end:word.end,wordIndex})),...(s.localId==='compare'?{actorId:s.pairing.helpers[optionIndex].id}:{})});
       return spans;
     }
     // Whole relationship names win over the possessive kid word inside them.
@@ -107,30 +107,49 @@
       const pair=phraseMatches(words,`${s.choices[0]} or ${s.choices[1]}`);
       for(const range of pair){
         const firstLength=cueTokens(s.choices[0]).length,secondStart=range.at+firstLength+1;
-        spans.push({optionIndex:0,start:words[range.at].start,end:words[range.at+firstLength-1].end});
-        spans.push({optionIndex:1,start:words[secondStart].start,end:words[range.at+range.length-1].end});
+        spans.push({optionIndex:0,start:words[range.at].start,end:words[range.at+firstLength-1].end,wordTimes:words.slice(range.at,range.at+firstLength).map((word,wordIndex)=>({start:word.start,end:word.end,wordIndex}))});
+        spans.push({optionIndex:1,start:words[secondStart].start,end:words[range.at+range.length-1].end,wordTimes:words.slice(secondStart,range.at+range.length).map((word,wordIndex)=>({start:word.start,end:word.end,wordIndex}))});
       }
     }
     return spans;
   }
   function clearSpokenCues(){
-    stage.querySelectorAll('.narration-actor-current,.option-current').forEach(element=>element.classList.remove('narration-actor-current','option-current'));
+    stage.querySelectorAll('.narration-actor-current,.option-current,.choice-bounce-a,.choice-bounce-b').forEach(element=>element.classList.remove('narration-actor-current','option-current','choice-bounce-a','choice-bounce-b'));
   }
   function showSpokenCues(spans,seconds){
     const current=spans.filter(cue=>seconds>=cue.start&&seconds<cue.end),actorIds=new Set(current.map(cue=>cue.actorId).filter(Boolean)),optionIndexes=new Set(current.map(cue=>cue.optionIndex).filter(value=>value!==undefined));
     stage.querySelectorAll('[data-narration-actor]').forEach(element=>element.classList.toggle('narration-actor-current',actorIds.has(element.dataset.narrationActor)));
-    stage.querySelectorAll('[data-answer]:not(.continue-answer)').forEach(button=>button.classList.toggle('option-current',optionIndexes.has(Number(button.dataset.answer))));
+    stage.querySelectorAll('[data-answer]:not(.continue-answer)').forEach(button=>{
+      const answer=Number(button.dataset.answer),cue=current.find(value=>value.optionIndex===answer);
+      button.classList.toggle('option-current',optionIndexes.has(answer));
+      const word=cue?.wordTimes?.find(value=>seconds>=value.start&&seconds<value.end);
+      const bounce=button.classList.contains('spoken-choice') && (word || (cue&&!cue.wordTimes));
+      // Alternate identical animation names so the second word restarts the hop.
+      button.classList.toggle('choice-bounce-a',!!bounce&&((word?.wordIndex||0)%2===0));
+      button.classList.toggle('choice-bounce-b',!!bounce&&((word?.wordIndex||0)%2===1));
+    });
+  }
+  function childAudioMode(s,fullReady){
+    if(fullReady)return 'full';
+    const optionIds=narration.screenFor(s).options;
+    const ready=!!s.choices?.length && optionIds.length===s.choices.length && optionIds.every((id,index)=>{
+      const clip=narration.clipsById[id];
+      return !!clip?.src && cueTokens(clip.text).join(' ')===cueTokens(s.choices[index]).join(' ');
+    });
+    return ready?'choices':'unavailable';
   }
   // Expose pure cue mapping for local regression checks and review diagnostics.
-  window.ObligationSpokenCues={recordingWords,spansFor:spokenCueSpans,embeddedChoices};
+  window.ObligationSpokenCues={recordingWords,spansFor:spokenCueSpans,embeddedChoices,childAudioMode};
   function syncChildControls(){
     const replay=stage.querySelector('.child-replay'),stop=stage.querySelector('.child-stop');
     if(!replay)return;
-    replay.disabled=$('play-narration').disabled;
-    replay.querySelector('.child-control-label').textContent=narrationEnabled?'Replay':'Listen';
-    replay.setAttribute('aria-label',narrationEnabled?'Replay narration':'Listen to the narration');
+    const s=steps[index]||steps[0],mode=childAudioMode(s,!$('play-narration').disabled);
+    replay.disabled=mode==='unavailable';
+    replay.querySelector('.child-control-label').textContent=mode==='choices'?'Choices':narrationEnabled?'Replay':'Listen';
+    replay.setAttribute('aria-label',mode==='choices'?'Listen to the choices':narrationEnabled?'Replay narration':'Listen to the narration');
+    replay.title=mode==='choices'?'Hear only the answer choices':'Hear the narration';
     stop.hidden=!narrationPlaying;
-    const s=steps[index]||steps[0],bubble=stage.querySelector('.child-helper-bubble');
+    const bubble=stage.querySelector('.child-helper-bubble');
     bubble.textContent=narrationPlaying||stage.querySelector('.rating-answer:disabled')?'Listen and look!':s.point?'Tap '+actors(s).find(a=>a.id===s.point).description+'!':helperChoiceActors(s).length?'Tap a person!':s.choices?'Tap one!':s.localId==='end'?'All done!':'Listen and look!';
     if(s.localId==='end')stage.querySelectorAll('.continue-answer').forEach(button=>button.textContent=childView?'All done!':'Read the full storyboard');
   }
@@ -154,6 +173,13 @@
     $('narration-status').textContent=ready?(slowerReminder?'NaturalReader · Evelyn · Slower reminder':'NaturalReader · Evelyn · Soft · 0.90×'):'NaturalReader recordings are pending for this screen. Read aloud to review.';
     syncChildControls();
     return ready;
+  }
+  function playChildNarration(){
+    if(!$('play-narration').disabled)return playNarration();
+    const s=steps[index];
+    if(childAudioMode(s,false)==='choices' && optionReader?.read()){
+      $('narration-status').textContent='Question narration is pending. Evelyn is reading only the answer choices.';
+    }
   }
   function playNarration(){
     stopNarration();if(!narrationStatus())return;
@@ -237,7 +263,7 @@
     stage.dataset.screenKind=s.visual==='teacher-practice'?'illustrated-practice':s.image?'story':'practice';
     stage.dataset.responseKind=s.choices?.length===3?'scale':s.point?'character':s.choices?'binary':'continue';
     stage.innerHTML=prompt(s)+scene(s,true)+feedback+options+childFooter(s);
-    stage.querySelector('.child-replay').addEventListener('click',playNarration);
+    stage.querySelector('.child-replay').addEventListener('click',playChildNarration);
     stage.querySelector('.child-stop').addEventListener('click',()=>{stopNarration();optionReader?.reset();$('narration-status').textContent='Audio stopped. Replay, or read aloud.';});
     $('step-note').innerHTML=`${s.proposed?'<strong>Proposed wording · </strong>':''}${esc(branchNote(s)+(s.note||'Adapted from Marshall Study 1.'))}`;
     stage.querySelectorAll('[data-answer]').forEach(b=>b.addEventListener('click',()=>respond((s.choices||['Continue'])[Number(b.dataset.answer)])));

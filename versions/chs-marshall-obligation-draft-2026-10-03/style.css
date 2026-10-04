@@ -82,3 +82,11 @@
 .character-choice-cue{pointer-events:none}
 @media(prefers-reduced-motion:reduce){.character-choice-target.option-current,.character-choice-target.narration-actor-current{animation:none}}
 @media print{.character-choice-target{animation:none;box-shadow:none}}
+
+/* A short word-synchronized hop makes spoken response boxes clear to nonreaders. */
+@keyframes choice-word-bounce-a{0%,100%{transform:translateY(0) scale(1)}45%{transform:translateY(-7px) scale(1.035)}}
+@keyframes choice-word-bounce-b{0%,100%{transform:translateY(0) scale(1)}45%{transform:translateY(-7px) scale(1.035)}}
+.answers button.spoken-choice.option-current.choice-bounce-a{animation:choice-word-bounce-a .32s ease-out both}
+.answers button.spoken-choice.option-current.choice-bounce-b{animation:choice-word-bounce-b .32s ease-out both}
+@media(prefers-reduced-motion:reduce){.answers button.spoken-choice.option-current.choice-bounce-a,.answers button.spoken-choice.option-current.choice-bounce-b{animation:none;transform:none}}
+@media print{.answers button.spoken-choice.option-current{animation:none!important;transform:none!important}}
