@@ -43,10 +43,16 @@
     }
     add('need', 'need', {phase:`${upper(recipient.description)} needs help`, text:`Now let’s say that one day ${recipient.isAdult ? recipient.description : 'the kid in the middle'} was very sad.`});
     add('witness', 'witness', {text:`${upper(helpers[0].description)} and ${helpers[1].description} both see that ${recipient.description} is sad.`});
-    for (const helper of helpers) add(`predict-${helper.id}`, 'predict-mom', {
-      phase:`Prediction · ${helperTitle(helper)}`,
-      text:`Now, do you think ${helper.description} will help ${recipient.description}?`
-    });
+    for (const helper of helpers) {
+      add(`predict-${helper.id}`, 'predict-mom', {
+        phase:`Prediction · ${helperTitle(helper)}`,
+        text:`Now, do you think ${helper.description} will help ${recipient.description}?`
+      });
+      add(`predict-${helper.id}-confidence`, 'predict-mom-confidence', {
+        phase:`Prediction confidence · ${helperTitle(helper)}`,
+        relatedPrediction:prefix(`predict-${helper.id}`)
+      });
+    }
     if (includePractice) {
       for (const template of draft.steps.filter(s => s.id.startsWith('practice-'))) {
         add(template.id, template.id, {image:template.image, note:[template.note,
@@ -124,6 +130,7 @@
       responses:reached.filter(s => s.choices || s.point).length,
       words:reached.reduce((sum, step) => sum + spokenWords(step), 0),
       substantive:reached.filter(s => s.measure && !s.when).length,
+      confidenceResponses:reached.filter(s => s.measure === 'Prediction confidence').length,
       checks:reached.filter(s => s.point || s.expected && !s.localId.startsWith('practice-')).length,
       practiceResponses:reached.filter(s => s.localId.startsWith('practice-') && s.choices).length,
       strengthResponses:reached.filter(s => s.when && !s.localId.startsWith('practice-')).length
@@ -138,7 +145,7 @@
       words:{min:min.words, max:max.words},
       minutes:{min:Math.round((min.words / 130 + min.responses * 3 / 60) * 10) / 10,
         max:Math.round((max.words / 110 + max.responses * 5 / 60) * 10) / 10},
-      substantive:min.substantive, checks:min.checks, practiceResponses:min.practiceResponses,
+      substantive:min.substantive, confidenceResponses:min.confidenceResponses, checks:min.checks, practiceResponses:min.practiceResponses,
       strengthResponses:{min:min.strengthResponses, max:max.strengthResponses},
       assumptions:[
         'Illustrative estimate, not observed child-session duration.',
@@ -167,7 +174,8 @@
       notes:[
         'This is a draft adaptation using Find the Caregiver stimuli and the Marshall Study 1 question structure.',
         'Helpers are questioned individually in left-to-right order. All paths lead to neither helper helping.',
-        'Prediction is Yes/No only, as in Marshall Study 1. Strength questions follow obligation and meanness judgments conditionally.',
+        'Prediction confidence is an added adaptation measure, not recovered Marshall wording. Its three response labels remain provisional.',
+        'Prediction is Yes/No, as in Marshall Study 1. A new provisional confidence question follows each prediction after either Yes or No. Strength questions follow obligation and meanness judgments conditionally.',
         'The overall-evaluation strength prompt remains proposed wording, not verified verbatim Marshall wording.',
         'White backgrounds and the same sadness context are used throughout. Source relationships, character positions, and intro order are preserved.',
         practiceMode === 'each' ? 'Practice repeats before obligation questions in each story, matching the captured Marshall Study 1 sequence.' : 'Practice once is an explicit proposed change from the repeated practice in the captured Marshall Study 1 sequence.',
@@ -184,7 +192,7 @@
       `**${session.setLabel} · ${session.pairings.length} stories · ${session.practiceLabel}**`, '',
       ...session.notes.map(note => `- ${note}`), '',
       `Expected path range: **${stats.screens.min}–${stats.screens.max} screens**, **${stats.responses.min}–${stats.responses.max} responses**.`, '',
-      `${stats.substantive} main judgments + ${stats.checks} identity/recall checks + ${stats.practiceResponses} practice responses + ${stats.strengthResponses.min}–${stats.strengthResponses.max} conditional study-strength responses.`, '',
+      `${stats.substantive} main judgments (including ${stats.confidenceResponses} prediction-confidence responses) + ${stats.checks} identity/recall checks + ${stats.practiceResponses} practice responses + ${stats.strengthResponses.min}–${stats.strengthResponses.max} conditional study-strength responses.`, '',
       `Illustrative duration: **${stats.minutes.min}–${stats.minutes.max} minutes**, based on ${stats.words.min}–${stats.words.max} spoken words.`, '',
       ...stats.assumptions.map(note => `- ${note}`), '',
       'The storyboard below includes all possible branches, including a practice branch that is normally skipped after a correct No answer to the lying question.', ''
@@ -201,6 +209,7 @@
         const parent = session.steps.find(s => s.id === step.when[0]);
         lines.push(`*Only after “${step.when[1]}” to ${parent.phase}.*`, '');
       }
+      if (step.relatedPrediction) lines.push(`*Confidence about the immediately preceding prediction, after either Yes or No (${step.relatedPrediction}).*`, '');
       if (step.context) lines.push(`**${step.context}**`, '');
       if (step.preface) lines.push(step.preface, '');
       lines.push(`“${step.text}”`, '');

@@ -16,8 +16,8 @@
     "projectName": "Marshall explicit outcome Evelyn 2026-10-03",
     "savedProjectTextVerified": true
   },
-  "clipCount": 62,
-  "note": "New paragraphs only, in this order. Export Index + Segment numbered MP3s. This recording plan is separate from the pending HAVE TO/HAS TO emphasis batch. Appended nr_269 is a local recording request only; it has not been saved online or exported, and the earlier export indices are preserved.",
+  "clipCount": 66,
+  "note": "New paragraphs only, in this order. Export Index + Segment numbered MP3s. This recording plan is separate from the pending HAVE TO/HAS TO emphasis batch. Appended nr_269 is a local recording request only; it has not been saved online or exported, and the earlier export indices are preserved. Appended nr_270–nr_273 are proposed prediction confidence recording requests only; they have not been generated, saved online, or exported. Earlier export indices are preserved.",
   "entries": [
     {
       "exportIndex": 1,
@@ -452,6 +452,34 @@
       "text": "Now let’s say that one day the kid in the middle was very sad.",
       "targetFile": "assets/narration/nr_269.mp3",
       "proposedWording": false
+    },
+    {
+      "exportIndex": 63,
+      "clipId": "nr_270",
+      "text": "How sure are you?",
+      "targetFile": "assets/narration/nr_270.mp3",
+      "proposedWording": true
+    },
+    {
+      "exportIndex": 64,
+      "clipId": "nr_271",
+      "text": "Not sure",
+      "targetFile": "assets/narration/nr_271.mp3",
+      "proposedWording": true
+    },
+    {
+      "exportIndex": 65,
+      "clipId": "nr_272",
+      "text": "A little sure",
+      "targetFile": "assets/narration/nr_272.mp3",
+      "proposedWording": true
+    },
+    {
+      "exportIndex": 66,
+      "clipId": "nr_273",
+      "text": "Very sure",
+      "targetFile": "assets/narration/nr_273.mp3",
+      "proposedWording": true
     }
   ]
 }

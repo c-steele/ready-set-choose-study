@@ -3,6 +3,7 @@
   const yesNo = ['Yes', 'No'];
   const amount = ['A teeny bit', 'A little bit', 'A lot'];
   const meanAmount = ['A teeny bit mean', 'A little bit mean', 'Very mean'];
+  const confidence = ['Not sure', 'A little sure', 'Very sure'];
   const steps = [
     {id:'group', phase:'Meet the characters', image:'01-group.png', text:'Oh look! Here is a kid.', note:'Opening adapted to the single kid shown on screen.'},
     {id:'kid', phase:'Meet the kid', image:'02-child.png', text:'This is the kid. Tap the kid.', point:'kid', reminder:'This one in the middle is the kid. Tap the kid.'},
@@ -11,7 +12,9 @@
     {id:'need', phase:'The kid needs help', text:'Now let’s say that one day the kid in the middle was very sad.'},
     {id:'witness', phase:'Both helpers see', text:'The kid’s mom and the kid’s sister both see that the kid is sad.'},
     {id:'predict-mom', phase:'Prediction · Mom', text:'Now, do you think the kid’s mom will help the kid?', choices:yesNo, measure:'Prediction'},
+    {id:'predict-mom-confidence', phase:'Prediction confidence · Mom', text:'How sure are you?', choices:confidence, measure:'Prediction confidence', proposed:true, relatedPrediction:'predict-mom', note:'Proposed new confidence measure. Asked after either Yes or No to the immediately preceding prediction; wording is provisional.'},
     {id:'predict-sister', phase:'Prediction · Sister', text:'Now, do you think the kid’s sister will help the kid?', choices:yesNo, measure:'Prediction'},
+    {id:'predict-sister-confidence', phase:'Prediction confidence · Sister', text:'How sure are you?', choices:confidence, measure:'Prediction confidence', proposed:true, relatedPrediction:'predict-sister', note:'Proposed new confidence measure. Asked after either Yes or No to the immediately preceding prediction; wording is provisional.'},
     {id:'practice-intro', phase:'“HAVE TO” practice', image:null, text:'Now, sometimes people HAVE TO do things.'},
     {id:'practice-stop', phase:'Practice · Stop being mean', image:null, visual:'teacher-practice', displayTitle:'Let’s practice!', displaySetup:'A teacher tells you to stop being mean to someone.', displayQuestion:'Do you HAVE TO stop being mean?', text:'When a teacher tells you to stop being mean to someone, do you HAVE TO stop being mean? Yes or No.', choices:yesNo, expected:'Yes', reminder:'When a teacher tells you to stop being mean to someone, you HAVE TO stop being mean. Let’s try that question again.', note:'Practice, not a study outcome. The illustration and split display wording are new adaptations. The downloaded script retains the full Marshall practice prompt. Reminder wording is a draft implementation choice.'},
     {id:'practice-stop-amount', phase:'Practice · How much', image:null, text:'How much do you think you HAVE TO stop being mean?', choices:amount, when:['practice-stop','Yes'], note:'Practice routing is a draft choice; strength is not marked right or wrong.'},

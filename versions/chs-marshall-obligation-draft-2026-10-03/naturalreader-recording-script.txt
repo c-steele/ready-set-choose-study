@@ -121,3 +121,11 @@ How mean do you think the kid was for NOT helping the teacher in the middle?
 Oh look! Here is a kid.
 
 Now let’s say that one day the kid in the middle was very sad.
+
+How sure are you?
+
+Not sure
+
+A little sure
+
+Very sure

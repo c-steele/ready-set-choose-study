@@ -17,10 +17,10 @@
   },
   "summary": {
     "storyCount": 18,
-    "screenCount": 523,
-    "clipCount": 209,
+    "screenCount": 559,
+    "clipCount": 213,
     "readyCount": 147,
-    "pendingCount": 62,
+    "pendingCount": 66,
     "emphasisPendingCount": 32
   },
   "notes": [
@@ -36,7 +36,8 @@
     "Planned manifest only: no source narration manifest or audio has been changed. Exact unchanged full text retains the original clip ID and audio fields; new full text receives a fresh ID.",
     "New explicit-outcome recordings use Evelyn Soft 0.80x / 160 WPM; retained recordings preserve their original voice settings. The package contains mixed recorded pacing.",
     "The opening now says \"Oh look! Here is a kid.\" in all 18 stories. The old some-people recording is inactive; the revised complete sentence is pending under nr_268.",
-    "The revised kid sadness prompt nr_269 is a new pending recording. The retired nr_008 recording and word cues are not used for this changed wording; no cloud save or export is claimed for the replacement paragraph."
+    "The revised kid sadness prompt nr_269 is a new pending recording. The retired nr_008 recording and word cues are not used for this changed wording; no cloud save or export is claimed for the replacement paragraph.",
+    "Prediction confidence is proposed wording added to this adaptation after each individual prediction question: How sure are you? Not sure / A little sure / Very sure. The four new clips nr_270–nr_273 remain pending and are not claimed as Marshall source wording or as generated/cloud-saved recordings."
   ],
   "clips": [
     {
@@ -14944,6 +14945,922 @@
         "decodeVerified": true,
         "copiedWithoutReencoding": true
       }
+    },
+    {
+      "id": "nr_270",
+      "text": "How sure are you?",
+      "src": null,
+      "kind": "prompt",
+      "status": "pending",
+      "uses": [
+        {
+          "stepId": "woman-mom-teacher:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "woman-mom-teacher:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "woman-sister-friend:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "woman-sister-friend:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "woman-bestfriend-friend:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "woman-bestfriend-friend:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "woman-teacher-friend:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "woman-teacher-friend:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "woman-mom-sister:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "woman-mom-sister:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "woman-teacher-classmate:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "woman-teacher-classmate:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-dad-teacher:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-dad-teacher:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-brother-friend:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-brother-friend:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-bestfriend-friend:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-bestfriend-friend:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-teacher-friend:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-teacher-friend:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-dad-brother:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-dad-brother:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-teacher-classmate:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-teacher-classmate:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "family-mom-dad:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "family-mom-dad:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "family-sister-brother:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "family-sister-brother:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "family-dad-kid:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "family-dad-kid:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "family-mom-kid:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "family-mom-kid:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "family-teacher-kid:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "family-teacher-kid:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "family-teacher-classmate:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "family-teacher-classmate:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "prompt"
+        }
+      ],
+      "requestedVoice": {
+        "provider": "NaturalReaders Commercial",
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Requested Evelyn Soft 0.80x / 160 WPM for proposed prediction confidence questions and response options; these paragraphs have not been generated, saved to a cloud project, exported, or imported."
+      }
+    },
+    {
+      "id": "nr_271",
+      "text": "Not sure",
+      "src": null,
+      "kind": "option",
+      "status": "pending",
+      "uses": [
+        {
+          "stepId": "woman-mom-teacher:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "woman-mom-teacher:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "woman-sister-friend:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "woman-sister-friend:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "woman-bestfriend-friend:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "woman-bestfriend-friend:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "woman-teacher-friend:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "woman-teacher-friend:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "woman-mom-sister:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "woman-mom-sister:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "woman-teacher-classmate:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "woman-teacher-classmate:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "man-dad-teacher:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "man-dad-teacher:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "man-brother-friend:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "man-brother-friend:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "man-bestfriend-friend:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "man-bestfriend-friend:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "man-teacher-friend:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "man-teacher-friend:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "man-dad-brother:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "man-dad-brother:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "man-teacher-classmate:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "man-teacher-classmate:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "family-mom-dad:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "family-mom-dad:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "family-sister-brother:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "family-sister-brother:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "family-dad-kid:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "family-dad-kid:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "family-mom-kid:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "family-mom-kid:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "family-teacher-kid:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "family-teacher-kid:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "family-teacher-classmate:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "family-teacher-classmate:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        }
+      ],
+      "requestedVoice": {
+        "provider": "NaturalReaders Commercial",
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Requested Evelyn Soft 0.80x / 160 WPM for proposed prediction confidence questions and response options; these paragraphs have not been generated, saved to a cloud project, exported, or imported."
+      }
+    },
+    {
+      "id": "nr_272",
+      "text": "A little sure",
+      "src": null,
+      "kind": "option",
+      "status": "pending",
+      "uses": [
+        {
+          "stepId": "woman-mom-teacher:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 1
+        },
+        {
+          "stepId": "woman-mom-teacher:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 1
+        },
+        {
+          "stepId": "woman-sister-friend:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 1
+        },
+        {
+          "stepId": "woman-sister-friend:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 1
+        },
+        {
+          "stepId": "woman-bestfriend-friend:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 1
+        },
+        {
+          "stepId": "woman-bestfriend-friend:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 1
+        },
+        {
+          "stepId": "woman-teacher-friend:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 1
+        },
+        {
+          "stepId": "woman-teacher-friend:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 1
+        },
+        {
+          "stepId": "woman-mom-sister:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 1
+        },
+        {
+          "stepId": "woman-mom-sister:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 1
+        },
+        {
+          "stepId": "woman-teacher-classmate:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 1
+        },
+        {
+          "stepId": "woman-teacher-classmate:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 1
+        },
+        {
+          "stepId": "man-dad-teacher:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 1
+        },
+        {
+          "stepId": "man-dad-teacher:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 1
+        },
+        {
+          "stepId": "man-brother-friend:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 1
+        },
+        {
+          "stepId": "man-brother-friend:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 1
+        },
+        {
+          "stepId": "man-bestfriend-friend:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 1
+        },
+        {
+          "stepId": "man-bestfriend-friend:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 1
+        },
+        {
+          "stepId": "man-teacher-friend:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 1
+        },
+        {
+          "stepId": "man-teacher-friend:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 1
+        },
+        {
+          "stepId": "man-dad-brother:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 1
+        },
+        {
+          "stepId": "man-dad-brother:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 1
+        },
+        {
+          "stepId": "man-teacher-classmate:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 1
+        },
+        {
+          "stepId": "man-teacher-classmate:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 1
+        },
+        {
+          "stepId": "family-mom-dad:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 1
+        },
+        {
+          "stepId": "family-mom-dad:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 1
+        },
+        {
+          "stepId": "family-sister-brother:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 1
+        },
+        {
+          "stepId": "family-sister-brother:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 1
+        },
+        {
+          "stepId": "family-dad-kid:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 1
+        },
+        {
+          "stepId": "family-dad-kid:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 1
+        },
+        {
+          "stepId": "family-mom-kid:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 1
+        },
+        {
+          "stepId": "family-mom-kid:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 1
+        },
+        {
+          "stepId": "family-teacher-kid:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 1
+        },
+        {
+          "stepId": "family-teacher-kid:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 1
+        },
+        {
+          "stepId": "family-teacher-classmate:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 1
+        },
+        {
+          "stepId": "family-teacher-classmate:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 1
+        }
+      ],
+      "requestedVoice": {
+        "provider": "NaturalReaders Commercial",
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Requested Evelyn Soft 0.80x / 160 WPM for proposed prediction confidence questions and response options; these paragraphs have not been generated, saved to a cloud project, exported, or imported."
+      }
+    },
+    {
+      "id": "nr_273",
+      "text": "Very sure",
+      "src": null,
+      "kind": "option",
+      "status": "pending",
+      "uses": [
+        {
+          "stepId": "woman-mom-teacher:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 2
+        },
+        {
+          "stepId": "woman-mom-teacher:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 2
+        },
+        {
+          "stepId": "woman-sister-friend:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 2
+        },
+        {
+          "stepId": "woman-sister-friend:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 2
+        },
+        {
+          "stepId": "woman-bestfriend-friend:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 2
+        },
+        {
+          "stepId": "woman-bestfriend-friend:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 2
+        },
+        {
+          "stepId": "woman-teacher-friend:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 2
+        },
+        {
+          "stepId": "woman-teacher-friend:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 2
+        },
+        {
+          "stepId": "woman-mom-sister:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 2
+        },
+        {
+          "stepId": "woman-mom-sister:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 2
+        },
+        {
+          "stepId": "woman-teacher-classmate:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 2
+        },
+        {
+          "stepId": "woman-teacher-classmate:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 2
+        },
+        {
+          "stepId": "man-dad-teacher:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 2
+        },
+        {
+          "stepId": "man-dad-teacher:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 2
+        },
+        {
+          "stepId": "man-brother-friend:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 2
+        },
+        {
+          "stepId": "man-brother-friend:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 2
+        },
+        {
+          "stepId": "man-bestfriend-friend:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 2
+        },
+        {
+          "stepId": "man-bestfriend-friend:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 2
+        },
+        {
+          "stepId": "man-teacher-friend:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 2
+        },
+        {
+          "stepId": "man-teacher-friend:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 2
+        },
+        {
+          "stepId": "man-dad-brother:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 2
+        },
+        {
+          "stepId": "man-dad-brother:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 2
+        },
+        {
+          "stepId": "man-teacher-classmate:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 2
+        },
+        {
+          "stepId": "man-teacher-classmate:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 2
+        },
+        {
+          "stepId": "family-mom-dad:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 2
+        },
+        {
+          "stepId": "family-mom-dad:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 2
+        },
+        {
+          "stepId": "family-sister-brother:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 2
+        },
+        {
+          "stepId": "family-sister-brother:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 2
+        },
+        {
+          "stepId": "family-dad-kid:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 2
+        },
+        {
+          "stepId": "family-dad-kid:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 2
+        },
+        {
+          "stepId": "family-mom-kid:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 2
+        },
+        {
+          "stepId": "family-mom-kid:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 2
+        },
+        {
+          "stepId": "family-teacher-kid:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 2
+        },
+        {
+          "stepId": "family-teacher-kid:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 2
+        },
+        {
+          "stepId": "family-teacher-classmate:predict-helper1-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 2
+        },
+        {
+          "stepId": "family-teacher-classmate:predict-helper2-confidence",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 2
+        }
+      ],
+      "requestedVoice": {
+        "provider": "NaturalReaders Commercial",
+        "name": "Evelyn",
+        "style": "Soft",
+        "speed": 0.8,
+        "wordsPerMinuteSetting": 160,
+        "paragraphPauseSeconds": 0,
+        "exportFormat": "MP3",
+        "exportMode": "separate files ZIP",
+        "exportNaming": "Index + Segment",
+        "preferredBitrateKbps": 320,
+        "settingsBasis": "Requested Evelyn Soft 0.80x / 160 WPM for proposed prediction confidence questions and response options; these paragraphs have not been generated, saved to a cloud project, exported, or imported."
+      }
     }
   ],
   "screens": {
@@ -14992,6 +15909,16 @@
       ],
       "proposedWording": false
     },
+    "woman-mom-teacher:predict-helper1-confidence": {
+      "prompt": "nr_270",
+      "reminder": null,
+      "options": [
+        "nr_271",
+        "nr_272",
+        "nr_273"
+      ],
+      "proposedWording": true
+    },
     "woman-mom-teacher:predict-helper2": {
       "prompt": "nr_013",
       "reminder": null,
@@ -15000,6 +15927,16 @@
         "nr_012"
       ],
       "proposedWording": false
+    },
+    "woman-mom-teacher:predict-helper2-confidence": {
+      "prompt": "nr_270",
+      "reminder": null,
+      "options": [
+        "nr_271",
+        "nr_272",
+        "nr_273"
+      ],
+      "proposedWording": true
     },
     "woman-mom-teacher:practice-intro": {
       "prompt": "nr_014",
@@ -15233,6 +16170,16 @@
       ],
       "proposedWording": false
     },
+    "woman-sister-friend:predict-helper1-confidence": {
+      "prompt": "nr_270",
+      "reminder": null,
+      "options": [
+        "nr_271",
+        "nr_272",
+        "nr_273"
+      ],
+      "proposedWording": true
+    },
     "woman-sister-friend:predict-helper2": {
       "prompt": "nr_059",
       "reminder": null,
@@ -15241,6 +16188,16 @@
         "nr_012"
       ],
       "proposedWording": false
+    },
+    "woman-sister-friend:predict-helper2-confidence": {
+      "prompt": "nr_270",
+      "reminder": null,
+      "options": [
+        "nr_271",
+        "nr_272",
+        "nr_273"
+      ],
+      "proposedWording": true
     },
     "woman-sister-friend:practice-intro": {
       "prompt": "nr_014",
@@ -15474,6 +16431,16 @@
       ],
       "proposedWording": false
     },
+    "woman-bestfriend-friend:predict-helper1-confidence": {
+      "prompt": "nr_270",
+      "reminder": null,
+      "options": [
+        "nr_271",
+        "nr_272",
+        "nr_273"
+      ],
+      "proposedWording": true
+    },
     "woman-bestfriend-friend:predict-helper2": {
       "prompt": "nr_078",
       "reminder": null,
@@ -15482,6 +16449,16 @@
         "nr_012"
       ],
       "proposedWording": false
+    },
+    "woman-bestfriend-friend:predict-helper2-confidence": {
+      "prompt": "nr_270",
+      "reminder": null,
+      "options": [
+        "nr_271",
+        "nr_272",
+        "nr_273"
+      ],
+      "proposedWording": true
     },
     "woman-bestfriend-friend:practice-intro": {
       "prompt": "nr_014",
@@ -15715,6 +16692,16 @@
       ],
       "proposedWording": false
     },
+    "woman-teacher-friend:predict-helper1-confidence": {
+      "prompt": "nr_270",
+      "reminder": null,
+      "options": [
+        "nr_271",
+        "nr_272",
+        "nr_273"
+      ],
+      "proposedWording": true
+    },
     "woman-teacher-friend:predict-helper2": {
       "prompt": "nr_059",
       "reminder": null,
@@ -15723,6 +16710,16 @@
         "nr_012"
       ],
       "proposedWording": false
+    },
+    "woman-teacher-friend:predict-helper2-confidence": {
+      "prompt": "nr_270",
+      "reminder": null,
+      "options": [
+        "nr_271",
+        "nr_272",
+        "nr_273"
+      ],
+      "proposedWording": true
     },
     "woman-teacher-friend:practice-intro": {
       "prompt": "nr_014",
@@ -15956,6 +16953,16 @@
       ],
       "proposedWording": false
     },
+    "woman-mom-sister:predict-helper1-confidence": {
+      "prompt": "nr_270",
+      "reminder": null,
+      "options": [
+        "nr_271",
+        "nr_272",
+        "nr_273"
+      ],
+      "proposedWording": true
+    },
     "woman-mom-sister:predict-helper2": {
       "prompt": "nr_058",
       "reminder": null,
@@ -15964,6 +16971,16 @@
         "nr_012"
       ],
       "proposedWording": false
+    },
+    "woman-mom-sister:predict-helper2-confidence": {
+      "prompt": "nr_270",
+      "reminder": null,
+      "options": [
+        "nr_271",
+        "nr_272",
+        "nr_273"
+      ],
+      "proposedWording": true
     },
     "woman-mom-sister:practice-intro": {
       "prompt": "nr_014",
@@ -16197,6 +17214,16 @@
       ],
       "proposedWording": false
     },
+    "woman-teacher-classmate:predict-helper1-confidence": {
+      "prompt": "nr_270",
+      "reminder": null,
+      "options": [
+        "nr_271",
+        "nr_272",
+        "nr_273"
+      ],
+      "proposedWording": true
+    },
     "woman-teacher-classmate:predict-helper2": {
       "prompt": "nr_010",
       "reminder": null,
@@ -16205,6 +17232,16 @@
         "nr_012"
       ],
       "proposedWording": false
+    },
+    "woman-teacher-classmate:predict-helper2-confidence": {
+      "prompt": "nr_270",
+      "reminder": null,
+      "options": [
+        "nr_271",
+        "nr_272",
+        "nr_273"
+      ],
+      "proposedWording": true
     },
     "woman-teacher-classmate:practice-intro": {
       "prompt": "nr_014",
@@ -16438,6 +17475,16 @@
       ],
       "proposedWording": false
     },
+    "man-dad-teacher:predict-helper1-confidence": {
+      "prompt": "nr_270",
+      "reminder": null,
+      "options": [
+        "nr_271",
+        "nr_272",
+        "nr_273"
+      ],
+      "proposedWording": true
+    },
     "man-dad-teacher:predict-helper2": {
       "prompt": "nr_106",
       "reminder": null,
@@ -16446,6 +17493,16 @@
         "nr_012"
       ],
       "proposedWording": false
+    },
+    "man-dad-teacher:predict-helper2-confidence": {
+      "prompt": "nr_270",
+      "reminder": null,
+      "options": [
+        "nr_271",
+        "nr_272",
+        "nr_273"
+      ],
+      "proposedWording": true
     },
     "man-dad-teacher:practice-intro": {
       "prompt": "nr_014",
@@ -16679,6 +17736,16 @@
       ],
       "proposedWording": false
     },
+    "man-brother-friend:predict-helper1-confidence": {
+      "prompt": "nr_270",
+      "reminder": null,
+      "options": [
+        "nr_271",
+        "nr_272",
+        "nr_273"
+      ],
+      "proposedWording": true
+    },
     "man-brother-friend:predict-helper2": {
       "prompt": "nr_059",
       "reminder": null,
@@ -16687,6 +17754,16 @@
         "nr_012"
       ],
       "proposedWording": false
+    },
+    "man-brother-friend:predict-helper2-confidence": {
+      "prompt": "nr_270",
+      "reminder": null,
+      "options": [
+        "nr_271",
+        "nr_272",
+        "nr_273"
+      ],
+      "proposedWording": true
     },
     "man-brother-friend:practice-intro": {
       "prompt": "nr_014",
@@ -16920,6 +17997,16 @@
       ],
       "proposedWording": false
     },
+    "man-bestfriend-friend:predict-helper1-confidence": {
+      "prompt": "nr_270",
+      "reminder": null,
+      "options": [
+        "nr_271",
+        "nr_272",
+        "nr_273"
+      ],
+      "proposedWording": true
+    },
     "man-bestfriend-friend:predict-helper2": {
       "prompt": "nr_078",
       "reminder": null,
@@ -16928,6 +18015,16 @@
         "nr_012"
       ],
       "proposedWording": false
+    },
+    "man-bestfriend-friend:predict-helper2-confidence": {
+      "prompt": "nr_270",
+      "reminder": null,
+      "options": [
+        "nr_271",
+        "nr_272",
+        "nr_273"
+      ],
+      "proposedWording": true
     },
     "man-bestfriend-friend:practice-intro": {
       "prompt": "nr_014",
@@ -17161,6 +18258,16 @@
       ],
       "proposedWording": false
     },
+    "man-teacher-friend:predict-helper1-confidence": {
+      "prompt": "nr_270",
+      "reminder": null,
+      "options": [
+        "nr_271",
+        "nr_272",
+        "nr_273"
+      ],
+      "proposedWording": true
+    },
     "man-teacher-friend:predict-helper2": {
       "prompt": "nr_059",
       "reminder": null,
@@ -17169,6 +18276,16 @@
         "nr_012"
       ],
       "proposedWording": false
+    },
+    "man-teacher-friend:predict-helper2-confidence": {
+      "prompt": "nr_270",
+      "reminder": null,
+      "options": [
+        "nr_271",
+        "nr_272",
+        "nr_273"
+      ],
+      "proposedWording": true
     },
     "man-teacher-friend:practice-intro": {
       "prompt": "nr_014",
@@ -17402,6 +18519,16 @@
       ],
       "proposedWording": false
     },
+    "man-dad-brother:predict-helper1-confidence": {
+      "prompt": "nr_270",
+      "reminder": null,
+      "options": [
+        "nr_271",
+        "nr_272",
+        "nr_273"
+      ],
+      "proposedWording": true
+    },
     "man-dad-brother:predict-helper2": {
       "prompt": "nr_118",
       "reminder": null,
@@ -17410,6 +18537,16 @@
         "nr_012"
       ],
       "proposedWording": false
+    },
+    "man-dad-brother:predict-helper2-confidence": {
+      "prompt": "nr_270",
+      "reminder": null,
+      "options": [
+        "nr_271",
+        "nr_272",
+        "nr_273"
+      ],
+      "proposedWording": true
     },
     "man-dad-brother:practice-intro": {
       "prompt": "nr_014",
@@ -17643,6 +18780,16 @@
       ],
       "proposedWording": false
     },
+    "man-teacher-classmate:predict-helper1-confidence": {
+      "prompt": "nr_270",
+      "reminder": null,
+      "options": [
+        "nr_271",
+        "nr_272",
+        "nr_273"
+      ],
+      "proposedWording": true
+    },
     "man-teacher-classmate:predict-helper2": {
       "prompt": "nr_010",
       "reminder": null,
@@ -17651,6 +18798,16 @@
         "nr_012"
       ],
       "proposedWording": false
+    },
+    "man-teacher-classmate:predict-helper2-confidence": {
+      "prompt": "nr_270",
+      "reminder": null,
+      "options": [
+        "nr_271",
+        "nr_272",
+        "nr_273"
+      ],
+      "proposedWording": true
     },
     "man-teacher-classmate:practice-intro": {
       "prompt": "nr_014",
@@ -17884,6 +19041,16 @@
       ],
       "proposedWording": false
     },
+    "family-mom-dad:predict-helper1-confidence": {
+      "prompt": "nr_270",
+      "reminder": null,
+      "options": [
+        "nr_271",
+        "nr_272",
+        "nr_273"
+      ],
+      "proposedWording": true
+    },
     "family-mom-dad:predict-helper2": {
       "prompt": "nr_013",
       "reminder": null,
@@ -17892,6 +19059,16 @@
         "nr_012"
       ],
       "proposedWording": false
+    },
+    "family-mom-dad:predict-helper2-confidence": {
+      "prompt": "nr_270",
+      "reminder": null,
+      "options": [
+        "nr_271",
+        "nr_272",
+        "nr_273"
+      ],
+      "proposedWording": true
     },
     "family-mom-dad:practice-intro": {
       "prompt": "nr_014",
@@ -18125,6 +19302,16 @@
       ],
       "proposedWording": false
     },
+    "family-sister-brother:predict-helper1-confidence": {
+      "prompt": "nr_270",
+      "reminder": null,
+      "options": [
+        "nr_271",
+        "nr_272",
+        "nr_273"
+      ],
+      "proposedWording": true
+    },
     "family-sister-brother:predict-helper2": {
       "prompt": "nr_118",
       "reminder": null,
@@ -18133,6 +19320,16 @@
         "nr_012"
       ],
       "proposedWording": false
+    },
+    "family-sister-brother:predict-helper2-confidence": {
+      "prompt": "nr_270",
+      "reminder": null,
+      "options": [
+        "nr_271",
+        "nr_272",
+        "nr_273"
+      ],
+      "proposedWording": true
     },
     "family-sister-brother:practice-intro": {
       "prompt": "nr_014",
@@ -18366,6 +19563,16 @@
       ],
       "proposedWording": false
     },
+    "family-dad-kid:predict-helper1-confidence": {
+      "prompt": "nr_270",
+      "reminder": null,
+      "options": [
+        "nr_271",
+        "nr_272",
+        "nr_273"
+      ],
+      "proposedWording": true
+    },
     "family-dad-kid:predict-helper2": {
       "prompt": "nr_138",
       "reminder": null,
@@ -18374,6 +19581,16 @@
         "nr_012"
       ],
       "proposedWording": false
+    },
+    "family-dad-kid:predict-helper2-confidence": {
+      "prompt": "nr_270",
+      "reminder": null,
+      "options": [
+        "nr_271",
+        "nr_272",
+        "nr_273"
+      ],
+      "proposedWording": true
     },
     "family-dad-kid:practice-intro": {
       "prompt": "nr_014",
@@ -18607,6 +19824,16 @@
       ],
       "proposedWording": false
     },
+    "family-mom-kid:predict-helper1-confidence": {
+      "prompt": "nr_270",
+      "reminder": null,
+      "options": [
+        "nr_271",
+        "nr_272",
+        "nr_273"
+      ],
+      "proposedWording": true
+    },
     "family-mom-kid:predict-helper2": {
       "prompt": "nr_159",
       "reminder": null,
@@ -18615,6 +19842,16 @@
         "nr_012"
       ],
       "proposedWording": false
+    },
+    "family-mom-kid:predict-helper2-confidence": {
+      "prompt": "nr_270",
+      "reminder": null,
+      "options": [
+        "nr_271",
+        "nr_272",
+        "nr_273"
+      ],
+      "proposedWording": true
     },
     "family-mom-kid:practice-intro": {
       "prompt": "nr_014",
@@ -18848,6 +20085,16 @@
       ],
       "proposedWording": false
     },
+    "family-teacher-kid:predict-helper1-confidence": {
+      "prompt": "nr_270",
+      "reminder": null,
+      "options": [
+        "nr_271",
+        "nr_272",
+        "nr_273"
+      ],
+      "proposedWording": true
+    },
     "family-teacher-kid:predict-helper2": {
       "prompt": "nr_179",
       "reminder": null,
@@ -18856,6 +20103,16 @@
         "nr_012"
       ],
       "proposedWording": false
+    },
+    "family-teacher-kid:predict-helper2-confidence": {
+      "prompt": "nr_270",
+      "reminder": null,
+      "options": [
+        "nr_271",
+        "nr_272",
+        "nr_273"
+      ],
+      "proposedWording": true
     },
     "family-teacher-kid:practice-intro": {
       "prompt": "nr_014",
@@ -19089,6 +20346,16 @@
       ],
       "proposedWording": false
     },
+    "family-teacher-classmate:predict-helper1-confidence": {
+      "prompt": "nr_270",
+      "reminder": null,
+      "options": [
+        "nr_271",
+        "nr_272",
+        "nr_273"
+      ],
+      "proposedWording": true
+    },
     "family-teacher-classmate:predict-helper2": {
       "prompt": "nr_010",
       "reminder": null,
@@ -19097,6 +20364,16 @@
         "nr_012"
       ],
       "proposedWording": false
+    },
+    "family-teacher-classmate:predict-helper2-confidence": {
+      "prompt": "nr_270",
+      "reminder": null,
+      "options": [
+        "nr_271",
+        "nr_272",
+        "nr_273"
+      ],
+      "proposedWording": true
     },
     "family-teacher-classmate:practice-intro": {
       "prompt": "nr_014",

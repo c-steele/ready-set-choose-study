@@ -4,17 +4,18 @@
 
 - This is a draft adaptation using Find the Caregiver stimuli and the Marshall Study 1 question structure.
 - Helpers are questioned individually in left-to-right order. All paths lead to neither helper helping.
-- Prediction is Yes/No only, as in Marshall Study 1. Strength questions follow obligation and meanness judgments conditionally.
+- Prediction confidence is an added adaptation measure, not recovered Marshall wording. Its three response labels remain provisional.
+- Prediction is Yes/No, as in Marshall Study 1. A new provisional confidence question follows each prediction after either Yes or No. Strength questions follow obligation and meanness judgments conditionally.
 - The overall-evaluation strength prompt remains proposed wording, not verified verbatim Marshall wording.
 - White backgrounds and the same sadness context are used throughout. Source relationships, character positions, and intro order are preserved.
 - Practice repeats before obligation questions in each story, matching the captured Marshall Study 1 sequence.
 - This preview contains the six pairings from one role set in a fixed review order.
 
-Expected path range: **139–169 screens**, **102–132 responses**.
+Expected path range: **151–181 screens**, **114–144 responses**.
 
-48 main judgments + 36 identity/recall checks + 18 practice responses + 0–30 conditional study-strength responses.
+60 main judgments (including 12 prediction-confidence responses) + 36 identity/recall checks + 18 practice responses + 0–30 conditional study-strength responses.
 
-Illustrative duration: **20.5–35.3 minutes**, based on 1997–2676 spoken words.
+Illustrative duration: **22.1–37.5 minutes**, based on 2129–2808 spoken words.
 
 - Illustrative estimate, not observed child-session duration.
 - Read-aloud pace: 110–130 words per minute; response time: 3–5 seconds per selection.
@@ -92,7 +93,19 @@ Reminder if needed: “This big one is this kid’s mom. This one is the kid’s
 
 Choices: Yes / No.
 
-### 8. Prediction · Mom
+### 8. Prediction confidence · Teacher — PROPOSED WORDING
+
+*Confidence about the immediately preceding prediction, after either Yes or No (woman-mom-teacher:predict-helper1).*
+
+“How sure are you?”
+
+[Stimulus source](assets/stimuli/ef6ceaf063c6-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+
+Choices: Not sure / A little sure / Very sure.
+
+*Proposed new confidence measure. Asked after either Yes or No to the immediately preceding prediction; wording is provisional.*
+
+### 9. Prediction · Mom
 
 “Now, do you think the kid’s mom will help the kid?”
 
@@ -100,13 +113,25 @@ Choices: Yes / No.
 
 Choices: Yes / No.
 
-### 9. “HAVE TO” practice
+### 10. Prediction confidence · Mom — PROPOSED WORDING
+
+*Confidence about the immediately preceding prediction, after either Yes or No (woman-mom-teacher:predict-helper2).*
+
+“How sure are you?”
+
+[Stimulus source](assets/stimuli/ef6ceaf063c6-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+
+Choices: Not sure / A little sure / Very sure.
+
+*Proposed new confidence measure. Asked after either Yes or No to the immediately preceding prediction; wording is provisional.*
+
+### 11. “HAVE TO” practice
 
 “Now, sometimes people HAVE TO do things.”
 
 *Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
-### 10. Practice · Stop being mean
+### 12. Practice · Stop being mean
 
 “When a teacher tells you to stop being mean to someone, do you HAVE TO stop being mean? Yes or No.”
 
@@ -120,7 +145,7 @@ Reminder if needed: “When a teacher tells you to stop being mean to someone, y
 
 *Practice, not a study outcome. The illustration and split display wording are new adaptations. The downloaded script retains the full Marshall practice prompt. Reminder wording is a draft implementation choice. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
-### 11. Practice · How much
+### 13. Practice · How much
 
 *Only after “Yes” to Practice · Stop being mean.*
 
@@ -130,7 +155,7 @@ Choices: A teeny bit / A little bit / A lot.
 
 *Practice routing is a draft choice; strength is not marked right or wrong. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
-### 12. Practice · Lie
+### 14. Practice · Lie
 
 “When someone asks you a question, do you HAVE TO lie? Yes or No.”
 
@@ -142,7 +167,7 @@ Reminder if needed: “When someone asks you a question, you do not HAVE TO lie.
 
 *Practice, not a study outcome. Reminder wording is a draft implementation choice. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
-### 13. Practice · How much
+### 15. Practice · How much
 
 *Only after “Yes” to Practice · Lie.*
 
@@ -152,13 +177,13 @@ Choices: A teeny bit / A little bit / A lot.
 
 *Shown if the facilitator continues after a Yes response. Original practice follow-up routing is unverified. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
-### 14. Back to our story
+### 16. Back to our story
 
 “So now, I’m going to ask you some questions about whether people HAVE TO do things.”
 
 *Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
-### 15. Obligation · Teacher
+### 17. Obligation · Teacher
 
 “Now, do you think the kid’s teacher HAS TO help the kid? Yes or No.”
 
@@ -166,7 +191,7 @@ Choices: A teeny bit / A little bit / A lot.
 
 Choices: Yes / No.
 
-### 16. Obligation strength · Teacher
+### 18. Obligation strength · Teacher
 
 *Only after “Yes” to Obligation · Teacher.*
 
@@ -180,7 +205,7 @@ Display wording: “How much do you think the kid’s teacher HAS TO?” The rol
 
 Choices: A teeny bit / A little bit / A lot.
 
-### 17. Obligation · Mom
+### 19. Obligation · Mom
 
 “Now, do you think the kid’s mom HAS TO help the kid? Yes or No.”
 
@@ -188,7 +213,7 @@ Choices: A teeny bit / A little bit / A lot.
 
 Choices: Yes / No.
 
-### 18. Obligation strength · Mom
+### 20. Obligation strength · Mom
 
 *Only after “Yes” to Obligation · Mom.*
 
@@ -202,7 +227,7 @@ Display wording: “How much do you think the kid’s mom HAS TO?” The role is
 
 Choices: A teeny bit / A little bit / A lot.
 
-### 19. What happens next
+### 21. What happens next
 
 “No one helped the kid. The kid’s teacher did NOT help the kid. The kid’s mom did NOT help the kid.”
 
@@ -210,7 +235,7 @@ Choices: A teeny bit / A little bit / A lot.
 
 *Every response path reaches this same outcome, regardless of prediction or obligation answers.*
 
-### 20. Recall · No one helped
+### 22. Recall · No one helped
 
 “Can you tell me, did either of these people help the kid?”
 
@@ -222,7 +247,7 @@ Expected check/practice answer: No.
 
 Reminder if needed: “Actually, remember, no one helped the kid. The kid’s teacher did NOT help the kid. The kid’s mom did NOT help the kid. Can you tell me, did either of these people help the kid?”
 
-### 21. Overall evaluation
+### 23. Overall evaluation
 
 No one helped the kid.
 
@@ -234,7 +259,7 @@ Choices: Mean / Nice.
 
 *Exploratory measure in Marshall Study 1.*
 
-### 22. Overall evaluation strength — PROPOSED WORDING
+### 24. Overall evaluation strength — PROPOSED WORDING
 
 *Only after “Mean” to Overall evaluation.*
 
@@ -246,7 +271,7 @@ Choices: A tiny bit mean / A little bit mean / A lot mean.
 
 *PROPOSED PROMPT AND RESPONSE WORDING: the supplement confirms these score levels, but the exact spoken follow-up and response wording were not recovered.*
 
-### 23. Recall · Teacher
+### 25. Recall · Teacher
 
 “Do you remember, did the kid’s teacher help the kid?”
 
@@ -258,7 +283,7 @@ Expected check/practice answer: No.
 
 Reminder if needed: “Remember, the kid’s teacher did not help the kid. Do you remember, did the kid’s teacher help the kid?”
 
-### 24. Individual evaluation · Teacher
+### 26. Individual evaluation · Teacher
 
 “Do you think it was Mean or Not Mean that the kid’s teacher did NOT help the kid in the middle?”
 
@@ -266,7 +291,7 @@ Reminder if needed: “Remember, the kid’s teacher did not help the kid. Do yo
 
 Choices: Mean / Not Mean.
 
-### 25. Meanness strength · Teacher
+### 27. Meanness strength · Teacher
 
 *Only after “Mean” to Individual evaluation · Teacher.*
 
@@ -278,7 +303,7 @@ Display wording: “How mean do you think the kid’s teacher was for NOT helpin
 
 Choices: A teeny bit mean / A little bit mean / Very mean.
 
-### 26. Recall · Mom
+### 28. Recall · Mom
 
 “Do you remember, did the kid’s mom help the kid?”
 
@@ -290,7 +315,7 @@ Expected check/practice answer: No.
 
 Reminder if needed: “Remember, the kid’s mom did not help the kid. Do you remember, did the kid’s mom help the kid?”
 
-### 27. Individual evaluation · Mom
+### 29. Individual evaluation · Mom
 
 “Do you think it was Mean or Not Mean that the kid’s mom did NOT help the kid in the middle?”
 
@@ -298,7 +323,7 @@ Reminder if needed: “Remember, the kid’s mom did not help the kid. Do you re
 
 Choices: Mean / Not Mean.
 
-### 28. Meanness strength · Mom
+### 30. Meanness strength · Mom
 
 *Only after “Mean” to Individual evaluation · Mom.*
 
@@ -310,7 +335,7 @@ Display wording: “How mean do you think the kid’s mom was for NOT helping th
 
 Choices: A teeny bit mean / A little bit mean / Very mean.
 
-### 29. Compare the helpers
+### 31. Compare the helpers
 
 “Who was meaner for not helping?”
 
@@ -324,7 +349,7 @@ Choices: The kid’s teacher / The kid’s mom.
 
 Left: the kid’s sister. Middle: the kid. Right: the kid’s friend.
 
-### 30. Meet the characters
+### 32. Meet the characters
 
 “Oh look! Here is a kid.”
 
@@ -332,7 +357,7 @@ Left: the kid’s sister. Middle: the kid. Right: the kid’s friend.
 
 *Opening adapted to the single kid shown on screen.*
 
-### 31. Meet the kid
+### 33. Meet the kid
 
 “This little one is a kid. Tap the kid.”
 
@@ -344,7 +369,7 @@ Reminder if needed: “This little one is a kid. This one is the kid. Tap the ki
 
 *Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
 
-### 32. Meet the kid’s sister
+### 34. Meet the kid’s sister
 
 “This little one is this kid’s sister. Tap the kid’s sister.”
 
@@ -356,7 +381,7 @@ Reminder if needed: “This little one is this kid’s sister. This one is the k
 
 *Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
 
-### 33. Meet the kid’s friend
+### 35. Meet the kid’s friend
 
 “This little one is this kid’s friend. Tap the kid’s friend.”
 
@@ -368,19 +393,19 @@ Reminder if needed: “This little one is this kid’s friend. This one is the k
 
 *Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
 
-### 34. The kid needs help
+### 36. The kid needs help
 
 “Now let’s say that one day the kid in the middle was very sad.”
 
 [Stimulus source](assets/stimuli/d8367f1a225f-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-### 35. Both helpers see
+### 37. Both helpers see
 
 “The kid’s sister and the kid’s friend both see that the kid is sad.”
 
 [Stimulus source](assets/stimuli/d8367f1a225f-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-### 36. Prediction · Sister
+### 38. Prediction · Sister
 
 “Now, do you think the kid’s sister will help the kid?”
 
@@ -388,7 +413,19 @@ Reminder if needed: “This little one is this kid’s friend. This one is the k
 
 Choices: Yes / No.
 
-### 37. Prediction · Friend
+### 39. Prediction confidence · Sister — PROPOSED WORDING
+
+*Confidence about the immediately preceding prediction, after either Yes or No (woman-sister-friend:predict-helper1).*
+
+“How sure are you?”
+
+[Stimulus source](assets/stimuli/d8367f1a225f-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+
+Choices: Not sure / A little sure / Very sure.
+
+*Proposed new confidence measure. Asked after either Yes or No to the immediately preceding prediction; wording is provisional.*
+
+### 40. Prediction · Friend
 
 “Now, do you think the kid’s friend will help the kid?”
 
@@ -396,13 +433,25 @@ Choices: Yes / No.
 
 Choices: Yes / No.
 
-### 38. “HAVE TO” practice
+### 41. Prediction confidence · Friend — PROPOSED WORDING
+
+*Confidence about the immediately preceding prediction, after either Yes or No (woman-sister-friend:predict-helper2).*
+
+“How sure are you?”
+
+[Stimulus source](assets/stimuli/d8367f1a225f-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+
+Choices: Not sure / A little sure / Very sure.
+
+*Proposed new confidence measure. Asked after either Yes or No to the immediately preceding prediction; wording is provisional.*
+
+### 42. “HAVE TO” practice
 
 “Now, sometimes people HAVE TO do things.”
 
 *Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
-### 39. Practice · Stop being mean
+### 43. Practice · Stop being mean
 
 “When a teacher tells you to stop being mean to someone, do you HAVE TO stop being mean? Yes or No.”
 
@@ -416,7 +465,7 @@ Reminder if needed: “When a teacher tells you to stop being mean to someone, y
 
 *Practice, not a study outcome. The illustration and split display wording are new adaptations. The downloaded script retains the full Marshall practice prompt. Reminder wording is a draft implementation choice. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
-### 40. Practice · How much
+### 44. Practice · How much
 
 *Only after “Yes” to Practice · Stop being mean.*
 
@@ -426,7 +475,7 @@ Choices: A teeny bit / A little bit / A lot.
 
 *Practice routing is a draft choice; strength is not marked right or wrong. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
-### 41. Practice · Lie
+### 45. Practice · Lie
 
 “When someone asks you a question, do you HAVE TO lie? Yes or No.”
 
@@ -438,7 +487,7 @@ Reminder if needed: “When someone asks you a question, you do not HAVE TO lie.
 
 *Practice, not a study outcome. Reminder wording is a draft implementation choice. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
-### 42. Practice · How much
+### 46. Practice · How much
 
 *Only after “Yes” to Practice · Lie.*
 
@@ -448,13 +497,13 @@ Choices: A teeny bit / A little bit / A lot.
 
 *Shown if the facilitator continues after a Yes response. Original practice follow-up routing is unverified. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
-### 43. Back to our story
+### 47. Back to our story
 
 “So now, I’m going to ask you some questions about whether people HAVE TO do things.”
 
 *Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
-### 44. Obligation · Sister
+### 48. Obligation · Sister
 
 “Now, do you think the kid’s sister HAS TO help the kid? Yes or No.”
 
@@ -462,7 +511,7 @@ Choices: A teeny bit / A little bit / A lot.
 
 Choices: Yes / No.
 
-### 45. Obligation strength · Sister
+### 49. Obligation strength · Sister
 
 *Only after “Yes” to Obligation · Sister.*
 
@@ -476,7 +525,7 @@ Display wording: “How much do you think the kid’s sister HAS TO?” The role
 
 Choices: A teeny bit / A little bit / A lot.
 
-### 46. Obligation · Friend
+### 50. Obligation · Friend
 
 “Now, do you think the kid’s friend HAS TO help the kid? Yes or No.”
 
@@ -484,7 +533,7 @@ Choices: A teeny bit / A little bit / A lot.
 
 Choices: Yes / No.
 
-### 47. Obligation strength · Friend
+### 51. Obligation strength · Friend
 
 *Only after “Yes” to Obligation · Friend.*
 
@@ -498,7 +547,7 @@ Display wording: “How much do you think the kid’s friend HAS TO?” The role
 
 Choices: A teeny bit / A little bit / A lot.
 
-### 48. What happens next
+### 52. What happens next
 
 “No one helped the kid. The kid’s sister did NOT help the kid. The kid’s friend did NOT help the kid.”
 
@@ -506,7 +555,7 @@ Choices: A teeny bit / A little bit / A lot.
 
 *Every response path reaches this same outcome, regardless of prediction or obligation answers.*
 
-### 49. Recall · No one helped
+### 53. Recall · No one helped
 
 “Can you tell me, did either of these people help the kid?”
 
@@ -518,7 +567,7 @@ Expected check/practice answer: No.
 
 Reminder if needed: “Actually, remember, no one helped the kid. The kid’s sister did NOT help the kid. The kid’s friend did NOT help the kid. Can you tell me, did either of these people help the kid?”
 
-### 50. Overall evaluation
+### 54. Overall evaluation
 
 No one helped the kid.
 
@@ -530,7 +579,7 @@ Choices: Mean / Nice.
 
 *Exploratory measure in Marshall Study 1.*
 
-### 51. Overall evaluation strength — PROPOSED WORDING
+### 55. Overall evaluation strength — PROPOSED WORDING
 
 *Only after “Mean” to Overall evaluation.*
 
@@ -542,7 +591,7 @@ Choices: A tiny bit mean / A little bit mean / A lot mean.
 
 *PROPOSED PROMPT AND RESPONSE WORDING: the supplement confirms these score levels, but the exact spoken follow-up and response wording were not recovered.*
 
-### 52. Recall · Sister
+### 56. Recall · Sister
 
 “Do you remember, did the kid’s sister help the kid?”
 
@@ -554,7 +603,7 @@ Expected check/practice answer: No.
 
 Reminder if needed: “Remember, the kid’s sister did not help the kid. Do you remember, did the kid’s sister help the kid?”
 
-### 53. Individual evaluation · Sister
+### 57. Individual evaluation · Sister
 
 “Do you think it was Mean or Not Mean that the kid’s sister did NOT help the kid in the middle?”
 
@@ -562,7 +611,7 @@ Reminder if needed: “Remember, the kid’s sister did not help the kid. Do you
 
 Choices: Mean / Not Mean.
 
-### 54. Meanness strength · Sister
+### 58. Meanness strength · Sister
 
 *Only after “Mean” to Individual evaluation · Sister.*
 
@@ -574,7 +623,7 @@ Display wording: “How mean do you think the kid’s sister was for NOT helping
 
 Choices: A teeny bit mean / A little bit mean / Very mean.
 
-### 55. Recall · Friend
+### 59. Recall · Friend
 
 “Do you remember, did the kid’s friend help the kid?”
 
@@ -586,7 +635,7 @@ Expected check/practice answer: No.
 
 Reminder if needed: “Remember, the kid’s friend did not help the kid. Do you remember, did the kid’s friend help the kid?”
 
-### 56. Individual evaluation · Friend
+### 60. Individual evaluation · Friend
 
 “Do you think it was Mean or Not Mean that the kid’s friend did NOT help the kid in the middle?”
 
@@ -594,7 +643,7 @@ Reminder if needed: “Remember, the kid’s friend did not help the kid. Do you
 
 Choices: Mean / Not Mean.
 
-### 57. Meanness strength · Friend
+### 61. Meanness strength · Friend
 
 *Only after “Mean” to Individual evaluation · Friend.*
 
@@ -606,7 +655,7 @@ Display wording: “How mean do you think the kid’s friend was for NOT helping
 
 Choices: A teeny bit mean / A little bit mean / Very mean.
 
-### 58. Compare the helpers
+### 62. Compare the helpers
 
 “Who was meaner for not helping?”
 
@@ -620,7 +669,7 @@ Choices: The kid’s sister / The kid’s friend.
 
 Left: the kid’s friend. Middle: the kid. Right: the kid’s best friend.
 
-### 59. Meet the characters
+### 63. Meet the characters
 
 “Oh look! Here is a kid.”
 
@@ -628,7 +677,7 @@ Left: the kid’s friend. Middle: the kid. Right: the kid’s best friend.
 
 *Opening adapted to the single kid shown on screen.*
 
-### 60. Meet the kid
+### 64. Meet the kid
 
 “This little one is a kid. Tap the kid.”
 
@@ -640,7 +689,7 @@ Reminder if needed: “This little one is a kid. This one is the kid. Tap the ki
 
 *Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
 
-### 61. Meet the kid’s friend
+### 65. Meet the kid’s friend
 
 “This little one is this kid’s friend. Tap the kid’s friend.”
 
@@ -652,7 +701,7 @@ Reminder if needed: “This little one is this kid’s friend. This one is the k
 
 *Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
 
-### 62. Meet the kid’s best friend
+### 66. Meet the kid’s best friend
 
 “This little one is this kid’s best friend. Tap the kid’s best friend.”
 
@@ -664,19 +713,19 @@ Reminder if needed: “This little one is this kid’s best friend. This one is 
 
 *Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
 
-### 63. The kid needs help
+### 67. The kid needs help
 
 “Now let’s say that one day the kid in the middle was very sad.”
 
 [Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-### 64. Both helpers see
+### 68. Both helpers see
 
 “The kid’s friend and the kid’s best friend both see that the kid is sad.”
 
 [Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-### 65. Prediction · Friend
+### 69. Prediction · Friend
 
 “Now, do you think the kid’s friend will help the kid?”
 
@@ -684,7 +733,19 @@ Reminder if needed: “This little one is this kid’s best friend. This one is 
 
 Choices: Yes / No.
 
-### 66. Prediction · Best friend
+### 70. Prediction confidence · Friend — PROPOSED WORDING
+
+*Confidence about the immediately preceding prediction, after either Yes or No (woman-bestfriend-friend:predict-helper1).*
+
+“How sure are you?”
+
+[Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+
+Choices: Not sure / A little sure / Very sure.
+
+*Proposed new confidence measure. Asked after either Yes or No to the immediately preceding prediction; wording is provisional.*
+
+### 71. Prediction · Best friend
 
 “Now, do you think the kid’s best friend will help the kid?”
 
@@ -692,13 +753,25 @@ Choices: Yes / No.
 
 Choices: Yes / No.
 
-### 67. “HAVE TO” practice
+### 72. Prediction confidence · Best friend — PROPOSED WORDING
+
+*Confidence about the immediately preceding prediction, after either Yes or No (woman-bestfriend-friend:predict-helper2).*
+
+“How sure are you?”
+
+[Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+
+Choices: Not sure / A little sure / Very sure.
+
+*Proposed new confidence measure. Asked after either Yes or No to the immediately preceding prediction; wording is provisional.*
+
+### 73. “HAVE TO” practice
 
 “Now, sometimes people HAVE TO do things.”
 
 *Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
-### 68. Practice · Stop being mean
+### 74. Practice · Stop being mean
 
 “When a teacher tells you to stop being mean to someone, do you HAVE TO stop being mean? Yes or No.”
 
@@ -712,7 +785,7 @@ Reminder if needed: “When a teacher tells you to stop being mean to someone, y
 
 *Practice, not a study outcome. The illustration and split display wording are new adaptations. The downloaded script retains the full Marshall practice prompt. Reminder wording is a draft implementation choice. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
-### 69. Practice · How much
+### 75. Practice · How much
 
 *Only after “Yes” to Practice · Stop being mean.*
 
@@ -722,7 +795,7 @@ Choices: A teeny bit / A little bit / A lot.
 
 *Practice routing is a draft choice; strength is not marked right or wrong. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
-### 70. Practice · Lie
+### 76. Practice · Lie
 
 “When someone asks you a question, do you HAVE TO lie? Yes or No.”
 
@@ -734,7 +807,7 @@ Reminder if needed: “When someone asks you a question, you do not HAVE TO lie.
 
 *Practice, not a study outcome. Reminder wording is a draft implementation choice. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
-### 71. Practice · How much
+### 77. Practice · How much
 
 *Only after “Yes” to Practice · Lie.*
 
@@ -744,13 +817,13 @@ Choices: A teeny bit / A little bit / A lot.
 
 *Shown if the facilitator continues after a Yes response. Original practice follow-up routing is unverified. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
-### 72. Back to our story
+### 78. Back to our story
 
 “So now, I’m going to ask you some questions about whether people HAVE TO do things.”
 
 *Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
-### 73. Obligation · Friend
+### 79. Obligation · Friend
 
 “Now, do you think the kid’s friend HAS TO help the kid? Yes or No.”
 
@@ -758,7 +831,7 @@ Choices: A teeny bit / A little bit / A lot.
 
 Choices: Yes / No.
 
-### 74. Obligation strength · Friend
+### 80. Obligation strength · Friend
 
 *Only after “Yes” to Obligation · Friend.*
 
@@ -772,7 +845,7 @@ Display wording: “How much do you think the kid’s friend HAS TO?” The role
 
 Choices: A teeny bit / A little bit / A lot.
 
-### 75. Obligation · Best friend
+### 81. Obligation · Best friend
 
 “Now, do you think the kid’s best friend HAS TO help the kid? Yes or No.”
 
@@ -780,7 +853,7 @@ Choices: A teeny bit / A little bit / A lot.
 
 Choices: Yes / No.
 
-### 76. Obligation strength · Best friend
+### 82. Obligation strength · Best friend
 
 *Only after “Yes” to Obligation · Best friend.*
 
@@ -794,7 +867,7 @@ Display wording: “How much do you think the kid’s best friend HAS TO?” The
 
 Choices: A teeny bit / A little bit / A lot.
 
-### 77. What happens next
+### 83. What happens next
 
 “No one helped the kid. The kid’s friend did NOT help the kid. The kid’s best friend did NOT help the kid.”
 
@@ -802,7 +875,7 @@ Choices: A teeny bit / A little bit / A lot.
 
 *Every response path reaches this same outcome, regardless of prediction or obligation answers.*
 
-### 78. Recall · No one helped
+### 84. Recall · No one helped
 
 “Can you tell me, did either of these people help the kid?”
 
@@ -814,7 +887,7 @@ Expected check/practice answer: No.
 
 Reminder if needed: “Actually, remember, no one helped the kid. The kid’s friend did NOT help the kid. The kid’s best friend did NOT help the kid. Can you tell me, did either of these people help the kid?”
 
-### 79. Overall evaluation
+### 85. Overall evaluation
 
 No one helped the kid.
 
@@ -826,7 +899,7 @@ Choices: Mean / Nice.
 
 *Exploratory measure in Marshall Study 1.*
 
-### 80. Overall evaluation strength — PROPOSED WORDING
+### 86. Overall evaluation strength — PROPOSED WORDING
 
 *Only after “Mean” to Overall evaluation.*
 
@@ -838,7 +911,7 @@ Choices: A tiny bit mean / A little bit mean / A lot mean.
 
 *PROPOSED PROMPT AND RESPONSE WORDING: the supplement confirms these score levels, but the exact spoken follow-up and response wording were not recovered.*
 
-### 81. Recall · Friend
+### 87. Recall · Friend
 
 “Do you remember, did the kid’s friend help the kid?”
 
@@ -850,7 +923,7 @@ Expected check/practice answer: No.
 
 Reminder if needed: “Remember, the kid’s friend did not help the kid. Do you remember, did the kid’s friend help the kid?”
 
-### 82. Individual evaluation · Friend
+### 88. Individual evaluation · Friend
 
 “Do you think it was Mean or Not Mean that the kid’s friend did NOT help the kid in the middle?”
 
@@ -858,7 +931,7 @@ Reminder if needed: “Remember, the kid’s friend did not help the kid. Do you
 
 Choices: Mean / Not Mean.
 
-### 83. Meanness strength · Friend
+### 89. Meanness strength · Friend
 
 *Only after “Mean” to Individual evaluation · Friend.*
 
@@ -870,7 +943,7 @@ Display wording: “How mean do you think the kid’s friend was for NOT helping
 
 Choices: A teeny bit mean / A little bit mean / Very mean.
 
-### 84. Recall · Best friend
+### 90. Recall · Best friend
 
 “Do you remember, did the kid’s best friend help the kid?”
 
@@ -882,7 +955,7 @@ Expected check/practice answer: No.
 
 Reminder if needed: “Remember, the kid’s best friend did not help the kid. Do you remember, did the kid’s best friend help the kid?”
 
-### 85. Individual evaluation · Best friend
+### 91. Individual evaluation · Best friend
 
 “Do you think it was Mean or Not Mean that the kid’s best friend did NOT help the kid in the middle?”
 
@@ -890,7 +963,7 @@ Reminder if needed: “Remember, the kid’s best friend did not help the kid. D
 
 Choices: Mean / Not Mean.
 
-### 86. Meanness strength · Best friend
+### 92. Meanness strength · Best friend
 
 *Only after “Mean” to Individual evaluation · Best friend.*
 
@@ -902,7 +975,7 @@ Display wording: “How mean do you think the kid’s best friend was for NOT he
 
 Choices: A teeny bit mean / A little bit mean / Very mean.
 
-### 87. Compare the helpers
+### 93. Compare the helpers
 
 “Who was meaner for not helping?”
 
@@ -916,7 +989,7 @@ Choices: The kid’s friend / The kid’s best friend.
 
 Left: the kid’s teacher. Middle: the kid. Right: the kid’s friend.
 
-### 88. Meet the characters
+### 94. Meet the characters
 
 “Oh look! Here is a kid.”
 
@@ -924,7 +997,7 @@ Left: the kid’s teacher. Middle: the kid. Right: the kid’s friend.
 
 *Opening adapted to the single kid shown on screen.*
 
-### 89. Meet the kid
+### 95. Meet the kid
 
 “This little one is a kid. Tap the kid.”
 
@@ -936,7 +1009,7 @@ Reminder if needed: “This little one is a kid. This one is the kid. Tap the ki
 
 *Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
 
-### 90. Meet the kid’s teacher
+### 96. Meet the kid’s teacher
 
 “This big one is this kid’s teacher. Tap the kid’s teacher.”
 
@@ -948,7 +1021,7 @@ Reminder if needed: “This big one is this kid’s teacher. This one is the kid
 
 *Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
 
-### 91. Meet the kid’s friend
+### 97. Meet the kid’s friend
 
 “This little one is this kid’s friend. Tap the kid’s friend.”
 
@@ -960,19 +1033,19 @@ Reminder if needed: “This little one is this kid’s friend. This one is the k
 
 *Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
 
-### 92. The kid needs help
+### 98. The kid needs help
 
 “Now let’s say that one day the kid in the middle was very sad.”
 
 [Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-### 93. Both helpers see
+### 99. Both helpers see
 
 “The kid’s teacher and the kid’s friend both see that the kid is sad.”
 
 [Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-### 94. Prediction · Teacher
+### 100. Prediction · Teacher
 
 “Now, do you think the kid’s teacher will help the kid?”
 
@@ -980,7 +1053,19 @@ Reminder if needed: “This little one is this kid’s friend. This one is the k
 
 Choices: Yes / No.
 
-### 95. Prediction · Friend
+### 101. Prediction confidence · Teacher — PROPOSED WORDING
+
+*Confidence about the immediately preceding prediction, after either Yes or No (woman-teacher-friend:predict-helper1).*
+
+“How sure are you?”
+
+[Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+
+Choices: Not sure / A little sure / Very sure.
+
+*Proposed new confidence measure. Asked after either Yes or No to the immediately preceding prediction; wording is provisional.*
+
+### 102. Prediction · Friend
 
 “Now, do you think the kid’s friend will help the kid?”
 
@@ -988,13 +1073,25 @@ Choices: Yes / No.
 
 Choices: Yes / No.
 
-### 96. “HAVE TO” practice
+### 103. Prediction confidence · Friend — PROPOSED WORDING
+
+*Confidence about the immediately preceding prediction, after either Yes or No (woman-teacher-friend:predict-helper2).*
+
+“How sure are you?”
+
+[Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+
+Choices: Not sure / A little sure / Very sure.
+
+*Proposed new confidence measure. Asked after either Yes or No to the immediately preceding prediction; wording is provisional.*
+
+### 104. “HAVE TO” practice
 
 “Now, sometimes people HAVE TO do things.”
 
 *Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
-### 97. Practice · Stop being mean
+### 105. Practice · Stop being mean
 
 “When a teacher tells you to stop being mean to someone, do you HAVE TO stop being mean? Yes or No.”
 
@@ -1008,7 +1105,7 @@ Reminder if needed: “When a teacher tells you to stop being mean to someone, y
 
 *Practice, not a study outcome. The illustration and split display wording are new adaptations. The downloaded script retains the full Marshall practice prompt. Reminder wording is a draft implementation choice. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
-### 98. Practice · How much
+### 106. Practice · How much
 
 *Only after “Yes” to Practice · Stop being mean.*
 
@@ -1018,7 +1115,7 @@ Choices: A teeny bit / A little bit / A lot.
 
 *Practice routing is a draft choice; strength is not marked right or wrong. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
-### 99. Practice · Lie
+### 107. Practice · Lie
 
 “When someone asks you a question, do you HAVE TO lie? Yes or No.”
 
@@ -1030,7 +1127,7 @@ Reminder if needed: “When someone asks you a question, you do not HAVE TO lie.
 
 *Practice, not a study outcome. Reminder wording is a draft implementation choice. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
-### 100. Practice · How much
+### 108. Practice · How much
 
 *Only after “Yes” to Practice · Lie.*
 
@@ -1040,13 +1137,13 @@ Choices: A teeny bit / A little bit / A lot.
 
 *Shown if the facilitator continues after a Yes response. Original practice follow-up routing is unverified. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
-### 101. Back to our story
+### 109. Back to our story
 
 “So now, I’m going to ask you some questions about whether people HAVE TO do things.”
 
 *Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
-### 102. Obligation · Teacher
+### 110. Obligation · Teacher
 
 “Now, do you think the kid’s teacher HAS TO help the kid? Yes or No.”
 
@@ -1054,7 +1151,7 @@ Choices: A teeny bit / A little bit / A lot.
 
 Choices: Yes / No.
 
-### 103. Obligation strength · Teacher
+### 111. Obligation strength · Teacher
 
 *Only after “Yes” to Obligation · Teacher.*
 
@@ -1068,7 +1165,7 @@ Display wording: “How much do you think the kid’s teacher HAS TO?” The rol
 
 Choices: A teeny bit / A little bit / A lot.
 
-### 104. Obligation · Friend
+### 112. Obligation · Friend
 
 “Now, do you think the kid’s friend HAS TO help the kid? Yes or No.”
 
@@ -1076,7 +1173,7 @@ Choices: A teeny bit / A little bit / A lot.
 
 Choices: Yes / No.
 
-### 105. Obligation strength · Friend
+### 113. Obligation strength · Friend
 
 *Only after “Yes” to Obligation · Friend.*
 
@@ -1090,7 +1187,7 @@ Display wording: “How much do you think the kid’s friend HAS TO?” The role
 
 Choices: A teeny bit / A little bit / A lot.
 
-### 106. What happens next
+### 114. What happens next
 
 “No one helped the kid. The kid’s teacher did NOT help the kid. The kid’s friend did NOT help the kid.”
 
@@ -1098,7 +1195,7 @@ Choices: A teeny bit / A little bit / A lot.
 
 *Every response path reaches this same outcome, regardless of prediction or obligation answers.*
 
-### 107. Recall · No one helped
+### 115. Recall · No one helped
 
 “Can you tell me, did either of these people help the kid?”
 
@@ -1110,7 +1207,7 @@ Expected check/practice answer: No.
 
 Reminder if needed: “Actually, remember, no one helped the kid. The kid’s teacher did NOT help the kid. The kid’s friend did NOT help the kid. Can you tell me, did either of these people help the kid?”
 
-### 108. Overall evaluation
+### 116. Overall evaluation
 
 No one helped the kid.
 
@@ -1122,7 +1219,7 @@ Choices: Mean / Nice.
 
 *Exploratory measure in Marshall Study 1.*
 
-### 109. Overall evaluation strength — PROPOSED WORDING
+### 117. Overall evaluation strength — PROPOSED WORDING
 
 *Only after “Mean” to Overall evaluation.*
 
@@ -1134,7 +1231,7 @@ Choices: A tiny bit mean / A little bit mean / A lot mean.
 
 *PROPOSED PROMPT AND RESPONSE WORDING: the supplement confirms these score levels, but the exact spoken follow-up and response wording were not recovered.*
 
-### 110. Recall · Teacher
+### 118. Recall · Teacher
 
 “Do you remember, did the kid’s teacher help the kid?”
 
@@ -1146,7 +1243,7 @@ Expected check/practice answer: No.
 
 Reminder if needed: “Remember, the kid’s teacher did not help the kid. Do you remember, did the kid’s teacher help the kid?”
 
-### 111. Individual evaluation · Teacher
+### 119. Individual evaluation · Teacher
 
 “Do you think it was Mean or Not Mean that the kid’s teacher did NOT help the kid in the middle?”
 
@@ -1154,7 +1251,7 @@ Reminder if needed: “Remember, the kid’s teacher did not help the kid. Do yo
 
 Choices: Mean / Not Mean.
 
-### 112. Meanness strength · Teacher
+### 120. Meanness strength · Teacher
 
 *Only after “Mean” to Individual evaluation · Teacher.*
 
@@ -1166,7 +1263,7 @@ Display wording: “How mean do you think the kid’s teacher was for NOT helpin
 
 Choices: A teeny bit mean / A little bit mean / Very mean.
 
-### 113. Recall · Friend
+### 121. Recall · Friend
 
 “Do you remember, did the kid’s friend help the kid?”
 
@@ -1178,7 +1275,7 @@ Expected check/practice answer: No.
 
 Reminder if needed: “Remember, the kid’s friend did not help the kid. Do you remember, did the kid’s friend help the kid?”
 
-### 114. Individual evaluation · Friend
+### 122. Individual evaluation · Friend
 
 “Do you think it was Mean or Not Mean that the kid’s friend did NOT help the kid in the middle?”
 
@@ -1186,7 +1283,7 @@ Reminder if needed: “Remember, the kid’s friend did not help the kid. Do you
 
 Choices: Mean / Not Mean.
 
-### 115. Meanness strength · Friend
+### 123. Meanness strength · Friend
 
 *Only after “Mean” to Individual evaluation · Friend.*
 
@@ -1198,7 +1295,7 @@ Display wording: “How mean do you think the kid’s friend was for NOT helping
 
 Choices: A teeny bit mean / A little bit mean / Very mean.
 
-### 116. Compare the helpers
+### 124. Compare the helpers
 
 “Who was meaner for not helping?”
 
@@ -1212,7 +1309,7 @@ Choices: The kid’s teacher / The kid’s friend.
 
 Left: the kid’s mom. Middle: the kid. Right: the kid’s sister.
 
-### 117. Meet the characters
+### 125. Meet the characters
 
 “Oh look! Here is a kid.”
 
@@ -1220,7 +1317,7 @@ Left: the kid’s mom. Middle: the kid. Right: the kid’s sister.
 
 *Opening adapted to the single kid shown on screen.*
 
-### 118. Meet the kid
+### 126. Meet the kid
 
 “This little one is a kid. Tap the kid.”
 
@@ -1232,7 +1329,7 @@ Reminder if needed: “This little one is a kid. This one is the kid. Tap the ki
 
 *Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
 
-### 119. Meet the kid’s mom
+### 127. Meet the kid’s mom
 
 “This big one is this kid’s mom. Tap the kid’s mom.”
 
@@ -1244,7 +1341,7 @@ Reminder if needed: “This big one is this kid’s mom. This one is the kid’s
 
 *Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
 
-### 120. Meet the kid’s sister
+### 128. Meet the kid’s sister
 
 “This little one is this kid’s sister. Tap the kid’s sister.”
 
@@ -1256,19 +1353,19 @@ Reminder if needed: “This little one is this kid’s sister. This one is the k
 
 *Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
 
-### 121. The kid needs help
+### 129. The kid needs help
 
 “Now let’s say that one day the kid in the middle was very sad.”
 
 [Stimulus source](assets/stimuli/cf266d33caca-05-sad.png) — original reference image; the preview replaces its caption with the wording above.
 
-### 122. Both helpers see
+### 130. Both helpers see
 
 “The kid’s mom and the kid’s sister both see that the kid is sad.”
 
 [Stimulus source](assets/stimuli/cf266d33caca-05-sad.png) — original reference image; the preview replaces its caption with the wording above.
 
-### 123. Prediction · Mom
+### 131. Prediction · Mom
 
 “Now, do you think the kid’s mom will help the kid?”
 
@@ -1276,7 +1373,19 @@ Reminder if needed: “This little one is this kid’s sister. This one is the k
 
 Choices: Yes / No.
 
-### 124. Prediction · Sister
+### 132. Prediction confidence · Mom — PROPOSED WORDING
+
+*Confidence about the immediately preceding prediction, after either Yes or No (woman-mom-sister:predict-helper1).*
+
+“How sure are you?”
+
+[Stimulus source](assets/stimuli/cf266d33caca-05-sad.png) — original reference image; the preview replaces its caption with the wording above.
+
+Choices: Not sure / A little sure / Very sure.
+
+*Proposed new confidence measure. Asked after either Yes or No to the immediately preceding prediction; wording is provisional.*
+
+### 133. Prediction · Sister
 
 “Now, do you think the kid’s sister will help the kid?”
 
@@ -1284,13 +1393,25 @@ Choices: Yes / No.
 
 Choices: Yes / No.
 
-### 125. “HAVE TO” practice
+### 134. Prediction confidence · Sister — PROPOSED WORDING
+
+*Confidence about the immediately preceding prediction, after either Yes or No (woman-mom-sister:predict-helper2).*
+
+“How sure are you?”
+
+[Stimulus source](assets/stimuli/cf266d33caca-05-sad.png) — original reference image; the preview replaces its caption with the wording above.
+
+Choices: Not sure / A little sure / Very sure.
+
+*Proposed new confidence measure. Asked after either Yes or No to the immediately preceding prediction; wording is provisional.*
+
+### 135. “HAVE TO” practice
 
 “Now, sometimes people HAVE TO do things.”
 
 *Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
-### 126. Practice · Stop being mean
+### 136. Practice · Stop being mean
 
 “When a teacher tells you to stop being mean to someone, do you HAVE TO stop being mean? Yes or No.”
 
@@ -1304,7 +1425,7 @@ Reminder if needed: “When a teacher tells you to stop being mean to someone, y
 
 *Practice, not a study outcome. The illustration and split display wording are new adaptations. The downloaded script retains the full Marshall practice prompt. Reminder wording is a draft implementation choice. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
-### 127. Practice · How much
+### 137. Practice · How much
 
 *Only after “Yes” to Practice · Stop being mean.*
 
@@ -1314,7 +1435,7 @@ Choices: A teeny bit / A little bit / A lot.
 
 *Practice routing is a draft choice; strength is not marked right or wrong. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
-### 128. Practice · Lie
+### 138. Practice · Lie
 
 “When someone asks you a question, do you HAVE TO lie? Yes or No.”
 
@@ -1326,7 +1447,7 @@ Reminder if needed: “When someone asks you a question, you do not HAVE TO lie.
 
 *Practice, not a study outcome. Reminder wording is a draft implementation choice. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
-### 129. Practice · How much
+### 139. Practice · How much
 
 *Only after “Yes” to Practice · Lie.*
 
@@ -1336,13 +1457,13 @@ Choices: A teeny bit / A little bit / A lot.
 
 *Shown if the facilitator continues after a Yes response. Original practice follow-up routing is unverified. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
-### 130. Back to our story
+### 140. Back to our story
 
 “So now, I’m going to ask you some questions about whether people HAVE TO do things.”
 
 *Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
-### 131. Obligation · Mom
+### 141. Obligation · Mom
 
 “Now, do you think the kid’s mom HAS TO help the kid? Yes or No.”
 
@@ -1350,7 +1471,7 @@ Choices: A teeny bit / A little bit / A lot.
 
 Choices: Yes / No.
 
-### 132. Obligation strength · Mom
+### 142. Obligation strength · Mom
 
 *Only after “Yes” to Obligation · Mom.*
 
@@ -1364,7 +1485,7 @@ Display wording: “How much do you think the kid’s mom HAS TO?” The role is
 
 Choices: A teeny bit / A little bit / A lot.
 
-### 133. Obligation · Sister
+### 143. Obligation · Sister
 
 “Now, do you think the kid’s sister HAS TO help the kid? Yes or No.”
 
@@ -1372,7 +1493,7 @@ Choices: A teeny bit / A little bit / A lot.
 
 Choices: Yes / No.
 
-### 134. Obligation strength · Sister
+### 144. Obligation strength · Sister
 
 *Only after “Yes” to Obligation · Sister.*
 
@@ -1386,7 +1507,7 @@ Display wording: “How much do you think the kid’s sister HAS TO?” The role
 
 Choices: A teeny bit / A little bit / A lot.
 
-### 135. What happens next
+### 145. What happens next
 
 “No one helped the kid. The kid’s mom did NOT help the kid. The kid’s sister did NOT help the kid.”
 
@@ -1394,7 +1515,7 @@ Choices: A teeny bit / A little bit / A lot.
 
 *Every response path reaches this same outcome, regardless of prediction or obligation answers.*
 
-### 136. Recall · No one helped
+### 146. Recall · No one helped
 
 “Can you tell me, did either of these people help the kid?”
 
@@ -1406,7 +1527,7 @@ Expected check/practice answer: No.
 
 Reminder if needed: “Actually, remember, no one helped the kid. The kid’s mom did NOT help the kid. The kid’s sister did NOT help the kid. Can you tell me, did either of these people help the kid?”
 
-### 137. Overall evaluation
+### 147. Overall evaluation
 
 No one helped the kid.
 
@@ -1418,7 +1539,7 @@ Choices: Mean / Nice.
 
 *Exploratory measure in Marshall Study 1.*
 
-### 138. Overall evaluation strength — PROPOSED WORDING
+### 148. Overall evaluation strength — PROPOSED WORDING
 
 *Only after “Mean” to Overall evaluation.*
 
@@ -1430,7 +1551,7 @@ Choices: A tiny bit mean / A little bit mean / A lot mean.
 
 *PROPOSED PROMPT AND RESPONSE WORDING: the supplement confirms these score levels, but the exact spoken follow-up and response wording were not recovered.*
 
-### 139. Recall · Mom
+### 149. Recall · Mom
 
 “Do you remember, did the kid’s mom help the kid?”
 
@@ -1442,7 +1563,7 @@ Expected check/practice answer: No.
 
 Reminder if needed: “Remember, the kid’s mom did not help the kid. Do you remember, did the kid’s mom help the kid?”
 
-### 140. Individual evaluation · Mom
+### 150. Individual evaluation · Mom
 
 “Do you think it was Mean or Not Mean that the kid’s mom did NOT help the kid in the middle?”
 
@@ -1450,7 +1571,7 @@ Reminder if needed: “Remember, the kid’s mom did not help the kid. Do you re
 
 Choices: Mean / Not Mean.
 
-### 141. Meanness strength · Mom
+### 151. Meanness strength · Mom
 
 *Only after “Mean” to Individual evaluation · Mom.*
 
@@ -1462,7 +1583,7 @@ Display wording: “How mean do you think the kid’s mom was for NOT helping th
 
 Choices: A teeny bit mean / A little bit mean / Very mean.
 
-### 142. Recall · Sister
+### 152. Recall · Sister
 
 “Do you remember, did the kid’s sister help the kid?”
 
@@ -1474,7 +1595,7 @@ Expected check/practice answer: No.
 
 Reminder if needed: “Remember, the kid’s sister did not help the kid. Do you remember, did the kid’s sister help the kid?”
 
-### 143. Individual evaluation · Sister
+### 153. Individual evaluation · Sister
 
 “Do you think it was Mean or Not Mean that the kid’s sister did NOT help the kid in the middle?”
 
@@ -1482,7 +1603,7 @@ Reminder if needed: “Remember, the kid’s sister did not help the kid. Do you
 
 Choices: Mean / Not Mean.
 
-### 144. Meanness strength · Sister
+### 154. Meanness strength · Sister
 
 *Only after “Mean” to Individual evaluation · Sister.*
 
@@ -1494,7 +1615,7 @@ Display wording: “How mean do you think the kid’s sister was for NOT helping
 
 Choices: A teeny bit mean / A little bit mean / Very mean.
 
-### 145. Compare the helpers
+### 155. Compare the helpers
 
 “Who was meaner for not helping?”
 
@@ -1508,7 +1629,7 @@ Choices: The kid’s mom / The kid’s sister.
 
 Left: the kid’s classmate. Middle: the kid. Right: the kid’s teacher.
 
-### 146. Meet the characters
+### 156. Meet the characters
 
 “Oh look! Here is a kid.”
 
@@ -1516,7 +1637,7 @@ Left: the kid’s classmate. Middle: the kid. Right: the kid’s teacher.
 
 *Opening adapted to the single kid shown on screen.*
 
-### 147. Meet the kid
+### 157. Meet the kid
 
 “This little one is a kid. Tap the kid.”
 
@@ -1528,7 +1649,7 @@ Reminder if needed: “This little one is a kid. This one is the kid. Tap the ki
 
 *Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
 
-### 148. Meet the kid’s classmate
+### 158. Meet the kid’s classmate
 
 “This little one is this kid’s classmate. Tap the kid’s classmate.”
 
@@ -1540,7 +1661,7 @@ Reminder if needed: “This little one is this kid’s classmate. This one is th
 
 *Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
 
-### 149. Meet the kid’s teacher
+### 159. Meet the kid’s teacher
 
 “This big one is this kid’s teacher. Tap the kid’s teacher.”
 
@@ -1552,19 +1673,19 @@ Reminder if needed: “This big one is this kid’s teacher. This one is the kid
 
 *Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
 
-### 150. The kid needs help
+### 160. The kid needs help
 
 “Now let’s say that one day the kid in the middle was very sad.”
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
-### 151. Both helpers see
+### 161. Both helpers see
 
 “The kid’s classmate and the kid’s teacher both see that the kid is sad.”
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
-### 152. Prediction · Classmate
+### 162. Prediction · Classmate
 
 “Now, do you think the kid’s classmate will help the kid?”
 
@@ -1572,7 +1693,19 @@ Reminder if needed: “This big one is this kid’s teacher. This one is the kid
 
 Choices: Yes / No.
 
-### 153. Prediction · Teacher
+### 163. Prediction confidence · Classmate — PROPOSED WORDING
+
+*Confidence about the immediately preceding prediction, after either Yes or No (woman-teacher-classmate:predict-helper1).*
+
+“How sure are you?”
+
+[Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
+
+Choices: Not sure / A little sure / Very sure.
+
+*Proposed new confidence measure. Asked after either Yes or No to the immediately preceding prediction; wording is provisional.*
+
+### 164. Prediction · Teacher
 
 “Now, do you think the kid’s teacher will help the kid?”
 
@@ -1580,13 +1713,25 @@ Choices: Yes / No.
 
 Choices: Yes / No.
 
-### 154. “HAVE TO” practice
+### 165. Prediction confidence · Teacher — PROPOSED WORDING
+
+*Confidence about the immediately preceding prediction, after either Yes or No (woman-teacher-classmate:predict-helper2).*
+
+“How sure are you?”
+
+[Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
+
+Choices: Not sure / A little sure / Very sure.
+
+*Proposed new confidence measure. Asked after either Yes or No to the immediately preceding prediction; wording is provisional.*
+
+### 166. “HAVE TO” practice
 
 “Now, sometimes people HAVE TO do things.”
 
 *Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
-### 155. Practice · Stop being mean
+### 167. Practice · Stop being mean
 
 “When a teacher tells you to stop being mean to someone, do you HAVE TO stop being mean? Yes or No.”
 
@@ -1600,7 +1745,7 @@ Reminder if needed: “When a teacher tells you to stop being mean to someone, y
 
 *Practice, not a study outcome. The illustration and split display wording are new adaptations. The downloaded script retains the full Marshall practice prompt. Reminder wording is a draft implementation choice. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
-### 156. Practice · How much
+### 168. Practice · How much
 
 *Only after “Yes” to Practice · Stop being mean.*
 
@@ -1610,7 +1755,7 @@ Choices: A teeny bit / A little bit / A lot.
 
 *Practice routing is a draft choice; strength is not marked right or wrong. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
-### 157. Practice · Lie
+### 169. Practice · Lie
 
 “When someone asks you a question, do you HAVE TO lie? Yes or No.”
 
@@ -1622,7 +1767,7 @@ Reminder if needed: “When someone asks you a question, you do not HAVE TO lie.
 
 *Practice, not a study outcome. Reminder wording is a draft implementation choice. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
-### 158. Practice · How much
+### 170. Practice · How much
 
 *Only after “Yes” to Practice · Lie.*
 
@@ -1632,13 +1777,13 @@ Choices: A teeny bit / A little bit / A lot.
 
 *Shown if the facilitator continues after a Yes response. Original practice follow-up routing is unverified. Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
-### 159. Back to our story
+### 171. Back to our story
 
 “So now, I’m going to ask you some questions about whether people HAVE TO do things.”
 
 *Practice is repeated with each story in the main preview, as in the captured Marshall Study 1 sequence. The once-only setting is a proposed adaptation.*
 
-### 160. Obligation · Classmate
+### 172. Obligation · Classmate
 
 “Now, do you think the kid’s classmate HAS TO help the kid? Yes or No.”
 
@@ -1646,7 +1791,7 @@ Choices: A teeny bit / A little bit / A lot.
 
 Choices: Yes / No.
 
-### 161. Obligation strength · Classmate
+### 173. Obligation strength · Classmate
 
 *Only after “Yes” to Obligation · Classmate.*
 
@@ -1660,7 +1805,7 @@ Display wording: “How much do you think the kid’s classmate HAS TO?” The r
 
 Choices: A teeny bit / A little bit / A lot.
 
-### 162. Obligation · Teacher
+### 174. Obligation · Teacher
 
 “Now, do you think the kid’s teacher HAS TO help the kid? Yes or No.”
 
@@ -1668,7 +1813,7 @@ Choices: A teeny bit / A little bit / A lot.
 
 Choices: Yes / No.
 
-### 163. Obligation strength · Teacher
+### 175. Obligation strength · Teacher
 
 *Only after “Yes” to Obligation · Teacher.*
 
@@ -1682,7 +1827,7 @@ Display wording: “How much do you think the kid’s teacher HAS TO?” The rol
 
 Choices: A teeny bit / A little bit / A lot.
 
-### 164. What happens next
+### 176. What happens next
 
 “No one helped the kid. The kid’s classmate did NOT help the kid. The kid’s teacher did NOT help the kid.”
 
@@ -1690,7 +1835,7 @@ Choices: A teeny bit / A little bit / A lot.
 
 *Every response path reaches this same outcome, regardless of prediction or obligation answers.*
 
-### 165. Recall · No one helped
+### 177. Recall · No one helped
 
 “Can you tell me, did either of these people help the kid?”
 
@@ -1702,7 +1847,7 @@ Expected check/practice answer: No.
 
 Reminder if needed: “Actually, remember, no one helped the kid. The kid’s classmate did NOT help the kid. The kid’s teacher did NOT help the kid. Can you tell me, did either of these people help the kid?”
 
-### 166. Overall evaluation
+### 178. Overall evaluation
 
 No one helped the kid.
 
@@ -1714,7 +1859,7 @@ Choices: Mean / Nice.
 
 *Exploratory measure in Marshall Study 1.*
 
-### 167. Overall evaluation strength — PROPOSED WORDING
+### 179. Overall evaluation strength — PROPOSED WORDING
 
 *Only after “Mean” to Overall evaluation.*
 
@@ -1726,7 +1871,7 @@ Choices: A tiny bit mean / A little bit mean / A lot mean.
 
 *PROPOSED PROMPT AND RESPONSE WORDING: the supplement confirms these score levels, but the exact spoken follow-up and response wording were not recovered.*
 
-### 168. Recall · Classmate
+### 180. Recall · Classmate
 
 “Do you remember, did the kid’s classmate help the kid?”
 
@@ -1738,7 +1883,7 @@ Expected check/practice answer: No.
 
 Reminder if needed: “Remember, the kid’s classmate did not help the kid. Do you remember, did the kid’s classmate help the kid?”
 
-### 169. Individual evaluation · Classmate
+### 181. Individual evaluation · Classmate
 
 “Do you think it was Mean or Not Mean that the kid’s classmate did NOT help the kid in the middle?”
 
@@ -1746,7 +1891,7 @@ Reminder if needed: “Remember, the kid’s classmate did not help the kid. Do 
 
 Choices: Mean / Not Mean.
 
-### 170. Meanness strength · Classmate
+### 182. Meanness strength · Classmate
 
 *Only after “Mean” to Individual evaluation · Classmate.*
 
@@ -1758,7 +1903,7 @@ Display wording: “How mean do you think the kid’s classmate was for NOT help
 
 Choices: A teeny bit mean / A little bit mean / Very mean.
 
-### 171. Recall · Teacher
+### 183. Recall · Teacher
 
 “Do you remember, did the kid’s teacher help the kid?”
 
@@ -1770,7 +1915,7 @@ Expected check/practice answer: No.
 
 Reminder if needed: “Remember, the kid’s teacher did not help the kid. Do you remember, did the kid’s teacher help the kid?”
 
-### 172. Individual evaluation · Teacher
+### 184. Individual evaluation · Teacher
 
 “Do you think it was Mean or Not Mean that the kid’s teacher did NOT help the kid in the middle?”
 
@@ -1778,7 +1923,7 @@ Reminder if needed: “Remember, the kid’s teacher did not help the kid. Do yo
 
 Choices: Mean / Not Mean.
 
-### 173. Meanness strength · Teacher
+### 185. Meanness strength · Teacher
 
 *Only after “Mean” to Individual evaluation · Teacher.*
 
@@ -1790,7 +1935,7 @@ Display wording: “How mean do you think the kid’s teacher was for NOT helpin
 
 Choices: A teeny bit mean / A little bit mean / Very mean.
 
-### 174. Compare the helpers
+### 186. Compare the helpers
 
 “Who was meaner for not helping?”
 
@@ -1800,7 +1945,7 @@ Choices: The kid’s classmate / The kid’s teacher.
 
 *Exploratory comparison. Buttons follow the scene: the kid’s classmate left, the kid’s teacher right.*
 
-### 175. End of this session
+### 187. End of this session
 
 “That’s the end of our stories. Thank you!”
 

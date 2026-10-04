@@ -16,6 +16,11 @@
     screen(step,session,index){if(currentScreen!==step.id){screenTime=performance.now();currentScreen=step.id;emit('MARSHALL_SCREEN',{step_id:step.id,role_set:session.setId,story_index:step.storyIndex??null,step_index:index});}},
     answer(step,session,response,flags){
       const record={sequence:records.length,study_version:VERSION,role_set:session.setId,practice_mode:session.practiceMode,pairing_id:step.pairing?.id||null,pairing_label:step.pairing?.label||null,story_index:step.storyIndex??null,step_id:step.id,local_step_id:step.localId,phase:step.phase,measure:step.measure||null,proposed_wording:!!step.proposed,narration_script:[step.context,step.preface,step.text].filter(Boolean).join(' '),choices:step.choices||null,response,rt:Math.round(performance.now()-screenTime),expected:step.expected||step.point||null,accepted:!!flags.accepted,continued_after_reminder:!!flags.continuedAfterReminder,recorded_at:new Date().toISOString()};
+      if (step.relatedPrediction) {
+        record.source_prediction_step_id=step.relatedPrediction;
+        record.source_prediction_response=flags.relatedPredictionResponse??null;
+        record.confidence_ordinal=step.choices.indexOf(response);
+      }
       records.push(record);emit('MARSHALL_RESPONSE',{record:clone(record)});screenTime=performance.now();
     },
     reset(){records=[];screenTime=performance.now();currentScreen=null;completeSent=false;},
