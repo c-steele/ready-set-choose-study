@@ -7,7 +7,7 @@
   let childView=false,choiceConfirmation=null,correctFeedbackState=null,screenHeard=false;
   let session,steps,index=0,answers={},history=[],wrong=null,optionReader=null,downloadUrl=null;
   let elapsed=0,started=null,timerUsed=false,incomplete=false,completed=false;
-  let narrationRun=null,narrationEnabled=false,narrationPlaying=false,audioStartRequired=false,audioEverStarted=false;
+  let narrationRun=null,narrationEnabled=false,narrationPlaying=false,audioStartRequired=false,audioEverStarted=false,autoAdvanceTimer=null,advanceGeneration=0;
   const narration=window.ObligationNarration;
   const roleNames={woman:'Mom / sister set',man:'Dad / brother set',family:'Family set',all:'All three sets · review only'};
 
@@ -33,6 +33,28 @@
     needsConfirmation:(s,answer)=>!!s.confirmChoice&&!!s.choiceConfirmations?.[answer]
   };
   window.ObligationInteractionRules=interactionRules;
+  function isAutomaticStoryStep(s){return childView&&!s.choices&&!s.point&&!s.virtualType&&s.localId!=='end';}
+  function clearAutomaticAdvance(){advanceGeneration++;if(autoAdvanceTimer!==null){clearTimeout(autoAdvanceTimer);autoAdvanceTimer=null;}}
+  function scheduleAutomaticAdvance(s){
+    clearAutomaticAdvance();
+    if(!isAutomaticStoryStep(s))return;
+    const screenId=s.id,screenIndex=index,transitionToken=advanceGeneration;
+    autoAdvanceTimer=setTimeout(()=>{
+      if(advanceGeneration!==transitionToken)return;
+      autoAdvanceTimer=null;
+      if(childView&&index===screenIndex&&activeStep().id===screenId&&screenHeard&&!narrationPlaying&&!wrong&&!choiceConfirmation&&!correctFeedbackState&&!$('player').hidden)commit('Continue');
+    },650);
+  }
+  function pauseChildPlayback(){stopNarration();optionReader?.reset();$('narration-status').textContent='Paused. Tap Replay to continue.';}
+  // A native browser may reject audible autoplay until the first real gesture.
+  // Retry that pending recording from a tap anywhere on the story itself.
+  function enablePendingAudio(event){
+    if(!childView||!audioStartRequired||!event.isTrusted||event.target.closest?.('.child-replay,.child-stop'))return;
+    if(event.type==='keydown'&&!['Enter',' '].includes(event.key))return;
+    playChildNarration();
+  }
+  stage.addEventListener('pointerdown',enablePendingAudio);
+  stage.addEventListener('keydown',enablePendingAudio);
   function storyAccent(s){
     return s.pairing?.visualHex||'#f5b236';
   }
@@ -175,17 +197,16 @@
   function syncChildControls(){
     const replay=stage.querySelector('.child-replay'),stop=stage.querySelector('.child-stop');
     if(!replay)return;
-    const startGate=stage.querySelector('.audio-start-gate');
-    if(startGate)startGate.hidden=!childView||!audioStartRequired;
     stage.classList.toggle('awaiting-audio-start',childView&&audioStartRequired);
     const s=activeStep()||steps[0],mode=childAudioMode(s,!$('play-narration').disabled);
+    stage.classList.toggle('story-autoplay',isAutomaticStoryStep(s));
     replay.disabled=mode==='unavailable';
     replay.querySelector('.child-control-label').textContent=mode==='choices'?'Choices':narrationEnabled?'Replay':'Listen';
     replay.setAttribute('aria-label',mode==='choices'?'Listen to the choices':narrationEnabled?'Replay narration':'Listen to the narration');
     replay.title=mode==='choices'?'Hear only the answer choices':'Hear the narration';
-    stop.hidden=!narrationPlaying;
+    stop.hidden=!(narrationPlaying||autoAdvanceTimer!==null);
     const bubble=stage.querySelector('.child-helper-bubble');
-    bubble.textContent=audioStartRequired?'Tap to start!':narrationPlaying||stage.querySelector('.rating-answer:disabled')?'Listen and look!':s.point?'Tap '+actors(s).find(a=>a.id===s.point).description+'!':helperChoiceActors(s).length?'Tap a person!':s.choices?'Tap one!':s.localId==='end'?'All done!':'Listen and look!';
+    bubble.textContent=audioStartRequired?'Tap anywhere to hear!':narrationPlaying||stage.querySelector('.rating-answer:disabled')?'Listen and look!':s.point?'Tap '+actors(s).find(a=>a.id===s.point).description+'!':helperChoiceActors(s).length?'Tap a person!':s.choices?'Tap one!':s.localId==='end'?'All done!':'Listen and look!';
     if(s.localId==='end')stage.querySelectorAll('.continue-answer').forEach(button=>{button.textContent='➜';button.setAttribute('aria-label','Finish');});
   }
   function setChildView(value){
@@ -194,14 +215,14 @@
     const u=new URL(location.href);if(value)u.searchParams.set('view','child');else u.searchParams.delete('view');
     window.history.replaceState(null,'',u);syncChildControls();window.scrollTo(0,0);if(value&&!$('player').hidden)playNarration();
   }
-  function childFooter(s){return `<div class="child-session-footer"><div class="child-helper" aria-hidden="true"><span class="child-helper-face"><i></i></span><span class="child-helper-bubble">Listen and look!</span></div><div class="child-audio-controls"><button class="child-replay" type="button"><span class="child-control-symbol" aria-hidden="true">▶</span><span class="child-control-label">Listen</span></button>${!s.choices&&!s.point&&!s.virtualType?'<div class="answers child-continue"><button class="continue-answer" data-answer="0" aria-label="Next">➜</button></div>':''}<button class="child-stop" type="button" hidden>Stop</button></div></div>`;}
+  function childFooter(s){return `<div class="child-session-footer"><div class="child-helper" aria-hidden="true"><span class="child-helper-face"><i></i></span><span class="child-helper-bubble">Listen and look!</span></div><div class="child-audio-controls"><button class="child-replay" type="button"><span class="child-control-symbol" aria-hidden="true">▶</span><span class="child-control-label">Listen</span></button>${!s.choices&&!s.point&&!s.virtualType?'<div class="answers child-continue"><button class="continue-answer" data-answer="0" aria-label="Next">➜</button></div>':''}<button class="child-stop" type="button" hidden>Pause</button></div></div>`;}
   function narrationIds(s){
     const map=narration.screenFor(s);
     if(wrong&&map.reminder)return [map.reminder,...(s.rereadAfterReminder?[map.prompt]:[])].filter(Boolean);
     return [map.prompt].filter(Boolean);
   }
   function gateNarration(locked){stage.querySelectorAll('[data-answer],[data-point],[data-read-options],#continue-check').forEach(b=>b.disabled=locked);}
-  function stopNarration(){narrationRun?.cancel();narrationRun=null;narration.stop();narrationPlaying=false;clearSpokenCues();gateNarration(!screenHeard);$('stop-narration').disabled=true;syncChildControls();}
+  function stopNarration(){clearAutomaticAdvance();narrationRun?.cancel();narrationRun=null;narration.stop();narrationPlaying=false;clearSpokenCues();gateNarration(!screenHeard);$('stop-narration').disabled=true;syncChildControls();}
   function narrationStatus(){
     const s=activeStep(),ids=[...narrationIds(s),...(!wrong&&s.choices&&!embeddedChoices(s)?narration.screenFor(s).options:[])],ready=ids.length>0&&ids.every(id=>narration.clipsById[id]?.src);
     $('play-narration').textContent='Play narration';$('play-narration').disabled=!ready;$('stop-narration').disabled=!narrationPlaying;
@@ -221,8 +242,8 @@
       onClipStart(){if(activeStep().id!==screenId)return;audioEverStarted=true;audioStartRequired=false;syncChildControls();},
       onClipTime(id,clipIndex,seconds){if(activeStep().id!==screenId)return;if(!clipSpans.has(id))clipSpans.set(id,spokenCueSpans(s,id));showSpokenCues(clipSpans.get(id),seconds);},
       onClipClear:clearSpokenCues,
-      onEnd(){if(activeStep().id!==screenId)return;narrationRun=null;clearSpokenCues();if(s.virtualType==='correct-feedback'){const answer=correctFeedbackState.answer;correctFeedbackState=null;commit(answer);return;}if(s.choices&&!embeddedChoices(s)){if(optionReader?.read())return;narrationPlaying=false;gateNarration(true);$('narration-status').textContent='Choice audio is not connected yet. Try Replay.';}else{narrationPlaying=false;screenHeard=true;optionReader?.ready();gateNarration(false);$('narration-status').textContent='Narration finished.';}$('stop-narration').disabled=true;syncChildControls();},
-      onError(error){if(activeStep().id!==screenId)return;audioStartRequired=error?.code==='audio-blocked'&&!audioEverStarted;narrationRun=null;narrationPlaying=false;screenHeard=false;clearSpokenCues();gateNarration(true);$('stop-narration').disabled=true;$('narration-status').textContent='Tap the play button to hear this screen.';syncChildControls();}
+      onEnd(){if(activeStep().id!==screenId)return;narrationRun=null;clearSpokenCues();if(s.virtualType==='correct-feedback'){const answer=correctFeedbackState.answer;correctFeedbackState=null;commit(answer);return;}if(s.choices&&!embeddedChoices(s)){if(optionReader?.read())return;narrationPlaying=false;gateNarration(true);$('narration-status').textContent='Choice audio is not connected yet. Try Replay.';}else{narrationPlaying=false;screenHeard=true;optionReader?.ready();gateNarration(false);$('narration-status').textContent='Narration finished.';scheduleAutomaticAdvance(s);}$('stop-narration').disabled=true;syncChildControls();},
+      onError(error){if(activeStep().id!==screenId)return;audioStartRequired=error?.code==='audio-blocked'&&!audioEverStarted;narrationRun=null;narrationPlaying=false;screenHeard=false;clearSpokenCues();gateNarration(true);$('stop-narration').disabled=true;$('narration-status').textContent=audioStartRequired&&childView?'Your browser needs one tap on the story to allow sound.':'Audio could not play. Tap Replay to try again.';syncChildControls();}
     });
   }
   function actors(s){return s.pairing?[s.pairing.recipient,...s.pairing.helpers]:[];}
@@ -304,10 +325,9 @@
     stage.dataset.screenKind=s.visual?'illustrated-practice':s.image?'story':'practice';
     stage.dataset.responseFormat=s.optionActors?'forced-choice':s.point?'character':s.choices?'check':'continue';
     stage.dataset.responseKind=s.choices?.length===3?'scale':s.point?'character':s.choices?'binary':'continue';
-    stage.innerHTML=prompt(s)+scene(s,true)+feedback+options+'<div class="audio-start-gate" hidden><button class="audio-start-button" type="button" aria-label="Start narration"><span aria-hidden="true">▶</span><strong>Let’s listen!</strong></button></div>'+childFooter(s);
-    stage.querySelector('.audio-start-button').addEventListener('click',playChildNarration);
+    stage.innerHTML=prompt(s)+scene(s,true)+feedback+options+childFooter(s);
     stage.querySelector('.child-replay').addEventListener('click',playChildNarration);
-    stage.querySelector('.child-stop').addEventListener('click',()=>{stopNarration();optionReader?.reset();$('narration-status').textContent='Audio stopped. Tap Replay to hear this screen.';});
+    stage.querySelector('.child-stop').addEventListener('click',pauseChildPlayback);
     $('step-note').innerHTML=`${s.proposed?'<strong>Proposed wording · </strong>':''}${esc(branchNote(s)+(s.note||'Adapted from Marshall Study 1.'))}`;
     stage.querySelectorAll('[data-answer]').forEach(b=>b.addEventListener('click',()=>respond((s.choices||['Continue'])[Number(b.dataset.answer)])));
     stage.querySelectorAll('[data-point]').forEach(b=>b.addEventListener('click',()=>respond(b.dataset.point)));
@@ -368,11 +388,13 @@
   function updateOverview(){
     const t=session.stats;
     const recordedTiming=window.ObligationNarrationTiming?.get?.(session.setId,session.practiceMode);
-    const estimatedMinutes=recordedTiming?.estimatedSessionMinutesIncludingResponses||t.minutes;
+    const automaticAdvanceSeconds=session.steps.filter(s=>!s.choices&&!s.point&&!s.virtualType&&s.localId!=='end').length*0.65;
+    const baseMinutes=recordedTiming?.estimatedSessionMinutesIncludingResponses||t.minutes;
+    const estimatedMinutes={min:baseMinutes.min+automaticAdvanceSeconds/60,max:baseMinutes.max+automaticAdvanceSeconds/60};
     $('session-subtitle').textContent=`${roleNames[session.setId]} · ${t.storyCount} stories · Sadness · Plain backgrounds`;
     $('session-warning').textContent=session.isAllReview?'All 18 story instances are shown for review. Shared pairings recur across sets; this is not the six-story session one child would receive.':'One child would see one set of six pairings. The order below is fixed for review.';
     $('session-stats').innerHTML=`<div><strong>${t.storyCount}</strong><span>stories</span></div><div><strong>${t.substantive}</strong><span>main judgments</span></div><div><strong>${t.responses.min}–${t.responses.max}</strong><span>question responses</span></div><div><strong>~${Math.round(estimatedMinutes.min)}–${Math.round(estimatedMinutes.max)} min</strong><span>illustrative estimate</span></div>`;
-    $('timing-details').textContent=`${t.screens.min}–${t.screens.max} screens on the correct-practice path. Includes ${t.checks} identity/recall checks, ${t.practiceResponses} practice selections, and three main forced-choice judgments per story. Includes meanness strength ratings and individual helper evaluations. ${recordedTiming?'The recordings and programmed pauses total '+recordedTiming.playbackMinutes.min.toFixed(1)+'–'+recordedTiming.playbackMinutes.max.toFixed(1)+' minutes. The estimate adds 3–5 seconds per response.':'Timing assumes reading aloud at 110–130 words/minute plus 3–5 seconds per selection.'} It is not measured child-session time; breaks, corrections and control/navigation time can add to it.`;
+    $('timing-details').textContent=`${t.screens.min}–${t.screens.max} screens on the correct-practice path. Includes ${t.checks} identity/recall checks, ${t.practiceResponses} practice selections, and three main forced-choice judgments per story. Includes meanness strength ratings and individual helper evaluations. ${recordedTiming?'The recordings and programmed pauses total '+recordedTiming.playbackMinutes.min.toFixed(1)+'–'+recordedTiming.playbackMinutes.max.toFixed(1)+' minutes. The estimate adds 3–5 seconds per response.':'Timing assumes reading aloud at 110–130 words/minute plus 3–5 seconds per selection.'} The automatic story transitions add about ${Math.round(automaticAdvanceSeconds)} seconds, included in the illustrative session estimate. It is not measured child-session time; breaks, corrections and control/navigation time can add to it.`;
     $('practice-note').textContent=session.practiceMode==='each'?'The brief HAVE TO practice repeats in every story.':'The brief HAVE TO practice appears in the first story only. This shorter draft setting is an adaptation.';
     $('pairing-list').innerHTML=session.pairings.map((p,i)=>`<button class="pairing-tile" data-story="${p.id}"><span class="tile-number">${i+1}</span><span class="tile-picture"><img src="${esc(p.images.need)}" alt="${esc(p.label)}; ${esc(p.recipient.reference)} is sad."></span><strong>${esc(p.label)}</strong><span>${p.recipient.role==='KID'?'Kid is sad':esc(p.recipient.label.charAt(0).toUpperCase()+p.recipient.label.slice(1))+' is sad'}</span></button>`).join('');
     $('pairing-list').querySelectorAll('[data-story]').forEach(b=>b.addEventListener('click',()=>goTo(steps.findIndex(s=>s.pairing?.id===b.dataset.story))));
