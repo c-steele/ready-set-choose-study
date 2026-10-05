@@ -30,26 +30,24 @@
     if(!shouldLookAway(step))return '';
     const geometry=eyesForPairing(step.pairing);
     if(!geometry)return '';
-    const recipientCenter=({left:320,middle:960,right:1600})[step.pairing.recipient.side]||960;
     const source=step.pairing.images.need;
-    const prefix='look-away-'+String(step.id||step.pairing.id).replace(/[^a-z\d-]/gi,'-');
+    const prefix='look-down-'+String(step.id||step.pairing.id).replace(/[^a-z\d-]/gi,'-');
     const pupils=[];
     for(const helper of step.pairing.helpers){
       for(const [eyeIndex,eye] of geometry[helper.id].entries()){
         const [cx,cy,radius]=eye.white,[px,py,pupilRadius]=eye.pupil;
-        const outward=cx<recipientCenter?-1:1;
-        const dy=py-cy;
-        const safeHorizontal=Math.sqrt(Math.max(0,(radius-pupilRadius-1.25)**2-dy**2));
-        const offset=Math.min(Math.max(Math.abs(px-cx),radius*.25),safeHorizontal);
-        const targetX=cx+outward*offset,delta=targetX-px;
+        // Match the second nothelp.key reference: centered, downward pupils.
+        // Leave a small white margin so the copied pupil stays within its eye.
+        const targetX=cx,targetY=cy+Math.max(0,radius-pupilRadius-1.25);
+        const deltaX=targetX-px,deltaY=targetY-py;
         const id=prefix+'-'+helper.id+'-'+eyeIndex;
         // Erase only the old pupil within its existing white eye. Copy the
         // original pupil pixels, including their shape and antialiasing, to the
-        // other side. Two circle clips keep all changes inside that same eye;
+        // downward position. Two circle clips keep changes inside that same eye;
         // no body, mouth, sadness mark, role label, or source image is replaced.
-        pupils.push(`<g class="look-away-eye" data-look-away-helper="${esc(helper.id)}" data-away-direction="${outward<0?'left':'right'}">
-          <defs><clipPath id="${id}-eye"><circle cx="${cx}" cy="${cy-120}" r="${radius}"/></clipPath><clipPath id="${id}-pupil"><circle cx="${targetX}" cy="${py-120}" r="${pupilRadius+.75}"/></clipPath></defs>
-          <g clip-path="url(#${id}-eye)"><circle cx="${cx}" cy="${cy-120}" r="${radius}" fill="#fff"/><image href="${esc(source)}" x="${delta}" y="-120" width="1920" height="1080" preserveAspectRatio="none" clip-path="url(#${id}-pupil)"/></g>
+        pupils.push(`<g class="look-down-eye" data-look-down-helper="${esc(helper.id)}" data-gaze-direction="down">
+          <defs><clipPath id="${id}-eye"><circle cx="${cx}" cy="${cy-120}" r="${radius}"/></clipPath><clipPath id="${id}-pupil"><circle cx="${targetX}" cy="${targetY-120}" r="${pupilRadius+.75}"/></clipPath></defs>
+          <g clip-path="url(#${id}-eye)"><circle cx="${cx}" cy="${cy-120}" r="${radius}" fill="#fff"/><image href="${esc(source)}" x="${deltaX}" y="${deltaY-120}" width="1920" height="1080" preserveAspectRatio="none" clip-path="url(#${id}-pupil)"/></g>
         </g>`);
       }
     }
