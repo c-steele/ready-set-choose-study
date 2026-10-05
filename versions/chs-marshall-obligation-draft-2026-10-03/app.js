@@ -25,7 +25,7 @@
         context:null,preface:null,confirmChoice:false,confirmationActorId:item.actorId,
         nonhelpingScene:/^(compare|evaluation|overall|recall)/.test(base.localId)};
     }
-    return base;
+    return window.ObligationSession.resolvePredictionConfidence(base,answers);
   }
   const interactionRules={
     isCorrect:(s,answer)=>!((s.expected&&answer!==s.expected)||(s.point&&answer!==s.point)),
@@ -366,7 +366,7 @@
     }
     commit(answer);
   }
-  function commit(answer){chsBridge?.answer(steps[index],session,answer,{accepted:true,continuedAfterReminder:!!wrong,relatedPredictionResponse:steps[index].relatedPrediction?answers[steps[index].relatedPrediction]??null:null});if(timerUsed&&started===null)incomplete=true;for(let n=index;n<steps.length;n++)delete answers[steps[n].id];answers[steps[index].id]=answer;history.push(index);wrong=null;choiceConfirmation=null;correctFeedbackState=null;index=Math.min(session.nextIndex(index,answers),steps.length-1);render();}
+  function commit(answer){chsBridge?.answer(window.ObligationSession.resolvePredictionConfidence(steps[index],answers),session,answer,{accepted:true,continuedAfterReminder:!!wrong,relatedPredictionResponse:steps[index].relatedPrediction?answers[steps[index].relatedPrediction]??null:null});if(timerUsed&&started===null)incomplete=true;for(let n=index;n<steps.length;n++)delete answers[steps[n].id];answers[steps[index].id]=answer;history.push(index);wrong=null;choiceConfirmation=null;correctFeedbackState=null;index=Math.min(session.nextIndex(index,answers),steps.length-1);render();}
   function goTo(target){markBrowse();history.push(index);index=target;wrong=null;choiceConfirmation=null;correctFeedbackState=null;showBoard(false);render();stage.scrollIntoView({block:'nearest'});}
   function showBoard(value){
     if(value&&childView)setChildView(false);
@@ -378,7 +378,8 @@
   function cardExtraScript(s){
     const feedback=s.correctFeedback?`<p class="card-note"><strong>After a correct answer:</strong> “${esc(s.correctFeedback)}”</p><p class="card-note"><strong>After an incorrect answer:</strong> “${esc(s.incorrectFeedback)}” Then reread the question; the correct answer is required.</p>`:'';
     const confirmations=s.choiceConfirmations?Object.entries(s.choiceConfirmations).map(([choice,item])=>`<p class="card-note"><strong>After choosing ${esc(choice)}:</strong> “${esc(item.text)}” Yes keeps this choice; No returns to the original question.</p>`).join(''):'';
-    return feedback||confirmations?`<div class="card-flow-notes">${feedback}${confirmations}</div>`:'';
+    const predictions=s.predictionPrompts?Object.entries(s.predictionPrompts).map(([response,text])=>`<p class="card-note"><strong>After ${esc(response)}:</strong> “${esc(text)}”</p>`).join(''):'';
+    return feedback||confirmations||predictions?`<div class="card-flow-notes">${feedback}${confirmations}${predictions}</div>`:'';
   }
   function card(s,i){return `<article class="story-card${!s.image&&!s.visual?' message-slide':''}" style="--story-accent:${esc(storyAccent(s))}"><h3 class="card-heading">${String(i+1).padStart(2,'0')} · ${esc(s.phase)}${s.proposed?' · PROPOSED WORDING':''}</h3>${prompt(s)}${scene(s)}${s.choices?.length===3?scaleOptions(s):`<p class="card-options">${s.point?'Tap '+esc(actors(s).find(a=>a.id===s.point).description):s.choices?s.choices.map(esc).join(' &nbsp; / &nbsp; '):'Narration'}</p>`}${s.when||s.note||s.expected||s.point?`<p class="card-note">${esc(branchNote(s)+(s.note||''))}${s.expected?' Check answer: '+esc(s.expected)+'.':''}${s.reminder?' Reminder if needed: “'+esc(s.reminder)+'”':''}</p>`:''}${cardExtraScript(s)}</article>`;}
   function buildBoard(){

@@ -18,8 +18,8 @@
   "summary": {
     "storyCount": 18,
     "screenCount": 649,
-    "clipCount": 236,
-    "readyCount": 236,
+    "clipCount": 264,
+    "readyCount": 264,
     "pendingCount": 0,
     "emphasisPendingCount": 32,
     "pauseAdjustedReadyCount": 0,
@@ -39,7 +39,10 @@
     "requiredConfirmationScreensPerCorrectPath": 18,
     "requiredCorrectFeedbackScreensPerCorrectPath": 36,
     "childFlowRevisionNewUniqueCount": 32,
-    "originalContinuousRestoredReadyCount": 1
+    "originalContinuousRestoredReadyCount": 1,
+    "answerSpecificConfidenceUniqueClipCount": 28,
+    "answerSpecificConfidenceScreenCount": 36,
+    "answerSpecificConfidenceRouteCount": 72
   },
   "notes": [
     "One clip per complete prompt, reminder, or individual response option. Repeated text shares one recording.",
@@ -52,7 +55,6 @@
     "Explicit no-one-helped wording and complete helper/recipient evaluation wording are draft adaptations requested for clarity.",
     "The opening now says \"Oh look! Here is a kid.\" in all 18 stories. nr_268 is a complete native Evelyn Soft recording with strict full-word recognition and matching cues; the old some-people recording is inactive.",
     "The revised kid sadness prompt nr_269 is now a complete native Evelyn Soft recording with strict full-word recognition and matching cues. The retired nr_008 recording is inactive.",
-    "Prediction confidence is proposed wording added to this adaptation: How sure are you? Not sure / A little sure / Very sure. nr_270–nr_273 are verified complete native Evelyn Soft recordings, and are not claimed as Marshall source wording.",
     "The adapted teacher-practice strength prompt nr_274 reiterates the teacher context and uses exact existing Evelyn speech joined with a 300 ms pause. A fresh full NaturalReaders prosody recording remains pending; this is a documented local audio derivative.",
     "Obligation strength narration now states each role once within the question, matching the caption. nr_275–nr_284 are verified local derivatives of existing Evelyn speech; obsolete standalone role headings are removed. Original files are retained, cue hashes and timings follow the new assets, and native full-question prosody replacements remain pending.",
     "Each story now has two outcome screens: a standalone No one helped sentence, then one complete sentence for each helper who did NOT help and a repeated No one helped sentence at the end. No question is added; one six-story session gains six brief screens.",
@@ -68,7 +70,8 @@
     "October4 reminder import:13 complete native article-pronunciation paragraph files passed strict unprompted full-file recognition of the canonical script, including every The. Native input spells those weak articles phonetically; this does not change the recognition normalization or canonical caption. File bytes are unchanged, cues/hash verified. nr_320 is now a complete native Thee-input recording with strict canonical The recognition.",
     "October4 reminder repair:13 complete native article-pronunciation files307–319 passed unprompted full-file canonical transcripts, including every The. Actual nativeInputText is retained in provenance; phonetic Thuh is not normalized to The by the verifier. Files copied unchanged with matching hashes/cues. nr_320 is now a complete native Thee-input recording with strict canonical The recognition.",
     "October4 reminder import:13 complete native article-pronunciation paragraph files passed strict unprompted full-file recognition of the canonical script, including every The. Native input spells those weak articles phonetically; this does not change the recognition normalization or canonical caption. File bytes are unchanged, cues/hash verified. nr_320 is now a complete native Thee-input recording with strict canonical The recognition.",
-    "Teacher reminder320 now uses one complete native Thee-input paragraph. Actual whole-file unprompted recognition returns the canonical The articles, both helper sentences, and both No one sentences exactly; no input spelling substitution is applied to recognition. Audit-only export title is never mapped to the study."
+    "Teacher reminder320 now uses one complete native Thee-input paragraph. Actual whole-file unprompted recognition returns the canonical The articles, both helper sentences, and both No one sentences exactly; no input spelling substitution is applied to recognition. Audit-only export title is never mapped to the study.",
+    "October5 answer-specific confidence update: each Yes/No prediction is followed by the full statement, will help after Yes or will NOT help after No. The28complete native EvelynSoft0.90x recordings cover72branches across36confidence screens; all articles and complete spoken word sequences passed independent recognition and valid hash-bound word cues. Three existing confidence options remain unchanged. nr_270 is retained only for an unanswered researcher preview; accepted child predictions always route to the matching full recording. The confidence wording remains a proposed adaptation, not recovered Marshall source wording."
   ],
   "clips": [
     {
@@ -21213,6 +21216,2298 @@
         "decodeVerified": true,
         "copiedWithoutReencoding": true
       }
+    },
+    {
+      "id": "nr_confidence_001",
+      "text": "How sure are you that the kid’s teacher will help the kid?",
+      "src": "assets/narration/nr_confidence_001.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "woman-mom-teacher:predict-helper1-confidence",
+          "part": "prompt",
+          "predictionResponse": "Yes",
+          "proposedWording": true
+        },
+        {
+          "stepId": "woman-teacher-friend:predict-helper1-confidence",
+          "part": "prompt",
+          "predictionResponse": "Yes",
+          "proposedWording": true
+        },
+        {
+          "stepId": "woman-teacher-classmate:predict-helper2-confidence",
+          "part": "prompt",
+          "predictionResponse": "Yes",
+          "proposedWording": true
+        },
+        {
+          "stepId": "man-dad-teacher:predict-helper1-confidence",
+          "part": "prompt",
+          "predictionResponse": "Yes",
+          "proposedWording": true
+        },
+        {
+          "stepId": "man-teacher-friend:predict-helper1-confidence",
+          "part": "prompt",
+          "predictionResponse": "Yes",
+          "proposedWording": true
+        },
+        {
+          "stepId": "man-teacher-classmate:predict-helper2-confidence",
+          "part": "prompt",
+          "predictionResponse": "Yes",
+          "proposedWording": true
+        },
+        {
+          "stepId": "family-teacher-classmate:predict-helper2-confidence",
+          "part": "prompt",
+          "predictionResponse": "Yes",
+          "proposedWording": true
+        }
+      ],
+      "sha256": "6ccf9af2c4fc75aa9f629d84072aa1c4b16814c89f1f27fda8079362d50ed067",
+      "bytes": 151555,
+      "durationSeconds": 3.78775,
+      "provenance": {
+        "exportIndex": 1,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/native-source/numbered-clips/1.How_sure_are_you_that_the_kid’.mp3",
+        "sourceSha256": "6ccf9af2c4fc75aa9f629d84072aa1c4b16814c89f1f27fda8079362d50ed067",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "2b35eb9d43e78481ba2da3145fcf927a362259fc822b0a1e1762d514cfe67883",
+        "recordingIndexSha256": "c67f8c63e76f0dc61f6e44ad2ffbecc0ea77d48fa5cdc6333d21ad3d2ce2c5a1",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Agent observed exact28paragraph NR project at EvelynSoft0.90x180WPM0pause and320MP3SeparateIndexSegment export; audio bytes preserved",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 3.78775,
+        "uses": [
+          {
+            "pairingId": "woman-mom-teacher",
+            "actorId": "helper1",
+            "answer": "Yes",
+            "stepId": "woman-mom-teacher:predict-helper1-confidence"
+          },
+          {
+            "pairingId": "woman-teacher-friend",
+            "actorId": "helper1",
+            "answer": "Yes",
+            "stepId": "woman-teacher-friend:predict-helper1-confidence"
+          },
+          {
+            "pairingId": "woman-teacher-classmate",
+            "actorId": "helper2",
+            "answer": "Yes",
+            "stepId": "woman-teacher-classmate:predict-helper2-confidence"
+          },
+          {
+            "pairingId": "man-dad-teacher",
+            "actorId": "helper1",
+            "answer": "Yes",
+            "stepId": "man-dad-teacher:predict-helper1-confidence"
+          },
+          {
+            "pairingId": "man-teacher-friend",
+            "actorId": "helper1",
+            "answer": "Yes",
+            "stepId": "man-teacher-friend:predict-helper1-confidence"
+          },
+          {
+            "pairingId": "man-teacher-classmate",
+            "actorId": "helper2",
+            "answer": "Yes",
+            "stepId": "man-teacher-classmate:predict-helper2-confidence"
+          },
+          {
+            "pairingId": "family-teacher-classmate",
+            "actorId": "helper2",
+            "answer": "Yes",
+            "stepId": "family-teacher-classmate:predict-helper2-confidence"
+          }
+        ],
+        "nativeInputText": "How sure are you that the kid’s teacher will help the kid?",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "fullProjectTextVerified": true,
+        "decodeVerified": true,
+        "verifiedSourceAuditRecord": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/processed/verified-native-recordings.json",
+        "installedFileBytesMatchVerifiedSource": true
+      }
+    },
+    {
+      "id": "nr_confidence_002",
+      "text": "How sure are you that the kid’s teacher will NOT help the kid?",
+      "src": "assets/narration/nr_confidence_002.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "woman-mom-teacher:predict-helper1-confidence",
+          "part": "prompt",
+          "predictionResponse": "No",
+          "proposedWording": true
+        },
+        {
+          "stepId": "woman-teacher-friend:predict-helper1-confidence",
+          "part": "prompt",
+          "predictionResponse": "No",
+          "proposedWording": true
+        },
+        {
+          "stepId": "woman-teacher-classmate:predict-helper2-confidence",
+          "part": "prompt",
+          "predictionResponse": "No",
+          "proposedWording": true
+        },
+        {
+          "stepId": "man-dad-teacher:predict-helper1-confidence",
+          "part": "prompt",
+          "predictionResponse": "No",
+          "proposedWording": true
+        },
+        {
+          "stepId": "man-teacher-friend:predict-helper1-confidence",
+          "part": "prompt",
+          "predictionResponse": "No",
+          "proposedWording": true
+        },
+        {
+          "stepId": "man-teacher-classmate:predict-helper2-confidence",
+          "part": "prompt",
+          "predictionResponse": "No",
+          "proposedWording": true
+        },
+        {
+          "stepId": "family-teacher-classmate:predict-helper2-confidence",
+          "part": "prompt",
+          "predictionResponse": "No",
+          "proposedWording": true
+        }
+      ],
+      "sha256": "601934c98d6ccd9c6a808227155a2ce5f1fcd0fd0eed37424f7006453908fb53",
+      "bytes": 163049,
+      "durationSeconds": 4.0751,
+      "provenance": {
+        "exportIndex": 2,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/native-source/numbered-clips/2.How_sure_are_you_that_the_kid’.mp3",
+        "sourceSha256": "601934c98d6ccd9c6a808227155a2ce5f1fcd0fd0eed37424f7006453908fb53",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "2b35eb9d43e78481ba2da3145fcf927a362259fc822b0a1e1762d514cfe67883",
+        "recordingIndexSha256": "c67f8c63e76f0dc61f6e44ad2ffbecc0ea77d48fa5cdc6333d21ad3d2ce2c5a1",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Agent observed exact28paragraph NR project at EvelynSoft0.90x180WPM0pause and320MP3SeparateIndexSegment export; audio bytes preserved",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 4.075125,
+        "uses": [
+          {
+            "pairingId": "woman-mom-teacher",
+            "actorId": "helper1",
+            "answer": "No",
+            "stepId": "woman-mom-teacher:predict-helper1-confidence"
+          },
+          {
+            "pairingId": "woman-teacher-friend",
+            "actorId": "helper1",
+            "answer": "No",
+            "stepId": "woman-teacher-friend:predict-helper1-confidence"
+          },
+          {
+            "pairingId": "woman-teacher-classmate",
+            "actorId": "helper2",
+            "answer": "No",
+            "stepId": "woman-teacher-classmate:predict-helper2-confidence"
+          },
+          {
+            "pairingId": "man-dad-teacher",
+            "actorId": "helper1",
+            "answer": "No",
+            "stepId": "man-dad-teacher:predict-helper1-confidence"
+          },
+          {
+            "pairingId": "man-teacher-friend",
+            "actorId": "helper1",
+            "answer": "No",
+            "stepId": "man-teacher-friend:predict-helper1-confidence"
+          },
+          {
+            "pairingId": "man-teacher-classmate",
+            "actorId": "helper2",
+            "answer": "No",
+            "stepId": "man-teacher-classmate:predict-helper2-confidence"
+          },
+          {
+            "pairingId": "family-teacher-classmate",
+            "actorId": "helper2",
+            "answer": "No",
+            "stepId": "family-teacher-classmate:predict-helper2-confidence"
+          }
+        ],
+        "nativeInputText": "How sure are you that the kid’s teacher will not help the kid?",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "fullProjectTextVerified": true,
+        "decodeVerified": true,
+        "verifiedSourceAuditRecord": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/processed/verified-native-recordings.json",
+        "installedFileBytesMatchVerifiedSource": true
+      }
+    },
+    {
+      "id": "nr_confidence_003",
+      "text": "How sure are you that the kid’s mom will help the kid?",
+      "src": "assets/narration/nr_confidence_003.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "woman-mom-teacher:predict-helper2-confidence",
+          "part": "prompt",
+          "predictionResponse": "Yes",
+          "proposedWording": true
+        },
+        {
+          "stepId": "woman-mom-sister:predict-helper1-confidence",
+          "part": "prompt",
+          "predictionResponse": "Yes",
+          "proposedWording": true
+        },
+        {
+          "stepId": "family-mom-dad:predict-helper2-confidence",
+          "part": "prompt",
+          "predictionResponse": "Yes",
+          "proposedWording": true
+        }
+      ],
+      "sha256": "a40ff34c3617a922998087a47e9225a583bf1c1354a54935a566635ea8f99026",
+      "bytes": 146330,
+      "durationSeconds": 3.657125,
+      "provenance": {
+        "exportIndex": 3,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/native-source/numbered-clips/3.How_sure_are_you_that_the_kid’.mp3",
+        "sourceSha256": "a40ff34c3617a922998087a47e9225a583bf1c1354a54935a566635ea8f99026",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "2b35eb9d43e78481ba2da3145fcf927a362259fc822b0a1e1762d514cfe67883",
+        "recordingIndexSha256": "c67f8c63e76f0dc61f6e44ad2ffbecc0ea77d48fa5cdc6333d21ad3d2ce2c5a1",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Agent observed exact28paragraph NR project at EvelynSoft0.90x180WPM0pause and320MP3SeparateIndexSegment export; audio bytes preserved",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 3.657125,
+        "uses": [
+          {
+            "pairingId": "woman-mom-teacher",
+            "actorId": "helper2",
+            "answer": "Yes",
+            "stepId": "woman-mom-teacher:predict-helper2-confidence"
+          },
+          {
+            "pairingId": "woman-mom-sister",
+            "actorId": "helper1",
+            "answer": "Yes",
+            "stepId": "woman-mom-sister:predict-helper1-confidence"
+          },
+          {
+            "pairingId": "family-mom-dad",
+            "actorId": "helper2",
+            "answer": "Yes",
+            "stepId": "family-mom-dad:predict-helper2-confidence"
+          }
+        ],
+        "nativeInputText": "How sure are you that the kid’s mom will help the kid?",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "fullProjectTextVerified": true,
+        "decodeVerified": true,
+        "verifiedSourceAuditRecord": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/processed/verified-native-recordings.json",
+        "installedFileBytesMatchVerifiedSource": true
+      }
+    },
+    {
+      "id": "nr_confidence_004",
+      "text": "How sure are you that the kid’s mom will NOT help the kid?",
+      "src": "assets/narration/nr_confidence_004.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "woman-mom-teacher:predict-helper2-confidence",
+          "part": "prompt",
+          "predictionResponse": "No",
+          "proposedWording": true
+        },
+        {
+          "stepId": "woman-mom-sister:predict-helper1-confidence",
+          "part": "prompt",
+          "predictionResponse": "No",
+          "proposedWording": true
+        },
+        {
+          "stepId": "family-mom-dad:predict-helper2-confidence",
+          "part": "prompt",
+          "predictionResponse": "No",
+          "proposedWording": true
+        }
+      ],
+      "sha256": "1d65e0d759fb75435911434cd1198fa63f3410ccd59d9a1ed76fd8d142bd4448",
+      "bytes": 156779,
+      "durationSeconds": 3.91835,
+      "provenance": {
+        "exportIndex": 4,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/native-source/numbered-clips/4.How_sure_are_you_that_the_kid’.mp3",
+        "sourceSha256": "1d65e0d759fb75435911434cd1198fa63f3410ccd59d9a1ed76fd8d142bd4448",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "2b35eb9d43e78481ba2da3145fcf927a362259fc822b0a1e1762d514cfe67883",
+        "recordingIndexSha256": "c67f8c63e76f0dc61f6e44ad2ffbecc0ea77d48fa5cdc6333d21ad3d2ce2c5a1",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Agent observed exact28paragraph NR project at EvelynSoft0.90x180WPM0pause and320MP3SeparateIndexSegment export; audio bytes preserved",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 3.918375,
+        "uses": [
+          {
+            "pairingId": "woman-mom-teacher",
+            "actorId": "helper2",
+            "answer": "No",
+            "stepId": "woman-mom-teacher:predict-helper2-confidence"
+          },
+          {
+            "pairingId": "woman-mom-sister",
+            "actorId": "helper1",
+            "answer": "No",
+            "stepId": "woman-mom-sister:predict-helper1-confidence"
+          },
+          {
+            "pairingId": "family-mom-dad",
+            "actorId": "helper2",
+            "answer": "No",
+            "stepId": "family-mom-dad:predict-helper2-confidence"
+          }
+        ],
+        "nativeInputText": "How sure are you that the kid’s mom will not help the kid?",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "fullProjectTextVerified": true,
+        "decodeVerified": true,
+        "verifiedSourceAuditRecord": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/processed/verified-native-recordings.json",
+        "installedFileBytesMatchVerifiedSource": true
+      }
+    },
+    {
+      "id": "nr_confidence_005",
+      "text": "How sure are you that the kid’s sister will help the kid?",
+      "src": "assets/narration/nr_confidence_005.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "woman-sister-friend:predict-helper1-confidence",
+          "part": "prompt",
+          "predictionResponse": "Yes",
+          "proposedWording": true
+        },
+        {
+          "stepId": "woman-mom-sister:predict-helper2-confidence",
+          "part": "prompt",
+          "predictionResponse": "Yes",
+          "proposedWording": true
+        },
+        {
+          "stepId": "family-sister-brother:predict-helper1-confidence",
+          "part": "prompt",
+          "predictionResponse": "Yes",
+          "proposedWording": true
+        }
+      ],
+      "sha256": "fe1e883705a712cc3300e26f8dc7896a6d3c3e098e22de4e5c73323bc773f4fb",
+      "bytes": 149465,
+      "durationSeconds": 3.7355,
+      "provenance": {
+        "exportIndex": 5,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/native-source/numbered-clips/5.How_sure_are_you_that_the_kid’.mp3",
+        "sourceSha256": "fe1e883705a712cc3300e26f8dc7896a6d3c3e098e22de4e5c73323bc773f4fb",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "2b35eb9d43e78481ba2da3145fcf927a362259fc822b0a1e1762d514cfe67883",
+        "recordingIndexSha256": "c67f8c63e76f0dc61f6e44ad2ffbecc0ea77d48fa5cdc6333d21ad3d2ce2c5a1",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Agent observed exact28paragraph NR project at EvelynSoft0.90x180WPM0pause and320MP3SeparateIndexSegment export; audio bytes preserved",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 3.7355,
+        "uses": [
+          {
+            "pairingId": "woman-sister-friend",
+            "actorId": "helper1",
+            "answer": "Yes",
+            "stepId": "woman-sister-friend:predict-helper1-confidence"
+          },
+          {
+            "pairingId": "woman-mom-sister",
+            "actorId": "helper2",
+            "answer": "Yes",
+            "stepId": "woman-mom-sister:predict-helper2-confidence"
+          },
+          {
+            "pairingId": "family-sister-brother",
+            "actorId": "helper1",
+            "answer": "Yes",
+            "stepId": "family-sister-brother:predict-helper1-confidence"
+          }
+        ],
+        "nativeInputText": "How sure are you that the kid’s sister will help the kid?",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "fullProjectTextVerified": true,
+        "decodeVerified": true,
+        "verifiedSourceAuditRecord": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/processed/verified-native-recordings.json",
+        "installedFileBytesMatchVerifiedSource": true
+      }
+    },
+    {
+      "id": "nr_confidence_006",
+      "text": "How sure are you that the kid’s sister will NOT help the kid?",
+      "src": "assets/narration/nr_confidence_006.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "woman-sister-friend:predict-helper1-confidence",
+          "part": "prompt",
+          "predictionResponse": "No",
+          "proposedWording": true
+        },
+        {
+          "stepId": "woman-mom-sister:predict-helper2-confidence",
+          "part": "prompt",
+          "predictionResponse": "No",
+          "proposedWording": true
+        },
+        {
+          "stepId": "family-sister-brother:predict-helper1-confidence",
+          "part": "prompt",
+          "predictionResponse": "No",
+          "proposedWording": true
+        }
+      ],
+      "sha256": "b729b014c367394381b63786658dab22100fc1d743fbf92b42c4f7bdb27edc11",
+      "bytes": 159914,
+      "durationSeconds": 3.996725,
+      "provenance": {
+        "exportIndex": 6,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/native-source/numbered-clips/6.How_sure_are_you_that_the_kid’.mp3",
+        "sourceSha256": "b729b014c367394381b63786658dab22100fc1d743fbf92b42c4f7bdb27edc11",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "2b35eb9d43e78481ba2da3145fcf927a362259fc822b0a1e1762d514cfe67883",
+        "recordingIndexSha256": "c67f8c63e76f0dc61f6e44ad2ffbecc0ea77d48fa5cdc6333d21ad3d2ce2c5a1",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Agent observed exact28paragraph NR project at EvelynSoft0.90x180WPM0pause and320MP3SeparateIndexSegment export; audio bytes preserved",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 3.99675,
+        "uses": [
+          {
+            "pairingId": "woman-sister-friend",
+            "actorId": "helper1",
+            "answer": "No",
+            "stepId": "woman-sister-friend:predict-helper1-confidence"
+          },
+          {
+            "pairingId": "woman-mom-sister",
+            "actorId": "helper2",
+            "answer": "No",
+            "stepId": "woman-mom-sister:predict-helper2-confidence"
+          },
+          {
+            "pairingId": "family-sister-brother",
+            "actorId": "helper1",
+            "answer": "No",
+            "stepId": "family-sister-brother:predict-helper1-confidence"
+          }
+        ],
+        "nativeInputText": "How sure are you that the kid’s sister will not help the kid?",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "fullProjectTextVerified": true,
+        "decodeVerified": true,
+        "verifiedSourceAuditRecord": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/processed/verified-native-recordings.json",
+        "installedFileBytesMatchVerifiedSource": true
+      }
+    },
+    {
+      "id": "nr_confidence_007",
+      "text": "How sure are you that the kid’s friend will help the kid?",
+      "src": "assets/narration/nr_confidence_007.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "woman-sister-friend:predict-helper2-confidence",
+          "part": "prompt",
+          "predictionResponse": "Yes",
+          "proposedWording": true
+        },
+        {
+          "stepId": "woman-bestfriend-friend:predict-helper1-confidence",
+          "part": "prompt",
+          "predictionResponse": "Yes",
+          "proposedWording": true
+        },
+        {
+          "stepId": "woman-teacher-friend:predict-helper2-confidence",
+          "part": "prompt",
+          "predictionResponse": "Yes",
+          "proposedWording": true
+        },
+        {
+          "stepId": "man-brother-friend:predict-helper2-confidence",
+          "part": "prompt",
+          "predictionResponse": "Yes",
+          "proposedWording": true
+        },
+        {
+          "stepId": "man-bestfriend-friend:predict-helper1-confidence",
+          "part": "prompt",
+          "predictionResponse": "Yes",
+          "proposedWording": true
+        },
+        {
+          "stepId": "man-teacher-friend:predict-helper2-confidence",
+          "part": "prompt",
+          "predictionResponse": "Yes",
+          "proposedWording": true
+        }
+      ],
+      "sha256": "0ae2924eaa1314bdd323213e268b40ddc632803c66f8fbe8c9c7da2e7143433f",
+      "bytes": 148420,
+      "durationSeconds": 3.709375,
+      "provenance": {
+        "exportIndex": 7,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/native-source/numbered-clips/7.How_sure_are_you_that_the_kid’.mp3",
+        "sourceSha256": "0ae2924eaa1314bdd323213e268b40ddc632803c66f8fbe8c9c7da2e7143433f",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "2b35eb9d43e78481ba2da3145fcf927a362259fc822b0a1e1762d514cfe67883",
+        "recordingIndexSha256": "c67f8c63e76f0dc61f6e44ad2ffbecc0ea77d48fa5cdc6333d21ad3d2ce2c5a1",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Agent observed exact28paragraph NR project at EvelynSoft0.90x180WPM0pause and320MP3SeparateIndexSegment export; audio bytes preserved",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 3.709375,
+        "uses": [
+          {
+            "pairingId": "woman-sister-friend",
+            "actorId": "helper2",
+            "answer": "Yes",
+            "stepId": "woman-sister-friend:predict-helper2-confidence"
+          },
+          {
+            "pairingId": "woman-bestfriend-friend",
+            "actorId": "helper1",
+            "answer": "Yes",
+            "stepId": "woman-bestfriend-friend:predict-helper1-confidence"
+          },
+          {
+            "pairingId": "woman-teacher-friend",
+            "actorId": "helper2",
+            "answer": "Yes",
+            "stepId": "woman-teacher-friend:predict-helper2-confidence"
+          },
+          {
+            "pairingId": "man-brother-friend",
+            "actorId": "helper2",
+            "answer": "Yes",
+            "stepId": "man-brother-friend:predict-helper2-confidence"
+          },
+          {
+            "pairingId": "man-bestfriend-friend",
+            "actorId": "helper1",
+            "answer": "Yes",
+            "stepId": "man-bestfriend-friend:predict-helper1-confidence"
+          },
+          {
+            "pairingId": "man-teacher-friend",
+            "actorId": "helper2",
+            "answer": "Yes",
+            "stepId": "man-teacher-friend:predict-helper2-confidence"
+          }
+        ],
+        "nativeInputText": "How sure are you that the kid’s friend will help the kid?",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "fullProjectTextVerified": true,
+        "decodeVerified": true,
+        "verifiedSourceAuditRecord": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/processed/verified-native-recordings.json",
+        "installedFileBytesMatchVerifiedSource": true
+      }
+    },
+    {
+      "id": "nr_confidence_008",
+      "text": "How sure are you that the kid’s friend will NOT help the kid?",
+      "src": "assets/narration/nr_confidence_008.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "woman-sister-friend:predict-helper2-confidence",
+          "part": "prompt",
+          "predictionResponse": "No",
+          "proposedWording": true
+        },
+        {
+          "stepId": "woman-bestfriend-friend:predict-helper1-confidence",
+          "part": "prompt",
+          "predictionResponse": "No",
+          "proposedWording": true
+        },
+        {
+          "stepId": "woman-teacher-friend:predict-helper2-confidence",
+          "part": "prompt",
+          "predictionResponse": "No",
+          "proposedWording": true
+        },
+        {
+          "stepId": "man-brother-friend:predict-helper2-confidence",
+          "part": "prompt",
+          "predictionResponse": "No",
+          "proposedWording": true
+        },
+        {
+          "stepId": "man-bestfriend-friend:predict-helper1-confidence",
+          "part": "prompt",
+          "predictionResponse": "No",
+          "proposedWording": true
+        },
+        {
+          "stepId": "man-teacher-friend:predict-helper2-confidence",
+          "part": "prompt",
+          "predictionResponse": "No",
+          "proposedWording": true
+        }
+      ],
+      "sha256": "bcdba131810a1518ba553685b0938357dd79fe9b3c3d4b97178ffa0ce94cb216",
+      "bytes": 159914,
+      "durationSeconds": 3.996725,
+      "provenance": {
+        "exportIndex": 8,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/native-source/numbered-clips/8.How_sure_are_you_that_the_kid’.mp3",
+        "sourceSha256": "bcdba131810a1518ba553685b0938357dd79fe9b3c3d4b97178ffa0ce94cb216",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "2b35eb9d43e78481ba2da3145fcf927a362259fc822b0a1e1762d514cfe67883",
+        "recordingIndexSha256": "c67f8c63e76f0dc61f6e44ad2ffbecc0ea77d48fa5cdc6333d21ad3d2ce2c5a1",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Agent observed exact28paragraph NR project at EvelynSoft0.90x180WPM0pause and320MP3SeparateIndexSegment export; audio bytes preserved",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 3.99675,
+        "uses": [
+          {
+            "pairingId": "woman-sister-friend",
+            "actorId": "helper2",
+            "answer": "No",
+            "stepId": "woman-sister-friend:predict-helper2-confidence"
+          },
+          {
+            "pairingId": "woman-bestfriend-friend",
+            "actorId": "helper1",
+            "answer": "No",
+            "stepId": "woman-bestfriend-friend:predict-helper1-confidence"
+          },
+          {
+            "pairingId": "woman-teacher-friend",
+            "actorId": "helper2",
+            "answer": "No",
+            "stepId": "woman-teacher-friend:predict-helper2-confidence"
+          },
+          {
+            "pairingId": "man-brother-friend",
+            "actorId": "helper2",
+            "answer": "No",
+            "stepId": "man-brother-friend:predict-helper2-confidence"
+          },
+          {
+            "pairingId": "man-bestfriend-friend",
+            "actorId": "helper1",
+            "answer": "No",
+            "stepId": "man-bestfriend-friend:predict-helper1-confidence"
+          },
+          {
+            "pairingId": "man-teacher-friend",
+            "actorId": "helper2",
+            "answer": "No",
+            "stepId": "man-teacher-friend:predict-helper2-confidence"
+          }
+        ],
+        "nativeInputText": "How sure are you that the kid’s friend will not help the kid?",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "fullProjectTextVerified": true,
+        "decodeVerified": true,
+        "verifiedSourceAuditRecord": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/processed/verified-native-recordings.json",
+        "installedFileBytesMatchVerifiedSource": true
+      }
+    },
+    {
+      "id": "nr_confidence_009",
+      "text": "How sure are you that the kid’s best friend will help the kid?",
+      "src": "assets/narration/nr_confidence_009.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "woman-bestfriend-friend:predict-helper2-confidence",
+          "part": "prompt",
+          "predictionResponse": "Yes",
+          "proposedWording": true
+        },
+        {
+          "stepId": "man-bestfriend-friend:predict-helper2-confidence",
+          "part": "prompt",
+          "predictionResponse": "Yes",
+          "proposedWording": true
+        }
+      ],
+      "sha256": "c49027a1c510d11fa0ae3650b08524527799c2d5083a381fdbdade8498c6103d",
+      "bytes": 160959,
+      "durationSeconds": 4.02285,
+      "provenance": {
+        "exportIndex": 9,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/native-source/numbered-clips/9.How_sure_are_you_that_the_kid’.mp3",
+        "sourceSha256": "c49027a1c510d11fa0ae3650b08524527799c2d5083a381fdbdade8498c6103d",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "2b35eb9d43e78481ba2da3145fcf927a362259fc822b0a1e1762d514cfe67883",
+        "recordingIndexSha256": "c67f8c63e76f0dc61f6e44ad2ffbecc0ea77d48fa5cdc6333d21ad3d2ce2c5a1",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Agent observed exact28paragraph NR project at EvelynSoft0.90x180WPM0pause and320MP3SeparateIndexSegment export; audio bytes preserved",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 4.022875,
+        "uses": [
+          {
+            "pairingId": "woman-bestfriend-friend",
+            "actorId": "helper2",
+            "answer": "Yes",
+            "stepId": "woman-bestfriend-friend:predict-helper2-confidence"
+          },
+          {
+            "pairingId": "man-bestfriend-friend",
+            "actorId": "helper2",
+            "answer": "Yes",
+            "stepId": "man-bestfriend-friend:predict-helper2-confidence"
+          }
+        ],
+        "nativeInputText": "How sure are you that the kid’s best friend will help the kid?",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "fullProjectTextVerified": true,
+        "decodeVerified": true,
+        "verifiedSourceAuditRecord": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/processed/verified-native-recordings.json",
+        "installedFileBytesMatchVerifiedSource": true
+      }
+    },
+    {
+      "id": "nr_confidence_010",
+      "text": "How sure are you that the kid’s best friend will NOT help the kid?",
+      "src": "assets/narration/nr_confidence_010.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "woman-bestfriend-friend:predict-helper2-confidence",
+          "part": "prompt",
+          "predictionResponse": "No",
+          "proposedWording": true
+        },
+        {
+          "stepId": "man-bestfriend-friend:predict-helper2-confidence",
+          "part": "prompt",
+          "predictionResponse": "No",
+          "proposedWording": true
+        }
+      ],
+      "sha256": "e7fe0ce69263b9fd02228bb3cb5955778331d91ceebb65831c0330384273e8b2",
+      "bytes": 172453,
+      "durationSeconds": 4.3102,
+      "provenance": {
+        "exportIndex": 10,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/native-source/numbered-clips/10.How_sure_are_you_that_the_kid’.mp3",
+        "sourceSha256": "e7fe0ce69263b9fd02228bb3cb5955778331d91ceebb65831c0330384273e8b2",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "2b35eb9d43e78481ba2da3145fcf927a362259fc822b0a1e1762d514cfe67883",
+        "recordingIndexSha256": "c67f8c63e76f0dc61f6e44ad2ffbecc0ea77d48fa5cdc6333d21ad3d2ce2c5a1",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Agent observed exact28paragraph NR project at EvelynSoft0.90x180WPM0pause and320MP3SeparateIndexSegment export; audio bytes preserved",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 4.3101875,
+        "uses": [
+          {
+            "pairingId": "woman-bestfriend-friend",
+            "actorId": "helper2",
+            "answer": "No",
+            "stepId": "woman-bestfriend-friend:predict-helper2-confidence"
+          },
+          {
+            "pairingId": "man-bestfriend-friend",
+            "actorId": "helper2",
+            "answer": "No",
+            "stepId": "man-bestfriend-friend:predict-helper2-confidence"
+          }
+        ],
+        "nativeInputText": "How sure are you that the kid’s best friend will not help the kid?",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "fullProjectTextVerified": true,
+        "decodeVerified": true,
+        "verifiedSourceAuditRecord": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/processed/verified-native-recordings.json",
+        "installedFileBytesMatchVerifiedSource": true
+      }
+    },
+    {
+      "id": "nr_confidence_011",
+      "text": "How sure are you that the kid’s classmate will help the kid?",
+      "src": "assets/narration/nr_confidence_011.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "woman-teacher-classmate:predict-helper1-confidence",
+          "part": "prompt",
+          "predictionResponse": "Yes",
+          "proposedWording": true
+        },
+        {
+          "stepId": "man-teacher-classmate:predict-helper1-confidence",
+          "part": "prompt",
+          "predictionResponse": "Yes",
+          "proposedWording": true
+        },
+        {
+          "stepId": "family-teacher-classmate:predict-helper1-confidence",
+          "part": "prompt",
+          "predictionResponse": "Yes",
+          "proposedWording": true
+        }
+      ],
+      "sha256": "5805cd203e659edb36ebcfc442987f8aa69f98b0f78c9bb8b14cbb1bc8a5668e",
+      "bytes": 162004,
+      "durationSeconds": 4.048975,
+      "provenance": {
+        "exportIndex": 11,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/native-source/numbered-clips/11.How_sure_are_you_that_the_kid’.mp3",
+        "sourceSha256": "5805cd203e659edb36ebcfc442987f8aa69f98b0f78c9bb8b14cbb1bc8a5668e",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "2b35eb9d43e78481ba2da3145fcf927a362259fc822b0a1e1762d514cfe67883",
+        "recordingIndexSha256": "c67f8c63e76f0dc61f6e44ad2ffbecc0ea77d48fa5cdc6333d21ad3d2ce2c5a1",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Agent observed exact28paragraph NR project at EvelynSoft0.90x180WPM0pause and320MP3SeparateIndexSegment export; audio bytes preserved",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 4.049,
+        "uses": [
+          {
+            "pairingId": "woman-teacher-classmate",
+            "actorId": "helper1",
+            "answer": "Yes",
+            "stepId": "woman-teacher-classmate:predict-helper1-confidence"
+          },
+          {
+            "pairingId": "man-teacher-classmate",
+            "actorId": "helper1",
+            "answer": "Yes",
+            "stepId": "man-teacher-classmate:predict-helper1-confidence"
+          },
+          {
+            "pairingId": "family-teacher-classmate",
+            "actorId": "helper1",
+            "answer": "Yes",
+            "stepId": "family-teacher-classmate:predict-helper1-confidence"
+          }
+        ],
+        "nativeInputText": "How sure are you that the kid’s classmate will help the kid?",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "fullProjectTextVerified": true,
+        "decodeVerified": true,
+        "verifiedSourceAuditRecord": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/processed/verified-native-recordings.json",
+        "installedFileBytesMatchVerifiedSource": true
+      }
+    },
+    {
+      "id": "nr_confidence_012",
+      "text": "How sure are you that the kid’s classmate will NOT help the kid?",
+      "src": "assets/narration/nr_confidence_012.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "woman-teacher-classmate:predict-helper1-confidence",
+          "part": "prompt",
+          "predictionResponse": "No",
+          "proposedWording": true
+        },
+        {
+          "stepId": "man-teacher-classmate:predict-helper1-confidence",
+          "part": "prompt",
+          "predictionResponse": "No",
+          "proposedWording": true
+        },
+        {
+          "stepId": "family-teacher-classmate:predict-helper1-confidence",
+          "part": "prompt",
+          "predictionResponse": "No",
+          "proposedWording": true
+        }
+      ],
+      "sha256": "a42de49c3238d1fa618286e08e19f5d5b82e9365609fb0e8795ac97e7d01baaa",
+      "bytes": 173498,
+      "durationSeconds": 4.336325,
+      "provenance": {
+        "exportIndex": 12,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/native-source/numbered-clips/12.How_sure_are_you_that_the_kid’.mp3",
+        "sourceSha256": "a42de49c3238d1fa618286e08e19f5d5b82e9365609fb0e8795ac97e7d01baaa",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "2b35eb9d43e78481ba2da3145fcf927a362259fc822b0a1e1762d514cfe67883",
+        "recordingIndexSha256": "c67f8c63e76f0dc61f6e44ad2ffbecc0ea77d48fa5cdc6333d21ad3d2ce2c5a1",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Agent observed exact28paragraph NR project at EvelynSoft0.90x180WPM0pause and320MP3SeparateIndexSegment export; audio bytes preserved",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 4.3363125,
+        "uses": [
+          {
+            "pairingId": "woman-teacher-classmate",
+            "actorId": "helper1",
+            "answer": "No",
+            "stepId": "woman-teacher-classmate:predict-helper1-confidence"
+          },
+          {
+            "pairingId": "man-teacher-classmate",
+            "actorId": "helper1",
+            "answer": "No",
+            "stepId": "man-teacher-classmate:predict-helper1-confidence"
+          },
+          {
+            "pairingId": "family-teacher-classmate",
+            "actorId": "helper1",
+            "answer": "No",
+            "stepId": "family-teacher-classmate:predict-helper1-confidence"
+          }
+        ],
+        "nativeInputText": "How sure are you that the kid’s classmate will not help the kid?",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "fullProjectTextVerified": true,
+        "decodeVerified": true,
+        "verifiedSourceAuditRecord": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/processed/verified-native-recordings.json",
+        "installedFileBytesMatchVerifiedSource": true
+      }
+    },
+    {
+      "id": "nr_confidence_013",
+      "text": "How sure are you that the kid’s dad will help the kid?",
+      "src": "assets/narration/nr_confidence_013.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "man-dad-teacher:predict-helper2-confidence",
+          "part": "prompt",
+          "predictionResponse": "Yes",
+          "proposedWording": true
+        },
+        {
+          "stepId": "man-dad-brother:predict-helper1-confidence",
+          "part": "prompt",
+          "predictionResponse": "Yes",
+          "proposedWording": true
+        },
+        {
+          "stepId": "family-mom-dad:predict-helper1-confidence",
+          "part": "prompt",
+          "predictionResponse": "Yes",
+          "proposedWording": true
+        }
+      ],
+      "sha256": "5c210fcbe9fcf9f9e44b083d4adbf9500058547affcb6752353f2dbe2a63a246",
+      "bytes": 146330,
+      "durationSeconds": 3.657125,
+      "provenance": {
+        "exportIndex": 13,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/native-source/numbered-clips/13.How_sure_are_you_that_the_kid’.mp3",
+        "sourceSha256": "5c210fcbe9fcf9f9e44b083d4adbf9500058547affcb6752353f2dbe2a63a246",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "2b35eb9d43e78481ba2da3145fcf927a362259fc822b0a1e1762d514cfe67883",
+        "recordingIndexSha256": "c67f8c63e76f0dc61f6e44ad2ffbecc0ea77d48fa5cdc6333d21ad3d2ce2c5a1",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Agent observed exact28paragraph NR project at EvelynSoft0.90x180WPM0pause and320MP3SeparateIndexSegment export; audio bytes preserved",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 3.657125,
+        "uses": [
+          {
+            "pairingId": "man-dad-teacher",
+            "actorId": "helper2",
+            "answer": "Yes",
+            "stepId": "man-dad-teacher:predict-helper2-confidence"
+          },
+          {
+            "pairingId": "man-dad-brother",
+            "actorId": "helper1",
+            "answer": "Yes",
+            "stepId": "man-dad-brother:predict-helper1-confidence"
+          },
+          {
+            "pairingId": "family-mom-dad",
+            "actorId": "helper1",
+            "answer": "Yes",
+            "stepId": "family-mom-dad:predict-helper1-confidence"
+          }
+        ],
+        "nativeInputText": "How sure are you that the kid’s dad will help the kid?",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "fullProjectTextVerified": true,
+        "decodeVerified": true,
+        "verifiedSourceAuditRecord": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/processed/verified-native-recordings.json",
+        "installedFileBytesMatchVerifiedSource": true
+      }
+    },
+    {
+      "id": "nr_confidence_014",
+      "text": "How sure are you that the kid’s dad will NOT help the kid?",
+      "src": "assets/narration/nr_confidence_014.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "man-dad-teacher:predict-helper2-confidence",
+          "part": "prompt",
+          "predictionResponse": "No",
+          "proposedWording": true
+        },
+        {
+          "stepId": "man-dad-brother:predict-helper1-confidence",
+          "part": "prompt",
+          "predictionResponse": "No",
+          "proposedWording": true
+        },
+        {
+          "stepId": "family-mom-dad:predict-helper1-confidence",
+          "part": "prompt",
+          "predictionResponse": "No",
+          "proposedWording": true
+        }
+      ],
+      "sha256": "8adce8051074abcfabe81ee4efc37c04fc7559bfa6ed98bd18ea93edd2c36873",
+      "bytes": 156779,
+      "durationSeconds": 3.91835,
+      "provenance": {
+        "exportIndex": 14,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/native-source/numbered-clips/14.How_sure_are_you_that_the_kid’.mp3",
+        "sourceSha256": "8adce8051074abcfabe81ee4efc37c04fc7559bfa6ed98bd18ea93edd2c36873",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "2b35eb9d43e78481ba2da3145fcf927a362259fc822b0a1e1762d514cfe67883",
+        "recordingIndexSha256": "c67f8c63e76f0dc61f6e44ad2ffbecc0ea77d48fa5cdc6333d21ad3d2ce2c5a1",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Agent observed exact28paragraph NR project at EvelynSoft0.90x180WPM0pause and320MP3SeparateIndexSegment export; audio bytes preserved",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 3.918375,
+        "uses": [
+          {
+            "pairingId": "man-dad-teacher",
+            "actorId": "helper2",
+            "answer": "No",
+            "stepId": "man-dad-teacher:predict-helper2-confidence"
+          },
+          {
+            "pairingId": "man-dad-brother",
+            "actorId": "helper1",
+            "answer": "No",
+            "stepId": "man-dad-brother:predict-helper1-confidence"
+          },
+          {
+            "pairingId": "family-mom-dad",
+            "actorId": "helper1",
+            "answer": "No",
+            "stepId": "family-mom-dad:predict-helper1-confidence"
+          }
+        ],
+        "nativeInputText": "How sure are you that the kid’s dad will not help the kid?",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "fullProjectTextVerified": true,
+        "decodeVerified": true,
+        "verifiedSourceAuditRecord": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/processed/verified-native-recordings.json",
+        "installedFileBytesMatchVerifiedSource": true
+      }
+    },
+    {
+      "id": "nr_confidence_015",
+      "text": "How sure are you that the kid’s brother will help the kid?",
+      "src": "assets/narration/nr_confidence_015.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "man-brother-friend:predict-helper1-confidence",
+          "part": "prompt",
+          "predictionResponse": "Yes",
+          "proposedWording": true
+        },
+        {
+          "stepId": "man-dad-brother:predict-helper2-confidence",
+          "part": "prompt",
+          "predictionResponse": "Yes",
+          "proposedWording": true
+        },
+        {
+          "stepId": "family-sister-brother:predict-helper2-confidence",
+          "part": "prompt",
+          "predictionResponse": "Yes",
+          "proposedWording": true
+        }
+      ],
+      "sha256": "1b1fabba01e80ff26ee3d98b8b16d9fcc88218fa59630f3c06803ab4de97ff49",
+      "bytes": 151555,
+      "durationSeconds": 3.78775,
+      "provenance": {
+        "exportIndex": 15,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/native-source/numbered-clips/15.How_sure_are_you_that_the_kid’.mp3",
+        "sourceSha256": "1b1fabba01e80ff26ee3d98b8b16d9fcc88218fa59630f3c06803ab4de97ff49",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "2b35eb9d43e78481ba2da3145fcf927a362259fc822b0a1e1762d514cfe67883",
+        "recordingIndexSha256": "c67f8c63e76f0dc61f6e44ad2ffbecc0ea77d48fa5cdc6333d21ad3d2ce2c5a1",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Agent observed exact28paragraph NR project at EvelynSoft0.90x180WPM0pause and320MP3SeparateIndexSegment export; audio bytes preserved",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 3.78775,
+        "uses": [
+          {
+            "pairingId": "man-brother-friend",
+            "actorId": "helper1",
+            "answer": "Yes",
+            "stepId": "man-brother-friend:predict-helper1-confidence"
+          },
+          {
+            "pairingId": "man-dad-brother",
+            "actorId": "helper2",
+            "answer": "Yes",
+            "stepId": "man-dad-brother:predict-helper2-confidence"
+          },
+          {
+            "pairingId": "family-sister-brother",
+            "actorId": "helper2",
+            "answer": "Yes",
+            "stepId": "family-sister-brother:predict-helper2-confidence"
+          }
+        ],
+        "nativeInputText": "How sure are you that the kid’s brother will help the kid?",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "fullProjectTextVerified": true,
+        "decodeVerified": true,
+        "verifiedSourceAuditRecord": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/processed/verified-native-recordings.json",
+        "installedFileBytesMatchVerifiedSource": true
+      }
+    },
+    {
+      "id": "nr_confidence_016",
+      "text": "How sure are you that the kid’s brother will NOT help the kid?",
+      "src": "assets/narration/nr_confidence_016.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "man-brother-friend:predict-helper1-confidence",
+          "part": "prompt",
+          "predictionResponse": "No",
+          "proposedWording": true
+        },
+        {
+          "stepId": "man-dad-brother:predict-helper2-confidence",
+          "part": "prompt",
+          "predictionResponse": "No",
+          "proposedWording": true
+        },
+        {
+          "stepId": "family-sister-brother:predict-helper2-confidence",
+          "part": "prompt",
+          "predictionResponse": "No",
+          "proposedWording": true
+        }
+      ],
+      "sha256": "919bad8f228e268e84ee7754cbe5cd1ae20d8a608fa304a6e248857d6ad8a5e9",
+      "bytes": 162004,
+      "durationSeconds": 4.048975,
+      "provenance": {
+        "exportIndex": 16,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/native-source/numbered-clips/16.How_sure_are_you_that_the_kid’.mp3",
+        "sourceSha256": "919bad8f228e268e84ee7754cbe5cd1ae20d8a608fa304a6e248857d6ad8a5e9",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "2b35eb9d43e78481ba2da3145fcf927a362259fc822b0a1e1762d514cfe67883",
+        "recordingIndexSha256": "c67f8c63e76f0dc61f6e44ad2ffbecc0ea77d48fa5cdc6333d21ad3d2ce2c5a1",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Agent observed exact28paragraph NR project at EvelynSoft0.90x180WPM0pause and320MP3SeparateIndexSegment export; audio bytes preserved",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 4.049,
+        "uses": [
+          {
+            "pairingId": "man-brother-friend",
+            "actorId": "helper1",
+            "answer": "No",
+            "stepId": "man-brother-friend:predict-helper1-confidence"
+          },
+          {
+            "pairingId": "man-dad-brother",
+            "actorId": "helper2",
+            "answer": "No",
+            "stepId": "man-dad-brother:predict-helper2-confidence"
+          },
+          {
+            "pairingId": "family-sister-brother",
+            "actorId": "helper2",
+            "answer": "No",
+            "stepId": "family-sister-brother:predict-helper2-confidence"
+          }
+        ],
+        "nativeInputText": "How sure are you that the kid’s brother will not help the kid?",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "fullProjectTextVerified": true,
+        "decodeVerified": true,
+        "verifiedSourceAuditRecord": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/processed/verified-native-recordings.json",
+        "installedFileBytesMatchVerifiedSource": true
+      }
+    },
+    {
+      "id": "nr_confidence_017",
+      "text": "How sure are you that the kid’s dad will help the mom?",
+      "src": "assets/narration/nr_confidence_017.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "family-dad-kid:predict-helper1-confidence",
+          "part": "prompt",
+          "predictionResponse": "Yes",
+          "proposedWording": true
+        }
+      ],
+      "sha256": "563cd288dbd2f1c04550e097b5829e59925a718893fab3024b12bd9542a4f240",
+      "bytes": 145285,
+      "durationSeconds": 3.631,
+      "provenance": {
+        "exportIndex": 17,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/native-source/numbered-clips/17.How_sure_are_you_that_the_kid’.mp3",
+        "sourceSha256": "563cd288dbd2f1c04550e097b5829e59925a718893fab3024b12bd9542a4f240",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "2b35eb9d43e78481ba2da3145fcf927a362259fc822b0a1e1762d514cfe67883",
+        "recordingIndexSha256": "c67f8c63e76f0dc61f6e44ad2ffbecc0ea77d48fa5cdc6333d21ad3d2ce2c5a1",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Agent observed exact28paragraph NR project at EvelynSoft0.90x180WPM0pause and320MP3SeparateIndexSegment export; audio bytes preserved",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 3.631,
+        "uses": [
+          {
+            "pairingId": "family-dad-kid",
+            "actorId": "helper1",
+            "answer": "Yes",
+            "stepId": "family-dad-kid:predict-helper1-confidence"
+          }
+        ],
+        "nativeInputText": "How sure are you that the kid’s dad will help the mom?",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "fullProjectTextVerified": true,
+        "decodeVerified": true,
+        "verifiedSourceAuditRecord": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/processed/verified-native-recordings.json",
+        "installedFileBytesMatchVerifiedSource": true
+      }
+    },
+    {
+      "id": "nr_confidence_018",
+      "text": "How sure are you that the kid’s dad will NOT help the mom?",
+      "src": "assets/narration/nr_confidence_018.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "family-dad-kid:predict-helper1-confidence",
+          "part": "prompt",
+          "predictionResponse": "No",
+          "proposedWording": true
+        }
+      ],
+      "sha256": "cc53aeece112a0141e4ba5540ecf359b173c6a725ec3051853c8d623396f6d18",
+      "bytes": 154689,
+      "durationSeconds": 3.8661,
+      "provenance": {
+        "exportIndex": 18,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/native-source/numbered-clips/18.How_sure_are_you_that_the_kid’.mp3",
+        "sourceSha256": "cc53aeece112a0141e4ba5540ecf359b173c6a725ec3051853c8d623396f6d18",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "2b35eb9d43e78481ba2da3145fcf927a362259fc822b0a1e1762d514cfe67883",
+        "recordingIndexSha256": "c67f8c63e76f0dc61f6e44ad2ffbecc0ea77d48fa5cdc6333d21ad3d2ce2c5a1",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Agent observed exact28paragraph NR project at EvelynSoft0.90x180WPM0pause and320MP3SeparateIndexSegment export; audio bytes preserved",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 3.866125,
+        "uses": [
+          {
+            "pairingId": "family-dad-kid",
+            "actorId": "helper1",
+            "answer": "No",
+            "stepId": "family-dad-kid:predict-helper1-confidence"
+          }
+        ],
+        "nativeInputText": "How sure are you that the kid’s dad will not help the mom?",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "fullProjectTextVerified": true,
+        "decodeVerified": true,
+        "verifiedSourceAuditRecord": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/processed/verified-native-recordings.json",
+        "installedFileBytesMatchVerifiedSource": true
+      }
+    },
+    {
+      "id": "nr_confidence_019",
+      "text": "How sure are you that the kid will help the mom?",
+      "src": "assets/narration/nr_confidence_019.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "family-dad-kid:predict-helper2-confidence",
+          "part": "prompt",
+          "predictionResponse": "Yes",
+          "proposedWording": true
+        }
+      ],
+      "sha256": "7ad7a19bbd3fa6f7c0748bba87bf28d997b8734b86b0b584c3b37b4fdf052e41",
+      "bytes": 130657,
+      "durationSeconds": 3.2653,
+      "provenance": {
+        "exportIndex": 19,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/native-source/numbered-clips/19.How_sure_are_you_that_the_kid_.mp3",
+        "sourceSha256": "7ad7a19bbd3fa6f7c0748bba87bf28d997b8734b86b0b584c3b37b4fdf052e41",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "2b35eb9d43e78481ba2da3145fcf927a362259fc822b0a1e1762d514cfe67883",
+        "recordingIndexSha256": "c67f8c63e76f0dc61f6e44ad2ffbecc0ea77d48fa5cdc6333d21ad3d2ce2c5a1",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Agent observed exact28paragraph NR project at EvelynSoft0.90x180WPM0pause and320MP3SeparateIndexSegment export; audio bytes preserved",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 3.2653125,
+        "uses": [
+          {
+            "pairingId": "family-dad-kid",
+            "actorId": "helper2",
+            "answer": "Yes",
+            "stepId": "family-dad-kid:predict-helper2-confidence"
+          }
+        ],
+        "nativeInputText": "How sure are you that the kid will help the mom?",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "fullProjectTextVerified": true,
+        "decodeVerified": true,
+        "verifiedSourceAuditRecord": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/processed/verified-native-recordings.json",
+        "installedFileBytesMatchVerifiedSource": true
+      }
+    },
+    {
+      "id": "nr_confidence_020",
+      "text": "How sure are you that the kid will NOT help the mom?",
+      "src": "assets/narration/nr_confidence_020.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "family-dad-kid:predict-helper2-confidence",
+          "part": "prompt",
+          "predictionResponse": "No",
+          "proposedWording": true
+        }
+      ],
+      "sha256": "6414535505d44f272644fe8396c3a97d0e56b326e0c7a0a8e01678795d5b3659",
+      "bytes": 142151,
+      "durationSeconds": 3.55265,
+      "provenance": {
+        "exportIndex": 20,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/native-source/numbered-clips/20.How_sure_are_you_that_the_kid_.mp3",
+        "sourceSha256": "6414535505d44f272644fe8396c3a97d0e56b326e0c7a0a8e01678795d5b3659",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "2b35eb9d43e78481ba2da3145fcf927a362259fc822b0a1e1762d514cfe67883",
+        "recordingIndexSha256": "c67f8c63e76f0dc61f6e44ad2ffbecc0ea77d48fa5cdc6333d21ad3d2ce2c5a1",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Agent observed exact28paragraph NR project at EvelynSoft0.90x180WPM0pause and320MP3SeparateIndexSegment export; audio bytes preserved",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 3.5526875,
+        "uses": [
+          {
+            "pairingId": "family-dad-kid",
+            "actorId": "helper2",
+            "answer": "No",
+            "stepId": "family-dad-kid:predict-helper2-confidence"
+          }
+        ],
+        "nativeInputText": "How sure are you that the kid will not help the mom?",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "fullProjectTextVerified": true,
+        "decodeVerified": true,
+        "verifiedSourceAuditRecord": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/processed/verified-native-recordings.json",
+        "installedFileBytesMatchVerifiedSource": true
+      }
+    },
+    {
+      "id": "nr_confidence_021",
+      "text": "How sure are you that the kid will help the dad?",
+      "src": "assets/narration/nr_confidence_021.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "family-mom-kid:predict-helper1-confidence",
+          "part": "prompt",
+          "predictionResponse": "Yes",
+          "proposedWording": true
+        }
+      ],
+      "sha256": "b93861e9cf4d5ffee8783fdcca10e2fddef837dbb991c43944d0ac0fc7ded889",
+      "bytes": 133792,
+      "durationSeconds": 3.343675,
+      "provenance": {
+        "exportIndex": 21,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/native-source/numbered-clips/21.How_sure_are_you_that_the_kid_.mp3",
+        "sourceSha256": "b93861e9cf4d5ffee8783fdcca10e2fddef837dbb991c43944d0ac0fc7ded889",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "2b35eb9d43e78481ba2da3145fcf927a362259fc822b0a1e1762d514cfe67883",
+        "recordingIndexSha256": "c67f8c63e76f0dc61f6e44ad2ffbecc0ea77d48fa5cdc6333d21ad3d2ce2c5a1",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Agent observed exact28paragraph NR project at EvelynSoft0.90x180WPM0pause and320MP3SeparateIndexSegment export; audio bytes preserved",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 3.3436875,
+        "uses": [
+          {
+            "pairingId": "family-mom-kid",
+            "actorId": "helper1",
+            "answer": "Yes",
+            "stepId": "family-mom-kid:predict-helper1-confidence"
+          }
+        ],
+        "nativeInputText": "How sure are you that the kid will help the dad?",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "fullProjectTextVerified": true,
+        "decodeVerified": true,
+        "verifiedSourceAuditRecord": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/processed/verified-native-recordings.json",
+        "installedFileBytesMatchVerifiedSource": true
+      }
+    },
+    {
+      "id": "nr_confidence_022",
+      "text": "How sure are you that the kid will NOT help the dad?",
+      "src": "assets/narration/nr_confidence_022.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "family-mom-kid:predict-helper1-confidence",
+          "part": "prompt",
+          "predictionResponse": "No",
+          "proposedWording": true
+        }
+      ],
+      "sha256": "68c4b531792638686f105eb8fcad03751f7c7f76d0354b033951a512648b1101",
+      "bytes": 145285,
+      "durationSeconds": 3.631,
+      "provenance": {
+        "exportIndex": 22,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/native-source/numbered-clips/22.How_sure_are_you_that_the_kid_.mp3",
+        "sourceSha256": "68c4b531792638686f105eb8fcad03751f7c7f76d0354b033951a512648b1101",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "2b35eb9d43e78481ba2da3145fcf927a362259fc822b0a1e1762d514cfe67883",
+        "recordingIndexSha256": "c67f8c63e76f0dc61f6e44ad2ffbecc0ea77d48fa5cdc6333d21ad3d2ce2c5a1",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Agent observed exact28paragraph NR project at EvelynSoft0.90x180WPM0pause and320MP3SeparateIndexSegment export; audio bytes preserved",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 3.631,
+        "uses": [
+          {
+            "pairingId": "family-mom-kid",
+            "actorId": "helper1",
+            "answer": "No",
+            "stepId": "family-mom-kid:predict-helper1-confidence"
+          }
+        ],
+        "nativeInputText": "How sure are you that the kid will not help the dad?",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "fullProjectTextVerified": true,
+        "decodeVerified": true,
+        "verifiedSourceAuditRecord": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/processed/verified-native-recordings.json",
+        "installedFileBytesMatchVerifiedSource": true
+      }
+    },
+    {
+      "id": "nr_confidence_023",
+      "text": "How sure are you that the kid’s mom will help the dad?",
+      "src": "assets/narration/nr_confidence_023.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "family-mom-kid:predict-helper2-confidence",
+          "part": "prompt",
+          "predictionResponse": "Yes",
+          "proposedWording": true
+        }
+      ],
+      "sha256": "c48901ed1095d9b730806268f9e802df54f65b3d6cb01a6ba19db3b95504f542",
+      "bytes": 148420,
+      "durationSeconds": 3.709375,
+      "provenance": {
+        "exportIndex": 23,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/native-source/numbered-clips/23.How_sure_are_you_that_the_kid’.mp3",
+        "sourceSha256": "c48901ed1095d9b730806268f9e802df54f65b3d6cb01a6ba19db3b95504f542",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "2b35eb9d43e78481ba2da3145fcf927a362259fc822b0a1e1762d514cfe67883",
+        "recordingIndexSha256": "c67f8c63e76f0dc61f6e44ad2ffbecc0ea77d48fa5cdc6333d21ad3d2ce2c5a1",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Agent observed exact28paragraph NR project at EvelynSoft0.90x180WPM0pause and320MP3SeparateIndexSegment export; audio bytes preserved",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 3.709375,
+        "uses": [
+          {
+            "pairingId": "family-mom-kid",
+            "actorId": "helper2",
+            "answer": "Yes",
+            "stepId": "family-mom-kid:predict-helper2-confidence"
+          }
+        ],
+        "nativeInputText": "How sure are you that the kid’s mom will help the dad?",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "fullProjectTextVerified": true,
+        "decodeVerified": true,
+        "verifiedSourceAuditRecord": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/processed/verified-native-recordings.json",
+        "installedFileBytesMatchVerifiedSource": true
+      }
+    },
+    {
+      "id": "nr_confidence_024",
+      "text": "How sure are you that the kid’s mom will NOT help the dad?",
+      "src": "assets/narration/nr_confidence_024.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "family-mom-kid:predict-helper2-confidence",
+          "part": "prompt",
+          "predictionResponse": "No",
+          "proposedWording": true
+        }
+      ],
+      "sha256": "926316907f4492e6f5cffd2a204bb8f68d5452389b29e6e5ff6c17fd0b37d6df",
+      "bytes": 157824,
+      "durationSeconds": 3.944475,
+      "provenance": {
+        "exportIndex": 24,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/native-source/numbered-clips/24.How_sure_are_you_that_the_kid’.mp3",
+        "sourceSha256": "926316907f4492e6f5cffd2a204bb8f68d5452389b29e6e5ff6c17fd0b37d6df",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "2b35eb9d43e78481ba2da3145fcf927a362259fc822b0a1e1762d514cfe67883",
+        "recordingIndexSha256": "c67f8c63e76f0dc61f6e44ad2ffbecc0ea77d48fa5cdc6333d21ad3d2ce2c5a1",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Agent observed exact28paragraph NR project at EvelynSoft0.90x180WPM0pause and320MP3SeparateIndexSegment export; audio bytes preserved",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 3.9445,
+        "uses": [
+          {
+            "pairingId": "family-mom-kid",
+            "actorId": "helper2",
+            "answer": "No",
+            "stepId": "family-mom-kid:predict-helper2-confidence"
+          }
+        ],
+        "nativeInputText": "How sure are you that the kid’s mom will not help the dad?",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "fullProjectTextVerified": true,
+        "decodeVerified": true,
+        "verifiedSourceAuditRecord": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/processed/verified-native-recordings.json",
+        "installedFileBytesMatchVerifiedSource": true
+      }
+    },
+    {
+      "id": "nr_confidence_025",
+      "text": "How sure are you that the teacher on the left will help the teacher in the middle?",
+      "src": "assets/narration/nr_confidence_025.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "family-teacher-kid:predict-helper1-confidence",
+          "part": "prompt",
+          "predictionResponse": "Yes",
+          "proposedWording": true
+        }
+      ],
+      "sha256": "f486275ab7087411b425f99939c4f6e3ccc9e16fb58ee8b7402fc0e60890aaa7",
+      "bytes": 189171,
+      "durationSeconds": 4.72815,
+      "provenance": {
+        "exportIndex": 25,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/native-source/numbered-clips/25.How_sure_are_you_that_the_teac.mp3",
+        "sourceSha256": "f486275ab7087411b425f99939c4f6e3ccc9e16fb58ee8b7402fc0e60890aaa7",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "2b35eb9d43e78481ba2da3145fcf927a362259fc822b0a1e1762d514cfe67883",
+        "recordingIndexSha256": "c67f8c63e76f0dc61f6e44ad2ffbecc0ea77d48fa5cdc6333d21ad3d2ce2c5a1",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Agent observed exact28paragraph NR project at EvelynSoft0.90x180WPM0pause and320MP3SeparateIndexSegment export; audio bytes preserved",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 4.7281875,
+        "uses": [
+          {
+            "pairingId": "family-teacher-kid",
+            "actorId": "helper1",
+            "answer": "Yes",
+            "stepId": "family-teacher-kid:predict-helper1-confidence"
+          }
+        ],
+        "nativeInputText": "How sure are you that the teacher on the left will help the teacher in the middle?",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "fullProjectTextVerified": true,
+        "decodeVerified": true,
+        "verifiedSourceAuditRecord": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/processed/verified-native-recordings.json",
+        "installedFileBytesMatchVerifiedSource": true
+      }
+    },
+    {
+      "id": "nr_confidence_026",
+      "text": "How sure are you that the teacher on the left will NOT help the teacher in the middle?",
+      "src": "assets/narration/nr_confidence_026.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "family-teacher-kid:predict-helper1-confidence",
+          "part": "prompt",
+          "predictionResponse": "No",
+          "proposedWording": true
+        }
+      ],
+      "sha256": "fae585baed65f106761e2d06cc4151427431cfa91c337acd4bc3f50df0354f3b",
+      "bytes": 198575,
+      "durationSeconds": 4.96325,
+      "provenance": {
+        "exportIndex": 26,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/native-source/numbered-clips/26.How_sure_are_you_that_the_teac.mp3",
+        "sourceSha256": "fae585baed65f106761e2d06cc4151427431cfa91c337acd4bc3f50df0354f3b",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "2b35eb9d43e78481ba2da3145fcf927a362259fc822b0a1e1762d514cfe67883",
+        "recordingIndexSha256": "c67f8c63e76f0dc61f6e44ad2ffbecc0ea77d48fa5cdc6333d21ad3d2ce2c5a1",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Agent observed exact28paragraph NR project at EvelynSoft0.90x180WPM0pause and320MP3SeparateIndexSegment export; audio bytes preserved",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 4.96325,
+        "uses": [
+          {
+            "pairingId": "family-teacher-kid",
+            "actorId": "helper1",
+            "answer": "No",
+            "stepId": "family-teacher-kid:predict-helper1-confidence"
+          }
+        ],
+        "nativeInputText": "How sure are you that the teacher on the left will not help the teacher in the middle?",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "fullProjectTextVerified": true,
+        "decodeVerified": true,
+        "verifiedSourceAuditRecord": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/processed/verified-native-recordings.json",
+        "installedFileBytesMatchVerifiedSource": true
+      }
+    },
+    {
+      "id": "nr_confidence_027",
+      "text": "How sure are you that the kid will help the teacher in the middle?",
+      "src": "assets/narration/nr_confidence_027.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "family-teacher-kid:predict-helper2-confidence",
+          "part": "prompt",
+          "predictionResponse": "Yes",
+          "proposedWording": true
+        }
+      ],
+      "sha256": "89ea7498dec79ff9062329c799b4293596bf8aed21874d1d1ca898b7165d2819",
+      "bytes": 163049,
+      "durationSeconds": 4.0751,
+      "provenance": {
+        "exportIndex": 27,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/native-source/numbered-clips/27.How_sure_are_you_that_the_kid_.mp3",
+        "sourceSha256": "89ea7498dec79ff9062329c799b4293596bf8aed21874d1d1ca898b7165d2819",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "2b35eb9d43e78481ba2da3145fcf927a362259fc822b0a1e1762d514cfe67883",
+        "recordingIndexSha256": "c67f8c63e76f0dc61f6e44ad2ffbecc0ea77d48fa5cdc6333d21ad3d2ce2c5a1",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Agent observed exact28paragraph NR project at EvelynSoft0.90x180WPM0pause and320MP3SeparateIndexSegment export; audio bytes preserved",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 4.075125,
+        "uses": [
+          {
+            "pairingId": "family-teacher-kid",
+            "actorId": "helper2",
+            "answer": "Yes",
+            "stepId": "family-teacher-kid:predict-helper2-confidence"
+          }
+        ],
+        "nativeInputText": "How sure are you that the kid will help the teacher in the middle?",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "fullProjectTextVerified": true,
+        "decodeVerified": true,
+        "verifiedSourceAuditRecord": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/processed/verified-native-recordings.json",
+        "installedFileBytesMatchVerifiedSource": true
+      }
+    },
+    {
+      "id": "nr_confidence_028",
+      "text": "How sure are you that the kid will NOT help the teacher in the middle?",
+      "src": "assets/narration/nr_confidence_028.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "family-teacher-kid:predict-helper2-confidence",
+          "part": "prompt",
+          "predictionResponse": "No",
+          "proposedWording": true
+        }
+      ],
+      "sha256": "4154f2e8a727fbef2959b95f36e0cb78d3bbb90e59eae56909bcb3395e44a3ab",
+      "bytes": 174543,
+      "durationSeconds": 4.36245,
+      "provenance": {
+        "exportIndex": 28,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/native-source/numbered-clips/28.How_sure_are_you_that_the_kid_.mp3",
+        "sourceSha256": "4154f2e8a727fbef2959b95f36e0cb78d3bbb90e59eae56909bcb3395e44a3ab",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "2b35eb9d43e78481ba2da3145fcf927a362259fc822b0a1e1762d514cfe67883",
+        "recordingIndexSha256": "c67f8c63e76f0dc61f6e44ad2ffbecc0ea77d48fa5cdc6333d21ad3d2ce2c5a1",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Agent observed exact28paragraph NR project at EvelynSoft0.90x180WPM0pause and320MP3SeparateIndexSegment export; audio bytes preserved",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 4.3624375,
+        "uses": [
+          {
+            "pairingId": "family-teacher-kid",
+            "actorId": "helper2",
+            "answer": "No",
+            "stepId": "family-teacher-kid:predict-helper2-confidence"
+          }
+        ],
+        "nativeInputText": "How sure are you that the kid will not help the teacher in the middle?",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "fullProjectTextVerified": true,
+        "decodeVerified": true,
+        "verifiedSourceAuditRecord": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/processed/verified-native-recordings.json",
+        "installedFileBytesMatchVerifiedSource": true
+      }
     }
   ],
   "screens": {
@@ -21269,7 +23564,12 @@
         "nr_272",
         "nr_273"
       ],
-      "proposedWording": true
+      "proposedWording": true,
+      "promptVariants": {
+        "Yes": "nr_confidence_001",
+        "No": "nr_confidence_002"
+      },
+      "promptVariantBasis": "source-prediction-response"
     },
     "woman-mom-teacher:predict-helper2": {
       "prompt": "nr_013",
@@ -21288,7 +23588,12 @@
         "nr_272",
         "nr_273"
       ],
-      "proposedWording": true
+      "proposedWording": true,
+      "promptVariants": {
+        "Yes": "nr_confidence_003",
+        "No": "nr_confidence_004"
+      },
+      "promptVariantBasis": "source-prediction-response"
     },
     "woman-mom-teacher:practice-intro": {
       "prompt": "nr_014",
@@ -21584,7 +23889,12 @@
         "nr_272",
         "nr_273"
       ],
-      "proposedWording": true
+      "proposedWording": true,
+      "promptVariants": {
+        "Yes": "nr_confidence_005",
+        "No": "nr_confidence_006"
+      },
+      "promptVariantBasis": "source-prediction-response"
     },
     "woman-sister-friend:predict-helper2": {
       "prompt": "nr_059",
@@ -21603,7 +23913,12 @@
         "nr_272",
         "nr_273"
       ],
-      "proposedWording": true
+      "proposedWording": true,
+      "promptVariants": {
+        "Yes": "nr_confidence_007",
+        "No": "nr_confidence_008"
+      },
+      "promptVariantBasis": "source-prediction-response"
     },
     "woman-sister-friend:practice-intro": {
       "prompt": "nr_014",
@@ -21899,7 +24214,12 @@
         "nr_272",
         "nr_273"
       ],
-      "proposedWording": true
+      "proposedWording": true,
+      "promptVariants": {
+        "Yes": "nr_confidence_007",
+        "No": "nr_confidence_008"
+      },
+      "promptVariantBasis": "source-prediction-response"
     },
     "woman-bestfriend-friend:predict-helper2": {
       "prompt": "nr_078",
@@ -21918,7 +24238,12 @@
         "nr_272",
         "nr_273"
       ],
-      "proposedWording": true
+      "proposedWording": true,
+      "promptVariants": {
+        "Yes": "nr_confidence_009",
+        "No": "nr_confidence_010"
+      },
+      "promptVariantBasis": "source-prediction-response"
     },
     "woman-bestfriend-friend:practice-intro": {
       "prompt": "nr_014",
@@ -22214,7 +24539,12 @@
         "nr_272",
         "nr_273"
       ],
-      "proposedWording": true
+      "proposedWording": true,
+      "promptVariants": {
+        "Yes": "nr_confidence_001",
+        "No": "nr_confidence_002"
+      },
+      "promptVariantBasis": "source-prediction-response"
     },
     "woman-teacher-friend:predict-helper2": {
       "prompt": "nr_059",
@@ -22233,7 +24563,12 @@
         "nr_272",
         "nr_273"
       ],
-      "proposedWording": true
+      "proposedWording": true,
+      "promptVariants": {
+        "Yes": "nr_confidence_007",
+        "No": "nr_confidence_008"
+      },
+      "promptVariantBasis": "source-prediction-response"
     },
     "woman-teacher-friend:practice-intro": {
       "prompt": "nr_014",
@@ -22529,7 +24864,12 @@
         "nr_272",
         "nr_273"
       ],
-      "proposedWording": true
+      "proposedWording": true,
+      "promptVariants": {
+        "Yes": "nr_confidence_003",
+        "No": "nr_confidence_004"
+      },
+      "promptVariantBasis": "source-prediction-response"
     },
     "woman-mom-sister:predict-helper2": {
       "prompt": "nr_058",
@@ -22548,7 +24888,12 @@
         "nr_272",
         "nr_273"
       ],
-      "proposedWording": true
+      "proposedWording": true,
+      "promptVariants": {
+        "Yes": "nr_confidence_005",
+        "No": "nr_confidence_006"
+      },
+      "promptVariantBasis": "source-prediction-response"
     },
     "woman-mom-sister:practice-intro": {
       "prompt": "nr_014",
@@ -22844,7 +25189,12 @@
         "nr_272",
         "nr_273"
       ],
-      "proposedWording": true
+      "proposedWording": true,
+      "promptVariants": {
+        "Yes": "nr_confidence_011",
+        "No": "nr_confidence_012"
+      },
+      "promptVariantBasis": "source-prediction-response"
     },
     "woman-teacher-classmate:predict-helper2": {
       "prompt": "nr_010",
@@ -22863,7 +25213,12 @@
         "nr_272",
         "nr_273"
       ],
-      "proposedWording": true
+      "proposedWording": true,
+      "promptVariants": {
+        "Yes": "nr_confidence_001",
+        "No": "nr_confidence_002"
+      },
+      "promptVariantBasis": "source-prediction-response"
     },
     "woman-teacher-classmate:practice-intro": {
       "prompt": "nr_014",
@@ -23159,7 +25514,12 @@
         "nr_272",
         "nr_273"
       ],
-      "proposedWording": true
+      "proposedWording": true,
+      "promptVariants": {
+        "Yes": "nr_confidence_001",
+        "No": "nr_confidence_002"
+      },
+      "promptVariantBasis": "source-prediction-response"
     },
     "man-dad-teacher:predict-helper2": {
       "prompt": "nr_106",
@@ -23178,7 +25538,12 @@
         "nr_272",
         "nr_273"
       ],
-      "proposedWording": true
+      "proposedWording": true,
+      "promptVariants": {
+        "Yes": "nr_confidence_013",
+        "No": "nr_confidence_014"
+      },
+      "promptVariantBasis": "source-prediction-response"
     },
     "man-dad-teacher:practice-intro": {
       "prompt": "nr_014",
@@ -23474,7 +25839,12 @@
         "nr_272",
         "nr_273"
       ],
-      "proposedWording": true
+      "proposedWording": true,
+      "promptVariants": {
+        "Yes": "nr_confidence_015",
+        "No": "nr_confidence_016"
+      },
+      "promptVariantBasis": "source-prediction-response"
     },
     "man-brother-friend:predict-helper2": {
       "prompt": "nr_059",
@@ -23493,7 +25863,12 @@
         "nr_272",
         "nr_273"
       ],
-      "proposedWording": true
+      "proposedWording": true,
+      "promptVariants": {
+        "Yes": "nr_confidence_007",
+        "No": "nr_confidence_008"
+      },
+      "promptVariantBasis": "source-prediction-response"
     },
     "man-brother-friend:practice-intro": {
       "prompt": "nr_014",
@@ -23789,7 +26164,12 @@
         "nr_272",
         "nr_273"
       ],
-      "proposedWording": true
+      "proposedWording": true,
+      "promptVariants": {
+        "Yes": "nr_confidence_007",
+        "No": "nr_confidence_008"
+      },
+      "promptVariantBasis": "source-prediction-response"
     },
     "man-bestfriend-friend:predict-helper2": {
       "prompt": "nr_078",
@@ -23808,7 +26188,12 @@
         "nr_272",
         "nr_273"
       ],
-      "proposedWording": true
+      "proposedWording": true,
+      "promptVariants": {
+        "Yes": "nr_confidence_009",
+        "No": "nr_confidence_010"
+      },
+      "promptVariantBasis": "source-prediction-response"
     },
     "man-bestfriend-friend:practice-intro": {
       "prompt": "nr_014",
@@ -24104,7 +26489,12 @@
         "nr_272",
         "nr_273"
       ],
-      "proposedWording": true
+      "proposedWording": true,
+      "promptVariants": {
+        "Yes": "nr_confidence_001",
+        "No": "nr_confidence_002"
+      },
+      "promptVariantBasis": "source-prediction-response"
     },
     "man-teacher-friend:predict-helper2": {
       "prompt": "nr_059",
@@ -24123,7 +26513,12 @@
         "nr_272",
         "nr_273"
       ],
-      "proposedWording": true
+      "proposedWording": true,
+      "promptVariants": {
+        "Yes": "nr_confidence_007",
+        "No": "nr_confidence_008"
+      },
+      "promptVariantBasis": "source-prediction-response"
     },
     "man-teacher-friend:practice-intro": {
       "prompt": "nr_014",
@@ -24419,7 +26814,12 @@
         "nr_272",
         "nr_273"
       ],
-      "proposedWording": true
+      "proposedWording": true,
+      "promptVariants": {
+        "Yes": "nr_confidence_013",
+        "No": "nr_confidence_014"
+      },
+      "promptVariantBasis": "source-prediction-response"
     },
     "man-dad-brother:predict-helper2": {
       "prompt": "nr_118",
@@ -24438,7 +26838,12 @@
         "nr_272",
         "nr_273"
       ],
-      "proposedWording": true
+      "proposedWording": true,
+      "promptVariants": {
+        "Yes": "nr_confidence_015",
+        "No": "nr_confidence_016"
+      },
+      "promptVariantBasis": "source-prediction-response"
     },
     "man-dad-brother:practice-intro": {
       "prompt": "nr_014",
@@ -24734,7 +27139,12 @@
         "nr_272",
         "nr_273"
       ],
-      "proposedWording": true
+      "proposedWording": true,
+      "promptVariants": {
+        "Yes": "nr_confidence_011",
+        "No": "nr_confidence_012"
+      },
+      "promptVariantBasis": "source-prediction-response"
     },
     "man-teacher-classmate:predict-helper2": {
       "prompt": "nr_010",
@@ -24753,7 +27163,12 @@
         "nr_272",
         "nr_273"
       ],
-      "proposedWording": true
+      "proposedWording": true,
+      "promptVariants": {
+        "Yes": "nr_confidence_001",
+        "No": "nr_confidence_002"
+      },
+      "promptVariantBasis": "source-prediction-response"
     },
     "man-teacher-classmate:practice-intro": {
       "prompt": "nr_014",
@@ -25049,7 +27464,12 @@
         "nr_272",
         "nr_273"
       ],
-      "proposedWording": true
+      "proposedWording": true,
+      "promptVariants": {
+        "Yes": "nr_confidence_013",
+        "No": "nr_confidence_014"
+      },
+      "promptVariantBasis": "source-prediction-response"
     },
     "family-mom-dad:predict-helper2": {
       "prompt": "nr_013",
@@ -25068,7 +27488,12 @@
         "nr_272",
         "nr_273"
       ],
-      "proposedWording": true
+      "proposedWording": true,
+      "promptVariants": {
+        "Yes": "nr_confidence_003",
+        "No": "nr_confidence_004"
+      },
+      "promptVariantBasis": "source-prediction-response"
     },
     "family-mom-dad:practice-intro": {
       "prompt": "nr_014",
@@ -25364,7 +27789,12 @@
         "nr_272",
         "nr_273"
       ],
-      "proposedWording": true
+      "proposedWording": true,
+      "promptVariants": {
+        "Yes": "nr_confidence_005",
+        "No": "nr_confidence_006"
+      },
+      "promptVariantBasis": "source-prediction-response"
     },
     "family-sister-brother:predict-helper2": {
       "prompt": "nr_118",
@@ -25383,7 +27813,12 @@
         "nr_272",
         "nr_273"
       ],
-      "proposedWording": true
+      "proposedWording": true,
+      "promptVariants": {
+        "Yes": "nr_confidence_015",
+        "No": "nr_confidence_016"
+      },
+      "promptVariantBasis": "source-prediction-response"
     },
     "family-sister-brother:practice-intro": {
       "prompt": "nr_014",
@@ -25679,7 +28114,12 @@
         "nr_272",
         "nr_273"
       ],
-      "proposedWording": true
+      "proposedWording": true,
+      "promptVariants": {
+        "Yes": "nr_confidence_017",
+        "No": "nr_confidence_018"
+      },
+      "promptVariantBasis": "source-prediction-response"
     },
     "family-dad-kid:predict-helper2": {
       "prompt": "nr_138",
@@ -25698,7 +28138,12 @@
         "nr_272",
         "nr_273"
       ],
-      "proposedWording": true
+      "proposedWording": true,
+      "promptVariants": {
+        "Yes": "nr_confidence_019",
+        "No": "nr_confidence_020"
+      },
+      "promptVariantBasis": "source-prediction-response"
     },
     "family-dad-kid:practice-intro": {
       "prompt": "nr_014",
@@ -25994,7 +28439,12 @@
         "nr_272",
         "nr_273"
       ],
-      "proposedWording": true
+      "proposedWording": true,
+      "promptVariants": {
+        "Yes": "nr_confidence_021",
+        "No": "nr_confidence_022"
+      },
+      "promptVariantBasis": "source-prediction-response"
     },
     "family-mom-kid:predict-helper2": {
       "prompt": "nr_159",
@@ -26013,7 +28463,12 @@
         "nr_272",
         "nr_273"
       ],
-      "proposedWording": true
+      "proposedWording": true,
+      "promptVariants": {
+        "Yes": "nr_confidence_023",
+        "No": "nr_confidence_024"
+      },
+      "promptVariantBasis": "source-prediction-response"
     },
     "family-mom-kid:practice-intro": {
       "prompt": "nr_014",
@@ -26309,7 +28764,12 @@
         "nr_272",
         "nr_273"
       ],
-      "proposedWording": true
+      "proposedWording": true,
+      "promptVariants": {
+        "Yes": "nr_confidence_025",
+        "No": "nr_confidence_026"
+      },
+      "promptVariantBasis": "source-prediction-response"
     },
     "family-teacher-kid:predict-helper2": {
       "prompt": "nr_179",
@@ -26328,7 +28788,12 @@
         "nr_272",
         "nr_273"
       ],
-      "proposedWording": true
+      "proposedWording": true,
+      "promptVariants": {
+        "Yes": "nr_confidence_027",
+        "No": "nr_confidence_028"
+      },
+      "promptVariantBasis": "source-prediction-response"
     },
     "family-teacher-kid:practice-intro": {
       "prompt": "nr_014",
@@ -26624,7 +29089,12 @@
         "nr_272",
         "nr_273"
       ],
-      "proposedWording": true
+      "proposedWording": true,
+      "promptVariants": {
+        "Yes": "nr_confidence_011",
+        "No": "nr_confidence_012"
+      },
+      "promptVariantBasis": "source-prediction-response"
     },
     "family-teacher-classmate:predict-helper2": {
       "prompt": "nr_010",
@@ -26643,7 +29113,12 @@
         "nr_272",
         "nr_273"
       ],
-      "proposedWording": true
+      "proposedWording": true,
+      "promptVariants": {
+        "Yes": "nr_confidence_001",
+        "No": "nr_confidence_002"
+      },
+      "promptVariantBasis": "source-prediction-response"
     },
     "family-teacher-classmate:practice-intro": {
       "prompt": "nr_014",

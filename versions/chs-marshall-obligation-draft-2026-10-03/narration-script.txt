@@ -469,3 +469,59 @@ You chose the teacher on the left. Did you mean that the teacher on the left was
 You chose the kid. Did you mean that the kid was meaner for NOT helping the teacher in the middle? Yes or No.
 
 That’s the end of our stories. Thank you!
+
+How sure are you that the kid’s teacher will help the kid?
+
+How sure are you that the kid’s teacher will NOT help the kid?
+
+How sure are you that the kid’s mom will help the kid?
+
+How sure are you that the kid’s mom will NOT help the kid?
+
+How sure are you that the kid’s sister will help the kid?
+
+How sure are you that the kid’s sister will NOT help the kid?
+
+How sure are you that the kid’s friend will help the kid?
+
+How sure are you that the kid’s friend will NOT help the kid?
+
+How sure are you that the kid’s best friend will help the kid?
+
+How sure are you that the kid’s best friend will NOT help the kid?
+
+How sure are you that the kid’s classmate will help the kid?
+
+How sure are you that the kid’s classmate will NOT help the kid?
+
+How sure are you that the kid’s dad will help the kid?
+
+How sure are you that the kid’s dad will NOT help the kid?
+
+How sure are you that the kid’s brother will help the kid?
+
+How sure are you that the kid’s brother will NOT help the kid?
+
+How sure are you that the kid’s dad will help the mom?
+
+How sure are you that the kid’s dad will NOT help the mom?
+
+How sure are you that the kid will help the mom?
+
+How sure are you that the kid will NOT help the mom?
+
+How sure are you that the kid will help the dad?
+
+How sure are you that the kid will NOT help the dad?
+
+How sure are you that the kid’s mom will help the dad?
+
+How sure are you that the kid’s mom will NOT help the dad?
+
+How sure are you that the teacher on the left will help the teacher in the middle?
+
+How sure are you that the teacher on the left will NOT help the teacher in the middle?
+
+How sure are you that the kid will help the teacher in the middle?
+
+How sure are you that the kid will NOT help the teacher in the middle?

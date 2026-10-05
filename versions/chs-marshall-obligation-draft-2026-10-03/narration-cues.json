@@ -28395,6 +28395,2740 @@
       "articleOmissionExceptionsAllowed": false,
       "cueAlignmentApproved": true,
       "recognitionMethod": "unprompted full-context recognition from final unchanged native MP3"
+    },
+    "nr_confidence_001": {
+      "id": "nr_confidence_001",
+      "sha256": "6ccf9af2c4fc75aa9f629d84072aa1c4b16814c89f1f27fda8079362d50ed067",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "durationSeconds": 3.78775,
+      "decodedDurationSeconds": 3.78775,
+      "recognizedText": "How sure are you that the kids' teacher will help the kid?",
+      "expectedText": "How sure are you that the kid’s teacher will help the kid?",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.36
+        },
+        {
+          "word": "sure",
+          "start": 0.36,
+          "end": 0.64
+        },
+        {
+          "word": "are",
+          "start": 0.64,
+          "end": 0.86
+        },
+        {
+          "word": "you",
+          "start": 0.86,
+          "end": 1.06
+        },
+        {
+          "word": "that",
+          "start": 1.06,
+          "end": 1.28
+        },
+        {
+          "word": "the",
+          "start": 1.28,
+          "end": 1.36
+        },
+        {
+          "word": "kids'",
+          "start": 1.36,
+          "end": 1.84
+        },
+        {
+          "word": "teacher",
+          "start": 1.84,
+          "end": 2.02
+        },
+        {
+          "word": "will",
+          "start": 2.02,
+          "end": 2.34
+        },
+        {
+          "word": "help",
+          "start": 2.34,
+          "end": 2.54
+        },
+        {
+          "word": "the",
+          "start": 2.54,
+          "end": 2.72
+        },
+        {
+          "word": "kid?",
+          "start": 2.72,
+          "end": 3.4
+        }
+      ],
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration; approximate boundaries nominal20msgrid",
+      "alignmentAudioFrames": 190,
+      "numBeams": 1,
+      "generationTimestampTokens": false,
+      "recognitionTempo": 1,
+      "recognitionTests": [
+        {
+          "numBeams": 1,
+          "recognizedText": "How sure are you that the kids' teacher will help the kid?",
+          "exactNormalizedWordMatch": true
+        }
+      ],
+      "articleOmissionExceptionsAllowed": false,
+      "cueAlignmentApproved": true,
+      "recognitionMethod": "unprompted full-context recognition from final unchanged native MP3"
+    },
+    "nr_confidence_002": {
+      "id": "nr_confidence_002",
+      "sha256": "601934c98d6ccd9c6a808227155a2ce5f1fcd0fd0eed37424f7006453908fb53",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "durationSeconds": 4.0751,
+      "decodedDurationSeconds": 4.075125,
+      "recognizedText": "How sure are you that the kids' teacher will not help the kid?",
+      "expectedText": "How sure are you that the kid’s teacher will NOT help the kid?",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.36
+        },
+        {
+          "word": "sure",
+          "start": 0.36,
+          "end": 0.66
+        },
+        {
+          "word": "are",
+          "start": 0.66,
+          "end": 0.86
+        },
+        {
+          "word": "you",
+          "start": 0.86,
+          "end": 1.06
+        },
+        {
+          "word": "that",
+          "start": 1.06,
+          "end": 1.28
+        },
+        {
+          "word": "the",
+          "start": 1.28,
+          "end": 1.36
+        },
+        {
+          "word": "kids'",
+          "start": 1.36,
+          "end": 1.84
+        },
+        {
+          "word": "teacher",
+          "start": 1.84,
+          "end": 2.04
+        },
+        {
+          "word": "will",
+          "start": 2.04,
+          "end": 2.36
+        },
+        {
+          "word": "not",
+          "start": 2.36,
+          "end": 2.54
+        },
+        {
+          "word": "help",
+          "start": 2.54,
+          "end": 2.78
+        },
+        {
+          "word": "the",
+          "start": 2.78,
+          "end": 2.98
+        },
+        {
+          "word": "kid?",
+          "start": 2.98,
+          "end": 3.64
+        }
+      ],
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration; approximate boundaries nominal20msgrid",
+      "alignmentAudioFrames": 204,
+      "numBeams": 1,
+      "generationTimestampTokens": false,
+      "recognitionTempo": 1,
+      "recognitionTests": [
+        {
+          "numBeams": 1,
+          "recognizedText": "How sure are you that the kids' teacher will not help the kid?",
+          "exactNormalizedWordMatch": true
+        }
+      ],
+      "articleOmissionExceptionsAllowed": false,
+      "cueAlignmentApproved": true,
+      "recognitionMethod": "unprompted full-context recognition from final unchanged native MP3"
+    },
+    "nr_confidence_003": {
+      "id": "nr_confidence_003",
+      "sha256": "a40ff34c3617a922998087a47e9225a583bf1c1354a54935a566635ea8f99026",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "durationSeconds": 3.657125,
+      "decodedDurationSeconds": 3.657125,
+      "recognizedText": "How sure are you that the kid's mom will help the kid?",
+      "expectedText": "How sure are you that the kid’s mom will help the kid?",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.36
+        },
+        {
+          "word": "sure",
+          "start": 0.36,
+          "end": 0.66
+        },
+        {
+          "word": "are",
+          "start": 0.66,
+          "end": 0.84
+        },
+        {
+          "word": "you",
+          "start": 0.84,
+          "end": 1.04
+        },
+        {
+          "word": "that",
+          "start": 1.04,
+          "end": 1.22
+        },
+        {
+          "word": "the",
+          "start": 1.22,
+          "end": 1.32
+        },
+        {
+          "word": "kid's",
+          "start": 1.32,
+          "end": 1.74
+        },
+        {
+          "word": "mom",
+          "start": 1.74,
+          "end": 1.94
+        },
+        {
+          "word": "will",
+          "start": 1.94,
+          "end": 2.2
+        },
+        {
+          "word": "help",
+          "start": 2.2,
+          "end": 2.42
+        },
+        {
+          "word": "the",
+          "start": 2.42,
+          "end": 2.58
+        },
+        {
+          "word": "kid?",
+          "start": 2.58,
+          "end": 3.32
+        }
+      ],
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration; approximate boundaries nominal20msgrid",
+      "alignmentAudioFrames": 183,
+      "numBeams": 1,
+      "generationTimestampTokens": false,
+      "recognitionTempo": 1,
+      "recognitionTests": [
+        {
+          "numBeams": 1,
+          "recognizedText": "How sure are you that the kid's mom will help the kid?",
+          "exactNormalizedWordMatch": true
+        }
+      ],
+      "articleOmissionExceptionsAllowed": false,
+      "cueAlignmentApproved": true,
+      "recognitionMethod": "unprompted full-context recognition from final unchanged native MP3"
+    },
+    "nr_confidence_004": {
+      "id": "nr_confidence_004",
+      "sha256": "1d65e0d759fb75435911434cd1198fa63f3410ccd59d9a1ed76fd8d142bd4448",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "durationSeconds": 3.91835,
+      "decodedDurationSeconds": 3.918375,
+      "recognizedText": "How sure are you that the kid's mom will not help the kid?",
+      "expectedText": "How sure are you that the kid’s mom will NOT help the kid?",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.36
+        },
+        {
+          "word": "sure",
+          "start": 0.36,
+          "end": 0.66
+        },
+        {
+          "word": "are",
+          "start": 0.66,
+          "end": 0.86
+        },
+        {
+          "word": "you",
+          "start": 0.86,
+          "end": 1.06
+        },
+        {
+          "word": "that",
+          "start": 1.06,
+          "end": 1.24
+        },
+        {
+          "word": "the",
+          "start": 1.24,
+          "end": 1.34
+        },
+        {
+          "word": "kid's",
+          "start": 1.34,
+          "end": 1.76
+        },
+        {
+          "word": "mom",
+          "start": 1.76,
+          "end": 1.98
+        },
+        {
+          "word": "will",
+          "start": 1.98,
+          "end": 2.24
+        },
+        {
+          "word": "not",
+          "start": 2.24,
+          "end": 2.42
+        },
+        {
+          "word": "help",
+          "start": 2.42,
+          "end": 2.66
+        },
+        {
+          "word": "the",
+          "start": 2.66,
+          "end": 2.86
+        },
+        {
+          "word": "kid?",
+          "start": 2.86,
+          "end": 3.54
+        }
+      ],
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration; approximate boundaries nominal20msgrid",
+      "alignmentAudioFrames": 196,
+      "numBeams": 1,
+      "generationTimestampTokens": false,
+      "recognitionTempo": 1,
+      "recognitionTests": [
+        {
+          "numBeams": 1,
+          "recognizedText": "How sure are you that the kid's mom will not help the kid?",
+          "exactNormalizedWordMatch": true
+        }
+      ],
+      "articleOmissionExceptionsAllowed": false,
+      "cueAlignmentApproved": true,
+      "recognitionMethod": "unprompted full-context recognition from final unchanged native MP3"
+    },
+    "nr_confidence_005": {
+      "id": "nr_confidence_005",
+      "sha256": "fe1e883705a712cc3300e26f8dc7896a6d3c3e098e22de4e5c73323bc773f4fb",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "durationSeconds": 3.7355,
+      "decodedDurationSeconds": 3.7355,
+      "recognizedText": "How sure are you that the kid's sister will help the kid?",
+      "expectedText": "How sure are you that the kid’s sister will help the kid?",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.36
+        },
+        {
+          "word": "sure",
+          "start": 0.36,
+          "end": 0.66
+        },
+        {
+          "word": "are",
+          "start": 0.66,
+          "end": 0.84
+        },
+        {
+          "word": "you",
+          "start": 0.84,
+          "end": 1.04
+        },
+        {
+          "word": "that",
+          "start": 1.04,
+          "end": 1.26
+        },
+        {
+          "word": "the",
+          "start": 1.26,
+          "end": 1.32
+        },
+        {
+          "word": "kid's",
+          "start": 1.32,
+          "end": 1.74
+        },
+        {
+          "word": "sister",
+          "start": 1.74,
+          "end": 2.12
+        },
+        {
+          "word": "will",
+          "start": 2.12,
+          "end": 2.32
+        },
+        {
+          "word": "help",
+          "start": 2.32,
+          "end": 2.52
+        },
+        {
+          "word": "the",
+          "start": 2.52,
+          "end": 2.68
+        },
+        {
+          "word": "kid?",
+          "start": 2.68,
+          "end": 3.4
+        }
+      ],
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration; approximate boundaries nominal20msgrid",
+      "alignmentAudioFrames": 187,
+      "numBeams": 1,
+      "generationTimestampTokens": false,
+      "recognitionTempo": 1,
+      "recognitionTests": [
+        {
+          "numBeams": 1,
+          "recognizedText": "How sure are you that the kid's sister will help the kid?",
+          "exactNormalizedWordMatch": true
+        }
+      ],
+      "articleOmissionExceptionsAllowed": false,
+      "cueAlignmentApproved": true,
+      "recognitionMethod": "unprompted full-context recognition from final unchanged native MP3"
+    },
+    "nr_confidence_006": {
+      "id": "nr_confidence_006",
+      "sha256": "b729b014c367394381b63786658dab22100fc1d743fbf92b42c4f7bdb27edc11",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "durationSeconds": 3.996725,
+      "decodedDurationSeconds": 3.99675,
+      "recognizedText": "How sure are you that the kid's sister will not help the kid?",
+      "expectedText": "How sure are you that the kid’s sister will NOT help the kid?",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.36
+        },
+        {
+          "word": "sure",
+          "start": 0.36,
+          "end": 0.66
+        },
+        {
+          "word": "are",
+          "start": 0.66,
+          "end": 0.84
+        },
+        {
+          "word": "you",
+          "start": 0.84,
+          "end": 1.06
+        },
+        {
+          "word": "that",
+          "start": 1.06,
+          "end": 1.26
+        },
+        {
+          "word": "the",
+          "start": 1.26,
+          "end": 1.36
+        },
+        {
+          "word": "kid's",
+          "start": 1.36,
+          "end": 1.76
+        },
+        {
+          "word": "sister",
+          "start": 1.76,
+          "end": 2.12
+        },
+        {
+          "word": "will",
+          "start": 2.12,
+          "end": 2.32
+        },
+        {
+          "word": "not",
+          "start": 2.32,
+          "end": 2.52
+        },
+        {
+          "word": "help",
+          "start": 2.52,
+          "end": 2.74
+        },
+        {
+          "word": "the",
+          "start": 2.74,
+          "end": 2.94
+        },
+        {
+          "word": "kid?",
+          "start": 2.94,
+          "end": 3.58
+        }
+      ],
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration; approximate boundaries nominal20msgrid",
+      "alignmentAudioFrames": 200,
+      "numBeams": 1,
+      "generationTimestampTokens": false,
+      "recognitionTempo": 1,
+      "recognitionTests": [
+        {
+          "numBeams": 1,
+          "recognizedText": "How sure are you that the kid's sister will not help the kid?",
+          "exactNormalizedWordMatch": true
+        }
+      ],
+      "articleOmissionExceptionsAllowed": false,
+      "cueAlignmentApproved": true,
+      "recognitionMethod": "unprompted full-context recognition from final unchanged native MP3"
+    },
+    "nr_confidence_007": {
+      "id": "nr_confidence_007",
+      "sha256": "0ae2924eaa1314bdd323213e268b40ddc632803c66f8fbe8c9c7da2e7143433f",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "durationSeconds": 3.709375,
+      "decodedDurationSeconds": 3.709375,
+      "recognizedText": "How sure are you that the kid's friend will help the kid?",
+      "expectedText": "How sure are you that the kid’s friend will help the kid?",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.38
+        },
+        {
+          "word": "sure",
+          "start": 0.38,
+          "end": 0.68
+        },
+        {
+          "word": "are",
+          "start": 0.68,
+          "end": 0.9
+        },
+        {
+          "word": "you",
+          "start": 0.9,
+          "end": 1.08
+        },
+        {
+          "word": "that",
+          "start": 1.08,
+          "end": 1.26
+        },
+        {
+          "word": "the",
+          "start": 1.26,
+          "end": 1.36
+        },
+        {
+          "word": "kid's",
+          "start": 1.36,
+          "end": 1.78
+        },
+        {
+          "word": "friend",
+          "start": 1.78,
+          "end": 2.02
+        },
+        {
+          "word": "will",
+          "start": 2.02,
+          "end": 2.28
+        },
+        {
+          "word": "help",
+          "start": 2.28,
+          "end": 2.48
+        },
+        {
+          "word": "the",
+          "start": 2.48,
+          "end": 2.66
+        },
+        {
+          "word": "kid?",
+          "start": 2.66,
+          "end": 3.4
+        }
+      ],
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration; approximate boundaries nominal20msgrid",
+      "alignmentAudioFrames": 186,
+      "numBeams": 1,
+      "generationTimestampTokens": false,
+      "recognitionTempo": 1,
+      "recognitionTests": [
+        {
+          "numBeams": 1,
+          "recognizedText": "How sure are you that the kid's friend will help the kid?",
+          "exactNormalizedWordMatch": true
+        }
+      ],
+      "articleOmissionExceptionsAllowed": false,
+      "cueAlignmentApproved": true,
+      "recognitionMethod": "unprompted full-context recognition from final unchanged native MP3"
+    },
+    "nr_confidence_008": {
+      "id": "nr_confidence_008",
+      "sha256": "bcdba131810a1518ba553685b0938357dd79fe9b3c3d4b97178ffa0ce94cb216",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "durationSeconds": 3.996725,
+      "decodedDurationSeconds": 3.99675,
+      "recognizedText": "How sure are you that the kid's friend will not help the kid?",
+      "expectedText": "How sure are you that the kid’s friend will NOT help the kid?",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.36
+        },
+        {
+          "word": "sure",
+          "start": 0.36,
+          "end": 0.68
+        },
+        {
+          "word": "are",
+          "start": 0.68,
+          "end": 0.88
+        },
+        {
+          "word": "you",
+          "start": 0.88,
+          "end": 1.08
+        },
+        {
+          "word": "that",
+          "start": 1.08,
+          "end": 1.28
+        },
+        {
+          "word": "the",
+          "start": 1.28,
+          "end": 1.38
+        },
+        {
+          "word": "kid's",
+          "start": 1.38,
+          "end": 1.8
+        },
+        {
+          "word": "friend",
+          "start": 1.8,
+          "end": 2.0
+        },
+        {
+          "word": "will",
+          "start": 2.0,
+          "end": 2.3
+        },
+        {
+          "word": "not",
+          "start": 2.3,
+          "end": 2.48
+        },
+        {
+          "word": "help",
+          "start": 2.48,
+          "end": 2.72
+        },
+        {
+          "word": "the",
+          "start": 2.72,
+          "end": 2.92
+        },
+        {
+          "word": "kid?",
+          "start": 2.92,
+          "end": 3.58
+        }
+      ],
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration; approximate boundaries nominal20msgrid",
+      "alignmentAudioFrames": 200,
+      "numBeams": 1,
+      "generationTimestampTokens": false,
+      "recognitionTempo": 1,
+      "recognitionTests": [
+        {
+          "numBeams": 1,
+          "recognizedText": "How sure are you that the kid's friend will not help the kid?",
+          "exactNormalizedWordMatch": true
+        }
+      ],
+      "articleOmissionExceptionsAllowed": false,
+      "cueAlignmentApproved": true,
+      "recognitionMethod": "unprompted full-context recognition from final unchanged native MP3"
+    },
+    "nr_confidence_009": {
+      "id": "nr_confidence_009",
+      "sha256": "c49027a1c510d11fa0ae3650b08524527799c2d5083a381fdbdade8498c6103d",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "durationSeconds": 4.02285,
+      "decodedDurationSeconds": 4.022875,
+      "recognizedText": "How sure are you that the kid's best friend will help the kid?",
+      "expectedText": "How sure are you that the kid’s best friend will help the kid?",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.36
+        },
+        {
+          "word": "sure",
+          "start": 0.36,
+          "end": 0.64
+        },
+        {
+          "word": "are",
+          "start": 0.64,
+          "end": 0.86
+        },
+        {
+          "word": "you",
+          "start": 0.86,
+          "end": 1.06
+        },
+        {
+          "word": "that",
+          "start": 1.06,
+          "end": 1.26
+        },
+        {
+          "word": "the",
+          "start": 1.26,
+          "end": 1.34
+        },
+        {
+          "word": "kid's",
+          "start": 1.34,
+          "end": 1.76
+        },
+        {
+          "word": "best",
+          "start": 1.76,
+          "end": 1.92
+        },
+        {
+          "word": "friend",
+          "start": 1.92,
+          "end": 2.38
+        },
+        {
+          "word": "will",
+          "start": 2.38,
+          "end": 2.58
+        },
+        {
+          "word": "help",
+          "start": 2.58,
+          "end": 2.78
+        },
+        {
+          "word": "the",
+          "start": 2.78,
+          "end": 2.94
+        },
+        {
+          "word": "kid?",
+          "start": 2.94,
+          "end": 3.64
+        }
+      ],
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration; approximate boundaries nominal20msgrid",
+      "alignmentAudioFrames": 202,
+      "numBeams": 1,
+      "generationTimestampTokens": false,
+      "recognitionTempo": 1,
+      "recognitionTests": [
+        {
+          "numBeams": 1,
+          "recognizedText": "How sure are you that the kid's best friend will help the kid?",
+          "exactNormalizedWordMatch": true
+        }
+      ],
+      "articleOmissionExceptionsAllowed": false,
+      "cueAlignmentApproved": true,
+      "recognitionMethod": "unprompted full-context recognition from final unchanged native MP3"
+    },
+    "nr_confidence_010": {
+      "id": "nr_confidence_010",
+      "sha256": "e7fe0ce69263b9fd02228bb3cb5955778331d91ceebb65831c0330384273e8b2",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "durationSeconds": 4.3102,
+      "decodedDurationSeconds": 4.3101875,
+      "recognizedText": "How sure are you that the kid's best friend will not help the kid?",
+      "expectedText": "How sure are you that the kid’s best friend will NOT help the kid?",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.36
+        },
+        {
+          "word": "sure",
+          "start": 0.36,
+          "end": 0.62
+        },
+        {
+          "word": "are",
+          "start": 0.62,
+          "end": 0.88
+        },
+        {
+          "word": "you",
+          "start": 0.88,
+          "end": 1.08
+        },
+        {
+          "word": "that",
+          "start": 1.08,
+          "end": 1.28
+        },
+        {
+          "word": "the",
+          "start": 1.28,
+          "end": 1.38
+        },
+        {
+          "word": "kid's",
+          "start": 1.38,
+          "end": 1.8
+        },
+        {
+          "word": "best",
+          "start": 1.8,
+          "end": 1.94
+        },
+        {
+          "word": "friend",
+          "start": 1.94,
+          "end": 2.38
+        },
+        {
+          "word": "will",
+          "start": 2.38,
+          "end": 2.62
+        },
+        {
+          "word": "not",
+          "start": 2.62,
+          "end": 2.82
+        },
+        {
+          "word": "help",
+          "start": 2.82,
+          "end": 3.04
+        },
+        {
+          "word": "the",
+          "start": 3.04,
+          "end": 3.24
+        },
+        {
+          "word": "kid?",
+          "start": 3.24,
+          "end": 3.94
+        }
+      ],
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration; approximate boundaries nominal20msgrid",
+      "alignmentAudioFrames": 216,
+      "numBeams": 1,
+      "generationTimestampTokens": false,
+      "recognitionTempo": 1,
+      "recognitionTests": [
+        {
+          "numBeams": 1,
+          "recognizedText": "How sure are you that the kid's best friend will not help the kid?",
+          "exactNormalizedWordMatch": true
+        }
+      ],
+      "articleOmissionExceptionsAllowed": false,
+      "cueAlignmentApproved": true,
+      "recognitionMethod": "unprompted full-context recognition from final unchanged native MP3"
+    },
+    "nr_confidence_011": {
+      "id": "nr_confidence_011",
+      "sha256": "5805cd203e659edb36ebcfc442987f8aa69f98b0f78c9bb8b14cbb1bc8a5668e",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "durationSeconds": 4.048975,
+      "decodedDurationSeconds": 4.049,
+      "recognizedText": "How sure are you that the kids' classmate will help the kid?",
+      "expectedText": "How sure are you that the kid’s classmate will help the kid?",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.38
+        },
+        {
+          "word": "sure",
+          "start": 0.38,
+          "end": 0.68
+        },
+        {
+          "word": "are",
+          "start": 0.68,
+          "end": 0.9
+        },
+        {
+          "word": "you",
+          "start": 0.9,
+          "end": 1.1
+        },
+        {
+          "word": "that",
+          "start": 1.1,
+          "end": 1.32
+        },
+        {
+          "word": "the",
+          "start": 1.32,
+          "end": 1.4
+        },
+        {
+          "word": "kids'",
+          "start": 1.4,
+          "end": 1.88
+        },
+        {
+          "word": "classmate",
+          "start": 1.88,
+          "end": 2.14
+        },
+        {
+          "word": "will",
+          "start": 2.14,
+          "end": 2.6
+        },
+        {
+          "word": "help",
+          "start": 2.6,
+          "end": 2.8
+        },
+        {
+          "word": "the",
+          "start": 2.8,
+          "end": 2.98
+        },
+        {
+          "word": "kid?",
+          "start": 2.98,
+          "end": 3.62
+        }
+      ],
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration; approximate boundaries nominal20msgrid",
+      "alignmentAudioFrames": 203,
+      "numBeams": 1,
+      "generationTimestampTokens": false,
+      "recognitionTempo": 1,
+      "recognitionTests": [
+        {
+          "numBeams": 1,
+          "recognizedText": "How sure are you that the kids' classmate will help the kid?",
+          "exactNormalizedWordMatch": true
+        }
+      ],
+      "articleOmissionExceptionsAllowed": false,
+      "cueAlignmentApproved": true,
+      "recognitionMethod": "unprompted full-context recognition from final unchanged native MP3"
+    },
+    "nr_confidence_012": {
+      "id": "nr_confidence_012",
+      "sha256": "a42de49c3238d1fa618286e08e19f5d5b82e9365609fb0e8795ac97e7d01baaa",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "durationSeconds": 4.336325,
+      "decodedDurationSeconds": 4.3363125,
+      "recognizedText": "How sure are you that the kids' classmate will not help the kid?",
+      "expectedText": "How sure are you that the kid’s classmate will NOT help the kid?",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.38
+        },
+        {
+          "word": "sure",
+          "start": 0.38,
+          "end": 0.7
+        },
+        {
+          "word": "are",
+          "start": 0.7,
+          "end": 0.92
+        },
+        {
+          "word": "you",
+          "start": 0.92,
+          "end": 1.12
+        },
+        {
+          "word": "that",
+          "start": 1.12,
+          "end": 1.32
+        },
+        {
+          "word": "the",
+          "start": 1.32,
+          "end": 1.42
+        },
+        {
+          "word": "kids'",
+          "start": 1.42,
+          "end": 1.88
+        },
+        {
+          "word": "classmate",
+          "start": 1.88,
+          "end": 2.18
+        },
+        {
+          "word": "will",
+          "start": 2.18,
+          "end": 2.62
+        },
+        {
+          "word": "not",
+          "start": 2.62,
+          "end": 2.82
+        },
+        {
+          "word": "help",
+          "start": 2.82,
+          "end": 3.04
+        },
+        {
+          "word": "the",
+          "start": 3.04,
+          "end": 3.24
+        },
+        {
+          "word": "kid?",
+          "start": 3.24,
+          "end": 3.94
+        }
+      ],
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration; approximate boundaries nominal20msgrid",
+      "alignmentAudioFrames": 217,
+      "numBeams": 1,
+      "generationTimestampTokens": false,
+      "recognitionTempo": 1,
+      "recognitionTests": [
+        {
+          "numBeams": 1,
+          "recognizedText": "How sure are you that the kids' classmate will not help the kid?",
+          "exactNormalizedWordMatch": true
+        }
+      ],
+      "articleOmissionExceptionsAllowed": false,
+      "cueAlignmentApproved": true,
+      "recognitionMethod": "unprompted full-context recognition from final unchanged native MP3"
+    },
+    "nr_confidence_013": {
+      "id": "nr_confidence_013",
+      "sha256": "5c210fcbe9fcf9f9e44b083d4adbf9500058547affcb6752353f2dbe2a63a246",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "durationSeconds": 3.657125,
+      "decodedDurationSeconds": 3.657125,
+      "recognizedText": "How sure are you that the kid's dad will help the kid?",
+      "expectedText": "How sure are you that the kid’s dad will help the kid?",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.36
+        },
+        {
+          "word": "sure",
+          "start": 0.36,
+          "end": 0.66
+        },
+        {
+          "word": "are",
+          "start": 0.66,
+          "end": 0.84
+        },
+        {
+          "word": "you",
+          "start": 0.84,
+          "end": 1.04
+        },
+        {
+          "word": "that",
+          "start": 1.04,
+          "end": 1.22
+        },
+        {
+          "word": "the",
+          "start": 1.22,
+          "end": 1.32
+        },
+        {
+          "word": "kid's",
+          "start": 1.32,
+          "end": 1.74
+        },
+        {
+          "word": "dad",
+          "start": 1.74,
+          "end": 2.0
+        },
+        {
+          "word": "will",
+          "start": 2.0,
+          "end": 2.22
+        },
+        {
+          "word": "help",
+          "start": 2.22,
+          "end": 2.42
+        },
+        {
+          "word": "the",
+          "start": 2.42,
+          "end": 2.58
+        },
+        {
+          "word": "kid?",
+          "start": 2.58,
+          "end": 3.32
+        }
+      ],
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration; approximate boundaries nominal20msgrid",
+      "alignmentAudioFrames": 183,
+      "numBeams": 1,
+      "generationTimestampTokens": false,
+      "recognitionTempo": 1,
+      "recognitionTests": [
+        {
+          "numBeams": 1,
+          "recognizedText": "How sure are you that the kid's dad will help the kid?",
+          "exactNormalizedWordMatch": true
+        }
+      ],
+      "articleOmissionExceptionsAllowed": false,
+      "cueAlignmentApproved": true,
+      "recognitionMethod": "unprompted full-context recognition from final unchanged native MP3"
+    },
+    "nr_confidence_014": {
+      "id": "nr_confidence_014",
+      "sha256": "8adce8051074abcfabe81ee4efc37c04fc7559bfa6ed98bd18ea93edd2c36873",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "durationSeconds": 3.91835,
+      "decodedDurationSeconds": 3.918375,
+      "recognizedText": "How sure are you that the kids' dad will not help the kid?",
+      "expectedText": "How sure are you that the kid’s dad will NOT help the kid?",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.36
+        },
+        {
+          "word": "sure",
+          "start": 0.36,
+          "end": 0.66
+        },
+        {
+          "word": "are",
+          "start": 0.66,
+          "end": 0.86
+        },
+        {
+          "word": "you",
+          "start": 0.86,
+          "end": 1.04
+        },
+        {
+          "word": "that",
+          "start": 1.04,
+          "end": 1.24
+        },
+        {
+          "word": "the",
+          "start": 1.24,
+          "end": 1.32
+        },
+        {
+          "word": "kids'",
+          "start": 1.32,
+          "end": 1.78
+        },
+        {
+          "word": "dad",
+          "start": 1.78,
+          "end": 2.02
+        },
+        {
+          "word": "will",
+          "start": 2.02,
+          "end": 2.22
+        },
+        {
+          "word": "not",
+          "start": 2.22,
+          "end": 2.4
+        },
+        {
+          "word": "help",
+          "start": 2.4,
+          "end": 2.64
+        },
+        {
+          "word": "the",
+          "start": 2.64,
+          "end": 2.82
+        },
+        {
+          "word": "kid?",
+          "start": 2.82,
+          "end": 3.48
+        }
+      ],
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration; approximate boundaries nominal20msgrid",
+      "alignmentAudioFrames": 196,
+      "numBeams": 1,
+      "generationTimestampTokens": false,
+      "recognitionTempo": 1,
+      "recognitionTests": [
+        {
+          "numBeams": 1,
+          "recognizedText": "How sure are you that the kids' dad will not help the kid?",
+          "exactNormalizedWordMatch": true
+        }
+      ],
+      "articleOmissionExceptionsAllowed": false,
+      "cueAlignmentApproved": true,
+      "recognitionMethod": "unprompted full-context recognition from final unchanged native MP3"
+    },
+    "nr_confidence_015": {
+      "id": "nr_confidence_015",
+      "sha256": "1b1fabba01e80ff26ee3d98b8b16d9fcc88218fa59630f3c06803ab4de97ff49",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "durationSeconds": 3.78775,
+      "decodedDurationSeconds": 3.78775,
+      "recognizedText": "How sure are you that the kid's brother will help the kid?",
+      "expectedText": "How sure are you that the kid’s brother will help the kid?",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.36
+        },
+        {
+          "word": "sure",
+          "start": 0.36,
+          "end": 0.68
+        },
+        {
+          "word": "are",
+          "start": 0.68,
+          "end": 0.9
+        },
+        {
+          "word": "you",
+          "start": 0.9,
+          "end": 1.1
+        },
+        {
+          "word": "that",
+          "start": 1.1,
+          "end": 1.32
+        },
+        {
+          "word": "the",
+          "start": 1.32,
+          "end": 1.4
+        },
+        {
+          "word": "kid's",
+          "start": 1.4,
+          "end": 1.8
+        },
+        {
+          "word": "brother",
+          "start": 1.8,
+          "end": 2.1
+        },
+        {
+          "word": "will",
+          "start": 2.1,
+          "end": 2.34
+        },
+        {
+          "word": "help",
+          "start": 2.34,
+          "end": 2.54
+        },
+        {
+          "word": "the",
+          "start": 2.54,
+          "end": 2.72
+        },
+        {
+          "word": "kid?",
+          "start": 2.72,
+          "end": 3.44
+        }
+      ],
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration; approximate boundaries nominal20msgrid",
+      "alignmentAudioFrames": 190,
+      "numBeams": 1,
+      "generationTimestampTokens": false,
+      "recognitionTempo": 1,
+      "recognitionTests": [
+        {
+          "numBeams": 1,
+          "recognizedText": "How sure are you that the kid's brother will help the kid?",
+          "exactNormalizedWordMatch": true
+        }
+      ],
+      "articleOmissionExceptionsAllowed": false,
+      "cueAlignmentApproved": true,
+      "recognitionMethod": "unprompted full-context recognition from final unchanged native MP3"
+    },
+    "nr_confidence_016": {
+      "id": "nr_confidence_016",
+      "sha256": "919bad8f228e268e84ee7754cbe5cd1ae20d8a608fa304a6e248857d6ad8a5e9",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "durationSeconds": 4.048975,
+      "decodedDurationSeconds": 4.049,
+      "recognizedText": "How sure are you that the kid's brother will not help the kid?",
+      "expectedText": "How sure are you that the kid’s brother will NOT help the kid?",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.36
+        },
+        {
+          "word": "sure",
+          "start": 0.36,
+          "end": 0.68
+        },
+        {
+          "word": "are",
+          "start": 0.68,
+          "end": 0.88
+        },
+        {
+          "word": "you",
+          "start": 0.88,
+          "end": 1.1
+        },
+        {
+          "word": "that",
+          "start": 1.1,
+          "end": 1.3
+        },
+        {
+          "word": "the",
+          "start": 1.3,
+          "end": 1.4
+        },
+        {
+          "word": "kid's",
+          "start": 1.4,
+          "end": 1.8
+        },
+        {
+          "word": "brother",
+          "start": 1.8,
+          "end": 2.08
+        },
+        {
+          "word": "will",
+          "start": 2.08,
+          "end": 2.34
+        },
+        {
+          "word": "not",
+          "start": 2.34,
+          "end": 2.54
+        },
+        {
+          "word": "help",
+          "start": 2.54,
+          "end": 2.78
+        },
+        {
+          "word": "the",
+          "start": 2.78,
+          "end": 2.96
+        },
+        {
+          "word": "kid?",
+          "start": 2.96,
+          "end": 3.62
+        }
+      ],
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration; approximate boundaries nominal20msgrid",
+      "alignmentAudioFrames": 203,
+      "numBeams": 1,
+      "generationTimestampTokens": false,
+      "recognitionTempo": 1,
+      "recognitionTests": [
+        {
+          "numBeams": 1,
+          "recognizedText": "How sure are you that the kid's brother will not help the kid?",
+          "exactNormalizedWordMatch": true
+        }
+      ],
+      "articleOmissionExceptionsAllowed": false,
+      "cueAlignmentApproved": true,
+      "recognitionMethod": "unprompted full-context recognition from final unchanged native MP3"
+    },
+    "nr_confidence_017": {
+      "id": "nr_confidence_017",
+      "sha256": "563cd288dbd2f1c04550e097b5829e59925a718893fab3024b12bd9542a4f240",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "durationSeconds": 3.631,
+      "decodedDurationSeconds": 3.631,
+      "recognizedText": "How sure are you that the kids' dad will help the mom?",
+      "expectedText": "How sure are you that the kid’s dad will help the mom?",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.38
+        },
+        {
+          "word": "sure",
+          "start": 0.38,
+          "end": 0.68
+        },
+        {
+          "word": "are",
+          "start": 0.68,
+          "end": 0.86
+        },
+        {
+          "word": "you",
+          "start": 0.86,
+          "end": 1.06
+        },
+        {
+          "word": "that",
+          "start": 1.06,
+          "end": 1.22
+        },
+        {
+          "word": "the",
+          "start": 1.22,
+          "end": 1.34
+        },
+        {
+          "word": "kids'",
+          "start": 1.34,
+          "end": 1.8
+        },
+        {
+          "word": "dad",
+          "start": 1.8,
+          "end": 2.02
+        },
+        {
+          "word": "will",
+          "start": 2.02,
+          "end": 2.22
+        },
+        {
+          "word": "help",
+          "start": 2.22,
+          "end": 2.44
+        },
+        {
+          "word": "the",
+          "start": 2.44,
+          "end": 2.6
+        },
+        {
+          "word": "mom?",
+          "start": 2.6,
+          "end": 3.3
+        }
+      ],
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration; approximate boundaries nominal20msgrid",
+      "alignmentAudioFrames": 182,
+      "numBeams": 1,
+      "generationTimestampTokens": false,
+      "recognitionTempo": 1,
+      "recognitionTests": [
+        {
+          "numBeams": 1,
+          "recognizedText": "How sure are you that the kids' dad will help the mom?",
+          "exactNormalizedWordMatch": true
+        }
+      ],
+      "articleOmissionExceptionsAllowed": false,
+      "cueAlignmentApproved": true,
+      "recognitionMethod": "unprompted full-context recognition from final unchanged native MP3"
+    },
+    "nr_confidence_018": {
+      "id": "nr_confidence_018",
+      "sha256": "cc53aeece112a0141e4ba5540ecf359b173c6a725ec3051853c8d623396f6d18",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "durationSeconds": 3.8661,
+      "decodedDurationSeconds": 3.866125,
+      "recognizedText": "How sure are you that the kids' dad will not help the mom?",
+      "expectedText": "How sure are you that the kid’s dad will NOT help the mom?",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.36
+        },
+        {
+          "word": "sure",
+          "start": 0.36,
+          "end": 0.66
+        },
+        {
+          "word": "are",
+          "start": 0.66,
+          "end": 0.86
+        },
+        {
+          "word": "you",
+          "start": 0.86,
+          "end": 1.06
+        },
+        {
+          "word": "that",
+          "start": 1.06,
+          "end": 1.24
+        },
+        {
+          "word": "the",
+          "start": 1.24,
+          "end": 1.32
+        },
+        {
+          "word": "kids'",
+          "start": 1.32,
+          "end": 1.8
+        },
+        {
+          "word": "dad",
+          "start": 1.8,
+          "end": 2.02
+        },
+        {
+          "word": "will",
+          "start": 2.02,
+          "end": 2.24
+        },
+        {
+          "word": "not",
+          "start": 2.24,
+          "end": 2.4
+        },
+        {
+          "word": "help",
+          "start": 2.4,
+          "end": 2.66
+        },
+        {
+          "word": "the",
+          "start": 2.66,
+          "end": 2.84
+        },
+        {
+          "word": "mom?",
+          "start": 2.84,
+          "end": 3.48
+        }
+      ],
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration; approximate boundaries nominal20msgrid",
+      "alignmentAudioFrames": 194,
+      "numBeams": 1,
+      "generationTimestampTokens": false,
+      "recognitionTempo": 1,
+      "recognitionTests": [
+        {
+          "numBeams": 1,
+          "recognizedText": "How sure are you that the kids' dad will not help the mom?",
+          "exactNormalizedWordMatch": true
+        }
+      ],
+      "articleOmissionExceptionsAllowed": false,
+      "cueAlignmentApproved": true,
+      "recognitionMethod": "unprompted full-context recognition from final unchanged native MP3"
+    },
+    "nr_confidence_019": {
+      "id": "nr_confidence_019",
+      "sha256": "7ad7a19bbd3fa6f7c0748bba87bf28d997b8734b86b0b584c3b37b4fdf052e41",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "durationSeconds": 3.2653,
+      "decodedDurationSeconds": 3.2653125,
+      "recognizedText": "How sure are you that the kid will help the mom?",
+      "expectedText": "How sure are you that the kid will help the mom?",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.38
+        },
+        {
+          "word": "sure",
+          "start": 0.38,
+          "end": 0.68
+        },
+        {
+          "word": "are",
+          "start": 0.68,
+          "end": 0.86
+        },
+        {
+          "word": "you",
+          "start": 0.86,
+          "end": 1.06
+        },
+        {
+          "word": "that",
+          "start": 1.06,
+          "end": 1.22
+        },
+        {
+          "word": "the",
+          "start": 1.22,
+          "end": 1.32
+        },
+        {
+          "word": "kid",
+          "start": 1.32,
+          "end": 1.62
+        },
+        {
+          "word": "will",
+          "start": 1.62,
+          "end": 1.84
+        },
+        {
+          "word": "help",
+          "start": 1.84,
+          "end": 2.06
+        },
+        {
+          "word": "the",
+          "start": 2.06,
+          "end": 2.24
+        },
+        {
+          "word": "mom?",
+          "start": 2.24,
+          "end": 2.94
+        }
+      ],
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration; approximate boundaries nominal20msgrid",
+      "alignmentAudioFrames": 164,
+      "numBeams": 1,
+      "generationTimestampTokens": false,
+      "recognitionTempo": 1,
+      "recognitionTests": [
+        {
+          "numBeams": 1,
+          "recognizedText": "How sure are you that the kid will help the mom?",
+          "exactNormalizedWordMatch": true
+        }
+      ],
+      "articleOmissionExceptionsAllowed": false,
+      "cueAlignmentApproved": true,
+      "recognitionMethod": "unprompted full-context recognition from final unchanged native MP3"
+    },
+    "nr_confidence_020": {
+      "id": "nr_confidence_020",
+      "sha256": "6414535505d44f272644fe8396c3a97d0e56b326e0c7a0a8e01678795d5b3659",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "durationSeconds": 3.55265,
+      "decodedDurationSeconds": 3.5526875,
+      "recognizedText": "How sure are you that the kid will not help the mom?",
+      "expectedText": "How sure are you that the kid will NOT help the mom?",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.38
+        },
+        {
+          "word": "sure",
+          "start": 0.38,
+          "end": 0.68
+        },
+        {
+          "word": "are",
+          "start": 0.68,
+          "end": 0.86
+        },
+        {
+          "word": "you",
+          "start": 0.86,
+          "end": 1.06
+        },
+        {
+          "word": "that",
+          "start": 1.06,
+          "end": 1.22
+        },
+        {
+          "word": "the",
+          "start": 1.22,
+          "end": 1.32
+        },
+        {
+          "word": "kid",
+          "start": 1.32,
+          "end": 1.64
+        },
+        {
+          "word": "will",
+          "start": 1.64,
+          "end": 1.88
+        },
+        {
+          "word": "not",
+          "start": 1.88,
+          "end": 2.08
+        },
+        {
+          "word": "help",
+          "start": 2.08,
+          "end": 2.32
+        },
+        {
+          "word": "the",
+          "start": 2.32,
+          "end": 2.5
+        },
+        {
+          "word": "mom?",
+          "start": 2.5,
+          "end": 3.18
+        }
+      ],
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration; approximate boundaries nominal20msgrid",
+      "alignmentAudioFrames": 178,
+      "numBeams": 1,
+      "generationTimestampTokens": false,
+      "recognitionTempo": 1,
+      "recognitionTests": [
+        {
+          "numBeams": 1,
+          "recognizedText": "How sure are you that the kid will not help the mom?",
+          "exactNormalizedWordMatch": true
+        }
+      ],
+      "articleOmissionExceptionsAllowed": false,
+      "cueAlignmentApproved": true,
+      "recognitionMethod": "unprompted full-context recognition from final unchanged native MP3"
+    },
+    "nr_confidence_021": {
+      "id": "nr_confidence_021",
+      "sha256": "b93861e9cf4d5ffee8783fdcca10e2fddef837dbb991c43944d0ac0fc7ded889",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "durationSeconds": 3.343675,
+      "decodedDurationSeconds": 3.3436875,
+      "recognizedText": "How sure are you that the kid will help the dad?",
+      "expectedText": "How sure are you that the kid will help the dad?",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.36
+        },
+        {
+          "word": "sure",
+          "start": 0.36,
+          "end": 0.68
+        },
+        {
+          "word": "are",
+          "start": 0.68,
+          "end": 0.86
+        },
+        {
+          "word": "you",
+          "start": 0.86,
+          "end": 1.06
+        },
+        {
+          "word": "that",
+          "start": 1.06,
+          "end": 1.22
+        },
+        {
+          "word": "the",
+          "start": 1.22,
+          "end": 1.32
+        },
+        {
+          "word": "kid",
+          "start": 1.32,
+          "end": 1.62
+        },
+        {
+          "word": "will",
+          "start": 1.62,
+          "end": 1.86
+        },
+        {
+          "word": "help",
+          "start": 1.86,
+          "end": 2.08
+        },
+        {
+          "word": "the",
+          "start": 2.08,
+          "end": 2.26
+        },
+        {
+          "word": "dad?",
+          "start": 2.26,
+          "end": 3.0
+        }
+      ],
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration; approximate boundaries nominal20msgrid",
+      "alignmentAudioFrames": 168,
+      "numBeams": 1,
+      "generationTimestampTokens": false,
+      "recognitionTempo": 1,
+      "recognitionTests": [
+        {
+          "numBeams": 1,
+          "recognizedText": "How sure are you that the kid will help the dad?",
+          "exactNormalizedWordMatch": true
+        }
+      ],
+      "articleOmissionExceptionsAllowed": false,
+      "cueAlignmentApproved": true,
+      "recognitionMethod": "unprompted full-context recognition from final unchanged native MP3"
+    },
+    "nr_confidence_022": {
+      "id": "nr_confidence_022",
+      "sha256": "68c4b531792638686f105eb8fcad03751f7c7f76d0354b033951a512648b1101",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "durationSeconds": 3.631,
+      "decodedDurationSeconds": 3.631,
+      "recognizedText": "How sure are you that the kid will not help the dad?",
+      "expectedText": "How sure are you that the kid will NOT help the dad?",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.36
+        },
+        {
+          "word": "sure",
+          "start": 0.36,
+          "end": 0.68
+        },
+        {
+          "word": "are",
+          "start": 0.68,
+          "end": 0.84
+        },
+        {
+          "word": "you",
+          "start": 0.84,
+          "end": 1.04
+        },
+        {
+          "word": "that",
+          "start": 1.04,
+          "end": 1.22
+        },
+        {
+          "word": "the",
+          "start": 1.22,
+          "end": 1.32
+        },
+        {
+          "word": "kid",
+          "start": 1.32,
+          "end": 1.64
+        },
+        {
+          "word": "will",
+          "start": 1.64,
+          "end": 1.88
+        },
+        {
+          "word": "not",
+          "start": 1.88,
+          "end": 2.1
+        },
+        {
+          "word": "help",
+          "start": 2.1,
+          "end": 2.36
+        },
+        {
+          "word": "the",
+          "start": 2.36,
+          "end": 2.56
+        },
+        {
+          "word": "dad?",
+          "start": 2.56,
+          "end": 3.3
+        }
+      ],
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration; approximate boundaries nominal20msgrid",
+      "alignmentAudioFrames": 182,
+      "numBeams": 1,
+      "generationTimestampTokens": false,
+      "recognitionTempo": 1,
+      "recognitionTests": [
+        {
+          "numBeams": 1,
+          "recognizedText": "How sure are you that the kid will not help the dad?",
+          "exactNormalizedWordMatch": true
+        }
+      ],
+      "articleOmissionExceptionsAllowed": false,
+      "cueAlignmentApproved": true,
+      "recognitionMethod": "unprompted full-context recognition from final unchanged native MP3"
+    },
+    "nr_confidence_023": {
+      "id": "nr_confidence_023",
+      "sha256": "c48901ed1095d9b730806268f9e802df54f65b3d6cb01a6ba19db3b95504f542",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "durationSeconds": 3.709375,
+      "decodedDurationSeconds": 3.709375,
+      "recognizedText": "How sure are you that the kids mom will help the dad?",
+      "expectedText": "How sure are you that the kid’s mom will help the dad?",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.38
+        },
+        {
+          "word": "sure",
+          "start": 0.38,
+          "end": 0.68
+        },
+        {
+          "word": "are",
+          "start": 0.68,
+          "end": 0.88
+        },
+        {
+          "word": "you",
+          "start": 0.88,
+          "end": 1.08
+        },
+        {
+          "word": "that",
+          "start": 1.08,
+          "end": 1.26
+        },
+        {
+          "word": "the",
+          "start": 1.26,
+          "end": 1.34
+        },
+        {
+          "word": "kids",
+          "start": 1.34,
+          "end": 1.62
+        },
+        {
+          "word": "mom",
+          "start": 1.62,
+          "end": 1.94
+        },
+        {
+          "word": "will",
+          "start": 1.94,
+          "end": 2.24
+        },
+        {
+          "word": "help",
+          "start": 2.24,
+          "end": 2.46
+        },
+        {
+          "word": "the",
+          "start": 2.46,
+          "end": 2.64
+        },
+        {
+          "word": "dad?",
+          "start": 2.64,
+          "end": 3.32
+        }
+      ],
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration; approximate boundaries nominal20msgrid",
+      "alignmentAudioFrames": 186,
+      "numBeams": 1,
+      "generationTimestampTokens": false,
+      "recognitionTempo": 1,
+      "recognitionTests": [
+        {
+          "numBeams": 1,
+          "recognizedText": "How sure are you that the kids mom will help the dad?",
+          "exactNormalizedWordMatch": true
+        }
+      ],
+      "articleOmissionExceptionsAllowed": false,
+      "cueAlignmentApproved": true,
+      "recognitionMethod": "unprompted full-context recognition from final unchanged native MP3"
+    },
+    "nr_confidence_024": {
+      "id": "nr_confidence_024",
+      "sha256": "926316907f4492e6f5cffd2a204bb8f68d5452389b29e6e5ff6c17fd0b37d6df",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "durationSeconds": 3.944475,
+      "decodedDurationSeconds": 3.9445,
+      "recognizedText": "How sure are you that the kids mom will not help the dad?",
+      "expectedText": "How sure are you that the kid’s mom will NOT help the dad?",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.36
+        },
+        {
+          "word": "sure",
+          "start": 0.36,
+          "end": 0.66
+        },
+        {
+          "word": "are",
+          "start": 0.66,
+          "end": 0.86
+        },
+        {
+          "word": "you",
+          "start": 0.86,
+          "end": 1.06
+        },
+        {
+          "word": "that",
+          "start": 1.06,
+          "end": 1.24
+        },
+        {
+          "word": "the",
+          "start": 1.24,
+          "end": 1.34
+        },
+        {
+          "word": "kids",
+          "start": 1.34,
+          "end": 1.62
+        },
+        {
+          "word": "mom",
+          "start": 1.62,
+          "end": 1.92
+        },
+        {
+          "word": "will",
+          "start": 1.92,
+          "end": 2.24
+        },
+        {
+          "word": "not",
+          "start": 2.24,
+          "end": 2.42
+        },
+        {
+          "word": "help",
+          "start": 2.42,
+          "end": 2.68
+        },
+        {
+          "word": "the",
+          "start": 2.68,
+          "end": 2.88
+        },
+        {
+          "word": "dad?",
+          "start": 2.88,
+          "end": 3.58
+        }
+      ],
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration; approximate boundaries nominal20msgrid",
+      "alignmentAudioFrames": 198,
+      "numBeams": 1,
+      "generationTimestampTokens": false,
+      "recognitionTempo": 1,
+      "recognitionTests": [
+        {
+          "numBeams": 1,
+          "recognizedText": "How sure are you that the kids mom will not help the dad?",
+          "exactNormalizedWordMatch": true
+        }
+      ],
+      "articleOmissionExceptionsAllowed": false,
+      "cueAlignmentApproved": true,
+      "recognitionMethod": "unprompted full-context recognition from final unchanged native MP3"
+    },
+    "nr_confidence_025": {
+      "id": "nr_confidence_025",
+      "sha256": "f486275ab7087411b425f99939c4f6e3ccc9e16fb58ee8b7402fc0e60890aaa7",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "durationSeconds": 4.72815,
+      "decodedDurationSeconds": 4.7281875,
+      "recognizedText": "How sure are you that the teacher on the left will help the teacher in the middle?",
+      "expectedText": "How sure are you that the teacher on the left will help the teacher in the middle?",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.38
+        },
+        {
+          "word": "sure",
+          "start": 0.38,
+          "end": 0.68
+        },
+        {
+          "word": "are",
+          "start": 0.68,
+          "end": 0.88
+        },
+        {
+          "word": "you",
+          "start": 0.88,
+          "end": 1.08
+        },
+        {
+          "word": "that",
+          "start": 1.08,
+          "end": 1.28
+        },
+        {
+          "word": "the",
+          "start": 1.28,
+          "end": 1.4
+        },
+        {
+          "word": "teacher",
+          "start": 1.4,
+          "end": 1.7
+        },
+        {
+          "word": "on",
+          "start": 1.7,
+          "end": 1.98
+        },
+        {
+          "word": "the",
+          "start": 1.98,
+          "end": 2.1
+        },
+        {
+          "word": "left",
+          "start": 2.1,
+          "end": 2.36
+        },
+        {
+          "word": "will",
+          "start": 2.36,
+          "end": 2.66
+        },
+        {
+          "word": "help",
+          "start": 2.66,
+          "end": 2.88
+        },
+        {
+          "word": "the",
+          "start": 2.88,
+          "end": 3.04
+        },
+        {
+          "word": "teacher",
+          "start": 3.04,
+          "end": 3.38
+        },
+        {
+          "word": "in",
+          "start": 3.38,
+          "end": 3.58
+        },
+        {
+          "word": "the",
+          "start": 3.58,
+          "end": 3.66
+        },
+        {
+          "word": "middle?",
+          "start": 3.66,
+          "end": 4.42
+        }
+      ],
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration; approximate boundaries nominal20msgrid",
+      "alignmentAudioFrames": 237,
+      "numBeams": 1,
+      "generationTimestampTokens": false,
+      "recognitionTempo": 1,
+      "recognitionTests": [
+        {
+          "numBeams": 1,
+          "recognizedText": "How sure are you that the teacher on the left will help the teacher in the middle?",
+          "exactNormalizedWordMatch": true
+        }
+      ],
+      "articleOmissionExceptionsAllowed": false,
+      "cueAlignmentApproved": true,
+      "recognitionMethod": "unprompted full-context recognition from final unchanged native MP3"
+    },
+    "nr_confidence_026": {
+      "id": "nr_confidence_026",
+      "sha256": "fae585baed65f106761e2d06cc4151427431cfa91c337acd4bc3f50df0354f3b",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "durationSeconds": 4.96325,
+      "decodedDurationSeconds": 4.96325,
+      "recognizedText": "How sure are you that the teacher on the left will not help the teacher in the middle?",
+      "expectedText": "How sure are you that the teacher on the left will NOT help the teacher in the middle?",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.36
+        },
+        {
+          "word": "sure",
+          "start": 0.36,
+          "end": 0.64
+        },
+        {
+          "word": "are",
+          "start": 0.64,
+          "end": 0.88
+        },
+        {
+          "word": "you",
+          "start": 0.88,
+          "end": 1.06
+        },
+        {
+          "word": "that",
+          "start": 1.06,
+          "end": 1.28
+        },
+        {
+          "word": "the",
+          "start": 1.28,
+          "end": 1.4
+        },
+        {
+          "word": "teacher",
+          "start": 1.4,
+          "end": 1.68
+        },
+        {
+          "word": "on",
+          "start": 1.68,
+          "end": 1.96
+        },
+        {
+          "word": "the",
+          "start": 1.96,
+          "end": 2.08
+        },
+        {
+          "word": "left",
+          "start": 2.08,
+          "end": 2.36
+        },
+        {
+          "word": "will",
+          "start": 2.36,
+          "end": 2.64
+        },
+        {
+          "word": "not",
+          "start": 2.64,
+          "end": 2.82
+        },
+        {
+          "word": "help",
+          "start": 2.82,
+          "end": 3.1
+        },
+        {
+          "word": "the",
+          "start": 3.1,
+          "end": 3.28
+        },
+        {
+          "word": "teacher",
+          "start": 3.28,
+          "end": 3.62
+        },
+        {
+          "word": "in",
+          "start": 3.62,
+          "end": 3.82
+        },
+        {
+          "word": "the",
+          "start": 3.82,
+          "end": 3.92
+        },
+        {
+          "word": "middle?",
+          "start": 3.92,
+          "end": 4.64
+        }
+      ],
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration; approximate boundaries nominal20msgrid",
+      "alignmentAudioFrames": 249,
+      "numBeams": 1,
+      "generationTimestampTokens": false,
+      "recognitionTempo": 1,
+      "recognitionTests": [
+        {
+          "numBeams": 1,
+          "recognizedText": "How sure are you that the teacher on the left will not help the teacher in the middle?",
+          "exactNormalizedWordMatch": true
+        }
+      ],
+      "articleOmissionExceptionsAllowed": false,
+      "cueAlignmentApproved": true,
+      "recognitionMethod": "unprompted full-context recognition from final unchanged native MP3"
+    },
+    "nr_confidence_027": {
+      "id": "nr_confidence_027",
+      "sha256": "89ea7498dec79ff9062329c799b4293596bf8aed21874d1d1ca898b7165d2819",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "durationSeconds": 4.0751,
+      "decodedDurationSeconds": 4.075125,
+      "recognizedText": "How sure are you that the kid will help the teacher in the middle?",
+      "expectedText": "How sure are you that the kid will help the teacher in the middle?",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.38
+        },
+        {
+          "word": "sure",
+          "start": 0.38,
+          "end": 0.7
+        },
+        {
+          "word": "are",
+          "start": 0.7,
+          "end": 0.9
+        },
+        {
+          "word": "you",
+          "start": 0.9,
+          "end": 1.12
+        },
+        {
+          "word": "that",
+          "start": 1.12,
+          "end": 1.32
+        },
+        {
+          "word": "the",
+          "start": 1.32,
+          "end": 1.44
+        },
+        {
+          "word": "kid",
+          "start": 1.44,
+          "end": 1.74
+        },
+        {
+          "word": "will",
+          "start": 1.74,
+          "end": 2.0
+        },
+        {
+          "word": "help",
+          "start": 2.0,
+          "end": 2.2
+        },
+        {
+          "word": "the",
+          "start": 2.2,
+          "end": 2.38
+        },
+        {
+          "word": "teacher",
+          "start": 2.38,
+          "end": 2.72
+        },
+        {
+          "word": "in",
+          "start": 2.72,
+          "end": 2.92
+        },
+        {
+          "word": "the",
+          "start": 2.92,
+          "end": 3.0
+        },
+        {
+          "word": "middle?",
+          "start": 3.0,
+          "end": 3.82
+        }
+      ],
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration; approximate boundaries nominal20msgrid",
+      "alignmentAudioFrames": 204,
+      "numBeams": 1,
+      "generationTimestampTokens": false,
+      "recognitionTempo": 1,
+      "recognitionTests": [
+        {
+          "numBeams": 1,
+          "recognizedText": "How sure are you that the kid will help the teacher in the middle?",
+          "exactNormalizedWordMatch": true
+        }
+      ],
+      "articleOmissionExceptionsAllowed": false,
+      "cueAlignmentApproved": true,
+      "recognitionMethod": "unprompted full-context recognition from final unchanged native MP3"
+    },
+    "nr_confidence_028": {
+      "id": "nr_confidence_028",
+      "sha256": "4154f2e8a727fbef2959b95f36e0cb78d3bbb90e59eae56909bcb3395e44a3ab",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "durationSeconds": 4.36245,
+      "decodedDurationSeconds": 4.3624375,
+      "recognizedText": "How sure are you that the kid will not help the teacher in the middle?",
+      "expectedText": "How sure are you that the kid will NOT help the teacher in the middle?",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.38
+        },
+        {
+          "word": "sure",
+          "start": 0.38,
+          "end": 0.68
+        },
+        {
+          "word": "are",
+          "start": 0.68,
+          "end": 0.88
+        },
+        {
+          "word": "you",
+          "start": 0.88,
+          "end": 1.1
+        },
+        {
+          "word": "that",
+          "start": 1.1,
+          "end": 1.34
+        },
+        {
+          "word": "the",
+          "start": 1.34,
+          "end": 1.46
+        },
+        {
+          "word": "kid",
+          "start": 1.46,
+          "end": 1.76
+        },
+        {
+          "word": "will",
+          "start": 1.76,
+          "end": 2.04
+        },
+        {
+          "word": "not",
+          "start": 2.04,
+          "end": 2.24
+        },
+        {
+          "word": "help",
+          "start": 2.24,
+          "end": 2.5
+        },
+        {
+          "word": "the",
+          "start": 2.5,
+          "end": 2.68
+        },
+        {
+          "word": "teacher",
+          "start": 2.68,
+          "end": 3.02
+        },
+        {
+          "word": "in",
+          "start": 3.02,
+          "end": 3.22
+        },
+        {
+          "word": "the",
+          "start": 3.22,
+          "end": 3.3
+        },
+        {
+          "word": "middle?",
+          "start": 3.3,
+          "end": 4.04
+        }
+      ],
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration; approximate boundaries nominal20msgrid",
+      "alignmentAudioFrames": 219,
+      "numBeams": 1,
+      "generationTimestampTokens": false,
+      "recognitionTempo": 1,
+      "recognitionTests": [
+        {
+          "numBeams": 1,
+          "recognizedText": "How sure are you that the kid will not help the teacher in the middle?",
+          "exactNormalizedWordMatch": true
+        }
+      ],
+      "articleOmissionExceptionsAllowed": false,
+      "cueAlignmentApproved": true,
+      "recognitionMethod": "unprompted full-context recognition from final unchanged native MP3"
     }
   }
 }

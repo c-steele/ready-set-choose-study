@@ -14,6 +14,13 @@
   const copy = value => JSON.parse(JSON.stringify(value));
   const wordCount = text => (String(text).match(/[\p{L}\p{N}]+(?:[’'-][\p{L}\p{N}]+)*/gu) || []).length;
 
+  function resolvePredictionConfidence(step, answers = {}) {
+    if (!step?.predictionPrompts || !step.relatedPrediction) return step;
+    const response = answers[step.relatedPrediction];
+    const text = response === 'Yes' || response === 'No' ? step.predictionPrompts[response] : null;
+    return text ? {...step, text, predictionResponse:response} : step;
+  }
+
   function nextIndex(steps, index, answers) {
     let next = index + 1;
     while (next < steps.length && steps[next].when && answers[steps[next].when[0]] !== steps[next].when[1]) next++;
@@ -51,7 +58,11 @@
       });
       add(`predict-${helper.id}-confidence`, 'predict-mom-confidence', {
         phase:`Prediction confidence · ${helperTitle(helper)}`,
-        relatedPrediction:prefix(`predict-${helper.id}`)
+        relatedPrediction:prefix(`predict-${helper.id}`),
+        predictionPrompts:{
+          Yes:`How sure are you that ${helper.description} will help ${recipient.description}?`,
+          No:`How sure are you that ${helper.description} will NOT help ${recipient.description}?`
+        }
       });
     }
     if (includePractice) {
@@ -126,7 +137,7 @@
   function pathStats(steps, maximize) {
     const answers = {}, reached = [];
     for (let index = 0; index < steps.length;) {
-      const step = steps[index]; reached.push(step);
+      const step = resolvePredictionConfidence(steps[index], answers); reached.push(step);
       let answer = step.expected || step.point;
       if (!answer && step.choices) {
         const children = steps.filter(s => s.when && s.when[0] === step.id);
@@ -134,8 +145,10 @@
           const cost = choice => wordCount(step.choiceConfirmations[choice].text) + children.filter(child => child.when[1] === choice).reduce((sum, child) => sum + spokenWords(child), 0);
           answer = step.choices.reduce((chosen, choice) => (maximize ? cost(choice) > cost(chosen) : cost(choice) < cost(chosen)) ? choice : chosen);
         } else {
-          const child = children[0];
-          answer = child ? (maximize ? child.when[1] : step.choices.find(c => c !== child.when[1])) : step.choices[0];
+          const child = children[0], confidence = steps.find(s => s.relatedPrediction === step.id && s.predictionPrompts);
+          answer = child ? (maximize ? child.when[1] : step.choices.find(c => c !== child.when[1]))
+            : confidence ? step.choices.reduce((chosen, choice) => (maximize ? wordCount(confidence.predictionPrompts[choice]) > wordCount(confidence.predictionPrompts[chosen]) : wordCount(confidence.predictionPrompts[choice]) < wordCount(confidence.predictionPrompts[chosen])) ? choice : chosen)
+            : step.choices[0];
         }
       }
       answers[step.id] = answer || 'Continue';
@@ -199,7 +212,7 @@
         'This is a draft adaptation using Find the Caregiver stimuli and the Marshall Study 1 question structure.',
         'Helpers are questioned individually in left-to-right order. All paths lead to neither helper helping.',
         'Prediction confidence is an added adaptation measure, not recovered Marshall wording. Its three response labels remain provisional.',
-        'Prediction is Yes/No, as in Marshall Study 1. A new provisional confidence question follows each prediction after either Yes or No. Strength questions follow obligation and meanness judgments conditionally.',
+        'Prediction is Yes/No, as in Marshall Study 1. The proposed confidence question repeats that helper’s prediction: will help after Yes; will NOT help after No. Strength questions follow obligation and meanness judgments conditionally.',
         'The overall-evaluation strength prompt remains proposed wording, not verified verbatim Marshall wording.',
         'White backgrounds and the same sadness context are used throughout. Source relationships, character positions, and intro order are preserved.',
         practiceMode === 'each' ? 'Practice repeats before obligation questions in each story, matching the captured Marshall Study 1 sequence.' : 'Practice once is an explicit proposed change from the repeated practice in the captured Marshall Study 1 sequence.',
@@ -239,6 +252,7 @@
       if (step.preface) lines.push(step.preface, '');
       const scriptText=step.captionEmphasis==='HAVE TO'?step.text.replace(/\bHAVE TO\b/g,'*HAVE TO*'):step.text;
       lines.push(`“${scriptText}”`, '');
+      if (step.predictionPrompts) for (const [response, text] of Object.entries(step.predictionPrompts)) lines.push(`After ${response}: “${text}”`, '');
       if (step.displayTitle) lines.push(`Display treatment: ${step.displayTitle} / ${step.displaySetup} / ${step.displayQuestion}`, '');
       if (step.displayText) lines.push(`Display wording: “${step.displayText}” ${step.outcomeVisual?'Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.':'The role is included in the question; no separate role label is displayed above it.'}`, '');
       if (step.outcomeCaptions) lines.push(`Captions follow the narration, in order: ${step.outcomeCaptions.map(text=>`“${text}”`).join(' → ')}.`, '');
@@ -256,5 +270,5 @@
     }
     return lines.join('\n');
   }
-  return {build, toMarkdown, spokenWords};
+  return {build, toMarkdown, spokenWords, resolvePredictionConfidence};
 });

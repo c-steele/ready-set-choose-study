@@ -5,7 +5,7 @@
 - This is a draft adaptation using Find the Caregiver stimuli and the Marshall Study 1 question structure.
 - Helpers are questioned individually in left-to-right order. All paths lead to neither helper helping.
 - Prediction confidence is an added adaptation measure, not recovered Marshall wording. Its three response labels remain provisional.
-- Prediction is Yes/No, as in Marshall Study 1. A new provisional confidence question follows each prediction after either Yes or No. Strength questions follow obligation and meanness judgments conditionally.
+- Prediction is Yes/No, as in Marshall Study 1. The proposed confidence question repeats that helper’s prediction: will help after Yes; will NOT help after No. Strength questions follow obligation and meanness judgments conditionally.
 - The overall-evaluation strength prompt remains proposed wording, not verified verbatim Marshall wording.
 - White backgrounds and the same sadness context are used throughout. Source relationships, character positions, and intro order are preserved.
 - Practice repeats before obligation questions in each story, matching the captured Marshall Study 1 sequence.
@@ -17,7 +17,7 @@ Includes 6 required choice-confirmation screens and 12 correct-answer practice-f
 
 60 main judgments (including 12 prediction-confidence responses) + 6 helper-choice confirmations + 36 identity/recall checks + 18 practice responses + 0–30 conditional study-strength responses.
 
-Illustrative duration: **26–42.1 minutes**, based on 2603–3255 spoken words.
+Illustrative duration: **26.8–43.1 minutes**, based on 2700–3364 spoken words.
 
 - Illustrative estimate, not observed child-session duration.
 - Read-aloud pace: 110–130 words per minute; response time: 3–5 seconds per selection.
@@ -107,6 +107,10 @@ Choices: Yes / No.
 
 “How sure are you?”
 
+After Yes: “How sure are you that the kid’s teacher will help the kid?”
+
+After No: “How sure are you that the kid’s teacher will NOT help the kid?”
+
 [Stimulus source](assets/stimuli/ef6ceaf063c6-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Not sure / A little sure / Very sure.
@@ -126,6 +130,10 @@ Choices: Yes / No.
 *Confidence about the immediately preceding prediction, after either Yes or No (woman-mom-teacher:predict-helper2).*
 
 “How sure are you?”
+
+After Yes: “How sure are you that the kid’s mom will help the kid?”
+
+After No: “How sure are you that the kid’s mom will NOT help the kid?”
 
 [Stimulus source](assets/stimuli/ef6ceaf063c6-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -479,6 +487,10 @@ Choices: Yes / No.
 
 “How sure are you?”
 
+After Yes: “How sure are you that the kid’s sister will help the kid?”
+
+After No: “How sure are you that the kid’s sister will NOT help the kid?”
+
 [Stimulus source](assets/stimuli/d8367f1a225f-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Not sure / A little sure / Very sure.
@@ -498,6 +510,10 @@ Choices: Yes / No.
 *Confidence about the immediately preceding prediction, after either Yes or No (woman-sister-friend:predict-helper2).*
 
 “How sure are you?”
+
+After Yes: “How sure are you that the kid’s friend will help the kid?”
+
+After No: “How sure are you that the kid’s friend will NOT help the kid?”
 
 [Stimulus source](assets/stimuli/d8367f1a225f-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -851,6 +867,10 @@ Choices: Yes / No.
 
 “How sure are you?”
 
+After Yes: “How sure are you that the kid’s friend will help the kid?”
+
+After No: “How sure are you that the kid’s friend will NOT help the kid?”
+
 [Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Not sure / A little sure / Very sure.
@@ -870,6 +890,10 @@ Choices: Yes / No.
 *Confidence about the immediately preceding prediction, after either Yes or No (woman-bestfriend-friend:predict-helper2).*
 
 “How sure are you?”
+
+After Yes: “How sure are you that the kid’s best friend will help the kid?”
+
+After No: “How sure are you that the kid’s best friend will NOT help the kid?”
 
 [Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1223,6 +1247,10 @@ Choices: Yes / No.
 
 “How sure are you?”
 
+After Yes: “How sure are you that the kid’s teacher will help the kid?”
+
+After No: “How sure are you that the kid’s teacher will NOT help the kid?”
+
 [Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Not sure / A little sure / Very sure.
@@ -1242,6 +1270,10 @@ Choices: Yes / No.
 *Confidence about the immediately preceding prediction, after either Yes or No (woman-teacher-friend:predict-helper2).*
 
 “How sure are you?”
+
+After Yes: “How sure are you that the kid’s friend will help the kid?”
+
+After No: “How sure are you that the kid’s friend will NOT help the kid?”
 
 [Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1595,6 +1627,10 @@ Choices: Yes / No.
 
 “How sure are you?”
 
+After Yes: “How sure are you that the kid’s mom will help the kid?”
+
+After No: “How sure are you that the kid’s mom will NOT help the kid?”
+
 [Stimulus source](assets/stimuli/cf266d33caca-05-sad.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Not sure / A little sure / Very sure.
@@ -1614,6 +1650,10 @@ Choices: Yes / No.
 *Confidence about the immediately preceding prediction, after either Yes or No (woman-mom-sister:predict-helper2).*
 
 “How sure are you?”
+
+After Yes: “How sure are you that the kid’s sister will help the kid?”
+
+After No: “How sure are you that the kid’s sister will NOT help the kid?”
 
 [Stimulus source](assets/stimuli/cf266d33caca-05-sad.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1967,6 +2007,10 @@ Choices: Yes / No.
 
 “How sure are you?”
 
+After Yes: “How sure are you that the kid’s classmate will help the kid?”
+
+After No: “How sure are you that the kid’s classmate will NOT help the kid?”
+
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Not sure / A little sure / Very sure.
@@ -1986,6 +2030,10 @@ Choices: Yes / No.
 *Confidence about the immediately preceding prediction, after either Yes or No (woman-teacher-classmate:predict-helper2).*
 
 “How sure are you?”
+
+After Yes: “How sure are you that the kid’s teacher will help the kid?”
+
+After No: “How sure are you that the kid’s teacher will NOT help the kid?”
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
