@@ -60,11 +60,7 @@ So now, I’m going to ask you some questions about whether people HAVE TO do th
 
 Now, do you think the kid’s teacher HAS TO help the kid? Yes or No.
 
-How much do you think the kid’s teacher HAS TO?
-
 Now, do you think the kid’s mom HAS TO help the kid? Yes or No.
-
-How much do you think the kid’s mom HAS TO?
 
 No one helped the kid.
 
@@ -73,8 +69,6 @@ The kid’s teacher did NOT help the kid. The kid’s mom did NOT help the kid. 
 Can you tell me, did either of these people help the kid?
 
 Actually, remember, no one helped the kid. The kid’s teacher did NOT help the kid. The kid’s mom did NOT help the kid. No one helped the kid.
-
-No one helped the kid. Do you think this was a mean or nice thing that happened?
 
 Mean
 
@@ -136,11 +130,7 @@ Now, do you think the kid’s friend will help the kid?
 
 Now, do you think the kid’s sister HAS TO help the kid? Yes or No.
 
-How much do you think the kid’s sister HAS TO?
-
 Now, do you think the kid’s friend HAS TO help the kid? Yes or No.
-
-How much do you think the kid’s friend HAS TO?
 
 The kid’s sister did NOT help the kid. The kid’s friend did NOT help the kid. No one helped the kid.
 
@@ -180,8 +170,6 @@ Now, do you think the kid’s best friend will help the kid?
 
 Now, do you think the kid’s best friend HAS TO help the kid? Yes or No.
 
-How much do you think the kid’s best friend HAS TO?
-
 The kid’s friend did NOT help the kid. The kid’s best friend did NOT help the kid. No one helped the kid.
 
 Actually, remember, no one helped the kid. The kid’s friend did NOT help the kid. The kid’s best friend did NOT help the kid. No one helped the kid.
@@ -220,8 +208,6 @@ Now, do you think the kid’s classmate will help the kid?
 
 Now, do you think the kid’s classmate HAS TO help the kid? Yes or No.
 
-How much do you think the kid’s classmate HAS TO?
-
 The kid’s classmate did NOT help the kid. The kid’s teacher did NOT help the kid. No one helped the kid.
 
 Actually, remember, no one helped the kid. The kid’s classmate did NOT help the kid. The kid’s teacher did NOT help the kid. No one helped the kid.
@@ -248,8 +234,6 @@ Now, do you think the kid’s dad will help the kid?
 
 Now, do you think the kid’s dad HAS TO help the kid? Yes or No.
 
-How much do you think the kid’s dad HAS TO?
-
 The kid’s teacher did NOT help the kid. The kid’s dad did NOT help the kid. No one helped the kid.
 
 Actually, remember, no one helped the kid. The kid’s teacher did NOT help the kid. The kid’s dad did NOT help the kid. No one helped the kid.
@@ -275,8 +259,6 @@ The kid’s brother and the kid’s friend both see that the kid is sad.
 Now, do you think the kid’s brother will help the kid?
 
 Now, do you think the kid’s brother HAS TO help the kid? Yes or No.
-
-How much do you think the kid’s brother HAS TO?
 
 The kid’s brother did NOT help the kid. The kid’s friend did NOT help the kid. No one helped the kid.
 
@@ -328,8 +310,6 @@ Now, do you think the kid’s dad HAS TO help the mom? Yes or No.
 
 Now, do you think the kid HAS TO help the mom? Yes or No.
 
-How much do you think the kid HAS TO?
-
 No one helped the mom.
 
 The kid’s dad did NOT help the mom. The kid did NOT help the mom. No one helped the mom.
@@ -337,8 +317,6 @@ The kid’s dad did NOT help the mom. The kid did NOT help the mom. No one helpe
 Can you tell me, did either of these people help the mom?
 
 Actually, remember, no one helped the mom. The kid’s dad did NOT help the mom. The kid did NOT help the mom. No one helped the mom.
-
-No one helped the mom. Do you think this was a mean or nice thing that happened?
 
 Do you remember, did the kid’s dad help the mom?
 
@@ -388,8 +366,6 @@ Can you tell me, did either of these people help the dad?
 
 Actually, remember, no one helped the dad. The kid did NOT help the dad. The kid’s mom did NOT help the dad. No one helped the dad.
 
-No one helped the dad. Do you think this was a mean or nice thing that happened?
-
 Do you remember, did the kid help the dad?
 
 Remember, the kid did not help the dad. Do you remember, did the kid help the dad?
@@ -430,8 +406,6 @@ Now, do you think the kid will help the teacher in the middle?
 
 Now, do you think the teacher on the left HAS TO help the teacher in the middle? Yes or No.
 
-How much do you think the teacher on the left HAS TO?
-
 Now, do you think the kid HAS TO help the teacher in the middle? Yes or No.
 
 No one helped the teacher in the middle.
@@ -441,8 +415,6 @@ The teacher on the left did NOT help the teacher in the middle. The kid did NOT 
 Can you tell me, did either of these people help the teacher in the middle?
 
 Actually, remember, no one helped the teacher in the middle. The teacher on the left did NOT help the teacher in the middle. The kid did NOT help the teacher in the middle. No one helped the teacher in the middle.
-
-No one helped the teacher in the middle. Do you think this was a mean or nice thing that happened?
 
 Do you remember, did the teacher on the left help the teacher in the middle?
 
@@ -525,3 +497,67 @@ How sure are you that the teacher on the left will NOT help the teacher in the m
 How sure are you that the kid will help the teacher in the middle?
 
 How sure are you that the kid will NOT help the teacher in the middle?
+
+How much do you think the kid’s teacher HAS TO help the kid?
+
+You think the kid’s teacher does NOT HAVE TO help the kid. Is that what you meant? Yes or No.
+
+How much do you think the kid’s mom HAS TO help the kid?
+
+You think the kid’s mom does NOT HAVE TO help the kid. Is that what you meant? Yes or No.
+
+No one helped the kid. Do you think it was mean or nice that no one helped the kid?
+
+How much do you think the kid’s sister HAS TO help the kid?
+
+You think the kid’s sister does NOT HAVE TO help the kid. Is that what you meant? Yes or No.
+
+How much do you think the kid’s friend HAS TO help the kid?
+
+You think the kid’s friend does NOT HAVE TO help the kid. Is that what you meant? Yes or No.
+
+How much do you think the kid’s best friend HAS TO help the kid?
+
+You think the kid’s best friend does NOT HAVE TO help the kid. Is that what you meant? Yes or No.
+
+How much do you think the kid’s classmate HAS TO help the kid?
+
+You think the kid’s classmate does NOT HAVE TO help the kid. Is that what you meant? Yes or No.
+
+How much do you think the kid’s dad HAS TO help the kid?
+
+You think the kid’s dad does NOT HAVE TO help the kid. Is that what you meant? Yes or No.
+
+How much do you think the kid’s brother HAS TO help the kid?
+
+You think the kid’s brother does NOT HAVE TO help the kid. Is that what you meant? Yes or No.
+
+How much do you think the kid’s dad HAS TO help the mom?
+
+You think the kid’s dad does NOT HAVE TO help the mom. Is that what you meant? Yes or No.
+
+How much do you think the kid HAS TO help the mom?
+
+You think the kid does NOT HAVE TO help the mom. Is that what you meant? Yes or No.
+
+No one helped the mom. Do you think it was mean or nice that no one helped the mom?
+
+How much do you think the kid HAS TO help the dad?
+
+You think the kid does NOT HAVE TO help the dad. Is that what you meant? Yes or No.
+
+How much do you think the kid’s mom HAS TO help the dad?
+
+You think the kid’s mom does NOT HAVE TO help the dad. Is that what you meant? Yes or No.
+
+No one helped the dad. Do you think it was mean or nice that no one helped the dad?
+
+How much do you think the teacher on the left HAS TO help the teacher in the middle?
+
+You think the teacher on the left does NOT HAVE TO help the teacher in the middle. Is that what you meant? Yes or No.
+
+How much do you think the kid HAS TO help the teacher in the middle?
+
+You think the kid does NOT HAVE TO help the teacher in the middle. Is that what you meant? Yes or No.
+
+No one helped the teacher in the middle. Do you think it was mean or nice that no one helped the teacher in the middle?

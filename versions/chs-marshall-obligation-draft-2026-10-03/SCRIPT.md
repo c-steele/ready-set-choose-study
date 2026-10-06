@@ -6,24 +6,27 @@
 - Helpers are questioned individually in left-to-right order. All paths lead to neither helper helping.
 - Prediction confidence is an added adaptation measure, not recovered Marshall wording. Its three response labels remain provisional.
 - Prediction is Yes/No, as in Marshall Study 1. The proposed confidence question repeats that helper’s prediction: will help after Yes; will NOT help after No. Strength questions follow obligation and meanness judgments conditionally.
-- The overall-evaluation strength prompt remains proposed wording, not verified verbatim Marshall wording.
+- The overall-evaluation question now explicitly repeats that no one helped; this is adapted wording. The overall-evaluation strength prompt remains proposed wording, not verified verbatim Marshall wording.
+- A No obligation response is repeated in a neutral spoken confirmation. Yes accepts that No and skips the how-much follow-up; No returns to the obligation question. This confirmation is an adaptation, not a correctness check.
 - White backgrounds and the same sadness context are used throughout. Source relationships, character positions, and intro order are preserved.
 - Practice repeats before obligation questions in each story, matching the captured Marshall Study 1 sequence.
 - This preview contains the six pairings from one role set in a fixed review order.
 
-Expected path range: **175–205 screens**, **120–150 responses**.
+Expected path range: **187–205 screens**, **132–150 responses**.
 
-Includes 6 required choice-confirmation screens and 12 correct-answer practice-feedback screens in addition to the static storyboard.
+Includes 6–18 answer-confirmation screens and 12 correct-answer practice-feedback screens in addition to the static storyboard.
 
-60 main judgments (including 12 prediction-confidence responses) + 6 helper-choice confirmations + 36 identity/recall checks + 18 practice responses + 0–30 conditional study-strength responses.
+Main judgments: 60 (including 12 prediction-confidence responses). Identity/recall checks: 36. Practice responses: 18. Answer confirmations: 6–18. Conditional study-strength responses: 0–30. The total screen and response ranges above are computed for complete paths; separate minimum counts need not occur together.
 
-Illustrative duration: **26.8–43.1 minutes**, based on 2700–3364 spoken words.
+Illustrative duration: **29.3–43.5 minutes**, based on 2953–3412 spoken words.
 
 - Illustrative estimate, not observed child-session duration.
 - Read-aloud pace: 110–130 words per minute; response time: 3–5 seconds per selection.
-- Includes each response label once, one accepted Yes confirmation after each helper-choice comparison, and mandatory correct-answer practice feedback; excludes repeated binary labels already stated in the prompt.
+- Includes each response label once, accepted Yes confirmation after each helper-choice comparison and after each No obligation judgment, and mandatory correct-answer practice feedback; excludes binary labels already stated in the prompt.
+- Yes to an individual obligation judgment opens its strength follow-up. No opens a neutral answer-confirmation screen, then skips that strength follow-up after the child confirms the No answer.
+- Screen, response, strength, confirmation, word, and duration ranges are each computed across complete paths. Separate minimum counts need not occur on the same path.
 - Assumes correct identity, recall, and practice answers, including Yes to stopping being mean and No to lying. Incorrect check responses require correction and retry; there is no bypass.
-- Does not include correction repeats, rejected helper-choice confirmations, breaks, setup, narration-only transition delays, or extra pauses between glowing options. Screen counts include required confirmation and correct-answer feedback stages; error retries are not counted.
+- Does not include correction repeats, rejected answer confirmations, breaks, setup, narration-only transition delays, or extra pauses between glowing options. Screen counts include accepted confirmation and correct-answer feedback stages; error retries are not counted.
 
 The storyboard below includes all possible branches. Correct No is required for the lying practice question, so its retained legacy Yes-strength card is not reached during the normal path.
 
@@ -227,13 +230,17 @@ Choices: A teeny bit / A little bit / A lot.
 
 Choices: Yes / No.
 
+After choosing “No”, confirm: “You think the kid’s teacher does NOT HAVE TO help the kid. Is that what you meant? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
+
+*No opens a neutral spoken confirmation. Yes on the confirmation accepts the original No and skips the strength question; No returns to this obligation question. Neither study answer is marked incorrect.*
+
 ### 18. Obligation strength · Teacher
 
 *Only after “Yes” to Obligation · Teacher.*
 
-“How much do you think the kid’s teacher HAS TO?”
+“How much do you think the kid’s teacher HAS TO help the kid?”
 
-Display wording: “How much do you think the kid’s teacher HAS TO?” The role is included in the question; no separate role label is displayed above it.
+Display wording: “How much do you think the kid’s teacher HAS TO help the kid?” The role is included in the question; no separate role label is displayed above it.
 
 [Stimulus source](assets/stimuli/ef6ceaf063c6-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -249,13 +256,17 @@ Choices: A teeny bit / A little bit / A lot.
 
 Choices: Yes / No.
 
+After choosing “No”, confirm: “You think the kid’s mom does NOT HAVE TO help the kid. Is that what you meant? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
+
+*No opens a neutral spoken confirmation. Yes on the confirmation accepts the original No and skips the strength question; No returns to this obligation question. Neither study answer is marked incorrect.*
+
 ### 20. Obligation strength · Mom
 
 *Only after “Yes” to Obligation · Mom.*
 
-“How much do you think the kid’s mom HAS TO?”
+“How much do you think the kid’s mom HAS TO help the kid?”
 
-Display wording: “How much do you think the kid’s mom HAS TO?” The role is included in the question; no separate role label is displayed above it.
+Display wording: “How much do you think the kid’s mom HAS TO help the kid?” The role is included in the question; no separate role label is displayed above it.
 
 [Stimulus source](assets/stimuli/ef6ceaf063c6-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -301,17 +312,17 @@ Reminder if needed: “Actually, remember, no one helped the kid. The kid’s te
 
 After the reminder, reread the full question and response labels before reopening the choices.
 
-### 24. Overall evaluation
+### 24. Overall evaluation — PROPOSED WORDING
 
 No one helped the kid.
 
-“Do you think this was a mean or nice thing that happened?”
+“Do you think it was mean or nice that no one helped the kid?”
 
 [Stimulus source](assets/stimuli/ef6ceaf063c6-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Mean / Nice.
 
-*Exploratory measure in Marshall Study 1.*
+*Adapted overall-evaluation wording explicitly repeats that no one helped the recipient.*
 
 ### 25. Overall evaluation strength — PROPOSED WORDING
 
@@ -607,13 +618,17 @@ Choices: A teeny bit / A little bit / A lot.
 
 Choices: Yes / No.
 
+After choosing “No”, confirm: “You think the kid’s sister does NOT HAVE TO help the kid. Is that what you meant? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
+
+*No opens a neutral spoken confirmation. Yes on the confirmation accepts the original No and skips the strength question; No returns to this obligation question. Neither study answer is marked incorrect.*
+
 ### 50. Obligation strength · Sister
 
 *Only after “Yes” to Obligation · Sister.*
 
-“How much do you think the kid’s sister HAS TO?”
+“How much do you think the kid’s sister HAS TO help the kid?”
 
-Display wording: “How much do you think the kid’s sister HAS TO?” The role is included in the question; no separate role label is displayed above it.
+Display wording: “How much do you think the kid’s sister HAS TO help the kid?” The role is included in the question; no separate role label is displayed above it.
 
 [Stimulus source](assets/stimuli/d8367f1a225f-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -629,13 +644,17 @@ Choices: A teeny bit / A little bit / A lot.
 
 Choices: Yes / No.
 
+After choosing “No”, confirm: “You think the kid’s friend does NOT HAVE TO help the kid. Is that what you meant? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
+
+*No opens a neutral spoken confirmation. Yes on the confirmation accepts the original No and skips the strength question; No returns to this obligation question. Neither study answer is marked incorrect.*
+
 ### 52. Obligation strength · Friend
 
 *Only after “Yes” to Obligation · Friend.*
 
-“How much do you think the kid’s friend HAS TO?”
+“How much do you think the kid’s friend HAS TO help the kid?”
 
-Display wording: “How much do you think the kid’s friend HAS TO?” The role is included in the question; no separate role label is displayed above it.
+Display wording: “How much do you think the kid’s friend HAS TO help the kid?” The role is included in the question; no separate role label is displayed above it.
 
 [Stimulus source](assets/stimuli/d8367f1a225f-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -681,17 +700,17 @@ Reminder if needed: “Actually, remember, no one helped the kid. The kid’s si
 
 After the reminder, reread the full question and response labels before reopening the choices.
 
-### 56. Overall evaluation
+### 56. Overall evaluation — PROPOSED WORDING
 
 No one helped the kid.
 
-“Do you think this was a mean or nice thing that happened?”
+“Do you think it was mean or nice that no one helped the kid?”
 
 [Stimulus source](assets/stimuli/d8367f1a225f-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Mean / Nice.
 
-*Exploratory measure in Marshall Study 1.*
+*Adapted overall-evaluation wording explicitly repeats that no one helped the recipient.*
 
 ### 57. Overall evaluation strength — PROPOSED WORDING
 
@@ -987,13 +1006,17 @@ Choices: A teeny bit / A little bit / A lot.
 
 Choices: Yes / No.
 
+After choosing “No”, confirm: “You think the kid’s friend does NOT HAVE TO help the kid. Is that what you meant? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
+
+*No opens a neutral spoken confirmation. Yes on the confirmation accepts the original No and skips the strength question; No returns to this obligation question. Neither study answer is marked incorrect.*
+
 ### 82. Obligation strength · Friend
 
 *Only after “Yes” to Obligation · Friend.*
 
-“How much do you think the kid’s friend HAS TO?”
+“How much do you think the kid’s friend HAS TO help the kid?”
 
-Display wording: “How much do you think the kid’s friend HAS TO?” The role is included in the question; no separate role label is displayed above it.
+Display wording: “How much do you think the kid’s friend HAS TO help the kid?” The role is included in the question; no separate role label is displayed above it.
 
 [Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1009,13 +1032,17 @@ Choices: A teeny bit / A little bit / A lot.
 
 Choices: Yes / No.
 
+After choosing “No”, confirm: “You think the kid’s best friend does NOT HAVE TO help the kid. Is that what you meant? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
+
+*No opens a neutral spoken confirmation. Yes on the confirmation accepts the original No and skips the strength question; No returns to this obligation question. Neither study answer is marked incorrect.*
+
 ### 84. Obligation strength · Best friend
 
 *Only after “Yes” to Obligation · Best friend.*
 
-“How much do you think the kid’s best friend HAS TO?”
+“How much do you think the kid’s best friend HAS TO help the kid?”
 
-Display wording: “How much do you think the kid’s best friend HAS TO?” The role is included in the question; no separate role label is displayed above it.
+Display wording: “How much do you think the kid’s best friend HAS TO help the kid?” The role is included in the question; no separate role label is displayed above it.
 
 [Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1061,17 +1088,17 @@ Reminder if needed: “Actually, remember, no one helped the kid. The kid’s fr
 
 After the reminder, reread the full question and response labels before reopening the choices.
 
-### 88. Overall evaluation
+### 88. Overall evaluation — PROPOSED WORDING
 
 No one helped the kid.
 
-“Do you think this was a mean or nice thing that happened?”
+“Do you think it was mean or nice that no one helped the kid?”
 
 [Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Mean / Nice.
 
-*Exploratory measure in Marshall Study 1.*
+*Adapted overall-evaluation wording explicitly repeats that no one helped the recipient.*
 
 ### 89. Overall evaluation strength — PROPOSED WORDING
 
@@ -1367,13 +1394,17 @@ Choices: A teeny bit / A little bit / A lot.
 
 Choices: Yes / No.
 
+After choosing “No”, confirm: “You think the kid’s teacher does NOT HAVE TO help the kid. Is that what you meant? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
+
+*No opens a neutral spoken confirmation. Yes on the confirmation accepts the original No and skips the strength question; No returns to this obligation question. Neither study answer is marked incorrect.*
+
 ### 114. Obligation strength · Teacher
 
 *Only after “Yes” to Obligation · Teacher.*
 
-“How much do you think the kid’s teacher HAS TO?”
+“How much do you think the kid’s teacher HAS TO help the kid?”
 
-Display wording: “How much do you think the kid’s teacher HAS TO?” The role is included in the question; no separate role label is displayed above it.
+Display wording: “How much do you think the kid’s teacher HAS TO help the kid?” The role is included in the question; no separate role label is displayed above it.
 
 [Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1389,13 +1420,17 @@ Choices: A teeny bit / A little bit / A lot.
 
 Choices: Yes / No.
 
+After choosing “No”, confirm: “You think the kid’s friend does NOT HAVE TO help the kid. Is that what you meant? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
+
+*No opens a neutral spoken confirmation. Yes on the confirmation accepts the original No and skips the strength question; No returns to this obligation question. Neither study answer is marked incorrect.*
+
 ### 116. Obligation strength · Friend
 
 *Only after “Yes” to Obligation · Friend.*
 
-“How much do you think the kid’s friend HAS TO?”
+“How much do you think the kid’s friend HAS TO help the kid?”
 
-Display wording: “How much do you think the kid’s friend HAS TO?” The role is included in the question; no separate role label is displayed above it.
+Display wording: “How much do you think the kid’s friend HAS TO help the kid?” The role is included in the question; no separate role label is displayed above it.
 
 [Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1441,17 +1476,17 @@ Reminder if needed: “Actually, remember, no one helped the kid. The kid’s te
 
 After the reminder, reread the full question and response labels before reopening the choices.
 
-### 120. Overall evaluation
+### 120. Overall evaluation — PROPOSED WORDING
 
 No one helped the kid.
 
-“Do you think this was a mean or nice thing that happened?”
+“Do you think it was mean or nice that no one helped the kid?”
 
 [Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Mean / Nice.
 
-*Exploratory measure in Marshall Study 1.*
+*Adapted overall-evaluation wording explicitly repeats that no one helped the recipient.*
 
 ### 121. Overall evaluation strength — PROPOSED WORDING
 
@@ -1747,13 +1782,17 @@ Choices: A teeny bit / A little bit / A lot.
 
 Choices: Yes / No.
 
+After choosing “No”, confirm: “You think the kid’s mom does NOT HAVE TO help the kid. Is that what you meant? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
+
+*No opens a neutral spoken confirmation. Yes on the confirmation accepts the original No and skips the strength question; No returns to this obligation question. Neither study answer is marked incorrect.*
+
 ### 146. Obligation strength · Mom
 
 *Only after “Yes” to Obligation · Mom.*
 
-“How much do you think the kid’s mom HAS TO?”
+“How much do you think the kid’s mom HAS TO help the kid?”
 
-Display wording: “How much do you think the kid’s mom HAS TO?” The role is included in the question; no separate role label is displayed above it.
+Display wording: “How much do you think the kid’s mom HAS TO help the kid?” The role is included in the question; no separate role label is displayed above it.
 
 [Stimulus source](assets/stimuli/cf266d33caca-05-sad.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1769,13 +1808,17 @@ Choices: A teeny bit / A little bit / A lot.
 
 Choices: Yes / No.
 
+After choosing “No”, confirm: “You think the kid’s sister does NOT HAVE TO help the kid. Is that what you meant? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
+
+*No opens a neutral spoken confirmation. Yes on the confirmation accepts the original No and skips the strength question; No returns to this obligation question. Neither study answer is marked incorrect.*
+
 ### 148. Obligation strength · Sister
 
 *Only after “Yes” to Obligation · Sister.*
 
-“How much do you think the kid’s sister HAS TO?”
+“How much do you think the kid’s sister HAS TO help the kid?”
 
-Display wording: “How much do you think the kid’s sister HAS TO?” The role is included in the question; no separate role label is displayed above it.
+Display wording: “How much do you think the kid’s sister HAS TO help the kid?” The role is included in the question; no separate role label is displayed above it.
 
 [Stimulus source](assets/stimuli/cf266d33caca-05-sad.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1821,17 +1864,17 @@ Reminder if needed: “Actually, remember, no one helped the kid. The kid’s mo
 
 After the reminder, reread the full question and response labels before reopening the choices.
 
-### 152. Overall evaluation
+### 152. Overall evaluation — PROPOSED WORDING
 
 No one helped the kid.
 
-“Do you think this was a mean or nice thing that happened?”
+“Do you think it was mean or nice that no one helped the kid?”
 
 [Stimulus source](assets/stimuli/cf266d33caca-05-sad.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Mean / Nice.
 
-*Exploratory measure in Marshall Study 1.*
+*Adapted overall-evaluation wording explicitly repeats that no one helped the recipient.*
 
 ### 153. Overall evaluation strength — PROPOSED WORDING
 
@@ -2127,13 +2170,17 @@ Choices: A teeny bit / A little bit / A lot.
 
 Choices: Yes / No.
 
+After choosing “No”, confirm: “You think the kid’s classmate does NOT HAVE TO help the kid. Is that what you meant? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
+
+*No opens a neutral spoken confirmation. Yes on the confirmation accepts the original No and skips the strength question; No returns to this obligation question. Neither study answer is marked incorrect.*
+
 ### 178. Obligation strength · Classmate
 
 *Only after “Yes” to Obligation · Classmate.*
 
-“How much do you think the kid’s classmate HAS TO?”
+“How much do you think the kid’s classmate HAS TO help the kid?”
 
-Display wording: “How much do you think the kid’s classmate HAS TO?” The role is included in the question; no separate role label is displayed above it.
+Display wording: “How much do you think the kid’s classmate HAS TO help the kid?” The role is included in the question; no separate role label is displayed above it.
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
@@ -2149,13 +2196,17 @@ Choices: A teeny bit / A little bit / A lot.
 
 Choices: Yes / No.
 
+After choosing “No”, confirm: “You think the kid’s teacher does NOT HAVE TO help the kid. Is that what you meant? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
+
+*No opens a neutral spoken confirmation. Yes on the confirmation accepts the original No and skips the strength question; No returns to this obligation question. Neither study answer is marked incorrect.*
+
 ### 180. Obligation strength · Teacher
 
 *Only after “Yes” to Obligation · Teacher.*
 
-“How much do you think the kid’s teacher HAS TO?”
+“How much do you think the kid’s teacher HAS TO help the kid?”
 
-Display wording: “How much do you think the kid’s teacher HAS TO?” The role is included in the question; no separate role label is displayed above it.
+Display wording: “How much do you think the kid’s teacher HAS TO help the kid?” The role is included in the question; no separate role label is displayed above it.
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
@@ -2201,17 +2252,17 @@ Reminder if needed: “Actually, remember, no one helped the kid. The kid’s cl
 
 After the reminder, reread the full question and response labels before reopening the choices.
 
-### 184. Overall evaluation
+### 184. Overall evaluation — PROPOSED WORDING
 
 No one helped the kid.
 
-“Do you think this was a mean or nice thing that happened?”
+“Do you think it was mean or nice that no one helped the kid?”
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Mean / Nice.
 
-*Exploratory measure in Marshall Study 1.*
+*Adapted overall-evaluation wording explicitly repeats that no one helped the recipient.*
 
 ### 185. Overall evaluation strength — PROPOSED WORDING
 

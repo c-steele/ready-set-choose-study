@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "title": "Find the Caregiver × Marshall obligation draft — full narration",
-  "clipCount": 264,
+  "clipCount": 296,
   "pendingClipCount": 0,
   "clips": [
     {
@@ -2053,6 +2053,222 @@
           "proposedWording": true,
           "part": "option",
           "optionIndex": 0
+        },
+        {
+          "stepId": "woman-mom-teacher:obligation-helper1:confirm-1",
+          "part": "option",
+          "optionIndex": 0,
+          "proposedWording": true
+        },
+        {
+          "stepId": "woman-teacher-friend:obligation-helper1:confirm-1",
+          "part": "option",
+          "optionIndex": 0,
+          "proposedWording": true
+        },
+        {
+          "stepId": "woman-teacher-classmate:obligation-helper2:confirm-1",
+          "part": "option",
+          "optionIndex": 0,
+          "proposedWording": true
+        },
+        {
+          "stepId": "man-dad-teacher:obligation-helper1:confirm-1",
+          "part": "option",
+          "optionIndex": 0,
+          "proposedWording": true
+        },
+        {
+          "stepId": "man-teacher-friend:obligation-helper1:confirm-1",
+          "part": "option",
+          "optionIndex": 0,
+          "proposedWording": true
+        },
+        {
+          "stepId": "man-teacher-classmate:obligation-helper2:confirm-1",
+          "part": "option",
+          "optionIndex": 0,
+          "proposedWording": true
+        },
+        {
+          "stepId": "family-teacher-classmate:obligation-helper2:confirm-1",
+          "part": "option",
+          "optionIndex": 0,
+          "proposedWording": true
+        },
+        {
+          "stepId": "woman-mom-teacher:obligation-helper2:confirm-1",
+          "part": "option",
+          "optionIndex": 0,
+          "proposedWording": true
+        },
+        {
+          "stepId": "woman-mom-sister:obligation-helper1:confirm-1",
+          "part": "option",
+          "optionIndex": 0,
+          "proposedWording": true
+        },
+        {
+          "stepId": "family-mom-dad:obligation-helper2:confirm-1",
+          "part": "option",
+          "optionIndex": 0,
+          "proposedWording": true
+        },
+        {
+          "stepId": "woman-sister-friend:obligation-helper1:confirm-1",
+          "part": "option",
+          "optionIndex": 0,
+          "proposedWording": true
+        },
+        {
+          "stepId": "woman-mom-sister:obligation-helper2:confirm-1",
+          "part": "option",
+          "optionIndex": 0,
+          "proposedWording": true
+        },
+        {
+          "stepId": "family-sister-brother:obligation-helper1:confirm-1",
+          "part": "option",
+          "optionIndex": 0,
+          "proposedWording": true
+        },
+        {
+          "stepId": "woman-sister-friend:obligation-helper2:confirm-1",
+          "part": "option",
+          "optionIndex": 0,
+          "proposedWording": true
+        },
+        {
+          "stepId": "woman-bestfriend-friend:obligation-helper1:confirm-1",
+          "part": "option",
+          "optionIndex": 0,
+          "proposedWording": true
+        },
+        {
+          "stepId": "woman-teacher-friend:obligation-helper2:confirm-1",
+          "part": "option",
+          "optionIndex": 0,
+          "proposedWording": true
+        },
+        {
+          "stepId": "man-brother-friend:obligation-helper2:confirm-1",
+          "part": "option",
+          "optionIndex": 0,
+          "proposedWording": true
+        },
+        {
+          "stepId": "man-bestfriend-friend:obligation-helper1:confirm-1",
+          "part": "option",
+          "optionIndex": 0,
+          "proposedWording": true
+        },
+        {
+          "stepId": "man-teacher-friend:obligation-helper2:confirm-1",
+          "part": "option",
+          "optionIndex": 0,
+          "proposedWording": true
+        },
+        {
+          "stepId": "woman-bestfriend-friend:obligation-helper2:confirm-1",
+          "part": "option",
+          "optionIndex": 0,
+          "proposedWording": true
+        },
+        {
+          "stepId": "man-bestfriend-friend:obligation-helper2:confirm-1",
+          "part": "option",
+          "optionIndex": 0,
+          "proposedWording": true
+        },
+        {
+          "stepId": "woman-teacher-classmate:obligation-helper1:confirm-1",
+          "part": "option",
+          "optionIndex": 0,
+          "proposedWording": true
+        },
+        {
+          "stepId": "man-teacher-classmate:obligation-helper1:confirm-1",
+          "part": "option",
+          "optionIndex": 0,
+          "proposedWording": true
+        },
+        {
+          "stepId": "family-teacher-classmate:obligation-helper1:confirm-1",
+          "part": "option",
+          "optionIndex": 0,
+          "proposedWording": true
+        },
+        {
+          "stepId": "man-dad-teacher:obligation-helper2:confirm-1",
+          "part": "option",
+          "optionIndex": 0,
+          "proposedWording": true
+        },
+        {
+          "stepId": "man-dad-brother:obligation-helper1:confirm-1",
+          "part": "option",
+          "optionIndex": 0,
+          "proposedWording": true
+        },
+        {
+          "stepId": "family-mom-dad:obligation-helper1:confirm-1",
+          "part": "option",
+          "optionIndex": 0,
+          "proposedWording": true
+        },
+        {
+          "stepId": "man-brother-friend:obligation-helper1:confirm-1",
+          "part": "option",
+          "optionIndex": 0,
+          "proposedWording": true
+        },
+        {
+          "stepId": "man-dad-brother:obligation-helper2:confirm-1",
+          "part": "option",
+          "optionIndex": 0,
+          "proposedWording": true
+        },
+        {
+          "stepId": "family-sister-brother:obligation-helper2:confirm-1",
+          "part": "option",
+          "optionIndex": 0,
+          "proposedWording": true
+        },
+        {
+          "stepId": "family-dad-kid:obligation-helper1:confirm-1",
+          "part": "option",
+          "optionIndex": 0,
+          "proposedWording": true
+        },
+        {
+          "stepId": "family-dad-kid:obligation-helper2:confirm-1",
+          "part": "option",
+          "optionIndex": 0,
+          "proposedWording": true
+        },
+        {
+          "stepId": "family-mom-kid:obligation-helper1:confirm-1",
+          "part": "option",
+          "optionIndex": 0,
+          "proposedWording": true
+        },
+        {
+          "stepId": "family-mom-kid:obligation-helper2:confirm-1",
+          "part": "option",
+          "optionIndex": 0,
+          "proposedWording": true
+        },
+        {
+          "stepId": "family-teacher-kid:obligation-helper1:confirm-1",
+          "part": "option",
+          "optionIndex": 0,
+          "proposedWording": true
+        },
+        {
+          "stepId": "family-teacher-kid:obligation-helper2:confirm-1",
+          "part": "option",
+          "optionIndex": 0,
+          "proposedWording": true
         }
       ],
       "sha256": "a2d00905f08e26973248e65c3d07576398edfebc07679aeed62c78410573d172",
@@ -3274,6 +3490,222 @@
           "proposedWording": true,
           "part": "option",
           "optionIndex": 1
+        },
+        {
+          "stepId": "woman-mom-teacher:obligation-helper1:confirm-1",
+          "part": "option",
+          "optionIndex": 1,
+          "proposedWording": true
+        },
+        {
+          "stepId": "woman-teacher-friend:obligation-helper1:confirm-1",
+          "part": "option",
+          "optionIndex": 1,
+          "proposedWording": true
+        },
+        {
+          "stepId": "woman-teacher-classmate:obligation-helper2:confirm-1",
+          "part": "option",
+          "optionIndex": 1,
+          "proposedWording": true
+        },
+        {
+          "stepId": "man-dad-teacher:obligation-helper1:confirm-1",
+          "part": "option",
+          "optionIndex": 1,
+          "proposedWording": true
+        },
+        {
+          "stepId": "man-teacher-friend:obligation-helper1:confirm-1",
+          "part": "option",
+          "optionIndex": 1,
+          "proposedWording": true
+        },
+        {
+          "stepId": "man-teacher-classmate:obligation-helper2:confirm-1",
+          "part": "option",
+          "optionIndex": 1,
+          "proposedWording": true
+        },
+        {
+          "stepId": "family-teacher-classmate:obligation-helper2:confirm-1",
+          "part": "option",
+          "optionIndex": 1,
+          "proposedWording": true
+        },
+        {
+          "stepId": "woman-mom-teacher:obligation-helper2:confirm-1",
+          "part": "option",
+          "optionIndex": 1,
+          "proposedWording": true
+        },
+        {
+          "stepId": "woman-mom-sister:obligation-helper1:confirm-1",
+          "part": "option",
+          "optionIndex": 1,
+          "proposedWording": true
+        },
+        {
+          "stepId": "family-mom-dad:obligation-helper2:confirm-1",
+          "part": "option",
+          "optionIndex": 1,
+          "proposedWording": true
+        },
+        {
+          "stepId": "woman-sister-friend:obligation-helper1:confirm-1",
+          "part": "option",
+          "optionIndex": 1,
+          "proposedWording": true
+        },
+        {
+          "stepId": "woman-mom-sister:obligation-helper2:confirm-1",
+          "part": "option",
+          "optionIndex": 1,
+          "proposedWording": true
+        },
+        {
+          "stepId": "family-sister-brother:obligation-helper1:confirm-1",
+          "part": "option",
+          "optionIndex": 1,
+          "proposedWording": true
+        },
+        {
+          "stepId": "woman-sister-friend:obligation-helper2:confirm-1",
+          "part": "option",
+          "optionIndex": 1,
+          "proposedWording": true
+        },
+        {
+          "stepId": "woman-bestfriend-friend:obligation-helper1:confirm-1",
+          "part": "option",
+          "optionIndex": 1,
+          "proposedWording": true
+        },
+        {
+          "stepId": "woman-teacher-friend:obligation-helper2:confirm-1",
+          "part": "option",
+          "optionIndex": 1,
+          "proposedWording": true
+        },
+        {
+          "stepId": "man-brother-friend:obligation-helper2:confirm-1",
+          "part": "option",
+          "optionIndex": 1,
+          "proposedWording": true
+        },
+        {
+          "stepId": "man-bestfriend-friend:obligation-helper1:confirm-1",
+          "part": "option",
+          "optionIndex": 1,
+          "proposedWording": true
+        },
+        {
+          "stepId": "man-teacher-friend:obligation-helper2:confirm-1",
+          "part": "option",
+          "optionIndex": 1,
+          "proposedWording": true
+        },
+        {
+          "stepId": "woman-bestfriend-friend:obligation-helper2:confirm-1",
+          "part": "option",
+          "optionIndex": 1,
+          "proposedWording": true
+        },
+        {
+          "stepId": "man-bestfriend-friend:obligation-helper2:confirm-1",
+          "part": "option",
+          "optionIndex": 1,
+          "proposedWording": true
+        },
+        {
+          "stepId": "woman-teacher-classmate:obligation-helper1:confirm-1",
+          "part": "option",
+          "optionIndex": 1,
+          "proposedWording": true
+        },
+        {
+          "stepId": "man-teacher-classmate:obligation-helper1:confirm-1",
+          "part": "option",
+          "optionIndex": 1,
+          "proposedWording": true
+        },
+        {
+          "stepId": "family-teacher-classmate:obligation-helper1:confirm-1",
+          "part": "option",
+          "optionIndex": 1,
+          "proposedWording": true
+        },
+        {
+          "stepId": "man-dad-teacher:obligation-helper2:confirm-1",
+          "part": "option",
+          "optionIndex": 1,
+          "proposedWording": true
+        },
+        {
+          "stepId": "man-dad-brother:obligation-helper1:confirm-1",
+          "part": "option",
+          "optionIndex": 1,
+          "proposedWording": true
+        },
+        {
+          "stepId": "family-mom-dad:obligation-helper1:confirm-1",
+          "part": "option",
+          "optionIndex": 1,
+          "proposedWording": true
+        },
+        {
+          "stepId": "man-brother-friend:obligation-helper1:confirm-1",
+          "part": "option",
+          "optionIndex": 1,
+          "proposedWording": true
+        },
+        {
+          "stepId": "man-dad-brother:obligation-helper2:confirm-1",
+          "part": "option",
+          "optionIndex": 1,
+          "proposedWording": true
+        },
+        {
+          "stepId": "family-sister-brother:obligation-helper2:confirm-1",
+          "part": "option",
+          "optionIndex": 1,
+          "proposedWording": true
+        },
+        {
+          "stepId": "family-dad-kid:obligation-helper1:confirm-1",
+          "part": "option",
+          "optionIndex": 1,
+          "proposedWording": true
+        },
+        {
+          "stepId": "family-dad-kid:obligation-helper2:confirm-1",
+          "part": "option",
+          "optionIndex": 1,
+          "proposedWording": true
+        },
+        {
+          "stepId": "family-mom-kid:obligation-helper1:confirm-1",
+          "part": "option",
+          "optionIndex": 1,
+          "proposedWording": true
+        },
+        {
+          "stepId": "family-mom-kid:obligation-helper2:confirm-1",
+          "part": "option",
+          "optionIndex": 1,
+          "proposedWording": true
+        },
+        {
+          "stepId": "family-teacher-kid:obligation-helper1:confirm-1",
+          "part": "option",
+          "optionIndex": 1,
+          "proposedWording": true
+        },
+        {
+          "stepId": "family-teacher-kid:obligation-helper2:confirm-1",
+          "part": "option",
+          "optionIndex": 1,
+          "proposedWording": true
         }
       ],
       "sha256": "0da76c0eedbcd88512077dba36ae4fd07128b4c4ac899c7f712d814c0e01c4bd",
@@ -7244,43 +7676,7 @@
       "src": "assets/narration/nr_275.mp3",
       "kind": "prompt",
       "status": "verified-local-audio-derivative",
-      "uses": [
-        {
-          "stepId": "woman-mom-teacher:obligation-helper1-amount",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "woman-teacher-friend:obligation-helper1-amount",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "woman-teacher-classmate:obligation-helper2-amount",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-dad-teacher:obligation-helper1-amount",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-teacher-friend:obligation-helper1-amount",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-teacher-classmate:obligation-helper2-amount",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "family-teacher-classmate:obligation-helper2-amount",
-          "proposedWording": false,
-          "part": "prompt"
-        }
-      ],
+      "uses": [],
       "sha256": "b5342ce2d302b3f20e6955633f9545965f354f2cdc3140190ff5187cb6f45242",
       "bytes": 141105,
       "durationSeconds": 3.500408,
@@ -7330,7 +7726,8 @@
       "audioTreatment": {
         "kind": "leading-role-context-trimmed-from-existing-Evelyn-recording",
         "extraRoleHeadingRemoved": true
-      }
+      },
+      "historicalInactive": true
     },
     {
       "id": "nr_027",
@@ -7391,28 +7788,7 @@
       "src": "assets/narration/nr_276.mp3",
       "kind": "prompt",
       "status": "verified-local-audio-derivative",
-      "uses": [
-        {
-          "stepId": "woman-mom-teacher:obligation-helper2-amount",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "woman-mom-sister:obligation-helper1-amount",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "family-mom-dad:obligation-helper2-amount",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "family-mom-kid:obligation-helper2-amount",
-          "proposedWording": false,
-          "part": "prompt"
-        }
-      ],
+      "uses": [],
       "sha256": "7c4d7b7188f16880f9c376a115f0be6386b525b2873102a3acdbe652664abecf",
       "bytes": 153644,
       "durationSeconds": 3.813878,
@@ -7516,7 +7892,8 @@
       "audioTreatment": {
         "kind": "assembled-full-role-question-from-existing-Evelyn-recordings",
         "extraRoleHeadingRemoved": true
-      }
+      },
+      "historicalInactive": true
     },
     {
       "id": "nr_285",
@@ -7949,83 +8326,7 @@
       "src": "assets/narration/nr_198-archive-complete.mp3",
       "kind": "prompt",
       "status": "verified-complete-native-recording",
-      "uses": [
-        {
-          "stepId": "woman-mom-teacher:overall",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "woman-sister-friend:overall",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "woman-bestfriend-friend:overall",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "woman-teacher-friend:overall",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "woman-mom-sister:overall",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "woman-teacher-classmate:overall",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-dad-teacher:overall",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-brother-friend:overall",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-bestfriend-friend:overall",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-teacher-friend:overall",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-dad-brother:overall",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-teacher-classmate:overall",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "family-mom-dad:overall",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "family-sister-brother:overall",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "family-teacher-classmate:overall",
-          "proposedWording": false,
-          "part": "prompt"
-        }
-      ],
+      "uses": [],
       "sha256": "3a4441ef0c92b7f42c17eb4adbed045978d26d75fa6502d3014c5bfc4da2ffc0",
       "bytes": 263358,
       "durationSeconds": 6.556735,
@@ -8066,7 +8367,8 @@
         "fullProjectTextVerified": true,
         "verifiedSourceAuditRecord": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_child_flow_revision_2026-10-04/audio-audit/processed/verified-archived-prompt-recordings.json",
         "installedFileBytesMatchVerifiedSource": true
-      }
+      },
+      "historicalInactive": true
     },
     {
       "id": "nr_033",
@@ -11452,23 +11754,7 @@
       "src": "assets/narration/nr_277.mp3",
       "kind": "prompt",
       "status": "verified-local-audio-derivative",
-      "uses": [
-        {
-          "stepId": "woman-sister-friend:obligation-helper1-amount",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "woman-mom-sister:obligation-helper2-amount",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "family-sister-brother:obligation-helper1-amount",
-          "proposedWording": false,
-          "part": "prompt"
-        }
-      ],
+      "uses": [],
       "sha256": "1a033cb0de0dfcf813c8f02fffd6d029b318747ead05a4b18cff1196338b35ea",
       "bytes": 159913,
       "durationSeconds": 3.970612,
@@ -11572,7 +11858,8 @@
       "audioTreatment": {
         "kind": "assembled-full-role-question-from-existing-Evelyn-recordings",
         "extraRoleHeadingRemoved": true
-      }
+      },
+      "historicalInactive": true
     },
     {
       "id": "nr_062",
@@ -11648,38 +11935,7 @@
       "src": "assets/narration/nr_278.mp3",
       "kind": "prompt",
       "status": "verified-local-audio-derivative",
-      "uses": [
-        {
-          "stepId": "woman-sister-friend:obligation-helper2-amount",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "woman-bestfriend-friend:obligation-helper1-amount",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "woman-teacher-friend:obligation-helper2-amount",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-brother-friend:obligation-helper2-amount",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-bestfriend-friend:obligation-helper1-amount",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-teacher-friend:obligation-helper2-amount",
-          "proposedWording": false,
-          "part": "prompt"
-        }
-      ],
+      "uses": [],
       "sha256": "2c73b089a34f37997480658a1e0c2f37817e97e8ce830f2b5362344886f62815",
       "bytes": 136925,
       "durationSeconds": 3.395918,
@@ -11729,7 +11985,8 @@
       "audioTreatment": {
         "kind": "leading-role-context-trimmed-from-existing-Evelyn-recording",
         "extraRoleHeadingRemoved": true
-      }
+      },
+      "historicalInactive": true
     },
     {
       "id": "nr_290",
@@ -12917,18 +13174,7 @@
       "src": "assets/narration/nr_279.mp3",
       "kind": "prompt",
       "status": "verified-local-audio-derivative",
-      "uses": [
-        {
-          "stepId": "woman-bestfriend-friend:obligation-helper2-amount",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-bestfriend-friend:obligation-helper2-amount",
-          "proposedWording": false,
-          "part": "prompt"
-        }
-      ],
+      "uses": [],
       "sha256": "5201868a415df9c5170561e8f9fc5dd7213bd264d4956581589d1b4100c5bea8",
       "bytes": 145285,
       "durationSeconds": 3.604898,
@@ -12978,7 +13224,8 @@
       "audioTreatment": {
         "kind": "leading-role-context-trimmed-from-existing-Evelyn-recording",
         "extraRoleHeadingRemoved": true
-      }
+      },
+      "historicalInactive": true
     },
     {
       "id": "nr_291",
@@ -14167,23 +14414,7 @@
       "src": "assets/narration/nr_280.mp3",
       "kind": "prompt",
       "status": "verified-local-audio-derivative",
-      "uses": [
-        {
-          "stepId": "woman-teacher-classmate:obligation-helper1-amount",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-teacher-classmate:obligation-helper1-amount",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "family-teacher-classmate:obligation-helper1-amount",
-          "proposedWording": false,
-          "part": "prompt"
-        }
-      ],
+      "uses": [],
       "sha256": "d2834219d554d8f00e6a3b838971cc95f64eada3ed84f513773fbf62ab2c8e52",
       "bytes": 146329,
       "durationSeconds": 3.63102,
@@ -14233,7 +14464,8 @@
       "audioTreatment": {
         "kind": "leading-role-context-trimmed-from-existing-Evelyn-recording",
         "extraRoleHeadingRemoved": true
-      }
+      },
+      "historicalInactive": true
     },
     {
       "id": "nr_294",
@@ -15026,28 +15258,7 @@
       "src": "assets/narration/nr_281.mp3",
       "kind": "prompt",
       "status": "verified-local-audio-derivative",
-      "uses": [
-        {
-          "stepId": "man-dad-teacher:obligation-helper2-amount",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-dad-brother:obligation-helper1-amount",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "family-mom-dad:obligation-helper1-amount",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "family-dad-kid:obligation-helper1-amount",
-          "proposedWording": false,
-          "part": "prompt"
-        }
-      ],
+      "uses": [],
       "sha256": "2ad47034b2f6b75d86b9cb6c4d25699b8a9e90ea8863c839d0e7eff1f8d0c9df",
       "bytes": 153644,
       "durationSeconds": 3.813878,
@@ -15151,7 +15362,8 @@
       "audioTreatment": {
         "kind": "assembled-full-role-question-from-existing-Evelyn-recordings",
         "extraRoleHeadingRemoved": true
-      }
+      },
+      "historicalInactive": true
     },
     {
       "id": "nr_295",
@@ -15920,23 +16132,7 @@
       "src": "assets/narration/nr_282.mp3",
       "kind": "prompt",
       "status": "verified-local-audio-derivative",
-      "uses": [
-        {
-          "stepId": "man-brother-friend:obligation-helper1-amount",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-dad-brother:obligation-helper2-amount",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "family-sister-brother:obligation-helper2-amount",
-          "proposedWording": false,
-          "part": "prompt"
-        }
-      ],
+      "uses": [],
       "sha256": "3cd2263735d6d0d2ba599eb19d4ac7882b46d34120678faa96cfbd23d92a65ac",
       "bytes": 155733,
       "durationSeconds": 3.866122,
@@ -16040,7 +16236,8 @@
       "audioTreatment": {
         "kind": "assembled-full-role-question-from-existing-Evelyn-recordings",
         "extraRoleHeadingRemoved": true
-      }
+      },
+      "historicalInactive": true
     },
     {
       "id": "nr_296",
@@ -17515,23 +17712,7 @@
       "src": "assets/narration/nr_283.mp3",
       "kind": "prompt",
       "status": "verified-local-audio-derivative",
-      "uses": [
-        {
-          "stepId": "family-dad-kid:obligation-helper2-amount",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "family-mom-kid:obligation-helper1-amount",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "family-teacher-kid:obligation-helper2-amount",
-          "proposedWording": false,
-          "part": "prompt"
-        }
-      ],
+      "uses": [],
       "sha256": "f5212abe4a544a898c4423f559e3385192c3eb169209b863a9bd1384fea2804e",
       "bytes": 117072,
       "durationSeconds": 2.899592,
@@ -17581,7 +17762,8 @@
       "audioTreatment": {
         "kind": "leading-role-context-trimmed-from-existing-Evelyn-recording",
         "extraRoleHeadingRemoved": true
-      }
+      },
+      "historicalInactive": true
     },
     {
       "id": "nr_286",
@@ -17877,13 +18059,7 @@
       "src": "assets/narration/nr_237-archive-complete.mp3",
       "kind": "prompt",
       "status": "verified-complete-native-recording",
-      "uses": [
-        {
-          "stepId": "family-dad-kid:overall",
-          "proposedWording": false,
-          "part": "prompt"
-        }
-      ],
+      "uses": [],
       "sha256": "701af0bbcf4b4c84e74ce750207cdf6c43d7fe638ace3c6895667d7c3f0317e6",
       "bytes": 262313,
       "durationSeconds": 6.530612,
@@ -17924,7 +18100,8 @@
         "fullProjectTextVerified": true,
         "verifiedSourceAuditRecord": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_child_flow_revision_2026-10-04/audio-audit/processed/verified-archived-prompt-recordings.json",
         "installedFileBytesMatchVerifiedSource": true
-      }
+      },
+      "historicalInactive": true
     },
     {
       "id": "nr_146",
@@ -19127,13 +19304,7 @@
       "src": "assets/narration/nr_244-archive-complete.mp3",
       "kind": "prompt",
       "status": "verified-complete-native-recording",
-      "uses": [
-        {
-          "stepId": "family-mom-kid:overall",
-          "proposedWording": false,
-          "part": "prompt"
-        }
-      ],
+      "uses": [],
       "sha256": "48128abe3ea0a7861fd299f22dfd37b67c82ae85ed9cf67de3716a0bf53ef918",
       "bytes": 262313,
       "durationSeconds": 6.530612,
@@ -19174,7 +19345,8 @@
         "fullProjectTextVerified": true,
         "verifiedSourceAuditRecord": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_child_flow_revision_2026-10-04/audio-audit/processed/verified-archived-prompt-recordings.json",
         "installedFileBytesMatchVerifiedSource": true
-      }
+      },
+      "historicalInactive": true
     },
     {
       "id": "nr_166",
@@ -20074,13 +20246,7 @@
       "src": "assets/narration/nr_284.mp3",
       "kind": "prompt",
       "status": "verified-local-audio-derivative",
-      "uses": [
-        {
-          "stepId": "family-teacher-kid:obligation-helper1-amount",
-          "proposedWording": false,
-          "part": "prompt"
-        }
-      ],
+      "uses": [],
       "sha256": "8c9a8b0688764991604dcd7f2a93d93e55d46bf7b028ddfdf92ae2507409d33b",
       "bytes": 139015,
       "durationSeconds": 3.448163,
@@ -20130,7 +20296,8 @@
       "audioTreatment": {
         "kind": "leading-role-context-trimmed-from-existing-Evelyn-recording",
         "extraRoleHeadingRemoved": true
-      }
+      },
+      "historicalInactive": true
     },
     {
       "id": "nr_182",
@@ -20466,13 +20633,7 @@
       "src": "assets/narration/nr_251-archive-complete.mp3",
       "kind": "prompt",
       "status": "verified-complete-native-recording",
-      "uses": [
-        {
-          "stepId": "family-teacher-kid:overall",
-          "proposedWording": false,
-          "part": "prompt"
-        }
-      ],
+      "uses": [],
       "sha256": "e4416778c03b6cea7643f60df30ddb9987c9834f0d99a13e48452c951f7eaada",
       "bytes": 293660,
       "durationSeconds": 7.314286,
@@ -20515,7 +20676,8 @@
         "fullProjectTextVerified": true,
         "verifiedSourceAuditRecord": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_child_flow_revision_2026-10-04/audio-audit/processed/verified-archived-prompt-recordings.json",
         "installedFileBytesMatchVerifiedSource": true
-      }
+      },
+      "historicalInactive": true
     },
     {
       "id": "nr_187",
@@ -23438,6 +23600,2250 @@
         "verifiedSourceAuditRecord": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_answer_confidence_2026-10-05/audio-preparation/processed/verified-native-recordings.json",
         "installedFileBytesMatchVerifiedSource": true
       }
+    },
+    {
+      "id": "nr_complete_001",
+      "text": "How much do you think the kid’s teacher HAS TO help the kid?",
+      "src": "assets/narration/nr_complete_001.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "pairingId": "woman-mom-teacher",
+          "actorId": "helper1",
+          "stepId": "woman-mom-teacher:obligation-helper1-amount",
+          "part": "prompt"
+        },
+        {
+          "pairingId": "woman-teacher-friend",
+          "actorId": "helper1",
+          "stepId": "woman-teacher-friend:obligation-helper1-amount",
+          "part": "prompt"
+        },
+        {
+          "pairingId": "woman-teacher-classmate",
+          "actorId": "helper2",
+          "stepId": "woman-teacher-classmate:obligation-helper2-amount",
+          "part": "prompt"
+        },
+        {
+          "pairingId": "man-dad-teacher",
+          "actorId": "helper1",
+          "stepId": "man-dad-teacher:obligation-helper1-amount",
+          "part": "prompt"
+        },
+        {
+          "pairingId": "man-teacher-friend",
+          "actorId": "helper1",
+          "stepId": "man-teacher-friend:obligation-helper1-amount",
+          "part": "prompt"
+        },
+        {
+          "pairingId": "man-teacher-classmate",
+          "actorId": "helper2",
+          "stepId": "man-teacher-classmate:obligation-helper2-amount",
+          "part": "prompt"
+        },
+        {
+          "pairingId": "family-teacher-classmate",
+          "actorId": "helper2",
+          "stepId": "family-teacher-classmate:obligation-helper2-amount",
+          "part": "prompt"
+        }
+      ],
+      "sha256": "ac592c7eda17e029a59ec311b109aca6e2c9f1666d6406837fbce751b80633ae",
+      "bytes": 157824,
+      "durationSeconds": 3.944475,
+      "provenance": {
+        "exportIndex": 1,
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/processed/nr_complete_001.mp3",
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/numbered-clips/1.How_much_do_you_think_the_kid’.mp3",
+        "sourceSha256": "ac592c7eda17e029a59ec311b109aca6e2c9f1666d6406837fbce751b80633ae",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "bd8f9b0499f84ac4e7e23bfcd2b226ca8126f6a116fed2424d1bcba997c35c6f",
+        "recordingIndexSha256": "6fe941df8aa9ea00289c92ed6ffeff6ca611f6bd6fb1b35c371372e495a08977",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed 32-segment NaturalReaders Commercial project: Evelyn Soft, 0.90× (180 WPM), paragraph pause 0.0 seconds; MP3 at 320 kbps; Separate Files ZIP with Index + Segment filenames. See native-project-voice-settings.png and native-export-settings.png.",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 3.9445,
+        "nonzeroWordTimingVerified": true,
+        "cueTimestampLimit": "Approximate Whisper word boundaries on a nominal 20 ms grid; all boundaries monotone, positive-length, and within the decoded audio.",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalTextDiffersOnlyInLetterCase": true
+      },
+      "revisionCategory": "complete-obligation-and-neutral-no-confirmation"
+    },
+    {
+      "id": "nr_complete_002",
+      "text": "You think the kid’s teacher does NOT HAVE TO help the kid. Is that what you meant? Yes or No.",
+      "src": "assets/narration/nr_complete_002.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "pairingId": "woman-mom-teacher",
+          "actorId": "helper1",
+          "stepId": "woman-mom-teacher:obligation-helper1:confirm-1",
+          "part": "prompt",
+          "response": "No",
+          "proposedWording": true
+        },
+        {
+          "pairingId": "woman-teacher-friend",
+          "actorId": "helper1",
+          "stepId": "woman-teacher-friend:obligation-helper1:confirm-1",
+          "part": "prompt",
+          "response": "No",
+          "proposedWording": true
+        },
+        {
+          "pairingId": "woman-teacher-classmate",
+          "actorId": "helper2",
+          "stepId": "woman-teacher-classmate:obligation-helper2:confirm-1",
+          "part": "prompt",
+          "response": "No",
+          "proposedWording": true
+        },
+        {
+          "pairingId": "man-dad-teacher",
+          "actorId": "helper1",
+          "stepId": "man-dad-teacher:obligation-helper1:confirm-1",
+          "part": "prompt",
+          "response": "No",
+          "proposedWording": true
+        },
+        {
+          "pairingId": "man-teacher-friend",
+          "actorId": "helper1",
+          "stepId": "man-teacher-friend:obligation-helper1:confirm-1",
+          "part": "prompt",
+          "response": "No",
+          "proposedWording": true
+        },
+        {
+          "pairingId": "man-teacher-classmate",
+          "actorId": "helper2",
+          "stepId": "man-teacher-classmate:obligation-helper2:confirm-1",
+          "part": "prompt",
+          "response": "No",
+          "proposedWording": true
+        },
+        {
+          "pairingId": "family-teacher-classmate",
+          "actorId": "helper2",
+          "stepId": "family-teacher-classmate:obligation-helper2:confirm-1",
+          "part": "prompt",
+          "response": "No",
+          "proposedWording": true
+        }
+      ],
+      "sha256": "a705f20e35d49105baefde0d4092d998f2e5f5329c08c608a4b26b8253b77f06",
+      "bytes": 294706,
+      "durationSeconds": 7.366525,
+      "provenance": {
+        "exportIndex": 2,
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/processed/nr_complete_002.mp3",
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/numbered-clips/2.You_think_the_kid’s_teacher_do.mp3",
+        "sourceSha256": "a705f20e35d49105baefde0d4092d998f2e5f5329c08c608a4b26b8253b77f06",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "bd8f9b0499f84ac4e7e23bfcd2b226ca8126f6a116fed2424d1bcba997c35c6f",
+        "recordingIndexSha256": "6fe941df8aa9ea00289c92ed6ffeff6ca611f6bd6fb1b35c371372e495a08977",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed 32-segment NaturalReaders Commercial project: Evelyn Soft, 0.90× (180 WPM), paragraph pause 0.0 seconds; MP3 at 320 kbps; Separate Files ZIP with Index + Segment filenames. See native-project-voice-settings.png and native-export-settings.png.",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 7.3665625,
+        "nonzeroWordTimingVerified": true,
+        "cueTimestampLimit": "Approximate Whisper word boundaries on a nominal 20 ms grid; all boundaries monotone, positive-length, and within the decoded audio.",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalTextDiffersOnlyInLetterCase": true
+      },
+      "revisionCategory": "complete-obligation-and-neutral-no-confirmation"
+    },
+    {
+      "id": "nr_complete_003",
+      "text": "How much do you think the kid’s mom HAS TO help the kid?",
+      "src": "assets/narration/nr_complete_003.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "pairingId": "woman-mom-teacher",
+          "actorId": "helper2",
+          "stepId": "woman-mom-teacher:obligation-helper2-amount",
+          "part": "prompt"
+        },
+        {
+          "pairingId": "woman-mom-sister",
+          "actorId": "helper1",
+          "stepId": "woman-mom-sister:obligation-helper1-amount",
+          "part": "prompt"
+        },
+        {
+          "pairingId": "family-mom-dad",
+          "actorId": "helper2",
+          "stepId": "family-mom-dad:obligation-helper2-amount",
+          "part": "prompt"
+        }
+      ],
+      "sha256": "9041bb5f92811e75f6713d0690c406357cf31649177a25d7ea8aa9e342863e53",
+      "bytes": 154689,
+      "durationSeconds": 3.8661,
+      "provenance": {
+        "exportIndex": 3,
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/processed/nr_complete_003.mp3",
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/numbered-clips/3.How_much_do_you_think_the_kid’.mp3",
+        "sourceSha256": "9041bb5f92811e75f6713d0690c406357cf31649177a25d7ea8aa9e342863e53",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "bd8f9b0499f84ac4e7e23bfcd2b226ca8126f6a116fed2424d1bcba997c35c6f",
+        "recordingIndexSha256": "6fe941df8aa9ea00289c92ed6ffeff6ca611f6bd6fb1b35c371372e495a08977",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed 32-segment NaturalReaders Commercial project: Evelyn Soft, 0.90× (180 WPM), paragraph pause 0.0 seconds; MP3 at 320 kbps; Separate Files ZIP with Index + Segment filenames. See native-project-voice-settings.png and native-export-settings.png.",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 3.866125,
+        "nonzeroWordTimingVerified": true,
+        "cueTimestampLimit": "Approximate Whisper word boundaries on a nominal 20 ms grid; all boundaries monotone, positive-length, and within the decoded audio.",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalTextDiffersOnlyInLetterCase": true
+      },
+      "revisionCategory": "complete-obligation-and-neutral-no-confirmation"
+    },
+    {
+      "id": "nr_complete_004",
+      "text": "You think the kid’s mom does NOT HAVE TO help the kid. Is that what you meant? Yes or No.",
+      "src": "assets/narration/nr_complete_004.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "pairingId": "woman-mom-teacher",
+          "actorId": "helper2",
+          "stepId": "woman-mom-teacher:obligation-helper2:confirm-1",
+          "part": "prompt",
+          "response": "No",
+          "proposedWording": true
+        },
+        {
+          "pairingId": "woman-mom-sister",
+          "actorId": "helper1",
+          "stepId": "woman-mom-sister:obligation-helper1:confirm-1",
+          "part": "prompt",
+          "response": "No",
+          "proposedWording": true
+        },
+        {
+          "pairingId": "family-mom-dad",
+          "actorId": "helper2",
+          "stepId": "family-mom-dad:obligation-helper2:confirm-1",
+          "part": "prompt",
+          "response": "No",
+          "proposedWording": true
+        }
+      ],
+      "sha256": "cf1ae94e703e1c4f26b4a3a84c43303a9c56e6668d8ab7220458337d7c1e221f",
+      "bytes": 294706,
+      "durationSeconds": 7.366525,
+      "provenance": {
+        "exportIndex": 4,
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/processed/nr_complete_004.mp3",
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/numbered-clips/4.You_think_the_kid’s_mom_does_n.mp3",
+        "sourceSha256": "cf1ae94e703e1c4f26b4a3a84c43303a9c56e6668d8ab7220458337d7c1e221f",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "bd8f9b0499f84ac4e7e23bfcd2b226ca8126f6a116fed2424d1bcba997c35c6f",
+        "recordingIndexSha256": "6fe941df8aa9ea00289c92ed6ffeff6ca611f6bd6fb1b35c371372e495a08977",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed 32-segment NaturalReaders Commercial project: Evelyn Soft, 0.90× (180 WPM), paragraph pause 0.0 seconds; MP3 at 320 kbps; Separate Files ZIP with Index + Segment filenames. See native-project-voice-settings.png and native-export-settings.png.",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 7.3665625,
+        "nonzeroWordTimingVerified": true,
+        "cueTimestampLimit": "Approximate Whisper word boundaries on a nominal 20 ms grid; all boundaries monotone, positive-length, and within the decoded audio.",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalTextDiffersOnlyInLetterCase": true
+      },
+      "revisionCategory": "complete-obligation-and-neutral-no-confirmation"
+    },
+    {
+      "id": "nr_complete_005",
+      "text": "No one helped the kid. Do you think it was mean or nice that no one helped the kid?",
+      "src": "assets/narration/nr_complete_005.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "pairingId": "woman-mom-teacher",
+          "stepId": "woman-mom-teacher:overall",
+          "part": "prompt",
+          "proposedWording": true
+        },
+        {
+          "pairingId": "woman-sister-friend",
+          "stepId": "woman-sister-friend:overall",
+          "part": "prompt",
+          "proposedWording": true
+        },
+        {
+          "pairingId": "woman-bestfriend-friend",
+          "stepId": "woman-bestfriend-friend:overall",
+          "part": "prompt",
+          "proposedWording": true
+        },
+        {
+          "pairingId": "woman-teacher-friend",
+          "stepId": "woman-teacher-friend:overall",
+          "part": "prompt",
+          "proposedWording": true
+        },
+        {
+          "pairingId": "woman-mom-sister",
+          "stepId": "woman-mom-sister:overall",
+          "part": "prompt",
+          "proposedWording": true
+        },
+        {
+          "pairingId": "woman-teacher-classmate",
+          "stepId": "woman-teacher-classmate:overall",
+          "part": "prompt",
+          "proposedWording": true
+        },
+        {
+          "pairingId": "man-dad-teacher",
+          "stepId": "man-dad-teacher:overall",
+          "part": "prompt",
+          "proposedWording": true
+        },
+        {
+          "pairingId": "man-brother-friend",
+          "stepId": "man-brother-friend:overall",
+          "part": "prompt",
+          "proposedWording": true
+        },
+        {
+          "pairingId": "man-bestfriend-friend",
+          "stepId": "man-bestfriend-friend:overall",
+          "part": "prompt",
+          "proposedWording": true
+        },
+        {
+          "pairingId": "man-teacher-friend",
+          "stepId": "man-teacher-friend:overall",
+          "part": "prompt",
+          "proposedWording": true
+        },
+        {
+          "pairingId": "man-dad-brother",
+          "stepId": "man-dad-brother:overall",
+          "part": "prompt",
+          "proposedWording": true
+        },
+        {
+          "pairingId": "man-teacher-classmate",
+          "stepId": "man-teacher-classmate:overall",
+          "part": "prompt",
+          "proposedWording": true
+        },
+        {
+          "pairingId": "family-mom-dad",
+          "stepId": "family-mom-dad:overall",
+          "part": "prompt",
+          "proposedWording": true
+        },
+        {
+          "pairingId": "family-sister-brother",
+          "stepId": "family-sister-brother:overall",
+          "part": "prompt",
+          "proposedWording": true
+        },
+        {
+          "pairingId": "family-teacher-classmate",
+          "stepId": "family-teacher-classmate:overall",
+          "part": "prompt",
+          "proposedWording": true
+        }
+      ],
+      "sha256": "a4fb520d1a4ca8f8b7600def6faf24ac15d553c000483709f370bd995a4748c9",
+      "bytes": 244551,
+      "durationSeconds": 6.11265,
+      "provenance": {
+        "exportIndex": 5,
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/processed/nr_complete_005.mp3",
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/numbered-clips/5.No_one_helped_the_kid._Do_you_.mp3",
+        "sourceSha256": "a4fb520d1a4ca8f8b7600def6faf24ac15d553c000483709f370bd995a4748c9",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "bd8f9b0499f84ac4e7e23bfcd2b226ca8126f6a116fed2424d1bcba997c35c6f",
+        "recordingIndexSha256": "6fe941df8aa9ea00289c92ed6ffeff6ca611f6bd6fb1b35c371372e495a08977",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed 32-segment NaturalReaders Commercial project: Evelyn Soft, 0.90× (180 WPM), paragraph pause 0.0 seconds; MP3 at 320 kbps; Separate Files ZIP with Index + Segment filenames. See native-project-voice-settings.png and native-export-settings.png.",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 6.1126875,
+        "nonzeroWordTimingVerified": true,
+        "cueTimestampLimit": "Approximate Whisper word boundaries on a nominal 20 ms grid; all boundaries monotone, positive-length, and within the decoded audio.",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalTextDiffersOnlyInLetterCase": true
+      },
+      "revisionCategory": "complete-obligation-and-neutral-no-confirmation"
+    },
+    {
+      "id": "nr_complete_006",
+      "text": "How much do you think the kid’s sister HAS TO help the kid?",
+      "src": "assets/narration/nr_complete_006.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "pairingId": "woman-sister-friend",
+          "actorId": "helper1",
+          "stepId": "woman-sister-friend:obligation-helper1-amount",
+          "part": "prompt"
+        },
+        {
+          "pairingId": "woman-mom-sister",
+          "actorId": "helper2",
+          "stepId": "woman-mom-sister:obligation-helper2-amount",
+          "part": "prompt"
+        },
+        {
+          "pairingId": "family-sister-brother",
+          "actorId": "helper1",
+          "stepId": "family-sister-brother:obligation-helper1-amount",
+          "part": "prompt"
+        }
+      ],
+      "sha256": "29154a09f7b553dad8aacc21f5df71b5856b2f7d1afda7746232394db6c527a7",
+      "bytes": 158869,
+      "durationSeconds": 3.9706,
+      "provenance": {
+        "exportIndex": 6,
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/processed/nr_complete_006.mp3",
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/numbered-clips/6.How_much_do_you_think_the_kid’.mp3",
+        "sourceSha256": "29154a09f7b553dad8aacc21f5df71b5856b2f7d1afda7746232394db6c527a7",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "bd8f9b0499f84ac4e7e23bfcd2b226ca8126f6a116fed2424d1bcba997c35c6f",
+        "recordingIndexSha256": "6fe941df8aa9ea00289c92ed6ffeff6ca611f6bd6fb1b35c371372e495a08977",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed 32-segment NaturalReaders Commercial project: Evelyn Soft, 0.90× (180 WPM), paragraph pause 0.0 seconds; MP3 at 320 kbps; Separate Files ZIP with Index + Segment filenames. See native-project-voice-settings.png and native-export-settings.png.",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 3.970625,
+        "nonzeroWordTimingVerified": true,
+        "cueTimestampLimit": "Approximate Whisper word boundaries on a nominal 20 ms grid; all boundaries monotone, positive-length, and within the decoded audio.",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalTextDiffersOnlyInLetterCase": true
+      },
+      "revisionCategory": "complete-obligation-and-neutral-no-confirmation"
+    },
+    {
+      "id": "nr_complete_007",
+      "text": "You think the kid’s sister does NOT HAVE TO help the kid. Is that what you meant? Yes or No.",
+      "src": "assets/narration/nr_complete_007.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "pairingId": "woman-sister-friend",
+          "actorId": "helper1",
+          "stepId": "woman-sister-friend:obligation-helper1:confirm-1",
+          "part": "prompt",
+          "response": "No",
+          "proposedWording": true
+        },
+        {
+          "pairingId": "woman-mom-sister",
+          "actorId": "helper2",
+          "stepId": "woman-mom-sister:obligation-helper2:confirm-1",
+          "part": "prompt",
+          "response": "No",
+          "proposedWording": true
+        },
+        {
+          "pairingId": "family-sister-brother",
+          "actorId": "helper1",
+          "stepId": "family-sister-brother:obligation-helper1:confirm-1",
+          "part": "prompt",
+          "response": "No",
+          "proposedWording": true
+        }
+      ],
+      "sha256": "a9b5aee1a38074ce319a760fb77d0eb45759a17ff653d062c4dde77d92df6e56",
+      "bytes": 289481,
+      "durationSeconds": 7.2359,
+      "provenance": {
+        "exportIndex": 7,
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/processed/nr_complete_007.mp3",
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/numbered-clips/7.You_think_the_kid’s_sister_doe.mp3",
+        "sourceSha256": "a9b5aee1a38074ce319a760fb77d0eb45759a17ff653d062c4dde77d92df6e56",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "bd8f9b0499f84ac4e7e23bfcd2b226ca8126f6a116fed2424d1bcba997c35c6f",
+        "recordingIndexSha256": "6fe941df8aa9ea00289c92ed6ffeff6ca611f6bd6fb1b35c371372e495a08977",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed 32-segment NaturalReaders Commercial project: Evelyn Soft, 0.90× (180 WPM), paragraph pause 0.0 seconds; MP3 at 320 kbps; Separate Files ZIP with Index + Segment filenames. See native-project-voice-settings.png and native-export-settings.png.",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 7.2359375,
+        "nonzeroWordTimingVerified": true,
+        "cueTimestampLimit": "Approximate Whisper word boundaries on a nominal 20 ms grid; all boundaries monotone, positive-length, and within the decoded audio.",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalTextDiffersOnlyInLetterCase": true
+      },
+      "revisionCategory": "complete-obligation-and-neutral-no-confirmation"
+    },
+    {
+      "id": "nr_complete_008",
+      "text": "How much do you think the kid’s friend HAS TO help the kid?",
+      "src": "assets/narration/nr_complete_008.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "pairingId": "woman-sister-friend",
+          "actorId": "helper2",
+          "stepId": "woman-sister-friend:obligation-helper2-amount",
+          "part": "prompt"
+        },
+        {
+          "pairingId": "woman-bestfriend-friend",
+          "actorId": "helper1",
+          "stepId": "woman-bestfriend-friend:obligation-helper1-amount",
+          "part": "prompt"
+        },
+        {
+          "pairingId": "woman-teacher-friend",
+          "actorId": "helper2",
+          "stepId": "woman-teacher-friend:obligation-helper2-amount",
+          "part": "prompt"
+        },
+        {
+          "pairingId": "man-brother-friend",
+          "actorId": "helper2",
+          "stepId": "man-brother-friend:obligation-helper2-amount",
+          "part": "prompt"
+        },
+        {
+          "pairingId": "man-bestfriend-friend",
+          "actorId": "helper1",
+          "stepId": "man-bestfriend-friend:obligation-helper1-amount",
+          "part": "prompt"
+        },
+        {
+          "pairingId": "man-teacher-friend",
+          "actorId": "helper2",
+          "stepId": "man-teacher-friend:obligation-helper2-amount",
+          "part": "prompt"
+        }
+      ],
+      "sha256": "f548e6c72be240a81822d07feae4a48f28327262f5e834b0922c0bd44994236c",
+      "bytes": 154689,
+      "durationSeconds": 3.8661,
+      "provenance": {
+        "exportIndex": 8,
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/processed/nr_complete_008.mp3",
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/numbered-clips/8.How_much_do_you_think_the_kid’.mp3",
+        "sourceSha256": "f548e6c72be240a81822d07feae4a48f28327262f5e834b0922c0bd44994236c",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "bd8f9b0499f84ac4e7e23bfcd2b226ca8126f6a116fed2424d1bcba997c35c6f",
+        "recordingIndexSha256": "6fe941df8aa9ea00289c92ed6ffeff6ca611f6bd6fb1b35c371372e495a08977",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed 32-segment NaturalReaders Commercial project: Evelyn Soft, 0.90× (180 WPM), paragraph pause 0.0 seconds; MP3 at 320 kbps; Separate Files ZIP with Index + Segment filenames. See native-project-voice-settings.png and native-export-settings.png.",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 3.866125,
+        "nonzeroWordTimingVerified": true,
+        "cueTimestampLimit": "Approximate Whisper word boundaries on a nominal 20 ms grid; all boundaries monotone, positive-length, and within the decoded audio.",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalTextDiffersOnlyInLetterCase": true
+      },
+      "revisionCategory": "complete-obligation-and-neutral-no-confirmation"
+    },
+    {
+      "id": "nr_complete_009",
+      "text": "You think the kid’s friend does NOT HAVE TO help the kid. Is that what you meant? Yes or No.",
+      "src": "assets/narration/nr_complete_009.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "pairingId": "woman-sister-friend",
+          "actorId": "helper2",
+          "stepId": "woman-sister-friend:obligation-helper2:confirm-1",
+          "part": "prompt",
+          "response": "No",
+          "proposedWording": true
+        },
+        {
+          "pairingId": "woman-bestfriend-friend",
+          "actorId": "helper1",
+          "stepId": "woman-bestfriend-friend:obligation-helper1:confirm-1",
+          "part": "prompt",
+          "response": "No",
+          "proposedWording": true
+        },
+        {
+          "pairingId": "woman-teacher-friend",
+          "actorId": "helper2",
+          "stepId": "woman-teacher-friend:obligation-helper2:confirm-1",
+          "part": "prompt",
+          "response": "No",
+          "proposedWording": true
+        },
+        {
+          "pairingId": "man-brother-friend",
+          "actorId": "helper2",
+          "stepId": "man-brother-friend:obligation-helper2:confirm-1",
+          "part": "prompt",
+          "response": "No",
+          "proposedWording": true
+        },
+        {
+          "pairingId": "man-bestfriend-friend",
+          "actorId": "helper1",
+          "stepId": "man-bestfriend-friend:obligation-helper1:confirm-1",
+          "part": "prompt",
+          "response": "No",
+          "proposedWording": true
+        },
+        {
+          "pairingId": "man-teacher-friend",
+          "actorId": "helper2",
+          "stepId": "man-teacher-friend:obligation-helper2:confirm-1",
+          "part": "prompt",
+          "response": "No",
+          "proposedWording": true
+        }
+      ],
+      "sha256": "581244a8cbd90661b0bfb1fc1d156be24c37349ade7fa026058384cf641ac498",
+      "bytes": 291571,
+      "durationSeconds": 7.28815,
+      "provenance": {
+        "exportIndex": 9,
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/processed/nr_complete_009.mp3",
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/numbered-clips/9.You_think_the_kid’s_friend_doe.mp3",
+        "sourceSha256": "581244a8cbd90661b0bfb1fc1d156be24c37349ade7fa026058384cf641ac498",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "bd8f9b0499f84ac4e7e23bfcd2b226ca8126f6a116fed2424d1bcba997c35c6f",
+        "recordingIndexSha256": "6fe941df8aa9ea00289c92ed6ffeff6ca611f6bd6fb1b35c371372e495a08977",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed 32-segment NaturalReaders Commercial project: Evelyn Soft, 0.90× (180 WPM), paragraph pause 0.0 seconds; MP3 at 320 kbps; Separate Files ZIP with Index + Segment filenames. See native-project-voice-settings.png and native-export-settings.png.",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 7.2881875,
+        "nonzeroWordTimingVerified": true,
+        "cueTimestampLimit": "Approximate Whisper word boundaries on a nominal 20 ms grid; all boundaries monotone, positive-length, and within the decoded audio.",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalTextDiffersOnlyInLetterCase": true
+      },
+      "revisionCategory": "complete-obligation-and-neutral-no-confirmation"
+    },
+    {
+      "id": "nr_complete_010",
+      "text": "How much do you think the kid’s best friend HAS TO help the kid?",
+      "src": "assets/narration/nr_complete_010.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "pairingId": "woman-bestfriend-friend",
+          "actorId": "helper2",
+          "stepId": "woman-bestfriend-friend:obligation-helper2-amount",
+          "part": "prompt"
+        },
+        {
+          "pairingId": "man-bestfriend-friend",
+          "actorId": "helper2",
+          "stepId": "man-bestfriend-friend:obligation-helper2-amount",
+          "part": "prompt"
+        }
+      ],
+      "sha256": "c42d2f902418bb82c723ad7d4da3a0fb2a432c8b90b36f0ae4ca268c93ed2d7f",
+      "bytes": 169318,
+      "durationSeconds": 4.231825,
+      "provenance": {
+        "exportIndex": 10,
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/processed/nr_complete_010.mp3",
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/numbered-clips/10.How_much_do_you_think_the_kid’.mp3",
+        "sourceSha256": "c42d2f902418bb82c723ad7d4da3a0fb2a432c8b90b36f0ae4ca268c93ed2d7f",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "bd8f9b0499f84ac4e7e23bfcd2b226ca8126f6a116fed2424d1bcba997c35c6f",
+        "recordingIndexSha256": "6fe941df8aa9ea00289c92ed6ffeff6ca611f6bd6fb1b35c371372e495a08977",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed 32-segment NaturalReaders Commercial project: Evelyn Soft, 0.90× (180 WPM), paragraph pause 0.0 seconds; MP3 at 320 kbps; Separate Files ZIP with Index + Segment filenames. See native-project-voice-settings.png and native-export-settings.png.",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 4.231875,
+        "nonzeroWordTimingVerified": true,
+        "cueTimestampLimit": "Approximate Whisper word boundaries on a nominal 20 ms grid; all boundaries monotone, positive-length, and within the decoded audio.",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalTextDiffersOnlyInLetterCase": true
+      },
+      "revisionCategory": "complete-obligation-and-neutral-no-confirmation"
+    },
+    {
+      "id": "nr_complete_011",
+      "text": "You think the kid’s best friend does NOT HAVE TO help the kid. Is that what you meant? Yes or No.",
+      "src": "assets/narration/nr_complete_011.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "pairingId": "woman-bestfriend-friend",
+          "actorId": "helper2",
+          "stepId": "woman-bestfriend-friend:obligation-helper2:confirm-1",
+          "part": "prompt",
+          "response": "No",
+          "proposedWording": true
+        },
+        {
+          "pairingId": "man-bestfriend-friend",
+          "actorId": "helper2",
+          "stepId": "man-bestfriend-friend:obligation-helper2:confirm-1",
+          "part": "prompt",
+          "response": "No",
+          "proposedWording": true
+        }
+      ],
+      "sha256": "5420846b3a6fb069ee5f573b1b71bf109fe5d82c030cd13cbb8a3876819366e4",
+      "bytes": 302020,
+      "durationSeconds": 7.549375,
+      "provenance": {
+        "exportIndex": 11,
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/processed/nr_complete_011.mp3",
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/numbered-clips/11.You_think_the_kid’s_best_frien.mp3",
+        "sourceSha256": "5420846b3a6fb069ee5f573b1b71bf109fe5d82c030cd13cbb8a3876819366e4",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "bd8f9b0499f84ac4e7e23bfcd2b226ca8126f6a116fed2424d1bcba997c35c6f",
+        "recordingIndexSha256": "6fe941df8aa9ea00289c92ed6ffeff6ca611f6bd6fb1b35c371372e495a08977",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed 32-segment NaturalReaders Commercial project: Evelyn Soft, 0.90× (180 WPM), paragraph pause 0.0 seconds; MP3 at 320 kbps; Separate Files ZIP with Index + Segment filenames. See native-project-voice-settings.png and native-export-settings.png.",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 7.549375,
+        "nonzeroWordTimingVerified": true,
+        "cueTimestampLimit": "Approximate Whisper word boundaries on a nominal 20 ms grid; all boundaries monotone, positive-length, and within the decoded audio.",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalTextDiffersOnlyInLetterCase": true
+      },
+      "revisionCategory": "complete-obligation-and-neutral-no-confirmation"
+    },
+    {
+      "id": "nr_complete_012",
+      "text": "How much do you think the kid’s classmate HAS TO help the kid?",
+      "src": "assets/narration/nr_complete_012.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "pairingId": "woman-teacher-classmate",
+          "actorId": "helper1",
+          "stepId": "woman-teacher-classmate:obligation-helper1-amount",
+          "part": "prompt"
+        },
+        {
+          "pairingId": "man-teacher-classmate",
+          "actorId": "helper1",
+          "stepId": "man-teacher-classmate:obligation-helper1-amount",
+          "part": "prompt"
+        },
+        {
+          "pairingId": "family-teacher-classmate",
+          "actorId": "helper1",
+          "stepId": "family-teacher-classmate:obligation-helper1-amount",
+          "part": "prompt"
+        }
+      ],
+      "sha256": "b0e05e62cedf244ae2300ff1e08675d0221e17736c1e1b6f925758f58fcd5b78",
+      "bytes": 167228,
+      "durationSeconds": 4.179575,
+      "provenance": {
+        "exportIndex": 12,
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/processed/nr_complete_012.mp3",
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/numbered-clips/12.How_much_do_you_think_the_kid’.mp3",
+        "sourceSha256": "b0e05e62cedf244ae2300ff1e08675d0221e17736c1e1b6f925758f58fcd5b78",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "bd8f9b0499f84ac4e7e23bfcd2b226ca8126f6a116fed2424d1bcba997c35c6f",
+        "recordingIndexSha256": "6fe941df8aa9ea00289c92ed6ffeff6ca611f6bd6fb1b35c371372e495a08977",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed 32-segment NaturalReaders Commercial project: Evelyn Soft, 0.90× (180 WPM), paragraph pause 0.0 seconds; MP3 at 320 kbps; Separate Files ZIP with Index + Segment filenames. See native-project-voice-settings.png and native-export-settings.png.",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 4.179625,
+        "nonzeroWordTimingVerified": true,
+        "cueTimestampLimit": "Approximate Whisper word boundaries on a nominal 20 ms grid; all boundaries monotone, positive-length, and within the decoded audio.",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalTextDiffersOnlyInLetterCase": true
+      },
+      "revisionCategory": "complete-obligation-and-neutral-no-confirmation"
+    },
+    {
+      "id": "nr_complete_013",
+      "text": "You think the kid’s classmate does NOT HAVE TO help the kid. Is that what you meant? Yes or No.",
+      "src": "assets/narration/nr_complete_013.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "pairingId": "woman-teacher-classmate",
+          "actorId": "helper1",
+          "stepId": "woman-teacher-classmate:obligation-helper1:confirm-1",
+          "part": "prompt",
+          "response": "No",
+          "proposedWording": true
+        },
+        {
+          "pairingId": "man-teacher-classmate",
+          "actorId": "helper1",
+          "stepId": "man-teacher-classmate:obligation-helper1:confirm-1",
+          "part": "prompt",
+          "response": "No",
+          "proposedWording": true
+        },
+        {
+          "pairingId": "family-teacher-classmate",
+          "actorId": "helper1",
+          "stepId": "family-teacher-classmate:obligation-helper1:confirm-1",
+          "part": "prompt",
+          "response": "No",
+          "proposedWording": true
+        }
+      ],
+      "sha256": "487ebe85f264e58505d6abffd0eb2e6afd46b0d9358a5fa5a7ab06f66e6c3d1c",
+      "bytes": 305155,
+      "durationSeconds": 7.62775,
+      "provenance": {
+        "exportIndex": 13,
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/processed/nr_complete_013.mp3",
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/numbered-clips/13.You_think_the_kid’s_classmate_.mp3",
+        "sourceSha256": "487ebe85f264e58505d6abffd0eb2e6afd46b0d9358a5fa5a7ab06f66e6c3d1c",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "bd8f9b0499f84ac4e7e23bfcd2b226ca8126f6a116fed2424d1bcba997c35c6f",
+        "recordingIndexSha256": "6fe941df8aa9ea00289c92ed6ffeff6ca611f6bd6fb1b35c371372e495a08977",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed 32-segment NaturalReaders Commercial project: Evelyn Soft, 0.90× (180 WPM), paragraph pause 0.0 seconds; MP3 at 320 kbps; Separate Files ZIP with Index + Segment filenames. See native-project-voice-settings.png and native-export-settings.png.",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 7.62775,
+        "nonzeroWordTimingVerified": true,
+        "cueTimestampLimit": "Approximate Whisper word boundaries on a nominal 20 ms grid; all boundaries monotone, positive-length, and within the decoded audio.",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalTextDiffersOnlyInLetterCase": true
+      },
+      "revisionCategory": "complete-obligation-and-neutral-no-confirmation"
+    },
+    {
+      "id": "nr_complete_014",
+      "text": "How much do you think the kid’s dad HAS TO help the kid?",
+      "src": "assets/narration/nr_complete_014.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "pairingId": "man-dad-teacher",
+          "actorId": "helper2",
+          "stepId": "man-dad-teacher:obligation-helper2-amount",
+          "part": "prompt"
+        },
+        {
+          "pairingId": "man-dad-brother",
+          "actorId": "helper1",
+          "stepId": "man-dad-brother:obligation-helper1-amount",
+          "part": "prompt"
+        },
+        {
+          "pairingId": "family-mom-dad",
+          "actorId": "helper1",
+          "stepId": "family-mom-dad:obligation-helper1-amount",
+          "part": "prompt"
+        }
+      ],
+      "sha256": "b9b4ec126b47ce213dffe33731bd220a9d52edcf54c52a11de7e3c9737adc416",
+      "bytes": 153645,
+      "durationSeconds": 3.84,
+      "provenance": {
+        "exportIndex": 14,
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/processed/nr_complete_014.mp3",
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/numbered-clips/14.How_much_do_you_think_the_kid’.mp3",
+        "sourceSha256": "b9b4ec126b47ce213dffe33731bd220a9d52edcf54c52a11de7e3c9737adc416",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "bd8f9b0499f84ac4e7e23bfcd2b226ca8126f6a116fed2424d1bcba997c35c6f",
+        "recordingIndexSha256": "6fe941df8aa9ea00289c92ed6ffeff6ca611f6bd6fb1b35c371372e495a08977",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed 32-segment NaturalReaders Commercial project: Evelyn Soft, 0.90× (180 WPM), paragraph pause 0.0 seconds; MP3 at 320 kbps; Separate Files ZIP with Index + Segment filenames. See native-project-voice-settings.png and native-export-settings.png.",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 3.84,
+        "nonzeroWordTimingVerified": true,
+        "cueTimestampLimit": "Approximate Whisper word boundaries on a nominal 20 ms grid; all boundaries monotone, positive-length, and within the decoded audio.",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalTextDiffersOnlyInLetterCase": true
+      },
+      "revisionCategory": "complete-obligation-and-neutral-no-confirmation"
+    },
+    {
+      "id": "nr_complete_015",
+      "text": "You think the kid’s dad does NOT HAVE TO help the kid. Is that what you meant? Yes or No.",
+      "src": "assets/narration/nr_complete_015.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "pairingId": "man-dad-teacher",
+          "actorId": "helper2",
+          "stepId": "man-dad-teacher:obligation-helper2:confirm-1",
+          "part": "prompt",
+          "response": "No",
+          "proposedWording": true
+        },
+        {
+          "pairingId": "man-dad-brother",
+          "actorId": "helper1",
+          "stepId": "man-dad-brother:obligation-helper1:confirm-1",
+          "part": "prompt",
+          "response": "No",
+          "proposedWording": true
+        },
+        {
+          "pairingId": "family-mom-dad",
+          "actorId": "helper1",
+          "stepId": "family-mom-dad:obligation-helper1:confirm-1",
+          "part": "prompt",
+          "response": "No",
+          "proposedWording": true
+        }
+      ],
+      "sha256": "1b2a20b093e7c1bfdc65890bc868da1884a88119865cfc32b07a3eebab36c113",
+      "bytes": 291571,
+      "durationSeconds": 7.28815,
+      "provenance": {
+        "exportIndex": 15,
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/processed/nr_complete_015.mp3",
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/numbered-clips/15.You_think_the_kid’s_dad_does_n.mp3",
+        "sourceSha256": "1b2a20b093e7c1bfdc65890bc868da1884a88119865cfc32b07a3eebab36c113",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "bd8f9b0499f84ac4e7e23bfcd2b226ca8126f6a116fed2424d1bcba997c35c6f",
+        "recordingIndexSha256": "6fe941df8aa9ea00289c92ed6ffeff6ca611f6bd6fb1b35c371372e495a08977",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed 32-segment NaturalReaders Commercial project: Evelyn Soft, 0.90× (180 WPM), paragraph pause 0.0 seconds; MP3 at 320 kbps; Separate Files ZIP with Index + Segment filenames. See native-project-voice-settings.png and native-export-settings.png.",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 7.2881875,
+        "nonzeroWordTimingVerified": true,
+        "cueTimestampLimit": "Approximate Whisper word boundaries on a nominal 20 ms grid; all boundaries monotone, positive-length, and within the decoded audio.",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalTextDiffersOnlyInLetterCase": true
+      },
+      "revisionCategory": "complete-obligation-and-neutral-no-confirmation"
+    },
+    {
+      "id": "nr_complete_016",
+      "text": "How much do you think the kid’s brother HAS TO help the kid?",
+      "src": "assets/narration/nr_complete_016.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "pairingId": "man-brother-friend",
+          "actorId": "helper1",
+          "stepId": "man-brother-friend:obligation-helper1-amount",
+          "part": "prompt"
+        },
+        {
+          "pairingId": "man-dad-brother",
+          "actorId": "helper2",
+          "stepId": "man-dad-brother:obligation-helper2-amount",
+          "part": "prompt"
+        },
+        {
+          "pairingId": "family-sister-brother",
+          "actorId": "helper2",
+          "stepId": "family-sister-brother:obligation-helper2-amount",
+          "part": "prompt"
+        }
+      ],
+      "sha256": "feadccefc883453dd9d2f6926ff453a6f59107f90c086a3976ed92b8e92d8701",
+      "bytes": 158869,
+      "durationSeconds": 3.9706,
+      "provenance": {
+        "exportIndex": 16,
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/processed/nr_complete_016.mp3",
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/numbered-clips/16.How_much_do_you_think_the_kid’.mp3",
+        "sourceSha256": "feadccefc883453dd9d2f6926ff453a6f59107f90c086a3976ed92b8e92d8701",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "bd8f9b0499f84ac4e7e23bfcd2b226ca8126f6a116fed2424d1bcba997c35c6f",
+        "recordingIndexSha256": "6fe941df8aa9ea00289c92ed6ffeff6ca611f6bd6fb1b35c371372e495a08977",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed 32-segment NaturalReaders Commercial project: Evelyn Soft, 0.90× (180 WPM), paragraph pause 0.0 seconds; MP3 at 320 kbps; Separate Files ZIP with Index + Segment filenames. See native-project-voice-settings.png and native-export-settings.png.",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 3.970625,
+        "nonzeroWordTimingVerified": true,
+        "cueTimestampLimit": "Approximate Whisper word boundaries on a nominal 20 ms grid; all boundaries monotone, positive-length, and within the decoded audio.",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalTextDiffersOnlyInLetterCase": true
+      },
+      "revisionCategory": "complete-obligation-and-neutral-no-confirmation"
+    },
+    {
+      "id": "nr_complete_017",
+      "text": "You think the kid’s brother does NOT HAVE TO help the kid. Is that what you meant? Yes or No.",
+      "src": "assets/narration/nr_complete_017.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "pairingId": "man-brother-friend",
+          "actorId": "helper1",
+          "stepId": "man-brother-friend:obligation-helper1:confirm-1",
+          "part": "prompt",
+          "response": "No",
+          "proposedWording": true
+        },
+        {
+          "pairingId": "man-dad-brother",
+          "actorId": "helper2",
+          "stepId": "man-dad-brother:obligation-helper2:confirm-1",
+          "part": "prompt",
+          "response": "No",
+          "proposedWording": true
+        },
+        {
+          "pairingId": "family-sister-brother",
+          "actorId": "helper2",
+          "stepId": "family-sister-brother:obligation-helper2:confirm-1",
+          "part": "prompt",
+          "response": "No",
+          "proposedWording": true
+        }
+      ],
+      "sha256": "efaa9c14dd25ec07ea058fbd6c0198f198b989756df996f589964e30bc58ce5e",
+      "bytes": 294706,
+      "durationSeconds": 7.366525,
+      "provenance": {
+        "exportIndex": 17,
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/processed/nr_complete_017.mp3",
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/numbered-clips/17.You_think_the_kid’s_brother_do.mp3",
+        "sourceSha256": "efaa9c14dd25ec07ea058fbd6c0198f198b989756df996f589964e30bc58ce5e",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "bd8f9b0499f84ac4e7e23bfcd2b226ca8126f6a116fed2424d1bcba997c35c6f",
+        "recordingIndexSha256": "6fe941df8aa9ea00289c92ed6ffeff6ca611f6bd6fb1b35c371372e495a08977",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed 32-segment NaturalReaders Commercial project: Evelyn Soft, 0.90× (180 WPM), paragraph pause 0.0 seconds; MP3 at 320 kbps; Separate Files ZIP with Index + Segment filenames. See native-project-voice-settings.png and native-export-settings.png.",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 7.3665625,
+        "nonzeroWordTimingVerified": true,
+        "cueTimestampLimit": "Approximate Whisper word boundaries on a nominal 20 ms grid; all boundaries monotone, positive-length, and within the decoded audio.",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalTextDiffersOnlyInLetterCase": true
+      },
+      "revisionCategory": "complete-obligation-and-neutral-no-confirmation"
+    },
+    {
+      "id": "nr_complete_018",
+      "text": "How much do you think the kid’s dad HAS TO help the mom?",
+      "src": "assets/narration/nr_complete_018.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "pairingId": "family-dad-kid",
+          "actorId": "helper1",
+          "stepId": "family-dad-kid:obligation-helper1-amount",
+          "part": "prompt"
+        }
+      ],
+      "sha256": "b56ee6efc925e9c3f68fac8110126330609660a0ec6611bc82061d01ba4554d3",
+      "bytes": 151555,
+      "durationSeconds": 3.78775,
+      "provenance": {
+        "exportIndex": 18,
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/processed/nr_complete_018.mp3",
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/numbered-clips/18.How_much_do_you_think_the_kid’.mp3",
+        "sourceSha256": "b56ee6efc925e9c3f68fac8110126330609660a0ec6611bc82061d01ba4554d3",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "bd8f9b0499f84ac4e7e23bfcd2b226ca8126f6a116fed2424d1bcba997c35c6f",
+        "recordingIndexSha256": "6fe941df8aa9ea00289c92ed6ffeff6ca611f6bd6fb1b35c371372e495a08977",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed 32-segment NaturalReaders Commercial project: Evelyn Soft, 0.90× (180 WPM), paragraph pause 0.0 seconds; MP3 at 320 kbps; Separate Files ZIP with Index + Segment filenames. See native-project-voice-settings.png and native-export-settings.png.",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 3.78775,
+        "nonzeroWordTimingVerified": true,
+        "cueTimestampLimit": "Approximate Whisper word boundaries on a nominal 20 ms grid; all boundaries monotone, positive-length, and within the decoded audio.",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalTextDiffersOnlyInLetterCase": true
+      },
+      "revisionCategory": "complete-obligation-and-neutral-no-confirmation"
+    },
+    {
+      "id": "nr_complete_019",
+      "text": "You think the kid’s dad does NOT HAVE TO help the mom. Is that what you meant? Yes or No.",
+      "src": "assets/narration/nr_complete_019.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "pairingId": "family-dad-kid",
+          "actorId": "helper1",
+          "stepId": "family-dad-kid:obligation-helper1:confirm-1",
+          "part": "prompt",
+          "response": "No",
+          "proposedWording": true
+        }
+      ],
+      "sha256": "62d3cc674467cc0fa102ecf2f5f1854737cdd45feb9cdeb0e91c5838746f6351",
+      "bytes": 288436,
+      "durationSeconds": 7.209775,
+      "provenance": {
+        "exportIndex": 19,
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/processed/nr_complete_019.mp3",
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/numbered-clips/19.You_think_the_kid’s_dad_does_n.mp3",
+        "sourceSha256": "62d3cc674467cc0fa102ecf2f5f1854737cdd45feb9cdeb0e91c5838746f6351",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "bd8f9b0499f84ac4e7e23bfcd2b226ca8126f6a116fed2424d1bcba997c35c6f",
+        "recordingIndexSha256": "6fe941df8aa9ea00289c92ed6ffeff6ca611f6bd6fb1b35c371372e495a08977",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed 32-segment NaturalReaders Commercial project: Evelyn Soft, 0.90× (180 WPM), paragraph pause 0.0 seconds; MP3 at 320 kbps; Separate Files ZIP with Index + Segment filenames. See native-project-voice-settings.png and native-export-settings.png.",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 7.2098125,
+        "nonzeroWordTimingVerified": true,
+        "cueTimestampLimit": "Approximate Whisper word boundaries on a nominal 20 ms grid; all boundaries monotone, positive-length, and within the decoded audio.",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalTextDiffersOnlyInLetterCase": true
+      },
+      "revisionCategory": "complete-obligation-and-neutral-no-confirmation"
+    },
+    {
+      "id": "nr_complete_020",
+      "text": "How much do you think the kid HAS TO help the mom?",
+      "src": "assets/narration/nr_complete_020.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "pairingId": "family-dad-kid",
+          "actorId": "helper2",
+          "stepId": "family-dad-kid:obligation-helper2-amount",
+          "part": "prompt"
+        }
+      ],
+      "sha256": "d765e87c25c04333790dd4d927c6bd8df9202947bbc34da3651ab440eb38d0ad",
+      "bytes": 141106,
+      "durationSeconds": 3.526525,
+      "provenance": {
+        "exportIndex": 20,
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/processed/nr_complete_020.mp3",
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/numbered-clips/20.How_much_do_you_think_the_kid_.mp3",
+        "sourceSha256": "d765e87c25c04333790dd4d927c6bd8df9202947bbc34da3651ab440eb38d0ad",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "bd8f9b0499f84ac4e7e23bfcd2b226ca8126f6a116fed2424d1bcba997c35c6f",
+        "recordingIndexSha256": "6fe941df8aa9ea00289c92ed6ffeff6ca611f6bd6fb1b35c371372e495a08977",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed 32-segment NaturalReaders Commercial project: Evelyn Soft, 0.90× (180 WPM), paragraph pause 0.0 seconds; MP3 at 320 kbps; Separate Files ZIP with Index + Segment filenames. See native-project-voice-settings.png and native-export-settings.png.",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 3.5265625,
+        "nonzeroWordTimingVerified": true,
+        "cueTimestampLimit": "Approximate Whisper word boundaries on a nominal 20 ms grid; all boundaries monotone, positive-length, and within the decoded audio.",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalTextDiffersOnlyInLetterCase": true
+      },
+      "revisionCategory": "complete-obligation-and-neutral-no-confirmation"
+    },
+    {
+      "id": "nr_complete_021",
+      "text": "You think the kid does NOT HAVE TO help the mom. Is that what you meant? Yes or No.",
+      "src": "assets/narration/nr_complete_021.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "pairingId": "family-dad-kid",
+          "actorId": "helper2",
+          "stepId": "family-dad-kid:obligation-helper2:confirm-1",
+          "part": "prompt",
+          "response": "No",
+          "proposedWording": true
+        }
+      ],
+      "sha256": "5649b2b35a3e2a294f6326f26f7cd11b4f31bc2a1ecdaeba21dfae5ce8e5e35f",
+      "bytes": 275898,
+      "durationSeconds": 6.896325,
+      "provenance": {
+        "exportIndex": 21,
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/processed/nr_complete_021.mp3",
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/numbered-clips/21.You_think_the_kid_does_not_hav.mp3",
+        "sourceSha256": "5649b2b35a3e2a294f6326f26f7cd11b4f31bc2a1ecdaeba21dfae5ce8e5e35f",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "bd8f9b0499f84ac4e7e23bfcd2b226ca8126f6a116fed2424d1bcba997c35c6f",
+        "recordingIndexSha256": "6fe941df8aa9ea00289c92ed6ffeff6ca611f6bd6fb1b35c371372e495a08977",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed 32-segment NaturalReaders Commercial project: Evelyn Soft, 0.90× (180 WPM), paragraph pause 0.0 seconds; MP3 at 320 kbps; Separate Files ZIP with Index + Segment filenames. See native-project-voice-settings.png and native-export-settings.png.",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 6.8963125,
+        "nonzeroWordTimingVerified": true,
+        "cueTimestampLimit": "Approximate Whisper word boundaries on a nominal 20 ms grid; all boundaries monotone, positive-length, and within the decoded audio.",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalTextDiffersOnlyInLetterCase": true
+      },
+      "revisionCategory": "complete-obligation-and-neutral-no-confirmation"
+    },
+    {
+      "id": "nr_complete_022",
+      "text": "No one helped the mom. Do you think it was mean or nice that no one helped the mom?",
+      "src": "assets/narration/nr_complete_022.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "pairingId": "family-dad-kid",
+          "stepId": "family-dad-kid:overall",
+          "part": "prompt",
+          "proposedWording": true
+        }
+      ],
+      "sha256": "e84410c03d59d737340b0c5d1aa11b575c881a6f9aeab6c1e9c03c94f4778dbd",
+      "bytes": 241416,
+      "durationSeconds": 6.034275,
+      "provenance": {
+        "exportIndex": 22,
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/processed/nr_complete_022.mp3",
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/numbered-clips/22.No_one_helped_the_mom._Do_you_.mp3",
+        "sourceSha256": "e84410c03d59d737340b0c5d1aa11b575c881a6f9aeab6c1e9c03c94f4778dbd",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "bd8f9b0499f84ac4e7e23bfcd2b226ca8126f6a116fed2424d1bcba997c35c6f",
+        "recordingIndexSha256": "6fe941df8aa9ea00289c92ed6ffeff6ca611f6bd6fb1b35c371372e495a08977",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed 32-segment NaturalReaders Commercial project: Evelyn Soft, 0.90× (180 WPM), paragraph pause 0.0 seconds; MP3 at 320 kbps; Separate Files ZIP with Index + Segment filenames. See native-project-voice-settings.png and native-export-settings.png.",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 6.0343125,
+        "nonzeroWordTimingVerified": true,
+        "cueTimestampLimit": "Approximate Whisper word boundaries on a nominal 20 ms grid; all boundaries monotone, positive-length, and within the decoded audio.",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalTextDiffersOnlyInLetterCase": true
+      },
+      "revisionCategory": "complete-obligation-and-neutral-no-confirmation"
+    },
+    {
+      "id": "nr_complete_023",
+      "text": "How much do you think the kid HAS TO help the dad?",
+      "src": "assets/narration/nr_complete_023.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "pairingId": "family-mom-kid",
+          "actorId": "helper1",
+          "stepId": "family-mom-kid:obligation-helper1-amount",
+          "part": "prompt"
+        }
+      ],
+      "sha256": "d4fc3a5ac3a30079c9dff34dc4efd19feff8d8e0c32f1ec853ecbffc39265390",
+      "bytes": 143196,
+      "durationSeconds": 3.578775,
+      "provenance": {
+        "exportIndex": 23,
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/processed/nr_complete_023.mp3",
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/numbered-clips/23.How_much_do_you_think_the_kid_.mp3",
+        "sourceSha256": "d4fc3a5ac3a30079c9dff34dc4efd19feff8d8e0c32f1ec853ecbffc39265390",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "bd8f9b0499f84ac4e7e23bfcd2b226ca8126f6a116fed2424d1bcba997c35c6f",
+        "recordingIndexSha256": "6fe941df8aa9ea00289c92ed6ffeff6ca611f6bd6fb1b35c371372e495a08977",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed 32-segment NaturalReaders Commercial project: Evelyn Soft, 0.90× (180 WPM), paragraph pause 0.0 seconds; MP3 at 320 kbps; Separate Files ZIP with Index + Segment filenames. See native-project-voice-settings.png and native-export-settings.png.",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 3.5788125,
+        "nonzeroWordTimingVerified": true,
+        "cueTimestampLimit": "Approximate Whisper word boundaries on a nominal 20 ms grid; all boundaries monotone, positive-length, and within the decoded audio.",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalTextDiffersOnlyInLetterCase": true
+      },
+      "revisionCategory": "complete-obligation-and-neutral-no-confirmation"
+    },
+    {
+      "id": "nr_complete_024",
+      "text": "You think the kid does NOT HAVE TO help the dad. Is that what you meant? Yes or No.",
+      "src": "assets/narration/nr_complete_024.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "pairingId": "family-mom-kid",
+          "actorId": "helper1",
+          "stepId": "family-mom-kid:obligation-helper1:confirm-1",
+          "part": "prompt",
+          "response": "No",
+          "proposedWording": true
+        }
+      ],
+      "sha256": "18260be558647df1b95c21e0f620d0041ebe1e77e01d4aee24f04ea7ab4c27ec",
+      "bytes": 279032,
+      "durationSeconds": 6.974675,
+      "provenance": {
+        "exportIndex": 24,
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/processed/nr_complete_024.mp3",
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/numbered-clips/24.You_think_the_kid_does_not_hav.mp3",
+        "sourceSha256": "18260be558647df1b95c21e0f620d0041ebe1e77e01d4aee24f04ea7ab4c27ec",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "bd8f9b0499f84ac4e7e23bfcd2b226ca8126f6a116fed2424d1bcba997c35c6f",
+        "recordingIndexSha256": "6fe941df8aa9ea00289c92ed6ffeff6ca611f6bd6fb1b35c371372e495a08977",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed 32-segment NaturalReaders Commercial project: Evelyn Soft, 0.90× (180 WPM), paragraph pause 0.0 seconds; MP3 at 320 kbps; Separate Files ZIP with Index + Segment filenames. See native-project-voice-settings.png and native-export-settings.png.",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 6.9746875,
+        "nonzeroWordTimingVerified": true,
+        "cueTimestampLimit": "Approximate Whisper word boundaries on a nominal 20 ms grid; all boundaries monotone, positive-length, and within the decoded audio.",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalTextDiffersOnlyInLetterCase": true
+      },
+      "revisionCategory": "complete-obligation-and-neutral-no-confirmation"
+    },
+    {
+      "id": "nr_complete_025",
+      "text": "How much do you think the kid’s mom HAS TO help the dad?",
+      "src": "assets/narration/nr_complete_025.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "pairingId": "family-mom-kid",
+          "actorId": "helper2",
+          "stepId": "family-mom-kid:obligation-helper2-amount",
+          "part": "prompt"
+        }
+      ],
+      "sha256": "47567b006fdae4f30df2fbd76a942c8cbc93ac07629a8f8f50840192f14b2662",
+      "bytes": 154689,
+      "durationSeconds": 3.8661,
+      "provenance": {
+        "exportIndex": 25,
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/processed/nr_complete_025.mp3",
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/numbered-clips/25.How_much_do_you_think_the_kid’.mp3",
+        "sourceSha256": "47567b006fdae4f30df2fbd76a942c8cbc93ac07629a8f8f50840192f14b2662",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "bd8f9b0499f84ac4e7e23bfcd2b226ca8126f6a116fed2424d1bcba997c35c6f",
+        "recordingIndexSha256": "6fe941df8aa9ea00289c92ed6ffeff6ca611f6bd6fb1b35c371372e495a08977",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed 32-segment NaturalReaders Commercial project: Evelyn Soft, 0.90× (180 WPM), paragraph pause 0.0 seconds; MP3 at 320 kbps; Separate Files ZIP with Index + Segment filenames. See native-project-voice-settings.png and native-export-settings.png.",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 3.866125,
+        "nonzeroWordTimingVerified": true,
+        "cueTimestampLimit": "Approximate Whisper word boundaries on a nominal 20 ms grid; all boundaries monotone, positive-length, and within the decoded audio.",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalTextDiffersOnlyInLetterCase": true
+      },
+      "revisionCategory": "complete-obligation-and-neutral-no-confirmation"
+    },
+    {
+      "id": "nr_complete_026",
+      "text": "You think the kid’s mom does NOT HAVE TO help the dad. Is that what you meant? Yes or No.",
+      "src": "assets/narration/nr_complete_026.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "pairingId": "family-mom-kid",
+          "actorId": "helper2",
+          "stepId": "family-mom-kid:obligation-helper2:confirm-1",
+          "part": "prompt",
+          "response": "No",
+          "proposedWording": true
+        }
+      ],
+      "sha256": "e9ce0746b9db9dd77d41d32a6685b22c0321b52ee4d653bf17ae0a833d119f64",
+      "bytes": 294706,
+      "durationSeconds": 7.366525,
+      "provenance": {
+        "exportIndex": 26,
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/processed/nr_complete_026.mp3",
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/numbered-clips/26.You_think_the_kid’s_mom_does_n.mp3",
+        "sourceSha256": "e9ce0746b9db9dd77d41d32a6685b22c0321b52ee4d653bf17ae0a833d119f64",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "bd8f9b0499f84ac4e7e23bfcd2b226ca8126f6a116fed2424d1bcba997c35c6f",
+        "recordingIndexSha256": "6fe941df8aa9ea00289c92ed6ffeff6ca611f6bd6fb1b35c371372e495a08977",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed 32-segment NaturalReaders Commercial project: Evelyn Soft, 0.90× (180 WPM), paragraph pause 0.0 seconds; MP3 at 320 kbps; Separate Files ZIP with Index + Segment filenames. See native-project-voice-settings.png and native-export-settings.png.",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 7.3665625,
+        "nonzeroWordTimingVerified": true,
+        "cueTimestampLimit": "Approximate Whisper word boundaries on a nominal 20 ms grid; all boundaries monotone, positive-length, and within the decoded audio.",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalTextDiffersOnlyInLetterCase": true
+      },
+      "revisionCategory": "complete-obligation-and-neutral-no-confirmation"
+    },
+    {
+      "id": "nr_complete_027",
+      "text": "No one helped the dad. Do you think it was mean or nice that no one helped the dad?",
+      "src": "assets/narration/nr_complete_027.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "pairingId": "family-mom-kid",
+          "stepId": "family-mom-kid:overall",
+          "part": "prompt",
+          "proposedWording": true
+        }
+      ],
+      "sha256": "2ceed36f66705c575c408ca4d984e869e894f48b8970011434f61dbbc048bd57",
+      "bytes": 243506,
+      "durationSeconds": 6.086525,
+      "provenance": {
+        "exportIndex": 27,
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/processed/nr_complete_027.mp3",
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/numbered-clips/27.No_one_helped_the_dad._Do_you_.mp3",
+        "sourceSha256": "2ceed36f66705c575c408ca4d984e869e894f48b8970011434f61dbbc048bd57",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "bd8f9b0499f84ac4e7e23bfcd2b226ca8126f6a116fed2424d1bcba997c35c6f",
+        "recordingIndexSha256": "6fe941df8aa9ea00289c92ed6ffeff6ca611f6bd6fb1b35c371372e495a08977",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed 32-segment NaturalReaders Commercial project: Evelyn Soft, 0.90× (180 WPM), paragraph pause 0.0 seconds; MP3 at 320 kbps; Separate Files ZIP with Index + Segment filenames. See native-project-voice-settings.png and native-export-settings.png.",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 6.0865625,
+        "nonzeroWordTimingVerified": true,
+        "cueTimestampLimit": "Approximate Whisper word boundaries on a nominal 20 ms grid; all boundaries monotone, positive-length, and within the decoded audio.",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalTextDiffersOnlyInLetterCase": true
+      },
+      "revisionCategory": "complete-obligation-and-neutral-no-confirmation"
+    },
+    {
+      "id": "nr_complete_028",
+      "text": "How much do you think the teacher on the left HAS TO help the teacher in the middle?",
+      "src": "assets/narration/nr_complete_028.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "pairingId": "family-teacher-kid",
+          "actorId": "helper1",
+          "stepId": "family-teacher-kid:obligation-helper1-amount",
+          "part": "prompt"
+        }
+      ],
+      "sha256": "15b47cc75f35be8e477893c6f161b70b90c1d790b30af740f42058b3e89ec948",
+      "bytes": 196485,
+      "durationSeconds": 4.911,
+      "provenance": {
+        "exportIndex": 28,
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/processed/nr_complete_028.mp3",
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/numbered-clips/28.How_much_do_you_think_the_teac.mp3",
+        "sourceSha256": "15b47cc75f35be8e477893c6f161b70b90c1d790b30af740f42058b3e89ec948",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "bd8f9b0499f84ac4e7e23bfcd2b226ca8126f6a116fed2424d1bcba997c35c6f",
+        "recordingIndexSha256": "6fe941df8aa9ea00289c92ed6ffeff6ca611f6bd6fb1b35c371372e495a08977",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed 32-segment NaturalReaders Commercial project: Evelyn Soft, 0.90× (180 WPM), paragraph pause 0.0 seconds; MP3 at 320 kbps; Separate Files ZIP with Index + Segment filenames. See native-project-voice-settings.png and native-export-settings.png.",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 4.911,
+        "nonzeroWordTimingVerified": true,
+        "cueTimestampLimit": "Approximate Whisper word boundaries on a nominal 20 ms grid; all boundaries monotone, positive-length, and within the decoded audio.",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalTextDiffersOnlyInLetterCase": true
+      },
+      "revisionCategory": "complete-obligation-and-neutral-no-confirmation"
+    },
+    {
+      "id": "nr_complete_029",
+      "text": "You think the teacher on the left does NOT HAVE TO help the teacher in the middle. Is that what you meant? Yes or No.",
+      "src": "assets/narration/nr_complete_029.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "pairingId": "family-teacher-kid",
+          "actorId": "helper1",
+          "stepId": "family-teacher-kid:obligation-helper1:confirm-1",
+          "part": "prompt",
+          "response": "No",
+          "proposedWording": true
+        }
+      ],
+      "sha256": "e9b8b0f6897087eb3255ee2d2f82b258ec0f13cf18608908c3d42680ed46e676",
+      "bytes": 330232,
+      "durationSeconds": 8.254675,
+      "provenance": {
+        "exportIndex": 29,
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/processed/nr_complete_029.mp3",
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/numbered-clips/29.You_think_the_teacher_on_the_l.mp3",
+        "sourceSha256": "e9b8b0f6897087eb3255ee2d2f82b258ec0f13cf18608908c3d42680ed46e676",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "bd8f9b0499f84ac4e7e23bfcd2b226ca8126f6a116fed2424d1bcba997c35c6f",
+        "recordingIndexSha256": "6fe941df8aa9ea00289c92ed6ffeff6ca611f6bd6fb1b35c371372e495a08977",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed 32-segment NaturalReaders Commercial project: Evelyn Soft, 0.90× (180 WPM), paragraph pause 0.0 seconds; MP3 at 320 kbps; Separate Files ZIP with Index + Segment filenames. See native-project-voice-settings.png and native-export-settings.png.",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 8.2546875,
+        "nonzeroWordTimingVerified": true,
+        "cueTimestampLimit": "Approximate Whisper word boundaries on a nominal 20 ms grid; all boundaries monotone, positive-length, and within the decoded audio.",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalTextDiffersOnlyInLetterCase": true
+      },
+      "revisionCategory": "complete-obligation-and-neutral-no-confirmation"
+    },
+    {
+      "id": "nr_complete_030",
+      "text": "How much do you think the kid HAS TO help the teacher in the middle?",
+      "src": "assets/narration/nr_complete_030.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "pairingId": "family-teacher-kid",
+          "actorId": "helper2",
+          "stepId": "family-teacher-kid:obligation-helper2-amount",
+          "part": "prompt"
+        }
+      ],
+      "sha256": "0ec1267e5011ee578d8eaca7d869ce6769ba0f3262c117e546abad81070ded13",
+      "bytes": 172453,
+      "durationSeconds": 4.3102,
+      "provenance": {
+        "exportIndex": 30,
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/processed/nr_complete_030.mp3",
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/numbered-clips/30.How_much_do_you_think_the_kid_.mp3",
+        "sourceSha256": "0ec1267e5011ee578d8eaca7d869ce6769ba0f3262c117e546abad81070ded13",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "bd8f9b0499f84ac4e7e23bfcd2b226ca8126f6a116fed2424d1bcba997c35c6f",
+        "recordingIndexSha256": "6fe941df8aa9ea00289c92ed6ffeff6ca611f6bd6fb1b35c371372e495a08977",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed 32-segment NaturalReaders Commercial project: Evelyn Soft, 0.90× (180 WPM), paragraph pause 0.0 seconds; MP3 at 320 kbps; Separate Files ZIP with Index + Segment filenames. See native-project-voice-settings.png and native-export-settings.png.",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 4.3101875,
+        "nonzeroWordTimingVerified": true,
+        "cueTimestampLimit": "Approximate Whisper word boundaries on a nominal 20 ms grid; all boundaries monotone, positive-length, and within the decoded audio.",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalTextDiffersOnlyInLetterCase": true
+      },
+      "revisionCategory": "complete-obligation-and-neutral-no-confirmation"
+    },
+    {
+      "id": "nr_complete_031",
+      "text": "You think the kid does NOT HAVE TO help the teacher in the middle. Is that what you meant? Yes or No.",
+      "src": "assets/narration/nr_complete_031.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "pairingId": "family-teacher-kid",
+          "actorId": "helper2",
+          "stepId": "family-teacher-kid:obligation-helper2:confirm-1",
+          "part": "prompt",
+          "response": "No",
+          "proposedWording": true
+        }
+      ],
+      "sha256": "42c88163a75bfdfa7d0c5f133468edde356c78c0de9df73a92fe6cadd63f80ef",
+      "bytes": 306200,
+      "durationSeconds": 7.653875,
+      "provenance": {
+        "exportIndex": 31,
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/processed/nr_complete_031.mp3",
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/numbered-clips/31.You_think_the_kid_does_not_hav.mp3",
+        "sourceSha256": "42c88163a75bfdfa7d0c5f133468edde356c78c0de9df73a92fe6cadd63f80ef",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "bd8f9b0499f84ac4e7e23bfcd2b226ca8126f6a116fed2424d1bcba997c35c6f",
+        "recordingIndexSha256": "6fe941df8aa9ea00289c92ed6ffeff6ca611f6bd6fb1b35c371372e495a08977",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed 32-segment NaturalReaders Commercial project: Evelyn Soft, 0.90× (180 WPM), paragraph pause 0.0 seconds; MP3 at 320 kbps; Separate Files ZIP with Index + Segment filenames. See native-project-voice-settings.png and native-export-settings.png.",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 7.653875,
+        "nonzeroWordTimingVerified": true,
+        "cueTimestampLimit": "Approximate Whisper word boundaries on a nominal 20 ms grid; all boundaries monotone, positive-length, and within the decoded audio.",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalTextDiffersOnlyInLetterCase": true
+      },
+      "revisionCategory": "complete-obligation-and-neutral-no-confirmation"
+    },
+    {
+      "id": "nr_complete_032",
+      "text": "No one helped the teacher in the middle. Do you think it was mean or nice that no one helped the teacher in the middle?",
+      "src": "assets/narration/nr_complete_032.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "pairingId": "family-teacher-kid",
+          "stepId": "family-teacher-kid:overall",
+          "part": "prompt",
+          "proposedWording": true
+        }
+      ],
+      "sha256": "9ff63a0c10aec43ea8f5830435ac2ef2602869db92111bcf59828f0398cd44f9",
+      "bytes": 294706,
+      "durationSeconds": 7.366525,
+      "provenance": {
+        "exportIndex": 32,
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/processed/nr_complete_032.mp3",
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/numbered-clips/32.No_one_helped_the_teacher_in_t.mp3",
+        "sourceSha256": "9ff63a0c10aec43ea8f5830435ac2ef2602869db92111bcf59828f0398cd44f9",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_complete_obligation_2026-10-06/audio-preparation/native-source/naturalreader-export.zip",
+        "sourceZipSha256": "bd8f9b0499f84ac4e7e23bfcd2b226ca8126f6a116fed2424d1bcba997c35c6f",
+        "recordingIndexSha256": "6fe941df8aa9ea00289c92ed6ffeff6ca611f6bd6fb1b35c371372e495a08977",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed 32-segment NaturalReaders Commercial project: Evelyn Soft, 0.90× (180 WPM), paragraph pause 0.0 seconds; MP3 at 320 kbps; Separate Files ZIP with Index + Segment filenames. See native-project-voice-settings.png and native-export-settings.png.",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "decodedDurationSeconds": 7.3665625,
+        "nonzeroWordTimingVerified": true,
+        "cueTimestampLimit": "Approximate Whisper word boundaries on a nominal 20 ms grid; all boundaries monotone, positive-length, and within the decoded audio.",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalTextDiffersOnlyInLetterCase": true
+      },
+      "revisionCategory": "complete-obligation-and-neutral-no-confirmation"
     }
   ],
   "screens": {
@@ -23605,7 +26011,7 @@
       "proposedWording": false
     },
     "woman-mom-teacher:obligation-helper1-amount": {
-      "prompt": "nr_275",
+      "prompt": "nr_complete_001",
       "reminder": null,
       "options": [
         "nr_018",
@@ -23624,7 +26030,7 @@
       "proposedWording": false
     },
     "woman-mom-teacher:obligation-helper2-amount": {
-      "prompt": "nr_276",
+      "prompt": "nr_complete_003",
       "reminder": null,
       "options": [
         "nr_018",
@@ -23655,13 +26061,13 @@
       "proposedWording": false
     },
     "woman-mom-teacher:overall": {
-      "prompt": "nr_198",
+      "prompt": "nr_complete_005",
       "reminder": null,
       "options": [
         "nr_033",
         "nr_034"
       ],
-      "proposedWording": false
+      "proposedWording": true
     },
     "woman-mom-teacher:overall-amount": {
       "prompt": "nr_035",
@@ -23930,7 +26336,7 @@
       "proposedWording": false
     },
     "woman-sister-friend:obligation-helper1-amount": {
-      "prompt": "nr_277",
+      "prompt": "nr_complete_006",
       "reminder": null,
       "options": [
         "nr_018",
@@ -23949,7 +26355,7 @@
       "proposedWording": false
     },
     "woman-sister-friend:obligation-helper2-amount": {
-      "prompt": "nr_278",
+      "prompt": "nr_complete_008",
       "reminder": null,
       "options": [
         "nr_018",
@@ -23980,13 +26386,13 @@
       "proposedWording": false
     },
     "woman-sister-friend:overall": {
-      "prompt": "nr_198",
+      "prompt": "nr_complete_005",
       "reminder": null,
       "options": [
         "nr_033",
         "nr_034"
       ],
-      "proposedWording": false
+      "proposedWording": true
     },
     "woman-sister-friend:overall-amount": {
       "prompt": "nr_035",
@@ -24255,7 +26661,7 @@
       "proposedWording": false
     },
     "woman-bestfriend-friend:obligation-helper1-amount": {
-      "prompt": "nr_278",
+      "prompt": "nr_complete_008",
       "reminder": null,
       "options": [
         "nr_018",
@@ -24274,7 +26680,7 @@
       "proposedWording": false
     },
     "woman-bestfriend-friend:obligation-helper2-amount": {
-      "prompt": "nr_279",
+      "prompt": "nr_complete_010",
       "reminder": null,
       "options": [
         "nr_018",
@@ -24305,13 +26711,13 @@
       "proposedWording": false
     },
     "woman-bestfriend-friend:overall": {
-      "prompt": "nr_198",
+      "prompt": "nr_complete_005",
       "reminder": null,
       "options": [
         "nr_033",
         "nr_034"
       ],
-      "proposedWording": false
+      "proposedWording": true
     },
     "woman-bestfriend-friend:overall-amount": {
       "prompt": "nr_035",
@@ -24580,7 +26986,7 @@
       "proposedWording": false
     },
     "woman-teacher-friend:obligation-helper1-amount": {
-      "prompt": "nr_275",
+      "prompt": "nr_complete_001",
       "reminder": null,
       "options": [
         "nr_018",
@@ -24599,7 +27005,7 @@
       "proposedWording": false
     },
     "woman-teacher-friend:obligation-helper2-amount": {
-      "prompt": "nr_278",
+      "prompt": "nr_complete_008",
       "reminder": null,
       "options": [
         "nr_018",
@@ -24630,13 +27036,13 @@
       "proposedWording": false
     },
     "woman-teacher-friend:overall": {
-      "prompt": "nr_198",
+      "prompt": "nr_complete_005",
       "reminder": null,
       "options": [
         "nr_033",
         "nr_034"
       ],
-      "proposedWording": false
+      "proposedWording": true
     },
     "woman-teacher-friend:overall-amount": {
       "prompt": "nr_035",
@@ -24905,7 +27311,7 @@
       "proposedWording": false
     },
     "woman-mom-sister:obligation-helper1-amount": {
-      "prompt": "nr_276",
+      "prompt": "nr_complete_003",
       "reminder": null,
       "options": [
         "nr_018",
@@ -24924,7 +27330,7 @@
       "proposedWording": false
     },
     "woman-mom-sister:obligation-helper2-amount": {
-      "prompt": "nr_277",
+      "prompt": "nr_complete_006",
       "reminder": null,
       "options": [
         "nr_018",
@@ -24955,13 +27361,13 @@
       "proposedWording": false
     },
     "woman-mom-sister:overall": {
-      "prompt": "nr_198",
+      "prompt": "nr_complete_005",
       "reminder": null,
       "options": [
         "nr_033",
         "nr_034"
       ],
-      "proposedWording": false
+      "proposedWording": true
     },
     "woman-mom-sister:overall-amount": {
       "prompt": "nr_035",
@@ -25230,7 +27636,7 @@
       "proposedWording": false
     },
     "woman-teacher-classmate:obligation-helper1-amount": {
-      "prompt": "nr_280",
+      "prompt": "nr_complete_012",
       "reminder": null,
       "options": [
         "nr_018",
@@ -25249,7 +27655,7 @@
       "proposedWording": false
     },
     "woman-teacher-classmate:obligation-helper2-amount": {
-      "prompt": "nr_275",
+      "prompt": "nr_complete_001",
       "reminder": null,
       "options": [
         "nr_018",
@@ -25280,13 +27686,13 @@
       "proposedWording": false
     },
     "woman-teacher-classmate:overall": {
-      "prompt": "nr_198",
+      "prompt": "nr_complete_005",
       "reminder": null,
       "options": [
         "nr_033",
         "nr_034"
       ],
-      "proposedWording": false
+      "proposedWording": true
     },
     "woman-teacher-classmate:overall-amount": {
       "prompt": "nr_035",
@@ -25555,7 +27961,7 @@
       "proposedWording": false
     },
     "man-dad-teacher:obligation-helper1-amount": {
-      "prompt": "nr_275",
+      "prompt": "nr_complete_001",
       "reminder": null,
       "options": [
         "nr_018",
@@ -25574,7 +27980,7 @@
       "proposedWording": false
     },
     "man-dad-teacher:obligation-helper2-amount": {
-      "prompt": "nr_281",
+      "prompt": "nr_complete_014",
       "reminder": null,
       "options": [
         "nr_018",
@@ -25605,13 +28011,13 @@
       "proposedWording": false
     },
     "man-dad-teacher:overall": {
-      "prompt": "nr_198",
+      "prompt": "nr_complete_005",
       "reminder": null,
       "options": [
         "nr_033",
         "nr_034"
       ],
-      "proposedWording": false
+      "proposedWording": true
     },
     "man-dad-teacher:overall-amount": {
       "prompt": "nr_035",
@@ -25880,7 +28286,7 @@
       "proposedWording": false
     },
     "man-brother-friend:obligation-helper1-amount": {
-      "prompt": "nr_282",
+      "prompt": "nr_complete_016",
       "reminder": null,
       "options": [
         "nr_018",
@@ -25899,7 +28305,7 @@
       "proposedWording": false
     },
     "man-brother-friend:obligation-helper2-amount": {
-      "prompt": "nr_278",
+      "prompt": "nr_complete_008",
       "reminder": null,
       "options": [
         "nr_018",
@@ -25930,13 +28336,13 @@
       "proposedWording": false
     },
     "man-brother-friend:overall": {
-      "prompt": "nr_198",
+      "prompt": "nr_complete_005",
       "reminder": null,
       "options": [
         "nr_033",
         "nr_034"
       ],
-      "proposedWording": false
+      "proposedWording": true
     },
     "man-brother-friend:overall-amount": {
       "prompt": "nr_035",
@@ -26205,7 +28611,7 @@
       "proposedWording": false
     },
     "man-bestfriend-friend:obligation-helper1-amount": {
-      "prompt": "nr_278",
+      "prompt": "nr_complete_008",
       "reminder": null,
       "options": [
         "nr_018",
@@ -26224,7 +28630,7 @@
       "proposedWording": false
     },
     "man-bestfriend-friend:obligation-helper2-amount": {
-      "prompt": "nr_279",
+      "prompt": "nr_complete_010",
       "reminder": null,
       "options": [
         "nr_018",
@@ -26255,13 +28661,13 @@
       "proposedWording": false
     },
     "man-bestfriend-friend:overall": {
-      "prompt": "nr_198",
+      "prompt": "nr_complete_005",
       "reminder": null,
       "options": [
         "nr_033",
         "nr_034"
       ],
-      "proposedWording": false
+      "proposedWording": true
     },
     "man-bestfriend-friend:overall-amount": {
       "prompt": "nr_035",
@@ -26530,7 +28936,7 @@
       "proposedWording": false
     },
     "man-teacher-friend:obligation-helper1-amount": {
-      "prompt": "nr_275",
+      "prompt": "nr_complete_001",
       "reminder": null,
       "options": [
         "nr_018",
@@ -26549,7 +28955,7 @@
       "proposedWording": false
     },
     "man-teacher-friend:obligation-helper2-amount": {
-      "prompt": "nr_278",
+      "prompt": "nr_complete_008",
       "reminder": null,
       "options": [
         "nr_018",
@@ -26580,13 +28986,13 @@
       "proposedWording": false
     },
     "man-teacher-friend:overall": {
-      "prompt": "nr_198",
+      "prompt": "nr_complete_005",
       "reminder": null,
       "options": [
         "nr_033",
         "nr_034"
       ],
-      "proposedWording": false
+      "proposedWording": true
     },
     "man-teacher-friend:overall-amount": {
       "prompt": "nr_035",
@@ -26855,7 +29261,7 @@
       "proposedWording": false
     },
     "man-dad-brother:obligation-helper1-amount": {
-      "prompt": "nr_281",
+      "prompt": "nr_complete_014",
       "reminder": null,
       "options": [
         "nr_018",
@@ -26874,7 +29280,7 @@
       "proposedWording": false
     },
     "man-dad-brother:obligation-helper2-amount": {
-      "prompt": "nr_282",
+      "prompt": "nr_complete_016",
       "reminder": null,
       "options": [
         "nr_018",
@@ -26905,13 +29311,13 @@
       "proposedWording": false
     },
     "man-dad-brother:overall": {
-      "prompt": "nr_198",
+      "prompt": "nr_complete_005",
       "reminder": null,
       "options": [
         "nr_033",
         "nr_034"
       ],
-      "proposedWording": false
+      "proposedWording": true
     },
     "man-dad-brother:overall-amount": {
       "prompt": "nr_035",
@@ -27180,7 +29586,7 @@
       "proposedWording": false
     },
     "man-teacher-classmate:obligation-helper1-amount": {
-      "prompt": "nr_280",
+      "prompt": "nr_complete_012",
       "reminder": null,
       "options": [
         "nr_018",
@@ -27199,7 +29605,7 @@
       "proposedWording": false
     },
     "man-teacher-classmate:obligation-helper2-amount": {
-      "prompt": "nr_275",
+      "prompt": "nr_complete_001",
       "reminder": null,
       "options": [
         "nr_018",
@@ -27230,13 +29636,13 @@
       "proposedWording": false
     },
     "man-teacher-classmate:overall": {
-      "prompt": "nr_198",
+      "prompt": "nr_complete_005",
       "reminder": null,
       "options": [
         "nr_033",
         "nr_034"
       ],
-      "proposedWording": false
+      "proposedWording": true
     },
     "man-teacher-classmate:overall-amount": {
       "prompt": "nr_035",
@@ -27505,7 +29911,7 @@
       "proposedWording": false
     },
     "family-mom-dad:obligation-helper1-amount": {
-      "prompt": "nr_281",
+      "prompt": "nr_complete_014",
       "reminder": null,
       "options": [
         "nr_018",
@@ -27524,7 +29930,7 @@
       "proposedWording": false
     },
     "family-mom-dad:obligation-helper2-amount": {
-      "prompt": "nr_276",
+      "prompt": "nr_complete_003",
       "reminder": null,
       "options": [
         "nr_018",
@@ -27555,13 +29961,13 @@
       "proposedWording": false
     },
     "family-mom-dad:overall": {
-      "prompt": "nr_198",
+      "prompt": "nr_complete_005",
       "reminder": null,
       "options": [
         "nr_033",
         "nr_034"
       ],
-      "proposedWording": false
+      "proposedWording": true
     },
     "family-mom-dad:overall-amount": {
       "prompt": "nr_035",
@@ -27830,7 +30236,7 @@
       "proposedWording": false
     },
     "family-sister-brother:obligation-helper1-amount": {
-      "prompt": "nr_277",
+      "prompt": "nr_complete_006",
       "reminder": null,
       "options": [
         "nr_018",
@@ -27849,7 +30255,7 @@
       "proposedWording": false
     },
     "family-sister-brother:obligation-helper2-amount": {
-      "prompt": "nr_282",
+      "prompt": "nr_complete_016",
       "reminder": null,
       "options": [
         "nr_018",
@@ -27880,13 +30286,13 @@
       "proposedWording": false
     },
     "family-sister-brother:overall": {
-      "prompt": "nr_198",
+      "prompt": "nr_complete_005",
       "reminder": null,
       "options": [
         "nr_033",
         "nr_034"
       ],
-      "proposedWording": false
+      "proposedWording": true
     },
     "family-sister-brother:overall-amount": {
       "prompt": "nr_035",
@@ -28155,7 +30561,7 @@
       "proposedWording": false
     },
     "family-dad-kid:obligation-helper1-amount": {
-      "prompt": "nr_281",
+      "prompt": "nr_complete_018",
       "reminder": null,
       "options": [
         "nr_018",
@@ -28174,7 +30580,7 @@
       "proposedWording": false
     },
     "family-dad-kid:obligation-helper2-amount": {
-      "prompt": "nr_283",
+      "prompt": "nr_complete_020",
       "reminder": null,
       "options": [
         "nr_018",
@@ -28205,13 +30611,13 @@
       "proposedWording": false
     },
     "family-dad-kid:overall": {
-      "prompt": "nr_237",
+      "prompt": "nr_complete_022",
       "reminder": null,
       "options": [
         "nr_033",
         "nr_034"
       ],
-      "proposedWording": false
+      "proposedWording": true
     },
     "family-dad-kid:overall-amount": {
       "prompt": "nr_035",
@@ -28480,7 +30886,7 @@
       "proposedWording": false
     },
     "family-mom-kid:obligation-helper1-amount": {
-      "prompt": "nr_283",
+      "prompt": "nr_complete_023",
       "reminder": null,
       "options": [
         "nr_018",
@@ -28499,7 +30905,7 @@
       "proposedWording": false
     },
     "family-mom-kid:obligation-helper2-amount": {
-      "prompt": "nr_276",
+      "prompt": "nr_complete_025",
       "reminder": null,
       "options": [
         "nr_018",
@@ -28530,13 +30936,13 @@
       "proposedWording": false
     },
     "family-mom-kid:overall": {
-      "prompt": "nr_244",
+      "prompt": "nr_complete_027",
       "reminder": null,
       "options": [
         "nr_033",
         "nr_034"
       ],
-      "proposedWording": false
+      "proposedWording": true
     },
     "family-mom-kid:overall-amount": {
       "prompt": "nr_035",
@@ -28805,7 +31211,7 @@
       "proposedWording": false
     },
     "family-teacher-kid:obligation-helper1-amount": {
-      "prompt": "nr_284",
+      "prompt": "nr_complete_028",
       "reminder": null,
       "options": [
         "nr_018",
@@ -28824,7 +31230,7 @@
       "proposedWording": false
     },
     "family-teacher-kid:obligation-helper2-amount": {
-      "prompt": "nr_283",
+      "prompt": "nr_complete_030",
       "reminder": null,
       "options": [
         "nr_018",
@@ -28855,13 +31261,13 @@
       "proposedWording": false
     },
     "family-teacher-kid:overall": {
-      "prompt": "nr_251",
+      "prompt": "nr_complete_032",
       "reminder": null,
       "options": [
         "nr_033",
         "nr_034"
       ],
-      "proposedWording": false
+      "proposedWording": true
     },
     "family-teacher-kid:overall-amount": {
       "prompt": "nr_035",
@@ -29130,7 +31536,7 @@
       "proposedWording": false
     },
     "family-teacher-classmate:obligation-helper1-amount": {
-      "prompt": "nr_280",
+      "prompt": "nr_complete_012",
       "reminder": null,
       "options": [
         "nr_018",
@@ -29149,7 +31555,7 @@
       "proposedWording": false
     },
     "family-teacher-classmate:obligation-helper2-amount": {
-      "prompt": "nr_275",
+      "prompt": "nr_complete_001",
       "reminder": null,
       "options": [
         "nr_018",
@@ -29180,13 +31586,13 @@
       "proposedWording": false
     },
     "family-teacher-classmate:overall": {
-      "prompt": "nr_198",
+      "prompt": "nr_complete_005",
       "reminder": null,
       "options": [
         "nr_033",
         "nr_034"
       ],
-      "proposedWording": false
+      "proposedWording": true
     },
     "family-teacher-classmate:overall-amount": {
       "prompt": "nr_035",
@@ -29296,7 +31702,475 @@
       "reminder": null,
       "options": [],
       "proposedWording": false
+    },
+    "woman-mom-teacher:obligation-helper1:confirm-1": {
+      "prompt": "nr_complete_002",
+      "reminder": null,
+      "options": [
+        "nr_011",
+        "nr_012"
+      ],
+      "proposedWording": true,
+      "virtualKind": "choice-confirmation",
+      "baseStepId": "woman-mom-teacher:obligation-helper1",
+      "choiceIndex": 1,
+      "sourceResponse": "No"
+    },
+    "woman-teacher-friend:obligation-helper1:confirm-1": {
+      "prompt": "nr_complete_002",
+      "reminder": null,
+      "options": [
+        "nr_011",
+        "nr_012"
+      ],
+      "proposedWording": true,
+      "virtualKind": "choice-confirmation",
+      "baseStepId": "woman-teacher-friend:obligation-helper1",
+      "choiceIndex": 1,
+      "sourceResponse": "No"
+    },
+    "woman-teacher-classmate:obligation-helper2:confirm-1": {
+      "prompt": "nr_complete_002",
+      "reminder": null,
+      "options": [
+        "nr_011",
+        "nr_012"
+      ],
+      "proposedWording": true,
+      "virtualKind": "choice-confirmation",
+      "baseStepId": "woman-teacher-classmate:obligation-helper2",
+      "choiceIndex": 1,
+      "sourceResponse": "No"
+    },
+    "man-dad-teacher:obligation-helper1:confirm-1": {
+      "prompt": "nr_complete_002",
+      "reminder": null,
+      "options": [
+        "nr_011",
+        "nr_012"
+      ],
+      "proposedWording": true,
+      "virtualKind": "choice-confirmation",
+      "baseStepId": "man-dad-teacher:obligation-helper1",
+      "choiceIndex": 1,
+      "sourceResponse": "No"
+    },
+    "man-teacher-friend:obligation-helper1:confirm-1": {
+      "prompt": "nr_complete_002",
+      "reminder": null,
+      "options": [
+        "nr_011",
+        "nr_012"
+      ],
+      "proposedWording": true,
+      "virtualKind": "choice-confirmation",
+      "baseStepId": "man-teacher-friend:obligation-helper1",
+      "choiceIndex": 1,
+      "sourceResponse": "No"
+    },
+    "man-teacher-classmate:obligation-helper2:confirm-1": {
+      "prompt": "nr_complete_002",
+      "reminder": null,
+      "options": [
+        "nr_011",
+        "nr_012"
+      ],
+      "proposedWording": true,
+      "virtualKind": "choice-confirmation",
+      "baseStepId": "man-teacher-classmate:obligation-helper2",
+      "choiceIndex": 1,
+      "sourceResponse": "No"
+    },
+    "family-teacher-classmate:obligation-helper2:confirm-1": {
+      "prompt": "nr_complete_002",
+      "reminder": null,
+      "options": [
+        "nr_011",
+        "nr_012"
+      ],
+      "proposedWording": true,
+      "virtualKind": "choice-confirmation",
+      "baseStepId": "family-teacher-classmate:obligation-helper2",
+      "choiceIndex": 1,
+      "sourceResponse": "No"
+    },
+    "woman-mom-teacher:obligation-helper2:confirm-1": {
+      "prompt": "nr_complete_004",
+      "reminder": null,
+      "options": [
+        "nr_011",
+        "nr_012"
+      ],
+      "proposedWording": true,
+      "virtualKind": "choice-confirmation",
+      "baseStepId": "woman-mom-teacher:obligation-helper2",
+      "choiceIndex": 1,
+      "sourceResponse": "No"
+    },
+    "woman-mom-sister:obligation-helper1:confirm-1": {
+      "prompt": "nr_complete_004",
+      "reminder": null,
+      "options": [
+        "nr_011",
+        "nr_012"
+      ],
+      "proposedWording": true,
+      "virtualKind": "choice-confirmation",
+      "baseStepId": "woman-mom-sister:obligation-helper1",
+      "choiceIndex": 1,
+      "sourceResponse": "No"
+    },
+    "family-mom-dad:obligation-helper2:confirm-1": {
+      "prompt": "nr_complete_004",
+      "reminder": null,
+      "options": [
+        "nr_011",
+        "nr_012"
+      ],
+      "proposedWording": true,
+      "virtualKind": "choice-confirmation",
+      "baseStepId": "family-mom-dad:obligation-helper2",
+      "choiceIndex": 1,
+      "sourceResponse": "No"
+    },
+    "woman-sister-friend:obligation-helper1:confirm-1": {
+      "prompt": "nr_complete_007",
+      "reminder": null,
+      "options": [
+        "nr_011",
+        "nr_012"
+      ],
+      "proposedWording": true,
+      "virtualKind": "choice-confirmation",
+      "baseStepId": "woman-sister-friend:obligation-helper1",
+      "choiceIndex": 1,
+      "sourceResponse": "No"
+    },
+    "woman-mom-sister:obligation-helper2:confirm-1": {
+      "prompt": "nr_complete_007",
+      "reminder": null,
+      "options": [
+        "nr_011",
+        "nr_012"
+      ],
+      "proposedWording": true,
+      "virtualKind": "choice-confirmation",
+      "baseStepId": "woman-mom-sister:obligation-helper2",
+      "choiceIndex": 1,
+      "sourceResponse": "No"
+    },
+    "family-sister-brother:obligation-helper1:confirm-1": {
+      "prompt": "nr_complete_007",
+      "reminder": null,
+      "options": [
+        "nr_011",
+        "nr_012"
+      ],
+      "proposedWording": true,
+      "virtualKind": "choice-confirmation",
+      "baseStepId": "family-sister-brother:obligation-helper1",
+      "choiceIndex": 1,
+      "sourceResponse": "No"
+    },
+    "woman-sister-friend:obligation-helper2:confirm-1": {
+      "prompt": "nr_complete_009",
+      "reminder": null,
+      "options": [
+        "nr_011",
+        "nr_012"
+      ],
+      "proposedWording": true,
+      "virtualKind": "choice-confirmation",
+      "baseStepId": "woman-sister-friend:obligation-helper2",
+      "choiceIndex": 1,
+      "sourceResponse": "No"
+    },
+    "woman-bestfriend-friend:obligation-helper1:confirm-1": {
+      "prompt": "nr_complete_009",
+      "reminder": null,
+      "options": [
+        "nr_011",
+        "nr_012"
+      ],
+      "proposedWording": true,
+      "virtualKind": "choice-confirmation",
+      "baseStepId": "woman-bestfriend-friend:obligation-helper1",
+      "choiceIndex": 1,
+      "sourceResponse": "No"
+    },
+    "woman-teacher-friend:obligation-helper2:confirm-1": {
+      "prompt": "nr_complete_009",
+      "reminder": null,
+      "options": [
+        "nr_011",
+        "nr_012"
+      ],
+      "proposedWording": true,
+      "virtualKind": "choice-confirmation",
+      "baseStepId": "woman-teacher-friend:obligation-helper2",
+      "choiceIndex": 1,
+      "sourceResponse": "No"
+    },
+    "man-brother-friend:obligation-helper2:confirm-1": {
+      "prompt": "nr_complete_009",
+      "reminder": null,
+      "options": [
+        "nr_011",
+        "nr_012"
+      ],
+      "proposedWording": true,
+      "virtualKind": "choice-confirmation",
+      "baseStepId": "man-brother-friend:obligation-helper2",
+      "choiceIndex": 1,
+      "sourceResponse": "No"
+    },
+    "man-bestfriend-friend:obligation-helper1:confirm-1": {
+      "prompt": "nr_complete_009",
+      "reminder": null,
+      "options": [
+        "nr_011",
+        "nr_012"
+      ],
+      "proposedWording": true,
+      "virtualKind": "choice-confirmation",
+      "baseStepId": "man-bestfriend-friend:obligation-helper1",
+      "choiceIndex": 1,
+      "sourceResponse": "No"
+    },
+    "man-teacher-friend:obligation-helper2:confirm-1": {
+      "prompt": "nr_complete_009",
+      "reminder": null,
+      "options": [
+        "nr_011",
+        "nr_012"
+      ],
+      "proposedWording": true,
+      "virtualKind": "choice-confirmation",
+      "baseStepId": "man-teacher-friend:obligation-helper2",
+      "choiceIndex": 1,
+      "sourceResponse": "No"
+    },
+    "woman-bestfriend-friend:obligation-helper2:confirm-1": {
+      "prompt": "nr_complete_011",
+      "reminder": null,
+      "options": [
+        "nr_011",
+        "nr_012"
+      ],
+      "proposedWording": true,
+      "virtualKind": "choice-confirmation",
+      "baseStepId": "woman-bestfriend-friend:obligation-helper2",
+      "choiceIndex": 1,
+      "sourceResponse": "No"
+    },
+    "man-bestfriend-friend:obligation-helper2:confirm-1": {
+      "prompt": "nr_complete_011",
+      "reminder": null,
+      "options": [
+        "nr_011",
+        "nr_012"
+      ],
+      "proposedWording": true,
+      "virtualKind": "choice-confirmation",
+      "baseStepId": "man-bestfriend-friend:obligation-helper2",
+      "choiceIndex": 1,
+      "sourceResponse": "No"
+    },
+    "woman-teacher-classmate:obligation-helper1:confirm-1": {
+      "prompt": "nr_complete_013",
+      "reminder": null,
+      "options": [
+        "nr_011",
+        "nr_012"
+      ],
+      "proposedWording": true,
+      "virtualKind": "choice-confirmation",
+      "baseStepId": "woman-teacher-classmate:obligation-helper1",
+      "choiceIndex": 1,
+      "sourceResponse": "No"
+    },
+    "man-teacher-classmate:obligation-helper1:confirm-1": {
+      "prompt": "nr_complete_013",
+      "reminder": null,
+      "options": [
+        "nr_011",
+        "nr_012"
+      ],
+      "proposedWording": true,
+      "virtualKind": "choice-confirmation",
+      "baseStepId": "man-teacher-classmate:obligation-helper1",
+      "choiceIndex": 1,
+      "sourceResponse": "No"
+    },
+    "family-teacher-classmate:obligation-helper1:confirm-1": {
+      "prompt": "nr_complete_013",
+      "reminder": null,
+      "options": [
+        "nr_011",
+        "nr_012"
+      ],
+      "proposedWording": true,
+      "virtualKind": "choice-confirmation",
+      "baseStepId": "family-teacher-classmate:obligation-helper1",
+      "choiceIndex": 1,
+      "sourceResponse": "No"
+    },
+    "man-dad-teacher:obligation-helper2:confirm-1": {
+      "prompt": "nr_complete_015",
+      "reminder": null,
+      "options": [
+        "nr_011",
+        "nr_012"
+      ],
+      "proposedWording": true,
+      "virtualKind": "choice-confirmation",
+      "baseStepId": "man-dad-teacher:obligation-helper2",
+      "choiceIndex": 1,
+      "sourceResponse": "No"
+    },
+    "man-dad-brother:obligation-helper1:confirm-1": {
+      "prompt": "nr_complete_015",
+      "reminder": null,
+      "options": [
+        "nr_011",
+        "nr_012"
+      ],
+      "proposedWording": true,
+      "virtualKind": "choice-confirmation",
+      "baseStepId": "man-dad-brother:obligation-helper1",
+      "choiceIndex": 1,
+      "sourceResponse": "No"
+    },
+    "family-mom-dad:obligation-helper1:confirm-1": {
+      "prompt": "nr_complete_015",
+      "reminder": null,
+      "options": [
+        "nr_011",
+        "nr_012"
+      ],
+      "proposedWording": true,
+      "virtualKind": "choice-confirmation",
+      "baseStepId": "family-mom-dad:obligation-helper1",
+      "choiceIndex": 1,
+      "sourceResponse": "No"
+    },
+    "man-brother-friend:obligation-helper1:confirm-1": {
+      "prompt": "nr_complete_017",
+      "reminder": null,
+      "options": [
+        "nr_011",
+        "nr_012"
+      ],
+      "proposedWording": true,
+      "virtualKind": "choice-confirmation",
+      "baseStepId": "man-brother-friend:obligation-helper1",
+      "choiceIndex": 1,
+      "sourceResponse": "No"
+    },
+    "man-dad-brother:obligation-helper2:confirm-1": {
+      "prompt": "nr_complete_017",
+      "reminder": null,
+      "options": [
+        "nr_011",
+        "nr_012"
+      ],
+      "proposedWording": true,
+      "virtualKind": "choice-confirmation",
+      "baseStepId": "man-dad-brother:obligation-helper2",
+      "choiceIndex": 1,
+      "sourceResponse": "No"
+    },
+    "family-sister-brother:obligation-helper2:confirm-1": {
+      "prompt": "nr_complete_017",
+      "reminder": null,
+      "options": [
+        "nr_011",
+        "nr_012"
+      ],
+      "proposedWording": true,
+      "virtualKind": "choice-confirmation",
+      "baseStepId": "family-sister-brother:obligation-helper2",
+      "choiceIndex": 1,
+      "sourceResponse": "No"
+    },
+    "family-dad-kid:obligation-helper1:confirm-1": {
+      "prompt": "nr_complete_019",
+      "reminder": null,
+      "options": [
+        "nr_011",
+        "nr_012"
+      ],
+      "proposedWording": true,
+      "virtualKind": "choice-confirmation",
+      "baseStepId": "family-dad-kid:obligation-helper1",
+      "choiceIndex": 1,
+      "sourceResponse": "No"
+    },
+    "family-dad-kid:obligation-helper2:confirm-1": {
+      "prompt": "nr_complete_021",
+      "reminder": null,
+      "options": [
+        "nr_011",
+        "nr_012"
+      ],
+      "proposedWording": true,
+      "virtualKind": "choice-confirmation",
+      "baseStepId": "family-dad-kid:obligation-helper2",
+      "choiceIndex": 1,
+      "sourceResponse": "No"
+    },
+    "family-mom-kid:obligation-helper1:confirm-1": {
+      "prompt": "nr_complete_024",
+      "reminder": null,
+      "options": [
+        "nr_011",
+        "nr_012"
+      ],
+      "proposedWording": true,
+      "virtualKind": "choice-confirmation",
+      "baseStepId": "family-mom-kid:obligation-helper1",
+      "choiceIndex": 1,
+      "sourceResponse": "No"
+    },
+    "family-mom-kid:obligation-helper2:confirm-1": {
+      "prompt": "nr_complete_026",
+      "reminder": null,
+      "options": [
+        "nr_011",
+        "nr_012"
+      ],
+      "proposedWording": true,
+      "virtualKind": "choice-confirmation",
+      "baseStepId": "family-mom-kid:obligation-helper2",
+      "choiceIndex": 1,
+      "sourceResponse": "No"
+    },
+    "family-teacher-kid:obligation-helper1:confirm-1": {
+      "prompt": "nr_complete_029",
+      "reminder": null,
+      "options": [
+        "nr_011",
+        "nr_012"
+      ],
+      "proposedWording": true,
+      "virtualKind": "choice-confirmation",
+      "baseStepId": "family-teacher-kid:obligation-helper1",
+      "choiceIndex": 1,
+      "sourceResponse": "No"
+    },
+    "family-teacher-kid:obligation-helper2:confirm-1": {
+      "prompt": "nr_complete_031",
+      "reminder": null,
+      "options": [
+        "nr_011",
+        "nr_012"
+      ],
+      "proposedWording": true,
+      "virtualKind": "choice-confirmation",
+      "baseStepId": "family-teacher-kid:obligation-helper2",
+      "choiceIndex": 1,
+      "sourceResponse": "No"
     }
   },
-  "note": "Current active recording index. Confidence promptVariants route by the preceding accepted Yes/No prediction; nr_270 is available only for an unanswered researcher preview."
+  "note": "Current complete narration index. Historical inactive recordings have no active uses; screen mappings select current recordings."
 }
