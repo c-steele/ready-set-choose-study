@@ -2,17 +2,20 @@
   "complete": true,
   "allRecordingsComplete": true,
   "pendingRetryRecordingIDs": [],
-  "createdAt": "2026-10-04T11:16:52.997Z",
-  "basis": "Verified MP3 durations for the correct-answer path plus the actual programmed inter-option gap. Exact branch extrema include chosen-character confirmations and mandatory practice feedback.",
+  "createdAt": "2026-10-06T19:09:12.386Z",
+  "basis": "Verified MP3 durations for accepted paths plus the programmed inter-option gap. Each range has exact independent branch extrema, including answer-specific prediction confidence, No-only obligation confirmations, chosen-character confirmations, and mandatory practice feedback.",
   "gapSeconds": 0.25,
-  "manifestSha256": "5195eb62d32a388d7ae960908f4e42fdbcf99b5c28d3e27ceac79f567e0f5be0",
+  "manifestSha256": "d3eda3e301d3cd925657950d2702ffb338514ca14df6fbce3e914e09100dfa4f",
   "assumptions": [
-    "Assumes correct identification, recall and practice answers, and Yes acceptance of each chosen-character confirmation.",
-    "Every prompted option is read once; options embedded in the full question are not read again.",
-    "Includes each required confirmation and correct-answer feedback recording.",
-    "Estimated session time adds 3–5 seconds per identification/answer/confirmation selection.",
-    "Excludes incorrect-answer repeats, rejected confirmations, extra replays, network loading, setup, breaks, and pauses before narrative Continue clicks.",
-    "Pending retry recordings, if listed, are excluded from this correct-answer-path timing; no duration is fabricated.",
+    "Assumes correct identification, recall and practice answers, and Yes acceptance of each answer confirmation.",
+    "A No individual-obligation judgment adds its neutral confirmation; a Yes judgment instead adds its obligation-strength follow-up.",
+    "Every prompted option is read once; binary options embedded in the full question are not read again.",
+    "Each confidence prompt repeats the preceding Yes or No prediction; timing considers both recorded variants.",
+    "Includes each reached confirmation and correct-answer feedback recording.",
+    "Estimated session time adds 3–5 seconds per identification, answer, or confirmation selection.",
+    "Word, playback, duration, screen, response, strength, and confirmation ranges are computed independently across complete paths; their minimum values need not occur together.",
+    "Excludes incorrect-answer repeats, rejected confirmations, extra replays, network loading, setup, breaks, and narration-only transition delays.",
+    "Pending retry recordings, if listed, are excluded from this accepted-path timing; no duration is fabricated.",
     "This is a script-based playback calculation, not observed child-session time.",
     "All 18 stories remain a researcher-review catalog; a child session uses a six-story role set."
   ],
@@ -22,16 +25,16 @@
       "practiceMode": "each",
       "storyCount": 6,
       "playbackSeconds": {
-        "min": 911.0329299999999,
-        "max": 1064.3895190000005
+        "min": 938.2001849999999,
+        "max": 1091.5567740000008
       },
       "playbackMinutes": {
-        "min": 15.2,
-        "max": 17.7
+        "min": 15.6,
+        "max": 18.2
       },
       "estimatedSessionMinutesIncludingResponses": {
-        "min": 19.7,
-        "max": 26.2
+        "min": 20.1,
+        "max": 26.7
       },
       "responseCounts": {
         "min": 90,
@@ -40,6 +43,10 @@
       "screens": {
         "min": 145,
         "max": 157
+      },
+      "confirmationScreens": {
+        "min": 18,
+        "max": 18
       },
       "requiredConfirmationScreens": 18,
       "requiredCorrectFeedbackScreens": 12
@@ -49,16 +56,16 @@
       "practiceMode": "once",
       "storyCount": 6,
       "playbackSeconds": {
-        "min": 745.8086799999998,
-        "max": 899.165269
+        "min": 772.9759349999999,
+        "max": 926.3325240000003
       },
       "playbackMinutes": {
-        "min": 12.4,
-        "max": 15
+        "min": 12.9,
+        "max": 15.4
       },
       "estimatedSessionMinutesIncludingResponses": {
-        "min": 16.4,
-        "max": 22.7
+        "min": 16.9,
+        "max": 23.1
       },
       "responseCounts": {
         "min": 80,
@@ -67,6 +74,10 @@
       "screens": {
         "min": 115,
         "max": 127
+      },
+      "confirmationScreens": {
+        "min": 18,
+        "max": 18
       },
       "requiredConfirmationScreens": 18,
       "requiredCorrectFeedbackScreens": 2
@@ -76,16 +87,16 @@
       "practiceMode": "each",
       "storyCount": 6,
       "playbackSeconds": {
-        "min": 912.9399399999999,
-        "max": 1065.7218290000005
+        "min": 939.898191,
+        "max": 1092.6800800000003
       },
       "playbackMinutes": {
-        "min": 15.2,
-        "max": 17.8
+        "min": 15.7,
+        "max": 18.2
       },
       "estimatedSessionMinutesIncludingResponses": {
-        "min": 19.7,
-        "max": 26.3
+        "min": 20.2,
+        "max": 26.7
       },
       "responseCounts": {
         "min": 90,
@@ -94,6 +105,10 @@
       "screens": {
         "min": 145,
         "max": 157
+      },
+      "confirmationScreens": {
+        "min": 18,
+        "max": 18
       },
       "requiredConfirmationScreens": 18,
       "requiredCorrectFeedbackScreens": 12
@@ -103,16 +118,16 @@
       "practiceMode": "once",
       "storyCount": 6,
       "playbackSeconds": {
-        "min": 747.7156899999998,
-        "max": 900.4975790000001
+        "min": 774.6739409999999,
+        "max": 927.45583
       },
       "playbackMinutes": {
-        "min": 12.5,
-        "max": 15
+        "min": 12.9,
+        "max": 15.5
       },
       "estimatedSessionMinutesIncludingResponses": {
-        "min": 16.5,
-        "max": 22.7
+        "min": 16.9,
+        "max": 23.1
       },
       "responseCounts": {
         "min": 80,
@@ -121,6 +136,10 @@
       "screens": {
         "min": 115,
         "max": 127
+      },
+      "confirmationScreens": {
+        "min": 18,
+        "max": 18
       },
       "requiredConfirmationScreens": 18,
       "requiredCorrectFeedbackScreens": 2
@@ -130,16 +149,16 @@
       "practiceMode": "each",
       "storyCount": 6,
       "playbackSeconds": {
-        "min": 908.0289100000002,
-        "max": 1064.2329090000005
+        "min": 921.5341470000001,
+        "max": 1077.7381460000006
       },
       "playbackMinutes": {
-        "min": 15.1,
-        "max": 17.7
+        "min": 15.4,
+        "max": 18
       },
       "estimatedSessionMinutesIncludingResponses": {
-        "min": 19.6,
-        "max": 26.2
+        "min": 19.9,
+        "max": 26.5
       },
       "responseCounts": {
         "min": 90,
@@ -149,6 +168,10 @@
         "min": 145,
         "max": 157
       },
+      "confirmationScreens": {
+        "min": 18,
+        "max": 18
+      },
       "requiredConfirmationScreens": 18,
       "requiredCorrectFeedbackScreens": 12
     },
@@ -157,16 +180,16 @@
       "practiceMode": "once",
       "storyCount": 6,
       "playbackSeconds": {
-        "min": 742.8046599999998,
-        "max": 899.0086590000002
+        "min": 756.3098969999996,
+        "max": 912.513896
       },
       "playbackMinutes": {
-        "min": 12.4,
-        "max": 15
+        "min": 12.6,
+        "max": 15.2
       },
       "estimatedSessionMinutesIncludingResponses": {
-        "min": 16.4,
-        "max": 22.7
+        "min": 16.6,
+        "max": 22.9
       },
       "responseCounts": {
         "min": 80,
@@ -176,6 +199,10 @@
         "min": 115,
         "max": 127
       },
+      "confirmationScreens": {
+        "min": 18,
+        "max": 18
+      },
       "requiredConfirmationScreens": 18,
       "requiredCorrectFeedbackScreens": 2
     },
@@ -184,16 +211,16 @@
       "practiceMode": "each",
       "storyCount": 18,
       "playbackSeconds": {
-        "min": 2724.269580000001,
-        "max": 3186.6120570000026
+        "min": 2791.9003229999985,
+        "max": 3254.2427999999986
       },
       "playbackMinutes": {
-        "min": 45.4,
-        "max": 53.1
+        "min": 46.5,
+        "max": 54.2
       },
       "estimatedSessionMinutesIncludingResponses": {
-        "min": 58.9,
-        "max": 78.6
+        "min": 60,
+        "max": 79.7
       },
       "responseCounts": {
         "min": 270,
@@ -203,6 +230,10 @@
         "min": 433,
         "max": 469
       },
+      "confirmationScreens": {
+        "min": 54,
+        "max": 54
+      },
       "requiredConfirmationScreens": 54,
       "requiredCorrectFeedbackScreens": 36
     },
@@ -211,16 +242,16 @@
       "practiceMode": "once",
       "storyCount": 18,
       "playbackSeconds": {
-        "min": 2162.5071300000004,
-        "max": 2624.8496070000015
+        "min": 2230.137872999999,
+        "max": 2692.4803499999994
       },
       "playbackMinutes": {
-        "min": 36,
-        "max": 43.7
+        "min": 37.2,
+        "max": 44.9
       },
       "estimatedSessionMinutesIncludingResponses": {
-        "min": 47.8,
-        "max": 66.4
+        "min": 49,
+        "max": 67.5
       },
       "responseCounts": {
         "min": 236,
@@ -229,6 +260,10 @@
       "screens": {
         "min": 331,
         "max": 367
+      },
+      "confirmationScreens": {
+        "min": 54,
+        "max": 54
       },
       "requiredConfirmationScreens": 54,
       "requiredCorrectFeedbackScreens": 2

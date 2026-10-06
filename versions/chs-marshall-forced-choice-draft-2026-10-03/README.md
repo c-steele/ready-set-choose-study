@@ -1,5 +1,7 @@
 # Forced-choice obligation study draft
 
+October 6 consistent-reference revision: the child who needs help is called **the kid in the middle** throughout participant captions, questions, confidence follow-ups, confirmations, outcome statements and reminders. Full native narration is updated to match those references. This terminology revision preserves the study questions, choices, branching, character positions and source artwork.
+
 October 3, 2026. This is a separate compact version of the Marshall obligation follow-up. The individual-rating draft and the original Find the Caregiver / Who Helps Where studies are separate files and remain unchanged by this version.
 
 Open `index.html` for the child preview or full storyboard. Pairing selectors show the Woman, Man, or Family set of six stories; All pairings shows 18 entries for researcher review. Each main question asks the child to choose between the two helpers.

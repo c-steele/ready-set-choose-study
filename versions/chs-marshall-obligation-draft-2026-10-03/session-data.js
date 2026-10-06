@@ -28,7 +28,13 @@
   }
 
   function storySteps(pairing, storyIndex, includePractice) {
-    const result = [], p = pairing, recipient = p.recipient, helpers = p.helpers;
+    const result = [], p = copy(pairing);
+    // Use one clear name for the child recipient in every prompt and cue.
+    if (!p.recipient.isAdult) {
+      p.recipient.description = p.recipient.reference;
+      for (const intro of p.intros) if (intro.actorId === 'recipient') intro.description = p.recipient.reference;
+    }
+    const recipient = p.recipient, helpers = p.helpers;
     const prefix = localId => `${p.id}:${localId}`;
     const helperTitle = helper => upper(helper.label) + (helpers.filter(h => h.label === helper.label).length > 1 ? ` (${helper.side})` : '');
     function add(localId, templateId, overrides) {
@@ -92,13 +98,13 @@
     }
     const outcomeSummary = `No one helped ${recipient.description}.`;
     add('outcome-summary', 'outcome-summary', {text:outcomeSummary, displayText:outcomeSummary, outcomeVisual:true});
-    const outcomeCaptions = helpers.map(helper=>`${upper(helper.description)} did NOT help ${recipient.description}.`).concat(outcomeSummary);
+    const outcomeCaptions = helpers.map((helper, i)=>`${!recipient.isAdult && i > 0 ? "And " + helper.description : upper(helper.description)} did NOT help ${recipient.description}.`).concat(outcomeSummary);
     const explicitOutcome = outcomeCaptions.join(' ');
     add('outcome', 'outcome', {text:explicitOutcome, displayText:outcomeCaptions[0], outcomeCaptions, outcomeVisual:true});
     add('recall-all', 'recall-all', {
       text:`Can you tell me, did either of these people help ${recipient.description}?`,
       rereadAfterReminder:true,
-      reminder:`Actually, remember, no one helped ${recipient.description}. ${upper(helpers[0].description)} did NOT help ${recipient.description}. ${upper(helpers[1].description)} did NOT help ${recipient.description}. No one helped ${recipient.description}.`
+      reminder:`Actually, remember, no one helped ${recipient.description}. ${!recipient.isAdult ? "And " + helpers[0].description : upper(helpers[0].description)} did NOT help ${recipient.description}. ${!recipient.isAdult ? "And " + helpers[1].description : upper(helpers[1].description)} did NOT help ${recipient.description}. No one helped ${recipient.description}.`
     });
     add('overall', 'overall', {
       preface:`No one helped ${recipient.description}.`,

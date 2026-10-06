@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "title": "Who Has to Help? — forced-choice obligation follow-up draft",
-  "clipCount": 189,
+  "clipCount": 226,
   "pendingClipCount": 0,
   "clips": [
     {
@@ -150,76 +150,6 @@
       "status": "imported",
       "uses": [
         {
-          "stepId": "woman-mom-teacher:intro-recipient",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "woman-sister-friend:intro-recipient",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "woman-bestfriend-friend:intro-recipient",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "woman-teacher-friend:intro-recipient",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "woman-mom-sister:intro-recipient",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "woman-teacher-classmate:intro-recipient",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-dad-teacher:intro-recipient",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-brother-friend:intro-recipient",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-bestfriend-friend:intro-recipient",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-teacher-friend:intro-recipient",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-dad-brother:intro-recipient",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-teacher-classmate:intro-recipient",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "family-mom-dad:intro-recipient",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "family-sister-brother:intro-recipient",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
           "stepId": "family-dad-kid:intro-helper2",
           "proposedWording": false,
           "part": "prompt"
@@ -231,11 +161,6 @@
         },
         {
           "stepId": "family-teacher-kid:intro-helper2",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "family-teacher-classmate:intro-recipient",
           "proposedWording": false,
           "part": "prompt"
         }
@@ -273,76 +198,6 @@
       "status": "imported",
       "uses": [
         {
-          "stepId": "woman-mom-teacher:intro-recipient",
-          "proposedWording": false,
-          "part": "reminder"
-        },
-        {
-          "stepId": "woman-sister-friend:intro-recipient",
-          "proposedWording": false,
-          "part": "reminder"
-        },
-        {
-          "stepId": "woman-bestfriend-friend:intro-recipient",
-          "proposedWording": false,
-          "part": "reminder"
-        },
-        {
-          "stepId": "woman-teacher-friend:intro-recipient",
-          "proposedWording": false,
-          "part": "reminder"
-        },
-        {
-          "stepId": "woman-mom-sister:intro-recipient",
-          "proposedWording": false,
-          "part": "reminder"
-        },
-        {
-          "stepId": "woman-teacher-classmate:intro-recipient",
-          "proposedWording": false,
-          "part": "reminder"
-        },
-        {
-          "stepId": "man-dad-teacher:intro-recipient",
-          "proposedWording": false,
-          "part": "reminder"
-        },
-        {
-          "stepId": "man-brother-friend:intro-recipient",
-          "proposedWording": false,
-          "part": "reminder"
-        },
-        {
-          "stepId": "man-bestfriend-friend:intro-recipient",
-          "proposedWording": false,
-          "part": "reminder"
-        },
-        {
-          "stepId": "man-teacher-friend:intro-recipient",
-          "proposedWording": false,
-          "part": "reminder"
-        },
-        {
-          "stepId": "man-dad-brother:intro-recipient",
-          "proposedWording": false,
-          "part": "reminder"
-        },
-        {
-          "stepId": "man-teacher-classmate:intro-recipient",
-          "proposedWording": false,
-          "part": "reminder"
-        },
-        {
-          "stepId": "family-mom-dad:intro-recipient",
-          "proposedWording": false,
-          "part": "reminder"
-        },
-        {
-          "stepId": "family-sister-brother:intro-recipient",
-          "proposedWording": false,
-          "part": "reminder"
-        },
-        {
           "stepId": "family-dad-kid:intro-helper2",
           "proposedWording": false,
           "part": "reminder"
@@ -354,11 +209,6 @@
         },
         {
           "stepId": "family-teacher-kid:intro-helper2",
-          "proposedWording": false,
-          "part": "reminder"
-        },
-        {
-          "stepId": "family-teacher-classmate:intro-recipient",
           "proposedWording": false,
           "part": "reminder"
         }
@@ -759,13 +609,7 @@
       "src": "assets/narration/nr_009.mp3",
       "kind": "prompt",
       "status": "imported",
-      "uses": [
-        {
-          "stepId": "woman-mom-teacher:witness",
-          "proposedWording": false,
-          "part": "prompt"
-        }
-      ],
+      "uses": [],
       "sha256": "d7753bc445ec05e16998127e7e8f271161cd7d8eda29cec9d6acd6718706346f",
       "bytes": 166183,
       "durationSeconds": 4.15345,
@@ -789,7 +633,8 @@
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
-      }
+      },
+      "historicalInactive": true
     },
     {
       "id": "nr_256",
@@ -4756,83 +4601,7 @@
       "src": "assets/narration/nr_285-sequence.mp3",
       "kind": "prompt",
       "status": "verified-complete-sentence-audio-derivative",
-      "uses": [
-        {
-          "stepId": "woman-mom-teacher:outcome-summary",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "woman-sister-friend:outcome-summary",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "woman-bestfriend-friend:outcome-summary",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "woman-teacher-friend:outcome-summary",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "woman-mom-sister:outcome-summary",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "woman-teacher-classmate:outcome-summary",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-dad-teacher:outcome-summary",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-brother-friend:outcome-summary",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-bestfriend-friend:outcome-summary",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-teacher-friend:outcome-summary",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-dad-brother:outcome-summary",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-teacher-classmate:outcome-summary",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "family-mom-dad:outcome-summary",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "family-sister-brother:outcome-summary",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "family-teacher-classmate:outcome-summary",
-          "proposedWording": false,
-          "part": "prompt"
-        }
-      ],
+      "uses": [],
       "sha256": "cf91a1a0994b5237cd8849a07af4b82a1e3379081179ff63706da39be0d8507f",
       "bytes": 84680,
       "durationSeconds": 2.089796,
@@ -4892,7 +4661,8 @@
         "wholeSentenceSpeechPreserved": true,
         "wordLevelSplicing": false,
         "allInitialTheArticlesPresent": true
-      }
+      },
+      "historicalInactive": true
     },
     {
       "id": "nr_289",
@@ -4900,13 +4670,7 @@
       "src": "assets/narration/nr_289-sequence.mp3",
       "kind": "prompt",
       "status": "verified-complete-sentence-audio-derivative",
-      "uses": [
-        {
-          "stepId": "woman-mom-teacher:outcome",
-          "proposedWording": false,
-          "part": "prompt"
-        }
-      ],
+      "uses": [],
       "sha256": "13d2928a36d3c54c2592df4db86a553e4090c37d5fbd1d6e362c8fd018acdb8f",
       "bytes": 305154,
       "durationSeconds": 7.601633,
@@ -5001,7 +4765,8 @@
         "wholeSentenceSpeechPreserved": true,
         "wordLevelSplicing": false,
         "allInitialTheArticlesPresent": true
-      }
+      },
+      "historicalInactive": true
     },
     {
       "id": "nr_030",
@@ -5009,83 +4774,7 @@
       "src": "assets/narration/nr_030.mp3",
       "kind": "prompt",
       "status": "imported",
-      "uses": [
-        {
-          "stepId": "woman-mom-teacher:recall-all",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "woman-sister-friend:recall-all",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "woman-bestfriend-friend:recall-all",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "woman-teacher-friend:recall-all",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "woman-mom-sister:recall-all",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "woman-teacher-classmate:recall-all",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-dad-teacher:recall-all",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-brother-friend:recall-all",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-bestfriend-friend:recall-all",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-teacher-friend:recall-all",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-dad-brother:recall-all",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-teacher-classmate:recall-all",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "family-mom-dad:recall-all",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "family-sister-brother:recall-all",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "family-teacher-classmate:recall-all",
-          "proposedWording": false,
-          "part": "prompt"
-        }
-      ],
+      "uses": [],
       "sha256": "a654b384d464caf7f27cbc8b2514cdf912918ff476b846b8e03a3762c5142904",
       "bytes": 148420,
       "durationSeconds": 3.709375,
@@ -5109,7 +4798,8 @@
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
-      }
+      },
+      "historicalInactive": true
     },
     {
       "id": "nr_307",
@@ -5117,13 +4807,7 @@
       "src": "assets/narration/nr_307-reminder-native-article-pronunciation.mp3",
       "kind": "reminder",
       "status": "verified-complete-native-recording",
-      "uses": [
-        {
-          "stepId": "woman-mom-teacher:recall-all",
-          "proposedWording": false,
-          "part": "reminder"
-        }
-      ],
+      "uses": [],
       "revisionCategory": "recallReminder",
       "sha256": "6a79ecc18a02328f3116c9ef11c172f1154582c084211c74b6a5dc9b546b45a1",
       "bytes": 495326,
@@ -5173,7 +4857,8 @@
         "fullProjectTextVerified": true,
         "verifiedSourceAuditRecord": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_child_flow_revision_2026-10-04/naturalreader-reminder-repair/processed/verified-native-recordings.json",
         "installedFileBytesMatchVerifiedSource": true
-      }
+      },
+      "historicalInactive": true
     },
     {
       "id": "nr_258",
@@ -7929,13 +7614,7 @@
       "src": "assets/narration/nr_057.mp3",
       "kind": "prompt",
       "status": "imported",
-      "uses": [
-        {
-          "stepId": "woman-sister-friend:witness",
-          "proposedWording": false,
-          "part": "prompt"
-        }
-      ],
+      "uses": [],
       "sha256": "dc8f1594fe737e2d55b074c36082ed8a21b2a838d0f7489158af52d9a40df675",
       "bytes": 169318,
       "durationSeconds": 4.231825,
@@ -7959,7 +7638,8 @@
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
-      }
+      },
+      "historicalInactive": true
     },
     {
       "id": "nr_073",
@@ -8505,13 +8185,7 @@
       "src": "assets/narration/nr_290-sequence.mp3",
       "kind": "prompt",
       "status": "verified-complete-sentence-audio-derivative",
-      "uses": [
-        {
-          "stepId": "woman-sister-friend:outcome",
-          "proposedWording": false,
-          "part": "prompt"
-        }
-      ],
+      "uses": [],
       "sha256": "4d860d58ea4a4f28f89d324358fa913ef50f6538fb9791568d388b4e3389037f",
       "bytes": 303064,
       "durationSeconds": 7.549388,
@@ -8606,7 +8280,8 @@
         "wholeSentenceSpeechPreserved": true,
         "wordLevelSplicing": false,
         "allInitialTheArticlesPresent": true
-      }
+      },
+      "historicalInactive": true
     },
     {
       "id": "nr_308",
@@ -8614,13 +8289,7 @@
       "src": "assets/narration/nr_308-reminder-native-article-pronunciation.mp3",
       "kind": "reminder",
       "status": "verified-complete-native-recording",
-      "uses": [
-        {
-          "stepId": "woman-sister-friend:recall-all",
-          "proposedWording": false,
-          "part": "reminder"
-        }
-      ],
+      "uses": [],
       "revisionCategory": "recallReminder",
       "sha256": "1b94b38a828a3bb4f64dee3a5078bda8df9118264050904fbe07c264f76324b8",
       "bytes": 489057,
@@ -8670,7 +8339,8 @@
         "fullProjectTextVerified": true,
         "verifiedSourceAuditRecord": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_child_flow_revision_2026-10-04/naturalreader-reminder-repair/processed/verified-native-recordings.json",
         "installedFileBytesMatchVerifiedSource": true
-      }
+      },
+      "historicalInactive": true
     },
     {
       "id": "nr_331",
@@ -9254,18 +8924,7 @@
       "src": "assets/narration/nr_077.mp3",
       "kind": "prompt",
       "status": "imported",
-      "uses": [
-        {
-          "stepId": "woman-bestfriend-friend:witness",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-bestfriend-friend:witness",
-          "proposedWording": false,
-          "part": "prompt"
-        }
-      ],
+      "uses": [],
       "sha256": "1f007e04fe310a5f2ad7e438f5a963fa34bce986f124d7b96155621b887fb1dc",
       "bytes": 182902,
       "durationSeconds": 4.571425,
@@ -9289,7 +8948,8 @@
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
-      }
+      },
+      "historicalInactive": true
     },
     {
       "id": "nr_086",
@@ -9496,18 +9156,7 @@
       "src": "assets/narration/nr_291-sequence.mp3",
       "kind": "prompt",
       "status": "verified-complete-sentence-audio-derivative",
-      "uses": [
-        {
-          "stepId": "woman-bestfriend-friend:outcome",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-bestfriend-friend:outcome",
-          "proposedWording": false,
-          "part": "prompt"
-        }
-      ],
+      "uses": [],
       "sha256": "0a704dabc29e5ddf1746bfcd22c09928f2147358e7bf0af2c99ce7f61eef4c7c",
       "bytes": 310378,
       "durationSeconds": 7.732245,
@@ -9602,7 +9251,8 @@
         "wholeSentenceSpeechPreserved": true,
         "wordLevelSplicing": false,
         "allInitialTheArticlesPresent": true
-      }
+      },
+      "historicalInactive": true
     },
     {
       "id": "nr_309",
@@ -9610,18 +9260,7 @@
       "src": "assets/narration/nr_309-reminder-native-article-pronunciation.mp3",
       "kind": "reminder",
       "status": "verified-complete-native-recording",
-      "uses": [
-        {
-          "stepId": "woman-bestfriend-friend:recall-all",
-          "proposedWording": false,
-          "part": "reminder"
-        },
-        {
-          "stepId": "man-bestfriend-friend:recall-all",
-          "proposedWording": false,
-          "part": "reminder"
-        }
-      ],
+      "uses": [],
       "revisionCategory": "recallReminder",
       "sha256": "297716d78e1ad04276f0e2f27f748ba474acf2bb12ea1f6c8993f6b51f74f718",
       "bytes": 498461,
@@ -9671,7 +9310,8 @@
         "fullProjectTextVerified": true,
         "verifiedSourceAuditRecord": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_child_flow_revision_2026-10-04/naturalreader-reminder-repair/processed/verified-native-recordings.json",
         "installedFileBytesMatchVerifiedSource": true
-      }
+      },
+      "historicalInactive": true
     },
     {
       "id": "nr_335",
@@ -9874,18 +9514,7 @@
       "src": "assets/narration/nr_087.mp3",
       "kind": "prompt",
       "status": "imported",
-      "uses": [
-        {
-          "stepId": "woman-teacher-friend:witness",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-teacher-friend:witness",
-          "proposedWording": false,
-          "part": "prompt"
-        }
-      ],
+      "uses": [],
       "sha256": "4b612ac10ddd594ba77d84914e44ef30f8292acdf9e243785da914fb1213a245",
       "bytes": 172453,
       "durationSeconds": 4.3102,
@@ -9909,7 +9538,8 @@
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
-      }
+      },
+      "historicalInactive": true
     },
     {
       "id": "nr_292",
@@ -9917,18 +9547,7 @@
       "src": "assets/narration/nr_292-sequence.mp3",
       "kind": "prompt",
       "status": "verified-complete-sentence-audio-derivative",
-      "uses": [
-        {
-          "stepId": "woman-teacher-friend:outcome",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-teacher-friend:outcome",
-          "proposedWording": false,
-          "part": "prompt"
-        }
-      ],
+      "uses": [],
       "sha256": "de711e8622d6c15780c46eed1ce33635523eceab43696d4e6c48f60ae2cc7cab",
       "bytes": 303064,
       "durationSeconds": 7.549388,
@@ -10023,7 +9642,8 @@
         "wholeSentenceSpeechPreserved": true,
         "wordLevelSplicing": false,
         "allInitialTheArticlesPresent": true
-      }
+      },
+      "historicalInactive": true
     },
     {
       "id": "nr_310",
@@ -10031,18 +9651,7 @@
       "src": "assets/narration/nr_310-reminder-native-article-pronunciation.mp3",
       "kind": "reminder",
       "status": "verified-complete-native-recording",
-      "uses": [
-        {
-          "stepId": "woman-teacher-friend:recall-all",
-          "proposedWording": false,
-          "part": "reminder"
-        },
-        {
-          "stepId": "man-teacher-friend:recall-all",
-          "proposedWording": false,
-          "part": "reminder"
-        }
-      ],
+      "uses": [],
       "revisionCategory": "recallReminder",
       "sha256": "4ab38802a0df75a28e9d17e39e3070fe12be9eebb0cdad1d1ff8a52a9c90f7c3",
       "bytes": 490102,
@@ -10092,7 +9701,8 @@
         "fullProjectTextVerified": true,
         "verifiedSourceAuditRecord": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_child_flow_revision_2026-10-04/naturalreader-reminder-repair/processed/verified-native-recordings.json",
         "installedFileBytesMatchVerifiedSource": true
-      }
+      },
+      "historicalInactive": true
     },
     {
       "id": "nr_089",
@@ -10100,13 +9710,7 @@
       "src": "assets/narration/nr_089.mp3",
       "kind": "prompt",
       "status": "imported",
-      "uses": [
-        {
-          "stepId": "woman-mom-sister:witness",
-          "proposedWording": false,
-          "part": "prompt"
-        }
-      ],
+      "uses": [],
       "sha256": "6f6e03735b22a5abaa5cbeaf8f489fbb135d91ff2a0c21420f83a85158e011e2",
       "bytes": 170363,
       "durationSeconds": 4.25795,
@@ -10130,7 +9734,8 @@
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
-      }
+      },
+      "historicalInactive": true
     },
     {
       "id": "nr_293",
@@ -10138,13 +9743,7 @@
       "src": "assets/narration/nr_293-sequence.mp3",
       "kind": "prompt",
       "status": "verified-complete-sentence-audio-derivative",
-      "uses": [
-        {
-          "stepId": "woman-mom-sister:outcome",
-          "proposedWording": false,
-          "part": "prompt"
-        }
-      ],
+      "uses": [],
       "sha256": "eb6d14fae4dd266436baef6d402a0069305971801361cdf6f1ded69610275b34",
       "bytes": 305154,
       "durationSeconds": 7.601633,
@@ -10239,7 +9838,8 @@
         "wholeSentenceSpeechPreserved": true,
         "wordLevelSplicing": false,
         "allInitialTheArticlesPresent": true
-      }
+      },
+      "historicalInactive": true
     },
     {
       "id": "nr_311",
@@ -10247,13 +9847,7 @@
       "src": "assets/narration/nr_311-reminder-native-article-pronunciation.mp3",
       "kind": "reminder",
       "status": "verified-complete-native-recording",
-      "uses": [
-        {
-          "stepId": "woman-mom-sister:recall-all",
-          "proposedWording": false,
-          "part": "reminder"
-        }
-      ],
+      "uses": [],
       "revisionCategory": "recallReminder",
       "sha256": "7794321956ff26ce2f39203287408d702f18c9fbe56a044e4520320252f6f9e6",
       "bytes": 494281,
@@ -10303,7 +9897,8 @@
         "fullProjectTextVerified": true,
         "verifiedSourceAuditRecord": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_child_flow_revision_2026-10-04/naturalreader-reminder-repair/processed/verified-native-recordings.json",
         "installedFileBytesMatchVerifiedSource": true
-      }
+      },
+      "historicalInactive": true
     },
     {
       "id": "nr_091",
@@ -10407,23 +10002,7 @@
       "src": "assets/narration/nr_093.mp3",
       "kind": "prompt",
       "status": "imported",
-      "uses": [
-        {
-          "stepId": "woman-teacher-classmate:witness",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-teacher-classmate:witness",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "family-teacher-classmate:witness",
-          "proposedWording": false,
-          "part": "prompt"
-        }
-      ],
+      "uses": [],
       "sha256": "4a1a10f6acca12957581ca08625636b8d0b87a00faac263929ed5e49d1c92398",
       "bytes": 179767,
       "durationSeconds": 4.49305,
@@ -10447,7 +10026,8 @@
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
-      }
+      },
+      "historicalInactive": true
     },
     {
       "id": "nr_102",
@@ -10682,23 +10262,7 @@
       "src": "assets/narration/nr_294-sequence.mp3",
       "kind": "prompt",
       "status": "verified-complete-sentence-audio-derivative",
-      "uses": [
-        {
-          "stepId": "woman-teacher-classmate:outcome",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-teacher-classmate:outcome",
-          "proposedWording": false,
-          "part": "prompt"
-        },
-        {
-          "stepId": "family-teacher-classmate:outcome",
-          "proposedWording": false,
-          "part": "prompt"
-        }
-      ],
+      "uses": [],
       "sha256": "9c516b11b2a22eb0295cbbd72ce0f265e06fd9d6c4ae4c6ad5bcb76d976c5a76",
       "bytes": 315603,
       "durationSeconds": 7.862857,
@@ -10793,7 +10357,8 @@
         "wholeSentenceSpeechPreserved": true,
         "wordLevelSplicing": false,
         "allInitialTheArticlesPresent": true
-      }
+      },
+      "historicalInactive": true
     },
     {
       "id": "nr_312",
@@ -10801,23 +10366,7 @@
       "src": "assets/narration/nr_312-reminder-native-article-pronunciation.mp3",
       "kind": "reminder",
       "status": "verified-complete-native-recording",
-      "uses": [
-        {
-          "stepId": "woman-teacher-classmate:recall-all",
-          "proposedWording": false,
-          "part": "reminder"
-        },
-        {
-          "stepId": "man-teacher-classmate:recall-all",
-          "proposedWording": false,
-          "part": "reminder"
-        },
-        {
-          "stepId": "family-teacher-classmate:recall-all",
-          "proposedWording": false,
-          "part": "reminder"
-        }
-      ],
+      "uses": [],
       "revisionCategory": "recallReminder",
       "sha256": "26aeb58e46eb6f6b81279bef8730ab95b3bbaf38b09bae3d7f349401bc229daa",
       "bytes": 504730,
@@ -10867,7 +10416,8 @@
         "fullProjectTextVerified": true,
         "verifiedSourceAuditRecord": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_child_flow_revision_2026-10-04/naturalreader-reminder-repair/processed/verified-native-recordings.json",
         "installedFileBytesMatchVerifiedSource": true
-      }
+      },
+      "historicalInactive": true
     },
     {
       "id": "nr_338",
@@ -11196,13 +10746,7 @@
       "src": "assets/narration/nr_105.mp3",
       "kind": "prompt",
       "status": "imported",
-      "uses": [
-        {
-          "stepId": "man-dad-teacher:witness",
-          "proposedWording": false,
-          "part": "prompt"
-        }
-      ],
+      "uses": [],
       "sha256": "e4e938a28072afca5f5ec533702139b9b1fb46bd61c4fbe3f71d67aacd880cec",
       "bytes": 167228,
       "durationSeconds": 4.179575,
@@ -11226,7 +10770,8 @@
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
-      }
+      },
+      "historicalInactive": true
     },
     {
       "id": "nr_114",
@@ -11479,13 +11024,7 @@
       "src": "assets/narration/nr_295-sequence.mp3",
       "kind": "prompt",
       "status": "verified-complete-sentence-audio-derivative",
-      "uses": [
-        {
-          "stepId": "man-dad-teacher:outcome",
-          "proposedWording": false,
-          "part": "prompt"
-        }
-      ],
+      "uses": [],
       "sha256": "f2ea1e698f009e79e55e84e1408bee3118e5cc2c979abe1810252095d3ef84eb",
       "bytes": 304109,
       "durationSeconds": 7.57551,
@@ -11580,7 +11119,8 @@
         "wholeSentenceSpeechPreserved": true,
         "wordLevelSplicing": false,
         "allInitialTheArticlesPresent": true
-      }
+      },
+      "historicalInactive": true
     },
     {
       "id": "nr_313",
@@ -11588,13 +11128,7 @@
       "src": "assets/narration/nr_313-reminder-native-article-pronunciation.mp3",
       "kind": "reminder",
       "status": "verified-complete-native-recording",
-      "uses": [
-        {
-          "stepId": "man-dad-teacher:recall-all",
-          "proposedWording": false,
-          "part": "reminder"
-        }
-      ],
+      "uses": [],
       "revisionCategory": "recallReminder",
       "sha256": "3c8b4b5704643230e1269d8d440118026e6d91d64397fc58c3bbbf27e17d2bbb",
       "bytes": 490102,
@@ -11644,7 +11178,8 @@
         "fullProjectTextVerified": true,
         "verifiedSourceAuditRecord": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_child_flow_revision_2026-10-04/naturalreader-reminder-repair/processed/verified-native-recordings.json",
         "installedFileBytesMatchVerifiedSource": true
-      }
+      },
+      "historicalInactive": true
     },
     {
       "id": "nr_341",
@@ -11963,13 +11498,7 @@
       "src": "assets/narration/nr_117.mp3",
       "kind": "prompt",
       "status": "imported",
-      "uses": [
-        {
-          "stepId": "man-brother-friend:witness",
-          "proposedWording": false,
-          "part": "prompt"
-        }
-      ],
+      "uses": [],
       "sha256": "e98ee0f2e25c424e59c789ee013388db5942fb0a84f14fc5f1d2095da64f885f",
       "bytes": 172453,
       "durationSeconds": 4.3102,
@@ -11993,7 +11522,8 @@
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
-      }
+      },
+      "historicalInactive": true
     },
     {
       "id": "nr_126",
@@ -12228,13 +11758,7 @@
       "src": "assets/narration/nr_296-sequence.mp3",
       "kind": "prompt",
       "status": "verified-complete-sentence-audio-derivative",
-      "uses": [
-        {
-          "stepId": "man-brother-friend:outcome",
-          "proposedWording": false,
-          "part": "prompt"
-        }
-      ],
+      "uses": [],
       "sha256": "0d20bd4f85f5ac07dccde91128360ab02c0804581dfa9dc5a9e11d565521da55",
       "bytes": 303064,
       "durationSeconds": 7.549388,
@@ -12329,7 +11853,8 @@
         "wholeSentenceSpeechPreserved": true,
         "wordLevelSplicing": false,
         "allInitialTheArticlesPresent": true
-      }
+      },
+      "historicalInactive": true
     },
     {
       "id": "nr_314",
@@ -12337,13 +11862,7 @@
       "src": "assets/narration/nr_314-reminder-native-article-pronunciation.mp3",
       "kind": "reminder",
       "status": "verified-complete-native-recording",
-      "uses": [
-        {
-          "stepId": "man-brother-friend:recall-all",
-          "proposedWording": false,
-          "part": "reminder"
-        }
-      ],
+      "uses": [],
       "revisionCategory": "recallReminder",
       "sha256": "7d63488facc108ea51d0d2244533d389e6ac60348ef81f58101c037016525933",
       "bytes": 489057,
@@ -12393,7 +11912,8 @@
         "fullProjectTextVerified": true,
         "verifiedSourceAuditRecord": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_child_flow_revision_2026-10-04/naturalreader-reminder-repair/processed/verified-native-recordings.json",
         "installedFileBytesMatchVerifiedSource": true
-      }
+      },
+      "historicalInactive": true
     },
     {
       "id": "nr_344",
@@ -12616,13 +12136,7 @@
       "src": "assets/narration/nr_127.mp3",
       "kind": "prompt",
       "status": "imported",
-      "uses": [
-        {
-          "stepId": "man-dad-brother:witness",
-          "proposedWording": false,
-          "part": "prompt"
-        }
-      ],
+      "uses": [],
       "sha256": "6178239f2d4a12107041656cd567755621d73eb81317872eb049d361a7fa4d6c",
       "bytes": 168273,
       "durationSeconds": 4.2057,
@@ -12646,7 +12160,8 @@
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
-      }
+      },
+      "historicalInactive": true
     },
     {
       "id": "nr_297",
@@ -12654,13 +12169,7 @@
       "src": "assets/narration/nr_297-sequence.mp3",
       "kind": "prompt",
       "status": "verified-complete-sentence-audio-derivative",
-      "uses": [
-        {
-          "stepId": "man-dad-brother:outcome",
-          "proposedWording": false,
-          "part": "prompt"
-        }
-      ],
+      "uses": [],
       "sha256": "0c0cf347f5046354169cf5c30a2ed3076aa06a18dfe717e139e8476eb6192527",
       "bytes": 304109,
       "durationSeconds": 7.57551,
@@ -12755,7 +12264,8 @@
         "wholeSentenceSpeechPreserved": true,
         "wordLevelSplicing": false,
         "allInitialTheArticlesPresent": true
-      }
+      },
+      "historicalInactive": true
     },
     {
       "id": "nr_315",
@@ -12763,13 +12273,7 @@
       "src": "assets/narration/nr_315-reminder-native-article-pronunciation.mp3",
       "kind": "reminder",
       "status": "verified-complete-native-recording",
-      "uses": [
-        {
-          "stepId": "man-dad-brother:recall-all",
-          "proposedWording": false,
-          "part": "reminder"
-        }
-      ],
+      "uses": [],
       "revisionCategory": "recallReminder",
       "sha256": "c40e228edafd4a7a7578168edbdbb0eeb9d30bf0410ad748d041c52828e5456a",
       "bytes": 489057,
@@ -12819,7 +12323,8 @@
         "fullProjectTextVerified": true,
         "verifiedSourceAuditRecord": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_child_flow_revision_2026-10-04/naturalreader-reminder-repair/processed/verified-native-recordings.json",
         "installedFileBytesMatchVerifiedSource": true
-      }
+      },
+      "historicalInactive": true
     },
     {
       "id": "nr_129",
@@ -12827,13 +12332,7 @@
       "src": "assets/narration/nr_129.mp3",
       "kind": "prompt",
       "status": "imported",
-      "uses": [
-        {
-          "stepId": "family-mom-dad:witness",
-          "proposedWording": false,
-          "part": "prompt"
-        }
-      ],
+      "uses": [],
       "sha256": "8b37b1a35b11ab38b57fd70c75065a6062cad8cc0c35c1ad78367ce477d12814",
       "bytes": 167228,
       "durationSeconds": 4.179575,
@@ -12857,7 +12356,8 @@
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
-      }
+      },
+      "historicalInactive": true
     },
     {
       "id": "nr_298",
@@ -12865,13 +12365,7 @@
       "src": "assets/narration/nr_298-sequence.mp3",
       "kind": "prompt",
       "status": "verified-complete-sentence-audio-derivative",
-      "uses": [
-        {
-          "stepId": "family-mom-dad:outcome",
-          "proposedWording": false,
-          "part": "prompt"
-        }
-      ],
+      "uses": [],
       "sha256": "741b0a9d30872c12ea0a00ef726ac45e2383f233b0c34d24c06baf198ddbef5c",
       "bytes": 300974,
       "durationSeconds": 7.497143,
@@ -12966,7 +12460,8 @@
         "wholeSentenceSpeechPreserved": true,
         "wordLevelSplicing": false,
         "allInitialTheArticlesPresent": true
-      }
+      },
+      "historicalInactive": true
     },
     {
       "id": "nr_316",
@@ -12974,13 +12469,7 @@
       "src": "assets/narration/nr_316-reminder-native-article-pronunciation.mp3",
       "kind": "reminder",
       "status": "verified-complete-native-recording",
-      "uses": [
-        {
-          "stepId": "family-mom-dad:recall-all",
-          "proposedWording": false,
-          "part": "reminder"
-        }
-      ],
+      "uses": [],
       "revisionCategory": "recallReminder",
       "sha256": "c12519b5fa5e0e2276ff4af1e7e2f35fcd21b2d5469919830c0a98b1c5f8c1dd",
       "bytes": 486967,
@@ -13030,7 +12519,8 @@
         "fullProjectTextVerified": true,
         "verifiedSourceAuditRecord": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_child_flow_revision_2026-10-04/naturalreader-reminder-repair/processed/verified-native-recordings.json",
         "installedFileBytesMatchVerifiedSource": true
-      }
+      },
+      "historicalInactive": true
     },
     {
       "id": "nr_131",
@@ -13038,13 +12528,7 @@
       "src": "assets/narration/nr_131.mp3",
       "kind": "prompt",
       "status": "imported",
-      "uses": [
-        {
-          "stepId": "family-sister-brother:witness",
-          "proposedWording": false,
-          "part": "prompt"
-        }
-      ],
+      "uses": [],
       "sha256": "0c0616440309471351c875d8ccf9e79613899580300327acba1e518b12d0d5e5",
       "bytes": 168273,
       "durationSeconds": 4.2057,
@@ -13068,7 +12552,8 @@
         "fullProjectTextVerified": true,
         "decodeVerified": true,
         "copiedWithoutReencoding": true
-      }
+      },
+      "historicalInactive": true
     },
     {
       "id": "nr_299",
@@ -13076,13 +12561,7 @@
       "src": "assets/narration/nr_299-sequence.mp3",
       "kind": "prompt",
       "status": "verified-complete-sentence-audio-derivative",
-      "uses": [
-        {
-          "stepId": "family-sister-brother:outcome",
-          "proposedWording": false,
-          "part": "prompt"
-        }
-      ],
+      "uses": [],
       "sha256": "7285983020c5f54c5283efa86824ed65bdc8dcf80834054fdcb370f4cc9f7cc2",
       "bytes": 308289,
       "durationSeconds": 7.68,
@@ -13177,7 +12656,8 @@
         "wholeSentenceSpeechPreserved": true,
         "wordLevelSplicing": false,
         "allInitialTheArticlesPresent": true
-      }
+      },
+      "historicalInactive": true
     },
     {
       "id": "nr_317",
@@ -13185,13 +12665,7 @@
       "src": "assets/narration/nr_317-reminder-native-article-pronunciation.mp3",
       "kind": "reminder",
       "status": "verified-complete-native-recording",
-      "uses": [
-        {
-          "stepId": "family-sister-brother:recall-all",
-          "proposedWording": false,
-          "part": "reminder"
-        }
-      ],
+      "uses": [],
       "revisionCategory": "recallReminder",
       "sha256": "135ba3c335f2360772663e0329e9d002dfbf53a6e1f2a05d005634c888ccd4f7",
       "bytes": 496371,
@@ -13241,7 +12715,8 @@
         "fullProjectTextVerified": true,
         "verifiedSourceAuditRecord": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_child_flow_revision_2026-10-04/naturalreader-reminder-repair/processed/verified-native-recordings.json",
         "installedFileBytesMatchVerifiedSource": true
-      }
+      },
+      "historicalInactive": true
     },
     {
       "id": "nr_133",
@@ -17081,6 +16556,2387 @@
         "decodeVerified": true,
         "copiedWithoutReencoding": true
       }
+    },
+    {
+      "id": "nr_middle_001",
+      "text": "This little one is a kid. Tap the kid in the middle.",
+      "src": "assets/narration/nr_middle_001.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "woman-mom-teacher:intro-recipient",
+          "part": "prompt"
+        },
+        {
+          "stepId": "woman-sister-friend:intro-recipient",
+          "part": "prompt"
+        },
+        {
+          "stepId": "woman-bestfriend-friend:intro-recipient",
+          "part": "prompt"
+        },
+        {
+          "stepId": "woman-teacher-friend:intro-recipient",
+          "part": "prompt"
+        },
+        {
+          "stepId": "woman-mom-sister:intro-recipient",
+          "part": "prompt"
+        },
+        {
+          "stepId": "woman-teacher-classmate:intro-recipient",
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-dad-teacher:intro-recipient",
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-brother-friend:intro-recipient",
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-bestfriend-friend:intro-recipient",
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-teacher-friend:intro-recipient",
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-dad-brother:intro-recipient",
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-teacher-classmate:intro-recipient",
+          "part": "prompt"
+        },
+        {
+          "stepId": "family-mom-dad:intro-recipient",
+          "part": "prompt"
+        },
+        {
+          "stepId": "family-sister-brother:intro-recipient",
+          "part": "prompt"
+        },
+        {
+          "stepId": "family-teacher-classmate:intro-recipient",
+          "part": "prompt"
+        }
+      ],
+      "sha256": "388eab08a228f52a10f3ccf12e654cd852dad93bcebfdffcfe3367c0dcd78e1d",
+      "bytes": 176632,
+      "durationSeconds": 4.414675,
+      "provenance": {
+        "exportIndex": 1,
+        "sourceExportIndex": 1,
+        "sourceBatch": 1,
+        "nativeInputText": "This little one is a kid. Tap the kid in the middle.",
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/processed/nr_middle_001.mp3",
+        "decodedDurationSeconds": 4.4146875,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/numbered-clips/001.mp3",
+        "sourceSha256": "388eab08a228f52a10f3ccf12e654cd852dad93bcebfdffcfe3367c0dcd78e1d",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/naturalreader-export-001-100.zip",
+        "sourceZipSha256": "9e220681fa0d1ee570c02aab4b877cd5a80028c926a93ca2a568b5ffb3c61215",
+        "recordingIndexSha256": "3eee4b26d97102b291320b1208cbeada4e2655ab455c2318ac117b32c5d849de",
+        "canonicalRecordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed dedicated original100plus2 or revised connected22 paragraph projects at Evelyn Soft0.90x180WPM0pause and320MP3SeparateIndexSegment export; native audio bytes unchanged",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalSpokenWordSequenceVerified": true
+      },
+      "revisionCategory": "consistent-child-recipient-reference"
+    },
+    {
+      "id": "nr_middle_002",
+      "text": "This little one is a kid. This one is the kid in the middle. Tap the kid in the middle.",
+      "src": "assets/narration/nr_middle_002.mp3",
+      "kind": "reminder",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "woman-mom-teacher:intro-recipient",
+          "part": "reminder"
+        },
+        {
+          "stepId": "woman-sister-friend:intro-recipient",
+          "part": "reminder"
+        },
+        {
+          "stepId": "woman-bestfriend-friend:intro-recipient",
+          "part": "reminder"
+        },
+        {
+          "stepId": "woman-teacher-friend:intro-recipient",
+          "part": "reminder"
+        },
+        {
+          "stepId": "woman-mom-sister:intro-recipient",
+          "part": "reminder"
+        },
+        {
+          "stepId": "woman-teacher-classmate:intro-recipient",
+          "part": "reminder"
+        },
+        {
+          "stepId": "man-dad-teacher:intro-recipient",
+          "part": "reminder"
+        },
+        {
+          "stepId": "man-brother-friend:intro-recipient",
+          "part": "reminder"
+        },
+        {
+          "stepId": "man-bestfriend-friend:intro-recipient",
+          "part": "reminder"
+        },
+        {
+          "stepId": "man-teacher-friend:intro-recipient",
+          "part": "reminder"
+        },
+        {
+          "stepId": "man-dad-brother:intro-recipient",
+          "part": "reminder"
+        },
+        {
+          "stepId": "man-teacher-classmate:intro-recipient",
+          "part": "reminder"
+        },
+        {
+          "stepId": "family-mom-dad:intro-recipient",
+          "part": "reminder"
+        },
+        {
+          "stepId": "family-sister-brother:intro-recipient",
+          "part": "reminder"
+        },
+        {
+          "stepId": "family-teacher-classmate:intro-recipient",
+          "part": "reminder"
+        }
+      ],
+      "sha256": "7e6d2abf6fbb2282f6fa8606643e59171317e522449f535a86624fa014e92da3",
+      "bytes": 272763,
+      "durationSeconds": 6.81795,
+      "provenance": {
+        "exportIndex": 2,
+        "sourceExportIndex": 2,
+        "sourceBatch": 1,
+        "nativeInputText": "This little one is a kid. This one is the kid in the middle. Tap the kid in the middle.",
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/processed/nr_middle_002.mp3",
+        "decodedDurationSeconds": 6.818,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/numbered-clips/002.mp3",
+        "sourceSha256": "7e6d2abf6fbb2282f6fa8606643e59171317e522449f535a86624fa014e92da3",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/naturalreader-export-001-100.zip",
+        "sourceZipSha256": "9e220681fa0d1ee570c02aab4b877cd5a80028c926a93ca2a568b5ffb3c61215",
+        "recordingIndexSha256": "3eee4b26d97102b291320b1208cbeada4e2655ab455c2318ac117b32c5d849de",
+        "canonicalRecordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed dedicated original100plus2 or revised connected22 paragraph projects at Evelyn Soft0.90x180WPM0pause and320MP3SeparateIndexSegment export; native audio bytes unchanged",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalSpokenWordSequenceVerified": true
+      },
+      "revisionCategory": "consistent-child-recipient-reference"
+    },
+    {
+      "id": "nr_middle_003",
+      "text": "The kid’s teacher and the kid’s mom both see that the kid in the middle is sad.",
+      "src": "assets/narration/nr_middle_003.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "woman-mom-teacher:witness",
+          "part": "prompt"
+        }
+      ],
+      "sha256": "2a35b7b2f24f5ab332d881d60aa353ce649705f05d3b7776e40ea9c335f82bba",
+      "bytes": 195441,
+      "durationSeconds": 4.8849,
+      "provenance": {
+        "exportIndex": 3,
+        "sourceExportIndex": 3,
+        "sourceBatch": 1,
+        "nativeInputText": "The kid’s teacher and the kid’s mom both see that the kid in the middle is sad.",
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/processed/nr_middle_003.mp3",
+        "decodedDurationSeconds": 4.8849375,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/numbered-clips/003.mp3",
+        "sourceSha256": "2a35b7b2f24f5ab332d881d60aa353ce649705f05d3b7776e40ea9c335f82bba",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/naturalreader-export-001-100.zip",
+        "sourceZipSha256": "9e220681fa0d1ee570c02aab4b877cd5a80028c926a93ca2a568b5ffb3c61215",
+        "recordingIndexSha256": "3eee4b26d97102b291320b1208cbeada4e2655ab455c2318ac117b32c5d849de",
+        "canonicalRecordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed dedicated original100plus2 or revised connected22 paragraph projects at Evelyn Soft0.90x180WPM0pause and320MP3SeparateIndexSegment export; native audio bytes unchanged",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalSpokenWordSequenceVerified": true
+      },
+      "revisionCategory": "consistent-child-recipient-reference"
+    },
+    {
+      "id": "nr_middle_016",
+      "text": "No one helped the kid in the middle.",
+      "src": "assets/narration/nr_middle_016.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "woman-mom-teacher:outcome-summary",
+          "part": "prompt"
+        },
+        {
+          "stepId": "woman-sister-friend:outcome-summary",
+          "part": "prompt"
+        },
+        {
+          "stepId": "woman-bestfriend-friend:outcome-summary",
+          "part": "prompt"
+        },
+        {
+          "stepId": "woman-teacher-friend:outcome-summary",
+          "part": "prompt"
+        },
+        {
+          "stepId": "woman-mom-sister:outcome-summary",
+          "part": "prompt"
+        },
+        {
+          "stepId": "woman-teacher-classmate:outcome-summary",
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-dad-teacher:outcome-summary",
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-brother-friend:outcome-summary",
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-bestfriend-friend:outcome-summary",
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-teacher-friend:outcome-summary",
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-dad-brother:outcome-summary",
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-teacher-classmate:outcome-summary",
+          "part": "prompt"
+        },
+        {
+          "stepId": "family-mom-dad:outcome-summary",
+          "part": "prompt"
+        },
+        {
+          "stepId": "family-sister-brother:outcome-summary",
+          "part": "prompt"
+        },
+        {
+          "stepId": "family-teacher-classmate:outcome-summary",
+          "part": "prompt"
+        }
+      ],
+      "sha256": "8fdf264bd58b734456bbf86b4b681f6aa9063b6bce076a22d89887c4672a69bd",
+      "bytes": 117073,
+      "durationSeconds": 2.9257,
+      "provenance": {
+        "exportIndex": 16,
+        "sourceExportIndex": 16,
+        "sourceBatch": 1,
+        "nativeInputText": "No one helped the kid in the middle.",
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/processed/nr_middle_016.mp3",
+        "decodedDurationSeconds": 2.92575,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/numbered-clips/016.mp3",
+        "sourceSha256": "8fdf264bd58b734456bbf86b4b681f6aa9063b6bce076a22d89887c4672a69bd",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/naturalreader-export-001-100.zip",
+        "sourceZipSha256": "9e220681fa0d1ee570c02aab4b877cd5a80028c926a93ca2a568b5ffb3c61215",
+        "recordingIndexSha256": "3eee4b26d97102b291320b1208cbeada4e2655ab455c2318ac117b32c5d849de",
+        "canonicalRecordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed dedicated original100plus2 or revised connected22 paragraph projects at Evelyn Soft0.90x180WPM0pause and320MP3SeparateIndexSegment export; native audio bytes unchanged",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalSpokenWordSequenceVerified": true
+      },
+      "revisionCategory": "consistent-child-recipient-reference"
+    },
+    {
+      "id": "nr_middle_017",
+      "text": "The kid’s teacher did NOT help the kid in the middle. And the kid’s mom did NOT help the kid in the middle. No one helped the kid in the middle.",
+      "src": "assets/narration/nr_middle_017.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "woman-mom-teacher:outcome",
+          "part": "prompt"
+        }
+      ],
+      "sha256": "2a7c2df3a5a761bafac0d5e825e0c5be997cf64446294b084f62da8fb6bb9bae",
+      "bytes": 378298,
+      "durationSeconds": 9.456325,
+      "provenance": {
+        "exportIndex": 17,
+        "sourceExportIndex": 1,
+        "sourceBatch": 5,
+        "nativeInputText": "The kid’s teacher did not help the kid in the middle. And the kid’s mom did not help the kid in the middle. No one helped the kid in the middle.",
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/processed/nr_middle_017.mp3",
+        "decodedDurationSeconds": 9.4563125,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/connective-numbered-clips/017.mp3",
+        "sourceSha256": "2a7c2df3a5a761bafac0d5e825e0c5be997cf64446294b084f62da8fb6bb9bae",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/naturalreader-export-connected22.zip",
+        "sourceZipSha256": "31bc758d57445e3e5274549c5a15e767e91b93f26fa1709b59971b20c53cc382",
+        "recordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "canonicalRecordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed dedicated original100plus2 or revised connected22 paragraph projects at Evelyn Soft0.90x180WPM0pause and320MP3SeparateIndexSegment export; native audio bytes unchanged",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalSpokenWordSequenceVerified": true
+      },
+      "revisionCategory": "consistent-child-recipient-reference"
+    },
+    {
+      "id": "nr_middle_018",
+      "text": "Can you tell me, did either of these people help the kid in the middle?",
+      "src": "assets/narration/nr_middle_018.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "woman-mom-teacher:recall-all",
+          "part": "prompt"
+        },
+        {
+          "stepId": "woman-sister-friend:recall-all",
+          "part": "prompt"
+        },
+        {
+          "stepId": "woman-bestfriend-friend:recall-all",
+          "part": "prompt"
+        },
+        {
+          "stepId": "woman-teacher-friend:recall-all",
+          "part": "prompt"
+        },
+        {
+          "stepId": "woman-mom-sister:recall-all",
+          "part": "prompt"
+        },
+        {
+          "stepId": "woman-teacher-classmate:recall-all",
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-dad-teacher:recall-all",
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-brother-friend:recall-all",
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-bestfriend-friend:recall-all",
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-teacher-friend:recall-all",
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-dad-brother:recall-all",
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-teacher-classmate:recall-all",
+          "part": "prompt"
+        },
+        {
+          "stepId": "family-mom-dad:recall-all",
+          "part": "prompt"
+        },
+        {
+          "stepId": "family-sister-brother:recall-all",
+          "part": "prompt"
+        },
+        {
+          "stepId": "family-teacher-classmate:recall-all",
+          "part": "prompt"
+        }
+      ],
+      "sha256": "7d79093fd2d830bb9ac570cdcfcf3536ab9c1a3b5d8e9f5621b7792f1c60a66f",
+      "bytes": 174543,
+      "durationSeconds": 4.36245,
+      "provenance": {
+        "exportIndex": 18,
+        "sourceExportIndex": 18,
+        "sourceBatch": 1,
+        "nativeInputText": "Can you tell me, did either of these people help the kid in the middle?",
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/processed/nr_middle_018.mp3",
+        "decodedDurationSeconds": 4.3624375,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/numbered-clips/018.mp3",
+        "sourceSha256": "7d79093fd2d830bb9ac570cdcfcf3536ab9c1a3b5d8e9f5621b7792f1c60a66f",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/naturalreader-export-001-100.zip",
+        "sourceZipSha256": "9e220681fa0d1ee570c02aab4b877cd5a80028c926a93ca2a568b5ffb3c61215",
+        "recordingIndexSha256": "3eee4b26d97102b291320b1208cbeada4e2655ab455c2318ac117b32c5d849de",
+        "canonicalRecordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed dedicated original100plus2 or revised connected22 paragraph projects at Evelyn Soft0.90x180WPM0pause and320MP3SeparateIndexSegment export; native audio bytes unchanged",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalSpokenWordSequenceVerified": true
+      },
+      "revisionCategory": "consistent-child-recipient-reference"
+    },
+    {
+      "id": "nr_middle_019",
+      "text": "Actually, remember, no one helped the kid in the middle. And the kid’s teacher did NOT help the kid in the middle. And the kid’s mom did NOT help the kid in the middle. No one helped the kid in the middle.",
+      "src": "assets/narration/nr_middle_019.mp3",
+      "kind": "reminder",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "woman-mom-teacher:recall-all",
+          "part": "reminder"
+        }
+      ],
+      "sha256": "3d34b3c7e760dcfc5c965c6ea624f0850a448dc0612f23f18e362448d7b10dae",
+      "bytes": 523538,
+      "durationSeconds": 13.087325,
+      "provenance": {
+        "exportIndex": 19,
+        "sourceExportIndex": 2,
+        "sourceBatch": 5,
+        "nativeInputText": "Actually, remember, no one helped the kid in the middle. And the kid’s teacher did not help the kid in the middle. And the kid’s mom did not help the kid in the middle. No one helped the kid in the middle.",
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/processed/nr_middle_019.mp3",
+        "decodedDurationSeconds": 13.087375,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/connective-numbered-clips/019.mp3",
+        "sourceSha256": "3d34b3c7e760dcfc5c965c6ea624f0850a448dc0612f23f18e362448d7b10dae",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/naturalreader-export-connected22.zip",
+        "sourceZipSha256": "31bc758d57445e3e5274549c5a15e767e91b93f26fa1709b59971b20c53cc382",
+        "recordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "canonicalRecordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed dedicated original100plus2 or revised connected22 paragraph projects at Evelyn Soft0.90x180WPM0pause and320MP3SeparateIndexSegment export; native audio bytes unchanged",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalSpokenWordSequenceVerified": true
+      },
+      "revisionCategory": "consistent-child-recipient-reference"
+    },
+    {
+      "id": "nr_middle_025",
+      "text": "The kid’s sister and the kid’s friend both see that the kid in the middle is sad.",
+      "src": "assets/narration/nr_middle_025.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "woman-sister-friend:witness",
+          "part": "prompt"
+        }
+      ],
+      "sha256": "f197d1a1adf0cc049a3dcc638768b3dcc77b8ded5ea546d1a6fda890d4c26132",
+      "bytes": 195441,
+      "durationSeconds": 4.8849,
+      "provenance": {
+        "exportIndex": 25,
+        "sourceExportIndex": 25,
+        "sourceBatch": 1,
+        "nativeInputText": "The kid’s sister and the kid’s friend both see that the kid in the middle is sad.",
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/processed/nr_middle_025.mp3",
+        "decodedDurationSeconds": 4.8849375,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/numbered-clips/025.mp3",
+        "sourceSha256": "f197d1a1adf0cc049a3dcc638768b3dcc77b8ded5ea546d1a6fda890d4c26132",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/naturalreader-export-001-100.zip",
+        "sourceZipSha256": "9e220681fa0d1ee570c02aab4b877cd5a80028c926a93ca2a568b5ffb3c61215",
+        "recordingIndexSha256": "3eee4b26d97102b291320b1208cbeada4e2655ab455c2318ac117b32c5d849de",
+        "canonicalRecordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed dedicated original100plus2 or revised connected22 paragraph projects at Evelyn Soft0.90x180WPM0pause and320MP3SeparateIndexSegment export; native audio bytes unchanged",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalSpokenWordSequenceVerified": true
+      },
+      "revisionCategory": "consistent-child-recipient-reference"
+    },
+    {
+      "id": "nr_middle_038",
+      "text": "The kid’s sister did NOT help the kid in the middle. And the kid’s friend did NOT help the kid in the middle. No one helped the kid in the middle.",
+      "src": "assets/narration/nr_middle_038.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "woman-sister-friend:outcome",
+          "part": "prompt"
+        }
+      ],
+      "sha256": "0417c929fc434b5b62e3395b4828bccafa857b7e3ffead12661fe2168c94e3bf",
+      "bytes": 378298,
+      "durationSeconds": 9.456325,
+      "provenance": {
+        "exportIndex": 38,
+        "sourceExportIndex": 3,
+        "sourceBatch": 5,
+        "nativeInputText": "The kid’s sister did not help the kid in the middle. And the kid’s friend did not help the kid in the middle. No one helped the kid in the middle.",
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/processed/nr_middle_038.mp3",
+        "decodedDurationSeconds": 9.4563125,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/connective-numbered-clips/038.mp3",
+        "sourceSha256": "0417c929fc434b5b62e3395b4828bccafa857b7e3ffead12661fe2168c94e3bf",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/naturalreader-export-connected22.zip",
+        "sourceZipSha256": "31bc758d57445e3e5274549c5a15e767e91b93f26fa1709b59971b20c53cc382",
+        "recordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "canonicalRecordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed dedicated original100plus2 or revised connected22 paragraph projects at Evelyn Soft0.90x180WPM0pause and320MP3SeparateIndexSegment export; native audio bytes unchanged",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalSpokenWordSequenceVerified": true
+      },
+      "revisionCategory": "consistent-child-recipient-reference"
+    },
+    {
+      "id": "nr_middle_039",
+      "text": "Actually, remember, no one helped the kid in the middle. And the kid’s sister did NOT help the kid in the middle. And the kid’s friend did NOT help the kid in the middle. No one helped the kid in the middle.",
+      "src": "assets/narration/nr_middle_039.mp3",
+      "kind": "reminder",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "woman-sister-friend:recall-all",
+          "part": "reminder"
+        }
+      ],
+      "sha256": "adbba468f1113a6223f9d076eab478e6503fb2dbddaa77e26f37f4c323aea34f",
+      "bytes": 524583,
+      "durationSeconds": 13.11345,
+      "provenance": {
+        "exportIndex": 39,
+        "sourceExportIndex": 4,
+        "sourceBatch": 5,
+        "nativeInputText": "Actually, remember, no one helped the kid in the middle. And the kid’s sister did not help the kid in the middle. And the kid’s friend did not help the kid in the middle. No one helped the kid in the middle.",
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/processed/nr_middle_039.mp3",
+        "decodedDurationSeconds": 13.1135,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/connective-numbered-clips/039.mp3",
+        "sourceSha256": "adbba468f1113a6223f9d076eab478e6503fb2dbddaa77e26f37f4c323aea34f",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/naturalreader-export-connected22.zip",
+        "sourceZipSha256": "31bc758d57445e3e5274549c5a15e767e91b93f26fa1709b59971b20c53cc382",
+        "recordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "canonicalRecordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed dedicated original100plus2 or revised connected22 paragraph projects at Evelyn Soft0.90x180WPM0pause and320MP3SeparateIndexSegment export; native audio bytes unchanged",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalSpokenWordSequenceVerified": true
+      },
+      "revisionCategory": "consistent-child-recipient-reference"
+    },
+    {
+      "id": "nr_middle_044",
+      "text": "The kid’s friend and the kid’s best friend both see that the kid in the middle is sad.",
+      "src": "assets/narration/nr_middle_044.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "woman-bestfriend-friend:witness",
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-bestfriend-friend:witness",
+          "part": "prompt"
+        }
+      ],
+      "sha256": "8e2efd2fb0bbb1193fad878eaa835227858d53b1fb0ee7cd66d93d7e73f8fec1",
+      "bytes": 206934,
+      "durationSeconds": 5.172225,
+      "provenance": {
+        "exportIndex": 44,
+        "sourceExportIndex": 44,
+        "sourceBatch": 1,
+        "nativeInputText": "The kid’s friend and the kid’s best friend both see that the kid in the middle is sad.",
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/processed/nr_middle_044.mp3",
+        "decodedDurationSeconds": 5.17225,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/numbered-clips/044.mp3",
+        "sourceSha256": "8e2efd2fb0bbb1193fad878eaa835227858d53b1fb0ee7cd66d93d7e73f8fec1",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/naturalreader-export-001-100.zip",
+        "sourceZipSha256": "9e220681fa0d1ee570c02aab4b877cd5a80028c926a93ca2a568b5ffb3c61215",
+        "recordingIndexSha256": "3eee4b26d97102b291320b1208cbeada4e2655ab455c2318ac117b32c5d849de",
+        "canonicalRecordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed dedicated original100plus2 or revised connected22 paragraph projects at Evelyn Soft0.90x180WPM0pause and320MP3SeparateIndexSegment export; native audio bytes unchanged",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalSpokenWordSequenceVerified": true
+      },
+      "revisionCategory": "consistent-child-recipient-reference"
+    },
+    {
+      "id": "nr_middle_051",
+      "text": "The kid’s friend did NOT help the kid in the middle. And the kid’s best friend did NOT help the kid in the middle. No one helped the kid in the middle.",
+      "src": "assets/narration/nr_middle_051.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "woman-bestfriend-friend:outcome",
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-bestfriend-friend:outcome",
+          "part": "prompt"
+        }
+      ],
+      "sha256": "1f633d0c9ca51b829e15366ac6b9582f483577f00b674d2bb866e29cd8b9a8c6",
+      "bytes": 388747,
+      "durationSeconds": 9.71755,
+      "provenance": {
+        "exportIndex": 51,
+        "sourceExportIndex": 5,
+        "sourceBatch": 5,
+        "nativeInputText": "The kid’s friend did not help the kid in the middle. And the kid’s best friend did not help the kid in the middle. No one helped the kid in the middle.",
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/processed/nr_middle_051.mp3",
+        "decodedDurationSeconds": 9.7175625,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/connective-numbered-clips/051.mp3",
+        "sourceSha256": "1f633d0c9ca51b829e15366ac6b9582f483577f00b674d2bb866e29cd8b9a8c6",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/naturalreader-export-connected22.zip",
+        "sourceZipSha256": "31bc758d57445e3e5274549c5a15e767e91b93f26fa1709b59971b20c53cc382",
+        "recordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "canonicalRecordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed dedicated original100plus2 or revised connected22 paragraph projects at Evelyn Soft0.90x180WPM0pause and320MP3SeparateIndexSegment export; native audio bytes unchanged",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalSpokenWordSequenceVerified": true
+      },
+      "revisionCategory": "consistent-child-recipient-reference"
+    },
+    {
+      "id": "nr_middle_052",
+      "text": "Actually, remember, no one helped the kid in the middle. And the kid’s friend did NOT help the kid in the middle. And the kid’s best friend did NOT help the kid in the middle. No one helped the kid in the middle.",
+      "src": "assets/narration/nr_middle_052.mp3",
+      "kind": "reminder",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "woman-bestfriend-friend:recall-all",
+          "part": "reminder"
+        },
+        {
+          "stepId": "man-bestfriend-friend:recall-all",
+          "part": "reminder"
+        }
+      ],
+      "sha256": "2da3d9e65abed7e7791bc98b5b059b01dd637f6351330f5abe7a4061cf24496b",
+      "bytes": 533987,
+      "durationSeconds": 13.34855,
+      "provenance": {
+        "exportIndex": 52,
+        "sourceExportIndex": 6,
+        "sourceBatch": 5,
+        "nativeInputText": "Actually, remember, no one helped the kid in the middle. And the kid’s friend did not help the kid in the middle. And the kid’s best friend did not help the kid in the middle. No one helped the kid in the middle.",
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/processed/nr_middle_052.mp3",
+        "decodedDurationSeconds": 13.3485625,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/connective-numbered-clips/052.mp3",
+        "sourceSha256": "2da3d9e65abed7e7791bc98b5b059b01dd637f6351330f5abe7a4061cf24496b",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/naturalreader-export-connected22.zip",
+        "sourceZipSha256": "31bc758d57445e3e5274549c5a15e767e91b93f26fa1709b59971b20c53cc382",
+        "recordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "canonicalRecordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed dedicated original100plus2 or revised connected22 paragraph projects at Evelyn Soft0.90x180WPM0pause and320MP3SeparateIndexSegment export; native audio bytes unchanged",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalSpokenWordSequenceVerified": true
+      },
+      "revisionCategory": "consistent-child-recipient-reference"
+    },
+    {
+      "id": "nr_middle_055",
+      "text": "The kid’s teacher and the kid’s friend both see that the kid in the middle is sad.",
+      "src": "assets/narration/nr_middle_055.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "woman-teacher-friend:witness",
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-teacher-friend:witness",
+          "part": "prompt"
+        }
+      ],
+      "sha256": "672d8ca3c8e31a35dd4dc9d4005d6433cc5e5bac3fd2dbac8e7d09bb2028ee76",
+      "bytes": 198575,
+      "durationSeconds": 4.96325,
+      "provenance": {
+        "exportIndex": 55,
+        "sourceExportIndex": 55,
+        "sourceBatch": 1,
+        "nativeInputText": "The kid’s teacher and the kid’s friend both see that the kid in the middle is sad.",
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/processed/nr_middle_055.mp3",
+        "decodedDurationSeconds": 4.96325,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/numbered-clips/055.mp3",
+        "sourceSha256": "672d8ca3c8e31a35dd4dc9d4005d6433cc5e5bac3fd2dbac8e7d09bb2028ee76",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/naturalreader-export-001-100.zip",
+        "sourceZipSha256": "9e220681fa0d1ee570c02aab4b877cd5a80028c926a93ca2a568b5ffb3c61215",
+        "recordingIndexSha256": "3eee4b26d97102b291320b1208cbeada4e2655ab455c2318ac117b32c5d849de",
+        "canonicalRecordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed dedicated original100plus2 or revised connected22 paragraph projects at Evelyn Soft0.90x180WPM0pause and320MP3SeparateIndexSegment export; native audio bytes unchanged",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalSpokenWordSequenceVerified": true
+      },
+      "revisionCategory": "consistent-child-recipient-reference"
+    },
+    {
+      "id": "nr_middle_056",
+      "text": "The kid’s teacher did NOT help the kid in the middle. And the kid’s friend did NOT help the kid in the middle. No one helped the kid in the middle.",
+      "src": "assets/narration/nr_middle_056.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "woman-teacher-friend:outcome",
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-teacher-friend:outcome",
+          "part": "prompt"
+        }
+      ],
+      "sha256": "ce41e70236d62f81a452ad8231d5dc47978fe19a9fa4194321f456fa1535c793",
+      "bytes": 377253,
+      "durationSeconds": 9.4302,
+      "provenance": {
+        "exportIndex": 56,
+        "sourceExportIndex": 7,
+        "sourceBatch": 5,
+        "nativeInputText": "The kid’s teacher did not help the kid in the middle. And the kid’s friend did not help the kid in the middle. No one helped the kid in the middle.",
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/processed/nr_middle_056.mp3",
+        "decodedDurationSeconds": 9.4301875,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/connective-numbered-clips/056.mp3",
+        "sourceSha256": "ce41e70236d62f81a452ad8231d5dc47978fe19a9fa4194321f456fa1535c793",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/naturalreader-export-connected22.zip",
+        "sourceZipSha256": "31bc758d57445e3e5274549c5a15e767e91b93f26fa1709b59971b20c53cc382",
+        "recordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "canonicalRecordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed dedicated original100plus2 or revised connected22 paragraph projects at Evelyn Soft0.90x180WPM0pause and320MP3SeparateIndexSegment export; native audio bytes unchanged",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalSpokenWordSequenceVerified": true
+      },
+      "revisionCategory": "consistent-child-recipient-reference"
+    },
+    {
+      "id": "nr_middle_057",
+      "text": "Actually, remember, no one helped the kid in the middle. And the kid’s teacher did NOT help the kid in the middle. And the kid’s friend did NOT help the kid in the middle. No one helped the kid in the middle.",
+      "src": "assets/narration/nr_middle_057.mp3",
+      "kind": "reminder",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "woman-teacher-friend:recall-all",
+          "part": "reminder"
+        },
+        {
+          "stepId": "man-teacher-friend:recall-all",
+          "part": "reminder"
+        }
+      ],
+      "sha256": "c5e5e283153f82ddbc975ee41d802e8b2c87528a43cb228ebddec2f13594a7d5",
+      "bytes": 522494,
+      "durationSeconds": 13.061225,
+      "provenance": {
+        "exportIndex": 57,
+        "sourceExportIndex": 8,
+        "sourceBatch": 5,
+        "nativeInputText": "Actually, remember, no one helped the kid in the middle. And the kid’s teacher did not help the kid in the middle. And the kid’s friend did not help the kid in the middle. No one helped the kid in the middle.",
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/processed/nr_middle_057.mp3",
+        "decodedDurationSeconds": 13.06125,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/connective-numbered-clips/057.mp3",
+        "sourceSha256": "c5e5e283153f82ddbc975ee41d802e8b2c87528a43cb228ebddec2f13594a7d5",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/naturalreader-export-connected22.zip",
+        "sourceZipSha256": "31bc758d57445e3e5274549c5a15e767e91b93f26fa1709b59971b20c53cc382",
+        "recordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "canonicalRecordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed dedicated original100plus2 or revised connected22 paragraph projects at Evelyn Soft0.90x180WPM0pause and320MP3SeparateIndexSegment export; native audio bytes unchanged",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalSpokenWordSequenceVerified": true
+      },
+      "revisionCategory": "consistent-child-recipient-reference"
+    },
+    {
+      "id": "nr_middle_058",
+      "text": "The kid’s mom and the kid’s sister both see that the kid in the middle is sad.",
+      "src": "assets/narration/nr_middle_058.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "woman-mom-sister:witness",
+          "part": "prompt"
+        }
+      ],
+      "sha256": "502a8e2ecdb2734c9ee41e590b125bd7e803e0e30961389b44b754101e90b3f7",
+      "bytes": 198575,
+      "durationSeconds": 4.96325,
+      "provenance": {
+        "exportIndex": 58,
+        "sourceExportIndex": 58,
+        "sourceBatch": 1,
+        "nativeInputText": "The kid’s mom and the kid’s sister both see that the kid in the middle is sad.",
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/processed/nr_middle_058.mp3",
+        "decodedDurationSeconds": 4.96325,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/numbered-clips/058.mp3",
+        "sourceSha256": "502a8e2ecdb2734c9ee41e590b125bd7e803e0e30961389b44b754101e90b3f7",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/naturalreader-export-001-100.zip",
+        "sourceZipSha256": "9e220681fa0d1ee570c02aab4b877cd5a80028c926a93ca2a568b5ffb3c61215",
+        "recordingIndexSha256": "3eee4b26d97102b291320b1208cbeada4e2655ab455c2318ac117b32c5d849de",
+        "canonicalRecordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed dedicated original100plus2 or revised connected22 paragraph projects at Evelyn Soft0.90x180WPM0pause and320MP3SeparateIndexSegment export; native audio bytes unchanged",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalSpokenWordSequenceVerified": true
+      },
+      "revisionCategory": "consistent-child-recipient-reference"
+    },
+    {
+      "id": "nr_middle_059",
+      "text": "The kid’s mom did NOT help the kid in the middle. And the kid’s sister did NOT help the kid in the middle. No one helped the kid in the middle.",
+      "src": "assets/narration/nr_middle_059.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "woman-mom-sister:outcome",
+          "part": "prompt"
+        }
+      ],
+      "sha256": "e6385ed33a24bac43994aa67f8e1d8267e0455310512100164d2dea74d8d6ea0",
+      "bytes": 383522,
+      "durationSeconds": 9.586925,
+      "provenance": {
+        "exportIndex": 59,
+        "sourceExportIndex": 9,
+        "sourceBatch": 5,
+        "nativeInputText": "The kid’s mom did not help the kid in the middle. And the kid’s sister did not help the kid in the middle. No one helped the kid in the middle.",
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/processed/nr_middle_059.mp3",
+        "decodedDurationSeconds": 9.5869375,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/connective-numbered-clips/059.mp3",
+        "sourceSha256": "e6385ed33a24bac43994aa67f8e1d8267e0455310512100164d2dea74d8d6ea0",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/naturalreader-export-connected22.zip",
+        "sourceZipSha256": "31bc758d57445e3e5274549c5a15e767e91b93f26fa1709b59971b20c53cc382",
+        "recordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "canonicalRecordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed dedicated original100plus2 or revised connected22 paragraph projects at Evelyn Soft0.90x180WPM0pause and320MP3SeparateIndexSegment export; native audio bytes unchanged",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalSpokenWordSequenceVerified": true
+      },
+      "revisionCategory": "consistent-child-recipient-reference"
+    },
+    {
+      "id": "nr_middle_060",
+      "text": "Actually, remember, no one helped the kid in the middle. And the kid’s mom did NOT help the kid in the middle. And the kid’s sister did NOT help the kid in the middle. No one helped the kid in the middle.",
+      "src": "assets/narration/nr_middle_060.mp3",
+      "kind": "reminder",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "woman-mom-sister:recall-all",
+          "part": "reminder"
+        }
+      ],
+      "sha256": "75267fd874221e15920007ff41f99084fff3e4df31efc48fe8b03ba5bebc0ba6",
+      "bytes": 525628,
+      "durationSeconds": 13.139575,
+      "provenance": {
+        "exportIndex": 60,
+        "sourceExportIndex": 10,
+        "sourceBatch": 5,
+        "nativeInputText": "Actually, remember, no one helped the kid in the middle. And the kid’s mom did not help the kid in the middle. And the kid’s sister did not help the kid in the middle. No one helped the kid in the middle.",
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/processed/nr_middle_060.mp3",
+        "decodedDurationSeconds": 13.139625,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/connective-numbered-clips/060.mp3",
+        "sourceSha256": "75267fd874221e15920007ff41f99084fff3e4df31efc48fe8b03ba5bebc0ba6",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/naturalreader-export-connected22.zip",
+        "sourceZipSha256": "31bc758d57445e3e5274549c5a15e767e91b93f26fa1709b59971b20c53cc382",
+        "recordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "canonicalRecordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed dedicated original100plus2 or revised connected22 paragraph projects at Evelyn Soft0.90x180WPM0pause and320MP3SeparateIndexSegment export; native audio bytes unchanged",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalSpokenWordSequenceVerified": true
+      },
+      "revisionCategory": "consistent-child-recipient-reference"
+    },
+    {
+      "id": "nr_middle_061",
+      "text": "The kid’s classmate and the kid’s teacher both see that the kid in the middle is sad.",
+      "src": "assets/narration/nr_middle_061.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "woman-teacher-classmate:witness",
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-teacher-classmate:witness",
+          "part": "prompt"
+        },
+        {
+          "stepId": "family-teacher-classmate:witness",
+          "part": "prompt"
+        }
+      ],
+      "sha256": "7e5cf7cb44c3df842d95ef2eaf3058d8bf8b56c486d8994dadce3d1ffeed4e9b",
+      "bytes": 206934,
+      "durationSeconds": 5.172225,
+      "provenance": {
+        "exportIndex": 61,
+        "sourceExportIndex": 61,
+        "sourceBatch": 1,
+        "nativeInputText": "The kid’s classmate and the kid’s teacher both see that the kid in the middle is sad.",
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/processed/nr_middle_061.mp3",
+        "decodedDurationSeconds": 5.17225,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/numbered-clips/061.mp3",
+        "sourceSha256": "7e5cf7cb44c3df842d95ef2eaf3058d8bf8b56c486d8994dadce3d1ffeed4e9b",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/naturalreader-export-001-100.zip",
+        "sourceZipSha256": "9e220681fa0d1ee570c02aab4b877cd5a80028c926a93ca2a568b5ffb3c61215",
+        "recordingIndexSha256": "3eee4b26d97102b291320b1208cbeada4e2655ab455c2318ac117b32c5d849de",
+        "canonicalRecordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed dedicated original100plus2 or revised connected22 paragraph projects at Evelyn Soft0.90x180WPM0pause and320MP3SeparateIndexSegment export; native audio bytes unchanged",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalSpokenWordSequenceVerified": true
+      },
+      "revisionCategory": "consistent-child-recipient-reference"
+    },
+    {
+      "id": "nr_middle_068",
+      "text": "The kid’s classmate did NOT help the kid in the middle. And the kid’s teacher did NOT help the kid in the middle. No one helped the kid in the middle.",
+      "src": "assets/narration/nr_middle_068.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "woman-teacher-classmate:outcome",
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-teacher-classmate:outcome",
+          "part": "prompt"
+        },
+        {
+          "stepId": "family-teacher-classmate:outcome",
+          "part": "prompt"
+        }
+      ],
+      "sha256": "2f912a8d4a3537d76df1fdb0e122a4615ccc149a23ba74eedd57cfb45ca8e52e",
+      "bytes": 391881,
+      "durationSeconds": 9.7959,
+      "provenance": {
+        "exportIndex": 68,
+        "sourceExportIndex": 11,
+        "sourceBatch": 5,
+        "nativeInputText": "The kid’s classmate did not help the kid in the middle. And the kid’s teacher did not help the kid in the middle. No one helped the kid in the middle.",
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/processed/nr_middle_068.mp3",
+        "decodedDurationSeconds": 9.7959375,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/connective-numbered-clips/068.mp3",
+        "sourceSha256": "2f912a8d4a3537d76df1fdb0e122a4615ccc149a23ba74eedd57cfb45ca8e52e",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/naturalreader-export-connected22.zip",
+        "sourceZipSha256": "31bc758d57445e3e5274549c5a15e767e91b93f26fa1709b59971b20c53cc382",
+        "recordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "canonicalRecordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed dedicated original100plus2 or revised connected22 paragraph projects at Evelyn Soft0.90x180WPM0pause and320MP3SeparateIndexSegment export; native audio bytes unchanged",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalSpokenWordSequenceVerified": true
+      },
+      "revisionCategory": "consistent-child-recipient-reference"
+    },
+    {
+      "id": "nr_middle_069",
+      "text": "Actually, remember, no one helped the kid in the middle. And the kid’s classmate did NOT help the kid in the middle. And the kid’s teacher did NOT help the kid in the middle. No one helped the kid in the middle.",
+      "src": "assets/narration/nr_middle_069.mp3",
+      "kind": "reminder",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "woman-teacher-classmate:recall-all",
+          "part": "reminder"
+        },
+        {
+          "stepId": "man-teacher-classmate:recall-all",
+          "part": "reminder"
+        },
+        {
+          "stepId": "family-teacher-classmate:recall-all",
+          "part": "reminder"
+        }
+      ],
+      "sha256": "1ea95edb2f9960a5b7746b7180210a136cd5ecaa757cada307973add99dbd843",
+      "bytes": 530853,
+      "durationSeconds": 13.2702,
+      "provenance": {
+        "exportIndex": 69,
+        "sourceExportIndex": 12,
+        "sourceBatch": 5,
+        "nativeInputText": "Actually, remember, no one helped the kid in the middle. And the kid’s classmate did not help the kid in the middle. And the kid’s teacher did not help the kid in the middle. No one helped the kid in the middle.",
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/processed/nr_middle_069.mp3",
+        "decodedDurationSeconds": 13.2701875,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/connective-numbered-clips/069.mp3",
+        "sourceSha256": "1ea95edb2f9960a5b7746b7180210a136cd5ecaa757cada307973add99dbd843",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/naturalreader-export-connected22.zip",
+        "sourceZipSha256": "31bc758d57445e3e5274549c5a15e767e91b93f26fa1709b59971b20c53cc382",
+        "recordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "canonicalRecordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed dedicated original100plus2 or revised connected22 paragraph projects at Evelyn Soft0.90x180WPM0pause and320MP3SeparateIndexSegment export; native audio bytes unchanged",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalSpokenWordSequenceVerified": true
+      },
+      "revisionCategory": "consistent-child-recipient-reference"
+    },
+    {
+      "id": "nr_middle_072",
+      "text": "The kid’s teacher and the kid’s dad both see that the kid in the middle is sad.",
+      "src": "assets/narration/nr_middle_072.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "man-dad-teacher:witness",
+          "part": "prompt"
+        }
+      ],
+      "sha256": "66a8971b0f84ddecdd0eeb6c1fe51a0464d3beda2be00bb2f828536a43dcd463",
+      "bytes": 192306,
+      "durationSeconds": 4.806525,
+      "provenance": {
+        "exportIndex": 72,
+        "sourceExportIndex": 72,
+        "sourceBatch": 1,
+        "nativeInputText": "The kid’s teacher and the kid’s dad both see that the kid in the middle is sad.",
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/processed/nr_middle_072.mp3",
+        "decodedDurationSeconds": 4.8065625,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/numbered-clips/072.mp3",
+        "sourceSha256": "66a8971b0f84ddecdd0eeb6c1fe51a0464d3beda2be00bb2f828536a43dcd463",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/naturalreader-export-001-100.zip",
+        "sourceZipSha256": "9e220681fa0d1ee570c02aab4b877cd5a80028c926a93ca2a568b5ffb3c61215",
+        "recordingIndexSha256": "3eee4b26d97102b291320b1208cbeada4e2655ab455c2318ac117b32c5d849de",
+        "canonicalRecordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed dedicated original100plus2 or revised connected22 paragraph projects at Evelyn Soft0.90x180WPM0pause and320MP3SeparateIndexSegment export; native audio bytes unchanged",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalSpokenWordSequenceVerified": true
+      },
+      "revisionCategory": "consistent-child-recipient-reference"
+    },
+    {
+      "id": "nr_middle_079",
+      "text": "The kid’s teacher did NOT help the kid in the middle. And the kid’s dad did NOT help the kid in the middle. No one helped the kid in the middle.",
+      "src": "assets/narration/nr_middle_079.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "man-dad-teacher:outcome",
+          "part": "prompt"
+        }
+      ],
+      "sha256": "7ca6d838a783727f727fd67ea3b1afbcf8cd20432f7d0a9eadd796a7f758040e",
+      "bytes": 376208,
+      "durationSeconds": 9.404075,
+      "provenance": {
+        "exportIndex": 79,
+        "sourceExportIndex": 13,
+        "sourceBatch": 5,
+        "nativeInputText": "The kid’s teacher did not help the kid in the middle. And the kid’s dad did not help the kid in the middle. No one helped the kid in the middle.",
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/processed/nr_middle_079.mp3",
+        "decodedDurationSeconds": 9.4040625,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/connective-numbered-clips/079.mp3",
+        "sourceSha256": "7ca6d838a783727f727fd67ea3b1afbcf8cd20432f7d0a9eadd796a7f758040e",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/naturalreader-export-connected22.zip",
+        "sourceZipSha256": "31bc758d57445e3e5274549c5a15e767e91b93f26fa1709b59971b20c53cc382",
+        "recordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "canonicalRecordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed dedicated original100plus2 or revised connected22 paragraph projects at Evelyn Soft0.90x180WPM0pause and320MP3SeparateIndexSegment export; native audio bytes unchanged",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalSpokenWordSequenceVerified": true
+      },
+      "revisionCategory": "consistent-child-recipient-reference"
+    },
+    {
+      "id": "nr_middle_080",
+      "text": "Actually, remember, no one helped the kid in the middle. And the kid’s teacher did NOT help the kid in the middle. And the kid’s dad did NOT help the kid in the middle. No one helped the kid in the middle.",
+      "src": "assets/narration/nr_middle_080.mp3",
+      "kind": "reminder",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "man-dad-teacher:recall-all",
+          "part": "reminder"
+        }
+      ],
+      "sha256": "8ce86da39dff5d0701ed0f0a9b3ccb77fa220ce1c7530dad7268ff61f128dfa3",
+      "bytes": 522494,
+      "durationSeconds": 13.061225,
+      "provenance": {
+        "exportIndex": 80,
+        "sourceExportIndex": 14,
+        "sourceBatch": 5,
+        "nativeInputText": "Actually, remember, no one helped the kid in the middle. And the kid’s teacher did not help the kid in the middle. And the kid’s dad did not help the kid in the middle. No one helped the kid in the middle.",
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/processed/nr_middle_080.mp3",
+        "decodedDurationSeconds": 13.06125,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/connective-numbered-clips/080.mp3",
+        "sourceSha256": "8ce86da39dff5d0701ed0f0a9b3ccb77fa220ce1c7530dad7268ff61f128dfa3",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/naturalreader-export-connected22.zip",
+        "sourceZipSha256": "31bc758d57445e3e5274549c5a15e767e91b93f26fa1709b59971b20c53cc382",
+        "recordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "canonicalRecordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed dedicated original100plus2 or revised connected22 paragraph projects at Evelyn Soft0.90x180WPM0pause and320MP3SeparateIndexSegment export; native audio bytes unchanged",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalSpokenWordSequenceVerified": true
+      },
+      "revisionCategory": "consistent-child-recipient-reference"
+    },
+    {
+      "id": "nr_middle_083",
+      "text": "The kid’s brother and the kid’s friend both see that the kid in the middle is sad.",
+      "src": "assets/narration/nr_middle_083.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "man-brother-friend:witness",
+          "part": "prompt"
+        }
+      ],
+      "sha256": "7b8004e7a89e2d89bc2debbeafd4f8da850b77d8a0dc979065930071903dd932",
+      "bytes": 198575,
+      "durationSeconds": 4.96325,
+      "provenance": {
+        "exportIndex": 83,
+        "sourceExportIndex": 83,
+        "sourceBatch": 1,
+        "nativeInputText": "The kid’s brother and the kid’s friend both see that the kid in the middle is sad.",
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/processed/nr_middle_083.mp3",
+        "decodedDurationSeconds": 4.96325,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/numbered-clips/083.mp3",
+        "sourceSha256": "7b8004e7a89e2d89bc2debbeafd4f8da850b77d8a0dc979065930071903dd932",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/naturalreader-export-001-100.zip",
+        "sourceZipSha256": "9e220681fa0d1ee570c02aab4b877cd5a80028c926a93ca2a568b5ffb3c61215",
+        "recordingIndexSha256": "3eee4b26d97102b291320b1208cbeada4e2655ab455c2318ac117b32c5d849de",
+        "canonicalRecordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed dedicated original100plus2 or revised connected22 paragraph projects at Evelyn Soft0.90x180WPM0pause and320MP3SeparateIndexSegment export; native audio bytes unchanged",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalSpokenWordSequenceVerified": true
+      },
+      "revisionCategory": "consistent-child-recipient-reference"
+    },
+    {
+      "id": "nr_middle_090",
+      "text": "The kid’s brother did NOT help the kid in the middle. And the kid’s friend did NOT help the kid in the middle. No one helped the kid in the middle.",
+      "src": "assets/narration/nr_middle_090.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "man-brother-friend:outcome",
+          "part": "prompt"
+        }
+      ],
+      "sha256": "88b41db0ca1544a189494bc17652ab9f26c3efb20308cb45ab352ab23669226d",
+      "bytes": 380387,
+      "durationSeconds": 9.50855,
+      "provenance": {
+        "exportIndex": 90,
+        "sourceExportIndex": 15,
+        "sourceBatch": 5,
+        "nativeInputText": "The kid’s brother did not help the kid in the middle. And the kid’s friend did not help the kid in the middle. No one helped the kid in the middle.",
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/processed/nr_middle_090.mp3",
+        "decodedDurationSeconds": 9.5085625,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/connective-numbered-clips/090.mp3",
+        "sourceSha256": "88b41db0ca1544a189494bc17652ab9f26c3efb20308cb45ab352ab23669226d",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/naturalreader-export-connected22.zip",
+        "sourceZipSha256": "31bc758d57445e3e5274549c5a15e767e91b93f26fa1709b59971b20c53cc382",
+        "recordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "canonicalRecordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed dedicated original100plus2 or revised connected22 paragraph projects at Evelyn Soft0.90x180WPM0pause and320MP3SeparateIndexSegment export; native audio bytes unchanged",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalSpokenWordSequenceVerified": true
+      },
+      "revisionCategory": "consistent-child-recipient-reference"
+    },
+    {
+      "id": "nr_middle_091",
+      "text": "Actually, remember, no one helped the kid in the middle. And the kid’s brother did NOT help the kid in the middle. And the kid’s friend did NOT help the kid in the middle. No one helped the kid in the middle.",
+      "src": "assets/narration/nr_middle_091.mp3",
+      "kind": "reminder",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "man-brother-friend:recall-all",
+          "part": "reminder"
+        }
+      ],
+      "sha256": "6e5601a3509eabccfbe25b353a59eb833886db796a68b603745bec2e23590768",
+      "bytes": 523538,
+      "durationSeconds": 13.087325,
+      "provenance": {
+        "exportIndex": 91,
+        "sourceExportIndex": 16,
+        "sourceBatch": 5,
+        "nativeInputText": "Actually, remember, no one helped the kid in the middle. And the kid’s brother did not help the kid in the middle. And the kid’s friend did not help the kid in the middle. No one helped the kid in the middle.",
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/processed/nr_middle_091.mp3",
+        "decodedDurationSeconds": 13.087375,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/connective-numbered-clips/091.mp3",
+        "sourceSha256": "6e5601a3509eabccfbe25b353a59eb833886db796a68b603745bec2e23590768",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/naturalreader-export-connected22.zip",
+        "sourceZipSha256": "31bc758d57445e3e5274549c5a15e767e91b93f26fa1709b59971b20c53cc382",
+        "recordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "canonicalRecordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed dedicated original100plus2 or revised connected22 paragraph projects at Evelyn Soft0.90x180WPM0pause and320MP3SeparateIndexSegment export; native audio bytes unchanged",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalSpokenWordSequenceVerified": true
+      },
+      "revisionCategory": "consistent-child-recipient-reference"
+    },
+    {
+      "id": "nr_middle_094",
+      "text": "The kid’s dad and the kid’s brother both see that the kid in the middle is sad.",
+      "src": "assets/narration/nr_middle_094.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "man-dad-brother:witness",
+          "part": "prompt"
+        }
+      ],
+      "sha256": "77a3436eacfa3974ad2189045ff5f52ad04bb13d9a2dcab8f162aa206c30d11e",
+      "bytes": 194396,
+      "durationSeconds": 4.858775,
+      "provenance": {
+        "exportIndex": 94,
+        "sourceExportIndex": 94,
+        "sourceBatch": 1,
+        "nativeInputText": "The kid’s dad and the kid’s brother both see that the kid in the middle is sad.",
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/processed/nr_middle_094.mp3",
+        "decodedDurationSeconds": 4.8588125,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/numbered-clips/094.mp3",
+        "sourceSha256": "77a3436eacfa3974ad2189045ff5f52ad04bb13d9a2dcab8f162aa206c30d11e",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/naturalreader-export-001-100.zip",
+        "sourceZipSha256": "9e220681fa0d1ee570c02aab4b877cd5a80028c926a93ca2a568b5ffb3c61215",
+        "recordingIndexSha256": "3eee4b26d97102b291320b1208cbeada4e2655ab455c2318ac117b32c5d849de",
+        "canonicalRecordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed dedicated original100plus2 or revised connected22 paragraph projects at Evelyn Soft0.90x180WPM0pause and320MP3SeparateIndexSegment export; native audio bytes unchanged",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalSpokenWordSequenceVerified": true
+      },
+      "revisionCategory": "consistent-child-recipient-reference"
+    },
+    {
+      "id": "nr_middle_095",
+      "text": "The kid’s dad did NOT help the kid in the middle. And the kid’s brother did NOT help the kid in the middle. No one helped the kid in the middle.",
+      "src": "assets/narration/nr_middle_095.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "man-dad-brother:outcome",
+          "part": "prompt"
+        }
+      ],
+      "sha256": "7dfab7a1df06bdc99ca00cff77864ff8e75b77352ae79770a0872a61d386263e",
+      "bytes": 379343,
+      "durationSeconds": 9.48245,
+      "provenance": {
+        "exportIndex": 95,
+        "sourceExportIndex": 17,
+        "sourceBatch": 5,
+        "nativeInputText": "The kid’s dad did not help the kid in the middle. And the kid’s brother did not help the kid in the middle. No one helped the kid in the middle.",
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/processed/nr_middle_095.mp3",
+        "decodedDurationSeconds": 9.4824375,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/connective-numbered-clips/095.mp3",
+        "sourceSha256": "7dfab7a1df06bdc99ca00cff77864ff8e75b77352ae79770a0872a61d386263e",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/naturalreader-export-connected22.zip",
+        "sourceZipSha256": "31bc758d57445e3e5274549c5a15e767e91b93f26fa1709b59971b20c53cc382",
+        "recordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "canonicalRecordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed dedicated original100plus2 or revised connected22 paragraph projects at Evelyn Soft0.90x180WPM0pause and320MP3SeparateIndexSegment export; native audio bytes unchanged",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalSpokenWordSequenceVerified": true
+      },
+      "revisionCategory": "consistent-child-recipient-reference"
+    },
+    {
+      "id": "nr_middle_096",
+      "text": "Actually, remember, no one helped the kid in the middle. And the kid’s dad did NOT help the kid in the middle. And the kid’s brother did NOT help the kid in the middle. No one helped the kid in the middle.",
+      "src": "assets/narration/nr_middle_096.mp3",
+      "kind": "reminder",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "man-dad-brother:recall-all",
+          "part": "reminder"
+        }
+      ],
+      "sha256": "0ab9527357f5b580402f29dffab0daad775a489c335b10dd6be8027cd81c08bb",
+      "bytes": 523538,
+      "durationSeconds": 13.087325,
+      "provenance": {
+        "exportIndex": 96,
+        "sourceExportIndex": 18,
+        "sourceBatch": 5,
+        "nativeInputText": "Actually, remember, no one helped the kid in the middle. And the kid’s dad did not help the kid in the middle. And the kid’s brother did not help the kid in the middle. No one helped the kid in the middle.",
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/processed/nr_middle_096.mp3",
+        "decodedDurationSeconds": 13.087375,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/connective-numbered-clips/096.mp3",
+        "sourceSha256": "0ab9527357f5b580402f29dffab0daad775a489c335b10dd6be8027cd81c08bb",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/naturalreader-export-connected22.zip",
+        "sourceZipSha256": "31bc758d57445e3e5274549c5a15e767e91b93f26fa1709b59971b20c53cc382",
+        "recordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "canonicalRecordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed dedicated original100plus2 or revised connected22 paragraph projects at Evelyn Soft0.90x180WPM0pause and320MP3SeparateIndexSegment export; native audio bytes unchanged",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalSpokenWordSequenceVerified": true
+      },
+      "revisionCategory": "consistent-child-recipient-reference"
+    },
+    {
+      "id": "nr_middle_097",
+      "text": "The kid’s dad and the kid’s mom both see that the kid in the middle is sad.",
+      "src": "assets/narration/nr_middle_097.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "family-mom-dad:witness",
+          "part": "prompt"
+        }
+      ],
+      "sha256": "9dc8ba4b5f66ec25c8102b70526fd23cb84fafa8140f50f0e70f168242aa23df",
+      "bytes": 192306,
+      "durationSeconds": 4.806525,
+      "provenance": {
+        "exportIndex": 97,
+        "sourceExportIndex": 97,
+        "sourceBatch": 1,
+        "nativeInputText": "The kid’s dad and the kid’s mom both see that the kid in the middle is sad.",
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/processed/nr_middle_097.mp3",
+        "decodedDurationSeconds": 4.8065625,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/numbered-clips/097.mp3",
+        "sourceSha256": "9dc8ba4b5f66ec25c8102b70526fd23cb84fafa8140f50f0e70f168242aa23df",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/naturalreader-export-001-100.zip",
+        "sourceZipSha256": "9e220681fa0d1ee570c02aab4b877cd5a80028c926a93ca2a568b5ffb3c61215",
+        "recordingIndexSha256": "3eee4b26d97102b291320b1208cbeada4e2655ab455c2318ac117b32c5d849de",
+        "canonicalRecordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed dedicated original100plus2 or revised connected22 paragraph projects at Evelyn Soft0.90x180WPM0pause and320MP3SeparateIndexSegment export; native audio bytes unchanged",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalSpokenWordSequenceVerified": true
+      },
+      "revisionCategory": "consistent-child-recipient-reference"
+    },
+    {
+      "id": "nr_middle_098",
+      "text": "The kid’s dad did NOT help the kid in the middle. And the kid’s mom did NOT help the kid in the middle. No one helped the kid in the middle.",
+      "src": "assets/narration/nr_middle_098.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "family-mom-dad:outcome",
+          "part": "prompt"
+        }
+      ],
+      "sha256": "c01f26248046ad5c39e3f964e4f9a484aeeb9aed1d63c7c8f02246dba20b1671",
+      "bytes": 375163,
+      "durationSeconds": 9.37795,
+      "provenance": {
+        "exportIndex": 98,
+        "sourceExportIndex": 19,
+        "sourceBatch": 5,
+        "nativeInputText": "The kid’s dad did not help the kid in the middle. And the kid’s mom did not help the kid in the middle. No one helped the kid in the middle.",
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/processed/nr_middle_098.mp3",
+        "decodedDurationSeconds": 9.378,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/connective-numbered-clips/098.mp3",
+        "sourceSha256": "c01f26248046ad5c39e3f964e4f9a484aeeb9aed1d63c7c8f02246dba20b1671",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/naturalreader-export-connected22.zip",
+        "sourceZipSha256": "31bc758d57445e3e5274549c5a15e767e91b93f26fa1709b59971b20c53cc382",
+        "recordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "canonicalRecordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed dedicated original100plus2 or revised connected22 paragraph projects at Evelyn Soft0.90x180WPM0pause and320MP3SeparateIndexSegment export; native audio bytes unchanged",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalSpokenWordSequenceVerified": true
+      },
+      "revisionCategory": "consistent-child-recipient-reference"
+    },
+    {
+      "id": "nr_middle_099",
+      "text": "Actually, remember, no one helped the kid in the middle. And the kid’s dad did NOT help the kid in the middle. And the kid’s mom did NOT help the kid in the middle. No one helped the kid in the middle.",
+      "src": "assets/narration/nr_middle_099.mp3",
+      "kind": "reminder",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "family-mom-dad:recall-all",
+          "part": "reminder"
+        }
+      ],
+      "sha256": "94e5d1625c908957de1d489d748dea1f40def4caf27ff9dface24731cdc1a7ad",
+      "bytes": 519359,
+      "durationSeconds": 12.98285,
+      "provenance": {
+        "exportIndex": 99,
+        "sourceExportIndex": 20,
+        "sourceBatch": 5,
+        "nativeInputText": "Actually, remember, no one helped the kid in the middle. And the kid’s dad did not help the kid in the middle. And the kid’s mom did not help the kid in the middle. No one helped the kid in the middle.",
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/processed/nr_middle_099.mp3",
+        "decodedDurationSeconds": 12.982875,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/connective-numbered-clips/099.mp3",
+        "sourceSha256": "94e5d1625c908957de1d489d748dea1f40def4caf27ff9dface24731cdc1a7ad",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/naturalreader-export-connected22.zip",
+        "sourceZipSha256": "31bc758d57445e3e5274549c5a15e767e91b93f26fa1709b59971b20c53cc382",
+        "recordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "canonicalRecordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed dedicated original100plus2 or revised connected22 paragraph projects at Evelyn Soft0.90x180WPM0pause and320MP3SeparateIndexSegment export; native audio bytes unchanged",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalSpokenWordSequenceVerified": true
+      },
+      "revisionCategory": "consistent-child-recipient-reference"
+    },
+    {
+      "id": "nr_middle_100",
+      "text": "The kid’s sister and the kid’s brother both see that the kid in the middle is sad.",
+      "src": "assets/narration/nr_middle_100.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "family-sister-brother:witness",
+          "part": "prompt"
+        }
+      ],
+      "sha256": "7d1a60aa55d46b6b26f450479fe7c93a36768a27d3807eecb82c9aecb56a9229",
+      "bytes": 196485,
+      "durationSeconds": 4.911,
+      "provenance": {
+        "exportIndex": 100,
+        "sourceExportIndex": 100,
+        "sourceBatch": 1,
+        "nativeInputText": "The kid’s sister and the kid’s brother both see that the kid in the middle is sad.",
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/processed/nr_middle_100.mp3",
+        "decodedDurationSeconds": 4.911,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/numbered-clips/100.mp3",
+        "sourceSha256": "7d1a60aa55d46b6b26f450479fe7c93a36768a27d3807eecb82c9aecb56a9229",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/naturalreader-export-001-100.zip",
+        "sourceZipSha256": "9e220681fa0d1ee570c02aab4b877cd5a80028c926a93ca2a568b5ffb3c61215",
+        "recordingIndexSha256": "3eee4b26d97102b291320b1208cbeada4e2655ab455c2318ac117b32c5d849de",
+        "canonicalRecordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed dedicated original100plus2 or revised connected22 paragraph projects at Evelyn Soft0.90x180WPM0pause and320MP3SeparateIndexSegment export; native audio bytes unchanged",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalSpokenWordSequenceVerified": true
+      },
+      "revisionCategory": "consistent-child-recipient-reference"
+    },
+    {
+      "id": "nr_middle_101",
+      "text": "The kid’s sister did NOT help the kid in the middle. And the kid’s brother did NOT help the kid in the middle. No one helped the kid in the middle.",
+      "src": "assets/narration/nr_middle_101.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "family-sister-brother:outcome",
+          "part": "prompt"
+        }
+      ],
+      "sha256": "7e6602c40dc7cdde4d6f7986e69c03432541ee8f6899f7af04bc18f020e86956",
+      "bytes": 382477,
+      "durationSeconds": 9.5608,
+      "provenance": {
+        "exportIndex": 101,
+        "sourceExportIndex": 21,
+        "sourceBatch": 5,
+        "nativeInputText": "The kid’s sister did not help the kid in the middle. And the kid’s brother did not help the kid in the middle. No one helped the kid in the middle.",
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/processed/nr_middle_101.mp3",
+        "decodedDurationSeconds": 9.5608125,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/connective-numbered-clips/101.mp3",
+        "sourceSha256": "7e6602c40dc7cdde4d6f7986e69c03432541ee8f6899f7af04bc18f020e86956",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/naturalreader-export-connected22.zip",
+        "sourceZipSha256": "31bc758d57445e3e5274549c5a15e767e91b93f26fa1709b59971b20c53cc382",
+        "recordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "canonicalRecordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed dedicated original100plus2 or revised connected22 paragraph projects at Evelyn Soft0.90x180WPM0pause and320MP3SeparateIndexSegment export; native audio bytes unchanged",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalSpokenWordSequenceVerified": true
+      },
+      "revisionCategory": "consistent-child-recipient-reference"
+    },
+    {
+      "id": "nr_middle_102",
+      "text": "Actually, remember, no one helped the kid in the middle. And the kid’s sister did NOT help the kid in the middle. And the kid’s brother did NOT help the kid in the middle. No one helped the kid in the middle.",
+      "src": "assets/narration/nr_middle_102.mp3",
+      "kind": "reminder",
+      "status": "verified-complete-native-recording",
+      "uses": [
+        {
+          "stepId": "family-sister-brother:recall-all",
+          "part": "reminder"
+        }
+      ],
+      "sha256": "f49c6b840d4947cde61191d3ced58aaccbebfd368c9ea86ed267827d43d5f585",
+      "bytes": 528763,
+      "durationSeconds": 13.21795,
+      "provenance": {
+        "exportIndex": 102,
+        "sourceExportIndex": 22,
+        "sourceBatch": 5,
+        "nativeInputText": "Actually, remember, no one helped the kid in the middle. And the kid’s sister did not help the kid in the middle. And the kid’s brother did not help the kid in the middle. No one helped the kid in the middle.",
+        "file": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/processed/nr_middle_102.mp3",
+        "decodedDurationSeconds": 13.218,
+        "sampleRate": 44100,
+        "channels": 1,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/connective-numbered-clips/102.mp3",
+        "sourceSha256": "f49c6b840d4947cde61191d3ced58aaccbebfd368c9ea86ed267827d43d5f585",
+        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_consistent_recipient_2026-10-06/audio-preparation/native-source/naturalreader-export-connected22.zip",
+        "sourceZipSha256": "31bc758d57445e3e5274549c5a15e767e91b93f26fa1709b59971b20c53cc382",
+        "recordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "canonicalRecordingIndexSha256": "587c85c28d1720675a85cab322511b86cb87f6e419aa88063d0b10247af0c547",
+        "voiceProvider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "insertedPauseMilliseconds": 0,
+        "nativeVoiceGenerationSpeedVerified": true,
+        "voiceSettingsEvidence": "Observed dedicated original100plus2 or revised connected22 paragraph projects at Evelyn Soft0.90x180WPM0pause and320MP3SeparateIndexSegment export; native audio bytes unchanged",
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false,
+        "cueAlignmentApproved": true,
+        "strictFinalSpokenSequenceMatches": true,
+        "allTheArticlesVerified": true,
+        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
+        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "decodeVerified": true,
+        "fullProjectTextVerified": true,
+        "canonicalSpokenWordSequenceVerified": true
+      },
+      "revisionCategory": "consistent-child-recipient-reference"
     }
   ],
   "screens": {
@@ -17091,8 +18947,8 @@
       "proposedWording": false
     },
     "woman-mom-teacher:intro-recipient": {
-      "prompt": "nr_002",
-      "reminder": "nr_003",
+      "prompt": "nr_middle_001",
+      "reminder": "nr_middle_002",
       "options": [],
       "proposedWording": false
     },
@@ -17115,7 +18971,7 @@
       "proposedWording": false
     },
     "woman-mom-teacher:witness": {
-      "prompt": "nr_009",
+      "prompt": "nr_middle_003",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -17245,20 +19101,20 @@
       "choiceIndex": 1
     },
     "woman-mom-teacher:outcome-summary": {
-      "prompt": "nr_285",
+      "prompt": "nr_middle_016",
       "reminder": null,
       "options": [],
       "proposedWording": false
     },
     "woman-mom-teacher:outcome": {
-      "prompt": "nr_289",
+      "prompt": "nr_middle_017",
       "reminder": null,
       "options": [],
       "proposedWording": false
     },
     "woman-mom-teacher:recall-all": {
-      "prompt": "nr_030",
-      "reminder": "nr_307",
+      "prompt": "nr_middle_018",
+      "reminder": "nr_middle_019",
       "options": [
         "nr_011",
         "nr_012"
@@ -17367,8 +19223,8 @@
       "proposedWording": false
     },
     "woman-sister-friend:intro-recipient": {
-      "prompt": "nr_002",
-      "reminder": "nr_003",
+      "prompt": "nr_middle_001",
+      "reminder": "nr_middle_002",
       "options": [],
       "proposedWording": false
     },
@@ -17391,7 +19247,7 @@
       "proposedWording": false
     },
     "woman-sister-friend:witness": {
-      "prompt": "nr_057",
+      "prompt": "nr_middle_025",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -17521,20 +19377,20 @@
       "choiceIndex": 1
     },
     "woman-sister-friend:outcome-summary": {
-      "prompt": "nr_285",
+      "prompt": "nr_middle_016",
       "reminder": null,
       "options": [],
       "proposedWording": false
     },
     "woman-sister-friend:outcome": {
-      "prompt": "nr_290",
+      "prompt": "nr_middle_038",
       "reminder": null,
       "options": [],
       "proposedWording": false
     },
     "woman-sister-friend:recall-all": {
-      "prompt": "nr_030",
-      "reminder": "nr_308",
+      "prompt": "nr_middle_018",
+      "reminder": "nr_middle_039",
       "options": [
         "nr_011",
         "nr_012"
@@ -17643,8 +19499,8 @@
       "proposedWording": false
     },
     "woman-bestfriend-friend:intro-recipient": {
-      "prompt": "nr_002",
-      "reminder": "nr_003",
+      "prompt": "nr_middle_001",
+      "reminder": "nr_middle_002",
       "options": [],
       "proposedWording": false
     },
@@ -17667,7 +19523,7 @@
       "proposedWording": false
     },
     "woman-bestfriend-friend:witness": {
-      "prompt": "nr_077",
+      "prompt": "nr_middle_044",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -17797,20 +19653,20 @@
       "choiceIndex": 1
     },
     "woman-bestfriend-friend:outcome-summary": {
-      "prompt": "nr_285",
+      "prompt": "nr_middle_016",
       "reminder": null,
       "options": [],
       "proposedWording": false
     },
     "woman-bestfriend-friend:outcome": {
-      "prompt": "nr_291",
+      "prompt": "nr_middle_051",
       "reminder": null,
       "options": [],
       "proposedWording": false
     },
     "woman-bestfriend-friend:recall-all": {
-      "prompt": "nr_030",
-      "reminder": "nr_309",
+      "prompt": "nr_middle_018",
+      "reminder": "nr_middle_052",
       "options": [
         "nr_011",
         "nr_012"
@@ -17919,8 +19775,8 @@
       "proposedWording": false
     },
     "woman-teacher-friend:intro-recipient": {
-      "prompt": "nr_002",
-      "reminder": "nr_003",
+      "prompt": "nr_middle_001",
+      "reminder": "nr_middle_002",
       "options": [],
       "proposedWording": false
     },
@@ -17943,7 +19799,7 @@
       "proposedWording": false
     },
     "woman-teacher-friend:witness": {
-      "prompt": "nr_087",
+      "prompt": "nr_middle_055",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -18073,20 +19929,20 @@
       "choiceIndex": 1
     },
     "woman-teacher-friend:outcome-summary": {
-      "prompt": "nr_285",
+      "prompt": "nr_middle_016",
       "reminder": null,
       "options": [],
       "proposedWording": false
     },
     "woman-teacher-friend:outcome": {
-      "prompt": "nr_292",
+      "prompt": "nr_middle_056",
       "reminder": null,
       "options": [],
       "proposedWording": false
     },
     "woman-teacher-friend:recall-all": {
-      "prompt": "nr_030",
-      "reminder": "nr_310",
+      "prompt": "nr_middle_018",
+      "reminder": "nr_middle_057",
       "options": [
         "nr_011",
         "nr_012"
@@ -18195,8 +20051,8 @@
       "proposedWording": false
     },
     "woman-mom-sister:intro-recipient": {
-      "prompt": "nr_002",
-      "reminder": "nr_003",
+      "prompt": "nr_middle_001",
+      "reminder": "nr_middle_002",
       "options": [],
       "proposedWording": false
     },
@@ -18219,7 +20075,7 @@
       "proposedWording": false
     },
     "woman-mom-sister:witness": {
-      "prompt": "nr_089",
+      "prompt": "nr_middle_058",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -18349,20 +20205,20 @@
       "choiceIndex": 1
     },
     "woman-mom-sister:outcome-summary": {
-      "prompt": "nr_285",
+      "prompt": "nr_middle_016",
       "reminder": null,
       "options": [],
       "proposedWording": false
     },
     "woman-mom-sister:outcome": {
-      "prompt": "nr_293",
+      "prompt": "nr_middle_059",
       "reminder": null,
       "options": [],
       "proposedWording": false
     },
     "woman-mom-sister:recall-all": {
-      "prompt": "nr_030",
-      "reminder": "nr_311",
+      "prompt": "nr_middle_018",
+      "reminder": "nr_middle_060",
       "options": [
         "nr_011",
         "nr_012"
@@ -18471,8 +20327,8 @@
       "proposedWording": false
     },
     "woman-teacher-classmate:intro-recipient": {
-      "prompt": "nr_002",
-      "reminder": "nr_003",
+      "prompt": "nr_middle_001",
+      "reminder": "nr_middle_002",
       "options": [],
       "proposedWording": false
     },
@@ -18495,7 +20351,7 @@
       "proposedWording": false
     },
     "woman-teacher-classmate:witness": {
-      "prompt": "nr_093",
+      "prompt": "nr_middle_061",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -18625,20 +20481,20 @@
       "choiceIndex": 1
     },
     "woman-teacher-classmate:outcome-summary": {
-      "prompt": "nr_285",
+      "prompt": "nr_middle_016",
       "reminder": null,
       "options": [],
       "proposedWording": false
     },
     "woman-teacher-classmate:outcome": {
-      "prompt": "nr_294",
+      "prompt": "nr_middle_068",
       "reminder": null,
       "options": [],
       "proposedWording": false
     },
     "woman-teacher-classmate:recall-all": {
-      "prompt": "nr_030",
-      "reminder": "nr_312",
+      "prompt": "nr_middle_018",
+      "reminder": "nr_middle_069",
       "options": [
         "nr_011",
         "nr_012"
@@ -18747,8 +20603,8 @@
       "proposedWording": false
     },
     "man-dad-teacher:intro-recipient": {
-      "prompt": "nr_002",
-      "reminder": "nr_003",
+      "prompt": "nr_middle_001",
+      "reminder": "nr_middle_002",
       "options": [],
       "proposedWording": false
     },
@@ -18771,7 +20627,7 @@
       "proposedWording": false
     },
     "man-dad-teacher:witness": {
-      "prompt": "nr_105",
+      "prompt": "nr_middle_072",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -18901,20 +20757,20 @@
       "choiceIndex": 1
     },
     "man-dad-teacher:outcome-summary": {
-      "prompt": "nr_285",
+      "prompt": "nr_middle_016",
       "reminder": null,
       "options": [],
       "proposedWording": false
     },
     "man-dad-teacher:outcome": {
-      "prompt": "nr_295",
+      "prompt": "nr_middle_079",
       "reminder": null,
       "options": [],
       "proposedWording": false
     },
     "man-dad-teacher:recall-all": {
-      "prompt": "nr_030",
-      "reminder": "nr_313",
+      "prompt": "nr_middle_018",
+      "reminder": "nr_middle_080",
       "options": [
         "nr_011",
         "nr_012"
@@ -19023,8 +20879,8 @@
       "proposedWording": false
     },
     "man-brother-friend:intro-recipient": {
-      "prompt": "nr_002",
-      "reminder": "nr_003",
+      "prompt": "nr_middle_001",
+      "reminder": "nr_middle_002",
       "options": [],
       "proposedWording": false
     },
@@ -19047,7 +20903,7 @@
       "proposedWording": false
     },
     "man-brother-friend:witness": {
-      "prompt": "nr_117",
+      "prompt": "nr_middle_083",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -19177,20 +21033,20 @@
       "choiceIndex": 1
     },
     "man-brother-friend:outcome-summary": {
-      "prompt": "nr_285",
+      "prompt": "nr_middle_016",
       "reminder": null,
       "options": [],
       "proposedWording": false
     },
     "man-brother-friend:outcome": {
-      "prompt": "nr_296",
+      "prompt": "nr_middle_090",
       "reminder": null,
       "options": [],
       "proposedWording": false
     },
     "man-brother-friend:recall-all": {
-      "prompt": "nr_030",
-      "reminder": "nr_314",
+      "prompt": "nr_middle_018",
+      "reminder": "nr_middle_091",
       "options": [
         "nr_011",
         "nr_012"
@@ -19299,8 +21155,8 @@
       "proposedWording": false
     },
     "man-bestfriend-friend:intro-recipient": {
-      "prompt": "nr_002",
-      "reminder": "nr_003",
+      "prompt": "nr_middle_001",
+      "reminder": "nr_middle_002",
       "options": [],
       "proposedWording": false
     },
@@ -19323,7 +21179,7 @@
       "proposedWording": false
     },
     "man-bestfriend-friend:witness": {
-      "prompt": "nr_077",
+      "prompt": "nr_middle_044",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -19453,20 +21309,20 @@
       "choiceIndex": 1
     },
     "man-bestfriend-friend:outcome-summary": {
-      "prompt": "nr_285",
+      "prompt": "nr_middle_016",
       "reminder": null,
       "options": [],
       "proposedWording": false
     },
     "man-bestfriend-friend:outcome": {
-      "prompt": "nr_291",
+      "prompt": "nr_middle_051",
       "reminder": null,
       "options": [],
       "proposedWording": false
     },
     "man-bestfriend-friend:recall-all": {
-      "prompt": "nr_030",
-      "reminder": "nr_309",
+      "prompt": "nr_middle_018",
+      "reminder": "nr_middle_052",
       "options": [
         "nr_011",
         "nr_012"
@@ -19575,8 +21431,8 @@
       "proposedWording": false
     },
     "man-teacher-friend:intro-recipient": {
-      "prompt": "nr_002",
-      "reminder": "nr_003",
+      "prompt": "nr_middle_001",
+      "reminder": "nr_middle_002",
       "options": [],
       "proposedWording": false
     },
@@ -19599,7 +21455,7 @@
       "proposedWording": false
     },
     "man-teacher-friend:witness": {
-      "prompt": "nr_087",
+      "prompt": "nr_middle_055",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -19729,20 +21585,20 @@
       "choiceIndex": 1
     },
     "man-teacher-friend:outcome-summary": {
-      "prompt": "nr_285",
+      "prompt": "nr_middle_016",
       "reminder": null,
       "options": [],
       "proposedWording": false
     },
     "man-teacher-friend:outcome": {
-      "prompt": "nr_292",
+      "prompt": "nr_middle_056",
       "reminder": null,
       "options": [],
       "proposedWording": false
     },
     "man-teacher-friend:recall-all": {
-      "prompt": "nr_030",
-      "reminder": "nr_310",
+      "prompt": "nr_middle_018",
+      "reminder": "nr_middle_057",
       "options": [
         "nr_011",
         "nr_012"
@@ -19851,8 +21707,8 @@
       "proposedWording": false
     },
     "man-dad-brother:intro-recipient": {
-      "prompt": "nr_002",
-      "reminder": "nr_003",
+      "prompt": "nr_middle_001",
+      "reminder": "nr_middle_002",
       "options": [],
       "proposedWording": false
     },
@@ -19875,7 +21731,7 @@
       "proposedWording": false
     },
     "man-dad-brother:witness": {
-      "prompt": "nr_127",
+      "prompt": "nr_middle_094",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -20005,20 +21861,20 @@
       "choiceIndex": 1
     },
     "man-dad-brother:outcome-summary": {
-      "prompt": "nr_285",
+      "prompt": "nr_middle_016",
       "reminder": null,
       "options": [],
       "proposedWording": false
     },
     "man-dad-brother:outcome": {
-      "prompt": "nr_297",
+      "prompt": "nr_middle_095",
       "reminder": null,
       "options": [],
       "proposedWording": false
     },
     "man-dad-brother:recall-all": {
-      "prompt": "nr_030",
-      "reminder": "nr_315",
+      "prompt": "nr_middle_018",
+      "reminder": "nr_middle_096",
       "options": [
         "nr_011",
         "nr_012"
@@ -20127,8 +21983,8 @@
       "proposedWording": false
     },
     "man-teacher-classmate:intro-recipient": {
-      "prompt": "nr_002",
-      "reminder": "nr_003",
+      "prompt": "nr_middle_001",
+      "reminder": "nr_middle_002",
       "options": [],
       "proposedWording": false
     },
@@ -20151,7 +22007,7 @@
       "proposedWording": false
     },
     "man-teacher-classmate:witness": {
-      "prompt": "nr_093",
+      "prompt": "nr_middle_061",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -20281,20 +22137,20 @@
       "choiceIndex": 1
     },
     "man-teacher-classmate:outcome-summary": {
-      "prompt": "nr_285",
+      "prompt": "nr_middle_016",
       "reminder": null,
       "options": [],
       "proposedWording": false
     },
     "man-teacher-classmate:outcome": {
-      "prompt": "nr_294",
+      "prompt": "nr_middle_068",
       "reminder": null,
       "options": [],
       "proposedWording": false
     },
     "man-teacher-classmate:recall-all": {
-      "prompt": "nr_030",
-      "reminder": "nr_312",
+      "prompt": "nr_middle_018",
+      "reminder": "nr_middle_069",
       "options": [
         "nr_011",
         "nr_012"
@@ -20403,8 +22259,8 @@
       "proposedWording": false
     },
     "family-mom-dad:intro-recipient": {
-      "prompt": "nr_002",
-      "reminder": "nr_003",
+      "prompt": "nr_middle_001",
+      "reminder": "nr_middle_002",
       "options": [],
       "proposedWording": false
     },
@@ -20427,7 +22283,7 @@
       "proposedWording": false
     },
     "family-mom-dad:witness": {
-      "prompt": "nr_129",
+      "prompt": "nr_middle_097",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -20557,20 +22413,20 @@
       "choiceIndex": 1
     },
     "family-mom-dad:outcome-summary": {
-      "prompt": "nr_285",
+      "prompt": "nr_middle_016",
       "reminder": null,
       "options": [],
       "proposedWording": false
     },
     "family-mom-dad:outcome": {
-      "prompt": "nr_298",
+      "prompt": "nr_middle_098",
       "reminder": null,
       "options": [],
       "proposedWording": false
     },
     "family-mom-dad:recall-all": {
-      "prompt": "nr_030",
-      "reminder": "nr_316",
+      "prompt": "nr_middle_018",
+      "reminder": "nr_middle_099",
       "options": [
         "nr_011",
         "nr_012"
@@ -20679,8 +22535,8 @@
       "proposedWording": false
     },
     "family-sister-brother:intro-recipient": {
-      "prompt": "nr_002",
-      "reminder": "nr_003",
+      "prompt": "nr_middle_001",
+      "reminder": "nr_middle_002",
       "options": [],
       "proposedWording": false
     },
@@ -20703,7 +22559,7 @@
       "proposedWording": false
     },
     "family-sister-brother:witness": {
-      "prompt": "nr_131",
+      "prompt": "nr_middle_100",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -20833,20 +22689,20 @@
       "choiceIndex": 1
     },
     "family-sister-brother:outcome-summary": {
-      "prompt": "nr_285",
+      "prompt": "nr_middle_016",
       "reminder": null,
       "options": [],
       "proposedWording": false
     },
     "family-sister-brother:outcome": {
-      "prompt": "nr_299",
+      "prompt": "nr_middle_101",
       "reminder": null,
       "options": [],
       "proposedWording": false
     },
     "family-sister-brother:recall-all": {
-      "prompt": "nr_030",
-      "reminder": "nr_317",
+      "prompt": "nr_middle_018",
+      "reminder": "nr_middle_102",
       "options": [
         "nr_011",
         "nr_012"
@@ -21783,8 +23639,8 @@
       "proposedWording": false
     },
     "family-teacher-classmate:intro-recipient": {
-      "prompt": "nr_002",
-      "reminder": "nr_003",
+      "prompt": "nr_middle_001",
+      "reminder": "nr_middle_002",
       "options": [],
       "proposedWording": false
     },
@@ -21807,7 +23663,7 @@
       "proposedWording": false
     },
     "family-teacher-classmate:witness": {
-      "prompt": "nr_093",
+      "prompt": "nr_middle_061",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -21937,20 +23793,20 @@
       "choiceIndex": 1
     },
     "family-teacher-classmate:outcome-summary": {
-      "prompt": "nr_285",
+      "prompt": "nr_middle_016",
       "reminder": null,
       "options": [],
       "proposedWording": false
     },
     "family-teacher-classmate:outcome": {
-      "prompt": "nr_294",
+      "prompt": "nr_middle_068",
       "reminder": null,
       "options": [],
       "proposedWording": false
     },
     "family-teacher-classmate:recall-all": {
-      "prompt": "nr_030",
-      "reminder": "nr_312",
+      "prompt": "nr_middle_018",
+      "reminder": "nr_middle_069",
       "options": [
         "nr_011",
         "nr_012"
@@ -22059,5 +23915,5 @@
       "proposedWording": false
     }
   },
-  "note": "Complete current narration catalog; source text is canonical, and each recording retains its provenance and word-cue hash."
+  "note": "Current complete narration index; superseded recordings have no active uses."
 }

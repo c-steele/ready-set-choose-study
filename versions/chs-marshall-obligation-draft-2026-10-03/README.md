@@ -1,5 +1,7 @@
 # Full-session obligation draft
 
+October 6 consistent-reference revision: the child who needs help is called **the kid in the middle** throughout participant captions, questions, confidence follow-ups, confirmations, outcome statements and reminders. Full native narration is updated to match those references. This terminology revision preserves the study questions, choices, branching, character positions and source artwork.
+
 October 6 current preview: obligation-strength questions now include the full action and recipient (for example, “How much do you think the kid’s mom HAS TO help the kid?”). A No obligation judgment opens a neutral spoken confirmation; Yes accepts the original No and skips strength, while No reopens the obligation question. The overall Mean/Nice question explicitly repeats that no one helped. All 32 new passages are verified complete native Evelyn Soft recordings at 0.90×, with matching captions and word cues; no words were spliced. All current recording mappings are ready. These wording and confirmation changes are adaptations. Current narration mappings are authoritative; historical notes below describe earlier versions.
 
 Full-session revision, September 28, 2026. Open `index.html` in the local preview; choose **Try the session** or **Full storyboard**. `SCRIPT.md` contains every spoken prompt, response set, conditional rule, and reminder. The storyboard also has a print/save as PDF control.

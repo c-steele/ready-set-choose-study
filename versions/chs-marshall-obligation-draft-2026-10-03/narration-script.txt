@@ -14,10 +14,6 @@ This big one is this kid’s mom. This one is the kid’s mom. Tap the kid’s m
 
 Now let’s say that one day the kid in the middle was very sad.
 
-The kid’s teacher and the kid’s mom both see that the kid is sad.
-
-Now, do you think the kid’s teacher will help the kid?
-
 Yes
 
 No
@@ -29,8 +25,6 @@ Not sure
 A little sure
 
 Very sure
-
-Now, do you think the kid’s mom will help the kid?
 
 Now, sometimes people HAVE TO do things.
 
@@ -58,18 +52,6 @@ How much do you think you HAVE TO lie?
 
 So now, I’m going to ask you some questions about whether people HAVE TO do things.
 
-Now, do you think the kid’s teacher HAS TO help the kid? Yes or No.
-
-Now, do you think the kid’s mom HAS TO help the kid? Yes or No.
-
-No one helped the kid.
-
-The kid’s teacher did NOT help the kid. The kid’s mom did NOT help the kid. No one helped the kid.
-
-Can you tell me, did either of these people help the kid?
-
-Actually, remember, no one helped the kid. The kid’s teacher did NOT help the kid. The kid’s mom did NOT help the kid. No one helped the kid.
-
 Mean
 
 Nice
@@ -82,10 +64,6 @@ A little bit mean
 
 A lot mean
 
-Do you remember, did the kid’s teacher help the kid?
-
-Remember, the kid’s teacher did not help the kid. Do you remember, did the kid’s teacher help the kid?
-
 Do you think it was Mean or Not Mean that the kid’s teacher did NOT help the kid in the middle?
 
 Not Mean
@@ -95,10 +73,6 @@ How mean do you think the kid’s teacher was for NOT helping the kid in the mid
 A teeny bit mean
 
 Very mean
-
-Do you remember, did the kid’s mom help the kid?
-
-Remember, the kid’s mom did not help the kid. Do you remember, did the kid’s mom help the kid?
 
 Do you think it was Mean or Not Mean that the kid’s mom did NOT help the kid in the middle?
 
@@ -122,31 +96,9 @@ This little one is this kid’s friend. Tap the kid’s friend.
 
 This little one is this kid’s friend. This one is the kid’s friend. Tap the kid’s friend.
 
-The kid’s sister and the kid’s friend both see that the kid is sad.
-
-Now, do you think the kid’s sister will help the kid?
-
-Now, do you think the kid’s friend will help the kid?
-
-Now, do you think the kid’s sister HAS TO help the kid? Yes or No.
-
-Now, do you think the kid’s friend HAS TO help the kid? Yes or No.
-
-The kid’s sister did NOT help the kid. The kid’s friend did NOT help the kid. No one helped the kid.
-
-Actually, remember, no one helped the kid. The kid’s sister did NOT help the kid. The kid’s friend did NOT help the kid. No one helped the kid.
-
-Do you remember, did the kid’s sister help the kid?
-
-Remember, the kid’s sister did not help the kid. Do you remember, did the kid’s sister help the kid?
-
 Do you think it was Mean or Not Mean that the kid’s sister did NOT help the kid in the middle?
 
 How mean do you think the kid’s sister was for NOT helping the kid in the middle?
-
-Do you remember, did the kid’s friend help the kid?
-
-Remember, the kid’s friend did not help the kid. Do you remember, did the kid’s friend help the kid?
 
 Do you think it was Mean or Not Mean that the kid’s friend did NOT help the kid in the middle?
 
@@ -164,20 +116,6 @@ This little one is this kid’s best friend. Tap the kid’s best friend.
 
 This little one is this kid’s best friend. This one is the kid’s best friend. Tap the kid’s best friend.
 
-The kid’s friend and the kid’s best friend both see that the kid is sad.
-
-Now, do you think the kid’s best friend will help the kid?
-
-Now, do you think the kid’s best friend HAS TO help the kid? Yes or No.
-
-The kid’s friend did NOT help the kid. The kid’s best friend did NOT help the kid. No one helped the kid.
-
-Actually, remember, no one helped the kid. The kid’s friend did NOT help the kid. The kid’s best friend did NOT help the kid. No one helped the kid.
-
-Do you remember, did the kid’s best friend help the kid?
-
-Remember, the kid’s best friend did not help the kid. Do you remember, did the kid’s best friend help the kid?
-
 Do you think it was Mean or Not Mean that the kid’s best friend did NOT help the kid in the middle?
 
 How mean do you think the kid’s best friend was for NOT helping the kid in the middle?
@@ -186,35 +124,9 @@ The kid’s best friend
 
 You chose the kid’s best friend. Did you mean that the kid’s best friend was meaner for NOT helping the kid in the middle? Yes or No.
 
-The kid’s teacher and the kid’s friend both see that the kid is sad.
-
-The kid’s teacher did NOT help the kid. The kid’s friend did NOT help the kid. No one helped the kid.
-
-Actually, remember, no one helped the kid. The kid’s teacher did NOT help the kid. The kid’s friend did NOT help the kid. No one helped the kid.
-
-The kid’s mom and the kid’s sister both see that the kid is sad.
-
-The kid’s mom did NOT help the kid. The kid’s sister did NOT help the kid. No one helped the kid.
-
-Actually, remember, no one helped the kid. The kid’s mom did NOT help the kid. The kid’s sister did NOT help the kid. No one helped the kid.
-
 This little one is this kid’s classmate. Tap the kid’s classmate.
 
 This little one is this kid’s classmate. This one is the kid’s classmate. Tap the kid’s classmate.
-
-The kid’s classmate and the kid’s teacher both see that the kid is sad.
-
-Now, do you think the kid’s classmate will help the kid?
-
-Now, do you think the kid’s classmate HAS TO help the kid? Yes or No.
-
-The kid’s classmate did NOT help the kid. The kid’s teacher did NOT help the kid. No one helped the kid.
-
-Actually, remember, no one helped the kid. The kid’s classmate did NOT help the kid. The kid’s teacher did NOT help the kid. No one helped the kid.
-
-Do you remember, did the kid’s classmate help the kid?
-
-Remember, the kid’s classmate did not help the kid. Do you remember, did the kid’s classmate help the kid?
 
 Do you think it was Mean or Not Mean that the kid’s classmate did NOT help the kid in the middle?
 
@@ -228,20 +140,6 @@ This big one is this kid’s dad. Tap the kid’s dad.
 
 This big one is this kid’s dad. This one is the kid’s dad. Tap the kid’s dad.
 
-The kid’s teacher and the kid’s dad both see that the kid is sad.
-
-Now, do you think the kid’s dad will help the kid?
-
-Now, do you think the kid’s dad HAS TO help the kid? Yes or No.
-
-The kid’s teacher did NOT help the kid. The kid’s dad did NOT help the kid. No one helped the kid.
-
-Actually, remember, no one helped the kid. The kid’s teacher did NOT help the kid. The kid’s dad did NOT help the kid. No one helped the kid.
-
-Do you remember, did the kid’s dad help the kid?
-
-Remember, the kid’s dad did not help the kid. Do you remember, did the kid’s dad help the kid?
-
 Do you think it was Mean or Not Mean that the kid’s dad did NOT help the kid in the middle?
 
 How mean do you think the kid’s dad was for NOT helping the kid in the middle?
@@ -254,20 +152,6 @@ This little one is this kid’s brother. Tap the kid’s brother.
 
 This little one is this kid’s brother. This one is the kid’s brother. Tap the kid’s brother.
 
-The kid’s brother and the kid’s friend both see that the kid is sad.
-
-Now, do you think the kid’s brother will help the kid?
-
-Now, do you think the kid’s brother HAS TO help the kid? Yes or No.
-
-The kid’s brother did NOT help the kid. The kid’s friend did NOT help the kid. No one helped the kid.
-
-Actually, remember, no one helped the kid. The kid’s brother did NOT help the kid. The kid’s friend did NOT help the kid. No one helped the kid.
-
-Do you remember, did the kid’s brother help the kid?
-
-Remember, the kid’s brother did not help the kid. Do you remember, did the kid’s brother help the kid?
-
 Do you think it was Mean or Not Mean that the kid’s brother did NOT help the kid in the middle?
 
 How mean do you think the kid’s brother was for NOT helping the kid in the middle?
@@ -275,24 +159,6 @@ How mean do you think the kid’s brother was for NOT helping the kid in the mid
 The kid’s brother
 
 You chose the kid’s brother. Did you mean that the kid’s brother was meaner for NOT helping the kid in the middle? Yes or No.
-
-The kid’s dad and the kid’s brother both see that the kid is sad.
-
-The kid’s dad did NOT help the kid. The kid’s brother did NOT help the kid. No one helped the kid.
-
-Actually, remember, no one helped the kid. The kid’s dad did NOT help the kid. The kid’s brother did NOT help the kid. No one helped the kid.
-
-The kid’s dad and the kid’s mom both see that the kid is sad.
-
-The kid’s dad did NOT help the kid. The kid’s mom did NOT help the kid. No one helped the kid.
-
-Actually, remember, no one helped the kid. The kid’s dad did NOT help the kid. The kid’s mom did NOT help the kid. No one helped the kid.
-
-The kid’s sister and the kid’s brother both see that the kid is sad.
-
-The kid’s sister did NOT help the kid. The kid’s brother did NOT help the kid. No one helped the kid.
-
-Actually, remember, no one helped the kid. The kid’s sister did NOT help the kid. The kid’s brother did NOT help the kid. No one helped the kid.
 
 This big one is this kid’s mom. Tap the mom.
 
@@ -442,38 +308,6 @@ You chose the kid. Did you mean that the kid was meaner for NOT helping the teac
 
 That’s the end of our stories. Thank you!
 
-How sure are you that the kid’s teacher will help the kid?
-
-How sure are you that the kid’s teacher will NOT help the kid?
-
-How sure are you that the kid’s mom will help the kid?
-
-How sure are you that the kid’s mom will NOT help the kid?
-
-How sure are you that the kid’s sister will help the kid?
-
-How sure are you that the kid’s sister will NOT help the kid?
-
-How sure are you that the kid’s friend will help the kid?
-
-How sure are you that the kid’s friend will NOT help the kid?
-
-How sure are you that the kid’s best friend will help the kid?
-
-How sure are you that the kid’s best friend will NOT help the kid?
-
-How sure are you that the kid’s classmate will help the kid?
-
-How sure are you that the kid’s classmate will NOT help the kid?
-
-How sure are you that the kid’s dad will help the kid?
-
-How sure are you that the kid’s dad will NOT help the kid?
-
-How sure are you that the kid’s brother will help the kid?
-
-How sure are you that the kid’s brother will NOT help the kid?
-
 How sure are you that the kid’s dad will help the mom?
 
 How sure are you that the kid’s dad will NOT help the mom?
@@ -497,40 +331,6 @@ How sure are you that the teacher on the left will NOT help the teacher in the m
 How sure are you that the kid will help the teacher in the middle?
 
 How sure are you that the kid will NOT help the teacher in the middle?
-
-How much do you think the kid’s teacher HAS TO help the kid?
-
-You think the kid’s teacher does NOT HAVE TO help the kid. Is that what you meant? Yes or No.
-
-How much do you think the kid’s mom HAS TO help the kid?
-
-You think the kid’s mom does NOT HAVE TO help the kid. Is that what you meant? Yes or No.
-
-No one helped the kid. Do you think it was mean or nice that no one helped the kid?
-
-How much do you think the kid’s sister HAS TO help the kid?
-
-You think the kid’s sister does NOT HAVE TO help the kid. Is that what you meant? Yes or No.
-
-How much do you think the kid’s friend HAS TO help the kid?
-
-You think the kid’s friend does NOT HAVE TO help the kid. Is that what you meant? Yes or No.
-
-How much do you think the kid’s best friend HAS TO help the kid?
-
-You think the kid’s best friend does NOT HAVE TO help the kid. Is that what you meant? Yes or No.
-
-How much do you think the kid’s classmate HAS TO help the kid?
-
-You think the kid’s classmate does NOT HAVE TO help the kid. Is that what you meant? Yes or No.
-
-How much do you think the kid’s dad HAS TO help the kid?
-
-You think the kid’s dad does NOT HAVE TO help the kid. Is that what you meant? Yes or No.
-
-How much do you think the kid’s brother HAS TO help the kid?
-
-You think the kid’s brother does NOT HAVE TO help the kid. Is that what you meant? Yes or No.
 
 How much do you think the kid’s dad HAS TO help the mom?
 
@@ -561,3 +361,207 @@ How much do you think the kid HAS TO help the teacher in the middle?
 You think the kid does NOT HAVE TO help the teacher in the middle. Is that what you meant? Yes or No.
 
 No one helped the teacher in the middle. Do you think it was mean or nice that no one helped the teacher in the middle?
+
+This little one is a kid. Tap the kid in the middle.
+
+This little one is a kid. This one is the kid in the middle. Tap the kid in the middle.
+
+The kid’s teacher and the kid’s mom both see that the kid in the middle is sad.
+
+Now, do you think the kid’s teacher will help the kid in the middle?
+
+How sure are you that the kid’s teacher will help the kid in the middle?
+
+How sure are you that the kid’s teacher will NOT help the kid in the middle?
+
+Now, do you think the kid’s mom will help the kid in the middle?
+
+How sure are you that the kid’s mom will help the kid in the middle?
+
+How sure are you that the kid’s mom will NOT help the kid in the middle?
+
+Now, do you think the kid’s teacher HAS TO help the kid in the middle? Yes or No.
+
+You think the kid’s teacher does NOT HAVE TO help the kid in the middle. Is that what you meant? Yes or No.
+
+How much do you think the kid’s teacher HAS TO help the kid in the middle?
+
+Now, do you think the kid’s mom HAS TO help the kid in the middle? Yes or No.
+
+You think the kid’s mom does NOT HAVE TO help the kid in the middle. Is that what you meant? Yes or No.
+
+How much do you think the kid’s mom HAS TO help the kid in the middle?
+
+No one helped the kid in the middle.
+
+The kid’s teacher did NOT help the kid in the middle. And the kid’s mom did NOT help the kid in the middle. No one helped the kid in the middle.
+
+Can you tell me, did either of these people help the kid in the middle?
+
+Actually, remember, no one helped the kid in the middle. And the kid’s teacher did NOT help the kid in the middle. And the kid’s mom did NOT help the kid in the middle. No one helped the kid in the middle.
+
+No one helped the kid in the middle. Do you think it was mean or nice that no one helped the kid in the middle?
+
+Do you remember, did the kid’s teacher help the kid in the middle?
+
+Remember, the kid’s teacher did not help the kid in the middle. Do you remember, did the kid’s teacher help the kid in the middle?
+
+Do you remember, did the kid’s mom help the kid in the middle?
+
+Remember, the kid’s mom did not help the kid in the middle. Do you remember, did the kid’s mom help the kid in the middle?
+
+The kid’s sister and the kid’s friend both see that the kid in the middle is sad.
+
+Now, do you think the kid’s sister will help the kid in the middle?
+
+How sure are you that the kid’s sister will help the kid in the middle?
+
+How sure are you that the kid’s sister will NOT help the kid in the middle?
+
+Now, do you think the kid’s friend will help the kid in the middle?
+
+How sure are you that the kid’s friend will help the kid in the middle?
+
+How sure are you that the kid’s friend will NOT help the kid in the middle?
+
+Now, do you think the kid’s sister HAS TO help the kid in the middle? Yes or No.
+
+You think the kid’s sister does NOT HAVE TO help the kid in the middle. Is that what you meant? Yes or No.
+
+How much do you think the kid’s sister HAS TO help the kid in the middle?
+
+Now, do you think the kid’s friend HAS TO help the kid in the middle? Yes or No.
+
+You think the kid’s friend does NOT HAVE TO help the kid in the middle. Is that what you meant? Yes or No.
+
+How much do you think the kid’s friend HAS TO help the kid in the middle?
+
+The kid’s sister did NOT help the kid in the middle. And the kid’s friend did NOT help the kid in the middle. No one helped the kid in the middle.
+
+Actually, remember, no one helped the kid in the middle. And the kid’s sister did NOT help the kid in the middle. And the kid’s friend did NOT help the kid in the middle. No one helped the kid in the middle.
+
+Do you remember, did the kid’s sister help the kid in the middle?
+
+Remember, the kid’s sister did not help the kid in the middle. Do you remember, did the kid’s sister help the kid in the middle?
+
+Do you remember, did the kid’s friend help the kid in the middle?
+
+Remember, the kid’s friend did not help the kid in the middle. Do you remember, did the kid’s friend help the kid in the middle?
+
+The kid’s friend and the kid’s best friend both see that the kid in the middle is sad.
+
+Now, do you think the kid’s best friend will help the kid in the middle?
+
+How sure are you that the kid’s best friend will help the kid in the middle?
+
+How sure are you that the kid’s best friend will NOT help the kid in the middle?
+
+Now, do you think the kid’s best friend HAS TO help the kid in the middle? Yes or No.
+
+You think the kid’s best friend does NOT HAVE TO help the kid in the middle. Is that what you meant? Yes or No.
+
+How much do you think the kid’s best friend HAS TO help the kid in the middle?
+
+The kid’s friend did NOT help the kid in the middle. And the kid’s best friend did NOT help the kid in the middle. No one helped the kid in the middle.
+
+Actually, remember, no one helped the kid in the middle. And the kid’s friend did NOT help the kid in the middle. And the kid’s best friend did NOT help the kid in the middle. No one helped the kid in the middle.
+
+Do you remember, did the kid’s best friend help the kid in the middle?
+
+Remember, the kid’s best friend did not help the kid in the middle. Do you remember, did the kid’s best friend help the kid in the middle?
+
+The kid’s teacher and the kid’s friend both see that the kid in the middle is sad.
+
+The kid’s teacher did NOT help the kid in the middle. And the kid’s friend did NOT help the kid in the middle. No one helped the kid in the middle.
+
+Actually, remember, no one helped the kid in the middle. And the kid’s teacher did NOT help the kid in the middle. And the kid’s friend did NOT help the kid in the middle. No one helped the kid in the middle.
+
+The kid’s mom and the kid’s sister both see that the kid in the middle is sad.
+
+The kid’s mom did NOT help the kid in the middle. And the kid’s sister did NOT help the kid in the middle. No one helped the kid in the middle.
+
+Actually, remember, no one helped the kid in the middle. And the kid’s mom did NOT help the kid in the middle. And the kid’s sister did NOT help the kid in the middle. No one helped the kid in the middle.
+
+The kid’s classmate and the kid’s teacher both see that the kid in the middle is sad.
+
+Now, do you think the kid’s classmate will help the kid in the middle?
+
+How sure are you that the kid’s classmate will help the kid in the middle?
+
+How sure are you that the kid’s classmate will NOT help the kid in the middle?
+
+Now, do you think the kid’s classmate HAS TO help the kid in the middle? Yes or No.
+
+You think the kid’s classmate does NOT HAVE TO help the kid in the middle. Is that what you meant? Yes or No.
+
+How much do you think the kid’s classmate HAS TO help the kid in the middle?
+
+The kid’s classmate did NOT help the kid in the middle. And the kid’s teacher did NOT help the kid in the middle. No one helped the kid in the middle.
+
+Actually, remember, no one helped the kid in the middle. And the kid’s classmate did NOT help the kid in the middle. And the kid’s teacher did NOT help the kid in the middle. No one helped the kid in the middle.
+
+Do you remember, did the kid’s classmate help the kid in the middle?
+
+Remember, the kid’s classmate did not help the kid in the middle. Do you remember, did the kid’s classmate help the kid in the middle?
+
+The kid’s teacher and the kid’s dad both see that the kid in the middle is sad.
+
+Now, do you think the kid’s dad will help the kid in the middle?
+
+How sure are you that the kid’s dad will help the kid in the middle?
+
+How sure are you that the kid’s dad will NOT help the kid in the middle?
+
+Now, do you think the kid’s dad HAS TO help the kid in the middle? Yes or No.
+
+You think the kid’s dad does NOT HAVE TO help the kid in the middle. Is that what you meant? Yes or No.
+
+How much do you think the kid’s dad HAS TO help the kid in the middle?
+
+The kid’s teacher did NOT help the kid in the middle. And the kid’s dad did NOT help the kid in the middle. No one helped the kid in the middle.
+
+Actually, remember, no one helped the kid in the middle. And the kid’s teacher did NOT help the kid in the middle. And the kid’s dad did NOT help the kid in the middle. No one helped the kid in the middle.
+
+Do you remember, did the kid’s dad help the kid in the middle?
+
+Remember, the kid’s dad did not help the kid in the middle. Do you remember, did the kid’s dad help the kid in the middle?
+
+The kid’s brother and the kid’s friend both see that the kid in the middle is sad.
+
+Now, do you think the kid’s brother will help the kid in the middle?
+
+How sure are you that the kid’s brother will help the kid in the middle?
+
+How sure are you that the kid’s brother will NOT help the kid in the middle?
+
+Now, do you think the kid’s brother HAS TO help the kid in the middle? Yes or No.
+
+You think the kid’s brother does NOT HAVE TO help the kid in the middle. Is that what you meant? Yes or No.
+
+How much do you think the kid’s brother HAS TO help the kid in the middle?
+
+The kid’s brother did NOT help the kid in the middle. And the kid’s friend did NOT help the kid in the middle. No one helped the kid in the middle.
+
+Actually, remember, no one helped the kid in the middle. And the kid’s brother did NOT help the kid in the middle. And the kid’s friend did NOT help the kid in the middle. No one helped the kid in the middle.
+
+Do you remember, did the kid’s brother help the kid in the middle?
+
+Remember, the kid’s brother did not help the kid in the middle. Do you remember, did the kid’s brother help the kid in the middle?
+
+The kid’s dad and the kid’s brother both see that the kid in the middle is sad.
+
+The kid’s dad did NOT help the kid in the middle. And the kid’s brother did NOT help the kid in the middle. No one helped the kid in the middle.
+
+Actually, remember, no one helped the kid in the middle. And the kid’s dad did NOT help the kid in the middle. And the kid’s brother did NOT help the kid in the middle. No one helped the kid in the middle.
+
+The kid’s dad and the kid’s mom both see that the kid in the middle is sad.
+
+The kid’s dad did NOT help the kid in the middle. And the kid’s mom did NOT help the kid in the middle. No one helped the kid in the middle.
+
+Actually, remember, no one helped the kid in the middle. And the kid’s dad did NOT help the kid in the middle. And the kid’s mom did NOT help the kid in the middle. No one helped the kid in the middle.
+
+The kid’s sister and the kid’s brother both see that the kid in the middle is sad.
+
+The kid’s sister did NOT help the kid in the middle. And the kid’s brother did NOT help the kid in the middle. No one helped the kid in the middle.
+
+Actually, remember, no one helped the kid in the middle. And the kid’s sister did NOT help the kid in the middle. And the kid’s brother did NOT help the kid in the middle. No one helped the kid in the middle.
