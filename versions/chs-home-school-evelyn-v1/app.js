@@ -9,7 +9,7 @@ const TEACHER_CLASSMATE_GENERATED_ROOT = "assets/teacher_classmate/generated/";
 const TEACHER_CLASSMATE_V78_REVISION_ROOT = "versions/chs-v78-teacher-classmate-evelyn-unique-roles/assets/teacher_classmate/generated/";
 const TEACHER_CLASSMATE_V78_DYAD_REVISION = /^dyads\/classmate-kid_0(?:1_tkc-deep-purple-a|2_tkc-deep-purple-b)\/slide_(?:0[3-9]|1[0-3])\.svg$/;
 const TEACHER_CLASSMATE_V78_TRIAL_REVISION = /^trials\/14(?:[ab]\/intro_04|[cd]\/intro_0[34]|[abcd]\/(?:hug|food|help)_screen_2)\.svg$/;
-const HOME_SCHOOL_ASSET_VERSION = "chs-home-school-evelyn-v1-r27-peer-review-1";
+const HOME_SCHOOL_ASSET_VERSION = "chs-home-school-evelyn-v1-r28-camera-preview-1";
 const HOME_SCHOOL_DESIGN_VERSION = "home_school_context_chs_candidate_v1";
 const HOME_SCHOOL_WITHIN_CHILD_DESIGN_VERSION = "home_school_within_child_two_role_sets_v2";
 const HOME_SCHOOL_CONTEXT_SCRIPT_VERSION = "home_school_house_entrance_recipient_aware_v6";
@@ -4455,6 +4455,7 @@ async function main() {
       },
     };
 
+  let disposeCameraPreview = () => {};
   const cameraSetupNode = {
       type: jsPsychHtmlButtonResponse,
       stimulus: `
@@ -4495,6 +4496,13 @@ async function main() {
                 </article>
               </div>
               <div class="ksize-camera-panel">
+                <div class="ksize-camera-live-preview" data-camera-preview-state="review">
+                  <h2 class="ksize-camera-preview-title">Live camera view</h2>
+                  <div class="ksize-camera-preview-slot" aria-label="Your live camera view"></div>
+                  <p class="ksize-camera-preview-status" role="status" aria-live="polite">A live camera view is available when you open this study through Children Helping Science. This review page does not access your camera.</p>
+                  <button class="ksize-camera-preview-retry" type="button" hidden>Try live view again</button>
+                  <p class="ksize-camera-preview-help">Check your child’s full face and shoulders, then keep this position during the game.</p>
+                </div>
                 <h2 class="ksize-camera-examples-title">Use these examples to check your setup</h2>
                 <div class="ksize-lookit-example-stack">
                   <figure class="ksize-lookit-example ksize-camera-combined-example">
@@ -4530,11 +4538,17 @@ async function main() {
         facilitator_mode: isFacilitatorMode,
       },
       on_load: () => {
+        disposeCameraPreview();
+        disposeCameraPreview = window.WTCCameraPreview?.mount(document.querySelector(".ksize-camera-live-preview")) || (() => {});
         installResearcherSkip(jsPsych);
         document.querySelector(".ksize-camera-next")?.addEventListener("click", () => {
           audio.stop();
           finishParticipantTrial(jsPsych, { response: "camera_setup_continue" }, 0, "camera_setup");
         });
+      },
+      on_finish: () => {
+        disposeCameraPreview();
+        disposeCameraPreview = () => {};
       },
     };
 

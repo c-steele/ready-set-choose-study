@@ -1,7 +1,7 @@
 /*
   PRODUCTION-READY CHS WRAPPER SOURCE FOR STUDY 6349.
 
-  This source targets the r27 peer-review two-role-set within-child House/School candidate.
+  This source targets the r28 camera-preview two-role-set within-child House/School candidate.
   Installing it in CHS remains a separate researcher-controlled action.
 
   Public title: Who Helps Where?
@@ -28,7 +28,7 @@ var HOME_SCHOOL_CANDIDATE_ROOT_URL =
 var HOME_SCHOOL_CANDIDATE_ORIGIN = "https://c-steele.github.io";
 
 var HOME_SCHOOL_STUDY_VERSION = "chs-home-school-evelyn-v1";
-var HOME_SCHOOL_CANDIDATE_RELEASE = "chs-home-school-evelyn-v1-r27-peer-review-1";
+var HOME_SCHOOL_CANDIDATE_RELEASE = "chs-home-school-evelyn-v1-r28-camera-preview-1";
 var HOME_SCHOOL_CONTEXT_SCRIPT_VERSION = "home_school_house_entrance_recipient_aware_v6";
 var HOME_SCHOOL_DESIGN_VERSION = "home_school_within_child_two_role_sets_v2";
 /* CHS previews and participant launches have no researcher Back/Skip controls.
@@ -257,6 +257,8 @@ var gameUrl = assignedCell
     "&assignmentCell=" + encodeURIComponent(assignedCell.assignmentCell) +
     "&child=" + encodeURIComponent(chsChildId) +
     "&response=" + encodeURIComponent(chsResponseId) +
+    "&cameraPreviewBridge=chs-parent" +
+    "&cameraPreviewParentOrigin=" + encodeURIComponent(window.location.origin) +
     previewNavigationParams +
     dataMirrorParams
   : "about:blank";
@@ -438,6 +440,167 @@ function mirrorCompletedSession(gamePayload) {
   return { requested: requested, rowCount: answerRows.length };
 }
 
+/* Display the already-selected CHS stream in the parent, never in the remote
+   iframe. Messages contain only placeholder geometry, not video or devices.
+   Detaching this preview must not stop the session recorder's shared tracks. */
+function createHomeSchoolCameraPreview(gameFrame) {
+  var active = null;
+  var disposed = false;
+  var closedIds = [];
+  function retireId(id) {
+    if (closedIds.indexOf(id) === -1) closedIds.push(id);
+    if (closedIds.length > 30) closedIds.shift();
+  }
+  function closePreview() {
+    if (!active) return;
+    var prior = active;
+    active = null;
+    clearTimeout(prior.timer);
+    prior.video.removeEventListener("playing", prior.ready);
+    prior.video.removeEventListener("error", prior.failed);
+    prior.tracks.forEach(function(track) {
+      if (track.removeEventListener) track.removeEventListener("ended", prior.failed);
+    });
+    prior.video.pause();
+    prior.video.srcObject = null;
+    prior.box.remove();
+  }
+  function status(id, value) {
+    if (disposed || !gameFrame || !gameFrame.contentWindow) return;
+    gameFrame.contentWindow.postMessage({
+      type: "CAMERA_PREVIEW_STATUS", preview_id: id, status: value
+    }, HOME_SCHOOL_CANDIDATE_ORIGIN);
+  }
+  function geometry(message) {
+    var rect = message.rect || {};
+    var viewport = message.viewport || {};
+    var values = [rect.x, rect.y, rect.width, rect.height, viewport.width, viewport.height];
+    if (!values.every(function(value) { return typeof value === "number" && isFinite(value); })) return null;
+    if (rect.width <= 0 || rect.height <= 0 || viewport.width <= 0 || viewport.height <= 0 ||
+        viewport.width > 20000 || viewport.height > 20000 ||
+        values.some(function(value) { return Math.abs(value) > 1000000; })) return null;
+    return { rect: rect, viewport: viewport };
+  }
+  function position() {
+    if (!active || !active.geometry) return;
+    var bounds = gameFrame.getBoundingClientRect();
+    var rect = active.geometry.rect;
+    var viewport = active.geometry.viewport;
+    var sx = bounds.width / viewport.width;
+    var sy = bounds.height / viewport.height;
+    var left = Math.max(0, rect.x), top = Math.max(0, rect.y);
+    var right = Math.min(viewport.width, rect.x + rect.width);
+    var bottom = Math.min(viewport.height, rect.y + rect.height);
+    active.box.style.left = (bounds.left + left * sx) + "px";
+    active.box.style.top = (bounds.top + top * sy) + "px";
+    active.box.style.width = Math.max(0, (right - left) * sx) + "px";
+    active.box.style.height = Math.max(0, (bottom - top) * sy) + "px";
+    active.video.style.width = (rect.width * sx) + "px";
+    active.video.style.height = (rect.height * sy) + "px";
+    active.video.style.left = ((rect.x - left) * sx) + "px";
+    active.video.style.top = ((rect.y - top) * sy) + "px";
+    active.box.style.visibility = active.playing ? "visible" : "hidden";
+  }
+  function handleMessage(message) {
+    if (disposed) return;
+    var id = message.preview_id;
+    if (typeof id !== "string" || !id || id.length > 120) return;
+    if (message.type === "CAMERA_PREVIEW_HIDE") {
+      retireId(id);
+      if (active && active.id === id) closePreview();
+      return;
+    }
+    if (message.type !== "CAMERA_PREVIEW_SHOW" || closedIds.indexOf(id) !== -1) return;
+    var nextGeometry = geometry(message);
+    if (!nextGeometry) return;
+    if (active && active.id === id) {
+      active.geometry = nextGeometry;
+      position();
+      return;
+    }
+    if (active) retireId(active.id);
+    closePreview();
+    var stream = null;
+    try {
+      var api = jsPsych.pluginAPI || {};
+      var recorder = api.getCameraRecorder ? api.getCameraRecorder() : null;
+      stream = recorder && recorder.stream;
+      if (!stream && api.getCameraStream) stream = api.getCameraStream();
+    } catch (error) { /* Existing camera unavailable; do not request another. */ }
+    var tracks = stream && stream.getVideoTracks ? stream.getVideoTracks() : [];
+    if (!tracks.some(function(track) { return track.readyState === "live"; })) {
+      status(id, "unavailable");
+      return;
+    }
+    var box = document.createElement("div");
+    box.setAttribute("data-home-school-camera-preview", "true");
+    box.style.cssText = "position:fixed;z-index:10001;overflow:hidden;pointer-events:none;background:#172d3d;visibility:hidden;border-radius:12px";
+    var video = document.createElement("video");
+    video.autoplay = true;
+    video.muted = true;
+    video.playsInline = true;
+    video.setAttribute("aria-hidden", "true");
+    video.setAttribute("playsinline", "");
+    video.style.cssText = "position:absolute;object-fit:contain;transform:scaleX(-1);pointer-events:none";
+    box.appendChild(video);
+    gameFrame.parentElement.appendChild(box);
+    var current = { id: id, box: box, video: video, tracks: tracks, geometry: nextGeometry, playing: false };
+    active = current;
+    current.ready = function() {
+      if (active !== current || disposed) return;
+      clearTimeout(current.timer);
+      current.playing = true;
+      position();
+      status(id, "ready");
+    };
+    current.failed = function() {
+      if (active !== current || disposed) return;
+      closePreview();
+      status(id, "unavailable");
+    };
+    video.addEventListener("playing", current.ready);
+    video.addEventListener("error", current.failed);
+    tracks.forEach(function(track) {
+      if (track.addEventListener) track.addEventListener("ended", current.failed);
+    });
+    current.timer = setTimeout(current.failed, 8000);
+    position();
+    video.srcObject = stream;
+    try {
+      var playback = video.play();
+      if (playback && playback.catch) playback.catch(current.failed);
+    } catch (error) { current.failed(); }
+  }
+  function iframeNavigated() {
+    if (active) retireId(active.id);
+    closePreview();
+  }
+  function fullscreenChanged() {
+    var fullscreen = document.fullscreenElement;
+    if (active && fullscreen && !fullscreen.contains(active.box)) {
+      var id = active.id;
+      closePreview();
+      status(id, "unavailable");
+    } else position();
+  }
+  function dispose() {
+    if (disposed) return;
+    disposed = true;
+    closePreview();
+    window.removeEventListener("resize", position);
+    window.removeEventListener("pagehide", dispose);
+    document.removeEventListener("fullscreenchange", fullscreenChanged);
+    if (gameFrame && gameFrame.removeEventListener) gameFrame.removeEventListener("load", iframeNavigated);
+  }
+  window.addEventListener("resize", position);
+  window.addEventListener("pagehide", dispose);
+  document.addEventListener("fullscreenchange", fullscreenChanged);
+  if (gameFrame && gameFrame.addEventListener) gameFrame.addEventListener("load", iframeNavigated);
+  return { handleMessage: handleMessage, dispose: dispose };
+}
+
+var homeSchoolCameraPreview = null;
+
 var enterFullscreen = {
   type: jsPsychFullscreen,
   fullscreen_mode: true,
@@ -511,10 +674,15 @@ var readySetChooseGame = {
       );
       return;
     }
+    homeSchoolCameraPreview = createHomeSchoolCameraPreview(gameFrame);
     window.readySetChooseMessageHandler = function(event) {
       if (!event || !event.data) return;
       if (event.origin !== HOME_SCHOOL_CANDIDATE_ORIGIN) return;
       if (!gameFrame || event.source !== gameFrame.contentWindow) return;
+      if (event.data.type === "CAMERA_PREVIEW_SHOW" || event.data.type === "CAMERA_PREVIEW_HIDE") {
+        homeSchoolCameraPreview.handleMessage(event.data);
+        return;
+      }
       if (event.data.type === "DATA_MIRROR_ROW") {
         mirrorAnswerRowMessage(event.data);
         return;
@@ -531,6 +699,7 @@ var readySetChooseGame = {
         String(gamePayload.event_suffix || "").toUpperCase() === assignedCell.event &&
         Number(gamePayload.assignment_cell) === assignedCell.assignmentCell;
       if (!payloadMatchesAssignment) return;
+      homeSchoolCameraPreview.dispose();
       window.removeEventListener("message", window.readySetChooseMessageHandler);
       window.readySetChooseMessageHandler = null;
       var sheetMirror = mirrorCompletedSession(gamePayload);
@@ -568,6 +737,10 @@ var readySetChooseGame = {
     window.addEventListener("message", window.readySetChooseMessageHandler);
   },
   on_finish: function() {
+    if (homeSchoolCameraPreview) {
+      homeSchoolCameraPreview.dispose();
+      homeSchoolCameraPreview = null;
+    }
     if (window.readySetChooseMessageHandler) {
       window.removeEventListener("message", window.readySetChooseMessageHandler);
       window.readySetChooseMessageHandler = null;

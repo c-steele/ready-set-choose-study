@@ -10,13 +10,24 @@ const source = fs.readFileSync(wrapperPath, "utf8");
 
 const recorded = { properties: null, timeline: null, finishTrials: [] };
 const registeredListeners = {};
-const gameFrameWindow = {};
+const registeredDocumentListeners = {};
+const registeredFrameListeners = {};
+const previewResponses = [];
+const gameFrameWindow = { postMessage(message, origin) { previewResponses.push({ message, origin }); } };
 const assignmentFailureHost = {
   children: [],
   querySelector() { return null; },
   appendChild(child) { this.children.push(child); },
 };
-const gameFrame = { contentWindow: gameFrameWindow, parentElement: assignmentFailureHost };
+const gameFrame = {
+  contentWindow: gameFrameWindow,
+  parentElement: assignmentFailureHost,
+  getBoundingClientRect() { return { left: 0, top: 0, width: 1280, height: 800 }; },
+  addEventListener(type, listener) { registeredFrameListeners[type] = listener; },
+  removeEventListener(type, listener) {
+    if (registeredFrameListeners[type] === listener) delete registeredFrameListeners[type];
+  },
+};
 const jsPsych = {
   data: { addProperties(value) { recorded.properties = value; } },
   finishTrial(value) { recorded.finishTrials.push(value); },
@@ -46,6 +57,8 @@ const context = vm.createContext({
   String,
   URLSearchParams,
   encodeURIComponent,
+  setTimeout,
+  clearTimeout,
   responseUuid: "TEST-RESPONSE",
   initJsPsych() { return jsPsych; },
   jsPsychFullscreen: "jsPsychFullscreen",
@@ -67,6 +80,10 @@ const context = vm.createContext({
     documentElement: {},
     getElementById(id) { return id === "ready-set-choose-frame" ? gameFrame : null; },
     querySelectorAll() { return []; },
+    addEventListener(type, listener) { registeredDocumentListeners[type] = listener; },
+    removeEventListener(type, listener) {
+      if (registeredDocumentListeners[type] === listener) delete registeredDocumentListeners[type];
+    },
   },
   window: {
     location: {
@@ -93,6 +110,10 @@ assert.equal(context.assignmentKey, "TEST-CHILD", "the trusted CHS child hash mu
 assert.equal(context.assignmentKeyType, "chs_hash_child_id");
 assert.doesNotMatch(context.gameUrl, /SPOOFED-QUERY/);
 assert.equal(recorded.timeline.length, 7, "consent/recording/game/exit/debrief architecture must remain intact");
+assert.deepEqual(Array.from(recorded.timeline, trial => trial.type), [
+  "VideoConfigPlugin", "VideoConsentPlugin", "StartRecordPlugin", "jsPsychHtmlButtonResponse",
+  "StopRecordPlugin", "ExitSurveyPlugin", "jsPsychHtmlButtonResponse",
+], "camera preview changes must preserve the CHS consent, recording, exit, and debrief order");
 
 const expectedRoleSets = ["WOMAN", "MAN"];
 const expectedEvents = ["HUG", "FOOD", "HELP"];
@@ -171,12 +192,14 @@ assert.equal(recorded.properties.first_context, context.assignedCell.firstContex
 assert.equal(recorded.properties.second_context, context.assignedCell.secondContext);
 assert.equal(recorded.properties.design_version, "home_school_within_child_two_role_sets_v2");
 assert.equal(recorded.properties.assignment_method, "fnv1a_mod_12");
-assert.equal(recorded.properties.candidate_release, "chs-home-school-evelyn-v1-r27-peer-review-1");
+assert.equal(recorded.properties.candidate_release, "chs-home-school-evelyn-v1-r28-camera-preview-1");
 assert.equal(recorded.properties.context_script_version, "home_school_house_entrance_recipient_aware_v6");
-assert.match(context.gameUrl, /[?&]v=chs-home-school-evelyn-v1-r27-peer-review-1(?:&|$)/);
+assert.match(context.gameUrl, /[?&]v=chs-home-school-evelyn-v1-r28-camera-preview-1(?:&|$)/);
+assert.match(context.gameUrl, /[?&]cameraPreviewBridge=chs-parent(?:&|$)/);
+assert.equal(new URL(context.gameUrl).searchParams.get("cameraPreviewParentOrigin"), "https://childrenhelpingscience.com");
 assert.match(context.gameUrl, /[?&]syntheticSpeech=0(?:&|$)/);
 assert.doesNotMatch(context.gameUrl, /[?&](?:entranceVisualOnly|facilitator|liveShare)=/, "CHS must not enable silent or facilitator previews");
-assert.equal(context.temporaryChsPreviewControls, false, "researcher controls must remain disabled in the peer-review release");
+assert.equal(context.temporaryChsPreviewControls, false, "researcher controls must remain disabled in the camera-preview release");
 assert.doesNotMatch(context.gameUrl, /[?&](?:researcherTools|researcherToolbar|researcherJump|skipParentSetup)=/, "live CHS runs must not expose any researcher navigation parameters");
 assert.match(context.gameUrl, /[?&]contextStudy=1(?:&|$)/);
 assert.match(context.gameUrl, /[?&]withinChildContexts=1(?:&|$)/);
@@ -192,7 +215,7 @@ assert.doesNotMatch(source, /assignedEntrypoint[^;]*(?:home\.html|school\.html)/
 assert.match(source, /context="\s*\+\s*encodeURIComponent\(assignedCell\.firstContext\)/);
 assert.match(source, /HOME_SCHOOL_STUDY_VERSION\s*=\s*"chs-home-school-evelyn-v1"/);
 assert.match(source, /HOME_SCHOOL_CONTEXT_SCRIPT_VERSION\s*=\s*"home_school_house_entrance_recipient_aware_v6"/);
-assert.match(source, /HOME_SCHOOL_CANDIDATE_RELEASE\s*=\s*"chs-home-school-evelyn-v1-r27-peer-review-1"/);
+assert.match(source, /HOME_SCHOOL_CANDIDATE_RELEASE\s*=\s*"chs-home-school-evelyn-v1-r28-camera-preview-1"/);
 assert.match(source, /HOME_SCHOOL_TEMPORARY_CHS_PREVIEW_CONTROLS\s*=\s*false/);
 assert.match(source, /HOME_SCHOOL_TEMPORARY_CHS_PREVIEW_CONTROLS === true\s*&& isChsPreviewContext && isInternalChsOrigin\(window\.location\.origin\)/);
 assert.doesNotMatch(source, /researcherJump=|skipParentSetup=/, "the CHS wrapper must not bypass parent setup or launch at a skipped screen");
@@ -233,7 +256,11 @@ function loadIdentityScenario({ origin, pathname, search = "", runtimeChildId = 
     querySelector() { return null; },
     appendChild(child) { this.children.push(child); },
   };
-  const localFrame = { contentWindow: {}, parentElement: localHost };
+  const localFrame = {
+    contentWindow: { postMessage() {} }, parentElement: localHost,
+    getBoundingClientRect() { return { left: 0, top: 0, width: 1280, height: 800 }; },
+    addEventListener() {}, removeEventListener() {},
+  };
   const localJsPsych = {
     data: { addProperties(value) { localRecorded.properties = value; } },
     finishTrial() {},
@@ -247,6 +274,8 @@ function loadIdentityScenario({ origin, pathname, search = "", runtimeChildId = 
     String,
     URLSearchParams,
     encodeURIComponent,
+    setTimeout,
+    clearTimeout,
     responseUuid: responseId,
     initJsPsych() { return localJsPsych; },
     jsPsychFullscreen: "jsPsychFullscreen",
@@ -265,6 +294,8 @@ function loadIdentityScenario({ origin, pathname, search = "", runtimeChildId = 
       documentElement: {},
       getElementById(id) { return id === "ready-set-choose-frame" ? localFrame : null; },
       querySelectorAll() { return []; },
+      addEventListener() {},
+      removeEventListener() {},
     },
     window: {
       location: { origin, pathname, search },
@@ -379,6 +410,29 @@ const iframeTrial = recorded.timeline[3];
 assert.equal(iframeTrial.data.trial_type, "ready_set_choose_home_school_iframe");
 iframeTrial.on_load();
 assert.equal(typeof registeredListeners.message, "function");
+assert.equal(typeof registeredListeners.resize, "function");
+assert.equal(typeof registeredListeners.pagehide, "function");
+assert.equal(typeof registeredDocumentListeners.fullscreenchange, "function");
+assert.equal(typeof registeredFrameListeners.load, "function");
+const previewRequest = {
+  type: "CAMERA_PREVIEW_SHOW",
+  preview_id: "wrapper-preview-test",
+  rect: { x: 120, y: 90, width: 480, height: 270 },
+  viewport: { width: 1280, height: 800 },
+};
+registeredListeners.message({ origin: "https://example.invalid", source: gameFrameWindow, data: previewRequest });
+registeredListeners.message({ origin: "https://c-steele.github.io", source: {}, data: previewRequest });
+registeredListeners.message({
+  origin: "https://c-steele.github.io", source: gameFrameWindow,
+  data: { ...previewRequest, rect: { ...previewRequest.rect, width: 0 } },
+});
+assert.equal(previewResponses.length, 0, "untrusted or malformed preview requests must not reach the selected camera");
+registeredListeners.message({ origin: "https://c-steele.github.io", source: gameFrameWindow, data: previewRequest });
+assert.deepEqual(JSON.parse(JSON.stringify(previewResponses)), [{
+  message: { type: "CAMERA_PREVIEW_STATUS", preview_id: "wrapper-preview-test", status: "unavailable" },
+  origin: "https://c-steele.github.io",
+}], "a trusted request without an existing CHS stream must report unavailable to the exact candidate origin");
+assert.equal(recorded.finishTrials.length, 0, "camera preview messages must not complete the game");
 const expectedAssignment = context.assignHomeSchoolCell("TEST-CHILD");
 const matchingPayload = {
   assigned_context: expectedAssignment.assignedContext,
@@ -436,6 +490,14 @@ registeredListeners.message({
   },
 });
 assert.equal(recorded.finishTrials.length, 1, "the assigned candidate frame must complete the iframe trial");
+for (const type of ["message", "resize", "pagehide"]) {
+  assert.equal(registeredListeners[type], undefined, `completed game must remove its ${type} listener`);
+}
+assert.equal(registeredDocumentListeners.fullscreenchange, undefined, "completed game must remove its fullscreen listener");
+assert.equal(registeredFrameListeners.load, undefined, "completed game must remove its iframe navigation listener");
+iframeTrial.on_finish();
+assert.equal(context.homeSchoolCameraPreview, null, "trial finish must dispose and release the preview controller");
+assert.equal(recorded.finishTrials.length, 1, "preview cleanup must not finish the game twice");
 assert.equal(recorded.finishTrials[0].assignment_cell, expectedAssignment.assignmentCell);
 assert.equal(recorded.finishTrials[0].assigned_context, "BOTH");
 assert.equal(recorded.finishTrials[0].assigned_contexts, expectedAssignment.contextOrder.join(","));
@@ -468,4 +530,4 @@ assert.match(source, /StopRecordPlugin/);
 assert.match(source, /ExitSurveyPlugin/);
 assert.match(source, /GAME_COMPLETE/);
 
-console.log("Verified local CHS study 6349 wrapper draft: trusted live identity, 12 role/event/context-order cells, 12-story within-child context design, no rating trials, tool-free CHS previews and live runs by default, explicitly gated temporary controls, and intact CHS recording flow.");
+console.log("Verified local CHS study 6349 wrapper r28: trusted live identity, 12 role/event/context-order cells, 12-story within-child context design, no rating trials, tool-free CHS previews and live runs, trusted camera-preview routing and cleanup, and intact CHS recording flow.");

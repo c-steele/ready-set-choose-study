@@ -2734,12 +2734,13 @@ body {
   display: grid;
   grid-template-columns: minmax(310px, 0.85fr) minmax(380px, 1.15fr);
   gap: 24px;
-  align-items: stretch;
+  align-items: start;
 }
 
 .ksize-camera-instructions {
   display: grid;
   gap: 12px;
+  align-content: start;
 }
 
 .ksize-camera-tip {
@@ -2904,6 +2905,60 @@ body {
   color: #24343d;
   font-size: 21px;
   text-align: center;
+}
+
+.ksize-camera-live-preview {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.ksize-camera-preview-title {
+  margin: 0;
+  color: #24343d;
+  font-size: 21px;
+  text-align: center;
+}
+
+.ksize-camera-preview-slot {
+  width: 100%;
+  height: clamp(180px, 24vw, 260px);
+  overflow: hidden;
+  border-radius: 8px;
+  background: #24343d;
+}
+
+.ksize-camera-preview-status,
+.ksize-camera-preview-help {
+  margin: 0;
+  color: #43535b;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.ksize-camera-preview-help {
+  font-size: 14px;
+}
+
+.ksize-camera-preview-retry {
+  justify-self: start;
+  padding: 10px 14px;
+  border: 2px solid #2e5e4e;
+  border-radius: 8px;
+  background: #fff;
+  color: #2e5e4e;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.ksize-camera-preview-retry[hidden] {
+  display: none;
+}
+
+.ksize-camera-preview-retry:focus-visible {
+  outline: 3px solid #17466f;
+  outline-offset: 3px;
 }
 
 .ksize-camera-examples {
