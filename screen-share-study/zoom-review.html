@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="light">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Find the Caregiver — 96 Zoom previews</title>
+    <link rel="stylesheet" href="review.css?v=ftc-rendition-review-v4">
+  </head>
+  <body>
+    <main class="review-shell">
+      <header class="review-hero">
+        <div>
+          <p class="review-eyebrow">Zoom collaborator preview</p>
+          <h1>Find the Caregiver</h1>
+          <p class="review-subtitle">Preview any of the 96 Zoom study versions. Every version uses six different character colors.</p>
+        </div>
+        <div class="review-progress-card" aria-live="polite">
+          <strong data-progress-count>0 / 96</strong>
+          <span data-progress-label>Zoom runs reviewed</span>
+          <div class="review-progress-track" aria-hidden="true"><i data-progress-bar></i></div>
+        </div>
+      </header>
+
+      <p class="review-mode-help" data-mode-help>The Zoom version is researcher-paced for live screen sharing.</p>
+
+      <section class="review-controls" aria-label="Preview filters">
+        <label>
+          <span>Role set</span>
+          <select data-filter="role">
+            <option value="all">All role sets</option>
+            <option value="woman">Woman</option>
+            <option value="man">Man</option>
+            <option value="family">Family–teacher</option>
+          </select>
+        </label>
+        <label>
+          <span>Story event</span>
+          <select data-filter="event">
+            <option value="all">Hug, Food, and Help</option>
+            <option value="HUG">Hug</option>
+            <option value="FOOD">Food</option>
+            <option value="HELP">Help</option>
+          </select>
+        </label>
+        <label>
+          <span>Session color plan</span>
+          <select data-filter="visual">
+            <option value="all">A, B, C, and D</option>
+            <option value="a">A</option>
+            <option value="b">B</option>
+            <option value="c">C</option>
+            <option value="d">D</option>
+          </select>
+        </label>
+        <label class="review-check-filter">
+          <input type="checkbox" data-filter="unfinished">
+          <span>Only show unchecked</span>
+        </label>
+        <button type="button" class="review-reset" data-reset>Clear Zoom checks</button>
+      </section>
+
+      <section class="review-summary">
+        <p><strong data-visible-count>96 runs</strong> shown for <strong data-mode-name>Zoom researcher-paced</strong>. <span data-mode-summary>Each opens in manual researcher mode with Back and Skip controls.</span> Every pair plan rates six different focal roles.</p>
+        <p>Review checkmarks are saved only in this browser.</p>
+      </section>
+
+      <section class="review-grid" data-review-grid aria-live="polite"></section>
+    </main>
+
+    <template id="review-card-template">
+      <article class="review-card">
+        <div class="review-card-topline">
+          <span class="review-role"></span>
+          <label class="review-done"><input type="checkbox"><span>Reviewed</span></label>
+        </div>
+        <h2></h2>
+        <dl>
+          <div><dt>Event</dt><dd data-field="event"></dd></div>
+          <div><dt>Colors</dt><dd data-field="visual"></dd></div>
+          <div><dt>Pair plan</dt><dd data-field="schedule"></dd></div>
+        </dl>
+        <details class="review-pairings">
+          <summary>See who is rated after each story</summary>
+          <ul class="review-pairing-list"></ul>
+        </details>
+        <a class="review-open" target="_blank" rel="noopener"><span data-open-label>Open Zoom rendition</span> <span aria-hidden="true">↗</span></a>
+      </article>
+    </template>
+
+    <script>
+      (() => {
+        const zoomUrl = new URL(window.location.href);
+        zoomUrl.searchParams.set("mode", "zoom");
+        window.history.replaceState(window.history.state, "", zoomUrl.toString());
+      })();
+    </script>
+    <script src="review.js?v=ftc-rendition-review-v8-unique-colors"></script>
+  </body>
+</html>
