@@ -152,6 +152,60 @@
     );
   }
 
+  // This is a provisional recruitment order, not a sample-size target. Keep
+  // every existing rendition intact while covering all HELP cells earlier.
+  function testingQueueEntries() {
+    const entries = renditionEntries();
+    const entryByCell = new Map(entries.map((entry) => [
+      `${entry.event}:${entry.role}:${entry.visualPlan}:${entry.scheduleIndex + 1}`,
+      entry,
+    ]));
+    const basis = [];
+    for (let index = 0; index < 8; index += 1) {
+      const visual = index % 4;
+      const phase = Math.floor(index / 4);
+      basis.push(
+        { role: "woman", visualPlan: visual + 1, ratingPlan: 1 + ((phase + visual) % 2) },
+        { role: "family", visualPlan: 1 + ((visual + 1) % 4), ratingPlan: 1 + ((2 * phase + visual) % 4) },
+        { role: "man", visualPlan: 1 + ((visual + 2) % 4), ratingPlan: 1 + ((phase + visual + 1) % 2) },
+        { role: "family", visualPlan: 1 + ((visual + 3) % 4), ratingPlan: 1 + ((2 * phase + visual + 1) % 4) },
+      );
+    }
+    const queue = [];
+    const append = (event, cell) => {
+      const entry = entryByCell.get(`${event}:${cell.role}:${cell.visualPlan}:${cell.ratingPlan}`);
+      if (!entry) throw new Error("The testing queue contains an unknown rendition.");
+      queue.push(Object.freeze({
+        ...entry,
+        queueOrder: queue.length + 1,
+        queuePhase: queue.length < 64 ? "HELP priority" : "Remaining coverage",
+      }));
+    };
+    for (let index = 0; index < 16; index += 1) {
+      append("HELP", basis[2 * index]);
+      append("HUG", basis[index]);
+      append("HELP", basis[2 * index + 1]);
+      append("FOOD", basis[index]);
+    }
+    for (let index = 16; index < basis.length; index += 1) {
+      append("HUG", basis[index]);
+      append("FOOD", basis[index]);
+    }
+    if (queue.length !== entries.length || new Set(queue.map((entry) => entry.id)).size !== entries.length) {
+      throw new Error("The testing queue must include every rendition exactly once.");
+    }
+    return Object.freeze(queue);
+  }
+
+  function buildTestingLaunchUrl(entry, baseHref) {
+    if (!entry || !renditionEntries().some((candidate) => candidate.id === entry.id)) {
+      throw new Error("Cannot build a launch link for an unknown rendition.");
+    }
+    const url = new URL("zoom-review.html", baseHref);
+    url.searchParams.set("launch", entry.id);
+    return url;
+  }
+
   function canonicalPrimaryCell(role, event) {
     const roleIndex = ROLE_SETS.findIndex((candidate) => candidate.value === role);
     const eventIndex = EVENTS.indexOf(event);
@@ -243,6 +297,8 @@
     scheduleIndexForSeed,
     seedForRendition,
     renditionEntries,
+    testingQueueEntries,
+    buildTestingLaunchUrl,
     canonicalPrimaryCell,
     makeLaunchToken,
     buildStudyUrl,
@@ -252,7 +308,28 @@
 
   if (!documentObject) return;
 
-  const entries = renditionEntries();
+  // Spreadsheet links use only a stable rendition ID. Generate a fresh session
+  // on every visit instead of storing a reusable participant session in a cell.
+  const launchParams = new URLSearchParams(globalObject.location.search);
+  if (launchParams.has("launch")) {
+    const launchId = launchParams.get("launch");
+    const launchEntry = renditionEntries().find((entry) => entry.id === launchId);
+    if (launchEntry) {
+      globalObject.location.replace(buildStudyUrl(
+        launchEntry,
+        globalObject.location.href,
+        "zoom",
+        makeLaunchToken(),
+      ).toString());
+    } else {
+      const error = documentObject.querySelector("[data-launch-error]");
+      error.hidden = false;
+      error.textContent = "This study-version link is not valid. No study was opened. Please return to the testing data log and use its version link, or open the Zoom menu without a launch parameter.";
+    }
+    return;
+  }
+
+  const entries = testingQueueEntries();
   const grid = documentObject.querySelector("[data-review-grid]");
   const template = documentObject.querySelector("#review-card-template");
   const progressCount = documentObject.querySelector("[data-progress-count]");
@@ -351,10 +428,12 @@
       const checkbox = card.querySelector(".review-done input");
       const checkKey = reviewCheckKey(activeMode, entry.id);
       card.dataset.renditionId = entry.id;
+      card.dataset.queueOrder = entry.queueOrder;
       card.classList.toggle("is-reviewed", Boolean(checks[checkKey]));
       card.classList.toggle("is-audio-mode", activeMode === "chs");
-      card.querySelector(".review-role").textContent = `${entry.roleLabel} role set`;
+      card.querySelector(".review-role").textContent = `#${String(entry.queueOrder).padStart(2, "0")} · ${entry.roleLabel} role set`;
       card.querySelector("h2").textContent = `${entry.event[0]}${entry.event.slice(1).toLowerCase()} · Color plan ${entry.visualPlanLabel}`;
+      card.querySelector('[data-field="queue-phase"]').textContent = entry.queuePhase;
       card.querySelector('[data-field="event"]').textContent = entry.event[0] + entry.event.slice(1).toLowerCase();
       card.querySelector('[data-field="visual"]').textContent = `${entry.visualPlanLabel} · six different colors`;
       card.querySelector('[data-field="schedule"]').textContent = `${entry.scheduleIndex + 1} of ${entry.scheduleCount}`;

@@ -5,16 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="color-scheme" content="light">
     <meta name="robots" content="noindex,nofollow">
-    <title>Find the Caregiver — 96 Zoom previews</title>
+    <title>Find the Caregiver — Zoom testing order</title>
     <link rel="stylesheet" href="review.css?v=ftc-rendition-review-v4">
   </head>
   <body>
     <main class="review-shell">
       <header class="review-hero">
         <div>
-          <p class="review-eyebrow">Zoom collaborator preview</p>
+          <p class="review-eyebrow">Zoom collaborator preview · provisional testing order</p>
           <h1>Find the Caregiver</h1>
-          <p class="review-subtitle">Preview any of the 96 Zoom study versions. Every version uses six different character colors.</p>
+          <p class="review-subtitle">The numbered versions are arranged in a provisional HELP-first testing order. Every version uses six different character colors.</p>
         </div>
         <div class="review-progress-card" aria-live="polite">
           <strong data-progress-count>0 / 96</strong>
@@ -25,6 +25,8 @@
 
       <p class="review-mode-help" data-mode-help>The Zoom version is researcher-paced for live screen sharing.</p>
       <p>Includes the supplied introduction and closing slides, with Next and Finish controls for the researcher.</p>
+      <p><strong>Testing order:</strong> the first 64 links alternate HELP, HUG, HELP, FOOD: 32 HELP, 16 HUG, and 16 FOOD. The remaining links finish coverage; all 96 together contain 32 of each event. This is a provisional version order, not a sample-size target. Use the testing data log to record actual testing and choose the next participant's version.</p>
+      <p data-launch-error role="alert" hidden></p>
 
       <section class="review-controls" aria-label="Preview filters">
         <label>
@@ -64,7 +66,7 @@
 
       <section class="review-summary">
         <p><strong data-visible-count>96 runs</strong> shown for <strong data-mode-name>Zoom researcher-paced</strong>. <span data-mode-summary>Each opens in manual researcher mode with Back and Skip controls.</span> Every pair plan rates six different focal roles.</p>
-        <p>Review checkmarks are saved only in this browser.</p>
+        <p>Review checkmarks are saved only in this browser. They mean <strong>reviewed</strong>, not participant tested or test completed; they are not shared with collaborators. Keep testing status in the data log. Filtering preserves the original queue numbers.</p>
       </section>
 
       <section class="review-grid" data-review-grid aria-live="polite"></section>
@@ -77,6 +79,7 @@
           <label class="review-done"><input type="checkbox"><span>Reviewed</span></label>
         </div>
         <h2></h2>
+        <p data-field="queue-phase"></p>
         <dl>
           <div><dt>Event</dt><dd data-field="event"></dd></div>
           <div><dt>Colors</dt><dd data-field="visual"></dd></div>
@@ -97,6 +100,6 @@
         window.history.replaceState(window.history.state, "", zoomUrl.toString());
       })();
     </script>
-    <script src="zoom-review.js?v=ftc-zoom-intro-outro-v1"></script>
+    <script src="zoom-review.js?v=ftc-zoom-help-priority-queue-v1"></script>
   </body>
 </html>
