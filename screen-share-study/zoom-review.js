@@ -152,8 +152,8 @@
     );
   }
 
-  // This is a provisional recruitment order, not a sample-size target. Keep
-  // every existing rendition intact while covering all HELP cells earlier.
+  // This is a balanced recruitment order, not a sample-size target. Keep
+  // every existing rendition intact and rotate HELP, HUG, and FOOD equally.
   function testingQueueEntries() {
     const entries = renditionEntries();
     const entryByCell = new Map(entries.map((entry) => [
@@ -178,18 +178,13 @@
       queue.push(Object.freeze({
         ...entry,
         queueOrder: queue.length + 1,
-        queuePhase: queue.length < 64 ? "HELP priority" : "Remaining coverage",
+        queuePhase: "Balanced testing order",
       }));
     };
-    for (let index = 0; index < 16; index += 1) {
-      append("HELP", basis[2 * index]);
-      append("HUG", basis[index]);
-      append("HELP", basis[2 * index + 1]);
-      append("FOOD", basis[index]);
-    }
-    for (let index = 16; index < basis.length; index += 1) {
-      append("HUG", basis[index]);
-      append("FOOD", basis[index]);
+    for (const cell of basis) {
+      append("HELP", cell);
+      append("HUG", cell);
+      append("FOOD", cell);
     }
     if (queue.length !== entries.length || new Set(queue.map((entry) => entry.id)).size !== entries.length) {
       throw new Error("The testing queue must include every rendition exactly once.");

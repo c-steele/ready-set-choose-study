@@ -12,9 +12,9 @@
     <main class="review-shell">
       <header class="review-hero">
         <div>
-          <p class="review-eyebrow">Zoom collaborator preview · provisional testing order</p>
+          <p class="review-eyebrow">Zoom collaborator preview · balanced testing order</p>
           <h1>Find the Caregiver</h1>
-          <p class="review-subtitle">The numbered versions are arranged in a provisional HELP-first testing order. Every version uses six different character colors.</p>
+          <p class="review-subtitle">The numbered versions follow a balanced HELP → HUG → FOOD testing order. Every version uses six different character colors.</p>
         </div>
         <div class="review-progress-card" aria-live="polite">
           <strong data-progress-count>0 / 96</strong>
@@ -25,7 +25,7 @@
 
       <p class="review-mode-help" data-mode-help>The Zoom version is researcher-paced for live screen sharing.</p>
       <p>Includes the supplied introduction and closing slides, with Next and Finish controls for the researcher.</p>
-      <p><strong>Testing order:</strong> the first 64 links alternate HELP, HUG, HELP, FOOD: 32 HELP, 16 HUG, and 16 FOOD. The remaining links finish coverage; all 96 together contain 32 of each event. This is a provisional version order, not a sample-size target. Use the testing data log to record actual testing and choose the next participant's version.</p>
+      <p><strong>Testing order:</strong> HELP → HUG → FOOD repeats throughout the list, rotating role sets, color plans, and pair-rating plans. Each group of three links contains one of each event; all 96 together contain 32 HELP, 32 HUG, and 32 FOOD. This balanced version order is not a sample-size target. Use the testing data log to record actual testing and choose the next participant's version.</p>
       <p data-launch-error role="alert" hidden></p>
 
       <section class="review-controls" aria-label="Preview filters">
@@ -100,6 +100,6 @@
         window.history.replaceState(window.history.state, "", zoomUrl.toString());
       })();
     </script>
-    <script src="zoom-review.js?v=ftc-zoom-help-priority-queue-v1"></script>
+    <script src="zoom-review.js?v=ftc-zoom-balanced-queue-v2"></script>
   </body>
 </html>
