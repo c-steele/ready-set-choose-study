@@ -398,6 +398,9 @@ assert.match(css, /body\.ksize-zoom-arrow-navigation[^{}]*\.ksize-next-btn[\s\S]
 assert.match(css, /body\.ksize-zoom-arrow-navigation[^{}]*\.ksize-zoom-slide-controls[\s\S]*?display:\s*none\s*!important/);
 assert.match(css, /\.ksize-zoom-navigation/);
 assert.match(css, /focus-visible/);
+assert.match(css, /\.ksize-zoom-navigation\s*\{[^}]*position:\s*static[^}]*align-self:\s*center/, "arrows belong to the centered normal-flow footer");
+assert.match(css, /\.ksize-zoom-navigation button\s*\{[^}]*background:\s*#176d57[^}]*color:\s*#fff/, "arrows retain the original green button format");
+assert.match(css, /body\.ksize-zoom-arrow-navigation > \.jspsych-content-wrapper\s*\{[^}]*min-height:\s*0[^}]*overflow-y:\s*auto/, "study content scrolls separately above the footer");
 
 console.log(JSON.stringify({
   status: "PASS",

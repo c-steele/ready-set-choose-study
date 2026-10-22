@@ -67,17 +67,58 @@ body.ksize-zoom-arrow-navigation .ksize-start-cue {
   display: none !important;
 }
 
+/* Reserve the footer's own height rather than placing it over the stimuli. */
+body.ksize-zoom-arrow-navigation {
+  height: 100vh !important;
+  height: 100dvh !important;
+  overflow: hidden;
+}
+
+body.ksize-zoom-arrow-navigation > .jspsych-content-wrapper {
+  flex: 1 1 auto;
+  min-height: 0;
+  margin: 0;
+  width: 100%;
+  overflow-y: auto;
+}
+
+body.ksize-zoom-arrow-navigation .ksize-screen .ksize-controls {
+  display: none !important;
+}
+
+/* Account for the footer when fitting the existing, aspect-preserved artwork. */
+body.ksize-zoom-arrow-navigation .ksize-screen {
+  min-height: calc(100dvh - 144px);
+}
+
+body.ksize-zoom-arrow-navigation .ksize-scene-wrap {
+  width: min(100%, 1080px, calc((68dvh - 68px) * 16 / 9));
+}
+
+body.ksize-zoom-arrow-navigation .ksize-slide-image img {
+  max-height: max(160px, calc(68dvh - 68px));
+}
+
+body.ksize-zoom-arrow-navigation .ksize-image-wrap {
+  min-height: max(160px, calc(52dvh - 68px));
+}
+
+body.ksize-zoom-arrow-navigation .ksize-image-wrap img {
+  max-height: max(160px, calc(52dvh - 68px));
+}
+
+body.ksize-zoom-arrow-navigation .ksize-image-stage.ksize-orange-outline-fix {
+  width: min(100%, 1180px, calc((52dvh - 68px) * 16 / 9));
+}
+
 .ksize-zoom-navigation {
-  position: fixed;
-  z-index: 60;
-  right: max(16px, env(safe-area-inset-right));
-  bottom: max(12px, env(safe-area-inset-bottom));
+  position: static;
+  flex: 0 0 auto;
+  align-self: center;
+  margin: 6px auto max(10px, env(safe-area-inset-bottom));
   display: flex;
-  gap: 6px;
+  gap: 8px;
   padding: 4px;
-  border: 1px solid #d6dbe0;
-  border-radius: 10px;
-  background: #fff;
 }
 
 .ksize-zoom-navigation button {
@@ -87,15 +128,15 @@ body.ksize-zoom-arrow-navigation .ksize-start-cue {
   width: 44px;
   height: 44px;
   padding: 0;
-  border: 1px solid #b9c1c9;
-  border-radius: 6px;
-  background: #fff;
-  color: #4a5560;
-  font: 400 25px/1 Arial, sans-serif;
+  border: 2px solid #176d57;
+  border-radius: 10px;
+  background: #176d57;
+  color: #fff;
+  font: 700 25px/1 Arial, sans-serif;
   cursor: pointer;
   box-shadow: none;
 }
 
-.ksize-zoom-navigation button:hover:not(:disabled) { background: #f0f2f4; }
+.ksize-zoom-navigation button:hover:not(:disabled) { background: #125b49; }
 .ksize-zoom-navigation button:disabled { opacity: .35; cursor: default; }
 .ksize-zoom-navigation button:focus-visible { outline: 3px solid #215bb2; outline-offset: 2px; }
