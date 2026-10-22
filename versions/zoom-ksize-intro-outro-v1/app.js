@@ -1044,6 +1044,7 @@ function collectFacilitatorControls() {
     ".ksize-audio-btn",
     ".ksize-parent-listen",
     ".ksize-researcher-tools button",
+    ".ksize-zoom-navigation button",
   ].join(",");
   return Array.from(document.querySelectorAll("button"))
     .filter((button) => {
@@ -2098,43 +2099,100 @@ async function playReviewNarration(text, explicitSrc = "") {
   return explicitSrc ? audio.playFile(explicitSrc, text) : audio.play(text);
 }
 
+function jumpToPreview(jsPsych, index) {
+  audio.stop();
+  const targetIndex = Math.max(0, Math.min(index, totalPreviewScreens - 1));
+  const url = new URL(window.location.href);
+  Object.entries(currentSessionParams).forEach(([key, value]) => {
+    if (value) url.searchParams.set(key, value);
+  });
+  url.searchParams.delete("resumeBackupKey");
+  url.searchParams.delete("expectedResumeRows");
+  url.searchParams.set("researcherJump", "1");
+  if (isFacilitatorMode && targetIndex > 0) {
+    const payload = currentFacilitatorPayload();
+    if (!payload) return false;
+    payload.rows = payload.rows.filter((row) => {
+      const rowIndex = Number(row?.preview_index);
+      return Number.isFinite(rowIndex) && rowIndex < targetIndex;
+    });
+    payload.facilitator_navigation_from = currentPreviewIndex;
+    payload.facilitator_navigation_to = targetIndex;
+    const backupKey = saveLocalDataBackup(payload);
+    if (payload.rows.length > 0) {
+      if (!backupKey) return false;
+      url.searchParams.set("resumeBackupKey", backupKey);
+      url.searchParams.set("expectedResumeRows", String(payload.rows.length));
+    }
+  }
+  url.searchParams.set("previewIndex", String(targetIndex));
+  window.location.href = url.toString();
+  return true;
+}
+
+function installZoomNavigation(jsPsych, nodeData) {
+  document.querySelector(".ksize-zoom-navigation")?.remove();
+  if (!useZoomIntroOutro) return;
+  document.body.classList.add("ksize-zoom-arrow-navigation");
+  const wrap = document.createElement("nav");
+  wrap.className = "ksize-zoom-navigation";
+  wrap.dataset.previewIndex = String(currentPreviewIndex);
+  wrap.setAttribute("aria-label", "Study screen navigation");
+  const back = document.createElement("button");
+  back.type = "button";
+  back.className = "ksize-zoom-back";
+  back.textContent = "←";
+  back.setAttribute("aria-label", "Previous screen");
+  back.title = "Previous screen";
+  back.disabled = currentPreviewIndex <= 0;
+  back.addEventListener("click", () => {
+    if (currentPreviewIndex <= 0 || back.disabled) return;
+    if (jumpToPreview(jsPsych, currentPreviewIndex - 1)) {
+      back.disabled = true;
+      forward.disabled = true;
+    }
+  });
+  const forward = document.createElement("button");
+  forward.type = "button";
+  forward.className = "ksize-zoom-forward";
+  forward.textContent = "→";
+  const finalScreen = currentPreviewIndex === totalPreviewScreens - 1;
+  forward.setAttribute("aria-label", finalScreen ? "Finish study" : "Next screen");
+  forward.title = finalScreen ? "Finish study" : "Next screen";
+  forward.addEventListener("click", () => {
+    if (forward.disabled) return;
+    // Keep each screen's existing completion handler and data semantics.
+    const nativeNext = document.querySelector([
+      ".ksize-zoom-slide-next", ".ksize-next-btn:not([data-download-json]):not([data-download-csv])",
+      ".ksize-setup-next", ".ksize-grownup-here-btn", ".ksize-final-grownup-continue",
+    ].join(","));
+    if (nativeNext?.disabled) return;
+    back.disabled = true;
+    forward.disabled = true;
+    audio.stop();
+    if (nativeNext) {
+      nativeNext.click();
+    } else {
+      // Navigation past a question must never create a choice or rating.
+      const needsAnswer = ["response_choices", "response", "child_assent"].includes(nodeData.slide_kind);
+      jsPsych.finishTrial({
+        researcher_navigation: "forward",
+        ...(needsAnswer ? { response_missing: true } : {}),
+      });
+    }
+  });
+  wrap.append(back, forward);
+  document.body.appendChild(wrap);
+}
+
 function installResearcherSkip(jsPsych) {
   const existing = document.querySelector(".ksize-researcher-tools");
   if (existing) existing.remove();
+  if (useZoomIntroOutro) return;
   if (!showResearcherTools) return;
 
   const wrap = document.createElement("div");
   wrap.className = "ksize-researcher-tools";
-
-  const jumpToPreview = (index) => {
-    audio.stop();
-    const targetIndex = Math.max(0, Math.min(index, totalPreviewScreens - 1));
-    const url = new URL(window.location.href);
-    Object.entries(currentSessionParams).forEach(([key, value]) => {
-      if (value) url.searchParams.set(key, value);
-    });
-    url.searchParams.delete("resumeBackupKey");
-    url.searchParams.delete("expectedResumeRows");
-    url.searchParams.set("researcherJump", "1");
-    if (isFacilitatorMode && targetIndex > 0) {
-      const payload = currentFacilitatorPayload();
-      if (!payload) return;
-      payload.rows = payload.rows.filter((row) => {
-        const rowIndex = Number(row?.preview_index);
-        return Number.isFinite(rowIndex) && rowIndex < targetIndex;
-      });
-      payload.facilitator_navigation_from = currentPreviewIndex;
-      payload.facilitator_navigation_to = targetIndex;
-      const backupKey = saveLocalDataBackup(payload);
-      if (payload.rows.length > 0) {
-        if (!backupKey) return;
-        url.searchParams.set("resumeBackupKey", backupKey);
-        url.searchParams.set("expectedResumeRows", String(payload.rows.length));
-      }
-    }
-    url.searchParams.set("previewIndex", String(targetIndex));
-    window.location.href = url.toString();
-  };
 
   const start = document.createElement("button");
   start.type = "button";
@@ -2142,7 +2200,7 @@ function installResearcherSkip(jsPsych) {
   start.textContent = "Start";
   start.title = "Jump back to the first preview screen.";
   start.disabled = currentPreviewIndex <= 0;
-  start.addEventListener("click", () => jumpToPreview(0));
+  start.addEventListener("click", () => jumpToPreview(jsPsych, 0));
 
   const back = document.createElement("button");
   back.type = "button";
@@ -2152,7 +2210,7 @@ function installResearcherSkip(jsPsych) {
   back.disabled = currentPreviewIndex <= 0;
   back.addEventListener("click", () => {
     if (currentPreviewIndex <= 0) return;
-    jumpToPreview(currentPreviewIndex - 1);
+    jumpToPreview(jsPsych, currentPreviewIndex - 1);
   });
 
   const button = document.createElement("button");
@@ -2170,7 +2228,7 @@ function installResearcherSkip(jsPsych) {
   end.textContent = "End";
   end.title = "Jump to the final preview screen.";
   end.disabled = !totalPreviewScreens || currentPreviewIndex >= totalPreviewScreens - 1;
-  end.addEventListener("click", () => jumpToPreview(totalPreviewScreens - 1));
+  end.addEventListener("click", () => jumpToPreview(jsPsych, totalPreviewScreens - 1));
 
   wrap.append(start, back, button, end);
   document.body.appendChild(wrap);
@@ -2189,6 +2247,7 @@ function withPreviewIndex(node, index) {
       setFacilitatorScript(node.data?.facilitator_script || [], node.data || {});
       originalOnLoad?.();
       renderLiveShareScript(node.data?.facilitator_script || []);
+      installZoomNavigation(facilitatorJsPsych, node.data || {});
       window.setTimeout(() => publishFacilitatorState(node.data || {}, index), 0);
     },
   };

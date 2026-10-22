@@ -11,7 +11,7 @@
       progressLabel: "Zoom runs reviewed",
       openLabel: "Open Zoom rendition",
       help: "The Zoom version is researcher-paced for live screen sharing.",
-      summary: "Each opens in manual researcher mode with Back and Skip controls.",
+      summary: "Each opens in manual researcher mode with adjacent back and forward arrows.",
     }),
   });
   const ROLE_SETS = Object.freeze([
