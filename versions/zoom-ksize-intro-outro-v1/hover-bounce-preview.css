@@ -1,0 +1,52 @@
+/* Comparison preview only. The regular study never loads this file.
+   Keep the actual hit target fixed; animate only the visible choice frame. */
+body.ksize-zoom-hover-preview.ksize-zoom-arrow-navigation [data-slide-kind="response_choices"] .ksize-char-btn:not(.ksize-char-cue-box) {
+  border-color: transparent;
+  background: transparent;
+  box-shadow: none;
+  animation: none;
+  transform: none;
+}
+
+body.ksize-zoom-hover-preview.ksize-zoom-arrow-navigation [data-slide-kind="response_choices"] .ksize-char-btn:not(.ksize-char-cue-box)::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  box-sizing: border-box;
+  border: 6px solid var(--choice-border);
+  border-radius: inherit;
+  background: rgba(255, 244, 191, 0.08);
+  box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.68), 0 0 18px rgba(255, 176, 0, 0.42);
+  pointer-events: none;
+  transform-origin: center;
+  animation: ksize-choice-pulse 1.25s ease-in-out infinite;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body.ksize-zoom-hover-preview.ksize-zoom-arrow-navigation [data-slide-kind="response_choices"] .ksize-char-btn:not(.ksize-char-cue-box):hover:not(:disabled)::after {
+    border-color: #2477b8;
+    background: rgba(234, 247, 255, 0.16);
+    box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.82), 0 0 34px rgba(36, 119, 184, 0.74);
+    animation: ksize-zoom-hover-bounce 620ms ease-in-out 2;
+  }
+}
+
+body.ksize-zoom-hover-preview.ksize-zoom-arrow-navigation [data-slide-kind="response_choices"] .ksize-char-btn:not(.ksize-char-cue-box):focus-visible:not(:disabled)::after {
+  border-color: #2477b8;
+  background: rgba(234, 247, 255, 0.16);
+  box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.82), 0 0 34px rgba(36, 119, 184, 0.74);
+  animation: none;
+}
+
+@keyframes ksize-zoom-hover-bounce {
+  0%, 100% { transform: translateY(0) scale(1); }
+  45% { transform: translateY(-10px) scale(1.06); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.ksize-zoom-hover-preview.ksize-zoom-arrow-navigation [data-slide-kind="response_choices"] .ksize-char-btn:not(.ksize-char-cue-box),
+  body.ksize-zoom-hover-preview.ksize-zoom-arrow-navigation [data-slide-kind="response_choices"] .ksize-char-btn:not(.ksize-char-cue-box)::after {
+    animation: none !important;
+    transform: none !important;
+  }
+}
