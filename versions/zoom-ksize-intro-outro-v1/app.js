@@ -2906,7 +2906,7 @@ function renderSlide({ chunk, slide, index, total, storyNumber = null, storyTota
     <main class="ksize-shell">
       <section class="ksize-screen" data-slide-kind="${escapeHtml(slide.kind)}">
         ${topHudHtml(storyNumber, storyTotal)}
-        ${slide.kind === "response"
+        ${slide.kind === "response" && !useZoomIntroOutro
           ? `<div class="ksize-rating-focus">${escapeHtml(ratingFocusLabel(chunk))}</div>`
           : ""}
         <div class="ksize-image-wrap">
@@ -3547,7 +3547,7 @@ async function main() {
     ? eventPlan.flatMap((trial, idx) => {
         const eventNodes = buildEventTrialNodes(jsPsych, trial, idx, eventPlan.length, selectedEventSuffix, PART_EVENT, 1);
         const dyadNodes = dyadGroupsByTrial[idx].flatMap((chunk) => [
-          makeFollowupTransitionNode(jsPsych, trial, chunk, idx + 1, eventPlan.length),
+          ...(useZoomIntroOutro ? [] : [makeFollowupTransitionNode(jsPsych, trial, chunk, idx + 1, eventPlan.length)]),
           ...orderedDyadSlides(chunk, { includeIntro: true }).map((slide) => {
             const node = makeSlideNode(
               jsPsych,

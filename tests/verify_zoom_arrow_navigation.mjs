@@ -237,11 +237,18 @@ function imagesIn(stimulus = "") {
   return [...stimulus.matchAll(/<img\b[^>]*\bsrc="([^"]*)"/g)].map((match) => match[1]);
 }
 
-function taskShape(run) {
-  return plain(run.timeline.map((node) => ({
+function taskShape(run, { simplifyZoomBaseline = false } = {}) {
+  const timeline = simplifyZoomBaseline
+    ? run.timeline.filter((node) => node.data?.slide_kind !== "followup_transition")
+    : run.timeline;
+  return plain(timeline.map((node, index) => ({
     type: node.type,
-    data: node.data,
-    stimulus: node.stimulus,
+    data: simplifyZoomBaseline && node.data
+      ? { ...node.data, preview_index: index - 1 }
+      : node.data,
+    stimulus: simplifyZoomBaseline && node.stimulus
+      ? node.stimulus.replace(/<div class="ksize-rating-focus">[^<]*<\/div>/g, "")
+      : node.stimulus,
     choices: node.choices,
     preloadImages: node.images,
     stimulusImages: imagesIn(node.stimulus),
@@ -267,8 +274,15 @@ for (const entry of entries) {
   assert.equal(scientificUrl.toString(), beforeUrl.toString(), `${entry.id}: assigned URL must not change apart from the cache-refresh parameter`);
   const before = await runtime(sourceBefore, beforeUrl, { helper: helperBefore });
   const after = await runtime(sourceAfter, afterUrl);
-  assert.deepEqual(taskShape(after), taskShape(before), `${entry.id}: scientific timeline data, screenshots, and answer options must not change`);
-  assert.deepEqual(after.inspect(), before.inspect(), `${entry.id}: actual assignments and pair schedules must not change`);
+  const removedTransitions = before.timeline.filter((node) => node.data?.slide_kind === "followup_transition").length;
+  assert.ok(removedTransitions > 0, `${entry.id}: baseline contains the intentionally removed transition screens`);
+  assert.equal(after.timeline.filter((node) => node.data?.slide_kind === "followup_transition").length, 0, `${entry.id}: Zoom must go directly from helper choice to the rating pair introduction`);
+  assert.equal(after.timeline.length, before.timeline.length - removedTransitions, `${entry.id}: only followup transition screens may be removed`);
+  assert.equal(after.timeline.some((node) => /class="ksize-rating-focus"/.test(node.stimulus || "")), false, `${entry.id}: redundant rating-focus banners must not render in Zoom`);
+  assert.deepEqual(taskShape(after), taskShape(before, { simplifyZoomBaseline: true }), `${entry.id}: all remaining scientific timeline data, pair introductions, screenshots, questions and answer options must remain identical`);
+  const beforeInspection = before.inspect();
+  beforeInspection.totalPreviewScreens -= removedTransitions;
+  assert.deepEqual(after.inspect(), beforeInspection, `${entry.id}: actual assignments and pair schedules must not change`);
   for (let index = 1; index < after.timeline.length; index += 1) {
     after.load(index);
     const node = after.timeline[index];
@@ -348,7 +362,7 @@ for (const variant of ["no-facilitator", "no-live-share", "no-deck-version"]) {
 }
 
 const nativeRun = await runtime(sourceAfter, exampleUrl);
-for (const kind of ["zoom_intro", "child_welcome", "intro", "story", "followup_transition"]) {
+for (const kind of ["zoom_intro", "child_welcome", "intro", "story"]) {
   const index = nativeRun.timeline.findIndex((node) => node.data?.slide_kind === kind);
   if (index < 0) continue; // Intro renderer uses distinct kind names across versions.
   nativeRun.load(index);
@@ -395,6 +409,7 @@ async function backAndReanswer(kind, answerClass, firstOption, changedOption) {
   run.load(answerIndex);
   const answers = run.document.querySelectorAll(answerClass);
   assert.ok(answers.length >= 2, `${kind}: actual answer controls remain available`);
+  const changedOptionText = answers[changedOption].getAttribute("aria-label") || answers[changedOption].textContent.trim();
   answers[firstOption].click();
   run.flushTimers();
   const firstAnswer = plain(run.rows.at(-1));
@@ -426,12 +441,10 @@ async function backAndReanswer(kind, answerClass, firstOption, changedOption) {
   assert.equal(resumed.rows.some((row) => row.response === "stale_future_answer"), false, `${kind}: stale later answers must be discarded`);
   if (kind === "response_choices") {
     resumed.load(2);
-    assert.equal(resumed.timeline[2].data.slide_kind, "followup_transition");
-    const confirmation = resumed.document.querySelector("[data-followup-choice]");
-    assert.ok(confirmation.textContent && confirmation.textContent !== "Thanks for choosing!", "helper confirmation must use the new answer");
-    resumed.arrow("forward").click();
-    resumed.flushTimers();
-    assert.equal(resumed.rows.at(-1).story_choice_label, result.choice_label.toUpperCase(), "helper confirmation must not retain the old answer");
+    assert.equal(resumed.timeline[2].data.slide_kind, "intro", "the actual rating-pair introduction must immediately follow the helper choice");
+    assert.ok(resumed.timeline[2].data.dyad_script_key, "the retained introduction identifies the assigned rating pair");
+    assert.equal(resumed.document.querySelector("[data-followup-choice]"), null, "the removed choice-confirmation screen must not be mounted");
+    assert.equal(result.choice_label, changedOptionText, "stored helper choice must reflect the newly selected answer");
     assert.deepEqual(plain(resumed.timeline.slice(2).map((node) => node.data.dyad_script_key)), plain(run.timeline.slice(answerIndex + 1).map((node) => node.data.dyad_script_key)), "re-answer must not change any assigned rating pair");
   } else {
     assert.equal(result.rating_value, changedOption + 1);
@@ -625,5 +638,5 @@ console.log(JSON.stringify({
   screensChecked: screenCount,
   slideKinds: [...allKinds].sort(),
   sharedChsFilesByteIdentical: immutableFiles.length,
-  verified: ["assignment/timeline identity", "Start/Back/Forward/End on every Zoom screen", "Start/End bounds disabled correctly", "all-version Start/End assignment identity", "Start clears stale responses without needing browser storage", "End previews certificate without completion or invented answers", "End storage fallback and fail-safe", "all four controls disable after successful navigation", "no upper-right toolbar", "native forward semantics", "missing-answer forward", "double-click guard", "Back/recovery", "session-first navigation checkpoint", "blocked/full local storage recovery", "blocked session storage fallback", "both stores blocked visible error without data loss", "selected-store isolation from stale checkpoints", "legacy local checkpoint recovery", "pending-persistence Back checkpoint isolation", "Back recovery without participant ID", "full restored-row identity", "helper re-answer/updated confirmation", "rating re-answer", "pair-plan stability", "invalid-restore protection", "final completion", "non-Zoom gate compatibility"],
+  verified: ["assignment/remaining-timeline identity", "Zoom-only removal of followup transition screens and redundant rating-focus banners", "retained pair introductions, rating images, questions and answer options", "Start/Back/Forward/End on every Zoom screen", "Start/End bounds disabled correctly", "all-version Start/End assignment identity", "Start clears stale responses without needing browser storage", "End previews certificate without completion or invented answers", "End storage fallback and fail-safe", "all four controls disable after successful navigation", "no upper-right toolbar", "native forward semantics", "missing-answer forward", "double-click guard", "Back/recovery", "session-first navigation checkpoint", "blocked/full local storage recovery", "blocked session storage fallback", "both stores blocked visible error without data loss", "selected-store isolation from stale checkpoints", "legacy local checkpoint recovery", "pending-persistence Back checkpoint isolation", "Back recovery without participant ID", "full restored-row identity", "helper re-answer followed directly by retained rating-pair introduction", "rating re-answer", "pair-plan stability", "invalid-restore protection", "final completion", "non-Zoom gate compatibility"],
 }, null, 2));
