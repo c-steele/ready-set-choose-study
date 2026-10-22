@@ -58,7 +58,7 @@
 /* Only the isolated, researcher-paced Zoom study uses this quiet arrow pair.
    Keep native handlers in the DOM so completion and response logging stay intact. */
 body.ksize-zoom-arrow-navigation .ksize-researcher-tools,
-body.ksize-zoom-arrow-navigation .ksize-zoom-slide-controls,
+body.ksize-zoom-arrow-navigation .ksize-zoom-slide-next,
 body.ksize-zoom-arrow-navigation .ksize-next-btn:not([data-download-json]):not([data-download-csv]),
 body.ksize-zoom-arrow-navigation .ksize-setup-next,
 body.ksize-zoom-arrow-navigation .ksize-grownup-here-btn,
@@ -67,28 +67,44 @@ body.ksize-zoom-arrow-navigation .ksize-start-cue {
   display: none !important;
 }
 
-/* Reserve the footer's own height rather than placing it over the stimuli. */
-body.ksize-zoom-arrow-navigation {
-  height: 100vh !important;
-  height: 100dvh !important;
-  overflow: hidden;
+/* Use the existing Next-button slot, not a separate page-bottom footer. */
+body.ksize-zoom-arrow-navigation #jspsych-content {
+  width: 100%;
+  max-width: 100%;
 }
 
-body.ksize-zoom-arrow-navigation > .jspsych-content-wrapper {
-  flex: 1 1 auto;
+body.ksize-zoom-arrow-navigation .ksize-controls:has(> .ksize-zoom-navigation) {
   min-height: 0;
   margin: 0;
-  width: 100%;
-  overflow-y: auto;
 }
 
-body.ksize-zoom-arrow-navigation .ksize-screen .ksize-controls {
-  display: none !important;
+body.ksize-zoom-arrow-navigation .ksize-bottom-area:has(.ksize-zoom-navigation) {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  gap: 8px 22px;
 }
 
-/* Account for the footer when fitting the existing, aspect-preserved artwork. */
+body.ksize-zoom-arrow-navigation .ksize-bottom-area:has(.ksize-zoom-navigation) > .ksize-helper {
+  grid-column: 1;
+  justify-self: end;
+}
+
+body.ksize-zoom-arrow-navigation .ksize-bottom-area:has(.ksize-zoom-navigation) > .ksize-controls {
+  grid-column: 2;
+}
+
+body.ksize-zoom-arrow-navigation .ksize-bottom-area:has(.ksize-zoom-navigation) > .ksize-choice-page-note {
+  grid-column: 1 / -1;
+  margin: 0;
+}
+
+body.ksize-zoom-arrow-navigation .ksize-rating-choice {
+  aspect-ratio: 1.5 / 1;
+}
+
+/* Fit the artwork and in-slide controls without changing image proportions. */
 body.ksize-zoom-arrow-navigation .ksize-screen {
-  min-height: calc(100dvh - 144px);
+  min-height: calc(100dvh - 88px);
 }
 
 body.ksize-zoom-arrow-navigation .ksize-scene-wrap {
@@ -115,10 +131,10 @@ body.ksize-zoom-arrow-navigation .ksize-image-stage.ksize-orange-outline-fix {
   position: static;
   flex: 0 0 auto;
   align-self: center;
-  margin: 6px auto max(10px, env(safe-area-inset-bottom));
+  margin: 0 auto;
   display: flex;
   gap: 8px;
-  padding: 4px;
+  padding: 0;
 }
 
 .ksize-zoom-navigation button {

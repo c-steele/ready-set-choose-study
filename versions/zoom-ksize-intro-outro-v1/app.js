@@ -2182,7 +2182,11 @@ function installZoomNavigation(jsPsych, nodeData) {
     }
   });
   wrap.append(back, forward);
-  document.body.appendChild(wrap);
+  // Replace the visible Next control in its original below-slide position.
+  // Keep its hidden native button and listener for the forward action above.
+  const controls = document.querySelector(".ksize-zoom-slide-controls, .ksize-controls");
+  const host = controls || document.querySelector(".ksize-screen, #jspsych-content") || document.body;
+  host.appendChild(wrap);
 }
 
 function installResearcherSkip(jsPsych) {
