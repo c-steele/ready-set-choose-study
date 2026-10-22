@@ -67,6 +67,11 @@ body.ksize-zoom-arrow-navigation .ksize-start-cue {
   display: none !important;
 }
 
+/* The live researcher supplies the prompts; hide the animated helper only here. */
+body.ksize-zoom-arrow-navigation .ksize-helper {
+  display: none !important;
+}
+
 /* Use the existing Next-button slot, not a separate page-bottom footer. */
 body.ksize-zoom-arrow-navigation #jspsych-content {
   width: 100%;
@@ -82,11 +87,6 @@ body.ksize-zoom-arrow-navigation .ksize-bottom-area:has(.ksize-zoom-navigation) 
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
   gap: 8px 22px;
-}
-
-body.ksize-zoom-arrow-navigation .ksize-bottom-area:has(.ksize-zoom-navigation) > .ksize-helper {
-  grid-column: 1;
-  justify-self: end;
 }
 
 body.ksize-zoom-arrow-navigation .ksize-bottom-area:has(.ksize-zoom-navigation) > .ksize-controls {

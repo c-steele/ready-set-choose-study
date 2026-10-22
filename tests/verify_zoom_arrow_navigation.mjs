@@ -378,6 +378,47 @@ async function backAndReanswer(kind, answerClass, firstOption, changedOption) {
 await backAndReanswer("response_choices", ".ksize-char-btn", 0, 1);
 await backAndReanswer("response", ".ksize-rating-choice", 0, 2);
 
+async function verifyBackCheckpoint({ withoutParticipantId = false, pendingPersistence = false } = {}) {
+  const url = new URL(exampleUrl);
+  if (withoutParticipantId) url.searchParams.delete("pid");
+  const run = await runtime(sourceAfter, url);
+  const answerIndex = run.timeline.findIndex((node) => node.data?.slide_kind === "response_choices");
+  const answerPreview = run.timeline[answerIndex].data.preview_index;
+  const earlierRow = { preview_index: 0, response: "earlier_intro", retained_fields: { label: "Do not change", values: [0, false, ""] } };
+  run.rows.push(plain(earlierRow));
+  run.load(answerIndex);
+  run.document.querySelectorAll(".ksize-char-btn")[0].click();
+  run.load(answerIndex + 1);
+  // The real bridge schedules persistence after clicks. Leave the existing
+  // data-update/state timers queued to reproduce a slow-navigation handoff.
+  if (!pendingPersistence) run.flushTimers();
+  run.arrow("back").click();
+  const navigation = new URL(run.window.location.href);
+  const backupKey = navigation.searchParams.get("resumeBackupKey");
+  assert.ok(backupKey, "Back with earlier responses must have a recovery checkpoint");
+  assert.equal(navigation.searchParams.get("expectedResumeRows"), "1");
+  assert.equal(Number(navigation.searchParams.get("previewIndex")), answerPreview);
+  const checkpoint = run.storage.get(backupKey);
+  assert.deepEqual(JSON.parse(checkpoint).rows, [earlierRow], "Back checkpoint contains only full, unmodified rows preceding the destination");
+  if (pendingPersistence) {
+    run.flushTimers();
+    assert.equal(run.storage.get(backupKey), checkpoint, "pending progress/state publication cannot overwrite the truncated navigation checkpoint");
+    const regularKey = `who-will-help-data:${navigation.searchParams.get("session_id")}`;
+    assert.notEqual(backupKey, regularKey, "navigation recovery must use a key isolated from ordinary progress saves");
+    assert.equal(JSON.parse(run.storage.get(regularKey)).rows.length, 2, "fixture actually runs the pending untruncated progress save");
+  }
+  const resumed = await runtime(sourceAfter, navigation, { storage: run.storage });
+  assert.equal(resumed.inspect().facilitatorRestoredRowCount, 1, "Back restores correctly with or without an explicit participant ID");
+  assert.equal(resumed.timeline[1].data.preview_index, answerPreview);
+  const restored = plain(resumed.rows[0]);
+  delete restored.facilitator_restored_from_backup;
+  assert.deepEqual(restored, earlierRow, "recovery preserves every original response field");
+  assert.deepEqual(assignmentWithoutRecovery(resumed), assignmentWithoutRecovery(run), "recovery leaves the assigned version and rating plan unchanged");
+}
+
+await verifyBackCheckpoint({ pendingPersistence: true });
+await verifyBackCheckpoint({ withoutParticipantId: true });
+
 const complete = await runtime(sourceAfter, exampleUrl);
 complete.load(complete.timeline.length - 1);
 assert.equal(complete.arrow("back").disabled, false);
@@ -393,6 +434,7 @@ assert.equal(saved.completion_status, "completed");
 assert.equal(saved.rows.at(-1).response, "finish_zoom_slides", "last Forward must use native final-slide completion");
 
 const css = currentFile(`${zoomPrefix}/zoom-slides.css`);
+assert.match(css, /body\.ksize-zoom-arrow-navigation \.ksize-helper\s*\{[^}]*display:\s*none\s*!important/, "animated helper and bubble are hidden only in isolated Zoom study");
 assert.match(css, /body\.ksize-zoom-arrow-navigation[^{}]*\.ksize-researcher-tools[\s\S]*?display:\s*none\s*!important/);
 assert.match(css, /body\.ksize-zoom-arrow-navigation[^{}]*\.ksize-next-btn[\s\S]*?display:\s*none\s*!important/);
 assert.match(css, /body\.ksize-zoom-arrow-navigation[^{}]*\.ksize-zoom-slide-next[\s\S]*?display:\s*none\s*!important/);
@@ -411,5 +453,5 @@ console.log(JSON.stringify({
   screensChecked: screenCount,
   slideKinds: [...allKinds].sort(),
   sharedChsFilesByteIdentical: immutableFiles.length,
-  verified: ["assignment/timeline identity", "arrows on every Zoom screen", "no upper-right toolbar", "native forward semantics", "missing-answer forward", "double-click guard", "Back/recovery", "helper re-answer/updated confirmation", "rating re-answer", "pair-plan stability", "invalid-restore protection", "final completion", "non-Zoom gate compatibility"],
+  verified: ["assignment/timeline identity", "arrows on every Zoom screen", "no upper-right toolbar", "native forward semantics", "missing-answer forward", "double-click guard", "Back/recovery", "pending-persistence Back checkpoint isolation", "Back recovery without participant ID", "full restored-row identity", "helper re-answer/updated confirmation", "rating re-answer", "pair-plan stability", "invalid-restore protection", "final completion", "non-Zoom gate compatibility"],
 }, null, 2));

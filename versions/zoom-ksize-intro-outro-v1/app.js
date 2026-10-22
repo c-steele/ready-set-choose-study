@@ -832,9 +832,8 @@ function makeDataPayload(jsPsych) {
   };
 }
 
-function saveLocalDataBackup(payload) {
+function saveLocalDataBackup(payload, key = `who-will-help-data:${payload.session_id}`) {
   try {
-    const key = `who-will-help-data:${payload.session_id}`;
     localStorage.setItem(key, JSON.stringify(payload));
     localStorage.setItem("who-will-help-data:last-session", key);
     return key;
@@ -849,7 +848,7 @@ function restoreFacilitatorDataBackup(jsPsych) {
   if (!requestedResumeBackupKey.startsWith("who-will-help-data:")) return 0;
   try {
     const priorPayload = JSON.parse(localStorage.getItem(requestedResumeBackupKey) || "null");
-    if (String(priorPayload?.participant_id || "") !== String(requestedParticipantId || "")) return 0;
+    if (String(priorPayload?.participant_id || "") !== String(requestedParticipantId || "test_no_pid")) return 0;
     if (String(priorPayload?.seed || "") !== String(requestedSeed || "")) return 0;
     const priorRows = Array.isArray(priorPayload?.rows) ? priorPayload.rows : [];
     const dataCollection = jsPsych.data.get();
@@ -2118,7 +2117,10 @@ function jumpToPreview(jsPsych, index) {
     });
     payload.facilitator_navigation_from = currentPreviewIndex;
     payload.facilitator_navigation_to = targetIndex;
-    const backupKey = saveLocalDataBackup(payload);
+    // Click/heartbeat callbacks may still save the current (untruncated) page
+    // while the destination loads. Keep the Back checkpoint in a separate,
+    // bounded per-session slot so those writes cannot invalidate its row count.
+    const backupKey = saveLocalDataBackup(payload, `who-will-help-data:${payload.session_id}:navigation`);
     if (payload.rows.length > 0) {
       if (!backupKey) return false;
       url.searchParams.set("resumeBackupKey", backupKey);
