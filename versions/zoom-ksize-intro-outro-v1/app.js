@@ -2166,6 +2166,34 @@ function installZoomNavigation(jsPsych, nodeData) {
   wrap.className = "ksize-zoom-navigation";
   wrap.dataset.previewIndex = String(currentPreviewIndex);
   wrap.setAttribute("aria-label", "Study screen navigation");
+  const jumpFromControl = (targetIndex, label) => {
+    document.querySelector(".ksize-zoom-navigation-error")?.remove();
+    if (jumpToPreview(jsPsych, targetIndex)) {
+      wrap.querySelectorAll("button").forEach((button) => { button.disabled = true; });
+    } else {
+      // Never silently strand a researcher when the browser blocks both stores.
+      // Keep both controls usable and preserve all current response data.
+      const error = document.createElement("p");
+      error.className = "ksize-zoom-navigation-error";
+      error.setAttribute("role", "alert");
+      error.textContent = `${label} could not save your progress in this browser. This screen and your answers are unchanged. Please allow site storage and try again.`;
+      error.style.cssText = "flex-basis:100%;max-width:30rem;margin:8px 0 0;color:#a12525;font:600 15px/1.4 system-ui,sans-serif;text-align:center;";
+      wrap.style.flexWrap = "wrap";
+      wrap.style.justifyContent = "center";
+      wrap.style.maxWidth = "30rem";
+      wrap.appendChild(error);
+    }
+  };
+  const start = document.createElement("button");
+  start.type = "button";
+  start.className = "ksize-zoom-start ksize-zoom-boundary";
+  start.textContent = "Start";
+  start.setAttribute("aria-label", "Go to first screen");
+  start.title = "Return to the first Welcome slide. Later answers will be reset.";
+  start.disabled = currentPreviewIndex <= 0;
+  start.addEventListener("click", () => {
+    if (!start.disabled) jumpFromControl(0, "Start");
+  });
   const back = document.createElement("button");
   back.type = "button";
   back.className = "ksize-zoom-back";
@@ -2174,24 +2202,7 @@ function installZoomNavigation(jsPsych, nodeData) {
   back.title = "Previous screen";
   back.disabled = currentPreviewIndex <= 0;
   back.addEventListener("click", () => {
-    if (currentPreviewIndex <= 0 || back.disabled) return;
-    document.querySelector(".ksize-zoom-navigation-error")?.remove();
-    if (jumpToPreview(jsPsych, currentPreviewIndex - 1)) {
-      back.disabled = true;
-      forward.disabled = true;
-    } else {
-      // Never silently strand a researcher when the browser blocks both stores.
-      // Keep both controls usable and preserve all current response data.
-      const error = document.createElement("p");
-      error.className = "ksize-zoom-navigation-error";
-      error.setAttribute("role", "alert");
-      error.textContent = "Back could not save your progress in this browser. This screen and your answers are unchanged. Please allow site storage and try again.";
-      error.style.cssText = "flex-basis:100%;max-width:30rem;margin:8px 0 0;color:#a12525;font:600 15px/1.4 system-ui,sans-serif;text-align:center;";
-      wrap.style.flexWrap = "wrap";
-      wrap.style.justifyContent = "center";
-      wrap.style.maxWidth = "30rem";
-      wrap.appendChild(error);
-    }
+    if (currentPreviewIndex > 0 && !back.disabled) jumpFromControl(currentPreviewIndex - 1, "Back");
   });
   const forward = document.createElement("button");
   forward.type = "button";
@@ -2208,8 +2219,7 @@ function installZoomNavigation(jsPsych, nodeData) {
       ".ksize-setup-next", ".ksize-grownup-here-btn", ".ksize-final-grownup-continue",
     ].join(","));
     if (nativeNext?.disabled) return;
-    back.disabled = true;
-    forward.disabled = true;
+    wrap.querySelectorAll("button").forEach((button) => { button.disabled = true; });
     audio.stop();
     if (nativeNext) {
       nativeNext.click();
@@ -2222,7 +2232,17 @@ function installZoomNavigation(jsPsych, nodeData) {
       });
     }
   });
-  wrap.append(back, forward);
+  const end = document.createElement("button");
+  end.type = "button";
+  end.className = "ksize-zoom-end ksize-zoom-boundary";
+  end.textContent = "End";
+  end.setAttribute("aria-label", "Go to last screen");
+  end.title = "Go to the final closing slide without finishing the study.";
+  end.disabled = currentPreviewIndex >= totalPreviewScreens - 1;
+  end.addEventListener("click", () => {
+    if (!end.disabled) jumpFromControl(totalPreviewScreens - 1, "End");
+  });
+  wrap.append(start, back, forward, end);
   // Replace the visible Next control in its original below-slide position.
   // Keep its hidden native button and listener for the forward action above.
   const controls = document.querySelector(".ksize-zoom-slide-controls, .ksize-controls");

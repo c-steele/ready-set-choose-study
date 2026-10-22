@@ -261,7 +261,7 @@ for (const entry of entries) {
   const beforeUrl = apiBefore.buildStudyUrl(entry, "https://example.test/screen-share-study/zoom-review.html", "zoom", "ARROWS");
   const afterUrl = apiAfter.buildStudyUrl(entry, "https://example.test/screen-share-study/zoom-review.html", "zoom", "ARROWS");
   assert.equal(afterUrl.pathname, `/${zoomPrefix}/index.html`);
-  assert.equal(afterUrl.searchParams.get("v"), "zoom-navigation-storage-2026-10-22", `${entry.id}: fresh previews use the current navigation HTML`);
+  assert.equal(afterUrl.searchParams.get("v"), "zoom-navigation-bounds-2026-10-22", `${entry.id}: fresh previews use the current navigation HTML`);
   const scientificUrl = new URL(afterUrl);
   scientificUrl.searchParams.delete("v");
   assert.equal(scientificUrl.toString(), beforeUrl.toString(), `${entry.id}: assigned URL must not change apart from the cache-refresh parameter`);
@@ -275,11 +275,56 @@ for (const entry of entries) {
     allKinds.add(node.data.slide_kind);
     screenCount += 1;
     assert.ok(after.body.classList.contains("ksize-zoom-arrow-navigation"), `${entry.id}/${index}: Zoom body gate is required`);
-    assert.equal(after.document.querySelectorAll(".ksize-zoom-navigation").length, 1, `${entry.id}/${index}: one navigation pair only`);
+    assert.equal(after.document.querySelectorAll(".ksize-zoom-navigation").length, 1, `${entry.id}/${index}: one navigation group only`);
     assert.equal(after.document.querySelectorAll(".ksize-researcher-tools").length, 0, `${entry.id}/${index}: upper-right researcher controls must not mount`);
+    assert.ok(after.arrow("start"), `${entry.id}/${index}: Start exists`);
     assert.ok(after.arrow("back"), `${entry.id}/${index}: Back exists`);
     assert.ok(after.arrow("forward"), `${entry.id}/${index}: Forward exists`);
+    assert.ok(after.arrow("end"), `${entry.id}/${index}: End exists`);
+    assert.deepEqual(after.document.querySelector(".ksize-zoom-navigation").children.map((node) => node.textContent), ["Start", "←", "→", "End"], `${entry.id}/${index}: controls are ordered Start, Back, Forward, End`);
+    assert.equal(after.arrow("start").disabled, index === 1, `${entry.id}/${index}: Start is disabled only on the first screen`);
     assert.equal(after.arrow("back").disabled, index === 1, `${entry.id}/${index}: Back is disabled only on the first screen`);
+    assert.equal(after.arrow("end").disabled, index === after.timeline.length - 1, `${entry.id}/${index}: End is disabled only on the final screen`);
+  }
+  // Exercise both new bounds for every assigned version. End previews the last
+  // certificate screen; it is not equivalent to completing/submitting the study.
+  after.load(2);
+  const earlier = { preview_index: 0, response: "retain_before_end", nested: { value: 0 } };
+  after.rows.push(plain(earlier));
+  const rowsBeforeEnd = plain(after.rows);
+  const lastPreview = after.inspect().totalPreviewScreens - 1;
+  const oldAssignment = assignmentWithoutRecovery(after);
+  after.arrow("end").click();
+  assertNavigationDisabled(after, `${entry.id}: End`);
+  assert.equal(after.inspect().facilitatorStudyFinished, false, `${entry.id}: End must not finish the session`);
+  assert.deepEqual(plain(after.rows), rowsBeforeEnd, `${entry.id}: End must not create a choice, rating or completion row`);
+  assert.equal(after.messages.some((message) => message.type === "GAME_COMPLETE"), false, `${entry.id}: End must not submit/complete the study`);
+  const endUrl = new URL(after.window.location.href);
+  assert.equal(Number(endUrl.searchParams.get("previewIndex")), lastPreview, `${entry.id}: End jumps to the last screen`);
+  const atEnd = await runtime(sourceAfter, endUrl, { storage: after.storage, sessionStore: after.sessionStore });
+  assert.deepEqual(assignmentWithoutRecovery(atEnd), oldAssignment, `${entry.id}: End preserves the assigned version and rating plan`);
+  assert.equal(atEnd.timeline[1].data.zoom_deck_slide_id, "certificate", `${entry.id}: End destination is the final certificate, not completion`);
+  assert.equal(atEnd.timeline[1].data.preview_index, lastPreview);
+  assert.equal(atEnd.rows.length, rowsBeforeEnd.length, `${entry.id}: End preserves earlier responses without inventing skipped responses`);
+  assert.equal(atEnd.rows[0].response, earlier.response);
+  atEnd.load(1);
+  assert.equal(atEnd.arrow("end").disabled, true);
+  assert.equal(atEnd.arrow("start").disabled, false);
+  atEnd.arrow("start").click();
+  assertNavigationDisabled(atEnd, `${entry.id}: Start`);
+  const startUrl = new URL(atEnd.window.location.href);
+  assert.equal(startUrl.searchParams.get("previewIndex"), "0", `${entry.id}: Start jumps to the first screen`);
+  assert.equal(startUrl.searchParams.has("resumeBackupKey"), false, `${entry.id}: Start must not resurrect old answers`);
+  assert.equal(startUrl.searchParams.has("expectedResumeRows"), false);
+  const atStart = await runtime(sourceAfter, startUrl, { storage: after.storage, sessionStore: after.sessionStore });
+  assert.deepEqual(assignmentWithoutRecovery(atStart), oldAssignment, `${entry.id}: Start preserves the assigned version and rating plan`);
+  assert.equal(atStart.timeline[1].data.zoom_deck_slide_id, "welcome");
+  assert.equal(atStart.rows.length, 0, `${entry.id}: restarting allows fresh responses rather than retaining stale answers`);
+}
+
+function assertNavigationDisabled(run, label) {
+  for (const direction of ["start", "back", "forward", "end"]) {
+    assert.equal(run.arrow(direction).disabled, true, `${label}: all navigation controls disable after a successful click`);
   }
 }
 
@@ -310,6 +355,7 @@ for (const kind of ["zoom_intro", "child_welcome", "intro", "story", "followup_t
   const previousCount = nativeRun.rows.length;
   nativeRun.arrow("forward").click();
   nativeRun.flushTimers();
+  assertNavigationDisabled(nativeRun, `${kind}: Forward`);
   assert.equal(nativeRun.rows.length, previousCount + 1, `${kind}: Forward must advance exactly once`);
   assert.notEqual(nativeRun.rows.at(-1).researcher_navigation, "forward", `${kind}: Forward uses the native advance callback when one exists`);
   assert.equal(nativeRun.rows.at(-1).researcher_skip, undefined, `${kind}: do not mark native forward as researcher Skip`);
@@ -322,6 +368,7 @@ for (const kind of ["response_choices", "response"]) {
   run.load(index);
   run.arrow("forward").click();
   run.flushTimers();
+  assertNavigationDisabled(run, `${kind}: Forward`);
   const row = run.rows.at(-1);
   assert.equal(row.researcher_navigation, "forward", `${kind}: explicit forward navigation is recorded`);
   assert.equal(row.response_missing, true, `${kind}: a bypassed answer must be marked missing`);
@@ -354,6 +401,7 @@ async function backAndReanswer(kind, answerClass, firstOption, changedOption) {
   run.rows.push({ preview_index: answerPreview + 8, response: "stale_future_answer" });
   run.load(answerIndex + 1);
   run.arrow("back").click();
+  assertNavigationDisabled(run, `${kind}: Back`);
   const navigation = new URL(run.window.location.href);
   assert.equal(Number(navigation.searchParams.get("previewIndex")), answerPreview, `${kind}: Back returns to the immediately prior question`);
   assert.equal(navigation.searchParams.get("researcherJump"), "1");
@@ -419,6 +467,7 @@ async function verifyBackCheckpoint({
   // data-update/state timers queued to reproduce a slow-navigation handoff.
   if (!pendingPersistence) run.flushTimers();
   run.arrow("back").click();
+  assertNavigationDisabled(run, "Back checkpoint");
   const navigation = new URL(run.window.location.href);
   const backupKey = navigation.searchParams.get("resumeBackupKey");
   assert.ok(backupKey, "Back with earlier responses must have a recovery checkpoint");
@@ -489,17 +538,61 @@ assert.equal(blocked.window.location.href, beforeBlockedUrl, "failed checkpoint 
 assert.deepEqual(plain(blocked.rows), beforeBlockedRows, "failed checkpoint cannot mutate the current answers");
 assert.equal(blocked.arrow("back").disabled, false, "Back remains available for retry");
 assert.equal(blocked.arrow("forward").disabled, false, "Forward remains available");
+assert.equal(blocked.arrow("start").disabled, false, "Start remains available");
+assert.equal(blocked.arrow("end").disabled, false, "End remains available");
 assert.match(blocked.document.querySelector(".ksize-zoom-navigation-error")?.textContent || "", /Back could not save.*answers are unchanged/);
 assert.equal(blocked.document.querySelector(".ksize-zoom-navigation-error").getAttribute("role"), "alert");
 blocked.arrow("back").click();
 assert.equal(blocked.document.querySelectorAll(".ksize-zoom-navigation-error").length, 1, "retry must not duplicate the recovery message");
+blocked.arrow("end").click();
+assert.equal(blocked.window.location.href, beforeBlockedUrl, "End cannot navigate when both stores fail and earlier answers need saving");
+assert.deepEqual(plain(blocked.rows), beforeBlockedRows, "failed End preserves every current answer");
+for (const direction of ["start", "back", "forward", "end"]) {
+  assert.equal(blocked.arrow(direction).disabled, false, `failed End leaves ${direction} available for retry`);
+}
+assert.match(blocked.document.querySelector(".ksize-zoom-navigation-error")?.textContent || "", /End could not save.*answers are unchanged/);
+assert.equal(blocked.document.querySelectorAll(".ksize-zoom-navigation-error").length, 1, "failed End replaces, rather than duplicates, an earlier navigation error");
+blocked.arrow("start").click();
+assert.equal(new URL(blocked.window.location.href).searchParams.get("previewIndex"), "0", "Start works even if both stores are blocked");
+assertNavigationDisabled(blocked, "storage-independent Start");
 blocked.load(2);
 blocked.arrow("back").click();
 assert.equal(new URL(blocked.window.location.href).searchParams.get("previewIndex"), "0", "returning to the first screen does not require storage");
 
+for (const failure of [
+  { localStorageFailure: "blocked", sessionStorageFailure: "" },
+  { localStorageFailure: "quota", sessionStorageFailure: "" },
+  { localStorageFailure: "", sessionStorageFailure: "blocked" },
+]) {
+  const run = await runtime(sourceAfter, exampleUrl, failure);
+  const answerIndex = run.timeline.findIndex((node) => node.data?.slide_kind === "response_choices");
+  const oldRows = [
+    { preview_index: 0, response: "intro_before_end", nested: { value: false } },
+    { preview_index: run.timeline[answerIndex].data.preview_index, choice_id: "actual_answer_before_end", response: 1 },
+  ];
+  run.rows.push(...plain(oldRows));
+  run.load(answerIndex + 1);
+  run.arrow("end").click();
+  assertNavigationDisabled(run, "End storage fallback");
+  const destination = new URL(run.window.location.href);
+  assert.equal(destination.searchParams.get("expectedResumeRows"), "2", "End retains every earlier completed answer");
+  assert.equal(Number(destination.searchParams.get("previewIndex")), run.inspect().totalPreviewScreens - 1);
+  const backupKey = destination.searchParams.get("resumeBackupKey");
+  assert.equal(backupKey.startsWith("who-will-help-navigation-session:"), !failure.sessionStorageFailure);
+  run.flushTimers();
+  const resumed = await runtime(sourceAfter, destination, { ...failure, storage: run.storage, sessionStore: run.sessionStore });
+  assert.equal(resumed.timeline[1].data.zoom_deck_slide_id, "certificate");
+  const restored = plain(resumed.rows).map(({ facilitator_restored_from_backup, ...row }) => row);
+  assert.deepEqual(restored, oldRows, "End storage fallback preserves original answers and no skipped answers");
+  assert.equal(resumed.inspect().facilitatorStudyFinished, false);
+  assert.equal(resumed.messages.some((message) => message.type === "GAME_COMPLETE"), false);
+}
+
 const complete = await runtime(sourceAfter, exampleUrl);
 complete.load(complete.timeline.length - 1);
 assert.equal(complete.arrow("back").disabled, false);
+assert.equal(complete.arrow("start").disabled, false);
+assert.equal(complete.arrow("end").disabled, true);
 complete.arrow("forward").click();
 complete.flushTimers();
 await complete.jsPsych.completion;
@@ -531,5 +624,5 @@ console.log(JSON.stringify({
   screensChecked: screenCount,
   slideKinds: [...allKinds].sort(),
   sharedChsFilesByteIdentical: immutableFiles.length,
-  verified: ["assignment/timeline identity", "arrows on every Zoom screen", "no upper-right toolbar", "native forward semantics", "missing-answer forward", "double-click guard", "Back/recovery", "session-first navigation checkpoint", "blocked/full local storage recovery", "blocked session storage fallback", "both stores blocked visible error without data loss", "selected-store isolation from stale checkpoints", "legacy local checkpoint recovery", "pending-persistence Back checkpoint isolation", "Back recovery without participant ID", "full restored-row identity", "helper re-answer/updated confirmation", "rating re-answer", "pair-plan stability", "invalid-restore protection", "final completion", "non-Zoom gate compatibility"],
+  verified: ["assignment/timeline identity", "Start/Back/Forward/End on every Zoom screen", "Start/End bounds disabled correctly", "all-version Start/End assignment identity", "Start clears stale responses without needing browser storage", "End previews certificate without completion or invented answers", "End storage fallback and fail-safe", "all four controls disable after successful navigation", "no upper-right toolbar", "native forward semantics", "missing-answer forward", "double-click guard", "Back/recovery", "session-first navigation checkpoint", "blocked/full local storage recovery", "blocked session storage fallback", "both stores blocked visible error without data loss", "selected-store isolation from stale checkpoints", "legacy local checkpoint recovery", "pending-persistence Back checkpoint isolation", "Back recovery without participant ID", "full restored-row identity", "helper re-answer/updated confirmation", "rating re-answer", "pair-plan stability", "invalid-restore protection", "final completion", "non-Zoom gate compatibility"],
 }, null, 2));

@@ -154,5 +154,11 @@ body.ksize-zoom-arrow-navigation .ksize-image-stage.ksize-orange-outline-fix {
 }
 
 .ksize-zoom-navigation button:hover:not(:disabled) { background: #125b49; }
+.ksize-zoom-navigation .ksize-zoom-boundary {
+  width: auto;
+  min-width: 58px;
+  padding: 0 10px;
+  font: 700 14px/1.2 system-ui, sans-serif;
+}
 .ksize-zoom-navigation button:disabled { opacity: .35; cursor: default; }
 .ksize-zoom-navigation button:focus-visible { outline: 3px solid #215bb2; outline-offset: 2px; }
