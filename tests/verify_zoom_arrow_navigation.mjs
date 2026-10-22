@@ -116,7 +116,14 @@ function parseStimulus(source) {
   return nodes;
 }
 
-async function runtime(source, url, { helper = helperAfter, storage = new Map(), deckVersion = "keynote-v1" } = {}) {
+async function runtime(source, url, {
+  helper = helperAfter,
+  storage = new Map(),
+  sessionStore = new Map(),
+  localStorageFailure = "",
+  sessionStorageFailure = "",
+  deckVersion = "keynote-v1",
+} = {}) {
   let timeline = [];
   let finishOptions;
   const rows = [];
@@ -180,11 +187,22 @@ async function runtime(source, url, { helper = helperAfter, storage = new Map(),
     opener: { closed: false, postMessage: (message) => messages.push(message) },
     parent: null,
   };
+  const browserStorage = (values, failure) => ({
+    getItem: (key) => {
+      if (failure === "blocked") throw new Error("SecurityError: browser storage is blocked");
+      return values.get(key) ?? null;
+    },
+    setItem: (key, value) => {
+      if (failure) throw new Error(failure === "quota" ? "QuotaExceededError: browser storage is full" : "SecurityError: browser storage is blocked");
+      values.set(key, value);
+    },
+  });
   const context = vm.createContext({
     window, document, navigator: window.navigator, URL, URLSearchParams, Date, Math, Uint32Array,
     performance: { now: () => 100 }, console, CSS: { escape: (value) => value },
     setTimeout: window.setTimeout, clearTimeout() {},
-    localStorage: { getItem: (key) => storage.get(key) ?? null, setItem: (key, value) => storage.set(key, value) },
+    localStorage: browserStorage(storage, localStorageFailure),
+    sessionStorage: browserStorage(sessionStore, sessionStorageFailure),
     fetch: async (resource) => {
       const filename = path.basename(new URL(resource, url).pathname);
       if (!manifestCache.has(filename)) manifestCache.set(filename, JSON.parse(fs.readFileSync(path.join(manifestRoot, filename), "utf8")));
@@ -199,7 +217,7 @@ async function runtime(source, url, { helper = helperAfter, storage = new Map(),
     globalThis.__inspect=()=>({currentSessionParams,facilitatorAssignmentSummary,totalPreviewScreens,currentPreviewIndex,facilitatorRestoredRowCount,facilitatorStudyFinished});`, context);
   await context.__main();
   return {
-    context, jsPsych, storage, rows, messages, window, body, document,
+    context, jsPsych, storage, sessionStore, rows, messages, window, body, document,
     get timeline() { return timeline; },
     inspect: () => plain(context.__inspect()),
     load(index) {
@@ -243,7 +261,10 @@ for (const entry of entries) {
   const beforeUrl = apiBefore.buildStudyUrl(entry, "https://example.test/screen-share-study/zoom-review.html", "zoom", "ARROWS");
   const afterUrl = apiAfter.buildStudyUrl(entry, "https://example.test/screen-share-study/zoom-review.html", "zoom", "ARROWS");
   assert.equal(afterUrl.pathname, `/${zoomPrefix}/index.html`);
-  assert.equal(afterUrl.toString(), beforeUrl.toString(), `${entry.id}: assigned URL must not change`);
+  assert.equal(afterUrl.searchParams.get("v"), "zoom-navigation-storage-2026-10-22", `${entry.id}: fresh previews use the current navigation HTML`);
+  const scientificUrl = new URL(afterUrl);
+  scientificUrl.searchParams.delete("v");
+  assert.equal(scientificUrl.toString(), beforeUrl.toString(), `${entry.id}: assigned URL must not change apart from the cache-refresh parameter`);
   const before = await runtime(sourceBefore, beforeUrl, { helper: helperBefore });
   const after = await runtime(sourceAfter, afterUrl);
   assert.deepEqual(taskShape(after), taskShape(before), `${entry.id}: scientific timeline data, screenshots, and answer options must not change`);
@@ -340,7 +361,7 @@ async function backAndReanswer(kind, answerClass, firstOption, changedOption) {
   for (const key of ["seed", "roleSet", "set", "event", "primaryCell", "ratingPlan", "visualPlan", "assignmentId", "session_id"]) {
     assert.equal(navigation.searchParams.get(key), exampleUrl.searchParams.get(key), `${kind}: ${key} must survive Back`);
   }
-  const resumed = await runtime(sourceAfter, navigation, { storage: run.storage });
+  const resumed = await runtime(sourceAfter, navigation, { storage: run.storage, sessionStore: run.sessionStore });
   assert.deepEqual(assignmentWithoutRecovery(resumed), assignmentWithoutRecovery(run), `${kind}: Back must not reassign colors, events, sides or rating pairs`);
   assert.equal(resumed.timeline[1].data.preview_index, answerPreview);
   assert.equal(resumed.rows.length, 1);
@@ -372,16 +393,21 @@ async function backAndReanswer(kind, answerClass, firstOption, changedOption) {
   }
   const invalid = new URL(navigation);
   invalid.searchParams.set("expectedResumeRows", "999");
-  await assert.rejects(runtime(sourceAfter, invalid, { storage: run.storage }), /Recovery stopped/, `${kind}: invalid restore must fail closed`);
+  await assert.rejects(runtime(sourceAfter, invalid, { storage: run.storage, sessionStore: run.sessionStore }), /Recovery stopped/, `${kind}: invalid restore must fail closed`);
 }
 
 await backAndReanswer("response_choices", ".ksize-char-btn", 0, 1);
 await backAndReanswer("response", ".ksize-rating-choice", 0, 2);
 
-async function verifyBackCheckpoint({ withoutParticipantId = false, pendingPersistence = false } = {}) {
+async function verifyBackCheckpoint({
+  withoutParticipantId = false,
+  pendingPersistence = false,
+  localStorageFailure = "",
+  sessionStorageFailure = "",
+} = {}) {
   const url = new URL(exampleUrl);
   if (withoutParticipantId) url.searchParams.delete("pid");
-  const run = await runtime(sourceAfter, url);
+  const run = await runtime(sourceAfter, url, { localStorageFailure, sessionStorageFailure });
   const answerIndex = run.timeline.findIndex((node) => node.data?.slide_kind === "response_choices");
   const answerPreview = run.timeline[answerIndex].data.preview_index;
   const earlierRow = { preview_index: 0, response: "earlier_intro", retained_fields: { label: "Do not change", values: [0, false, ""] } };
@@ -398,16 +424,27 @@ async function verifyBackCheckpoint({ withoutParticipantId = false, pendingPersi
   assert.ok(backupKey, "Back with earlier responses must have a recovery checkpoint");
   assert.equal(navigation.searchParams.get("expectedResumeRows"), "1");
   assert.equal(Number(navigation.searchParams.get("previewIndex")), answerPreview);
-  const checkpoint = run.storage.get(backupKey);
+  const checkpointStore = backupKey.startsWith("who-will-help-navigation-session:") ? run.sessionStore : run.storage;
+  assert.equal(backupKey.startsWith("who-will-help-navigation-session:"), !sessionStorageFailure, "Back prefers tab storage and explicitly names the selected store");
+  const checkpoint = checkpointStore.get(backupKey);
   assert.deepEqual(JSON.parse(checkpoint).rows, [earlierRow], "Back checkpoint contains only full, unmodified rows preceding the destination");
   if (pendingPersistence) {
     run.flushTimers();
-    assert.equal(run.storage.get(backupKey), checkpoint, "pending progress/state publication cannot overwrite the truncated navigation checkpoint");
+    assert.equal(checkpointStore.get(backupKey), checkpoint, "pending progress/state publication cannot overwrite the truncated navigation checkpoint");
     const regularKey = `who-will-help-data:${navigation.searchParams.get("session_id")}`;
     assert.notEqual(backupKey, regularKey, "navigation recovery must use a key isolated from ordinary progress saves");
-    assert.equal(JSON.parse(run.storage.get(regularKey)).rows.length, 2, "fixture actually runs the pending untruncated progress save");
+    if (!localStorageFailure) assert.equal(JSON.parse(run.storage.get(regularKey)).rows.length, 2, "fixture actually runs the pending untruncated progress save");
   }
-  const resumed = await runtime(sourceAfter, navigation, { storage: run.storage });
+  // A stale checkpoint in the unselected store must never override the current
+  // checkpoint identified in the URL, even if its row count happens to match.
+  const otherStore = checkpointStore === run.storage ? run.sessionStore : run.storage;
+  const otherKey = checkpointStore === run.storage
+    ? `who-will-help-navigation-session:${navigation.searchParams.get("session_id")}`
+    : `who-will-help-data:${navigation.searchParams.get("session_id")}:navigation`;
+  otherStore.set(otherKey, JSON.stringify({ ...JSON.parse(checkpoint), rows: [{ preview_index: 0, response: "stale_other_store" }] }));
+  const resumed = await runtime(sourceAfter, navigation, {
+    storage: run.storage, sessionStore: run.sessionStore, localStorageFailure, sessionStorageFailure,
+  });
   assert.equal(resumed.inspect().facilitatorRestoredRowCount, 1, "Back restores correctly with or without an explicit participant ID");
   assert.equal(resumed.timeline[1].data.preview_index, answerPreview);
   const restored = plain(resumed.rows[0]);
@@ -418,6 +455,47 @@ async function verifyBackCheckpoint({ withoutParticipantId = false, pendingPersi
 
 await verifyBackCheckpoint({ pendingPersistence: true });
 await verifyBackCheckpoint({ withoutParticipantId: true });
+await verifyBackCheckpoint({ localStorageFailure: "blocked", pendingPersistence: true });
+await verifyBackCheckpoint({ localStorageFailure: "quota", withoutParticipantId: true });
+await verifyBackCheckpoint({ sessionStorageFailure: "blocked", pendingPersistence: true });
+
+// Existing regular local backups remain readable: navigation storage does not
+// change the older facilitator recovery format or bypass its row-count checks.
+const legacyRun = await runtime(sourceAfter, exampleUrl);
+const legacyIndex = legacyRun.timeline.findIndex((node) => node.data?.slide_kind === "response_choices");
+legacyRun.rows.push({ preview_index: 0, response: "legacy_local_intro" });
+legacyRun.load(legacyIndex);
+legacyRun.flushTimers();
+const legacyKey = `who-will-help-data:${exampleUrl.searchParams.get("session_id")}`;
+assert.ok(legacyRun.storage.has(legacyKey), "legacy progress fixture was saved by the existing persistence handler");
+const legacyUrl = new URL(exampleUrl);
+legacyUrl.searchParams.set("previewIndex", String(legacyRun.timeline[legacyIndex].data.preview_index));
+legacyUrl.searchParams.set("resumeBackupKey", legacyKey);
+legacyUrl.searchParams.set("expectedResumeRows", "1");
+const legacyResumed = await runtime(sourceAfter, legacyUrl, { storage: legacyRun.storage });
+assert.equal(legacyResumed.rows[0].response, "legacy_local_intro");
+assert.equal(legacyResumed.inspect().facilitatorRestoredRowCount, 1);
+
+// If both stores are unavailable, do not reload with unverifiable/unsaved data,
+// disable the controls, discard answers, or fail silently. A retry is allowed.
+const blocked = await runtime(sourceAfter, exampleUrl, { localStorageFailure: "quota", sessionStorageFailure: "blocked" });
+const blockedIndex = blocked.timeline.findIndex((node) => node.data?.slide_kind === "response_choices");
+blocked.rows.push({ preview_index: 0, response: "keep_this_answer" });
+blocked.load(blockedIndex + 1);
+const beforeBlockedRows = plain(blocked.rows);
+const beforeBlockedUrl = blocked.window.location.href;
+blocked.arrow("back").click();
+assert.equal(blocked.window.location.href, beforeBlockedUrl, "failed checkpoint cannot navigate or lose the current page");
+assert.deepEqual(plain(blocked.rows), beforeBlockedRows, "failed checkpoint cannot mutate the current answers");
+assert.equal(blocked.arrow("back").disabled, false, "Back remains available for retry");
+assert.equal(blocked.arrow("forward").disabled, false, "Forward remains available");
+assert.match(blocked.document.querySelector(".ksize-zoom-navigation-error")?.textContent || "", /Back could not save.*answers are unchanged/);
+assert.equal(blocked.document.querySelector(".ksize-zoom-navigation-error").getAttribute("role"), "alert");
+blocked.arrow("back").click();
+assert.equal(blocked.document.querySelectorAll(".ksize-zoom-navigation-error").length, 1, "retry must not duplicate the recovery message");
+blocked.load(2);
+blocked.arrow("back").click();
+assert.equal(new URL(blocked.window.location.href).searchParams.get("previewIndex"), "0", "returning to the first screen does not require storage");
 
 const complete = await runtime(sourceAfter, exampleUrl);
 complete.load(complete.timeline.length - 1);
@@ -453,5 +531,5 @@ console.log(JSON.stringify({
   screensChecked: screenCount,
   slideKinds: [...allKinds].sort(),
   sharedChsFilesByteIdentical: immutableFiles.length,
-  verified: ["assignment/timeline identity", "arrows on every Zoom screen", "no upper-right toolbar", "native forward semantics", "missing-answer forward", "double-click guard", "Back/recovery", "pending-persistence Back checkpoint isolation", "Back recovery without participant ID", "full restored-row identity", "helper re-answer/updated confirmation", "rating re-answer", "pair-plan stability", "invalid-restore protection", "final completion", "non-Zoom gate compatibility"],
+  verified: ["assignment/timeline identity", "arrows on every Zoom screen", "no upper-right toolbar", "native forward semantics", "missing-answer forward", "double-click guard", "Back/recovery", "session-first navigation checkpoint", "blocked/full local storage recovery", "blocked session storage fallback", "both stores blocked visible error without data loss", "selected-store isolation from stale checkpoints", "legacy local checkpoint recovery", "pending-persistence Back checkpoint isolation", "Back recovery without participant ID", "full restored-row identity", "helper re-answer/updated confirmation", "rating re-answer", "pair-plan stability", "invalid-restore protection", "final completion", "non-Zoom gate compatibility"],
 }, null, 2));

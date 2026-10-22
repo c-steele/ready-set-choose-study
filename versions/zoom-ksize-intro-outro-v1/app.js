@@ -843,11 +843,35 @@ function saveLocalDataBackup(payload, key = `who-will-help-data:${payload.sessio
   }
 }
 
+function saveFacilitatorNavigationBackup(payload) {
+  const serialized = JSON.stringify(payload);
+  // Back only needs a checkpoint in this tab. Prefer session storage so a full
+  // long-term backup store cannot prevent navigation. Explicit key namespaces
+  // ensure restoration never selects an older checkpoint from the other store.
+  const stores = [
+    { key: `who-will-help-navigation-session:${payload.session_id}`, storage: () => sessionStorage },
+    { key: `who-will-help-data:${payload.session_id}:navigation`, storage: () => localStorage },
+  ];
+  for (const candidate of stores) {
+    try {
+      const storage = candidate.storage();
+      storage.setItem(candidate.key, serialized);
+      if (storage.getItem(candidate.key) === serialized) return candidate.key;
+    } catch (error) {
+      console.warn("Could not save facilitator navigation checkpoint in this browser store", error);
+    }
+  }
+  return "";
+}
+
 function restoreFacilitatorDataBackup(jsPsych) {
   if (!isFacilitatorMode || !requestedResumeBackupKey || typeof jsPsych?.data?.get !== "function") return 0;
-  if (!requestedResumeBackupKey.startsWith("who-will-help-data:")) return 0;
+  const sessionNavigationBackup = useZoomIntroOutro
+    && requestedResumeBackupKey.startsWith("who-will-help-navigation-session:");
+  if (!sessionNavigationBackup && !requestedResumeBackupKey.startsWith("who-will-help-data:")) return 0;
   try {
-    const priorPayload = JSON.parse(localStorage.getItem(requestedResumeBackupKey) || "null");
+    const storage = sessionNavigationBackup ? sessionStorage : localStorage;
+    const priorPayload = JSON.parse(storage.getItem(requestedResumeBackupKey) || "null");
     if (String(priorPayload?.participant_id || "") !== String(requestedParticipantId || "test_no_pid")) return 0;
     if (String(priorPayload?.seed || "") !== String(requestedSeed || "")) return 0;
     const priorRows = Array.isArray(priorPayload?.rows) ? priorPayload.rows : [];
@@ -2120,8 +2144,10 @@ function jumpToPreview(jsPsych, index) {
     // Click/heartbeat callbacks may still save the current (untruncated) page
     // while the destination loads. Keep the Back checkpoint in a separate,
     // bounded per-session slot so those writes cannot invalidate its row count.
-    const backupKey = saveLocalDataBackup(payload, `who-will-help-data:${payload.session_id}:navigation`);
     if (payload.rows.length > 0) {
+      const backupKey = useZoomIntroOutro
+        ? saveFacilitatorNavigationBackup(payload)
+        : saveLocalDataBackup(payload, `who-will-help-data:${payload.session_id}:navigation`);
       if (!backupKey) return false;
       url.searchParams.set("resumeBackupKey", backupKey);
       url.searchParams.set("expectedResumeRows", String(payload.rows.length));
@@ -2149,9 +2175,22 @@ function installZoomNavigation(jsPsych, nodeData) {
   back.disabled = currentPreviewIndex <= 0;
   back.addEventListener("click", () => {
     if (currentPreviewIndex <= 0 || back.disabled) return;
+    document.querySelector(".ksize-zoom-navigation-error")?.remove();
     if (jumpToPreview(jsPsych, currentPreviewIndex - 1)) {
       back.disabled = true;
       forward.disabled = true;
+    } else {
+      // Never silently strand a researcher when the browser blocks both stores.
+      // Keep both controls usable and preserve all current response data.
+      const error = document.createElement("p");
+      error.className = "ksize-zoom-navigation-error";
+      error.setAttribute("role", "alert");
+      error.textContent = "Back could not save your progress in this browser. This screen and your answers are unchanged. Please allow site storage and try again.";
+      error.style.cssText = "flex-basis:100%;max-width:30rem;margin:8px 0 0;color:#a12525;font:600 15px/1.4 system-ui,sans-serif;text-align:center;";
+      wrap.style.flexWrap = "wrap";
+      wrap.style.justifyContent = "center";
+      wrap.style.maxWidth = "30rem";
+      wrap.appendChild(error);
     }
   });
   const forward = document.createElement("button");

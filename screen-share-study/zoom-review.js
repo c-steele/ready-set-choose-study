@@ -233,6 +233,7 @@
     const ratingPlan = entry.scheduleIndex + 1;
     const assignmentId = `REVIEW-FTC-C${String(primaryCell).padStart(2, "0")}-RP${ratingPlan}-VP${entry.visualPlan}`;
     const commonValues = {
+      v: "zoom-navigation-storage-2026-10-22",
       seed: entry.seed,
       roleSet: entry.role,
       set: entry.set,
