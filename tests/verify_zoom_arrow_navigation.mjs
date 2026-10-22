@@ -616,6 +616,7 @@ assert.match(css, /\.ksize-zoom-navigation button\s*\{[^}]*background:\s*#176d57
 assert.match(sourceAfter, /const controls = document\.querySelector\("\.ksize-zoom-slide-controls, \.ksize-controls"\)/, "arrows replace Next in the original controls area");
 assert.doesNotMatch(css, /body\.ksize-zoom-arrow-navigation > \.jspsych-content-wrapper/, "no separate footer scroll pane");
 assert.match(css, /\.ksize-controls:has\(> \.ksize-zoom-navigation\)\s*\{[^}]*min-height:\s*0/, "no inherited 72px empty control gap");
+assert.match(css, /body\.ksize-zoom-arrow-navigation \.ksize-welcome-screen > \.ksize-child-turn-badge,[\s\S]*?\.ksize-welcome-screen:has\(> \.ksize-child-turn-badge\) > \.ksize-controls:has\(> \.ksize-zoom-navigation\)\s*\{[^}]*margin-top:\s*auto/, "child Welcome navigation uses the same lower content edge as story pages without moving other welcome-style screens");
 
 console.log(JSON.stringify({
   status: "PASS",

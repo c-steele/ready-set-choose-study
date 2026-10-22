@@ -83,6 +83,13 @@ body.ksize-zoom-arrow-navigation .ksize-controls:has(> .ksize-zoom-navigation) {
   margin: 0;
 }
 
+/* Keep the child Welcome text centered, but align its navigation with stories.
+   Paired auto margins reserve space in normal flow, even on shorter screens. */
+body.ksize-zoom-arrow-navigation .ksize-welcome-screen > .ksize-child-turn-badge,
+body.ksize-zoom-arrow-navigation .ksize-welcome-screen:has(> .ksize-child-turn-badge) > .ksize-controls:has(> .ksize-zoom-navigation) {
+  margin-top: auto;
+}
+
 body.ksize-zoom-arrow-navigation .ksize-bottom-area:has(.ksize-zoom-navigation) {
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
