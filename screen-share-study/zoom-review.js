@@ -198,6 +198,7 @@
     }
     const url = new URL("zoom-review.html", baseHref);
     url.searchParams.set("launch", entry.id);
+    url.searchParams.set("v", "zoom-likert-choices-2026-10-22");
     return url;
   }
 
@@ -233,7 +234,7 @@
     const ratingPlan = entry.scheduleIndex + 1;
     const assignmentId = `REVIEW-FTC-C${String(primaryCell).padStart(2, "0")}-RP${ratingPlan}-VP${entry.visualPlan}`;
     const commonValues = {
-      v: "zoom-navigation-bounds-2026-10-22",
+      v: "zoom-likert-choices-2026-10-22",
       seed: entry.seed,
       roleSet: entry.role,
       set: entry.set,

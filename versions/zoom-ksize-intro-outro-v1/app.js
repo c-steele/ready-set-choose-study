@@ -15,6 +15,9 @@ const HOME_SCHOOL_ASSET_VERSION = "home-school-context-preview-v4";
 const HOME_SCHOOL_DESIGN_VERSION = "home_school_context_preview_v1";
 const HOME_SCHOOL_CONTEXT_SCRIPT_VERSION = "home_school_context_script_v1";
 const RATING_SCHEDULE_VERSION = "unique_focal_role_per_set_v1";
+// Bump whenever the Zoom screen order changes. Older saved indices must never
+// be used against the streamlined timeline that omits choice-confirmation pages.
+const ZOOM_NAVIGATION_VERSION = "zoom-streamlined-ratings-v2";
 const BALANCED_VISUAL_PLAN_VERSION = "balanced_unique_colors_sides_v1";
 const HOME_SCHOOL_GENERATED_ROOT = "assets/home_school/generated/";
 const DYAD_MANIFEST_URL = runtimeConfig.dyadManifestUrl
@@ -443,6 +446,7 @@ let facilitatorCurrentScript = [];
 let facilitatorCurrentMeta = {};
 let facilitatorEndedEarly = false;
 let facilitatorRestoredRowCount = 0;
+let facilitatorRecoveryFailureReason = "";
 let facilitatorCloseAfterFinish = false;
 let facilitatorStudyFinished = false;
 let facilitatorDatasetFingerprint = "";
@@ -825,6 +829,7 @@ function makeDataPayload(jsPsych) {
     facilitator_ended_early: isFacilitatorMode ? facilitatorEndedEarly : false,
     facilitator_resume_backup_key: isFacilitatorMode ? requestedResumeBackupKey : "",
     facilitator_restored_row_count: isFacilitatorMode ? facilitatorRestoredRowCount : 0,
+    ...(useZoomIntroOutro ? { zoom_navigation_version: ZOOM_NAVIGATION_VERSION } : {}),
     completed_at: completedAt,
     user_agent: navigator.userAgent,
     url: window.location.href,
@@ -874,6 +879,10 @@ function restoreFacilitatorDataBackup(jsPsych) {
     const priorPayload = JSON.parse(storage.getItem(requestedResumeBackupKey) || "null");
     if (String(priorPayload?.participant_id || "") !== String(requestedParticipantId || "test_no_pid")) return 0;
     if (String(priorPayload?.seed || "") !== String(requestedSeed || "")) return 0;
+    if (useZoomIntroOutro && priorPayload?.zoom_navigation_version !== ZOOM_NAVIGATION_VERSION) {
+      facilitatorRecoveryFailureReason = "zoom_navigation_version_mismatch";
+      return 0;
+    }
     const priorRows = Array.isArray(priorPayload?.rows) ? priorPayload.rows : [];
     const dataCollection = jsPsych.data.get();
     if (typeof dataCollection?.push !== "function") return 0;
@@ -3386,8 +3395,11 @@ async function main() {
       backupKey: requestedResumeBackupKey,
       expectedRows: requestedExpectedResumeRows,
       restoredRows: facilitatorRestoredRowCount,
-      reason: requestedExpectedResumeRows <= 0 ? "missing_expected_row_count" : "row_count_mismatch",
+      reason: facilitatorRecoveryFailureReason || (requestedExpectedResumeRows <= 0 ? "missing_expected_row_count" : "row_count_mismatch"),
     });
+    if (facilitatorRecoveryFailureReason === "zoom_navigation_version_mismatch") {
+      throw new Error("This saved Zoom session uses an older screen order and cannot safely resume. Your saved answers have not been changed. Please open a fresh version from the Zoom testing menu instead.");
+    }
     throw new Error("Recovery stopped because the saved facilitator checkpoint could not be verified.");
   }
 

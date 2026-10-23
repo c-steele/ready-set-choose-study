@@ -215,7 +215,12 @@ async function runtime(source, url, {
   const runnable = source.replace(/\nmain\(\)\.catch\([\s\S]*$/, "");
   vm.runInContext(`${runnable}\n globalThis.__main=main;
     globalThis.__inspect=()=>({currentSessionParams,facilitatorAssignmentSummary,totalPreviewScreens,currentPreviewIndex,facilitatorRestoredRowCount,facilitatorStudyFinished});`, context);
-  await context.__main();
+  try {
+    await context.__main();
+  } catch (error) {
+    error.testRuntime = { rows, messages, timeline };
+    throw error;
+  }
   return {
     context, jsPsych, storage, sessionStore, rows, messages, window, body, document,
     get timeline() { return timeline; },
@@ -268,7 +273,9 @@ for (const entry of entries) {
   const beforeUrl = apiBefore.buildStudyUrl(entry, "https://example.test/screen-share-study/zoom-review.html", "zoom", "ARROWS");
   const afterUrl = apiAfter.buildStudyUrl(entry, "https://example.test/screen-share-study/zoom-review.html", "zoom", "ARROWS");
   assert.equal(afterUrl.pathname, `/${zoomPrefix}/index.html`);
-  assert.equal(afterUrl.searchParams.get("v"), "zoom-navigation-bounds-2026-10-22", `${entry.id}: fresh previews use the current navigation HTML`);
+  assert.equal(afterUrl.searchParams.get("v"), "zoom-likert-choices-2026-10-22", `${entry.id}: fresh previews use the current Zoom choice treatment`);
+  const testingUrl = apiAfter.buildTestingLaunchUrl(entry, "https://example.test/screen-share-study/zoom-review.html");
+  assert.equal(testingUrl.searchParams.get("v"), "zoom-likert-choices-2026-10-22", `${entry.id}: workbook launch links refresh the Zoom launcher`);
   const scientificUrl = new URL(afterUrl);
   scientificUrl.searchParams.delete("v");
   assert.equal(scientificUrl.toString(), beforeUrl.toString(), `${entry.id}: assigned URL must not change apart from the cache-refresh parameter`);
@@ -489,6 +496,7 @@ async function verifyBackCheckpoint({
   const checkpointStore = backupKey.startsWith("who-will-help-navigation-session:") ? run.sessionStore : run.storage;
   assert.equal(backupKey.startsWith("who-will-help-navigation-session:"), !sessionStorageFailure, "Back prefers tab storage and explicitly names the selected store");
   const checkpoint = checkpointStore.get(backupKey);
+  assert.equal(JSON.parse(checkpoint).zoom_navigation_version, "zoom-streamlined-ratings-v2", "new checkpoints identify their exact Zoom screen order");
   assert.deepEqual(JSON.parse(checkpoint).rows, [earlierRow], "Back checkpoint contains only full, unmodified rows preceding the destination");
   if (pendingPersistence) {
     run.flushTimers();
@@ -521,8 +529,8 @@ await verifyBackCheckpoint({ localStorageFailure: "blocked", pendingPersistence:
 await verifyBackCheckpoint({ localStorageFailure: "quota", withoutParticipantId: true });
 await verifyBackCheckpoint({ sessionStorageFailure: "blocked", pendingPersistence: true });
 
-// Existing regular local backups remain readable: navigation storage does not
-// change the older facilitator recovery format or bypass its row-count checks.
+// Current-format regular local backups remain readable; their version marker
+// protects saved indices just as it does for session/local navigation backups.
 const legacyRun = await runtime(sourceAfter, exampleUrl);
 const legacyIndex = legacyRun.timeline.findIndex((node) => node.data?.slide_kind === "response_choices");
 legacyRun.rows.push({ preview_index: 0, response: "legacy_local_intro" });
@@ -537,6 +545,54 @@ legacyUrl.searchParams.set("expectedResumeRows", "1");
 const legacyResumed = await runtime(sourceAfter, legacyUrl, { storage: legacyRun.storage });
 assert.equal(legacyResumed.rows[0].response, "legacy_local_intro");
 assert.equal(legacyResumed.inspect().facilitatorRestoredRowCount, 1);
+
+// A saved index from the old timeline is not interchangeable with the revised
+// screen order, even when participant, seed and row count all match. Refuse it
+// before importing any answer, leave its original bytes intact, and fail closed.
+for (const oldVersion of [undefined, "zoom-before-streamlined-ratings-v1"]) {
+  for (const storageKind of ["session", "local-navigation", "local-regular"]) {
+    const sessionStore = new Map();
+    const storage = new Map();
+    const store = storageKind === "session" ? sessionStore : storage;
+    const session = exampleUrl.searchParams.get("session_id");
+    const key = storageKind === "session"
+      ? `who-will-help-navigation-session:${session}`
+      : `who-will-help-data:${session}${storageKind === "local-navigation" ? ":navigation" : ""}`;
+    const payload = {
+      participant_id: exampleUrl.searchParams.get("pid"),
+      seed: exampleUrl.searchParams.get("seed"),
+      rows: [{ preview_index: 0, response: "old_screen_answer_do_not_import" }],
+      ...(oldVersion ? { zoom_navigation_version: oldVersion } : {}),
+    };
+    const serialized = JSON.stringify(payload);
+    store.set(key, serialized);
+    const oldUrl = new URL(exampleUrl);
+    oldUrl.searchParams.set("previewIndex", "16");
+    oldUrl.searchParams.set("resumeBackupKey", key);
+    oldUrl.searchParams.set("expectedResumeRows", "1");
+    await assert.rejects(runtime(sourceAfter, oldUrl, { storage, sessionStore }), (error) => {
+      assert.match(error.message, /older screen order and cannot safely resume.*saved answers have not been changed.*fresh version from the Zoom testing menu/);
+      assert.equal(error.testRuntime.rows.length, 0, "outdated checkpoint must fail before importing any saved row");
+      assert.equal(error.testRuntime.timeline.length, 0, "outdated checkpoint must not run any study screen");
+      assert.equal(error.testRuntime.messages.find((message) => message.type === "FACILITATOR_RECOVERY_FAILED")?.reason, "zoom_navigation_version_mismatch");
+      return true;
+    }, `${storageKind}: missing/old screen-order marker must fail closed`);
+    assert.equal(store.get(key), serialized, "rejecting an old checkpoint must not delete or alter the saved original");
+  }
+}
+
+// The marker belongs only to revised Zoom recovery. Non-Zoom facilitator saves
+// keep their existing restore behavior even when they have no Zoom marker.
+const nonZoomUrl = new URL(exampleUrl);
+nonZoomUrl.searchParams.delete("liveShare");
+const nonZoomPayload = JSON.parse(legacyRun.storage.get(legacyKey));
+delete nonZoomPayload.zoom_navigation_version;
+const nonZoomStorage = new Map([[legacyKey, JSON.stringify(nonZoomPayload)]]);
+nonZoomUrl.searchParams.set("previewIndex", "16");
+nonZoomUrl.searchParams.set("resumeBackupKey", legacyKey);
+nonZoomUrl.searchParams.set("expectedResumeRows", "1");
+const nonZoomResumed = await runtime(sourceAfter, nonZoomUrl, { storage: nonZoomStorage });
+assert.equal(nonZoomResumed.rows[0].response, "legacy_local_intro", "non-Zoom recovery must remain backward-compatible");
 
 // If both stores are unavailable, do not reload with unverifiable/unsaved data,
 // disable the controls, discard answers, or fail silently. A retry is allowed.
@@ -618,6 +674,13 @@ assert.equal(saved.completion_status, "completed");
 assert.equal(saved.rows.at(-1).response, "finish_zoom_slides", "last Forward must use native final-slide completion");
 
 const css = currentFile(`${zoomPrefix}/zoom-slides.css`);
+const choiceCss = currentFile(`${zoomPrefix}/zoom-choice-effects.css`);
+const approvedChoiceCss = currentFile(`${zoomPrefix}/likert-style-choice-preview.css`);
+assert.equal(choiceCss.slice(choiceCss.indexOf("body.")), approvedChoiceCss.slice(approvedChoiceCss.indexOf("body.")).replaceAll("ksize-zoom-likert-choice-preview", "ksize-zoom-choice-effects").replaceAll("ksize-zoom-likert-choice-reveal", "ksize-zoom-choice-reveal"), "production CSS is the approved comparison effect with only scoped names changed");
+const zoomHtml = currentFile(`${zoomPrefix}/index.html`);
+assert.match(zoomHtml, /<body class="ksize-zoom-choice-effects">/, "regular Zoom entry enables the approved effect");
+assert.match(zoomHtml, /zoom-choice-effects\.css\?v=zoom-likert-choices-2026-10-22/, "regular Zoom entry loads the current effect stylesheet");
+assert.match(zoomHtml, /app\.js\?v=zoom-likert-choices-2026-10-22/, "regular Zoom entry refreshes guarded recovery code");
 assert.match(css, /body\.ksize-zoom-arrow-navigation \.ksize-helper\s*\{[^}]*display:\s*none\s*!important/, "animated helper and bubble are hidden only in isolated Zoom study");
 assert.match(css, /body\.ksize-zoom-arrow-navigation[^{}]*\.ksize-researcher-tools[\s\S]*?display:\s*none\s*!important/);
 assert.match(css, /body\.ksize-zoom-arrow-navigation[^{}]*\.ksize-next-btn[\s\S]*?display:\s*none\s*!important/);
@@ -638,5 +701,5 @@ console.log(JSON.stringify({
   screensChecked: screenCount,
   slideKinds: [...allKinds].sort(),
   sharedChsFilesByteIdentical: immutableFiles.length,
-  verified: ["assignment/remaining-timeline identity", "Zoom-only removal of followup transition screens and redundant rating-focus banners", "retained pair introductions, rating images, questions and answer options", "Start/Back/Forward/End on every Zoom screen", "Start/End bounds disabled correctly", "all-version Start/End assignment identity", "Start clears stale responses without needing browser storage", "End previews certificate without completion or invented answers", "End storage fallback and fail-safe", "all four controls disable after successful navigation", "no upper-right toolbar", "native forward semantics", "missing-answer forward", "double-click guard", "Back/recovery", "session-first navigation checkpoint", "blocked/full local storage recovery", "blocked session storage fallback", "both stores blocked visible error without data loss", "selected-store isolation from stale checkpoints", "legacy local checkpoint recovery", "pending-persistence Back checkpoint isolation", "Back recovery without participant ID", "full restored-row identity", "helper re-answer followed directly by retained rating-pair introduction", "rating re-answer", "pair-plan stability", "invalid-restore protection", "final completion", "non-Zoom gate compatibility"],
+  verified: ["assignment/remaining-timeline identity", "Zoom-only removal of followup transition screens and redundant rating-focus banners", "retained pair introductions, rating images, questions and answer options", "Start/Back/Forward/End on every Zoom screen", "Start/End bounds disabled correctly", "all-version Start/End assignment identity", "Start clears stale responses without needing browser storage", "End previews certificate without completion or invented answers", "End storage fallback and fail-safe", "all four controls disable after successful navigation", "no upper-right toolbar", "native forward semantics", "missing-answer forward", "double-click guard", "Back/recovery", "session-first navigation checkpoint", "blocked/full local storage recovery", "blocked session storage fallback", "both stores blocked visible error without data loss", "selected-store isolation from stale checkpoints", "current-format local/session checkpoint recovery", "missing/old Zoom timeline markers rejected before importing answers without changing saved bytes", "non-Zoom unversioned local recovery unchanged", "pending-persistence Back checkpoint isolation", "Back recovery without participant ID", "full restored-row identity", "helper re-answer followed directly by retained rating-pair introduction", "rating re-answer", "pair-plan stability", "invalid-restore protection", "production choice CSS matches approved comparison effect", "all-version launcher/cache refresh", "final completion", "non-Zoom gate compatibility"],
 }, null, 2));
