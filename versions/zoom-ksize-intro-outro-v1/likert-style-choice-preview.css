@@ -1,0 +1,52 @@
+/* Separate comparison only. Match the rating buttons' scale reveal, ready
+   shadow and hover outline. Keep the hit area still and the artwork visible. */
+body.ksize-zoom-likert-choice-preview.ksize-zoom-arrow-navigation [data-slide-kind="response_choices"] .ksize-char-btn:not(.ksize-char-cue-box) {
+  border-color: transparent;
+  background: transparent;
+  box-shadow: none;
+  animation: none;
+  transform: none;
+  outline: none;
+}
+
+body.ksize-zoom-likert-choice-preview.ksize-zoom-arrow-navigation [data-slide-kind="response_choices"] .ksize-char-btn:not(.ksize-char-cue-box)::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  box-sizing: border-box;
+  border: 5px solid var(--choice-border);
+  border-radius: inherit;
+  background: transparent;
+  box-shadow: 0 10px 20px rgba(91, 66, 5, 0.14);
+  pointer-events: none;
+  transform-origin: center;
+  opacity: 1;
+  transform: scale(1);
+  animation: ksize-zoom-likert-choice-reveal 280ms ease 1;
+  transition: opacity 280ms ease, transform 280ms ease, border-color 220ms ease, box-shadow 220ms ease, background 220ms ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body.ksize-zoom-likert-choice-preview.ksize-zoom-arrow-navigation [data-slide-kind="response_choices"] .ksize-char-btn:not(.ksize-char-cue-box):hover:not(:disabled)::after {
+    outline: 5px solid rgba(36, 119, 184, 0.28);
+  }
+}
+
+body.ksize-zoom-likert-choice-preview.ksize-zoom-arrow-navigation [data-slide-kind="response_choices"] .ksize-char-btn:not(.ksize-char-cue-box):focus-visible:not(:disabled)::after {
+  outline: 5px solid rgba(36, 119, 184, 0.28);
+}
+
+@keyframes ksize-zoom-likert-choice-reveal {
+  from { opacity: 0.18; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.ksize-zoom-likert-choice-preview.ksize-zoom-arrow-navigation [data-slide-kind="response_choices"] .ksize-char-btn:not(.ksize-char-cue-box),
+  body.ksize-zoom-likert-choice-preview.ksize-zoom-arrow-navigation [data-slide-kind="response_choices"] .ksize-char-btn:not(.ksize-char-cue-box)::after {
+    animation: none !important;
+    transform: none !important;
+    transition: none !important;
+    opacity: 1;
+  }
+}
