@@ -2347,15 +2347,17 @@ function installZoomNavigation(jsPsych, nodeData) {
   const presenter = document.createElement("button");
   presenter.type = "button";
   presenter.className = "ksize-zoom-presenter-open";
-  presenter.textContent = "Slide navigator ↗";
-  presenter.title = "Open private slide previews and story shortcuts. Share only this study window with the participant.";
+  presenter.textContent = "Slides ↗";
+  presenter.setAttribute("aria-label", "Open slide navigator");
+  presenter.title = "Open slide navigator";
   presenter.addEventListener("click", () => {
     const url = new URL("presenter.html", window.location.href);
     url.searchParams.set("facilitatorSession", facilitatorSessionKey);
-    url.searchParams.set("v", "zoom-direct-navigator-2026-10-27");
+    url.searchParams.set("v", "zoom-slides-button-2026-10-27");
     const opened = window.open(url.toString(), `ftc-presenter-${facilitatorSessionKey}`, "popup,width=1220,height=840");
     if (!opened) {
-      presenter.textContent = "Allow pop-ups to open navigator ↗";
+      presenter.textContent = "Allow pop-ups ↗";
+      presenter.title = "Allow pop-ups to open the slide navigator";
       return;
     }
     zoomPresenterWindow = opened;

@@ -41,7 +41,7 @@
     const ready = isConnected();
     connection.dataset.connected = String(ready);
     connection.textContent = ready ? "Connected to study" : deck ? "Waiting for study window…" : "Connecting…";
-    if (!session) connection.textContent = "Open from the study’s Slide navigator button";
+    if (!session) connection.textContent = "Open from the study’s Slides button";
   }
   function slideAt(index) { return deck?.slides.find((slide) => slide.index === index); }
   function highlightedIndex() { return queuedTarget ?? pending?.target ?? (following ? live?.previewIndex : selected); }

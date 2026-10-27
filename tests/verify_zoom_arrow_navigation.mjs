@@ -302,9 +302,9 @@ for (const entry of entries) {
   const beforeUrl = apiBefore.buildStudyUrl(entry, "https://example.test/screen-share-study/zoom-review.html", "zoom", "ARROWS");
   const afterUrl = apiAfter.buildStudyUrl(entry, "https://example.test/screen-share-study/zoom-review.html", "zoom", "ARROWS");
   assert.equal(afterUrl.pathname, `/${zoomPrefix}/index.html`);
-  assert.equal(afterUrl.searchParams.get("v"), "zoom-direct-navigator-2026-10-27", `${entry.id}: fresh previews load the direct Zoom thumbnail navigator`);
+  assert.equal(afterUrl.searchParams.get("v"), "zoom-slides-button-2026-10-27", `${entry.id}: fresh previews load the current Zoom slide controls`);
   const testingUrl = apiAfter.buildTestingLaunchUrl(entry, "https://example.test/screen-share-study/zoom-review.html");
-  assert.equal(testingUrl.searchParams.get("v"), "zoom-direct-navigator-2026-10-27", `${entry.id}: workbook launch links refresh the Zoom launcher`);
+  assert.equal(testingUrl.searchParams.get("v"), "zoom-slides-button-2026-10-27", `${entry.id}: workbook launch links refresh the Zoom launcher`);
   const scientificUrl = new URL(afterUrl);
   scientificUrl.searchParams.delete("v");
   assert.equal(scientificUrl.toString(), beforeUrl.toString(), `${entry.id}: assigned URL must not change apart from the cache-refresh parameter`);
@@ -363,7 +363,7 @@ for (const entry of entries) {
     assert.ok(after.arrow("back"), `${entry.id}/${index}: Back exists`);
     assert.ok(after.arrow("forward"), `${entry.id}/${index}: Forward exists`);
     assert.ok(after.arrow("end"), `${entry.id}/${index}: End exists`);
-    assert.deepEqual(after.document.querySelector(".ksize-zoom-navigation").children.map((node) => node.textContent), ["Start", "←", "→", "End", "Slide navigator ↗"], `${entry.id}/${index}: the private navigator follows the original four controls`);
+    assert.deepEqual(after.document.querySelector(".ksize-zoom-navigation").children.map((node) => node.textContent), ["Start", "←", "→", "End", "Slides ↗"], `${entry.id}/${index}: the private navigator follows the original four controls`);
     assert.equal(after.arrow("start").disabled, index === 1, `${entry.id}/${index}: Start is disabled only on the first screen`);
     assert.equal(after.arrow("back").disabled, index === 1, `${entry.id}/${index}: Back is disabled only on the first screen`);
     assert.equal(after.arrow("end").disabled, index === after.timeline.length - 1, `${entry.id}/${index}: End is disabled only on the final screen`);
@@ -751,7 +751,7 @@ assert.equal(popupRun.openedWindows.length, 1);
 const opened = popupRun.openedWindows[0];
 const popupUrl = new URL(opened.args[0]);
 assert.equal(popupUrl.pathname, `/${zoomPrefix}/presenter.html`);
-assert.deepEqual([...popupUrl.searchParams], [["facilitatorSession", exampleUrl.searchParams.get("facilitatorSession")], ["v", "zoom-direct-navigator-2026-10-27"]], "private window receives only its session channel and UI version, not an independently runnable child assignment");
+assert.deepEqual([...popupUrl.searchParams], [["facilitatorSession", exampleUrl.searchParams.get("facilitatorSession")], ["v", "zoom-slides-button-2026-10-27"]], "private window receives only its session channel and UI version, not an independently runnable child assignment");
 assert.equal(opened.popup.focused, true);
 popupRun.dispatchMessage({ type: "FACILITATOR_COMMAND", action: "deck", commandId: "popup-first-catalog", facilitatorSession: popupUrl.searchParams.get("facilitatorSession") }, { source: opened.popup });
 assert.ok(popupRun.popupMessages.some((message) => message.type === "FACILITATOR_DECK"), "child-opened popup receives the catalog without BroadcastChannel or a child opener");
@@ -1044,7 +1044,7 @@ assert.equal(choiceCss.slice(choiceCss.indexOf("body.")), approvedChoiceCss.slic
 const zoomHtml = currentFile(`${zoomPrefix}/index.html`);
 assert.match(zoomHtml, /<body class="ksize-zoom-choice-effects">/, "regular Zoom entry enables the approved effect");
 assert.match(zoomHtml, /zoom-choice-effects\.css\?v=zoom-likert-choices-2026-10-22/, "regular Zoom entry loads the current effect stylesheet");
-assert.match(zoomHtml, /app\.js\?v=zoom-direct-navigator-2026-10-27/, "regular Zoom entry loads the direct thumbnail navigator");
+assert.match(zoomHtml, /app\.js\?v=zoom-slides-button-2026-10-27/, "regular Zoom entry loads the current slide controls");
 assert.match(css, /body\.ksize-zoom-arrow-navigation \.ksize-helper\s*\{[^}]*display:\s*none\s*!important/, "animated helper and bubble are hidden only in isolated Zoom study");
 assert.match(css, /body\.ksize-zoom-arrow-navigation[^{}]*\.ksize-researcher-tools[\s\S]*?display:\s*none\s*!important/);
 assert.match(css, /body\.ksize-zoom-arrow-navigation[^{}]*\.ksize-next-btn[\s\S]*?display:\s*none\s*!important/);
