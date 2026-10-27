@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex,nofollow">
   <title>Find the Caregiver — private slide navigator</title>
-  <link rel="stylesheet" href="presenter.css?v=zoom-presenter-2026-10-27">
+  <link rel="stylesheet" href="presenter.css?v=zoom-thumbnails-2026-10-27">
 </head>
 <body>
   <header class="presenter-header">
-    <div><p class="eyebrow">Find the Caregiver · Researcher view</p><h1>Slide navigator</h1></div>
-    <p class="privacy-note">Share only the <strong>study window</strong> in Zoom. Keep this window private.</p>
+    <h1>Find the Caregiver</h1>
+    <p class="privacy-note">Researcher view · Share only the <strong>study window</strong></p>
     <span class="connection" data-connection role="status">Connecting…</span>
   </header>
   <main class="presenter-main">
@@ -22,21 +22,20 @@
       <p class="empty-state" data-empty>Keep the study window open. Its slides will appear here when connected.</p>
       <div class="viewer-grid" data-viewers hidden>
         <section class="slide-card live-card">
-          <div class="slide-card-heading"><h2>Participant is seeing</h2><span class="live-badge">LIVE</span></div>
+          <div class="slide-card-heading"><h2>Current</h2><span class="slide-counter" data-live-counter></span></div>
           <p class="slide-title" data-live-title></p>
           <div class="slide-viewport" data-viewport><iframe title="Current participant slide, read-only" data-live-frame sandbox="" tabindex="-1"></iframe></div>
-          <p class="slide-counter" data-live-counter></p>
         </section>
         <section class="slide-card preview-card">
-          <div class="slide-card-heading"><h2 data-preview-heading>Coming next</h2><span class="preview-badge">PRIVATE PREVIEW</span></div>
+          <div class="slide-card-heading"><h2 data-preview-heading>Next</h2><span class="slide-counter" data-preview-counter></span></div>
           <p class="slide-title" data-preview-title></p>
           <div class="slide-viewport" data-viewport><iframe title="Selected slide, private read-only preview" data-preview-frame sandbox="" tabindex="-1"></iframe></div>
-          <div class="preview-controls"><button type="button" data-preview-previous aria-label="Preview previous slide">←</button><p class="slide-counter" data-preview-counter></p><button type="button" data-preview-next aria-label="Preview next slide">→</button></div>
+          <div class="preview-controls"><button type="button" data-preview-previous aria-label="Preview previous slide">←</button><button type="button" data-preview-next aria-label="Preview next slide">→</button></div>
         </section>
       </div>
       <div class="action-row" data-actions hidden>
         <button class="secondary-button" type="button" data-follow title="Automatically preview the next slide as the participant advances">Follow live</button>
-        <p>Browsing here leaves the participant’s slide unchanged.</p>
+        <p>Previewing leaves the participant’s slide unchanged.</p>
         <button class="show-button" type="button" data-show disabled>Show this slide</button>
       </div>
       <p class="navigation-status" data-navigation-status role="status"></p>
@@ -44,6 +43,6 @@
     </section>
   </main>
   <footer class="story-footer"><span>Preview a story</span><nav data-story-buttons aria-label="Story shortcuts"></nav></footer>
-  <script src="presenter.js?v=zoom-presenter-2026-10-27"></script>
+  <script src="presenter.js?v=zoom-thumbnails-2026-10-27"></script>
 </body>
 </html>

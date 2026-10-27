@@ -13,6 +13,7 @@
   let pending = null;
   let lastRenderedLive = null;
   let lastRenderedPreview = null;
+  let thumbnailObserver = null;
   const seen = new Set();
   const channel = session && "BroadcastChannel" in window ? new BroadcastChannel(`ftc-facilitator:${session}`) : null;
 
@@ -78,6 +79,28 @@
   }
   function resizeFrames() {
     document.querySelectorAll("[data-viewport]").forEach((box) => { box.querySelector("iframe").style.transform = `scale(${box.clientWidth / 1280})`; });
+    document.querySelectorAll(".slide-miniature iframe").forEach((frame) => { frame.style.transform = `scale(${frame.parentElement.clientWidth / 1280})`; });
+  }
+  function mountThumbnail(button) {
+    const box = button.querySelector(".slide-miniature");
+    if (box.querySelector("iframe")) return;
+    const slide = slideAt(Number(button.dataset.slideIndex));
+    const frame = document.createElement("iframe");
+    frame.setAttribute("sandbox", "");
+    frame.setAttribute("tabindex", "-1");
+    frame.setAttribute("aria-hidden", "true");
+    frame.title = `Slide ${slide.index + 1} thumbnail`;
+    frame.style.transform = `scale(${box.clientWidth / 1280})`;
+    frame.srcdoc = inertDocument(slide);
+    box.appendChild(frame);
+  }
+  function revealSelectedThumbnail() {
+    const rail = $("[data-slide-list]");
+    const button = rail.querySelector(`[data-slide-index="${selected}"]`);
+    if (!button) return;
+    const item = button.getBoundingClientRect(), viewport = rail.getBoundingClientRect();
+    if (item.top < viewport.top) rail.scrollTop += item.top - viewport.top - 4;
+    else if (item.bottom > viewport.bottom) rail.scrollTop += item.bottom - viewport.bottom + 4;
   }
   function paint() {
     if (!deck || !live) return updateConnection();
@@ -92,7 +115,7 @@
       renderFrame("preview", preview); lastRenderedPreview = preview.index;
       $("[data-preview-script]").replaceChildren(...preview.scriptLines.map((line) => { const p = document.createElement("p"); p.textContent = line; return p; }));
     }
-    $("[data-preview-heading]").textContent = following ? "Coming next" : "Selected slide";
+    $("[data-preview-heading]").textContent = following ? "Next" : "Preview";
     $("[data-preview-previous]").disabled = selected <= 0;
     $("[data-preview-next]").disabled = selected >= deck.slides.length - 1;
     $("[data-follow]").setAttribute("aria-pressed", String(following));
@@ -102,6 +125,7 @@
       button.dataset.live = String(index === live.previewIndex);
     });
     document.querySelectorAll("[data-story-index]").forEach((button) => button.setAttribute("aria-current", String(slideAt(Number(button.dataset.storyIndex))?.storyNumber === preview?.storyNumber)));
+    revealSelectedThumbnail();
     resizeFrames();
     updateConnection();
   }
@@ -115,10 +139,21 @@
     $("[data-slide-total]").textContent = `(${deck.slides.length})`;
     $("[data-slide-list]").replaceChildren(...deck.slides.map((slide) => {
       const button = document.createElement("button"); button.type = "button"; button.dataset.slideIndex = String(slide.index);
-      const number = document.createElement("span"); number.textContent = String(slide.index + 1);
-      const title = document.createElement("span"); title.textContent = slide.title;
-      button.append(number, title); button.addEventListener("click", () => select(slide.index)); return button;
+      button.setAttribute("aria-label", `Slide ${slide.index + 1}: ${slide.title}`);
+      button.title = slide.title;
+      const number = document.createElement("span"); number.className = "slide-number"; number.textContent = String(slide.index + 1);
+      const image = document.createElement("span"); image.className = "slide-miniature"; image.setAttribute("aria-hidden", "true");
+      button.append(number, image); button.addEventListener("click", () => select(slide.index)); return button;
     }));
+    thumbnailObserver?.disconnect();
+    const rail = $("[data-slide-list]");
+    thumbnailObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) mountThumbnail(entry.target);
+        else entry.target.querySelector(".slide-miniature iframe")?.remove();
+      });
+    }, { root: rail, rootMargin: "160px 0px" });
+    rail.querySelectorAll("[data-slide-index]").forEach((button) => thumbnailObserver.observe(button));
     const stories = new Map();
     deck.slides.forEach((slide) => { if (slide.storyNumber && !stories.has(slide.storyNumber)) stories.set(slide.storyNumber, slide); });
     $("[data-story-buttons]").replaceChildren(...[...stories.values()].map((slide) => {
@@ -156,6 +191,14 @@
   channel?.addEventListener("message", (event) => receive(event.data));
   window.addEventListener("message", (event) => { if (event.origin === location.origin && event.source === window.opener) receive(event.data); });
   $("[data-preview-previous]").addEventListener("click", () => select(selected - 1));
+  $("[data-slide-list]").addEventListener("keydown", (event) => {
+    const current = event.target.closest("[data-slide-index]");
+    if (!current || !["ArrowUp", "ArrowDown", "Home", "End"].includes(event.key)) return;
+    event.preventDefault();
+    const index = Number(current.dataset.slideIndex);
+    select(event.key === "Home" ? 0 : event.key === "End" ? deck.slides.length - 1 : index + (event.key === "ArrowDown" ? 1 : -1));
+    $("[data-slide-list]").querySelector(`[data-slide-index="${selected}"]`)?.focus({ preventScroll: true });
+  });
   $("[data-preview-next]").addEventListener("click", () => select(selected + 1));
   $("[data-follow]").addEventListener("click", () => { if (!deck || !live) return; following = true; selected = Math.min(live.previewIndex + 1, deck.slides.length - 1); paint(); });
   $("[data-show]").addEventListener("click", () => {
@@ -169,12 +212,13 @@
   });
   const observer = new ResizeObserver(resizeFrames);
   document.querySelectorAll("[data-viewport]").forEach((box) => observer.observe(box));
+  observer.observe($("[data-slide-list]"));
   const timer = window.setInterval(() => {
     if (!deck) send("deck");
     if (!deck || Date.now() - lastStateAt > 4000) send("ping");
     if (pending && Date.now() - pending.sent > 12000) { pending = null; $("[data-navigation-status]").textContent = "The study has not confirmed the change. Check its current slide before trying again."; }
     updateConnection();
   }, 2000);
-  window.addEventListener("pagehide", () => { clearInterval(timer); channel?.close(); observer.disconnect(); });
+  window.addEventListener("pagehide", () => { clearInterval(timer); channel?.close(); observer.disconnect(); thumbnailObserver?.disconnect(); });
   send("deck"); send("ping"); updateConnection();
 })();

@@ -2330,6 +2330,7 @@ function installZoomNavigation(jsPsych, nodeData) {
   presenter.addEventListener("click", () => {
     const url = new URL("presenter.html", window.location.href);
     url.searchParams.set("facilitatorSession", facilitatorSessionKey);
+    url.searchParams.set("v", "zoom-thumbnails-2026-10-27");
     const opened = window.open(url.toString(), `ftc-presenter-${facilitatorSessionKey}`, "popup,width=1220,height=840");
     if (!opened) {
       presenter.textContent = "Allow pop-ups to open navigator ↗";
