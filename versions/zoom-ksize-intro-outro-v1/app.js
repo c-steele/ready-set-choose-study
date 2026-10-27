@@ -426,6 +426,8 @@ const TEACHER_BOX_QUESTION_TEXT = {
 let introImageFixes = {};
 let currentPreviewIndex = 0;
 let totalPreviewScreens = 0;
+let zoomPresenterDeck = null;
+let zoomPresenterWindow = null;
 let currentSessionParams = {};
 let canonicalAudioByText = new Map();
 let canonicalAudioByOriginalSrc = new Map();
@@ -1109,6 +1111,9 @@ function postFacilitatorMessage(message) {
   if (window.opener && !window.opener.closed) {
     window.opener.postMessage(payload, window.location.origin);
   }
+  if (zoomPresenterWindow && !zoomPresenterWindow.closed && zoomPresenterWindow !== window.opener) {
+    zoomPresenterWindow.postMessage(payload, window.location.origin);
+  }
 }
 
 function currentFacilitatorPayload() {
@@ -1334,9 +1339,39 @@ function acknowledgeFacilitatorCommand(message, status, reason = "") {
 function receiveFacilitatorCommand(message) {
   if (!isFacilitatorMode || !message || message.facilitatorSession !== facilitatorSessionKey) return;
   if (message.type !== "FACILITATOR_COMMAND") return;
-  if (message.commandId && facilitatorBridge?.lastCommandId === message.commandId) return;
-  if (facilitatorBridge && message.commandId) facilitatorBridge.lastCommandId = message.commandId;
+  if (facilitatorBridge && message.commandId) {
+    const seen = facilitatorBridge.seenCommandIds ||= new Set();
+    if (seen.has(message.commandId)) return;
+    seen.add(message.commandId);
+    if (seen.size > 128) seen.delete(seen.values().next().value);
+    facilitatorBridge.lastCommandId = message.commandId;
+  }
 
+  if (useZoomIntroOutro && message.action === "deck") {
+    publishZoomPresenterDeck();
+    return;
+  }
+  if (useZoomIntroOutro && message.action === "navigate") {
+    const target = message.targetIndex;
+    const reason = message.previewIndex !== currentPreviewIndex ? "stale_screen"
+      : !Number.isInteger(target) || target < 0 || target >= totalPreviewScreens ? "invalid_screen"
+      : target < currentPreviewIndex && message.resetLaterAnswers !== true ? "reset_not_confirmed" : "";
+    if (reason) {
+      acknowledgeFacilitatorCommand(message, "rejected", reason);
+      publishFacilitatorState();
+      return;
+    }
+    if (target === currentPreviewIndex) {
+      acknowledgeFacilitatorCommand(message, "accepted");
+      publishFacilitatorState();
+      return;
+    }
+    // Only an explicit presenter action changes the live timeline. Browsing
+    // previews never runs a trial, creates an answer, or changes saved rows.
+    const moved = jumpToPreview(facilitatorJsPsych, target);
+    acknowledgeFacilitatorCommand(message, moved ? "accepted" : "rejected", moved ? "" : "storage_unavailable");
+    return;
+  }
   if (message.action === "ping") {
     publishFacilitatorState();
     return;
@@ -1397,6 +1432,9 @@ function installFacilitatorBridge(jsPsych) {
   }
   window.addEventListener("message", (event) => {
     if (event.origin !== window.location.origin) return;
+    if (useZoomIntroOutro && event.data?.type === "FACILITATOR_COMMAND"
+        && ["deck", "ping"].includes(event.data?.action) && event.data.facilitatorSession === facilitatorSessionKey
+        && event.source && event.source !== window) zoomPresenterWindow = event.source;
     receiveFacilitatorCommand(event.data);
   });
   document.addEventListener("click", () => {
@@ -2167,6 +2205,38 @@ function jumpToPreview(jsPsych, index) {
   return true;
 }
 
+function publishZoomPresenterDeck() {
+  if (!useZoomIntroOutro || !zoomPresenterDeck) return;
+  postFacilitatorMessage({ type: "FACILITATOR_DECK", ...zoomPresenterDeck, currentIndex: currentPreviewIndex });
+}
+
+function makeZoomPresenterDeck(nodes) {
+  return {
+    version: ZOOM_NAVIGATION_VERSION,
+    baseUrl: window.location.href,
+    styles: Array.from(document.querySelectorAll('link[rel="stylesheet"]')).map((link) => link.href),
+    bodyClass: "ksize-facilitator-child ksize-live-share ksize-zoom-arrow-navigation ksize-zoom-choice-effects",
+    slides: nodes.map((node, index) => {
+      const data = node.data || {};
+      const condition = data.condition_pairing || data.condition || "";
+      const storyNumber = data.story_number || null;
+      const kind = data.slide_kind || "slide";
+      const scriptLines = normalizeFacilitatorScript(data.facilitator_script || []);
+      const step = ({ love: "Love", like: "Like", charge: "In charge", old: "Age", strong: "Strength" })[data.trait]
+        || (kind === "response_choices" ? "Choose who" : kind === "intro" && scriptLines[0]
+          ? scriptLines[0].slice(0, 90) : kind.replace(/_/g, " "));
+      const title = data.zoom_deck_slide_id
+        ? data.zoom_deck_slide_id.replace(/-/g, " ")
+        : kind === "child_welcome" ? "Ready to play"
+        : [storyNumber ? `Story ${storyNumber}` : "", condition.replace(/BESTFRIEND/g, "BEST FRIEND").replace(/-/g, "–"),
+          step].filter(Boolean).join(" · ");
+      return { index, title, storyNumber, condition, kind,
+        scriptLines,
+        html: typeof node.stimulus === "string" ? node.stimulus : "" };
+    }),
+  };
+}
+
 function installZoomNavigation(jsPsych, nodeData) {
   document.querySelector(".ksize-zoom-navigation")?.remove();
   if (!useZoomIntroOutro) return;
@@ -2252,6 +2322,23 @@ function installZoomNavigation(jsPsych, nodeData) {
     if (!end.disabled) jumpFromControl(totalPreviewScreens - 1, "End");
   });
   wrap.append(start, back, forward, end);
+  const presenter = document.createElement("button");
+  presenter.type = "button";
+  presenter.className = "ksize-zoom-presenter-open";
+  presenter.textContent = "Slide navigator ↗";
+  presenter.title = "Open private slide previews and story shortcuts. Share only this study window with the participant.";
+  presenter.addEventListener("click", () => {
+    const url = new URL("presenter.html", window.location.href);
+    url.searchParams.set("facilitatorSession", facilitatorSessionKey);
+    const opened = window.open(url.toString(), `ftc-presenter-${facilitatorSessionKey}`, "popup,width=1220,height=840");
+    if (!opened) {
+      presenter.textContent = "Allow pop-ups to open navigator ↗";
+      return;
+    }
+    zoomPresenterWindow = opened;
+    opened.focus();
+  });
+  wrap.appendChild(presenter);
   // Replace the visible Next control in its original below-slide position.
   // Keep its hidden native button and listener for the forward action above.
   const controls = document.querySelector(".ksize-zoom-slide-controls, .ksize-controls");
@@ -4200,6 +4287,7 @@ async function main() {
         ]
   ).map((node, index) => withPreviewIndex(node, index));
   totalPreviewScreens = reviewNodes.length;
+  if (useZoomIntroOutro) zoomPresenterDeck = makeZoomPresenterDeck(reviewNodes);
   const safeRequestedPreviewIndex = safeFacilitatorPreviewIndex({
     requestedIndex: requestedPreviewIndex,
     facilitatorMode: isFacilitatorMode,

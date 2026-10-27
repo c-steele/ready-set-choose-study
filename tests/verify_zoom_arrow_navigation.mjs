@@ -123,6 +123,7 @@ async function runtime(source, url, {
   localStorageFailure = "",
   sessionStorageFailure = "",
   deckVersion = "keynote-v1",
+  hasOpener = true,
 } = {}) {
   let timeline = [];
   let finishOptions;
@@ -130,16 +131,28 @@ async function runtime(source, url, {
   let properties = {};
   const timers = [];
   const messages = [];
+  const windowHandlers = {};
+  const popupMessages = [];
+  const openedWindows = [];
+  const head = element("head");
+  const styleUrls = ["styles.css?test=child", "zoom-slides.css?test=child", "zoom-choice-effects.css?test=child"]
+    .map((href) => new URL(href, url).toString());
+  styleUrls.forEach((href) => {
+    const link = element("link");
+    link.setAttribute("rel", "stylesheet");
+    link.href = href;
+    head.append(link);
+  });
   const body = element("body");
   const stage = element("div");
   stage.className = "jspsych-content";
   body.append(stage);
   const document = {
-    body,
+    body, head,
     createElement: (tag) => element(tag),
     addEventListener() {},
-    querySelector: (selector) => descendants(body).find((node) => node.matches(selector)) || null,
-    querySelectorAll: (selector) => descendants(body).filter((node) => node.matches(selector)),
+    querySelector: (selector) => [...descendants(head), ...descendants(body)].find((node) => node.matches(selector)) || null,
+    querySelectorAll: (selector) => [...descendants(head), ...descendants(body)].filter((node) => node.matches(selector)),
   };
   const collection = (items = rows) => ({
     values: () => items,
@@ -177,14 +190,19 @@ async function runtime(source, url, {
       lockedDataStudyVersion: "chs-v80-balanced-assignment",
       zoomIntroOutroVersion: deckVersion,
     },
-    addEventListener() {},
+    addEventListener(name, handler) { (windowHandlers[name] ||= []).push(handler); },
     setTimeout: (callback) => { timers.push(callback); return timers.length; },
     clearTimeout() {},
     getComputedStyle: (node) => ({
       display: node.hidden || node.removed ? "none" : "block",
       visibility: "visible",
     }),
-    opener: { closed: false, postMessage: (message) => messages.push(message) },
+    opener: hasOpener ? { closed: false, postMessage: (message) => messages.push(message) } : null,
+    open: (...args) => {
+      const popup = { closed: false, focused: false, focus() { this.focused = true; }, postMessage: (message) => popupMessages.push(message) };
+      openedWindows.push({ args, popup });
+      return popup;
+    },
     parent: null,
   };
   const browserStorage = (values, failure) => ({
@@ -214,7 +232,10 @@ async function runtime(source, url, {
   vm.runInContext(helper, context, { filename: "zoom-slides.js" });
   const runnable = source.replace(/\nmain\(\)\.catch\([\s\S]*$/, "");
   vm.runInContext(`${runnable}\n globalThis.__main=main;
-    globalThis.__inspect=()=>({currentSessionParams,facilitatorAssignmentSummary,totalPreviewScreens,currentPreviewIndex,facilitatorRestoredRowCount,facilitatorStudyFinished});`, context);
+    globalThis.__inspect=()=>({currentSessionParams,facilitatorAssignmentSummary,totalPreviewScreens,currentPreviewIndex,facilitatorRestoredRowCount,facilitatorStudyFinished});
+    globalThis.__presenterDeck=()=>typeof zoomPresenterDeck === "undefined" ? null : zoomPresenterDeck;
+    globalThis.__makePresenterDeck=(nodes)=>makeZoomPresenterDeck(nodes);
+    globalThis.__receiveCommand=(message)=>receiveFacilitatorCommand(message);`, context);
   try {
     await context.__main();
   } catch (error) {
@@ -222,9 +243,15 @@ async function runtime(source, url, {
     throw error;
   }
   return {
-    context, jsPsych, storage, sessionStore, rows, messages, window, body, document,
+    context, jsPsych, storage, sessionStore, rows, messages, window, body, document, styleUrls, popupMessages, openedWindows,
     get timeline() { return timeline; },
     inspect: () => plain(context.__inspect()),
+    deck: () => plain(context.__presenterDeck()),
+    makeDeck: (nodes) => plain(context.__makePresenterDeck(nodes)),
+    command: (message) => context.__receiveCommand(message),
+    dispatchMessage(data, { origin = url.origin, source = null } = {}) {
+      (windowHandlers.message || []).forEach((handler) => handler({ data, origin, source }));
+    },
     load(index) {
       stage.replaceChildren(...parseStimulus(timeline[index].stimulus));
       jsPsych.active = index;
@@ -273,9 +300,9 @@ for (const entry of entries) {
   const beforeUrl = apiBefore.buildStudyUrl(entry, "https://example.test/screen-share-study/zoom-review.html", "zoom", "ARROWS");
   const afterUrl = apiAfter.buildStudyUrl(entry, "https://example.test/screen-share-study/zoom-review.html", "zoom", "ARROWS");
   assert.equal(afterUrl.pathname, `/${zoomPrefix}/index.html`);
-  assert.equal(afterUrl.searchParams.get("v"), "zoom-likert-choices-2026-10-22", `${entry.id}: fresh previews use the current Zoom choice treatment`);
+  assert.equal(afterUrl.searchParams.get("v"), "zoom-presenter-2026-10-27", `${entry.id}: fresh previews load the Zoom presenter navigator`);
   const testingUrl = apiAfter.buildTestingLaunchUrl(entry, "https://example.test/screen-share-study/zoom-review.html");
-  assert.equal(testingUrl.searchParams.get("v"), "zoom-likert-choices-2026-10-22", `${entry.id}: workbook launch links refresh the Zoom launcher`);
+  assert.equal(testingUrl.searchParams.get("v"), "zoom-presenter-2026-10-27", `${entry.id}: workbook launch links refresh the Zoom launcher`);
   const scientificUrl = new URL(afterUrl);
   scientificUrl.searchParams.delete("v");
   assert.equal(scientificUrl.toString(), beforeUrl.toString(), `${entry.id}: assigned URL must not change apart from the cache-refresh parameter`);
@@ -290,6 +317,37 @@ for (const entry of entries) {
   const beforeInspection = before.inspect();
   beforeInspection.totalPreviewScreens -= removedTransitions;
   assert.deepEqual(after.inspect(), beforeInspection, `${entry.id}: actual assignments and pair schedules must not change`);
+  // The private catalog is a projection of the already assigned timeline. It
+  // must never construct a second assignment or run participant trial hooks.
+  const deck = after.deck();
+  assert.ok(deck, `${entry.id}: Zoom publishes an assigned presenter catalog`);
+  assert.equal(deck.version, "zoom-streamlined-ratings-v2");
+  assert.equal(deck.baseUrl, afterUrl.toString());
+  assert.deepEqual(deck.styles, after.styleUrls, `${entry.id}: private previews use this child's exact stylesheet URLs`);
+  assert.equal(deck.bodyClass, "ksize-facilitator-child ksize-live-share ksize-zoom-arrow-navigation ksize-zoom-choice-effects");
+  assert.equal(deck.slides.length, after.inspect().totalPreviewScreens);
+  assert.equal(deck.slides.length, after.timeline.length - 1, `${entry.id}: preload is not a participant preview`);
+  deck.slides.forEach((slide, index) => {
+    const node = after.timeline[index + 1];
+    const data = node.data || {};
+    const script = Array.isArray(data.facilitator_script) ? data.facilitator_script : String(data.facilitator_script || "").split(/\n+/);
+    assert.deepEqual(slide, {
+      index, title: slide.title, storyNumber: data.story_number || null,
+      condition: data.condition_pairing || data.condition || "", kind: data.slide_kind || "slide",
+      scriptLines: script.map((line) => String(line || "").replace(/\s+/g, " ").trim()).filter(Boolean),
+      html: typeof node.stimulus === "string" ? node.stimulus : "",
+    }, `${entry.id}/${index}: preview preserves exact assigned images, options, pair, script and order`);
+    assert.equal(index, data.preview_index);
+    assert.ok(slide.title.trim(), `${entry.id}/${index}: every preview has a readable label`);
+  });
+  assert.deepEqual([...new Set(deck.slides.filter((slide) => slide.storyNumber).map((slide) => slide.storyNumber))], [1, 2, 3, 4, 5, 6], `${entry.id}: private story navigation follows this child's six-story order`);
+  const deckRequestSnapshot = { rows: plain(after.rows), inspect: after.inspect(), url: after.window.location.href,
+    local: [...after.storage], session: [...after.sessionStore] };
+  after.command({ type: "FACILITATOR_COMMAND", action: "deck", commandId: `${entry.id}-catalog`, facilitatorSession: afterUrl.searchParams.get("facilitatorSession") });
+  const published = plain(after.messages.filter((message) => message.type === "FACILITATOR_DECK").at(-1));
+  assert.deepEqual(published, { facilitatorSession: afterUrl.searchParams.get("facilitatorSession"), type: "FACILITATOR_DECK", ...deck, currentIndex: after.inspect().currentPreviewIndex }, `${entry.id}: catalog replies include all assigned previews and the live position`);
+  assert.deepEqual({ rows: plain(after.rows), inspect: after.inspect(), url: after.window.location.href,
+    local: [...after.storage], session: [...after.sessionStore] }, deckRequestSnapshot, `${entry.id}: requesting previews cannot change answers, location, assignment or saved rows`);
   for (let index = 1; index < after.timeline.length; index += 1) {
     after.load(index);
     const node = after.timeline[index];
@@ -302,7 +360,7 @@ for (const entry of entries) {
     assert.ok(after.arrow("back"), `${entry.id}/${index}: Back exists`);
     assert.ok(after.arrow("forward"), `${entry.id}/${index}: Forward exists`);
     assert.ok(after.arrow("end"), `${entry.id}/${index}: End exists`);
-    assert.deepEqual(after.document.querySelector(".ksize-zoom-navigation").children.map((node) => node.textContent), ["Start", "←", "→", "End"], `${entry.id}/${index}: controls are ordered Start, Back, Forward, End`);
+    assert.deepEqual(after.document.querySelector(".ksize-zoom-navigation").children.map((node) => node.textContent), ["Start", "←", "→", "End", "Slide navigator ↗"], `${entry.id}/${index}: the private navigator follows the original four controls`);
     assert.equal(after.arrow("start").disabled, index === 1, `${entry.id}/${index}: Start is disabled only on the first screen`);
     assert.equal(after.arrow("back").disabled, index === 1, `${entry.id}/${index}: Back is disabled only on the first screen`);
     assert.equal(after.arrow("end").disabled, index === after.timeline.length - 1, `${entry.id}/${index}: End is disabled only on the final screen`);
@@ -360,6 +418,12 @@ for (const variant of ["no-facilitator", "no-live-share", "no-deck-version"]) {
   const after = await runtime(sourceAfter, url, options);
   assert.deepEqual(taskShape(after), taskShape(before), `${variant}: scientific/non-Zoom timeline must stay unchanged`);
   assert.deepEqual(after.inspect(), before.inspect(), `${variant}: assignments stay unchanged`);
+  assert.equal(after.deck(), null, `${variant}: the Zoom-only private catalog is absent`);
+  const gateSnapshot = { rows: plain(after.rows), inspect: after.inspect(), url: after.window.location.href };
+  after.command({ type: "FACILITATOR_COMMAND", action: "deck", commandId: `${variant}-catalog`, facilitatorSession: url.searchParams.get("facilitatorSession") });
+  after.command({ type: "FACILITATOR_COMMAND", action: "navigate", targetIndex: 5, previewIndex: 0, commandId: `${variant}-navigate`, facilitatorSession: url.searchParams.get("facilitatorSession") });
+  assert.equal(after.messages.some((message) => message.type === "FACILITATOR_DECK"), false, `${variant}: presenter commands stay gated off`);
+  assert.deepEqual({ rows: plain(after.rows), inspect: after.inspect(), url: after.window.location.href }, gateSnapshot, `${variant}: presenter commands cannot affect non-Zoom trials`);
   // Only run a silent facilitator callback here, not the CHS audio promise chain.
   if (variant !== "no-facilitator") {
     after.load(1);
@@ -407,6 +471,147 @@ function assignmentWithoutRecovery(run) {
   delete value.restoredRowCount;
   return value;
 }
+
+let presenterCommandNumber = 0;
+function presenterCommand(run, action, details = {}) {
+  const message = {
+    type: "FACILITATOR_COMMAND", action,
+    facilitatorSession: new URL(run.window.location.href).searchParams.get("facilitatorSession"),
+    commandId: `presenter-regression-${++presenterCommandNumber}`,
+    ...details,
+  };
+  run.command(message);
+  return message;
+}
+
+function presenterAck(run, command) {
+  return plain(run.messages.findLast((message) => message.type === "FACILITATOR_COMMAND_ACK" && message.commandId === command.commandId));
+}
+
+const inertPreview = await runtime(sourceAfter, exampleUrl);
+let trialHooksCalled = 0;
+const inertSnapshot = { rows: plain(inertPreview.rows), inspect: inertPreview.inspect(), url: inertPreview.window.location.href,
+  local: [...inertPreview.storage], session: [...inertPreview.sessionStore] };
+const inertCatalog = inertPreview.makeDeck([
+  { stimulus: '<div><button data-choice-index="0">MOM</button><img src="exact-assigned.png"></div>',
+    data: { slide_kind: "response_choices", story_number: 2, condition_pairing: "MOM-TEACHER", facilitator_script: ["  Ask   this question.  ", "", "Then wait."] },
+    on_load() { trialHooksCalled += 1; }, on_finish() { trialHooksCalled += 1; } },
+  { stimulus() { trialHooksCalled += 1; return "must not evaluate dynamic trial content"; }, data: {} },
+]);
+assert.equal(trialHooksCalled, 0, "building private previews never runs stimulus functions or trial lifecycle hooks");
+assert.deepEqual(inertCatalog.slides[0].scriptLines, ["Ask this question.", "Then wait."]);
+assert.equal(inertCatalog.slides[1].html, "", "a non-string trial stimulus is never executed in a private preview");
+assert.deepEqual({ rows: plain(inertPreview.rows), inspect: inertPreview.inspect(), url: inertPreview.window.location.href,
+  local: [...inertPreview.storage], session: [...inertPreview.sessionStore] }, inertSnapshot, "catalog construction is read-only");
+
+const guardedPresenter = await runtime(sourceAfter, exampleUrl);
+guardedPresenter.load(11);
+guardedPresenter.rows.push({ preview_index: 0, response: "preserve-before-invalid-command", nested: { falseValue: false, zero: 0 } });
+const guardedSnapshot = { rows: plain(guardedPresenter.rows), inspect: guardedPresenter.inspect(), url: guardedPresenter.window.location.href };
+const invalidNavigations = [
+  { targetIndex: 5, previewIndex: 9, resetLaterAnswers: true, reason: "stale_screen" },
+  { targetIndex: -1, previewIndex: 10, resetLaterAnswers: true, reason: "invalid_screen" },
+  { targetIndex: guardedPresenter.inspect().totalPreviewScreens, previewIndex: 10, reason: "invalid_screen" },
+  { targetIndex: 10.5, previewIndex: 10, reason: "invalid_screen" },
+  { targetIndex: "not-a-slide", previewIndex: 10, reason: "invalid_screen" },
+  { targetIndex: null, previewIndex: 10, reason: "invalid_screen" },
+  { targetIndex: true, previewIndex: 10, reason: "invalid_screen" },
+  { targetIndex: "5", previewIndex: 10, reason: "invalid_screen" },
+  { targetIndex: 5, previewIndex: 10, reason: "reset_not_confirmed" },
+  { targetIndex: 0, previewIndex: 10, resetLaterAnswers: "true", reason: "reset_not_confirmed" },
+];
+for (const { reason, ...details } of invalidNavigations) {
+  const command = presenterCommand(guardedPresenter, "navigate", details);
+  const ack = presenterAck(guardedPresenter, command);
+  assert.equal(ack.status, "rejected");
+  assert.equal(ack.reason, reason, `presenter navigation rejects ${JSON.stringify(details)}`);
+  assert.deepEqual({ rows: plain(guardedPresenter.rows), inspect: guardedPresenter.inspect(), url: guardedPresenter.window.location.href }, guardedSnapshot, `${reason}: no answer or live screen changes`);
+}
+const sameSlide = presenterCommand(guardedPresenter, "navigate", { targetIndex: 10, previewIndex: 10 });
+assert.equal(presenterAck(guardedPresenter, sameSlide).status, "accepted", "showing the current slide is a harmless no-op");
+assert.deepEqual({ rows: plain(guardedPresenter.rows), inspect: guardedPresenter.inspect(), url: guardedPresenter.window.location.href }, guardedSnapshot);
+const messagesBeforeForeign = guardedPresenter.messages.length;
+presenterCommand(guardedPresenter, "navigate", { targetIndex: 20, previewIndex: 10, facilitatorSession: "another-child-session" });
+presenterCommand(guardedPresenter, "navigate", { targetIndex: 20, previewIndex: 10, type: "NOT_A_FACILITATOR_COMMAND" });
+assert.equal(guardedPresenter.messages.length, messagesBeforeForeign, "foreign sessions and non-command messages are ignored");
+const catalogRequest = presenterCommand(guardedPresenter, "deck");
+presenterCommand(guardedPresenter, "deck");
+const catalogsBeforeDuplicate = guardedPresenter.messages.filter((message) => message.type === "FACILITATOR_DECK").length;
+guardedPresenter.command(catalogRequest);
+assert.equal(guardedPresenter.messages.filter((message) => message.type === "FACILITATOR_DECK").length, catalogsBeforeDuplicate, "a delayed duplicate remains ignored after an intervening command");
+
+for (const direction of ["forward", "back", "restart"]) {
+  const run = await runtime(sourceAfter, exampleUrl);
+  const targetIndex = direction === "restart" ? 0 : 6;
+  const fromIndex = direction === "forward" ? 4 : 10;
+  run.load(fromIndex + 1);
+  const rows = direction === "forward"
+    ? [{ preview_index: 0, response: "earlier" }, { preview_index: 2, rating_value: 2 }, { preview_index: 4, choice_label: "actual recorded role" }]
+    : [{ preview_index: 0, response: "earlier" }, { preview_index: 5, rating_value: 2 }, { preview_index: 6, choice_label: "stale destination answer" }, { preview_index: 9, rating_value: 3 }];
+  run.rows.push(...plain(rows));
+  const assignment = assignmentWithoutRecovery(run);
+  const command = presenterCommand(run, "navigate", { targetIndex, previewIndex: fromIndex, ...(direction !== "forward" ? { resetLaterAnswers: true } : {}) });
+  assert.equal(presenterAck(run, command).status, "accepted", `${direction}: an explicit valid Show command is accepted`);
+  assert.deepEqual(plain(run.rows), rows, `${direction}: a jump itself does not finish a trial or fabricate an answer`);
+  assert.equal(run.inspect().facilitatorStudyFinished, false);
+  assert.equal(run.messages.some((message) => message.type === "GAME_COMPLETE"), false);
+  const destination = new URL(run.window.location.href);
+  assert.equal(Number(destination.searchParams.get("previewIndex")), targetIndex);
+  const retained = rows.filter((row) => row.preview_index < targetIndex);
+  if (retained.length) {
+    const backupKey = destination.searchParams.get("resumeBackupKey");
+    assert.ok(backupKey);
+    assert.equal(destination.searchParams.get("expectedResumeRows"), String(retained.length));
+    const store = backupKey.startsWith("who-will-help-navigation-session:") ? run.sessionStore : run.storage;
+    assert.deepEqual(JSON.parse(store.get(backupKey)).rows, retained, `${direction}: checkpoint preserves exactly the preceding complete rows`);
+  } else {
+    assert.equal(destination.searchParams.has("resumeBackupKey"), false, "restart explicitly discards stale recovery");
+  }
+  const resumed = await runtime(sourceAfter, destination, { storage: run.storage, sessionStore: run.sessionStore });
+  assert.deepEqual(assignmentWithoutRecovery(resumed), assignment, `${direction}: private navigation preserves colors, sides, role pair, event and trait schedule`);
+  assert.equal(resumed.timeline[1].data.preview_index, targetIndex);
+  assert.deepEqual(plain(resumed.rows).map(({ facilitator_restored_from_backup, ...row }) => row), retained, `${direction}: only the intended preceding answers return`);
+  assert.deepEqual(resumed.deck().slides, run.deck().slides, `${direction}: reload still previews the complete assigned deck, not only its remaining tail`);
+}
+
+const blockedPresenter = await runtime(sourceAfter, exampleUrl, { localStorageFailure: "blocked", sessionStorageFailure: "blocked" });
+blockedPresenter.load(11);
+blockedPresenter.rows.push({ preview_index: 0, response: "must-not-lose" });
+const blockedSnapshot = { rows: plain(blockedPresenter.rows), url: blockedPresenter.window.location.href };
+const blockedCommand = presenterCommand(blockedPresenter, "navigate", { targetIndex: 6, previewIndex: 10, resetLaterAnswers: true });
+assert.equal(presenterAck(blockedPresenter, blockedCommand).reason, "storage_unavailable");
+assert.deepEqual({ rows: plain(blockedPresenter.rows), url: blockedPresenter.window.location.href }, blockedSnapshot, "failed private navigation preserves the live screen and responses when both browser stores are blocked");
+
+// The child normally has no opener because the launch link uses noopener.
+// Exercise the direct popup fallback without providing BroadcastChannel at all.
+const popupRun = await runtime(sourceAfter, exampleUrl, { hasOpener: false });
+popupRun.load(3);
+const popupSnapshot = { rows: plain(popupRun.rows), inspect: popupRun.inspect(), url: popupRun.window.location.href };
+popupRun.document.querySelector(".ksize-zoom-presenter-open").click();
+assert.equal(popupRun.openedWindows.length, 1);
+const opened = popupRun.openedWindows[0];
+const popupUrl = new URL(opened.args[0]);
+assert.equal(popupUrl.pathname, `/${zoomPrefix}/presenter.html`);
+assert.deepEqual([...popupUrl.searchParams], [["facilitatorSession", exampleUrl.searchParams.get("facilitatorSession")]], "private window receives only its session channel, not an independently runnable child assignment");
+assert.equal(opened.popup.focused, true);
+popupRun.dispatchMessage({ type: "FACILITATOR_COMMAND", action: "deck", commandId: "popup-first-catalog", facilitatorSession: popupUrl.searchParams.get("facilitatorSession") }, { source: opened.popup });
+assert.ok(popupRun.popupMessages.some((message) => message.type === "FACILITATOR_DECK"), "child-opened popup receives the catalog without BroadcastChannel or a child opener");
+assert.deepEqual({ rows: plain(popupRun.rows), inspect: popupRun.inspect(), url: popupRun.window.location.href }, popupSnapshot, "opening and connecting the private popup is read-only");
+const reconnected = await runtime(sourceAfter, exampleUrl, { hasOpener: false });
+const reconnectMessages = [];
+const reconnectSource = { closed: false, postMessage: (message) => reconnectMessages.push(message) };
+const reconnectRequest = { type: "FACILITATOR_COMMAND", action: "deck", commandId: "popup-after-child-reload", facilitatorSession: popupUrl.searchParams.get("facilitatorSession") };
+reconnected.dispatchMessage(reconnectRequest, { origin: "https://foreign.example", source: reconnectSource });
+reconnected.dispatchMessage({ ...reconnectRequest, facilitatorSession: "wrong-session" }, { source: reconnectSource });
+assert.equal(reconnectMessages.length, 0, "popup reconnection rejects foreign origins and sessions");
+reconnected.dispatchMessage(reconnectRequest, { source: reconnectSource });
+assert.equal(reconnectMessages.filter((message) => message.type === "FACILITATOR_DECK").length, 1, "a still-open popup can reconnect after child reload with no BroadcastChannel");
+const pingReconnected = await runtime(sourceAfter, exampleUrl, { hasOpener: false });
+const pingMessages = [];
+pingReconnected.dispatchMessage({ ...reconnectRequest, action: "ping", commandId: "popup-ping-after-reload" }, {
+  source: { closed: false, postMessage: (message) => pingMessages.push(message) },
+});
+assert.ok(pingMessages.some((message) => message.type === "FACILITATOR_STATE"), "an already-open private navigator reconnects by heartbeat without requesting its cached catalog again");
 
 async function backAndReanswer(kind, answerClass, firstOption, changedOption) {
   const run = await runtime(sourceAfter, exampleUrl);
@@ -680,7 +885,7 @@ assert.equal(choiceCss.slice(choiceCss.indexOf("body.")), approvedChoiceCss.slic
 const zoomHtml = currentFile(`${zoomPrefix}/index.html`);
 assert.match(zoomHtml, /<body class="ksize-zoom-choice-effects">/, "regular Zoom entry enables the approved effect");
 assert.match(zoomHtml, /zoom-choice-effects\.css\?v=zoom-likert-choices-2026-10-22/, "regular Zoom entry loads the current effect stylesheet");
-assert.match(zoomHtml, /app\.js\?v=zoom-likert-choices-2026-10-22/, "regular Zoom entry refreshes guarded recovery code");
+assert.match(zoomHtml, /app\.js\?v=zoom-presenter-2026-10-27/, "regular Zoom entry loads the private presenter bridge");
 assert.match(css, /body\.ksize-zoom-arrow-navigation \.ksize-helper\s*\{[^}]*display:\s*none\s*!important/, "animated helper and bubble are hidden only in isolated Zoom study");
 assert.match(css, /body\.ksize-zoom-arrow-navigation[^{}]*\.ksize-researcher-tools[\s\S]*?display:\s*none\s*!important/);
 assert.match(css, /body\.ksize-zoom-arrow-navigation[^{}]*\.ksize-next-btn[\s\S]*?display:\s*none\s*!important/);
@@ -699,7 +904,17 @@ console.log(JSON.stringify({
   baselineRevision: BASELINE_REVISION,
   versions: entries.length,
   screensChecked: screenCount,
+  presenterCatalogsChecked: entries.length,
+  presenterSlidesChecked: screenCount,
   slideKinds: [...allKinds].sort(),
   sharedChsFilesByteIdentical: immutableFiles.length,
-  verified: ["assignment/remaining-timeline identity", "Zoom-only removal of followup transition screens and redundant rating-focus banners", "retained pair introductions, rating images, questions and answer options", "Start/Back/Forward/End on every Zoom screen", "Start/End bounds disabled correctly", "all-version Start/End assignment identity", "Start clears stale responses without needing browser storage", "End previews certificate without completion or invented answers", "End storage fallback and fail-safe", "all four controls disable after successful navigation", "no upper-right toolbar", "native forward semantics", "missing-answer forward", "double-click guard", "Back/recovery", "session-first navigation checkpoint", "blocked/full local storage recovery", "blocked session storage fallback", "both stores blocked visible error without data loss", "selected-store isolation from stale checkpoints", "current-format local/session checkpoint recovery", "missing/old Zoom timeline markers rejected before importing answers without changing saved bytes", "non-Zoom unversioned local recovery unchanged", "pending-persistence Back checkpoint isolation", "Back recovery without participant ID", "full restored-row identity", "helper re-answer followed directly by retained rating-pair introduction", "rating re-answer", "pair-plan stability", "invalid-restore protection", "production choice CSS matches approved comparison effect", "all-version launcher/cache refresh", "final completion", "non-Zoom gate compatibility"],
+  verified: ["assignment/remaining-timeline identity", "Zoom-only removal of followup transition screens and redundant rating-focus banners", "retained pair introductions, rating images, questions and answer options", "Start/Back/Forward/End on every Zoom screen", "Start/End bounds disabled correctly", "all-version Start/End assignment identity", "Start clears stale responses without needing browser storage", "End previews certificate without completion or invented answers", "End storage fallback and fail-safe", "all four controls disable after successful navigation", "no upper-right toolbar", "native forward semantics", "missing-answer forward", "double-click guard", "Back/recovery", "session-first navigation checkpoint", "blocked/full local storage recovery", "blocked session storage fallback", "both stores blocked visible error without data loss", "selected-store isolation from stale checkpoints", "current-format local/session checkpoint recovery", "missing/old Zoom timeline markers rejected before importing answers without changing saved bytes", "non-Zoom unversioned local recovery unchanged", "pending-persistence Back checkpoint isolation", "Back recovery without participant ID", "full restored-row identity", "helper re-answer followed directly by retained rating-pair introduction", "rating re-answer", "pair-plan stability", "invalid-restore protection", "production choice CSS matches approved comparison effect", "all-version launcher/cache refresh", "final completion", "non-Zoom gate compatibility",
+    "all-version private catalog preserves exact assigned order, HTML, script, pair and stylesheet URLs",
+    "catalog construction and requests never run trials or change answers, location or storage",
+    "presenter stale/negative/fractional/out-of-range navigation and unconfirmed reset guards",
+    "presenter duplicate-command and foreign-session guards",
+    "explicit presenter forward/back/restart preserves assignment and exact checkpoint rows",
+    "presenter blocked-storage navigation fails without losing answers",
+    "private popup and child-reload reconnection without BroadcastChannel or child opener",
+    "presenter commands remain Zoom-only"],
 }, null, 2));
