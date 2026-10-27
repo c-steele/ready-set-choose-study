@@ -235,6 +235,7 @@ async function runtime(source, url, {
     globalThis.__inspect=()=>({currentSessionParams,facilitatorAssignmentSummary,totalPreviewScreens,currentPreviewIndex,facilitatorRestoredRowCount,facilitatorStudyFinished});
     globalThis.__presenterDeck=()=>typeof zoomPresenterDeck === "undefined" ? null : zoomPresenterDeck;
     globalThis.__makePresenterDeck=(nodes)=>makeZoomPresenterDeck(nodes);
+    globalThis.__coalesceRows=(rows)=>coalesceZoomNavigatorRows(rows);
     globalThis.__receiveCommand=(message)=>receiveFacilitatorCommand(message);`, context);
   try {
     await context.__main();
@@ -248,6 +249,7 @@ async function runtime(source, url, {
     inspect: () => plain(context.__inspect()),
     deck: () => plain(context.__presenterDeck()),
     makeDeck: (nodes) => plain(context.__makePresenterDeck(nodes)),
+    coalesceRows: (rows) => plain(context.__coalesceRows(rows)),
     command: (message) => context.__receiveCommand(message),
     dispatchMessage(data, { origin = url.origin, source = null } = {}) {
       (windowHandlers.message || []).forEach((handler) => handler({ data, origin, source }));
@@ -300,9 +302,9 @@ for (const entry of entries) {
   const beforeUrl = apiBefore.buildStudyUrl(entry, "https://example.test/screen-share-study/zoom-review.html", "zoom", "ARROWS");
   const afterUrl = apiAfter.buildStudyUrl(entry, "https://example.test/screen-share-study/zoom-review.html", "zoom", "ARROWS");
   assert.equal(afterUrl.pathname, `/${zoomPrefix}/index.html`);
-  assert.equal(afterUrl.searchParams.get("v"), "zoom-thumbnails-2026-10-27", `${entry.id}: fresh previews load the Zoom thumbnail navigator`);
+  assert.equal(afterUrl.searchParams.get("v"), "zoom-direct-navigator-2026-10-27", `${entry.id}: fresh previews load the direct Zoom thumbnail navigator`);
   const testingUrl = apiAfter.buildTestingLaunchUrl(entry, "https://example.test/screen-share-study/zoom-review.html");
-  assert.equal(testingUrl.searchParams.get("v"), "zoom-thumbnails-2026-10-27", `${entry.id}: workbook launch links refresh the Zoom launcher`);
+  assert.equal(testingUrl.searchParams.get("v"), "zoom-direct-navigator-2026-10-27", `${entry.id}: workbook launch links refresh the Zoom launcher`);
   const scientificUrl = new URL(afterUrl);
   scientificUrl.searchParams.delete("v");
   assert.equal(scientificUrl.toString(), beforeUrl.toString(), `${entry.id}: assigned URL must not change apart from the cache-refresh parameter`);
@@ -322,6 +324,7 @@ for (const entry of entries) {
   const deck = after.deck();
   assert.ok(deck, `${entry.id}: Zoom publishes an assigned presenter catalog`);
   assert.equal(deck.version, "zoom-streamlined-ratings-v2");
+  assert.deepEqual(deck.navigationCapabilities, { preserveResponses: true }, `${entry.id}: direct navigation advertises explicit answer-preservation support`);
   assert.equal(deck.baseUrl, afterUrl.toString());
   assert.deepEqual(deck.styles, after.styleUrls, `${entry.id}: private previews use this child's exact stylesheet URLs`);
   assert.equal(deck.bodyClass, "ksize-facilitator-child ksize-live-share ksize-zoom-arrow-navigation ksize-zoom-choice-effects");
@@ -399,6 +402,36 @@ for (const entry of entries) {
   assert.deepEqual(assignmentWithoutRecovery(atStart), oldAssignment, `${entry.id}: Start preserves the assigned version and rating plan`);
   assert.equal(atStart.timeline[1].data.zoom_deck_slide_id, "welcome");
   assert.equal(atStart.rows.length, 0, `${entry.id}: restarting allows fresh responses rather than retaining stale answers`);
+  // Actual recorded helper/rating responses must survive a direct rail jump
+  // back to the first slide for every fixed assignment, unlike legacy Start.
+  const helperIndex = atStart.timeline.findIndex((node) => node.data?.slide_kind === "response_choices");
+  const ratingIndex = atStart.timeline.findIndex((node) => node.data?.slide_kind === "response");
+  atStart.load(helperIndex);
+  atStart.document.querySelectorAll(".ksize-char-btn")[0].click();
+  atStart.flushTimers();
+  atStart.load(ratingIndex);
+  atStart.document.querySelectorAll(".ksize-rating-choice")[0].click();
+  atStart.flushTimers();
+  const recorded = plain(atStart.rows);
+  assert.equal(recorded.length, 2);
+  assert.ok(recorded[0].choice_id != null && recorded[1].rating_value === 1);
+  atStart.load(atStart.timeline.length - 2);
+  const current = atStart.inspect().currentPreviewIndex;
+  const directMessage = { type: "FACILITATOR_COMMAND", action: "navigate", facilitatorSession: new URL(atStart.window.location.href).searchParams.get("facilitatorSession"), commandId: `${entry.id}-direct-first`, targetIndex: 0, previewIndex: current, preserveResponses: true };
+  atStart.command(directMessage);
+  assert.equal(atStart.messages.findLast((message) => message.commandId === directMessage.commandId)?.status, "accepted", `${entry.id}: supported direct Back does not require resetting answers`);
+  const directUrl = new URL(atStart.window.location.href);
+  assert.equal(directUrl.searchParams.get("navigatorKeepAnswers"), "1");
+  assert.equal(directUrl.searchParams.get("previewIndex"), "0");
+  assert.equal(directUrl.searchParams.get("expectedResumeRows"), "2");
+  const checkpointKey = directUrl.searchParams.get("resumeBackupKey");
+  const checkpointStore = checkpointKey.startsWith("who-will-help-navigation-session:") ? atStart.sessionStore : atStart.storage;
+  assert.deepEqual(JSON.parse(checkpointStore.get(checkpointKey)).rows, recorded, `${entry.id}: direct slide 1 checkpoints both full actual answers unchanged`);
+  assert.deepEqual(plain(atStart.rows), recorded, `${entry.id}: a direct jump itself does not edit the running data collection`);
+  const directFirst = await runtime(sourceAfter, directUrl, { storage: atStart.storage, sessionStore: atStart.sessionStore });
+  assert.deepEqual(plain(directFirst.rows).map(({ facilitator_restored_from_backup, ...row }) => row), recorded, `${entry.id}: direct first-slide navigation restores every recorded answer`);
+  assert.deepEqual(assignmentWithoutRecovery(directFirst), oldAssignment, `${entry.id}: direct first-slide navigation keeps the exact assigned roles, colors, sides and rating plan`);
+  assert.deepEqual(directFirst.deck().slides, deck.slides, `${entry.id}: answer-preserving reload retains the exact full scientific deck`);
 }
 
 function assertNavigationDisabled(run, label) {
@@ -582,6 +615,132 @@ const blockedCommand = presenterCommand(blockedPresenter, "navigate", { targetIn
 assert.equal(presenterAck(blockedPresenter, blockedCommand).reason, "storage_unavailable");
 assert.deepEqual({ rows: plain(blockedPresenter.rows), url: blockedPresenter.window.location.href }, blockedSnapshot, "failed private navigation preserves the live screen and responses when both browser stores are blocked");
 
+const coalesceFixture = [
+  { technical: "unindexed preload", nested: { zero: 0, falseValue: false, empty: "" } },
+  { preview_index: 3, choice_index: 0, choice_id: "recorded-first-role", response_missing: false },
+  { preview_index: 8, rating_value: 1, rating_label: "Original rating" },
+  { preview_index: 3, response_missing: true, researcher_navigation: "forward" },
+  { preview_index: 6, response_missing: true },
+  { preview_index: 8, rating_value: 3, rating_label: "Changed rating" },
+  { preview_index: 6, choice_id: "newly-answered-role", response_missing: false },
+  { preview_index: 8, response_missing: true, researcher_navigation: "forward" },
+  { preview_index: "3", technical: "noninteger identity is retained" },
+  { preview_index: 4, response: "first visit without a question" },
+  { preview_index: 4, response: "latest visit without a question" },
+];
+const coalesceSnapshot = plain(coalesceFixture);
+assert.deepEqual(inertPreview.coalesceRows(coalesceFixture), [coalesceFixture[0], coalesceFixture[1], coalesceFixture[5], coalesceFixture[6], coalesceFixture[8], coalesceFixture[10]], "coalescing keeps first row position, latest actual answer, earlier answer over a missing response, and every unindexed technical row");
+assert.deepEqual(coalesceFixture, coalesceSnapshot, "coalescing is pure and preserves the original input records");
+
+for (const [direction, targetIndex] of [["forward", 20], ["back", 6], ["first", 0]]) {
+  const run = await runtime(sourceAfter, exampleUrl);
+  run.load(11);
+  const rows = [
+    { technical: "retain complete non-answer row" },
+    { preview_index: 0, response: "earlier", nested: { zero: 0, falseValue: false } },
+    { preview_index: 6, choice_index: 0, choice_id: "recorded destination role" },
+    { preview_index: 19, rating_value: 3, rating_label: "later recorded rating" },
+  ];
+  run.rows.push(...plain(rows));
+  const assignment = assignmentWithoutRecovery(run);
+  const command = presenterCommand(run, "navigate", { targetIndex, previewIndex: 10, preserveResponses: true });
+  assert.equal(presenterAck(run, command).status, "accepted", `${direction}: direct navigation preserves responses without a backward-reset confirmation`);
+  assert.deepEqual(plain(run.rows), rows, `${direction}: checkpoint creation cannot mutate running responses`);
+  const destination = new URL(run.window.location.href);
+  assert.equal(destination.searchParams.get("navigatorKeepAnswers"), "1");
+  assert.equal(destination.searchParams.get("expectedResumeRows"), String(rows.length));
+  const key = destination.searchParams.get("resumeBackupKey");
+  const store = key.startsWith("who-will-help-navigation-session:") ? run.sessionStore : run.storage;
+  assert.deepEqual(JSON.parse(store.get(key)).rows, rows, `${direction}: every earlier and later answer is checkpointed intact`);
+  run.flushTimers();
+  assert.deepEqual(JSON.parse(store.get(key)).rows, rows, `${direction}: pending ordinary progress saves cannot replace the full navigation checkpoint`);
+  const resumed = await runtime(sourceAfter, destination, { storage: run.storage, sessionStore: run.sessionStore });
+  assert.deepEqual(plain(resumed.rows).map(({ facilitator_restored_from_backup, ...row }) => row), rows);
+  assert.deepEqual(assignmentWithoutRecovery(resumed), assignment);
+  assert.equal(resumed.timeline[1].data.preview_index, targetIndex);
+  if (direction === "back") {
+    resumed.load(1);
+    resumed.arrow("back").click();
+    const legacyBackUrl = new URL(resumed.window.location.href);
+    assert.equal(legacyBackUrl.searchParams.has("navigatorKeepAnswers"), false, "the original Back arrow exits answer-preserving mode");
+    assert.equal(legacyBackUrl.searchParams.get("expectedResumeRows"), "1", "the original Back arrow retains only rows preceding its destination");
+    const legacyKey = legacyBackUrl.searchParams.get("resumeBackupKey");
+    const legacyStore = legacyKey.startsWith("who-will-help-navigation-session:") ? resumed.sessionStore : resumed.storage;
+    assert.deepEqual(JSON.parse(legacyStore.get(legacyKey)).rows.map(({ facilitator_restored_from_backup, ...row }) => row), [rows[1]], "old arrow semantics still deliberately truncate destination and later answers");
+  }
+}
+
+for (const targetIndex of [0, 6, 20]) {
+  const run = await runtime(sourceAfter, exampleUrl, { localStorageFailure: "blocked", sessionStorageFailure: "blocked" });
+  run.load(11); run.rows.push({ preview_index: 19, rating_value: 3, rating_label: "must survive failed direct navigation" });
+  const snapshot = { rows: plain(run.rows), url: run.window.location.href, assignment: assignmentWithoutRecovery(run) };
+  const command = presenterCommand(run, "navigate", { targetIndex, previewIndex: 10, preserveResponses: true });
+  assert.equal(presenterAck(run, command).reason, "storage_unavailable");
+  assert.deepEqual({ rows: plain(run.rows), url: run.window.location.href, assignment: assignmentWithoutRecovery(run) }, snapshot, `slide ${targetIndex}: failed direct navigation preserves all data and the live view`);
+}
+
+// Exercise real helper and Likert handlers after a preserve-all checkpoint in
+// every role-set/care-act cell, including a zero-index choice and the last
+// rating. Merely looking and moving on retains the recorded answer; choosing
+// again replaces that question's single row without touching later answers.
+for (const role of ["woman", "man", "family"]) for (const care of ["hug", "food", "help"]) {
+  const entry = entries.find((item) => item.id.startsWith(`${role}-${care}-`));
+  assert.ok(entry);
+  const url = apiAfter.buildStudyUrl(entry, "https://example.test/screen-share-study/zoom-review.html", "zoom", "DIRECT-REANSWER");
+  const run = await runtime(sourceAfter, url);
+  const helperIndex = run.timeline.findIndex((node) => node.data?.slide_kind === "response_choices");
+  const ratingIndex = run.timeline.findIndex((node) => node.data?.slide_kind === "response");
+  const laterIndex = run.timeline.findLastIndex((node) => node.data?.slide_kind === "response");
+  const helperPreview = run.timeline[helperIndex].data.preview_index;
+  const ratingPreview = run.timeline[ratingIndex].data.preview_index;
+  const laterPreview = run.timeline[laterIndex].data.preview_index;
+  run.load(helperIndex); run.document.querySelectorAll(".ksize-char-btn")[0].click(); run.flushTimers();
+  run.load(ratingIndex); run.document.querySelectorAll(".ksize-rating-choice")[0].click(); run.flushTimers();
+  run.load(laterIndex); run.document.querySelectorAll(".ksize-rating-choice")[2].click(); run.flushTimers();
+  const command = presenterCommand(run, "navigate", { targetIndex: helperPreview, previewIndex: laterPreview, preserveResponses: true });
+  assert.equal(presenterAck(run, command).status, "accepted");
+  const resumed = await runtime(sourceAfter, new URL(run.window.location.href), { storage: run.storage, sessionStore: run.sessionStore });
+  const original = plain(resumed.rows);
+  assert.equal(original.length, 3);
+  resumed.load(1); resumed.arrow("forward").click(); resumed.flushTimers();
+  assert.deepEqual(plain(resumed.rows), original, `${entry.id}: Forward past a revisited helper choice preserves the old answer and every later record`);
+  resumed.load(1);
+  const helperLabel = resumed.document.querySelectorAll(".ksize-char-btn")[1].getAttribute("aria-label");
+  resumed.document.querySelectorAll(".ksize-char-btn")[1].click(); resumed.flushTimers();
+  const changedHelper = resumed.rows.find((row) => row.preview_index === helperPreview);
+  assert.equal(changedHelper.choice_index, 1);
+  assert.equal(changedHelper.choice_label, helperLabel);
+  assert.equal(changedHelper.response_missing, false);
+  assert.deepEqual(plain(resumed.rows.slice(1)), original.slice(1), `${entry.id}: changing a helper choice keeps both later ratings intact`);
+  const resumedRating = resumed.timeline.findIndex((node) => node.data?.preview_index === ratingPreview);
+  const beforeRatingVisit = plain(resumed.rows);
+  resumed.load(resumedRating); resumed.arrow("forward").click(); resumed.flushTimers();
+  assert.deepEqual(plain(resumed.rows), beforeRatingVisit, `${entry.id}: Forward past a revisited rating cannot replace its answer with missingness`);
+  resumed.load(resumedRating); resumed.document.querySelectorAll(".ksize-rating-choice")[2].click(); resumed.flushTimers();
+  assert.equal(resumed.rows.find((row) => row.preview_index === ratingPreview).rating_value, 3);
+  assert.equal(resumed.rows.find((row) => row.preview_index === ratingPreview).response_missing, false);
+  assert.deepEqual(plain(resumed.rows.find((row) => row.preview_index === laterPreview)), original[2]);
+  assert.deepEqual(plain(resumed.rows[0]), plain(changedHelper));
+  assert.equal(resumed.rows.length, 3);
+  assert.equal(new Set(resumed.rows.map((row) => row.preview_index)).size, 3, `${entry.id}: each question retains exactly one row after navigation and re-answering`);
+  assert.deepEqual(assignmentWithoutRecovery(resumed), assignmentWithoutRecovery(run));
+  assert.deepEqual(resumed.deck().slides, run.deck().slides, `${entry.id}: updated answers do not change assigned roles, images, colors, sides or rating order`);
+  const regularKey = `who-will-help-data:${new URL(resumed.window.location.href).searchParams.get("session_id")}`;
+  assert.deepEqual(JSON.parse(resumed.storage.get(regularKey)).rows, plain(resumed.rows), `${entry.id}: saved progress reflects the unique current answer rows`);
+}
+
+for (const variant of ["ordinary-zoom", "no-facilitator", "no-live-share", "no-deck-version"]) {
+  const url = new URL(exampleUrl);
+  if (variant !== "ordinary-zoom") url.searchParams.set("navigatorKeepAnswers", "1");
+  if (variant === "no-facilitator") url.searchParams.delete("facilitator");
+  if (variant === "no-live-share") url.searchParams.delete("liveShare");
+  const run = await runtime(sourceAfter, url, variant === "no-deck-version" ? { deckVersion: "" } : {});
+  run.jsPsych.active = run.timeline.findIndex((node) => node.data?.slide_kind === "response_choices");
+  run.jsPsych.finishTrial({ choice_index: 0, choice_id: "first-recorded-role", response: 0 });
+  run.jsPsych.finishTrial({ choice_index: 1, choice_id: "second-recorded-role", response: 1 });
+  assert.equal(run.rows.length, 2, `${variant}: row coalescing is scoped only to supported Zoom navigator preservation mode`);
+}
+
 // The child normally has no opener because the launch link uses noopener.
 // Exercise the direct popup fallback without providing BroadcastChannel at all.
 const popupRun = await runtime(sourceAfter, exampleUrl, { hasOpener: false });
@@ -592,7 +751,7 @@ assert.equal(popupRun.openedWindows.length, 1);
 const opened = popupRun.openedWindows[0];
 const popupUrl = new URL(opened.args[0]);
 assert.equal(popupUrl.pathname, `/${zoomPrefix}/presenter.html`);
-assert.deepEqual([...popupUrl.searchParams], [["facilitatorSession", exampleUrl.searchParams.get("facilitatorSession")], ["v", "zoom-thumbnails-2026-10-27"]], "private window receives only its session channel and UI version, not an independently runnable child assignment");
+assert.deepEqual([...popupUrl.searchParams], [["facilitatorSession", exampleUrl.searchParams.get("facilitatorSession")], ["v", "zoom-direct-navigator-2026-10-27"]], "private window receives only its session channel and UI version, not an independently runnable child assignment");
 assert.equal(opened.popup.focused, true);
 popupRun.dispatchMessage({ type: "FACILITATOR_COMMAND", action: "deck", commandId: "popup-first-catalog", facilitatorSession: popupUrl.searchParams.get("facilitatorSession") }, { source: opened.popup });
 assert.ok(popupRun.popupMessages.some((message) => message.type === "FACILITATOR_DECK"), "child-opened popup receives the catalog without BroadcastChannel or a child opener");
@@ -885,7 +1044,7 @@ assert.equal(choiceCss.slice(choiceCss.indexOf("body.")), approvedChoiceCss.slic
 const zoomHtml = currentFile(`${zoomPrefix}/index.html`);
 assert.match(zoomHtml, /<body class="ksize-zoom-choice-effects">/, "regular Zoom entry enables the approved effect");
 assert.match(zoomHtml, /zoom-choice-effects\.css\?v=zoom-likert-choices-2026-10-22/, "regular Zoom entry loads the current effect stylesheet");
-assert.match(zoomHtml, /app\.js\?v=zoom-thumbnails-2026-10-27/, "regular Zoom entry loads the private thumbnail navigator");
+assert.match(zoomHtml, /app\.js\?v=zoom-direct-navigator-2026-10-27/, "regular Zoom entry loads the direct thumbnail navigator");
 assert.match(css, /body\.ksize-zoom-arrow-navigation \.ksize-helper\s*\{[^}]*display:\s*none\s*!important/, "animated helper and bubble are hidden only in isolated Zoom study");
 assert.match(css, /body\.ksize-zoom-arrow-navigation[^{}]*\.ksize-researcher-tools[\s\S]*?display:\s*none\s*!important/);
 assert.match(css, /body\.ksize-zoom-arrow-navigation[^{}]*\.ksize-next-btn[\s\S]*?display:\s*none\s*!important/);
@@ -906,6 +1065,8 @@ console.log(JSON.stringify({
   screensChecked: screenCount,
   presenterCatalogsChecked: entries.length,
   presenterSlidesChecked: screenCount,
+  answerPreservingAssignmentsChecked: entries.length,
+  realReanswerRoleCareCellsChecked: 9,
   slideKinds: [...allKinds].sort(),
   sharedChsFilesByteIdentical: immutableFiles.length,
   verified: ["assignment/remaining-timeline identity", "Zoom-only removal of followup transition screens and redundant rating-focus banners", "retained pair introductions, rating images, questions and answer options", "Start/Back/Forward/End on every Zoom screen", "Start/End bounds disabled correctly", "all-version Start/End assignment identity", "Start clears stale responses without needing browser storage", "End previews certificate without completion or invented answers", "End storage fallback and fail-safe", "all four controls disable after successful navigation", "no upper-right toolbar", "native forward semantics", "missing-answer forward", "double-click guard", "Back/recovery", "session-first navigation checkpoint", "blocked/full local storage recovery", "blocked session storage fallback", "both stores blocked visible error without data loss", "selected-store isolation from stale checkpoints", "current-format local/session checkpoint recovery", "missing/old Zoom timeline markers rejected before importing answers without changing saved bytes", "non-Zoom unversioned local recovery unchanged", "pending-persistence Back checkpoint isolation", "Back recovery without participant ID", "full restored-row identity", "helper re-answer followed directly by retained rating-pair introduction", "rating re-answer", "pair-plan stability", "invalid-restore protection", "production choice CSS matches approved comparison effect", "all-version launcher/cache refresh", "final completion", "non-Zoom gate compatibility",
@@ -916,5 +1077,12 @@ console.log(JSON.stringify({
     "explicit presenter forward/back/restart preserves assignment and exact checkpoint rows",
     "presenter blocked-storage navigation fails without losing answers",
     "private popup and child-reload reconnection without BroadcastChannel or child opener",
-    "presenter commands remain Zoom-only"],
+    "presenter commands remain Zoom-only",
+    "all 96 assignments retain actual helper and rating answers when navigating directly to slide 1",
+    "direct forward/back/first checkpoints preserve all earlier, destination, later and unindexed rows",
+    "pure coalescing keeps original row position and latest actual answer without mutating input",
+    "revisiting then advancing without answering retains the recorded helper/rating response",
+    "real re-answer handlers replace one row and preserve all other answers in all nine role/care cells",
+    "answer-preserving mode is Zoom-only and old arrows retain their original reset semantics",
+    "blocked-storage direct navigation preserves all rows even when targeting slide 1"],
 }, null, 2));

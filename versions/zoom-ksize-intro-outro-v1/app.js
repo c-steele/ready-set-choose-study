@@ -197,6 +197,7 @@ if (runtimeConfig.zoomIntroOutroVersion && !zoomIntroOutro) {
 }
 const useZoomIntroOutro = Boolean(zoomIntroOutro) && isFacilitatorMode && isLiveShareMode && !isHomeSchoolStudy
   && runtimeConfig.zoomIntroOutroVersion === zoomIntroOutro?.version;
+const preserveNavigatorResponses = useZoomIntroOutro && configValue("navigatorKeepAnswers") === "1";
 const showLiveReadAloud = isLiveShareMode
   && configValue("showReadAloud", "readAloudCaptions", "read_aloud_captions") !== "0";
 const skipParentSetup = isFacilitatorMode
@@ -783,6 +784,22 @@ function sessionId() {
   return currentSessionId;
 }
 
+function coalesceZoomNavigatorRows(rows) {
+  const result = [], positions = new Map();
+  const answered = (row) => Number.isInteger(row?.choice_index) || row?.choice_id != null
+    || Number.isFinite(row?.rating_value) || row?.rating_label != null;
+  rows.forEach((row) => {
+    const index = row?.preview_index;
+    if (!Number.isInteger(index)) { result.push(row); return; }
+    if (!positions.has(index)) { positions.set(index, result.length); result.push(row); return; }
+    const position = positions.get(index);
+    // Looking at an answered question and advancing without choosing must not
+    // replace a recorded answer with a missing-response navigation row.
+    if (!answered(result[position]) || answered(row)) result[position] = row;
+  });
+  return result;
+}
+
 function makeDataPayload(jsPsych) {
   const rows = jsPsych.data.get().values();
   const completedAt = new Date().toISOString();
@@ -1305,6 +1322,7 @@ function publishFacilitatorState(nodeData = {}, index = currentPreviewIndex) {
     type: "FACILITATOR_STATE",
     previewIndex: index,
     totalScreens: totalPreviewScreens,
+    ...(useZoomIntroOutro ? { navigationCapabilities: { preserveResponses: true } } : {}),
     scriptLines: script,
     controls: collectFacilitatorControls(),
     assignment: facilitatorAssignmentSummary,
@@ -1355,7 +1373,7 @@ function receiveFacilitatorCommand(message) {
     const target = message.targetIndex;
     const reason = message.previewIndex !== currentPreviewIndex ? "stale_screen"
       : !Number.isInteger(target) || target < 0 || target >= totalPreviewScreens ? "invalid_screen"
-      : target < currentPreviewIndex && message.resetLaterAnswers !== true ? "reset_not_confirmed" : "";
+      : target < currentPreviewIndex && message.preserveResponses !== true && message.resetLaterAnswers !== true ? "reset_not_confirmed" : "";
     if (reason) {
       acknowledgeFacilitatorCommand(message, "rejected", reason);
       publishFacilitatorState();
@@ -1368,7 +1386,7 @@ function receiveFacilitatorCommand(message) {
     }
     // Only an explicit presenter action changes the live timeline. Browsing
     // previews never runs a trial, creates an answer, or changes saved rows.
-    const moved = jumpToPreview(facilitatorJsPsych, target);
+    const moved = jumpToPreview(facilitatorJsPsych, target, { preserveResponses: message.preserveResponses === true });
     acknowledgeFacilitatorCommand(message, moved ? "accepted" : "rejected", moved ? "" : "storage_unavailable");
     return;
   }
@@ -2169,7 +2187,8 @@ async function playReviewNarration(text, explicitSrc = "") {
   return explicitSrc ? audio.playFile(explicitSrc, text) : audio.play(text);
 }
 
-function jumpToPreview(jsPsych, index) {
+function jumpToPreview(jsPsych, index, { preserveResponses = false } = {}) {
+  preserveResponses = useZoomIntroOutro && preserveResponses === true;
   audio.stop();
   const targetIndex = Math.max(0, Math.min(index, totalPreviewScreens - 1));
   const url = new URL(window.location.href);
@@ -2179,10 +2198,12 @@ function jumpToPreview(jsPsych, index) {
   url.searchParams.delete("resumeBackupKey");
   url.searchParams.delete("expectedResumeRows");
   url.searchParams.set("researcherJump", "1");
-  if (isFacilitatorMode && targetIndex > 0) {
+  if (preserveResponses && useZoomIntroOutro) url.searchParams.set("navigatorKeepAnswers", "1");
+  else url.searchParams.delete("navigatorKeepAnswers");
+  if (isFacilitatorMode && (targetIndex > 0 || preserveResponses)) {
     const payload = currentFacilitatorPayload();
     if (!payload) return false;
-    payload.rows = payload.rows.filter((row) => {
+    payload.rows = preserveResponses ? coalesceZoomNavigatorRows(payload.rows) : payload.rows.filter((row) => {
       const rowIndex = Number(row?.preview_index);
       return Number.isFinite(rowIndex) && rowIndex < targetIndex;
     });
@@ -2213,6 +2234,7 @@ function publishZoomPresenterDeck() {
 function makeZoomPresenterDeck(nodes) {
   return {
     version: ZOOM_NAVIGATION_VERSION,
+    navigationCapabilities: { preserveResponses: true },
     baseUrl: window.location.href,
     styles: Array.from(document.querySelectorAll('link[rel="stylesheet"]')).map((link) => link.href),
     bodyClass: "ksize-facilitator-child ksize-live-share ksize-zoom-arrow-navigation ksize-zoom-choice-effects",
@@ -2330,7 +2352,7 @@ function installZoomNavigation(jsPsych, nodeData) {
   presenter.addEventListener("click", () => {
     const url = new URL("presenter.html", window.location.href);
     url.searchParams.set("facilitatorSession", facilitatorSessionKey);
-    url.searchParams.set("v", "zoom-thumbnails-2026-10-27");
+    url.searchParams.set("v", "zoom-direct-navigator-2026-10-27");
     const opened = window.open(url.toString(), `ftc-presenter-${facilitatorSessionKey}`, "popup,width=1220,height=840");
     if (!opened) {
       presenter.textContent = "Allow pop-ups to open navigator ↗";
@@ -3466,8 +3488,13 @@ async function main() {
   audio.init();
 
   const jsPsych = initJsPsych({
-    on_data_update: () => {
+    on_data_update: (data) => {
       if (!isFacilitatorMode || facilitatorStudyFinished) return;
+      if (preserveNavigatorResponses && Number.isInteger(data?.preview_index)) {
+        const rows = jsPsych.data.get().values();
+        const unique = coalesceZoomNavigatorRows(rows);
+        if (unique.length !== rows.length) rows.splice(0, rows.length, ...unique);
+      }
       window.setTimeout(() => {
         if (!facilitatorStudyFinished) persistFacilitatorProgress();
       }, 0);

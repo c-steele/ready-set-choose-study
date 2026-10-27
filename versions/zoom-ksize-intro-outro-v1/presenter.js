@@ -11,6 +11,7 @@
   let following = true;
   let lastStateAt = 0;
   let pending = null;
+  let queuedTarget = null;
   let lastRenderedLive = null;
   let lastRenderedPreview = null;
   let thumbnailObserver = null;
@@ -41,9 +42,9 @@
     connection.dataset.connected = String(ready);
     connection.textContent = ready ? "Connected to study" : deck ? "Waiting for study window…" : "Connecting…";
     if (!session) connection.textContent = "Open from the study’s Slide navigator button";
-    $("[data-show]").disabled = !ready || pending !== null || selected === live?.previewIndex;
   }
   function slideAt(index) { return deck?.slides.find((slide) => slide.index === index); }
+  function highlightedIndex() { return queuedTarget ?? pending?.target ?? (following ? live?.previewIndex : selected); }
   function inertDocument(slide) {
     const parsed = new DOMParser().parseFromString(String(slide.html || ""), "text/html");
     parsed.querySelectorAll("script,iframe,object,embed,base,meta,link,audio,video,source").forEach((node) => node.remove());
@@ -96,7 +97,7 @@
   }
   function revealSelectedThumbnail() {
     const rail = $("[data-slide-list]");
-    const button = rail.querySelector(`[data-slide-index="${selected}"]`);
+    const button = rail.querySelector(`[data-slide-index="${highlightedIndex()}"]`);
     if (!button) return;
     const item = button.getBoundingClientRect(), viewport = rail.getBoundingClientRect();
     if (item.top < viewport.top) rail.scrollTop += item.top - viewport.top - 4;
@@ -121,7 +122,7 @@
     $("[data-follow]").setAttribute("aria-pressed", String(following));
     document.querySelectorAll("[data-slide-index]").forEach((button) => {
       const index = Number(button.dataset.slideIndex);
-      button.setAttribute("aria-pressed", String(index === selected));
+      button.setAttribute("aria-pressed", String(index === highlightedIndex()));
       button.dataset.live = String(index === live.previewIndex);
     });
     document.querySelectorAll("[data-story-index]").forEach((button) => button.setAttribute("aria-current", String(slideAt(Number(button.dataset.storyIndex))?.storyNumber === preview?.storyNumber)));
@@ -135,15 +136,40 @@
     following = false;
     paint();
   }
+  function flushLiveNavigation() {
+    if (queuedTarget === null || pending || !isConnected()) return;
+    const target = queuedTarget;
+    queuedTarget = null;
+    if (target === live.previewIndex) { paint(); return; }
+    const id = send("navigate", { previewIndex: live.previewIndex, targetIndex: target, preserveResponses: true });
+    pending = { id, target, sent: Date.now() };
+    $("[data-navigation-status]").textContent = `Showing slide ${target + 1}…`;
+    paint();
+  }
+  function showLive(index) {
+    if (!deck) return;
+    const target = Math.max(0, Math.min(index, deck.slides.length - 1));
+    if (!deck.navigationCapabilities?.preserveResponses) {
+      select(target);
+      $("[data-navigation-status]").textContent = "Refresh the study window to enable click-to-show navigation.";
+      return;
+    }
+    following = true;
+    selected = Math.min(target + 1, deck.slides.length - 1);
+    queuedTarget = target;
+    if (!isConnected()) $("[data-navigation-status]").textContent = "Waiting for the study window to reconnect…";
+    flushLiveNavigation();
+    paint();
+  }
   function buildNavigation() {
     $("[data-slide-total]").textContent = `(${deck.slides.length})`;
     $("[data-slide-list]").replaceChildren(...deck.slides.map((slide) => {
       const button = document.createElement("button"); button.type = "button"; button.dataset.slideIndex = String(slide.index);
       button.setAttribute("aria-label", `Slide ${slide.index + 1}: ${slide.title}`);
-      button.title = slide.title;
+      button.title = `Show slide ${slide.index + 1}: ${slide.title}`;
       const number = document.createElement("span"); number.className = "slide-number"; number.textContent = String(slide.index + 1);
       const image = document.createElement("span"); image.className = "slide-miniature"; image.setAttribute("aria-hidden", "true");
-      button.append(number, image); button.addEventListener("click", () => select(slide.index)); return button;
+      button.append(number, image); button.addEventListener("click", () => showLive(slide.index)); return button;
     }));
     thumbnailObserver?.disconnect();
     const rail = $("[data-slide-list]");
@@ -159,8 +185,8 @@
     $("[data-story-buttons]").replaceChildren(...[...stories.values()].map((slide) => {
       const button = document.createElement("button"); button.type = "button"; button.dataset.storyIndex = String(slide.index);
       button.textContent = `${slide.storyNumber} · ${String(slide.condition || "Story").replaceAll("BESTFRIEND", "BEST FRIEND").replaceAll("-", "–")}`;
-      button.title = "Privately preview this story; participant slide stays unchanged";
-      button.addEventListener("click", () => select(slide.index)); return button;
+      button.title = "Show this story to the participant";
+      button.addEventListener("click", () => showLive(slide.index)); return button;
     }));
   }
   function receive(message) {
@@ -170,22 +196,36 @@
       if (deck) return;
       const slides = message.slides.filter((slide, index) => slide.index === index && typeof slide.html === "string").map((slide) => ({ ...slide, title: String(slide.title || `Slide ${slide.index + 1}`), scriptLines: Array.isArray(slide.scriptLines) ? slide.scriptLines.map(String) : [] }));
       if (slides.length !== message.slides.length) return;
-      deck = { slides, styles: Array.isArray(message.styles) ? message.styles : [], baseUrl: message.baseUrl, bodyClass: message.bodyClass };
+      deck = { slides, styles: Array.isArray(message.styles) ? message.styles : [], baseUrl: message.baseUrl, bodyClass: message.bodyClass,
+        navigationCapabilities: { preserveResponses: message.navigationCapabilities?.preserveResponses === true } };
       selected = Math.min((live?.previewIndex ?? message.currentIndex ?? 0) + 1, slides.length - 1);
       buildNavigation(); paint(); send("ping");
     } else if (message.type === "FACILITATOR_STATE") {
       if (!Number.isInteger(message.previewIndex) || message.previewIndex < 0) return;
+      if (deck && !deck.navigationCapabilities.preserveResponses && message.navigationCapabilities?.preserveResponses === true) {
+        deck.navigationCapabilities.preserveResponses = true;
+        $("[data-navigation-status]").textContent = "";
+      }
       const changed = live?.previewIndex !== message.previewIndex;
       live = message; lastStateAt = Date.now();
-      if (deck && following) selected = Math.min(live.previewIndex + 1, deck.slides.length - 1);
-      if (pending !== null && live.previewIndex === pending.target) { pending = null; $("[data-navigation-status]").textContent = "Participant view updated."; }
+      if (pending !== null && live.previewIndex === pending.target) { pending = null; $("[data-navigation-status]").textContent = ""; }
+      if (deck && following) selected = Math.min((queuedTarget ?? pending?.target ?? live.previewIndex) + 1, deck.slides.length - 1);
       if (changed || lastRenderedLive === null) paint(); else updateConnection();
+      flushLiveNavigation();
     } else if (message.type === "FACILITATOR_COMMAND_ACK") {
       if (!pending || message.commandId !== pending.id || seen.has(message.commandId)) return;
       seen.add(message.commandId);
-      if (message.status === "rejected") { pending = null; $("[data-navigation-status]").textContent = "The study moved or could not navigate. Check its current slide and try again."; updateConnection(); }
+      if (message.status === "rejected") {
+        const target = queuedTarget ?? pending.target;
+        pending = null;
+        queuedTarget = message.reason === "stale_screen" ? target : null;
+        $("[data-navigation-status]").textContent = message.reason === "storage_unavailable"
+          ? "Progress could not be saved, so the slide was left unchanged."
+          : "Waiting for the current study slide…";
+        updateConnection();
+      }
     } else if (message.type === "GAME_COMPLETE") {
-      pending = null; lastStateAt = 0; $("[data-navigation-status]").textContent = "The study has ended."; updateConnection();
+      pending = null; queuedTarget = null; lastStateAt = 0; $("[data-navigation-status]").textContent = "The study has ended."; updateConnection();
     }
   }
   channel?.addEventListener("message", (event) => receive(event.data));
@@ -196,27 +236,19 @@
     if (!current || !["ArrowUp", "ArrowDown", "Home", "End"].includes(event.key)) return;
     event.preventDefault();
     const index = Number(current.dataset.slideIndex);
-    select(event.key === "Home" ? 0 : event.key === "End" ? deck.slides.length - 1 : index + (event.key === "ArrowDown" ? 1 : -1));
-    $("[data-slide-list]").querySelector(`[data-slide-index="${selected}"]`)?.focus({ preventScroll: true });
+    const target = Math.max(0, Math.min(event.key === "Home" ? 0 : event.key === "End" ? deck.slides.length - 1 : index + (event.key === "ArrowDown" ? 1 : -1), deck.slides.length - 1));
+    showLive(target);
+    $("[data-slide-list]").querySelector(`[data-slide-index="${target}"]`)?.focus({ preventScroll: true });
   });
   $("[data-preview-next]").addEventListener("click", () => select(selected + 1));
   $("[data-follow]").addEventListener("click", () => { if (!deck || !live) return; following = true; selected = Math.min(live.previewIndex + 1, deck.slides.length - 1); paint(); });
-  $("[data-show]").addEventListener("click", () => {
-    if (!isConnected() || pending !== null || selected === live.previewIndex) return;
-    const backward = selected < live.previewIndex;
-    if (backward && !window.confirm("Show this earlier slide to the participant? Answers from this slide onward will be reset, just like using Back. To look without changing answers, keep browsing this private preview.")) return;
-    const id = send("navigate", { previewIndex: live.previewIndex, targetIndex: selected, resetLaterAnswers: backward });
-    pending = { id, target: selected, sent: Date.now() };
-    $("[data-navigation-status]").textContent = "Updating participant view…";
-    updateConnection();
-  });
   const observer = new ResizeObserver(resizeFrames);
   document.querySelectorAll("[data-viewport]").forEach((box) => observer.observe(box));
   observer.observe($("[data-slide-list]"));
   const timer = window.setInterval(() => {
     if (!deck) send("deck");
     if (!deck || Date.now() - lastStateAt > 4000) send("ping");
-    if (pending && Date.now() - pending.sent > 12000) { pending = null; $("[data-navigation-status]").textContent = "The study has not confirmed the change. Check its current slide before trying again."; }
+    if (pending && Date.now() - pending.sent > 12000) { pending = null; queuedTarget = null; $("[data-navigation-status]").textContent = "The study has not confirmed the change. Check its current slide before trying again."; }
     updateConnection();
   }, 2000);
   window.addEventListener("pagehide", () => { clearInterval(timer); channel?.close(); observer.disconnect(); thumbnailObserver?.disconnect(); });

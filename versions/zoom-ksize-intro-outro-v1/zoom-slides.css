@@ -139,11 +139,11 @@ body.ksize-zoom-arrow-navigation .ksize-image-stage.ksize-orange-outline-fix {
   flex: 0 0 auto;
   align-self: center;
   margin: 0 auto;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 44px 44px auto;
   gap: 8px;
   padding: 0;
-  width: 228px;
-  flex-wrap: wrap;
+  width: max-content;
   justify-content: center;
 }
 
@@ -174,7 +174,7 @@ body.ksize-zoom-arrow-navigation .ksize-image-stage.ksize-orange-outline-fix {
 .ksize-zoom-navigation button:focus-visible { outline: 3px solid #215bb2; outline-offset: 2px; }
 
 .ksize-zoom-navigation .ksize-zoom-presenter-open {
-  flex-basis: 100%;
+  grid-column: 1 / -1;
   width: auto;
   height: 22px;
   padding: 2px 0;
@@ -184,6 +184,7 @@ body.ksize-zoom-arrow-navigation .ksize-image-stage.ksize-orange-outline-fix {
   color: #526b63;
   font: 500 12px/1.3 system-ui, sans-serif;
 }
+.ksize-zoom-navigation-error { grid-column: 1 / -1; }
 .ksize-zoom-navigation .ksize-zoom-presenter-open:hover:not(:disabled) {
   background: #f0f5f2;
   color: #176d57;

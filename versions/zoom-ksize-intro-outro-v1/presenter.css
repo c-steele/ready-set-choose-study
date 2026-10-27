@@ -45,9 +45,7 @@ h1 { font-size: 17px; line-height: 1.2; margin: 0; font-weight: 600; }
 .preview-controls button { border: 1px solid #d1dad1; border-radius: 5px; background: #fff; color: #526c5d; width: 30px; height: 28px; font-size: 18px; }
 .action-row { display: flex; align-items: center; gap: 15px; margin-top: 22px; padding-top: 16px; border-top: 1px solid #dde3da; }
 .action-row p { font-size: 11px; line-height: 1.5; color: #728075; flex: 1; margin: 0; }
-.secondary-button, .show-button { padding: 9px 12px; border: 1px solid #c6d2c7; border-radius: 6px; background: #fff; color: #315e4b; font-size: 12px; font-weight: 600; }
-.show-button { border-color: #176d57; color: #fff; background: #176d57; }
-.show-button:hover:not(:disabled) { background: #125844; }
+.secondary-button { padding: 9px 12px; border: 1px solid #c6d2c7; border-radius: 6px; background: #fff; color: #315e4b; font-size: 12px; font-weight: 600; }
 .secondary-button:hover:not(:disabled) { border-color: #709580; }
 .navigation-status { min-height: 18px; color: #716d53; font-size: 11px; margin: 10px 0; }
 .script-panel { font-size: 12px; color: #637065; border-top: 1px solid #e0e5dd; padding-top: 12px; }
