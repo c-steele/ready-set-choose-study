@@ -140,8 +140,8 @@ body.ksize-zoom-arrow-navigation .ksize-image-stage.ksize-orange-outline-fix {
   align-self: center;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: auto 44px 44px auto;
-  gap: 8px;
+  grid-template-columns: auto 34px 34px auto;
+  gap: 6px;
   padding: 0;
   width: max-content;
   justify-content: center;
@@ -151,14 +151,14 @@ body.ksize-zoom-arrow-navigation .ksize-image-stage.ksize-orange-outline-fix {
   box-sizing: border-box;
   display: grid;
   place-items: center;
-  width: 44px;
-  height: 44px;
+  width: 34px;
+  height: 34px;
   padding: 0;
   border: 2px solid #176d57;
-  border-radius: 10px;
+  border-radius: 8px;
   background: #176d57;
   color: #fff;
-  font: 700 25px/1 Arial, sans-serif;
+  font: 700 21px/1 Arial, sans-serif;
   cursor: pointer;
   box-shadow: none;
 }
@@ -166,9 +166,9 @@ body.ksize-zoom-arrow-navigation .ksize-image-stage.ksize-orange-outline-fix {
 .ksize-zoom-navigation button:hover:not(:disabled) { background: #125b49; }
 .ksize-zoom-navigation .ksize-zoom-boundary {
   width: auto;
-  min-width: 58px;
-  padding: 0 10px;
-  font: 700 14px/1.2 system-ui, sans-serif;
+  min-width: 46px;
+  padding: 0 8px;
+  font: 700 12px/1.2 system-ui, sans-serif;
 }
 .ksize-zoom-navigation button:disabled { opacity: .35; cursor: default; }
 .ksize-zoom-navigation button:focus-visible { outline: 3px solid #215bb2; outline-offset: 2px; }

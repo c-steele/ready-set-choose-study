@@ -2344,26 +2344,30 @@ function installZoomNavigation(jsPsych, nodeData) {
     if (!end.disabled) jumpFromControl(totalPreviewScreens - 1, "End");
   });
   wrap.append(start, back, forward, end);
-  const presenter = document.createElement("button");
-  presenter.type = "button";
-  presenter.className = "ksize-zoom-presenter-open";
-  presenter.textContent = "Slides ↗";
-  presenter.setAttribute("aria-label", "Open slide navigator");
-  presenter.title = "Open slide navigator";
-  presenter.addEventListener("click", () => {
-    const url = new URL("presenter.html", window.location.href);
-    url.searchParams.set("facilitatorSession", facilitatorSessionKey);
-    url.searchParams.set("v", "zoom-slides-button-2026-10-27");
-    const opened = window.open(url.toString(), `ftc-presenter-${facilitatorSessionKey}`, "popup,width=1220,height=840");
-    if (!opened) {
-      presenter.textContent = "Allow pop-ups ↗";
-      presenter.title = "Allow pop-ups to open the slide navigator";
-      return;
-    }
-    zoomPresenterWindow = opened;
-    opened.focus();
-  });
-  wrap.appendChild(presenter);
+  // Open the private navigator before the game, without advertising it on
+  // participant-facing story and question screens. An open navigator stays live.
+  if (currentPreviewIndex === 0 && nodeData.zoom_deck_slide_id === "welcome") {
+    const presenter = document.createElement("button");
+    presenter.type = "button";
+    presenter.className = "ksize-zoom-presenter-open";
+    presenter.textContent = "Slides ↗";
+    presenter.setAttribute("aria-label", "Open slide navigator");
+    presenter.title = "Open slide navigator";
+    presenter.addEventListener("click", () => {
+      const url = new URL("presenter.html", window.location.href);
+      url.searchParams.set("facilitatorSession", facilitatorSessionKey);
+      url.searchParams.set("v", "zoom-compact-welcome-nav-2026-11-03");
+      const opened = window.open(url.toString(), `ftc-presenter-${facilitatorSessionKey}`, "popup,width=1220,height=840");
+      if (!opened) {
+        presenter.textContent = "Allow pop-ups ↗";
+        presenter.title = "Allow pop-ups to open the slide navigator";
+        return;
+      }
+      zoomPresenterWindow = opened;
+      opened.focus();
+    });
+    wrap.appendChild(presenter);
+  }
   // Replace the visible Next control in its original below-slide position.
   // Keep its hidden native button and listener for the forward action above.
   const controls = document.querySelector(".ksize-zoom-slide-controls, .ksize-controls");
