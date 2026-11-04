@@ -4318,7 +4318,6 @@ async function main() {
         <main class="ksize-shell ksize-setup-shell">
           <section class="ksize-screen ksize-setup-screen ksize-parent-welcome-screen">
             ${parentProgressHtml(1)}
-            ${parentNarrationControlsHtml(parentWelcomeScript)}
             <header class="ksize-parent-welcome-header">
               <span class="ksize-setup-eyebrow">Who Helps Where?</span>
               <h1 class="ksize-setup-title">Welcome, grown-ups!</h1>
@@ -4350,6 +4349,7 @@ async function main() {
               <p>The next pages are for the grown-up.</p>
               <button class="ksize-setup-next ksize-parent-welcome-next" type="button"><span>Let’s get set up</span><span aria-hidden="true">➜</span></button>
             </footer>
+            ${parentNarrationControlsHtml(parentWelcomeScript)}
           </section>
         </main>
       `,
@@ -4374,7 +4374,6 @@ async function main() {
         <main class="ksize-shell ksize-setup-shell">
           <section class="ksize-screen ksize-setup-screen">
             ${parentProgressHtml(2)}
-            ${parentNarrationControlsHtml(parentQuickChecksScript)}
             <header class="ksize-setup-heading">
               <span class="ksize-setup-eyebrow">A quick note for the grown-up</span>
               <h1 class="ksize-setup-title">Get ready to play</h1>
@@ -4437,6 +4436,7 @@ async function main() {
             <footer class="ksize-setup-footer">
               <button class="ksize-setup-next" type="button"><span>Ready</span><span aria-hidden="true">➜</span></button>
             </footer>
+            ${parentNarrationControlsHtml(parentQuickChecksScript)}
           </section>
         </main>
       `,
@@ -4462,7 +4462,6 @@ async function main() {
         <main class="ksize-shell ksize-setup-shell">
           <section class="ksize-screen ksize-setup-screen ksize-camera-screen">
             ${parentProgressHtml(3)}
-            ${parentNarrationControlsHtml(PARENT_CAMERA_TEXT)}
             <header class="ksize-setup-heading">
               <span class="ksize-setup-eyebrow">Camera check</span>
               <h1 class="ksize-setup-title">${cameraSetupTitle}</h1>
@@ -4528,6 +4527,7 @@ async function main() {
               <p>Keep this position during the game.</p>
               <button class="ksize-setup-next ksize-camera-next" type="button"><span>Finish grown-up setup</span><span aria-hidden="true">➜</span></button>
             </footer>
+            ${parentNarrationControlsHtml(PARENT_CAMERA_TEXT)}
           </section>
         </main>
       `,
@@ -4558,7 +4558,6 @@ async function main() {
         <main class="ksize-shell ksize-setup-shell">
           <section class="ksize-screen ksize-setup-screen ksize-handoff-screen">
             ${parentProgressHtml(4)}
-            ${parentNarrationControlsHtml(parentHandoffScript)}
             <div class="ksize-handoff-complete"><span aria-hidden="true">✓</span> Grown-up setup complete</div>
             <div class="ksize-handoff-visual" aria-hidden="true">
               <div class="ksize-handoff-person ksize-handoff-grownup"><span></span><b></b></div>
@@ -4583,6 +4582,7 @@ async function main() {
             <footer class="ksize-setup-footer ksize-handoff-footer">
               <button class="ksize-setup-next ksize-handoff-next" type="button"><span>My child is ready</span><span aria-hidden="true">➜</span></button>
             </footer>
+            ${parentNarrationControlsHtml(parentHandoffScript)}
           </section>
         </main>
       `,
