@@ -4532,7 +4532,6 @@ async function main() {
                   <div class="ksize-camera-preview-slot" aria-label="Your live camera view"></div>
                   <p class="ksize-camera-preview-status" role="status" aria-live="polite">A live camera view is available when you open this study through Children Helping Science. This review page does not access your camera.</p>
                   <button class="ksize-camera-preview-retry" type="button" hidden>Try live view again</button>
-                  <p class="ksize-camera-preview-help">Check your child’s full face and shoulders, then keep this position during the game.</p>
                 </div>
               </div>
               <section class="ksize-camera-examples-panel" aria-labelledby="camera-examples-title">
