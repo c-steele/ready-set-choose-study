@@ -91,7 +91,7 @@ function fixture({search=configuredSearch,embedded=true,rect={x:120,y:90,width:4
 
 const text={
   pending:'Connecting your live camera view…',
-  ready:'Keep your child’s face and shoulders in view.',
+  ready:'Please keep your child’s face and shoulders in view.',
   unavailable:'The live view is unavailable. Try again to check your child’s position.',
   fullscreen:'Exit full screen to check your child’s position in the live view.',
   standalone:'A live camera view is available when you open this study through Children Helping Science. This review page does not access your camera.',

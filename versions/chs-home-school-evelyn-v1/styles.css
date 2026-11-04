@@ -2680,8 +2680,8 @@ body {
 
 .ksize-camera-combined-example figcaption {
   display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 12px;
+  grid-template-columns: 1fr;
+  gap: 6px;
 }
 
 .ksize-camera-combined-example figcaption span {
@@ -2909,7 +2909,22 @@ body {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 16px;
-  align-items: start;
+  align-items: stretch;
+}
+
+.ksize-camera-example-grid .ksize-lookit-example {
+  display: flex;
+  flex-direction: column;
+}
+
+.ksize-camera-example-grid .ksize-lookit-example img {
+  aspect-ratio: 533 / 150;
+  object-fit: contain;
+}
+
+.ksize-camera-example-grid .ksize-lookit-example figcaption {
+  flex: 1;
+  align-content: center;
 }
 
 .ksize-camera-examples-title {
