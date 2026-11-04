@@ -45,6 +45,9 @@ let configurations=0,storyNarrationSegments=0;
 for(const role of ['woman','man']) for(const event of ['HUG','FOOD','HELP']) for(const context of ['HOME','SCHOOL']) for(const variant of ['a','b','c','d']) {
   const run=await h.runMain(`?contextStudy=1&withinChildContexts=1&roleSet=${role}&set=role&event=${event}&context=${context}&variant=${variant}&seed=media-${role}-${event}&syntheticSpeech=0`);
   const audios=new Set(run.timeline[0].audio.map(s=>s.split('?')[0]));
+  for(const node of run.timeline.filter(n=>n.data?.story_number)) {
+    assert.doesNotMatch(node.stimulus,/class="ksize-next-btn/,`${role}/${event}/${context}/${variant}: child story exposes a Next shortcut`);
+  }
   for(const node of run.timeline.filter(n=>n.data?.story_number)) for(const line of node._ksizeNarration) {
     const src=run.host.api.canonicalAudioPathForText(line.text)||line.src;
     assert.ok(audios.has(src),`${role}/${event}/${context}/${variant}: ${line.text}`);
@@ -360,12 +363,73 @@ for(const [kind,listenSelector] of parentPages) {
 {
   const run=await h.runMain(search),clock=fakeClock();let resolveNarration,glowAdds=0;
   Object.assign(run.host.context.window,{setTimeout:clock.setTimeout,clearTimeout:clock.clearTimeout});
-  const replay={classList:{remove(){}},addEventListener(type,fn){this[type]=fn;}},start={classList:{add(){glowAdds++;}},addEventListener(){}};
+  const replay={classList:{remove(){}},addEventListener(type,fn){this[type]=fn;}},start={classList:{add(){glowAdds++;},remove(){}},addEventListener(){}};
   run.host.context.document.querySelector=selector=>({'.ksize-start-audio':replay,'.ksize-next-btn':start})[selector]||null;
   run.host.api.audio.playFile=()=>new Promise(resolve=>{resolveNarration=resolve;});
   const welcome=run.timeline.find(n=>n.data?.slide_kind==='child_welcome');
   welcome.on_load();const replayPromise=replay.click();welcome.on_finish();resolveNarration(false);await replayPromise;await clock.advance(5000);
   assert.equal(glowAdds,0,'Cancelled welcome replay restarted the next-page cue');
 }
+
+// Actual participant stories have no Next shortcut. Even a stale button handler
+// cannot advance during narration. Replay cancels the old advance and starts a
+// complete recording; only successful completion can schedule the next page.
+for (const kind of ['exterior','intro','context_intro','story']) {
+  const run=await h.runMain(search),x=playbackHost(run.host);
+  x.context.window.testFinishes=[];
+  vm.runInContext('finishParticipantTrial = (_jsPsych, data) => window.testFinishes.push(data)',x.context);
+  const controls=mountControls(x,['.ksize-audio-btn','.ksize-next-btn']);
+  const page=run.timeline.find(node=>node.data?.slide_kind===kind);
+  page.on_load();controls['.ksize-next-btn'].click();
+  assert.equal(x.context.window.testFinishes.length,0,kind+': allowed early Next');
+  await x.clock.advance(250);await new Promise(setImmediate);
+  assert.equal(x.clips.length,1);x.clips[0].emit('playing');
+  controls['.ksize-next-btn'].click();assert.equal(x.context.window.testFinishes.length,0);
+  x.clips[0].emit('ended');await new Promise(setImmediate);
+  await x.clock.advance(399);assert.equal(x.context.window.testFinishes.length,0);
+  controls['.ksize-audio-btn'].click();await new Promise(setImmediate);
+  assert.equal(x.clips.length,2);assert.equal(controls['.ksize-next-btn'].disabled,true);
+  await x.clock.advance(1000);assert.equal(x.context.window.testFinishes.length,0,kind+': replay did not cancel old advance');
+  x.clips[1].emit('playing');x.clips[1].emit('ended');await new Promise(setImmediate);
+  await x.clock.advance(399);assert.equal(x.context.window.testFinishes.length,0);
+  await x.clock.advance(1);assert.equal(x.context.window.testFinishes.length,1);
+  assert.equal(x.context.window.testFinishes[0].response,'auto_next');page.on_finish({});
+}
+// An audio failure cannot unlock a story; Replay can recover without a skip.
+{
+  const run=await h.runMain(search),x=playbackHost(run.host);
+  x.context.window.testFinishes=[];
+  vm.runInContext('finishParticipantTrial = (_jsPsych, data) => window.testFinishes.push(data)',x.context);
+  const controls=mountControls(x,['.ksize-audio-btn','.ksize-next-btn']);
+  const page=run.timeline.find(node=>node.data?.slide_kind==='story');
+  page.on_load();await x.clock.advance(250);await new Promise(setImmediate);
+  x.clips.at(-1).emit('error');x.clips.at(-1).emit('error');await new Promise(setImmediate);
+  controls['.ksize-next-btn'].click();await x.clock.advance(500);
+  assert.equal(x.context.window.testFinishes.length,0);assert.equal(controls['.ksize-next-btn'].disabled,true);
+  controls['.ksize-audio-btn'].click();await new Promise(setImmediate);
+  x.clips.at(-1).emit('playing');x.clips.at(-1).emit('ended');await new Promise(setImmediate);
+  await x.clock.advance(400);assert.equal(x.context.window.testFinishes.length,1);page.on_finish({});
+}
+// The child welcome's Start cannot interrupt either the first narration or a
+// replay. Failed audio keeps it locked, and its retry unlocks it only at the end.
+{
+  const run=await h.runMain(search),x=playbackHost(run.host),requests=[];
+  const controls=mountControls(x,['.ksize-start-audio','.ksize-next-btn']);
+  x.context.window.testFinishes=[];
+  vm.runInContext('finishParticipantTrial = (_jsPsych, data) => window.testFinishes.push(data)',x.context);
+  x.api.audio.playFile=(_src,_text,options)=>new Promise(resolve=>requests.push({resolve,options}));
+  const page=run.timeline.find(node=>node.data?.slide_kind==='child_welcome');
+  page.on_load();controls['.ksize-next-btn'].click();assert.equal(x.context.window.testFinishes.length,0);
+  assert.equal(controls['.ksize-next-btn'].disabled,true);
+  await x.clock.advance(4100);assert.equal(requests.length,1);
+  requests[0].resolve(false);await new Promise(setImmediate);assert.equal(controls['.ksize-next-btn'].disabled,true);
+  requests[0].options.onRetry();assert.equal(requests.length,2);
+  requests[1].resolve(true);await new Promise(setImmediate);assert.equal(controls['.ksize-next-btn'].disabled,false);
+  controls['.ksize-start-audio'].click();assert.equal(controls['.ksize-next-btn'].disabled,true);
+  controls['.ksize-next-btn'].click();assert.equal(x.context.window.testFinishes.length,0);
+  requests[2].resolve(true);await new Promise(setImmediate);assert.equal(controls['.ksize-next-btn'].disabled,false);
+  controls['.ksize-next-btn'].click();assert.equal(x.context.window.testFinishes.length,1);page.on_finish({});
+}
+
 const bytes=files=>files.reduce((sum,s)=>sum+fs.statSync(path.join(root,s.split('?')[0])).size,0);
 console.log(JSON.stringify({status:'PASS',configurations,storyNarrationSegments,preloadImages:preloader.images.length,preloadAudio:preloader.audio.length,preloadImageBytes:bytes(preloader.images),preloadAudioBytes:bytes(preloader.audio),startTimeout:'two attempts, 10s each',stallTimeout:'two attempts, 7s without progress',startupTimeout:'90s, fail closed with retry',browserColdCacheCheck:'required separately through CUA'},null,2));

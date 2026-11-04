@@ -51,8 +51,8 @@ const BROWSER_DATASET_DB_NAME = "find-the-caregiver-researcher-data";
 const BROWSER_DATASET_DB_VERSION = 1;
 const BROWSER_DATASET_STORE = "sessions";
 const AUTO_ADVANCE_PAUSE_MS = 400;
-const PARENT_AUTOPLAY_NOTE = "Most pages in the game move on by themselves after a few moments, but you can press Replay to hear it again or press Next to move on sooner when it appears.";
-const PARENT_AUTOPLAY_NOTE_SHORT = "Most pages move on by themselves. Press Replay to hear it again, or Next to move on sooner.";
+const PARENT_AUTOPLAY_NOTE = "Each story page continues after the narration finishes. Press Replay to hear it again.";
+const PARENT_AUTOPLAY_NOTE_SHORT = "Listen until the narration finishes, then choose your answer when the choices are ready.";
 const START_INTRO_TEXT = "Hi there! Welcome to Who Helps Where? We are going to look at pictures and play a choosing game. Listen to each page. When you see choices, choose the one you pick. When you are ready, hit the green button to start.";
 const START_INTRO_AUDIO = "audio_evelyn/whw_001_child_welcome_who_helps_where.mp3";
 const GAME_START_TEXT = "Let’s play. Listen to the story, then answer the questions. Hit the green button to start.";
@@ -62,11 +62,11 @@ const GAME_START_AUDIO = requestedVoiceProfile === "relkind"
 const PARENT_WELCOME_AUDIO = `${PREFERRED_AUDIO_DIR}/077_parent_setup_Welcome_grownups.mp3`;
 const PARENT_WELCOME_TEXT = "Welcome, grown-ups! Thank you for helping your child take part. First, we'll get the sound, screen, and camera ready. Then your child will listen to stories and choose pictures on the screen. Most pages move on by themselves, and you can press Replay if your child wants to hear a page again. You can help with the device, but please let your child choose the answers.";
 const PARENT_QUICK_CHECKS_AUDIO = `${PREFERRED_AUDIO_DIR}/078_parent_setup_Three_quick_checks.mp3`;
-const PARENT_QUICK_CHECKS_TEXT = `Before you begin: This is a recorded picture game about social relationships. It takes about ten to fifteen minutes. You and your child may stop at any time. There are no right or wrong answers in this game. The pages are read aloud, so your child does not need to read. ${PARENT_AUTOPLAY_NOTE} Now, three quick checks. Use one screen and place it in front of your child. Turn the sound to a comfortable volume. Stay close to help with the device, but let your child choose the answers.`;
+const PARENT_QUICK_CHECKS_TEXT = `Before you begin: This is a recorded picture game about social relationships. It takes about ten to fifteen minutes. You and your child may stop at any time. There are no right or wrong answers in this game. The pages are read aloud, so your child does not need to read. Now, three quick checks. Use one screen and place it in front of your child. Turn the sound to a comfortable volume. Stay close to help with the device, but let your child choose the answers.`;
 const PARENT_CAMERA_AUDIO = `${PREFERRED_AUDIO_DIR}/079_parent_setup_Check_the_camera.mp3`;
 const PARENT_CAMERA_TEXT = "Let's check the camera. Put the screen directly in front of your child. Keep their full face and shoulders in view, and avoid a bright window behind them. Use one screen, and keep the webcam centered above the screen your child is watching.";
 const PARENT_HANDOFF_AUDIO = `${PREFERRED_AUDIO_DIR}/083_parent_handoff_Invite_your_child.mp3`;
-const PARENT_HANDOFF_TEXT = `Grown-up setup is finished. Now it's your child's turn. Please invite your child to sit in front of the screen. Grown-ups, you may help with the device, but please let your child choose. There are no right or wrong answers. The pages are read aloud. ${PARENT_AUTOPLAY_NOTE_SHORT} When your child is ready, press the green button to continue.`;
+const PARENT_HANDOFF_TEXT = `Grown-up setup is finished. Now it's your child's turn. Please invite your child to sit in front of the screen. Grown-ups, you may help with the device, but please let your child choose. There are no right or wrong answers. The pages are read aloud. When your child is ready, press the green button to continue.`;
 const CHILD_ASSENT_AUDIO = `${PREFERRED_AUDIO_DIR}/084_child_assent_Would_you_like_to_play.mp3`;
 const CHILD_ASSENT_TEXT = "Hi there! Do you want to play a fun game today? In my game, I'm going to show you some shapes and ask you some questions. You'll press or click buttons on the screen to tell me what you think. There are no right or wrong answers, so you can say whatever you think! We're just curious about how kids think. The camera will stay on while you play, and you can stop at any time. Are you ready to play my game?";
 const CHILD_GROWNUP_HANDOFF_TEXT = "Great job—you finished the game! The final questions are for your grown-up to do. Your grown-up may already be with you.";
@@ -2958,7 +2958,7 @@ function renderKidSlide({ trial = null, image, text, choices = [], overlayChoice
             ` : ""}
           </div>
           ${hasChoicePrompt ? `<div class="ksize-choice-page-note">Choose a glowing box to move on.</div>` : ""}
-          ${showNext ? `<div class="ksize-auto-next-note">${entranceVisualOnly ? "Press Next to continue the visual review." : "Game will keep going on its own, or press Next to move on sooner."}</div>` : ""}
+          ${showNext ? `<div class="ksize-auto-next-note">${entranceVisualOnly ? "Press Next to continue the visual review." : "The next page continues after the narration finishes."}</div>` : ""}
         </div>
       </section>
     </main>
@@ -2982,7 +2982,7 @@ function makeKidNode(jsPsych, { trial, block, suffix, image, text, audioSegments
     _ksizeNarration: audioTexts.length
       ? audioTexts.map((audioText, index) => ({ text: audioText, src: audioSegments[index] }))
       : audioSegments.map((src) => ({ src, text: text || "" })),
-    stimulus: renderKidSlide({ trial, image, text, choices, overlayChoices, showText, slideKind, showNext: !hasChoices, visualChoices, contextIntro, contextCondition, studyContext, storyNumber, storyTotal }),
+    stimulus: renderKidSlide({ trial, image, text, choices, overlayChoices, showText, slideKind, showNext: !hasChoices && (isFacilitatorMode || entranceVisualOnly || !autoAdvanceAfterAudio), visualChoices, contextIntro, contextCondition, studyContext, storyNumber, storyTotal }),
     choices: [],
     data: {
       trial_key: trial.id,
@@ -3040,6 +3040,9 @@ function makeKidNode(jsPsych, { trial, block, suffix, image, text, audioSegments
       installResearcherSkip(jsPsych);
       const loadedAt = performance.now();
       let didFinish = false;
+      let narrationComplete = isFacilitatorMode || entranceVisualOnly;
+      const nextButton = document.querySelector(".ksize-next-btn");
+      if (nextButton) nextButton.disabled = !narrationComplete;
       let highlightTimers = [];
       let playbackGeneration = 0;
       const pendingTimers = new Set();
@@ -3080,7 +3083,7 @@ function makeKidNode(jsPsych, { trial, block, suffix, image, text, audioSegments
         contextChoiceButtons.forEach((button) => { button.disabled = false; });
       }
       const finishNext = () => {
-        if (didFinish) return;
+        if (didFinish || !narrationComplete) return;
         didFinish = true;
         finishParticipantTrial(jsPsych, { response: "auto_next" }, TRIAL_ADVANCE_VALUES.next, "auto_next_page");
       };
@@ -3117,6 +3120,10 @@ function makeKidNode(jsPsych, { trial, block, suffix, image, text, audioSegments
       };
       const playAudio = async ({ advanceWhenDone = false } = {}) => {
         const generation = ++playbackGeneration;
+        narrationComplete = isFacilitatorMode || entranceVisualOnly;
+        if (nextButton) nextButton.disabled = !narrationComplete;
+        pendingTimers.forEach((timer) => window.clearTimeout(timer));
+        pendingTimers.clear();
         audio.stop();
         clearHighlights();
         setContextChoicesEnabled(false);
@@ -3166,6 +3173,8 @@ function makeKidNode(jsPsych, { trial, block, suffix, image, text, audioSegments
         if (didFinish || generation !== playbackGeneration) return;
         clearHighlights();
         if (attemptFailed) return;
+        narrationComplete = true;
+        if (nextButton) nextButton.disabled = false;
         setContextChoicesEnabled(true);
         if (advanceWhenDone && autoAdvanceAfterAudio && !hasChoices && !entranceVisualOnly) finishNextAfterPause(generation);
       };
@@ -3175,10 +3184,10 @@ function makeKidNode(jsPsych, { trial, block, suffix, image, text, audioSegments
       });
       document.querySelector(".ksize-audio-btn")?.addEventListener("click", () => {
         replayCount += 1;
-        playAudio();
+        playAudio({ advanceWhenDone: autoAdvanceAfterAudio });
       });
-      document.querySelector(".ksize-next-btn")?.addEventListener("click", () => {
-        if (didFinish) return;
+      nextButton?.addEventListener("click", () => {
+        if (didFinish || !narrationComplete) return;
         const entryElement = document.querySelector(".ksize-entry-layers");
         if (slideKind === "room_entry" && Number(entryElement?.dataset.entranceProgress) < 1) {
           entrance?.skip();
@@ -3192,7 +3201,7 @@ function makeKidNode(jsPsych, { trial, block, suffix, image, text, audioSegments
       document.querySelectorAll(".ksize-char-btn").forEach((button) => {
         if (visualChoices) return;
         button.addEventListener("click", () => {
-          if (didFinish) return;
+          if (didFinish || !narrationComplete || button.disabled) return;
           didFinish = true;
           clearHighlights();
           audio.stop();
@@ -3602,7 +3611,7 @@ function renderSlide({ trial = null, chunk, slide, index, total, storyNumber = n
             ` : ""}
           </div>
           ${slide.kind === "response" ? `<div class="ksize-choice-page-note">Choose one answer to move on.</div>` : ""}
-          ${slide.kind !== "response" ? `<div class="ksize-auto-next-note">Game will keep going on its own, or press Next to move on sooner.</div>` : ""}
+          ${slide.kind !== "response" ? `<div class="ksize-auto-next-note">The next page continues after the narration finishes.</div>` : ""}
         </div>
       </section>
     </main>
@@ -4703,7 +4712,7 @@ async function main() {
                 <span class="ksize-icon-symbol" aria-hidden="true">▶</span>
                 <span class="ksize-icon-label">Replay</span>
               </button>
-              <button class="ksize-next-btn ksize-icon-btn" type="button" aria-label="Start">
+              <button class="ksize-next-btn ksize-icon-btn" type="button" aria-label="Start" ${isFacilitatorMode ? "" : "disabled"}>
                 <span class="ksize-icon-symbol" aria-hidden="true">➜</span>
                 <span class="ksize-icon-label">Start</span>
               </button>
@@ -4721,18 +4730,34 @@ async function main() {
         installResearcherSkip(jsPsych);
         const playButton = document.querySelector(".ksize-start-audio");
         const startButton = document.querySelector(".ksize-next-btn");
-        const runWelcomeSequence = async ({ includeOpening = true } = {}) => {
+        let narrationComplete = isFacilitatorMode;
+        const lockStart = () => {
+          narrationComplete = isFacilitatorMode;
+          if (startButton) startButton.disabled = !narrationComplete;
+          startButton?.classList.remove("ksize-prompt-glow");
+        };
+        const unlockStart = () => {
+          narrationComplete = true;
+          if (startButton) startButton.disabled = false;
+          startButton?.classList.add("ksize-prompt-glow");
+        };
+        lockStart();
+        const runWelcomeSequence = async ({ includeOpening = true, replay = false } = {}) => {
+          lockStart();
           welcomeSequenceToken += 1;
           const sequenceToken = welcomeSequenceToken;
+          audio.stop();
           if (includeOpening) playIntroOpeningMusic();
-          await new Promise((resolve) => window.setTimeout(resolve, 4100));
+          if (!replay) await new Promise((resolve) => window.setTimeout(resolve, 4100));
           if (sequenceToken !== welcomeSequenceToken) return;
           stopIntroMusic();
           playButton?.classList.remove("ksize-prompt-glow");
-          const played = await audio.playFile(START_INTRO_AUDIO, START_INTRO_TEXT);
+          const played = await audio.playFile(START_INTRO_AUDIO, START_INTRO_TEXT, {
+            onRetry: () => runWelcomeSequence({ includeOpening: false, replay: true }),
+          });
           if (!played || sequenceToken !== welcomeSequenceToken) return;
           playIntroOpeningMusic();
-          startButton?.classList.add("ksize-prompt-glow");
+          unlockStart();
         };
         if (!isFacilitatorMode) {
           runWelcomeSequence({ includeOpening: !introMusicStopper });
@@ -4740,18 +4765,11 @@ async function main() {
           playButton.hidden = true;
           startButton?.classList.add("ksize-prompt-glow");
         }
-        playButton?.addEventListener("click", async () => {
-          welcomeSequenceToken += 1;
-          const sequenceToken = welcomeSequenceToken;
-          stopIntroMusic();
-          audio.stop();
-          playButton.classList.remove("ksize-prompt-glow");
-          const played = await audio.playFile(START_INTRO_AUDIO, START_INTRO_TEXT);
-          if (!played || sequenceToken !== welcomeSequenceToken) return;
-          playIntroOpeningMusic();
-          startButton?.classList.add("ksize-prompt-glow");
+        playButton?.addEventListener("click", () => {
+          runWelcomeSequence({ includeOpening: false, replay: true });
         });
         startButton?.addEventListener("click", () => {
+          if (!narrationComplete) return;
           welcomeSequenceToken += 1;
           stopIntroMusic();
           audio.stop();

@@ -22417,18 +22417,18 @@
     },
     {
       "id": "ftc_147",
-      "text": "Before you begin: This is a recorded picture game about social relationships. It takes about ten to fifteen minutes. You and your child may stop at any time. There are no right or wrong answers in this game. The pages are read aloud, so your child does not need to read. Most pages in the game move on by themselves after a few moments, but you can press Replay to hear it again or press Next to move on sooner when it appears. Now, three quick checks. Use one screen and place it in front of your child. Turn the sound to a comfortable volume. Stay close to help with the device, but let your child choose the answers.",
-      "normalizedText": "before you begin: this is a recorded picture game about social relationships. it takes about ten to fifteen minutes. you and your child may stop at any time. there are no right or wrong answers in this game. the pages are read aloud, so your child does not need to read. most pages in the game move on by themselves after a few moments, but you can press replay to hear it again or press next to move on sooner when it appears. now, three quick checks. use one screen and place it in front of your child. turn the sound to a comfortable volume. stay close to help with the device, but let your child choose the answers.",
+      "text": "Before you begin: This is a recorded picture game about social relationships. It takes about ten to fifteen minutes. You and your child may stop at any time. There are no right or wrong answers in this game. The pages are read aloud, so your child does not need to read. Now, three quick checks. Use one screen and place it in front of your child. Turn the sound to a comfortable volume. Stay close to help with the device, but let your child choose the answers.",
+      "normalizedText": "before you begin: this is a recorded picture game about social relationships. it takes about ten to fifteen minutes. you and your child may stop at any time. there are no right or wrong answers in this game. the pages are read aloud, so your child does not need to read. now, three quick checks. use one screen and place it in front of your child. turn the sound to a comfortable volume. stay close to help with the device, but let your child choose the answers.",
       "category": "parent-setup",
       "runtimeGroup": "active_support",
       "active": true,
       "conditional": false,
       "plannedForNarration": false,
-      "output": "audio_evelyn/ftc_147_parent_setup_02_before_you_begin_this_is_a_recorded_picture_game_about_social.mp3",
-      "sha256": "b2a0a0a42c9e42d8ce4631e984ce1ae830d11bc92d0c7d3e3dee27349ebab664",
-      "bytes": 1594559,
+      "output": "audio_evelyn/whw_parent_quick_checks_no_skip.mp3",
+      "sha256": "00c4c10d9d93c8f9a510308acf6554688ec3da51aab5c5af68f7f4be41ecbffa",
+      "bytes": 1252876,
       "sourceKey": "parent-quick-checks",
-      "note": null
+      "note": "Removed the superseded early-Next instruction at silent sentence boundaries; original recording preserved."
     },
     {
       "id": "ftc_148",
@@ -22447,18 +22447,18 @@
     },
     {
       "id": "ftc_149",
-      "text": "Grown-up setup is finished. Now it's your child's turn. Please invite your child to sit in front of the screen. Grown-ups, you may help with the device, but please let your child choose. There are no right or wrong answers. The pages are read aloud. Most pages move on by themselves. Press Replay to hear it again, or Next to move on sooner. When your child is ready, press the green button to continue.",
-      "normalizedText": "grown-up setup is finished. now it's your child's turn. please invite your child to sit in front of the screen. grown-ups, you may help with the device, but please let your child choose. there are no right or wrong answers. the pages are read aloud. most pages move on by themselves. press replay to hear it again, or next to move on sooner. when your child is ready, press the green button to continue.",
+      "text": "Grown-up setup is finished. Now it's your child's turn. Please invite your child to sit in front of the screen. Grown-ups, you may help with the device, but please let your child choose. There are no right or wrong answers. The pages are read aloud. When your child is ready, press the green button to continue.",
+      "normalizedText": "grown-up setup is finished. now it's your child's turn. please invite your child to sit in front of the screen. grown-ups, you may help with the device, but please let your child choose. there are no right or wrong answers. the pages are read aloud. when your child is ready, press the green button to continue.",
       "category": "parent-setup",
       "runtimeGroup": "active_support",
       "active": true,
       "conditional": false,
       "plannedForNarration": false,
-      "output": "audio_evelyn/ftc_149_parent_setup_04_grown_up_setup_is_finished_now_its_your_childs_turn_please_inv.mp3",
-      "sha256": "1708cdf449808261854f3b0974a2fd605839dea8918568b3f54eb65c5263cf32",
-      "bytes": 1127489,
+      "output": "audio_evelyn/whw_parent_handoff_no_skip.mp3",
+      "sha256": "7a66837c9b11645d7fcd930b5c23eed678491e7f104c7793fa02ffdba64e781a",
+      "bytes": 847456,
       "sourceKey": "parent-child-handoff",
-      "note": null
+      "note": "Removed the superseded early-Next instruction at silent sentence boundaries; original recording preserved."
     },
     {
       "id": "whw_001",
@@ -22743,9 +22743,7 @@
     "thanks for choosing!": "audio_evelyn/ftc_144_defensive_fallback_01_thanks_for_choosing.mp3",
     "now let's answer some questions about these two people.": "audio_evelyn/ftc_145_defensive_fallback_02_now_lets_answer_some_questions_about_these_two_people.mp3",
     "welcome, grown-ups! thank you for helping your child take part. first, we'll get the sound, screen, and camera ready. then your child will listen to stories and choose pictures on the screen. most pages move on by themselves, and you can press replay if your child wants to hear a page again. you can help with the device, but please let your child choose the answers.": "audio_evelyn/ftc_146_parent_setup_01_welcome_grown_ups_thank_you_for_helping_your_child_take_part_f.mp3",
-    "before you begin: this is a recorded picture game about social relationships. it takes about ten to fifteen minutes. you and your child may stop at any time. there are no right or wrong answers in this game. the pages are read aloud, so your child does not need to read. most pages in the game move on by themselves after a few moments, but you can press replay to hear it again or press next to move on sooner when it appears. now, three quick checks. use one screen and place it in front of your child. turn the sound to a comfortable volume. stay close to help with the device, but let your child choose the answers.": "audio_evelyn/ftc_147_parent_setup_02_before_you_begin_this_is_a_recorded_picture_game_about_social.mp3",
     "let's check the camera. put the screen directly in front of your child. keep their full face and shoulders in view, and avoid a bright window behind them. use one screen, and keep the webcam centered above the screen your child is watching.": "audio_evelyn/ftc_148_parent_setup_03_lets_check_the_camera_put_the_screen_directly_in_front_of_your.mp3",
-    "grown-up setup is finished. now it's your child's turn. please invite your child to sit in front of the screen. grown-ups, you may help with the device, but please let your child choose. there are no right or wrong answers. the pages are read aloud. most pages move on by themselves. press replay to hear it again, or next to move on sooner. when your child is ready, press the green button to continue.": "audio_evelyn/ftc_149_parent_setup_04_grown_up_setup_is_finished_now_its_your_childs_turn_please_inv.mp3",
     "hi there! welcome to who helps where? we are going to look at pictures and play a choosing game. listen to each page. when you see choices, choose the one you pick. when you are ready, hit the green button to start.": "audio_evelyn/whw_001_child_welcome_who_helps_where.mp3",
     "thank you for playing!": "audio_evelyn/ftc_151_ending_child_01_thank_you_for_playing.mp3",
     "we're all done!": "audio_evelyn/ftc_152_ending_child_02_were_all_done.mp3",
@@ -22754,6 +22752,8 @@
     "hi there! do you want to play a fun game today? in my game, i'm going to show you some shapes and ask you some questions. you'll press or click buttons on the screen to tell me what you think. there are no right or wrong answers, so you can say whatever you think! we're just curious about how kids think. the camera will stay on while you play, and you can stop at any time. are you ready to play my game?": "audio_evelyn/ftc_155_inactive_child_assent_01_hi_there_do_you_want_to_play_a_fun_game_today_in_my_game_im_go.mp3",
     "let's play. listen to the story, then answer the questions. hit the green button to start.": "audio_evelyn/ftc_156_inactive_game_start_01_lets_play_listen_to_the_story_then_answer_the_questions_hit_th.mp3",
     "game 2. hit the green button to start.": "audio_evelyn/ftc_157_inactive_game_start_02_game_2_hit_the_green_button_to_start.mp3",
-    "first, we'll meet the two people so it is clear who each question is about.": "audio_evelyn/ftc_158_planned_transition_narration_01_first_well_meet_the_two_people_so_it_is_clear_who_each_questio.mp3"
+    "first, we'll meet the two people so it is clear who each question is about.": "audio_evelyn/ftc_158_planned_transition_narration_01_first_well_meet_the_two_people_so_it_is_clear_who_each_questio.mp3",
+    "before you begin: this is a recorded picture game about social relationships. it takes about ten to fifteen minutes. you and your child may stop at any time. there are no right or wrong answers in this game. the pages are read aloud, so your child does not need to read. now, three quick checks. use one screen and place it in front of your child. turn the sound to a comfortable volume. stay close to help with the device, but let your child choose the answers.": "audio_evelyn/whw_parent_quick_checks_no_skip.mp3",
+    "grown-up setup is finished. now it's your child's turn. please invite your child to sit in front of the screen. grown-ups, you may help with the device, but please let your child choose. there are no right or wrong answers. the pages are read aloud. when your child is ready, press the green button to continue.": "audio_evelyn/whw_parent_handoff_no_skip.mp3"
   }
 }

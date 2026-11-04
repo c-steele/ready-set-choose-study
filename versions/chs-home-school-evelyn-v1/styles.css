@@ -3513,3 +3513,11 @@ body.ksize-live-share .ksize-top-hud-right {
     font-size: 11px;
   }
 }
+
+/* The child cannot start before the complete opening narration has played. */
+.ksize-next-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  animation: none;
+  transform: none;
+}
