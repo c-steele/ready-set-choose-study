@@ -2135,7 +2135,8 @@ function mediaForAssignedNodes(nodes) {
   return { images: [...images], audio: [...recordings] };
 }
 
-function makeStudyPreloader(media) {
+function makeStudyPreloader(media, jsPsych) {
+  const recordingSources = new Set(media.audio);
   const retry = (event) => {
     if (event.target?.closest?.(".ksize-retry-study-loading")) window.location.reload();
   };
@@ -2148,6 +2149,14 @@ function makeStudyPreloader(media) {
     continue_after_error: false,
     message: '<p role="status">Getting the pictures and recordings ready…</p>',
     error_message: '<section role="alert"><h2>The study could not finish loading</h2><p>Please check your connection, then try loading again. Your child’s game has not started.</p><button class="ksize-retry-study-loading" type="button">Try loading again</button><p>If this continues, stop and contact the researcher.</p></section>',
+    on_success: (src) => {
+      if (!recordingSources.has(src)) return;
+      // Keep the actual HTML audio element prepared by jsPsych. Decoding into
+      // its separate Web Audio cache would not prepare our HTML audio player.
+      jsPsych.pluginAPI.getAudioBuffer(src).then((file) => {
+        audio.preloadedFiles.set(src, file);
+      });
+    },
     on_load: () => document.addEventListener("click", retry),
     on_finish: () => document.removeEventListener("click", retry),
   };
@@ -2174,6 +2183,7 @@ async function fetchStudyJson(url) {
 const audio = {
   voice: null,
   current: null,
+  preloadedFiles: new Map(),
   token: 0,
   cancelCurrent: null,
   init() {
@@ -2260,7 +2270,7 @@ const audio = {
       const finish = (played) => {
         if (settled) return;
         settled = true;
-        cleanupAttempt();
+        cleanupAttempt(played);
         if (token === this.token) {
           this.cancelCurrent = null;
           setNarratorMouthPlaying(false);
@@ -2270,14 +2280,20 @@ const audio = {
       };
       this.cancelCurrent = () => finish(false);
       const attempt = (number) => {
-        const fileAudio = new Audio(versionedAudioSrc(resolvedSrc));
+        const playbackSrc = versionedAudioSrc(resolvedSrc);
+        const fileAudio = this.preloadedFiles.get(playbackSrc) || new Audio(playbackSrc);
+        this.preloadedFiles.delete(playbackSrc);
+        const listeners = [];
+        const listen = (event, handler) => {
+          listeners.push([event, handler]);
+          fileAudio.addEventListener(event, handler);
+        };
+        fileAudio.currentTime = 0;
         fileAudio.volume = options.volume ?? 1;
         fileAudio.playbackRate = options.playbackRate ?? 1;
-        if (options.preservePitch === false) {
-          fileAudio.preservesPitch = false;
-          fileAudio.mozPreservesPitch = false;
-          fileAudio.webkitPreservesPitch = false;
-        }
+        fileAudio.preservesPitch = options.preservePitch !== false;
+        fileAudio.mozPreservesPitch = options.preservePitch !== false;
+        fileAudio.webkitPreservesPitch = options.preservePitch !== false;
         this.current = fileAudio;
         let active = true;
         let didStart = false;
@@ -2297,15 +2313,21 @@ const audio = {
             if (current()) showMediaStatus("Loading the sound… Please wait.");
           }, 1800);
         };
-        cleanupAttempt = () => {
+        cleanupAttempt = (keepPrepared = false) => {
           if (!active) return;
           active = false;
           [watchdog, noticeTimer, totalTimer].forEach((timer) => window.clearTimeout(timer));
+          listeners.forEach(([event, handler]) => fileAudio.removeEventListener(event, handler));
           fileAudio.pause();
-          // Mark inactive before load(), whose abort/emptied events can fire
-          // synchronously. Release interrupted requests as well as playback.
-          fileAudio.removeAttribute?.("src");
-          fileAudio.load?.();
+          if (keepPrepared) {
+            // A repeated introduction or Replay uses this same loaded player.
+            fileAudio.currentTime = 0;
+            this.preloadedFiles.set(playbackSrc, fileAudio);
+          } else {
+            // Release failed/interrupted requests; retry gets a fresh player.
+            fileAudio.removeAttribute?.("src");
+            fileAudio.load?.();
+          }
           if (this.current === fileAudio) this.current = null;
         };
         const fail = async () => {
@@ -2347,7 +2369,7 @@ const audio = {
           // Do not extend the deadline on repeated waiting/stalled events.
           scheduleLoadingNotice();
         };
-        fileAudio.addEventListener("playing", () => {
+        listen("playing", () => {
           if (!current()) return;
           clearNotice();
           showMediaStatus();
@@ -2360,7 +2382,7 @@ const audio = {
           // Repeated playing events without progress must not postpone retry.
           shortenTotalDeadline();
         });
-        fileAudio.addEventListener("timeupdate", () => {
+        listen("timeupdate", () => {
           if (!current()) return;
           if (fileAudio.currentTime - lastTime >= 0.1) {
             lastTime = fileAudio.currentTime;
@@ -2370,10 +2392,10 @@ const audio = {
           }
           options.onTimeUpdate?.(fileAudio.currentTime, fileAudio.duration);
         });
-        ["waiting", "stalled", "pause", "emptied"].forEach((event) => fileAudio.addEventListener(event, buffering));
-        ["error", "abort"].forEach((event) => fileAudio.addEventListener(event, fail));
-        ["loadedmetadata", "durationchange"].forEach((event) => fileAudio.addEventListener(event, shortenTotalDeadline));
-        fileAudio.addEventListener("ended", () => {
+        ["waiting", "stalled", "pause", "emptied"].forEach((event) => listen(event, buffering));
+        ["error", "abort"].forEach((event) => listen(event, fail));
+        ["loadedmetadata", "durationchange"].forEach((event) => listen(event, shortenTotalDeadline));
+        listen("ended", () => {
           if (!current()) return;
           setNarratorMouthPlaying(false);
           options.onEnd?.();
@@ -4049,6 +4071,7 @@ async function main() {
   audio.init();
 
   const jsPsych = initJsPsych({
+    use_webaudio: false,
     on_data_update: (data) => {
       shareAnswerRowWithParent(jsPsych, data);
       if (!isFacilitatorMode || facilitatorStudyFinished) return;
@@ -4951,7 +4974,7 @@ async function main() {
   currentPreviewIndex = startIndex;
 
   const assignedNodes = reviewNodes.slice(startIndex);
-  const timeline = [makeStudyPreloader(mediaForAssignedNodes(assignedNodes)), ...assignedNodes];
+  const timeline = [makeStudyPreloader(mediaForAssignedNodes(assignedNodes), jsPsych), ...assignedNodes];
 
   jsPsych.run(timeline);
 }

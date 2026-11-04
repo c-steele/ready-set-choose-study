@@ -129,16 +129,17 @@ async function runMain(search) {
   const host = loadRuntime(search);
   let timeline;
   let properties;
+  let initSettings;
   const collection = { values: () => [], filter() { return this; }, last() { return this; }, push() {} };
   host.context.fetch = localJsonResponse;
-  host.context.initJsPsych = () => ({
+  host.context.initJsPsych = (settings) => (initSettings = settings, {
     data: { get: () => collection, addProperties(value) { properties = value; } },
     run(value) { timeline = value; }, finishTrial() {},
   });
   await host.api.main();
   assert.ok(timeline, `main() did not build a timeline for ${search}`);
   assert.ok(properties, `main() did not attach data properties for ${search}`);
-  return { timeline: Array.from(timeline), properties, host };
+  return { timeline: Array.from(timeline), properties, host, initSettings };
 }
 
 function expectedReveal(trial, sourceIndex) {

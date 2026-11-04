@@ -14,7 +14,8 @@ const prefix=helper.slice(0,helper.indexOf('// Keep every original source asset 
 const AsyncFunction=Object.getPrototypeOf(async function(){}).constructor;
 const h=await new AsyncFunction('assert','fs','path','vm','createHash',prefix+'\nreturn {runMain,loadRuntime,configure,localJsonResponse};')(assert,fs,path,vm,createHash);
 const search='?contextStudy=1&withinChildContexts=1&context=HOME&roleSet=woman&set=role&event=HUG&variant=a&seed=media-recovery&syntheticSpeech=0';
-const {timeline,host}=await h.runMain(search);
+const {timeline,host,initSettings}=await h.runMain(search);
+assert.equal(initSettings.use_webaudio,false,'Preloading must prepare the HTML audio players used for narration');
 const preloader=timeline[0];
 assert.equal(preloader.max_load_time,90000);
 assert.equal(preloader.continue_after_error,false);
@@ -85,6 +86,7 @@ function playbackHost(host=h.loadRuntime(search)) {
   class FakeAudio {
     constructor(src){this.src=src;this.currentTime=0;this.duration=5;this.events={};this.loadCalls=0;this.released=false;clips.push(this);}
     addEventListener(name,fn){(this.events[name] ||= []).push(fn);}
+    removeEventListener(name,fn){this.events[name]=(this.events[name]||[]).filter(listener=>listener!==fn);}
     emit(name){for(const fn of this.events[name]||[])fn();}
     play(){return Promise.resolve();}
     pause(){this.emit('pause');}
@@ -109,6 +111,39 @@ function mountControls(host,selectors) {
   return controls;
 }
 const caption='Oh look! Here is a house.';
+// Preload and playback share the same prepared element, including the repeated
+// mom introduction in the second setting and Replay. No fresh player/request,
+// stale callbacks, or accumulating listeners are needed after successful plays.
+{
+  const x=playbackHost();
+  const text="This big one is this kid's mom.";
+  x.context.testText=text;
+  const src=vm.runInContext('versionedAudioSrc(audioPathForText(testText))',x.context);
+  const prepared=new x.context.Audio(src);
+  const requested=[];
+  x.context.testPreloaderHost={pluginAPI:{getAudioBuffer(source){requested.push(source);return Promise.resolve(prepared);}}};
+  x.context.testSource=src;
+  const loader=vm.runInContext('makeStudyPreloader({images:["example.png"],audio:[testSource]}, testPreloaderHost)',x.context);
+  loader.on_success('example.png');assert.equal(requested.length,0);
+  loader.on_success(src);await Promise.resolve();
+  assert.deepEqual(requested,[src]);
+  for(let repetition=0;repetition<3;repetition++) {
+    let starts=0,ends=0;
+    const done=x.api.audio.play(text,{onStart(){starts++;},onEnd(){ends++;}});
+    assert.equal(x.api.audio.current,prepared);
+    assert.equal(prepared.currentTime,0);assert.equal(x.clips.length,1);
+    prepared.emit('playing');prepared.currentTime=2;prepared.emit('timeupdate');prepared.emit('ended');
+    assert.equal(await done,true);assert.equal(starts,1);assert.equal(ends,1);
+    assert.equal(x.clock.pending,0);assert.equal(prepared.loadCalls,0);assert.equal(prepared.released,false);
+    assert.equal(Object.values(prepared.events).flat().length,0);
+    prepared.emit('error');prepared.emit('ended');assert.equal(ends,1);
+  }
+  // A failed prepared player is discarded; the normal bounded retry still works.
+  const recovered=x.api.audio.play(text);
+  prepared.emit('error');assert.equal(prepared.released,true);assert.equal(x.clips.length,2);
+  x.clips[1].emit('playing');x.clips[1].emit('ended');assert.equal(await recovered,true);
+  assert.equal(x.clock.pending,0);
+}
 // Never-starting playback resolves false after two bounded tries, not forever.
 {
   const x=playbackHost();let resolved;
@@ -289,8 +324,9 @@ for(const [kind,listenSelector] of parentPages) {
   }
   assert.equal(x.clips.length,segments);assert.ok(choices.every(choice=>!choice.disabled));
   controls['.ksize-audio-btn'].click();await new Promise(setImmediate);
-  assert.ok(choices.every(choice=>choice.disabled));assert.equal(x.clips.length,segments+1);
-  x.clips.at(-1).emit('error');x.clips.at(-1).emit('error');
+  assert.ok(choices.every(choice=>choice.disabled));assert.equal(x.clips.length,segments);
+  assert.equal(x.api.audio.current,x.clips[0]);
+  x.api.audio.current.emit('error');x.api.audio.current.emit('error');
   await new Promise(setImmediate);
   assert.ok(choices.every(choice=>choice.disabled),'Failed child replay unlocked responses');
   const data={};page.on_finish(data);assert.equal(data.audio_playback_or_load_failure,true);
@@ -388,9 +424,9 @@ for (const kind of ['exterior','intro','context_intro','story']) {
   x.clips[0].emit('ended');await new Promise(setImmediate);
   await x.clock.advance(399);assert.equal(x.context.window.testFinishes.length,0);
   controls['.ksize-audio-btn'].click();await new Promise(setImmediate);
-  assert.equal(x.clips.length,2);assert.equal(controls['.ksize-next-btn'].disabled,true);
+  assert.equal(x.clips.length,1);assert.equal(controls['.ksize-next-btn'].disabled,true);
   await x.clock.advance(1000);assert.equal(x.context.window.testFinishes.length,0,kind+': replay did not cancel old advance');
-  x.clips[1].emit('playing');x.clips[1].emit('ended');await new Promise(setImmediate);
+  x.clips[0].emit('playing');x.clips[0].emit('ended');await new Promise(setImmediate);
   await x.clock.advance(399);assert.equal(x.context.window.testFinishes.length,0);
   await x.clock.advance(1);assert.equal(x.context.window.testFinishes.length,1);
   assert.equal(x.context.window.testFinishes[0].response,'auto_next');page.on_finish({});
