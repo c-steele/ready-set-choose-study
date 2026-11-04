@@ -2732,8 +2732,8 @@ body {
 
 .ksize-camera-layout {
   display: grid;
-  grid-template-columns: minmax(310px, 0.85fr) minmax(380px, 1.15fr);
-  gap: 24px;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: 18px 24px;
   align-items: start;
 }
 
@@ -2891,13 +2891,26 @@ body {
   line-height: 1.4;
 }
 
-.ksize-camera-panel {
+.ksize-camera-panel,
+.ksize-camera-examples-panel {
   display: flex;
   flex-direction: column;
+  min-width: 0;
   padding: 16px;
   border: 3px solid #8fbbaa;
   border-radius: 8px;
   background: #eff9f5;
+}
+
+.ksize-camera-examples-panel {
+  grid-column: 1 / -1;
+}
+
+.ksize-camera-example-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  align-items: start;
 }
 
 .ksize-camera-examples-title {
@@ -2910,7 +2923,6 @@ body {
 .ksize-camera-live-preview {
   display: grid;
   gap: 10px;
-  margin-bottom: 20px;
 }
 
 .ksize-camera-preview-title {
@@ -3157,6 +3169,13 @@ body {
 
 .ksize-camera-footer {
   margin-top: 18px;
+}
+
+@media (max-width: 860px) {
+  .ksize-camera-layout,
+  .ksize-camera-example-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 @media (max-width: 720px) {

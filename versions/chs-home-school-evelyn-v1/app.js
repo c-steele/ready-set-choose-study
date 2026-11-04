@@ -4511,8 +4511,10 @@ async function main() {
                   <button class="ksize-camera-preview-retry" type="button" hidden>Try live view again</button>
                   <p class="ksize-camera-preview-help">Check your child’s full face and shoulders, then keep this position during the game.</p>
                 </div>
-                <h2 class="ksize-camera-examples-title">Use these examples to check your setup</h2>
-                <div class="ksize-lookit-example-stack">
+              </div>
+              <section class="ksize-camera-examples-panel" aria-labelledby="camera-examples-title">
+                <h2 class="ksize-camera-examples-title" id="camera-examples-title">Use these examples to check your setup</h2>
+                <div class="ksize-camera-example-grid">
                   <figure class="ksize-lookit-example ksize-camera-combined-example">
                     <img src="${escapeHtml(displayImageSrc("assets/lookit-camera-centering.png"))}" alt="Three original setup photos: a correct centered external webcam, an incorrect off-center external webcam, and a correct laptop with a built-in camera.">
                     <figcaption>
@@ -4529,7 +4531,7 @@ async function main() {
                   <span class="ksize-recording-dot" aria-hidden="true"></span>
                   <p>${cameraRecordingNote}</p>
                 </div>
-              </div>
+              </section>
             </div>
             <button class="ksize-parent-listen ksize-camera-audio" type="button"><span aria-hidden="true">▶</span><span>Listen</span></button>
             <footer class="ksize-setup-footer ksize-camera-footer">
