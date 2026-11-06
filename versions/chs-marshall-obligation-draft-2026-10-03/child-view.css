@@ -425,3 +425,21 @@ body.child-view .answers button.continue-answer::before{content:none!important;d
 body.child-view .stage.story-autoplay .child-continue{display:none}
 body.child-view .stage.awaiting-audio-start .child-helper-bubble{max-width:220px}
 body.child-view .stage.awaiting-audio-start .child-replay{box-shadow:0 0 0 4px #b8e4ff,0 8px 20px #246fb833}
+
+#child-welcome {
+  box-sizing: border-box;
+  min-height: min(640px, calc(100dvh - 24px));
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 20px;
+  padding: clamp(24px, 6vw, 72px);
+  text-align: center;
+  background: white;
+  border: 3px solid #dbeaf4;
+  border-radius: 16px;
+}
+#child-welcome h1 { margin: 0; color: #17466f; font-size: clamp(32px, 6vw, 60px); }
+#child-welcome p { margin: 0; max-width: 34ch; font-size: clamp(18px, 3vw, 24px); line-height: 1.45; }
+#start-stories { padding: 12px 26px; border: 0; border-radius: 12px; background: #236cb1; color: white; font-size: 20px; font-weight: bold; }
+#start-stories:hover { background: #19588f; }

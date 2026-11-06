@@ -396,10 +396,25 @@
   window.addEventListener('beforeprint',()=>{document.querySelectorAll('#cards img').forEach(img=>img.loading='eager');});
   $('set-select').value=Object.keys(roleNames).includes(params.get('set'))?params.get('set'):'woman';$('practice-select').value=params.get('practice')==='once'?'once':'each';
   $('set-select').addEventListener('change',configure);$('practice-select').addEventListener('change',configure);
-  window.addEventListener('pagehide',()=>{stopNarration();narrationEnabled=false;optionReader?.dispose();optionReader=null;pauseTimer();});window.addEventListener('pageshow',e=>{if(e.persisted)render();});
+  window.addEventListener('pagehide',()=>{stopNarration();narrationEnabled=false;optionReader?.dispose();optionReader=null;pauseTimer();});window.addEventListener('pageshow',e=>{if(e.persisted&&$('child-welcome').hidden)render();});
   $('play-narration').addEventListener('click',playNarration);$('stop-narration').addEventListener('click',()=>{stopNarration();optionReader?.reset();$('narration-status').textContent='Audio stopped. Tap Replay to hear this screen.';});
   $('auto-narration').addEventListener('change',()=>{if(!$('auto-narration').checked){stopNarration();optionReader?.reset();$('narration-status').textContent='Audio stopped. Tap Replay to hear this screen.';}});
   const recordingClips=Object.values(narration.clipsById);$('recording-coverage').textContent=`${recordingClips.filter(c=>c.src).length} of ${recordingClips.length} distinct recordings connected across all pairing sets.`;
-  if(params.get('view')==='child'){childView=true;document.body.classList.add('child-view');$('auto-narration').checked=true;}
-  configure();setInterval(updateTimer,1000);if(params.get('view')==='storyboard')showBoard(true);
+  if(params.get('view')==='child'){
+    childView=true;
+    document.body.classList.add('child-view');
+    $('auto-narration').checked=true;
+    $('player').hidden=true;
+    $('child-welcome').hidden=false;
+    $('start-stories').addEventListener('click',()=>{
+      $('child-welcome').hidden=true;
+      configure();
+      stage.tabIndex=-1;
+      stage.focus({preventScroll:true});
+    },{once:true});
+  }else{
+    configure();
+    if(params.get('view')==='storyboard')showBoard(true);
+  }
+  setInterval(updateTimer,1000);
 })();
