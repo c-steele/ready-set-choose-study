@@ -200,7 +200,9 @@
     stopNarration();optionReader?.reset();childView=value;document.body.classList.toggle('child-view',value);
     if(value){showBoard(false);$('auto-narration').checked=true;}
     const u=new URL(location.href);if(value)u.searchParams.set('view','child');else u.searchParams.delete('view');
-    window.history.replaceState(null,'',u);syncChildControls();window.scrollTo(0,0);if(value&&!$('player').hidden)playNarration();
+    window.history.replaceState(null,'',u);syncChildControls();window.scrollTo(0,0);
+    if(value && index === 0){openIntroduction();return;}
+    if(value&&!$('player').hidden)playNarration();
   }
   function childFooter(s){return `<div class="child-session-footer"><div class="child-helper" aria-hidden="true"><span class="child-helper-face"><i></i></span><span class="child-helper-bubble">Listen and look!</span></div><div class="child-audio-controls"><button class="child-replay" type="button"><span class="child-control-symbol" aria-hidden="true">▶</span><span class="child-control-label">Listen</span></button>${!s.choices&&!s.point&&!s.virtualType?'<div class="answers child-continue"><button class="continue-answer" data-answer="0" aria-label="Next">➜</button></div>':''}<button class="child-stop" type="button" hidden>Pause</button></div></div>`;}
   function narrationIds(s){
@@ -400,18 +402,80 @@
   $('play-narration').addEventListener('click',playNarration);$('stop-narration').addEventListener('click',()=>{stopNarration();optionReader?.reset();$('narration-status').textContent='Audio stopped. Tap Replay to hear this screen.';});
   $('auto-narration').addEventListener('change',()=>{if(!$('auto-narration').checked){stopNarration();optionReader?.reset();$('narration-status').textContent='Audio stopped. Tap Replay to hear this screen.';}});
   const recordingClips=Object.values(narration.clipsById);$('recording-coverage').textContent=`${recordingClips.filter(c=>c.src).length} of ${recordingClips.length} distinct recordings connected across all pairing sets.`;
+  const welcome = $('child-welcome');
+  const introPages = Array.from(welcome.querySelectorAll('.intro-page'));
+  const nextIntro = $('start-stories');
+  const listenIntro = $('intro-listen');
+  const introStatus = $('intro-audio-status');
+  let introIndex = 0;
+  let introAudio;
+
+  function stopIntroAudio(){
+    if(!introAudio)return;
+    introAudio.onended = introAudio.onerror = null;
+    introAudio.pause();
+    introAudio = null;
+  }
+  function playIntroAudio(){
+    stopIntroAudio();
+    const page = introPages[introIndex];
+    const audio = new Audio('../../audio_evelyn/' + page.dataset.audio);
+    introAudio = audio;
+    if(introIndex === introPages.length - 1)nextIntro.disabled = true;
+    introStatus.hidden = true;
+    listenIntro.textContent = 'Replay';
+    function showAudioError(){
+      if(introAudio !== audio)return;
+      stopIntroAudio();
+      introStatus.textContent = 'The audio could not play. Select Listen to try again.';
+      introStatus.hidden = false;
+      listenIntro.textContent = 'Listen';
+    }
+    audio.onerror = showAudioError;
+    audio.onended = ()=>{
+      if(introAudio === audio)nextIntro.disabled = false;
+    };
+    audio.play().catch(showAudioError);
+  }
+  function showIntroPage(index, focusHeading = true){
+    stopIntroAudio();
+    introIndex = index;
+    introPages.forEach((page, i)=>{page.hidden = i !== index;});
+    const page = introPages[index];
+    const isChildIntro = index === introPages.length - 1;
+    introStatus.hidden = true;
+    $('intro-back').hidden = index === 0;
+    listenIntro.textContent = page.dataset.listen || 'Listen';
+    nextIntro.textContent = page.dataset.next;
+    nextIntro.disabled = isChildIntro;
+    if(focusHeading)page.querySelector('h1').focus();
+    if(isChildIntro)playIntroAudio();
+  }
+  function openIntroduction(){
+    $('player').hidden = true;
+    welcome.hidden = false;
+    showIntroPage(0, false);
+    window.scrollTo(0,0);
+  }
+  listenIntro.addEventListener('click',playIntroAudio);
+  $('intro-back').addEventListener('click',()=>showIntroPage(introIndex-1));
+  nextIntro.addEventListener('click',()=>{
+    if(introIndex < introPages.length-1){
+      showIntroPage(introIndex+1);
+      return;
+    }
+    stopIntroAudio();
+    welcome.hidden = true;
+    configure();
+    stage.tabIndex = -1;
+    stage.focus({preventScroll:true});
+  });
+  window.addEventListener('pagehide',stopIntroAudio);
   if(params.get('view')==='child'){
     childView=true;
     document.body.classList.add('child-view');
     $('auto-narration').checked=true;
-    $('player').hidden=true;
-    $('child-welcome').hidden=false;
-    $('start-stories').addEventListener('click',()=>{
-      $('child-welcome').hidden=true;
-      configure();
-      stage.tabIndex=-1;
-      stage.focus({preventScroll:true});
-    },{once:true});
+    openIntroduction();
   }else{
     configure();
     if(params.get('view')==='storyboard')showBoard(true);
