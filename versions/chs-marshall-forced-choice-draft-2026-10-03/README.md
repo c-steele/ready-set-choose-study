@@ -4,7 +4,7 @@ October 6 consistent-reference revision: the child who needs help is called **th
 
 October 3, 2026. This is a separate compact version of the Marshall obligation follow-up. The individual-rating draft and the original Find the Caregiver / Who Helps Where studies are separate files and remain unchanged by this version.
 
-The child-view link starts with a grown-up welcome, screen and sound checks, a static camera-positioning example, a handoff, and a narrated introduction for the child. Start the stories opens the first pairing after the child introduction finishes. The preview uses no camera or microphone.
+Child-view links start with the shared Who Helps Where? visual introduction, then enter this version’s own character introductions and questions. Both camera examples are shown. The preview keeps the camera and microphone off.
 
 Open `index.html` for the child preview or full storyboard. Pairing selectors show the Woman, Man, or Family set of six stories; All pairings shows 18 entries for researcher review. Each main question asks the child to choose between the two helpers.
 

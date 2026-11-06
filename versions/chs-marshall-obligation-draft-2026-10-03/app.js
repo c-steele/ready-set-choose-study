@@ -199,7 +199,9 @@
     stopNarration();optionReader?.reset();childView=value;document.body.classList.toggle('child-view',value);
     if(value){showBoard(false);$('auto-narration').checked=true;}
     const u=new URL(location.href);if(value)u.searchParams.set('view','child');else u.searchParams.delete('view');
-    window.history.replaceState(null,'',u);syncChildControls();window.scrollTo(0,0);if(value&&!$('player').hidden)playNarration();
+    window.history.replaceState(null,'',u);syncChildControls();window.scrollTo(0,0);
+    if(value && index === 0){openIntroduction();return;}
+    if(value&&!$('player').hidden)playNarration();
   }
   function childFooter(s){return `<div class="child-session-footer"><div class="child-helper" aria-hidden="true"><span class="child-helper-face"><i></i></span><span class="child-helper-bubble">Listen and look!</span></div><div class="child-audio-controls"><button class="child-replay" type="button"><span class="child-control-symbol" aria-hidden="true">▶</span><span class="child-control-label">Listen</span></button>${!s.choices&&!s.point&&!s.virtualType?'<div class="answers child-continue"><button class="continue-answer" data-answer="0" aria-label="Next">➜</button></div>':''}<button class="child-stop" type="button" hidden>Pause</button></div></div>`;}
   function narrationIds(s){
@@ -400,18 +402,28 @@
   $('play-narration').addEventListener('click',playNarration);$('stop-narration').addEventListener('click',()=>{stopNarration();optionReader?.reset();$('narration-status').textContent='Audio stopped. Tap Replay to hear this screen.';});
   $('auto-narration').addEventListener('change',()=>{if(!$('auto-narration').checked){stopNarration();optionReader?.reset();$('narration-status').textContent='Audio stopped. Tap Replay to hear this screen.';}});
   const recordingClips=Object.values(narration.clipsById);$('recording-coverage').textContent=`${recordingClips.filter(c=>c.src).length} of ${recordingClips.length} distinct recordings connected across all pairing sets.`;
+  const welcome = $('child-welcome');
+  function openIntroduction(){
+    $('player').hidden = true;
+    welcome.hidden = false;
+    const frame = document.createElement('iframe');
+    frame.title = 'Who Has to Help? Study introduction';
+    frame.src = '../marshall-introduction/index.html?v=original-intro-r29';
+    frame.addEventListener('intro-complete', () => {
+      welcome.hidden = true;
+      frame.remove();
+      configure();
+      stage.tabIndex = -1;
+      stage.focus({preventScroll:true});
+    }, {once:true});
+    welcome.replaceChildren(frame);
+    window.scrollTo(0,0);
+  }
   if(params.get('view')==='child'){
     childView=true;
     document.body.classList.add('child-view');
     $('auto-narration').checked=true;
-    $('player').hidden=true;
-    $('child-welcome').hidden=false;
-    $('start-stories').addEventListener('click',()=>{
-      $('child-welcome').hidden=true;
-      configure();
-      stage.tabIndex=-1;
-      stage.focus({preventScroll:true});
-    },{once:true});
+    openIntroduction();
   }else{
     configure();
     if(params.get('view')==='storyboard')showBoard(true);

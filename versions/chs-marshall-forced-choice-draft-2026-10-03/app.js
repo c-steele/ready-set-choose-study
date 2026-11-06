@@ -403,74 +403,22 @@
   $('auto-narration').addEventListener('change',()=>{if(!$('auto-narration').checked){stopNarration();optionReader?.reset();$('narration-status').textContent='Audio stopped. Tap Replay to hear this screen.';}});
   const recordingClips=Object.values(narration.clipsById);$('recording-coverage').textContent=`${recordingClips.filter(c=>c.src).length} of ${recordingClips.length} distinct recordings connected across all pairing sets.`;
   const welcome = $('child-welcome');
-  const introPages = Array.from(welcome.querySelectorAll('.intro-page'));
-  const nextIntro = $('start-stories');
-  const listenIntro = $('intro-listen');
-  const introStatus = $('intro-audio-status');
-  let introIndex = 0;
-  let introAudio;
-
-  function stopIntroAudio(){
-    if(!introAudio)return;
-    introAudio.onended = introAudio.onerror = null;
-    introAudio.pause();
-    introAudio = null;
-  }
-  function playIntroAudio(){
-    stopIntroAudio();
-    const page = introPages[introIndex];
-    const audio = new Audio('../../audio_evelyn/' + page.dataset.audio);
-    introAudio = audio;
-    if(introIndex === introPages.length - 1)nextIntro.disabled = true;
-    introStatus.hidden = true;
-    listenIntro.textContent = 'Replay';
-    function showAudioError(){
-      if(introAudio !== audio)return;
-      stopIntroAudio();
-      introStatus.textContent = 'The audio could not play. Select Listen to try again.';
-      introStatus.hidden = false;
-      listenIntro.textContent = 'Listen';
-    }
-    audio.onerror = showAudioError;
-    audio.onended = ()=>{
-      if(introAudio === audio)nextIntro.disabled = false;
-    };
-    audio.play().catch(showAudioError);
-  }
-  function showIntroPage(index, focusHeading = true){
-    stopIntroAudio();
-    introIndex = index;
-    introPages.forEach((page, i)=>{page.hidden = i !== index;});
-    const page = introPages[index];
-    const isChildIntro = index === introPages.length - 1;
-    introStatus.hidden = true;
-    $('intro-back').hidden = index === 0;
-    listenIntro.textContent = page.dataset.listen || 'Listen';
-    nextIntro.textContent = page.dataset.next;
-    nextIntro.disabled = isChildIntro;
-    if(focusHeading)page.querySelector('h1').focus();
-    if(isChildIntro)playIntroAudio();
-  }
   function openIntroduction(){
     $('player').hidden = true;
     welcome.hidden = false;
-    showIntroPage(0, false);
+    const frame = document.createElement('iframe');
+    frame.title = 'Who Has to Help? Study introduction';
+    frame.src = '../marshall-introduction/index.html?v=original-intro-r29';
+    frame.addEventListener('intro-complete', () => {
+      welcome.hidden = true;
+      frame.remove();
+      configure();
+      stage.tabIndex = -1;
+      stage.focus({preventScroll:true});
+    }, {once:true});
+    welcome.replaceChildren(frame);
     window.scrollTo(0,0);
   }
-  listenIntro.addEventListener('click',playIntroAudio);
-  $('intro-back').addEventListener('click',()=>showIntroPage(introIndex-1));
-  nextIntro.addEventListener('click',()=>{
-    if(introIndex < introPages.length-1){
-      showIntroPage(introIndex+1);
-      return;
-    }
-    stopIntroAudio();
-    welcome.hidden = true;
-    configure();
-    stage.tabIndex = -1;
-    stage.focus({preventScroll:true});
-  });
-  window.addEventListener('pagehide',stopIntroAudio);
   if(params.get('view')==='child'){
     childView=true;
     document.body.classList.add('child-view');
