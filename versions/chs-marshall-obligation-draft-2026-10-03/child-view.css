@@ -94,6 +94,27 @@ body.child-view .prompt h2 {
   text-wrap: balance;
 }
 
+/* Find the Caregiver's top color band occupies 99 of the 1920 source pixels.
+   Its scene is capped at 1080px wide and 68vh high in the original player. */
+.stage[data-screen-kind="story"] {
+  container-type: inline-size;
+}
+
+.stage[data-screen-kind="story"] > .prompt {
+  --slide-unit: min(1cqw, 10.8px, 1.2089vh);
+  min-height: max(42px, calc(5.15625 * var(--slide-unit)));
+  padding-block: max(6px, calc(.65 * var(--slide-unit)));
+}
+
+.stage[data-screen-kind="story"] > .prompt h2 {
+  font-size: max(22px, calc(3.25 * var(--slide-unit)));
+  line-height: 1.12;
+}
+
+@media (max-width: 460px) {
+  .stage[data-screen-kind="story"] > .prompt h2 { font-size: 19px; }
+}
+
 body.child-view .picture {
   flex: 0 0 auto;
   width: min(100%, 1050px, calc((100vh - 342px) * 2.285714));
