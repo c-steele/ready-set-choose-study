@@ -306,7 +306,9 @@
     stage.dataset.screenKind=s.visual?'illustrated-practice':s.image?'story':'practice';
     stage.dataset.responseFormat=s.optionActors?'forced-choice':s.point?'character':s.choices?'check':'continue';
     stage.dataset.responseKind=s.choices?.length===3?'scale':s.point?'character':s.choices?'binary':'continue';
-    stage.innerHTML=prompt(s)+scene(s,true)+feedback+options+childFooter(s);
+    const art = scene(s, true);
+    const visual = s.image ? `<div class="story-art">${art}</div>` : art;
+    stage.innerHTML=prompt(s)+visual+feedback+options+childFooter(s);
     stage.querySelector('.child-replay').addEventListener('click',playChildNarration);
     stage.querySelector('.child-stop').addEventListener('click',pauseChildPlayback);
     $('step-note').innerHTML=`${s.proposed?'<strong>Proposed wording · </strong>':''}${esc(branchNote(s)+(s.note||'Adapted from Marshall Study 1.'))}`;
@@ -409,7 +411,7 @@
     welcome.hidden = false;
     const frame = document.createElement('iframe');
     frame.title = 'Who Has to Help? Study introduction';
-    frame.src = '../marshall-introduction/index.html?v=original-intro-r29';
+    frame.src = '../marshall-introduction/index.html?v=responsive-r33';
     frame.addEventListener('intro-complete', () => {
       welcome.hidden = true;
       frame.remove();

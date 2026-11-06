@@ -31,7 +31,7 @@ body.child-view > footer {
 }
 
 body.child-view > main {
-  width: min(1180px, calc(100% - 24px));
+  width: min(calc(100% - 24px), clamp(1180px, 92vw, 1720px));
   margin: 0 auto;
   padding: 10px 0 12px;
 }
@@ -115,16 +115,39 @@ body.child-view .prompt h2 {
   .stage[data-screen-kind="story"] > .prompt h2 { font-size: 19px; }
 }
 
-body.child-view .picture {
-  flex: 0 0 auto;
-  width: min(100%, 1050px, calc((100vh - 342px) * 2.285714));
-  width: min(100%, 1050px, calc((100dvh - 342px) * 2.285714));
-  margin: 12px auto 6px;
+/* Let the caption, answers and audio controls take their natural height.
+   The illustration uses the room left between them, in either window mode. */
+body.child-view #player:not([hidden]):has(.story-art) {
+  display: flex;
+  flex-direction: column;
+  height: calc(100dvh - 22px);
+  min-height: min-content;
 }
 
-body.child-view .stage:has(.rating-options) .picture {
-  width: min(100%, 1000px, calc((100vh - 474px) * 2.285714));
-  width: min(100%, 1000px, calc((100dvh - 474px) * 2.285714));
+body.child-view .stage[data-screen-kind="story"] {
+  flex: 1 0 auto;
+  min-height: min-content;
+}
+
+.story-art { display: contents; }
+
+body.child-view .story-art {
+  flex: 1 0 auto;
+  min-height: min(150px, 44vw);
+  display: grid;
+  place-items: center;
+  container-type: size;
+}
+
+body.child-view .story-art > * {
+  --badge-space: 0px;
+  width: min(96cqw, 1600px, calc((100cqh - var(--badge-space)) * 16 / 7));
+  margin: 0;
+}
+
+body.child-view .story-art > .outcome-scene { --badge-space: 64px; }
+@media (max-width: 460px) {
+  body.child-view .story-art > .outcome-scene { --badge-space: 80px; }
 }
 
 body.child-view .answers {
@@ -362,11 +385,6 @@ body.child-view .facilitator-controls {
   padding: 0 12px 6px;
 }
 
-body.child-view .stage:has(.feedback) .picture {
-  width: min(100%, 1000px, calc((100vh - 520px) * 2.285714));
-  width: min(100%, 1000px, calc((100dvh - 520px) * 2.285714));
-}
-
 body.child-view .stage:has(.feedback) .practice-artwork {
   max-height: min(22vh, 175px);
 }
@@ -374,7 +392,6 @@ body.child-view .stage:has(.feedback) .practice-artwork {
 @media (max-width: 750px) {
   body.child-view > main { width: calc(100% - 20px); }
   body.child-view .prompt h2 { font-size: 22px; }
-  body.child-view .picture { margin-top: 18px; }
   body.child-view .answers button { font-size: 20px; }
   body.child-view .child-session-footer { gap: 20px; }
 }
@@ -401,7 +418,6 @@ body.child-view .stage:has(.feedback) .practice-artwork {
   body.child-view .stage { min-height: calc(100dvh - 66px); }
   body.child-view .prompt h2 { font-size: 22px; }
   body.child-view .child-session-footer { padding-block: 5px 8px; }
-  body.child-view .picture { margin-block: 6px; }
   body.child-view .rating-answer { min-height: 95px; }
 }
 
@@ -414,7 +430,6 @@ body.child-view .stage:has(.feedback) .practice-artwork {
 /* Keep the familiar Replay and Continue pair together under the scene. */
 body.child-view .stage > .answers:has(.continue-answer){display:none}
 body.child-view .child-continue{padding:0;min-height:0}
-body.child-view .picture{margin-block:auto}
 body.child-view .practice-illustration{margin-block:auto}
 body.child-view .child-session-footer{margin-top:0}
 
@@ -425,13 +440,6 @@ body.child-view .child-session-footer{margin-top:0}
 body.child-view .binary-reader-controls,
 body.child-view .binary-reader-status{display:none}
 body.child-view .answers button.spoken-choice.option-current{box-shadow:0 0 0 5px #2477b833,0 9px 20px #2477b833}
-
-/* Recover the former word-button space for character-sized response targets. */
-body.child-view .stage[data-choice-location="characters"] .picture{width:min(100%,1050px,calc((100vh - 270px) * 2.285714));width:min(100%,1050px,calc((100dvh - 270px) * 2.285714))}
-
-/* Center the complete outcome scene and its two helper cues as one unit. */
-body.child-view .outcome-scene{flex:0 0 auto;width:min(100%,1050px,calc((100vh - 342px) * 2.285714));width:min(100%,1050px,calc((100dvh - 342px) * 2.285714));margin-block:auto}
-body.child-view .outcome-scene .picture{width:100%;margin:0}
 
 /* Keep text-only screens centered; retain compact headers on illustrated scenes. */
 body.child-view .stage.message-slide{min-height:calc(100vh - 82px);min-height:calc(100dvh - 82px)}

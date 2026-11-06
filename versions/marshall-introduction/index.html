@@ -15,7 +15,9 @@
     h1[tabindex="-1"]:focus { outline: none; }
     .intro-back { background: white; color: #17476f; border: 1px solid currentColor; border-radius: 8px; padding: 8px 14px; font: inherit; cursor: pointer; }
     .ksize-setup-footer:has(.intro-back) { flex-wrap: wrap; }
-    @media (max-width: 700px) { .ksize-shell { width: calc(100vw - 24px); } }
+    #jspsych-content { width: 100%; max-width: 100%; }
+    .ksize-shell { width: min(calc(100% - 24px), clamp(1180px, 92vw, 1720px)); }
+    .ksize-setup-shell { width: min(calc(100% - 24px), clamp(980px, 80vw, 1280px)); }
   </style>
   <script defer src="intro.js?v=original-intro-r29"></script>
 </head>
