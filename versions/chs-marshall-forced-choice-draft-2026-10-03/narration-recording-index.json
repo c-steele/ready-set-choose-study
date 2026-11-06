@@ -508,11 +508,11 @@
       "provenance": "Original Find the Caregiver Evelyn recording."
     },
     {
-      "id": "nr_269",
-      "text": "Now let’s say that one day the kid in the middle was very sad.",
-      "src": "assets/narration/nr_269-complete.mp3",
+      "id": "ftc_005",
+      "text": "Oh no! The kid in the middle is sad now!",
+      "src": "../../audio_evelyn/ftc_005_story_event_01_oh_no_the_kid_in_the_middle_is_sad_now.mp3",
       "kind": "prompt",
-      "status": "verified-complete-native-recording",
+      "status": "verified-source-recording",
       "uses": [
         {
           "stepId": "woman-mom-teacher:need",
@@ -590,45 +590,10 @@
           "part": "prompt"
         }
       ],
-      "sha256": "9dba413927bfc85726e13ee8fbd2b626d470e00d3ddc5248b03b23412f713559",
-      "bytes": 168273,
-      "durationSeconds": 4.2057,
-      "decodedDurationSeconds": 4.20575,
-      "provenance": {
-        "exportIndex": 2,
-        "sampleRate": 44100,
-        "channels": 1,
-        "nativeNaturalReadersRecording": true,
-        "wholeParagraphSpeechPreserved": true,
-        "wordLevelSplicing": false,
-        "copiedWithoutReencoding": true,
-        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_child_flow_revision_2026-10-04/naturalreader-batch-01/native-source/numbered-clips/2.Now_let’s_say_that_one_day_the.mp3",
-        "sourceSha256": "9dba413927bfc85726e13ee8fbd2b626d470e00d3ddc5248b03b23412f713559",
-        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_child_flow_revision_2026-10-04/naturalreader-batch-01/native-source/naturalreader-export.zip",
-        "sourceZipSha256": "fccdee9f67f395f3b6dcddbcfa1cad22a9fe85387eafdfcbc75ee410584a5442",
-        "recordingIndexSha256": "d95f75beb0bb7a824c8a5c72e5c605b679d991bb4e0084056b0ddcea7b654b82",
-        "voiceProvider": "NaturalReaders Commercial",
-        "voiceName": "Evelyn",
-        "voiceStyle": "Soft",
-        "voiceSpeed": 0.9,
-        "voiceWordsPerMinute": 180,
-        "insertedPauseMilliseconds": 0,
-        "nativeVoiceGenerationSpeedVerified": true,
-        "voiceSettingsEvidence": "Parent observed exact18paragraph NR project at EvelynSoft0.90x180WPM0pause and320MP3SeparateIndexSegment export; audio bytes preserved",
-        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
-        "independentExactNormalizedRecognition": true,
-        "articleOmissionExceptionsAllowed": false,
-        "cueAlignmentApproved": true,
-        "strictFinalSpokenSequenceMatches": true,
-        "allTheArticlesVerified": true,
-        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
-        "provider": "NaturalReaders Commercial",
-        "sourceVoice": "Evelyn Soft",
-        "decodeVerified": true,
-        "fullProjectTextVerified": true,
-        "verifiedSourceAuditRecord": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_child_flow_revision_2026-10-04/naturalreader-batch-01/processed/verified-native-recordings.json",
-        "installedFileBytesMatchVerifiedSource": true
-      }
+      "sha256": "fe9c68bd59f37060b15e4f62c330c4d98c882038012c9ed6d53786e2dbd9e3c8",
+      "bytes": 157824,
+      "durationSeconds": 3.944475,
+      "provenance": "Original Find the Caregiver HUG event recording."
     },
     {
       "id": "nr_009",
@@ -12140,11 +12105,11 @@
       "historicalInactive": true
     },
     {
-      "id": "nr_135",
-      "text": "Now let’s say that one day the mom was very sad.",
-      "src": "assets/narration/nr_135.mp3",
+      "id": "ftc_018",
+      "text": "Oh no! The mom in the middle is sad now!",
+      "src": "../../audio_evelyn/ftc_018_story_event_04_oh_no_the_mom_in_the_middle_is_sad_now.mp3",
       "kind": "prompt",
-      "status": "imported",
+      "status": "verified-source-recording",
       "uses": [
         {
           "stepId": "family-dad-kid:need",
@@ -12152,30 +12117,10 @@
           "part": "prompt"
         }
       ],
-      "sha256": "587851f7ef212f9d645ccfbc973de77f493e8e97a69d325cf6be987d0f0be413",
-      "bytes": 147375,
-      "durationSeconds": 3.68325,
-      "provenance": {
-        "provider": "NaturalReaders Commercial",
-        "voice": {
-          "provider": "NaturalReaders Commercial",
-          "name": "Evelyn",
-          "style": "Soft",
-          "speed": 0.9,
-          "wordsPerMinuteSetting": 180,
-          "paragraphPauseSeconds": 0,
-          "exportFormat": "MP3",
-          "exportMode": "separate files ZIP",
-          "exportNaming": "Index + Segment",
-          "preferredBitrateKbps": 320,
-          "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "34.Now_let’s_say_that_one_day_the.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
-      }
+      "sha256": "7d66da3bb09f145165a349a7758f3a626aaf8fdba6aeab12cf080584d23208b7",
+      "bytes": 165138,
+      "durationSeconds": 4.127325,
+      "provenance": "Original Find the Caregiver HUG event recording."
     },
     {
       "id": "nr_136",
@@ -13346,11 +13291,11 @@
       }
     },
     {
-      "id": "nr_156",
-      "text": "Now let’s say that one day the dad was very sad.",
-      "src": "assets/narration/nr_156.mp3",
+      "id": "ftc_042",
+      "text": "Oh no! The dad in the middle is sad now!",
+      "src": "../../audio_evelyn/ftc_042_story_event_10_oh_no_the_dad_in_the_middle_is_sad_now.mp3",
       "kind": "prompt",
-      "status": "imported",
+      "status": "verified-source-recording",
       "uses": [
         {
           "stepId": "family-mom-kid:need",
@@ -13358,30 +13303,10 @@
           "part": "prompt"
         }
       ],
-      "sha256": "4d202061cb3b6bcb3f96185bfdf97f36c1abbc74fbd4ac55314583545622a5fb",
-      "bytes": 147375,
-      "durationSeconds": 3.68325,
-      "provenance": {
-        "provider": "NaturalReaders Commercial",
-        "voice": {
-          "provider": "NaturalReaders Commercial",
-          "name": "Evelyn",
-          "style": "Soft",
-          "speed": 0.9,
-          "wordsPerMinuteSetting": 180,
-          "paragraphPauseSeconds": 0,
-          "exportFormat": "MP3",
-          "exportMode": "separate files ZIP",
-          "exportNaming": "Index + Segment",
-          "preferredBitrateKbps": 320,
-          "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "55.Now_let’s_say_that_one_day_the.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
-      }
+      "sha256": "c75c2b5bf9e08d025ae92e38ca1bd2a18abb037020a947ccb9b2ffc3b89d46e6",
+      "bytes": 165138,
+      "durationSeconds": 4.127325,
+      "provenance": "Original Find the Caregiver HUG event recording."
     },
     {
       "id": "nr_157",
@@ -14462,11 +14387,11 @@
       }
     },
     {
-      "id": "nr_176",
-      "text": "Now let’s say that one day the teacher in the middle was very sad.",
-      "src": "assets/narration/nr_176.mp3",
+      "id": "ftc_027",
+      "text": "Oh no! The teacher in the middle is sad now!",
+      "src": "../../audio_evelyn/ftc_027_story_event_07_oh_no_the_teacher_in_the_middle_is_sad_now.mp3",
       "kind": "prompt",
-      "status": "imported",
+      "status": "verified-source-recording",
       "uses": [
         {
           "stepId": "family-teacher-kid:need",
@@ -14474,30 +14399,10 @@
           "part": "prompt"
         }
       ],
-      "sha256": "c3c706f1978a402e086d5a53881f96d0a40650ec2b0025f32c3a0849fc741386",
-      "bytes": 174543,
-      "durationSeconds": 4.36245,
-      "provenance": {
-        "provider": "NaturalReaders Commercial",
-        "voice": {
-          "provider": "NaturalReaders Commercial",
-          "name": "Evelyn",
-          "style": "Soft",
-          "speed": 0.9,
-          "wordsPerMinuteSetting": 180,
-          "paragraphPauseSeconds": 0,
-          "exportFormat": "MP3",
-          "exportMode": "separate files ZIP",
-          "exportNaming": "Index + Segment",
-          "preferredBitrateKbps": 320,
-          "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "7e7b1042a38254298d9f82a21bffb4dc593dd3ebe568322dd58aad12371bdbd5",
-        "archiveMember": "75.Now_let’s_say_that_one_day_the.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
-      }
+      "sha256": "098726ea30fd05d7f1d4a0434a55ebc1daa227df3d9b34678bbca54f15413fdc",
+      "bytes": 169318,
+      "durationSeconds": 4.231825,
+      "provenance": "Original Find the Caregiver HUG event recording."
     },
     {
       "id": "nr_177",
@@ -17856,7 +17761,7 @@
       "proposedWording": false
     },
     "woman-mom-teacher:need": {
-      "prompt": "nr_269",
+      "prompt": "ftc_005",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -18132,7 +18037,7 @@
       "proposedWording": false
     },
     "woman-sister-friend:need": {
-      "prompt": "nr_269",
+      "prompt": "ftc_005",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -18408,7 +18313,7 @@
       "proposedWording": false
     },
     "woman-bestfriend-friend:need": {
-      "prompt": "nr_269",
+      "prompt": "ftc_005",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -18684,7 +18589,7 @@
       "proposedWording": false
     },
     "woman-teacher-friend:need": {
-      "prompt": "nr_269",
+      "prompt": "ftc_005",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -18960,7 +18865,7 @@
       "proposedWording": false
     },
     "woman-mom-sister:need": {
-      "prompt": "nr_269",
+      "prompt": "ftc_005",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -19236,7 +19141,7 @@
       "proposedWording": false
     },
     "woman-teacher-classmate:need": {
-      "prompt": "nr_269",
+      "prompt": "ftc_005",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -19512,7 +19417,7 @@
       "proposedWording": false
     },
     "man-dad-teacher:need": {
-      "prompt": "nr_269",
+      "prompt": "ftc_005",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -19788,7 +19693,7 @@
       "proposedWording": false
     },
     "man-brother-friend:need": {
-      "prompt": "nr_269",
+      "prompt": "ftc_005",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -20064,7 +19969,7 @@
       "proposedWording": false
     },
     "man-bestfriend-friend:need": {
-      "prompt": "nr_269",
+      "prompt": "ftc_005",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -20340,7 +20245,7 @@
       "proposedWording": false
     },
     "man-teacher-friend:need": {
-      "prompt": "nr_269",
+      "prompt": "ftc_005",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -20616,7 +20521,7 @@
       "proposedWording": false
     },
     "man-dad-brother:need": {
-      "prompt": "nr_269",
+      "prompt": "ftc_005",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -20892,7 +20797,7 @@
       "proposedWording": false
     },
     "man-teacher-classmate:need": {
-      "prompt": "nr_269",
+      "prompt": "ftc_005",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -21168,7 +21073,7 @@
       "proposedWording": false
     },
     "family-mom-dad:need": {
-      "prompt": "nr_269",
+      "prompt": "ftc_005",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -21444,7 +21349,7 @@
       "proposedWording": false
     },
     "family-sister-brother:need": {
-      "prompt": "nr_269",
+      "prompt": "ftc_005",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -21720,7 +21625,7 @@
       "proposedWording": false
     },
     "family-dad-kid:need": {
-      "prompt": "nr_135",
+      "prompt": "ftc_018",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -21996,7 +21901,7 @@
       "proposedWording": false
     },
     "family-mom-kid:need": {
-      "prompt": "nr_156",
+      "prompt": "ftc_042",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -22272,7 +22177,7 @@
       "proposedWording": false
     },
     "family-teacher-kid:need": {
-      "prompt": "nr_176",
+      "prompt": "ftc_027",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -22548,7 +22453,7 @@
       "proposedWording": false
     },
     "family-teacher-classmate:need": {
-      "prompt": "nr_269",
+      "prompt": "ftc_005",
       "reminder": null,
       "options": [],
       "proposedWording": false

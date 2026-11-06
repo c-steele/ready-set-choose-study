@@ -18,7 +18,7 @@ Includes 6–18 answer-confirmation screens and 12 correct-answer practice-feedb
 
 Main judgments: 60 (including 12 prediction-confidence responses). Recall checks: 18. Practice responses: 18. Answer confirmations: 6–18. Conditional study-strength responses: 0–30. The total screen and response ranges above are computed for complete paths; separate minimum counts need not occur together.
 
-Illustrative duration: **29.3–43.1 minutes**, based on 3069–3534 spoken words.
+Illustrative duration: **29.2–43 minutes**, based on 3051–3516 spoken words.
 
 - Illustrative estimate, not observed child-session duration.
 - Read-aloud pace: 110–130 words per minute; response time: 3–5 seconds per selection.
@@ -66,7 +66,7 @@ Left: the kid’s dad. Middle: the kid in the middle. Right: the kid’s mom.
 
 ### 5. The kid in the middle needs help
 
-“Now let’s say that one day the kid in the middle was very sad.”
+“Oh no! The kid in the middle is sad now!”
 
 [Stimulus source](assets/stimuli/443991b4edc3-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -434,7 +434,7 @@ Left: the kid’s sister. Middle: the kid in the middle. Right: the kid’s brot
 
 ### 37. The kid in the middle needs help
 
-“Now let’s say that one day the kid in the middle was very sad.”
+“Oh no! The kid in the middle is sad now!”
 
 [Stimulus source](assets/stimuli/fac075f520aa-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -802,7 +802,7 @@ Left: the kid’s dad. Middle: the mom. Right: the kid.
 
 ### 69. The mom needs help
 
-“Now let’s say that one day the mom was very sad.”
+“Oh no! The mom in the middle is sad now!”
 
 [Stimulus source](assets/stimuli/b1ba34666825-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1170,7 +1170,7 @@ Left: the kid. Middle: the dad. Right: the kid’s mom.
 
 ### 101. The dad needs help
 
-“Now let’s say that one day the dad was very sad.”
+“Oh no! The dad in the middle is sad now!”
 
 [Stimulus source](assets/stimuli/a47ed9f1306d-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1538,7 +1538,7 @@ Left: the teacher on the left. Middle: the teacher in the middle. Right: the kid
 
 ### 133. The teacher in the middle needs help
 
-“Now let’s say that one day the teacher in the middle was very sad.”
+“Oh no! The teacher in the middle is sad now!”
 
 [Stimulus source](assets/stimuli/4bb031a656d9-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1906,7 +1906,7 @@ Left: the kid’s classmate. Middle: the kid in the middle. Right: the kid’s t
 
 ### 165. The kid in the middle needs help
 
-“Now let’s say that one day the kid in the middle was very sad.”
+“Oh no! The kid in the middle is sad now!”
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 

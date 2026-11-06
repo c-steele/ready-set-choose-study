@@ -52,7 +52,7 @@
         note:'Narrated character introduction from Find the Caregiver.'
       });
     }
-    add('need', 'need', {phase:`${upper(recipient.description)} needs help`, text:`Now let’s say that one day ${recipient.isAdult ? recipient.description : 'the kid in the middle'} was very sad.`});
+    add('need', 'need', {phase:`${upper(recipient.description)} needs help`, text:p.sourceNeedText});
     add('witness', 'witness', {text:`${upper(helpers[0].description)} and ${helpers[1].description} both see that ${recipient.description} is sad.`});
     add('predict-compare', 'predict-compare', {
       ...pairOptions,

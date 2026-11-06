@@ -2,10 +2,10 @@
   "complete": true,
   "allRecordingsComplete": true,
   "pendingRetryRecordingIDs": [],
-  "createdAt": "2026-11-06T18:06:35.813Z",
+  "createdAt": "2026-11-06T20:07:44.468Z",
   "basis": "Verified MP3 durations for accepted paths plus the programmed inter-option gap. Each range has exact independent branch extrema, including answer-specific prediction confidence, No-only obligation confirmations, chosen-character confirmations, and mandatory practice feedback.",
   "gapSeconds": 0.25,
-  "manifestSha256": "2d6b99d152dcfdd66db00728d226fe8c7b70f7e3aa75ed493f6207c5f82db36d",
+  "manifestSha256": "dfdadebba4a6c9b70f03b73e8ae5ba8e17b06f52edb52283b9b76b18fcb9dd23",
   "assumptions": [
     "Assumes correct recall and practice answers, and Yes acceptance of each answer confirmation.",
     "A No individual-obligation judgment adds its neutral confirmation; a Yes judgment instead adds its obligation-strength follow-up.",
@@ -25,15 +25,15 @@
       "practiceMode": "each",
       "storyCount": 6,
       "playbackSeconds": {
-        "min": 1233.579398,
-        "max": 1477.490372000001
+        "min": 1232.012048,
+        "max": 1475.9230220000013
       },
       "playbackMinutes": {
-        "min": 20.6,
+        "min": 20.5,
         "max": 24.6
       },
       "estimatedSessionMinutesIncludingResponses": {
-        "min": 26.3,
+        "min": 26.2,
         "max": 35.6
       },
       "responseCounts": {
@@ -56,12 +56,12 @@
       "practiceMode": "once",
       "storyCount": 6,
       "playbackSeconds": {
-        "min": 1001.8551229999999,
-        "max": 1245.7660970000009
+        "min": 1000.2877730000001,
+        "max": 1244.198747000001
       },
       "playbackMinutes": {
         "min": 16.7,
-        "max": 20.8
+        "max": 20.7
       },
       "estimatedSessionMinutesIncludingResponses": {
         "min": 21.6,
@@ -87,15 +87,15 @@
       "practiceMode": "each",
       "storyCount": 6,
       "playbackSeconds": {
-        "min": 1233.683914,
-        "max": 1477.4380780000006
+        "min": 1232.1165640000002,
+        "max": 1475.8707280000008
       },
       "playbackMinutes": {
-        "min": 20.6,
+        "min": 20.5,
         "max": 24.6
       },
       "estimatedSessionMinutesIncludingResponses": {
-        "min": 26.3,
+        "min": 26.2,
         "max": 35.6
       },
       "responseCounts": {
@@ -118,12 +118,12 @@
       "practiceMode": "once",
       "storyCount": 6,
       "playbackSeconds": {
-        "min": 1001.9596389999999,
-        "max": 1245.7138030000003
+        "min": 1000.3922890000001,
+        "max": 1244.1464530000005
       },
       "playbackMinutes": {
         "min": 16.7,
-        "max": 20.8
+        "max": 20.7
       },
       "estimatedSessionMinutesIncludingResponses": {
         "min": 21.6,
@@ -149,8 +149,8 @@
       "practiceMode": "each",
       "storyCount": 6,
       "playbackSeconds": {
-        "min": 1203.0423180000003,
-        "max": 1447.6324140000006
+        "min": 1203.0161680000003,
+        "max": 1447.6062640000007
       },
       "playbackMinutes": {
         "min": 20.1,
@@ -180,8 +180,8 @@
       "practiceMode": "once",
       "storyCount": 6,
       "playbackSeconds": {
-        "min": 971.3180429999998,
-        "max": 1215.9081390000001
+        "min": 971.2918929999998,
+        "max": 1215.881989
       },
       "playbackMinutes": {
         "min": 16.2,
@@ -211,8 +211,8 @@
       "practiceMode": "each",
       "storyCount": 18,
       "playbackSeconds": {
-        "min": 3662.5734299999904,
-        "max": 4394.828663999992
+        "min": 3659.4125799999892,
+        "max": 4391.66781399999
       },
       "playbackMinutes": {
         "min": 61,
@@ -242,16 +242,16 @@
       "practiceMode": "once",
       "storyCount": 18,
       "playbackSeconds": {
-        "min": 2874.7108949999933,
-        "max": 3606.966128999996
+        "min": 2871.5500449999927,
+        "max": 3603.805278999994
       },
       "playbackMinutes": {
         "min": 47.9,
         "max": 60.1
       },
       "estimatedSessionMinutesIncludingResponses": {
-        "min": 62.5,
-        "max": 88.9
+        "min": 62.4,
+        "max": 88.8
       },
       "responseCounts": {
         "min": 291,

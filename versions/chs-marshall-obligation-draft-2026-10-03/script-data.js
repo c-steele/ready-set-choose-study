@@ -9,7 +9,7 @@
     {id:'kid', phase:'Meet the kid in the middle', image:'02-child.png', text:'This is the kid in the middle.'},
     {id:'mom', phase:'Meet the mom', image:'03-mom.png', text:'This is the kid’s mom.'},
     {id:'sister', phase:'Meet the sister', image:'04-sister.png', text:'This is the kid’s sister.'},
-    {id:'need', phase:'The kid in the middle needs help', text:'Now let’s say that one day the kid in the middle was very sad.'},
+    {id:'need', phase:'The kid in the middle needs help', text:'Oh no! The kid in the middle is sad now!'},
     {id:'witness', phase:'Both helpers see', text:'The kid’s mom and the kid’s sister both see that the kid in the middle is sad.'},
     {id:'predict-mom', phase:'Prediction · Mom', text:'Now, do you think the kid’s mom will help the kid in the middle?', choices:yesNo, measure:'Prediction'},
     {id:'predict-mom-confidence', phase:'Prediction confidence · Mom', text:'How sure are you?', choices:confidence, measure:'Prediction confidence', proposed:true, relatedPrediction:'predict-mom', note:'Proposed new confidence measure. Asked after either Yes or No to the immediately preceding prediction; wording is provisional.'},

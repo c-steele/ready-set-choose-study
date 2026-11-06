@@ -20,7 +20,7 @@ This little one is this kid’s brother.
 
 This big one is this kid’s teacher too.
 
-Now let’s say that one day the kid in the middle was very sad.
+Oh no! The kid in the middle is sad now!
 
 The kid’s teacher and the kid’s mom both see that the kid is sad.
 
@@ -296,7 +296,7 @@ The kid’s sister did NOT help the kid. The kid’s brother did NOT help the ki
 
 Actually, remember, no one helped the kid. The kid’s sister did NOT help the kid. The kid’s brother did NOT help the kid. No one helped the kid.
 
-Now let’s say that one day the mom was very sad.
+Oh no! The mom in the middle is sad now!
 
 The kid’s dad and the kid both see that the mom is sad.
 
@@ -344,7 +344,7 @@ You chose the kid’s dad. Did you mean that the kid’s dad was meaner for NOT 
 
 You chose the kid. Did you mean that the kid was meaner for NOT helping the mom in the middle? Yes or No.
 
-Now let’s say that one day the dad was very sad.
+Oh no! The dad in the middle is sad now!
 
 The kid and the kid’s mom both see that the dad is sad.
 
@@ -388,7 +388,7 @@ You chose the kid. Did you mean that the kid was meaner for NOT helping the dad 
 
 You chose the kid’s mom. Did you mean that the kid’s mom was meaner for NOT helping the dad in the middle? Yes or No.
 
-Now let’s say that one day the teacher in the middle was very sad.
+Oh no! The teacher in the middle is sad now!
 
 The teacher on the left and the kid both see that the teacher in the middle is sad.
 

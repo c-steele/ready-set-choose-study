@@ -18,7 +18,7 @@ Includes 54 required choice-confirmation screens and 36 correct-answer practice-
 
 54 forced choices + 36 individual Mean/Not Mean judgments + 18–54 how-mean ratings + 54 choice confirmations + 18 recall checks + 36 brief practice responses.
 
-Illustrative duration: **65–94.3 minutes**, based on 7043–8065 spoken words.
+Illustrative duration: **64.5–93.7 minutes**, based on 6977–7999 spoken words.
 
 - Illustrative estimate, not observed child-session duration.
 - Read-aloud pace: 110–130 words per minute; response time: 3–5 seconds per selection.
@@ -64,7 +64,7 @@ Left: the kid’s teacher. Middle: the kid in the middle. Right: the kid’s mom
 
 ### 5. The kid in the middle needs help
 
-“Now let’s say that one day the kid in the middle was very sad.”
+“Oh no! The kid in the middle is sad now!”
 
 [Stimulus source](assets/stimuli/ef6ceaf063c6-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -314,7 +314,7 @@ Left: the kid’s sister. Middle: the kid in the middle. Right: the kid’s frie
 
 ### 27. The kid in the middle needs help
 
-“Now let’s say that one day the kid in the middle was very sad.”
+“Oh no! The kid in the middle is sad now!”
 
 [Stimulus source](assets/stimuli/d8367f1a225f-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -564,7 +564,7 @@ Left: the kid’s friend. Middle: the kid in the middle. Right: the kid’s best
 
 ### 49. The kid in the middle needs help
 
-“Now let’s say that one day the kid in the middle was very sad.”
+“Oh no! The kid in the middle is sad now!”
 
 [Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -814,7 +814,7 @@ Left: the kid’s teacher. Middle: the kid in the middle. Right: the kid’s fri
 
 ### 71. The kid in the middle needs help
 
-“Now let’s say that one day the kid in the middle was very sad.”
+“Oh no! The kid in the middle is sad now!”
 
 [Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1064,7 +1064,7 @@ Left: the kid’s mom. Middle: the kid in the middle. Right: the kid’s sister.
 
 ### 93. The kid in the middle needs help
 
-“Now let’s say that one day the kid in the middle was very sad.”
+“Oh no! The kid in the middle is sad now!”
 
 [Stimulus source](assets/stimuli/cf266d33caca-05-sad.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1314,7 +1314,7 @@ Left: the kid’s classmate. Middle: the kid in the middle. Right: the kid’s t
 
 ### 115. The kid in the middle needs help
 
-“Now let’s say that one day the kid in the middle was very sad.”
+“Oh no! The kid in the middle is sad now!”
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1564,7 +1564,7 @@ Left: the kid’s teacher. Middle: the kid in the middle. Right: the kid’s dad
 
 ### 137. The kid in the middle needs help
 
-“Now let’s say that one day the kid in the middle was very sad.”
+“Oh no! The kid in the middle is sad now!”
 
 [Stimulus source](assets/stimuli/ee15b1b5be65-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1814,7 +1814,7 @@ Left: the kid’s brother. Middle: the kid in the middle. Right: the kid’s fri
 
 ### 159. The kid in the middle needs help
 
-“Now let’s say that one day the kid in the middle was very sad.”
+“Oh no! The kid in the middle is sad now!”
 
 [Stimulus source](assets/stimuli/3538d8e77c34-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -2064,7 +2064,7 @@ Left: the kid’s friend. Middle: the kid in the middle. Right: the kid’s best
 
 ### 181. The kid in the middle needs help
 
-“Now let’s say that one day the kid in the middle was very sad.”
+“Oh no! The kid in the middle is sad now!”
 
 [Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -2314,7 +2314,7 @@ Left: the kid’s teacher. Middle: the kid in the middle. Right: the kid’s fri
 
 ### 203. The kid in the middle needs help
 
-“Now let’s say that one day the kid in the middle was very sad.”
+“Oh no! The kid in the middle is sad now!”
 
 [Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -2564,7 +2564,7 @@ Left: the kid’s dad. Middle: the kid in the middle. Right: the kid’s brother
 
 ### 225. The kid in the middle needs help
 
-“Now let’s say that one day the kid in the middle was very sad.”
+“Oh no! The kid in the middle is sad now!”
 
 [Stimulus source](assets/stimuli/09b52ae33b24-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -2814,7 +2814,7 @@ Left: the kid’s classmate. Middle: the kid in the middle. Right: the kid’s t
 
 ### 247. The kid in the middle needs help
 
-“Now let’s say that one day the kid in the middle was very sad.”
+“Oh no! The kid in the middle is sad now!”
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
@@ -3064,7 +3064,7 @@ Left: the kid’s dad. Middle: the kid in the middle. Right: the kid’s mom.
 
 ### 269. The kid in the middle needs help
 
-“Now let’s say that one day the kid in the middle was very sad.”
+“Oh no! The kid in the middle is sad now!”
 
 [Stimulus source](assets/stimuli/443991b4edc3-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -3314,7 +3314,7 @@ Left: the kid’s sister. Middle: the kid in the middle. Right: the kid’s brot
 
 ### 291. The kid in the middle needs help
 
-“Now let’s say that one day the kid in the middle was very sad.”
+“Oh no! The kid in the middle is sad now!”
 
 [Stimulus source](assets/stimuli/fac075f520aa-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -3564,7 +3564,7 @@ Left: the kid’s dad. Middle: the mom. Right: the kid.
 
 ### 313. The mom needs help
 
-“Now let’s say that one day the mom was very sad.”
+“Oh no! The mom in the middle is sad now!”
 
 [Stimulus source](assets/stimuli/b1ba34666825-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -3814,7 +3814,7 @@ Left: the kid. Middle: the dad. Right: the kid’s mom.
 
 ### 335. The dad needs help
 
-“Now let’s say that one day the dad was very sad.”
+“Oh no! The dad in the middle is sad now!”
 
 [Stimulus source](assets/stimuli/a47ed9f1306d-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -4064,7 +4064,7 @@ Left: the teacher on the left. Middle: the teacher in the middle. Right: the kid
 
 ### 357. The teacher in the middle needs help
 
-“Now let’s say that one day the teacher in the middle was very sad.”
+“Oh no! The teacher in the middle is sad now!”
 
 [Stimulus source](assets/stimuli/4bb031a656d9-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -4314,7 +4314,7 @@ Left: the kid’s classmate. Middle: the kid in the middle. Right: the kid’s t
 
 ### 379. The kid in the middle needs help
 
-“Now let’s say that one day the kid in the middle was very sad.”
+“Oh no! The kid in the middle is sad now!”
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 

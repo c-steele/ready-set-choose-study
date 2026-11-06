@@ -3585,76 +3585,6 @@
       "alignmentFailures": [],
       "zeroDurationWordCount": 0
     },
-    "nr_135": {
-      "sha256": "587851f7ef212f9d645ccfbc973de77f493e8e97a69d325cf6be987d0f0be413",
-      "durationSeconds": 3.68325,
-      "recognizedText": "Now let's say that one day the mom was very sad.",
-      "words": [
-        {
-          "word": "Now",
-          "start": 0,
-          "end": 0.36
-        },
-        {
-          "word": "let's",
-          "start": 0.36,
-          "end": 0.7
-        },
-        {
-          "word": "say",
-          "start": 0.7,
-          "end": 0.84
-        },
-        {
-          "word": "that",
-          "start": 0.84,
-          "end": 0.98
-        },
-        {
-          "word": "one",
-          "start": 0.98,
-          "end": 1.2
-        },
-        {
-          "word": "day",
-          "start": 1.2,
-          "end": 1.46
-        },
-        {
-          "word": "the",
-          "start": 1.46,
-          "end": 1.66
-        },
-        {
-          "word": "mom",
-          "start": 1.66,
-          "end": 1.82
-        },
-        {
-          "word": "was",
-          "start": 1.82,
-          "end": 2.12
-        },
-        {
-          "word": "very",
-          "start": 2.12,
-          "end": 2.46
-        },
-        {
-          "word": "sad.",
-          "start": 2.46,
-          "end": 3.46
-        }
-      ],
-      "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
-      "alignmentAudioFrames": 185,
-      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Now let’s say that one day the mom was very sad.",
-      "exactNormalizedWordMatch": true,
-      "alignmentValid": true,
-      "alignmentFailures": [],
-      "zeroDurationWordCount": 0
-    },
     "nr_136": {
       "sha256": "bff5a1721c921bc220b734e72b50a53d8d08ba90425a6a7ca3b18e49682eb526",
       "durationSeconds": 4.048975,
@@ -3989,76 +3919,6 @@
       "alignmentValid": true,
       "alignmentFailures": [],
       "zeroDurationWordCount": 1
-    },
-    "nr_156": {
-      "sha256": "4d202061cb3b6bcb3f96185bfdf97f36c1abbc74fbd4ac55314583545622a5fb",
-      "durationSeconds": 3.68325,
-      "recognizedText": "Now let's say that one day the dad was very sad.",
-      "words": [
-        {
-          "word": "Now",
-          "start": 0,
-          "end": 0.36
-        },
-        {
-          "word": "let's",
-          "start": 0.36,
-          "end": 0.68
-        },
-        {
-          "word": "say",
-          "start": 0.68,
-          "end": 0.82
-        },
-        {
-          "word": "that",
-          "start": 0.82,
-          "end": 0.98
-        },
-        {
-          "word": "one",
-          "start": 0.98,
-          "end": 1.2
-        },
-        {
-          "word": "day",
-          "start": 1.2,
-          "end": 1.46
-        },
-        {
-          "word": "the",
-          "start": 1.46,
-          "end": 1.68
-        },
-        {
-          "word": "dad",
-          "start": 1.68,
-          "end": 1.9
-        },
-        {
-          "word": "was",
-          "start": 1.9,
-          "end": 2.12
-        },
-        {
-          "word": "very",
-          "start": 2.12,
-          "end": 2.48
-        },
-        {
-          "word": "sad.",
-          "start": 2.48,
-          "end": 3.46
-        }
-      ],
-      "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
-      "alignmentAudioFrames": 185,
-      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Now let’s say that one day the dad was very sad.",
-      "exactNormalizedWordMatch": true,
-      "alignmentValid": true,
-      "alignmentFailures": [],
-      "zeroDurationWordCount": 0
     },
     "nr_157": {
       "sha256": "08c481cb17d1c7c8b8e906bafdff962ba602cee54a9e880052e9e8ae20183478",
@@ -4624,91 +4484,6 @@
       "alignmentValid": true,
       "alignmentFailures": [],
       "zeroDurationWordCount": 1
-    },
-    "nr_176": {
-      "sha256": "c3c706f1978a402e086d5a53881f96d0a40650ec2b0025f32c3a0849fc741386",
-      "durationSeconds": 4.36245,
-      "recognizedText": "Now let's say that one day the teacher in the middle was very sad.",
-      "words": [
-        {
-          "word": "Now",
-          "start": 0,
-          "end": 0.36
-        },
-        {
-          "word": "let's",
-          "start": 0.36,
-          "end": 0.74
-        },
-        {
-          "word": "say",
-          "start": 0.74,
-          "end": 0.88
-        },
-        {
-          "word": "that",
-          "start": 0.88,
-          "end": 1.04
-        },
-        {
-          "word": "one",
-          "start": 1.04,
-          "end": 1.26
-        },
-        {
-          "word": "day",
-          "start": 1.26,
-          "end": 1.52
-        },
-        {
-          "word": "the",
-          "start": 1.52,
-          "end": 1.72
-        },
-        {
-          "word": "teacher",
-          "start": 1.72,
-          "end": 2.08
-        },
-        {
-          "word": "in",
-          "start": 2.08,
-          "end": 2.26
-        },
-        {
-          "word": "the",
-          "start": 2.26,
-          "end": 2.34
-        },
-        {
-          "word": "middle",
-          "start": 2.34,
-          "end": 2.56
-        },
-        {
-          "word": "was",
-          "start": 2.56,
-          "end": 2.76
-        },
-        {
-          "word": "very",
-          "start": 2.76,
-          "end": 3.1
-        },
-        {
-          "word": "sad.",
-          "start": 3.1,
-          "end": 4.08
-        }
-      ],
-      "alignmentModelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
-      "alignmentAudioFrames": 219,
-      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration before alignment; nominal 20ms grid",
-      "expectedText": "Now let’s say that one day the teacher in the middle was very sad.",
-      "exactNormalizedWordMatch": true,
-      "alignmentValid": true,
-      "alignmentFailures": [],
-      "zeroDurationWordCount": 0
     },
     "nr_177": {
       "sha256": "76c684b232c62033b6a95b928765cb414109f7931f7cb47def15a8047d094850",
@@ -11133,109 +10908,6 @@
         {
           "numBeams": 1,
           "recognizedText": "Oh look! Here is a kid.",
-          "exactNormalizedWordMatch": true
-        }
-      ],
-      "articleOmissionExceptionsAllowed": false,
-      "cueAlignmentApproved": true,
-      "recognitionMethod": "unprompted full-context recognition from final unchanged native MP3"
-    },
-    "nr_269": {
-      "id": "nr_269",
-      "sha256": "9dba413927bfc85726e13ee8fbd2b626d470e00d3ddc5248b03b23412f713559",
-      "model": "openai/whisper-base.en",
-      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
-      "offline": true,
-      "expectedTextProvidedToRecognizer": false,
-      "durationSeconds": 4.2057,
-      "decodedDurationSeconds": 4.20575,
-      "recognizedText": "Now let's say that one day the kid in the middle was very sad.",
-      "expectedText": "Now let’s say that one day the kid in the middle was very sad.",
-      "words": [
-        {
-          "word": "Now",
-          "start": 0.0,
-          "end": 0.36
-        },
-        {
-          "word": "let's",
-          "start": 0.36,
-          "end": 0.72
-        },
-        {
-          "word": "say",
-          "start": 0.72,
-          "end": 0.86
-        },
-        {
-          "word": "that",
-          "start": 0.86,
-          "end": 1.04
-        },
-        {
-          "word": "one",
-          "start": 1.04,
-          "end": 1.26
-        },
-        {
-          "word": "day",
-          "start": 1.26,
-          "end": 1.52
-        },
-        {
-          "word": "the",
-          "start": 1.52,
-          "end": 1.74
-        },
-        {
-          "word": "kid",
-          "start": 1.74,
-          "end": 1.98
-        },
-        {
-          "word": "in",
-          "start": 1.98,
-          "end": 2.12
-        },
-        {
-          "word": "the",
-          "start": 2.12,
-          "end": 2.22
-        },
-        {
-          "word": "middle",
-          "start": 2.22,
-          "end": 2.5
-        },
-        {
-          "word": "was",
-          "start": 2.5,
-          "end": 2.66
-        },
-        {
-          "word": "very",
-          "start": 2.66,
-          "end": 2.98
-        },
-        {
-          "word": "sad.",
-          "start": 2.98,
-          "end": 3.98
-        }
-      ],
-      "exactNormalizedWordMatch": true,
-      "alignmentValid": true,
-      "alignmentFailures": [],
-      "zeroDurationWordCount": 0,
-      "alignmentMethod": "Whisper cross-attention DTW cropped to decoded audio duration; approximate boundaries nominal20msgrid",
-      "alignmentAudioFrames": 211,
-      "numBeams": 1,
-      "generationTimestampTokens": false,
-      "recognitionTempo": 1,
-      "recognitionTests": [
-        {
-          "numBeams": 1,
-          "recognizedText": "Now let's say that one day the kid in the middle was very sad.",
           "exactNormalizedWordMatch": true
         }
       ],
@@ -28438,6 +28110,266 @@
       "articleOmissionExceptionsAllowed": false,
       "timestampQuantizationAdjustments": [],
       "nativeWordLevelAudioSplicing": false
+    },
+    "ftc_005": {
+      "id": "ftc_005",
+      "sha256": "fe9c68bd59f37060b15e4f62c330c4d98c882038012c9ed6d53786e2dbd9e3c8",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "expectedText": "Oh no! The kid in the middle is sad now!",
+      "recognizedText": "Oh no! The kid in the middle is sad now.",
+      "words": [
+        {
+          "word": "Oh",
+          "start": 0.0,
+          "end": 0.36
+        },
+        {
+          "word": "no!",
+          "start": 0.36,
+          "end": 1.46
+        },
+        {
+          "word": "The",
+          "start": 1.46,
+          "end": 1.62
+        },
+        {
+          "word": "kid",
+          "start": 1.62,
+          "end": 1.8
+        },
+        {
+          "word": "in",
+          "start": 1.8,
+          "end": 1.92
+        },
+        {
+          "word": "the",
+          "start": 1.92,
+          "end": 2.02
+        },
+        {
+          "word": "middle",
+          "start": 2.02,
+          "end": 2.28
+        },
+        {
+          "word": "is",
+          "start": 2.28,
+          "end": 2.46
+        },
+        {
+          "word": "sad",
+          "start": 2.46,
+          "end": 2.8
+        },
+        {
+          "word": "now.",
+          "start": 2.8,
+          "end": 3.62
+        }
+      ],
+      "decodedDurationSeconds": 3.9445,
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true
+    },
+    "ftc_018": {
+      "id": "ftc_018",
+      "sha256": "7d66da3bb09f145165a349a7758f3a626aaf8fdba6aeab12cf080584d23208b7",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "expectedText": "Oh no! The mom in the middle is sad now!",
+      "recognizedText": "Oh no! The mom in the middle is sad now.",
+      "words": [
+        {
+          "word": "Oh",
+          "start": 0.0,
+          "end": 0.38
+        },
+        {
+          "word": "no!",
+          "start": 0.38,
+          "end": 1.46
+        },
+        {
+          "word": "The",
+          "start": 1.46,
+          "end": 1.66
+        },
+        {
+          "word": "mom",
+          "start": 1.66,
+          "end": 1.84
+        },
+        {
+          "word": "in",
+          "start": 1.84,
+          "end": 2.1
+        },
+        {
+          "word": "the",
+          "start": 2.1,
+          "end": 2.18
+        },
+        {
+          "word": "middle",
+          "start": 2.18,
+          "end": 2.48
+        },
+        {
+          "word": "is",
+          "start": 2.48,
+          "end": 2.66
+        },
+        {
+          "word": "sad",
+          "start": 2.66,
+          "end": 2.98
+        },
+        {
+          "word": "now.",
+          "start": 2.98,
+          "end": 3.84
+        }
+      ],
+      "decodedDurationSeconds": 4.127375,
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true
+    },
+    "ftc_027": {
+      "id": "ftc_027",
+      "sha256": "098726ea30fd05d7f1d4a0434a55ebc1daa227df3d9b34678bbca54f15413fdc",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "expectedText": "Oh no! The teacher in the middle is sad now!",
+      "recognizedText": "Oh no! The teacher in the middle is sad now.",
+      "words": [
+        {
+          "word": "Oh",
+          "start": 0.0,
+          "end": 0.36
+        },
+        {
+          "word": "no!",
+          "start": 0.36,
+          "end": 1.48
+        },
+        {
+          "word": "The",
+          "start": 1.48,
+          "end": 1.68
+        },
+        {
+          "word": "teacher",
+          "start": 1.68,
+          "end": 2.0
+        },
+        {
+          "word": "in",
+          "start": 2.0,
+          "end": 2.2
+        },
+        {
+          "word": "the",
+          "start": 2.2,
+          "end": 2.28
+        },
+        {
+          "word": "middle",
+          "start": 2.28,
+          "end": 2.54
+        },
+        {
+          "word": "is",
+          "start": 2.54,
+          "end": 2.78
+        },
+        {
+          "word": "sad",
+          "start": 2.78,
+          "end": 3.1
+        },
+        {
+          "word": "now.",
+          "start": 3.1,
+          "end": 3.96
+        }
+      ],
+      "decodedDurationSeconds": 4.231875,
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true
+    },
+    "ftc_042": {
+      "id": "ftc_042",
+      "sha256": "c75c2b5bf9e08d025ae92e38ca1bd2a18abb037020a947ccb9b2ffc3b89d46e6",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "expectedText": "Oh no! The dad in the middle is sad now!",
+      "recognizedText": "Oh no! The dad in the middle is sad now.",
+      "words": [
+        {
+          "word": "Oh",
+          "start": 0.0,
+          "end": 0.38
+        },
+        {
+          "word": "no!",
+          "start": 0.38,
+          "end": 1.46
+        },
+        {
+          "word": "The",
+          "start": 1.46,
+          "end": 1.68
+        },
+        {
+          "word": "dad",
+          "start": 1.68,
+          "end": 1.92
+        },
+        {
+          "word": "in",
+          "start": 1.92,
+          "end": 2.1
+        },
+        {
+          "word": "the",
+          "start": 2.1,
+          "end": 2.2
+        },
+        {
+          "word": "middle",
+          "start": 2.2,
+          "end": 2.46
+        },
+        {
+          "word": "is",
+          "start": 2.46,
+          "end": 2.66
+        },
+        {
+          "word": "sad",
+          "start": 2.66,
+          "end": 2.98
+        },
+        {
+          "word": "now.",
+          "start": 2.98,
+          "end": 3.82
+        }
+      ],
+      "decodedDurationSeconds": 4.127375,
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true
     }
   },
   "reuseNote": "Verified existing hash-bound timestamps are preserved, including historical inactive entries. Newly reused exact-text ready option recordings copy their original timestamp entries without realignment."
