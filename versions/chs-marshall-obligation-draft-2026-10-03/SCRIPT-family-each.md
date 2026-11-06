@@ -5,83 +5,66 @@
 - This is a draft adaptation using Find the Caregiver stimuli and the Marshall Study 1 question structure.
 - Helpers are questioned individually in left-to-right order. All paths lead to neither helper helping.
 - Prediction confidence is an added adaptation measure, not recovered Marshall wording. Its three response labels remain provisional.
-- Prediction is Yes/No, as in Marshall Study 1. A new provisional confidence question follows each prediction after either Yes or No. Strength questions follow obligation and meanness judgments conditionally.
-- The overall-evaluation strength prompt remains proposed wording, not verified verbatim Marshall wording.
+- Prediction is Yes/No, as in Marshall Study 1. The proposed confidence question repeats that helper’s prediction: will help after Yes; will NOT help after No. Strength questions follow obligation and meanness judgments conditionally.
+- The overall-evaluation question now explicitly repeats that no one helped; this is adapted wording. The overall-evaluation strength prompt remains proposed wording, not verified verbatim Marshall wording.
+- A No obligation response is repeated in a neutral spoken confirmation. Yes accepts that No and skips the how-much follow-up; No returns to the obligation question. This confirmation is an adaptation, not a correctness check.
 - White backgrounds and the same sadness context are used throughout. Source relationships, character positions, and intro order are preserved.
 - Practice repeats before obligation questions in each story, matching the captured Marshall Study 1 sequence.
 - This preview contains the six pairings from one role set in a fixed review order.
 
-Expected path range: **175–205 screens**, **120–150 responses**.
+Expected path range: **187–205 screens**, **114–132 responses**.
 
-Includes 6 required choice-confirmation screens and 12 correct-answer practice-feedback screens in addition to the static storyboard.
+Includes 6–18 answer-confirmation screens and 12 correct-answer practice-feedback screens in addition to the static storyboard.
 
-60 main judgments (including 12 prediction-confidence responses) + 6 helper-choice confirmations + 36 identity/recall checks + 18 practice responses + 0–30 conditional study-strength responses.
+Main judgments: 60 (including 12 prediction-confidence responses). Recall checks: 18. Practice responses: 18. Answer confirmations: 6–18. Conditional study-strength responses: 0–30. The total screen and response ranges above are computed for complete paths; separate minimum counts need not occur together.
 
-Illustrative duration: **26.1–42.3 minutes**, based on 2617–3273 spoken words.
+Illustrative duration: **29.3–43.1 minutes**, based on 3069–3534 spoken words.
 
 - Illustrative estimate, not observed child-session duration.
 - Read-aloud pace: 110–130 words per minute; response time: 3–5 seconds per selection.
-- Includes each response label once, one accepted Yes confirmation after each helper-choice comparison, and mandatory correct-answer practice feedback; excludes repeated binary labels already stated in the prompt.
-- Assumes correct identity, recall, and practice answers, including Yes to stopping being mean and No to lying. Incorrect check responses require correction and retry; there is no bypass.
-- Does not include correction repeats, rejected helper-choice confirmations, breaks, setup, narration-only transition delays, or extra pauses between glowing options. Screen counts include required confirmation and correct-answer feedback stages; error retries are not counted.
+- Includes each response label once, accepted Yes confirmation after each helper-choice comparison and after each No obligation judgment, and mandatory correct-answer practice feedback; excludes binary labels already stated in the prompt.
+- Yes to an individual obligation judgment opens its strength follow-up. No opens a neutral answer-confirmation screen, then skips that strength follow-up after the child confirms the No answer.
+- Screen, response, strength, confirmation, word, and duration ranges are each computed across complete paths. Separate minimum counts need not occur on the same path.
+- Assumes correct recall and practice answers, including Yes to stopping being mean and No to lying. Incorrect check responses require correction and retry; there is no bypass.
+- Does not include correction repeats, rejected answer confirmations, breaks, setup, narration-only transition delays, or extra pauses between glowing options. Screen counts include accepted confirmation and correct-answer feedback stages; error retries are not counted.
 
 The storyboard below includes all possible branches. Correct No is required for the lying practice question, so its retained legacy Yes-strength card is not reached during the normal path.
 
 ## Story 1: Mom–Dad
 
-Left: the kid’s dad. Middle: the kid. Right: the kid’s mom.
+Left: the kid’s dad. Middle: the kid in the middle. Right: the kid’s mom.
 
 ### 1. Meet the characters
 
-“Oh look! Here is a kid.”
+“Look! Here are some people.”
 
 [Stimulus source](assets/stimuli/a536bea376a4-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening adapted to the single kid shown on screen.*
+### 2. Meet the kid in the middle
 
-### 2. Meet the kid
-
-“This little one is a kid. Tap the kid.”
+“This little one is a kid.”
 
 [Stimulus source](assets/stimuli/3ee3708abba0-intro_02.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: recipient.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This little one is a kid. This one is the kid. Tap the kid.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 3. Meet the kid’s dad
 
-“This big one is this kid’s dad. Tap the kid’s dad.”
+“This big one is this kid’s dad.”
 
 [Stimulus source](assets/stimuli/1e980c95dcac-intro_03.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper1.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This big one is this kid’s dad. This one is the kid’s dad. Tap the kid’s dad.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 4. Meet the kid’s mom
 
-“This big one is this kid’s mom. Tap the kid’s mom.”
+“This big one is this kid’s mom.”
 
 [Stimulus source](assets/stimuli/ef70b2fc2757-intro_04.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper2.
+*Narrated character introduction from Find the Caregiver.*
 
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This big one is this kid’s mom. This one is the kid’s mom. Tap the kid’s mom.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
-
-### 5. The kid needs help
+### 5. The kid in the middle needs help
 
 “Now let’s say that one day the kid in the middle was very sad.”
 
@@ -89,13 +72,13 @@ Reminder if needed: “This big one is this kid’s mom. This one is the kid’s
 
 ### 6. Both helpers see
 
-“The kid’s dad and the kid’s mom both see that the kid is sad.”
+“The kid’s dad and the kid’s mom both see that the kid in the middle is sad.”
 
 [Stimulus source](assets/stimuli/443991b4edc3-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 ### 7. Prediction · Dad
 
-“Now, do you think the kid’s dad will help the kid?”
+“Now, do you think the kid’s dad will help the kid in the middle?”
 
 [Stimulus source](assets/stimuli/443991b4edc3-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -107,6 +90,10 @@ Choices: Yes / No.
 
 “How sure are you?”
 
+After Yes: “How sure are you that the kid’s dad will help the kid in the middle?”
+
+After No: “How sure are you that the kid’s dad will NOT help the kid in the middle?”
+
 [Stimulus source](assets/stimuli/443991b4edc3-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Not sure / A little sure / Very sure.
@@ -115,7 +102,7 @@ Choices: Not sure / A little sure / Very sure.
 
 ### 9. Prediction · Mom
 
-“Now, do you think the kid’s mom will help the kid?”
+“Now, do you think the kid’s mom will help the kid in the middle?”
 
 [Stimulus source](assets/stimuli/443991b4edc3-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -126,6 +113,10 @@ Choices: Yes / No.
 *Confidence about the immediately preceding prediction, after either Yes or No (family-mom-dad:predict-helper2).*
 
 “How sure are you?”
+
+After Yes: “How sure are you that the kid’s mom will help the kid in the middle?”
+
+After No: “How sure are you that the kid’s mom will NOT help the kid in the middle?”
 
 [Stimulus source](assets/stimuli/443991b4edc3-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -213,19 +204,23 @@ Choices: A teeny bit / A little bit / A lot.
 
 ### 17. Obligation · Dad
 
-“Now, do you think the kid’s dad HAS TO help the kid? Yes or No.”
+“Now, do you think the kid’s dad HAS TO help the kid in the middle? Yes or No.”
 
 [Stimulus source](assets/stimuli/443991b4edc3-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Yes / No.
 
+After choosing “No”, confirm: “You think the kid’s dad does NOT HAVE TO help the kid in the middle. Is that what you meant? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
+
+*No opens a neutral spoken confirmation. Yes on the confirmation accepts the original No and skips the strength question; No returns to this obligation question. Neither study answer is marked incorrect.*
+
 ### 18. Obligation strength · Dad
 
 *Only after “Yes” to Obligation · Dad.*
 
-“How much do you think the kid’s dad HAS TO?”
+“How much do you think the kid’s dad HAS TO help the kid in the middle?”
 
-Display wording: “How much do you think the kid’s dad HAS TO?” The role is included in the question; no separate role label is displayed above it.
+Display wording: “How much do you think the kid’s dad HAS TO help the kid in the middle?” The role is included in the question; no separate role label is displayed above it.
 
 [Stimulus source](assets/stimuli/443991b4edc3-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -235,19 +230,23 @@ Choices: A teeny bit / A little bit / A lot.
 
 ### 19. Obligation · Mom
 
-“Now, do you think the kid’s mom HAS TO help the kid? Yes or No.”
+“Now, do you think the kid’s mom HAS TO help the kid in the middle? Yes or No.”
 
 [Stimulus source](assets/stimuli/443991b4edc3-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Yes / No.
 
+After choosing “No”, confirm: “You think the kid’s mom does NOT HAVE TO help the kid in the middle. Is that what you meant? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
+
+*No opens a neutral spoken confirmation. Yes on the confirmation accepts the original No and skips the strength question; No returns to this obligation question. Neither study answer is marked incorrect.*
+
 ### 20. Obligation strength · Mom
 
 *Only after “Yes” to Obligation · Mom.*
 
-“How much do you think the kid’s mom HAS TO?”
+“How much do you think the kid’s mom HAS TO help the kid in the middle?”
 
-Display wording: “How much do you think the kid’s mom HAS TO?” The role is included in the question; no separate role label is displayed above it.
+Display wording: “How much do you think the kid’s mom HAS TO help the kid in the middle?” The role is included in the question; no separate role label is displayed above it.
 
 [Stimulus source](assets/stimuli/443991b4edc3-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -257,9 +256,9 @@ Choices: A teeny bit / A little bit / A lot.
 
 ### 21. No one helped
 
-“No one helped the kid.”
+“No one helped the kid in the middle.”
 
-Display wording: “No one helped the kid.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+Display wording: “No one helped the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
 
 [Stimulus source](assets/stimuli/443991b4edc3-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -267,11 +266,11 @@ Display wording: “No one helped the kid.” Both helper cues remain visible be
 
 ### 22. Each helper did NOT help
 
-“The kid’s dad did NOT help the kid. The kid’s mom did NOT help the kid. No one helped the kid.”
+“The kid’s dad did NOT help the kid in the middle. And the kid’s mom did NOT help the kid in the middle. No one helped the kid in the middle.”
 
-Display wording: “The kid’s dad did NOT help the kid.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+Display wording: “The kid’s dad did NOT help the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
 
-Captions follow the narration, in order: “The kid’s dad did NOT help the kid.” → “The kid’s mom did NOT help the kid.” → “No one helped the kid.”.
+Captions follow the narration, in order: “The kid’s dad did NOT help the kid in the middle.” → “And the kid’s mom did NOT help the kid in the middle.” → “No one helped the kid in the middle.”.
 
 [Stimulus source](assets/stimuli/443991b4edc3-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -279,7 +278,7 @@ Captions follow the narration, in order: “The kid’s dad did NOT help the kid
 
 ### 23. Recall · No one helped
 
-“Can you tell me, did either of these people help the kid?”
+“Can you tell me, did either of these people help the kid in the middle?”
 
 [Stimulus source](assets/stimuli/443991b4edc3-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -289,21 +288,21 @@ Expected check/practice answer: No.
 
 A correct response is required to advance; there is no bypass.
 
-Reminder if needed: “Actually, remember, no one helped the kid. The kid’s dad did NOT help the kid. The kid’s mom did NOT help the kid. No one helped the kid.”
+Reminder if needed: “Actually, remember, no one helped the kid in the middle. And the kid’s dad did NOT help the kid in the middle. And the kid’s mom did NOT help the kid in the middle. No one helped the kid in the middle.”
 
 After the reminder, reread the full question and response labels before reopening the choices.
 
-### 24. Overall evaluation
+### 24. Overall evaluation — PROPOSED WORDING
 
-No one helped the kid.
+No one helped the kid in the middle.
 
-“Do you think this was a mean or nice thing that happened?”
+“Do you think it was mean or nice that no one helped the kid in the middle?”
 
 [Stimulus source](assets/stimuli/443991b4edc3-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Mean / Nice.
 
-*Exploratory measure in Marshall Study 1.*
+*Adapted overall-evaluation wording explicitly repeats that no one helped the recipient.*
 
 ### 25. Overall evaluation strength — PROPOSED WORDING
 
@@ -319,7 +318,7 @@ Choices: A tiny bit mean / A little bit mean / A lot mean.
 
 ### 26. Recall · Dad
 
-“Do you remember, did the kid’s dad help the kid?”
+“Do you remember, did the kid’s dad help the kid in the middle?”
 
 [Stimulus source](assets/stimuli/443991b4edc3-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -329,7 +328,7 @@ Expected check/practice answer: No.
 
 A correct response is required to advance; there is no bypass.
 
-Reminder if needed: “Remember, the kid’s dad did not help the kid. Do you remember, did the kid’s dad help the kid?”
+Reminder if needed: “Remember, the kid’s dad did not help the kid in the middle. Do you remember, did the kid’s dad help the kid in the middle?”
 
 ### 27. Individual evaluation · Dad
 
@@ -353,7 +352,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 ### 29. Recall · Mom
 
-“Do you remember, did the kid’s mom help the kid?”
+“Do you remember, did the kid’s mom help the kid in the middle?”
 
 [Stimulus source](assets/stimuli/443991b4edc3-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -363,7 +362,7 @@ Expected check/practice answer: No.
 
 A correct response is required to advance; there is no bypass.
 
-Reminder if needed: “Remember, the kid’s mom did not help the kid. Do you remember, did the kid’s mom help the kid?”
+Reminder if needed: “Remember, the kid’s mom did not help the kid in the middle. Do you remember, did the kid’s mom help the kid in the middle?”
 
 ### 30. Individual evaluation · Mom
 
@@ -401,59 +400,39 @@ After choosing “The kid’s mom”, confirm: “You chose the kid’s mom. Did
 
 ## Story 2: Sister–Brother
 
-Left: the kid’s sister. Middle: the kid. Right: the kid’s brother.
+Left: the kid’s sister. Middle: the kid in the middle. Right: the kid’s brother.
 
 ### 33. Meet the characters
 
-“Oh look! Here is a kid.”
+“Look! Here are some people.”
 
 [Stimulus source](assets/stimuli/931a3ff701b0-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening adapted to the single kid shown on screen.*
+### 34. Meet the kid in the middle
 
-### 34. Meet the kid
-
-“This little one is a kid. Tap the kid.”
+“This little one is a kid.”
 
 [Stimulus source](assets/stimuli/b22dc4ce9487-intro_02.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: recipient.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This little one is a kid. This one is the kid. Tap the kid.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 35. Meet the kid’s sister
 
-“This little one is this kid’s sister. Tap the kid’s sister.”
+“This little one is this kid’s sister.”
 
 [Stimulus source](assets/stimuli/6a31a255e09e-intro_03.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper1.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This little one is this kid’s sister. This one is the kid’s sister. Tap the kid’s sister.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 36. Meet the kid’s brother
 
-“This little one is this kid’s brother. Tap the kid’s brother.”
+“This little one is this kid’s brother.”
 
 [Stimulus source](assets/stimuli/118cdfcb8a13-intro_04.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper2.
+*Narrated character introduction from Find the Caregiver.*
 
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This little one is this kid’s brother. This one is the kid’s brother. Tap the kid’s brother.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
-
-### 37. The kid needs help
+### 37. The kid in the middle needs help
 
 “Now let’s say that one day the kid in the middle was very sad.”
 
@@ -461,13 +440,13 @@ Reminder if needed: “This little one is this kid’s brother. This one is the 
 
 ### 38. Both helpers see
 
-“The kid’s sister and the kid’s brother both see that the kid is sad.”
+“The kid’s sister and the kid’s brother both see that the kid in the middle is sad.”
 
 [Stimulus source](assets/stimuli/fac075f520aa-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 ### 39. Prediction · Sister
 
-“Now, do you think the kid’s sister will help the kid?”
+“Now, do you think the kid’s sister will help the kid in the middle?”
 
 [Stimulus source](assets/stimuli/fac075f520aa-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -479,6 +458,10 @@ Choices: Yes / No.
 
 “How sure are you?”
 
+After Yes: “How sure are you that the kid’s sister will help the kid in the middle?”
+
+After No: “How sure are you that the kid’s sister will NOT help the kid in the middle?”
+
 [Stimulus source](assets/stimuli/fac075f520aa-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Not sure / A little sure / Very sure.
@@ -487,7 +470,7 @@ Choices: Not sure / A little sure / Very sure.
 
 ### 41. Prediction · Brother
 
-“Now, do you think the kid’s brother will help the kid?”
+“Now, do you think the kid’s brother will help the kid in the middle?”
 
 [Stimulus source](assets/stimuli/fac075f520aa-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -498,6 +481,10 @@ Choices: Yes / No.
 *Confidence about the immediately preceding prediction, after either Yes or No (family-sister-brother:predict-helper2).*
 
 “How sure are you?”
+
+After Yes: “How sure are you that the kid’s brother will help the kid in the middle?”
+
+After No: “How sure are you that the kid’s brother will NOT help the kid in the middle?”
 
 [Stimulus source](assets/stimuli/fac075f520aa-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -585,19 +572,23 @@ Choices: A teeny bit / A little bit / A lot.
 
 ### 49. Obligation · Sister
 
-“Now, do you think the kid’s sister HAS TO help the kid? Yes or No.”
+“Now, do you think the kid’s sister HAS TO help the kid in the middle? Yes or No.”
 
 [Stimulus source](assets/stimuli/fac075f520aa-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Yes / No.
 
+After choosing “No”, confirm: “You think the kid’s sister does NOT HAVE TO help the kid in the middle. Is that what you meant? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
+
+*No opens a neutral spoken confirmation. Yes on the confirmation accepts the original No and skips the strength question; No returns to this obligation question. Neither study answer is marked incorrect.*
+
 ### 50. Obligation strength · Sister
 
 *Only after “Yes” to Obligation · Sister.*
 
-“How much do you think the kid’s sister HAS TO?”
+“How much do you think the kid’s sister HAS TO help the kid in the middle?”
 
-Display wording: “How much do you think the kid’s sister HAS TO?” The role is included in the question; no separate role label is displayed above it.
+Display wording: “How much do you think the kid’s sister HAS TO help the kid in the middle?” The role is included in the question; no separate role label is displayed above it.
 
 [Stimulus source](assets/stimuli/fac075f520aa-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -607,19 +598,23 @@ Choices: A teeny bit / A little bit / A lot.
 
 ### 51. Obligation · Brother
 
-“Now, do you think the kid’s brother HAS TO help the kid? Yes or No.”
+“Now, do you think the kid’s brother HAS TO help the kid in the middle? Yes or No.”
 
 [Stimulus source](assets/stimuli/fac075f520aa-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Yes / No.
 
+After choosing “No”, confirm: “You think the kid’s brother does NOT HAVE TO help the kid in the middle. Is that what you meant? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
+
+*No opens a neutral spoken confirmation. Yes on the confirmation accepts the original No and skips the strength question; No returns to this obligation question. Neither study answer is marked incorrect.*
+
 ### 52. Obligation strength · Brother
 
 *Only after “Yes” to Obligation · Brother.*
 
-“How much do you think the kid’s brother HAS TO?”
+“How much do you think the kid’s brother HAS TO help the kid in the middle?”
 
-Display wording: “How much do you think the kid’s brother HAS TO?” The role is included in the question; no separate role label is displayed above it.
+Display wording: “How much do you think the kid’s brother HAS TO help the kid in the middle?” The role is included in the question; no separate role label is displayed above it.
 
 [Stimulus source](assets/stimuli/fac075f520aa-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -629,9 +624,9 @@ Choices: A teeny bit / A little bit / A lot.
 
 ### 53. No one helped
 
-“No one helped the kid.”
+“No one helped the kid in the middle.”
 
-Display wording: “No one helped the kid.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+Display wording: “No one helped the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
 
 [Stimulus source](assets/stimuli/fac075f520aa-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -639,11 +634,11 @@ Display wording: “No one helped the kid.” Both helper cues remain visible be
 
 ### 54. Each helper did NOT help
 
-“The kid’s sister did NOT help the kid. The kid’s brother did NOT help the kid. No one helped the kid.”
+“The kid’s sister did NOT help the kid in the middle. And the kid’s brother did NOT help the kid in the middle. No one helped the kid in the middle.”
 
-Display wording: “The kid’s sister did NOT help the kid.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+Display wording: “The kid’s sister did NOT help the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
 
-Captions follow the narration, in order: “The kid’s sister did NOT help the kid.” → “The kid’s brother did NOT help the kid.” → “No one helped the kid.”.
+Captions follow the narration, in order: “The kid’s sister did NOT help the kid in the middle.” → “And the kid’s brother did NOT help the kid in the middle.” → “No one helped the kid in the middle.”.
 
 [Stimulus source](assets/stimuli/fac075f520aa-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -651,7 +646,7 @@ Captions follow the narration, in order: “The kid’s sister did NOT help the 
 
 ### 55. Recall · No one helped
 
-“Can you tell me, did either of these people help the kid?”
+“Can you tell me, did either of these people help the kid in the middle?”
 
 [Stimulus source](assets/stimuli/fac075f520aa-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -661,21 +656,21 @@ Expected check/practice answer: No.
 
 A correct response is required to advance; there is no bypass.
 
-Reminder if needed: “Actually, remember, no one helped the kid. The kid’s sister did NOT help the kid. The kid’s brother did NOT help the kid. No one helped the kid.”
+Reminder if needed: “Actually, remember, no one helped the kid in the middle. And the kid’s sister did NOT help the kid in the middle. And the kid’s brother did NOT help the kid in the middle. No one helped the kid in the middle.”
 
 After the reminder, reread the full question and response labels before reopening the choices.
 
-### 56. Overall evaluation
+### 56. Overall evaluation — PROPOSED WORDING
 
-No one helped the kid.
+No one helped the kid in the middle.
 
-“Do you think this was a mean or nice thing that happened?”
+“Do you think it was mean or nice that no one helped the kid in the middle?”
 
 [Stimulus source](assets/stimuli/fac075f520aa-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Mean / Nice.
 
-*Exploratory measure in Marshall Study 1.*
+*Adapted overall-evaluation wording explicitly repeats that no one helped the recipient.*
 
 ### 57. Overall evaluation strength — PROPOSED WORDING
 
@@ -691,7 +686,7 @@ Choices: A tiny bit mean / A little bit mean / A lot mean.
 
 ### 58. Recall · Sister
 
-“Do you remember, did the kid’s sister help the kid?”
+“Do you remember, did the kid’s sister help the kid in the middle?”
 
 [Stimulus source](assets/stimuli/fac075f520aa-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -701,7 +696,7 @@ Expected check/practice answer: No.
 
 A correct response is required to advance; there is no bypass.
 
-Reminder if needed: “Remember, the kid’s sister did not help the kid. Do you remember, did the kid’s sister help the kid?”
+Reminder if needed: “Remember, the kid’s sister did not help the kid in the middle. Do you remember, did the kid’s sister help the kid in the middle?”
 
 ### 59. Individual evaluation · Sister
 
@@ -725,7 +720,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 ### 61. Recall · Brother
 
-“Do you remember, did the kid’s brother help the kid?”
+“Do you remember, did the kid’s brother help the kid in the middle?”
 
 [Stimulus source](assets/stimuli/fac075f520aa-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -735,7 +730,7 @@ Expected check/practice answer: No.
 
 A correct response is required to advance; there is no bypass.
 
-Reminder if needed: “Remember, the kid’s brother did not help the kid. Do you remember, did the kid’s brother help the kid?”
+Reminder if needed: “Remember, the kid’s brother did not help the kid in the middle. Do you remember, did the kid’s brother help the kid in the middle?”
 
 ### 62. Individual evaluation · Brother
 
@@ -777,53 +772,33 @@ Left: the kid’s dad. Middle: the mom. Right: the kid.
 
 ### 65. Meet the characters
 
-“Oh look! Here is a kid.”
+“Look! Here are some people.”
 
 [Stimulus source](assets/stimuli/966365322eff-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening adapted to the single kid shown on screen.*
-
 ### 66. Meet the kid
 
-“This little one is a kid. Tap the kid.”
+“This little one is a kid.”
 
 [Stimulus source](assets/stimuli/7849c46a23c8-intro_02.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper2.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This little one is a kid. This one is the kid. Tap the kid.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 67. Meet the kid’s dad
 
-“This big one is this kid’s dad. Tap the kid’s dad.”
+“This big one is this kid’s dad.”
 
 [Stimulus source](assets/stimuli/c5c6407132b2-intro_03.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper1.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This big one is this kid’s dad. This one is the kid’s dad. Tap the kid’s dad.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 68. Meet the mom
 
-“This big one is this kid’s mom. Tap the mom.”
+“This big one is this kid’s mom.”
 
 [Stimulus source](assets/stimuli/a581aa99f6cf-intro_04.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: recipient.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This big one is this kid’s mom. This one is the mom. Tap the mom.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation. The person who needs help is an adult in this story.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 69. The mom needs help
 
@@ -851,6 +826,10 @@ Choices: Yes / No.
 
 “How sure are you?”
 
+After Yes: “How sure are you that the kid’s dad will help the mom?”
+
+After No: “How sure are you that the kid’s dad will NOT help the mom?”
+
 [Stimulus source](assets/stimuli/b1ba34666825-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Not sure / A little sure / Very sure.
@@ -870,6 +849,10 @@ Choices: Yes / No.
 *Confidence about the immediately preceding prediction, after either Yes or No (family-dad-kid:predict-helper2).*
 
 “How sure are you?”
+
+After Yes: “How sure are you that the kid will help the mom?”
+
+After No: “How sure are you that the kid will NOT help the mom?”
 
 [Stimulus source](assets/stimuli/b1ba34666825-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -963,13 +946,17 @@ Choices: A teeny bit / A little bit / A lot.
 
 Choices: Yes / No.
 
+After choosing “No”, confirm: “You think the kid’s dad does NOT HAVE TO help the mom. Is that what you meant? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
+
+*No opens a neutral spoken confirmation. Yes on the confirmation accepts the original No and skips the strength question; No returns to this obligation question. Neither study answer is marked incorrect.*
+
 ### 82. Obligation strength · Dad
 
 *Only after “Yes” to Obligation · Dad.*
 
-“How much do you think the kid’s dad HAS TO?”
+“How much do you think the kid’s dad HAS TO help the mom?”
 
-Display wording: “How much do you think the kid’s dad HAS TO?” The role is included in the question; no separate role label is displayed above it.
+Display wording: “How much do you think the kid’s dad HAS TO help the mom?” The role is included in the question; no separate role label is displayed above it.
 
 [Stimulus source](assets/stimuli/b1ba34666825-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -985,13 +972,17 @@ Choices: A teeny bit / A little bit / A lot.
 
 Choices: Yes / No.
 
+After choosing “No”, confirm: “You think the kid does NOT HAVE TO help the mom. Is that what you meant? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
+
+*No opens a neutral spoken confirmation. Yes on the confirmation accepts the original No and skips the strength question; No returns to this obligation question. Neither study answer is marked incorrect.*
+
 ### 84. Obligation strength · Kid
 
 *Only after “Yes” to Obligation · Kid.*
 
-“How much do you think the kid HAS TO?”
+“How much do you think the kid HAS TO help the mom?”
 
-Display wording: “How much do you think the kid HAS TO?” The role is included in the question; no separate role label is displayed above it.
+Display wording: “How much do you think the kid HAS TO help the mom?” The role is included in the question; no separate role label is displayed above it.
 
 [Stimulus source](assets/stimuli/b1ba34666825-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1037,17 +1028,17 @@ Reminder if needed: “Actually, remember, no one helped the mom. The kid’s da
 
 After the reminder, reread the full question and response labels before reopening the choices.
 
-### 88. Overall evaluation
+### 88. Overall evaluation — PROPOSED WORDING
 
 No one helped the mom.
 
-“Do you think this was a mean or nice thing that happened?”
+“Do you think it was mean or nice that no one helped the mom?”
 
 [Stimulus source](assets/stimuli/b1ba34666825-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Mean / Nice.
 
-*Exploratory measure in Marshall Study 1.*
+*Adapted overall-evaluation wording explicitly repeats that no one helped the recipient.*
 
 ### 89. Overall evaluation strength — PROPOSED WORDING
 
@@ -1149,53 +1140,33 @@ Left: the kid. Middle: the dad. Right: the kid’s mom.
 
 ### 97. Meet the characters
 
-“Oh look! Here is a kid.”
+“Look! Here are some people.”
 
 [Stimulus source](assets/stimuli/0b393251d294-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening adapted to the single kid shown on screen.*
-
 ### 98. Meet the kid
 
-“This little one is a kid. Tap the kid.”
+“This little one is a kid.”
 
 [Stimulus source](assets/stimuli/84bb858d2543-intro_02.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper1.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This little one is a kid. This one is the kid. Tap the kid.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 99. Meet the dad
 
-“This big one is this kid’s dad. Tap the dad.”
+“This big one is this kid’s dad.”
 
 [Stimulus source](assets/stimuli/136f25127d00-intro_03.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: recipient.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This big one is this kid’s dad. This one is the dad. Tap the dad.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation. The person who needs help is an adult in this story.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 100. Meet the kid’s mom
 
-“This big one is this kid’s mom. Tap the kid’s mom.”
+“This big one is this kid’s mom.”
 
 [Stimulus source](assets/stimuli/bcf1701cd885-intro_04.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper2.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This big one is this kid’s mom. This one is the kid’s mom. Tap the kid’s mom.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 101. The dad needs help
 
@@ -1223,6 +1194,10 @@ Choices: Yes / No.
 
 “How sure are you?”
 
+After Yes: “How sure are you that the kid will help the dad?”
+
+After No: “How sure are you that the kid will NOT help the dad?”
+
 [Stimulus source](assets/stimuli/a47ed9f1306d-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Not sure / A little sure / Very sure.
@@ -1242,6 +1217,10 @@ Choices: Yes / No.
 *Confidence about the immediately preceding prediction, after either Yes or No (family-mom-kid:predict-helper2).*
 
 “How sure are you?”
+
+After Yes: “How sure are you that the kid’s mom will help the dad?”
+
+After No: “How sure are you that the kid’s mom will NOT help the dad?”
 
 [Stimulus source](assets/stimuli/a47ed9f1306d-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1335,13 +1314,17 @@ Choices: A teeny bit / A little bit / A lot.
 
 Choices: Yes / No.
 
+After choosing “No”, confirm: “You think the kid does NOT HAVE TO help the dad. Is that what you meant? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
+
+*No opens a neutral spoken confirmation. Yes on the confirmation accepts the original No and skips the strength question; No returns to this obligation question. Neither study answer is marked incorrect.*
+
 ### 114. Obligation strength · Kid
 
 *Only after “Yes” to Obligation · Kid.*
 
-“How much do you think the kid HAS TO?”
+“How much do you think the kid HAS TO help the dad?”
 
-Display wording: “How much do you think the kid HAS TO?” The role is included in the question; no separate role label is displayed above it.
+Display wording: “How much do you think the kid HAS TO help the dad?” The role is included in the question; no separate role label is displayed above it.
 
 [Stimulus source](assets/stimuli/a47ed9f1306d-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1357,13 +1340,17 @@ Choices: A teeny bit / A little bit / A lot.
 
 Choices: Yes / No.
 
+After choosing “No”, confirm: “You think the kid’s mom does NOT HAVE TO help the dad. Is that what you meant? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
+
+*No opens a neutral spoken confirmation. Yes on the confirmation accepts the original No and skips the strength question; No returns to this obligation question. Neither study answer is marked incorrect.*
+
 ### 116. Obligation strength · Mom
 
 *Only after “Yes” to Obligation · Mom.*
 
-“How much do you think the kid’s mom HAS TO?”
+“How much do you think the kid’s mom HAS TO help the dad?”
 
-Display wording: “How much do you think the kid’s mom HAS TO?” The role is included in the question; no separate role label is displayed above it.
+Display wording: “How much do you think the kid’s mom HAS TO help the dad?” The role is included in the question; no separate role label is displayed above it.
 
 [Stimulus source](assets/stimuli/a47ed9f1306d-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1409,17 +1396,17 @@ Reminder if needed: “Actually, remember, no one helped the dad. The kid did NO
 
 After the reminder, reread the full question and response labels before reopening the choices.
 
-### 120. Overall evaluation
+### 120. Overall evaluation — PROPOSED WORDING
 
 No one helped the dad.
 
-“Do you think this was a mean or nice thing that happened?”
+“Do you think it was mean or nice that no one helped the dad?”
 
 [Stimulus source](assets/stimuli/a47ed9f1306d-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Mean / Nice.
 
-*Exploratory measure in Marshall Study 1.*
+*Adapted overall-evaluation wording explicitly repeats that no one helped the recipient.*
 
 ### 121. Overall evaluation strength — PROPOSED WORDING
 
@@ -1521,53 +1508,33 @@ Left: the teacher on the left. Middle: the teacher in the middle. Right: the kid
 
 ### 129. Meet the characters
 
-“Oh look! Here is a kid.”
+“Look! Here are some people.”
 
 [Stimulus source](assets/stimuli/448d8507c0ab-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening adapted to the single kid shown on screen.*
-
 ### 130. Meet the kid
 
-“This little one is a kid. Tap the kid.”
+“This little one is a kid.”
 
 [Stimulus source](assets/stimuli/4e0d14a1cfbf-intro_02.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper2.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This little one is a kid. This one is the kid. Tap the kid.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 131. Meet the teacher on the left
 
-“This big one is this kid’s teacher. Tap the teacher on the left.”
+“This big one is this kid’s teacher.”
 
 [Stimulus source](assets/stimuli/e25b10adebd9-intro_03.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper1.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This big one is this kid’s teacher. This one is the teacher on the left. Tap the teacher on the left.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 132. Meet the teacher in the middle
 
-“This big one is this kid’s teacher too. Tap the teacher in the middle.”
+“This big one is this kid’s teacher too.”
 
 [Stimulus source](assets/stimuli/d1392c7313eb-intro_04.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: recipient.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This big one is this kid’s teacher too. This one is the teacher in the middle. Tap the teacher in the middle.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation. The person who needs help is an adult in this story.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 133. The teacher in the middle needs help
 
@@ -1595,6 +1562,10 @@ Choices: Yes / No.
 
 “How sure are you?”
 
+After Yes: “How sure are you that the teacher on the left will help the teacher in the middle?”
+
+After No: “How sure are you that the teacher on the left will NOT help the teacher in the middle?”
+
 [Stimulus source](assets/stimuli/4bb031a656d9-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Not sure / A little sure / Very sure.
@@ -1614,6 +1585,10 @@ Choices: Yes / No.
 *Confidence about the immediately preceding prediction, after either Yes or No (family-teacher-kid:predict-helper2).*
 
 “How sure are you?”
+
+After Yes: “How sure are you that the kid will help the teacher in the middle?”
+
+After No: “How sure are you that the kid will NOT help the teacher in the middle?”
 
 [Stimulus source](assets/stimuli/4bb031a656d9-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1707,13 +1682,17 @@ Choices: A teeny bit / A little bit / A lot.
 
 Choices: Yes / No.
 
+After choosing “No”, confirm: “You think the teacher on the left does NOT HAVE TO help the teacher in the middle. Is that what you meant? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
+
+*No opens a neutral spoken confirmation. Yes on the confirmation accepts the original No and skips the strength question; No returns to this obligation question. Neither study answer is marked incorrect.*
+
 ### 146. Obligation strength · Teacher
 
 *Only after “Yes” to Obligation · Teacher.*
 
-“How much do you think the teacher on the left HAS TO?”
+“How much do you think the teacher on the left HAS TO help the teacher in the middle?”
 
-Display wording: “How much do you think the teacher on the left HAS TO?” The role is included in the question; no separate role label is displayed above it.
+Display wording: “How much do you think the teacher on the left HAS TO help the teacher in the middle?” The role is included in the question; no separate role label is displayed above it.
 
 [Stimulus source](assets/stimuli/4bb031a656d9-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1729,13 +1708,17 @@ Choices: A teeny bit / A little bit / A lot.
 
 Choices: Yes / No.
 
+After choosing “No”, confirm: “You think the kid does NOT HAVE TO help the teacher in the middle. Is that what you meant? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
+
+*No opens a neutral spoken confirmation. Yes on the confirmation accepts the original No and skips the strength question; No returns to this obligation question. Neither study answer is marked incorrect.*
+
 ### 148. Obligation strength · Kid
 
 *Only after “Yes” to Obligation · Kid.*
 
-“How much do you think the kid HAS TO?”
+“How much do you think the kid HAS TO help the teacher in the middle?”
 
-Display wording: “How much do you think the kid HAS TO?” The role is included in the question; no separate role label is displayed above it.
+Display wording: “How much do you think the kid HAS TO help the teacher in the middle?” The role is included in the question; no separate role label is displayed above it.
 
 [Stimulus source](assets/stimuli/4bb031a656d9-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1781,17 +1764,17 @@ Reminder if needed: “Actually, remember, no one helped the teacher in the midd
 
 After the reminder, reread the full question and response labels before reopening the choices.
 
-### 152. Overall evaluation
+### 152. Overall evaluation — PROPOSED WORDING
 
 No one helped the teacher in the middle.
 
-“Do you think this was a mean or nice thing that happened?”
+“Do you think it was mean or nice that no one helped the teacher in the middle?”
 
 [Stimulus source](assets/stimuli/4bb031a656d9-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Mean / Nice.
 
-*Exploratory measure in Marshall Study 1.*
+*Adapted overall-evaluation wording explicitly repeats that no one helped the recipient.*
 
 ### 153. Overall evaluation strength — PROPOSED WORDING
 
@@ -1889,59 +1872,39 @@ After choosing “The kid”, confirm: “You chose the kid. Did you mean that t
 
 ## Story 6: Teacher–Classmate
 
-Left: the kid’s classmate. Middle: the kid. Right: the kid’s teacher.
+Left: the kid’s classmate. Middle: the kid in the middle. Right: the kid’s teacher.
 
 ### 161. Meet the characters
 
-“Oh look! Here is a kid.”
+“Look! Here are some people.”
 
 [Stimulus source](assets/stimuli/44d39b1df683-intro_01.svg) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening adapted to the single kid shown on screen.*
+### 162. Meet the kid in the middle
 
-### 162. Meet the kid
-
-“This little one is a kid. Tap the kid.”
+“This little one is a kid.”
 
 [Stimulus source](assets/stimuli/4e621f5d72b5-intro_02.svg) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: recipient.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This little one is a kid. This one is the kid. Tap the kid.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 163. Meet the kid’s classmate
 
-“This little one is this kid’s classmate. Tap the kid’s classmate.”
+“This little one is this kid’s classmate.”
 
 [Stimulus source](assets/stimuli/2867c2e0bd9c-intro_03.svg) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper1.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This little one is this kid’s classmate. This one is the kid’s classmate. Tap the kid’s classmate.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 164. Meet the kid’s teacher
 
-“This big one is this kid’s teacher. Tap the kid’s teacher.”
+“This big one is this kid’s teacher.”
 
 [Stimulus source](assets/stimuli/a5206d48c30f-intro_04.svg) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper2.
+*Narrated character introduction from Find the Caregiver.*
 
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This big one is this kid’s teacher. This one is the kid’s teacher. Tap the kid’s teacher.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
-
-### 165. The kid needs help
+### 165. The kid in the middle needs help
 
 “Now let’s say that one day the kid in the middle was very sad.”
 
@@ -1949,13 +1912,13 @@ Reminder if needed: “This big one is this kid’s teacher. This one is the kid
 
 ### 166. Both helpers see
 
-“The kid’s classmate and the kid’s teacher both see that the kid is sad.”
+“The kid’s classmate and the kid’s teacher both see that the kid in the middle is sad.”
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
 ### 167. Prediction · Classmate
 
-“Now, do you think the kid’s classmate will help the kid?”
+“Now, do you think the kid’s classmate will help the kid in the middle?”
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1967,6 +1930,10 @@ Choices: Yes / No.
 
 “How sure are you?”
 
+After Yes: “How sure are you that the kid’s classmate will help the kid in the middle?”
+
+After No: “How sure are you that the kid’s classmate will NOT help the kid in the middle?”
+
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Not sure / A little sure / Very sure.
@@ -1975,7 +1942,7 @@ Choices: Not sure / A little sure / Very sure.
 
 ### 169. Prediction · Teacher
 
-“Now, do you think the kid’s teacher will help the kid?”
+“Now, do you think the kid’s teacher will help the kid in the middle?”
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1986,6 +1953,10 @@ Choices: Yes / No.
 *Confidence about the immediately preceding prediction, after either Yes or No (family-teacher-classmate:predict-helper2).*
 
 “How sure are you?”
+
+After Yes: “How sure are you that the kid’s teacher will help the kid in the middle?”
+
+After No: “How sure are you that the kid’s teacher will NOT help the kid in the middle?”
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
@@ -2073,19 +2044,23 @@ Choices: A teeny bit / A little bit / A lot.
 
 ### 177. Obligation · Classmate
 
-“Now, do you think the kid’s classmate HAS TO help the kid? Yes or No.”
+“Now, do you think the kid’s classmate HAS TO help the kid in the middle? Yes or No.”
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Yes / No.
 
+After choosing “No”, confirm: “You think the kid’s classmate does NOT HAVE TO help the kid in the middle. Is that what you meant? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
+
+*No opens a neutral spoken confirmation. Yes on the confirmation accepts the original No and skips the strength question; No returns to this obligation question. Neither study answer is marked incorrect.*
+
 ### 178. Obligation strength · Classmate
 
 *Only after “Yes” to Obligation · Classmate.*
 
-“How much do you think the kid’s classmate HAS TO?”
+“How much do you think the kid’s classmate HAS TO help the kid in the middle?”
 
-Display wording: “How much do you think the kid’s classmate HAS TO?” The role is included in the question; no separate role label is displayed above it.
+Display wording: “How much do you think the kid’s classmate HAS TO help the kid in the middle?” The role is included in the question; no separate role label is displayed above it.
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
@@ -2095,19 +2070,23 @@ Choices: A teeny bit / A little bit / A lot.
 
 ### 179. Obligation · Teacher
 
-“Now, do you think the kid’s teacher HAS TO help the kid? Yes or No.”
+“Now, do you think the kid’s teacher HAS TO help the kid in the middle? Yes or No.”
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Yes / No.
 
+After choosing “No”, confirm: “You think the kid’s teacher does NOT HAVE TO help the kid in the middle. Is that what you meant? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
+
+*No opens a neutral spoken confirmation. Yes on the confirmation accepts the original No and skips the strength question; No returns to this obligation question. Neither study answer is marked incorrect.*
+
 ### 180. Obligation strength · Teacher
 
 *Only after “Yes” to Obligation · Teacher.*
 
-“How much do you think the kid’s teacher HAS TO?”
+“How much do you think the kid’s teacher HAS TO help the kid in the middle?”
 
-Display wording: “How much do you think the kid’s teacher HAS TO?” The role is included in the question; no separate role label is displayed above it.
+Display wording: “How much do you think the kid’s teacher HAS TO help the kid in the middle?” The role is included in the question; no separate role label is displayed above it.
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
@@ -2117,9 +2096,9 @@ Choices: A teeny bit / A little bit / A lot.
 
 ### 181. No one helped
 
-“No one helped the kid.”
+“No one helped the kid in the middle.”
 
-Display wording: “No one helped the kid.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+Display wording: “No one helped the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
@@ -2127,11 +2106,11 @@ Display wording: “No one helped the kid.” Both helper cues remain visible be
 
 ### 182. Each helper did NOT help
 
-“The kid’s classmate did NOT help the kid. The kid’s teacher did NOT help the kid. No one helped the kid.”
+“The kid’s classmate did NOT help the kid in the middle. And the kid’s teacher did NOT help the kid in the middle. No one helped the kid in the middle.”
 
-Display wording: “The kid’s classmate did NOT help the kid.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+Display wording: “The kid’s classmate did NOT help the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
 
-Captions follow the narration, in order: “The kid’s classmate did NOT help the kid.” → “The kid’s teacher did NOT help the kid.” → “No one helped the kid.”.
+Captions follow the narration, in order: “The kid’s classmate did NOT help the kid in the middle.” → “And the kid’s teacher did NOT help the kid in the middle.” → “No one helped the kid in the middle.”.
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
@@ -2139,7 +2118,7 @@ Captions follow the narration, in order: “The kid’s classmate did NOT help t
 
 ### 183. Recall · No one helped
 
-“Can you tell me, did either of these people help the kid?”
+“Can you tell me, did either of these people help the kid in the middle?”
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
@@ -2149,21 +2128,21 @@ Expected check/practice answer: No.
 
 A correct response is required to advance; there is no bypass.
 
-Reminder if needed: “Actually, remember, no one helped the kid. The kid’s classmate did NOT help the kid. The kid’s teacher did NOT help the kid. No one helped the kid.”
+Reminder if needed: “Actually, remember, no one helped the kid in the middle. And the kid’s classmate did NOT help the kid in the middle. And the kid’s teacher did NOT help the kid in the middle. No one helped the kid in the middle.”
 
 After the reminder, reread the full question and response labels before reopening the choices.
 
-### 184. Overall evaluation
+### 184. Overall evaluation — PROPOSED WORDING
 
-No one helped the kid.
+No one helped the kid in the middle.
 
-“Do you think this was a mean or nice thing that happened?”
+“Do you think it was mean or nice that no one helped the kid in the middle?”
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
 Choices: Mean / Nice.
 
-*Exploratory measure in Marshall Study 1.*
+*Adapted overall-evaluation wording explicitly repeats that no one helped the recipient.*
 
 ### 185. Overall evaluation strength — PROPOSED WORDING
 
@@ -2179,7 +2158,7 @@ Choices: A tiny bit mean / A little bit mean / A lot mean.
 
 ### 186. Recall · Classmate
 
-“Do you remember, did the kid’s classmate help the kid?”
+“Do you remember, did the kid’s classmate help the kid in the middle?”
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
@@ -2189,7 +2168,7 @@ Expected check/practice answer: No.
 
 A correct response is required to advance; there is no bypass.
 
-Reminder if needed: “Remember, the kid’s classmate did not help the kid. Do you remember, did the kid’s classmate help the kid?”
+Reminder if needed: “Remember, the kid’s classmate did not help the kid in the middle. Do you remember, did the kid’s classmate help the kid in the middle?”
 
 ### 187. Individual evaluation · Classmate
 
@@ -2213,7 +2192,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 ### 189. Recall · Teacher
 
-“Do you remember, did the kid’s teacher help the kid?”
+“Do you remember, did the kid’s teacher help the kid in the middle?”
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
@@ -2223,7 +2202,7 @@ Expected check/practice answer: No.
 
 A correct response is required to advance; there is no bypass.
 
-Reminder if needed: “Remember, the kid’s teacher did not help the kid. Do you remember, did the kid’s teacher help the kid?”
+Reminder if needed: “Remember, the kid’s teacher did not help the kid in the middle. Do you remember, did the kid’s teacher help the kid in the middle?”
 
 ### 190. Individual evaluation · Teacher
 

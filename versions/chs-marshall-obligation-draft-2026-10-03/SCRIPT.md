@@ -12,20 +12,20 @@
 - Practice repeats before obligation questions in each story, matching the captured Marshall Study 1 sequence.
 - This preview contains the six pairings from one role set in a fixed review order.
 
-Expected path range: **187–205 screens**, **132–150 responses**.
+Expected path range: **187–205 screens**, **114–132 responses**.
 
 Includes 6–18 answer-confirmation screens and 12 correct-answer practice-feedback screens in addition to the static storyboard.
 
-Main judgments: 60 (including 12 prediction-confidence responses). Identity/recall checks: 36. Practice responses: 18. Answer confirmations: 6–18. Conditional study-strength responses: 0–30. The total screen and response ranges above are computed for complete paths; separate minimum counts need not occur together.
+Main judgments: 60 (including 12 prediction-confidence responses). Recall checks: 18. Practice responses: 18. Answer confirmations: 6–18. Conditional study-strength responses: 0–30. The total screen and response ranges above are computed for complete paths; separate minimum counts need not occur together.
 
-Illustrative duration: **32–46.7 minutes**, based on 3301–3760 spoken words.
+Illustrative duration: **30.4–44.4 minutes**, based on 3210–3669 spoken words.
 
 - Illustrative estimate, not observed child-session duration.
 - Read-aloud pace: 110–130 words per minute; response time: 3–5 seconds per selection.
 - Includes each response label once, accepted Yes confirmation after each helper-choice comparison and after each No obligation judgment, and mandatory correct-answer practice feedback; excludes binary labels already stated in the prompt.
 - Yes to an individual obligation judgment opens its strength follow-up. No opens a neutral answer-confirmation screen, then skips that strength follow-up after the child confirms the No answer.
 - Screen, response, strength, confirmation, word, and duration ranges are each computed across complete paths. Separate minimum counts need not occur on the same path.
-- Assumes correct identity, recall, and practice answers, including Yes to stopping being mean and No to lying. Incorrect check responses require correction and retry; there is no bypass.
+- Assumes correct recall and practice answers, including Yes to stopping being mean and No to lying. Incorrect check responses require correction and retry; there is no bypass.
 - Does not include correction repeats, rejected answer confirmations, breaks, setup, narration-only transition delays, or extra pauses between glowing options. Screen counts include accepted confirmation and correct-answer feedback stages; error retries are not counted.
 
 The storyboard below includes all possible branches. Correct No is required for the lying practice question, so its retained legacy Yes-strength card is not reached during the normal path.
@@ -36,53 +36,33 @@ Left: the kid’s teacher. Middle: the kid in the middle. Right: the kid’s mom
 
 ### 1. Meet the characters
 
-“Oh look! Here is a kid.”
+“Look! Here are some people.”
 
 [Stimulus source](assets/stimuli/5698e7ccf886-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening adapted to the single kid shown on screen.*
-
 ### 2. Meet the kid in the middle
 
-“This little one is a kid. Tap the kid in the middle.”
+“This little one is a kid.”
 
 [Stimulus source](assets/stimuli/940e415d531b-intro_02.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: recipient.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This little one is a kid. This one is the kid in the middle. Tap the kid in the middle.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 3. Meet the kid’s teacher
 
-“This big one is this kid’s teacher. Tap the kid’s teacher.”
+“This big one is this kid’s teacher.”
 
 [Stimulus source](assets/stimuli/ca7e452610f7-intro_03.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper1.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This big one is this kid’s teacher. This one is the kid’s teacher. Tap the kid’s teacher.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 4. Meet the kid’s mom
 
-“This big one is this kid’s mom. Tap the kid’s mom.”
+“This big one is this kid’s mom.”
 
 [Stimulus source](assets/stimuli/97ccc74e9132-intro_04.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper2.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This big one is this kid’s mom. This one is the kid’s mom. Tap the kid’s mom.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 5. The kid in the middle needs help
 
@@ -424,53 +404,33 @@ Left: the kid’s sister. Middle: the kid in the middle. Right: the kid’s frie
 
 ### 33. Meet the characters
 
-“Oh look! Here is a kid.”
+“Look! Here are some people.”
 
 [Stimulus source](assets/stimuli/a247914f8341-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening adapted to the single kid shown on screen.*
-
 ### 34. Meet the kid in the middle
 
-“This little one is a kid. Tap the kid in the middle.”
+“This little one is a kid.”
 
 [Stimulus source](assets/stimuli/7f8866f99c37-intro_02.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: recipient.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This little one is a kid. This one is the kid in the middle. Tap the kid in the middle.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 35. Meet the kid’s sister
 
-“This little one is this kid’s sister. Tap the kid’s sister.”
+“This little one is this kid’s sister.”
 
 [Stimulus source](assets/stimuli/3a352d5b3f7d-intro_03.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper1.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This little one is this kid’s sister. This one is the kid’s sister. Tap the kid’s sister.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 36. Meet the kid’s friend
 
-“This little one is this kid’s friend. Tap the kid’s friend.”
+“This little one is this kid’s friend.”
 
 [Stimulus source](assets/stimuli/a646d1973c19-intro_04.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper2.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This little one is this kid’s friend. This one is the kid’s friend. Tap the kid’s friend.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 37. The kid in the middle needs help
 
@@ -812,53 +772,33 @@ Left: the kid’s friend. Middle: the kid in the middle. Right: the kid’s best
 
 ### 65. Meet the characters
 
-“Oh look! Here is a kid.”
+“Look! Here are some people.”
 
 [Stimulus source](assets/stimuli/d45a1ece9a16-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening adapted to the single kid shown on screen.*
-
 ### 66. Meet the kid in the middle
 
-“This little one is a kid. Tap the kid in the middle.”
+“This little one is a kid.”
 
 [Stimulus source](assets/stimuli/b1248cc0a0b3-intro_02.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: recipient.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This little one is a kid. This one is the kid in the middle. Tap the kid in the middle.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 67. Meet the kid’s friend
 
-“This little one is this kid’s friend. Tap the kid’s friend.”
+“This little one is this kid’s friend.”
 
 [Stimulus source](assets/stimuli/87de30905e8d-intro_03.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper1.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This little one is this kid’s friend. This one is the kid’s friend. Tap the kid’s friend.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 68. Meet the kid’s best friend
 
-“This little one is this kid’s best friend. Tap the kid’s best friend.”
+“This little one is this kid’s best friend.”
 
 [Stimulus source](assets/stimuli/54819c159fd8-intro_04.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper2.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This little one is this kid’s best friend. This one is the kid’s best friend. Tap the kid’s best friend.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 69. The kid in the middle needs help
 
@@ -1200,53 +1140,33 @@ Left: the kid’s teacher. Middle: the kid in the middle. Right: the kid’s fri
 
 ### 97. Meet the characters
 
-“Oh look! Here is a kid.”
+“Look! Here are some people.”
 
 [Stimulus source](assets/stimuli/5ab48f0b29ed-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening adapted to the single kid shown on screen.*
-
 ### 98. Meet the kid in the middle
 
-“This little one is a kid. Tap the kid in the middle.”
+“This little one is a kid.”
 
 [Stimulus source](assets/stimuli/034f00b997ea-intro_02.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: recipient.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This little one is a kid. This one is the kid in the middle. Tap the kid in the middle.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 99. Meet the kid’s teacher
 
-“This big one is this kid’s teacher. Tap the kid’s teacher.”
+“This big one is this kid’s teacher.”
 
 [Stimulus source](assets/stimuli/b3c03b18f90c-intro_03.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper1.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This big one is this kid’s teacher. This one is the kid’s teacher. Tap the kid’s teacher.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 100. Meet the kid’s friend
 
-“This little one is this kid’s friend. Tap the kid’s friend.”
+“This little one is this kid’s friend.”
 
 [Stimulus source](assets/stimuli/9c8f0bba75ed-intro_04.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper2.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This little one is this kid’s friend. This one is the kid’s friend. Tap the kid’s friend.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 101. The kid in the middle needs help
 
@@ -1588,53 +1508,33 @@ Left: the kid’s mom. Middle: the kid in the middle. Right: the kid’s sister.
 
 ### 129. Meet the characters
 
-“Oh look! Here is a kid.”
+“Look! Here are some people.”
 
 [Stimulus source](assets/stimuli/2fa20e069eca-01-group.png) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening adapted to the single kid shown on screen.*
-
 ### 130. Meet the kid in the middle
 
-“This little one is a kid. Tap the kid in the middle.”
+“This little one is a kid.”
 
 [Stimulus source](assets/stimuli/abff16b4e820-02-child.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: recipient.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This little one is a kid. This one is the kid in the middle. Tap the kid in the middle.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 131. Meet the kid’s mom
 
-“This big one is this kid’s mom. Tap the kid’s mom.”
+“This big one is this kid’s mom.”
 
 [Stimulus source](assets/stimuli/1f4a6786d185-03-mom.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper1.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This big one is this kid’s mom. This one is the kid’s mom. Tap the kid’s mom.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 132. Meet the kid’s sister
 
-“This little one is this kid’s sister. Tap the kid’s sister.”
+“This little one is this kid’s sister.”
 
 [Stimulus source](assets/stimuli/de928ad71b66-04-sister.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper2.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This little one is this kid’s sister. This one is the kid’s sister. Tap the kid’s sister.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 133. The kid in the middle needs help
 
@@ -1976,53 +1876,33 @@ Left: the kid’s classmate. Middle: the kid in the middle. Right: the kid’s t
 
 ### 161. Meet the characters
 
-“Oh look! Here is a kid.”
+“Look! Here are some people.”
 
 [Stimulus source](assets/stimuli/44d39b1df683-intro_01.svg) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening adapted to the single kid shown on screen.*
-
 ### 162. Meet the kid in the middle
 
-“This little one is a kid. Tap the kid in the middle.”
+“This little one is a kid.”
 
 [Stimulus source](assets/stimuli/4e621f5d72b5-intro_02.svg) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: recipient.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This little one is a kid. This one is the kid in the middle. Tap the kid in the middle.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 163. Meet the kid’s classmate
 
-“This little one is this kid’s classmate. Tap the kid’s classmate.”
+“This little one is this kid’s classmate.”
 
 [Stimulus source](assets/stimuli/2867c2e0bd9c-intro_03.svg) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper1.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This little one is this kid’s classmate. This one is the kid’s classmate. Tap the kid’s classmate.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 164. Meet the kid’s teacher
 
-“This big one is this kid’s teacher. Tap the kid’s teacher.”
+“This big one is this kid’s teacher.”
 
 [Stimulus source](assets/stimuli/a5206d48c30f-intro_04.svg) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper2.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This big one is this kid’s teacher. This one is the kid’s teacher. Tap the kid’s teacher.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 165. The kid in the middle needs help
 

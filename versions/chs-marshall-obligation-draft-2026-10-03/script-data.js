@@ -5,10 +5,10 @@
   const meanAmount = ['A teeny bit mean', 'A little bit mean', 'Very mean'];
   const confidence = ['Not sure', 'A little sure', 'Very sure'];
   const steps = [
-    {id:'group', phase:'Meet the characters', image:'01-group.png', text:'Oh look! Here is a kid.', note:'Opening adapted to the single kid shown on screen.'},
-    {id:'kid', phase:'Meet the kid in the middle', image:'02-child.png', text:'This is the kid in the middle. Tap the kid in the middle.', point:'kid', reminder:'This one in the middle is the kid in the middle. Tap the kid in the middle.'},
-    {id:'mom', phase:'Meet the mom', image:'03-mom.png', text:'This is the kid’s mom. Tap the kid’s mom.', point:'mom', reminder:'This one on the left is the kid’s mom. Tap the kid’s mom.'},
-    {id:'sister', phase:'Meet the sister', image:'04-sister.png', text:'This is the kid’s sister. Tap the kid’s sister.', point:'sister', reminder:'This one on the right is the kid’s sister. Tap the kid’s sister.'},
+    {id:'group', phase:'Meet the characters', image:'01-group.png', text:'Look! Here are some people.'},
+    {id:'kid', phase:'Meet the kid in the middle', image:'02-child.png', text:'This is the kid in the middle.'},
+    {id:'mom', phase:'Meet the mom', image:'03-mom.png', text:'This is the kid’s mom.'},
+    {id:'sister', phase:'Meet the sister', image:'04-sister.png', text:'This is the kid’s sister.'},
     {id:'need', phase:'The kid in the middle needs help', text:'Now let’s say that one day the kid in the middle was very sad.'},
     {id:'witness', phase:'Both helpers see', text:'The kid’s mom and the kid’s sister both see that the kid in the middle is sad.'},
     {id:'predict-mom', phase:'Prediction · Mom', text:'Now, do you think the kid’s mom will help the kid in the middle?', choices:yesNo, measure:'Prediction'},

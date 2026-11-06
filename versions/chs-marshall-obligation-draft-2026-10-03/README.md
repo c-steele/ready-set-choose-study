@@ -18,7 +18,7 @@ The preview includes three existing Find the Caregiver sets of six pairings each
 
 ## What is included
 
-- Guided character introductions using cumulative reveals and on-screen taps.
+- Narrated character introductions using the original Find the Caregiver slides and recordings.
 - Need narration, with both helpers seeing that the kid is sad.
 - Separate binary prediction questions for both helpers.
 - “Have to” practice after prediction and before obligation.
@@ -28,9 +28,7 @@ The preview includes three existing Find the Caregiver sets of six pairings each
 - Per-helper recall and Mean/Not mean evaluations; conditional strength after Mean.
 - One comparison between the two helpers per story.
 
-Each six-story set has 48 main judgments. With practice every story, the ordinary correct-practice path has 139–169 screens and 102–132 responses; the full storyboard has 175 possible cards. With practice once, these become 114–144 screens and 87–117 responses (145 possible cards). Conditional cards are skipped in the player according to answers.
-
-The illustrative estimate is approximately 20–35 minutes with repeated practice, or 16–29 minutes with practice once, before breaks/corrections. It counts actual script/choice words at 110–130 words/minute and 3–5 seconds per selection; it is not an observed child duration. Navigation-only delays and extra option-reading pauses are excluded. A start/pause/reset timer records the reviewer’s preview time and labels jumps or untimed progress as partial.
+See the [current default script](SCRIPT.md) for screen and response counts. The researcher view gives the recording-based duration for the selected role set and practice schedule.
 
 Pairing and practice selectors rebuild the session and its script download. SCRIPT.md is the default mom/sister set with repeated practice; SCRIPT-{woman,man,family,all}-{each,once}.md provides all combinations. The full storyboard includes every possible follow-up and can be printed. Practice once is a new adaptation; the captured Marshall survey repeated practice.
 
@@ -71,14 +69,9 @@ See NARRATION_README.md and the import receipts for source details. All research
 
 The overview now uses measured recording lengths plus programmed option pauses and an assumed 3–5 seconds per response: approximately 19–30 minutes with repeated practice, or 16–26 minutes with practice once. The earlier word-rate estimate remains in the read-aloud script export as a separate manual-narration estimate. Actual child duration still depends on response pace, breaks, corrections and navigation.
 
-## Character introductions (October 3)
+## Character introductions (November 6)
 
-The introduction now builds the scene one character at a time. The first actor is visible on the opening screen; their introduction asks the child to **Tap** that actor. Once tapped, the next actor appears while the first stays visible. Each pairing preserves its original introduction order, positions, sizes, colors and role labels. Only the newly introduced actor is tappable, with a blue glowing box fitted around the character and label. That glow remains until the child taps it. Unintroduced actors stay hidden; the full cast is present only after the last introduction and on later story screens.
-
-There is no **Show everyone** control. Narration temporarily locks the current tap target and unlocks it when the prompt ends; audio completion never reveals another character. Without narration, the target is immediately tappable. The storyboard shows the same cumulative sequence. Source stimulus files, judgment flow, screen identifiers and question counts remain unchanged. The spoken introduction wording has been adapted from “Select” to “Tap” for young children. These glowing targets provide guided orientation rather than uncued identity checks. All 26 affected introduction and reminder recordings were regenerated in NaturalReader with the same voice settings; all 195 current clips and their screen mappings were verified.
-
-Static verification checked JavaScript syntax, all 54 actor cue bounds, all pairing introduction orders, and removal of the old reveal transition. Live browser verification is recorded separately with the CHS draft update.
-
+Each story opens with “Look! Here are some people.” The original Find the Caregiver artwork then outlines and labels one character per slide. In child view each recording plays through and the next slide appears automatically. The first study question asks who will help.
 
 ## Obligation emphasis (October 3)
 

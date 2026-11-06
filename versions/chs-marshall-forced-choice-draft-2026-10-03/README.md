@@ -17,7 +17,7 @@ These are forced comparisons between helpers. There is no both, neither, or equa
 ## Story sequence
 
 1. Meet the group.
-2. Introduce the three characters cumulatively, with a tap on each introduced character. Preserve the source intro order, which begins with the kid even when the recipient is an adult.
+2. Show the original Find the Caregiver introduction slides. Each character gains an outline and label as the recording introduces them. Preserve the source intro order, which begins with the kid even when the recipient is an adult.
 3. Say the recipient is sad.
 4. Say both helpers see that the recipient is sad.
 5. Ask who will help. The two helper choices follow their positions in the scene, left then right.
@@ -32,14 +32,7 @@ There are **three main judgments per story**, with no individual helper ratings,
 
 ## Counts and illustrative duration
 
-| View | Practice | Screens | Total selections | Main judgments | Illustrative minutes |
-| --- | --- | ---: | ---: | ---: | ---: |
-| One role set, six stories | Every story | 91 | 54 | 18 | 12.3–16.0 |
-| One role set, six stories | Once | 71 | 44 | 18 | 9.6–12.5 |
-| All 18 entries, researcher review | Every story | 271 | 162 | 54 | 36.9–47.6 |
-| All 18 entries, researcher review | Once | 203 | 128 | 54 | 27.6–35.8 |
-
-Each six-story version includes 18 character-identification taps, six recall checks, and either 12 or two practice selections. There are no conditional strength branches. These are script-based estimates using 110–130 words per minute and 3–5 seconds per selection, with each answer label read once. They are not observed child-session durations. Breaks, reminders, setup, transitions, and extra gaps between glowing options can add time. All 18 entries are a review catalog, not the proposed session length for a child.
+The six-story session includes 18 narrated character introductions. Each introduction advances at the end of its recording. See the [current default script](SCRIPT.md) for the response count and the researcher view for the recording-based duration of each practice setting.
 
 ## Stimuli and presentation
 

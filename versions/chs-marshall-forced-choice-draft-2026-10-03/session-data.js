@@ -46,13 +46,10 @@
     }
     add('group', 'group', {image:p.images.group});
     for (const intro of p.intros) {
-      const actor = intro.actorId === 'recipient' ? recipient : helpers.find(h => h.id === intro.actorId);
-      const sourceText = apostrophes(intro.sourceText);
       add(`intro-${intro.actorId}`, 'kid', {
-        phase:`Meet ${intro.description}`, image:intro.image, point:intro.actorId,
-        text:`${sourceText} Tap ${intro.description}.`,
-        reminder:`${sourceText} This one is ${intro.description}. Tap ${intro.description}.`,
-        note:`Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation. ${actor.isAdult && intro.actorId === 'recipient' ? 'The person who needs help is an adult in this story.' : ''}`.trim()
+        phase:`Meet ${intro.description}`, image:intro.image,
+        text:apostrophes(intro.sourceText),
+        note:'Narrated character introduction from Find the Caregiver.'
       });
     }
     add('need', 'need', {phase:`${upper(recipient.description)} needs help`, text:`Now let’s say that one day ${recipient.isAdult ? recipient.description : 'the kid in the middle'} was very sad.`});
@@ -176,7 +173,7 @@
         'Illustrative estimate, not observed child-session duration.',
         'Read-aloud pace: 110–130 words per minute; response time: 3–5 seconds per selection.',
         'Includes each response label once, one accepted Yes confirmation for every forced-choice response, and mandatory correct-answer practice feedback; excludes repeated binary labels already stated in the prompt.',
-        'Assumes correct identity, recall, and practice answers, including Yes to stopping being mean and No to lying. Incorrect check responses require correction and retry; there is no bypass.',
+        'Assumes correct recall and practice answers, including Yes to stopping being mean and No to lying. Incorrect check responses require correction and retry; there is no bypass.',
         'Does not include correction repeats, rejected choice confirmations, breaks, setup, narration-only transition delays, or extra pauses between glowing options. Screen counts include required confirmation and correct-answer feedback stages; error retries are not counted.'
       ]
     };
@@ -219,7 +216,7 @@
       ...session.notes.map(note => `- ${note}`), '',
       `Expected path range: **${stats.screens.min}–${stats.screens.max} screens**, **${stats.responses.min}–${stats.responses.max} responses**.`, '',
       `Includes ${stats.virtualConfirmationScreens} required choice-confirmation screens and ${stats.virtualCorrectFeedbackScreens} correct-answer practice-feedback screens in addition to the static storyboard.`, '',
-      `${stats.forcedChoiceResponses} forced choices + ${stats.individualEvaluationResponses} individual Mean/Not Mean judgments + ${stats.strengthResponses.min}–${stats.strengthResponses.max} how-mean ratings + ${stats.confirmationResponses} choice confirmations + ${stats.checks} identity/recall checks + ${stats.practiceResponses} brief practice responses.`, '',
+      `${stats.forcedChoiceResponses} forced choices + ${stats.individualEvaluationResponses} individual Mean/Not Mean judgments + ${stats.strengthResponses.min}–${stats.strengthResponses.max} how-mean ratings + ${stats.confirmationResponses} choice confirmations + ${stats.checks} recall checks + ${stats.practiceResponses} brief practice responses.`, '',
       `Illustrative duration: **${stats.minutes.min}–${stats.minutes.max} minutes**, based on ${stats.words.min}–${stats.words.max} spoken words.`, '',
       ...stats.assumptions.map(note => `- ${note}`), '',
       'The first three judgments per story are two-helper choices with confirmation. Exactly one selected-helper how-mean card follows the meaner comparison. Individual how-mean cards follow Mean only. Practice feedback is mandatory; corrections require a retry.', ''

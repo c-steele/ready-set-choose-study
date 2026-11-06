@@ -58,18 +58,9 @@
   function storyAccent(s){
     return s.pairing?.visualHex||'#f5b236';
   }
-  function isCharacterIntro(s){return Boolean(s.pairing&&s.point&&s.localId.startsWith('intro-'));}
   // Bounds include each character, their existing outline and their role label.
   // Measured from the unmodified final intro stimulus, inside the 1920 × 840 crop.
   const introActorBounds={"woman-mom-teacher":{"recipient":[38.49,31.667,23.125,63.452],"helper1":[3.073,4.405,29.688,90.714],"helper2":[67.135,4.405,29.635,90.714]},"woman-sister-friend":{"recipient":[38.281,31.667,23.125,63.452],"helper1":[3.75,31.667,23.125,63.452],"helper2":[72.552,31.667,23.125,63.452]},"woman-bestfriend-friend":{"recipient":[38.281,31.667,23.125,63.452],"helper1":[3.75,31.667,23.125,63.452],"helper2":[72.5,31.667,23.177,63.452]},"woman-teacher-friend":{"recipient":[41.094,31.667,23.125,63.452],"helper1":[4.531,4.405,29.688,90.714],"helper2":[71.25,31.667,23.177,63.452]},"woman-mom-sister":{"recipient":[41.094,31.667,23.125,63.452],"helper1":[4.531,4.405,29.688,90.714],"helper2":[71.25,31.667,23.177,63.452]},"woman-teacher-classmate":{"recipient":[35.26,31.667,23.177,63.452],"helper1":[4.531,31.667,23.177,63.452],"helper2":[65.833,4.405,29.688,90.714]},"man-dad-teacher":{"recipient":[38.49,31.667,23.125,63.452],"helper1":[3.073,4.405,29.688,90.714],"helper2":[67.135,4.405,29.635,90.714]},"man-brother-friend":{"recipient":[38.281,31.667,23.125,63.452],"helper1":[3.75,31.667,23.125,63.452],"helper2":[72.5,31.667,23.177,63.452]},"man-bestfriend-friend":{"recipient":[38.281,31.667,23.125,63.452],"helper1":[3.75,31.667,23.125,63.452],"helper2":[72.5,31.667,23.177,63.452]},"man-teacher-friend":{"recipient":[41.094,31.667,23.125,63.452],"helper1":[4.531,4.405,29.688,90.714],"helper2":[71.25,31.667,23.177,63.452]},"man-dad-brother":{"recipient":[41.094,31.667,23.125,63.452],"helper1":[4.531,4.405,29.688,90.714],"helper2":[71.25,31.667,23.177,63.452]},"man-teacher-classmate":{"recipient":[35.26,31.667,23.177,63.452],"helper1":[4.531,31.667,23.177,63.452],"helper2":[65.833,4.405,29.688,90.714]},"family-mom-dad":{"recipient":[38.49,31.667,23.125,63.452],"helper1":[3.073,4.405,29.688,90.714],"helper2":[67.135,4.405,29.635,90.714]},"family-sister-brother":{"recipient":[38.281,31.667,23.125,63.452],"helper1":[3.75,31.667,23.125,63.452],"helper2":[72.552,31.667,23.125,63.452]},"family-dad-kid":{"recipient":[38.49,4.405,27.031,90.714],"helper1":[4.531,4.405,29.688,90.714],"helper2":[65.521,4.405,28.906,90.714]},"family-mom-kid":{"recipient":[34.479,4.405,26.979,90.714],"helper1":[4.375,4.405,30.104,90.714],"helper2":[65.521,4.405,29.635,90.714]},"family-teacher-kid":{"recipient":[38.49,4.405,27.031,90.714],"helper1":[4.531,4.405,29.688,90.714],"helper2":[65.521,4.405,28.906,90.714]},"family-teacher-classmate":{"recipient":[35.26,31.667,23.177,63.452],"helper1":[4.531,31.667,23.177,63.452],"helper2":[65.833,4.405,29.688,90.714]}};
-  function visibleIntroActors(s){
-    if(!s.pairing)return [];
-    const intros=s.pairing.intros;
-    if(s.localId==='group')return intros.slice(0,1).map(intro=>intro.actorId);
-    if(!isCharacterIntro(s))return actors(s).map(actor=>actor.id);
-    const current=intros.findIndex(intro=>intro.actorId===s.point);
-    return intros.slice(0,current+1).map(intro=>intro.actorId);
-  }
   function actorTargetStyle(s,actor){
     const bounds=window.ObligationStudyVisuals?.actorBoundsFor(s,actor.id)||introActorBounds[s.pairing.id]?.[actor.id];
     return bounds?` style="left:${bounds[0]}%;top:${bounds[1]}%;width:${bounds[2]}%;height:${bounds[3]}%"`:'';
@@ -131,11 +122,7 @@
       names.push(actor.description.replace(/^the /,'this '));
       for(const name of new Set(names))candidates.push({actorId:actor.id,tokens:cueTokens(name)});
     }
-    if(isCharacterIntro(s)){
-      const intro=s.pairing.intros.find(value=>value.actorId===s.point);
-      const name=intro.sourceText.split(/\bis\s+/i).pop();
-      candidates.push({actorId:s.point,tokens:cueTokens(name)});
-    }
+
     if(s.visual==='teacher-practice'||s.visual==='lie-practice'){
       candidates.length=0;
       candidates.push({actorId:s.visual==='lie-practice'?'practice-someone':'practice-teacher',tokens:cueTokens(s.visual==='lie-practice'?'someone':'a teacher')},{actorId:'practice-you',tokens:cueTokens('you')});
@@ -273,23 +260,14 @@
     if(s.visual==='lie-practice')return `<div class="practice-illustration"><p class="practice-setup">${esc(s.displaySetup||'Someone asks you a question.')}</p>${window.ObligationStudyVisuals.liePracticeArtwork(s)}<h2 class="practice-question">${esc(s.displayQuestion||s.text)}</h2></div>`;
     if(s.visual==='teacher-practice')return `<div class="practice-illustration"><p class="practice-setup">${esc(s.displaySetup)}</p>${practiceArtwork(s)}<h2 class="practice-question">${esc(s.displayQuestion)}</h2></div>`;
     if(!s.image)return '';
-    const introduction=isCharacterIntro(s),guided=introduction||s.localId==='group';
-    const visible=visibleIntroActors(s),allActors=actors(s),current=allActors.find(a=>a.id===s.point);
-    // Keep the final labeled cast in its original positions. Only actors not yet
-    // introduced are masked; previously tapped characters remain visible.
-    const shownActors=guided?allActors.filter(a=>visible.includes(a.id)):allActors;
-    const image=guided?s.pairing.intros[s.pairing.intros.length-1].image:s.image;
-    const masks=guided?allActors.filter(a=>!visible.includes(a.id)).map(a=>`<span class="introduction-mask side-${a.side}" aria-hidden="true"></span>`).join(''):'';
-    const tapActors=introduction?[current]:allActors;
-    const buttons=interactive&&s.point?tapActors.map(a=>`<button class="point-target side-${a.side}${introduction?' introduction-target':''}${wrong&&a.id===s.point?' reveal':''}"${introduction?actorTargetStyle(s,a):''} data-point="${a.id}" aria-label="Tap ${esc(a.description)}"></button>`).join(''):'';
-    const cue=introduction&&!interactive?`<span class="point-target introduction-cue"${actorTargetStyle(s,current)} aria-hidden="true"></span>`:'';
+    const shownActors=actors(s);
     const choiceActors=helperChoiceActors(s);
     const choiceBoxes=choiceActors.map((actor,choiceIndex)=>interactive
       ?`<button class="character-choice-target option-visible"${characterChoiceStyle(s,actor)} data-answer="${choiceIndex}" data-narration-actor="${actor.id}" aria-label="${esc(s.choices[choiceIndex])}"></button>`
       :`<span class="character-choice-cue"${characterChoiceStyle(s,actor)} aria-hidden="true"></span>`).join('');
     const spokenCues=interactive?shownActors.filter(actor=>!choiceActors.some(choice=>choice.id===actor.id)).map(actor=>`<span class="narration-actor-cue${actor.id===s.confirmationActorId?' confirmation-selected':''}" data-narration-actor="${actor.id}"${actorTargetStyle(s,actor)} aria-hidden="true"></span>`).join(''):'';
     const alt=shownActors.map(a=>a.side==='middle'&&a.description.endsWith('in the middle')?a.description:`${a.description} ${a.side==='middle'?'in the middle':'on the '+a.side}`).join('; ');
-    const picture=`<div class="picture${guided?' character-introduction':''}"><img ${interactive?'':'loading="lazy"'} src="${esc(image)}" alt="${esc(alt)}.${s.image===s.pairing.images.need?' '+esc(s.pairing.recipient.reference)+' is sad.':''}">${window.ObligationStudyVisuals.nonhelpingEyeOverlay(s)}${masks}${buttons}${choiceBoxes}${cue}${spokenCues}</div>`;
+    const picture=`<div class="picture"><img ${interactive?'':'loading="lazy"'} src="${esc(s.image)}" alt="${esc(alt)}.${s.image===s.pairing.images.need?' '+esc(s.pairing.recipient.reference)+' is sad.':''}">${window.ObligationStudyVisuals.nonhelpingEyeOverlay(s)}${choiceBoxes}${spokenCues}</div>`;
     if(!s.outcomeVisual)return picture;
     const badges=s.pairing.helpers.map(helper=>{
       const bounds=introActorBounds[s.pairing.id][helper.id],center=bounds[0]+bounds[2]/2;
@@ -394,7 +372,7 @@
     $('session-subtitle').textContent=`${roleNames[session.setId]} · ${t.storyCount} stories · Sadness · Plain backgrounds`;
     $('session-warning').textContent=session.isAllReview?'All 18 story instances are shown for review. Shared pairings recur across sets; this is not the six-story session one child would receive.':'One child would see one set of six pairings. The order below is fixed for review.';
     $('session-stats').innerHTML=`<div><strong>${t.storyCount}</strong><span>stories</span></div><div><strong>${t.substantive}</strong><span>main judgments</span></div><div><strong>${t.responses.min}–${t.responses.max}</strong><span>question responses</span></div><div><strong>~${Math.round(estimatedMinutes.min)}–${Math.round(estimatedMinutes.max)} min</strong><span>illustrative estimate</span></div>`;
-    $('timing-details').textContent=`${t.screens.min}–${t.screens.max} screens on the correct-practice path. Includes ${t.checks} identity/recall checks, ${t.practiceResponses} practice selections, and three main forced-choice judgments per story. Includes meanness strength ratings and individual helper evaluations. ${recordedTiming?'The recordings and programmed pauses total '+recordedTiming.playbackMinutes.min.toFixed(1)+'–'+recordedTiming.playbackMinutes.max.toFixed(1)+' minutes. The estimate adds 3–5 seconds per response.':'Timing assumes reading aloud at 110–130 words/minute plus 3–5 seconds per selection.'} The automatic story transitions add about ${Math.round(automaticAdvanceSeconds)} seconds, included in the illustrative session estimate. It is not measured child-session time; breaks, corrections and control/navigation time can add to it.`;
+    $('timing-details').textContent=`${t.screens.min}–${t.screens.max} screens on the correct-practice path. Includes ${t.checks} recall checks, ${t.practiceResponses} practice selections, and three main forced-choice judgments per story. Includes meanness strength ratings and individual helper evaluations. ${recordedTiming?'The recordings and programmed pauses total '+recordedTiming.playbackMinutes.min.toFixed(1)+'–'+recordedTiming.playbackMinutes.max.toFixed(1)+' minutes. The estimate adds 3–5 seconds per response.':'Timing assumes reading aloud at 110–130 words/minute plus 3–5 seconds per selection.'} The automatic story transitions add about ${Math.round(automaticAdvanceSeconds)} seconds, included in the illustrative session estimate. It is not measured child-session time; breaks, corrections and control/navigation time can add to it.`;
     $('practice-note').textContent=session.practiceMode==='each'?'The brief HAVE TO practice repeats in every story.':'The brief HAVE TO practice appears in the first story only. This shorter draft setting is an adaptation.';
     $('pairing-list').innerHTML=session.pairings.map((p,i)=>`<button class="pairing-tile" data-story="${p.id}"><span class="tile-number">${i+1}</span><span class="tile-picture"><img src="${esc(p.images.need)}" alt="${esc(p.label)}; ${esc(p.recipient.reference)} is sad."></span><strong>${esc(p.label)}</strong><span>${p.recipient.role==='KID'?'Kid is sad':esc(p.recipient.label.charAt(0).toUpperCase()+p.recipient.label.slice(1))+' is sad'}</span></button>`).join('');
     $('pairing-list').querySelectorAll('[data-story]').forEach(b=>b.addEventListener('click',()=>goTo(steps.findIndex(s=>s.pairing?.id===b.dataset.story))));

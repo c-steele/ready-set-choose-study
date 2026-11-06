@@ -12,77 +12,57 @@
 - Brief HAVE TO comprehension practice repeats before the obligation comparison in each story.
 - The 18-story view is a researcher catalog of all three role sets, not the proposed length of one child’s session.
 
-Expected path range: **433–469 screens**, **270–306 responses**.
+Expected path range: **433–469 screens**, **216–252 responses**.
 
 Includes 54 required choice-confirmation screens and 36 correct-answer practice-feedback screens in addition to the static storyboard.
 
-54 forced choices + 36 individual Mean/Not Mean judgments + 18–54 how-mean ratings + 54 choice confirmations + 72 identity/recall checks + 36 brief practice responses.
+54 forced choices + 36 individual Mean/Not Mean judgments + 18–54 how-mean ratings + 54 choice confirmations + 18 recall checks + 36 brief practice responses.
 
-Illustrative duration: **67.2–98.2 minutes**, based on 6978–8000 spoken words.
+Illustrative duration: **65–94.3 minutes**, based on 7043–8065 spoken words.
 
 - Illustrative estimate, not observed child-session duration.
 - Read-aloud pace: 110–130 words per minute; response time: 3–5 seconds per selection.
 - Includes each response label once, one accepted Yes confirmation for every forced-choice response, and mandatory correct-answer practice feedback; excludes repeated binary labels already stated in the prompt.
-- Assumes correct identity, recall, and practice answers, including Yes to stopping being mean and No to lying. Incorrect check responses require correction and retry; there is no bypass.
+- Assumes correct recall and practice answers, including Yes to stopping being mean and No to lying. Incorrect check responses require correction and retry; there is no bypass.
 - Does not include correction repeats, rejected choice confirmations, breaks, setup, narration-only transition delays, or extra pauses between glowing options. Screen counts include required confirmation and correct-answer feedback stages; error retries are not counted.
 
 The first three judgments per story are two-helper choices with confirmation. Exactly one selected-helper how-mean card follows the meaner comparison. Individual how-mean cards follow Mean only. Practice feedback is mandatory; corrections require a retry.
 
 ## Story 1: Mom–Teacher
 
-Left: the kid’s teacher. Middle: the kid. Right: the kid’s mom.
+Left: the kid’s teacher. Middle: the kid in the middle. Right: the kid’s mom.
 
 ### 1. Meet the characters
 
-“Oh look! Here is a kid.”
+“Look! Here are some people.”
 
 [Stimulus source](assets/stimuli/5698e7ccf886-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening adapted to the single kid shown on screen.*
+### 2. Meet the kid in the middle
 
-### 2. Meet the kid
-
-“This little one is a kid. Tap the kid.”
+“This little one is a kid.”
 
 [Stimulus source](assets/stimuli/940e415d531b-intro_02.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: recipient.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This little one is a kid. This one is the kid. Tap the kid.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 3. Meet the kid’s teacher
 
-“This big one is this kid’s teacher. Tap the kid’s teacher.”
+“This big one is this kid’s teacher.”
 
 [Stimulus source](assets/stimuli/ca7e452610f7-intro_03.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper1.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This big one is this kid’s teacher. This one is the kid’s teacher. Tap the kid’s teacher.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 4. Meet the kid’s mom
 
-“This big one is this kid’s mom. Tap the kid’s mom.”
+“This big one is this kid’s mom.”
 
 [Stimulus source](assets/stimuli/97ccc74e9132-intro_04.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper2.
+*Narrated character introduction from Find the Caregiver.*
 
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This big one is this kid’s mom. This one is the kid’s mom. Tap the kid’s mom.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
-
-### 5. The kid needs help
+### 5. The kid in the middle needs help
 
 “Now let’s say that one day the kid in the middle was very sad.”
 
@@ -90,7 +70,7 @@ Reminder if needed: “This big one is this kid’s mom. This one is the kid’s
 
 ### 6. Both helpers see
 
-“The kid’s teacher and the kid’s mom both see that the kid is sad.”
+“The kid’s teacher and the kid’s mom both see that the kid in the middle is sad.”
 
 [Stimulus source](assets/stimuli/ef6ceaf063c6-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -180,9 +160,9 @@ After choosing “The kid’s mom”, confirm: “You chose the kid’s mom. Did
 
 ### 13. No one helped
 
-“No one helped the kid.”
+“No one helped the kid in the middle.”
 
-Display wording: “No one helped the kid.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+Display wording: “No one helped the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
 
 [Stimulus source](assets/stimuli/ef6ceaf063c6-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -190,11 +170,11 @@ Display wording: “No one helped the kid.” Both helper cues remain visible be
 
 ### 14. Each helper did NOT help
 
-“The kid’s teacher did NOT help the kid. The kid’s mom did NOT help the kid. No one helped the kid.”
+“The kid’s teacher did NOT help the kid in the middle. And the kid’s mom did NOT help the kid in the middle. No one helped the kid in the middle.”
 
-Display wording: “The kid’s teacher did NOT help the kid.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+Display wording: “The kid’s teacher did NOT help the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
 
-Captions follow the narration, in order: “The kid’s teacher did NOT help the kid.” → “The kid’s mom did NOT help the kid.” → “No one helped the kid.”.
+Captions follow the narration, in order: “The kid’s teacher did NOT help the kid in the middle.” → “And the kid’s mom did NOT help the kid in the middle.” → “No one helped the kid in the middle.”.
 
 [Stimulus source](assets/stimuli/ef6ceaf063c6-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -202,7 +182,7 @@ Captions follow the narration, in order: “The kid’s teacher did NOT help the
 
 ### 15. Recall · No one helped
 
-“Can you tell me, did either of these people help the kid?”
+“Can you tell me, did either of these people help the kid in the middle?”
 
 [Stimulus source](assets/stimuli/ef6ceaf063c6-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -212,7 +192,7 @@ Expected check/practice answer: No.
 
 A correct response is required to advance; there is no bypass.
 
-Reminder if needed: “Actually, remember, no one helped the kid. The kid’s teacher did NOT help the kid. The kid’s mom did NOT help the kid. No one helped the kid.”
+Reminder if needed: “Actually, remember, no one helped the kid in the middle. And the kid’s teacher did NOT help the kid in the middle. And the kid’s mom did NOT help the kid in the middle. No one helped the kid in the middle.”
 
 After the reminder, reread the full question and response labels before reopening the choices.
 
@@ -300,59 +280,39 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 ## Story 2: Sister–Friend
 
-Left: the kid’s sister. Middle: the kid. Right: the kid’s friend.
+Left: the kid’s sister. Middle: the kid in the middle. Right: the kid’s friend.
 
 ### 23. Meet the characters
 
-“Oh look! Here is a kid.”
+“Look! Here are some people.”
 
 [Stimulus source](assets/stimuli/a247914f8341-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening adapted to the single kid shown on screen.*
+### 24. Meet the kid in the middle
 
-### 24. Meet the kid
-
-“This little one is a kid. Tap the kid.”
+“This little one is a kid.”
 
 [Stimulus source](assets/stimuli/7f8866f99c37-intro_02.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: recipient.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This little one is a kid. This one is the kid. Tap the kid.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 25. Meet the kid’s sister
 
-“This little one is this kid’s sister. Tap the kid’s sister.”
+“This little one is this kid’s sister.”
 
 [Stimulus source](assets/stimuli/3a352d5b3f7d-intro_03.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper1.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This little one is this kid’s sister. This one is the kid’s sister. Tap the kid’s sister.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 26. Meet the kid’s friend
 
-“This little one is this kid’s friend. Tap the kid’s friend.”
+“This little one is this kid’s friend.”
 
 [Stimulus source](assets/stimuli/a646d1973c19-intro_04.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper2.
+*Narrated character introduction from Find the Caregiver.*
 
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This little one is this kid’s friend. This one is the kid’s friend. Tap the kid’s friend.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
-
-### 27. The kid needs help
+### 27. The kid in the middle needs help
 
 “Now let’s say that one day the kid in the middle was very sad.”
 
@@ -360,7 +320,7 @@ Reminder if needed: “This little one is this kid’s friend. This one is the k
 
 ### 28. Both helpers see
 
-“The kid’s sister and the kid’s friend both see that the kid is sad.”
+“The kid’s sister and the kid’s friend both see that the kid in the middle is sad.”
 
 [Stimulus source](assets/stimuli/d8367f1a225f-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -450,9 +410,9 @@ After choosing “The kid’s friend”, confirm: “You chose the kid’s frien
 
 ### 35. No one helped
 
-“No one helped the kid.”
+“No one helped the kid in the middle.”
 
-Display wording: “No one helped the kid.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+Display wording: “No one helped the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
 
 [Stimulus source](assets/stimuli/d8367f1a225f-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -460,11 +420,11 @@ Display wording: “No one helped the kid.” Both helper cues remain visible be
 
 ### 36. Each helper did NOT help
 
-“The kid’s sister did NOT help the kid. The kid’s friend did NOT help the kid. No one helped the kid.”
+“The kid’s sister did NOT help the kid in the middle. And the kid’s friend did NOT help the kid in the middle. No one helped the kid in the middle.”
 
-Display wording: “The kid’s sister did NOT help the kid.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+Display wording: “The kid’s sister did NOT help the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
 
-Captions follow the narration, in order: “The kid’s sister did NOT help the kid.” → “The kid’s friend did NOT help the kid.” → “No one helped the kid.”.
+Captions follow the narration, in order: “The kid’s sister did NOT help the kid in the middle.” → “And the kid’s friend did NOT help the kid in the middle.” → “No one helped the kid in the middle.”.
 
 [Stimulus source](assets/stimuli/d8367f1a225f-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -472,7 +432,7 @@ Captions follow the narration, in order: “The kid’s sister did NOT help the 
 
 ### 37. Recall · No one helped
 
-“Can you tell me, did either of these people help the kid?”
+“Can you tell me, did either of these people help the kid in the middle?”
 
 [Stimulus source](assets/stimuli/d8367f1a225f-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -482,7 +442,7 @@ Expected check/practice answer: No.
 
 A correct response is required to advance; there is no bypass.
 
-Reminder if needed: “Actually, remember, no one helped the kid. The kid’s sister did NOT help the kid. The kid’s friend did NOT help the kid. No one helped the kid.”
+Reminder if needed: “Actually, remember, no one helped the kid in the middle. And the kid’s sister did NOT help the kid in the middle. And the kid’s friend did NOT help the kid in the middle. No one helped the kid in the middle.”
 
 After the reminder, reread the full question and response labels before reopening the choices.
 
@@ -570,59 +530,39 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 ## Story 3: Best Friend–Friend
 
-Left: the kid’s friend. Middle: the kid. Right: the kid’s best friend.
+Left: the kid’s friend. Middle: the kid in the middle. Right: the kid’s best friend.
 
 ### 45. Meet the characters
 
-“Oh look! Here is a kid.”
+“Look! Here are some people.”
 
 [Stimulus source](assets/stimuli/d45a1ece9a16-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening adapted to the single kid shown on screen.*
+### 46. Meet the kid in the middle
 
-### 46. Meet the kid
-
-“This little one is a kid. Tap the kid.”
+“This little one is a kid.”
 
 [Stimulus source](assets/stimuli/b1248cc0a0b3-intro_02.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: recipient.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This little one is a kid. This one is the kid. Tap the kid.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 47. Meet the kid’s friend
 
-“This little one is this kid’s friend. Tap the kid’s friend.”
+“This little one is this kid’s friend.”
 
 [Stimulus source](assets/stimuli/87de30905e8d-intro_03.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper1.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This little one is this kid’s friend. This one is the kid’s friend. Tap the kid’s friend.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 48. Meet the kid’s best friend
 
-“This little one is this kid’s best friend. Tap the kid’s best friend.”
+“This little one is this kid’s best friend.”
 
 [Stimulus source](assets/stimuli/54819c159fd8-intro_04.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper2.
+*Narrated character introduction from Find the Caregiver.*
 
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This little one is this kid’s best friend. This one is the kid’s best friend. Tap the kid’s best friend.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
-
-### 49. The kid needs help
+### 49. The kid in the middle needs help
 
 “Now let’s say that one day the kid in the middle was very sad.”
 
@@ -630,7 +570,7 @@ Reminder if needed: “This little one is this kid’s best friend. This one is 
 
 ### 50. Both helpers see
 
-“The kid’s friend and the kid’s best friend both see that the kid is sad.”
+“The kid’s friend and the kid’s best friend both see that the kid in the middle is sad.”
 
 [Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -720,9 +660,9 @@ After choosing “The kid’s best friend”, confirm: “You chose the kid’s 
 
 ### 57. No one helped
 
-“No one helped the kid.”
+“No one helped the kid in the middle.”
 
-Display wording: “No one helped the kid.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+Display wording: “No one helped the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
 
 [Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -730,11 +670,11 @@ Display wording: “No one helped the kid.” Both helper cues remain visible be
 
 ### 58. Each helper did NOT help
 
-“The kid’s friend did NOT help the kid. The kid’s best friend did NOT help the kid. No one helped the kid.”
+“The kid’s friend did NOT help the kid in the middle. And the kid’s best friend did NOT help the kid in the middle. No one helped the kid in the middle.”
 
-Display wording: “The kid’s friend did NOT help the kid.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+Display wording: “The kid’s friend did NOT help the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
 
-Captions follow the narration, in order: “The kid’s friend did NOT help the kid.” → “The kid’s best friend did NOT help the kid.” → “No one helped the kid.”.
+Captions follow the narration, in order: “The kid’s friend did NOT help the kid in the middle.” → “And the kid’s best friend did NOT help the kid in the middle.” → “No one helped the kid in the middle.”.
 
 [Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -742,7 +682,7 @@ Captions follow the narration, in order: “The kid’s friend did NOT help the 
 
 ### 59. Recall · No one helped
 
-“Can you tell me, did either of these people help the kid?”
+“Can you tell me, did either of these people help the kid in the middle?”
 
 [Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -752,7 +692,7 @@ Expected check/practice answer: No.
 
 A correct response is required to advance; there is no bypass.
 
-Reminder if needed: “Actually, remember, no one helped the kid. The kid’s friend did NOT help the kid. The kid’s best friend did NOT help the kid. No one helped the kid.”
+Reminder if needed: “Actually, remember, no one helped the kid in the middle. And the kid’s friend did NOT help the kid in the middle. And the kid’s best friend did NOT help the kid in the middle. No one helped the kid in the middle.”
 
 After the reminder, reread the full question and response labels before reopening the choices.
 
@@ -840,59 +780,39 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 ## Story 4: Teacher–Friend
 
-Left: the kid’s teacher. Middle: the kid. Right: the kid’s friend.
+Left: the kid’s teacher. Middle: the kid in the middle. Right: the kid’s friend.
 
 ### 67. Meet the characters
 
-“Oh look! Here is a kid.”
+“Look! Here are some people.”
 
 [Stimulus source](assets/stimuli/5ab48f0b29ed-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening adapted to the single kid shown on screen.*
+### 68. Meet the kid in the middle
 
-### 68. Meet the kid
-
-“This little one is a kid. Tap the kid.”
+“This little one is a kid.”
 
 [Stimulus source](assets/stimuli/034f00b997ea-intro_02.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: recipient.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This little one is a kid. This one is the kid. Tap the kid.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 69. Meet the kid’s teacher
 
-“This big one is this kid’s teacher. Tap the kid’s teacher.”
+“This big one is this kid’s teacher.”
 
 [Stimulus source](assets/stimuli/b3c03b18f90c-intro_03.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper1.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This big one is this kid’s teacher. This one is the kid’s teacher. Tap the kid’s teacher.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 70. Meet the kid’s friend
 
-“This little one is this kid’s friend. Tap the kid’s friend.”
+“This little one is this kid’s friend.”
 
 [Stimulus source](assets/stimuli/9c8f0bba75ed-intro_04.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper2.
+*Narrated character introduction from Find the Caregiver.*
 
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This little one is this kid’s friend. This one is the kid’s friend. Tap the kid’s friend.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
-
-### 71. The kid needs help
+### 71. The kid in the middle needs help
 
 “Now let’s say that one day the kid in the middle was very sad.”
 
@@ -900,7 +820,7 @@ Reminder if needed: “This little one is this kid’s friend. This one is the k
 
 ### 72. Both helpers see
 
-“The kid’s teacher and the kid’s friend both see that the kid is sad.”
+“The kid’s teacher and the kid’s friend both see that the kid in the middle is sad.”
 
 [Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -990,9 +910,9 @@ After choosing “The kid’s friend”, confirm: “You chose the kid’s frien
 
 ### 79. No one helped
 
-“No one helped the kid.”
+“No one helped the kid in the middle.”
 
-Display wording: “No one helped the kid.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+Display wording: “No one helped the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
 
 [Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1000,11 +920,11 @@ Display wording: “No one helped the kid.” Both helper cues remain visible be
 
 ### 80. Each helper did NOT help
 
-“The kid’s teacher did NOT help the kid. The kid’s friend did NOT help the kid. No one helped the kid.”
+“The kid’s teacher did NOT help the kid in the middle. And the kid’s friend did NOT help the kid in the middle. No one helped the kid in the middle.”
 
-Display wording: “The kid’s teacher did NOT help the kid.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+Display wording: “The kid’s teacher did NOT help the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
 
-Captions follow the narration, in order: “The kid’s teacher did NOT help the kid.” → “The kid’s friend did NOT help the kid.” → “No one helped the kid.”.
+Captions follow the narration, in order: “The kid’s teacher did NOT help the kid in the middle.” → “And the kid’s friend did NOT help the kid in the middle.” → “No one helped the kid in the middle.”.
 
 [Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1012,7 +932,7 @@ Captions follow the narration, in order: “The kid’s teacher did NOT help the
 
 ### 81. Recall · No one helped
 
-“Can you tell me, did either of these people help the kid?”
+“Can you tell me, did either of these people help the kid in the middle?”
 
 [Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1022,7 +942,7 @@ Expected check/practice answer: No.
 
 A correct response is required to advance; there is no bypass.
 
-Reminder if needed: “Actually, remember, no one helped the kid. The kid’s teacher did NOT help the kid. The kid’s friend did NOT help the kid. No one helped the kid.”
+Reminder if needed: “Actually, remember, no one helped the kid in the middle. And the kid’s teacher did NOT help the kid in the middle. And the kid’s friend did NOT help the kid in the middle. No one helped the kid in the middle.”
 
 After the reminder, reread the full question and response labels before reopening the choices.
 
@@ -1110,59 +1030,39 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 ## Story 5: Mom–Sister
 
-Left: the kid’s mom. Middle: the kid. Right: the kid’s sister.
+Left: the kid’s mom. Middle: the kid in the middle. Right: the kid’s sister.
 
 ### 89. Meet the characters
 
-“Oh look! Here is a kid.”
+“Look! Here are some people.”
 
 [Stimulus source](assets/stimuli/2fa20e069eca-01-group.png) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening adapted to the single kid shown on screen.*
+### 90. Meet the kid in the middle
 
-### 90. Meet the kid
-
-“This little one is a kid. Tap the kid.”
+“This little one is a kid.”
 
 [Stimulus source](assets/stimuli/abff16b4e820-02-child.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: recipient.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This little one is a kid. This one is the kid. Tap the kid.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 91. Meet the kid’s mom
 
-“This big one is this kid’s mom. Tap the kid’s mom.”
+“This big one is this kid’s mom.”
 
 [Stimulus source](assets/stimuli/1f4a6786d185-03-mom.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper1.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This big one is this kid’s mom. This one is the kid’s mom. Tap the kid’s mom.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 92. Meet the kid’s sister
 
-“This little one is this kid’s sister. Tap the kid’s sister.”
+“This little one is this kid’s sister.”
 
 [Stimulus source](assets/stimuli/de928ad71b66-04-sister.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper2.
+*Narrated character introduction from Find the Caregiver.*
 
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This little one is this kid’s sister. This one is the kid’s sister. Tap the kid’s sister.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
-
-### 93. The kid needs help
+### 93. The kid in the middle needs help
 
 “Now let’s say that one day the kid in the middle was very sad.”
 
@@ -1170,7 +1070,7 @@ Reminder if needed: “This little one is this kid’s sister. This one is the k
 
 ### 94. Both helpers see
 
-“The kid’s mom and the kid’s sister both see that the kid is sad.”
+“The kid’s mom and the kid’s sister both see that the kid in the middle is sad.”
 
 [Stimulus source](assets/stimuli/cf266d33caca-05-sad.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1260,9 +1160,9 @@ After choosing “The kid’s sister”, confirm: “You chose the kid’s siste
 
 ### 101. No one helped
 
-“No one helped the kid.”
+“No one helped the kid in the middle.”
 
-Display wording: “No one helped the kid.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+Display wording: “No one helped the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
 
 [Stimulus source](assets/stimuli/cf266d33caca-05-sad.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1270,11 +1170,11 @@ Display wording: “No one helped the kid.” Both helper cues remain visible be
 
 ### 102. Each helper did NOT help
 
-“The kid’s mom did NOT help the kid. The kid’s sister did NOT help the kid. No one helped the kid.”
+“The kid’s mom did NOT help the kid in the middle. And the kid’s sister did NOT help the kid in the middle. No one helped the kid in the middle.”
 
-Display wording: “The kid’s mom did NOT help the kid.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+Display wording: “The kid’s mom did NOT help the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
 
-Captions follow the narration, in order: “The kid’s mom did NOT help the kid.” → “The kid’s sister did NOT help the kid.” → “No one helped the kid.”.
+Captions follow the narration, in order: “The kid’s mom did NOT help the kid in the middle.” → “And the kid’s sister did NOT help the kid in the middle.” → “No one helped the kid in the middle.”.
 
 [Stimulus source](assets/stimuli/cf266d33caca-05-sad.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1282,7 +1182,7 @@ Captions follow the narration, in order: “The kid’s mom did NOT help the kid
 
 ### 103. Recall · No one helped
 
-“Can you tell me, did either of these people help the kid?”
+“Can you tell me, did either of these people help the kid in the middle?”
 
 [Stimulus source](assets/stimuli/cf266d33caca-05-sad.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1292,7 +1192,7 @@ Expected check/practice answer: No.
 
 A correct response is required to advance; there is no bypass.
 
-Reminder if needed: “Actually, remember, no one helped the kid. The kid’s mom did NOT help the kid. The kid’s sister did NOT help the kid. No one helped the kid.”
+Reminder if needed: “Actually, remember, no one helped the kid in the middle. And the kid’s mom did NOT help the kid in the middle. And the kid’s sister did NOT help the kid in the middle. No one helped the kid in the middle.”
 
 After the reminder, reread the full question and response labels before reopening the choices.
 
@@ -1380,59 +1280,39 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 ## Story 6: Teacher–Classmate
 
-Left: the kid’s classmate. Middle: the kid. Right: the kid’s teacher.
+Left: the kid’s classmate. Middle: the kid in the middle. Right: the kid’s teacher.
 
 ### 111. Meet the characters
 
-“Oh look! Here is a kid.”
+“Look! Here are some people.”
 
 [Stimulus source](assets/stimuli/44d39b1df683-intro_01.svg) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening adapted to the single kid shown on screen.*
+### 112. Meet the kid in the middle
 
-### 112. Meet the kid
-
-“This little one is a kid. Tap the kid.”
+“This little one is a kid.”
 
 [Stimulus source](assets/stimuli/4e621f5d72b5-intro_02.svg) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: recipient.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This little one is a kid. This one is the kid. Tap the kid.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 113. Meet the kid’s classmate
 
-“This little one is this kid’s classmate. Tap the kid’s classmate.”
+“This little one is this kid’s classmate.”
 
 [Stimulus source](assets/stimuli/2867c2e0bd9c-intro_03.svg) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper1.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This little one is this kid’s classmate. This one is the kid’s classmate. Tap the kid’s classmate.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 114. Meet the kid’s teacher
 
-“This big one is this kid’s teacher. Tap the kid’s teacher.”
+“This big one is this kid’s teacher.”
 
 [Stimulus source](assets/stimuli/a5206d48c30f-intro_04.svg) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper2.
+*Narrated character introduction from Find the Caregiver.*
 
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This big one is this kid’s teacher. This one is the kid’s teacher. Tap the kid’s teacher.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
-
-### 115. The kid needs help
+### 115. The kid in the middle needs help
 
 “Now let’s say that one day the kid in the middle was very sad.”
 
@@ -1440,7 +1320,7 @@ Reminder if needed: “This big one is this kid’s teacher. This one is the kid
 
 ### 116. Both helpers see
 
-“The kid’s classmate and the kid’s teacher both see that the kid is sad.”
+“The kid’s classmate and the kid’s teacher both see that the kid in the middle is sad.”
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1530,9 +1410,9 @@ After choosing “The kid’s teacher”, confirm: “You chose the kid’s teac
 
 ### 123. No one helped
 
-“No one helped the kid.”
+“No one helped the kid in the middle.”
 
-Display wording: “No one helped the kid.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+Display wording: “No one helped the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1540,11 +1420,11 @@ Display wording: “No one helped the kid.” Both helper cues remain visible be
 
 ### 124. Each helper did NOT help
 
-“The kid’s classmate did NOT help the kid. The kid’s teacher did NOT help the kid. No one helped the kid.”
+“The kid’s classmate did NOT help the kid in the middle. And the kid’s teacher did NOT help the kid in the middle. No one helped the kid in the middle.”
 
-Display wording: “The kid’s classmate did NOT help the kid.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+Display wording: “The kid’s classmate did NOT help the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
 
-Captions follow the narration, in order: “The kid’s classmate did NOT help the kid.” → “The kid’s teacher did NOT help the kid.” → “No one helped the kid.”.
+Captions follow the narration, in order: “The kid’s classmate did NOT help the kid in the middle.” → “And the kid’s teacher did NOT help the kid in the middle.” → “No one helped the kid in the middle.”.
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1552,7 +1432,7 @@ Captions follow the narration, in order: “The kid’s classmate did NOT help t
 
 ### 125. Recall · No one helped
 
-“Can you tell me, did either of these people help the kid?”
+“Can you tell me, did either of these people help the kid in the middle?”
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1562,7 +1442,7 @@ Expected check/practice answer: No.
 
 A correct response is required to advance; there is no bypass.
 
-Reminder if needed: “Actually, remember, no one helped the kid. The kid’s classmate did NOT help the kid. The kid’s teacher did NOT help the kid. No one helped the kid.”
+Reminder if needed: “Actually, remember, no one helped the kid in the middle. And the kid’s classmate did NOT help the kid in the middle. And the kid’s teacher did NOT help the kid in the middle. No one helped the kid in the middle.”
 
 After the reminder, reread the full question and response labels before reopening the choices.
 
@@ -1650,59 +1530,39 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 ## Story 7: Dad–Teacher
 
-Left: the kid’s teacher. Middle: the kid. Right: the kid’s dad.
+Left: the kid’s teacher. Middle: the kid in the middle. Right: the kid’s dad.
 
 ### 133. Meet the characters
 
-“Oh look! Here is a kid.”
+“Look! Here are some people.”
 
 [Stimulus source](assets/stimuli/677804bb653c-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening adapted to the single kid shown on screen.*
+### 134. Meet the kid in the middle
 
-### 134. Meet the kid
-
-“This little one is a kid. Tap the kid.”
+“This little one is a kid.”
 
 [Stimulus source](assets/stimuli/4af918001f03-intro_02.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: recipient.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This little one is a kid. This one is the kid. Tap the kid.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 135. Meet the kid’s teacher
 
-“This big one is this kid’s teacher. Tap the kid’s teacher.”
+“This big one is this kid’s teacher.”
 
 [Stimulus source](assets/stimuli/c9c880b0628e-intro_03.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper1.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This big one is this kid’s teacher. This one is the kid’s teacher. Tap the kid’s teacher.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 136. Meet the kid’s dad
 
-“This big one is this kid’s dad. Tap the kid’s dad.”
+“This big one is this kid’s dad.”
 
 [Stimulus source](assets/stimuli/7192fa43b60d-intro_04.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper2.
+*Narrated character introduction from Find the Caregiver.*
 
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This big one is this kid’s dad. This one is the kid’s dad. Tap the kid’s dad.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
-
-### 137. The kid needs help
+### 137. The kid in the middle needs help
 
 “Now let’s say that one day the kid in the middle was very sad.”
 
@@ -1710,7 +1570,7 @@ Reminder if needed: “This big one is this kid’s dad. This one is the kid’s
 
 ### 138. Both helpers see
 
-“The kid’s teacher and the kid’s dad both see that the kid is sad.”
+“The kid’s teacher and the kid’s dad both see that the kid in the middle is sad.”
 
 [Stimulus source](assets/stimuli/ee15b1b5be65-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1800,9 +1660,9 @@ After choosing “The kid’s dad”, confirm: “You chose the kid’s dad. Did
 
 ### 145. No one helped
 
-“No one helped the kid.”
+“No one helped the kid in the middle.”
 
-Display wording: “No one helped the kid.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+Display wording: “No one helped the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
 
 [Stimulus source](assets/stimuli/ee15b1b5be65-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1810,11 +1670,11 @@ Display wording: “No one helped the kid.” Both helper cues remain visible be
 
 ### 146. Each helper did NOT help
 
-“The kid’s teacher did NOT help the kid. The kid’s dad did NOT help the kid. No one helped the kid.”
+“The kid’s teacher did NOT help the kid in the middle. And the kid’s dad did NOT help the kid in the middle. No one helped the kid in the middle.”
 
-Display wording: “The kid’s teacher did NOT help the kid.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+Display wording: “The kid’s teacher did NOT help the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
 
-Captions follow the narration, in order: “The kid’s teacher did NOT help the kid.” → “The kid’s dad did NOT help the kid.” → “No one helped the kid.”.
+Captions follow the narration, in order: “The kid’s teacher did NOT help the kid in the middle.” → “And the kid’s dad did NOT help the kid in the middle.” → “No one helped the kid in the middle.”.
 
 [Stimulus source](assets/stimuli/ee15b1b5be65-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1822,7 +1682,7 @@ Captions follow the narration, in order: “The kid’s teacher did NOT help the
 
 ### 147. Recall · No one helped
 
-“Can you tell me, did either of these people help the kid?”
+“Can you tell me, did either of these people help the kid in the middle?”
 
 [Stimulus source](assets/stimuli/ee15b1b5be65-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1832,7 +1692,7 @@ Expected check/practice answer: No.
 
 A correct response is required to advance; there is no bypass.
 
-Reminder if needed: “Actually, remember, no one helped the kid. The kid’s teacher did NOT help the kid. The kid’s dad did NOT help the kid. No one helped the kid.”
+Reminder if needed: “Actually, remember, no one helped the kid in the middle. And the kid’s teacher did NOT help the kid in the middle. And the kid’s dad did NOT help the kid in the middle. No one helped the kid in the middle.”
 
 After the reminder, reread the full question and response labels before reopening the choices.
 
@@ -1920,59 +1780,39 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 ## Story 8: Brother–Friend
 
-Left: the kid’s brother. Middle: the kid. Right: the kid’s friend.
+Left: the kid’s brother. Middle: the kid in the middle. Right: the kid’s friend.
 
 ### 155. Meet the characters
 
-“Oh look! Here is a kid.”
+“Look! Here are some people.”
 
 [Stimulus source](assets/stimuli/bb199acadbc5-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening adapted to the single kid shown on screen.*
+### 156. Meet the kid in the middle
 
-### 156. Meet the kid
-
-“This little one is a kid. Tap the kid.”
+“This little one is a kid.”
 
 [Stimulus source](assets/stimuli/7ee73e71762e-intro_02.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: recipient.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This little one is a kid. This one is the kid. Tap the kid.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 157. Meet the kid’s brother
 
-“This little one is this kid’s brother. Tap the kid’s brother.”
+“This little one is this kid’s brother.”
 
 [Stimulus source](assets/stimuli/ea0f47bb1dfa-intro_03.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper1.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This little one is this kid’s brother. This one is the kid’s brother. Tap the kid’s brother.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 158. Meet the kid’s friend
 
-“This little one is this kid’s friend. Tap the kid’s friend.”
+“This little one is this kid’s friend.”
 
 [Stimulus source](assets/stimuli/82961f4d97a6-intro_04.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper2.
+*Narrated character introduction from Find the Caregiver.*
 
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This little one is this kid’s friend. This one is the kid’s friend. Tap the kid’s friend.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
-
-### 159. The kid needs help
+### 159. The kid in the middle needs help
 
 “Now let’s say that one day the kid in the middle was very sad.”
 
@@ -1980,7 +1820,7 @@ Reminder if needed: “This little one is this kid’s friend. This one is the k
 
 ### 160. Both helpers see
 
-“The kid’s brother and the kid’s friend both see that the kid is sad.”
+“The kid’s brother and the kid’s friend both see that the kid in the middle is sad.”
 
 [Stimulus source](assets/stimuli/3538d8e77c34-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -2070,9 +1910,9 @@ After choosing “The kid’s friend”, confirm: “You chose the kid’s frien
 
 ### 167. No one helped
 
-“No one helped the kid.”
+“No one helped the kid in the middle.”
 
-Display wording: “No one helped the kid.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+Display wording: “No one helped the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
 
 [Stimulus source](assets/stimuli/3538d8e77c34-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -2080,11 +1920,11 @@ Display wording: “No one helped the kid.” Both helper cues remain visible be
 
 ### 168. Each helper did NOT help
 
-“The kid’s brother did NOT help the kid. The kid’s friend did NOT help the kid. No one helped the kid.”
+“The kid’s brother did NOT help the kid in the middle. And the kid’s friend did NOT help the kid in the middle. No one helped the kid in the middle.”
 
-Display wording: “The kid’s brother did NOT help the kid.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+Display wording: “The kid’s brother did NOT help the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
 
-Captions follow the narration, in order: “The kid’s brother did NOT help the kid.” → “The kid’s friend did NOT help the kid.” → “No one helped the kid.”.
+Captions follow the narration, in order: “The kid’s brother did NOT help the kid in the middle.” → “And the kid’s friend did NOT help the kid in the middle.” → “No one helped the kid in the middle.”.
 
 [Stimulus source](assets/stimuli/3538d8e77c34-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -2092,7 +1932,7 @@ Captions follow the narration, in order: “The kid’s brother did NOT help the
 
 ### 169. Recall · No one helped
 
-“Can you tell me, did either of these people help the kid?”
+“Can you tell me, did either of these people help the kid in the middle?”
 
 [Stimulus source](assets/stimuli/3538d8e77c34-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -2102,7 +1942,7 @@ Expected check/practice answer: No.
 
 A correct response is required to advance; there is no bypass.
 
-Reminder if needed: “Actually, remember, no one helped the kid. The kid’s brother did NOT help the kid. The kid’s friend did NOT help the kid. No one helped the kid.”
+Reminder if needed: “Actually, remember, no one helped the kid in the middle. And the kid’s brother did NOT help the kid in the middle. And the kid’s friend did NOT help the kid in the middle. No one helped the kid in the middle.”
 
 After the reminder, reread the full question and response labels before reopening the choices.
 
@@ -2190,59 +2030,39 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 ## Story 9: Best Friend–Friend
 
-Left: the kid’s friend. Middle: the kid. Right: the kid’s best friend.
+Left: the kid’s friend. Middle: the kid in the middle. Right: the kid’s best friend.
 
 ### 177. Meet the characters
 
-“Oh look! Here is a kid.”
+“Look! Here are some people.”
 
 [Stimulus source](assets/stimuli/d45a1ece9a16-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening adapted to the single kid shown on screen.*
+### 178. Meet the kid in the middle
 
-### 178. Meet the kid
-
-“This little one is a kid. Tap the kid.”
+“This little one is a kid.”
 
 [Stimulus source](assets/stimuli/b1248cc0a0b3-intro_02.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: recipient.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This little one is a kid. This one is the kid. Tap the kid.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 179. Meet the kid’s friend
 
-“This little one is this kid’s friend. Tap the kid’s friend.”
+“This little one is this kid’s friend.”
 
 [Stimulus source](assets/stimuli/87de30905e8d-intro_03.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper1.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This little one is this kid’s friend. This one is the kid’s friend. Tap the kid’s friend.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 180. Meet the kid’s best friend
 
-“This little one is this kid’s best friend. Tap the kid’s best friend.”
+“This little one is this kid’s best friend.”
 
 [Stimulus source](assets/stimuli/54819c159fd8-intro_04.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper2.
+*Narrated character introduction from Find the Caregiver.*
 
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This little one is this kid’s best friend. This one is the kid’s best friend. Tap the kid’s best friend.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
-
-### 181. The kid needs help
+### 181. The kid in the middle needs help
 
 “Now let’s say that one day the kid in the middle was very sad.”
 
@@ -2250,7 +2070,7 @@ Reminder if needed: “This little one is this kid’s best friend. This one is 
 
 ### 182. Both helpers see
 
-“The kid’s friend and the kid’s best friend both see that the kid is sad.”
+“The kid’s friend and the kid’s best friend both see that the kid in the middle is sad.”
 
 [Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -2340,9 +2160,9 @@ After choosing “The kid’s best friend”, confirm: “You chose the kid’s 
 
 ### 189. No one helped
 
-“No one helped the kid.”
+“No one helped the kid in the middle.”
 
-Display wording: “No one helped the kid.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+Display wording: “No one helped the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
 
 [Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -2350,11 +2170,11 @@ Display wording: “No one helped the kid.” Both helper cues remain visible be
 
 ### 190. Each helper did NOT help
 
-“The kid’s friend did NOT help the kid. The kid’s best friend did NOT help the kid. No one helped the kid.”
+“The kid’s friend did NOT help the kid in the middle. And the kid’s best friend did NOT help the kid in the middle. No one helped the kid in the middle.”
 
-Display wording: “The kid’s friend did NOT help the kid.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+Display wording: “The kid’s friend did NOT help the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
 
-Captions follow the narration, in order: “The kid’s friend did NOT help the kid.” → “The kid’s best friend did NOT help the kid.” → “No one helped the kid.”.
+Captions follow the narration, in order: “The kid’s friend did NOT help the kid in the middle.” → “And the kid’s best friend did NOT help the kid in the middle.” → “No one helped the kid in the middle.”.
 
 [Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -2362,7 +2182,7 @@ Captions follow the narration, in order: “The kid’s friend did NOT help the 
 
 ### 191. Recall · No one helped
 
-“Can you tell me, did either of these people help the kid?”
+“Can you tell me, did either of these people help the kid in the middle?”
 
 [Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -2372,7 +2192,7 @@ Expected check/practice answer: No.
 
 A correct response is required to advance; there is no bypass.
 
-Reminder if needed: “Actually, remember, no one helped the kid. The kid’s friend did NOT help the kid. The kid’s best friend did NOT help the kid. No one helped the kid.”
+Reminder if needed: “Actually, remember, no one helped the kid in the middle. And the kid’s friend did NOT help the kid in the middle. And the kid’s best friend did NOT help the kid in the middle. No one helped the kid in the middle.”
 
 After the reminder, reread the full question and response labels before reopening the choices.
 
@@ -2460,59 +2280,39 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 ## Story 10: Teacher–Friend
 
-Left: the kid’s teacher. Middle: the kid. Right: the kid’s friend.
+Left: the kid’s teacher. Middle: the kid in the middle. Right: the kid’s friend.
 
 ### 199. Meet the characters
 
-“Oh look! Here is a kid.”
+“Look! Here are some people.”
 
 [Stimulus source](assets/stimuli/5ab48f0b29ed-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening adapted to the single kid shown on screen.*
+### 200. Meet the kid in the middle
 
-### 200. Meet the kid
-
-“This little one is a kid. Tap the kid.”
+“This little one is a kid.”
 
 [Stimulus source](assets/stimuli/034f00b997ea-intro_02.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: recipient.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This little one is a kid. This one is the kid. Tap the kid.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 201. Meet the kid’s teacher
 
-“This big one is this kid’s teacher. Tap the kid’s teacher.”
+“This big one is this kid’s teacher.”
 
 [Stimulus source](assets/stimuli/b3c03b18f90c-intro_03.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper1.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This big one is this kid’s teacher. This one is the kid’s teacher. Tap the kid’s teacher.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 202. Meet the kid’s friend
 
-“This little one is this kid’s friend. Tap the kid’s friend.”
+“This little one is this kid’s friend.”
 
 [Stimulus source](assets/stimuli/9c8f0bba75ed-intro_04.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper2.
+*Narrated character introduction from Find the Caregiver.*
 
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This little one is this kid’s friend. This one is the kid’s friend. Tap the kid’s friend.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
-
-### 203. The kid needs help
+### 203. The kid in the middle needs help
 
 “Now let’s say that one day the kid in the middle was very sad.”
 
@@ -2520,7 +2320,7 @@ Reminder if needed: “This little one is this kid’s friend. This one is the k
 
 ### 204. Both helpers see
 
-“The kid’s teacher and the kid’s friend both see that the kid is sad.”
+“The kid’s teacher and the kid’s friend both see that the kid in the middle is sad.”
 
 [Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -2610,9 +2410,9 @@ After choosing “The kid’s friend”, confirm: “You chose the kid’s frien
 
 ### 211. No one helped
 
-“No one helped the kid.”
+“No one helped the kid in the middle.”
 
-Display wording: “No one helped the kid.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+Display wording: “No one helped the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
 
 [Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -2620,11 +2420,11 @@ Display wording: “No one helped the kid.” Both helper cues remain visible be
 
 ### 212. Each helper did NOT help
 
-“The kid’s teacher did NOT help the kid. The kid’s friend did NOT help the kid. No one helped the kid.”
+“The kid’s teacher did NOT help the kid in the middle. And the kid’s friend did NOT help the kid in the middle. No one helped the kid in the middle.”
 
-Display wording: “The kid’s teacher did NOT help the kid.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+Display wording: “The kid’s teacher did NOT help the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
 
-Captions follow the narration, in order: “The kid’s teacher did NOT help the kid.” → “The kid’s friend did NOT help the kid.” → “No one helped the kid.”.
+Captions follow the narration, in order: “The kid’s teacher did NOT help the kid in the middle.” → “And the kid’s friend did NOT help the kid in the middle.” → “No one helped the kid in the middle.”.
 
 [Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -2632,7 +2432,7 @@ Captions follow the narration, in order: “The kid’s teacher did NOT help the
 
 ### 213. Recall · No one helped
 
-“Can you tell me, did either of these people help the kid?”
+“Can you tell me, did either of these people help the kid in the middle?”
 
 [Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -2642,7 +2442,7 @@ Expected check/practice answer: No.
 
 A correct response is required to advance; there is no bypass.
 
-Reminder if needed: “Actually, remember, no one helped the kid. The kid’s teacher did NOT help the kid. The kid’s friend did NOT help the kid. No one helped the kid.”
+Reminder if needed: “Actually, remember, no one helped the kid in the middle. And the kid’s teacher did NOT help the kid in the middle. And the kid’s friend did NOT help the kid in the middle. No one helped the kid in the middle.”
 
 After the reminder, reread the full question and response labels before reopening the choices.
 
@@ -2730,59 +2530,39 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 ## Story 11: Dad–Brother
 
-Left: the kid’s dad. Middle: the kid. Right: the kid’s brother.
+Left: the kid’s dad. Middle: the kid in the middle. Right: the kid’s brother.
 
 ### 221. Meet the characters
 
-“Oh look! Here is a kid.”
+“Look! Here are some people.”
 
 [Stimulus source](assets/stimuli/ebcc9f9f7d93-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening adapted to the single kid shown on screen.*
+### 222. Meet the kid in the middle
 
-### 222. Meet the kid
-
-“This little one is a kid. Tap the kid.”
+“This little one is a kid.”
 
 [Stimulus source](assets/stimuli/5173e613fe51-intro_02.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: recipient.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This little one is a kid. This one is the kid. Tap the kid.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 223. Meet the kid’s dad
 
-“This big one is this kid’s dad. Tap the kid’s dad.”
+“This big one is this kid’s dad.”
 
 [Stimulus source](assets/stimuli/8af685be55d9-intro_03.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper1.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This big one is this kid’s dad. This one is the kid’s dad. Tap the kid’s dad.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 224. Meet the kid’s brother
 
-“This little one is this kid’s brother. Tap the kid’s brother.”
+“This little one is this kid’s brother.”
 
 [Stimulus source](assets/stimuli/5430b5b95950-7a_brother_intro.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper2.
+*Narrated character introduction from Find the Caregiver.*
 
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This little one is this kid’s brother. This one is the kid’s brother. Tap the kid’s brother.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
-
-### 225. The kid needs help
+### 225. The kid in the middle needs help
 
 “Now let’s say that one day the kid in the middle was very sad.”
 
@@ -2790,7 +2570,7 @@ Reminder if needed: “This little one is this kid’s brother. This one is the 
 
 ### 226. Both helpers see
 
-“The kid’s dad and the kid’s brother both see that the kid is sad.”
+“The kid’s dad and the kid’s brother both see that the kid in the middle is sad.”
 
 [Stimulus source](assets/stimuli/09b52ae33b24-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -2880,9 +2660,9 @@ After choosing “The kid’s brother”, confirm: “You chose the kid’s brot
 
 ### 233. No one helped
 
-“No one helped the kid.”
+“No one helped the kid in the middle.”
 
-Display wording: “No one helped the kid.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+Display wording: “No one helped the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
 
 [Stimulus source](assets/stimuli/09b52ae33b24-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -2890,11 +2670,11 @@ Display wording: “No one helped the kid.” Both helper cues remain visible be
 
 ### 234. Each helper did NOT help
 
-“The kid’s dad did NOT help the kid. The kid’s brother did NOT help the kid. No one helped the kid.”
+“The kid’s dad did NOT help the kid in the middle. And the kid’s brother did NOT help the kid in the middle. No one helped the kid in the middle.”
 
-Display wording: “The kid’s dad did NOT help the kid.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+Display wording: “The kid’s dad did NOT help the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
 
-Captions follow the narration, in order: “The kid’s dad did NOT help the kid.” → “The kid’s brother did NOT help the kid.” → “No one helped the kid.”.
+Captions follow the narration, in order: “The kid’s dad did NOT help the kid in the middle.” → “And the kid’s brother did NOT help the kid in the middle.” → “No one helped the kid in the middle.”.
 
 [Stimulus source](assets/stimuli/09b52ae33b24-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -2902,7 +2682,7 @@ Captions follow the narration, in order: “The kid’s dad did NOT help the kid
 
 ### 235. Recall · No one helped
 
-“Can you tell me, did either of these people help the kid?”
+“Can you tell me, did either of these people help the kid in the middle?”
 
 [Stimulus source](assets/stimuli/09b52ae33b24-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -2912,7 +2692,7 @@ Expected check/practice answer: No.
 
 A correct response is required to advance; there is no bypass.
 
-Reminder if needed: “Actually, remember, no one helped the kid. The kid’s dad did NOT help the kid. The kid’s brother did NOT help the kid. No one helped the kid.”
+Reminder if needed: “Actually, remember, no one helped the kid in the middle. And the kid’s dad did NOT help the kid in the middle. And the kid’s brother did NOT help the kid in the middle. No one helped the kid in the middle.”
 
 After the reminder, reread the full question and response labels before reopening the choices.
 
@@ -3000,59 +2780,39 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 ## Story 12: Teacher–Classmate
 
-Left: the kid’s classmate. Middle: the kid. Right: the kid’s teacher.
+Left: the kid’s classmate. Middle: the kid in the middle. Right: the kid’s teacher.
 
 ### 243. Meet the characters
 
-“Oh look! Here is a kid.”
+“Look! Here are some people.”
 
 [Stimulus source](assets/stimuli/44d39b1df683-intro_01.svg) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening adapted to the single kid shown on screen.*
+### 244. Meet the kid in the middle
 
-### 244. Meet the kid
-
-“This little one is a kid. Tap the kid.”
+“This little one is a kid.”
 
 [Stimulus source](assets/stimuli/4e621f5d72b5-intro_02.svg) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: recipient.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This little one is a kid. This one is the kid. Tap the kid.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 245. Meet the kid’s classmate
 
-“This little one is this kid’s classmate. Tap the kid’s classmate.”
+“This little one is this kid’s classmate.”
 
 [Stimulus source](assets/stimuli/2867c2e0bd9c-intro_03.svg) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper1.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This little one is this kid’s classmate. This one is the kid’s classmate. Tap the kid’s classmate.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 246. Meet the kid’s teacher
 
-“This big one is this kid’s teacher. Tap the kid’s teacher.”
+“This big one is this kid’s teacher.”
 
 [Stimulus source](assets/stimuli/a5206d48c30f-intro_04.svg) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper2.
+*Narrated character introduction from Find the Caregiver.*
 
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This big one is this kid’s teacher. This one is the kid’s teacher. Tap the kid’s teacher.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
-
-### 247. The kid needs help
+### 247. The kid in the middle needs help
 
 “Now let’s say that one day the kid in the middle was very sad.”
 
@@ -3060,7 +2820,7 @@ Reminder if needed: “This big one is this kid’s teacher. This one is the kid
 
 ### 248. Both helpers see
 
-“The kid’s classmate and the kid’s teacher both see that the kid is sad.”
+“The kid’s classmate and the kid’s teacher both see that the kid in the middle is sad.”
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
@@ -3150,9 +2910,9 @@ After choosing “The kid’s teacher”, confirm: “You chose the kid’s teac
 
 ### 255. No one helped
 
-“No one helped the kid.”
+“No one helped the kid in the middle.”
 
-Display wording: “No one helped the kid.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+Display wording: “No one helped the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
@@ -3160,11 +2920,11 @@ Display wording: “No one helped the kid.” Both helper cues remain visible be
 
 ### 256. Each helper did NOT help
 
-“The kid’s classmate did NOT help the kid. The kid’s teacher did NOT help the kid. No one helped the kid.”
+“The kid’s classmate did NOT help the kid in the middle. And the kid’s teacher did NOT help the kid in the middle. No one helped the kid in the middle.”
 
-Display wording: “The kid’s classmate did NOT help the kid.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+Display wording: “The kid’s classmate did NOT help the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
 
-Captions follow the narration, in order: “The kid’s classmate did NOT help the kid.” → “The kid’s teacher did NOT help the kid.” → “No one helped the kid.”.
+Captions follow the narration, in order: “The kid’s classmate did NOT help the kid in the middle.” → “And the kid’s teacher did NOT help the kid in the middle.” → “No one helped the kid in the middle.”.
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
@@ -3172,7 +2932,7 @@ Captions follow the narration, in order: “The kid’s classmate did NOT help t
 
 ### 257. Recall · No one helped
 
-“Can you tell me, did either of these people help the kid?”
+“Can you tell me, did either of these people help the kid in the middle?”
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
@@ -3182,7 +2942,7 @@ Expected check/practice answer: No.
 
 A correct response is required to advance; there is no bypass.
 
-Reminder if needed: “Actually, remember, no one helped the kid. The kid’s classmate did NOT help the kid. The kid’s teacher did NOT help the kid. No one helped the kid.”
+Reminder if needed: “Actually, remember, no one helped the kid in the middle. And the kid’s classmate did NOT help the kid in the middle. And the kid’s teacher did NOT help the kid in the middle. No one helped the kid in the middle.”
 
 After the reminder, reread the full question and response labels before reopening the choices.
 
@@ -3270,59 +3030,39 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 ## Story 13: Mom–Dad
 
-Left: the kid’s dad. Middle: the kid. Right: the kid’s mom.
+Left: the kid’s dad. Middle: the kid in the middle. Right: the kid’s mom.
 
 ### 265. Meet the characters
 
-“Oh look! Here is a kid.”
+“Look! Here are some people.”
 
 [Stimulus source](assets/stimuli/a536bea376a4-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening adapted to the single kid shown on screen.*
+### 266. Meet the kid in the middle
 
-### 266. Meet the kid
-
-“This little one is a kid. Tap the kid.”
+“This little one is a kid.”
 
 [Stimulus source](assets/stimuli/3ee3708abba0-intro_02.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: recipient.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This little one is a kid. This one is the kid. Tap the kid.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 267. Meet the kid’s dad
 
-“This big one is this kid’s dad. Tap the kid’s dad.”
+“This big one is this kid’s dad.”
 
 [Stimulus source](assets/stimuli/1e980c95dcac-intro_03.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper1.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This big one is this kid’s dad. This one is the kid’s dad. Tap the kid’s dad.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 268. Meet the kid’s mom
 
-“This big one is this kid’s mom. Tap the kid’s mom.”
+“This big one is this kid’s mom.”
 
 [Stimulus source](assets/stimuli/ef70b2fc2757-intro_04.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper2.
+*Narrated character introduction from Find the Caregiver.*
 
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This big one is this kid’s mom. This one is the kid’s mom. Tap the kid’s mom.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
-
-### 269. The kid needs help
+### 269. The kid in the middle needs help
 
 “Now let’s say that one day the kid in the middle was very sad.”
 
@@ -3330,7 +3070,7 @@ Reminder if needed: “This big one is this kid’s mom. This one is the kid’s
 
 ### 270. Both helpers see
 
-“The kid’s dad and the kid’s mom both see that the kid is sad.”
+“The kid’s dad and the kid’s mom both see that the kid in the middle is sad.”
 
 [Stimulus source](assets/stimuli/443991b4edc3-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -3420,9 +3160,9 @@ After choosing “The kid’s mom”, confirm: “You chose the kid’s mom. Did
 
 ### 277. No one helped
 
-“No one helped the kid.”
+“No one helped the kid in the middle.”
 
-Display wording: “No one helped the kid.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+Display wording: “No one helped the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
 
 [Stimulus source](assets/stimuli/443991b4edc3-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -3430,11 +3170,11 @@ Display wording: “No one helped the kid.” Both helper cues remain visible be
 
 ### 278. Each helper did NOT help
 
-“The kid’s dad did NOT help the kid. The kid’s mom did NOT help the kid. No one helped the kid.”
+“The kid’s dad did NOT help the kid in the middle. And the kid’s mom did NOT help the kid in the middle. No one helped the kid in the middle.”
 
-Display wording: “The kid’s dad did NOT help the kid.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+Display wording: “The kid’s dad did NOT help the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
 
-Captions follow the narration, in order: “The kid’s dad did NOT help the kid.” → “The kid’s mom did NOT help the kid.” → “No one helped the kid.”.
+Captions follow the narration, in order: “The kid’s dad did NOT help the kid in the middle.” → “And the kid’s mom did NOT help the kid in the middle.” → “No one helped the kid in the middle.”.
 
 [Stimulus source](assets/stimuli/443991b4edc3-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -3442,7 +3182,7 @@ Captions follow the narration, in order: “The kid’s dad did NOT help the kid
 
 ### 279. Recall · No one helped
 
-“Can you tell me, did either of these people help the kid?”
+“Can you tell me, did either of these people help the kid in the middle?”
 
 [Stimulus source](assets/stimuli/443991b4edc3-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -3452,7 +3192,7 @@ Expected check/practice answer: No.
 
 A correct response is required to advance; there is no bypass.
 
-Reminder if needed: “Actually, remember, no one helped the kid. The kid’s dad did NOT help the kid. The kid’s mom did NOT help the kid. No one helped the kid.”
+Reminder if needed: “Actually, remember, no one helped the kid in the middle. And the kid’s dad did NOT help the kid in the middle. And the kid’s mom did NOT help the kid in the middle. No one helped the kid in the middle.”
 
 After the reminder, reread the full question and response labels before reopening the choices.
 
@@ -3540,59 +3280,39 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 ## Story 14: Sister–Brother
 
-Left: the kid’s sister. Middle: the kid. Right: the kid’s brother.
+Left: the kid’s sister. Middle: the kid in the middle. Right: the kid’s brother.
 
 ### 287. Meet the characters
 
-“Oh look! Here is a kid.”
+“Look! Here are some people.”
 
 [Stimulus source](assets/stimuli/931a3ff701b0-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening adapted to the single kid shown on screen.*
+### 288. Meet the kid in the middle
 
-### 288. Meet the kid
-
-“This little one is a kid. Tap the kid.”
+“This little one is a kid.”
 
 [Stimulus source](assets/stimuli/b22dc4ce9487-intro_02.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: recipient.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This little one is a kid. This one is the kid. Tap the kid.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 289. Meet the kid’s sister
 
-“This little one is this kid’s sister. Tap the kid’s sister.”
+“This little one is this kid’s sister.”
 
 [Stimulus source](assets/stimuli/6a31a255e09e-intro_03.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper1.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This little one is this kid’s sister. This one is the kid’s sister. Tap the kid’s sister.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 290. Meet the kid’s brother
 
-“This little one is this kid’s brother. Tap the kid’s brother.”
+“This little one is this kid’s brother.”
 
 [Stimulus source](assets/stimuli/118cdfcb8a13-intro_04.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper2.
+*Narrated character introduction from Find the Caregiver.*
 
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This little one is this kid’s brother. This one is the kid’s brother. Tap the kid’s brother.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
-
-### 291. The kid needs help
+### 291. The kid in the middle needs help
 
 “Now let’s say that one day the kid in the middle was very sad.”
 
@@ -3600,7 +3320,7 @@ Reminder if needed: “This little one is this kid’s brother. This one is the 
 
 ### 292. Both helpers see
 
-“The kid’s sister and the kid’s brother both see that the kid is sad.”
+“The kid’s sister and the kid’s brother both see that the kid in the middle is sad.”
 
 [Stimulus source](assets/stimuli/fac075f520aa-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -3690,9 +3410,9 @@ After choosing “The kid’s brother”, confirm: “You chose the kid’s brot
 
 ### 299. No one helped
 
-“No one helped the kid.”
+“No one helped the kid in the middle.”
 
-Display wording: “No one helped the kid.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+Display wording: “No one helped the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
 
 [Stimulus source](assets/stimuli/fac075f520aa-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -3700,11 +3420,11 @@ Display wording: “No one helped the kid.” Both helper cues remain visible be
 
 ### 300. Each helper did NOT help
 
-“The kid’s sister did NOT help the kid. The kid’s brother did NOT help the kid. No one helped the kid.”
+“The kid’s sister did NOT help the kid in the middle. And the kid’s brother did NOT help the kid in the middle. No one helped the kid in the middle.”
 
-Display wording: “The kid’s sister did NOT help the kid.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+Display wording: “The kid’s sister did NOT help the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
 
-Captions follow the narration, in order: “The kid’s sister did NOT help the kid.” → “The kid’s brother did NOT help the kid.” → “No one helped the kid.”.
+Captions follow the narration, in order: “The kid’s sister did NOT help the kid in the middle.” → “And the kid’s brother did NOT help the kid in the middle.” → “No one helped the kid in the middle.”.
 
 [Stimulus source](assets/stimuli/fac075f520aa-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -3712,7 +3432,7 @@ Captions follow the narration, in order: “The kid’s sister did NOT help the 
 
 ### 301. Recall · No one helped
 
-“Can you tell me, did either of these people help the kid?”
+“Can you tell me, did either of these people help the kid in the middle?”
 
 [Stimulus source](assets/stimuli/fac075f520aa-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -3722,7 +3442,7 @@ Expected check/practice answer: No.
 
 A correct response is required to advance; there is no bypass.
 
-Reminder if needed: “Actually, remember, no one helped the kid. The kid’s sister did NOT help the kid. The kid’s brother did NOT help the kid. No one helped the kid.”
+Reminder if needed: “Actually, remember, no one helped the kid in the middle. And the kid’s sister did NOT help the kid in the middle. And the kid’s brother did NOT help the kid in the middle. No one helped the kid in the middle.”
 
 After the reminder, reread the full question and response labels before reopening the choices.
 
@@ -3814,53 +3534,33 @@ Left: the kid’s dad. Middle: the mom. Right: the kid.
 
 ### 309. Meet the characters
 
-“Oh look! Here is a kid.”
+“Look! Here are some people.”
 
 [Stimulus source](assets/stimuli/966365322eff-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening adapted to the single kid shown on screen.*
-
 ### 310. Meet the kid
 
-“This little one is a kid. Tap the kid.”
+“This little one is a kid.”
 
 [Stimulus source](assets/stimuli/7849c46a23c8-intro_02.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper2.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This little one is a kid. This one is the kid. Tap the kid.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 311. Meet the kid’s dad
 
-“This big one is this kid’s dad. Tap the kid’s dad.”
+“This big one is this kid’s dad.”
 
 [Stimulus source](assets/stimuli/c5c6407132b2-intro_03.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper1.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This big one is this kid’s dad. This one is the kid’s dad. Tap the kid’s dad.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 312. Meet the mom
 
-“This big one is this kid’s mom. Tap the mom.”
+“This big one is this kid’s mom.”
 
 [Stimulus source](assets/stimuli/a581aa99f6cf-intro_04.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: recipient.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This big one is this kid’s mom. This one is the mom. Tap the mom.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation. The person who needs help is an adult in this story.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 313. The mom needs help
 
@@ -4084,53 +3784,33 @@ Left: the kid. Middle: the dad. Right: the kid’s mom.
 
 ### 331. Meet the characters
 
-“Oh look! Here is a kid.”
+“Look! Here are some people.”
 
 [Stimulus source](assets/stimuli/0b393251d294-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening adapted to the single kid shown on screen.*
-
 ### 332. Meet the kid
 
-“This little one is a kid. Tap the kid.”
+“This little one is a kid.”
 
 [Stimulus source](assets/stimuli/84bb858d2543-intro_02.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper1.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This little one is a kid. This one is the kid. Tap the kid.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 333. Meet the dad
 
-“This big one is this kid’s dad. Tap the dad.”
+“This big one is this kid’s dad.”
 
 [Stimulus source](assets/stimuli/136f25127d00-intro_03.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: recipient.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This big one is this kid’s dad. This one is the dad. Tap the dad.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation. The person who needs help is an adult in this story.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 334. Meet the kid’s mom
 
-“This big one is this kid’s mom. Tap the kid’s mom.”
+“This big one is this kid’s mom.”
 
 [Stimulus source](assets/stimuli/bcf1701cd885-intro_04.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper2.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This big one is this kid’s mom. This one is the kid’s mom. Tap the kid’s mom.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 335. The dad needs help
 
@@ -4354,53 +4034,33 @@ Left: the teacher on the left. Middle: the teacher in the middle. Right: the kid
 
 ### 353. Meet the characters
 
-“Oh look! Here is a kid.”
+“Look! Here are some people.”
 
 [Stimulus source](assets/stimuli/448d8507c0ab-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening adapted to the single kid shown on screen.*
-
 ### 354. Meet the kid
 
-“This little one is a kid. Tap the kid.”
+“This little one is a kid.”
 
 [Stimulus source](assets/stimuli/4e0d14a1cfbf-intro_02.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper2.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This little one is a kid. This one is the kid. Tap the kid.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 355. Meet the teacher on the left
 
-“This big one is this kid’s teacher. Tap the teacher on the left.”
+“This big one is this kid’s teacher.”
 
 [Stimulus source](assets/stimuli/e25b10adebd9-intro_03.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper1.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This big one is this kid’s teacher. This one is the teacher on the left. Tap the teacher on the left.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 356. Meet the teacher in the middle
 
-“This big one is this kid’s teacher too. Tap the teacher in the middle.”
+“This big one is this kid’s teacher too.”
 
 [Stimulus source](assets/stimuli/d1392c7313eb-intro_04.png) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: recipient.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This big one is this kid’s teacher too. This one is the teacher in the middle. Tap the teacher in the middle.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation. The person who needs help is an adult in this story.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 357. The teacher in the middle needs help
 
@@ -4620,59 +4280,39 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 ## Story 18: Teacher–Classmate
 
-Left: the kid’s classmate. Middle: the kid. Right: the kid’s teacher.
+Left: the kid’s classmate. Middle: the kid in the middle. Right: the kid’s teacher.
 
 ### 375. Meet the characters
 
-“Oh look! Here is a kid.”
+“Look! Here are some people.”
 
 [Stimulus source](assets/stimuli/44d39b1df683-intro_01.svg) — original reference image; the preview replaces its caption with the wording above.
 
-*Opening adapted to the single kid shown on screen.*
+### 376. Meet the kid in the middle
 
-### 376. Meet the kid
-
-“This little one is a kid. Tap the kid.”
+“This little one is a kid.”
 
 [Stimulus source](assets/stimuli/4e621f5d72b5-intro_02.svg) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: recipient.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This little one is a kid. This one is the kid. Tap the kid.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 377. Meet the kid’s classmate
 
-“This little one is this kid’s classmate. Tap the kid’s classmate.”
+“This little one is this kid’s classmate.”
 
 [Stimulus source](assets/stimuli/2867c2e0bd9c-intro_03.svg) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper1.
-
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This little one is this kid’s classmate. This one is the kid’s classmate. Tap the kid’s classmate.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
+*Narrated character introduction from Find the Caregiver.*
 
 ### 378. Meet the kid’s teacher
 
-“This big one is this kid’s teacher. Tap the kid’s teacher.”
+“This big one is this kid’s teacher.”
 
 [Stimulus source](assets/stimuli/a5206d48c30f-intro_04.svg) — original reference image; the preview replaces its caption with the wording above.
 
-Selection check: helper2.
+*Narrated character introduction from Find the Caregiver.*
 
-A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “This big one is this kid’s teacher. This one is the kid’s teacher. Tap the kid’s teacher.”
-
-*Relationship introduction and character order from Find the Caregiver. On-screen tap wording is an adaptation.*
-
-### 379. The kid needs help
+### 379. The kid in the middle needs help
 
 “Now let’s say that one day the kid in the middle was very sad.”
 
@@ -4680,7 +4320,7 @@ Reminder if needed: “This big one is this kid’s teacher. This one is the kid
 
 ### 380. Both helpers see
 
-“The kid’s classmate and the kid’s teacher both see that the kid is sad.”
+“The kid’s classmate and the kid’s teacher both see that the kid in the middle is sad.”
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
@@ -4770,9 +4410,9 @@ After choosing “The kid’s teacher”, confirm: “You chose the kid’s teac
 
 ### 387. No one helped
 
-“No one helped the kid.”
+“No one helped the kid in the middle.”
 
-Display wording: “No one helped the kid.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+Display wording: “No one helped the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
@@ -4780,11 +4420,11 @@ Display wording: “No one helped the kid.” Both helper cues remain visible be
 
 ### 388. Each helper did NOT help
 
-“The kid’s classmate did NOT help the kid. The kid’s teacher did NOT help the kid. No one helped the kid.”
+“The kid’s classmate did NOT help the kid in the middle. And the kid’s teacher did NOT help the kid in the middle. No one helped the kid in the middle.”
 
-Display wording: “The kid’s classmate did NOT help the kid.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+Display wording: “The kid’s classmate did NOT help the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
 
-Captions follow the narration, in order: “The kid’s classmate did NOT help the kid.” → “The kid’s teacher did NOT help the kid.” → “No one helped the kid.”.
+Captions follow the narration, in order: “The kid’s classmate did NOT help the kid in the middle.” → “And the kid’s teacher did NOT help the kid in the middle.” → “No one helped the kid in the middle.”.
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
@@ -4792,7 +4432,7 @@ Captions follow the narration, in order: “The kid’s classmate did NOT help t
 
 ### 389. Recall · No one helped
 
-“Can you tell me, did either of these people help the kid?”
+“Can you tell me, did either of these people help the kid in the middle?”
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
@@ -4802,7 +4442,7 @@ Expected check/practice answer: No.
 
 A correct response is required to advance; there is no bypass.
 
-Reminder if needed: “Actually, remember, no one helped the kid. The kid’s classmate did NOT help the kid. The kid’s teacher did NOT help the kid. No one helped the kid.”
+Reminder if needed: “Actually, remember, no one helped the kid in the middle. And the kid’s classmate did NOT help the kid in the middle. And the kid’s teacher did NOT help the kid in the middle. No one helped the kid in the middle.”
 
 After the reminder, reread the full question and response labels before reopening the choices.
 

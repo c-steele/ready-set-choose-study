@@ -46,13 +46,10 @@
     }
     add('group', 'group', {image:p.images.group});
     for (const intro of p.intros) {
-      const actor = intro.actorId === 'recipient' ? recipient : helpers.find(h => h.id === intro.actorId);
-      const sourceText = apostrophes(intro.sourceText);
       add(`intro-${intro.actorId}`, 'kid', {
-        phase:`Meet ${intro.description}`, image:intro.image, point:intro.actorId,
-        text:`${sourceText} Tap ${intro.description}.`,
-        reminder:`${sourceText} This one is ${intro.description}. Tap ${intro.description}.`,
-        note:`Relationship introduction and character order from Find the Caregiver. On-screen selection wording is an adaptation. ${actor.isAdult && intro.actorId === 'recipient' ? 'The person who needs help is an adult in this story.' : ''}`.trim()
+        phase:`Meet ${intro.description}`, image:intro.image,
+        text:apostrophes(intro.sourceText),
+        note:'Narrated character introduction from Find the Caregiver.'
       });
     }
     add('need', 'need', {phase:`${upper(recipient.description)} needs help`, text:`Now let’s say that one day ${recipient.isAdult ? recipient.description : 'the kid in the middle'} was very sad.`});
@@ -230,7 +227,7 @@
         'Includes each response label once, accepted Yes confirmation after each helper-choice comparison and after each No obligation judgment, and mandatory correct-answer practice feedback; excludes binary labels already stated in the prompt.',
         'Yes to an individual obligation judgment opens its strength follow-up. No opens a neutral answer-confirmation screen, then skips that strength follow-up after the child confirms the No answer.',
         'Screen, response, strength, confirmation, word, and duration ranges are each computed across complete paths. Separate minimum counts need not occur on the same path.',
-        'Assumes correct identity, recall, and practice answers, including Yes to stopping being mean and No to lying. Incorrect check responses require correction and retry; there is no bypass.',
+        'Assumes correct recall and practice answers, including Yes to stopping being mean and No to lying. Incorrect check responses require correction and retry; there is no bypass.',
         'Does not include correction repeats, rejected answer confirmations, breaks, setup, narration-only transition delays, or extra pauses between glowing options. Screen counts include accepted confirmation and correct-answer feedback stages; error retries are not counted.'
       ]
     };
@@ -274,7 +271,7 @@
       ...session.notes.map(note => `- ${note}`), '',
       `Expected path range: **${stats.screens.min}–${stats.screens.max} screens**, **${stats.responses.min}–${stats.responses.max} responses**.`, '',
       `Includes ${stats.virtualConfirmationScreensRange.min}–${stats.virtualConfirmationScreensRange.max} answer-confirmation screens and ${stats.virtualCorrectFeedbackScreens} correct-answer practice-feedback screens in addition to the static storyboard.`, '',
-      `Main judgments: ${stats.substantive} (including ${stats.confidenceResponses} prediction-confidence responses). Identity/recall checks: ${stats.checks}. Practice responses: ${stats.practiceResponses}. Answer confirmations: ${stats.confirmationResponsesRange.min}–${stats.confirmationResponsesRange.max}. Conditional study-strength responses: ${stats.strengthResponses.min}–${stats.strengthResponses.max}. The total screen and response ranges above are computed for complete paths; separate minimum counts need not occur together.`, '',
+      `Main judgments: ${stats.substantive} (including ${stats.confidenceResponses} prediction-confidence responses). Recall checks: ${stats.checks}. Practice responses: ${stats.practiceResponses}. Answer confirmations: ${stats.confirmationResponsesRange.min}–${stats.confirmationResponsesRange.max}. Conditional study-strength responses: ${stats.strengthResponses.min}–${stats.strengthResponses.max}. The total screen and response ranges above are computed for complete paths; separate minimum counts need not occur together.`, '',
       `Illustrative duration: **${stats.minutes.min}–${stats.minutes.max} minutes**, based on ${stats.words.min}–${stats.words.max} spoken words.`, '',
       ...stats.assumptions.map(note => `- ${note}`), '',
       'The storyboard below includes all possible branches. Correct No is required for the lying practice question, so its retained legacy Yes-strength card is not reached during the normal path.', ''
