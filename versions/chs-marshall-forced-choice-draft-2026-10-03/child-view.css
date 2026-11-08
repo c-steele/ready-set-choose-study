@@ -94,25 +94,43 @@ body.child-view .prompt h2 {
   text-wrap: balance;
 }
 
-/* Find the Caregiver's top color band occupies 99 of the 1920 source pixels.
-   Its scene is capped at 1080px wide and 68vh high in the original player. */
-.stage[data-screen-kind="story"] {
+/* Match the original stimulus bands in proportion to the full slide width. */
+.stage[data-screen-kind="story"],
+.story-card {
   container-type: inline-size;
+  --caption-unit: min(1cqw, 17.2px);
 }
 
-.stage[data-screen-kind="story"] > .prompt {
-  --slide-unit: min(1cqw, 10.8px, 1.2089vh);
-  min-height: max(42px, calc(5.15625 * var(--slide-unit)));
-  padding-block: max(6px, calc(.65 * var(--slide-unit)));
+.stage[data-screen-kind="story"] > .prompt,
+.choice-caption {
+  min-height: max(42px, calc(5.15625 * var(--caption-unit)));
+  padding: max(6px, calc(.65 * var(--caption-unit))) 16px;
 }
 
-.stage[data-screen-kind="story"] > .prompt h2 {
-  font-size: max(22px, calc(3.25 * var(--slide-unit)));
+.stage[data-screen-kind="story"] > .prompt h2,
+.choice-caption {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: max(22px, calc(3.25 * var(--caption-unit)));
+  font-weight: 700;
   line-height: 1.12;
+  letter-spacing: -.3px;
+  text-wrap: balance;
+}
+
+.choice-caption {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  min-height: max(52px, calc(6.875 * var(--caption-unit)));
+  margin: 0;
+  background: var(--story-accent);
+  color: #fff;
+  text-align: center;
 }
 
 @media (max-width: 460px) {
-  .stage[data-screen-kind="story"] > .prompt h2 { font-size: 19px; }
+  .stage[data-screen-kind="story"] > .prompt h2,
+  .choice-caption { font-size: 19px; }
 }
 
 /* Let the caption, answers and audio controls take their natural height.
@@ -295,10 +313,26 @@ body.child-view .child-helper-face i {
   left: 15px;
   display: block;
   width: 16px;
-  height: 7px;
-  border-radius: 0 0 20px 20px;
+  height: 4px;
+  border-radius: 4px;
   background: #203040;
 }
+body.child-view .child-speaking .child-helper-face i {
+  animation: child-talk 260ms ease-in-out infinite alternate;
+}
+
+@keyframes child-talk {
+  from { height: 4px; border-radius: 4px; transform: translateY(0); }
+  to { height: 10px; border-radius: 8px; transform: translateY(-2px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.child-view .child-speaking .child-helper-face i {
+    animation: none;
+    height: 7px;
+  }
+}
+
 
 body.child-view .child-helper-bubble {
   display: block;

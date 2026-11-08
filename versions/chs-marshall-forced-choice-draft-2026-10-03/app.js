@@ -159,9 +159,11 @@
     return spans;
   }
   function clearSpokenCues(){
+    stage.classList.remove('child-speaking');
     stage.querySelectorAll('.narration-actor-current,.option-current,.choice-bounce-a,.choice-bounce-b,.outcome-spoken').forEach(element=>element.classList.remove('narration-actor-current','option-current','choice-bounce-a','choice-bounce-b','outcome-spoken'));
   }
   function showSpokenCues(spans,seconds){
+    stage.classList.add('child-speaking');
     const current=spans.filter(cue=>seconds>=cue.start&&seconds<cue.end),actorIds=new Set(current.map(cue=>cue.actorId).filter(Boolean)),optionIndexes=new Set(current.map(cue=>cue.optionIndex).filter(value=>value!==undefined));
     const captionCue=current.find(cue=>cue.captionText),heading=stage.querySelector('.prompt h2');
     if(captionCue&&heading&&heading.textContent!==captionCue.captionText)heading.textContent=captionCue.captionText;
@@ -278,6 +280,11 @@
     }).join('');
     return `<div class="outcome-scene">${picture}<div class="no-help-strip">${badges}</div></div>`;
   }
+  function choiceCaption(s) {
+    if (!helperChoiceActors(s).length) return '';
+    const second = s.choices[1].replace(/^The /, 'the ');
+    return `<p class="choice-caption">${esc(s.choices[0])} or ${esc(second)}?</p>`;
+  }
   function caption(s){const text=esc(s.displayTitle||s.displayText||s.text);return s.captionEmphasis==='HAVE TO'?text.replace(/\bHAVE TO\b/g,'<em class="obligation-emphasis">HAVE TO</em>'):text;}
   function prompt(s){return `<div class="prompt">${s.context&&!s.displayText?`<p class="referent">${esc(s.context)}</p>`:''}${s.preface?`<p class="preface">${esc(s.preface)}</p>`:''}<h2>${caption(s)}</h2></div>`;}
   function branchNote(s){if(!s.when)return '';const parent=steps.find(p=>p.id===s.when[0]);return `Only after “${s.when[1]}” to ${parent.phase.toLowerCase()}. `;}
@@ -308,7 +315,7 @@
     stage.dataset.responseKind=s.choices?.length===3?'scale':s.point?'character':s.choices?'binary':'continue';
     const art = scene(s, true);
     const visual = s.image ? `<div class="story-art">${art}</div>` : art;
-    stage.innerHTML=prompt(s)+visual+feedback+options+childFooter(s);
+    stage.innerHTML=prompt(s)+visual+choiceCaption(s)+feedback+options+childFooter(s);
     stage.querySelector('.child-replay').addEventListener('click',playChildNarration);
     stage.querySelector('.child-stop').addEventListener('click',pauseChildPlayback);
     $('step-note').innerHTML=`${s.proposed?'<strong>Proposed wording · </strong>':''}${esc(branchNote(s)+(s.note||'Adapted from Marshall Study 1.'))}`;
@@ -364,7 +371,7 @@
     const confirmations=s.choiceConfirmations?Object.entries(s.choiceConfirmations).map(([choice,item])=>`<p class="card-note"><strong>After choosing ${esc(choice)}:</strong> “${esc(item.text)}” Yes keeps this choice; No returns to the original question.</p>`).join(''):'';
     return feedback||confirmations?`<div class="card-flow-notes">${feedback}${confirmations}</div>`:'';
   }
-  function card(s,i){return `<article class="story-card${!s.image&&!s.visual?' message-slide':''}" style="--story-accent:${esc(storyAccent(s))}"><h3 class="card-heading">${String(i+1).padStart(2,'0')} · ${esc(s.phase)}${s.proposed?' · PROPOSED WORDING':''}</h3>${prompt(s)}${scene(s)}${s.choices?.length===3?scaleOptions(s):`<p class="card-options">${s.point?'Tap '+esc(actors(s).find(a=>a.id===s.point).description):s.choices?s.choices.map(esc).join(' &nbsp; / &nbsp; '):'Narration'}</p>`}${s.when||s.note||s.expected||s.point?`<p class="card-note">${esc(branchNote(s)+(s.note||''))}${s.expected?' Check answer: '+esc(s.expected)+'.':''}${s.reminder?' Reminder if needed: “'+esc(s.reminder)+'”':''}</p>`:''}${cardExtraScript(s)}</article>`;}
+  function card(s,i){return `<article class="story-card${!s.image&&!s.visual?' message-slide':''}" style="--story-accent:${esc(storyAccent(s))}"><h3 class="card-heading">${String(i+1).padStart(2,'0')} · ${esc(s.phase)}${s.proposed?' · PROPOSED WORDING':''}</h3>${prompt(s)}${scene(s)}${choiceCaption(s)}${s.choices?.length===3?scaleOptions(s):`<p class="card-options">${s.point?'Tap '+esc(actors(s).find(a=>a.id===s.point).description):s.choices?s.choices.map(esc).join(' &nbsp; / &nbsp; '):'Narration'}</p>`}${s.when||s.note||s.expected||s.point?`<p class="card-note">${esc(branchNote(s)+(s.note||''))}${s.expected?' Check answer: '+esc(s.expected)+'.':''}${s.reminder?' Reminder if needed: “'+esc(s.reminder)+'”':''}</p>`:''}${cardExtraScript(s)}</article>`;}
   function buildBoard(){
     $('cards').innerHTML=session.pairings.map((p,n)=>`<section class="board-story" id="board-${p.id}"><h2>Story ${n+1} · ${esc(p.label)}</h2><p class="recipient-note">${esc(p.recipient.reference)} is sad.</p><div class="story-grid">${steps.filter(s=>s.pairing?.id===p.id).map(card).join('')}</div></section>`).join('')+`<div class="story-grid">${card(steps[steps.length-1],0)}</div>`;
   }
