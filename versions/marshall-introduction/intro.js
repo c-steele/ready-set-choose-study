@@ -4,7 +4,9 @@
   let position = 0;
   let narration = null;
   let parentSound = true;
-  const openingMusicEnabled = new URLSearchParams(location.search).get('openingMusic') === '1';
+  const introOptions = new URLSearchParams(location.search);
+  const openingMusicEnabled = introOptions.get('openingMusic') === '1';
+  const immediateStartEnabled = introOptions.get('immediateStart') === '1';
   let music = null;
   let audioRun = 0;
 
@@ -21,8 +23,9 @@
   function setStartReady(ready) {
     const start = stage.querySelector('.ksize-next-btn');
     if (start) {
-      start.disabled = !ready;
-      start.classList.toggle('ksize-prompt-glow', ready);
+      const enabled = ready || (immediateStartEnabled && position === slides.length - 1);
+      start.disabled = !enabled;
+      start.classList.toggle('ksize-prompt-glow', enabled);
     }
   }
 
@@ -70,6 +73,7 @@
     stopAudio();
     position = index;
     stage.replaceChildren(slides[index].content.cloneNode(true));
+    setStartReady(false);
     const heading = stage.querySelector('h1');
     heading.tabIndex = -1;
     if (index > 0) heading.focus({preventScroll: true});
