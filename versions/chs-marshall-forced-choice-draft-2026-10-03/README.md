@@ -10,7 +10,7 @@ Open `index.html` for the child preview or full storyboard. Pairing selectors sh
 
 | Main question | Example wording | Responses |
 | --- | --- | --- |
-| Prediction | Who do you think will help the kid in the middle? | The kid’s mom / The kid’s sister |
+| Prediction | Who will help the kid in the middle now that they’re sad? | The kid’s mom / The kid’s sister |
 | Obligation | Who do you think HAS TO help the kid in the middle? | The kid’s mom / The kid’s sister |
 | Meanness | Who was meaner for NOT helping the kid in the middle? | The kid’s mom / The kid’s sister |
 

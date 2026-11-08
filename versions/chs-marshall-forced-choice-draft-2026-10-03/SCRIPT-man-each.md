@@ -18,7 +18,7 @@ Includes 18 required choice-confirmation screens and 12 correct-answer practice-
 
 18 forced choices + 12 individual Mean/Not Mean judgments + 6–18 how-mean ratings + 18 choice confirmations + 6 recall checks + 12 brief practice responses.
 
-Illustrative duration: **21.1–30.7 minutes**, based on 2270–2602 spoken words.
+Illustrative duration: **21.1–30.7 minutes**, based on 2276–2608 spoken words.
 
 - Illustrative estimate, not observed child-session duration.
 - Read-aloud pace: 110–130 words per minute; response time: 3–5 seconds per selection.
@@ -70,7 +70,7 @@ Left: the kid’s teacher. Middle: the kid in the middle. Right: the kid’s dad
 
 ### 6. Who will help? — PROPOSED WORDING
 
-“Who do you think will help the kid in the middle?”
+“Who will help the kid in the middle now that they’re sad?”
 
 [Stimulus source](assets/stimuli/ee15b1b5be65-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -320,7 +320,7 @@ Left: the kid’s brother. Middle: the kid in the middle. Right: the kid’s fri
 
 ### 27. Who will help? — PROPOSED WORDING
 
-“Who do you think will help the kid in the middle?”
+“Who will help the kid in the middle now that they’re sad?”
 
 [Stimulus source](assets/stimuli/3538d8e77c34-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -570,7 +570,7 @@ Left: the kid’s friend. Middle: the kid in the middle. Right: the kid’s best
 
 ### 48. Who will help? — PROPOSED WORDING
 
-“Who do you think will help the kid in the middle?”
+“Who will help the kid in the middle now that they’re sad?”
 
 [Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -820,7 +820,7 @@ Left: the kid’s teacher. Middle: the kid in the middle. Right: the kid’s fri
 
 ### 69. Who will help? — PROPOSED WORDING
 
-“Who do you think will help the kid in the middle?”
+“Who will help the kid in the middle now that they’re sad?”
 
 [Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1070,7 +1070,7 @@ Left: the kid’s dad. Middle: the kid in the middle. Right: the kid’s brother
 
 ### 90. Who will help? — PROPOSED WORDING
 
-“Who do you think will help the kid in the middle?”
+“Who will help the kid in the middle now that they’re sad?”
 
 [Stimulus source](assets/stimuli/09b52ae33b24-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1320,7 +1320,7 @@ Left: the kid’s classmate. Middle: the kid in the middle. Right: the kid’s t
 
 ### 111. Who will help? — PROPOSED WORDING
 
-“Who do you think will help the kid in the middle?”
+“Who will help the kid in the middle now that they’re sad?”
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 

@@ -56,7 +56,7 @@
     add('need', 'need', {phase:`${upper(recipient.description)} needs help`, text:p.sourceNeedText});
     add('predict-compare', 'predict-compare', {
       ...pairOptions,
-      text:`Who do you think will help ${recipient.reference}?`,
+      text:`Who will help ${recipient.reference} now that they’re sad?`,
       choiceConfirmations:choiceConfirmations('will help')
     });
     if (includePractice) {
