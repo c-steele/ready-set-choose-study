@@ -37,7 +37,8 @@
       result.push(step);
     }
     const helperChoices = helpers.map(h => upper(h.description));
-    const pairOptions = {choices:helperChoices, optionActors:helpers.map(h => h.id), confirmChoice:true};
+    const choiceQuestion = apostrophes(p.sourceHugQuestion.trim().split('\n').pop());
+    const pairOptions = {choices:helperChoices, choiceQuestion, optionActors:helpers.map(h => h.id), confirmChoice:true};
     function choiceConfirmations(judgment) {
       return Object.fromEntries(helpers.map(helper => [upper(helper.description), {
         text:`You chose ${helper.description}. Did you mean that ${helper.description} ${judgment} ${recipient.reference}? Yes or No.`,
@@ -53,7 +54,6 @@
       });
     }
     add('need', 'need', {phase:`${upper(recipient.description)} needs help`, text:p.sourceNeedText});
-    add('witness', 'witness', {text:`${upper(helpers[0].description)} and ${helpers[1].description} both see that ${recipient.description} is sad.`});
     add('predict-compare', 'predict-compare', {
       ...pairOptions,
       text:`Who do you think will help ${recipient.reference}?`,
@@ -119,7 +119,7 @@
     const text = [step.context, step.preface, step.text].filter(Boolean).join(' ');
     const labelsInPrompt = /Yes or No\.?$/i.test(step.text || '') || /Mean or Not Mean/i.test(step.text || '');
     const choices = labelsInPrompt ? [] : step.choices || [];
-    return wordCount(text) + wordCount(choices.join(' ')) + wordCount(step.correctFeedback || '');
+    return wordCount(text) + wordCount(step.choiceQuestion || choices.join(' ')) + wordCount(step.correctFeedback || '');
   }
 
   function pathStats(steps, maximize) {
@@ -238,9 +238,10 @@
       const scriptText=step.captionEmphasis==='HAVE TO'?step.text.replace(/\bHAVE TO\b/g,'*HAVE TO*'):step.text;
       lines.push(`“${scriptText}”`, '');
       if (step.displayTitle) lines.push(`Display treatment: ${step.displayTitle} / ${step.displaySetup} / ${step.displayQuestion}`, '');
-      if (step.displayText) lines.push(`Display wording: “${step.displayText}” ${step.outcomeVisual?'Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.':'The role is included in the question; no separate role label is displayed above it.'}`, '');
+      if (step.displayText) lines.push(`Display wording: “${step.displayText}” ${step.outcomeVisual?'Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. The helper cues remain still throughout the narration.':'The role is included in the question; no separate role label is displayed above it.'}`, '');
       if (step.outcomeCaptions) lines.push(`Captions follow the narration, in order: ${step.outcomeCaptions.map(text=>`“${text}”`).join(' → ')}.`, '');
       if (step.image) lines.push(`[Stimulus source](${step.image}) — original reference image; the preview replaces its caption with the wording above.`, '');
+      if (step.choiceQuestion) lines.push(`Read the choices together: “${step.choiceQuestion}”`, '');
       if (step.choices) lines.push(`Choices: ${step.choices.join(' / ')}.`, '');
       if (step.point) lines.push(`Selection check: ${step.point}.`, '');
       if (step.expected) lines.push(`Expected check/practice answer: ${step.expected}.`, '');

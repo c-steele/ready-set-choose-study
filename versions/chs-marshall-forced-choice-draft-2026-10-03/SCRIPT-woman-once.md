@@ -12,13 +12,13 @@
 - Brief HAVE TO comprehension practice occurs before the first obligation comparison only.
 - This preview contains the six pairings from one role set in a fixed review order.
 
-Expected path range: **115–127 screens**, **62–74 responses**.
+Expected path range: **109–121 screens**, **62–74 responses**.
 
 Includes 18 required choice-confirmation screens and 2 correct-answer practice-feedback screens in addition to the static storyboard.
 
 18 forced choices + 12 individual Mean/Not Mean judgments + 6–18 how-mean ratings + 18 choice confirmations + 6 recall checks + 2 brief practice responses.
 
-Illustrative duration: **17.7–26.5 minutes**, based on 1900–2232 spoken words.
+Illustrative duration: **17.1–25.7 minutes**, based on 1815–2147 spoken words.
 
 - Illustrative estimate, not observed child-session duration.
 - Read-aloud pace: 110–130 words per minute; response time: 3–5 seconds per selection.
@@ -68,17 +68,13 @@ Left: the kid’s teacher. Middle: the kid in the middle. Right: the kid’s mom
 
 [Stimulus source](assets/stimuli/ef6ceaf063c6-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-### 6. Both helpers see
-
-“The kid’s teacher and the kid’s mom both see that the kid in the middle is sad.”
-
-[Stimulus source](assets/stimuli/ef6ceaf063c6-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
-
-### 7. Who will help? — PROPOSED WORDING
+### 6. Who will help? — PROPOSED WORDING
 
 “Who do you think will help the kid in the middle?”
 
 [Stimulus source](assets/stimuli/ef6ceaf063c6-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+
+Read the choices together: “The kid’s teacher or the kid’s mom?”
 
 Choices: The kid’s teacher / The kid’s mom.
 
@@ -88,13 +84,13 @@ After choosing “The kid’s mom”, confirm: “You chose the kid’s mom. Did
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No prediction question.*
 
-### 8. “HAVE TO” practice
+### 7. “HAVE TO” practice
 
 “Now, sometimes people *HAVE TO* do things.”
 
 *The Evelyn recording uses continuous speech. HAVE TO remains uppercase and italic on screen as an adaptation. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
 
-### 9. Practice · Stop being mean
+### 8. Practice · Stop being mean
 
 “When a teacher tells you to stop being mean to someone, do you HAVE TO stop being mean? Yes or No.”
 
@@ -116,7 +112,7 @@ After the reminder, reread the full question and response labels before reopenin
 
 *Correct-answer feedback is mandatory. Incorrect answers receive contextual correction and a reread; only the correct answer advances. Brief comprehension practice, not a study outcome. The illustration and split display wording are adaptations. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
 
-### 10. Practice · Lie
+### 9. Practice · Lie
 
 “When someone asks you a question, do you HAVE TO lie? Yes or No.”
 
@@ -138,17 +134,19 @@ After the reminder, reread the full question and response labels before reopenin
 
 *Correct-answer feedback is mandatory. Incorrect answers receive contextual correction and a reread; only the correct answer advances. Brief comprehension practice, not a study outcome. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
 
-### 11. Back to our story
+### 10. Back to our story
 
 “So now, I’m going to ask you some questions about whether people HAVE TO do things.”
 
 *Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
 
-### 12. Who HAS TO help? — PROPOSED WORDING
+### 11. Who HAS TO help? — PROPOSED WORDING
 
 “Who do you think HAS TO help the kid in the middle?”
 
 [Stimulus source](assets/stimuli/ef6ceaf063c6-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+
+Read the choices together: “The kid’s teacher or the kid’s mom?”
 
 Choices: The kid’s teacher / The kid’s mom.
 
@@ -158,21 +156,21 @@ After choosing “The kid’s mom”, confirm: “You chose the kid’s mom. Did
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No obligation question.*
 
-### 13. No one helped
+### 12. No one helped
 
 “No one helped the kid in the middle.”
 
-Display wording: “No one helped the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+Display wording: “No one helped the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. The helper cues remain still throughout the narration.
 
 [Stimulus source](assets/stimuli/ef6ceaf063c6-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 *Standalone outcome statement. Continue after the sentence to hear each helper’s action and the repeated no-one-helped statement.*
 
-### 14. Each helper did NOT help
+### 13. Each helper did NOT help
 
 “The kid’s teacher did NOT help the kid in the middle. And the kid’s mom did NOT help the kid in the middle. No one helped the kid in the middle.”
 
-Display wording: “The kid’s teacher did NOT help the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+Display wording: “The kid’s teacher did NOT help the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. The helper cues remain still throughout the narration.
 
 Captions follow the narration, in order: “The kid’s teacher did NOT help the kid in the middle.” → “And the kid’s mom did NOT help the kid in the middle.” → “No one helped the kid in the middle.”.
 
@@ -180,7 +178,7 @@ Captions follow the narration, in order: “The kid’s teacher did NOT help the
 
 *Every response path reaches this same outcome, regardless of prediction or obligation choices.*
 
-### 15. Recall · No one helped
+### 14. Recall · No one helped
 
 “Can you tell me, did either of these people help the kid in the middle?”
 
@@ -196,11 +194,13 @@ Reminder if needed: “Actually, remember, no one helped the kid in the middle. 
 
 After the reminder, reread the full question and response labels before reopening the choices.
 
-### 16. Who was meaner? — PROPOSED WORDING
+### 15. Who was meaner? — PROPOSED WORDING
 
 “Who was meaner for NOT helping the kid in the middle?”
 
 [Stimulus source](assets/stimuli/ef6ceaf063c6-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+
+Read the choices together: “The kid’s teacher or the kid’s mom?”
 
 Choices: The kid’s teacher / The kid’s mom.
 
@@ -210,7 +210,7 @@ After choosing “The kid’s mom”, confirm: “You chose the kid’s mom. Did
 
 *Two-helper comparison adapted from Marshall. Buttons follow the scene: the kid’s teacher left, the kid’s mom right.*
 
-### 17. Selected helper · How mean is the kid’s teacher? — PROPOSED WORDING
+### 16. Selected helper · How mean is the kid’s teacher? — PROPOSED WORDING
 
 *Only after “The kid’s teacher” to Who was meaner?.*
 
@@ -224,7 +224,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
-### 18. Selected helper · How mean is the kid’s mom? — PROPOSED WORDING
+### 17. Selected helper · How mean is the kid’s mom? — PROPOSED WORDING
 
 *Only after “The kid’s mom” to Who was meaner?.*
 
@@ -238,7 +238,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
-### 19. Individual evaluation · The kid’s teacher
+### 18. Individual evaluation · The kid’s teacher
 
 “Do you think it was Mean or Not Mean that the kid’s teacher did NOT help the kid in the middle?”
 
@@ -246,7 +246,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Choices: Mean / Not Mean.
 
-### 20. Meanness strength · The kid’s teacher
+### 19. Meanness strength · The kid’s teacher
 
 *Only after “Mean” to Individual evaluation · The kid’s teacher.*
 
@@ -258,7 +258,7 @@ Display wording: “How mean do you think the kid’s teacher was for NOT helpin
 
 Choices: A teeny bit mean / A little bit mean / Very mean.
 
-### 21. Individual evaluation · The kid’s mom
+### 20. Individual evaluation · The kid’s mom
 
 “Do you think it was Mean or Not Mean that the kid’s mom did NOT help the kid in the middle?”
 
@@ -266,7 +266,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Choices: Mean / Not Mean.
 
-### 22. Meanness strength · The kid’s mom
+### 21. Meanness strength · The kid’s mom
 
 *Only after “Mean” to Individual evaluation · The kid’s mom.*
 
@@ -282,13 +282,13 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Left: the kid’s sister. Middle: the kid in the middle. Right: the kid’s friend.
 
-### 23. Meet the characters
+### 22. Meet the characters
 
 “Look! Here are some people.”
 
 [Stimulus source](assets/stimuli/a247914f8341-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-### 24. Meet the kid in the middle
+### 23. Meet the kid in the middle
 
 “This little one is a kid.”
 
@@ -296,7 +296,7 @@ Left: the kid’s sister. Middle: the kid in the middle. Right: the kid’s frie
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 25. Meet the kid’s sister
+### 24. Meet the kid’s sister
 
 “This little one is this kid’s sister.”
 
@@ -304,7 +304,7 @@ Left: the kid’s sister. Middle: the kid in the middle. Right: the kid’s frie
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 26. Meet the kid’s friend
+### 25. Meet the kid’s friend
 
 “This little one is this kid’s friend.”
 
@@ -312,23 +312,19 @@ Left: the kid’s sister. Middle: the kid in the middle. Right: the kid’s frie
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 27. The kid in the middle needs help
+### 26. The kid in the middle needs help
 
 “Oh no! The kid in the middle is sad now!”
 
 [Stimulus source](assets/stimuli/d8367f1a225f-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-### 28. Both helpers see
-
-“The kid’s sister and the kid’s friend both see that the kid in the middle is sad.”
-
-[Stimulus source](assets/stimuli/d8367f1a225f-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
-
-### 29. Who will help? — PROPOSED WORDING
+### 27. Who will help? — PROPOSED WORDING
 
 “Who do you think will help the kid in the middle?”
 
 [Stimulus source](assets/stimuli/d8367f1a225f-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+
+Read the choices together: “The kid’s sister or the kid’s friend?”
 
 Choices: The kid’s sister / The kid’s friend.
 
@@ -338,11 +334,13 @@ After choosing “The kid’s friend”, confirm: “You chose the kid’s frien
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No prediction question.*
 
-### 30. Who HAS TO help? — PROPOSED WORDING
+### 28. Who HAS TO help? — PROPOSED WORDING
 
 “Who do you think HAS TO help the kid in the middle?”
 
 [Stimulus source](assets/stimuli/d8367f1a225f-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+
+Read the choices together: “The kid’s sister or the kid’s friend?”
 
 Choices: The kid’s sister / The kid’s friend.
 
@@ -352,21 +350,21 @@ After choosing “The kid’s friend”, confirm: “You chose the kid’s frien
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No obligation question.*
 
-### 31. No one helped
+### 29. No one helped
 
 “No one helped the kid in the middle.”
 
-Display wording: “No one helped the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+Display wording: “No one helped the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. The helper cues remain still throughout the narration.
 
 [Stimulus source](assets/stimuli/d8367f1a225f-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 *Standalone outcome statement. Continue after the sentence to hear each helper’s action and the repeated no-one-helped statement.*
 
-### 32. Each helper did NOT help
+### 30. Each helper did NOT help
 
 “The kid’s sister did NOT help the kid in the middle. And the kid’s friend did NOT help the kid in the middle. No one helped the kid in the middle.”
 
-Display wording: “The kid’s sister did NOT help the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+Display wording: “The kid’s sister did NOT help the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. The helper cues remain still throughout the narration.
 
 Captions follow the narration, in order: “The kid’s sister did NOT help the kid in the middle.” → “And the kid’s friend did NOT help the kid in the middle.” → “No one helped the kid in the middle.”.
 
@@ -374,7 +372,7 @@ Captions follow the narration, in order: “The kid’s sister did NOT help the 
 
 *Every response path reaches this same outcome, regardless of prediction or obligation choices.*
 
-### 33. Recall · No one helped
+### 31. Recall · No one helped
 
 “Can you tell me, did either of these people help the kid in the middle?”
 
@@ -390,11 +388,13 @@ Reminder if needed: “Actually, remember, no one helped the kid in the middle. 
 
 After the reminder, reread the full question and response labels before reopening the choices.
 
-### 34. Who was meaner? — PROPOSED WORDING
+### 32. Who was meaner? — PROPOSED WORDING
 
 “Who was meaner for NOT helping the kid in the middle?”
 
 [Stimulus source](assets/stimuli/d8367f1a225f-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+
+Read the choices together: “The kid’s sister or the kid’s friend?”
 
 Choices: The kid’s sister / The kid’s friend.
 
@@ -404,7 +404,7 @@ After choosing “The kid’s friend”, confirm: “You chose the kid’s frien
 
 *Two-helper comparison adapted from Marshall. Buttons follow the scene: the kid’s sister left, the kid’s friend right.*
 
-### 35. Selected helper · How mean is the kid’s sister? — PROPOSED WORDING
+### 33. Selected helper · How mean is the kid’s sister? — PROPOSED WORDING
 
 *Only after “The kid’s sister” to Who was meaner?.*
 
@@ -418,7 +418,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
-### 36. Selected helper · How mean is the kid’s friend? — PROPOSED WORDING
+### 34. Selected helper · How mean is the kid’s friend? — PROPOSED WORDING
 
 *Only after “The kid’s friend” to Who was meaner?.*
 
@@ -432,7 +432,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
-### 37. Individual evaluation · The kid’s sister
+### 35. Individual evaluation · The kid’s sister
 
 “Do you think it was Mean or Not Mean that the kid’s sister did NOT help the kid in the middle?”
 
@@ -440,7 +440,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Choices: Mean / Not Mean.
 
-### 38. Meanness strength · The kid’s sister
+### 36. Meanness strength · The kid’s sister
 
 *Only after “Mean” to Individual evaluation · The kid’s sister.*
 
@@ -452,7 +452,7 @@ Display wording: “How mean do you think the kid’s sister was for NOT helping
 
 Choices: A teeny bit mean / A little bit mean / Very mean.
 
-### 39. Individual evaluation · The kid’s friend
+### 37. Individual evaluation · The kid’s friend
 
 “Do you think it was Mean or Not Mean that the kid’s friend did NOT help the kid in the middle?”
 
@@ -460,7 +460,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Choices: Mean / Not Mean.
 
-### 40. Meanness strength · The kid’s friend
+### 38. Meanness strength · The kid’s friend
 
 *Only after “Mean” to Individual evaluation · The kid’s friend.*
 
@@ -476,13 +476,13 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Left: the kid’s friend. Middle: the kid in the middle. Right: the kid’s best friend.
 
-### 41. Meet the characters
+### 39. Meet the characters
 
 “Look! Here are some people.”
 
 [Stimulus source](assets/stimuli/d45a1ece9a16-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-### 42. Meet the kid in the middle
+### 40. Meet the kid in the middle
 
 “This little one is a kid.”
 
@@ -490,7 +490,7 @@ Left: the kid’s friend. Middle: the kid in the middle. Right: the kid’s best
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 43. Meet the kid’s friend
+### 41. Meet the kid’s friend
 
 “This little one is this kid’s friend.”
 
@@ -498,7 +498,7 @@ Left: the kid’s friend. Middle: the kid in the middle. Right: the kid’s best
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 44. Meet the kid’s best friend
+### 42. Meet the kid’s best friend
 
 “This little one is this kid’s best friend.”
 
@@ -506,23 +506,19 @@ Left: the kid’s friend. Middle: the kid in the middle. Right: the kid’s best
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 45. The kid in the middle needs help
+### 43. The kid in the middle needs help
 
 “Oh no! The kid in the middle is sad now!”
 
 [Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-### 46. Both helpers see
-
-“The kid’s friend and the kid’s best friend both see that the kid in the middle is sad.”
-
-[Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
-
-### 47. Who will help? — PROPOSED WORDING
+### 44. Who will help? — PROPOSED WORDING
 
 “Who do you think will help the kid in the middle?”
 
 [Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+
+Read the choices together: “The kid’s friend or the kid’s best friend?”
 
 Choices: The kid’s friend / The kid’s best friend.
 
@@ -532,11 +528,13 @@ After choosing “The kid’s best friend”, confirm: “You chose the kid’s 
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No prediction question.*
 
-### 48. Who HAS TO help? — PROPOSED WORDING
+### 45. Who HAS TO help? — PROPOSED WORDING
 
 “Who do you think HAS TO help the kid in the middle?”
 
 [Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+
+Read the choices together: “The kid’s friend or the kid’s best friend?”
 
 Choices: The kid’s friend / The kid’s best friend.
 
@@ -546,21 +544,21 @@ After choosing “The kid’s best friend”, confirm: “You chose the kid’s 
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No obligation question.*
 
-### 49. No one helped
+### 46. No one helped
 
 “No one helped the kid in the middle.”
 
-Display wording: “No one helped the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+Display wording: “No one helped the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. The helper cues remain still throughout the narration.
 
 [Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 *Standalone outcome statement. Continue after the sentence to hear each helper’s action and the repeated no-one-helped statement.*
 
-### 50. Each helper did NOT help
+### 47. Each helper did NOT help
 
 “The kid’s friend did NOT help the kid in the middle. And the kid’s best friend did NOT help the kid in the middle. No one helped the kid in the middle.”
 
-Display wording: “The kid’s friend did NOT help the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+Display wording: “The kid’s friend did NOT help the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. The helper cues remain still throughout the narration.
 
 Captions follow the narration, in order: “The kid’s friend did NOT help the kid in the middle.” → “And the kid’s best friend did NOT help the kid in the middle.” → “No one helped the kid in the middle.”.
 
@@ -568,7 +566,7 @@ Captions follow the narration, in order: “The kid’s friend did NOT help the 
 
 *Every response path reaches this same outcome, regardless of prediction or obligation choices.*
 
-### 51. Recall · No one helped
+### 48. Recall · No one helped
 
 “Can you tell me, did either of these people help the kid in the middle?”
 
@@ -584,11 +582,13 @@ Reminder if needed: “Actually, remember, no one helped the kid in the middle. 
 
 After the reminder, reread the full question and response labels before reopening the choices.
 
-### 52. Who was meaner? — PROPOSED WORDING
+### 49. Who was meaner? — PROPOSED WORDING
 
 “Who was meaner for NOT helping the kid in the middle?”
 
 [Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+
+Read the choices together: “The kid’s friend or the kid’s best friend?”
 
 Choices: The kid’s friend / The kid’s best friend.
 
@@ -598,7 +598,7 @@ After choosing “The kid’s best friend”, confirm: “You chose the kid’s 
 
 *Two-helper comparison adapted from Marshall. Buttons follow the scene: the kid’s friend left, the kid’s best friend right.*
 
-### 53. Selected helper · How mean is the kid’s friend? — PROPOSED WORDING
+### 50. Selected helper · How mean is the kid’s friend? — PROPOSED WORDING
 
 *Only after “The kid’s friend” to Who was meaner?.*
 
@@ -612,7 +612,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
-### 54. Selected helper · How mean is the kid’s best friend? — PROPOSED WORDING
+### 51. Selected helper · How mean is the kid’s best friend? — PROPOSED WORDING
 
 *Only after “The kid’s best friend” to Who was meaner?.*
 
@@ -626,7 +626,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
-### 55. Individual evaluation · The kid’s friend
+### 52. Individual evaluation · The kid’s friend
 
 “Do you think it was Mean or Not Mean that the kid’s friend did NOT help the kid in the middle?”
 
@@ -634,7 +634,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Choices: Mean / Not Mean.
 
-### 56. Meanness strength · The kid’s friend
+### 53. Meanness strength · The kid’s friend
 
 *Only after “Mean” to Individual evaluation · The kid’s friend.*
 
@@ -646,7 +646,7 @@ Display wording: “How mean do you think the kid’s friend was for NOT helping
 
 Choices: A teeny bit mean / A little bit mean / Very mean.
 
-### 57. Individual evaluation · The kid’s best friend
+### 54. Individual evaluation · The kid’s best friend
 
 “Do you think it was Mean or Not Mean that the kid’s best friend did NOT help the kid in the middle?”
 
@@ -654,7 +654,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Choices: Mean / Not Mean.
 
-### 58. Meanness strength · The kid’s best friend
+### 55. Meanness strength · The kid’s best friend
 
 *Only after “Mean” to Individual evaluation · The kid’s best friend.*
 
@@ -670,13 +670,13 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Left: the kid’s teacher. Middle: the kid in the middle. Right: the kid’s friend.
 
-### 59. Meet the characters
+### 56. Meet the characters
 
 “Look! Here are some people.”
 
 [Stimulus source](assets/stimuli/5ab48f0b29ed-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-### 60. Meet the kid in the middle
+### 57. Meet the kid in the middle
 
 “This little one is a kid.”
 
@@ -684,7 +684,7 @@ Left: the kid’s teacher. Middle: the kid in the middle. Right: the kid’s fri
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 61. Meet the kid’s teacher
+### 58. Meet the kid’s teacher
 
 “This big one is this kid’s teacher.”
 
@@ -692,7 +692,7 @@ Left: the kid’s teacher. Middle: the kid in the middle. Right: the kid’s fri
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 62. Meet the kid’s friend
+### 59. Meet the kid’s friend
 
 “This little one is this kid’s friend.”
 
@@ -700,23 +700,19 @@ Left: the kid’s teacher. Middle: the kid in the middle. Right: the kid’s fri
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 63. The kid in the middle needs help
+### 60. The kid in the middle needs help
 
 “Oh no! The kid in the middle is sad now!”
 
 [Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-### 64. Both helpers see
-
-“The kid’s teacher and the kid’s friend both see that the kid in the middle is sad.”
-
-[Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
-
-### 65. Who will help? — PROPOSED WORDING
+### 61. Who will help? — PROPOSED WORDING
 
 “Who do you think will help the kid in the middle?”
 
 [Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+
+Read the choices together: “The kid’s teacher or the kid’s friend?”
 
 Choices: The kid’s teacher / The kid’s friend.
 
@@ -726,11 +722,13 @@ After choosing “The kid’s friend”, confirm: “You chose the kid’s frien
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No prediction question.*
 
-### 66. Who HAS TO help? — PROPOSED WORDING
+### 62. Who HAS TO help? — PROPOSED WORDING
 
 “Who do you think HAS TO help the kid in the middle?”
 
 [Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+
+Read the choices together: “The kid’s teacher or the kid’s friend?”
 
 Choices: The kid’s teacher / The kid’s friend.
 
@@ -740,21 +738,21 @@ After choosing “The kid’s friend”, confirm: “You chose the kid’s frien
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No obligation question.*
 
-### 67. No one helped
+### 63. No one helped
 
 “No one helped the kid in the middle.”
 
-Display wording: “No one helped the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+Display wording: “No one helped the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. The helper cues remain still throughout the narration.
 
 [Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
 *Standalone outcome statement. Continue after the sentence to hear each helper’s action and the repeated no-one-helped statement.*
 
-### 68. Each helper did NOT help
+### 64. Each helper did NOT help
 
 “The kid’s teacher did NOT help the kid in the middle. And the kid’s friend did NOT help the kid in the middle. No one helped the kid in the middle.”
 
-Display wording: “The kid’s teacher did NOT help the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+Display wording: “The kid’s teacher did NOT help the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. The helper cues remain still throughout the narration.
 
 Captions follow the narration, in order: “The kid’s teacher did NOT help the kid in the middle.” → “And the kid’s friend did NOT help the kid in the middle.” → “No one helped the kid in the middle.”.
 
@@ -762,7 +760,7 @@ Captions follow the narration, in order: “The kid’s teacher did NOT help the
 
 *Every response path reaches this same outcome, regardless of prediction or obligation choices.*
 
-### 69. Recall · No one helped
+### 65. Recall · No one helped
 
 “Can you tell me, did either of these people help the kid in the middle?”
 
@@ -778,11 +776,13 @@ Reminder if needed: “Actually, remember, no one helped the kid in the middle. 
 
 After the reminder, reread the full question and response labels before reopening the choices.
 
-### 70. Who was meaner? — PROPOSED WORDING
+### 66. Who was meaner? — PROPOSED WORDING
 
 “Who was meaner for NOT helping the kid in the middle?”
 
 [Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
+
+Read the choices together: “The kid’s teacher or the kid’s friend?”
 
 Choices: The kid’s teacher / The kid’s friend.
 
@@ -792,7 +792,7 @@ After choosing “The kid’s friend”, confirm: “You chose the kid’s frien
 
 *Two-helper comparison adapted from Marshall. Buttons follow the scene: the kid’s teacher left, the kid’s friend right.*
 
-### 71. Selected helper · How mean is the kid’s teacher? — PROPOSED WORDING
+### 67. Selected helper · How mean is the kid’s teacher? — PROPOSED WORDING
 
 *Only after “The kid’s teacher” to Who was meaner?.*
 
@@ -806,7 +806,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
-### 72. Selected helper · How mean is the kid’s friend? — PROPOSED WORDING
+### 68. Selected helper · How mean is the kid’s friend? — PROPOSED WORDING
 
 *Only after “The kid’s friend” to Who was meaner?.*
 
@@ -820,7 +820,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
-### 73. Individual evaluation · The kid’s teacher
+### 69. Individual evaluation · The kid’s teacher
 
 “Do you think it was Mean or Not Mean that the kid’s teacher did NOT help the kid in the middle?”
 
@@ -828,7 +828,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Choices: Mean / Not Mean.
 
-### 74. Meanness strength · The kid’s teacher
+### 70. Meanness strength · The kid’s teacher
 
 *Only after “Mean” to Individual evaluation · The kid’s teacher.*
 
@@ -840,7 +840,7 @@ Display wording: “How mean do you think the kid’s teacher was for NOT helpin
 
 Choices: A teeny bit mean / A little bit mean / Very mean.
 
-### 75. Individual evaluation · The kid’s friend
+### 71. Individual evaluation · The kid’s friend
 
 “Do you think it was Mean or Not Mean that the kid’s friend did NOT help the kid in the middle?”
 
@@ -848,7 +848,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Choices: Mean / Not Mean.
 
-### 76. Meanness strength · The kid’s friend
+### 72. Meanness strength · The kid’s friend
 
 *Only after “Mean” to Individual evaluation · The kid’s friend.*
 
@@ -864,13 +864,13 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Left: the kid’s mom. Middle: the kid in the middle. Right: the kid’s sister.
 
-### 77. Meet the characters
+### 73. Meet the characters
 
 “Look! Here are some people.”
 
 [Stimulus source](assets/stimuli/2fa20e069eca-01-group.png) — original reference image; the preview replaces its caption with the wording above.
 
-### 78. Meet the kid in the middle
+### 74. Meet the kid in the middle
 
 “This little one is a kid.”
 
@@ -878,7 +878,7 @@ Left: the kid’s mom. Middle: the kid in the middle. Right: the kid’s sister.
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 79. Meet the kid’s mom
+### 75. Meet the kid’s mom
 
 “This big one is this kid’s mom.”
 
@@ -886,7 +886,7 @@ Left: the kid’s mom. Middle: the kid in the middle. Right: the kid’s sister.
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 80. Meet the kid’s sister
+### 76. Meet the kid’s sister
 
 “This little one is this kid’s sister.”
 
@@ -894,23 +894,19 @@ Left: the kid’s mom. Middle: the kid in the middle. Right: the kid’s sister.
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 81. The kid in the middle needs help
+### 77. The kid in the middle needs help
 
 “Oh no! The kid in the middle is sad now!”
 
 [Stimulus source](assets/stimuli/cf266d33caca-05-sad.png) — original reference image; the preview replaces its caption with the wording above.
 
-### 82. Both helpers see
-
-“The kid’s mom and the kid’s sister both see that the kid in the middle is sad.”
-
-[Stimulus source](assets/stimuli/cf266d33caca-05-sad.png) — original reference image; the preview replaces its caption with the wording above.
-
-### 83. Who will help? — PROPOSED WORDING
+### 78. Who will help? — PROPOSED WORDING
 
 “Who do you think will help the kid in the middle?”
 
 [Stimulus source](assets/stimuli/cf266d33caca-05-sad.png) — original reference image; the preview replaces its caption with the wording above.
+
+Read the choices together: “The kid’s mom or the kid’s sister?”
 
 Choices: The kid’s mom / The kid’s sister.
 
@@ -920,11 +916,13 @@ After choosing “The kid’s sister”, confirm: “You chose the kid’s siste
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No prediction question.*
 
-### 84. Who HAS TO help? — PROPOSED WORDING
+### 79. Who HAS TO help? — PROPOSED WORDING
 
 “Who do you think HAS TO help the kid in the middle?”
 
 [Stimulus source](assets/stimuli/cf266d33caca-05-sad.png) — original reference image; the preview replaces its caption with the wording above.
+
+Read the choices together: “The kid’s mom or the kid’s sister?”
 
 Choices: The kid’s mom / The kid’s sister.
 
@@ -934,21 +932,21 @@ After choosing “The kid’s sister”, confirm: “You chose the kid’s siste
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No obligation question.*
 
-### 85. No one helped
+### 80. No one helped
 
 “No one helped the kid in the middle.”
 
-Display wording: “No one helped the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+Display wording: “No one helped the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. The helper cues remain still throughout the narration.
 
 [Stimulus source](assets/stimuli/cf266d33caca-05-sad.png) — original reference image; the preview replaces its caption with the wording above.
 
 *Standalone outcome statement. Continue after the sentence to hear each helper’s action and the repeated no-one-helped statement.*
 
-### 86. Each helper did NOT help
+### 81. Each helper did NOT help
 
 “The kid’s mom did NOT help the kid in the middle. And the kid’s sister did NOT help the kid in the middle. No one helped the kid in the middle.”
 
-Display wording: “The kid’s mom did NOT help the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+Display wording: “The kid’s mom did NOT help the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. The helper cues remain still throughout the narration.
 
 Captions follow the narration, in order: “The kid’s mom did NOT help the kid in the middle.” → “And the kid’s sister did NOT help the kid in the middle.” → “No one helped the kid in the middle.”.
 
@@ -956,7 +954,7 @@ Captions follow the narration, in order: “The kid’s mom did NOT help the kid
 
 *Every response path reaches this same outcome, regardless of prediction or obligation choices.*
 
-### 87. Recall · No one helped
+### 82. Recall · No one helped
 
 “Can you tell me, did either of these people help the kid in the middle?”
 
@@ -972,11 +970,13 @@ Reminder if needed: “Actually, remember, no one helped the kid in the middle. 
 
 After the reminder, reread the full question and response labels before reopening the choices.
 
-### 88. Who was meaner? — PROPOSED WORDING
+### 83. Who was meaner? — PROPOSED WORDING
 
 “Who was meaner for NOT helping the kid in the middle?”
 
 [Stimulus source](assets/stimuli/cf266d33caca-05-sad.png) — original reference image; the preview replaces its caption with the wording above.
+
+Read the choices together: “The kid’s mom or the kid’s sister?”
 
 Choices: The kid’s mom / The kid’s sister.
 
@@ -986,7 +986,7 @@ After choosing “The kid’s sister”, confirm: “You chose the kid’s siste
 
 *Two-helper comparison adapted from Marshall. Buttons follow the scene: the kid’s mom left, the kid’s sister right.*
 
-### 89. Selected helper · How mean is the kid’s mom? — PROPOSED WORDING
+### 84. Selected helper · How mean is the kid’s mom? — PROPOSED WORDING
 
 *Only after “The kid’s mom” to Who was meaner?.*
 
@@ -1000,7 +1000,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
-### 90. Selected helper · How mean is the kid’s sister? — PROPOSED WORDING
+### 85. Selected helper · How mean is the kid’s sister? — PROPOSED WORDING
 
 *Only after “The kid’s sister” to Who was meaner?.*
 
@@ -1014,7 +1014,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
-### 91. Individual evaluation · The kid’s mom
+### 86. Individual evaluation · The kid’s mom
 
 “Do you think it was Mean or Not Mean that the kid’s mom did NOT help the kid in the middle?”
 
@@ -1022,7 +1022,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Choices: Mean / Not Mean.
 
-### 92. Meanness strength · The kid’s mom
+### 87. Meanness strength · The kid’s mom
 
 *Only after “Mean” to Individual evaluation · The kid’s mom.*
 
@@ -1034,7 +1034,7 @@ Display wording: “How mean do you think the kid’s mom was for NOT helping th
 
 Choices: A teeny bit mean / A little bit mean / Very mean.
 
-### 93. Individual evaluation · The kid’s sister
+### 88. Individual evaluation · The kid’s sister
 
 “Do you think it was Mean or Not Mean that the kid’s sister did NOT help the kid in the middle?”
 
@@ -1042,7 +1042,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Choices: Mean / Not Mean.
 
-### 94. Meanness strength · The kid’s sister
+### 89. Meanness strength · The kid’s sister
 
 *Only after “Mean” to Individual evaluation · The kid’s sister.*
 
@@ -1058,13 +1058,13 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Left: the kid’s classmate. Middle: the kid in the middle. Right: the kid’s teacher.
 
-### 95. Meet the characters
+### 90. Meet the characters
 
 “Look! Here are some people.”
 
 [Stimulus source](assets/stimuli/44d39b1df683-intro_01.svg) — original reference image; the preview replaces its caption with the wording above.
 
-### 96. Meet the kid in the middle
+### 91. Meet the kid in the middle
 
 “This little one is a kid.”
 
@@ -1072,7 +1072,7 @@ Left: the kid’s classmate. Middle: the kid in the middle. Right: the kid’s t
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 97. Meet the kid’s classmate
+### 92. Meet the kid’s classmate
 
 “This little one is this kid’s classmate.”
 
@@ -1080,7 +1080,7 @@ Left: the kid’s classmate. Middle: the kid in the middle. Right: the kid’s t
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 98. Meet the kid’s teacher
+### 93. Meet the kid’s teacher
 
 “This big one is this kid’s teacher.”
 
@@ -1088,23 +1088,19 @@ Left: the kid’s classmate. Middle: the kid in the middle. Right: the kid’s t
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 99. The kid in the middle needs help
+### 94. The kid in the middle needs help
 
 “Oh no! The kid in the middle is sad now!”
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
-### 100. Both helpers see
-
-“The kid’s classmate and the kid’s teacher both see that the kid in the middle is sad.”
-
-[Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
-
-### 101. Who will help? — PROPOSED WORDING
+### 95. Who will help? — PROPOSED WORDING
 
 “Who do you think will help the kid in the middle?”
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
+
+Read the choices together: “The kid’s classmate or the kid’s teacher?”
 
 Choices: The kid’s classmate / The kid’s teacher.
 
@@ -1114,11 +1110,13 @@ After choosing “The kid’s teacher”, confirm: “You chose the kid’s teac
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No prediction question.*
 
-### 102. Who HAS TO help? — PROPOSED WORDING
+### 96. Who HAS TO help? — PROPOSED WORDING
 
 “Who do you think HAS TO help the kid in the middle?”
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
+
+Read the choices together: “The kid’s classmate or the kid’s teacher?”
 
 Choices: The kid’s classmate / The kid’s teacher.
 
@@ -1128,21 +1126,21 @@ After choosing “The kid’s teacher”, confirm: “You chose the kid’s teac
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No obligation question.*
 
-### 103. No one helped
+### 97. No one helped
 
 “No one helped the kid in the middle.”
 
-Display wording: “No one helped the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+Display wording: “No one helped the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. The helper cues remain still throughout the narration.
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
 *Standalone outcome statement. Continue after the sentence to hear each helper’s action and the repeated no-one-helped statement.*
 
-### 104. Each helper did NOT help
+### 98. Each helper did NOT help
 
 “The kid’s classmate did NOT help the kid in the middle. And the kid’s teacher did NOT help the kid in the middle. No one helped the kid in the middle.”
 
-Display wording: “The kid’s classmate did NOT help the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper cue glows only during its complete did-NOT-help clause.
+Display wording: “The kid’s classmate did NOT help the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. The helper cues remain still throughout the narration.
 
 Captions follow the narration, in order: “The kid’s classmate did NOT help the kid in the middle.” → “And the kid’s teacher did NOT help the kid in the middle.” → “No one helped the kid in the middle.”.
 
@@ -1150,7 +1148,7 @@ Captions follow the narration, in order: “The kid’s classmate did NOT help t
 
 *Every response path reaches this same outcome, regardless of prediction or obligation choices.*
 
-### 105. Recall · No one helped
+### 99. Recall · No one helped
 
 “Can you tell me, did either of these people help the kid in the middle?”
 
@@ -1166,11 +1164,13 @@ Reminder if needed: “Actually, remember, no one helped the kid in the middle. 
 
 After the reminder, reread the full question and response labels before reopening the choices.
 
-### 106. Who was meaner? — PROPOSED WORDING
+### 100. Who was meaner? — PROPOSED WORDING
 
 “Who was meaner for NOT helping the kid in the middle?”
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
+
+Read the choices together: “The kid’s classmate or the kid’s teacher?”
 
 Choices: The kid’s classmate / The kid’s teacher.
 
@@ -1180,7 +1180,7 @@ After choosing “The kid’s teacher”, confirm: “You chose the kid’s teac
 
 *Two-helper comparison adapted from Marshall. Buttons follow the scene: the kid’s classmate left, the kid’s teacher right.*
 
-### 107. Selected helper · How mean is the kid’s classmate? — PROPOSED WORDING
+### 101. Selected helper · How mean is the kid’s classmate? — PROPOSED WORDING
 
 *Only after “The kid’s classmate” to Who was meaner?.*
 
@@ -1194,7 +1194,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
-### 108. Selected helper · How mean is the kid’s teacher? — PROPOSED WORDING
+### 102. Selected helper · How mean is the kid’s teacher? — PROPOSED WORDING
 
 *Only after “The kid’s teacher” to Who was meaner?.*
 
@@ -1208,7 +1208,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
-### 109. Individual evaluation · The kid’s classmate
+### 103. Individual evaluation · The kid’s classmate
 
 “Do you think it was Mean or Not Mean that the kid’s classmate did NOT help the kid in the middle?”
 
@@ -1216,7 +1216,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Choices: Mean / Not Mean.
 
-### 110. Meanness strength · The kid’s classmate
+### 104. Meanness strength · The kid’s classmate
 
 *Only after “Mean” to Individual evaluation · The kid’s classmate.*
 
@@ -1228,7 +1228,7 @@ Display wording: “How mean do you think the kid’s classmate was for NOT help
 
 Choices: A teeny bit mean / A little bit mean / Very mean.
 
-### 111. Individual evaluation · The kid’s teacher
+### 105. Individual evaluation · The kid’s teacher
 
 “Do you think it was Mean or Not Mean that the kid’s teacher did NOT help the kid in the middle?”
 
@@ -1236,7 +1236,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Choices: Mean / Not Mean.
 
-### 112. Meanness strength · The kid’s teacher
+### 106. Meanness strength · The kid’s teacher
 
 *Only after “Mean” to Individual evaluation · The kid’s teacher.*
 
@@ -1248,7 +1248,7 @@ Display wording: “How mean do you think the kid’s teacher was for NOT helpin
 
 Choices: A teeny bit mean / A little bit mean / Very mean.
 
-### 113. End of this session
+### 107. End of this session
 
 “That’s the end of our stories. Thank you!”
 

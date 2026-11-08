@@ -31,9 +31,9 @@
   },
   "summary": {
     "storyCount": 18,
-    "screenCount": 541,
-    "clipCount": 208,
-    "readyCount": 208,
+    "screenCount": 523,
+    "clipCount": 222,
+    "readyCount": 222,
     "pendingCount": 0,
     "newForcedChoiceRecordingCount": 12,
     "emphasisPendingCount": 3,
@@ -45,7 +45,7 @@
     "standaloneOutcomeScreenCount": 18,
     "closingOutcomeReadyCount": 14,
     "closingOutcomeScreenCount": 18,
-    "staticScreenCount": 397,
+    "staticScreenCount": 379,
     "virtualConfirmationScreenCount": 108,
     "virtualCorrectFeedbackScreenCount": 36,
     "possibleConfirmationRoutes": 108,
@@ -57,7 +57,9 @@
     "originalContinuousRestoredReadyCount": 1,
     "consistentChildRecipient": "the kid in the middle",
     "consistentRecipientNewNativeClipCount": 37,
-    "consistentRecipientUpdatedRoutes": 105
+    "consistentRecipientUpdatedRoutes": 105,
+    "originalPairedQuestionCount": 14,
+    "joinedQuestionScreenCount": 54
   },
   "notes": [
     "This is the separate forced-choice adaptation. Each story has one prediction, one obligation, and one comparative evaluation choice between its two helpers.",
@@ -84,7 +86,8 @@
     "October4 reminder repair:13 complete native article-pronunciation files307–319 passed unprompted full-file canonical transcripts, including every The. Actual nativeInputText is retained in provenance; phonetic Thuh is not normalized to The by the verifier. Files copied unchanged with matching hashes/cues. nr_320 is now a complete native Thee-input recording with strict canonical The recognition.",
     "October4 reminder import:13 complete native article-pronunciation paragraph files passed strict unprompted full-file recognition of the canonical script, including every The. Native input spells those weak articles phonetically; this does not change the recognition normalization or canonical caption. File bytes are unchanged, cues/hash verified. nr_320 is now a complete native Thee-input recording with strict canonical The recognition.",
     "Teacher reminder320 now uses one complete native Thee-input paragraph. Actual whole-file unprompted recognition returns the canonical The articles, both helper sentences, and both No one sentences exactly; no input spelling substitution is applied to recognition. Audit-only export title is never mapped to the study.",
-    "October 6 consistent-recipient revision: every reference to the child being helped now uses the kid in the middle, including introductions, prompts, confidence variants, neutral confirmations, outcomes and reminders. Helper relationship labels and adult-recipient stories retain their established names. Source catalogs and artwork are unchanged. A natural And connects repeated child-story helper clauses so native synthesis preserves each the article. Fresh native whole-paragraph recordings match all edited narration routes; superseded recordings remain historical sources without active uses."
+    "October 6 consistent-recipient revision: every reference to the child being helped now uses the kid in the middle, including introductions, prompts, confidence variants, neutral confirmations, outcomes and reminders. Helper relationship labels and adult-recipient stories retain their established names. Source catalogs and artwork are unchanged. A natural And connects repeated child-story helper clauses so native synthesis preserves each the article. Fresh native whole-paragraph recordings match all edited narration routes; superseded recordings remain historical sources without active uses.",
+    "Forced-choice helper alternatives use the original complete X or Y? recordings. The both-see witness screen is omitted. Individual option recordings are retained for archival comparison but not used on helper-choice screens."
   ],
   "clips": [
     {
@@ -5312,7 +5315,7 @@
         "sourceStartSample": 1517922,
         "sourceEndSample": 1764000,
         "sourceStartSeconds": 34.42,
-        "sourceEndSeconds": 40.0,
+        "sourceEndSeconds": 40,
         "exportIndexHint": 5,
         "cutAtNativeParagraphSilenceMidpoints": true,
         "voiceProvider": "NaturalReaders Commercial",
@@ -7434,7 +7437,7 @@
         "sourceCombinedSha256": "945cedb5dde4ba7cb5f13f13fc7f22a34b85b8f0e64b55b7ee898ee975e19382",
         "sourceStartSample": 1764000,
         "sourceEndSample": 2029041,
-        "sourceStartSeconds": 40.0,
+        "sourceStartSeconds": 40,
         "sourceEndSeconds": 46.01,
         "exportIndexHint": 6,
         "cutAtNativeParagraphSilenceMidpoints": true,
@@ -17816,6 +17819,458 @@
         "canonicalSpokenWordSequenceVerified": true
       },
       "revisionCategory": "consistent-child-recipient-reference"
+    },
+    {
+      "id": "ftc_036",
+      "text": "The kid’s teacher or the kid’s mom?",
+      "src": "../../audio_evelyn/ftc_036_story_options_10_the_kids_teacher_or_the_kids_mom.mp3",
+      "kind": "choice-question",
+      "status": "verified-source-recording",
+      "uses": [
+        {
+          "stepId": "woman-mom-teacher:predict-compare",
+          "proposedWording": false,
+          "part": "choice-question"
+        },
+        {
+          "stepId": "woman-mom-teacher:obligation-compare",
+          "proposedWording": false,
+          "part": "choice-question"
+        },
+        {
+          "stepId": "woman-mom-teacher:compare",
+          "proposedWording": false,
+          "part": "choice-question"
+        }
+      ],
+      "sha256": "1c15cef986854bf598eb93194e20dadef4394b819cc93fa7f61cd9d2c0d7d0ab",
+      "bytes": 113938,
+      "durationSeconds": 2.847325,
+      "provenance": "Original Find the Caregiver Evelyn recording; complete left-to-right helper question reused unchanged."
+    },
+    {
+      "id": "ftc_037",
+      "text": "The kid’s sister or the kid’s friend?",
+      "src": "../../audio_evelyn/ftc_037_story_options_11_the_kids_sister_or_the_kids_friend.mp3",
+      "kind": "choice-question",
+      "status": "verified-source-recording",
+      "uses": [
+        {
+          "stepId": "woman-sister-friend:predict-compare",
+          "proposedWording": false,
+          "part": "choice-question"
+        },
+        {
+          "stepId": "woman-sister-friend:obligation-compare",
+          "proposedWording": false,
+          "part": "choice-question"
+        },
+        {
+          "stepId": "woman-sister-friend:compare",
+          "proposedWording": false,
+          "part": "choice-question"
+        }
+      ],
+      "sha256": "d8b74fef36efb8c4b13dd7ee2187ad733286632665f9595eb77f9a3d8b239d3b",
+      "bytes": 113938,
+      "durationSeconds": 2.847325,
+      "provenance": "Original Find the Caregiver Evelyn recording; complete left-to-right helper question reused unchanged."
+    },
+    {
+      "id": "ftc_060",
+      "text": "The kid’s friend or the kid’s best friend?",
+      "src": "../../audio_evelyn/ftc_060_story_options_26_the_kids_friend_or_the_kids_best_friend.mp3",
+      "kind": "choice-question",
+      "status": "verified-source-recording",
+      "uses": [
+        {
+          "stepId": "woman-bestfriend-friend:predict-compare",
+          "proposedWording": false,
+          "part": "choice-question"
+        },
+        {
+          "stepId": "woman-bestfriend-friend:obligation-compare",
+          "proposedWording": false,
+          "part": "choice-question"
+        },
+        {
+          "stepId": "woman-bestfriend-friend:compare",
+          "proposedWording": false,
+          "part": "choice-question"
+        },
+        {
+          "stepId": "man-bestfriend-friend:predict-compare",
+          "proposedWording": false,
+          "part": "choice-question"
+        },
+        {
+          "stepId": "man-bestfriend-friend:obligation-compare",
+          "proposedWording": false,
+          "part": "choice-question"
+        },
+        {
+          "stepId": "man-bestfriend-friend:compare",
+          "proposedWording": false,
+          "part": "choice-question"
+        }
+      ],
+      "sha256": "a2214d67d2450431bf3b9d284d833f4244c5a516347076608c2dedea2afb92be",
+      "bytes": 124387,
+      "durationSeconds": 3.10855,
+      "provenance": "Original Find the Caregiver Evelyn recording; complete left-to-right helper question reused unchanged."
+    },
+    {
+      "id": "ftc_015",
+      "text": "The kid’s teacher or the kid’s friend?",
+      "src": "../../audio_evelyn/ftc_015_story_options_03_the_kids_teacher_or_the_kids_friend.mp3",
+      "kind": "choice-question",
+      "status": "verified-source-recording",
+      "uses": [
+        {
+          "stepId": "woman-teacher-friend:predict-compare",
+          "proposedWording": false,
+          "part": "choice-question"
+        },
+        {
+          "stepId": "woman-teacher-friend:obligation-compare",
+          "proposedWording": false,
+          "part": "choice-question"
+        },
+        {
+          "stepId": "woman-teacher-friend:compare",
+          "proposedWording": false,
+          "part": "choice-question"
+        },
+        {
+          "stepId": "man-teacher-friend:predict-compare",
+          "proposedWording": false,
+          "part": "choice-question"
+        },
+        {
+          "stepId": "man-teacher-friend:obligation-compare",
+          "proposedWording": false,
+          "part": "choice-question"
+        },
+        {
+          "stepId": "man-teacher-friend:compare",
+          "proposedWording": false,
+          "part": "choice-question"
+        }
+      ],
+      "sha256": "0c8b521e9e56c4b35f50f378a8497f8a794451950065521bb200ec9a1e873a85",
+      "bytes": 114983,
+      "durationSeconds": 2.87345,
+      "provenance": "Original Find the Caregiver Evelyn recording; complete left-to-right helper question reused unchanged."
+    },
+    {
+      "id": "ftc_007",
+      "text": "The kid’s mom or the kid’s sister?",
+      "src": "../../audio_evelyn/ftc_007_story_options_01_the_kids_mom_or_the_kids_sister.mp3",
+      "kind": "choice-question",
+      "status": "verified-source-recording",
+      "uses": [
+        {
+          "stepId": "woman-mom-sister:predict-compare",
+          "proposedWording": false,
+          "part": "choice-question"
+        },
+        {
+          "stepId": "woman-mom-sister:obligation-compare",
+          "proposedWording": false,
+          "part": "choice-question"
+        },
+        {
+          "stepId": "woman-mom-sister:compare",
+          "proposedWording": false,
+          "part": "choice-question"
+        }
+      ],
+      "sha256": "050d3e90fa30534aefd82b1132e80ba0a35c6f7523db171854d990020c1d8e31",
+      "bytes": 112894,
+      "durationSeconds": 2.821225,
+      "provenance": "Original Find the Caregiver Evelyn recording; complete left-to-right helper question reused unchanged."
+    },
+    {
+      "id": "ftc_classmate_or_teacher",
+      "text": "The kid’s classmate or the kid’s teacher?",
+      "src": "../../assets/teacher_classmate/generated/audio/tc_v3_classmate_or_teacher.mp3",
+      "kind": "choice-question",
+      "status": "verified-source-recording",
+      "uses": [
+        {
+          "stepId": "woman-teacher-classmate:predict-compare",
+          "proposedWording": false,
+          "part": "choice-question"
+        },
+        {
+          "stepId": "woman-teacher-classmate:obligation-compare",
+          "proposedWording": false,
+          "part": "choice-question"
+        },
+        {
+          "stepId": "woman-teacher-classmate:compare",
+          "proposedWording": false,
+          "part": "choice-question"
+        },
+        {
+          "stepId": "man-teacher-classmate:predict-compare",
+          "proposedWording": false,
+          "part": "choice-question"
+        },
+        {
+          "stepId": "man-teacher-classmate:obligation-compare",
+          "proposedWording": false,
+          "part": "choice-question"
+        },
+        {
+          "stepId": "man-teacher-classmate:compare",
+          "proposedWording": false,
+          "part": "choice-question"
+        },
+        {
+          "stepId": "family-teacher-classmate:predict-compare",
+          "proposedWording": false,
+          "part": "choice-question"
+        },
+        {
+          "stepId": "family-teacher-classmate:obligation-compare",
+          "proposedWording": false,
+          "part": "choice-question"
+        },
+        {
+          "stepId": "family-teacher-classmate:compare",
+          "proposedWording": false,
+          "part": "choice-question"
+        }
+      ],
+      "sha256": "88992cb50601d55284e8a1e8fdeced5bacdf2e5225333e45efae5788df207912",
+      "bytes": 123343,
+      "durationSeconds": 3.08245,
+      "provenance": "Original Find the Caregiver Evelyn recording; complete left-to-right helper question reused unchanged."
+    },
+    {
+      "id": "ftc_051",
+      "text": "The kid’s teacher or the kid’s dad?",
+      "src": "../../audio_evelyn/ftc_051_story_options_18_the_kids_teacher_or_the_kids_dad.mp3",
+      "kind": "choice-question",
+      "status": "verified-source-recording",
+      "uses": [
+        {
+          "stepId": "man-dad-teacher:predict-compare",
+          "proposedWording": false,
+          "part": "choice-question"
+        },
+        {
+          "stepId": "man-dad-teacher:obligation-compare",
+          "proposedWording": false,
+          "part": "choice-question"
+        },
+        {
+          "stepId": "man-dad-teacher:compare",
+          "proposedWording": false,
+          "part": "choice-question"
+        }
+      ],
+      "sha256": "5994af059bad4a2b1984983d8fa68802e87a58a64975fda07bb0b8e21ddd217b",
+      "bytes": 111849,
+      "durationSeconds": 2.7951,
+      "provenance": "Original Find the Caregiver Evelyn recording; complete left-to-right helper question reused unchanged."
+    },
+    {
+      "id": "ftc_052",
+      "text": "The kid’s brother or the kid’s friend?",
+      "src": "../../audio_evelyn/ftc_052_story_options_19_the_kids_brother_or_the_kids_friend.mp3",
+      "kind": "choice-question",
+      "status": "verified-source-recording",
+      "uses": [
+        {
+          "stepId": "man-brother-friend:predict-compare",
+          "proposedWording": false,
+          "part": "choice-question"
+        },
+        {
+          "stepId": "man-brother-friend:obligation-compare",
+          "proposedWording": false,
+          "part": "choice-question"
+        },
+        {
+          "stepId": "man-brother-friend:compare",
+          "proposedWording": false,
+          "part": "choice-question"
+        }
+      ],
+      "sha256": "a9295c0d71b938bc3323b3ee49b62eb0197994948842ed55f0dddbd06cb26c1c",
+      "bytes": 114983,
+      "durationSeconds": 2.87345,
+      "provenance": "Original Find the Caregiver Evelyn recording; complete left-to-right helper question reused unchanged."
+    },
+    {
+      "id": "ftc_040",
+      "text": "The kid’s dad or the kid’s brother?",
+      "src": "../../audio_evelyn/ftc_040_story_options_13_the_kids_dad_or_the_kids_brother.mp3",
+      "kind": "choice-question",
+      "status": "verified-source-recording",
+      "uses": [
+        {
+          "stepId": "man-dad-brother:predict-compare",
+          "proposedWording": false,
+          "part": "choice-question"
+        },
+        {
+          "stepId": "man-dad-brother:obligation-compare",
+          "proposedWording": false,
+          "part": "choice-question"
+        },
+        {
+          "stepId": "man-dad-brother:compare",
+          "proposedWording": false,
+          "part": "choice-question"
+        }
+      ],
+      "sha256": "d9206fba28ac010724db22cb582c43db35ec395eadae5f18662d27a435729887",
+      "bytes": 109759,
+      "durationSeconds": 2.74285,
+      "provenance": "Original Find the Caregiver Evelyn recording; complete left-to-right helper question reused unchanged."
+    },
+    {
+      "id": "ftc_055",
+      "text": "The kid’s dad or the kid’s mom?",
+      "src": "../../audio_evelyn/ftc_055_story_options_22_the_kids_dad_or_the_kids_mom.mp3",
+      "kind": "choice-question",
+      "status": "verified-source-recording",
+      "uses": [
+        {
+          "stepId": "family-mom-dad:predict-compare",
+          "proposedWording": false,
+          "part": "choice-question"
+        },
+        {
+          "stepId": "family-mom-dad:obligation-compare",
+          "proposedWording": false,
+          "part": "choice-question"
+        },
+        {
+          "stepId": "family-mom-dad:compare",
+          "proposedWording": false,
+          "part": "choice-question"
+        }
+      ],
+      "sha256": "db6a5d994164bdd61470ae99c3362bf0e7f17074cb4f59344ebf578034c5589e",
+      "bytes": 105579,
+      "durationSeconds": 2.63835,
+      "provenance": "Original Find the Caregiver Evelyn recording; complete left-to-right helper question reused unchanged."
+    },
+    {
+      "id": "ftc_056",
+      "text": "The kid’s sister or the kid’s brother?",
+      "src": "../../audio_evelyn/ftc_056_story_options_23_the_kids_sister_or_the_kids_brother.mp3",
+      "kind": "choice-question",
+      "status": "verified-source-recording",
+      "uses": [
+        {
+          "stepId": "family-sister-brother:predict-compare",
+          "proposedWording": false,
+          "part": "choice-question"
+        },
+        {
+          "stepId": "family-sister-brother:obligation-compare",
+          "proposedWording": false,
+          "part": "choice-question"
+        },
+        {
+          "stepId": "family-sister-brother:compare",
+          "proposedWording": false,
+          "part": "choice-question"
+        }
+      ],
+      "sha256": "8d663733bb9ac80e79653c06f2f2e6500df572e52fd26ceb67f203baf4c1aeef",
+      "bytes": 116028,
+      "durationSeconds": 2.899575,
+      "provenance": "Original Find the Caregiver Evelyn recording; complete left-to-right helper question reused unchanged."
+    },
+    {
+      "id": "ftc_020",
+      "text": "The kid’s dad or the kid?",
+      "src": "../../audio_evelyn/ftc_020_story_options_05_the_kids_dad_or_the_kid.mp3",
+      "kind": "choice-question",
+      "status": "verified-source-recording",
+      "uses": [
+        {
+          "stepId": "family-dad-kid:predict-compare",
+          "proposedWording": false,
+          "part": "choice-question"
+        },
+        {
+          "stepId": "family-dad-kid:obligation-compare",
+          "proposedWording": false,
+          "part": "choice-question"
+        },
+        {
+          "stepId": "family-dad-kid:compare",
+          "proposedWording": false,
+          "part": "choice-question"
+        }
+      ],
+      "sha256": "a552dfba634dbaae7c54bc8bb776522a996cec6fcad797da19eff54153f4232d",
+      "bytes": 95130,
+      "durationSeconds": 2.377125,
+      "provenance": "Original Find the Caregiver Evelyn recording; complete left-to-right helper question reused unchanged."
+    },
+    {
+      "id": "ftc_049",
+      "text": "The kid or the kid’s mom?",
+      "src": "../../audio_evelyn/ftc_049_story_options_16_the_kid_or_the_kids_mom.mp3",
+      "kind": "choice-question",
+      "status": "verified-source-recording",
+      "uses": [
+        {
+          "stepId": "family-mom-kid:predict-compare",
+          "proposedWording": false,
+          "part": "choice-question"
+        },
+        {
+          "stepId": "family-mom-kid:obligation-compare",
+          "proposedWording": false,
+          "part": "choice-question"
+        },
+        {
+          "stepId": "family-mom-kid:compare",
+          "proposedWording": false,
+          "part": "choice-question"
+        }
+      ],
+      "sha256": "9a6571a425da0e140f7a697a90a1880d1dc51311947b27732d8202f453619e09",
+      "bytes": 94085,
+      "durationSeconds": 2.351,
+      "provenance": "Original Find the Caregiver Evelyn recording; complete left-to-right helper question reused unchanged."
+    },
+    {
+      "id": "ftc_029",
+      "text": "The kid’s teacher or the kid?",
+      "src": "../../audio_evelyn/ftc_029_story_options_07_the_kids_teacher_or_the_kid.mp3",
+      "kind": "choice-question",
+      "status": "verified-source-recording",
+      "uses": [
+        {
+          "stepId": "family-teacher-kid:predict-compare",
+          "proposedWording": false,
+          "part": "choice-question"
+        },
+        {
+          "stepId": "family-teacher-kid:obligation-compare",
+          "proposedWording": false,
+          "part": "choice-question"
+        },
+        {
+          "stepId": "family-teacher-kid:compare",
+          "proposedWording": false,
+          "part": "choice-question"
+        }
+      ],
+      "sha256": "0fa5d97b067604f39bd415bd8f6c1a68395cd304ec0c4481b7a6b296b84f0874",
+      "bytes": 102445,
+      "durationSeconds": 2.56,
+      "provenance": "Original Find the Caregiver Evelyn recording; complete left-to-right helper question reused unchanged."
     }
   ],
   "screens": {
@@ -17849,12 +18304,6 @@
       "options": [],
       "proposedWording": false
     },
-    "woman-mom-teacher:witness": {
-      "prompt": "nr_middle_003",
-      "reminder": null,
-      "options": [],
-      "proposedWording": false
-    },
     "woman-mom-teacher:predict-compare": {
       "prompt": "nr_256",
       "reminder": null,
@@ -17866,7 +18315,8 @@
       "confirmationScreens": [
         "woman-mom-teacher:predict-compare:confirm-0",
         "woman-mom-teacher:predict-compare:confirm-1"
-      ]
+      ],
+      "choiceQuestion": "ftc_036"
     },
     "woman-mom-teacher:predict-compare:confirm-0": {
       "prompt": "nr_321",
@@ -17953,7 +18403,8 @@
       "confirmationScreens": [
         "woman-mom-teacher:obligation-compare:confirm-0",
         "woman-mom-teacher:obligation-compare:confirm-1"
-      ]
+      ],
+      "choiceQuestion": "ftc_036"
     },
     "woman-mom-teacher:obligation-compare:confirm-0": {
       "prompt": "nr_323",
@@ -18011,7 +18462,8 @@
       "confirmationScreens": [
         "woman-mom-teacher:compare:confirm-0",
         "woman-mom-teacher:compare:confirm-1"
-      ]
+      ],
+      "choiceQuestion": "ftc_036"
     },
     "woman-mom-teacher:compare:confirm-0": {
       "prompt": "nr_325",
@@ -18125,12 +18577,6 @@
       "options": [],
       "proposedWording": false
     },
-    "woman-sister-friend:witness": {
-      "prompt": "nr_middle_025",
-      "reminder": null,
-      "options": [],
-      "proposedWording": false
-    },
     "woman-sister-friend:predict-compare": {
       "prompt": "nr_256",
       "reminder": null,
@@ -18142,7 +18588,8 @@
       "confirmationScreens": [
         "woman-sister-friend:predict-compare:confirm-0",
         "woman-sister-friend:predict-compare:confirm-1"
-      ]
+      ],
+      "choiceQuestion": "ftc_037"
     },
     "woman-sister-friend:predict-compare:confirm-0": {
       "prompt": "nr_327",
@@ -18229,7 +18676,8 @@
       "confirmationScreens": [
         "woman-sister-friend:obligation-compare:confirm-0",
         "woman-sister-friend:obligation-compare:confirm-1"
-      ]
+      ],
+      "choiceQuestion": "ftc_037"
     },
     "woman-sister-friend:obligation-compare:confirm-0": {
       "prompt": "nr_329",
@@ -18287,7 +18735,8 @@
       "confirmationScreens": [
         "woman-sister-friend:compare:confirm-0",
         "woman-sister-friend:compare:confirm-1"
-      ]
+      ],
+      "choiceQuestion": "ftc_037"
     },
     "woman-sister-friend:compare:confirm-0": {
       "prompt": "nr_331",
@@ -18401,12 +18850,6 @@
       "options": [],
       "proposedWording": false
     },
-    "woman-bestfriend-friend:witness": {
-      "prompt": "nr_middle_044",
-      "reminder": null,
-      "options": [],
-      "proposedWording": false
-    },
     "woman-bestfriend-friend:predict-compare": {
       "prompt": "nr_256",
       "reminder": null,
@@ -18418,7 +18861,8 @@
       "confirmationScreens": [
         "woman-bestfriend-friend:predict-compare:confirm-0",
         "woman-bestfriend-friend:predict-compare:confirm-1"
-      ]
+      ],
+      "choiceQuestion": "ftc_060"
     },
     "woman-bestfriend-friend:predict-compare:confirm-0": {
       "prompt": "nr_328",
@@ -18505,7 +18949,8 @@
       "confirmationScreens": [
         "woman-bestfriend-friend:obligation-compare:confirm-0",
         "woman-bestfriend-friend:obligation-compare:confirm-1"
-      ]
+      ],
+      "choiceQuestion": "ftc_060"
     },
     "woman-bestfriend-friend:obligation-compare:confirm-0": {
       "prompt": "nr_330",
@@ -18563,7 +19008,8 @@
       "confirmationScreens": [
         "woman-bestfriend-friend:compare:confirm-0",
         "woman-bestfriend-friend:compare:confirm-1"
-      ]
+      ],
+      "choiceQuestion": "ftc_060"
     },
     "woman-bestfriend-friend:compare:confirm-0": {
       "prompt": "nr_332",
@@ -18677,12 +19123,6 @@
       "options": [],
       "proposedWording": false
     },
-    "woman-teacher-friend:witness": {
-      "prompt": "nr_middle_055",
-      "reminder": null,
-      "options": [],
-      "proposedWording": false
-    },
     "woman-teacher-friend:predict-compare": {
       "prompt": "nr_256",
       "reminder": null,
@@ -18694,7 +19134,8 @@
       "confirmationScreens": [
         "woman-teacher-friend:predict-compare:confirm-0",
         "woman-teacher-friend:predict-compare:confirm-1"
-      ]
+      ],
+      "choiceQuestion": "ftc_015"
     },
     "woman-teacher-friend:predict-compare:confirm-0": {
       "prompt": "nr_321",
@@ -18781,7 +19222,8 @@
       "confirmationScreens": [
         "woman-teacher-friend:obligation-compare:confirm-0",
         "woman-teacher-friend:obligation-compare:confirm-1"
-      ]
+      ],
+      "choiceQuestion": "ftc_015"
     },
     "woman-teacher-friend:obligation-compare:confirm-0": {
       "prompt": "nr_323",
@@ -18839,7 +19281,8 @@
       "confirmationScreens": [
         "woman-teacher-friend:compare:confirm-0",
         "woman-teacher-friend:compare:confirm-1"
-      ]
+      ],
+      "choiceQuestion": "ftc_015"
     },
     "woman-teacher-friend:compare:confirm-0": {
       "prompt": "nr_325",
@@ -18953,12 +19396,6 @@
       "options": [],
       "proposedWording": false
     },
-    "woman-mom-sister:witness": {
-      "prompt": "nr_middle_058",
-      "reminder": null,
-      "options": [],
-      "proposedWording": false
-    },
     "woman-mom-sister:predict-compare": {
       "prompt": "nr_256",
       "reminder": null,
@@ -18970,7 +19407,8 @@
       "confirmationScreens": [
         "woman-mom-sister:predict-compare:confirm-0",
         "woman-mom-sister:predict-compare:confirm-1"
-      ]
+      ],
+      "choiceQuestion": "ftc_007"
     },
     "woman-mom-sister:predict-compare:confirm-0": {
       "prompt": "nr_322",
@@ -19057,7 +19495,8 @@
       "confirmationScreens": [
         "woman-mom-sister:obligation-compare:confirm-0",
         "woman-mom-sister:obligation-compare:confirm-1"
-      ]
+      ],
+      "choiceQuestion": "ftc_007"
     },
     "woman-mom-sister:obligation-compare:confirm-0": {
       "prompt": "nr_324",
@@ -19115,7 +19554,8 @@
       "confirmationScreens": [
         "woman-mom-sister:compare:confirm-0",
         "woman-mom-sister:compare:confirm-1"
-      ]
+      ],
+      "choiceQuestion": "ftc_007"
     },
     "woman-mom-sister:compare:confirm-0": {
       "prompt": "nr_326",
@@ -19229,12 +19669,6 @@
       "options": [],
       "proposedWording": false
     },
-    "woman-teacher-classmate:witness": {
-      "prompt": "nr_middle_061",
-      "reminder": null,
-      "options": [],
-      "proposedWording": false
-    },
     "woman-teacher-classmate:predict-compare": {
       "prompt": "nr_256",
       "reminder": null,
@@ -19246,7 +19680,8 @@
       "confirmationScreens": [
         "woman-teacher-classmate:predict-compare:confirm-0",
         "woman-teacher-classmate:predict-compare:confirm-1"
-      ]
+      ],
+      "choiceQuestion": "ftc_classmate_or_teacher"
     },
     "woman-teacher-classmate:predict-compare:confirm-0": {
       "prompt": "nr_336",
@@ -19333,7 +19768,8 @@
       "confirmationScreens": [
         "woman-teacher-classmate:obligation-compare:confirm-0",
         "woman-teacher-classmate:obligation-compare:confirm-1"
-      ]
+      ],
+      "choiceQuestion": "ftc_classmate_or_teacher"
     },
     "woman-teacher-classmate:obligation-compare:confirm-0": {
       "prompt": "nr_337",
@@ -19391,7 +19827,8 @@
       "confirmationScreens": [
         "woman-teacher-classmate:compare:confirm-0",
         "woman-teacher-classmate:compare:confirm-1"
-      ]
+      ],
+      "choiceQuestion": "ftc_classmate_or_teacher"
     },
     "woman-teacher-classmate:compare:confirm-0": {
       "prompt": "nr_338",
@@ -19505,12 +19942,6 @@
       "options": [],
       "proposedWording": false
     },
-    "man-dad-teacher:witness": {
-      "prompt": "nr_middle_072",
-      "reminder": null,
-      "options": [],
-      "proposedWording": false
-    },
     "man-dad-teacher:predict-compare": {
       "prompt": "nr_256",
       "reminder": null,
@@ -19522,7 +19953,8 @@
       "confirmationScreens": [
         "man-dad-teacher:predict-compare:confirm-0",
         "man-dad-teacher:predict-compare:confirm-1"
-      ]
+      ],
+      "choiceQuestion": "ftc_051"
     },
     "man-dad-teacher:predict-compare:confirm-0": {
       "prompt": "nr_321",
@@ -19609,7 +20041,8 @@
       "confirmationScreens": [
         "man-dad-teacher:obligation-compare:confirm-0",
         "man-dad-teacher:obligation-compare:confirm-1"
-      ]
+      ],
+      "choiceQuestion": "ftc_051"
     },
     "man-dad-teacher:obligation-compare:confirm-0": {
       "prompt": "nr_323",
@@ -19667,7 +20100,8 @@
       "confirmationScreens": [
         "man-dad-teacher:compare:confirm-0",
         "man-dad-teacher:compare:confirm-1"
-      ]
+      ],
+      "choiceQuestion": "ftc_051"
     },
     "man-dad-teacher:compare:confirm-0": {
       "prompt": "nr_325",
@@ -19781,12 +20215,6 @@
       "options": [],
       "proposedWording": false
     },
-    "man-brother-friend:witness": {
-      "prompt": "nr_middle_083",
-      "reminder": null,
-      "options": [],
-      "proposedWording": false
-    },
     "man-brother-friend:predict-compare": {
       "prompt": "nr_256",
       "reminder": null,
@@ -19798,7 +20226,8 @@
       "confirmationScreens": [
         "man-brother-friend:predict-compare:confirm-0",
         "man-brother-friend:predict-compare:confirm-1"
-      ]
+      ],
+      "choiceQuestion": "ftc_052"
     },
     "man-brother-friend:predict-compare:confirm-0": {
       "prompt": "nr_342",
@@ -19885,7 +20314,8 @@
       "confirmationScreens": [
         "man-brother-friend:obligation-compare:confirm-0",
         "man-brother-friend:obligation-compare:confirm-1"
-      ]
+      ],
+      "choiceQuestion": "ftc_052"
     },
     "man-brother-friend:obligation-compare:confirm-0": {
       "prompt": "nr_343",
@@ -19943,7 +20373,8 @@
       "confirmationScreens": [
         "man-brother-friend:compare:confirm-0",
         "man-brother-friend:compare:confirm-1"
-      ]
+      ],
+      "choiceQuestion": "ftc_052"
     },
     "man-brother-friend:compare:confirm-0": {
       "prompt": "nr_344",
@@ -20057,12 +20488,6 @@
       "options": [],
       "proposedWording": false
     },
-    "man-bestfriend-friend:witness": {
-      "prompt": "nr_middle_044",
-      "reminder": null,
-      "options": [],
-      "proposedWording": false
-    },
     "man-bestfriend-friend:predict-compare": {
       "prompt": "nr_256",
       "reminder": null,
@@ -20074,7 +20499,8 @@
       "confirmationScreens": [
         "man-bestfriend-friend:predict-compare:confirm-0",
         "man-bestfriend-friend:predict-compare:confirm-1"
-      ]
+      ],
+      "choiceQuestion": "ftc_060"
     },
     "man-bestfriend-friend:predict-compare:confirm-0": {
       "prompt": "nr_328",
@@ -20161,7 +20587,8 @@
       "confirmationScreens": [
         "man-bestfriend-friend:obligation-compare:confirm-0",
         "man-bestfriend-friend:obligation-compare:confirm-1"
-      ]
+      ],
+      "choiceQuestion": "ftc_060"
     },
     "man-bestfriend-friend:obligation-compare:confirm-0": {
       "prompt": "nr_330",
@@ -20219,7 +20646,8 @@
       "confirmationScreens": [
         "man-bestfriend-friend:compare:confirm-0",
         "man-bestfriend-friend:compare:confirm-1"
-      ]
+      ],
+      "choiceQuestion": "ftc_060"
     },
     "man-bestfriend-friend:compare:confirm-0": {
       "prompt": "nr_332",
@@ -20333,12 +20761,6 @@
       "options": [],
       "proposedWording": false
     },
-    "man-teacher-friend:witness": {
-      "prompt": "nr_middle_055",
-      "reminder": null,
-      "options": [],
-      "proposedWording": false
-    },
     "man-teacher-friend:predict-compare": {
       "prompt": "nr_256",
       "reminder": null,
@@ -20350,7 +20772,8 @@
       "confirmationScreens": [
         "man-teacher-friend:predict-compare:confirm-0",
         "man-teacher-friend:predict-compare:confirm-1"
-      ]
+      ],
+      "choiceQuestion": "ftc_015"
     },
     "man-teacher-friend:predict-compare:confirm-0": {
       "prompt": "nr_321",
@@ -20437,7 +20860,8 @@
       "confirmationScreens": [
         "man-teacher-friend:obligation-compare:confirm-0",
         "man-teacher-friend:obligation-compare:confirm-1"
-      ]
+      ],
+      "choiceQuestion": "ftc_015"
     },
     "man-teacher-friend:obligation-compare:confirm-0": {
       "prompt": "nr_323",
@@ -20495,7 +20919,8 @@
       "confirmationScreens": [
         "man-teacher-friend:compare:confirm-0",
         "man-teacher-friend:compare:confirm-1"
-      ]
+      ],
+      "choiceQuestion": "ftc_015"
     },
     "man-teacher-friend:compare:confirm-0": {
       "prompt": "nr_325",
@@ -20609,12 +21034,6 @@
       "options": [],
       "proposedWording": false
     },
-    "man-dad-brother:witness": {
-      "prompt": "nr_middle_094",
-      "reminder": null,
-      "options": [],
-      "proposedWording": false
-    },
     "man-dad-brother:predict-compare": {
       "prompt": "nr_256",
       "reminder": null,
@@ -20626,7 +21045,8 @@
       "confirmationScreens": [
         "man-dad-brother:predict-compare:confirm-0",
         "man-dad-brother:predict-compare:confirm-1"
-      ]
+      ],
+      "choiceQuestion": "ftc_040"
     },
     "man-dad-brother:predict-compare:confirm-0": {
       "prompt": "nr_339",
@@ -20713,7 +21133,8 @@
       "confirmationScreens": [
         "man-dad-brother:obligation-compare:confirm-0",
         "man-dad-brother:obligation-compare:confirm-1"
-      ]
+      ],
+      "choiceQuestion": "ftc_040"
     },
     "man-dad-brother:obligation-compare:confirm-0": {
       "prompt": "nr_340",
@@ -20771,7 +21192,8 @@
       "confirmationScreens": [
         "man-dad-brother:compare:confirm-0",
         "man-dad-brother:compare:confirm-1"
-      ]
+      ],
+      "choiceQuestion": "ftc_040"
     },
     "man-dad-brother:compare:confirm-0": {
       "prompt": "nr_341",
@@ -20885,12 +21307,6 @@
       "options": [],
       "proposedWording": false
     },
-    "man-teacher-classmate:witness": {
-      "prompt": "nr_middle_061",
-      "reminder": null,
-      "options": [],
-      "proposedWording": false
-    },
     "man-teacher-classmate:predict-compare": {
       "prompt": "nr_256",
       "reminder": null,
@@ -20902,7 +21318,8 @@
       "confirmationScreens": [
         "man-teacher-classmate:predict-compare:confirm-0",
         "man-teacher-classmate:predict-compare:confirm-1"
-      ]
+      ],
+      "choiceQuestion": "ftc_classmate_or_teacher"
     },
     "man-teacher-classmate:predict-compare:confirm-0": {
       "prompt": "nr_336",
@@ -20989,7 +21406,8 @@
       "confirmationScreens": [
         "man-teacher-classmate:obligation-compare:confirm-0",
         "man-teacher-classmate:obligation-compare:confirm-1"
-      ]
+      ],
+      "choiceQuestion": "ftc_classmate_or_teacher"
     },
     "man-teacher-classmate:obligation-compare:confirm-0": {
       "prompt": "nr_337",
@@ -21047,7 +21465,8 @@
       "confirmationScreens": [
         "man-teacher-classmate:compare:confirm-0",
         "man-teacher-classmate:compare:confirm-1"
-      ]
+      ],
+      "choiceQuestion": "ftc_classmate_or_teacher"
     },
     "man-teacher-classmate:compare:confirm-0": {
       "prompt": "nr_338",
@@ -21161,12 +21580,6 @@
       "options": [],
       "proposedWording": false
     },
-    "family-mom-dad:witness": {
-      "prompt": "nr_middle_097",
-      "reminder": null,
-      "options": [],
-      "proposedWording": false
-    },
     "family-mom-dad:predict-compare": {
       "prompt": "nr_256",
       "reminder": null,
@@ -21178,7 +21591,8 @@
       "confirmationScreens": [
         "family-mom-dad:predict-compare:confirm-0",
         "family-mom-dad:predict-compare:confirm-1"
-      ]
+      ],
+      "choiceQuestion": "ftc_055"
     },
     "family-mom-dad:predict-compare:confirm-0": {
       "prompt": "nr_339",
@@ -21265,7 +21679,8 @@
       "confirmationScreens": [
         "family-mom-dad:obligation-compare:confirm-0",
         "family-mom-dad:obligation-compare:confirm-1"
-      ]
+      ],
+      "choiceQuestion": "ftc_055"
     },
     "family-mom-dad:obligation-compare:confirm-0": {
       "prompt": "nr_340",
@@ -21323,7 +21738,8 @@
       "confirmationScreens": [
         "family-mom-dad:compare:confirm-0",
         "family-mom-dad:compare:confirm-1"
-      ]
+      ],
+      "choiceQuestion": "ftc_055"
     },
     "family-mom-dad:compare:confirm-0": {
       "prompt": "nr_341",
@@ -21437,12 +21853,6 @@
       "options": [],
       "proposedWording": false
     },
-    "family-sister-brother:witness": {
-      "prompt": "nr_middle_100",
-      "reminder": null,
-      "options": [],
-      "proposedWording": false
-    },
     "family-sister-brother:predict-compare": {
       "prompt": "nr_256",
       "reminder": null,
@@ -21454,7 +21864,8 @@
       "confirmationScreens": [
         "family-sister-brother:predict-compare:confirm-0",
         "family-sister-brother:predict-compare:confirm-1"
-      ]
+      ],
+      "choiceQuestion": "ftc_056"
     },
     "family-sister-brother:predict-compare:confirm-0": {
       "prompt": "nr_327",
@@ -21541,7 +21952,8 @@
       "confirmationScreens": [
         "family-sister-brother:obligation-compare:confirm-0",
         "family-sister-brother:obligation-compare:confirm-1"
-      ]
+      ],
+      "choiceQuestion": "ftc_056"
     },
     "family-sister-brother:obligation-compare:confirm-0": {
       "prompt": "nr_329",
@@ -21599,7 +22011,8 @@
       "confirmationScreens": [
         "family-sister-brother:compare:confirm-0",
         "family-sister-brother:compare:confirm-1"
-      ]
+      ],
+      "choiceQuestion": "ftc_056"
     },
     "family-sister-brother:compare:confirm-0": {
       "prompt": "nr_331",
@@ -21713,12 +22126,6 @@
       "options": [],
       "proposedWording": false
     },
-    "family-dad-kid:witness": {
-      "prompt": "nr_136",
-      "reminder": null,
-      "options": [],
-      "proposedWording": false
-    },
     "family-dad-kid:predict-compare": {
       "prompt": "nr_259",
       "reminder": null,
@@ -21730,7 +22137,8 @@
       "confirmationScreens": [
         "family-dad-kid:predict-compare:confirm-0",
         "family-dad-kid:predict-compare:confirm-1"
-      ]
+      ],
+      "choiceQuestion": "ftc_020"
     },
     "family-dad-kid:predict-compare:confirm-0": {
       "prompt": "nr_345",
@@ -21817,7 +22225,8 @@
       "confirmationScreens": [
         "family-dad-kid:obligation-compare:confirm-0",
         "family-dad-kid:obligation-compare:confirm-1"
-      ]
+      ],
+      "choiceQuestion": "ftc_020"
     },
     "family-dad-kid:obligation-compare:confirm-0": {
       "prompt": "nr_347",
@@ -21875,7 +22284,8 @@
       "confirmationScreens": [
         "family-dad-kid:compare:confirm-0",
         "family-dad-kid:compare:confirm-1"
-      ]
+      ],
+      "choiceQuestion": "ftc_020"
     },
     "family-dad-kid:compare:confirm-0": {
       "prompt": "nr_349",
@@ -21989,12 +22399,6 @@
       "options": [],
       "proposedWording": false
     },
-    "family-mom-kid:witness": {
-      "prompt": "nr_157",
-      "reminder": null,
-      "options": [],
-      "proposedWording": false
-    },
     "family-mom-kid:predict-compare": {
       "prompt": "nr_262",
       "reminder": null,
@@ -22006,7 +22410,8 @@
       "confirmationScreens": [
         "family-mom-kid:predict-compare:confirm-0",
         "family-mom-kid:predict-compare:confirm-1"
-      ]
+      ],
+      "choiceQuestion": "ftc_049"
     },
     "family-mom-kid:predict-compare:confirm-0": {
       "prompt": "nr_351",
@@ -22093,7 +22498,8 @@
       "confirmationScreens": [
         "family-mom-kid:obligation-compare:confirm-0",
         "family-mom-kid:obligation-compare:confirm-1"
-      ]
+      ],
+      "choiceQuestion": "ftc_049"
     },
     "family-mom-kid:obligation-compare:confirm-0": {
       "prompt": "nr_353",
@@ -22151,7 +22557,8 @@
       "confirmationScreens": [
         "family-mom-kid:compare:confirm-0",
         "family-mom-kid:compare:confirm-1"
-      ]
+      ],
+      "choiceQuestion": "ftc_049"
     },
     "family-mom-kid:compare:confirm-0": {
       "prompt": "nr_355",
@@ -22265,12 +22672,6 @@
       "options": [],
       "proposedWording": false
     },
-    "family-teacher-kid:witness": {
-      "prompt": "nr_177",
-      "reminder": null,
-      "options": [],
-      "proposedWording": false
-    },
     "family-teacher-kid:predict-compare": {
       "prompt": "nr_265",
       "reminder": null,
@@ -22282,7 +22683,8 @@
       "confirmationScreens": [
         "family-teacher-kid:predict-compare:confirm-0",
         "family-teacher-kid:predict-compare:confirm-1"
-      ]
+      ],
+      "choiceQuestion": "ftc_029"
     },
     "family-teacher-kid:predict-compare:confirm-0": {
       "prompt": "nr_357",
@@ -22369,7 +22771,8 @@
       "confirmationScreens": [
         "family-teacher-kid:obligation-compare:confirm-0",
         "family-teacher-kid:obligation-compare:confirm-1"
-      ]
+      ],
+      "choiceQuestion": "ftc_029"
     },
     "family-teacher-kid:obligation-compare:confirm-0": {
       "prompt": "nr_359",
@@ -22427,7 +22830,8 @@
       "confirmationScreens": [
         "family-teacher-kid:compare:confirm-0",
         "family-teacher-kid:compare:confirm-1"
-      ]
+      ],
+      "choiceQuestion": "ftc_029"
     },
     "family-teacher-kid:compare:confirm-0": {
       "prompt": "nr_361",
@@ -22541,12 +22945,6 @@
       "options": [],
       "proposedWording": false
     },
-    "family-teacher-classmate:witness": {
-      "prompt": "nr_middle_061",
-      "reminder": null,
-      "options": [],
-      "proposedWording": false
-    },
     "family-teacher-classmate:predict-compare": {
       "prompt": "nr_256",
       "reminder": null,
@@ -22558,7 +22956,8 @@
       "confirmationScreens": [
         "family-teacher-classmate:predict-compare:confirm-0",
         "family-teacher-classmate:predict-compare:confirm-1"
-      ]
+      ],
+      "choiceQuestion": "ftc_classmate_or_teacher"
     },
     "family-teacher-classmate:predict-compare:confirm-0": {
       "prompt": "nr_336",
@@ -22645,7 +23044,8 @@
       "confirmationScreens": [
         "family-teacher-classmate:obligation-compare:confirm-0",
         "family-teacher-classmate:obligation-compare:confirm-1"
-      ]
+      ],
+      "choiceQuestion": "ftc_classmate_or_teacher"
     },
     "family-teacher-classmate:obligation-compare:confirm-0": {
       "prompt": "nr_337",
@@ -22703,7 +23103,8 @@
       "confirmationScreens": [
         "family-teacher-classmate:compare:confirm-0",
         "family-teacher-classmate:compare:confirm-1"
-      ]
+      ],
+      "choiceQuestion": "ftc_classmate_or_teacher"
     },
     "family-teacher-classmate:compare:confirm-0": {
       "prompt": "nr_338",

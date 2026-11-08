@@ -5,11 +5,13 @@
     const buttons = [...container.querySelectorAll('[data-answer]:not(.continue-answer)')];
     const play = container.querySelector('[data-read-options]');
     const status = container.querySelector('[data-reader-status]');
-    const clipIds = options.clipIds || [];
+    // Helper alternatives are one original recording: "X or Y?".
+    const questionClipId = options.questionClipId || null;
+    const clipIds = questionClipId ? [questionClipId] : options.clipIds || [];
     let handle = null, disposed = false, token = 0;
     const scaled = buttons.some(button => button.classList.contains('rating-answer'));
     const updateStatus = text => { if (status) status.textContent = text; };
-    const available = () => clipIds.length === labels.length && !!root.ObligationNarration?.coverage(clipIds).complete;
+    const available = () => (questionClipId ? labels.length === 2 : clipIds.length === labels.length) && !!root.ObligationNarration?.coverage(clipIds).complete;
     function cancel() { token++; handle?.cancel(); handle = null; }
     function cue(current, ready = false, highlight = true) {
       buttons.forEach((button, i) => {
@@ -46,11 +48,11 @@
       handle = root.ObligationNarration.play(clipIds, {
         onClipStart(id, index) {
           if (disposed || token !== activeToken) return;
-          cue(index, false, false); updateStatus('Listen and look!');
+          cue(questionClipId ? -1 : index, false, false); updateStatus('Listen and look!');
         },
         onClipTime(id, index, seconds) {
           if (disposed || token !== activeToken) return;
-          options.onClipTime?.(id, index, seconds);
+          options.onClipTime?.(id, questionClipId ? null : index, seconds);
         },
         onClipClear() {
           if (disposed || token !== activeToken) return;

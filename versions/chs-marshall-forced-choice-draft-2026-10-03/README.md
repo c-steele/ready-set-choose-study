@@ -21,14 +21,13 @@ These are forced comparisons between helpers. There is no both, neither, or equa
 1. Meet the group.
 2. Show the original Find the Caregiver introduction slides. Each character gains an outline and label as the recording introduces them. Preserve the source intro order, which begins with the kid even when the recipient is an adult.
 3. Say the recipient is sad.
-4. Say both helpers see that the recipient is sad.
-5. Ask who will help. The two helper choices follow their positions in the scene, left then right.
-6. Run brief HAVE TO comprehension practice: introduction, teacher/stop-being-mean Yes/No item, lie Yes/No item, and return to the story. Practice can repeat for every story or occur once.
-7. Ask who HAS TO help, with the same two helper choices.
-8. State the fixed outcome: no one helped, then name each helper who did NOT help.
-9. Ask one Yes/No recall check: did either person help? The expected answer is No; a correction restates the explicit outcome when needed.
-10. Ask who was meaner for NOT helping the recipient, with the same helper choices.
-11. Continue to the next pairing, then thank the child at session end.
+4. Ask who will help. The two helper choices follow their positions in the scene, left then right.
+5. Run brief HAVE TO comprehension practice: introduction, teacher/stop-being-mean Yes/No item, lie Yes/No item, and return to the story. Practice can repeat for every story or occur once.
+6. Ask who HAS TO help, with the same two helper choices.
+7. State the fixed outcome: no one helped, then name each helper who did NOT help.
+8. Ask one Yes/No recall check: did either person help? The expected answer is No; a correction restates the explicit outcome when needed.
+9. Ask who was meaner for NOT helping the recipient, with the same helper choices.
+10. Continue to the next pairing, then thank the child at session end.
 
 There are **three main judgments per story**, with no individual helper ratings, overall Mean/Nice judgment, individual recall questions, or how-much scales. The two practice items remain Yes/No comprehension checks and are not main dependent variables. Prediction or obligation responses never change whether the helpers help: the nonhelping outcome is fixed.
 
@@ -38,9 +37,9 @@ The six-story session includes 18 narrated character introductions. Each introdu
 
 ## Stimuli and presentation
 
-The pairing catalog, white backgrounds, exact existing characters and palettes, plain sadness context, original character positions, and cumulative character introductions come from the existing draft. Family-set stories with an adult recipient keep that adult in the middle. The two-teacher story distinguishes the helper as “the teacher on the left” and the recipient as “the teacher in the middle.” No extra family relationship is inferred.
+The pairing catalog, white backgrounds, exact existing characters and palettes, plain sadness context, original character positions, and cumulative character introductions come from the existing draft. Family-set stories with an adult recipient keep that adult in the middle. The two-teacher story distinguishes the helper as “the teacher on the left” and the recipient as “the teacher in the middle.” The complete source choice recording names the left helper “the kid’s teacher,” matching the original character introduction; the response record continues to identify this helper by position.
 
-Choices always match the two displayed helpers. Their full relationship descriptions are read aloud. Children tap transparent response targets around the actual helpers, with the original role labels preserved in the scene. The matching character outline glows as its option is read. No school or home backdrop is added.
+Choices always match the two displayed helpers. Their alternatives are read together using the original Find the Caregiver recordings, for example, “The kid’s teacher or the kid’s mom?” Children tap transparent response targets around the actual helpers, with the original role labels preserved in the scene. Characters and choice boxes remain still during narration; only the speaking face animates. No school or home backdrop is added.
 
 ## Scripts and narration
 

@@ -17,7 +17,7 @@
   function screenFor(step) {
     const id = typeof step === 'string' ? step : step?.id;
     const screen = manifest().screens?.[id] || {};
-    return {prompt: screen.prompt || null, reminder: screen.reminder || null, options: screen.options || []};
+    return {prompt: screen.prompt || null, reminder: screen.reminder || null, options: screen.options || [], choiceQuestion: screen.choiceQuestion || null};
   }
   function coverage(ids) {
     const clips = clipsById();

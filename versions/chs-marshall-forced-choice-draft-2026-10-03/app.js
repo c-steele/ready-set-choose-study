@@ -163,22 +163,11 @@
     stage.querySelectorAll('.narration-actor-current,.option-current,.choice-bounce-a,.choice-bounce-b,.outcome-spoken').forEach(element=>element.classList.remove('narration-actor-current','option-current','choice-bounce-a','choice-bounce-b','outcome-spoken'));
   }
   function showSpokenCues(spans,seconds){
+    // Narration moves the speaking face, but never flashes or bounces a helper.
     stage.classList.add('child-speaking');
-    const current=spans.filter(cue=>seconds>=cue.start&&seconds<cue.end),actorIds=new Set(current.map(cue=>cue.actorId).filter(Boolean)),optionIndexes=new Set(current.map(cue=>cue.optionIndex).filter(value=>value!==undefined));
-    const captionCue=current.find(cue=>cue.captionText),heading=stage.querySelector('.prompt h2');
+    const captionCue=spans.find(cue=>cue.captionText&&seconds>=cue.start&&seconds<cue.end);
+    const heading=stage.querySelector('.prompt h2');
     if(captionCue&&heading&&heading.textContent!==captionCue.captionText)heading.textContent=captionCue.captionText;
-    const outcomeHelpers=new Set(current.map(cue=>cue.outcomeHelperId).filter(Boolean));
-    stage.querySelectorAll('[data-outcome-helper]').forEach(element=>element.classList.toggle('outcome-spoken',outcomeHelpers.has(element.dataset.outcomeHelper)));
-    stage.querySelectorAll('[data-narration-actor]').forEach(element=>element.classList.toggle('narration-actor-current',actorIds.has(element.dataset.narrationActor)));
-    stage.querySelectorAll('[data-answer]:not(.continue-answer)').forEach(button=>{
-      const answer=Number(button.dataset.answer),cue=current.find(value=>value.optionIndex===answer);
-      button.classList.toggle('option-current',optionIndexes.has(answer));
-      const word=cue?.wordTimes?.find(value=>seconds>=value.start&&seconds<value.end);
-      const bounce=button.classList.contains('spoken-choice') && (word || (cue&&!cue.wordTimes));
-      // Alternate identical animation names so the second word restarts the hop.
-      button.classList.toggle('choice-bounce-a',!!bounce&&((word?.wordIndex||0)%2===0));
-      button.classList.toggle('choice-bounce-b',!!bounce&&((word?.wordIndex||0)%2===1));
-    });
   }
   function childAudioMode(s,fullReady){return fullReady?'full':'unavailable';}
   // Expose pure cue mapping for local regression checks and review diagnostics.
@@ -215,7 +204,7 @@
   function gateNarration(locked){stage.querySelectorAll('[data-answer],[data-point],[data-read-options],#continue-check').forEach(b=>b.disabled=locked);}
   function stopNarration(){clearAutomaticAdvance();narrationRun?.cancel();narrationRun=null;narration.stop();narrationPlaying=false;clearSpokenCues();gateNarration(!screenHeard);$('stop-narration').disabled=true;syncChildControls();}
   function narrationStatus(){
-    const s=activeStep(),ids=[...narrationIds(s),...(!wrong&&s.choices&&!embeddedChoices(s)?narration.screenFor(s).options:[])],ready=ids.length>0&&ids.every(id=>narration.clipsById[id]?.src);
+    const s=activeStep(),ids=[...narrationIds(s),...(!wrong&&s.choices&&!embeddedChoices(s)?(narration.screenFor(s).choiceQuestion ? [narration.screenFor(s).choiceQuestion] : narration.screenFor(s).options):[])],ready=ids.length>0&&ids.every(id=>narration.clipsById[id]?.src);
     $('play-narration').textContent='Play narration';$('play-narration').disabled=!ready;$('stop-narration').disabled=!narrationPlaying;
     const slowerReminder=ids.some(id=>narration.clipsById[id]?.audioTreatment?.kind==='slow-neither-reminder');
     $('narration-status').textContent=ready?(slowerReminder?'NaturalReader · Evelyn · Slower reminder':'NaturalReader · Evelyn · Soft'):'Narration is not connected for this screen yet.';
@@ -269,8 +258,8 @@
     const choiceBoxes=choiceActors.map((actor,choiceIndex)=>interactive
       ?`<button class="character-choice-target option-visible"${characterChoiceStyle(s,actor)} data-answer="${choiceIndex}" data-narration-actor="${actor.id}" aria-label="${esc(s.choices[choiceIndex])}"></button>`
       :`<span class="character-choice-cue"${characterChoiceStyle(s,actor)} aria-hidden="true"></span>`).join('');
-    // Both helpers witness the same event. Keep the scene still as each is named.
-    const spokenCues=interactive && s.localId !== 'witness' ? shownActors.filter(actor=>!choiceActors.some(choice=>choice.id===actor.id)).map(actor=>`<span class="narration-actor-cue${actor.id===s.confirmationActorId?' confirmation-selected':''}" data-narration-actor="${actor.id}"${actorTargetStyle(s,actor)} aria-hidden="true"></span>`).join(''):'';
+    // Only an already selected answer gets a still confirmation outline.
+    const spokenCues=interactive ? shownActors.filter(actor=>actor.id===s.confirmationActorId).map(actor=>`<span class="narration-actor-cue confirmation-selected"${actorTargetStyle(s,actor)} aria-hidden="true"></span>`).join(''):'';
     const alt=shownActors.map(a=>a.side==='middle'&&a.description.endsWith('in the middle')?a.description:`${a.description} ${a.side==='middle'?'in the middle':'on the '+a.side}`).join('; ');
     const picture=`<div class="picture"><img ${interactive?'':'loading="lazy"'} src="${esc(s.image)}" alt="${esc(alt)}.${s.image===s.pairing.images.need?' '+esc(s.pairing.recipient.reference)+' is sad.':''}">${window.ObligationStudyVisuals.nonhelpingEyeOverlay(s)}${choiceBoxes}${spokenCues}</div>`;
     if(!s.outcomeVisual)return picture;
@@ -283,7 +272,7 @@
   function choiceCaption(s) {
     if (!helperChoiceActors(s).length) return '';
     const second = s.choices[1].replace(/^The /, 'the ');
-    return `<p class="choice-caption">${esc(s.choices[0])} or ${esc(second)}?</p>`;
+    return `<p class="choice-caption">${esc(s.choiceQuestion || s.choices[0]+' or '+second+'?')}</p>`;
   }
   function caption(s){const text=esc(s.displayTitle||s.displayText||s.text);return s.captionEmphasis==='HAVE TO'?text.replace(/\bHAVE TO\b/g,'<em class="obligation-emphasis">HAVE TO</em>'):text;}
   function prompt(s){return `<div class="prompt">${s.context&&!s.displayText?`<p class="referent">${esc(s.context)}</p>`:''}${s.preface?`<p class="preface">${esc(s.preface)}</p>`:''}<h2>${caption(s)}</h2></div>`;}
@@ -325,10 +314,10 @@
     if(s.choices){
       const optionSpans=new Map();
       try{optionReader=window.createOptionReader(stage,s.choices,{
-        clipIds:narration.screenFor(s).options,
+        clipIds:narration.screenFor(s).options, questionClipId:narration.screenFor(s).choiceQuestion,
         onClipTime(id,choiceIndex,seconds){if(activeStep().id!==s.id)return;const key=id+':'+choiceIndex;if(!optionSpans.has(key))optionSpans.set(key,spokenCueSpans(s,id,choiceIndex));showSpokenCues(optionSpans.get(key),seconds);},
         onClipClear:clearSpokenCues,
-        onReadStart:()=>{if(activeStep().id!==s.id)return;stopNarration();screenHeard=false;narrationPlaying=true;gateNarration(true);$('stop-narration').disabled=false;$('narration-status').textContent='Listen to Evelyn read each choice…';syncChildControls();},
+        onReadStart:()=>{if(activeStep().id!==s.id)return;stopNarration();screenHeard=false;narrationPlaying=true;gateNarration(true);$('stop-narration').disabled=false;$('narration-status').textContent='Listen to Evelyn read the choices…';syncChildControls();},
         onComplete:()=>{if(activeStep().id!==s.id)return;clearSpokenCues();narrationPlaying=false;screenHeard=true;gateNarration(false);$('stop-narration').disabled=true;$('narration-status').textContent='Choose an answer.';syncChildControls();},
         onError:()=>{if(activeStep().id!==s.id)return;clearSpokenCues();narrationPlaying=false;screenHeard=false;gateNarration(true);$('stop-narration').disabled=true;$('narration-status').textContent='Choice audio could not play. Tap Replay to try again.';syncChildControls();}
       });}catch(error){stage.querySelector('[data-reader-status]').textContent='Option reading could not start. Please refresh this draft.';}
