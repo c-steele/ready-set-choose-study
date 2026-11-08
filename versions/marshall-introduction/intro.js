@@ -4,8 +4,14 @@
   let position = 0;
   let narration = null;
   let parentSound = true;
+  const openingMusicEnabled = new URLSearchParams(location.search).get('openingMusic') === '1';
+  let music = null;
+  let audioRun = 0;
 
   function stopAudio() {
+    audioRun += 1;
+    music?.stop();
+    music = null;
     if (!narration) return;
     narration.onended = narration.onerror = null;
     narration.pause();
@@ -20,15 +26,34 @@
     }
   }
 
-  function playAudio() {
+  async function playAudio() {
     stopAudio();
+    const run = audioRun;
     setStartReady(false);
+    const childMusic = openingMusicEnabled && position === slides.length - 1;
+    if (childMusic) {
+      const notice = stage.querySelector('.intro-audio-status');
+      notice.textContent = '';
+      music = window.MarshallOpeningMusic.play();
+      try {
+        const completed = await music.finished;
+        if (!completed || run !== audioRun) return;
+      } catch {
+        if (run === audioRun) notice.textContent = 'Select Replay to hear the introduction.';
+        return;
+      }
+    }
     const clip = new Audio(slides[position].dataset.audio);
     narration = clip;
     const notice = stage.querySelector('.intro-audio-status');
     notice.textContent = '';
     clip.onended = () => {
-      if (narration === clip) setStartReady(true);
+      if (narration !== clip) return;
+      setStartReady(true);
+      if (childMusic) {
+        music = window.MarshallOpeningMusic.play();
+        music.finished.catch(() => {});
+      }
     };
     function onError(error) {
       if (narration !== clip) return;

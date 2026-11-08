@@ -411,7 +411,7 @@
     welcome.hidden = false;
     const frame = document.createElement('iframe');
     frame.title = 'Who Has to Help? Study introduction';
-    frame.src = '../marshall-introduction/index.html?v=responsive-r33';
+    frame.src = '../marshall-introduction/index.html?openingMusic=1&v=welcome-music-r34';
     frame.addEventListener('intro-complete', () => {
       welcome.hidden = true;
       frame.remove();
