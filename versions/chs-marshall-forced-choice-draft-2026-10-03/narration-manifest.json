@@ -32,8 +32,8 @@
   "summary": {
     "storyCount": 18,
     "screenCount": 523,
-    "clipCount": 237,
-    "readyCount": 237,
+    "clipCount": 245,
+    "readyCount": 245,
     "pendingCount": 0,
     "newForcedChoiceRecordingCount": 12,
     "emphasisPendingCount": 2,
@@ -95,7 +95,8 @@
     "Prediction question revised to Who will help the recipient in the middle now that they’re sad? Four complete native Evelyn Soft recordings replace the earlier Who do you think wording; helper alternatives remain the original paired OR recordings.",
     "r41: proposed role-free practice uses a red traffic light and stopped car. Three new complete Evelyn Soft recordings replace Teacher/stop-being-mean prompt, correction, and correct feedback. Stable practice-stop step IDs are retained. Other study questions are unchanged.",
     "r43: Child-recipient outcome sentences each begin with The; the second helper sentence no longer begins with And. Eleven updated passages use three complete Evelyn Soft 0.90x sentences, verified independently from the final MP3 at their known assembly boundaries. Existing adult-recipient outcome audio is unchanged. Each helper outline glows only during its spoken role name; the characters and no-help badges stay still.",
-    "r44: The four forced-choice obligation prompts use a pitch-preserving local tempo edit and gentle gain emphasis on HAS TO. Every other spoken word is retained. New final MP3s and updated word cues pass unprompted full-sentence recognition; these are edited recordings, not newly synthesized native prosody."
+    "r44: The four forced-choice obligation prompts use a pitch-preserving local tempo edit and gentle gain emphasis on HAS TO. Every other spoken word is retained. New final MP3s and updated word cues pass unprompted full-sentence recognition; these are edited recordings, not newly synthesized native prosody.",
+    "r45: Replaced r44 obligation prompts, which inherited a slower 0.80x source. Four fresh Evelyn Soft 0.90x / 180 WPM recordings now match the surrounding narration pace. Only HAS TO is time-stretched at 0.65 tempo with gentle gain; prefix/suffix samples outside 5ms joins are unchanged before MP3 encoding. Native sources retained for comparison. Final audio and new cues pass independent unprompted full-sentence recognition."
   ],
   "clips": [
     {
@@ -18741,6 +18742,181 @@
       "src": "assets/narration/nr_obligation_emphasis_01_r44.mp3",
       "kind": "prompt",
       "status": "verified-phrase-emphasis-edit",
+      "uses": [],
+      "sha256": "bc996c5ba0ffc6ebb83b00016a72be39c99f7fb1cffc3491bba1e5cd67be2ba9",
+      "bytes": 165138,
+      "durationSeconds": 4.101224,
+      "revisionCategory": "slower-has-to-r44",
+      "provenance": {
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "sourceClipId": "nr_257",
+        "sourceSha256": "27ced857c38e244f0250487f85cd15270c832027b7daeed5300aa6db46e8db8b",
+        "nativeRecordingUnedited": false,
+        "processing": "Pitch-preserving tempo adjustment and gentle gain emphasis on HAS TO; smooth 5ms joins. Other spoken words and source voice retained.",
+        "edit": {
+          "oldId": "nr_257",
+          "sourceSha256": "27ced857c38e244f0250487f85cd15270c832027b7daeed5300aa6db46e8db8b",
+          "sourceFile": "assets/narration/nr_257-child-flow-native.mp3",
+          "phrase": "HAS TO",
+          "sourcePhraseStart": 1.0508843537414967,
+          "sourcePhraseEnd": 1.5238321995464852,
+          "tempo": 0.72,
+          "emphasisGain": 1.15,
+          "boundaryBlendMilliseconds": 4.988662131519274,
+          "pitchPreserved": true,
+          "originalPhraseSeconds": 0.47294784580498866,
+          "revisedPhraseSeconds": 0.6378458049886622,
+          "peak": 0.6918854117393494
+        },
+        "independentExactNormalizedRecognition": true,
+        "recordingWordCheckMethod": "Unprompted full-sentence recognition from final MP3",
+        "cueAlignmentApproved": true
+      },
+      "supersededBy": "nr_obligation_emphasis_01_r45"
+    },
+    {
+      "id": "nr_obligation_emphasis_02_r44",
+      "text": "Who do you think HAS TO help the mom in the middle?",
+      "src": "assets/narration/nr_obligation_emphasis_02_r44.mp3",
+      "kind": "prompt",
+      "status": "verified-phrase-emphasis-edit",
+      "uses": [],
+      "sha256": "2d0ef997b6d81654276602138856faf27935feb3f0c0d9a04e72b0980a5f8f34",
+      "bytes": 163048,
+      "durationSeconds": 4.04898,
+      "revisionCategory": "slower-has-to-r44",
+      "provenance": {
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "sourceClipId": "nr_260",
+        "sourceSha256": "2705e37f97e1a41c3b75175e290c71b884379e4f625bdcafe3dac1bad03473da",
+        "nativeRecordingUnedited": false,
+        "processing": "Pitch-preserving tempo adjustment and gentle gain emphasis on HAS TO; smooth 5ms joins. Other spoken words and source voice retained.",
+        "edit": {
+          "oldId": "nr_260",
+          "sourceSha256": "2705e37f97e1a41c3b75175e290c71b884379e4f625bdcafe3dac1bad03473da",
+          "sourceFile": "assets/narration/nr_260-child-flow-native.mp3",
+          "phrase": "HAS TO",
+          "sourcePhraseStart": 0.9978231292517007,
+          "sourcePhraseEnd": 1.506281179138322,
+          "tempo": 0.72,
+          "emphasisGain": 1.15,
+          "boundaryBlendMilliseconds": 4.988662131519274,
+          "pitchPreserved": true,
+          "originalPhraseSeconds": 0.5084580498866214,
+          "revisedPhraseSeconds": 0.6718140589569161,
+          "peak": 0.699847936630249
+        },
+        "independentExactNormalizedRecognition": true,
+        "recordingWordCheckMethod": "Unprompted full-sentence recognition from final MP3",
+        "cueAlignmentApproved": true
+      },
+      "supersededBy": "nr_obligation_emphasis_02_r45"
+    },
+    {
+      "id": "nr_obligation_emphasis_03_r44",
+      "text": "Who do you think HAS TO help the dad in the middle?",
+      "src": "assets/narration/nr_obligation_emphasis_03_r44.mp3",
+      "kind": "prompt",
+      "status": "verified-phrase-emphasis-edit",
+      "uses": [],
+      "sha256": "c776847a8f0c5e136b34c9bcf2f2b18469021fd47886fe3631d3150322a1968b",
+      "bytes": 165138,
+      "durationSeconds": 4.101224,
+      "revisionCategory": "slower-has-to-r44",
+      "provenance": {
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "sourceClipId": "nr_263",
+        "sourceSha256": "69fddda664f048aa03ee408b6b929b6db6bc0383fe065ee90ec147bcf45636e4",
+        "nativeRecordingUnedited": false,
+        "processing": "Pitch-preserving tempo adjustment and gentle gain emphasis on HAS TO; smooth 5ms joins. Other spoken words and source voice retained.",
+        "edit": {
+          "oldId": "nr_263",
+          "sourceSha256": "69fddda664f048aa03ee408b6b929b6db6bc0383fe065ee90ec147bcf45636e4",
+          "sourceFile": "assets/narration/nr_263-child-flow-native.mp3",
+          "phrase": "HAS TO",
+          "sourcePhraseStart": 1.0359410430839002,
+          "sourcePhraseEnd": 1.5072562358276644,
+          "tempo": 0.72,
+          "emphasisGain": 1.15,
+          "boundaryBlendMilliseconds": 4.988662131519274,
+          "pitchPreserved": true,
+          "originalPhraseSeconds": 0.47131519274376416,
+          "revisedPhraseSeconds": 0.6378458049886622,
+          "peak": 0.69013911485672
+        },
+        "independentExactNormalizedRecognition": true,
+        "recordingWordCheckMethod": "Unprompted full-sentence recognition from final MP3",
+        "cueAlignmentApproved": true
+      },
+      "supersededBy": "nr_obligation_emphasis_03_r45"
+    },
+    {
+      "id": "nr_obligation_emphasis_04_r44",
+      "text": "Who do you think HAS TO help the teacher in the middle?",
+      "src": "assets/narration/nr_obligation_emphasis_04_r44.mp3",
+      "kind": "prompt",
+      "status": "verified-phrase-emphasis-edit",
+      "uses": [],
+      "sha256": "21404876e0684d0748a170aab8e4b8d6b59e5177c2640a542557a992dcef5b95",
+      "bytes": 169317,
+      "durationSeconds": 4.205714,
+      "revisionCategory": "slower-has-to-r44",
+      "provenance": {
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "sourceClipId": "nr_266",
+        "sourceSha256": "2614a34767d28cbe5406af98ecf25f4de342489a5d147ac94ba90df241cf7ffc",
+        "nativeRecordingUnedited": false,
+        "processing": "Pitch-preserving tempo adjustment and gentle gain emphasis on HAS TO; smooth 5ms joins. Other spoken words and source voice retained.",
+        "edit": {
+          "oldId": "nr_266",
+          "sourceSha256": "2614a34767d28cbe5406af98ecf25f4de342489a5d147ac94ba90df241cf7ffc",
+          "sourceFile": "assets/narration/nr_266-child-flow-native.mp3",
+          "phrase": "HAS TO",
+          "sourcePhraseStart": 1.0401360544217686,
+          "sourcePhraseEnd": 1.5499773242630386,
+          "tempo": 0.72,
+          "emphasisGain": 1.15,
+          "boundaryBlendMilliseconds": 4.988662131519274,
+          "pitchPreserved": true,
+          "originalPhraseSeconds": 0.5098412698412699,
+          "revisedPhraseSeconds": 0.6905215419501134,
+          "peak": 0.6399433612823486
+        },
+        "independentExactNormalizedRecognition": true,
+        "recordingWordCheckMethod": "Unprompted full-sentence recognition from final MP3",
+        "cueAlignmentApproved": true
+      },
+      "supersededBy": "nr_obligation_emphasis_04_r45"
+    },
+    {
+      "id": "nr_obligation_normal_01_r45",
+      "text": "Who do you think HAS TO help the kid in the middle?",
+      "src": "assets/narration/nr_obligation_normal_01_r45.mp3",
+      "kind": "prompt-source",
+      "status": "verified-native-recording",
+      "uses": [],
+      "sha256": "b4a8f299cbb8a4e5a322167b2781dbf796301688bc6d068a921955b187f60eda",
+      "bytes": 140061,
+      "durationSeconds": 3.5004,
+      "provenance": {
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "observedSpeed": "0.90x / 180 WPM",
+        "rowSpeed": "1x",
+        "nativeRecordingUnedited": true,
+        "independentExactNormalizedRecognition": true
+      }
+    },
+    {
+      "id": "nr_obligation_emphasis_01_r45",
+      "text": "Who do you think HAS TO help the kid in the middle?",
+      "src": "assets/narration/nr_obligation_emphasis_01_r45.mp3",
+      "kind": "prompt",
+      "status": "verified-phrase-emphasis-edit",
       "uses": [
         {
           "stepId": "woman-mom-teacher:obligation-compare",
@@ -18818,31 +18994,36 @@
           "part": "prompt"
         }
       ],
-      "sha256": "bc996c5ba0ffc6ebb83b00016a72be39c99f7fb1cffc3491bba1e5cd67be2ba9",
-      "bytes": 165138,
-      "durationSeconds": 4.101224,
-      "revisionCategory": "slower-has-to-r44",
+      "sha256": "89fe1c009cb4c7daa9c28f4e6b2fbdacae4620214485a3bdbbdd24d39ae1f46c",
+      "bytes": 150509,
+      "durationSeconds": 3.73551,
+      "revisionCategory": "normal-pace-slower-has-to-r45",
       "provenance": {
         "provider": "NaturalReaders Commercial",
         "sourceVoice": "Evelyn Soft",
-        "sourceClipId": "nr_257",
-        "sourceSha256": "27ced857c38e244f0250487f85cd15270c832027b7daeed5300aa6db46e8db8b",
+        "observedSpeed": "0.90x / 180 WPM",
+        "rowSpeed": "1x",
+        "sourceClipId": "nr_obligation_normal_01_r45",
+        "sourceSha256": "b4a8f299cbb8a4e5a322167b2781dbf796301688bc6d068a921955b187f60eda",
         "nativeRecordingUnedited": false,
-        "processing": "Pitch-preserving tempo adjustment and gentle gain emphasis on HAS TO; smooth 5ms joins. Other spoken words and source voice retained.",
+        "processing": "Fresh normal-pace recording matching surrounding narration. Pitch-preserving tempo adjustment and gentle gain only on HAS TO, with 5ms joins. PCM outside joins verified unchanged from the fresh recording before MP3 encoding.",
         "edit": {
-          "oldId": "nr_257",
-          "sourceSha256": "27ced857c38e244f0250487f85cd15270c832027b7daeed5300aa6db46e8db8b",
-          "sourceFile": "assets/narration/nr_257-child-flow-native.mp3",
+          "oldId": "nr_obligation_emphasis_01_r44",
+          "sourceId": "nr_obligation_normal_01_r45",
+          "sourceSha256": "b4a8f299cbb8a4e5a322167b2781dbf796301688bc6d068a921955b187f60eda",
           "phrase": "HAS TO",
-          "sourcePhraseStart": 1.0508843537414967,
-          "sourcePhraseEnd": 1.5238321995464852,
-          "tempo": 0.72,
-          "emphasisGain": 1.15,
+          "sourcePhraseStart": 0.93,
+          "sourcePhraseEnd": 1.3648979591836734,
+          "tempo": 0.65,
+          "emphasisGain": 1.12,
           "boundaryBlendMilliseconds": 4.988662131519274,
           "pitchPreserved": true,
-          "originalPhraseSeconds": 0.47294784580498866,
-          "revisedPhraseSeconds": 0.6378458049886622,
-          "peak": 0.6918854117393494
+          "originalPhraseSeconds": 0.43489795918367347,
+          "revisedPhraseSeconds": 0.6456462585034014,
+          "prefixSamplesUnchanged": true,
+          "suffixSamplesUnchanged": true,
+          "sourceDurationSeconds": 3.5004,
+          "peak": 0.6757218837738037
         },
         "independentExactNormalizedRecognition": true,
         "recordingWordCheckMethod": "Unprompted full-sentence recognition from final MP3",
@@ -18850,9 +19031,28 @@
       }
     },
     {
-      "id": "nr_obligation_emphasis_02_r44",
+      "id": "nr_obligation_normal_02_r45",
       "text": "Who do you think HAS TO help the mom in the middle?",
-      "src": "assets/narration/nr_obligation_emphasis_02_r44.mp3",
+      "src": "assets/narration/nr_obligation_normal_02_r45.mp3",
+      "kind": "prompt-source",
+      "status": "verified-native-recording",
+      "uses": [],
+      "sha256": "f7c7ccfd0dd22a92c578c980013acd102788b5cf8ed8bdee7def41494be97d53",
+      "bytes": 137971,
+      "durationSeconds": 3.44815,
+      "provenance": {
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "observedSpeed": "0.90x / 180 WPM",
+        "rowSpeed": "1x",
+        "nativeRecordingUnedited": true,
+        "independentExactNormalizedRecognition": true
+      }
+    },
+    {
+      "id": "nr_obligation_emphasis_02_r45",
+      "text": "Who do you think HAS TO help the mom in the middle?",
+      "src": "assets/narration/nr_obligation_emphasis_02_r45.mp3",
       "kind": "prompt",
       "status": "verified-phrase-emphasis-edit",
       "uses": [
@@ -18862,31 +19062,36 @@
           "part": "prompt"
         }
       ],
-      "sha256": "2d0ef997b6d81654276602138856faf27935feb3f0c0d9a04e72b0980a5f8f34",
-      "bytes": 163048,
-      "durationSeconds": 4.04898,
-      "revisionCategory": "slower-has-to-r44",
+      "sha256": "7891386241143ac5e7bbc78c035a962429c4b334474d0f8f77dd1523b0a36a1d",
+      "bytes": 148419,
+      "durationSeconds": 3.683265,
+      "revisionCategory": "normal-pace-slower-has-to-r45",
       "provenance": {
         "provider": "NaturalReaders Commercial",
         "sourceVoice": "Evelyn Soft",
-        "sourceClipId": "nr_260",
-        "sourceSha256": "2705e37f97e1a41c3b75175e290c71b884379e4f625bdcafe3dac1bad03473da",
+        "observedSpeed": "0.90x / 180 WPM",
+        "rowSpeed": "1x",
+        "sourceClipId": "nr_obligation_normal_02_r45",
+        "sourceSha256": "f7c7ccfd0dd22a92c578c980013acd102788b5cf8ed8bdee7def41494be97d53",
         "nativeRecordingUnedited": false,
-        "processing": "Pitch-preserving tempo adjustment and gentle gain emphasis on HAS TO; smooth 5ms joins. Other spoken words and source voice retained.",
+        "processing": "Fresh normal-pace recording matching surrounding narration. Pitch-preserving tempo adjustment and gentle gain only on HAS TO, with 5ms joins. PCM outside joins verified unchanged from the fresh recording before MP3 encoding.",
         "edit": {
-          "oldId": "nr_260",
-          "sourceSha256": "2705e37f97e1a41c3b75175e290c71b884379e4f625bdcafe3dac1bad03473da",
-          "sourceFile": "assets/narration/nr_260-child-flow-native.mp3",
+          "oldId": "nr_obligation_emphasis_02_r44",
+          "sourceId": "nr_obligation_normal_02_r45",
+          "sourceSha256": "f7c7ccfd0dd22a92c578c980013acd102788b5cf8ed8bdee7def41494be97d53",
           "phrase": "HAS TO",
-          "sourcePhraseStart": 0.9978231292517007,
-          "sourcePhraseEnd": 1.506281179138322,
-          "tempo": 0.72,
-          "emphasisGain": 1.15,
+          "sourcePhraseStart": 0.9099773242630386,
+          "sourcePhraseEnd": 1.3399319727891157,
+          "tempo": 0.65,
+          "emphasisGain": 1.12,
           "boundaryBlendMilliseconds": 4.988662131519274,
           "pitchPreserved": true,
-          "originalPhraseSeconds": 0.5084580498866214,
-          "revisedPhraseSeconds": 0.6718140589569161,
-          "peak": 0.699847936630249
+          "originalPhraseSeconds": 0.4299546485260771,
+          "revisedPhraseSeconds": 0.6251473922902494,
+          "prefixSamplesUnchanged": true,
+          "suffixSamplesUnchanged": true,
+          "sourceDurationSeconds": 3.44815,
+          "peak": 0.6933206915855408
         },
         "independentExactNormalizedRecognition": true,
         "recordingWordCheckMethod": "Unprompted full-sentence recognition from final MP3",
@@ -18894,9 +19099,28 @@
       }
     },
     {
-      "id": "nr_obligation_emphasis_03_r44",
+      "id": "nr_obligation_normal_03_r45",
       "text": "Who do you think HAS TO help the dad in the middle?",
-      "src": "assets/narration/nr_obligation_emphasis_03_r44.mp3",
+      "src": "assets/narration/nr_obligation_normal_03_r45.mp3",
+      "kind": "prompt-source",
+      "status": "verified-native-recording",
+      "uses": [],
+      "sha256": "ea2946a3674d7a218123ebf3654023e869bed7317c7f6fef5852fab56c3d0cdf",
+      "bytes": 140061,
+      "durationSeconds": 3.5004,
+      "provenance": {
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "observedSpeed": "0.90x / 180 WPM",
+        "rowSpeed": "1x",
+        "nativeRecordingUnedited": true,
+        "independentExactNormalizedRecognition": true
+      }
+    },
+    {
+      "id": "nr_obligation_emphasis_03_r45",
+      "text": "Who do you think HAS TO help the dad in the middle?",
+      "src": "assets/narration/nr_obligation_emphasis_03_r45.mp3",
       "kind": "prompt",
       "status": "verified-phrase-emphasis-edit",
       "uses": [
@@ -18906,31 +19130,36 @@
           "part": "prompt"
         }
       ],
-      "sha256": "c776847a8f0c5e136b34c9bcf2f2b18469021fd47886fe3631d3150322a1968b",
-      "bytes": 165138,
-      "durationSeconds": 4.101224,
-      "revisionCategory": "slower-has-to-r44",
+      "sha256": "e3d584b39402de15f00f42374451ebe237e32881a880907392eb8af86b135e15",
+      "bytes": 150509,
+      "durationSeconds": 3.73551,
+      "revisionCategory": "normal-pace-slower-has-to-r45",
       "provenance": {
         "provider": "NaturalReaders Commercial",
         "sourceVoice": "Evelyn Soft",
-        "sourceClipId": "nr_263",
-        "sourceSha256": "69fddda664f048aa03ee408b6b929b6db6bc0383fe065ee90ec147bcf45636e4",
+        "observedSpeed": "0.90x / 180 WPM",
+        "rowSpeed": "1x",
+        "sourceClipId": "nr_obligation_normal_03_r45",
+        "sourceSha256": "ea2946a3674d7a218123ebf3654023e869bed7317c7f6fef5852fab56c3d0cdf",
         "nativeRecordingUnedited": false,
-        "processing": "Pitch-preserving tempo adjustment and gentle gain emphasis on HAS TO; smooth 5ms joins. Other spoken words and source voice retained.",
+        "processing": "Fresh normal-pace recording matching surrounding narration. Pitch-preserving tempo adjustment and gentle gain only on HAS TO, with 5ms joins. PCM outside joins verified unchanged from the fresh recording before MP3 encoding.",
         "edit": {
-          "oldId": "nr_263",
-          "sourceSha256": "69fddda664f048aa03ee408b6b929b6db6bc0383fe065ee90ec147bcf45636e4",
-          "sourceFile": "assets/narration/nr_263-child-flow-native.mp3",
+          "oldId": "nr_obligation_emphasis_03_r44",
+          "sourceId": "nr_obligation_normal_03_r45",
+          "sourceSha256": "ea2946a3674d7a218123ebf3654023e869bed7317c7f6fef5852fab56c3d0cdf",
           "phrase": "HAS TO",
-          "sourcePhraseStart": 1.0359410430839002,
-          "sourcePhraseEnd": 1.5072562358276644,
-          "tempo": 0.72,
-          "emphasisGain": 1.15,
+          "sourcePhraseStart": 0.91,
+          "sourcePhraseEnd": 1.343015873015873,
+          "tempo": 0.65,
+          "emphasisGain": 1.12,
           "boundaryBlendMilliseconds": 4.988662131519274,
           "pitchPreserved": true,
-          "originalPhraseSeconds": 0.47131519274376416,
-          "revisedPhraseSeconds": 0.6378458049886622,
-          "peak": 0.69013911485672
+          "originalPhraseSeconds": 0.433015873015873,
+          "revisedPhraseSeconds": 0.6409750566893424,
+          "prefixSamplesUnchanged": true,
+          "suffixSamplesUnchanged": true,
+          "sourceDurationSeconds": 3.5004,
+          "peak": 0.6708930730819702
         },
         "independentExactNormalizedRecognition": true,
         "recordingWordCheckMethod": "Unprompted full-sentence recognition from final MP3",
@@ -18938,9 +19167,28 @@
       }
     },
     {
-      "id": "nr_obligation_emphasis_04_r44",
+      "id": "nr_obligation_normal_04_r45",
       "text": "Who do you think HAS TO help the teacher in the middle?",
-      "src": "assets/narration/nr_obligation_emphasis_04_r44.mp3",
+      "src": "assets/narration/nr_obligation_normal_04_r45.mp3",
+      "kind": "prompt-source",
+      "status": "verified-native-recording",
+      "uses": [],
+      "sha256": "20bd6dc6a8aa701e6be8de7edec3ec58e2a8900bab893ca1e71f31d9b2b2bfbb",
+      "bytes": 142151,
+      "durationSeconds": 3.55265,
+      "provenance": {
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "observedSpeed": "0.90x / 180 WPM",
+        "rowSpeed": "1x",
+        "nativeRecordingUnedited": true,
+        "independentExactNormalizedRecognition": true
+      }
+    },
+    {
+      "id": "nr_obligation_emphasis_04_r45",
+      "text": "Who do you think HAS TO help the teacher in the middle?",
+      "src": "assets/narration/nr_obligation_emphasis_04_r45.mp3",
       "kind": "prompt",
       "status": "verified-phrase-emphasis-edit",
       "uses": [
@@ -18950,31 +19198,36 @@
           "part": "prompt"
         }
       ],
-      "sha256": "21404876e0684d0748a170aab8e4b8d6b59e5177c2640a542557a992dcef5b95",
-      "bytes": 169317,
-      "durationSeconds": 4.205714,
-      "revisionCategory": "slower-has-to-r44",
+      "sha256": "bc1dd66225ec3034061e88508fa0e5a68eba40a4be5b9592dd19dce908547807",
+      "bytes": 152599,
+      "durationSeconds": 3.787755,
+      "revisionCategory": "normal-pace-slower-has-to-r45",
       "provenance": {
         "provider": "NaturalReaders Commercial",
         "sourceVoice": "Evelyn Soft",
-        "sourceClipId": "nr_266",
-        "sourceSha256": "2614a34767d28cbe5406af98ecf25f4de342489a5d147ac94ba90df241cf7ffc",
+        "observedSpeed": "0.90x / 180 WPM",
+        "rowSpeed": "1x",
+        "sourceClipId": "nr_obligation_normal_04_r45",
+        "sourceSha256": "20bd6dc6a8aa701e6be8de7edec3ec58e2a8900bab893ca1e71f31d9b2b2bfbb",
         "nativeRecordingUnedited": false,
-        "processing": "Pitch-preserving tempo adjustment and gentle gain emphasis on HAS TO; smooth 5ms joins. Other spoken words and source voice retained.",
+        "processing": "Fresh normal-pace recording matching surrounding narration. Pitch-preserving tempo adjustment and gentle gain only on HAS TO, with 5ms joins. PCM outside joins verified unchanged from the fresh recording before MP3 encoding.",
         "edit": {
-          "oldId": "nr_266",
-          "sourceSha256": "2614a34767d28cbe5406af98ecf25f4de342489a5d147ac94ba90df241cf7ffc",
-          "sourceFile": "assets/narration/nr_266-child-flow-native.mp3",
+          "oldId": "nr_obligation_emphasis_04_r44",
+          "sourceId": "nr_obligation_normal_04_r45",
+          "sourceSha256": "20bd6dc6a8aa701e6be8de7edec3ec58e2a8900bab893ca1e71f31d9b2b2bfbb",
           "phrase": "HAS TO",
-          "sourcePhraseStart": 1.0401360544217686,
-          "sourcePhraseEnd": 1.5499773242630386,
-          "tempo": 0.72,
-          "emphasisGain": 1.15,
+          "sourcePhraseStart": 0.9307256235827664,
+          "sourcePhraseEnd": 1.3699773242630386,
+          "tempo": 0.65,
+          "emphasisGain": 1.12,
           "boundaryBlendMilliseconds": 4.988662131519274,
           "pitchPreserved": true,
-          "originalPhraseSeconds": 0.5098412698412699,
-          "revisedPhraseSeconds": 0.6905215419501134,
-          "peak": 0.6399433612823486
+          "originalPhraseSeconds": 0.4392517006802721,
+          "revisedPhraseSeconds": 0.6450113378684807,
+          "prefixSamplesUnchanged": true,
+          "suffixSamplesUnchanged": true,
+          "sourceDurationSeconds": 3.55265,
+          "peak": 0.6434664726257324
         },
         "independentExactNormalizedRecognition": true,
         "recordingWordCheckMethod": "Unprompted full-sentence recognition from final MP3",
@@ -19102,7 +19355,7 @@
       "proposedWording": false
     },
     "woman-mom-teacher:obligation-compare": {
-      "prompt": "nr_obligation_emphasis_01_r44",
+      "prompt": "nr_obligation_emphasis_01_r45",
       "reminder": null,
       "options": [
         "nr_051",
@@ -19375,7 +19628,7 @@
       "proposedWording": false
     },
     "woman-sister-friend:obligation-compare": {
-      "prompt": "nr_obligation_emphasis_01_r44",
+      "prompt": "nr_obligation_emphasis_01_r45",
       "reminder": null,
       "options": [
         "nr_073",
@@ -19648,7 +19901,7 @@
       "proposedWording": false
     },
     "woman-bestfriend-friend:obligation-compare": {
-      "prompt": "nr_obligation_emphasis_01_r44",
+      "prompt": "nr_obligation_emphasis_01_r45",
       "reminder": null,
       "options": [
         "nr_074",
@@ -19921,7 +20174,7 @@
       "proposedWording": false
     },
     "woman-teacher-friend:obligation-compare": {
-      "prompt": "nr_obligation_emphasis_01_r44",
+      "prompt": "nr_obligation_emphasis_01_r45",
       "reminder": null,
       "options": [
         "nr_051",
@@ -20194,7 +20447,7 @@
       "proposedWording": false
     },
     "woman-mom-sister:obligation-compare": {
-      "prompt": "nr_obligation_emphasis_01_r44",
+      "prompt": "nr_obligation_emphasis_01_r45",
       "reminder": null,
       "options": [
         "nr_052",
@@ -20467,7 +20720,7 @@
       "proposedWording": false
     },
     "woman-teacher-classmate:obligation-compare": {
-      "prompt": "nr_obligation_emphasis_01_r44",
+      "prompt": "nr_obligation_emphasis_01_r45",
       "reminder": null,
       "options": [
         "nr_102",
@@ -20740,7 +20993,7 @@
       "proposedWording": false
     },
     "man-dad-teacher:obligation-compare": {
-      "prompt": "nr_obligation_emphasis_01_r44",
+      "prompt": "nr_obligation_emphasis_01_r45",
       "reminder": null,
       "options": [
         "nr_051",
@@ -21013,7 +21266,7 @@
       "proposedWording": false
     },
     "man-brother-friend:obligation-compare": {
-      "prompt": "nr_obligation_emphasis_01_r44",
+      "prompt": "nr_obligation_emphasis_01_r45",
       "reminder": null,
       "options": [
         "nr_126",
@@ -21286,7 +21539,7 @@
       "proposedWording": false
     },
     "man-bestfriend-friend:obligation-compare": {
-      "prompt": "nr_obligation_emphasis_01_r44",
+      "prompt": "nr_obligation_emphasis_01_r45",
       "reminder": null,
       "options": [
         "nr_074",
@@ -21559,7 +21812,7 @@
       "proposedWording": false
     },
     "man-teacher-friend:obligation-compare": {
-      "prompt": "nr_obligation_emphasis_01_r44",
+      "prompt": "nr_obligation_emphasis_01_r45",
       "reminder": null,
       "options": [
         "nr_051",
@@ -21832,7 +22085,7 @@
       "proposedWording": false
     },
     "man-dad-brother:obligation-compare": {
-      "prompt": "nr_obligation_emphasis_01_r44",
+      "prompt": "nr_obligation_emphasis_01_r45",
       "reminder": null,
       "options": [
         "nr_114",
@@ -22105,7 +22358,7 @@
       "proposedWording": false
     },
     "man-teacher-classmate:obligation-compare": {
-      "prompt": "nr_obligation_emphasis_01_r44",
+      "prompt": "nr_obligation_emphasis_01_r45",
       "reminder": null,
       "options": [
         "nr_102",
@@ -22378,7 +22631,7 @@
       "proposedWording": false
     },
     "family-mom-dad:obligation-compare": {
-      "prompt": "nr_obligation_emphasis_01_r44",
+      "prompt": "nr_obligation_emphasis_01_r45",
       "reminder": null,
       "options": [
         "nr_114",
@@ -22651,7 +22904,7 @@
       "proposedWording": false
     },
     "family-sister-brother:obligation-compare": {
-      "prompt": "nr_obligation_emphasis_01_r44",
+      "prompt": "nr_obligation_emphasis_01_r45",
       "reminder": null,
       "options": [
         "nr_073",
@@ -22924,7 +23177,7 @@
       "proposedWording": false
     },
     "family-dad-kid:obligation-compare": {
-      "prompt": "nr_obligation_emphasis_02_r44",
+      "prompt": "nr_obligation_emphasis_02_r45",
       "reminder": null,
       "options": [
         "nr_114",
@@ -23197,7 +23450,7 @@
       "proposedWording": false
     },
     "family-mom-kid:obligation-compare": {
-      "prompt": "nr_obligation_emphasis_03_r44",
+      "prompt": "nr_obligation_emphasis_03_r45",
       "reminder": null,
       "options": [
         "nr_153",
@@ -23470,7 +23723,7 @@
       "proposedWording": false
     },
     "family-teacher-kid:obligation-compare": {
-      "prompt": "nr_obligation_emphasis_04_r44",
+      "prompt": "nr_obligation_emphasis_04_r45",
       "reminder": null,
       "options": [
         "nr_194",
@@ -23743,7 +23996,7 @@
       "proposedWording": false
     },
     "family-teacher-classmate:obligation-compare": {
-      "prompt": "nr_obligation_emphasis_01_r44",
+      "prompt": "nr_obligation_emphasis_01_r45",
       "reminder": null,
       "options": [
         "nr_102",
