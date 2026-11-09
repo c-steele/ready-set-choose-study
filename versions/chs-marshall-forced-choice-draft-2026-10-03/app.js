@@ -285,7 +285,7 @@
     return `<p class="choice-caption">${esc(s.choiceQuestion || s.choices[0]+' or '+second+'?')}</p>`;
   }
   function caption(s){const text=esc(s.displayTitle||s.displayText||s.text);return s.captionEmphasis==='HAVE TO'?text.replace(/\bHAVE TO\b/g,'<em class="obligation-emphasis">HAVE TO</em>'):text;}
-  function prompt(s){return `<div class="prompt${s.localId==='recall-all'?' recall-prompt':''}${s.choices?.length===3?' scale-prompt':''}">${s.context&&!s.displayText?`<p class="referent">${esc(s.context)}</p>`:''}${s.preface?`<p class="preface">${esc(s.preface)}</p>`:''}<h2>${caption(s)}</h2></div>`;}
+  function prompt(s){return `<div class="prompt${s.localId==='recall-all'?' recall-prompt':''}${s.choices?.length===3?' scale-prompt':''}${s.measure==='Individual evaluation'?' evaluation-prompt':''}">${s.context&&!s.displayText?`<p class="referent">${esc(s.context)}</p>`:''}${s.preface?`<p class="preface">${esc(s.preface)}</p>`:''}<h2>${caption(s)}</h2></div>`;}
   function yesNoLabel(label){
     const path=label==='Yes'?'M13 34 L27 48 L53 17':'M17 17 L47 47 M47 17 L17 47';
     return `<svg class="yes-no-symbol" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="${path}" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="yes-no-label">${esc(label)}</span>`;

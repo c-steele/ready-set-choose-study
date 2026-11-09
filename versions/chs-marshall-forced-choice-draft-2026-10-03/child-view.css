@@ -128,6 +128,13 @@ body.child-view .prompt h2 {
   text-align: center;
 }
 
+/* Fill each line naturally instead of forcing equally short caption lines. */
+.stage[data-screen-kind="story"] > .prompt.evaluation-prompt h2 {
+  width: 100%;
+  max-width: none;
+  text-wrap: wrap;
+}
+
 /* Keep the longer recall question on one line on desktop without shrinking
    the other story captions. Narrow screens can wrap at a readable size. */
 .stage[data-screen-kind="story"] > .prompt.recall-prompt h2 {
