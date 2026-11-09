@@ -2,10 +2,10 @@
   "complete": true,
   "allRecordingsComplete": true,
   "pendingRetryRecordingIDs": [],
-  "createdAt": "2026-11-09T01:40:26.483Z",
+  "createdAt": "2026-11-09T02:04:16.482Z",
   "basis": "Verified MP3 durations for accepted paths plus programmed audio gaps. Each range considers all reachable branches; helper choices are accepted immediately without a confirmation screen.",
   "gapSeconds": 0.25,
-  "manifestSha256": "205ad8fd4e520c8eba9add743e2eb461138df6f0bfdbd3d750763d32a1a6cb96",
+  "manifestSha256": "656e32d9386b12cbca8c3880590e08831ca459d5116106db3ea0b301f4534742",
   "assumptions": [
     "Assumes correct recall and practice answers; helper choices advance immediately.",
     "Every prompted option is read once; binary options embedded in the full question are not read again.",
@@ -22,16 +22,16 @@
       "practiceMode": "each",
       "storyCount": 6,
       "playbackSeconds": {
-        "min": 683.3948350000001,
-        "max": 830.0902490000002
+        "min": 663.803035,
+        "max": 810.4984490000005
       },
       "playbackMinutes": {
-        "min": 11.4,
-        "max": 13.8
+        "min": 11.1,
+        "max": 13.5
       },
       "estimatedSessionMinutesIncludingResponses": {
-        "min": 14.1,
-        "max": 19.3
+        "min": 13.8,
+        "max": 19
       },
       "responseCounts": {
         "min": 54,
@@ -53,12 +53,12 @@
       "practiceMode": "once",
       "storyCount": 6,
       "playbackSeconds": {
-        "min": 518.170585,
-        "max": 664.865999
+        "min": 514.905285,
+        "max": 661.6006990000001
       },
       "playbackMinutes": {
         "min": 8.6,
-        "max": 11.1
+        "max": 11
       },
       "estimatedSessionMinutesIncludingResponses": {
         "min": 10.8,
@@ -84,16 +84,16 @@
       "practiceMode": "each",
       "storyCount": 6,
       "playbackSeconds": {
-        "min": 682.976916,
-        "max": 829.6723300000002
+        "min": 663.385116,
+        "max": 810.0805300000003
       },
       "playbackMinutes": {
-        "min": 11.4,
-        "max": 13.8
+        "min": 11.1,
+        "max": 13.5
       },
       "estimatedSessionMinutesIncludingResponses": {
-        "min": 14.1,
-        "max": 19.3
+        "min": 13.8,
+        "max": 19
       },
       "responseCounts": {
         "min": 54,
@@ -115,12 +115,12 @@
       "practiceMode": "once",
       "storyCount": 6,
       "playbackSeconds": {
-        "min": 517.7526660000001,
-        "max": 664.4480799999999
+        "min": 514.4873660000002,
+        "max": 661.18278
       },
       "playbackMinutes": {
         "min": 8.6,
-        "max": 11.1
+        "max": 11
       },
       "estimatedSessionMinutesIncludingResponses": {
         "min": 10.8,
@@ -146,16 +146,16 @@
       "practiceMode": "each",
       "storyCount": 6,
       "playbackSeconds": {
-        "min": 670.6994469999999,
-        "max": 816.7679209999999
+        "min": 651.107647,
+        "max": 797.1761210000001
       },
       "playbackMinutes": {
-        "min": 11.2,
-        "max": 13.6
+        "min": 10.9,
+        "max": 13.3
       },
       "estimatedSessionMinutesIncludingResponses": {
-        "min": 13.9,
-        "max": 19.1
+        "min": 13.6,
+        "max": 18.8
       },
       "responseCounts": {
         "min": 54,
@@ -177,12 +177,12 @@
       "practiceMode": "once",
       "storyCount": 6,
       "playbackSeconds": {
-        "min": 505.47519700000004,
-        "max": 651.5436709999998
+        "min": 502.209897,
+        "max": 648.2783709999999
       },
       "playbackMinutes": {
         "min": 8.4,
-        "max": 10.9
+        "max": 10.8
       },
       "estimatedSessionMinutesIncludingResponses": {
         "min": 10.6,
@@ -208,16 +208,16 @@
       "practiceMode": "each",
       "storyCount": 18,
       "playbackSeconds": {
-        "min": 2029.3389980000024,
-        "max": 2468.7982999999995
+        "min": 1970.5635980000027,
+        "max": 2410.022899999999
       },
       "playbackMinutes": {
-        "min": 33.8,
-        "max": 41.1
+        "min": 32.8,
+        "max": 40.2
       },
       "estimatedSessionMinutesIncludingResponses": {
-        "min": 41.9,
-        "max": 57.6
+        "min": 40.9,
+        "max": 56.7
       },
       "responseCounts": {
         "min": 162,
@@ -239,16 +239,16 @@
       "practiceMode": "once",
       "storyCount": 18,
       "playbackSeconds": {
-        "min": 1467.5765480000007,
-        "max": 1907.0358500000004
+        "min": 1464.3112480000007,
+        "max": 1903.7705500000004
       },
       "playbackMinutes": {
-        "min": 24.5,
-        "max": 31.8
+        "min": 24.4,
+        "max": 31.7
       },
       "estimatedSessionMinutesIncludingResponses": {
-        "min": 30.9,
-        "max": 45.5
+        "min": 30.8,
+        "max": 45.4
       },
       "responseCounts": {
         "min": 128,

@@ -22,7 +22,7 @@ These are forced comparisons between helpers. There is no both, neither, or equa
 2. Show the original Find the Caregiver introduction slides. Each character gains an outline and label as the recording introduces them. Preserve the source intro order, which begins with the kid even when the recipient is an adult.
 3. Say the recipient is sad.
 4. Ask who will help. The two helper choices follow their positions in the scene, left then right.
-5. Run brief HAVE TO comprehension practice: introduction, teacher/stop-being-mean Yes/No item, lie Yes/No item, and return to the story. Practice can repeat for every story or occur once.
+5. Run brief HAVE TO comprehension practice: introduction, role-free red-traffic-light/stop Yes/No item, lie Yes/No item, and return to the story. Practice can repeat for every story or occur once.
 6. Ask who HAS TO help, with the same two helper choices.
 7. State the fixed outcome: no one helped, then name each helper who did NOT help.
 8. Ask one Yes/No recall check: did either person help? The expected answer is No; a correction restates the explicit outcome when needed.
@@ -56,3 +56,5 @@ This preview is for reviewing the proposed task. Do not submit, activate, or rec
 The green Next arrow is visible beside Replay on narration pages. Standalone review links can advance before narration ends; embedded CHS sessions retain the narration gate. Question pages still require a response. Helper-question outlines glow in place during each role name in the original paired recording, using verified recording-specific word timings.
 
 Helper selections now advance directly, without a separate “Did you mean…? Yes or No” confirmation. This applies to prediction, obligation, and the meaner comparison in every pairing set. The selected helper still determines the following how-mean rating.
+
+Practice layout: full-width caption bands, enlarged responsive illustrations, and larger Yes/No buttons. The positive practice item uses a red traffic light and a stopped car with no role labels. This is a proposed practice adaptation for researcher review, not a validated comprehension item. The lie item keeps its wording and uses unlabeled characters.

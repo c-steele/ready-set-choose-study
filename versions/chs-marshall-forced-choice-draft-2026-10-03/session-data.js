@@ -164,7 +164,7 @@
         'Illustrative estimate, not observed child-session duration.',
         'Read-aloud pace: 110–130 words per minute; response time: 3–5 seconds per selection.',
         'Includes each response label once, mandatory correct-answer practice feedback; excludes repeated binary labels already stated in the prompt.',
-        'Assumes correct recall and practice answers, including Yes to stopping being mean and No to lying. Incorrect check responses require correction and retry; there is no bypass.',
+        'Assumes correct recall and practice answers, including Yes to stopping at a red traffic light and No to lying. Incorrect check responses require correction and retry; there is no bypass.',
         'Does not include correction repeats, breaks, setup, narration-only transition delays, or extra pauses between glowing options. Screen counts include correct-answer feedback stages; error retries are not counted.'
       ]
     };

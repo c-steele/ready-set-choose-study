@@ -15,7 +15,7 @@
     const base=steps[index];
     if(correctFeedbackState)return {...base,id:base.id+':feedback-correct',localId:'practice-feedback',
       virtualType:'correct-feedback',text:base.correctFeedback,displayText:base.correctFeedback,
-      displayTitle:'That’s right!',displayQuestion:base.correctFeedback,choices:null,expected:null,
+      displayTitle:'That’s right!',displaySetup:null,displayQuestion:base.correctFeedback.replace(/^That’s right!\s*/, ''),choices:null,expected:null,
       point:null,optionActors:null,reminder:null,confirmChoice:false};
     if(choiceConfirmation){
       const item=base.choiceConfirmations[choiceConfirmation.answer];
@@ -57,7 +57,7 @@
   stage.addEventListener('pointerdown',enablePendingAudio);
   stage.addEventListener('keydown',enablePendingAudio);
   function storyAccent(s){
-    return s.pairing?.visualHex||'#f5b236';
+    return s.visual ? '#79549b' : s.pairing?.visualHex||'#f5b236';
   }
   // Bounds include each character, their existing outline and their role label.
   // Measured from the unmodified final intro stimulus, inside the 1920 × 840 crop.
@@ -134,9 +134,9 @@
       for(const name of new Set(names))candidates.push({actorId:actor.id,tokens:cueTokens(name)});
     }
 
-    if(s.visual==='teacher-practice'||s.visual==='lie-practice'){
+    if(s.visual==='lie-practice'){
       candidates.length=0;
-      candidates.push({actorId:s.visual==='lie-practice'?'practice-someone':'practice-teacher',tokens:cueTokens(s.visual==='lie-practice'?'someone':'a teacher')},{actorId:'practice-you',tokens:cueTokens('you')});
+      candidates.push({actorId:'practice-someone',tokens:cueTokens('someone')},{actorId:'practice-you',tokens:cueTokens('you')});
     }
     candidates.sort((a,b)=>b.tokens.length-a.tokens.length);
     for(let at=0;at<words.length;){
@@ -249,31 +249,12 @@
     });
   }
   function actors(s){return s.pairing?[s.pairing.recipient,...s.pairing.helpers]:[];}
-  function practiceArtwork(s){
-    // Reuse the original FTC teacher and kid pixels, rather than redrawing them.
-    const source=window.ObligationPairings.pairings.find(p=>p.id==='woman-mom-teacher').images.group;
-    const sourceColor=[129,214,83].map(n=>n/255),accent=storyAccent(s);
-    const targetColor=accent.match(/[a-f\d]{2}/gi).map(n=>parseInt(n,16)/255);
-    const mean=sourceColor.reduce((a,b)=>a+b,0)/3,direction=sourceColor.map(n=>n-mean);
-    const norm=direction.reduce((a,b)=>a+b*b,0),vector=direction.map(n=>n/norm);
-    // This linear map preserves black, white, and their antialias blends.
-    const matrix=targetColor.flatMap((n,i)=>[...vector.map((v,j)=>(i===j?1:0)+(n-sourceColor[i])*v),0,0]).concat([0,0,0,1,0]).join(' ');
-    const filterId='practice-palette-'+s.id.replace(/[^a-z\d-]/gi,'-');
-    return `<svg class="practice-artwork" viewBox="0 0 900 390" role="img" aria-label="A teacher tells a child, Stop being mean. The child is labeled YOU." xmlns="http://www.w3.org/2000/svg">
-      <defs><filter id="${filterId}" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="${matrix}"/></filter></defs>
-      <svg x="145" y="62" width="215" height="281" viewBox="100 160 490 640"><image href="${esc(source)}" width="1920" height="1080" filter="url(#${filterId})"/></svg>
-      <svg x="595" y="179" width="180" height="172" viewBox="760 390 410 390"><image href="${esc(source)}" width="1920" height="1080" filter="url(#${filterId})"/></svg>
-      <path class="practice-bubble" d="M350 25 H660 Q677 25 677 42 V89 Q677 106 660 106 H362 L326 133 L340 100 Q333 95 333 85 V42 Q333 25 350 25Z"/>
-      <text class="practice-bubble-text" x="505" y="76" text-anchor="middle">Stop being mean.</text>
-      <rect x="173" y="350" width="159" height="34" fill="${accent}"/><rect x="631" y="350" width="108" height="34" fill="${accent}"/>
-      <text class="practice-role-label" x="252.5" y="376" text-anchor="middle">TEACHER</text><text class="practice-role-label" x="685" y="376" text-anchor="middle">YOU</text>
-      <rect class="practice-actor-cue" data-narration-actor="practice-teacher" x="140" y="59" width="225" height="329" rx="8" aria-hidden="true"/>
-      <rect class="practice-actor-cue" data-narration-actor="practice-you" x="589" y="175" width="191" height="213" rx="8" aria-hidden="true"/>
-    </svg>`;
-  }
   function scene(s,interactive=false){
-    if(s.visual==='lie-practice')return `<div class="practice-illustration"><p class="practice-setup">${esc(s.displaySetup||'Someone asks you a question.')}</p>${window.ObligationStudyVisuals.liePracticeArtwork(s)}<h2 class="practice-question">${esc(s.displayQuestion||s.text)}</h2></div>`;
-    if(s.visual==='teacher-practice')return `<div class="practice-illustration"><p class="practice-setup">${esc(s.displaySetup)}</p>${practiceArtwork(s)}<h2 class="practice-question">${esc(s.displayQuestion)}</h2></div>`;
+    if(s.visual==='practice-intro'||s.visual==='practice-transition')return window.ObligationPracticeVisuals.introduction(s);
+    if(s.visual==='traffic-practice'||s.visual==='lie-practice'){
+      const art=s.visual==='traffic-practice'?window.ObligationPracticeVisuals.traffic():window.ObligationStudyVisuals.liePracticeArtwork(s);
+      return `<div class="practice-illustration">${s.displaySetup?`<p class="practice-setup">${esc(s.displaySetup)}</p>`:''}<div class="practice-picture">${art}</div></div>`;
+    }
     if(!s.image)return '';
     const shownActors=actors(s);
     const choiceActors=helperChoiceActors(s);
@@ -292,6 +273,7 @@
     return `<div class="outcome-scene">${picture}<div class="no-help-strip">${badges}</div></div>`;
   }
   function choiceCaption(s) {
+    if(s.visual&&s.displayQuestion)return `<p class="choice-caption practice-question-band">${esc(s.displayQuestion)}</p>`;
     if (!helperChoiceActors(s).length) return '';
     const second = s.choices[1].replace(/^The /, 'the ');
     return `<p class="choice-caption">${esc(s.choiceQuestion || s.choices[0]+' or '+second+'?')}</p>`;
@@ -321,6 +303,7 @@
     const feedback=wrong?`<p class="feedback">${esc(s.reminder)}</p>`:'';
     stage.classList.toggle('message-slide',!s.image&&!s.visual);
     stage.dataset.choiceLocation=helperChoiceActors(s).length?'characters':'controls';
+    stage.dataset.practiceVisual=s.visual||'';
     stage.dataset.screenKind=s.visual?'illustrated-practice':s.image?'story':'practice';
     stage.dataset.responseFormat=s.optionActors?'forced-choice':s.point?'character':s.choices?'check':'continue';
     stage.dataset.responseKind=s.choices?.length===3?'scale':s.point?'character':s.choices?'binary':'continue';

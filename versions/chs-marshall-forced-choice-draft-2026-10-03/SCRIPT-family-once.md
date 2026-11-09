@@ -18,12 +18,12 @@ Includes 2 correct-answer practice-feedback screens in addition to the static st
 
 18 forced choices + 12 individual Mean/Not Mean judgments + 6–18 how-mean ratings + 6 recall checks + 2 brief practice responses.
 
-Illustrative duration: **12.6–19.9 minutes**, based on 1350–1676 spoken words.
+Illustrative duration: **12.5–19.8 minutes**, based on 1336–1662 spoken words.
 
 - Illustrative estimate, not observed child-session duration.
 - Read-aloud pace: 110–130 words per minute; response time: 3–5 seconds per selection.
 - Includes each response label once, mandatory correct-answer practice feedback; excludes repeated binary labels already stated in the prompt.
-- Assumes correct recall and practice answers, including Yes to stopping being mean and No to lying. Incorrect check responses require correction and retry; there is no bypass.
+- Assumes correct recall and practice answers, including Yes to stopping at a red traffic light and No to lying. Incorrect check responses require correction and retry; there is no bypass.
 - Does not include correction repeats, breaks, setup, narration-only transition delays, or extra pauses between glowing options. Screen counts include correct-answer feedback stages; error retries are not counted.
 
 The first three judgments per story are two-helper choices that advance immediately after selection. Exactly one selected-helper how-mean card follows the meaner comparison. Individual how-mean cards follow Mean only. Practice feedback is mandatory; corrections require a retry.
@@ -86,11 +86,11 @@ Choices: The kid’s dad / The kid’s mom.
 
 *The Evelyn recording uses continuous speech. HAVE TO remains uppercase and italic on screen as an adaptation. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
 
-### 8. Practice · Stop being mean
+### 8. Practice · Red light
 
-“When a teacher tells you to stop being mean to someone, do you HAVE TO stop being mean? Yes or No.”
+“When the traffic light is red, do you HAVE TO stop? Yes or No.”
 
-Display treatment: Let’s practice! / A teacher tells you to stop being mean to someone. / Do you HAVE TO stop being mean?
+Display treatment: Let’s practice! / The traffic light is red. / Do you HAVE TO stop?
 
 Choices: Yes / No.
 
@@ -98,15 +98,15 @@ Expected check/practice answer: Yes.
 
 A correct response is required to advance; there is no bypass.
 
-Mandatory correct-answer feedback: “That’s right! When a teacher tells you to stop being mean to someone, you HAVE TO stop being mean.”
+Mandatory correct-answer feedback: “That’s right! When the traffic light is red, you HAVE TO stop.”
 
-Incorrect-answer correction: “No, that’s not quite right. When a teacher tells you to stop being mean to someone, you HAVE TO stop being mean. Let’s try that question again.”
+Incorrect-answer correction: “No, that’s not quite right. When the traffic light is red, you HAVE TO stop. Let’s try that question again.”
 
-Reminder if needed: “No, that’s not quite right. When a teacher tells you to stop being mean to someone, you HAVE TO stop being mean. Let’s try that question again.”
+Reminder if needed: “No, that’s not quite right. When the traffic light is red, you HAVE TO stop. Let’s try that question again.”
 
 After the reminder, reread the full question and response labels before reopening the choices.
 
-*Correct-answer feedback is mandatory. Incorrect answers receive contextual correction and a reread; only the correct answer advances. Brief comprehension practice, not a study outcome. The illustration and split display wording are adaptations. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
+*Correct-answer feedback is mandatory. Incorrect answers receive contextual correction and a reread; only the correct answer advances. Brief comprehension practice, not a study outcome. Role-free traffic-light example, illustration, and split display wording are draft adaptations for review. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
 
 ### 9. Practice · Lie
 

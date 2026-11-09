@@ -36,7 +36,7 @@
     "readyCount": 222,
     "pendingCount": 0,
     "newForcedChoiceRecordingCount": 12,
-    "emphasisPendingCount": 3,
+    "emphasisPendingCount": 2,
     "pauseAdjustedReadyCount": 0,
     "nativeProsodyPendingCount": 3,
     "emphasisPendingBasis": "New consistent-recipient passages are complete native Evelyn Soft paragraphs. Remaining flags refer only to unchanged active recordings; visual capitalization does not prove audible emphasis.",
@@ -60,7 +60,8 @@
     "consistentRecipientUpdatedRoutes": 105,
     "originalPairedQuestionCount": 14,
     "joinedQuestionScreenCount": 54,
-    "sadPredictionQuestionRecordingCount": 4
+    "sadPredictionQuestionRecordingCount": 4,
+    "trafficPracticeNewRecordingCount": 3
   },
   "notes": [
     "This is the separate forced-choice adaptation. Each story has one prediction, one obligation, and one comparative evaluation choice between its two helpers.",
@@ -89,7 +90,8 @@
     "Teacher reminder320 now uses one complete native Thee-input paragraph. Actual whole-file unprompted recognition returns the canonical The articles, both helper sentences, and both No one sentences exactly; no input spelling substitution is applied to recognition. Audit-only export title is never mapped to the study.",
     "October 6 consistent-recipient revision: every reference to the child being helped now uses the kid in the middle, including introductions, prompts, confidence variants, neutral confirmations, outcomes and reminders. Helper relationship labels and adult-recipient stories retain their established names. Source catalogs and artwork are unchanged. A natural And connects repeated child-story helper clauses so native synthesis preserves each the article. Fresh native whole-paragraph recordings match all edited narration routes; superseded recordings remain historical sources without active uses.",
     "Forced-choice helper alternatives use the original complete X or Y? recordings. The both-see witness screen is omitted. Individual option recordings are retained for archival comparison but not used on helper-choice screens.",
-    "Prediction question revised to Who will help the recipient in the middle now that they’re sad? Four complete native Evelyn Soft recordings replace the earlier Who do you think wording; helper alternatives remain the original paired OR recordings."
+    "Prediction question revised to Who will help the recipient in the middle now that they’re sad? Four complete native Evelyn Soft recordings replace the earlier Who do you think wording; helper alternatives remain the original paired OR recordings.",
+    "r41: proposed role-free practice uses a red traffic light and stopped car. Three new complete Evelyn Soft recordings replace Teacher/stop-being-mean prompt, correction, and correct feedback. Stable practice-stop step IDs are retained. Other study questions are unchanged."
   ],
   "clips": [
     {
@@ -3404,11 +3406,14 @@
       }
     },
     {
-      "id": "nr_015",
-      "text": "When a teacher tells you to stop being mean to someone, do you HAVE TO stop being mean? Yes or No.",
-      "src": "assets/narration/nr_015.mp3",
+      "sha256": "df0e95d71f4bd1fd3d6c62f5603d7e93d0f26c0caddb14c8c5c4313bff873064",
+      "bytes": 211114,
+      "durationSeconds": 5.276725,
+      "id": "nr_traffic_practice_prompt_r41",
+      "text": "When the traffic light is red, do you HAVE TO stop? Yes or No.",
+      "src": "assets/narration/nr_traffic_practice_prompt_r41.mp3",
       "kind": "prompt",
-      "status": "imported",
+      "status": "verified-complete-native-recording",
       "uses": [
         {
           "stepId": "woman-mom-teacher:practice-stop",
@@ -3501,40 +3506,31 @@
           "part": "prompt"
         }
       ],
-      "sha256": "3c983161d356bb8a0d726b6d0d79ab1d76e85947478c012cc9ac4c36ba0b291c",
-      "bytes": 261269,
-      "durationSeconds": 6.5306,
       "provenance": {
         "provider": "NaturalReaders Commercial",
-        "voice": {
-          "provider": "NaturalReaders Commercial",
-          "name": "Evelyn",
-          "style": "Soft",
-          "speed": 0.9,
-          "wordsPerMinuteSetting": 180,
-          "paragraphPauseSeconds": 0,
-          "exportFormat": "MP3",
-          "exportMode": "separate files ZIP",
-          "exportNaming": "Index + Segment",
-          "preferredBitrateKbps": 320,
-          "settingsBasis": "Previously used NaturalReaders settings; verify them in the generator for the new export."
-        },
-        "sourceArchiveSha256": "59cdebba0758db7a74935ae7779a884179b9c097eddd4039bdfc1206fb3dc4c3",
-        "archiveMember": "14.When_a_teacher_tells_you_to_st.mp3",
-        "fullProjectTextVerified": true,
-        "decodeVerified": true,
-        "copiedWithoutReencoding": true
-      },
-      "narrationEmphasis": {
-        "status": "awaiting-new-recording",
-        "originalRecordedText": "When a teacher tells you to stop being mean to someone, do you have to stop being mean? Yes or No.",
-        "visualCaseOnly": true
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "nativeNaturalReadersRecording": true,
+        "wholeParagraphSpeechPreserved": true,
+        "wordLevelSplicing": false,
+        "copiedWithoutReencoding": true,
+        "sourceFile": "5.When_the_traffic_light_is_red,.mp3",
+        "sourceZipSha256": "ae8b51221ac5a9367c831bb1a7c348e4c5029295432cfb3b13dd401379351189",
+        "verification": "offline unprompted transcription (Whisper base.en), not human listening",
+        "recognizedText": "When the traffic light is red, do you have TO stop? Yes or no?",
+        "exactNormalizedWordMatch": true,
+        "recordedDate": "2026-11-08"
       }
     },
     {
-      "id": "nr_305",
-      "text": "No, that’s not quite right. When a teacher tells you to stop being mean to someone, you HAVE TO stop being mean. Let’s try that question again.",
-      "src": "assets/narration/nr_305-child-flow-native.mp3",
+      "sha256": "0779475aaf377a8246067a2c5e506424c661d7f0f80f2842b27d3ccd1657a163",
+      "bytes": 341726,
+      "durationSeconds": 8.542025,
+      "id": "nr_traffic_practice_reminder_r41",
+      "text": "No, that’s not quite right. When the traffic light is red, you HAVE TO stop. Let’s try that question again.",
+      "src": "assets/narration/nr_traffic_practice_reminder_r41.mp3",
       "kind": "reminder",
       "status": "verified-complete-native-recording",
       "uses": [
@@ -3629,57 +3625,31 @@
           "part": "reminder"
         }
       ],
-      "revisionCategory": "incorrectFeedback",
-      "sha256": "f245b8f6101d332b000a509f1732eaeaed9ec729780b8eaa54abfc4d75debc85",
-      "bytes": 440992,
-      "durationSeconds": 11.023675,
-      "decodedDurationSeconds": 11.0236875,
       "provenance": {
-        "exportIndex": 3,
-        "nativeInputText": "No, that’s not quite right. When a teacher tells you to stop being mean to someone, you have to stop being mean. Let’s try that question again.",
-        "canonicalTextDiffersOnlyInLetterCase": true,
-        "sampleRate": 44100,
-        "channels": 1,
+        "provider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
         "nativeNaturalReadersRecording": true,
         "wholeParagraphSpeechPreserved": true,
         "wordLevelSplicing": false,
         "copiedWithoutReencoding": true,
-        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_child_flow_revision_2026-10-04/naturalreader-batch-02-export/native-source/numbered-clips/3.No,_that’s_not_quite_right._Wh.mp3",
-        "sourceSha256": "f245b8f6101d332b000a509f1732eaeaed9ec729780b8eaa54abfc4d75debc85",
-        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_child_flow_revision_2026-10-04/naturalreader-batch-02-export/native-source/naturalreader-export.zip",
-        "sourceZipSha256": "0efacfc6c808a5c9c0863689afc3eb9d1b96f55c132a648631c16b3f8393bd0e",
-        "recordingIndexSha256": "6bf384d8f93a7e2e03434104cfd073e04c26399ad0658675e6b0c232515866bb",
-        "voiceProvider": "NaturalReaders Commercial",
-        "voiceName": "Evelyn",
-        "voiceStyle": "Soft",
-        "voiceSpeed": 0.8,
-        "voiceWordsPerMinute": 160,
-        "observedRowMultiplier": 0.89,
-        "insertedPauseMilliseconds": 0,
-        "nativeVoiceGenerationSpeedVerified": false,
-        "voiceSettingsEvidence": "Parent observed all64 exact sentencecase paragraphs at EvelynSoft speed display0.80x160WPM with row multiplier0.89 and0pause, then320MP3SeparateIndexSegment ZIP export; audio bytes preserved",
-        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
-        "independentExactNormalizedRecognition": true,
-        "articleOmissionExceptionsAllowed": false,
-        "cueAlignmentApproved": true,
-        "strictFinalSpokenSequenceMatches": true,
-        "allTheArticlesVerified": true,
-        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
-        "provider": "NaturalReaders Commercial",
-        "sourceVoice": "Evelyn Soft",
-        "decodeVerified": true,
-        "fullProjectTextVerified": true,
-        "verifiedSourceAuditRecord": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_child_flow_revision_2026-10-04/naturalreader-batch-02-export/processed/verified-native-recordings.json",
-        "installedFileBytesMatchVerifiedSource": true,
-        "nativeGenerationSettingsObservedInUi": true,
-        "observedSpeedDisplay": "0.80x · 160WPM",
-        "audioDoesNotIndependentlyProveExactSynthesisSpeed": true
+        "sourceFile": "7.No,_that’s_not_quite_right._Wh.mp3",
+        "sourceZipSha256": "ae8b51221ac5a9367c831bb1a7c348e4c5029295432cfb3b13dd401379351189",
+        "verification": "offline unprompted transcription (Whisper base.en), not human listening",
+        "recognizedText": "No, that's not quite right. When the traffic light is red, you have TO stop. Let's try that question again.",
+        "exactNormalizedWordMatch": true,
+        "recordedDate": "2026-11-08"
       }
     },
     {
-      "id": "nr_303",
-      "text": "That’s right! When a teacher tells you to stop being mean to someone, you HAVE TO stop being mean.",
-      "src": "assets/narration/nr_303-child-flow-native.mp3",
+      "sha256": "42ea20a0e59b1ccf4c4cf02a7c7313a90e51fd3c107f82516dbbf3d7a2cde05b",
+      "bytes": 199620,
+      "durationSeconds": 4.989375,
+      "id": "nr_traffic_practice_correct_r41",
+      "text": "That’s right! When the traffic light is red, you HAVE TO stop.",
+      "src": "assets/narration/nr_traffic_practice_correct_r41.mp3",
       "kind": "prompt",
       "status": "verified-complete-native-recording",
       "uses": [
@@ -3774,51 +3744,22 @@
           "part": "prompt"
         }
       ],
-      "revisionCategory": "correctFeedback",
-      "sha256": "f25226a46e0cd1a0b98e15bc460f86446ddb3a8f3d42d901437ae237e58b3bef",
-      "bytes": 280077,
-      "durationSeconds": 7.0008,
-      "decodedDurationSeconds": 7.0008125,
       "provenance": {
-        "exportIndex": 1,
-        "nativeInputText": "That’s right! When a teacher tells you to stop being mean to someone, you have to stop being mean.",
-        "canonicalTextDiffersOnlyInLetterCase": true,
-        "sampleRate": 44100,
-        "channels": 1,
+        "provider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
         "nativeNaturalReadersRecording": true,
         "wholeParagraphSpeechPreserved": true,
         "wordLevelSplicing": false,
         "copiedWithoutReencoding": true,
-        "sourceFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_child_flow_revision_2026-10-04/naturalreader-batch-02-export/native-source/numbered-clips/1.That’s_right!_When_a_teacher_t.mp3",
-        "sourceSha256": "f25226a46e0cd1a0b98e15bc460f86446ddb3a8f3d42d901437ae237e58b3bef",
-        "sourceZipFile": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_child_flow_revision_2026-10-04/naturalreader-batch-02-export/native-source/naturalreader-export.zip",
-        "sourceZipSha256": "0efacfc6c808a5c9c0863689afc3eb9d1b96f55c132a648631c16b3f8393bd0e",
-        "recordingIndexSha256": "6bf384d8f93a7e2e03434104cfd073e04c26399ad0658675e6b0c232515866bb",
-        "voiceProvider": "NaturalReaders Commercial",
-        "voiceName": "Evelyn",
-        "voiceStyle": "Soft",
-        "voiceSpeed": 0.8,
-        "voiceWordsPerMinute": 160,
-        "observedRowMultiplier": 0.89,
-        "insertedPauseMilliseconds": 0,
-        "nativeVoiceGenerationSpeedVerified": false,
-        "voiceSettingsEvidence": "Parent observed all64 exact sentencecase paragraphs at EvelynSoft speed display0.80x160WPM with row multiplier0.89 and0pause, then320MP3SeparateIndexSegment ZIP export; audio bytes preserved",
-        "kind": "complete native paragraph file copied unchanged from numbered ZIP export",
-        "independentExactNormalizedRecognition": true,
-        "articleOmissionExceptionsAllowed": false,
-        "cueAlignmentApproved": true,
-        "strictFinalSpokenSequenceMatches": true,
-        "allTheArticlesVerified": true,
-        "recordingWordCheckMethod": "unprompted full-context recognition from final MP3",
-        "provider": "NaturalReaders Commercial",
-        "sourceVoice": "Evelyn Soft",
-        "decodeVerified": true,
-        "fullProjectTextVerified": true,
-        "verifiedSourceAuditRecord": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_child_flow_revision_2026-10-04/naturalreader-batch-02-export/processed/verified-native-recordings.json",
-        "installedFileBytesMatchVerifiedSource": true,
-        "nativeGenerationSettingsObservedInUi": true,
-        "observedSpeedDisplay": "0.80x · 160WPM",
-        "audioDoesNotIndependentlyProveExactSynthesisSpeed": true
+        "sourceFile": "6.That’s_right!_When_the_traffic.mp3",
+        "sourceZipSha256": "ae8b51221ac5a9367c831bb1a7c348e4c5029295432cfb3b13dd401379351189",
+        "verification": "offline unprompted transcription (Whisper base.en), not human listening",
+        "recognizedText": "That's right. When the traffic light is red, you have TO stop.",
+        "exactNormalizedWordMatch": true,
+        "recordedDate": "2026-11-08"
       }
     },
     {
@@ -18275,18 +18216,18 @@
       "proposedWording": false
     },
     "woman-mom-teacher:practice-stop": {
-      "prompt": "nr_015",
-      "reminder": "nr_305",
+      "prompt": "nr_traffic_practice_prompt_r41",
+      "reminder": "nr_traffic_practice_reminder_r41",
       "options": [
         "nr_011",
         "nr_012"
       ],
       "proposedWording": false,
-      "correctFeedback": "nr_303",
+      "correctFeedback": "nr_traffic_practice_correct_r41",
       "correctFeedbackScreen": "woman-mom-teacher:practice-stop:feedback-correct"
     },
     "woman-mom-teacher:practice-stop:feedback-correct": {
-      "prompt": "nr_303",
+      "prompt": "nr_traffic_practice_correct_r41",
       "reminder": null,
       "options": [],
       "proposedWording": true,
@@ -18548,18 +18489,18 @@
       "proposedWording": false
     },
     "woman-sister-friend:practice-stop": {
-      "prompt": "nr_015",
-      "reminder": "nr_305",
+      "prompt": "nr_traffic_practice_prompt_r41",
+      "reminder": "nr_traffic_practice_reminder_r41",
       "options": [
         "nr_011",
         "nr_012"
       ],
       "proposedWording": false,
-      "correctFeedback": "nr_303",
+      "correctFeedback": "nr_traffic_practice_correct_r41",
       "correctFeedbackScreen": "woman-sister-friend:practice-stop:feedback-correct"
     },
     "woman-sister-friend:practice-stop:feedback-correct": {
-      "prompt": "nr_303",
+      "prompt": "nr_traffic_practice_correct_r41",
       "reminder": null,
       "options": [],
       "proposedWording": true,
@@ -18821,18 +18762,18 @@
       "proposedWording": false
     },
     "woman-bestfriend-friend:practice-stop": {
-      "prompt": "nr_015",
-      "reminder": "nr_305",
+      "prompt": "nr_traffic_practice_prompt_r41",
+      "reminder": "nr_traffic_practice_reminder_r41",
       "options": [
         "nr_011",
         "nr_012"
       ],
       "proposedWording": false,
-      "correctFeedback": "nr_303",
+      "correctFeedback": "nr_traffic_practice_correct_r41",
       "correctFeedbackScreen": "woman-bestfriend-friend:practice-stop:feedback-correct"
     },
     "woman-bestfriend-friend:practice-stop:feedback-correct": {
-      "prompt": "nr_303",
+      "prompt": "nr_traffic_practice_correct_r41",
       "reminder": null,
       "options": [],
       "proposedWording": true,
@@ -19094,18 +19035,18 @@
       "proposedWording": false
     },
     "woman-teacher-friend:practice-stop": {
-      "prompt": "nr_015",
-      "reminder": "nr_305",
+      "prompt": "nr_traffic_practice_prompt_r41",
+      "reminder": "nr_traffic_practice_reminder_r41",
       "options": [
         "nr_011",
         "nr_012"
       ],
       "proposedWording": false,
-      "correctFeedback": "nr_303",
+      "correctFeedback": "nr_traffic_practice_correct_r41",
       "correctFeedbackScreen": "woman-teacher-friend:practice-stop:feedback-correct"
     },
     "woman-teacher-friend:practice-stop:feedback-correct": {
-      "prompt": "nr_303",
+      "prompt": "nr_traffic_practice_correct_r41",
       "reminder": null,
       "options": [],
       "proposedWording": true,
@@ -19367,18 +19308,18 @@
       "proposedWording": false
     },
     "woman-mom-sister:practice-stop": {
-      "prompt": "nr_015",
-      "reminder": "nr_305",
+      "prompt": "nr_traffic_practice_prompt_r41",
+      "reminder": "nr_traffic_practice_reminder_r41",
       "options": [
         "nr_011",
         "nr_012"
       ],
       "proposedWording": false,
-      "correctFeedback": "nr_303",
+      "correctFeedback": "nr_traffic_practice_correct_r41",
       "correctFeedbackScreen": "woman-mom-sister:practice-stop:feedback-correct"
     },
     "woman-mom-sister:practice-stop:feedback-correct": {
-      "prompt": "nr_303",
+      "prompt": "nr_traffic_practice_correct_r41",
       "reminder": null,
       "options": [],
       "proposedWording": true,
@@ -19640,18 +19581,18 @@
       "proposedWording": false
     },
     "woman-teacher-classmate:practice-stop": {
-      "prompt": "nr_015",
-      "reminder": "nr_305",
+      "prompt": "nr_traffic_practice_prompt_r41",
+      "reminder": "nr_traffic_practice_reminder_r41",
       "options": [
         "nr_011",
         "nr_012"
       ],
       "proposedWording": false,
-      "correctFeedback": "nr_303",
+      "correctFeedback": "nr_traffic_practice_correct_r41",
       "correctFeedbackScreen": "woman-teacher-classmate:practice-stop:feedback-correct"
     },
     "woman-teacher-classmate:practice-stop:feedback-correct": {
-      "prompt": "nr_303",
+      "prompt": "nr_traffic_practice_correct_r41",
       "reminder": null,
       "options": [],
       "proposedWording": true,
@@ -19913,18 +19854,18 @@
       "proposedWording": false
     },
     "man-dad-teacher:practice-stop": {
-      "prompt": "nr_015",
-      "reminder": "nr_305",
+      "prompt": "nr_traffic_practice_prompt_r41",
+      "reminder": "nr_traffic_practice_reminder_r41",
       "options": [
         "nr_011",
         "nr_012"
       ],
       "proposedWording": false,
-      "correctFeedback": "nr_303",
+      "correctFeedback": "nr_traffic_practice_correct_r41",
       "correctFeedbackScreen": "man-dad-teacher:practice-stop:feedback-correct"
     },
     "man-dad-teacher:practice-stop:feedback-correct": {
-      "prompt": "nr_303",
+      "prompt": "nr_traffic_practice_correct_r41",
       "reminder": null,
       "options": [],
       "proposedWording": true,
@@ -20186,18 +20127,18 @@
       "proposedWording": false
     },
     "man-brother-friend:practice-stop": {
-      "prompt": "nr_015",
-      "reminder": "nr_305",
+      "prompt": "nr_traffic_practice_prompt_r41",
+      "reminder": "nr_traffic_practice_reminder_r41",
       "options": [
         "nr_011",
         "nr_012"
       ],
       "proposedWording": false,
-      "correctFeedback": "nr_303",
+      "correctFeedback": "nr_traffic_practice_correct_r41",
       "correctFeedbackScreen": "man-brother-friend:practice-stop:feedback-correct"
     },
     "man-brother-friend:practice-stop:feedback-correct": {
-      "prompt": "nr_303",
+      "prompt": "nr_traffic_practice_correct_r41",
       "reminder": null,
       "options": [],
       "proposedWording": true,
@@ -20459,18 +20400,18 @@
       "proposedWording": false
     },
     "man-bestfriend-friend:practice-stop": {
-      "prompt": "nr_015",
-      "reminder": "nr_305",
+      "prompt": "nr_traffic_practice_prompt_r41",
+      "reminder": "nr_traffic_practice_reminder_r41",
       "options": [
         "nr_011",
         "nr_012"
       ],
       "proposedWording": false,
-      "correctFeedback": "nr_303",
+      "correctFeedback": "nr_traffic_practice_correct_r41",
       "correctFeedbackScreen": "man-bestfriend-friend:practice-stop:feedback-correct"
     },
     "man-bestfriend-friend:practice-stop:feedback-correct": {
-      "prompt": "nr_303",
+      "prompt": "nr_traffic_practice_correct_r41",
       "reminder": null,
       "options": [],
       "proposedWording": true,
@@ -20732,18 +20673,18 @@
       "proposedWording": false
     },
     "man-teacher-friend:practice-stop": {
-      "prompt": "nr_015",
-      "reminder": "nr_305",
+      "prompt": "nr_traffic_practice_prompt_r41",
+      "reminder": "nr_traffic_practice_reminder_r41",
       "options": [
         "nr_011",
         "nr_012"
       ],
       "proposedWording": false,
-      "correctFeedback": "nr_303",
+      "correctFeedback": "nr_traffic_practice_correct_r41",
       "correctFeedbackScreen": "man-teacher-friend:practice-stop:feedback-correct"
     },
     "man-teacher-friend:practice-stop:feedback-correct": {
-      "prompt": "nr_303",
+      "prompt": "nr_traffic_practice_correct_r41",
       "reminder": null,
       "options": [],
       "proposedWording": true,
@@ -21005,18 +20946,18 @@
       "proposedWording": false
     },
     "man-dad-brother:practice-stop": {
-      "prompt": "nr_015",
-      "reminder": "nr_305",
+      "prompt": "nr_traffic_practice_prompt_r41",
+      "reminder": "nr_traffic_practice_reminder_r41",
       "options": [
         "nr_011",
         "nr_012"
       ],
       "proposedWording": false,
-      "correctFeedback": "nr_303",
+      "correctFeedback": "nr_traffic_practice_correct_r41",
       "correctFeedbackScreen": "man-dad-brother:practice-stop:feedback-correct"
     },
     "man-dad-brother:practice-stop:feedback-correct": {
-      "prompt": "nr_303",
+      "prompt": "nr_traffic_practice_correct_r41",
       "reminder": null,
       "options": [],
       "proposedWording": true,
@@ -21278,18 +21219,18 @@
       "proposedWording": false
     },
     "man-teacher-classmate:practice-stop": {
-      "prompt": "nr_015",
-      "reminder": "nr_305",
+      "prompt": "nr_traffic_practice_prompt_r41",
+      "reminder": "nr_traffic_practice_reminder_r41",
       "options": [
         "nr_011",
         "nr_012"
       ],
       "proposedWording": false,
-      "correctFeedback": "nr_303",
+      "correctFeedback": "nr_traffic_practice_correct_r41",
       "correctFeedbackScreen": "man-teacher-classmate:practice-stop:feedback-correct"
     },
     "man-teacher-classmate:practice-stop:feedback-correct": {
-      "prompt": "nr_303",
+      "prompt": "nr_traffic_practice_correct_r41",
       "reminder": null,
       "options": [],
       "proposedWording": true,
@@ -21551,18 +21492,18 @@
       "proposedWording": false
     },
     "family-mom-dad:practice-stop": {
-      "prompt": "nr_015",
-      "reminder": "nr_305",
+      "prompt": "nr_traffic_practice_prompt_r41",
+      "reminder": "nr_traffic_practice_reminder_r41",
       "options": [
         "nr_011",
         "nr_012"
       ],
       "proposedWording": false,
-      "correctFeedback": "nr_303",
+      "correctFeedback": "nr_traffic_practice_correct_r41",
       "correctFeedbackScreen": "family-mom-dad:practice-stop:feedback-correct"
     },
     "family-mom-dad:practice-stop:feedback-correct": {
-      "prompt": "nr_303",
+      "prompt": "nr_traffic_practice_correct_r41",
       "reminder": null,
       "options": [],
       "proposedWording": true,
@@ -21824,18 +21765,18 @@
       "proposedWording": false
     },
     "family-sister-brother:practice-stop": {
-      "prompt": "nr_015",
-      "reminder": "nr_305",
+      "prompt": "nr_traffic_practice_prompt_r41",
+      "reminder": "nr_traffic_practice_reminder_r41",
       "options": [
         "nr_011",
         "nr_012"
       ],
       "proposedWording": false,
-      "correctFeedback": "nr_303",
+      "correctFeedback": "nr_traffic_practice_correct_r41",
       "correctFeedbackScreen": "family-sister-brother:practice-stop:feedback-correct"
     },
     "family-sister-brother:practice-stop:feedback-correct": {
-      "prompt": "nr_303",
+      "prompt": "nr_traffic_practice_correct_r41",
       "reminder": null,
       "options": [],
       "proposedWording": true,
@@ -22097,18 +22038,18 @@
       "proposedWording": false
     },
     "family-dad-kid:practice-stop": {
-      "prompt": "nr_015",
-      "reminder": "nr_305",
+      "prompt": "nr_traffic_practice_prompt_r41",
+      "reminder": "nr_traffic_practice_reminder_r41",
       "options": [
         "nr_011",
         "nr_012"
       ],
       "proposedWording": false,
-      "correctFeedback": "nr_303",
+      "correctFeedback": "nr_traffic_practice_correct_r41",
       "correctFeedbackScreen": "family-dad-kid:practice-stop:feedback-correct"
     },
     "family-dad-kid:practice-stop:feedback-correct": {
-      "prompt": "nr_303",
+      "prompt": "nr_traffic_practice_correct_r41",
       "reminder": null,
       "options": [],
       "proposedWording": true,
@@ -22370,18 +22311,18 @@
       "proposedWording": false
     },
     "family-mom-kid:practice-stop": {
-      "prompt": "nr_015",
-      "reminder": "nr_305",
+      "prompt": "nr_traffic_practice_prompt_r41",
+      "reminder": "nr_traffic_practice_reminder_r41",
       "options": [
         "nr_011",
         "nr_012"
       ],
       "proposedWording": false,
-      "correctFeedback": "nr_303",
+      "correctFeedback": "nr_traffic_practice_correct_r41",
       "correctFeedbackScreen": "family-mom-kid:practice-stop:feedback-correct"
     },
     "family-mom-kid:practice-stop:feedback-correct": {
-      "prompt": "nr_303",
+      "prompt": "nr_traffic_practice_correct_r41",
       "reminder": null,
       "options": [],
       "proposedWording": true,
@@ -22643,18 +22584,18 @@
       "proposedWording": false
     },
     "family-teacher-kid:practice-stop": {
-      "prompt": "nr_015",
-      "reminder": "nr_305",
+      "prompt": "nr_traffic_practice_prompt_r41",
+      "reminder": "nr_traffic_practice_reminder_r41",
       "options": [
         "nr_011",
         "nr_012"
       ],
       "proposedWording": false,
-      "correctFeedback": "nr_303",
+      "correctFeedback": "nr_traffic_practice_correct_r41",
       "correctFeedbackScreen": "family-teacher-kid:practice-stop:feedback-correct"
     },
     "family-teacher-kid:practice-stop:feedback-correct": {
-      "prompt": "nr_303",
+      "prompt": "nr_traffic_practice_correct_r41",
       "reminder": null,
       "options": [],
       "proposedWording": true,
@@ -22916,18 +22857,18 @@
       "proposedWording": false
     },
     "family-teacher-classmate:practice-stop": {
-      "prompt": "nr_015",
-      "reminder": "nr_305",
+      "prompt": "nr_traffic_practice_prompt_r41",
+      "reminder": "nr_traffic_practice_reminder_r41",
       "options": [
         "nr_011",
         "nr_012"
       ],
       "proposedWording": false,
-      "correctFeedback": "nr_303",
+      "correctFeedback": "nr_traffic_practice_correct_r41",
       "correctFeedbackScreen": "family-teacher-classmate:practice-stop:feedback-correct"
     },
     "family-teacher-classmate:practice-stop:feedback-correct": {
-      "prompt": "nr_303",
+      "prompt": "nr_traffic_practice_correct_r41",
       "reminder": null,
       "options": [],
       "proposedWording": true,

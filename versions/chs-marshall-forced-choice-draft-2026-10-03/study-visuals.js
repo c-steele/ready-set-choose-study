@@ -61,12 +61,11 @@
   function liePracticeArtwork(step){
     const source=root.ObligationPairings?.pairings.find(pairing=>pairing.id==='woman-mom-teacher')?.images.group;
     if(!source)return '';
-    const accent=step.pairing?.visualHex||'#f5b236';
+    const accent='#79549b';
     const id='lie-practice-palette-'+String(step.id||'practice-lie').replace(/[^a-z\d-]/gi,'-');
-    // Same original adult and child pixels, crop, scale, and role-label type as
-    // the existing teacher practice. The neutral question/answer bubbles do not
+    // Original character pixels, without study role labels. The neutral question/answer bubbles do not
     // add an unspoken story, model a lie, or depict a new human character.
-    return `<svg class="practice-artwork lie-practice-artwork" viewBox="0 0 900 390" role="img" aria-label="Someone asks you a question. You can answer. The child is labeled YOU." xmlns="http://www.w3.org/2000/svg">
+    return `<svg class="practice-artwork lie-practice-artwork" viewBox="0 0 900 390" role="img" aria-label="Someone asks you a question. You can answer." xmlns="http://www.w3.org/2000/svg">
       <defs><filter id="${id}" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="${paletteMatrix(accent)}"/></filter></defs>
       <svg x="145" y="62" width="215" height="281" viewBox="100 160 490 640"><image href="${esc(source)}" width="1920" height="1080" filter="url(#${id})"/></svg>
       <svg x="595" y="179" width="180" height="172" viewBox="760 390 410 390"><image href="${esc(source)}" width="1920" height="1080" filter="url(#${id})"/></svg>
@@ -74,8 +73,6 @@
       <text class="lie-question-symbol" x="424" y="92" text-anchor="middle">?</text>
       <path class="practice-bubble answer-bubble" d="M581 65 H729 Q746 65 746 82 V119 Q746 136 729 136 H672 L676 167 L645 136 H581 Q564 136 564 119 V82 Q564 65 581 65Z"/>
       <text class="lie-answer-symbol" x="655" y="111" text-anchor="middle">…</text>
-      <rect x="173" y="350" width="159" height="34" fill="${accent}"/><rect x="631" y="350" width="108" height="34" fill="${accent}"/>
-      <text class="practice-role-label" x="252.5" y="376" text-anchor="middle">SOMEONE</text><text class="practice-role-label" x="685" y="376" text-anchor="middle">YOU</text>
       <rect class="practice-actor-cue" data-narration-actor="practice-someone" x="140" y="59" width="225" height="329" rx="8" aria-hidden="true"/>
       <rect class="practice-actor-cue" data-narration-actor="practice-you" x="589" y="175" width="191" height="213" rx="8" aria-hidden="true"/>
     </svg>`;
