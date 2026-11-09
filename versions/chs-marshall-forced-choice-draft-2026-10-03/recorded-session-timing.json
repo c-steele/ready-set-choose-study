@@ -2,12 +2,12 @@
   "complete": true,
   "allRecordingsComplete": true,
   "pendingRetryRecordingIDs": [],
-  "createdAt": "2026-11-09T04:03:01.554Z",
-  "basis": "Verified MP3 durations and programmed pauses across complete paths without instructional practice.",
+  "createdAt": "2026-11-09T05:43:08.998Z",
+  "basis": "Verified MP3 durations and programmed pauses across complete paths, rating the selected meaner helper once and evaluating only the other helper.",
   "gapSeconds": 0.25,
   "manifestSha256": "8c016f6a246940bef7c61aeed44a79ab9232221bed393a3a2783533ba15583af",
   "assumptions": [
-    "Assumes correct recall answers. All prediction, obligation, meanness comparisons and helper ratings are retained.",
+    "Assumes correct recall answers. The selected meaner helper receives one strength rating; only the other helper receives Mean/Not Mean and a conditional strength rating after Mean.",
     "Every prompted option is read once; binary options embedded in the full question are not read again.",
     "Estimated session time adds 3–5 seconds per response.",
     "Playback, screen and response ranges are computed independently across complete paths.",
@@ -21,24 +21,24 @@
       "practiceMode": "none",
       "storyCount": 6,
       "playbackSeconds": {
-        "min": 508.3036119999999,
-        "max": 654.999026
+        "min": 471.6276929999999,
+        "max": 545.1582569999998
       },
       "playbackMinutes": {
-        "min": 8.5,
-        "max": 10.9
+        "min": 7.9,
+        "max": 9.1
       },
       "estimatedSessionMinutesIncludingResponses": {
-        "min": 10.6,
-        "max": 15.4
+        "min": 9.7,
+        "max": 12.6
       },
       "responseCounts": {
-        "min": 42,
-        "max": 54
+        "min": 36,
+        "max": 42
       },
       "screens": {
-        "min": 85,
-        "max": 97
+        "min": 79,
+        "max": 85
       },
       "confirmationScreens": {
         "min": 0,
@@ -52,24 +52,24 @@
       "practiceMode": "none",
       "storyCount": 6,
       "playbackSeconds": {
-        "min": 510.23672899999997,
-        "max": 656.9321429999997
+        "min": 473.66529899999995,
+        "max": 547.195864
       },
       "playbackMinutes": {
-        "min": 8.5,
-        "max": 10.9
+        "min": 7.9,
+        "max": 9.1
       },
       "estimatedSessionMinutesIncludingResponses": {
-        "min": 10.6,
-        "max": 15.4
+        "min": 9.7,
+        "max": 12.6
       },
       "responseCounts": {
-        "min": 42,
-        "max": 54
+        "min": 36,
+        "max": 42
       },
       "screens": {
-        "min": 85,
-        "max": 97
+        "min": 79,
+        "max": 85
       },
       "confirmationScreens": {
         "min": 0,
@@ -83,24 +83,24 @@
       "practiceMode": "none",
       "storyCount": 6,
       "playbackSeconds": {
-        "min": 502.3739629999999,
-        "max": 648.4424369999997
+        "min": 466.1421269999999,
+        "max": 539.7510579999998
       },
       "playbackMinutes": {
-        "min": 8.4,
-        "max": 10.8
+        "min": 7.8,
+        "max": 9
       },
       "estimatedSessionMinutesIncludingResponses": {
-        "min": 10.5,
-        "max": 15.3
+        "min": 9.6,
+        "max": 12.5
       },
       "responseCounts": {
-        "min": 42,
-        "max": 54
+        "min": 36,
+        "max": 42
       },
       "screens": {
-        "min": 85,
-        "max": 97
+        "min": 79,
+        "max": 85
       },
       "confirmationScreens": {
         "min": 0,
@@ -114,24 +114,24 @@
       "practiceMode": "none",
       "storyCount": 18,
       "playbackSeconds": {
-        "min": 1513.1821039999995,
-        "max": 1952.6414059999997
+        "min": 1403.7029189999996,
+        "max": 1624.3729789999998
       },
       "playbackMinutes": {
-        "min": 25.2,
-        "max": 32.5
+        "min": 23.4,
+        "max": 27.1
       },
       "estimatedSessionMinutesIncludingResponses": {
-        "min": 31.5,
-        "max": 46
+        "min": 28.8,
+        "max": 37.6
       },
       "responseCounts": {
-        "min": 126,
-        "max": 162
+        "min": 108,
+        "max": 126
       },
       "screens": {
-        "min": 253,
-        "max": 289
+        "min": 235,
+        "max": 253
       },
       "confirmationScreens": {
         "min": 0,

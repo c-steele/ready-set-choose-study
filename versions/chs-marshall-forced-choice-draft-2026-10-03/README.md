@@ -26,10 +26,10 @@ These are forced comparisons between helpers. There is no both, neither, or equa
 6. State the fixed outcome: no one helped, then name each helper who did NOT help.
 7. Ask one Yes/No recall check: did either person help? The expected answer is No; a correction restates the explicit outcome when needed.
 8. Ask who was meaner for NOT helping the recipient, with the same helper choices.
-9. Rate the selected helper’s meanness, then evaluate each helper individually with Mean / Not Mean and a strength rating after Mean.
+9. Rate the selected helper’s meanness once, then ask only about the other helper with Mean / Not Mean and a strength rating after Mean. Skip both repeated questions for the selected helper.
 10. Continue to the next pairing, then thank the child at session end.
 
-There are **three forced-choice judgments per story**, followed by a selected-helper meanness rating and individual evaluations. Prediction or obligation responses never change whether the helpers help: the nonhelping outcome is fixed.
+There are **three forced-choice judgments per story**, followed by a selected-helper meanness rating and an individual evaluation of the other helper. Prediction or obligation responses never change whether the helpers help: the nonhelping outcome is fixed.
 
 ## Counts and illustrative duration
 

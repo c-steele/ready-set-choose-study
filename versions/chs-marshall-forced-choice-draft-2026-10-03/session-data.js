@@ -16,7 +16,12 @@
 
   function nextIndex(steps, index, answers) {
     let next = index + 1;
-    while (next < steps.length && steps[next].when && answers[steps[next].when[0]] !== steps[next].when[1]) next++;
+    while (next < steps.length) {
+      const step = steps[next];
+      if (step.when && answers[step.when[0]] !== step.when[1] ||
+          step.unless && answers[step.unless[0]] === step.unless[1]) next++;
+      else break;
+    }
     return next;
   }
 
@@ -33,6 +38,7 @@
       const step = {...copy(templates[templateId]), image:p.images.need, ...overrides,
         id:prefix(localId), localId, pairing:p, storyIndex, adapted:true};
       if (step.when) step.when = [prefix(step.when[0]), step.when[1]];
+      if (step.unless) step.unless = [prefix(step.unless[0]), step.unless[1]];
       if (step.point || step.expected) { step.requireCorrect = true; step.allowBypass = false; }
       result.push(step);
     }
@@ -80,18 +86,19 @@
         when:['compare', upper(helper.description)], comparisonSource:prefix('compare'), ratedActor:helper.id
       });
     }
-    // Then rate each helper individually, retaining the original Mean/Not Mean gate.
+    // The selected helper was already rated. Only evaluate the other helper.
     for (const helper of helpers) {
       add(`evaluation-${helper.id}`, 'evaluation-mom', {
         phase:`Individual evaluation · ${upper(helper.description)}`,
         text:`Do you think it was Mean or Not Mean that ${helper.description} did NOT help ${recipient.reference}?`,
-        ratedActor:helper.id
+        unless:['compare', upper(helper.description)], ratedActor:helper.id
       });
       add(`evaluation-${helper.id}-amount`, 'evaluation-mom-amount', {
         phase:`Meanness strength · ${upper(helper.description)}`,
         text:`How mean do you think ${helper.description} was for NOT helping ${recipient.reference}?`,
         displayText:`How mean do you think ${helper.description} was for NOT helping ${recipient.reference}?`,
-        when:[`evaluation-${helper.id}`, 'Mean'], ratedActor:helper.id
+        when:[`evaluation-${helper.id}`, 'Mean'],
+        unless:['compare', upper(helper.description)], ratedActor:helper.id
       });
     }
     return result;
@@ -185,7 +192,7 @@
         'Forced-choice prediction and obligation are adaptations of the Marshall paradigm, not the original Study 1 individual Yes/No measures. The meaner comparison is adapted to these two-helper stories.',
         'White backgrounds and the same sadness context are used throughout. Source relationships, character positions, and intro order are preserved.',
         'All paths have the same explicit outcome: no one helped, followed by each named helper did NOT help. A single Yes/No recall check precedes the meaner comparison.',
-        'After the meaner comparison, a three-option how-mean rating is asked for the selected helper. Then each helper receives an individual Mean/Not Mean question and a conditional how-mean follow-up after Mean. Prediction and obligation remain forced choices without strength follow-ups. Overall Mean/Nice and individual recall questions remain omitted.',
+        'After the meaner comparison, a three-option how-mean rating is asked once for the selected helper. Only the other helper receives a Mean/Not Mean question, with a how-mean follow-up after Mean. The selected helper is not asked either question again. Prediction and obligation remain forced choices without strength follow-ups. Overall Mean/Nice and individual recall questions remain omitted.',
         'Instructional HAVE TO practice is omitted; prediction is followed directly by the obligation question.',
         setId === 'all' ? 'The 18-story view is a researcher catalog of all three role sets, not the proposed length of one child’s session.' : 'This preview contains the six pairings from one role set in a fixed review order.'
       ],
@@ -203,7 +210,7 @@
       `${stats.forcedChoiceResponses} forced choices + ${stats.individualEvaluationResponses} individual Mean/Not Mean judgments + ${stats.strengthResponses.min}–${stats.strengthResponses.max} how-mean ratings + ${stats.checks} recall checks.`, '',
       `Illustrative duration: **${stats.minutes.min}–${stats.minutes.max} minutes**, based on ${stats.words.min}–${stats.words.max} spoken words.`, '',
       ...stats.assumptions.map(note => `- ${note}`), '',
-      'The first three judgments per story are two-helper choices that advance immediately after selection. Exactly one selected-helper how-mean card follows the meaner comparison. Individual how-mean cards follow Mean only. Recall corrections require a retry.', ''
+      'The first three judgments per story are two-helper choices that advance immediately after selection. Exactly one selected-helper how-mean card follows the meaner comparison. Only the other helper receives Mean/Not Mean and, after Mean, a how-mean rating. Recall corrections require a retry.', ''
     ];
     let lastStory = -1;
     for (const [index, step] of session.steps.entries()) {
@@ -217,6 +224,7 @@
         const parent = session.steps.find(s => s.id === step.when[0]);
         lines.push(`*Only after “${step.when[1]}” to ${parent.phase}.*`, '');
       }
+      if (step.unless) lines.push(`*Skip if “${step.unless[1]}” was selected as meaner; this helper has already been rated.*`, '');
       if (step.context) lines.push(`**${step.context}**`, '');
       if (step.preface) lines.push(step.preface, '');
       const scriptText=step.captionEmphasis==='HAVE TO'?step.text.replace(/\bHAVE TO\b/g,'*HAVE TO*'):step.text;
