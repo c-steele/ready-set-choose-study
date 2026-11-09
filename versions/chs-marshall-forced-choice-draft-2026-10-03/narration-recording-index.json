@@ -4299,11 +4299,11 @@
       }
     },
     {
-      "id": "nr_257",
+      "id": "nr_obligation_emphasis_01_r44",
       "text": "Who do you think HAS TO help the kid in the middle?",
-      "src": "assets/narration/nr_257-child-flow-native.mp3",
+      "src": "assets/narration/nr_obligation_emphasis_01_r44.mp3",
       "kind": "prompt",
-      "status": "verified-complete-native-recording",
+      "status": "verified-phrase-emphasis-edit",
       "uses": [
         {
           "stepId": "woman-mom-teacher:obligation-compare",
@@ -12421,11 +12421,11 @@
       }
     },
     {
-      "id": "nr_260",
+      "id": "nr_obligation_emphasis_02_r44",
       "text": "Who do you think HAS TO help the mom in the middle?",
-      "src": "assets/narration/nr_260-child-flow-native.mp3",
+      "src": "assets/narration/nr_obligation_emphasis_02_r44.mp3",
       "kind": "prompt",
-      "status": "verified-complete-native-recording",
+      "status": "verified-phrase-emphasis-edit",
       "uses": [
         {
           "stepId": "family-dad-kid:obligation-compare",
@@ -13520,11 +13520,11 @@
       }
     },
     {
-      "id": "nr_263",
+      "id": "nr_obligation_emphasis_03_r44",
       "text": "Who do you think HAS TO help the dad in the middle?",
-      "src": "assets/narration/nr_263-child-flow-native.mp3",
+      "src": "assets/narration/nr_obligation_emphasis_03_r44.mp3",
       "kind": "prompt",
-      "status": "verified-complete-native-recording",
+      "status": "verified-phrase-emphasis-edit",
       "uses": [
         {
           "stepId": "family-mom-kid:obligation-compare",
@@ -14667,11 +14667,11 @@
       }
     },
     {
-      "id": "nr_266",
+      "id": "nr_obligation_emphasis_04_r44",
       "text": "Who do you think HAS TO help the teacher in the middle?",
-      "src": "assets/narration/nr_266-child-flow-native.mp3",
+      "src": "assets/narration/nr_obligation_emphasis_04_r44.mp3",
       "kind": "prompt",
-      "status": "verified-complete-native-recording",
+      "status": "verified-phrase-emphasis-edit",
       "uses": [
         {
           "stepId": "family-teacher-kid:obligation-compare",

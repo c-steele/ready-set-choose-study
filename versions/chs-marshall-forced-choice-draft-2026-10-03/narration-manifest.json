@@ -32,8 +32,8 @@
   "summary": {
     "storyCount": 18,
     "screenCount": 523,
-    "clipCount": 233,
-    "readyCount": 233,
+    "clipCount": 237,
+    "readyCount": 237,
     "pendingCount": 0,
     "newForcedChoiceRecordingCount": 12,
     "emphasisPendingCount": 2,
@@ -62,7 +62,8 @@
     "joinedQuestionScreenCount": 54,
     "sadPredictionQuestionRecordingCount": 4,
     "trafficPracticeNewRecordingCount": 3,
-    "outcomeWithoutAndRecordings": 11
+    "outcomeWithoutAndRecordings": 11,
+    "slowerHasToRecordingCount": 4
   },
   "notes": [
     "This is the separate forced-choice adaptation. Each story has one prediction, one obligation, and one comparative evaluation choice between its two helpers.",
@@ -93,7 +94,8 @@
     "Forced-choice helper alternatives use the original complete X or Y? recordings. The both-see witness screen is omitted. Individual option recordings are retained for archival comparison but not used on helper-choice screens.",
     "Prediction question revised to Who will help the recipient in the middle now that they’re sad? Four complete native Evelyn Soft recordings replace the earlier Who do you think wording; helper alternatives remain the original paired OR recordings.",
     "r41: proposed role-free practice uses a red traffic light and stopped car. Three new complete Evelyn Soft recordings replace Teacher/stop-being-mean prompt, correction, and correct feedback. Stable practice-stop step IDs are retained. Other study questions are unchanged.",
-    "r43: Child-recipient outcome sentences each begin with The; the second helper sentence no longer begins with And. Eleven updated passages use three complete Evelyn Soft 0.90x sentences, verified independently from the final MP3 at their known assembly boundaries. Existing adult-recipient outcome audio is unchanged. Each helper outline glows only during its spoken role name; the characters and no-help badges stay still."
+    "r43: Child-recipient outcome sentences each begin with The; the second helper sentence no longer begins with And. Eleven updated passages use three complete Evelyn Soft 0.90x sentences, verified independently from the final MP3 at their known assembly boundaries. Existing adult-recipient outcome audio is unchanged. Each helper outline glows only during its spoken role name; the characters and no-help badges stay still.",
+    "r44: The four forced-choice obligation prompts use a pitch-preserving local tempo edit and gentle gain emphasis on HAS TO. Every other spoken word is retained. New final MP3s and updated word cues pass unprompted full-sentence recognition; these are edited recordings, not newly synthesized native prosody."
   ],
   "clips": [
     {
@@ -4316,83 +4318,7 @@
       "src": "assets/narration/nr_257-child-flow-native.mp3",
       "kind": "prompt",
       "status": "verified-complete-native-recording",
-      "uses": [
-        {
-          "stepId": "woman-mom-teacher:obligation-compare",
-          "proposedWording": true,
-          "part": "prompt"
-        },
-        {
-          "stepId": "woman-sister-friend:obligation-compare",
-          "proposedWording": true,
-          "part": "prompt"
-        },
-        {
-          "stepId": "woman-bestfriend-friend:obligation-compare",
-          "proposedWording": true,
-          "part": "prompt"
-        },
-        {
-          "stepId": "woman-teacher-friend:obligation-compare",
-          "proposedWording": true,
-          "part": "prompt"
-        },
-        {
-          "stepId": "woman-mom-sister:obligation-compare",
-          "proposedWording": true,
-          "part": "prompt"
-        },
-        {
-          "stepId": "woman-teacher-classmate:obligation-compare",
-          "proposedWording": true,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-dad-teacher:obligation-compare",
-          "proposedWording": true,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-brother-friend:obligation-compare",
-          "proposedWording": true,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-bestfriend-friend:obligation-compare",
-          "proposedWording": true,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-teacher-friend:obligation-compare",
-          "proposedWording": true,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-dad-brother:obligation-compare",
-          "proposedWording": true,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-teacher-classmate:obligation-compare",
-          "proposedWording": true,
-          "part": "prompt"
-        },
-        {
-          "stepId": "family-mom-dad:obligation-compare",
-          "proposedWording": true,
-          "part": "prompt"
-        },
-        {
-          "stepId": "family-sister-brother:obligation-compare",
-          "proposedWording": true,
-          "part": "prompt"
-        },
-        {
-          "stepId": "family-teacher-classmate:obligation-compare",
-          "proposedWording": true,
-          "part": "prompt"
-        }
-      ],
+      "uses": [],
       "sha256": "27ced857c38e244f0250487f85cd15270c832027b7daeed5300aa6db46e8db8b",
       "bytes": 156779,
       "durationSeconds": 3.91835,
@@ -4437,7 +4363,8 @@
         "nativeGenerationSettingsObservedInUi": true,
         "observedSpeedDisplay": "0.80x · 160WPM",
         "audioDoesNotIndependentlyProveExactSynthesisSpeed": true
-      }
+      },
+      "supersededBy": "nr_obligation_emphasis_01_r44"
     },
     {
       "id": "nr_323",
@@ -12419,13 +12346,7 @@
       "src": "assets/narration/nr_260-child-flow-native.mp3",
       "kind": "prompt",
       "status": "verified-complete-native-recording",
-      "uses": [
-        {
-          "stepId": "family-dad-kid:obligation-compare",
-          "proposedWording": true,
-          "part": "prompt"
-        }
-      ],
+      "uses": [],
       "sha256": "2705e37f97e1a41c3b75175e290c71b884379e4f625bdcafe3dac1bad03473da",
       "bytes": 154689,
       "durationSeconds": 3.8661,
@@ -12470,7 +12391,8 @@
         "nativeGenerationSettingsObservedInUi": true,
         "observedSpeedDisplay": "0.80x · 160WPM",
         "audioDoesNotIndependentlyProveExactSynthesisSpeed": true
-      }
+      },
+      "supersededBy": "nr_obligation_emphasis_02_r44"
     },
     {
       "id": "nr_347",
@@ -13499,13 +13421,7 @@
       "src": "assets/narration/nr_263-child-flow-native.mp3",
       "kind": "prompt",
       "status": "verified-complete-native-recording",
-      "uses": [
-        {
-          "stepId": "family-mom-kid:obligation-compare",
-          "proposedWording": true,
-          "part": "prompt"
-        }
-      ],
+      "uses": [],
       "sha256": "69fddda664f048aa03ee408b6b929b6db6bc0383fe065ee90ec147bcf45636e4",
       "bytes": 156779,
       "durationSeconds": 3.91835,
@@ -13550,7 +13466,8 @@
         "nativeGenerationSettingsObservedInUi": true,
         "observedSpeedDisplay": "0.80x · 160WPM",
         "audioDoesNotIndependentlyProveExactSynthesisSpeed": true
-      }
+      },
+      "supersededBy": "nr_obligation_emphasis_03_r44"
     },
     {
       "id": "nr_353",
@@ -14627,13 +14544,7 @@
       "src": "assets/narration/nr_266-child-flow-native.mp3",
       "kind": "prompt",
       "status": "verified-complete-native-recording",
-      "uses": [
-        {
-          "stepId": "family-teacher-kid:obligation-compare",
-          "proposedWording": true,
-          "part": "prompt"
-        }
-      ],
+      "uses": [],
       "sha256": "2614a34767d28cbe5406af98ecf25f4de342489a5d147ac94ba90df241cf7ffc",
       "bytes": 159914,
       "durationSeconds": 3.996725,
@@ -14678,7 +14589,8 @@
         "nativeGenerationSettingsObservedInUi": true,
         "observedSpeedDisplay": "0.80x · 160WPM",
         "audioDoesNotIndependentlyProveExactSynthesisSpeed": true
-      }
+      },
+      "supersededBy": "nr_obligation_emphasis_04_r44"
     },
     {
       "id": "nr_359",
@@ -18822,6 +18734,252 @@
         "independentExactNormalizedRecognition": true,
         "articleOmissionExceptionsAllowed": false
       }
+    },
+    {
+      "id": "nr_obligation_emphasis_01_r44",
+      "text": "Who do you think HAS TO help the kid in the middle?",
+      "src": "assets/narration/nr_obligation_emphasis_01_r44.mp3",
+      "kind": "prompt",
+      "status": "verified-phrase-emphasis-edit",
+      "uses": [
+        {
+          "stepId": "woman-mom-teacher:obligation-compare",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "woman-sister-friend:obligation-compare",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "woman-bestfriend-friend:obligation-compare",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "woman-teacher-friend:obligation-compare",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "woman-mom-sister:obligation-compare",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "woman-teacher-classmate:obligation-compare",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-dad-teacher:obligation-compare",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-brother-friend:obligation-compare",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-bestfriend-friend:obligation-compare",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-teacher-friend:obligation-compare",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-dad-brother:obligation-compare",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-teacher-classmate:obligation-compare",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "family-mom-dad:obligation-compare",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "family-sister-brother:obligation-compare",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "family-teacher-classmate:obligation-compare",
+          "proposedWording": true,
+          "part": "prompt"
+        }
+      ],
+      "sha256": "bc996c5ba0ffc6ebb83b00016a72be39c99f7fb1cffc3491bba1e5cd67be2ba9",
+      "bytes": 165138,
+      "durationSeconds": 4.101224,
+      "revisionCategory": "slower-has-to-r44",
+      "provenance": {
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "sourceClipId": "nr_257",
+        "sourceSha256": "27ced857c38e244f0250487f85cd15270c832027b7daeed5300aa6db46e8db8b",
+        "nativeRecordingUnedited": false,
+        "processing": "Pitch-preserving tempo adjustment and gentle gain emphasis on HAS TO; smooth 5ms joins. Other spoken words and source voice retained.",
+        "edit": {
+          "oldId": "nr_257",
+          "sourceSha256": "27ced857c38e244f0250487f85cd15270c832027b7daeed5300aa6db46e8db8b",
+          "sourceFile": "assets/narration/nr_257-child-flow-native.mp3",
+          "phrase": "HAS TO",
+          "sourcePhraseStart": 1.0508843537414967,
+          "sourcePhraseEnd": 1.5238321995464852,
+          "tempo": 0.72,
+          "emphasisGain": 1.15,
+          "boundaryBlendMilliseconds": 4.988662131519274,
+          "pitchPreserved": true,
+          "originalPhraseSeconds": 0.47294784580498866,
+          "revisedPhraseSeconds": 0.6378458049886622,
+          "peak": 0.6918854117393494
+        },
+        "independentExactNormalizedRecognition": true,
+        "recordingWordCheckMethod": "Unprompted full-sentence recognition from final MP3",
+        "cueAlignmentApproved": true
+      }
+    },
+    {
+      "id": "nr_obligation_emphasis_02_r44",
+      "text": "Who do you think HAS TO help the mom in the middle?",
+      "src": "assets/narration/nr_obligation_emphasis_02_r44.mp3",
+      "kind": "prompt",
+      "status": "verified-phrase-emphasis-edit",
+      "uses": [
+        {
+          "stepId": "family-dad-kid:obligation-compare",
+          "proposedWording": true,
+          "part": "prompt"
+        }
+      ],
+      "sha256": "2d0ef997b6d81654276602138856faf27935feb3f0c0d9a04e72b0980a5f8f34",
+      "bytes": 163048,
+      "durationSeconds": 4.04898,
+      "revisionCategory": "slower-has-to-r44",
+      "provenance": {
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "sourceClipId": "nr_260",
+        "sourceSha256": "2705e37f97e1a41c3b75175e290c71b884379e4f625bdcafe3dac1bad03473da",
+        "nativeRecordingUnedited": false,
+        "processing": "Pitch-preserving tempo adjustment and gentle gain emphasis on HAS TO; smooth 5ms joins. Other spoken words and source voice retained.",
+        "edit": {
+          "oldId": "nr_260",
+          "sourceSha256": "2705e37f97e1a41c3b75175e290c71b884379e4f625bdcafe3dac1bad03473da",
+          "sourceFile": "assets/narration/nr_260-child-flow-native.mp3",
+          "phrase": "HAS TO",
+          "sourcePhraseStart": 0.9978231292517007,
+          "sourcePhraseEnd": 1.506281179138322,
+          "tempo": 0.72,
+          "emphasisGain": 1.15,
+          "boundaryBlendMilliseconds": 4.988662131519274,
+          "pitchPreserved": true,
+          "originalPhraseSeconds": 0.5084580498866214,
+          "revisedPhraseSeconds": 0.6718140589569161,
+          "peak": 0.699847936630249
+        },
+        "independentExactNormalizedRecognition": true,
+        "recordingWordCheckMethod": "Unprompted full-sentence recognition from final MP3",
+        "cueAlignmentApproved": true
+      }
+    },
+    {
+      "id": "nr_obligation_emphasis_03_r44",
+      "text": "Who do you think HAS TO help the dad in the middle?",
+      "src": "assets/narration/nr_obligation_emphasis_03_r44.mp3",
+      "kind": "prompt",
+      "status": "verified-phrase-emphasis-edit",
+      "uses": [
+        {
+          "stepId": "family-mom-kid:obligation-compare",
+          "proposedWording": true,
+          "part": "prompt"
+        }
+      ],
+      "sha256": "c776847a8f0c5e136b34c9bcf2f2b18469021fd47886fe3631d3150322a1968b",
+      "bytes": 165138,
+      "durationSeconds": 4.101224,
+      "revisionCategory": "slower-has-to-r44",
+      "provenance": {
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "sourceClipId": "nr_263",
+        "sourceSha256": "69fddda664f048aa03ee408b6b929b6db6bc0383fe065ee90ec147bcf45636e4",
+        "nativeRecordingUnedited": false,
+        "processing": "Pitch-preserving tempo adjustment and gentle gain emphasis on HAS TO; smooth 5ms joins. Other spoken words and source voice retained.",
+        "edit": {
+          "oldId": "nr_263",
+          "sourceSha256": "69fddda664f048aa03ee408b6b929b6db6bc0383fe065ee90ec147bcf45636e4",
+          "sourceFile": "assets/narration/nr_263-child-flow-native.mp3",
+          "phrase": "HAS TO",
+          "sourcePhraseStart": 1.0359410430839002,
+          "sourcePhraseEnd": 1.5072562358276644,
+          "tempo": 0.72,
+          "emphasisGain": 1.15,
+          "boundaryBlendMilliseconds": 4.988662131519274,
+          "pitchPreserved": true,
+          "originalPhraseSeconds": 0.47131519274376416,
+          "revisedPhraseSeconds": 0.6378458049886622,
+          "peak": 0.69013911485672
+        },
+        "independentExactNormalizedRecognition": true,
+        "recordingWordCheckMethod": "Unprompted full-sentence recognition from final MP3",
+        "cueAlignmentApproved": true
+      }
+    },
+    {
+      "id": "nr_obligation_emphasis_04_r44",
+      "text": "Who do you think HAS TO help the teacher in the middle?",
+      "src": "assets/narration/nr_obligation_emphasis_04_r44.mp3",
+      "kind": "prompt",
+      "status": "verified-phrase-emphasis-edit",
+      "uses": [
+        {
+          "stepId": "family-teacher-kid:obligation-compare",
+          "proposedWording": true,
+          "part": "prompt"
+        }
+      ],
+      "sha256": "21404876e0684d0748a170aab8e4b8d6b59e5177c2640a542557a992dcef5b95",
+      "bytes": 169317,
+      "durationSeconds": 4.205714,
+      "revisionCategory": "slower-has-to-r44",
+      "provenance": {
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "sourceClipId": "nr_266",
+        "sourceSha256": "2614a34767d28cbe5406af98ecf25f4de342489a5d147ac94ba90df241cf7ffc",
+        "nativeRecordingUnedited": false,
+        "processing": "Pitch-preserving tempo adjustment and gentle gain emphasis on HAS TO; smooth 5ms joins. Other spoken words and source voice retained.",
+        "edit": {
+          "oldId": "nr_266",
+          "sourceSha256": "2614a34767d28cbe5406af98ecf25f4de342489a5d147ac94ba90df241cf7ffc",
+          "sourceFile": "assets/narration/nr_266-child-flow-native.mp3",
+          "phrase": "HAS TO",
+          "sourcePhraseStart": 1.0401360544217686,
+          "sourcePhraseEnd": 1.5499773242630386,
+          "tempo": 0.72,
+          "emphasisGain": 1.15,
+          "boundaryBlendMilliseconds": 4.988662131519274,
+          "pitchPreserved": true,
+          "originalPhraseSeconds": 0.5098412698412699,
+          "revisedPhraseSeconds": 0.6905215419501134,
+          "peak": 0.6399433612823486
+        },
+        "independentExactNormalizedRecognition": true,
+        "recordingWordCheckMethod": "Unprompted full-sentence recognition from final MP3",
+        "cueAlignmentApproved": true
+      }
     }
   ],
   "screens": {
@@ -18944,7 +19102,7 @@
       "proposedWording": false
     },
     "woman-mom-teacher:obligation-compare": {
-      "prompt": "nr_257",
+      "prompt": "nr_obligation_emphasis_01_r44",
       "reminder": null,
       "options": [
         "nr_051",
@@ -19217,7 +19375,7 @@
       "proposedWording": false
     },
     "woman-sister-friend:obligation-compare": {
-      "prompt": "nr_257",
+      "prompt": "nr_obligation_emphasis_01_r44",
       "reminder": null,
       "options": [
         "nr_073",
@@ -19490,7 +19648,7 @@
       "proposedWording": false
     },
     "woman-bestfriend-friend:obligation-compare": {
-      "prompt": "nr_257",
+      "prompt": "nr_obligation_emphasis_01_r44",
       "reminder": null,
       "options": [
         "nr_074",
@@ -19763,7 +19921,7 @@
       "proposedWording": false
     },
     "woman-teacher-friend:obligation-compare": {
-      "prompt": "nr_257",
+      "prompt": "nr_obligation_emphasis_01_r44",
       "reminder": null,
       "options": [
         "nr_051",
@@ -20036,7 +20194,7 @@
       "proposedWording": false
     },
     "woman-mom-sister:obligation-compare": {
-      "prompt": "nr_257",
+      "prompt": "nr_obligation_emphasis_01_r44",
       "reminder": null,
       "options": [
         "nr_052",
@@ -20309,7 +20467,7 @@
       "proposedWording": false
     },
     "woman-teacher-classmate:obligation-compare": {
-      "prompt": "nr_257",
+      "prompt": "nr_obligation_emphasis_01_r44",
       "reminder": null,
       "options": [
         "nr_102",
@@ -20582,7 +20740,7 @@
       "proposedWording": false
     },
     "man-dad-teacher:obligation-compare": {
-      "prompt": "nr_257",
+      "prompt": "nr_obligation_emphasis_01_r44",
       "reminder": null,
       "options": [
         "nr_051",
@@ -20855,7 +21013,7 @@
       "proposedWording": false
     },
     "man-brother-friend:obligation-compare": {
-      "prompt": "nr_257",
+      "prompt": "nr_obligation_emphasis_01_r44",
       "reminder": null,
       "options": [
         "nr_126",
@@ -21128,7 +21286,7 @@
       "proposedWording": false
     },
     "man-bestfriend-friend:obligation-compare": {
-      "prompt": "nr_257",
+      "prompt": "nr_obligation_emphasis_01_r44",
       "reminder": null,
       "options": [
         "nr_074",
@@ -21401,7 +21559,7 @@
       "proposedWording": false
     },
     "man-teacher-friend:obligation-compare": {
-      "prompt": "nr_257",
+      "prompt": "nr_obligation_emphasis_01_r44",
       "reminder": null,
       "options": [
         "nr_051",
@@ -21674,7 +21832,7 @@
       "proposedWording": false
     },
     "man-dad-brother:obligation-compare": {
-      "prompt": "nr_257",
+      "prompt": "nr_obligation_emphasis_01_r44",
       "reminder": null,
       "options": [
         "nr_114",
@@ -21947,7 +22105,7 @@
       "proposedWording": false
     },
     "man-teacher-classmate:obligation-compare": {
-      "prompt": "nr_257",
+      "prompt": "nr_obligation_emphasis_01_r44",
       "reminder": null,
       "options": [
         "nr_102",
@@ -22220,7 +22378,7 @@
       "proposedWording": false
     },
     "family-mom-dad:obligation-compare": {
-      "prompt": "nr_257",
+      "prompt": "nr_obligation_emphasis_01_r44",
       "reminder": null,
       "options": [
         "nr_114",
@@ -22493,7 +22651,7 @@
       "proposedWording": false
     },
     "family-sister-brother:obligation-compare": {
-      "prompt": "nr_257",
+      "prompt": "nr_obligation_emphasis_01_r44",
       "reminder": null,
       "options": [
         "nr_073",
@@ -22766,7 +22924,7 @@
       "proposedWording": false
     },
     "family-dad-kid:obligation-compare": {
-      "prompt": "nr_260",
+      "prompt": "nr_obligation_emphasis_02_r44",
       "reminder": null,
       "options": [
         "nr_114",
@@ -23039,7 +23197,7 @@
       "proposedWording": false
     },
     "family-mom-kid:obligation-compare": {
-      "prompt": "nr_263",
+      "prompt": "nr_obligation_emphasis_03_r44",
       "reminder": null,
       "options": [
         "nr_153",
@@ -23312,7 +23470,7 @@
       "proposedWording": false
     },
     "family-teacher-kid:obligation-compare": {
-      "prompt": "nr_266",
+      "prompt": "nr_obligation_emphasis_04_r44",
       "reminder": null,
       "options": [
         "nr_194",
@@ -23585,7 +23743,7 @@
       "proposedWording": false
     },
     "family-teacher-classmate:obligation-compare": {
-      "prompt": "nr_257",
+      "prompt": "nr_obligation_emphasis_01_r44",
       "reminder": null,
       "options": [
         "nr_102",
