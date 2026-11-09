@@ -29060,8 +29060,309 @@
       "decodedDurationSeconds": 2.56,
       "exactNormalizedWordMatch": true,
       "alignmentValid": true
+    },
+    "nr_obligation_emphasis_01_r51": {
+      "id": "nr_obligation_emphasis_01_r51",
+      "sha256": "9e2eb58b38dcab14a95b3ac0296d85f302d1697a53bc065731adbbda11d83451",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "expectedText": "Who do you think HAS TO help the kid in the middle?",
+      "recognizedText": "Who do you think has to help the kid in the middle?",
+      "words": [
+        {
+          "word": "Who",
+          "start": 0.0,
+          "end": 0.4
+        },
+        {
+          "word": "do",
+          "start": 0.4,
+          "end": 0.52
+        },
+        {
+          "word": "you",
+          "start": 0.52,
+          "end": 0.62
+        },
+        {
+          "word": "think",
+          "start": 0.62,
+          "end": 0.94
+        },
+        {
+          "word": "has",
+          "start": 0.94,
+          "end": 1.22
+        },
+        {
+          "word": "to",
+          "start": 1.22,
+          "end": 1.56
+        },
+        {
+          "word": "help",
+          "start": 1.56,
+          "end": 1.96
+        },
+        {
+          "word": "the",
+          "start": 1.96,
+          "end": 2.22
+        },
+        {
+          "word": "kid",
+          "start": 2.22,
+          "end": 2.52
+        },
+        {
+          "word": "in",
+          "start": 2.52,
+          "end": 2.7
+        },
+        {
+          "word": "the",
+          "start": 2.7,
+          "end": 2.8
+        },
+        {
+          "word": "middle?",
+          "start": 2.8,
+          "end": 3.58
+        }
+      ],
+      "decodedDurationSeconds": 3.9511875,
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true
+    },
+    "nr_obligation_emphasis_02_r51": {
+      "id": "nr_obligation_emphasis_02_r51",
+      "sha256": "ed2096a053533f9a70cfc0c7583cbd4d93d534efd034c218fc557d82613cfc34",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "expectedText": "Who do you think HAS TO help the mom in the middle?",
+      "recognizedText": "Who do you think has to help the mom in the middle?",
+      "words": [
+        {
+          "word": "Who",
+          "start": 0.0,
+          "end": 0.4
+        },
+        {
+          "word": "do",
+          "start": 0.4,
+          "end": 0.52
+        },
+        {
+          "word": "you",
+          "start": 0.52,
+          "end": 0.62
+        },
+        {
+          "word": "think",
+          "start": 0.62,
+          "end": 0.92
+        },
+        {
+          "word": "has",
+          "start": 0.92,
+          "end": 1.22
+        },
+        {
+          "word": "to",
+          "start": 1.22,
+          "end": 1.52
+        },
+        {
+          "word": "help",
+          "start": 1.52,
+          "end": 1.9
+        },
+        {
+          "word": "the",
+          "start": 1.9,
+          "end": 2.18
+        },
+        {
+          "word": "mom",
+          "start": 2.18,
+          "end": 2.36
+        },
+        {
+          "word": "in",
+          "start": 2.36,
+          "end": 2.66
+        },
+        {
+          "word": "the",
+          "start": 2.66,
+          "end": 2.76
+        },
+        {
+          "word": "middle?",
+          "start": 2.76,
+          "end": 3.54
+        }
+      ],
+      "decodedDurationSeconds": 3.883375,
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true
+    },
+    "nr_obligation_emphasis_03_r51": {
+      "id": "nr_obligation_emphasis_03_r51",
+      "sha256": "d85aec0c2a1c8171a314d9113eff2e483e4c59aae5a0157e73ed2a96490c65fa",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "expectedText": "Who do you think HAS TO help the dad in the middle?",
+      "recognizedText": "Who do you think has to help the dad in the middle?",
+      "words": [
+        {
+          "word": "Who",
+          "start": 0.0,
+          "end": 0.4
+        },
+        {
+          "word": "do",
+          "start": 0.4,
+          "end": 0.52
+        },
+        {
+          "word": "you",
+          "start": 0.52,
+          "end": 0.6
+        },
+        {
+          "word": "think",
+          "start": 0.6,
+          "end": 0.92
+        },
+        {
+          "word": "has",
+          "start": 0.92,
+          "end": 1.22
+        },
+        {
+          "word": "to",
+          "start": 1.22,
+          "end": 1.54
+        },
+        {
+          "word": "help",
+          "start": 1.54,
+          "end": 1.92
+        },
+        {
+          "word": "the",
+          "start": 1.92,
+          "end": 2.22
+        },
+        {
+          "word": "dad",
+          "start": 2.22,
+          "end": 2.48
+        },
+        {
+          "word": "in",
+          "start": 2.48,
+          "end": 2.7
+        },
+        {
+          "word": "the",
+          "start": 2.7,
+          "end": 2.8
+        },
+        {
+          "word": "middle?",
+          "start": 2.8,
+          "end": 3.56
+        }
+      ],
+      "decodedDurationSeconds": 3.948375,
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true
+    },
+    "nr_obligation_emphasis_04_r51": {
+      "id": "nr_obligation_emphasis_04_r51",
+      "sha256": "15f6d7ecab29253ffe151501ed1118592aaa401e2dc3ce5a94ec1aa59d1106c1",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "expectedText": "Who do you think HAS TO help the teacher in the middle?",
+      "recognizedText": "Who do you think has to help the teacher in the middle?",
+      "words": [
+        {
+          "word": "Who",
+          "start": 0.0,
+          "end": 0.42
+        },
+        {
+          "word": "do",
+          "start": 0.42,
+          "end": 0.54
+        },
+        {
+          "word": "you",
+          "start": 0.54,
+          "end": 0.62
+        },
+        {
+          "word": "think",
+          "start": 0.62,
+          "end": 0.94
+        },
+        {
+          "word": "has",
+          "start": 0.94,
+          "end": 1.24
+        },
+        {
+          "word": "to",
+          "start": 1.24,
+          "end": 1.56
+        },
+        {
+          "word": "help",
+          "start": 1.56,
+          "end": 1.94
+        },
+        {
+          "word": "the",
+          "start": 1.94,
+          "end": 2.22
+        },
+        {
+          "word": "teacher",
+          "start": 2.22,
+          "end": 2.58
+        },
+        {
+          "word": "in",
+          "start": 2.58,
+          "end": 2.8
+        },
+        {
+          "word": "the",
+          "start": 2.8,
+          "end": 2.88
+        },
+        {
+          "word": "middle?",
+          "start": 2.88,
+          "end": 3.74
+        }
+      ],
+      "decodedDurationSeconds": 3.9984375,
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true
     }
   },
   "reuseNote": "Verified existing hash-bound timestamps are preserved, including historical inactive entries. Newly reused exact-text ready option recordings copy their original timestamp entries without realignment.",
-  "pairedQuestionTimingsNote": "Original paired helper questions aligned offline to their unchanged recordings on 2026-11-08; each role-name phrase glows in its actual left/right position."
+  "pairedQuestionTimingsNote": "Original paired helper questions aligned offline to their unchanged recordings on 2026-11-08; each role-name phrase glows in its actual left/right position.",
+  "obligationEmphasisRevision": "r51-pause-after-has-to"
 }
