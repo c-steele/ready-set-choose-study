@@ -28370,7 +28370,698 @@
       "decodedDurationSeconds": 4.127375,
       "exactNormalizedWordMatch": true,
       "alignmentValid": true
+    },
+    "ftc_036": {
+      "id": "ftc_036",
+      "sha256": "1c15cef986854bf598eb93194e20dadef4394b819cc93fa7f61cd9d2c0d7d0ab",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "expectedText": "The kid’s teacher or the kid’s mom?",
+      "recognizedText": "the kids' teacher or the kids' mom.",
+      "words": [
+        {
+          "word": "the",
+          "start": 0.0,
+          "end": 0.26
+        },
+        {
+          "word": "kids'",
+          "start": 0.26,
+          "end": 0.68
+        },
+        {
+          "word": "teacher",
+          "start": 0.68,
+          "end": 1.04
+        },
+        {
+          "word": "or",
+          "start": 1.04,
+          "end": 1.3
+        },
+        {
+          "word": "the",
+          "start": 1.3,
+          "end": 1.44
+        },
+        {
+          "word": "kids'",
+          "start": 1.44,
+          "end": 1.84
+        },
+        {
+          "word": "mom.",
+          "start": 1.84,
+          "end": 2.52
+        }
+      ],
+      "decodedDurationSeconds": 2.847375,
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true
+    },
+    "ftc_037": {
+      "id": "ftc_037",
+      "sha256": "d8b74fef36efb8c4b13dd7ee2187ad733286632665f9595eb77f9a3d8b239d3b",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "expectedText": "The kid’s sister or the kid’s friend?",
+      "recognizedText": "the kid's sister or the kid's friend.",
+      "words": [
+        {
+          "word": "the",
+          "start": 0.0,
+          "end": 0.24
+        },
+        {
+          "word": "kid's",
+          "start": 0.24,
+          "end": 0.6
+        },
+        {
+          "word": "sister",
+          "start": 0.6,
+          "end": 0.96
+        },
+        {
+          "word": "or",
+          "start": 0.96,
+          "end": 1.24
+        },
+        {
+          "word": "the",
+          "start": 1.24,
+          "end": 1.38
+        },
+        {
+          "word": "kid's",
+          "start": 1.38,
+          "end": 1.74
+        },
+        {
+          "word": "friend.",
+          "start": 1.74,
+          "end": 2.68
+        }
+      ],
+      "decodedDurationSeconds": 2.847375,
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true
+    },
+    "ftc_060": {
+      "id": "ftc_060",
+      "sha256": "a2214d67d2450431bf3b9d284d833f4244c5a516347076608c2dedea2afb92be",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "expectedText": "The kid’s friend or the kid’s best friend?",
+      "recognizedText": "The kid's friend or the kid's best friend.",
+      "words": [
+        {
+          "word": "The",
+          "start": 0.0,
+          "end": 0.24
+        },
+        {
+          "word": "kid's",
+          "start": 0.24,
+          "end": 0.62
+        },
+        {
+          "word": "friend",
+          "start": 0.62,
+          "end": 0.82
+        },
+        {
+          "word": "or",
+          "start": 0.82,
+          "end": 1.16
+        },
+        {
+          "word": "the",
+          "start": 1.16,
+          "end": 1.28
+        },
+        {
+          "word": "kid's",
+          "start": 1.28,
+          "end": 1.66
+        },
+        {
+          "word": "best",
+          "start": 1.66,
+          "end": 1.82
+        },
+        {
+          "word": "friend.",
+          "start": 1.82,
+          "end": 2.78
+        }
+      ],
+      "decodedDurationSeconds": 3.1085625,
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true
+    },
+    "ftc_015": {
+      "id": "ftc_015",
+      "sha256": "0c8b521e9e56c4b35f50f378a8497f8a794451950065521bb200ec9a1e873a85",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "expectedText": "The kid’s teacher or the kid’s friend?",
+      "recognizedText": "the kids' teacher or the kids' friend.",
+      "words": [
+        {
+          "word": "the",
+          "start": 0.0,
+          "end": 0.24
+        },
+        {
+          "word": "kids'",
+          "start": 0.24,
+          "end": 0.66
+        },
+        {
+          "word": "teacher",
+          "start": 0.66,
+          "end": 1.02
+        },
+        {
+          "word": "or",
+          "start": 1.02,
+          "end": 1.28
+        },
+        {
+          "word": "the",
+          "start": 1.28,
+          "end": 1.4
+        },
+        {
+          "word": "kids'",
+          "start": 1.4,
+          "end": 1.8
+        },
+        {
+          "word": "friend.",
+          "start": 1.8,
+          "end": 2.7
+        }
+      ],
+      "decodedDurationSeconds": 2.8735,
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true
+    },
+    "ftc_007": {
+      "id": "ftc_007",
+      "sha256": "050d3e90fa30534aefd82b1132e80ba0a35c6f7523db171854d990020c1d8e31",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "expectedText": "The kid’s mom or the kid’s sister?",
+      "recognizedText": "The kids mom or the kids sister.",
+      "words": [
+        {
+          "word": "The",
+          "start": 0.0,
+          "end": 0.24
+        },
+        {
+          "word": "kids",
+          "start": 0.24,
+          "end": 0.46
+        },
+        {
+          "word": "mom",
+          "start": 0.46,
+          "end": 0.78
+        },
+        {
+          "word": "or",
+          "start": 0.78,
+          "end": 1.14
+        },
+        {
+          "word": "the",
+          "start": 1.14,
+          "end": 1.26
+        },
+        {
+          "word": "kids",
+          "start": 1.26,
+          "end": 1.5
+        },
+        {
+          "word": "sister.",
+          "start": 1.5,
+          "end": 2.54
+        }
+      ],
+      "decodedDurationSeconds": 2.82125,
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true
+    },
+    "ftc_classmate_or_teacher": {
+      "id": "ftc_classmate_or_teacher",
+      "sha256": "88992cb50601d55284e8a1e8fdeced5bacdf2e5225333e45efae5788df207912",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "expectedText": "The kid’s classmate or the kid’s teacher?",
+      "recognizedText": "The kids classmate or the kids teacher.",
+      "words": [
+        {
+          "word": "The",
+          "start": 0.0,
+          "end": 0.26
+        },
+        {
+          "word": "kids",
+          "start": 0.26,
+          "end": 0.5
+        },
+        {
+          "word": "classmate",
+          "start": 0.5,
+          "end": 1.1
+        },
+        {
+          "word": "or",
+          "start": 1.1,
+          "end": 1.42
+        },
+        {
+          "word": "the",
+          "start": 1.42,
+          "end": 1.54
+        },
+        {
+          "word": "kids",
+          "start": 1.54,
+          "end": 1.8
+        },
+        {
+          "word": "teacher.",
+          "start": 1.8,
+          "end": 2.86
+        }
+      ],
+      "decodedDurationSeconds": 3.0824375,
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true
+    },
+    "ftc_051": {
+      "id": "ftc_051",
+      "sha256": "5994af059bad4a2b1984983d8fa68802e87a58a64975fda07bb0b8e21ddd217b",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "expectedText": "The kid’s teacher or the kid’s dad?",
+      "recognizedText": "The kids teacher or the kids dad?",
+      "words": [
+        {
+          "word": "The",
+          "start": 0.0,
+          "end": 0.24
+        },
+        {
+          "word": "kids",
+          "start": 0.24,
+          "end": 0.44
+        },
+        {
+          "word": "teacher",
+          "start": 0.44,
+          "end": 0.78
+        },
+        {
+          "word": "or",
+          "start": 0.78,
+          "end": 1.22
+        },
+        {
+          "word": "the",
+          "start": 1.22,
+          "end": 1.36
+        },
+        {
+          "word": "kids",
+          "start": 1.36,
+          "end": 1.6
+        },
+        {
+          "word": "dad?",
+          "start": 1.6,
+          "end": 2.46
+        }
+      ],
+      "decodedDurationSeconds": 2.795125,
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true
+    },
+    "ftc_052": {
+      "id": "ftc_052",
+      "sha256": "a9295c0d71b938bc3323b3ee49b62eb0197994948842ed55f0dddbd06cb26c1c",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "expectedText": "The kid’s brother or the kid’s friend?",
+      "recognizedText": "The kid's brother or the kid's friend.",
+      "words": [
+        {
+          "word": "The",
+          "start": 0.0,
+          "end": 0.24
+        },
+        {
+          "word": "kid's",
+          "start": 0.24,
+          "end": 0.6
+        },
+        {
+          "word": "brother",
+          "start": 0.6,
+          "end": 0.92
+        },
+        {
+          "word": "or",
+          "start": 0.92,
+          "end": 1.24
+        },
+        {
+          "word": "the",
+          "start": 1.24,
+          "end": 1.38
+        },
+        {
+          "word": "kid's",
+          "start": 1.38,
+          "end": 1.76
+        },
+        {
+          "word": "friend.",
+          "start": 1.76,
+          "end": 2.72
+        }
+      ],
+      "decodedDurationSeconds": 2.8735,
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true
+    },
+    "ftc_040": {
+      "id": "ftc_040",
+      "sha256": "d9206fba28ac010724db22cb582c43db35ec395eadae5f18662d27a435729887",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "expectedText": "The kid’s dad or the kid’s brother?",
+      "recognizedText": "The kids' dad or the kids' brother.",
+      "words": [
+        {
+          "word": "The",
+          "start": 0.0,
+          "end": 0.24
+        },
+        {
+          "word": "kids'",
+          "start": 0.24,
+          "end": 0.66
+        },
+        {
+          "word": "dad",
+          "start": 0.66,
+          "end": 0.88
+        },
+        {
+          "word": "or",
+          "start": 0.88,
+          "end": 1.12
+        },
+        {
+          "word": "the",
+          "start": 1.12,
+          "end": 1.26
+        },
+        {
+          "word": "kids'",
+          "start": 1.26,
+          "end": 1.66
+        },
+        {
+          "word": "brother.",
+          "start": 1.66,
+          "end": 2.52
+        }
+      ],
+      "decodedDurationSeconds": 2.742875,
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true
+    },
+    "ftc_055": {
+      "id": "ftc_055",
+      "sha256": "db6a5d994164bdd61470ae99c3362bf0e7f17074cb4f59344ebf578034c5589e",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "expectedText": "The kid’s dad or the kid’s mom?",
+      "recognizedText": "The kids' dad or the kids' mom?",
+      "words": [
+        {
+          "word": "The",
+          "start": 0.0,
+          "end": 0.26
+        },
+        {
+          "word": "kids'",
+          "start": 0.26,
+          "end": 0.7
+        },
+        {
+          "word": "dad",
+          "start": 0.7,
+          "end": 0.94
+        },
+        {
+          "word": "or",
+          "start": 0.94,
+          "end": 1.12
+        },
+        {
+          "word": "the",
+          "start": 1.12,
+          "end": 1.26
+        },
+        {
+          "word": "kids'",
+          "start": 1.26,
+          "end": 1.64
+        },
+        {
+          "word": "mom?",
+          "start": 1.64,
+          "end": 2.3
+        }
+      ],
+      "decodedDurationSeconds": 2.638375,
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true
+    },
+    "ftc_056": {
+      "id": "ftc_056",
+      "sha256": "8d663733bb9ac80e79653c06f2f2e6500df572e52fd26ceb67f203baf4c1aeef",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "expectedText": "The kid’s sister or the kid’s brother?",
+      "recognizedText": "the kid's sister or the kid's brother.",
+      "words": [
+        {
+          "word": "the",
+          "start": 0.0,
+          "end": 0.24
+        },
+        {
+          "word": "kid's",
+          "start": 0.24,
+          "end": 0.6
+        },
+        {
+          "word": "sister",
+          "start": 0.6,
+          "end": 0.98
+        },
+        {
+          "word": "or",
+          "start": 0.98,
+          "end": 1.26
+        },
+        {
+          "word": "the",
+          "start": 1.26,
+          "end": 1.4
+        },
+        {
+          "word": "kid's",
+          "start": 1.4,
+          "end": 1.76
+        },
+        {
+          "word": "brother.",
+          "start": 1.76,
+          "end": 2.68
+        }
+      ],
+      "decodedDurationSeconds": 2.899625,
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true
+    },
+    "ftc_020": {
+      "id": "ftc_020",
+      "sha256": "a552dfba634dbaae7c54bc8bb776522a996cec6fcad797da19eff54153f4232d",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "expectedText": "The kid’s dad or the kid?",
+      "recognizedText": "The kids' dad or the kid.",
+      "words": [
+        {
+          "word": "The",
+          "start": 0.0,
+          "end": 0.24
+        },
+        {
+          "word": "kids'",
+          "start": 0.24,
+          "end": 0.68
+        },
+        {
+          "word": "dad",
+          "start": 0.68,
+          "end": 0.94
+        },
+        {
+          "word": "or",
+          "start": 0.94,
+          "end": 1.14
+        },
+        {
+          "word": "the",
+          "start": 1.14,
+          "end": 1.26
+        },
+        {
+          "word": "kid.",
+          "start": 1.26,
+          "end": 2.06
+        }
+      ],
+      "decodedDurationSeconds": 2.377125,
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true
+    },
+    "ftc_049": {
+      "id": "ftc_049",
+      "sha256": "9a6571a425da0e140f7a697a90a1880d1dc51311947b27732d8202f453619e09",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "expectedText": "The kid or the kid’s mom?",
+      "recognizedText": "The kid or the kid's mom?",
+      "words": [
+        {
+          "word": "The",
+          "start": 0.0,
+          "end": 0.26
+        },
+        {
+          "word": "kid",
+          "start": 0.26,
+          "end": 0.6
+        },
+        {
+          "word": "or",
+          "start": 0.6,
+          "end": 0.82
+        },
+        {
+          "word": "the",
+          "start": 0.82,
+          "end": 0.94
+        },
+        {
+          "word": "kid's",
+          "start": 0.94,
+          "end": 1.32
+        },
+        {
+          "word": "mom?",
+          "start": 1.32,
+          "end": 2.04
+        }
+      ],
+      "decodedDurationSeconds": 2.351,
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true
+    },
+    "ftc_029": {
+      "id": "ftc_029",
+      "sha256": "0fa5d97b067604f39bd415bd8f6c1a68395cd304ec0c4481b7a6b296b84f0874",
+      "model": "openai/whisper-base.en",
+      "modelRevision": "911407f4214e0e1d82085af863093ec0b66f9cd6",
+      "offline": true,
+      "expectedTextProvidedToRecognizer": false,
+      "expectedText": "The kid’s teacher or the kid?",
+      "recognizedText": "The kid's teacher or the kid.",
+      "words": [
+        {
+          "word": "The",
+          "start": 0.0,
+          "end": 0.24
+        },
+        {
+          "word": "kid's",
+          "start": 0.24,
+          "end": 0.6
+        },
+        {
+          "word": "teacher",
+          "start": 0.6,
+          "end": 1.02
+        },
+        {
+          "word": "or",
+          "start": 1.02,
+          "end": 1.3
+        },
+        {
+          "word": "the",
+          "start": 1.3,
+          "end": 1.44
+        },
+        {
+          "word": "kid.",
+          "start": 1.44,
+          "end": 2.32
+        }
+      ],
+      "decodedDurationSeconds": 2.56,
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true
     }
   },
-  "reuseNote": "Verified existing hash-bound timestamps are preserved, including historical inactive entries. Newly reused exact-text ready option recordings copy their original timestamp entries without realignment."
+  "reuseNote": "Verified existing hash-bound timestamps are preserved, including historical inactive entries. Newly reused exact-text ready option recordings copy their original timestamp entries without realignment.",
+  "pairedQuestionTimingsNote": "Original paired helper questions aligned offline to their unchanged recordings on 2026-11-08; each role-name phrase glows in its actual left/right position."
 }

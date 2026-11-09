@@ -34,6 +34,7 @@
   };
   window.ObligationInteractionRules=interactionRules;
   function isAutomaticStoryStep(s){return childView&&!s.choices&&!s.point&&!s.virtualType&&s.localId!=='end';}
+  function canPreviewAdvance(s){return !chsBridge?.embedded&&isAutomaticStoryStep(s);}
   function clearAutomaticAdvance(){advanceGeneration++;if(autoAdvanceTimer!==null){clearTimeout(autoAdvanceTimer);autoAdvanceTimer=null;}}
   function scheduleAutomaticAdvance(s){
     clearAutomaticAdvance();
@@ -49,7 +50,7 @@
   // A native browser may reject audible autoplay until the first real gesture.
   // Retry that pending recording from a tap anywhere on the story itself.
   function enablePendingAudio(event){
-    if(!childView||!audioStartRequired||!event.isTrusted||event.target.closest?.('.child-replay,.child-stop'))return;
+    if(!childView||!audioStartRequired||!event.isTrusted||event.target.closest?.('.child-replay,.child-stop,.child-next'))return;
     if(event.type==='keydown'&&!['Enter',' '].includes(event.key))return;
     playChildNarration();
   }
@@ -106,6 +107,16 @@
   function spokenCueSpans(s,clipId,optionIndex=null){
     const words=recordingWords(clipId,optionIndex!==null),spans=[];
     if(!words.length)return spans;
+    // The original alternatives are one complete recording, in left/right order.
+    // Split its verified word timings at OR, including adult-recipient variants
+    // whose spoken relationship names differ from their internal response labels.
+    if(clipId===narration.screenFor(s).choiceQuestion&&helperChoiceActors(s).length===2){
+      const at=words.findIndex(word=>word.token==='or');
+      if(at>0&&at<words.length-1)return [words.slice(0,at),words.slice(at+1)].map((phrase,i)=>({
+        actorId:choiceActorId(s,i),optionIndex:i,start:phrase[0].start,end:phrase[phrase.length-1].end
+      }));
+      return spans;
+    }
     if(optionIndex!==null){
       // Each option is a separate verified recording. A recognizer spelling
       // error (for example Mean/Meen) need not suppress its voiced interval.
@@ -163,8 +174,12 @@
     stage.querySelectorAll('.narration-actor-current,.option-current,.choice-bounce-a,.choice-bounce-b,.outcome-spoken').forEach(element=>element.classList.remove('narration-actor-current','option-current','choice-bounce-a','choice-bounce-b','outcome-spoken'));
   }
   function showSpokenCues(spans,seconds){
-    // Narration moves the speaking face, but never flashes or bounces a helper.
+    // Only question-page helper targets glow; characters never move or bounce.
     stage.classList.add('child-speaking');
+    stage.querySelectorAll('.character-choice-target').forEach(button=>{
+      const active=spans.some(cue=>cue.actorId===button.dataset.narrationActor&&seconds>=cue.start&&seconds<cue.end);
+      button.classList.toggle('narration-actor-current',active);
+    });
     const captionCue=spans.find(cue=>cue.captionText&&seconds>=cue.start&&seconds<cue.end);
     const heading=stage.querySelector('.prompt h2');
     if(captionCue&&heading&&heading.textContent!==captionCue.captionText)heading.textContent=captionCue.captionText;
@@ -195,13 +210,20 @@
     if(value && index === 0){openIntroduction();return;}
     if(value&&!$('player').hidden)playNarration();
   }
-  function childFooter(s){return `<div class="child-session-footer"><div class="child-helper" aria-hidden="true"><span class="child-helper-face"><i></i></span><span class="child-helper-bubble">Listen and look!</span></div><div class="child-audio-controls"><button class="child-replay" type="button"><span class="child-control-symbol" aria-hidden="true">▶</span><span class="child-control-label">Listen</span></button>${!s.choices&&!s.point&&!s.virtualType?'<div class="answers child-continue"><button class="continue-answer" data-answer="0" aria-label="Next">➜</button></div>':''}<button class="child-stop" type="button" hidden>Pause</button></div></div>`;}
+  function childFooter(s){
+    const next=!s.choices&&!s.point&&!s.virtualType?`<div class="answers child-continue"><button class="continue-answer child-next" type="button" ${s.localId==='end'?'data-answer="0"':'data-next'} aria-label="Next"><span class="child-control-symbol" aria-hidden="true">➜</span><span class="child-control-label">Next</span></button></div>`:'';
+    return `<div class="child-session-footer"><div class="child-helper" aria-hidden="true"><span class="child-helper-face"><i></i></span><span class="child-helper-bubble">Listen and look!</span></div><div class="child-audio-controls"><button class="child-replay" type="button"><span class="child-control-symbol" aria-hidden="true">▶</span><span class="child-control-label">Listen</span></button>${next}<button class="child-stop" type="button" hidden>Pause</button></div></div>`;
+  }
   function narrationIds(s){
     const map=narration.screenFor(s);
     if(wrong&&map.reminder)return [map.reminder,...(s.rereadAfterReminder?[map.prompt]:[])].filter(Boolean);
     return [map.prompt].filter(Boolean);
   }
-  function gateNarration(locked){stage.querySelectorAll('[data-answer],[data-point],[data-read-options],#continue-check').forEach(b=>b.disabled=locked);}
+  function gateNarration(locked){
+    stage.querySelectorAll('[data-answer],[data-point],[data-read-options],#continue-check').forEach(b=>b.disabled=locked);
+    const next=stage.querySelector('[data-next]');
+    if(next)next.disabled=locked&&!canPreviewAdvance(activeStep());
+  }
   function stopNarration(){clearAutomaticAdvance();narrationRun?.cancel();narrationRun=null;narration.stop();narrationPlaying=false;clearSpokenCues();gateNarration(!screenHeard);$('stop-narration').disabled=true;syncChildControls();}
   function narrationStatus(){
     const s=activeStep(),ids=[...narrationIds(s),...(!wrong&&s.choices&&!embeddedChoices(s)?(narration.screenFor(s).choiceQuestion ? [narration.screenFor(s).choiceQuestion] : narration.screenFor(s).options):[])],ready=ids.length>0&&ids.every(id=>narration.clipsById[id]?.src);
@@ -307,6 +329,13 @@
     stage.innerHTML=prompt(s)+visual+choiceCaption(s)+feedback+options+childFooter(s);
     stage.querySelector('.child-replay').addEventListener('click',playChildNarration);
     stage.querySelector('.child-stop').addEventListener('click',pauseChildPlayback);
+    stage.querySelector('[data-next]')?.addEventListener('click',()=>{
+      if(activeStep().id!==s.id)return;
+      if(canPreviewAdvance(s)){
+        if(!screenHeard)markBrowse();
+        commit('Continue');
+      }else if(screenHeard&&!narrationPlaying)respond('Continue');
+    });
     $('step-note').innerHTML=`${s.proposed?'<strong>Proposed wording · </strong>':''}${esc(branchNote(s)+(s.note||'Adapted from Marshall Study 1.'))}`;
     stage.querySelectorAll('[data-answer]').forEach(b=>b.addEventListener('click',()=>respond((s.choices||['Continue'])[Number(b.dataset.answer)])));
     stage.querySelectorAll('[data-point]').forEach(b=>b.addEventListener('click',()=>respond(b.dataset.point)));

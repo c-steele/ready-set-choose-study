@@ -52,3 +52,5 @@ New forced-choice prompts need new NaturalReaders recordings. Existing recording
 This is a two-helper sadness adaptation using the relationship pairings from Find the Caregiver. It is not a verbatim copy of Marshall et al. (2022), Study 1, which used individual Yes/No prediction and obligation measures with follow-ups. Brief practice, explicit nonhelping narration, corrective reminders, fixed review order, and on-screen taps are implementation choices in this draft. Six stories per role set is retained for review; assignment and randomized presentation order are separate study-design decisions.
 
 This preview is for reviewing the proposed task. Do not submit, activate, or recruit from this draft without the user’s separate instruction.
+
+The green Next arrow is visible beside Replay on narration pages. Standalone review links can advance before narration ends; embedded CHS sessions retain the narration gate. Question pages still require a response. Helper-question outlines glow in place during each role name in the original paired recording, using verified recording-specific word timings.

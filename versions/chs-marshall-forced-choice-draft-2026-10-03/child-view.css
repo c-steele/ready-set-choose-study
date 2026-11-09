@@ -479,13 +479,13 @@ body.child-view .answers button.spoken-choice.option-current{box-shadow:0 0 0 5p
 body.child-view .stage.message-slide{min-height:calc(100vh - 82px);min-height:calc(100dvh - 82px)}
 body.child-view .stage.message-slide .prompt{flex:1;margin-block:auto;padding:clamp(26px,5vh,60px) 30px;background:#fff;color:#292821}
 body.child-view .stage.message-slide .prompt h2{font-size:clamp(29px,3.3vw,43px);line-height:1.25;max-width:24ch;text-wrap:balance}
-body.child-view .answers button.continue-answer{font-size:42px;line-height:1;flex-direction:row;gap:0;padding:7px 20px}
+body.child-view .answers button.continue-answer{font-size:42px;line-height:1;flex-direction:column;gap:3px;padding:7px 20px}
+body.child-view .child-next .child-control-symbol{font-size:42px}
 body.child-view .answers button.continue-answer::before{content:none!important;display:none!important}
 @media(max-width:460px){body.child-view .stage.message-slide .prompt{padding:26px 22px}body.child-view .stage.message-slide .prompt h2{font-size:29px;max-width:22ch}}
 @media(max-height:650px) and (min-width:700px){body.child-view .stage.message-slide{min-height:calc(100dvh - 66px)}body.child-view .stage.message-slide .prompt h2{font-size:32px}body.child-view .stage.message-slide .prompt{padding-block:22px}}
 
-/* Story narration advances on its own; questions and identification wait for taps. */
-body.child-view .stage.story-autoplay .child-continue{display:none}
+/* Keep Next beside Replay even on automatically advancing story pages. */
 body.child-view .stage.awaiting-audio-start .child-helper-bubble{max-width:220px}
 body.child-view .stage.awaiting-audio-start .child-replay{box-shadow:0 0 0 4px #b8e4ff,0 8px 20px #246fb833}
 
