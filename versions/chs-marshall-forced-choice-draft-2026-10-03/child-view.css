@@ -128,9 +128,19 @@ body.child-view .prompt h2 {
   text-align: center;
 }
 
+/* Keep the longer recall question on one line on desktop without shrinking
+   the other story captions. Narrow screens can wrap at a readable size. */
+.stage[data-screen-kind="story"] > .prompt.recall-prompt h2 {
+  width: 100%;
+  max-width: none;
+  font-size: max(22px, calc(2.75 * var(--caption-unit)));
+  text-wrap: wrap;
+}
+
 @media (max-width: 460px) {
   .stage[data-screen-kind="story"] > .prompt h2,
-  .choice-caption { font-size: 19px; }
+  .choice-caption,
+  .stage[data-screen-kind="story"] > .prompt.recall-prompt h2 { font-size: 19px; }
 }
 
 /* Let the caption, answers and audio controls take their natural height.
