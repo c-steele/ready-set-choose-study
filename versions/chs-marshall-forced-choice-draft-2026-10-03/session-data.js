@@ -58,7 +58,7 @@
     });
     const outcomeSummary = `No one helped ${recipient.description}.`;
     add('outcome-summary', 'outcome-summary', {text:outcomeSummary, displayText:outcomeSummary, outcomeVisual:true});
-    const outcomeCaptions = helpers.map((helper, i)=>`${!recipient.isAdult && i > 0 ? "And " + helper.description : upper(helper.description)} did NOT help ${recipient.description}.`).concat(outcomeSummary);
+    const outcomeCaptions = helpers.map(helper=>`${upper(helper.description)} did NOT help ${recipient.description}.`).concat(outcomeSummary);
     const explicitOutcome = outcomeCaptions.join(' ');
     add('outcome', 'outcome', {text:explicitOutcome, displayText:outcomeCaptions[0], outcomeCaptions, outcomeVisual:true});
     add('recall-all', 'recall-all', {
@@ -222,7 +222,7 @@
       const scriptText=step.captionEmphasis==='HAVE TO'?step.text.replace(/\bHAVE TO\b/g,'*HAVE TO*'):step.text;
       lines.push(`“${scriptText}”`, '');
       if (step.displayTitle) lines.push(`Display treatment: ${step.displayTitle} / ${step.displaySetup} / ${step.displayQuestion}`, '');
-      if (step.displayText) lines.push(`Display wording: “${step.displayText}” ${step.outcomeVisual?'Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. The helper cues remain still throughout the narration.':'The role is included in the question; no separate role label is displayed above it.'}`, '');
+      if (step.displayText) lines.push(`Display wording: “${step.displayText}” ${step.outcomeVisual?'Both no-help badges remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper’s outline glows when their role is spoken; the characters and badges stay still.':'The role is included in the question; no separate role label is displayed above it.'}`, '');
       if (step.outcomeCaptions) lines.push(`Captions follow the narration, in order: ${step.outcomeCaptions.map(text=>`“${text}”`).join(' → ')}.`, '');
       if (step.image) lines.push(`[Stimulus source](${step.image}) — original reference image; the preview replaces its caption with the wording above.`, '');
       if (step.choiceQuestion) lines.push(`Read the choices together: “${step.choiceQuestion}”`, '');

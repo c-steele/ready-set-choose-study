@@ -32,8 +32,8 @@
   "summary": {
     "storyCount": 18,
     "screenCount": 523,
-    "clipCount": 222,
-    "readyCount": 222,
+    "clipCount": 233,
+    "readyCount": 233,
     "pendingCount": 0,
     "newForcedChoiceRecordingCount": 12,
     "emphasisPendingCount": 2,
@@ -61,7 +61,8 @@
     "originalPairedQuestionCount": 14,
     "joinedQuestionScreenCount": 54,
     "sadPredictionQuestionRecordingCount": 4,
-    "trafficPracticeNewRecordingCount": 3
+    "trafficPracticeNewRecordingCount": 3,
+    "outcomeWithoutAndRecordings": 11
   },
   "notes": [
     "This is the separate forced-choice adaptation. Each story has one prediction, one obligation, and one comparative evaluation choice between its two helpers.",
@@ -91,7 +92,8 @@
     "October 6 consistent-recipient revision: every reference to the child being helped now uses the kid in the middle, including introductions, prompts, confidence variants, neutral confirmations, outcomes and reminders. Helper relationship labels and adult-recipient stories retain their established names. Source catalogs and artwork are unchanged. A natural And connects repeated child-story helper clauses so native synthesis preserves each the article. Fresh native whole-paragraph recordings match all edited narration routes; superseded recordings remain historical sources without active uses.",
     "Forced-choice helper alternatives use the original complete X or Y? recordings. The both-see witness screen is omitted. Individual option recordings are retained for archival comparison but not used on helper-choice screens.",
     "Prediction question revised to Who will help the recipient in the middle now that they’re sad? Four complete native Evelyn Soft recordings replace the earlier Who do you think wording; helper alternatives remain the original paired OR recordings.",
-    "r41: proposed role-free practice uses a red traffic light and stopped car. Three new complete Evelyn Soft recordings replace Teacher/stop-being-mean prompt, correction, and correct feedback. Stable practice-stop step IDs are retained. Other study questions are unchanged."
+    "r41: proposed role-free practice uses a red traffic light and stopped car. Three new complete Evelyn Soft recordings replace Teacher/stop-being-mean prompt, correction, and correct feedback. Stable practice-stop step IDs are retained. Other study questions are unchanged.",
+    "r43: Child-recipient outcome sentences each begin with The; the second helper sentence no longer begins with And. Eleven updated passages use three complete Evelyn Soft 0.90x sentences, verified independently from the final MP3 at their known assembly boundaries. Existing adult-recipient outcome audio is unchanged. Each helper outline glows only during its spoken role name; the characters and no-help badges stay still."
   ],
   "clips": [
     {
@@ -15708,12 +15710,7 @@
       "src": "assets/narration/nr_middle_017.mp3",
       "kind": "prompt",
       "status": "verified-complete-native-recording",
-      "uses": [
-        {
-          "stepId": "woman-mom-teacher:outcome",
-          "part": "prompt"
-        }
-      ],
+      "uses": [],
       "sha256": "2a7c2df3a5a761bafac0d5e825e0c5be997cf64446294b084f62da8fb6bb9bae",
       "bytes": 378298,
       "durationSeconds": 9.456325,
@@ -15757,7 +15754,8 @@
         "fullProjectTextVerified": true,
         "canonicalSpokenWordSequenceVerified": true
       },
-      "revisionCategory": "consistent-child-recipient-reference"
+      "revisionCategory": "consistent-child-recipient-reference",
+      "supersededBy": "nr_outcome_01_r43"
     },
     {
       "id": "nr_middle_018",
@@ -15992,12 +15990,7 @@
       "src": "assets/narration/nr_middle_038.mp3",
       "kind": "prompt",
       "status": "verified-complete-native-recording",
-      "uses": [
-        {
-          "stepId": "woman-sister-friend:outcome",
-          "part": "prompt"
-        }
-      ],
+      "uses": [],
       "sha256": "0417c929fc434b5b62e3395b4828bccafa857b7e3ffead12661fe2168c94e3bf",
       "bytes": 378298,
       "durationSeconds": 9.456325,
@@ -16041,7 +16034,8 @@
         "fullProjectTextVerified": true,
         "canonicalSpokenWordSequenceVerified": true
       },
-      "revisionCategory": "consistent-child-recipient-reference"
+      "revisionCategory": "consistent-child-recipient-reference",
+      "supersededBy": "nr_outcome_02_r43"
     },
     {
       "id": "nr_middle_039",
@@ -16167,16 +16161,7 @@
       "src": "assets/narration/nr_middle_051.mp3",
       "kind": "prompt",
       "status": "verified-complete-native-recording",
-      "uses": [
-        {
-          "stepId": "woman-bestfriend-friend:outcome",
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-bestfriend-friend:outcome",
-          "part": "prompt"
-        }
-      ],
+      "uses": [],
       "sha256": "1f633d0c9ca51b829e15366ac6b9582f483577f00b674d2bb866e29cd8b9a8c6",
       "bytes": 388747,
       "durationSeconds": 9.71755,
@@ -16220,7 +16205,8 @@
         "fullProjectTextVerified": true,
         "canonicalSpokenWordSequenceVerified": true
       },
-      "revisionCategory": "consistent-child-recipient-reference"
+      "revisionCategory": "consistent-child-recipient-reference",
+      "supersededBy": "nr_outcome_03_r43"
     },
     {
       "id": "nr_middle_052",
@@ -16350,16 +16336,7 @@
       "src": "assets/narration/nr_middle_056.mp3",
       "kind": "prompt",
       "status": "verified-complete-native-recording",
-      "uses": [
-        {
-          "stepId": "woman-teacher-friend:outcome",
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-teacher-friend:outcome",
-          "part": "prompt"
-        }
-      ],
+      "uses": [],
       "sha256": "ce41e70236d62f81a452ad8231d5dc47978fe19a9fa4194321f456fa1535c793",
       "bytes": 377253,
       "durationSeconds": 9.4302,
@@ -16403,7 +16380,8 @@
         "fullProjectTextVerified": true,
         "canonicalSpokenWordSequenceVerified": true
       },
-      "revisionCategory": "consistent-child-recipient-reference"
+      "revisionCategory": "consistent-child-recipient-reference",
+      "supersededBy": "nr_outcome_04_r43"
     },
     {
       "id": "nr_middle_057",
@@ -16529,12 +16507,7 @@
       "src": "assets/narration/nr_middle_059.mp3",
       "kind": "prompt",
       "status": "verified-complete-native-recording",
-      "uses": [
-        {
-          "stepId": "woman-mom-sister:outcome",
-          "part": "prompt"
-        }
-      ],
+      "uses": [],
       "sha256": "e6385ed33a24bac43994aa67f8e1d8267e0455310512100164d2dea74d8d6ea0",
       "bytes": 383522,
       "durationSeconds": 9.586925,
@@ -16578,7 +16551,8 @@
         "fullProjectTextVerified": true,
         "canonicalSpokenWordSequenceVerified": true
       },
-      "revisionCategory": "consistent-child-recipient-reference"
+      "revisionCategory": "consistent-child-recipient-reference",
+      "supersededBy": "nr_outcome_05_r43"
     },
     {
       "id": "nr_middle_060",
@@ -16708,20 +16682,7 @@
       "src": "assets/narration/nr_middle_068.mp3",
       "kind": "prompt",
       "status": "verified-complete-native-recording",
-      "uses": [
-        {
-          "stepId": "woman-teacher-classmate:outcome",
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-teacher-classmate:outcome",
-          "part": "prompt"
-        },
-        {
-          "stepId": "family-teacher-classmate:outcome",
-          "part": "prompt"
-        }
-      ],
+      "uses": [],
       "sha256": "2f912a8d4a3537d76df1fdb0e122a4615ccc149a23ba74eedd57cfb45ca8e52e",
       "bytes": 391881,
       "durationSeconds": 9.7959,
@@ -16765,7 +16726,8 @@
         "fullProjectTextVerified": true,
         "canonicalSpokenWordSequenceVerified": true
       },
-      "revisionCategory": "consistent-child-recipient-reference"
+      "revisionCategory": "consistent-child-recipient-reference",
+      "supersededBy": "nr_outcome_06_r43"
     },
     {
       "id": "nr_middle_069",
@@ -16895,12 +16857,7 @@
       "src": "assets/narration/nr_middle_079.mp3",
       "kind": "prompt",
       "status": "verified-complete-native-recording",
-      "uses": [
-        {
-          "stepId": "man-dad-teacher:outcome",
-          "part": "prompt"
-        }
-      ],
+      "uses": [],
       "sha256": "7ca6d838a783727f727fd67ea3b1afbcf8cd20432f7d0a9eadd796a7f758040e",
       "bytes": 376208,
       "durationSeconds": 9.404075,
@@ -16944,7 +16901,8 @@
         "fullProjectTextVerified": true,
         "canonicalSpokenWordSequenceVerified": true
       },
-      "revisionCategory": "consistent-child-recipient-reference"
+      "revisionCategory": "consistent-child-recipient-reference",
+      "supersededBy": "nr_outcome_07_r43"
     },
     {
       "id": "nr_middle_080",
@@ -17066,12 +17024,7 @@
       "src": "assets/narration/nr_middle_090.mp3",
       "kind": "prompt",
       "status": "verified-complete-native-recording",
-      "uses": [
-        {
-          "stepId": "man-brother-friend:outcome",
-          "part": "prompt"
-        }
-      ],
+      "uses": [],
       "sha256": "88b41db0ca1544a189494bc17652ab9f26c3efb20308cb45ab352ab23669226d",
       "bytes": 380387,
       "durationSeconds": 9.50855,
@@ -17115,7 +17068,8 @@
         "fullProjectTextVerified": true,
         "canonicalSpokenWordSequenceVerified": true
       },
-      "revisionCategory": "consistent-child-recipient-reference"
+      "revisionCategory": "consistent-child-recipient-reference",
+      "supersededBy": "nr_outcome_08_r43"
     },
     {
       "id": "nr_middle_091",
@@ -17237,12 +17191,7 @@
       "src": "assets/narration/nr_middle_095.mp3",
       "kind": "prompt",
       "status": "verified-complete-native-recording",
-      "uses": [
-        {
-          "stepId": "man-dad-brother:outcome",
-          "part": "prompt"
-        }
-      ],
+      "uses": [],
       "sha256": "7dfab7a1df06bdc99ca00cff77864ff8e75b77352ae79770a0872a61d386263e",
       "bytes": 379343,
       "durationSeconds": 9.48245,
@@ -17286,7 +17235,8 @@
         "fullProjectTextVerified": true,
         "canonicalSpokenWordSequenceVerified": true
       },
-      "revisionCategory": "consistent-child-recipient-reference"
+      "revisionCategory": "consistent-child-recipient-reference",
+      "supersededBy": "nr_outcome_09_r43"
     },
     {
       "id": "nr_middle_096",
@@ -17408,12 +17358,7 @@
       "src": "assets/narration/nr_middle_098.mp3",
       "kind": "prompt",
       "status": "verified-complete-native-recording",
-      "uses": [
-        {
-          "stepId": "family-mom-dad:outcome",
-          "part": "prompt"
-        }
-      ],
+      "uses": [],
       "sha256": "c01f26248046ad5c39e3f964e4f9a484aeeb9aed1d63c7c8f02246dba20b1671",
       "bytes": 375163,
       "durationSeconds": 9.37795,
@@ -17457,7 +17402,8 @@
         "fullProjectTextVerified": true,
         "canonicalSpokenWordSequenceVerified": true
       },
-      "revisionCategory": "consistent-child-recipient-reference"
+      "revisionCategory": "consistent-child-recipient-reference",
+      "supersededBy": "nr_outcome_10_r43"
     },
     {
       "id": "nr_middle_099",
@@ -17579,12 +17525,7 @@
       "src": "assets/narration/nr_middle_101.mp3",
       "kind": "prompt",
       "status": "verified-complete-native-recording",
-      "uses": [
-        {
-          "stepId": "family-sister-brother:outcome",
-          "part": "prompt"
-        }
-      ],
+      "uses": [],
       "sha256": "7e6602c40dc7cdde4d6f7986e69c03432541ee8f6899f7af04bc18f020e86956",
       "bytes": 382477,
       "durationSeconds": 9.5608,
@@ -17628,7 +17569,8 @@
         "fullProjectTextVerified": true,
         "canonicalSpokenWordSequenceVerified": true
       },
-      "revisionCategory": "consistent-child-recipient-reference"
+      "revisionCategory": "consistent-child-recipient-reference",
+      "supersededBy": "nr_outcome_11_r43"
     },
     {
       "id": "nr_middle_102",
@@ -18138,6 +18080,748 @@
       "bytes": 102445,
       "durationSeconds": 2.56,
       "provenance": "Original Find the Caregiver Evelyn recording; complete left-to-right helper question reused unchanged."
+    },
+    {
+      "id": "nr_outcome_01_r43",
+      "text": "The kid’s teacher did NOT help the kid in the middle. The kid’s mom did NOT help the kid in the middle. No one helped the kid in the middle.",
+      "src": "assets/narration/nr_outcome_01_r43.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-sentence-assembly",
+      "uses": [
+        {
+          "stepId": "woman-mom-teacher:outcome",
+          "part": "prompt"
+        }
+      ],
+      "sha256": "5642742af0989909af75e2f195dbf12f7269c882a2746aa03537fdf2abd6df2c",
+      "bytes": 399195,
+      "durationSeconds": 9.952653,
+      "revisionCategory": "outcome-without-and-r43",
+      "provenance": {
+        "provider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "nativeSentenceRecordings": true,
+        "wholeParagraphSpeechPreserved": false,
+        "wordLevelSplicing": false,
+        "composition": "Three complete, independently verified sentence recordings concatenated at their file boundaries and encoded as one 320-kbps MP3. No words cut or altered.",
+        "sourceZipSha256": "75a2c11851d18777d951b54ef427b367fc3041b62d684024b421eebbc91f81df",
+        "sources": [
+          {
+            "id": "nr_outcome_sentence_01_r43",
+            "text": "The kid’s teacher did NOT help the kid in the middle.",
+            "sourceSha256": "e66ad4d195b3b4a3177ba064d3c53373596e03746785ce76458a4849f24d2ec6",
+            "startSeconds": 0,
+            "decodedDurationSeconds": 3.474285714285714,
+            "endSeconds": 3.474285714285714,
+            "recognizedText": "The kids' teacher did not help the kid in the middle.",
+            "exactNormalizedWordMatch": true
+          },
+          {
+            "id": "nr_outcome_sentence_02_r43",
+            "text": "The kid’s mom did NOT help the kid in the middle.",
+            "sourceSha256": "61be3412e8879e0c2516211dfd09fd4b88eae1637554ab00b66c8033dfe9846d",
+            "startSeconds": 3.474285714285714,
+            "decodedDurationSeconds": 3.526530612244898,
+            "endSeconds": 7.000816326530613,
+            "recognizedText": "The kid's mom did not help the kid in the middle.",
+            "exactNormalizedWordMatch": true
+          },
+          {
+            "id": "nr_outcome_sentence_09_r43",
+            "text": "No one helped the kid in the middle.",
+            "sourceSha256": "8fdf264bd58b734456bbf86b4b681f6aa9063b6bce076a22d89887c4672a69bd",
+            "startSeconds": 7.000816326530613,
+            "decodedDurationSeconds": 2.9257142857142857,
+            "endSeconds": 9.926530612244898,
+            "recognizedText": "No one helped the kid in the middle.",
+            "exactNormalizedWordMatch": true
+          }
+        ],
+        "verificationMethod": "Unprompted recognition of each complete sentence from the final MP3, split at known sentence assembly boundaries",
+        "unsegmentedRecognizedText": "The kid's teacher did not help the kid in the middle. The kid's mom did not help the kid in the middle. No one helped the kid in the middle.",
+        "unsegmentedExactMatch": true,
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false
+      }
+    },
+    {
+      "id": "nr_outcome_02_r43",
+      "text": "The kid’s sister did NOT help the kid in the middle. The kid’s friend did NOT help the kid in the middle. No one helped the kid in the middle.",
+      "src": "assets/narration/nr_outcome_02_r43.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-sentence-assembly",
+      "uses": [
+        {
+          "stepId": "woman-sister-friend:outcome",
+          "part": "prompt"
+        }
+      ],
+      "sha256": "6fc5db6fc5adb2a8f8595463e7cb27c3521bfadaef624a7fd33581cc71ce8f8e",
+      "bytes": 397105,
+      "durationSeconds": 9.900408,
+      "revisionCategory": "outcome-without-and-r43",
+      "provenance": {
+        "provider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "nativeSentenceRecordings": true,
+        "wholeParagraphSpeechPreserved": false,
+        "wordLevelSplicing": false,
+        "composition": "Three complete, independently verified sentence recordings concatenated at their file boundaries and encoded as one 320-kbps MP3. No words cut or altered.",
+        "sourceZipSha256": "75a2c11851d18777d951b54ef427b367fc3041b62d684024b421eebbc91f81df",
+        "sources": [
+          {
+            "id": "nr_outcome_sentence_03_r43",
+            "text": "The kid’s sister did NOT help the kid in the middle.",
+            "sourceSha256": "ffc6ac449b3fe1fc185a6fbff83a6e16550019d6037f92e1a3b28ea30097eda1",
+            "startSeconds": 0,
+            "decodedDurationSeconds": 3.526530612244898,
+            "endSeconds": 3.526530612244898,
+            "recognizedText": "The kid's sister did not help the kid in the middle.",
+            "exactNormalizedWordMatch": true
+          },
+          {
+            "id": "nr_outcome_sentence_04_r43",
+            "text": "The kid’s friend did NOT help the kid in the middle.",
+            "sourceSha256": "3ef2461b00acb810eca0343eb6899150646402309d3935d340f01e256a453552",
+            "startSeconds": 3.526530612244898,
+            "decodedDurationSeconds": 3.422040816326531,
+            "endSeconds": 6.948571428571428,
+            "recognizedText": "The kid's friend did not help the kid in the middle.",
+            "exactNormalizedWordMatch": true
+          },
+          {
+            "id": "nr_outcome_sentence_09_r43",
+            "text": "No one helped the kid in the middle.",
+            "sourceSha256": "8fdf264bd58b734456bbf86b4b681f6aa9063b6bce076a22d89887c4672a69bd",
+            "startSeconds": 6.948571428571428,
+            "decodedDurationSeconds": 2.9257142857142857,
+            "endSeconds": 9.874285714285714,
+            "recognizedText": "No one helped the kid in the middle.",
+            "exactNormalizedWordMatch": true
+          }
+        ],
+        "verificationMethod": "Unprompted recognition of each complete sentence from the final MP3, split at known sentence assembly boundaries",
+        "unsegmentedRecognizedText": "The kid's sister did not help the kid in the middle. No one helped the kid in the middle.",
+        "unsegmentedExactMatch": false,
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false
+      }
+    },
+    {
+      "id": "nr_outcome_03_r43",
+      "text": "The kid’s friend did NOT help the kid in the middle. The kid’s best friend did NOT help the kid in the middle. No one helped the kid in the middle.",
+      "src": "assets/narration/nr_outcome_03_r43.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-sentence-assembly",
+      "uses": [
+        {
+          "stepId": "woman-bestfriend-friend:outcome",
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-bestfriend-friend:outcome",
+          "part": "prompt"
+        }
+      ],
+      "sha256": "ef94e9c843e55c8aeb6bd8fdd70059c37ec6c2de1bada5873cc3ea24f4d84a86",
+      "bytes": 404419,
+      "durationSeconds": 10.083265,
+      "revisionCategory": "outcome-without-and-r43",
+      "provenance": {
+        "provider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "nativeSentenceRecordings": true,
+        "wholeParagraphSpeechPreserved": false,
+        "wordLevelSplicing": false,
+        "composition": "Three complete, independently verified sentence recordings concatenated at their file boundaries and encoded as one 320-kbps MP3. No words cut or altered.",
+        "sourceZipSha256": "75a2c11851d18777d951b54ef427b367fc3041b62d684024b421eebbc91f81df",
+        "sources": [
+          {
+            "id": "nr_outcome_sentence_04_r43",
+            "text": "The kid’s friend did NOT help the kid in the middle.",
+            "sourceSha256": "3ef2461b00acb810eca0343eb6899150646402309d3935d340f01e256a453552",
+            "startSeconds": 0,
+            "decodedDurationSeconds": 3.422040816326531,
+            "endSeconds": 3.422040816326531,
+            "recognizedText": "The kid's friend did not help the kid in the middle.",
+            "exactNormalizedWordMatch": true
+          },
+          {
+            "id": "nr_outcome_sentence_05_r43",
+            "text": "The kid’s best friend did NOT help the kid in the middle.",
+            "sourceSha256": "b7e452f23fe3333b9e682f4e84bf206e1888cd960efa49c5e38d7ebd549e8529",
+            "startSeconds": 3.422040816326531,
+            "decodedDurationSeconds": 3.709387755102041,
+            "endSeconds": 7.131428571428572,
+            "recognizedText": "The kid's best friend did not help the kid in the middle.",
+            "exactNormalizedWordMatch": true
+          },
+          {
+            "id": "nr_outcome_sentence_09_r43",
+            "text": "No one helped the kid in the middle.",
+            "sourceSha256": "8fdf264bd58b734456bbf86b4b681f6aa9063b6bce076a22d89887c4672a69bd",
+            "startSeconds": 7.131428571428572,
+            "decodedDurationSeconds": 2.9257142857142857,
+            "endSeconds": 10.057142857142857,
+            "recognizedText": "No one helped the kid in the middle.",
+            "exactNormalizedWordMatch": true
+          }
+        ],
+        "verificationMethod": "Unprompted recognition of each complete sentence from the final MP3, split at known sentence assembly boundaries",
+        "unsegmentedRecognizedText": "The kid's friend did not help the kid in the middle. No one helped the kid in the middle.",
+        "unsegmentedExactMatch": false,
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false
+      }
+    },
+    {
+      "id": "nr_outcome_04_r43",
+      "text": "The kid’s teacher did NOT help the kid in the middle. The kid’s friend did NOT help the kid in the middle. No one helped the kid in the middle.",
+      "src": "assets/narration/nr_outcome_04_r43.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-sentence-assembly",
+      "uses": [
+        {
+          "stepId": "woman-teacher-friend:outcome",
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-teacher-friend:outcome",
+          "part": "prompt"
+        }
+      ],
+      "sha256": "7acbb27dbc7ac6864791a79ace7d1fa3686c5d214e00b9704b4760caa72b1eed",
+      "bytes": 395015,
+      "durationSeconds": 9.848163,
+      "revisionCategory": "outcome-without-and-r43",
+      "provenance": {
+        "provider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "nativeSentenceRecordings": true,
+        "wholeParagraphSpeechPreserved": false,
+        "wordLevelSplicing": false,
+        "composition": "Three complete, independently verified sentence recordings concatenated at their file boundaries and encoded as one 320-kbps MP3. No words cut or altered.",
+        "sourceZipSha256": "75a2c11851d18777d951b54ef427b367fc3041b62d684024b421eebbc91f81df",
+        "sources": [
+          {
+            "id": "nr_outcome_sentence_01_r43",
+            "text": "The kid’s teacher did NOT help the kid in the middle.",
+            "sourceSha256": "e66ad4d195b3b4a3177ba064d3c53373596e03746785ce76458a4849f24d2ec6",
+            "startSeconds": 0,
+            "decodedDurationSeconds": 3.474285714285714,
+            "endSeconds": 3.474285714285714,
+            "recognizedText": "The kids' teacher did not help the kid in the middle.",
+            "exactNormalizedWordMatch": true
+          },
+          {
+            "id": "nr_outcome_sentence_04_r43",
+            "text": "The kid’s friend did NOT help the kid in the middle.",
+            "sourceSha256": "3ef2461b00acb810eca0343eb6899150646402309d3935d340f01e256a453552",
+            "startSeconds": 3.474285714285714,
+            "decodedDurationSeconds": 3.422040816326531,
+            "endSeconds": 6.896326530612245,
+            "recognizedText": "The kid's friend did not help the kid in the middle.",
+            "exactNormalizedWordMatch": true
+          },
+          {
+            "id": "nr_outcome_sentence_09_r43",
+            "text": "No one helped the kid in the middle.",
+            "sourceSha256": "8fdf264bd58b734456bbf86b4b681f6aa9063b6bce076a22d89887c4672a69bd",
+            "startSeconds": 6.896326530612245,
+            "decodedDurationSeconds": 2.9257142857142857,
+            "endSeconds": 9.822040816326531,
+            "recognizedText": "No one helped the kid in the middle.",
+            "exactNormalizedWordMatch": true
+          }
+        ],
+        "verificationMethod": "Unprompted recognition of each complete sentence from the final MP3, split at known sentence assembly boundaries",
+        "unsegmentedRecognizedText": "The kid's teacher did not help the kid in the middle. No one helped the kid in the middle.",
+        "unsegmentedExactMatch": false,
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false
+      }
+    },
+    {
+      "id": "nr_outcome_05_r43",
+      "text": "The kid’s mom did NOT help the kid in the middle. The kid’s sister did NOT help the kid in the middle. No one helped the kid in the middle.",
+      "src": "assets/narration/nr_outcome_05_r43.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-sentence-assembly",
+      "uses": [
+        {
+          "stepId": "woman-mom-sister:outcome",
+          "part": "prompt"
+        }
+      ],
+      "sha256": "78d7b8dac0cdc14cc3002dc1441b99dd5f2dd1ed25b1c4b405e5d8bff576e8a2",
+      "bytes": 401285,
+      "durationSeconds": 10.004898,
+      "revisionCategory": "outcome-without-and-r43",
+      "provenance": {
+        "provider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "nativeSentenceRecordings": true,
+        "wholeParagraphSpeechPreserved": false,
+        "wordLevelSplicing": false,
+        "composition": "Three complete, independently verified sentence recordings concatenated at their file boundaries and encoded as one 320-kbps MP3. No words cut or altered.",
+        "sourceZipSha256": "75a2c11851d18777d951b54ef427b367fc3041b62d684024b421eebbc91f81df",
+        "sources": [
+          {
+            "id": "nr_outcome_sentence_02_r43",
+            "text": "The kid’s mom did NOT help the kid in the middle.",
+            "sourceSha256": "61be3412e8879e0c2516211dfd09fd4b88eae1637554ab00b66c8033dfe9846d",
+            "startSeconds": 0,
+            "decodedDurationSeconds": 3.526530612244898,
+            "endSeconds": 3.526530612244898,
+            "recognizedText": "The kid's mom did not help the kid in the middle.",
+            "exactNormalizedWordMatch": true
+          },
+          {
+            "id": "nr_outcome_sentence_03_r43",
+            "text": "The kid’s sister did NOT help the kid in the middle.",
+            "sourceSha256": "ffc6ac449b3fe1fc185a6fbff83a6e16550019d6037f92e1a3b28ea30097eda1",
+            "startSeconds": 3.526530612244898,
+            "decodedDurationSeconds": 3.526530612244898,
+            "endSeconds": 7.053061224489796,
+            "recognizedText": "The kid's sister did not help the kid in the middle.",
+            "exactNormalizedWordMatch": true
+          },
+          {
+            "id": "nr_outcome_sentence_09_r43",
+            "text": "No one helped the kid in the middle.",
+            "sourceSha256": "8fdf264bd58b734456bbf86b4b681f6aa9063b6bce076a22d89887c4672a69bd",
+            "startSeconds": 7.053061224489796,
+            "decodedDurationSeconds": 2.9257142857142857,
+            "endSeconds": 9.978775510204082,
+            "recognizedText": "No one helped the kid in the middle.",
+            "exactNormalizedWordMatch": true
+          }
+        ],
+        "verificationMethod": "Unprompted recognition of each complete sentence from the final MP3, split at known sentence assembly boundaries",
+        "unsegmentedRecognizedText": "The kid's mom did not help the kid in the middle. The kid's sister did not help the kid in the middle. No one helped the kid in the middle.",
+        "unsegmentedExactMatch": true,
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false
+      }
+    },
+    {
+      "id": "nr_outcome_06_r43",
+      "text": "The kid’s classmate did NOT help the kid in the middle. The kid’s teacher did NOT help the kid in the middle. No one helped the kid in the middle.",
+      "src": "assets/narration/nr_outcome_06_r43.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-sentence-assembly",
+      "uses": [
+        {
+          "stepId": "woman-teacher-classmate:outcome",
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-teacher-classmate:outcome",
+          "part": "prompt"
+        },
+        {
+          "stepId": "family-teacher-classmate:outcome",
+          "part": "prompt"
+        }
+      ],
+      "sha256": "7695a307d5d0935de960e80a3b9e5ec443572d30c7719939d04c16cd5f00facc",
+      "bytes": 408599,
+      "durationSeconds": 10.187755,
+      "revisionCategory": "outcome-without-and-r43",
+      "provenance": {
+        "provider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "nativeSentenceRecordings": true,
+        "wholeParagraphSpeechPreserved": false,
+        "wordLevelSplicing": false,
+        "composition": "Three complete, independently verified sentence recordings concatenated at their file boundaries and encoded as one 320-kbps MP3. No words cut or altered.",
+        "sourceZipSha256": "75a2c11851d18777d951b54ef427b367fc3041b62d684024b421eebbc91f81df",
+        "sources": [
+          {
+            "id": "nr_outcome_sentence_06_r43",
+            "text": "The kid’s classmate did NOT help the kid in the middle.",
+            "sourceSha256": "4758afc60494d069f55104f5026dcab851db0ce48dbb95af1949417d79073bb3",
+            "startSeconds": 0,
+            "decodedDurationSeconds": 3.7616326530612243,
+            "endSeconds": 3.7616326530612243,
+            "recognizedText": "The kids classmate did not help the kid in the middle.",
+            "exactNormalizedWordMatch": true
+          },
+          {
+            "id": "nr_outcome_sentence_01_r43",
+            "text": "The kid’s teacher did NOT help the kid in the middle.",
+            "sourceSha256": "e66ad4d195b3b4a3177ba064d3c53373596e03746785ce76458a4849f24d2ec6",
+            "startSeconds": 3.7616326530612243,
+            "decodedDurationSeconds": 3.474285714285714,
+            "endSeconds": 7.2359183673469385,
+            "recognizedText": "The kids' teacher did not help the kid in the middle.",
+            "exactNormalizedWordMatch": true
+          },
+          {
+            "id": "nr_outcome_sentence_09_r43",
+            "text": "No one helped the kid in the middle.",
+            "sourceSha256": "8fdf264bd58b734456bbf86b4b681f6aa9063b6bce076a22d89887c4672a69bd",
+            "startSeconds": 7.2359183673469385,
+            "decodedDurationSeconds": 2.9257142857142857,
+            "endSeconds": 10.161632653061224,
+            "recognizedText": "No one helped the kid in the middle.",
+            "exactNormalizedWordMatch": true
+          }
+        ],
+        "verificationMethod": "Unprompted recognition of each complete sentence from the final MP3, split at known sentence assembly boundaries",
+        "unsegmentedRecognizedText": "The kids classmate did not help the kid in the middle. The kids teacher did not help the kid in the middle. No one helped the kid in the middle.",
+        "unsegmentedExactMatch": true,
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false
+      }
+    },
+    {
+      "id": "nr_outcome_07_r43",
+      "text": "The kid’s teacher did NOT help the kid in the middle. The kid’s dad did NOT help the kid in the middle. No one helped the kid in the middle.",
+      "src": "assets/narration/nr_outcome_07_r43.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-sentence-assembly",
+      "uses": [
+        {
+          "stepId": "man-dad-teacher:outcome",
+          "part": "prompt"
+        }
+      ],
+      "sha256": "cefa28af4fd27abe81fbcadd9bfb204a4ef382bc8b543ddcc25d2ee9676df9f4",
+      "bytes": 396060,
+      "durationSeconds": 9.874286,
+      "revisionCategory": "outcome-without-and-r43",
+      "provenance": {
+        "provider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "nativeSentenceRecordings": true,
+        "wholeParagraphSpeechPreserved": false,
+        "wordLevelSplicing": false,
+        "composition": "Three complete, independently verified sentence recordings concatenated at their file boundaries and encoded as one 320-kbps MP3. No words cut or altered.",
+        "sourceZipSha256": "75a2c11851d18777d951b54ef427b367fc3041b62d684024b421eebbc91f81df",
+        "sources": [
+          {
+            "id": "nr_outcome_sentence_01_r43",
+            "text": "The kid’s teacher did NOT help the kid in the middle.",
+            "sourceSha256": "e66ad4d195b3b4a3177ba064d3c53373596e03746785ce76458a4849f24d2ec6",
+            "startSeconds": 0,
+            "decodedDurationSeconds": 3.474285714285714,
+            "endSeconds": 3.474285714285714,
+            "recognizedText": "The kids' teacher did not help the kid in the middle.",
+            "exactNormalizedWordMatch": true
+          },
+          {
+            "id": "nr_outcome_sentence_07_r43",
+            "text": "The kid’s dad did NOT help the kid in the middle.",
+            "sourceSha256": "945b4efdebfa09a6f73b15a245de3a75cc2b2f12aa0646ac9ba00d8f014a4a0d",
+            "startSeconds": 3.474285714285714,
+            "decodedDurationSeconds": 3.4481632653061225,
+            "endSeconds": 6.922448979591836,
+            "recognizedText": "The kids' dad did not help the kid in the middle.",
+            "exactNormalizedWordMatch": true
+          },
+          {
+            "id": "nr_outcome_sentence_09_r43",
+            "text": "No one helped the kid in the middle.",
+            "sourceSha256": "8fdf264bd58b734456bbf86b4b681f6aa9063b6bce076a22d89887c4672a69bd",
+            "startSeconds": 6.922448979591836,
+            "decodedDurationSeconds": 2.9257142857142857,
+            "endSeconds": 9.848163265306122,
+            "recognizedText": "No one helped the kid in the middle.",
+            "exactNormalizedWordMatch": true
+          }
+        ],
+        "verificationMethod": "Unprompted recognition of each complete sentence from the final MP3, split at known sentence assembly boundaries",
+        "unsegmentedRecognizedText": "The kid's teacher did not help the kid in the middle. The kid's dad did not help the kid in the middle. No one helped the kid in the middle.",
+        "unsegmentedExactMatch": true,
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false
+      }
+    },
+    {
+      "id": "nr_outcome_08_r43",
+      "text": "The kid’s brother did NOT help the kid in the middle. The kid’s friend did NOT help the kid in the middle. No one helped the kid in the middle.",
+      "src": "assets/narration/nr_outcome_08_r43.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-sentence-assembly",
+      "uses": [
+        {
+          "stepId": "man-brother-friend:outcome",
+          "part": "prompt"
+        }
+      ],
+      "sha256": "b403fc5ea58026a0f2e7b1b47dcdac839afb4c3922b0f4e1043ef4e64496a918",
+      "bytes": 398150,
+      "durationSeconds": 9.926531,
+      "revisionCategory": "outcome-without-and-r43",
+      "provenance": {
+        "provider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "nativeSentenceRecordings": true,
+        "wholeParagraphSpeechPreserved": false,
+        "wordLevelSplicing": false,
+        "composition": "Three complete, independently verified sentence recordings concatenated at their file boundaries and encoded as one 320-kbps MP3. No words cut or altered.",
+        "sourceZipSha256": "75a2c11851d18777d951b54ef427b367fc3041b62d684024b421eebbc91f81df",
+        "sources": [
+          {
+            "id": "nr_outcome_sentence_08_r43",
+            "text": "The kid’s brother did NOT help the kid in the middle.",
+            "sourceSha256": "c09b7981ced397fec32fb6d38a6039c58c12a973d83f0d718d3383e571a8d846",
+            "startSeconds": 0,
+            "decodedDurationSeconds": 3.5526530612244898,
+            "endSeconds": 3.5526530612244898,
+            "recognizedText": "The kid's brother did not help the kid in the middle.",
+            "exactNormalizedWordMatch": true
+          },
+          {
+            "id": "nr_outcome_sentence_04_r43",
+            "text": "The kid’s friend did NOT help the kid in the middle.",
+            "sourceSha256": "3ef2461b00acb810eca0343eb6899150646402309d3935d340f01e256a453552",
+            "startSeconds": 3.5526530612244898,
+            "decodedDurationSeconds": 3.422040816326531,
+            "endSeconds": 6.9746938775510205,
+            "recognizedText": "The kid's friend did not help the kid in the middle.",
+            "exactNormalizedWordMatch": true
+          },
+          {
+            "id": "nr_outcome_sentence_09_r43",
+            "text": "No one helped the kid in the middle.",
+            "sourceSha256": "8fdf264bd58b734456bbf86b4b681f6aa9063b6bce076a22d89887c4672a69bd",
+            "startSeconds": 6.9746938775510205,
+            "decodedDurationSeconds": 2.9257142857142857,
+            "endSeconds": 9.900408163265306,
+            "recognizedText": "No one helped the kid in the middle.",
+            "exactNormalizedWordMatch": true
+          }
+        ],
+        "verificationMethod": "Unprompted recognition of each complete sentence from the final MP3, split at known sentence assembly boundaries",
+        "unsegmentedRecognizedText": "The kid's brother did not help the kid in the middle. No one helped the kid in the middle.",
+        "unsegmentedExactMatch": false,
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false
+      }
+    },
+    {
+      "id": "nr_outcome_09_r43",
+      "text": "The kid’s dad did NOT help the kid in the middle. The kid’s brother did NOT help the kid in the middle. No one helped the kid in the middle.",
+      "src": "assets/narration/nr_outcome_09_r43.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-sentence-assembly",
+      "uses": [
+        {
+          "stepId": "man-dad-brother:outcome",
+          "part": "prompt"
+        }
+      ],
+      "sha256": "0c3cadf1ba1713555370aecdcc399a4ad59f9e78979e378a61d2443b67b726a2",
+      "bytes": 399195,
+      "durationSeconds": 9.952653,
+      "revisionCategory": "outcome-without-and-r43",
+      "provenance": {
+        "provider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "nativeSentenceRecordings": true,
+        "wholeParagraphSpeechPreserved": false,
+        "wordLevelSplicing": false,
+        "composition": "Three complete, independently verified sentence recordings concatenated at their file boundaries and encoded as one 320-kbps MP3. No words cut or altered.",
+        "sourceZipSha256": "75a2c11851d18777d951b54ef427b367fc3041b62d684024b421eebbc91f81df",
+        "sources": [
+          {
+            "id": "nr_outcome_sentence_07_r43",
+            "text": "The kid’s dad did NOT help the kid in the middle.",
+            "sourceSha256": "945b4efdebfa09a6f73b15a245de3a75cc2b2f12aa0646ac9ba00d8f014a4a0d",
+            "startSeconds": 0,
+            "decodedDurationSeconds": 3.4481632653061225,
+            "endSeconds": 3.4481632653061225,
+            "recognizedText": "The kids' dad did not help the kid in the middle.",
+            "exactNormalizedWordMatch": true
+          },
+          {
+            "id": "nr_outcome_sentence_08_r43",
+            "text": "The kid’s brother did NOT help the kid in the middle.",
+            "sourceSha256": "c09b7981ced397fec32fb6d38a6039c58c12a973d83f0d718d3383e571a8d846",
+            "startSeconds": 3.4481632653061225,
+            "decodedDurationSeconds": 3.5526530612244898,
+            "endSeconds": 7.000816326530613,
+            "recognizedText": "The kid's brother did not help the kid in the middle.",
+            "exactNormalizedWordMatch": true
+          },
+          {
+            "id": "nr_outcome_sentence_09_r43",
+            "text": "No one helped the kid in the middle.",
+            "sourceSha256": "8fdf264bd58b734456bbf86b4b681f6aa9063b6bce076a22d89887c4672a69bd",
+            "startSeconds": 7.000816326530613,
+            "decodedDurationSeconds": 2.9257142857142857,
+            "endSeconds": 9.926530612244898,
+            "recognizedText": "No one helped the kid in the middle.",
+            "exactNormalizedWordMatch": true
+          }
+        ],
+        "verificationMethod": "Unprompted recognition of each complete sentence from the final MP3, split at known sentence assembly boundaries",
+        "unsegmentedRecognizedText": "The kid's dad did not help the kid in the middle. No one helped the kid in the middle.",
+        "unsegmentedExactMatch": false,
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false
+      }
+    },
+    {
+      "id": "nr_outcome_10_r43",
+      "text": "The kid’s dad did NOT help the kid in the middle. The kid’s mom did NOT help the kid in the middle. No one helped the kid in the middle.",
+      "src": "assets/narration/nr_outcome_10_r43.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-sentence-assembly",
+      "uses": [
+        {
+          "stepId": "family-mom-dad:outcome",
+          "part": "prompt"
+        }
+      ],
+      "sha256": "b95c9a923bc1e05db2ca8632ca4e6deb4f658b89b550184d719e45325317f1dd",
+      "bytes": 398150,
+      "durationSeconds": 9.926531,
+      "revisionCategory": "outcome-without-and-r43",
+      "provenance": {
+        "provider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "nativeSentenceRecordings": true,
+        "wholeParagraphSpeechPreserved": false,
+        "wordLevelSplicing": false,
+        "composition": "Three complete, independently verified sentence recordings concatenated at their file boundaries and encoded as one 320-kbps MP3. No words cut or altered.",
+        "sourceZipSha256": "75a2c11851d18777d951b54ef427b367fc3041b62d684024b421eebbc91f81df",
+        "sources": [
+          {
+            "id": "nr_outcome_sentence_07_r43",
+            "text": "The kid’s dad did NOT help the kid in the middle.",
+            "sourceSha256": "945b4efdebfa09a6f73b15a245de3a75cc2b2f12aa0646ac9ba00d8f014a4a0d",
+            "startSeconds": 0,
+            "decodedDurationSeconds": 3.4481632653061225,
+            "endSeconds": 3.4481632653061225,
+            "recognizedText": "The kids' dad did not help the kid in the middle.",
+            "exactNormalizedWordMatch": true
+          },
+          {
+            "id": "nr_outcome_sentence_02_r43",
+            "text": "The kid’s mom did NOT help the kid in the middle.",
+            "sourceSha256": "61be3412e8879e0c2516211dfd09fd4b88eae1637554ab00b66c8033dfe9846d",
+            "startSeconds": 3.4481632653061225,
+            "decodedDurationSeconds": 3.526530612244898,
+            "endSeconds": 6.9746938775510205,
+            "recognizedText": "The kid's mom did not help the kid in the middle.",
+            "exactNormalizedWordMatch": true
+          },
+          {
+            "id": "nr_outcome_sentence_09_r43",
+            "text": "No one helped the kid in the middle.",
+            "sourceSha256": "8fdf264bd58b734456bbf86b4b681f6aa9063b6bce076a22d89887c4672a69bd",
+            "startSeconds": 6.9746938775510205,
+            "decodedDurationSeconds": 2.9257142857142857,
+            "endSeconds": 9.900408163265306,
+            "recognizedText": "No one helped the kid in the middle.",
+            "exactNormalizedWordMatch": true
+          }
+        ],
+        "verificationMethod": "Unprompted recognition of each complete sentence from the final MP3, split at known sentence assembly boundaries",
+        "unsegmentedRecognizedText": "The kid's dad did not help the kid in the middle. The kid's mom did not help the kid in the middle. No one helped the kid in the middle.",
+        "unsegmentedExactMatch": true,
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false
+      }
+    },
+    {
+      "id": "nr_outcome_11_r43",
+      "text": "The kid’s sister did NOT help the kid in the middle. The kid’s brother did NOT help the kid in the middle. No one helped the kid in the middle.",
+      "src": "assets/narration/nr_outcome_11_r43.mp3",
+      "kind": "prompt",
+      "status": "verified-complete-sentence-assembly",
+      "uses": [
+        {
+          "stepId": "family-sister-brother:outcome",
+          "part": "prompt"
+        }
+      ],
+      "sha256": "8b8a2162e9e325620e029c26b96da4f515a989c88a940703498ec48e0088897e",
+      "bytes": 402329,
+      "durationSeconds": 10.03102,
+      "revisionCategory": "outcome-without-and-r43",
+      "provenance": {
+        "provider": "NaturalReaders Commercial",
+        "voiceName": "Evelyn",
+        "voiceStyle": "Soft",
+        "voiceSpeed": 0.9,
+        "voiceWordsPerMinute": 180,
+        "nativeSentenceRecordings": true,
+        "wholeParagraphSpeechPreserved": false,
+        "wordLevelSplicing": false,
+        "composition": "Three complete, independently verified sentence recordings concatenated at their file boundaries and encoded as one 320-kbps MP3. No words cut or altered.",
+        "sourceZipSha256": "75a2c11851d18777d951b54ef427b367fc3041b62d684024b421eebbc91f81df",
+        "sources": [
+          {
+            "id": "nr_outcome_sentence_03_r43",
+            "text": "The kid’s sister did NOT help the kid in the middle.",
+            "sourceSha256": "ffc6ac449b3fe1fc185a6fbff83a6e16550019d6037f92e1a3b28ea30097eda1",
+            "startSeconds": 0,
+            "decodedDurationSeconds": 3.526530612244898,
+            "endSeconds": 3.526530612244898,
+            "recognizedText": "The kid's sister did not help the kid in the middle.",
+            "exactNormalizedWordMatch": true
+          },
+          {
+            "id": "nr_outcome_sentence_08_r43",
+            "text": "The kid’s brother did NOT help the kid in the middle.",
+            "sourceSha256": "c09b7981ced397fec32fb6d38a6039c58c12a973d83f0d718d3383e571a8d846",
+            "startSeconds": 3.526530612244898,
+            "decodedDurationSeconds": 3.5526530612244898,
+            "endSeconds": 7.079183673469387,
+            "recognizedText": "The kid's brother did not help the kid in the middle.",
+            "exactNormalizedWordMatch": true
+          },
+          {
+            "id": "nr_outcome_sentence_09_r43",
+            "text": "No one helped the kid in the middle.",
+            "sourceSha256": "8fdf264bd58b734456bbf86b4b681f6aa9063b6bce076a22d89887c4672a69bd",
+            "startSeconds": 7.079183673469387,
+            "decodedDurationSeconds": 2.9257142857142857,
+            "endSeconds": 10.004897959183673,
+            "recognizedText": "No one helped the kid in the middle.",
+            "exactNormalizedWordMatch": true
+          }
+        ],
+        "verificationMethod": "Unprompted recognition of each complete sentence from the final MP3, split at known sentence assembly boundaries",
+        "unsegmentedRecognizedText": "The kid's sister did not help the kid in the middle. No one helped the kid in the middle.",
+        "unsegmentedExactMatch": false,
+        "independentExactNormalizedRecognition": true,
+        "articleOmissionExceptionsAllowed": false
+      }
     }
   ],
   "screens": {
@@ -18304,7 +18988,7 @@
       "proposedWording": false
     },
     "woman-mom-teacher:outcome": {
-      "prompt": "nr_middle_017",
+      "prompt": "nr_outcome_01_r43",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -18577,7 +19261,7 @@
       "proposedWording": false
     },
     "woman-sister-friend:outcome": {
-      "prompt": "nr_middle_038",
+      "prompt": "nr_outcome_02_r43",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -18850,7 +19534,7 @@
       "proposedWording": false
     },
     "woman-bestfriend-friend:outcome": {
-      "prompt": "nr_middle_051",
+      "prompt": "nr_outcome_03_r43",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -19123,7 +19807,7 @@
       "proposedWording": false
     },
     "woman-teacher-friend:outcome": {
-      "prompt": "nr_middle_056",
+      "prompt": "nr_outcome_04_r43",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -19396,7 +20080,7 @@
       "proposedWording": false
     },
     "woman-mom-sister:outcome": {
-      "prompt": "nr_middle_059",
+      "prompt": "nr_outcome_05_r43",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -19669,7 +20353,7 @@
       "proposedWording": false
     },
     "woman-teacher-classmate:outcome": {
-      "prompt": "nr_middle_068",
+      "prompt": "nr_outcome_06_r43",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -19942,7 +20626,7 @@
       "proposedWording": false
     },
     "man-dad-teacher:outcome": {
-      "prompt": "nr_middle_079",
+      "prompt": "nr_outcome_07_r43",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -20215,7 +20899,7 @@
       "proposedWording": false
     },
     "man-brother-friend:outcome": {
-      "prompt": "nr_middle_090",
+      "prompt": "nr_outcome_08_r43",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -20488,7 +21172,7 @@
       "proposedWording": false
     },
     "man-bestfriend-friend:outcome": {
-      "prompt": "nr_middle_051",
+      "prompt": "nr_outcome_03_r43",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -20761,7 +21445,7 @@
       "proposedWording": false
     },
     "man-teacher-friend:outcome": {
-      "prompt": "nr_middle_056",
+      "prompt": "nr_outcome_04_r43",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -21034,7 +21718,7 @@
       "proposedWording": false
     },
     "man-dad-brother:outcome": {
-      "prompt": "nr_middle_095",
+      "prompt": "nr_outcome_09_r43",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -21307,7 +21991,7 @@
       "proposedWording": false
     },
     "man-teacher-classmate:outcome": {
-      "prompt": "nr_middle_068",
+      "prompt": "nr_outcome_06_r43",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -21580,7 +22264,7 @@
       "proposedWording": false
     },
     "family-mom-dad:outcome": {
-      "prompt": "nr_middle_098",
+      "prompt": "nr_outcome_10_r43",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -21853,7 +22537,7 @@
       "proposedWording": false
     },
     "family-sister-brother:outcome": {
-      "prompt": "nr_middle_101",
+      "prompt": "nr_outcome_11_r43",
       "reminder": null,
       "options": [],
       "proposedWording": false
@@ -22945,7 +23629,7 @@
       "proposedWording": false
     },
     "family-teacher-classmate:outcome": {
-      "prompt": "nr_middle_068",
+      "prompt": "nr_outcome_06_r43",
       "reminder": null,
       "options": [],
       "proposedWording": false

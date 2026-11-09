@@ -16,7 +16,7 @@ Expected path range: **85–97 screens**, **42–54 responses**.
 
 18 forced choices + 12 individual Mean/Not Mean judgments + 6–18 how-mean ratings + 6 recall checks.
 
-Illustrative duration: **12.2–19.4 minutes**, based on 1311–1635 spoken words.
+Illustrative duration: **12.1–19.3 minutes**, based on 1305–1629 spoken words.
 
 - Illustrative estimate, not observed child-session duration.
 - Read-aloud pace: 110–130 words per minute; response time: 3–5 seconds per selection.
@@ -94,7 +94,7 @@ Choices: The kid’s teacher / The kid’s dad.
 
 “No one helped the kid in the middle.”
 
-Display wording: “No one helped the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. The helper cues remain still throughout the narration.
+Display wording: “No one helped the kid in the middle.” Both no-help badges remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper’s outline glows when their role is spoken; the characters and badges stay still.
 
 [Stimulus source](assets/stimuli/ee15b1b5be65-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -102,11 +102,11 @@ Display wording: “No one helped the kid in the middle.” Both helper cues rem
 
 ### 9. Each helper did NOT help
 
-“The kid’s teacher did NOT help the kid in the middle. And the kid’s dad did NOT help the kid in the middle. No one helped the kid in the middle.”
+“The kid’s teacher did NOT help the kid in the middle. The kid’s dad did NOT help the kid in the middle. No one helped the kid in the middle.”
 
-Display wording: “The kid’s teacher did NOT help the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. The helper cues remain still throughout the narration.
+Display wording: “The kid’s teacher did NOT help the kid in the middle.” Both no-help badges remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper’s outline glows when their role is spoken; the characters and badges stay still.
 
-Captions follow the narration, in order: “The kid’s teacher did NOT help the kid in the middle.” → “And the kid’s dad did NOT help the kid in the middle.” → “No one helped the kid in the middle.”.
+Captions follow the narration, in order: “The kid’s teacher did NOT help the kid in the middle.” → “The kid’s dad did NOT help the kid in the middle.” → “No one helped the kid in the middle.”.
 
 [Stimulus source](assets/stimuli/ee15b1b5be65-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -276,7 +276,7 @@ Choices: The kid’s brother / The kid’s friend.
 
 “No one helped the kid in the middle.”
 
-Display wording: “No one helped the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. The helper cues remain still throughout the narration.
+Display wording: “No one helped the kid in the middle.” Both no-help badges remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper’s outline glows when their role is spoken; the characters and badges stay still.
 
 [Stimulus source](assets/stimuli/3538d8e77c34-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -284,11 +284,11 @@ Display wording: “No one helped the kid in the middle.” Both helper cues rem
 
 ### 26. Each helper did NOT help
 
-“The kid’s brother did NOT help the kid in the middle. And the kid’s friend did NOT help the kid in the middle. No one helped the kid in the middle.”
+“The kid’s brother did NOT help the kid in the middle. The kid’s friend did NOT help the kid in the middle. No one helped the kid in the middle.”
 
-Display wording: “The kid’s brother did NOT help the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. The helper cues remain still throughout the narration.
+Display wording: “The kid’s brother did NOT help the kid in the middle.” Both no-help badges remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper’s outline glows when their role is spoken; the characters and badges stay still.
 
-Captions follow the narration, in order: “The kid’s brother did NOT help the kid in the middle.” → “And the kid’s friend did NOT help the kid in the middle.” → “No one helped the kid in the middle.”.
+Captions follow the narration, in order: “The kid’s brother did NOT help the kid in the middle.” → “The kid’s friend did NOT help the kid in the middle.” → “No one helped the kid in the middle.”.
 
 [Stimulus source](assets/stimuli/3538d8e77c34-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -458,7 +458,7 @@ Choices: The kid’s friend / The kid’s best friend.
 
 “No one helped the kid in the middle.”
 
-Display wording: “No one helped the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. The helper cues remain still throughout the narration.
+Display wording: “No one helped the kid in the middle.” Both no-help badges remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper’s outline glows when their role is spoken; the characters and badges stay still.
 
 [Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -466,11 +466,11 @@ Display wording: “No one helped the kid in the middle.” Both helper cues rem
 
 ### 43. Each helper did NOT help
 
-“The kid’s friend did NOT help the kid in the middle. And the kid’s best friend did NOT help the kid in the middle. No one helped the kid in the middle.”
+“The kid’s friend did NOT help the kid in the middle. The kid’s best friend did NOT help the kid in the middle. No one helped the kid in the middle.”
 
-Display wording: “The kid’s friend did NOT help the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. The helper cues remain still throughout the narration.
+Display wording: “The kid’s friend did NOT help the kid in the middle.” Both no-help badges remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper’s outline glows when their role is spoken; the characters and badges stay still.
 
-Captions follow the narration, in order: “The kid’s friend did NOT help the kid in the middle.” → “And the kid’s best friend did NOT help the kid in the middle.” → “No one helped the kid in the middle.”.
+Captions follow the narration, in order: “The kid’s friend did NOT help the kid in the middle.” → “The kid’s best friend did NOT help the kid in the middle.” → “No one helped the kid in the middle.”.
 
 [Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -640,7 +640,7 @@ Choices: The kid’s teacher / The kid’s friend.
 
 “No one helped the kid in the middle.”
 
-Display wording: “No one helped the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. The helper cues remain still throughout the narration.
+Display wording: “No one helped the kid in the middle.” Both no-help badges remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper’s outline glows when their role is spoken; the characters and badges stay still.
 
 [Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -648,11 +648,11 @@ Display wording: “No one helped the kid in the middle.” Both helper cues rem
 
 ### 60. Each helper did NOT help
 
-“The kid’s teacher did NOT help the kid in the middle. And the kid’s friend did NOT help the kid in the middle. No one helped the kid in the middle.”
+“The kid’s teacher did NOT help the kid in the middle. The kid’s friend did NOT help the kid in the middle. No one helped the kid in the middle.”
 
-Display wording: “The kid’s teacher did NOT help the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. The helper cues remain still throughout the narration.
+Display wording: “The kid’s teacher did NOT help the kid in the middle.” Both no-help badges remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper’s outline glows when their role is spoken; the characters and badges stay still.
 
-Captions follow the narration, in order: “The kid’s teacher did NOT help the kid in the middle.” → “And the kid’s friend did NOT help the kid in the middle.” → “No one helped the kid in the middle.”.
+Captions follow the narration, in order: “The kid’s teacher did NOT help the kid in the middle.” → “The kid’s friend did NOT help the kid in the middle.” → “No one helped the kid in the middle.”.
 
 [Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -822,7 +822,7 @@ Choices: The kid’s dad / The kid’s brother.
 
 “No one helped the kid in the middle.”
 
-Display wording: “No one helped the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. The helper cues remain still throughout the narration.
+Display wording: “No one helped the kid in the middle.” Both no-help badges remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper’s outline glows when their role is spoken; the characters and badges stay still.
 
 [Stimulus source](assets/stimuli/09b52ae33b24-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -830,11 +830,11 @@ Display wording: “No one helped the kid in the middle.” Both helper cues rem
 
 ### 77. Each helper did NOT help
 
-“The kid’s dad did NOT help the kid in the middle. And the kid’s brother did NOT help the kid in the middle. No one helped the kid in the middle.”
+“The kid’s dad did NOT help the kid in the middle. The kid’s brother did NOT help the kid in the middle. No one helped the kid in the middle.”
 
-Display wording: “The kid’s dad did NOT help the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. The helper cues remain still throughout the narration.
+Display wording: “The kid’s dad did NOT help the kid in the middle.” Both no-help badges remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper’s outline glows when their role is spoken; the characters and badges stay still.
 
-Captions follow the narration, in order: “The kid’s dad did NOT help the kid in the middle.” → “And the kid’s brother did NOT help the kid in the middle.” → “No one helped the kid in the middle.”.
+Captions follow the narration, in order: “The kid’s dad did NOT help the kid in the middle.” → “The kid’s brother did NOT help the kid in the middle.” → “No one helped the kid in the middle.”.
 
 [Stimulus source](assets/stimuli/09b52ae33b24-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1004,7 +1004,7 @@ Choices: The kid’s classmate / The kid’s teacher.
 
 “No one helped the kid in the middle.”
 
-Display wording: “No one helped the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. The helper cues remain still throughout the narration.
+Display wording: “No one helped the kid in the middle.” Both no-help badges remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper’s outline glows when their role is spoken; the characters and badges stay still.
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1012,11 +1012,11 @@ Display wording: “No one helped the kid in the middle.” Both helper cues rem
 
 ### 94. Each helper did NOT help
 
-“The kid’s classmate did NOT help the kid in the middle. And the kid’s teacher did NOT help the kid in the middle. No one helped the kid in the middle.”
+“The kid’s classmate did NOT help the kid in the middle. The kid’s teacher did NOT help the kid in the middle. No one helped the kid in the middle.”
 
-Display wording: “The kid’s classmate did NOT help the kid in the middle.” Both helper cues remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. The helper cues remain still throughout the narration.
+Display wording: “The kid’s classmate did NOT help the kid in the middle.” Both no-help badges remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper’s outline glows when their role is spoken; the characters and badges stay still.
 
-Captions follow the narration, in order: “The kid’s classmate did NOT help the kid in the middle.” → “And the kid’s teacher did NOT help the kid in the middle.” → “No one helped the kid in the middle.”.
+Captions follow the narration, in order: “The kid’s classmate did NOT help the kid in the middle.” → “The kid’s teacher did NOT help the kid in the middle.” → “No one helped the kid in the middle.”.
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 

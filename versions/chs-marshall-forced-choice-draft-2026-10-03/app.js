@@ -174,9 +174,10 @@
     stage.querySelectorAll('.narration-actor-current,.option-current,.choice-bounce-a,.choice-bounce-b,.outcome-spoken').forEach(element=>element.classList.remove('narration-actor-current','option-current','choice-bounce-a','choice-bounce-b','outcome-spoken'));
   }
   function showSpokenCues(spans,seconds){
-    // Only question-page helper targets glow; characters never move or bounce.
+    // Question targets and outcome helper outlines follow the spoken role name.
+    // Characters and the no-help badges never move or bounce.
     stage.classList.add('child-speaking');
-    stage.querySelectorAll('.character-choice-target').forEach(button=>{
+    stage.querySelectorAll('.character-choice-target,.outcome-role-cue').forEach(button=>{
       const active=spans.some(cue=>cue.actorId===button.dataset.narrationActor&&seconds>=cue.start&&seconds<cue.end);
       button.classList.toggle('narration-actor-current',active);
     });
@@ -262,7 +263,8 @@
       ?`<button class="character-choice-target option-visible"${characterChoiceStyle(s,actor)} data-answer="${choiceIndex}" data-narration-actor="${actor.id}" aria-label="${esc(s.choices[choiceIndex])}"></button>`
       :`<span class="character-choice-cue"${characterChoiceStyle(s,actor)} aria-hidden="true"></span>`).join('');
     // Only an already selected answer gets a still confirmation outline.
-    const spokenCues=interactive ? shownActors.filter(actor=>actor.id===s.confirmationActorId).map(actor=>`<span class="narration-actor-cue confirmation-selected"${actorTargetStyle(s,actor)} aria-hidden="true"></span>`).join(''):'';
+    const spokenCues=interactive ? shownActors.filter(actor=>actor.id===s.confirmationActorId).map(actor=>`<span class="narration-actor-cue confirmation-selected"${actorTargetStyle(s,actor)} aria-hidden="true"></span>`).join('')
+      +(s.outcomeVisual?s.pairing.helpers.map(actor=>`<span class="narration-actor-cue outcome-role-cue"${actorTargetStyle(s,actor)} data-narration-actor="${actor.id}" aria-hidden="true"></span>`).join(''):''):'';
     const alt=shownActors.map(a=>a.side==='middle'&&a.description.endsWith('in the middle')?a.description:`${a.description} ${a.side==='middle'?'in the middle':'on the '+a.side}`).join('; ');
     const picture=`<div class="picture"><img ${interactive?'':'loading="lazy"'} src="${esc(s.image)}" alt="${esc(alt)}.${s.image===s.pairing.images.need?' '+esc(s.pairing.recipient.reference)+' is sad.':''}">${window.ObligationStudyVisuals.nonhelpingEyeOverlay(s)}${choiceBoxes}${spokenCues}</div>`;
     if(!s.outcomeVisual)return picture;

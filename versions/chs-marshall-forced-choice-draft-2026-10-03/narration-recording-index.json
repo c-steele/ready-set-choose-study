@@ -15750,11 +15750,11 @@
       "revisionCategory": "consistent-child-recipient-reference"
     },
     {
-      "id": "nr_middle_017",
-      "text": "The kid’s teacher did NOT help the kid in the middle. And the kid’s mom did NOT help the kid in the middle. No one helped the kid in the middle.",
-      "src": "assets/narration/nr_middle_017.mp3",
+      "id": "nr_outcome_01_r43",
+      "text": "The kid’s teacher did NOT help the kid in the middle. The kid’s mom did NOT help the kid in the middle. No one helped the kid in the middle.",
+      "src": "assets/narration/nr_outcome_01_r43.mp3",
       "kind": "prompt",
-      "status": "verified-complete-native-recording",
+      "status": "verified-complete-sentence-assembly",
       "uses": [
         {
           "stepId": "woman-mom-teacher:outcome",
@@ -16034,11 +16034,11 @@
       "revisionCategory": "consistent-child-recipient-reference"
     },
     {
-      "id": "nr_middle_038",
-      "text": "The kid’s sister did NOT help the kid in the middle. And the kid’s friend did NOT help the kid in the middle. No one helped the kid in the middle.",
-      "src": "assets/narration/nr_middle_038.mp3",
+      "id": "nr_outcome_02_r43",
+      "text": "The kid’s sister did NOT help the kid in the middle. The kid’s friend did NOT help the kid in the middle. No one helped the kid in the middle.",
+      "src": "assets/narration/nr_outcome_02_r43.mp3",
       "kind": "prompt",
-      "status": "verified-complete-native-recording",
+      "status": "verified-complete-sentence-assembly",
       "uses": [
         {
           "stepId": "woman-sister-friend:outcome",
@@ -16209,11 +16209,11 @@
       "revisionCategory": "consistent-child-recipient-reference"
     },
     {
-      "id": "nr_middle_051",
-      "text": "The kid’s friend did NOT help the kid in the middle. And the kid’s best friend did NOT help the kid in the middle. No one helped the kid in the middle.",
-      "src": "assets/narration/nr_middle_051.mp3",
+      "id": "nr_outcome_03_r43",
+      "text": "The kid’s friend did NOT help the kid in the middle. The kid’s best friend did NOT help the kid in the middle. No one helped the kid in the middle.",
+      "src": "assets/narration/nr_outcome_03_r43.mp3",
       "kind": "prompt",
-      "status": "verified-complete-native-recording",
+      "status": "verified-complete-sentence-assembly",
       "uses": [
         {
           "stepId": "woman-bestfriend-friend:outcome",
@@ -16392,11 +16392,11 @@
       "revisionCategory": "consistent-child-recipient-reference"
     },
     {
-      "id": "nr_middle_056",
-      "text": "The kid’s teacher did NOT help the kid in the middle. And the kid’s friend did NOT help the kid in the middle. No one helped the kid in the middle.",
-      "src": "assets/narration/nr_middle_056.mp3",
+      "id": "nr_outcome_04_r43",
+      "text": "The kid’s teacher did NOT help the kid in the middle. The kid’s friend did NOT help the kid in the middle. No one helped the kid in the middle.",
+      "src": "assets/narration/nr_outcome_04_r43.mp3",
       "kind": "prompt",
-      "status": "verified-complete-native-recording",
+      "status": "verified-complete-sentence-assembly",
       "uses": [
         {
           "stepId": "woman-teacher-friend:outcome",
@@ -16571,11 +16571,11 @@
       "revisionCategory": "consistent-child-recipient-reference"
     },
     {
-      "id": "nr_middle_059",
-      "text": "The kid’s mom did NOT help the kid in the middle. And the kid’s sister did NOT help the kid in the middle. No one helped the kid in the middle.",
-      "src": "assets/narration/nr_middle_059.mp3",
+      "id": "nr_outcome_05_r43",
+      "text": "The kid’s mom did NOT help the kid in the middle. The kid’s sister did NOT help the kid in the middle. No one helped the kid in the middle.",
+      "src": "assets/narration/nr_outcome_05_r43.mp3",
       "kind": "prompt",
-      "status": "verified-complete-native-recording",
+      "status": "verified-complete-sentence-assembly",
       "uses": [
         {
           "stepId": "woman-mom-sister:outcome",
@@ -16750,11 +16750,11 @@
       "revisionCategory": "consistent-child-recipient-reference"
     },
     {
-      "id": "nr_middle_068",
-      "text": "The kid’s classmate did NOT help the kid in the middle. And the kid’s teacher did NOT help the kid in the middle. No one helped the kid in the middle.",
-      "src": "assets/narration/nr_middle_068.mp3",
+      "id": "nr_outcome_06_r43",
+      "text": "The kid’s classmate did NOT help the kid in the middle. The kid’s teacher did NOT help the kid in the middle. No one helped the kid in the middle.",
+      "src": "assets/narration/nr_outcome_06_r43.mp3",
       "kind": "prompt",
-      "status": "verified-complete-native-recording",
+      "status": "verified-complete-sentence-assembly",
       "uses": [
         {
           "stepId": "woman-teacher-classmate:outcome",
@@ -16937,11 +16937,11 @@
       "revisionCategory": "consistent-child-recipient-reference"
     },
     {
-      "id": "nr_middle_079",
-      "text": "The kid’s teacher did NOT help the kid in the middle. And the kid’s dad did NOT help the kid in the middle. No one helped the kid in the middle.",
-      "src": "assets/narration/nr_middle_079.mp3",
+      "id": "nr_outcome_07_r43",
+      "text": "The kid’s teacher did NOT help the kid in the middle. The kid’s dad did NOT help the kid in the middle. No one helped the kid in the middle.",
+      "src": "assets/narration/nr_outcome_07_r43.mp3",
       "kind": "prompt",
-      "status": "verified-complete-native-recording",
+      "status": "verified-complete-sentence-assembly",
       "uses": [
         {
           "stepId": "man-dad-teacher:outcome",
@@ -17108,11 +17108,11 @@
       "revisionCategory": "consistent-child-recipient-reference"
     },
     {
-      "id": "nr_middle_090",
-      "text": "The kid’s brother did NOT help the kid in the middle. And the kid’s friend did NOT help the kid in the middle. No one helped the kid in the middle.",
-      "src": "assets/narration/nr_middle_090.mp3",
+      "id": "nr_outcome_08_r43",
+      "text": "The kid’s brother did NOT help the kid in the middle. The kid’s friend did NOT help the kid in the middle. No one helped the kid in the middle.",
+      "src": "assets/narration/nr_outcome_08_r43.mp3",
       "kind": "prompt",
-      "status": "verified-complete-native-recording",
+      "status": "verified-complete-sentence-assembly",
       "uses": [
         {
           "stepId": "man-brother-friend:outcome",
@@ -17279,11 +17279,11 @@
       "revisionCategory": "consistent-child-recipient-reference"
     },
     {
-      "id": "nr_middle_095",
-      "text": "The kid’s dad did NOT help the kid in the middle. And the kid’s brother did NOT help the kid in the middle. No one helped the kid in the middle.",
-      "src": "assets/narration/nr_middle_095.mp3",
+      "id": "nr_outcome_09_r43",
+      "text": "The kid’s dad did NOT help the kid in the middle. The kid’s brother did NOT help the kid in the middle. No one helped the kid in the middle.",
+      "src": "assets/narration/nr_outcome_09_r43.mp3",
       "kind": "prompt",
-      "status": "verified-complete-native-recording",
+      "status": "verified-complete-sentence-assembly",
       "uses": [
         {
           "stepId": "man-dad-brother:outcome",
@@ -17450,11 +17450,11 @@
       "revisionCategory": "consistent-child-recipient-reference"
     },
     {
-      "id": "nr_middle_098",
-      "text": "The kid’s dad did NOT help the kid in the middle. And the kid’s mom did NOT help the kid in the middle. No one helped the kid in the middle.",
-      "src": "assets/narration/nr_middle_098.mp3",
+      "id": "nr_outcome_10_r43",
+      "text": "The kid’s dad did NOT help the kid in the middle. The kid’s mom did NOT help the kid in the middle. No one helped the kid in the middle.",
+      "src": "assets/narration/nr_outcome_10_r43.mp3",
       "kind": "prompt",
-      "status": "verified-complete-native-recording",
+      "status": "verified-complete-sentence-assembly",
       "uses": [
         {
           "stepId": "family-mom-dad:outcome",
@@ -17621,11 +17621,11 @@
       "revisionCategory": "consistent-child-recipient-reference"
     },
     {
-      "id": "nr_middle_101",
-      "text": "The kid’s sister did NOT help the kid in the middle. And the kid’s brother did NOT help the kid in the middle. No one helped the kid in the middle.",
-      "src": "assets/narration/nr_middle_101.mp3",
+      "id": "nr_outcome_11_r43",
+      "text": "The kid’s sister did NOT help the kid in the middle. The kid’s brother did NOT help the kid in the middle. No one helped the kid in the middle.",
+      "src": "assets/narration/nr_outcome_11_r43.mp3",
       "kind": "prompt",
-      "status": "verified-complete-native-recording",
+      "status": "verified-complete-sentence-assembly",
       "uses": [
         {
           "stepId": "family-sister-brother:outcome",
