@@ -54,3 +54,5 @@ This is a two-helper sadness adaptation using the relationship pairings from Fin
 This preview is for reviewing the proposed task. Do not submit, activate, or recruit from this draft without the user’s separate instruction.
 
 The green Next arrow is visible beside Replay on narration pages. Standalone review links can advance before narration ends; embedded CHS sessions retain the narration gate. Question pages still require a response. Helper-question outlines glow in place during each role name in the original paired recording, using verified recording-specific word timings.
+
+Helper selections now advance directly, without a separate “Did you mean…? Yes or No” confirmation. This applies to prediction, obligation, and the meaner comparison in every pairing set. The selected helper still determines the following how-mean rating.

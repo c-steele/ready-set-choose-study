@@ -3,8 +3,8 @@
 **All pairings · researcher review · 18 stories · Practice once · proposed adaptation**
 
 - This separate forced-choice draft uses the same Find the Caregiver stimuli and pairing catalog as the individual-rating draft.
-- Each story first asks three forced-choice questions: who will help, who HAS TO help, and who was meaner for NOT helping. Each chosen character is confirmed neutrally with its full relationship description and recipient reference.
-- Each forced-choice question requires a choice between the two helpers. Choices appear in scene order: left helper, then right helper. There is no both, neither, or equal option. A Yes confirmation accepts the choice; No returns to it.
+- Each story first asks three forced-choice questions: who will help, who HAS TO help, and who was meaner for NOT helping. A character selection is recorded immediately and advances to the next part.
+- Each forced-choice question requires a choice between the two helpers. Choices appear in scene order: left helper, then right helper. There is no both, neither, or equal option.
 - Forced-choice prediction and obligation are adaptations of the Marshall paradigm, not the original Study 1 individual Yes/No measures. The meaner comparison is adapted to these two-helper stories.
 - White backgrounds and the same sadness context are used throughout. Source relationships, character positions, and intro order are preserved.
 - All paths have the same explicit outcome: no one helped, followed by each named helper did NOT help. A single Yes/No recall check precedes the meaner comparison.
@@ -12,21 +12,21 @@
 - Brief HAVE TO comprehension practice occurs before the first obligation comparison only.
 - The 18-story view is a researcher catalog of all three role sets, not the proposed length of one child’s session.
 
-Expected path range: **313–349 screens**, **182–218 responses**.
+Expected path range: **259–295 screens**, **128–164 responses**.
 
-Includes 54 required choice-confirmation screens and 2 correct-answer practice-feedback screens in addition to the static storyboard.
+Includes 2 correct-answer practice-feedback screens in addition to the static storyboard.
 
-54 forced choices + 36 individual Mean/Not Mean judgments + 18–54 how-mean ratings + 54 choice confirmations + 18 recall checks + 2 brief practice responses.
+54 forced choices + 36 individual Mean/Not Mean judgments + 18–54 how-mean ratings + 18 recall checks + 2 brief practice responses.
 
-Illustrative duration: **49.1–74.7 minutes**, based on 5195–6217 spoken words.
+Illustrative duration: **36.8–58.5 minutes**, based on 3956–4930 spoken words.
 
 - Illustrative estimate, not observed child-session duration.
 - Read-aloud pace: 110–130 words per minute; response time: 3–5 seconds per selection.
-- Includes each response label once, one accepted Yes confirmation for every forced-choice response, and mandatory correct-answer practice feedback; excludes repeated binary labels already stated in the prompt.
+- Includes each response label once, mandatory correct-answer practice feedback; excludes repeated binary labels already stated in the prompt.
 - Assumes correct recall and practice answers, including Yes to stopping being mean and No to lying. Incorrect check responses require correction and retry; there is no bypass.
-- Does not include correction repeats, rejected choice confirmations, breaks, setup, narration-only transition delays, or extra pauses between glowing options. Screen counts include required confirmation and correct-answer feedback stages; error retries are not counted.
+- Does not include correction repeats, breaks, setup, narration-only transition delays, or extra pauses between glowing options. Screen counts include correct-answer feedback stages; error retries are not counted.
 
-The first three judgments per story are two-helper choices with confirmation. Exactly one selected-helper how-mean card follows the meaner comparison. Individual how-mean cards follow Mean only. Practice feedback is mandatory; corrections require a retry.
+The first three judgments per story are two-helper choices that advance immediately after selection. Exactly one selected-helper how-mean card follows the meaner comparison. Individual how-mean cards follow Mean only. Practice feedback is mandatory; corrections require a retry.
 
 ## Story 1: Mom–Teacher
 
@@ -77,10 +77,6 @@ Left: the kid’s teacher. Middle: the kid in the middle. Right: the kid’s mom
 Read the choices together: “The kid’s teacher or the kid’s mom?”
 
 Choices: The kid’s teacher / The kid’s mom.
-
-After choosing “The kid’s teacher”, confirm: “You chose the kid’s teacher. Did you mean that the kid’s teacher will help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
-After choosing “The kid’s mom”, confirm: “You chose the kid’s mom. Did you mean that the kid’s mom will help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No prediction question.*
 
@@ -150,10 +146,6 @@ Read the choices together: “The kid’s teacher or the kid’s mom?”
 
 Choices: The kid’s teacher / The kid’s mom.
 
-After choosing “The kid’s teacher”, confirm: “You chose the kid’s teacher. Did you mean that the kid’s teacher HAS TO help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
-After choosing “The kid’s mom”, confirm: “You chose the kid’s mom. Did you mean that the kid’s mom HAS TO help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No obligation question.*
 
 ### 12. No one helped
@@ -203,10 +195,6 @@ After the reminder, reread the full question and response labels before reopenin
 Read the choices together: “The kid’s teacher or the kid’s mom?”
 
 Choices: The kid’s teacher / The kid’s mom.
-
-After choosing “The kid’s teacher”, confirm: “You chose the kid’s teacher. Did you mean that the kid’s teacher was meaner for NOT helping the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
-After choosing “The kid’s mom”, confirm: “You chose the kid’s mom. Did you mean that the kid’s mom was meaner for NOT helping the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
 
 *Two-helper comparison adapted from Marshall. Buttons follow the scene: the kid’s teacher left, the kid’s mom right.*
 
@@ -328,10 +316,6 @@ Read the choices together: “The kid’s sister or the kid’s friend?”
 
 Choices: The kid’s sister / The kid’s friend.
 
-After choosing “The kid’s sister”, confirm: “You chose the kid’s sister. Did you mean that the kid’s sister will help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
-After choosing “The kid’s friend”, confirm: “You chose the kid’s friend. Did you mean that the kid’s friend will help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No prediction question.*
 
 ### 28. Who HAS TO help? — PROPOSED WORDING
@@ -343,10 +327,6 @@ After choosing “The kid’s friend”, confirm: “You chose the kid’s frien
 Read the choices together: “The kid’s sister or the kid’s friend?”
 
 Choices: The kid’s sister / The kid’s friend.
-
-After choosing “The kid’s sister”, confirm: “You chose the kid’s sister. Did you mean that the kid’s sister HAS TO help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
-After choosing “The kid’s friend”, confirm: “You chose the kid’s friend. Did you mean that the kid’s friend HAS TO help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No obligation question.*
 
@@ -397,10 +377,6 @@ After the reminder, reread the full question and response labels before reopenin
 Read the choices together: “The kid’s sister or the kid’s friend?”
 
 Choices: The kid’s sister / The kid’s friend.
-
-After choosing “The kid’s sister”, confirm: “You chose the kid’s sister. Did you mean that the kid’s sister was meaner for NOT helping the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
-After choosing “The kid’s friend”, confirm: “You chose the kid’s friend. Did you mean that the kid’s friend was meaner for NOT helping the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
 
 *Two-helper comparison adapted from Marshall. Buttons follow the scene: the kid’s sister left, the kid’s friend right.*
 
@@ -522,10 +498,6 @@ Read the choices together: “The kid’s friend or the kid’s best friend?”
 
 Choices: The kid’s friend / The kid’s best friend.
 
-After choosing “The kid’s friend”, confirm: “You chose the kid’s friend. Did you mean that the kid’s friend will help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
-After choosing “The kid’s best friend”, confirm: “You chose the kid’s best friend. Did you mean that the kid’s best friend will help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No prediction question.*
 
 ### 45. Who HAS TO help? — PROPOSED WORDING
@@ -537,10 +509,6 @@ After choosing “The kid’s best friend”, confirm: “You chose the kid’s 
 Read the choices together: “The kid’s friend or the kid’s best friend?”
 
 Choices: The kid’s friend / The kid’s best friend.
-
-After choosing “The kid’s friend”, confirm: “You chose the kid’s friend. Did you mean that the kid’s friend HAS TO help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
-After choosing “The kid’s best friend”, confirm: “You chose the kid’s best friend. Did you mean that the kid’s best friend HAS TO help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No obligation question.*
 
@@ -591,10 +559,6 @@ After the reminder, reread the full question and response labels before reopenin
 Read the choices together: “The kid’s friend or the kid’s best friend?”
 
 Choices: The kid’s friend / The kid’s best friend.
-
-After choosing “The kid’s friend”, confirm: “You chose the kid’s friend. Did you mean that the kid’s friend was meaner for NOT helping the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
-After choosing “The kid’s best friend”, confirm: “You chose the kid’s best friend. Did you mean that the kid’s best friend was meaner for NOT helping the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
 
 *Two-helper comparison adapted from Marshall. Buttons follow the scene: the kid’s friend left, the kid’s best friend right.*
 
@@ -716,10 +680,6 @@ Read the choices together: “The kid’s teacher or the kid’s friend?”
 
 Choices: The kid’s teacher / The kid’s friend.
 
-After choosing “The kid’s teacher”, confirm: “You chose the kid’s teacher. Did you mean that the kid’s teacher will help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
-After choosing “The kid’s friend”, confirm: “You chose the kid’s friend. Did you mean that the kid’s friend will help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No prediction question.*
 
 ### 62. Who HAS TO help? — PROPOSED WORDING
@@ -731,10 +691,6 @@ After choosing “The kid’s friend”, confirm: “You chose the kid’s frien
 Read the choices together: “The kid’s teacher or the kid’s friend?”
 
 Choices: The kid’s teacher / The kid’s friend.
-
-After choosing “The kid’s teacher”, confirm: “You chose the kid’s teacher. Did you mean that the kid’s teacher HAS TO help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
-After choosing “The kid’s friend”, confirm: “You chose the kid’s friend. Did you mean that the kid’s friend HAS TO help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No obligation question.*
 
@@ -785,10 +741,6 @@ After the reminder, reread the full question and response labels before reopenin
 Read the choices together: “The kid’s teacher or the kid’s friend?”
 
 Choices: The kid’s teacher / The kid’s friend.
-
-After choosing “The kid’s teacher”, confirm: “You chose the kid’s teacher. Did you mean that the kid’s teacher was meaner for NOT helping the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
-After choosing “The kid’s friend”, confirm: “You chose the kid’s friend. Did you mean that the kid’s friend was meaner for NOT helping the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
 
 *Two-helper comparison adapted from Marshall. Buttons follow the scene: the kid’s teacher left, the kid’s friend right.*
 
@@ -910,10 +862,6 @@ Read the choices together: “The kid’s mom or the kid’s sister?”
 
 Choices: The kid’s mom / The kid’s sister.
 
-After choosing “The kid’s mom”, confirm: “You chose the kid’s mom. Did you mean that the kid’s mom will help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
-After choosing “The kid’s sister”, confirm: “You chose the kid’s sister. Did you mean that the kid’s sister will help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No prediction question.*
 
 ### 79. Who HAS TO help? — PROPOSED WORDING
@@ -925,10 +873,6 @@ After choosing “The kid’s sister”, confirm: “You chose the kid’s siste
 Read the choices together: “The kid’s mom or the kid’s sister?”
 
 Choices: The kid’s mom / The kid’s sister.
-
-After choosing “The kid’s mom”, confirm: “You chose the kid’s mom. Did you mean that the kid’s mom HAS TO help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
-After choosing “The kid’s sister”, confirm: “You chose the kid’s sister. Did you mean that the kid’s sister HAS TO help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No obligation question.*
 
@@ -979,10 +923,6 @@ After the reminder, reread the full question and response labels before reopenin
 Read the choices together: “The kid’s mom or the kid’s sister?”
 
 Choices: The kid’s mom / The kid’s sister.
-
-After choosing “The kid’s mom”, confirm: “You chose the kid’s mom. Did you mean that the kid’s mom was meaner for NOT helping the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
-After choosing “The kid’s sister”, confirm: “You chose the kid’s sister. Did you mean that the kid’s sister was meaner for NOT helping the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
 
 *Two-helper comparison adapted from Marshall. Buttons follow the scene: the kid’s mom left, the kid’s sister right.*
 
@@ -1104,10 +1044,6 @@ Read the choices together: “The kid’s classmate or the kid’s teacher?”
 
 Choices: The kid’s classmate / The kid’s teacher.
 
-After choosing “The kid’s classmate”, confirm: “You chose the kid’s classmate. Did you mean that the kid’s classmate will help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
-After choosing “The kid’s teacher”, confirm: “You chose the kid’s teacher. Did you mean that the kid’s teacher will help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No prediction question.*
 
 ### 96. Who HAS TO help? — PROPOSED WORDING
@@ -1119,10 +1055,6 @@ After choosing “The kid’s teacher”, confirm: “You chose the kid’s teac
 Read the choices together: “The kid’s classmate or the kid’s teacher?”
 
 Choices: The kid’s classmate / The kid’s teacher.
-
-After choosing “The kid’s classmate”, confirm: “You chose the kid’s classmate. Did you mean that the kid’s classmate HAS TO help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
-After choosing “The kid’s teacher”, confirm: “You chose the kid’s teacher. Did you mean that the kid’s teacher HAS TO help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No obligation question.*
 
@@ -1173,10 +1105,6 @@ After the reminder, reread the full question and response labels before reopenin
 Read the choices together: “The kid’s classmate or the kid’s teacher?”
 
 Choices: The kid’s classmate / The kid’s teacher.
-
-After choosing “The kid’s classmate”, confirm: “You chose the kid’s classmate. Did you mean that the kid’s classmate was meaner for NOT helping the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
-After choosing “The kid’s teacher”, confirm: “You chose the kid’s teacher. Did you mean that the kid’s teacher was meaner for NOT helping the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
 
 *Two-helper comparison adapted from Marshall. Buttons follow the scene: the kid’s classmate left, the kid’s teacher right.*
 
@@ -1298,10 +1226,6 @@ Read the choices together: “The kid’s teacher or the kid’s dad?”
 
 Choices: The kid’s teacher / The kid’s dad.
 
-After choosing “The kid’s teacher”, confirm: “You chose the kid’s teacher. Did you mean that the kid’s teacher will help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
-After choosing “The kid’s dad”, confirm: “You chose the kid’s dad. Did you mean that the kid’s dad will help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No prediction question.*
 
 ### 113. Who HAS TO help? — PROPOSED WORDING
@@ -1313,10 +1237,6 @@ After choosing “The kid’s dad”, confirm: “You chose the kid’s dad. Did
 Read the choices together: “The kid’s teacher or the kid’s dad?”
 
 Choices: The kid’s teacher / The kid’s dad.
-
-After choosing “The kid’s teacher”, confirm: “You chose the kid’s teacher. Did you mean that the kid’s teacher HAS TO help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
-After choosing “The kid’s dad”, confirm: “You chose the kid’s dad. Did you mean that the kid’s dad HAS TO help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No obligation question.*
 
@@ -1367,10 +1287,6 @@ After the reminder, reread the full question and response labels before reopenin
 Read the choices together: “The kid’s teacher or the kid’s dad?”
 
 Choices: The kid’s teacher / The kid’s dad.
-
-After choosing “The kid’s teacher”, confirm: “You chose the kid’s teacher. Did you mean that the kid’s teacher was meaner for NOT helping the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
-After choosing “The kid’s dad”, confirm: “You chose the kid’s dad. Did you mean that the kid’s dad was meaner for NOT helping the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
 
 *Two-helper comparison adapted from Marshall. Buttons follow the scene: the kid’s teacher left, the kid’s dad right.*
 
@@ -1492,10 +1408,6 @@ Read the choices together: “The kid’s brother or the kid’s friend?”
 
 Choices: The kid’s brother / The kid’s friend.
 
-After choosing “The kid’s brother”, confirm: “You chose the kid’s brother. Did you mean that the kid’s brother will help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
-After choosing “The kid’s friend”, confirm: “You chose the kid’s friend. Did you mean that the kid’s friend will help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No prediction question.*
 
 ### 130. Who HAS TO help? — PROPOSED WORDING
@@ -1507,10 +1419,6 @@ After choosing “The kid’s friend”, confirm: “You chose the kid’s frien
 Read the choices together: “The kid’s brother or the kid’s friend?”
 
 Choices: The kid’s brother / The kid’s friend.
-
-After choosing “The kid’s brother”, confirm: “You chose the kid’s brother. Did you mean that the kid’s brother HAS TO help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
-After choosing “The kid’s friend”, confirm: “You chose the kid’s friend. Did you mean that the kid’s friend HAS TO help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No obligation question.*
 
@@ -1561,10 +1469,6 @@ After the reminder, reread the full question and response labels before reopenin
 Read the choices together: “The kid’s brother or the kid’s friend?”
 
 Choices: The kid’s brother / The kid’s friend.
-
-After choosing “The kid’s brother”, confirm: “You chose the kid’s brother. Did you mean that the kid’s brother was meaner for NOT helping the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
-After choosing “The kid’s friend”, confirm: “You chose the kid’s friend. Did you mean that the kid’s friend was meaner for NOT helping the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
 
 *Two-helper comparison adapted from Marshall. Buttons follow the scene: the kid’s brother left, the kid’s friend right.*
 
@@ -1686,10 +1590,6 @@ Read the choices together: “The kid’s friend or the kid’s best friend?”
 
 Choices: The kid’s friend / The kid’s best friend.
 
-After choosing “The kid’s friend”, confirm: “You chose the kid’s friend. Did you mean that the kid’s friend will help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
-After choosing “The kid’s best friend”, confirm: “You chose the kid’s best friend. Did you mean that the kid’s best friend will help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No prediction question.*
 
 ### 147. Who HAS TO help? — PROPOSED WORDING
@@ -1701,10 +1601,6 @@ After choosing “The kid’s best friend”, confirm: “You chose the kid’s 
 Read the choices together: “The kid’s friend or the kid’s best friend?”
 
 Choices: The kid’s friend / The kid’s best friend.
-
-After choosing “The kid’s friend”, confirm: “You chose the kid’s friend. Did you mean that the kid’s friend HAS TO help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
-After choosing “The kid’s best friend”, confirm: “You chose the kid’s best friend. Did you mean that the kid’s best friend HAS TO help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No obligation question.*
 
@@ -1755,10 +1651,6 @@ After the reminder, reread the full question and response labels before reopenin
 Read the choices together: “The kid’s friend or the kid’s best friend?”
 
 Choices: The kid’s friend / The kid’s best friend.
-
-After choosing “The kid’s friend”, confirm: “You chose the kid’s friend. Did you mean that the kid’s friend was meaner for NOT helping the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
-After choosing “The kid’s best friend”, confirm: “You chose the kid’s best friend. Did you mean that the kid’s best friend was meaner for NOT helping the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
 
 *Two-helper comparison adapted from Marshall. Buttons follow the scene: the kid’s friend left, the kid’s best friend right.*
 
@@ -1880,10 +1772,6 @@ Read the choices together: “The kid’s teacher or the kid’s friend?”
 
 Choices: The kid’s teacher / The kid’s friend.
 
-After choosing “The kid’s teacher”, confirm: “You chose the kid’s teacher. Did you mean that the kid’s teacher will help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
-After choosing “The kid’s friend”, confirm: “You chose the kid’s friend. Did you mean that the kid’s friend will help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No prediction question.*
 
 ### 164. Who HAS TO help? — PROPOSED WORDING
@@ -1895,10 +1783,6 @@ After choosing “The kid’s friend”, confirm: “You chose the kid’s frien
 Read the choices together: “The kid’s teacher or the kid’s friend?”
 
 Choices: The kid’s teacher / The kid’s friend.
-
-After choosing “The kid’s teacher”, confirm: “You chose the kid’s teacher. Did you mean that the kid’s teacher HAS TO help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
-After choosing “The kid’s friend”, confirm: “You chose the kid’s friend. Did you mean that the kid’s friend HAS TO help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No obligation question.*
 
@@ -1949,10 +1833,6 @@ After the reminder, reread the full question and response labels before reopenin
 Read the choices together: “The kid’s teacher or the kid’s friend?”
 
 Choices: The kid’s teacher / The kid’s friend.
-
-After choosing “The kid’s teacher”, confirm: “You chose the kid’s teacher. Did you mean that the kid’s teacher was meaner for NOT helping the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
-After choosing “The kid’s friend”, confirm: “You chose the kid’s friend. Did you mean that the kid’s friend was meaner for NOT helping the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
 
 *Two-helper comparison adapted from Marshall. Buttons follow the scene: the kid’s teacher left, the kid’s friend right.*
 
@@ -2074,10 +1954,6 @@ Read the choices together: “The kid’s dad or the kid’s brother?”
 
 Choices: The kid’s dad / The kid’s brother.
 
-After choosing “The kid’s dad”, confirm: “You chose the kid’s dad. Did you mean that the kid’s dad will help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
-After choosing “The kid’s brother”, confirm: “You chose the kid’s brother. Did you mean that the kid’s brother will help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No prediction question.*
 
 ### 181. Who HAS TO help? — PROPOSED WORDING
@@ -2089,10 +1965,6 @@ After choosing “The kid’s brother”, confirm: “You chose the kid’s brot
 Read the choices together: “The kid’s dad or the kid’s brother?”
 
 Choices: The kid’s dad / The kid’s brother.
-
-After choosing “The kid’s dad”, confirm: “You chose the kid’s dad. Did you mean that the kid’s dad HAS TO help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
-After choosing “The kid’s brother”, confirm: “You chose the kid’s brother. Did you mean that the kid’s brother HAS TO help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No obligation question.*
 
@@ -2143,10 +2015,6 @@ After the reminder, reread the full question and response labels before reopenin
 Read the choices together: “The kid’s dad or the kid’s brother?”
 
 Choices: The kid’s dad / The kid’s brother.
-
-After choosing “The kid’s dad”, confirm: “You chose the kid’s dad. Did you mean that the kid’s dad was meaner for NOT helping the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
-After choosing “The kid’s brother”, confirm: “You chose the kid’s brother. Did you mean that the kid’s brother was meaner for NOT helping the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
 
 *Two-helper comparison adapted from Marshall. Buttons follow the scene: the kid’s dad left, the kid’s brother right.*
 
@@ -2268,10 +2136,6 @@ Read the choices together: “The kid’s classmate or the kid’s teacher?”
 
 Choices: The kid’s classmate / The kid’s teacher.
 
-After choosing “The kid’s classmate”, confirm: “You chose the kid’s classmate. Did you mean that the kid’s classmate will help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
-After choosing “The kid’s teacher”, confirm: “You chose the kid’s teacher. Did you mean that the kid’s teacher will help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No prediction question.*
 
 ### 198. Who HAS TO help? — PROPOSED WORDING
@@ -2283,10 +2147,6 @@ After choosing “The kid’s teacher”, confirm: “You chose the kid’s teac
 Read the choices together: “The kid’s classmate or the kid’s teacher?”
 
 Choices: The kid’s classmate / The kid’s teacher.
-
-After choosing “The kid’s classmate”, confirm: “You chose the kid’s classmate. Did you mean that the kid’s classmate HAS TO help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
-After choosing “The kid’s teacher”, confirm: “You chose the kid’s teacher. Did you mean that the kid’s teacher HAS TO help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No obligation question.*
 
@@ -2337,10 +2197,6 @@ After the reminder, reread the full question and response labels before reopenin
 Read the choices together: “The kid’s classmate or the kid’s teacher?”
 
 Choices: The kid’s classmate / The kid’s teacher.
-
-After choosing “The kid’s classmate”, confirm: “You chose the kid’s classmate. Did you mean that the kid’s classmate was meaner for NOT helping the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
-After choosing “The kid’s teacher”, confirm: “You chose the kid’s teacher. Did you mean that the kid’s teacher was meaner for NOT helping the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
 
 *Two-helper comparison adapted from Marshall. Buttons follow the scene: the kid’s classmate left, the kid’s teacher right.*
 
@@ -2462,10 +2318,6 @@ Read the choices together: “The kid’s dad or the kid’s mom?”
 
 Choices: The kid’s dad / The kid’s mom.
 
-After choosing “The kid’s dad”, confirm: “You chose the kid’s dad. Did you mean that the kid’s dad will help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
-After choosing “The kid’s mom”, confirm: “You chose the kid’s mom. Did you mean that the kid’s mom will help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No prediction question.*
 
 ### 215. Who HAS TO help? — PROPOSED WORDING
@@ -2477,10 +2329,6 @@ After choosing “The kid’s mom”, confirm: “You chose the kid’s mom. Did
 Read the choices together: “The kid’s dad or the kid’s mom?”
 
 Choices: The kid’s dad / The kid’s mom.
-
-After choosing “The kid’s dad”, confirm: “You chose the kid’s dad. Did you mean that the kid’s dad HAS TO help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
-After choosing “The kid’s mom”, confirm: “You chose the kid’s mom. Did you mean that the kid’s mom HAS TO help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No obligation question.*
 
@@ -2531,10 +2379,6 @@ After the reminder, reread the full question and response labels before reopenin
 Read the choices together: “The kid’s dad or the kid’s mom?”
 
 Choices: The kid’s dad / The kid’s mom.
-
-After choosing “The kid’s dad”, confirm: “You chose the kid’s dad. Did you mean that the kid’s dad was meaner for NOT helping the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
-After choosing “The kid’s mom”, confirm: “You chose the kid’s mom. Did you mean that the kid’s mom was meaner for NOT helping the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
 
 *Two-helper comparison adapted from Marshall. Buttons follow the scene: the kid’s dad left, the kid’s mom right.*
 
@@ -2656,10 +2500,6 @@ Read the choices together: “The kid’s sister or the kid’s brother?”
 
 Choices: The kid’s sister / The kid’s brother.
 
-After choosing “The kid’s sister”, confirm: “You chose the kid’s sister. Did you mean that the kid’s sister will help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
-After choosing “The kid’s brother”, confirm: “You chose the kid’s brother. Did you mean that the kid’s brother will help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No prediction question.*
 
 ### 232. Who HAS TO help? — PROPOSED WORDING
@@ -2671,10 +2511,6 @@ After choosing “The kid’s brother”, confirm: “You chose the kid’s brot
 Read the choices together: “The kid’s sister or the kid’s brother?”
 
 Choices: The kid’s sister / The kid’s brother.
-
-After choosing “The kid’s sister”, confirm: “You chose the kid’s sister. Did you mean that the kid’s sister HAS TO help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
-After choosing “The kid’s brother”, confirm: “You chose the kid’s brother. Did you mean that the kid’s brother HAS TO help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No obligation question.*
 
@@ -2725,10 +2561,6 @@ After the reminder, reread the full question and response labels before reopenin
 Read the choices together: “The kid’s sister or the kid’s brother?”
 
 Choices: The kid’s sister / The kid’s brother.
-
-After choosing “The kid’s sister”, confirm: “You chose the kid’s sister. Did you mean that the kid’s sister was meaner for NOT helping the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
-After choosing “The kid’s brother”, confirm: “You chose the kid’s brother. Did you mean that the kid’s brother was meaner for NOT helping the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
 
 *Two-helper comparison adapted from Marshall. Buttons follow the scene: the kid’s sister left, the kid’s brother right.*
 
@@ -2850,10 +2682,6 @@ Read the choices together: “The kid’s dad or the kid?”
 
 Choices: The kid’s dad / The kid.
 
-After choosing “The kid’s dad”, confirm: “You chose the kid’s dad. Did you mean that the kid’s dad will help the mom in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
-After choosing “The kid”, confirm: “You chose the kid. Did you mean that the kid will help the mom in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No prediction question.*
 
 ### 249. Who HAS TO help? — PROPOSED WORDING
@@ -2865,10 +2693,6 @@ After choosing “The kid”, confirm: “You chose the kid. Did you mean that t
 Read the choices together: “The kid’s dad or the kid?”
 
 Choices: The kid’s dad / The kid.
-
-After choosing “The kid’s dad”, confirm: “You chose the kid’s dad. Did you mean that the kid’s dad HAS TO help the mom in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
-After choosing “The kid”, confirm: “You chose the kid. Did you mean that the kid HAS TO help the mom in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No obligation question.*
 
@@ -2919,10 +2743,6 @@ After the reminder, reread the full question and response labels before reopenin
 Read the choices together: “The kid’s dad or the kid?”
 
 Choices: The kid’s dad / The kid.
-
-After choosing “The kid’s dad”, confirm: “You chose the kid’s dad. Did you mean that the kid’s dad was meaner for NOT helping the mom in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
-After choosing “The kid”, confirm: “You chose the kid. Did you mean that the kid was meaner for NOT helping the mom in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
 
 *Two-helper comparison adapted from Marshall. Buttons follow the scene: the kid’s dad left, the kid right.*
 
@@ -3044,10 +2864,6 @@ Read the choices together: “The kid or the kid’s mom?”
 
 Choices: The kid / The kid’s mom.
 
-After choosing “The kid”, confirm: “You chose the kid. Did you mean that the kid will help the dad in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
-After choosing “The kid’s mom”, confirm: “You chose the kid’s mom. Did you mean that the kid’s mom will help the dad in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No prediction question.*
 
 ### 266. Who HAS TO help? — PROPOSED WORDING
@@ -3059,10 +2875,6 @@ After choosing “The kid’s mom”, confirm: “You chose the kid’s mom. Did
 Read the choices together: “The kid or the kid’s mom?”
 
 Choices: The kid / The kid’s mom.
-
-After choosing “The kid”, confirm: “You chose the kid. Did you mean that the kid HAS TO help the dad in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
-After choosing “The kid’s mom”, confirm: “You chose the kid’s mom. Did you mean that the kid’s mom HAS TO help the dad in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No obligation question.*
 
@@ -3113,10 +2925,6 @@ After the reminder, reread the full question and response labels before reopenin
 Read the choices together: “The kid or the kid’s mom?”
 
 Choices: The kid / The kid’s mom.
-
-After choosing “The kid”, confirm: “You chose the kid. Did you mean that the kid was meaner for NOT helping the dad in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
-After choosing “The kid’s mom”, confirm: “You chose the kid’s mom. Did you mean that the kid’s mom was meaner for NOT helping the dad in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
 
 *Two-helper comparison adapted from Marshall. Buttons follow the scene: the kid left, the kid’s mom right.*
 
@@ -3238,10 +3046,6 @@ Read the choices together: “The kid’s teacher or the kid?”
 
 Choices: The teacher on the left / The kid.
 
-After choosing “The teacher on the left”, confirm: “You chose the teacher on the left. Did you mean that the teacher on the left will help the teacher in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
-After choosing “The kid”, confirm: “You chose the kid. Did you mean that the kid will help the teacher in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No prediction question.*
 
 ### 283. Who HAS TO help? — PROPOSED WORDING
@@ -3253,10 +3057,6 @@ After choosing “The kid”, confirm: “You chose the kid. Did you mean that t
 Read the choices together: “The kid’s teacher or the kid?”
 
 Choices: The teacher on the left / The kid.
-
-After choosing “The teacher on the left”, confirm: “You chose the teacher on the left. Did you mean that the teacher on the left HAS TO help the teacher in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
-After choosing “The kid”, confirm: “You chose the kid. Did you mean that the kid HAS TO help the teacher in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No obligation question.*
 
@@ -3307,10 +3107,6 @@ After the reminder, reread the full question and response labels before reopenin
 Read the choices together: “The kid’s teacher or the kid?”
 
 Choices: The teacher on the left / The kid.
-
-After choosing “The teacher on the left”, confirm: “You chose the teacher on the left. Did you mean that the teacher on the left was meaner for NOT helping the teacher in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
-After choosing “The kid”, confirm: “You chose the kid. Did you mean that the kid was meaner for NOT helping the teacher in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
 
 *Two-helper comparison adapted from Marshall. Buttons follow the scene: the teacher on the left left, the kid right.*
 
@@ -3432,10 +3228,6 @@ Read the choices together: “The kid’s classmate or the kid’s teacher?”
 
 Choices: The kid’s classmate / The kid’s teacher.
 
-After choosing “The kid’s classmate”, confirm: “You chose the kid’s classmate. Did you mean that the kid’s classmate will help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
-After choosing “The kid’s teacher”, confirm: “You chose the kid’s teacher. Did you mean that the kid’s teacher will help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No prediction question.*
 
 ### 300. Who HAS TO help? — PROPOSED WORDING
@@ -3447,10 +3239,6 @@ After choosing “The kid’s teacher”, confirm: “You chose the kid’s teac
 Read the choices together: “The kid’s classmate or the kid’s teacher?”
 
 Choices: The kid’s classmate / The kid’s teacher.
-
-After choosing “The kid’s classmate”, confirm: “You chose the kid’s classmate. Did you mean that the kid’s classmate HAS TO help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
-After choosing “The kid’s teacher”, confirm: “You chose the kid’s teacher. Did you mean that the kid’s teacher HAS TO help the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No obligation question.*
 
@@ -3501,10 +3289,6 @@ After the reminder, reread the full question and response labels before reopenin
 Read the choices together: “The kid’s classmate or the kid’s teacher?”
 
 Choices: The kid’s classmate / The kid’s teacher.
-
-After choosing “The kid’s classmate”, confirm: “You chose the kid’s classmate. Did you mean that the kid’s classmate was meaner for NOT helping the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
-
-After choosing “The kid’s teacher”, confirm: “You chose the kid’s teacher. Did you mean that the kid’s teacher was meaner for NOT helping the kid in the middle? Yes or No.” Choices: Yes / No. No returns to the original choice; Yes accepts it.
 
 *Two-helper comparison adapted from Marshall. Buttons follow the scene: the kid’s classmate left, the kid’s teacher right.*
 

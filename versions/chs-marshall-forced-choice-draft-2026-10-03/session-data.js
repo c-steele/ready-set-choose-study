@@ -38,13 +38,7 @@
     }
     const helperChoices = helpers.map(h => upper(h.description));
     const choiceQuestion = apostrophes(p.sourceHugQuestion.trim().split('\n').pop());
-    const pairOptions = {choices:helperChoices, choiceQuestion, optionActors:helpers.map(h => h.id), confirmChoice:true};
-    function choiceConfirmations(judgment) {
-      return Object.fromEntries(helpers.map(helper => [upper(helper.description), {
-        text:`You chose ${helper.description}. Did you mean that ${helper.description} ${judgment} ${recipient.reference}? Yes or No.`,
-        choices:['Yes', 'No'], actorId:helper.id
-      }]));
-    }
+    const pairOptions = {choices:helperChoices, choiceQuestion, optionActors:helpers.map(h => h.id)};
     add('group', 'group', {image:p.images.group});
     for (const intro of p.intros) {
       add(`intro-${intro.actorId}`, 'kid', {
@@ -56,8 +50,7 @@
     add('need', 'need', {phase:`${upper(recipient.description)} needs help`, text:p.sourceNeedText});
     add('predict-compare', 'predict-compare', {
       ...pairOptions,
-      text:`Who will help ${recipient.reference} now that they’re sad?`,
-      choiceConfirmations:choiceConfirmations('will help')
+      text:`Who will help ${recipient.reference} now that they’re sad?`
     });
     if (includePractice) {
       for (const template of draft.steps.filter(s => s.id.startsWith('practice-'))) {
@@ -68,8 +61,7 @@
     }
     add('obligation-compare', 'obligation-compare', {
       ...pairOptions,
-      text:`Who do you think HAS TO help ${recipient.reference}?`,
-      choiceConfirmations:choiceConfirmations('HAS TO help')
+      text:`Who do you think HAS TO help ${recipient.reference}?`
     });
     const outcomeSummary = `No one helped ${recipient.description}.`;
     add('outcome-summary', 'outcome-summary', {text:outcomeSummary, displayText:outcomeSummary, outcomeVisual:true});
@@ -84,10 +76,9 @@
     add('compare', 'compare', {
       ...pairOptions,
       text:`Who was meaner for NOT helping ${recipient.reference}?`,
-      choiceConfirmations:choiceConfirmations('was meaner for NOT helping'),
       note:`Two-helper comparison adapted from Marshall. Buttons follow the scene: ${helpers[0].description} left, ${helpers[1].description} right.`
     });
-    // Exactly one selected-helper strength card follows the confirmed comparison.
+    // Exactly one selected-helper strength card follows the comparison.
     for (const helper of helpers) {
       add(`compare-${helper.id}-amount`, `compare-${helper.id}-amount`, {
         phase:`Selected helper · How mean is ${helper.description}?`,
@@ -172,9 +163,9 @@
       assumptions:[
         'Illustrative estimate, not observed child-session duration.',
         'Read-aloud pace: 110–130 words per minute; response time: 3–5 seconds per selection.',
-        'Includes each response label once, one accepted Yes confirmation for every forced-choice response, and mandatory correct-answer practice feedback; excludes repeated binary labels already stated in the prompt.',
+        'Includes each response label once, mandatory correct-answer practice feedback; excludes repeated binary labels already stated in the prompt.',
         'Assumes correct recall and practice answers, including Yes to stopping being mean and No to lying. Incorrect check responses require correction and retry; there is no bypass.',
-        'Does not include correction repeats, rejected choice confirmations, breaks, setup, narration-only transition delays, or extra pauses between glowing options. Screen counts include required confirmation and correct-answer feedback stages; error retries are not counted.'
+        'Does not include correction repeats, breaks, setup, narration-only transition delays, or extra pauses between glowing options. Screen counts include correct-answer feedback stages; error retries are not counted.'
       ]
     };
   }
@@ -195,8 +186,8 @@
       isAllReview:setId === 'all', pairings, steps, stats:statsFor(steps, pairings.length),
       notes:[
         'This separate forced-choice draft uses the same Find the Caregiver stimuli and pairing catalog as the individual-rating draft.',
-        'Each story first asks three forced-choice questions: who will help, who HAS TO help, and who was meaner for NOT helping. Each chosen character is confirmed neutrally with its full relationship description and recipient reference.',
-        'Each forced-choice question requires a choice between the two helpers. Choices appear in scene order: left helper, then right helper. There is no both, neither, or equal option. A Yes confirmation accepts the choice; No returns to it.',
+        'Each story first asks three forced-choice questions: who will help, who HAS TO help, and who was meaner for NOT helping. A character selection is recorded immediately and advances to the next part.',
+        'Each forced-choice question requires a choice between the two helpers. Choices appear in scene order: left helper, then right helper. There is no both, neither, or equal option.',
         'Forced-choice prediction and obligation are adaptations of the Marshall paradigm, not the original Study 1 individual Yes/No measures. The meaner comparison is adapted to these two-helper stories.',
         'White backgrounds and the same sadness context are used throughout. Source relationships, character positions, and intro order are preserved.',
         'All paths have the same explicit outcome: no one helped, followed by each named helper did NOT help. A single Yes/No recall check precedes the meaner comparison.',
@@ -215,11 +206,11 @@
       `**${session.setLabel} · ${session.pairings.length} stories · ${session.practiceLabel}**`, '',
       ...session.notes.map(note => `- ${note}`), '',
       `Expected path range: **${stats.screens.min}–${stats.screens.max} screens**, **${stats.responses.min}–${stats.responses.max} responses**.`, '',
-      `Includes ${stats.virtualConfirmationScreens} required choice-confirmation screens and ${stats.virtualCorrectFeedbackScreens} correct-answer practice-feedback screens in addition to the static storyboard.`, '',
-      `${stats.forcedChoiceResponses} forced choices + ${stats.individualEvaluationResponses} individual Mean/Not Mean judgments + ${stats.strengthResponses.min}–${stats.strengthResponses.max} how-mean ratings + ${stats.confirmationResponses} choice confirmations + ${stats.checks} recall checks + ${stats.practiceResponses} brief practice responses.`, '',
+      `Includes ${stats.virtualCorrectFeedbackScreens} correct-answer practice-feedback screens in addition to the static storyboard.`, '',
+      `${stats.forcedChoiceResponses} forced choices + ${stats.individualEvaluationResponses} individual Mean/Not Mean judgments + ${stats.strengthResponses.min}–${stats.strengthResponses.max} how-mean ratings + ${stats.checks} recall checks + ${stats.practiceResponses} brief practice responses.`, '',
       `Illustrative duration: **${stats.minutes.min}–${stats.minutes.max} minutes**, based on ${stats.words.min}–${stats.words.max} spoken words.`, '',
       ...stats.assumptions.map(note => `- ${note}`), '',
-      'The first three judgments per story are two-helper choices with confirmation. Exactly one selected-helper how-mean card follows the meaner comparison. Individual how-mean cards follow Mean only. Practice feedback is mandatory; corrections require a retry.', ''
+      'The first three judgments per story are two-helper choices that advance immediately after selection. Exactly one selected-helper how-mean card follows the meaner comparison. Individual how-mean cards follow Mean only. Practice feedback is mandatory; corrections require a retry.', ''
     ];
     let lastStory = -1;
     for (const [index, step] of session.steps.entries()) {
