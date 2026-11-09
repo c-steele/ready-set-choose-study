@@ -136,11 +136,18 @@ body.child-view .prompt h2 {
   font-size: max(22px, calc(2.75 * var(--caption-unit)));
   text-wrap: wrap;
 }
+.stage[data-screen-kind="story"] > .prompt.scale-prompt h2 {
+  width: 100%;
+  max-width: none;
+  font-size: max(22px, calc(2.2 * var(--caption-unit)));
+  text-wrap: wrap;
+}
 
 @media (max-width: 460px) {
   .stage[data-screen-kind="story"] > .prompt h2,
   .choice-caption,
-  .stage[data-screen-kind="story"] > .prompt.recall-prompt h2 { font-size: 19px; }
+  .stage[data-screen-kind="story"] > .prompt.recall-prompt h2,
+  .stage[data-screen-kind="story"] > .prompt.scale-prompt h2 { font-size: 19px; }
 }
 
 /* Let the caption, answers and audio controls take their natural height.
@@ -263,22 +270,23 @@ body.child-view .point-instruction {
 
 body.child-view .rating-options {
   flex: 0 0 auto;
-  width: min(660px, calc(100% - 36px));
+  width: min(780px, calc(100% - 36px));
   gap: 14px;
   margin: 5px auto 4px;
 }
 
 body.child-view .rating-answer {
-  min-height: 108px;
-  gap: 5px;
+  min-height: 146px;
+  gap: 8px;
   padding: 9px;
   font-weight: 900;
-  font-size: 19px;
+  font-size: 20px;
   color: #1d2733;
 }
 
-body.child-view .amount-marker {
-  height: 48px;
+body.child-view .meanness-face { width: 82px; height: 82px; }
+@media (max-width: 460px) {
+  body.child-view .meanness-face { width: 62px; height: 62px; }
 }
 
 body.child-view .option-reader-controls {

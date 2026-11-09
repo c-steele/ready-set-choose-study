@@ -15,16 +15,14 @@
 @media(max-width:650px){.practice-illustration{padding:15px 12px 7px}.practice-setup{font-size:17px}.practice-question{font-size:22px}.practice-artwork{margin:5px auto}}
 @media print{.story-card .practice-illustration{padding:24px}.story-card .practice-setup{font-size:21px}.story-card .practice-question{font-size:26px}}
 
-/* FTC-style sequential option cues, without positive/negative face symbols. */
+/* Sequentially narrated meanness choices with increasingly stern faces. */
 .rating-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;width:min(660px,calc(100% - 44px));margin:5px auto 12px;padding:4px}
 .rating-answer{min-height:126px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;border:4px solid var(--story-border);border-radius:8px;background:var(--story-tint);color:#292821;font:inherit;font-size:18px;font-weight:700;padding:10px 8px;opacity:.18;transform:scale(.96);box-shadow:0 5px 12px #2928211a;transition:opacity 180ms ease,transform 180ms ease,background 180ms ease,box-shadow 180ms ease;text-align:center}
 .rating-answer:disabled{opacity:.18;cursor:default}
 .rating-answer.option-visible{opacity:1;transform:scale(1)}
 .rating-answer.option-current{background:#eaf7ff;border-color:#2477b8;box-shadow:0 0 0 5px #2477b833,0 9px 20px #2477b833}
 .rating-answer.option-ready:hover{background:var(--story-hover);box-shadow:0 0 0 4px #2477b82b}
-.amount-marker{display:flex;align-items:center;justify-content:center;height:56px;width:65px;flex-shrink:0}
-.amount-marker::before{content:'';display:block;border-radius:50%;background:var(--story-accent);width:14px;height:14px}
-.marker-1::before{width:29px;height:29px}.marker-2::before{width:49px;height:49px}
+.meanness-face{display:block;width:76px;height:76px;flex-shrink:0}
 .option-reader-controls{display:flex;justify-content:center;gap:10px;margin:8px 15px 0;flex-wrap:wrap}
 .option-reader-controls button{font-size:13px;padding:8px 13px}
 .option-reader-controls [data-read-options]{background:#edf6fc;border-color:#b6cfe2;color:#195c8f}

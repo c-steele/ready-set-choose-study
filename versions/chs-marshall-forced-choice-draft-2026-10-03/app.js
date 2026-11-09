@@ -181,7 +181,7 @@
       const active=spans.some(cue=>cue.actorId===button.dataset.narrationActor&&seconds>=cue.start&&seconds<cue.end);
       button.classList.toggle('narration-actor-current',active);
     });
-    stage.querySelectorAll('.yes-no-answer').forEach(button=>{
+    stage.querySelectorAll('.yes-no-answer,.rating-answer').forEach(button=>{
       const active=spans.some(cue=>cue.optionIndex===Number(button.dataset.answer)&&seconds>=cue.start&&seconds<cue.end);
       button.classList.toggle('option-current',active);
     });
@@ -285,15 +285,20 @@
     return `<p class="choice-caption">${esc(s.choiceQuestion || s.choices[0]+' or '+second+'?')}</p>`;
   }
   function caption(s){const text=esc(s.displayTitle||s.displayText||s.text);return s.captionEmphasis==='HAVE TO'?text.replace(/\bHAVE TO\b/g,'<em class="obligation-emphasis">HAVE TO</em>'):text;}
-  function prompt(s){return `<div class="prompt${s.localId==='recall-all'?' recall-prompt':''}">${s.context&&!s.displayText?`<p class="referent">${esc(s.context)}</p>`:''}${s.preface?`<p class="preface">${esc(s.preface)}</p>`:''}<h2>${caption(s)}</h2></div>`;}
+  function prompt(s){return `<div class="prompt${s.localId==='recall-all'?' recall-prompt':''}${s.choices?.length===3?' scale-prompt':''}">${s.context&&!s.displayText?`<p class="referent">${esc(s.context)}</p>`:''}${s.preface?`<p class="preface">${esc(s.preface)}</p>`:''}<h2>${caption(s)}</h2></div>`;}
   function yesNoLabel(label){
     const path=label==='Yes'?'M13 34 L27 48 L53 17':'M17 17 L47 47 M47 17 L17 47';
     return `<svg class="yes-no-symbol" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="${path}" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="yes-no-label">${esc(label)}</span>`;
   }
   function branchNote(s){if(!s.when)return '';const parent=steps.find(p=>p.id===s.when[0]);return `Only after “${s.when[1]}” to ${parent.phase.toLowerCase()}. `;}
   function choiceReaderControls(binary=false){return `<div class="option-reader-controls${binary?' binary-reader-controls':''}"><button data-read-options type="button" aria-label="Replay choices">▶</button></div><p class="reader-status${binary?' binary-reader-status':''}" data-reader-status role="status">Listen to each choice, then tap one.</p>`;}
+  function meannessFace(level){
+    const brows=['M26 30 L38 32 M58 32 L70 30','M25 27 L39 33 M57 33 L71 27','M24 25 L40 35 M56 35 L72 25'][level];
+    const mouth=['M33 65 Q48 59 63 65','M31 68 Q48 50 65 68','M29 71 Q48 43 67 71'][level];
+    return `<svg class="meanness-face" viewBox="0 0 96 96" aria-hidden="true" focusable="false"><circle cx="48" cy="48" r="43" fill="#FFD35C" stroke="#E6B648" stroke-width="2.5"/><g fill="#29333D"><circle cx="33" cy="43" r="4.5"/><circle cx="63" cy="43" r="4.5"/></g><path d="${brows} ${mouth}" fill="none" stroke="#29333D" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+  }
   function scaleOptions(s,interactive=false){
-    const cards=s.choices.map((c,i)=>interactive?`<button class="rating-answer" data-answer="${i}" disabled><span class="amount-marker marker-${i}" aria-hidden="true"></span><span>${esc(c)}</span></button>`:`<div class="rating-answer option-visible"><span class="amount-marker marker-${i}" aria-hidden="true"></span><span>${esc(c)}</span></div>`).join('');
+    const cards=s.choices.map((c,i)=>interactive?`<button class="rating-answer" data-answer="${i}" disabled>${meannessFace(i)}<span>${esc(c)}</span></button>`:`<div class="rating-answer option-visible">${meannessFace(i)}<span>${esc(c)}</span></div>`).join('');
     return `<div class="rating-options">${cards}</div>${interactive?choiceReaderControls():''}`;
   }
   function render(){
