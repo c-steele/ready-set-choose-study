@@ -1,6 +1,6 @@
 # Forced-choice obligation study draft — full session
 
-**All pairings · researcher review · 18 stories · Practice with every story**
+**All pairings · researcher review · 18 stories**
 
 - This separate forced-choice draft uses the same Find the Caregiver stimuli and pairing catalog as the individual-rating draft.
 - Each story first asks three forced-choice questions: who will help, who HAS TO help, and who was meaner for NOT helping. A character selection is recorded immediately and advances to the next part.
@@ -9,24 +9,22 @@
 - White backgrounds and the same sadness context are used throughout. Source relationships, character positions, and intro order are preserved.
 - All paths have the same explicit outcome: no one helped, followed by each named helper did NOT help. A single Yes/No recall check precedes the meaner comparison.
 - After the meaner comparison, a three-option how-mean rating is asked for the selected helper. Then each helper receives an individual Mean/Not Mean question and a conditional how-mean follow-up after Mean. Prediction and obligation remain forced choices without strength follow-ups. Overall Mean/Nice and individual recall questions remain omitted.
-- Brief HAVE TO comprehension practice repeats before the obligation comparison in each story.
+- Instructional HAVE TO practice is omitted; prediction is followed directly by the obligation question.
 - The 18-story view is a researcher catalog of all three role sets, not the proposed length of one child’s session.
 
-Expected path range: **361–397 screens**, **162–198 responses**.
+Expected path range: **253–289 screens**, **126–162 responses**.
 
-Includes 36 correct-answer practice-feedback screens in addition to the static storyboard.
+54 forced choices + 36 individual Mean/Not Mean judgments + 18–54 how-mean ratings + 18 recall checks.
 
-54 forced choices + 36 individual Mean/Not Mean judgments + 18–54 how-mean ratings + 18 recall checks + 36 brief practice responses.
-
-Illustrative duration: **48.5–73.1 minutes**, based on 5251–6225 spoken words.
+Illustrative duration: **36–57.5 minutes**, based on 3865–4839 spoken words.
 
 - Illustrative estimate, not observed child-session duration.
 - Read-aloud pace: 110–130 words per minute; response time: 3–5 seconds per selection.
-- Includes each response label once, mandatory correct-answer practice feedback; excludes repeated binary labels already stated in the prompt.
-- Assumes correct recall and practice answers, including Yes to stopping at a red traffic light and No to lying. Incorrect check responses require correction and retry; there is no bypass.
-- Does not include correction repeats, breaks, setup, narration-only transition delays, or extra pauses between glowing options. Screen counts include correct-answer feedback stages; error retries are not counted.
+- Includes each response label once; excludes repeated binary labels already stated in the prompt.
+- Assumes correct recall answers. Incorrect recall responses require correction and retry; there is no bypass.
+- Does not include correction repeats, breaks, setup, narration-only transition delays, or extra pauses between glowing options. Error retries are not counted.
 
-The first three judgments per story are two-helper choices that advance immediately after selection. Exactly one selected-helper how-mean card follows the meaner comparison. Individual how-mean cards follow Mean only. Practice feedback is mandatory; corrections require a retry.
+The first three judgments per story are two-helper choices that advance immediately after selection. Exactly one selected-helper how-mean card follows the meaner comparison. Individual how-mean cards follow Mean only. Recall corrections require a retry.
 
 ## Story 1: Mom–Teacher
 
@@ -80,63 +78,7 @@ Choices: The kid’s teacher / The kid’s mom.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No prediction question.*
 
-### 7. “HAVE TO” practice
-
-“Now, sometimes people *HAVE TO* do things.”
-
-*The Evelyn recording uses continuous speech. HAVE TO remains uppercase and italic on screen as an adaptation. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 8. Practice · Red light
-
-“When the traffic light is red, do you HAVE TO stop? Yes or No.”
-
-Display treatment: Let’s practice! / The traffic light is red. / Do you HAVE TO stop?
-
-Choices: Yes / No.
-
-Expected check/practice answer: Yes.
-
-A correct response is required to advance; there is no bypass.
-
-Mandatory correct-answer feedback: “That’s right! When the traffic light is red, you HAVE TO stop.”
-
-Incorrect-answer correction: “No, that’s not quite right. When the traffic light is red, you HAVE TO stop. Let’s try that question again.”
-
-Reminder if needed: “No, that’s not quite right. When the traffic light is red, you HAVE TO stop. Let’s try that question again.”
-
-After the reminder, reread the full question and response labels before reopening the choices.
-
-*Correct-answer feedback is mandatory. Incorrect answers receive contextual correction and a reread; only the correct answer advances. Brief comprehension practice, not a study outcome. Role-free traffic-light example, illustration, and split display wording are draft adaptations for review. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 9. Practice · Lie
-
-“When someone asks you a question, do you HAVE TO lie? Yes or No.”
-
-Display treatment: Let’s practice! / Someone asks you a question. / Do you HAVE TO lie?
-
-Choices: Yes / No.
-
-Expected check/practice answer: No.
-
-A correct response is required to advance; there is no bypass.
-
-Mandatory correct-answer feedback: “That’s right! When someone asks you a question, you do NOT HAVE TO lie.”
-
-Incorrect-answer correction: “No, that’s not quite right. When someone asks you a question, you do NOT HAVE TO lie. Let’s try that question again.”
-
-Reminder if needed: “No, that’s not quite right. When someone asks you a question, you do NOT HAVE TO lie. Let’s try that question again.”
-
-After the reminder, reread the full question and response labels before reopening the choices.
-
-*Correct-answer feedback is mandatory. Incorrect answers receive contextual correction and a reread; only the correct answer advances. Brief comprehension practice, not a study outcome. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 10. Back to our story
-
-“So now, I’m going to ask you some questions about whether people HAVE TO do things.”
-
-*Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 11. Who HAS TO help? — PROPOSED WORDING
+### 7. Who HAS TO help? — PROPOSED WORDING
 
 “Who do you think HAS TO help the kid in the middle?”
 
@@ -148,7 +90,7 @@ Choices: The kid’s teacher / The kid’s mom.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No obligation question.*
 
-### 12. No one helped
+### 8. No one helped
 
 “No one helped the kid in the middle.”
 
@@ -158,7 +100,7 @@ Display wording: “No one helped the kid in the middle.” Both helper cues rem
 
 *Standalone outcome statement. Continue after the sentence to hear each helper’s action and the repeated no-one-helped statement.*
 
-### 13. Each helper did NOT help
+### 9. Each helper did NOT help
 
 “The kid’s teacher did NOT help the kid in the middle. And the kid’s mom did NOT help the kid in the middle. No one helped the kid in the middle.”
 
@@ -170,7 +112,7 @@ Captions follow the narration, in order: “The kid’s teacher did NOT help the
 
 *Every response path reaches this same outcome, regardless of prediction or obligation choices.*
 
-### 14. Recall · No one helped
+### 10. Recall · No one helped
 
 “Can you tell me, did either of these people help the kid in the middle?”
 
@@ -178,7 +120,7 @@ Captions follow the narration, in order: “The kid’s teacher did NOT help the
 
 Choices: Yes / No.
 
-Expected check/practice answer: No.
+Expected recall answer: No.
 
 A correct response is required to advance; there is no bypass.
 
@@ -186,7 +128,7 @@ Reminder if needed: “Actually, remember, no one helped the kid in the middle. 
 
 After the reminder, reread the full question and response labels before reopening the choices.
 
-### 15. Who was meaner? — PROPOSED WORDING
+### 11. Who was meaner? — PROPOSED WORDING
 
 “Who was meaner for NOT helping the kid in the middle?”
 
@@ -198,7 +140,7 @@ Choices: The kid’s teacher / The kid’s mom.
 
 *Two-helper comparison adapted from Marshall. Buttons follow the scene: the kid’s teacher left, the kid’s mom right.*
 
-### 16. Selected helper · How mean is the kid’s teacher? — PROPOSED WORDING
+### 12. Selected helper · How mean is the kid’s teacher? — PROPOSED WORDING
 
 *Only after “The kid’s teacher” to Who was meaner?.*
 
@@ -212,7 +154,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
-### 17. Selected helper · How mean is the kid’s mom? — PROPOSED WORDING
+### 13. Selected helper · How mean is the kid’s mom? — PROPOSED WORDING
 
 *Only after “The kid’s mom” to Who was meaner?.*
 
@@ -226,7 +168,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
-### 18. Individual evaluation · The kid’s teacher
+### 14. Individual evaluation · The kid’s teacher
 
 “Do you think it was Mean or Not Mean that the kid’s teacher did NOT help the kid in the middle?”
 
@@ -234,7 +176,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Choices: Mean / Not Mean.
 
-### 19. Meanness strength · The kid’s teacher
+### 15. Meanness strength · The kid’s teacher
 
 *Only after “Mean” to Individual evaluation · The kid’s teacher.*
 
@@ -246,7 +188,7 @@ Display wording: “How mean do you think the kid’s teacher was for NOT helpin
 
 Choices: A teeny bit mean / A little bit mean / Very mean.
 
-### 20. Individual evaluation · The kid’s mom
+### 16. Individual evaluation · The kid’s mom
 
 “Do you think it was Mean or Not Mean that the kid’s mom did NOT help the kid in the middle?”
 
@@ -254,7 +196,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Choices: Mean / Not Mean.
 
-### 21. Meanness strength · The kid’s mom
+### 17. Meanness strength · The kid’s mom
 
 *Only after “Mean” to Individual evaluation · The kid’s mom.*
 
@@ -270,13 +212,13 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Left: the kid’s sister. Middle: the kid in the middle. Right: the kid’s friend.
 
-### 22. Meet the characters
+### 18. Meet the characters
 
 “Look! Here are some people.”
 
 [Stimulus source](assets/stimuli/a247914f8341-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-### 23. Meet the kid in the middle
+### 19. Meet the kid in the middle
 
 “This little one is a kid.”
 
@@ -284,7 +226,7 @@ Left: the kid’s sister. Middle: the kid in the middle. Right: the kid’s frie
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 24. Meet the kid’s sister
+### 20. Meet the kid’s sister
 
 “This little one is this kid’s sister.”
 
@@ -292,7 +234,7 @@ Left: the kid’s sister. Middle: the kid in the middle. Right: the kid’s frie
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 25. Meet the kid’s friend
+### 21. Meet the kid’s friend
 
 “This little one is this kid’s friend.”
 
@@ -300,13 +242,13 @@ Left: the kid’s sister. Middle: the kid in the middle. Right: the kid’s frie
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 26. The kid in the middle needs help
+### 22. The kid in the middle needs help
 
 “Oh no! The kid in the middle is sad now!”
 
 [Stimulus source](assets/stimuli/d8367f1a225f-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-### 27. Who will help? — PROPOSED WORDING
+### 23. Who will help? — PROPOSED WORDING
 
 “Who will help the kid in the middle now that they’re sad?”
 
@@ -318,63 +260,7 @@ Choices: The kid’s sister / The kid’s friend.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No prediction question.*
 
-### 28. “HAVE TO” practice
-
-“Now, sometimes people *HAVE TO* do things.”
-
-*The Evelyn recording uses continuous speech. HAVE TO remains uppercase and italic on screen as an adaptation. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 29. Practice · Red light
-
-“When the traffic light is red, do you HAVE TO stop? Yes or No.”
-
-Display treatment: Let’s practice! / The traffic light is red. / Do you HAVE TO stop?
-
-Choices: Yes / No.
-
-Expected check/practice answer: Yes.
-
-A correct response is required to advance; there is no bypass.
-
-Mandatory correct-answer feedback: “That’s right! When the traffic light is red, you HAVE TO stop.”
-
-Incorrect-answer correction: “No, that’s not quite right. When the traffic light is red, you HAVE TO stop. Let’s try that question again.”
-
-Reminder if needed: “No, that’s not quite right. When the traffic light is red, you HAVE TO stop. Let’s try that question again.”
-
-After the reminder, reread the full question and response labels before reopening the choices.
-
-*Correct-answer feedback is mandatory. Incorrect answers receive contextual correction and a reread; only the correct answer advances. Brief comprehension practice, not a study outcome. Role-free traffic-light example, illustration, and split display wording are draft adaptations for review. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 30. Practice · Lie
-
-“When someone asks you a question, do you HAVE TO lie? Yes or No.”
-
-Display treatment: Let’s practice! / Someone asks you a question. / Do you HAVE TO lie?
-
-Choices: Yes / No.
-
-Expected check/practice answer: No.
-
-A correct response is required to advance; there is no bypass.
-
-Mandatory correct-answer feedback: “That’s right! When someone asks you a question, you do NOT HAVE TO lie.”
-
-Incorrect-answer correction: “No, that’s not quite right. When someone asks you a question, you do NOT HAVE TO lie. Let’s try that question again.”
-
-Reminder if needed: “No, that’s not quite right. When someone asks you a question, you do NOT HAVE TO lie. Let’s try that question again.”
-
-After the reminder, reread the full question and response labels before reopening the choices.
-
-*Correct-answer feedback is mandatory. Incorrect answers receive contextual correction and a reread; only the correct answer advances. Brief comprehension practice, not a study outcome. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 31. Back to our story
-
-“So now, I’m going to ask you some questions about whether people HAVE TO do things.”
-
-*Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 32. Who HAS TO help? — PROPOSED WORDING
+### 24. Who HAS TO help? — PROPOSED WORDING
 
 “Who do you think HAS TO help the kid in the middle?”
 
@@ -386,7 +272,7 @@ Choices: The kid’s sister / The kid’s friend.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No obligation question.*
 
-### 33. No one helped
+### 25. No one helped
 
 “No one helped the kid in the middle.”
 
@@ -396,7 +282,7 @@ Display wording: “No one helped the kid in the middle.” Both helper cues rem
 
 *Standalone outcome statement. Continue after the sentence to hear each helper’s action and the repeated no-one-helped statement.*
 
-### 34. Each helper did NOT help
+### 26. Each helper did NOT help
 
 “The kid’s sister did NOT help the kid in the middle. And the kid’s friend did NOT help the kid in the middle. No one helped the kid in the middle.”
 
@@ -408,7 +294,7 @@ Captions follow the narration, in order: “The kid’s sister did NOT help the 
 
 *Every response path reaches this same outcome, regardless of prediction or obligation choices.*
 
-### 35. Recall · No one helped
+### 27. Recall · No one helped
 
 “Can you tell me, did either of these people help the kid in the middle?”
 
@@ -416,7 +302,7 @@ Captions follow the narration, in order: “The kid’s sister did NOT help the 
 
 Choices: Yes / No.
 
-Expected check/practice answer: No.
+Expected recall answer: No.
 
 A correct response is required to advance; there is no bypass.
 
@@ -424,7 +310,7 @@ Reminder if needed: “Actually, remember, no one helped the kid in the middle. 
 
 After the reminder, reread the full question and response labels before reopening the choices.
 
-### 36. Who was meaner? — PROPOSED WORDING
+### 28. Who was meaner? — PROPOSED WORDING
 
 “Who was meaner for NOT helping the kid in the middle?”
 
@@ -436,7 +322,7 @@ Choices: The kid’s sister / The kid’s friend.
 
 *Two-helper comparison adapted from Marshall. Buttons follow the scene: the kid’s sister left, the kid’s friend right.*
 
-### 37. Selected helper · How mean is the kid’s sister? — PROPOSED WORDING
+### 29. Selected helper · How mean is the kid’s sister? — PROPOSED WORDING
 
 *Only after “The kid’s sister” to Who was meaner?.*
 
@@ -450,7 +336,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
-### 38. Selected helper · How mean is the kid’s friend? — PROPOSED WORDING
+### 30. Selected helper · How mean is the kid’s friend? — PROPOSED WORDING
 
 *Only after “The kid’s friend” to Who was meaner?.*
 
@@ -464,7 +350,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
-### 39. Individual evaluation · The kid’s sister
+### 31. Individual evaluation · The kid’s sister
 
 “Do you think it was Mean or Not Mean that the kid’s sister did NOT help the kid in the middle?”
 
@@ -472,7 +358,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Choices: Mean / Not Mean.
 
-### 40. Meanness strength · The kid’s sister
+### 32. Meanness strength · The kid’s sister
 
 *Only after “Mean” to Individual evaluation · The kid’s sister.*
 
@@ -484,7 +370,7 @@ Display wording: “How mean do you think the kid’s sister was for NOT helping
 
 Choices: A teeny bit mean / A little bit mean / Very mean.
 
-### 41. Individual evaluation · The kid’s friend
+### 33. Individual evaluation · The kid’s friend
 
 “Do you think it was Mean or Not Mean that the kid’s friend did NOT help the kid in the middle?”
 
@@ -492,7 +378,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Choices: Mean / Not Mean.
 
-### 42. Meanness strength · The kid’s friend
+### 34. Meanness strength · The kid’s friend
 
 *Only after “Mean” to Individual evaluation · The kid’s friend.*
 
@@ -508,13 +394,13 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Left: the kid’s friend. Middle: the kid in the middle. Right: the kid’s best friend.
 
-### 43. Meet the characters
+### 35. Meet the characters
 
 “Look! Here are some people.”
 
 [Stimulus source](assets/stimuli/d45a1ece9a16-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-### 44. Meet the kid in the middle
+### 36. Meet the kid in the middle
 
 “This little one is a kid.”
 
@@ -522,7 +408,7 @@ Left: the kid’s friend. Middle: the kid in the middle. Right: the kid’s best
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 45. Meet the kid’s friend
+### 37. Meet the kid’s friend
 
 “This little one is this kid’s friend.”
 
@@ -530,7 +416,7 @@ Left: the kid’s friend. Middle: the kid in the middle. Right: the kid’s best
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 46. Meet the kid’s best friend
+### 38. Meet the kid’s best friend
 
 “This little one is this kid’s best friend.”
 
@@ -538,13 +424,13 @@ Left: the kid’s friend. Middle: the kid in the middle. Right: the kid’s best
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 47. The kid in the middle needs help
+### 39. The kid in the middle needs help
 
 “Oh no! The kid in the middle is sad now!”
 
 [Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-### 48. Who will help? — PROPOSED WORDING
+### 40. Who will help? — PROPOSED WORDING
 
 “Who will help the kid in the middle now that they’re sad?”
 
@@ -556,63 +442,7 @@ Choices: The kid’s friend / The kid’s best friend.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No prediction question.*
 
-### 49. “HAVE TO” practice
-
-“Now, sometimes people *HAVE TO* do things.”
-
-*The Evelyn recording uses continuous speech. HAVE TO remains uppercase and italic on screen as an adaptation. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 50. Practice · Red light
-
-“When the traffic light is red, do you HAVE TO stop? Yes or No.”
-
-Display treatment: Let’s practice! / The traffic light is red. / Do you HAVE TO stop?
-
-Choices: Yes / No.
-
-Expected check/practice answer: Yes.
-
-A correct response is required to advance; there is no bypass.
-
-Mandatory correct-answer feedback: “That’s right! When the traffic light is red, you HAVE TO stop.”
-
-Incorrect-answer correction: “No, that’s not quite right. When the traffic light is red, you HAVE TO stop. Let’s try that question again.”
-
-Reminder if needed: “No, that’s not quite right. When the traffic light is red, you HAVE TO stop. Let’s try that question again.”
-
-After the reminder, reread the full question and response labels before reopening the choices.
-
-*Correct-answer feedback is mandatory. Incorrect answers receive contextual correction and a reread; only the correct answer advances. Brief comprehension practice, not a study outcome. Role-free traffic-light example, illustration, and split display wording are draft adaptations for review. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 51. Practice · Lie
-
-“When someone asks you a question, do you HAVE TO lie? Yes or No.”
-
-Display treatment: Let’s practice! / Someone asks you a question. / Do you HAVE TO lie?
-
-Choices: Yes / No.
-
-Expected check/practice answer: No.
-
-A correct response is required to advance; there is no bypass.
-
-Mandatory correct-answer feedback: “That’s right! When someone asks you a question, you do NOT HAVE TO lie.”
-
-Incorrect-answer correction: “No, that’s not quite right. When someone asks you a question, you do NOT HAVE TO lie. Let’s try that question again.”
-
-Reminder if needed: “No, that’s not quite right. When someone asks you a question, you do NOT HAVE TO lie. Let’s try that question again.”
-
-After the reminder, reread the full question and response labels before reopening the choices.
-
-*Correct-answer feedback is mandatory. Incorrect answers receive contextual correction and a reread; only the correct answer advances. Brief comprehension practice, not a study outcome. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 52. Back to our story
-
-“So now, I’m going to ask you some questions about whether people HAVE TO do things.”
-
-*Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 53. Who HAS TO help? — PROPOSED WORDING
+### 41. Who HAS TO help? — PROPOSED WORDING
 
 “Who do you think HAS TO help the kid in the middle?”
 
@@ -624,7 +454,7 @@ Choices: The kid’s friend / The kid’s best friend.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No obligation question.*
 
-### 54. No one helped
+### 42. No one helped
 
 “No one helped the kid in the middle.”
 
@@ -634,7 +464,7 @@ Display wording: “No one helped the kid in the middle.” Both helper cues rem
 
 *Standalone outcome statement. Continue after the sentence to hear each helper’s action and the repeated no-one-helped statement.*
 
-### 55. Each helper did NOT help
+### 43. Each helper did NOT help
 
 “The kid’s friend did NOT help the kid in the middle. And the kid’s best friend did NOT help the kid in the middle. No one helped the kid in the middle.”
 
@@ -646,7 +476,7 @@ Captions follow the narration, in order: “The kid’s friend did NOT help the 
 
 *Every response path reaches this same outcome, regardless of prediction or obligation choices.*
 
-### 56. Recall · No one helped
+### 44. Recall · No one helped
 
 “Can you tell me, did either of these people help the kid in the middle?”
 
@@ -654,7 +484,7 @@ Captions follow the narration, in order: “The kid’s friend did NOT help the 
 
 Choices: Yes / No.
 
-Expected check/practice answer: No.
+Expected recall answer: No.
 
 A correct response is required to advance; there is no bypass.
 
@@ -662,7 +492,7 @@ Reminder if needed: “Actually, remember, no one helped the kid in the middle. 
 
 After the reminder, reread the full question and response labels before reopening the choices.
 
-### 57. Who was meaner? — PROPOSED WORDING
+### 45. Who was meaner? — PROPOSED WORDING
 
 “Who was meaner for NOT helping the kid in the middle?”
 
@@ -674,7 +504,7 @@ Choices: The kid’s friend / The kid’s best friend.
 
 *Two-helper comparison adapted from Marshall. Buttons follow the scene: the kid’s friend left, the kid’s best friend right.*
 
-### 58. Selected helper · How mean is the kid’s friend? — PROPOSED WORDING
+### 46. Selected helper · How mean is the kid’s friend? — PROPOSED WORDING
 
 *Only after “The kid’s friend” to Who was meaner?.*
 
@@ -688,7 +518,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
-### 59. Selected helper · How mean is the kid’s best friend? — PROPOSED WORDING
+### 47. Selected helper · How mean is the kid’s best friend? — PROPOSED WORDING
 
 *Only after “The kid’s best friend” to Who was meaner?.*
 
@@ -702,7 +532,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
-### 60. Individual evaluation · The kid’s friend
+### 48. Individual evaluation · The kid’s friend
 
 “Do you think it was Mean or Not Mean that the kid’s friend did NOT help the kid in the middle?”
 
@@ -710,7 +540,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Choices: Mean / Not Mean.
 
-### 61. Meanness strength · The kid’s friend
+### 49. Meanness strength · The kid’s friend
 
 *Only after “Mean” to Individual evaluation · The kid’s friend.*
 
@@ -722,7 +552,7 @@ Display wording: “How mean do you think the kid’s friend was for NOT helping
 
 Choices: A teeny bit mean / A little bit mean / Very mean.
 
-### 62. Individual evaluation · The kid’s best friend
+### 50. Individual evaluation · The kid’s best friend
 
 “Do you think it was Mean or Not Mean that the kid’s best friend did NOT help the kid in the middle?”
 
@@ -730,7 +560,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Choices: Mean / Not Mean.
 
-### 63. Meanness strength · The kid’s best friend
+### 51. Meanness strength · The kid’s best friend
 
 *Only after “Mean” to Individual evaluation · The kid’s best friend.*
 
@@ -746,13 +576,13 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Left: the kid’s teacher. Middle: the kid in the middle. Right: the kid’s friend.
 
-### 64. Meet the characters
+### 52. Meet the characters
 
 “Look! Here are some people.”
 
 [Stimulus source](assets/stimuli/5ab48f0b29ed-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-### 65. Meet the kid in the middle
+### 53. Meet the kid in the middle
 
 “This little one is a kid.”
 
@@ -760,7 +590,7 @@ Left: the kid’s teacher. Middle: the kid in the middle. Right: the kid’s fri
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 66. Meet the kid’s teacher
+### 54. Meet the kid’s teacher
 
 “This big one is this kid’s teacher.”
 
@@ -768,7 +598,7 @@ Left: the kid’s teacher. Middle: the kid in the middle. Right: the kid’s fri
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 67. Meet the kid’s friend
+### 55. Meet the kid’s friend
 
 “This little one is this kid’s friend.”
 
@@ -776,13 +606,13 @@ Left: the kid’s teacher. Middle: the kid in the middle. Right: the kid’s fri
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 68. The kid in the middle needs help
+### 56. The kid in the middle needs help
 
 “Oh no! The kid in the middle is sad now!”
 
 [Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-### 69. Who will help? — PROPOSED WORDING
+### 57. Who will help? — PROPOSED WORDING
 
 “Who will help the kid in the middle now that they’re sad?”
 
@@ -794,63 +624,7 @@ Choices: The kid’s teacher / The kid’s friend.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No prediction question.*
 
-### 70. “HAVE TO” practice
-
-“Now, sometimes people *HAVE TO* do things.”
-
-*The Evelyn recording uses continuous speech. HAVE TO remains uppercase and italic on screen as an adaptation. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 71. Practice · Red light
-
-“When the traffic light is red, do you HAVE TO stop? Yes or No.”
-
-Display treatment: Let’s practice! / The traffic light is red. / Do you HAVE TO stop?
-
-Choices: Yes / No.
-
-Expected check/practice answer: Yes.
-
-A correct response is required to advance; there is no bypass.
-
-Mandatory correct-answer feedback: “That’s right! When the traffic light is red, you HAVE TO stop.”
-
-Incorrect-answer correction: “No, that’s not quite right. When the traffic light is red, you HAVE TO stop. Let’s try that question again.”
-
-Reminder if needed: “No, that’s not quite right. When the traffic light is red, you HAVE TO stop. Let’s try that question again.”
-
-After the reminder, reread the full question and response labels before reopening the choices.
-
-*Correct-answer feedback is mandatory. Incorrect answers receive contextual correction and a reread; only the correct answer advances. Brief comprehension practice, not a study outcome. Role-free traffic-light example, illustration, and split display wording are draft adaptations for review. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 72. Practice · Lie
-
-“When someone asks you a question, do you HAVE TO lie? Yes or No.”
-
-Display treatment: Let’s practice! / Someone asks you a question. / Do you HAVE TO lie?
-
-Choices: Yes / No.
-
-Expected check/practice answer: No.
-
-A correct response is required to advance; there is no bypass.
-
-Mandatory correct-answer feedback: “That’s right! When someone asks you a question, you do NOT HAVE TO lie.”
-
-Incorrect-answer correction: “No, that’s not quite right. When someone asks you a question, you do NOT HAVE TO lie. Let’s try that question again.”
-
-Reminder if needed: “No, that’s not quite right. When someone asks you a question, you do NOT HAVE TO lie. Let’s try that question again.”
-
-After the reminder, reread the full question and response labels before reopening the choices.
-
-*Correct-answer feedback is mandatory. Incorrect answers receive contextual correction and a reread; only the correct answer advances. Brief comprehension practice, not a study outcome. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 73. Back to our story
-
-“So now, I’m going to ask you some questions about whether people HAVE TO do things.”
-
-*Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 74. Who HAS TO help? — PROPOSED WORDING
+### 58. Who HAS TO help? — PROPOSED WORDING
 
 “Who do you think HAS TO help the kid in the middle?”
 
@@ -862,7 +636,7 @@ Choices: The kid’s teacher / The kid’s friend.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No obligation question.*
 
-### 75. No one helped
+### 59. No one helped
 
 “No one helped the kid in the middle.”
 
@@ -872,7 +646,7 @@ Display wording: “No one helped the kid in the middle.” Both helper cues rem
 
 *Standalone outcome statement. Continue after the sentence to hear each helper’s action and the repeated no-one-helped statement.*
 
-### 76. Each helper did NOT help
+### 60. Each helper did NOT help
 
 “The kid’s teacher did NOT help the kid in the middle. And the kid’s friend did NOT help the kid in the middle. No one helped the kid in the middle.”
 
@@ -884,7 +658,7 @@ Captions follow the narration, in order: “The kid’s teacher did NOT help the
 
 *Every response path reaches this same outcome, regardless of prediction or obligation choices.*
 
-### 77. Recall · No one helped
+### 61. Recall · No one helped
 
 “Can you tell me, did either of these people help the kid in the middle?”
 
@@ -892,7 +666,7 @@ Captions follow the narration, in order: “The kid’s teacher did NOT help the
 
 Choices: Yes / No.
 
-Expected check/practice answer: No.
+Expected recall answer: No.
 
 A correct response is required to advance; there is no bypass.
 
@@ -900,7 +674,7 @@ Reminder if needed: “Actually, remember, no one helped the kid in the middle. 
 
 After the reminder, reread the full question and response labels before reopening the choices.
 
-### 78. Who was meaner? — PROPOSED WORDING
+### 62. Who was meaner? — PROPOSED WORDING
 
 “Who was meaner for NOT helping the kid in the middle?”
 
@@ -912,7 +686,7 @@ Choices: The kid’s teacher / The kid’s friend.
 
 *Two-helper comparison adapted from Marshall. Buttons follow the scene: the kid’s teacher left, the kid’s friend right.*
 
-### 79. Selected helper · How mean is the kid’s teacher? — PROPOSED WORDING
+### 63. Selected helper · How mean is the kid’s teacher? — PROPOSED WORDING
 
 *Only after “The kid’s teacher” to Who was meaner?.*
 
@@ -926,7 +700,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
-### 80. Selected helper · How mean is the kid’s friend? — PROPOSED WORDING
+### 64. Selected helper · How mean is the kid’s friend? — PROPOSED WORDING
 
 *Only after “The kid’s friend” to Who was meaner?.*
 
@@ -940,7 +714,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
-### 81. Individual evaluation · The kid’s teacher
+### 65. Individual evaluation · The kid’s teacher
 
 “Do you think it was Mean or Not Mean that the kid’s teacher did NOT help the kid in the middle?”
 
@@ -948,7 +722,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Choices: Mean / Not Mean.
 
-### 82. Meanness strength · The kid’s teacher
+### 66. Meanness strength · The kid’s teacher
 
 *Only after “Mean” to Individual evaluation · The kid’s teacher.*
 
@@ -960,7 +734,7 @@ Display wording: “How mean do you think the kid’s teacher was for NOT helpin
 
 Choices: A teeny bit mean / A little bit mean / Very mean.
 
-### 83. Individual evaluation · The kid’s friend
+### 67. Individual evaluation · The kid’s friend
 
 “Do you think it was Mean or Not Mean that the kid’s friend did NOT help the kid in the middle?”
 
@@ -968,7 +742,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Choices: Mean / Not Mean.
 
-### 84. Meanness strength · The kid’s friend
+### 68. Meanness strength · The kid’s friend
 
 *Only after “Mean” to Individual evaluation · The kid’s friend.*
 
@@ -984,13 +758,13 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Left: the kid’s mom. Middle: the kid in the middle. Right: the kid’s sister.
 
-### 85. Meet the characters
+### 69. Meet the characters
 
 “Look! Here are some people.”
 
 [Stimulus source](assets/stimuli/2fa20e069eca-01-group.png) — original reference image; the preview replaces its caption with the wording above.
 
-### 86. Meet the kid in the middle
+### 70. Meet the kid in the middle
 
 “This little one is a kid.”
 
@@ -998,7 +772,7 @@ Left: the kid’s mom. Middle: the kid in the middle. Right: the kid’s sister.
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 87. Meet the kid’s mom
+### 71. Meet the kid’s mom
 
 “This big one is this kid’s mom.”
 
@@ -1006,7 +780,7 @@ Left: the kid’s mom. Middle: the kid in the middle. Right: the kid’s sister.
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 88. Meet the kid’s sister
+### 72. Meet the kid’s sister
 
 “This little one is this kid’s sister.”
 
@@ -1014,13 +788,13 @@ Left: the kid’s mom. Middle: the kid in the middle. Right: the kid’s sister.
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 89. The kid in the middle needs help
+### 73. The kid in the middle needs help
 
 “Oh no! The kid in the middle is sad now!”
 
 [Stimulus source](assets/stimuli/cf266d33caca-05-sad.png) — original reference image; the preview replaces its caption with the wording above.
 
-### 90. Who will help? — PROPOSED WORDING
+### 74. Who will help? — PROPOSED WORDING
 
 “Who will help the kid in the middle now that they’re sad?”
 
@@ -1032,63 +806,7 @@ Choices: The kid’s mom / The kid’s sister.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No prediction question.*
 
-### 91. “HAVE TO” practice
-
-“Now, sometimes people *HAVE TO* do things.”
-
-*The Evelyn recording uses continuous speech. HAVE TO remains uppercase and italic on screen as an adaptation. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 92. Practice · Red light
-
-“When the traffic light is red, do you HAVE TO stop? Yes or No.”
-
-Display treatment: Let’s practice! / The traffic light is red. / Do you HAVE TO stop?
-
-Choices: Yes / No.
-
-Expected check/practice answer: Yes.
-
-A correct response is required to advance; there is no bypass.
-
-Mandatory correct-answer feedback: “That’s right! When the traffic light is red, you HAVE TO stop.”
-
-Incorrect-answer correction: “No, that’s not quite right. When the traffic light is red, you HAVE TO stop. Let’s try that question again.”
-
-Reminder if needed: “No, that’s not quite right. When the traffic light is red, you HAVE TO stop. Let’s try that question again.”
-
-After the reminder, reread the full question and response labels before reopening the choices.
-
-*Correct-answer feedback is mandatory. Incorrect answers receive contextual correction and a reread; only the correct answer advances. Brief comprehension practice, not a study outcome. Role-free traffic-light example, illustration, and split display wording are draft adaptations for review. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 93. Practice · Lie
-
-“When someone asks you a question, do you HAVE TO lie? Yes or No.”
-
-Display treatment: Let’s practice! / Someone asks you a question. / Do you HAVE TO lie?
-
-Choices: Yes / No.
-
-Expected check/practice answer: No.
-
-A correct response is required to advance; there is no bypass.
-
-Mandatory correct-answer feedback: “That’s right! When someone asks you a question, you do NOT HAVE TO lie.”
-
-Incorrect-answer correction: “No, that’s not quite right. When someone asks you a question, you do NOT HAVE TO lie. Let’s try that question again.”
-
-Reminder if needed: “No, that’s not quite right. When someone asks you a question, you do NOT HAVE TO lie. Let’s try that question again.”
-
-After the reminder, reread the full question and response labels before reopening the choices.
-
-*Correct-answer feedback is mandatory. Incorrect answers receive contextual correction and a reread; only the correct answer advances. Brief comprehension practice, not a study outcome. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 94. Back to our story
-
-“So now, I’m going to ask you some questions about whether people HAVE TO do things.”
-
-*Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 95. Who HAS TO help? — PROPOSED WORDING
+### 75. Who HAS TO help? — PROPOSED WORDING
 
 “Who do you think HAS TO help the kid in the middle?”
 
@@ -1100,7 +818,7 @@ Choices: The kid’s mom / The kid’s sister.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No obligation question.*
 
-### 96. No one helped
+### 76. No one helped
 
 “No one helped the kid in the middle.”
 
@@ -1110,7 +828,7 @@ Display wording: “No one helped the kid in the middle.” Both helper cues rem
 
 *Standalone outcome statement. Continue after the sentence to hear each helper’s action and the repeated no-one-helped statement.*
 
-### 97. Each helper did NOT help
+### 77. Each helper did NOT help
 
 “The kid’s mom did NOT help the kid in the middle. And the kid’s sister did NOT help the kid in the middle. No one helped the kid in the middle.”
 
@@ -1122,7 +840,7 @@ Captions follow the narration, in order: “The kid’s mom did NOT help the kid
 
 *Every response path reaches this same outcome, regardless of prediction or obligation choices.*
 
-### 98. Recall · No one helped
+### 78. Recall · No one helped
 
 “Can you tell me, did either of these people help the kid in the middle?”
 
@@ -1130,7 +848,7 @@ Captions follow the narration, in order: “The kid’s mom did NOT help the kid
 
 Choices: Yes / No.
 
-Expected check/practice answer: No.
+Expected recall answer: No.
 
 A correct response is required to advance; there is no bypass.
 
@@ -1138,7 +856,7 @@ Reminder if needed: “Actually, remember, no one helped the kid in the middle. 
 
 After the reminder, reread the full question and response labels before reopening the choices.
 
-### 99. Who was meaner? — PROPOSED WORDING
+### 79. Who was meaner? — PROPOSED WORDING
 
 “Who was meaner for NOT helping the kid in the middle?”
 
@@ -1150,7 +868,7 @@ Choices: The kid’s mom / The kid’s sister.
 
 *Two-helper comparison adapted from Marshall. Buttons follow the scene: the kid’s mom left, the kid’s sister right.*
 
-### 100. Selected helper · How mean is the kid’s mom? — PROPOSED WORDING
+### 80. Selected helper · How mean is the kid’s mom? — PROPOSED WORDING
 
 *Only after “The kid’s mom” to Who was meaner?.*
 
@@ -1164,7 +882,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
-### 101. Selected helper · How mean is the kid’s sister? — PROPOSED WORDING
+### 81. Selected helper · How mean is the kid’s sister? — PROPOSED WORDING
 
 *Only after “The kid’s sister” to Who was meaner?.*
 
@@ -1178,7 +896,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
-### 102. Individual evaluation · The kid’s mom
+### 82. Individual evaluation · The kid’s mom
 
 “Do you think it was Mean or Not Mean that the kid’s mom did NOT help the kid in the middle?”
 
@@ -1186,7 +904,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Choices: Mean / Not Mean.
 
-### 103. Meanness strength · The kid’s mom
+### 83. Meanness strength · The kid’s mom
 
 *Only after “Mean” to Individual evaluation · The kid’s mom.*
 
@@ -1198,7 +916,7 @@ Display wording: “How mean do you think the kid’s mom was for NOT helping th
 
 Choices: A teeny bit mean / A little bit mean / Very mean.
 
-### 104. Individual evaluation · The kid’s sister
+### 84. Individual evaluation · The kid’s sister
 
 “Do you think it was Mean or Not Mean that the kid’s sister did NOT help the kid in the middle?”
 
@@ -1206,7 +924,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Choices: Mean / Not Mean.
 
-### 105. Meanness strength · The kid’s sister
+### 85. Meanness strength · The kid’s sister
 
 *Only after “Mean” to Individual evaluation · The kid’s sister.*
 
@@ -1222,13 +940,13 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Left: the kid’s classmate. Middle: the kid in the middle. Right: the kid’s teacher.
 
-### 106. Meet the characters
+### 86. Meet the characters
 
 “Look! Here are some people.”
 
 [Stimulus source](assets/stimuli/44d39b1df683-intro_01.svg) — original reference image; the preview replaces its caption with the wording above.
 
-### 107. Meet the kid in the middle
+### 87. Meet the kid in the middle
 
 “This little one is a kid.”
 
@@ -1236,7 +954,7 @@ Left: the kid’s classmate. Middle: the kid in the middle. Right: the kid’s t
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 108. Meet the kid’s classmate
+### 88. Meet the kid’s classmate
 
 “This little one is this kid’s classmate.”
 
@@ -1244,7 +962,7 @@ Left: the kid’s classmate. Middle: the kid in the middle. Right: the kid’s t
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 109. Meet the kid’s teacher
+### 89. Meet the kid’s teacher
 
 “This big one is this kid’s teacher.”
 
@@ -1252,13 +970,13 @@ Left: the kid’s classmate. Middle: the kid in the middle. Right: the kid’s t
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 110. The kid in the middle needs help
+### 90. The kid in the middle needs help
 
 “Oh no! The kid in the middle is sad now!”
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
-### 111. Who will help? — PROPOSED WORDING
+### 91. Who will help? — PROPOSED WORDING
 
 “Who will help the kid in the middle now that they’re sad?”
 
@@ -1270,63 +988,7 @@ Choices: The kid’s classmate / The kid’s teacher.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No prediction question.*
 
-### 112. “HAVE TO” practice
-
-“Now, sometimes people *HAVE TO* do things.”
-
-*The Evelyn recording uses continuous speech. HAVE TO remains uppercase and italic on screen as an adaptation. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 113. Practice · Red light
-
-“When the traffic light is red, do you HAVE TO stop? Yes or No.”
-
-Display treatment: Let’s practice! / The traffic light is red. / Do you HAVE TO stop?
-
-Choices: Yes / No.
-
-Expected check/practice answer: Yes.
-
-A correct response is required to advance; there is no bypass.
-
-Mandatory correct-answer feedback: “That’s right! When the traffic light is red, you HAVE TO stop.”
-
-Incorrect-answer correction: “No, that’s not quite right. When the traffic light is red, you HAVE TO stop. Let’s try that question again.”
-
-Reminder if needed: “No, that’s not quite right. When the traffic light is red, you HAVE TO stop. Let’s try that question again.”
-
-After the reminder, reread the full question and response labels before reopening the choices.
-
-*Correct-answer feedback is mandatory. Incorrect answers receive contextual correction and a reread; only the correct answer advances. Brief comprehension practice, not a study outcome. Role-free traffic-light example, illustration, and split display wording are draft adaptations for review. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 114. Practice · Lie
-
-“When someone asks you a question, do you HAVE TO lie? Yes or No.”
-
-Display treatment: Let’s practice! / Someone asks you a question. / Do you HAVE TO lie?
-
-Choices: Yes / No.
-
-Expected check/practice answer: No.
-
-A correct response is required to advance; there is no bypass.
-
-Mandatory correct-answer feedback: “That’s right! When someone asks you a question, you do NOT HAVE TO lie.”
-
-Incorrect-answer correction: “No, that’s not quite right. When someone asks you a question, you do NOT HAVE TO lie. Let’s try that question again.”
-
-Reminder if needed: “No, that’s not quite right. When someone asks you a question, you do NOT HAVE TO lie. Let’s try that question again.”
-
-After the reminder, reread the full question and response labels before reopening the choices.
-
-*Correct-answer feedback is mandatory. Incorrect answers receive contextual correction and a reread; only the correct answer advances. Brief comprehension practice, not a study outcome. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 115. Back to our story
-
-“So now, I’m going to ask you some questions about whether people HAVE TO do things.”
-
-*Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 116. Who HAS TO help? — PROPOSED WORDING
+### 92. Who HAS TO help? — PROPOSED WORDING
 
 “Who do you think HAS TO help the kid in the middle?”
 
@@ -1338,7 +1000,7 @@ Choices: The kid’s classmate / The kid’s teacher.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No obligation question.*
 
-### 117. No one helped
+### 93. No one helped
 
 “No one helped the kid in the middle.”
 
@@ -1348,7 +1010,7 @@ Display wording: “No one helped the kid in the middle.” Both helper cues rem
 
 *Standalone outcome statement. Continue after the sentence to hear each helper’s action and the repeated no-one-helped statement.*
 
-### 118. Each helper did NOT help
+### 94. Each helper did NOT help
 
 “The kid’s classmate did NOT help the kid in the middle. And the kid’s teacher did NOT help the kid in the middle. No one helped the kid in the middle.”
 
@@ -1360,7 +1022,7 @@ Captions follow the narration, in order: “The kid’s classmate did NOT help t
 
 *Every response path reaches this same outcome, regardless of prediction or obligation choices.*
 
-### 119. Recall · No one helped
+### 95. Recall · No one helped
 
 “Can you tell me, did either of these people help the kid in the middle?”
 
@@ -1368,7 +1030,7 @@ Captions follow the narration, in order: “The kid’s classmate did NOT help t
 
 Choices: Yes / No.
 
-Expected check/practice answer: No.
+Expected recall answer: No.
 
 A correct response is required to advance; there is no bypass.
 
@@ -1376,7 +1038,7 @@ Reminder if needed: “Actually, remember, no one helped the kid in the middle. 
 
 After the reminder, reread the full question and response labels before reopening the choices.
 
-### 120. Who was meaner? — PROPOSED WORDING
+### 96. Who was meaner? — PROPOSED WORDING
 
 “Who was meaner for NOT helping the kid in the middle?”
 
@@ -1388,7 +1050,7 @@ Choices: The kid’s classmate / The kid’s teacher.
 
 *Two-helper comparison adapted from Marshall. Buttons follow the scene: the kid’s classmate left, the kid’s teacher right.*
 
-### 121. Selected helper · How mean is the kid’s classmate? — PROPOSED WORDING
+### 97. Selected helper · How mean is the kid’s classmate? — PROPOSED WORDING
 
 *Only after “The kid’s classmate” to Who was meaner?.*
 
@@ -1402,7 +1064,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
-### 122. Selected helper · How mean is the kid’s teacher? — PROPOSED WORDING
+### 98. Selected helper · How mean is the kid’s teacher? — PROPOSED WORDING
 
 *Only after “The kid’s teacher” to Who was meaner?.*
 
@@ -1416,7 +1078,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
-### 123. Individual evaluation · The kid’s classmate
+### 99. Individual evaluation · The kid’s classmate
 
 “Do you think it was Mean or Not Mean that the kid’s classmate did NOT help the kid in the middle?”
 
@@ -1424,7 +1086,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Choices: Mean / Not Mean.
 
-### 124. Meanness strength · The kid’s classmate
+### 100. Meanness strength · The kid’s classmate
 
 *Only after “Mean” to Individual evaluation · The kid’s classmate.*
 
@@ -1436,7 +1098,7 @@ Display wording: “How mean do you think the kid’s classmate was for NOT help
 
 Choices: A teeny bit mean / A little bit mean / Very mean.
 
-### 125. Individual evaluation · The kid’s teacher
+### 101. Individual evaluation · The kid’s teacher
 
 “Do you think it was Mean or Not Mean that the kid’s teacher did NOT help the kid in the middle?”
 
@@ -1444,7 +1106,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Choices: Mean / Not Mean.
 
-### 126. Meanness strength · The kid’s teacher
+### 102. Meanness strength · The kid’s teacher
 
 *Only after “Mean” to Individual evaluation · The kid’s teacher.*
 
@@ -1460,13 +1122,13 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Left: the kid’s teacher. Middle: the kid in the middle. Right: the kid’s dad.
 
-### 127. Meet the characters
+### 103. Meet the characters
 
 “Look! Here are some people.”
 
 [Stimulus source](assets/stimuli/677804bb653c-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-### 128. Meet the kid in the middle
+### 104. Meet the kid in the middle
 
 “This little one is a kid.”
 
@@ -1474,7 +1136,7 @@ Left: the kid’s teacher. Middle: the kid in the middle. Right: the kid’s dad
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 129. Meet the kid’s teacher
+### 105. Meet the kid’s teacher
 
 “This big one is this kid’s teacher.”
 
@@ -1482,7 +1144,7 @@ Left: the kid’s teacher. Middle: the kid in the middle. Right: the kid’s dad
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 130. Meet the kid’s dad
+### 106. Meet the kid’s dad
 
 “This big one is this kid’s dad.”
 
@@ -1490,13 +1152,13 @@ Left: the kid’s teacher. Middle: the kid in the middle. Right: the kid’s dad
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 131. The kid in the middle needs help
+### 107. The kid in the middle needs help
 
 “Oh no! The kid in the middle is sad now!”
 
 [Stimulus source](assets/stimuli/ee15b1b5be65-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-### 132. Who will help? — PROPOSED WORDING
+### 108. Who will help? — PROPOSED WORDING
 
 “Who will help the kid in the middle now that they’re sad?”
 
@@ -1508,63 +1170,7 @@ Choices: The kid’s teacher / The kid’s dad.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No prediction question.*
 
-### 133. “HAVE TO” practice
-
-“Now, sometimes people *HAVE TO* do things.”
-
-*The Evelyn recording uses continuous speech. HAVE TO remains uppercase and italic on screen as an adaptation. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 134. Practice · Red light
-
-“When the traffic light is red, do you HAVE TO stop? Yes or No.”
-
-Display treatment: Let’s practice! / The traffic light is red. / Do you HAVE TO stop?
-
-Choices: Yes / No.
-
-Expected check/practice answer: Yes.
-
-A correct response is required to advance; there is no bypass.
-
-Mandatory correct-answer feedback: “That’s right! When the traffic light is red, you HAVE TO stop.”
-
-Incorrect-answer correction: “No, that’s not quite right. When the traffic light is red, you HAVE TO stop. Let’s try that question again.”
-
-Reminder if needed: “No, that’s not quite right. When the traffic light is red, you HAVE TO stop. Let’s try that question again.”
-
-After the reminder, reread the full question and response labels before reopening the choices.
-
-*Correct-answer feedback is mandatory. Incorrect answers receive contextual correction and a reread; only the correct answer advances. Brief comprehension practice, not a study outcome. Role-free traffic-light example, illustration, and split display wording are draft adaptations for review. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 135. Practice · Lie
-
-“When someone asks you a question, do you HAVE TO lie? Yes or No.”
-
-Display treatment: Let’s practice! / Someone asks you a question. / Do you HAVE TO lie?
-
-Choices: Yes / No.
-
-Expected check/practice answer: No.
-
-A correct response is required to advance; there is no bypass.
-
-Mandatory correct-answer feedback: “That’s right! When someone asks you a question, you do NOT HAVE TO lie.”
-
-Incorrect-answer correction: “No, that’s not quite right. When someone asks you a question, you do NOT HAVE TO lie. Let’s try that question again.”
-
-Reminder if needed: “No, that’s not quite right. When someone asks you a question, you do NOT HAVE TO lie. Let’s try that question again.”
-
-After the reminder, reread the full question and response labels before reopening the choices.
-
-*Correct-answer feedback is mandatory. Incorrect answers receive contextual correction and a reread; only the correct answer advances. Brief comprehension practice, not a study outcome. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 136. Back to our story
-
-“So now, I’m going to ask you some questions about whether people HAVE TO do things.”
-
-*Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 137. Who HAS TO help? — PROPOSED WORDING
+### 109. Who HAS TO help? — PROPOSED WORDING
 
 “Who do you think HAS TO help the kid in the middle?”
 
@@ -1576,7 +1182,7 @@ Choices: The kid’s teacher / The kid’s dad.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No obligation question.*
 
-### 138. No one helped
+### 110. No one helped
 
 “No one helped the kid in the middle.”
 
@@ -1586,7 +1192,7 @@ Display wording: “No one helped the kid in the middle.” Both helper cues rem
 
 *Standalone outcome statement. Continue after the sentence to hear each helper’s action and the repeated no-one-helped statement.*
 
-### 139. Each helper did NOT help
+### 111. Each helper did NOT help
 
 “The kid’s teacher did NOT help the kid in the middle. And the kid’s dad did NOT help the kid in the middle. No one helped the kid in the middle.”
 
@@ -1598,7 +1204,7 @@ Captions follow the narration, in order: “The kid’s teacher did NOT help the
 
 *Every response path reaches this same outcome, regardless of prediction or obligation choices.*
 
-### 140. Recall · No one helped
+### 112. Recall · No one helped
 
 “Can you tell me, did either of these people help the kid in the middle?”
 
@@ -1606,7 +1212,7 @@ Captions follow the narration, in order: “The kid’s teacher did NOT help the
 
 Choices: Yes / No.
 
-Expected check/practice answer: No.
+Expected recall answer: No.
 
 A correct response is required to advance; there is no bypass.
 
@@ -1614,7 +1220,7 @@ Reminder if needed: “Actually, remember, no one helped the kid in the middle. 
 
 After the reminder, reread the full question and response labels before reopening the choices.
 
-### 141. Who was meaner? — PROPOSED WORDING
+### 113. Who was meaner? — PROPOSED WORDING
 
 “Who was meaner for NOT helping the kid in the middle?”
 
@@ -1626,7 +1232,7 @@ Choices: The kid’s teacher / The kid’s dad.
 
 *Two-helper comparison adapted from Marshall. Buttons follow the scene: the kid’s teacher left, the kid’s dad right.*
 
-### 142. Selected helper · How mean is the kid’s teacher? — PROPOSED WORDING
+### 114. Selected helper · How mean is the kid’s teacher? — PROPOSED WORDING
 
 *Only after “The kid’s teacher” to Who was meaner?.*
 
@@ -1640,7 +1246,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
-### 143. Selected helper · How mean is the kid’s dad? — PROPOSED WORDING
+### 115. Selected helper · How mean is the kid’s dad? — PROPOSED WORDING
 
 *Only after “The kid’s dad” to Who was meaner?.*
 
@@ -1654,7 +1260,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
-### 144. Individual evaluation · The kid’s teacher
+### 116. Individual evaluation · The kid’s teacher
 
 “Do you think it was Mean or Not Mean that the kid’s teacher did NOT help the kid in the middle?”
 
@@ -1662,7 +1268,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Choices: Mean / Not Mean.
 
-### 145. Meanness strength · The kid’s teacher
+### 117. Meanness strength · The kid’s teacher
 
 *Only after “Mean” to Individual evaluation · The kid’s teacher.*
 
@@ -1674,7 +1280,7 @@ Display wording: “How mean do you think the kid’s teacher was for NOT helpin
 
 Choices: A teeny bit mean / A little bit mean / Very mean.
 
-### 146. Individual evaluation · The kid’s dad
+### 118. Individual evaluation · The kid’s dad
 
 “Do you think it was Mean or Not Mean that the kid’s dad did NOT help the kid in the middle?”
 
@@ -1682,7 +1288,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Choices: Mean / Not Mean.
 
-### 147. Meanness strength · The kid’s dad
+### 119. Meanness strength · The kid’s dad
 
 *Only after “Mean” to Individual evaluation · The kid’s dad.*
 
@@ -1698,13 +1304,13 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Left: the kid’s brother. Middle: the kid in the middle. Right: the kid’s friend.
 
-### 148. Meet the characters
+### 120. Meet the characters
 
 “Look! Here are some people.”
 
 [Stimulus source](assets/stimuli/bb199acadbc5-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-### 149. Meet the kid in the middle
+### 121. Meet the kid in the middle
 
 “This little one is a kid.”
 
@@ -1712,7 +1318,7 @@ Left: the kid’s brother. Middle: the kid in the middle. Right: the kid’s fri
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 150. Meet the kid’s brother
+### 122. Meet the kid’s brother
 
 “This little one is this kid’s brother.”
 
@@ -1720,7 +1326,7 @@ Left: the kid’s brother. Middle: the kid in the middle. Right: the kid’s fri
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 151. Meet the kid’s friend
+### 123. Meet the kid’s friend
 
 “This little one is this kid’s friend.”
 
@@ -1728,13 +1334,13 @@ Left: the kid’s brother. Middle: the kid in the middle. Right: the kid’s fri
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 152. The kid in the middle needs help
+### 124. The kid in the middle needs help
 
 “Oh no! The kid in the middle is sad now!”
 
 [Stimulus source](assets/stimuli/3538d8e77c34-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-### 153. Who will help? — PROPOSED WORDING
+### 125. Who will help? — PROPOSED WORDING
 
 “Who will help the kid in the middle now that they’re sad?”
 
@@ -1746,63 +1352,7 @@ Choices: The kid’s brother / The kid’s friend.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No prediction question.*
 
-### 154. “HAVE TO” practice
-
-“Now, sometimes people *HAVE TO* do things.”
-
-*The Evelyn recording uses continuous speech. HAVE TO remains uppercase and italic on screen as an adaptation. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 155. Practice · Red light
-
-“When the traffic light is red, do you HAVE TO stop? Yes or No.”
-
-Display treatment: Let’s practice! / The traffic light is red. / Do you HAVE TO stop?
-
-Choices: Yes / No.
-
-Expected check/practice answer: Yes.
-
-A correct response is required to advance; there is no bypass.
-
-Mandatory correct-answer feedback: “That’s right! When the traffic light is red, you HAVE TO stop.”
-
-Incorrect-answer correction: “No, that’s not quite right. When the traffic light is red, you HAVE TO stop. Let’s try that question again.”
-
-Reminder if needed: “No, that’s not quite right. When the traffic light is red, you HAVE TO stop. Let’s try that question again.”
-
-After the reminder, reread the full question and response labels before reopening the choices.
-
-*Correct-answer feedback is mandatory. Incorrect answers receive contextual correction and a reread; only the correct answer advances. Brief comprehension practice, not a study outcome. Role-free traffic-light example, illustration, and split display wording are draft adaptations for review. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 156. Practice · Lie
-
-“When someone asks you a question, do you HAVE TO lie? Yes or No.”
-
-Display treatment: Let’s practice! / Someone asks you a question. / Do you HAVE TO lie?
-
-Choices: Yes / No.
-
-Expected check/practice answer: No.
-
-A correct response is required to advance; there is no bypass.
-
-Mandatory correct-answer feedback: “That’s right! When someone asks you a question, you do NOT HAVE TO lie.”
-
-Incorrect-answer correction: “No, that’s not quite right. When someone asks you a question, you do NOT HAVE TO lie. Let’s try that question again.”
-
-Reminder if needed: “No, that’s not quite right. When someone asks you a question, you do NOT HAVE TO lie. Let’s try that question again.”
-
-After the reminder, reread the full question and response labels before reopening the choices.
-
-*Correct-answer feedback is mandatory. Incorrect answers receive contextual correction and a reread; only the correct answer advances. Brief comprehension practice, not a study outcome. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 157. Back to our story
-
-“So now, I’m going to ask you some questions about whether people HAVE TO do things.”
-
-*Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 158. Who HAS TO help? — PROPOSED WORDING
+### 126. Who HAS TO help? — PROPOSED WORDING
 
 “Who do you think HAS TO help the kid in the middle?”
 
@@ -1814,7 +1364,7 @@ Choices: The kid’s brother / The kid’s friend.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No obligation question.*
 
-### 159. No one helped
+### 127. No one helped
 
 “No one helped the kid in the middle.”
 
@@ -1824,7 +1374,7 @@ Display wording: “No one helped the kid in the middle.” Both helper cues rem
 
 *Standalone outcome statement. Continue after the sentence to hear each helper’s action and the repeated no-one-helped statement.*
 
-### 160. Each helper did NOT help
+### 128. Each helper did NOT help
 
 “The kid’s brother did NOT help the kid in the middle. And the kid’s friend did NOT help the kid in the middle. No one helped the kid in the middle.”
 
@@ -1836,7 +1386,7 @@ Captions follow the narration, in order: “The kid’s brother did NOT help the
 
 *Every response path reaches this same outcome, regardless of prediction or obligation choices.*
 
-### 161. Recall · No one helped
+### 129. Recall · No one helped
 
 “Can you tell me, did either of these people help the kid in the middle?”
 
@@ -1844,7 +1394,7 @@ Captions follow the narration, in order: “The kid’s brother did NOT help the
 
 Choices: Yes / No.
 
-Expected check/practice answer: No.
+Expected recall answer: No.
 
 A correct response is required to advance; there is no bypass.
 
@@ -1852,7 +1402,7 @@ Reminder if needed: “Actually, remember, no one helped the kid in the middle. 
 
 After the reminder, reread the full question and response labels before reopening the choices.
 
-### 162. Who was meaner? — PROPOSED WORDING
+### 130. Who was meaner? — PROPOSED WORDING
 
 “Who was meaner for NOT helping the kid in the middle?”
 
@@ -1864,7 +1414,7 @@ Choices: The kid’s brother / The kid’s friend.
 
 *Two-helper comparison adapted from Marshall. Buttons follow the scene: the kid’s brother left, the kid’s friend right.*
 
-### 163. Selected helper · How mean is the kid’s brother? — PROPOSED WORDING
+### 131. Selected helper · How mean is the kid’s brother? — PROPOSED WORDING
 
 *Only after “The kid’s brother” to Who was meaner?.*
 
@@ -1878,7 +1428,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
-### 164. Selected helper · How mean is the kid’s friend? — PROPOSED WORDING
+### 132. Selected helper · How mean is the kid’s friend? — PROPOSED WORDING
 
 *Only after “The kid’s friend” to Who was meaner?.*
 
@@ -1892,7 +1442,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
-### 165. Individual evaluation · The kid’s brother
+### 133. Individual evaluation · The kid’s brother
 
 “Do you think it was Mean or Not Mean that the kid’s brother did NOT help the kid in the middle?”
 
@@ -1900,7 +1450,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Choices: Mean / Not Mean.
 
-### 166. Meanness strength · The kid’s brother
+### 134. Meanness strength · The kid’s brother
 
 *Only after “Mean” to Individual evaluation · The kid’s brother.*
 
@@ -1912,7 +1462,7 @@ Display wording: “How mean do you think the kid’s brother was for NOT helpin
 
 Choices: A teeny bit mean / A little bit mean / Very mean.
 
-### 167. Individual evaluation · The kid’s friend
+### 135. Individual evaluation · The kid’s friend
 
 “Do you think it was Mean or Not Mean that the kid’s friend did NOT help the kid in the middle?”
 
@@ -1920,7 +1470,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Choices: Mean / Not Mean.
 
-### 168. Meanness strength · The kid’s friend
+### 136. Meanness strength · The kid’s friend
 
 *Only after “Mean” to Individual evaluation · The kid’s friend.*
 
@@ -1936,13 +1486,13 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Left: the kid’s friend. Middle: the kid in the middle. Right: the kid’s best friend.
 
-### 169. Meet the characters
+### 137. Meet the characters
 
 “Look! Here are some people.”
 
 [Stimulus source](assets/stimuli/d45a1ece9a16-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-### 170. Meet the kid in the middle
+### 138. Meet the kid in the middle
 
 “This little one is a kid.”
 
@@ -1950,7 +1500,7 @@ Left: the kid’s friend. Middle: the kid in the middle. Right: the kid’s best
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 171. Meet the kid’s friend
+### 139. Meet the kid’s friend
 
 “This little one is this kid’s friend.”
 
@@ -1958,7 +1508,7 @@ Left: the kid’s friend. Middle: the kid in the middle. Right: the kid’s best
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 172. Meet the kid’s best friend
+### 140. Meet the kid’s best friend
 
 “This little one is this kid’s best friend.”
 
@@ -1966,13 +1516,13 @@ Left: the kid’s friend. Middle: the kid in the middle. Right: the kid’s best
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 173. The kid in the middle needs help
+### 141. The kid in the middle needs help
 
 “Oh no! The kid in the middle is sad now!”
 
 [Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-### 174. Who will help? — PROPOSED WORDING
+### 142. Who will help? — PROPOSED WORDING
 
 “Who will help the kid in the middle now that they’re sad?”
 
@@ -1984,63 +1534,7 @@ Choices: The kid’s friend / The kid’s best friend.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No prediction question.*
 
-### 175. “HAVE TO” practice
-
-“Now, sometimes people *HAVE TO* do things.”
-
-*The Evelyn recording uses continuous speech. HAVE TO remains uppercase and italic on screen as an adaptation. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 176. Practice · Red light
-
-“When the traffic light is red, do you HAVE TO stop? Yes or No.”
-
-Display treatment: Let’s practice! / The traffic light is red. / Do you HAVE TO stop?
-
-Choices: Yes / No.
-
-Expected check/practice answer: Yes.
-
-A correct response is required to advance; there is no bypass.
-
-Mandatory correct-answer feedback: “That’s right! When the traffic light is red, you HAVE TO stop.”
-
-Incorrect-answer correction: “No, that’s not quite right. When the traffic light is red, you HAVE TO stop. Let’s try that question again.”
-
-Reminder if needed: “No, that’s not quite right. When the traffic light is red, you HAVE TO stop. Let’s try that question again.”
-
-After the reminder, reread the full question and response labels before reopening the choices.
-
-*Correct-answer feedback is mandatory. Incorrect answers receive contextual correction and a reread; only the correct answer advances. Brief comprehension practice, not a study outcome. Role-free traffic-light example, illustration, and split display wording are draft adaptations for review. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 177. Practice · Lie
-
-“When someone asks you a question, do you HAVE TO lie? Yes or No.”
-
-Display treatment: Let’s practice! / Someone asks you a question. / Do you HAVE TO lie?
-
-Choices: Yes / No.
-
-Expected check/practice answer: No.
-
-A correct response is required to advance; there is no bypass.
-
-Mandatory correct-answer feedback: “That’s right! When someone asks you a question, you do NOT HAVE TO lie.”
-
-Incorrect-answer correction: “No, that’s not quite right. When someone asks you a question, you do NOT HAVE TO lie. Let’s try that question again.”
-
-Reminder if needed: “No, that’s not quite right. When someone asks you a question, you do NOT HAVE TO lie. Let’s try that question again.”
-
-After the reminder, reread the full question and response labels before reopening the choices.
-
-*Correct-answer feedback is mandatory. Incorrect answers receive contextual correction and a reread; only the correct answer advances. Brief comprehension practice, not a study outcome. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 178. Back to our story
-
-“So now, I’m going to ask you some questions about whether people HAVE TO do things.”
-
-*Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 179. Who HAS TO help? — PROPOSED WORDING
+### 143. Who HAS TO help? — PROPOSED WORDING
 
 “Who do you think HAS TO help the kid in the middle?”
 
@@ -2052,7 +1546,7 @@ Choices: The kid’s friend / The kid’s best friend.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No obligation question.*
 
-### 180. No one helped
+### 144. No one helped
 
 “No one helped the kid in the middle.”
 
@@ -2062,7 +1556,7 @@ Display wording: “No one helped the kid in the middle.” Both helper cues rem
 
 *Standalone outcome statement. Continue after the sentence to hear each helper’s action and the repeated no-one-helped statement.*
 
-### 181. Each helper did NOT help
+### 145. Each helper did NOT help
 
 “The kid’s friend did NOT help the kid in the middle. And the kid’s best friend did NOT help the kid in the middle. No one helped the kid in the middle.”
 
@@ -2074,7 +1568,7 @@ Captions follow the narration, in order: “The kid’s friend did NOT help the 
 
 *Every response path reaches this same outcome, regardless of prediction or obligation choices.*
 
-### 182. Recall · No one helped
+### 146. Recall · No one helped
 
 “Can you tell me, did either of these people help the kid in the middle?”
 
@@ -2082,7 +1576,7 @@ Captions follow the narration, in order: “The kid’s friend did NOT help the 
 
 Choices: Yes / No.
 
-Expected check/practice answer: No.
+Expected recall answer: No.
 
 A correct response is required to advance; there is no bypass.
 
@@ -2090,7 +1584,7 @@ Reminder if needed: “Actually, remember, no one helped the kid in the middle. 
 
 After the reminder, reread the full question and response labels before reopening the choices.
 
-### 183. Who was meaner? — PROPOSED WORDING
+### 147. Who was meaner? — PROPOSED WORDING
 
 “Who was meaner for NOT helping the kid in the middle?”
 
@@ -2102,7 +1596,7 @@ Choices: The kid’s friend / The kid’s best friend.
 
 *Two-helper comparison adapted from Marshall. Buttons follow the scene: the kid’s friend left, the kid’s best friend right.*
 
-### 184. Selected helper · How mean is the kid’s friend? — PROPOSED WORDING
+### 148. Selected helper · How mean is the kid’s friend? — PROPOSED WORDING
 
 *Only after “The kid’s friend” to Who was meaner?.*
 
@@ -2116,7 +1610,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
-### 185. Selected helper · How mean is the kid’s best friend? — PROPOSED WORDING
+### 149. Selected helper · How mean is the kid’s best friend? — PROPOSED WORDING
 
 *Only after “The kid’s best friend” to Who was meaner?.*
 
@@ -2130,7 +1624,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
-### 186. Individual evaluation · The kid’s friend
+### 150. Individual evaluation · The kid’s friend
 
 “Do you think it was Mean or Not Mean that the kid’s friend did NOT help the kid in the middle?”
 
@@ -2138,7 +1632,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Choices: Mean / Not Mean.
 
-### 187. Meanness strength · The kid’s friend
+### 151. Meanness strength · The kid’s friend
 
 *Only after “Mean” to Individual evaluation · The kid’s friend.*
 
@@ -2150,7 +1644,7 @@ Display wording: “How mean do you think the kid’s friend was for NOT helping
 
 Choices: A teeny bit mean / A little bit mean / Very mean.
 
-### 188. Individual evaluation · The kid’s best friend
+### 152. Individual evaluation · The kid’s best friend
 
 “Do you think it was Mean or Not Mean that the kid’s best friend did NOT help the kid in the middle?”
 
@@ -2158,7 +1652,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Choices: Mean / Not Mean.
 
-### 189. Meanness strength · The kid’s best friend
+### 153. Meanness strength · The kid’s best friend
 
 *Only after “Mean” to Individual evaluation · The kid’s best friend.*
 
@@ -2174,13 +1668,13 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Left: the kid’s teacher. Middle: the kid in the middle. Right: the kid’s friend.
 
-### 190. Meet the characters
+### 154. Meet the characters
 
 “Look! Here are some people.”
 
 [Stimulus source](assets/stimuli/5ab48f0b29ed-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-### 191. Meet the kid in the middle
+### 155. Meet the kid in the middle
 
 “This little one is a kid.”
 
@@ -2188,7 +1682,7 @@ Left: the kid’s teacher. Middle: the kid in the middle. Right: the kid’s fri
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 192. Meet the kid’s teacher
+### 156. Meet the kid’s teacher
 
 “This big one is this kid’s teacher.”
 
@@ -2196,7 +1690,7 @@ Left: the kid’s teacher. Middle: the kid in the middle. Right: the kid’s fri
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 193. Meet the kid’s friend
+### 157. Meet the kid’s friend
 
 “This little one is this kid’s friend.”
 
@@ -2204,13 +1698,13 @@ Left: the kid’s teacher. Middle: the kid in the middle. Right: the kid’s fri
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 194. The kid in the middle needs help
+### 158. The kid in the middle needs help
 
 “Oh no! The kid in the middle is sad now!”
 
 [Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-### 195. Who will help? — PROPOSED WORDING
+### 159. Who will help? — PROPOSED WORDING
 
 “Who will help the kid in the middle now that they’re sad?”
 
@@ -2222,63 +1716,7 @@ Choices: The kid’s teacher / The kid’s friend.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No prediction question.*
 
-### 196. “HAVE TO” practice
-
-“Now, sometimes people *HAVE TO* do things.”
-
-*The Evelyn recording uses continuous speech. HAVE TO remains uppercase and italic on screen as an adaptation. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 197. Practice · Red light
-
-“When the traffic light is red, do you HAVE TO stop? Yes or No.”
-
-Display treatment: Let’s practice! / The traffic light is red. / Do you HAVE TO stop?
-
-Choices: Yes / No.
-
-Expected check/practice answer: Yes.
-
-A correct response is required to advance; there is no bypass.
-
-Mandatory correct-answer feedback: “That’s right! When the traffic light is red, you HAVE TO stop.”
-
-Incorrect-answer correction: “No, that’s not quite right. When the traffic light is red, you HAVE TO stop. Let’s try that question again.”
-
-Reminder if needed: “No, that’s not quite right. When the traffic light is red, you HAVE TO stop. Let’s try that question again.”
-
-After the reminder, reread the full question and response labels before reopening the choices.
-
-*Correct-answer feedback is mandatory. Incorrect answers receive contextual correction and a reread; only the correct answer advances. Brief comprehension practice, not a study outcome. Role-free traffic-light example, illustration, and split display wording are draft adaptations for review. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 198. Practice · Lie
-
-“When someone asks you a question, do you HAVE TO lie? Yes or No.”
-
-Display treatment: Let’s practice! / Someone asks you a question. / Do you HAVE TO lie?
-
-Choices: Yes / No.
-
-Expected check/practice answer: No.
-
-A correct response is required to advance; there is no bypass.
-
-Mandatory correct-answer feedback: “That’s right! When someone asks you a question, you do NOT HAVE TO lie.”
-
-Incorrect-answer correction: “No, that’s not quite right. When someone asks you a question, you do NOT HAVE TO lie. Let’s try that question again.”
-
-Reminder if needed: “No, that’s not quite right. When someone asks you a question, you do NOT HAVE TO lie. Let’s try that question again.”
-
-After the reminder, reread the full question and response labels before reopening the choices.
-
-*Correct-answer feedback is mandatory. Incorrect answers receive contextual correction and a reread; only the correct answer advances. Brief comprehension practice, not a study outcome. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 199. Back to our story
-
-“So now, I’m going to ask you some questions about whether people HAVE TO do things.”
-
-*Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 200. Who HAS TO help? — PROPOSED WORDING
+### 160. Who HAS TO help? — PROPOSED WORDING
 
 “Who do you think HAS TO help the kid in the middle?”
 
@@ -2290,7 +1728,7 @@ Choices: The kid’s teacher / The kid’s friend.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No obligation question.*
 
-### 201. No one helped
+### 161. No one helped
 
 “No one helped the kid in the middle.”
 
@@ -2300,7 +1738,7 @@ Display wording: “No one helped the kid in the middle.” Both helper cues rem
 
 *Standalone outcome statement. Continue after the sentence to hear each helper’s action and the repeated no-one-helped statement.*
 
-### 202. Each helper did NOT help
+### 162. Each helper did NOT help
 
 “The kid’s teacher did NOT help the kid in the middle. And the kid’s friend did NOT help the kid in the middle. No one helped the kid in the middle.”
 
@@ -2312,7 +1750,7 @@ Captions follow the narration, in order: “The kid’s teacher did NOT help the
 
 *Every response path reaches this same outcome, regardless of prediction or obligation choices.*
 
-### 203. Recall · No one helped
+### 163. Recall · No one helped
 
 “Can you tell me, did either of these people help the kid in the middle?”
 
@@ -2320,7 +1758,7 @@ Captions follow the narration, in order: “The kid’s teacher did NOT help the
 
 Choices: Yes / No.
 
-Expected check/practice answer: No.
+Expected recall answer: No.
 
 A correct response is required to advance; there is no bypass.
 
@@ -2328,7 +1766,7 @@ Reminder if needed: “Actually, remember, no one helped the kid in the middle. 
 
 After the reminder, reread the full question and response labels before reopening the choices.
 
-### 204. Who was meaner? — PROPOSED WORDING
+### 164. Who was meaner? — PROPOSED WORDING
 
 “Who was meaner for NOT helping the kid in the middle?”
 
@@ -2340,7 +1778,7 @@ Choices: The kid’s teacher / The kid’s friend.
 
 *Two-helper comparison adapted from Marshall. Buttons follow the scene: the kid’s teacher left, the kid’s friend right.*
 
-### 205. Selected helper · How mean is the kid’s teacher? — PROPOSED WORDING
+### 165. Selected helper · How mean is the kid’s teacher? — PROPOSED WORDING
 
 *Only after “The kid’s teacher” to Who was meaner?.*
 
@@ -2354,7 +1792,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
-### 206. Selected helper · How mean is the kid’s friend? — PROPOSED WORDING
+### 166. Selected helper · How mean is the kid’s friend? — PROPOSED WORDING
 
 *Only after “The kid’s friend” to Who was meaner?.*
 
@@ -2368,7 +1806,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
-### 207. Individual evaluation · The kid’s teacher
+### 167. Individual evaluation · The kid’s teacher
 
 “Do you think it was Mean or Not Mean that the kid’s teacher did NOT help the kid in the middle?”
 
@@ -2376,7 +1814,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Choices: Mean / Not Mean.
 
-### 208. Meanness strength · The kid’s teacher
+### 168. Meanness strength · The kid’s teacher
 
 *Only after “Mean” to Individual evaluation · The kid’s teacher.*
 
@@ -2388,7 +1826,7 @@ Display wording: “How mean do you think the kid’s teacher was for NOT helpin
 
 Choices: A teeny bit mean / A little bit mean / Very mean.
 
-### 209. Individual evaluation · The kid’s friend
+### 169. Individual evaluation · The kid’s friend
 
 “Do you think it was Mean or Not Mean that the kid’s friend did NOT help the kid in the middle?”
 
@@ -2396,7 +1834,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Choices: Mean / Not Mean.
 
-### 210. Meanness strength · The kid’s friend
+### 170. Meanness strength · The kid’s friend
 
 *Only after “Mean” to Individual evaluation · The kid’s friend.*
 
@@ -2412,13 +1850,13 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Left: the kid’s dad. Middle: the kid in the middle. Right: the kid’s brother.
 
-### 211. Meet the characters
+### 171. Meet the characters
 
 “Look! Here are some people.”
 
 [Stimulus source](assets/stimuli/ebcc9f9f7d93-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-### 212. Meet the kid in the middle
+### 172. Meet the kid in the middle
 
 “This little one is a kid.”
 
@@ -2426,7 +1864,7 @@ Left: the kid’s dad. Middle: the kid in the middle. Right: the kid’s brother
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 213. Meet the kid’s dad
+### 173. Meet the kid’s dad
 
 “This big one is this kid’s dad.”
 
@@ -2434,7 +1872,7 @@ Left: the kid’s dad. Middle: the kid in the middle. Right: the kid’s brother
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 214. Meet the kid’s brother
+### 174. Meet the kid’s brother
 
 “This little one is this kid’s brother.”
 
@@ -2442,13 +1880,13 @@ Left: the kid’s dad. Middle: the kid in the middle. Right: the kid’s brother
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 215. The kid in the middle needs help
+### 175. The kid in the middle needs help
 
 “Oh no! The kid in the middle is sad now!”
 
 [Stimulus source](assets/stimuli/09b52ae33b24-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-### 216. Who will help? — PROPOSED WORDING
+### 176. Who will help? — PROPOSED WORDING
 
 “Who will help the kid in the middle now that they’re sad?”
 
@@ -2460,63 +1898,7 @@ Choices: The kid’s dad / The kid’s brother.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No prediction question.*
 
-### 217. “HAVE TO” practice
-
-“Now, sometimes people *HAVE TO* do things.”
-
-*The Evelyn recording uses continuous speech. HAVE TO remains uppercase and italic on screen as an adaptation. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 218. Practice · Red light
-
-“When the traffic light is red, do you HAVE TO stop? Yes or No.”
-
-Display treatment: Let’s practice! / The traffic light is red. / Do you HAVE TO stop?
-
-Choices: Yes / No.
-
-Expected check/practice answer: Yes.
-
-A correct response is required to advance; there is no bypass.
-
-Mandatory correct-answer feedback: “That’s right! When the traffic light is red, you HAVE TO stop.”
-
-Incorrect-answer correction: “No, that’s not quite right. When the traffic light is red, you HAVE TO stop. Let’s try that question again.”
-
-Reminder if needed: “No, that’s not quite right. When the traffic light is red, you HAVE TO stop. Let’s try that question again.”
-
-After the reminder, reread the full question and response labels before reopening the choices.
-
-*Correct-answer feedback is mandatory. Incorrect answers receive contextual correction and a reread; only the correct answer advances. Brief comprehension practice, not a study outcome. Role-free traffic-light example, illustration, and split display wording are draft adaptations for review. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 219. Practice · Lie
-
-“When someone asks you a question, do you HAVE TO lie? Yes or No.”
-
-Display treatment: Let’s practice! / Someone asks you a question. / Do you HAVE TO lie?
-
-Choices: Yes / No.
-
-Expected check/practice answer: No.
-
-A correct response is required to advance; there is no bypass.
-
-Mandatory correct-answer feedback: “That’s right! When someone asks you a question, you do NOT HAVE TO lie.”
-
-Incorrect-answer correction: “No, that’s not quite right. When someone asks you a question, you do NOT HAVE TO lie. Let’s try that question again.”
-
-Reminder if needed: “No, that’s not quite right. When someone asks you a question, you do NOT HAVE TO lie. Let’s try that question again.”
-
-After the reminder, reread the full question and response labels before reopening the choices.
-
-*Correct-answer feedback is mandatory. Incorrect answers receive contextual correction and a reread; only the correct answer advances. Brief comprehension practice, not a study outcome. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 220. Back to our story
-
-“So now, I’m going to ask you some questions about whether people HAVE TO do things.”
-
-*Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 221. Who HAS TO help? — PROPOSED WORDING
+### 177. Who HAS TO help? — PROPOSED WORDING
 
 “Who do you think HAS TO help the kid in the middle?”
 
@@ -2528,7 +1910,7 @@ Choices: The kid’s dad / The kid’s brother.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No obligation question.*
 
-### 222. No one helped
+### 178. No one helped
 
 “No one helped the kid in the middle.”
 
@@ -2538,7 +1920,7 @@ Display wording: “No one helped the kid in the middle.” Both helper cues rem
 
 *Standalone outcome statement. Continue after the sentence to hear each helper’s action and the repeated no-one-helped statement.*
 
-### 223. Each helper did NOT help
+### 179. Each helper did NOT help
 
 “The kid’s dad did NOT help the kid in the middle. And the kid’s brother did NOT help the kid in the middle. No one helped the kid in the middle.”
 
@@ -2550,7 +1932,7 @@ Captions follow the narration, in order: “The kid’s dad did NOT help the kid
 
 *Every response path reaches this same outcome, regardless of prediction or obligation choices.*
 
-### 224. Recall · No one helped
+### 180. Recall · No one helped
 
 “Can you tell me, did either of these people help the kid in the middle?”
 
@@ -2558,7 +1940,7 @@ Captions follow the narration, in order: “The kid’s dad did NOT help the kid
 
 Choices: Yes / No.
 
-Expected check/practice answer: No.
+Expected recall answer: No.
 
 A correct response is required to advance; there is no bypass.
 
@@ -2566,7 +1948,7 @@ Reminder if needed: “Actually, remember, no one helped the kid in the middle. 
 
 After the reminder, reread the full question and response labels before reopening the choices.
 
-### 225. Who was meaner? — PROPOSED WORDING
+### 181. Who was meaner? — PROPOSED WORDING
 
 “Who was meaner for NOT helping the kid in the middle?”
 
@@ -2578,7 +1960,7 @@ Choices: The kid’s dad / The kid’s brother.
 
 *Two-helper comparison adapted from Marshall. Buttons follow the scene: the kid’s dad left, the kid’s brother right.*
 
-### 226. Selected helper · How mean is the kid’s dad? — PROPOSED WORDING
+### 182. Selected helper · How mean is the kid’s dad? — PROPOSED WORDING
 
 *Only after “The kid’s dad” to Who was meaner?.*
 
@@ -2592,7 +1974,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
-### 227. Selected helper · How mean is the kid’s brother? — PROPOSED WORDING
+### 183. Selected helper · How mean is the kid’s brother? — PROPOSED WORDING
 
 *Only after “The kid’s brother” to Who was meaner?.*
 
@@ -2606,7 +1988,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
-### 228. Individual evaluation · The kid’s dad
+### 184. Individual evaluation · The kid’s dad
 
 “Do you think it was Mean or Not Mean that the kid’s dad did NOT help the kid in the middle?”
 
@@ -2614,7 +1996,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Choices: Mean / Not Mean.
 
-### 229. Meanness strength · The kid’s dad
+### 185. Meanness strength · The kid’s dad
 
 *Only after “Mean” to Individual evaluation · The kid’s dad.*
 
@@ -2626,7 +2008,7 @@ Display wording: “How mean do you think the kid’s dad was for NOT helping th
 
 Choices: A teeny bit mean / A little bit mean / Very mean.
 
-### 230. Individual evaluation · The kid’s brother
+### 186. Individual evaluation · The kid’s brother
 
 “Do you think it was Mean or Not Mean that the kid’s brother did NOT help the kid in the middle?”
 
@@ -2634,7 +2016,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Choices: Mean / Not Mean.
 
-### 231. Meanness strength · The kid’s brother
+### 187. Meanness strength · The kid’s brother
 
 *Only after “Mean” to Individual evaluation · The kid’s brother.*
 
@@ -2650,13 +2032,13 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Left: the kid’s classmate. Middle: the kid in the middle. Right: the kid’s teacher.
 
-### 232. Meet the characters
+### 188. Meet the characters
 
 “Look! Here are some people.”
 
 [Stimulus source](assets/stimuli/44d39b1df683-intro_01.svg) — original reference image; the preview replaces its caption with the wording above.
 
-### 233. Meet the kid in the middle
+### 189. Meet the kid in the middle
 
 “This little one is a kid.”
 
@@ -2664,7 +2046,7 @@ Left: the kid’s classmate. Middle: the kid in the middle. Right: the kid’s t
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 234. Meet the kid’s classmate
+### 190. Meet the kid’s classmate
 
 “This little one is this kid’s classmate.”
 
@@ -2672,7 +2054,7 @@ Left: the kid’s classmate. Middle: the kid in the middle. Right: the kid’s t
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 235. Meet the kid’s teacher
+### 191. Meet the kid’s teacher
 
 “This big one is this kid’s teacher.”
 
@@ -2680,13 +2062,13 @@ Left: the kid’s classmate. Middle: the kid in the middle. Right: the kid’s t
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 236. The kid in the middle needs help
+### 192. The kid in the middle needs help
 
 “Oh no! The kid in the middle is sad now!”
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
-### 237. Who will help? — PROPOSED WORDING
+### 193. Who will help? — PROPOSED WORDING
 
 “Who will help the kid in the middle now that they’re sad?”
 
@@ -2698,63 +2080,7 @@ Choices: The kid’s classmate / The kid’s teacher.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No prediction question.*
 
-### 238. “HAVE TO” practice
-
-“Now, sometimes people *HAVE TO* do things.”
-
-*The Evelyn recording uses continuous speech. HAVE TO remains uppercase and italic on screen as an adaptation. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 239. Practice · Red light
-
-“When the traffic light is red, do you HAVE TO stop? Yes or No.”
-
-Display treatment: Let’s practice! / The traffic light is red. / Do you HAVE TO stop?
-
-Choices: Yes / No.
-
-Expected check/practice answer: Yes.
-
-A correct response is required to advance; there is no bypass.
-
-Mandatory correct-answer feedback: “That’s right! When the traffic light is red, you HAVE TO stop.”
-
-Incorrect-answer correction: “No, that’s not quite right. When the traffic light is red, you HAVE TO stop. Let’s try that question again.”
-
-Reminder if needed: “No, that’s not quite right. When the traffic light is red, you HAVE TO stop. Let’s try that question again.”
-
-After the reminder, reread the full question and response labels before reopening the choices.
-
-*Correct-answer feedback is mandatory. Incorrect answers receive contextual correction and a reread; only the correct answer advances. Brief comprehension practice, not a study outcome. Role-free traffic-light example, illustration, and split display wording are draft adaptations for review. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 240. Practice · Lie
-
-“When someone asks you a question, do you HAVE TO lie? Yes or No.”
-
-Display treatment: Let’s practice! / Someone asks you a question. / Do you HAVE TO lie?
-
-Choices: Yes / No.
-
-Expected check/practice answer: No.
-
-A correct response is required to advance; there is no bypass.
-
-Mandatory correct-answer feedback: “That’s right! When someone asks you a question, you do NOT HAVE TO lie.”
-
-Incorrect-answer correction: “No, that’s not quite right. When someone asks you a question, you do NOT HAVE TO lie. Let’s try that question again.”
-
-Reminder if needed: “No, that’s not quite right. When someone asks you a question, you do NOT HAVE TO lie. Let’s try that question again.”
-
-After the reminder, reread the full question and response labels before reopening the choices.
-
-*Correct-answer feedback is mandatory. Incorrect answers receive contextual correction and a reread; only the correct answer advances. Brief comprehension practice, not a study outcome. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 241. Back to our story
-
-“So now, I’m going to ask you some questions about whether people HAVE TO do things.”
-
-*Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 242. Who HAS TO help? — PROPOSED WORDING
+### 194. Who HAS TO help? — PROPOSED WORDING
 
 “Who do you think HAS TO help the kid in the middle?”
 
@@ -2766,7 +2092,7 @@ Choices: The kid’s classmate / The kid’s teacher.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No obligation question.*
 
-### 243. No one helped
+### 195. No one helped
 
 “No one helped the kid in the middle.”
 
@@ -2776,7 +2102,7 @@ Display wording: “No one helped the kid in the middle.” Both helper cues rem
 
 *Standalone outcome statement. Continue after the sentence to hear each helper’s action and the repeated no-one-helped statement.*
 
-### 244. Each helper did NOT help
+### 196. Each helper did NOT help
 
 “The kid’s classmate did NOT help the kid in the middle. And the kid’s teacher did NOT help the kid in the middle. No one helped the kid in the middle.”
 
@@ -2788,7 +2114,7 @@ Captions follow the narration, in order: “The kid’s classmate did NOT help t
 
 *Every response path reaches this same outcome, regardless of prediction or obligation choices.*
 
-### 245. Recall · No one helped
+### 197. Recall · No one helped
 
 “Can you tell me, did either of these people help the kid in the middle?”
 
@@ -2796,7 +2122,7 @@ Captions follow the narration, in order: “The kid’s classmate did NOT help t
 
 Choices: Yes / No.
 
-Expected check/practice answer: No.
+Expected recall answer: No.
 
 A correct response is required to advance; there is no bypass.
 
@@ -2804,7 +2130,7 @@ Reminder if needed: “Actually, remember, no one helped the kid in the middle. 
 
 After the reminder, reread the full question and response labels before reopening the choices.
 
-### 246. Who was meaner? — PROPOSED WORDING
+### 198. Who was meaner? — PROPOSED WORDING
 
 “Who was meaner for NOT helping the kid in the middle?”
 
@@ -2816,7 +2142,7 @@ Choices: The kid’s classmate / The kid’s teacher.
 
 *Two-helper comparison adapted from Marshall. Buttons follow the scene: the kid’s classmate left, the kid’s teacher right.*
 
-### 247. Selected helper · How mean is the kid’s classmate? — PROPOSED WORDING
+### 199. Selected helper · How mean is the kid’s classmate? — PROPOSED WORDING
 
 *Only after “The kid’s classmate” to Who was meaner?.*
 
@@ -2830,7 +2156,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
-### 248. Selected helper · How mean is the kid’s teacher? — PROPOSED WORDING
+### 200. Selected helper · How mean is the kid’s teacher? — PROPOSED WORDING
 
 *Only after “The kid’s teacher” to Who was meaner?.*
 
@@ -2844,7 +2170,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
-### 249. Individual evaluation · The kid’s classmate
+### 201. Individual evaluation · The kid’s classmate
 
 “Do you think it was Mean or Not Mean that the kid’s classmate did NOT help the kid in the middle?”
 
@@ -2852,7 +2178,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Choices: Mean / Not Mean.
 
-### 250. Meanness strength · The kid’s classmate
+### 202. Meanness strength · The kid’s classmate
 
 *Only after “Mean” to Individual evaluation · The kid’s classmate.*
 
@@ -2864,7 +2190,7 @@ Display wording: “How mean do you think the kid’s classmate was for NOT help
 
 Choices: A teeny bit mean / A little bit mean / Very mean.
 
-### 251. Individual evaluation · The kid’s teacher
+### 203. Individual evaluation · The kid’s teacher
 
 “Do you think it was Mean or Not Mean that the kid’s teacher did NOT help the kid in the middle?”
 
@@ -2872,7 +2198,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Choices: Mean / Not Mean.
 
-### 252. Meanness strength · The kid’s teacher
+### 204. Meanness strength · The kid’s teacher
 
 *Only after “Mean” to Individual evaluation · The kid’s teacher.*
 
@@ -2888,13 +2214,13 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Left: the kid’s dad. Middle: the kid in the middle. Right: the kid’s mom.
 
-### 253. Meet the characters
+### 205. Meet the characters
 
 “Look! Here are some people.”
 
 [Stimulus source](assets/stimuli/a536bea376a4-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-### 254. Meet the kid in the middle
+### 206. Meet the kid in the middle
 
 “This little one is a kid.”
 
@@ -2902,7 +2228,7 @@ Left: the kid’s dad. Middle: the kid in the middle. Right: the kid’s mom.
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 255. Meet the kid’s dad
+### 207. Meet the kid’s dad
 
 “This big one is this kid’s dad.”
 
@@ -2910,7 +2236,7 @@ Left: the kid’s dad. Middle: the kid in the middle. Right: the kid’s mom.
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 256. Meet the kid’s mom
+### 208. Meet the kid’s mom
 
 “This big one is this kid’s mom.”
 
@@ -2918,13 +2244,13 @@ Left: the kid’s dad. Middle: the kid in the middle. Right: the kid’s mom.
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 257. The kid in the middle needs help
+### 209. The kid in the middle needs help
 
 “Oh no! The kid in the middle is sad now!”
 
 [Stimulus source](assets/stimuli/443991b4edc3-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-### 258. Who will help? — PROPOSED WORDING
+### 210. Who will help? — PROPOSED WORDING
 
 “Who will help the kid in the middle now that they’re sad?”
 
@@ -2936,63 +2262,7 @@ Choices: The kid’s dad / The kid’s mom.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No prediction question.*
 
-### 259. “HAVE TO” practice
-
-“Now, sometimes people *HAVE TO* do things.”
-
-*The Evelyn recording uses continuous speech. HAVE TO remains uppercase and italic on screen as an adaptation. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 260. Practice · Red light
-
-“When the traffic light is red, do you HAVE TO stop? Yes or No.”
-
-Display treatment: Let’s practice! / The traffic light is red. / Do you HAVE TO stop?
-
-Choices: Yes / No.
-
-Expected check/practice answer: Yes.
-
-A correct response is required to advance; there is no bypass.
-
-Mandatory correct-answer feedback: “That’s right! When the traffic light is red, you HAVE TO stop.”
-
-Incorrect-answer correction: “No, that’s not quite right. When the traffic light is red, you HAVE TO stop. Let’s try that question again.”
-
-Reminder if needed: “No, that’s not quite right. When the traffic light is red, you HAVE TO stop. Let’s try that question again.”
-
-After the reminder, reread the full question and response labels before reopening the choices.
-
-*Correct-answer feedback is mandatory. Incorrect answers receive contextual correction and a reread; only the correct answer advances. Brief comprehension practice, not a study outcome. Role-free traffic-light example, illustration, and split display wording are draft adaptations for review. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 261. Practice · Lie
-
-“When someone asks you a question, do you HAVE TO lie? Yes or No.”
-
-Display treatment: Let’s practice! / Someone asks you a question. / Do you HAVE TO lie?
-
-Choices: Yes / No.
-
-Expected check/practice answer: No.
-
-A correct response is required to advance; there is no bypass.
-
-Mandatory correct-answer feedback: “That’s right! When someone asks you a question, you do NOT HAVE TO lie.”
-
-Incorrect-answer correction: “No, that’s not quite right. When someone asks you a question, you do NOT HAVE TO lie. Let’s try that question again.”
-
-Reminder if needed: “No, that’s not quite right. When someone asks you a question, you do NOT HAVE TO lie. Let’s try that question again.”
-
-After the reminder, reread the full question and response labels before reopening the choices.
-
-*Correct-answer feedback is mandatory. Incorrect answers receive contextual correction and a reread; only the correct answer advances. Brief comprehension practice, not a study outcome. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 262. Back to our story
-
-“So now, I’m going to ask you some questions about whether people HAVE TO do things.”
-
-*Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 263. Who HAS TO help? — PROPOSED WORDING
+### 211. Who HAS TO help? — PROPOSED WORDING
 
 “Who do you think HAS TO help the kid in the middle?”
 
@@ -3004,7 +2274,7 @@ Choices: The kid’s dad / The kid’s mom.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No obligation question.*
 
-### 264. No one helped
+### 212. No one helped
 
 “No one helped the kid in the middle.”
 
@@ -3014,7 +2284,7 @@ Display wording: “No one helped the kid in the middle.” Both helper cues rem
 
 *Standalone outcome statement. Continue after the sentence to hear each helper’s action and the repeated no-one-helped statement.*
 
-### 265. Each helper did NOT help
+### 213. Each helper did NOT help
 
 “The kid’s dad did NOT help the kid in the middle. And the kid’s mom did NOT help the kid in the middle. No one helped the kid in the middle.”
 
@@ -3026,7 +2296,7 @@ Captions follow the narration, in order: “The kid’s dad did NOT help the kid
 
 *Every response path reaches this same outcome, regardless of prediction or obligation choices.*
 
-### 266. Recall · No one helped
+### 214. Recall · No one helped
 
 “Can you tell me, did either of these people help the kid in the middle?”
 
@@ -3034,7 +2304,7 @@ Captions follow the narration, in order: “The kid’s dad did NOT help the kid
 
 Choices: Yes / No.
 
-Expected check/practice answer: No.
+Expected recall answer: No.
 
 A correct response is required to advance; there is no bypass.
 
@@ -3042,7 +2312,7 @@ Reminder if needed: “Actually, remember, no one helped the kid in the middle. 
 
 After the reminder, reread the full question and response labels before reopening the choices.
 
-### 267. Who was meaner? — PROPOSED WORDING
+### 215. Who was meaner? — PROPOSED WORDING
 
 “Who was meaner for NOT helping the kid in the middle?”
 
@@ -3054,7 +2324,7 @@ Choices: The kid’s dad / The kid’s mom.
 
 *Two-helper comparison adapted from Marshall. Buttons follow the scene: the kid’s dad left, the kid’s mom right.*
 
-### 268. Selected helper · How mean is the kid’s dad? — PROPOSED WORDING
+### 216. Selected helper · How mean is the kid’s dad? — PROPOSED WORDING
 
 *Only after “The kid’s dad” to Who was meaner?.*
 
@@ -3068,7 +2338,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
-### 269. Selected helper · How mean is the kid’s mom? — PROPOSED WORDING
+### 217. Selected helper · How mean is the kid’s mom? — PROPOSED WORDING
 
 *Only after “The kid’s mom” to Who was meaner?.*
 
@@ -3082,7 +2352,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
-### 270. Individual evaluation · The kid’s dad
+### 218. Individual evaluation · The kid’s dad
 
 “Do you think it was Mean or Not Mean that the kid’s dad did NOT help the kid in the middle?”
 
@@ -3090,7 +2360,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Choices: Mean / Not Mean.
 
-### 271. Meanness strength · The kid’s dad
+### 219. Meanness strength · The kid’s dad
 
 *Only after “Mean” to Individual evaluation · The kid’s dad.*
 
@@ -3102,7 +2372,7 @@ Display wording: “How mean do you think the kid’s dad was for NOT helping th
 
 Choices: A teeny bit mean / A little bit mean / Very mean.
 
-### 272. Individual evaluation · The kid’s mom
+### 220. Individual evaluation · The kid’s mom
 
 “Do you think it was Mean or Not Mean that the kid’s mom did NOT help the kid in the middle?”
 
@@ -3110,7 +2380,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Choices: Mean / Not Mean.
 
-### 273. Meanness strength · The kid’s mom
+### 221. Meanness strength · The kid’s mom
 
 *Only after “Mean” to Individual evaluation · The kid’s mom.*
 
@@ -3126,13 +2396,13 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Left: the kid’s sister. Middle: the kid in the middle. Right: the kid’s brother.
 
-### 274. Meet the characters
+### 222. Meet the characters
 
 “Look! Here are some people.”
 
 [Stimulus source](assets/stimuli/931a3ff701b0-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-### 275. Meet the kid in the middle
+### 223. Meet the kid in the middle
 
 “This little one is a kid.”
 
@@ -3140,7 +2410,7 @@ Left: the kid’s sister. Middle: the kid in the middle. Right: the kid’s brot
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 276. Meet the kid’s sister
+### 224. Meet the kid’s sister
 
 “This little one is this kid’s sister.”
 
@@ -3148,7 +2418,7 @@ Left: the kid’s sister. Middle: the kid in the middle. Right: the kid’s brot
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 277. Meet the kid’s brother
+### 225. Meet the kid’s brother
 
 “This little one is this kid’s brother.”
 
@@ -3156,13 +2426,13 @@ Left: the kid’s sister. Middle: the kid in the middle. Right: the kid’s brot
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 278. The kid in the middle needs help
+### 226. The kid in the middle needs help
 
 “Oh no! The kid in the middle is sad now!”
 
 [Stimulus source](assets/stimuli/fac075f520aa-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-### 279. Who will help? — PROPOSED WORDING
+### 227. Who will help? — PROPOSED WORDING
 
 “Who will help the kid in the middle now that they’re sad?”
 
@@ -3174,63 +2444,7 @@ Choices: The kid’s sister / The kid’s brother.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No prediction question.*
 
-### 280. “HAVE TO” practice
-
-“Now, sometimes people *HAVE TO* do things.”
-
-*The Evelyn recording uses continuous speech. HAVE TO remains uppercase and italic on screen as an adaptation. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 281. Practice · Red light
-
-“When the traffic light is red, do you HAVE TO stop? Yes or No.”
-
-Display treatment: Let’s practice! / The traffic light is red. / Do you HAVE TO stop?
-
-Choices: Yes / No.
-
-Expected check/practice answer: Yes.
-
-A correct response is required to advance; there is no bypass.
-
-Mandatory correct-answer feedback: “That’s right! When the traffic light is red, you HAVE TO stop.”
-
-Incorrect-answer correction: “No, that’s not quite right. When the traffic light is red, you HAVE TO stop. Let’s try that question again.”
-
-Reminder if needed: “No, that’s not quite right. When the traffic light is red, you HAVE TO stop. Let’s try that question again.”
-
-After the reminder, reread the full question and response labels before reopening the choices.
-
-*Correct-answer feedback is mandatory. Incorrect answers receive contextual correction and a reread; only the correct answer advances. Brief comprehension practice, not a study outcome. Role-free traffic-light example, illustration, and split display wording are draft adaptations for review. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 282. Practice · Lie
-
-“When someone asks you a question, do you HAVE TO lie? Yes or No.”
-
-Display treatment: Let’s practice! / Someone asks you a question. / Do you HAVE TO lie?
-
-Choices: Yes / No.
-
-Expected check/practice answer: No.
-
-A correct response is required to advance; there is no bypass.
-
-Mandatory correct-answer feedback: “That’s right! When someone asks you a question, you do NOT HAVE TO lie.”
-
-Incorrect-answer correction: “No, that’s not quite right. When someone asks you a question, you do NOT HAVE TO lie. Let’s try that question again.”
-
-Reminder if needed: “No, that’s not quite right. When someone asks you a question, you do NOT HAVE TO lie. Let’s try that question again.”
-
-After the reminder, reread the full question and response labels before reopening the choices.
-
-*Correct-answer feedback is mandatory. Incorrect answers receive contextual correction and a reread; only the correct answer advances. Brief comprehension practice, not a study outcome. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 283. Back to our story
-
-“So now, I’m going to ask you some questions about whether people HAVE TO do things.”
-
-*Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 284. Who HAS TO help? — PROPOSED WORDING
+### 228. Who HAS TO help? — PROPOSED WORDING
 
 “Who do you think HAS TO help the kid in the middle?”
 
@@ -3242,7 +2456,7 @@ Choices: The kid’s sister / The kid’s brother.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No obligation question.*
 
-### 285. No one helped
+### 229. No one helped
 
 “No one helped the kid in the middle.”
 
@@ -3252,7 +2466,7 @@ Display wording: “No one helped the kid in the middle.” Both helper cues rem
 
 *Standalone outcome statement. Continue after the sentence to hear each helper’s action and the repeated no-one-helped statement.*
 
-### 286. Each helper did NOT help
+### 230. Each helper did NOT help
 
 “The kid’s sister did NOT help the kid in the middle. And the kid’s brother did NOT help the kid in the middle. No one helped the kid in the middle.”
 
@@ -3264,7 +2478,7 @@ Captions follow the narration, in order: “The kid’s sister did NOT help the 
 
 *Every response path reaches this same outcome, regardless of prediction or obligation choices.*
 
-### 287. Recall · No one helped
+### 231. Recall · No one helped
 
 “Can you tell me, did either of these people help the kid in the middle?”
 
@@ -3272,7 +2486,7 @@ Captions follow the narration, in order: “The kid’s sister did NOT help the 
 
 Choices: Yes / No.
 
-Expected check/practice answer: No.
+Expected recall answer: No.
 
 A correct response is required to advance; there is no bypass.
 
@@ -3280,7 +2494,7 @@ Reminder if needed: “Actually, remember, no one helped the kid in the middle. 
 
 After the reminder, reread the full question and response labels before reopening the choices.
 
-### 288. Who was meaner? — PROPOSED WORDING
+### 232. Who was meaner? — PROPOSED WORDING
 
 “Who was meaner for NOT helping the kid in the middle?”
 
@@ -3292,7 +2506,7 @@ Choices: The kid’s sister / The kid’s brother.
 
 *Two-helper comparison adapted from Marshall. Buttons follow the scene: the kid’s sister left, the kid’s brother right.*
 
-### 289. Selected helper · How mean is the kid’s sister? — PROPOSED WORDING
+### 233. Selected helper · How mean is the kid’s sister? — PROPOSED WORDING
 
 *Only after “The kid’s sister” to Who was meaner?.*
 
@@ -3306,7 +2520,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
-### 290. Selected helper · How mean is the kid’s brother? — PROPOSED WORDING
+### 234. Selected helper · How mean is the kid’s brother? — PROPOSED WORDING
 
 *Only after “The kid’s brother” to Who was meaner?.*
 
@@ -3320,7 +2534,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
-### 291. Individual evaluation · The kid’s sister
+### 235. Individual evaluation · The kid’s sister
 
 “Do you think it was Mean or Not Mean that the kid’s sister did NOT help the kid in the middle?”
 
@@ -3328,7 +2542,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Choices: Mean / Not Mean.
 
-### 292. Meanness strength · The kid’s sister
+### 236. Meanness strength · The kid’s sister
 
 *Only after “Mean” to Individual evaluation · The kid’s sister.*
 
@@ -3340,7 +2554,7 @@ Display wording: “How mean do you think the kid’s sister was for NOT helping
 
 Choices: A teeny bit mean / A little bit mean / Very mean.
 
-### 293. Individual evaluation · The kid’s brother
+### 237. Individual evaluation · The kid’s brother
 
 “Do you think it was Mean or Not Mean that the kid’s brother did NOT help the kid in the middle?”
 
@@ -3348,7 +2562,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Choices: Mean / Not Mean.
 
-### 294. Meanness strength · The kid’s brother
+### 238. Meanness strength · The kid’s brother
 
 *Only after “Mean” to Individual evaluation · The kid’s brother.*
 
@@ -3364,13 +2578,13 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Left: the kid’s dad. Middle: the mom. Right: the kid.
 
-### 295. Meet the characters
+### 239. Meet the characters
 
 “Look! Here are some people.”
 
 [Stimulus source](assets/stimuli/966365322eff-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-### 296. Meet the kid
+### 240. Meet the kid
 
 “This little one is a kid.”
 
@@ -3378,7 +2592,7 @@ Left: the kid’s dad. Middle: the mom. Right: the kid.
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 297. Meet the kid’s dad
+### 241. Meet the kid’s dad
 
 “This big one is this kid’s dad.”
 
@@ -3386,7 +2600,7 @@ Left: the kid’s dad. Middle: the mom. Right: the kid.
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 298. Meet the mom
+### 242. Meet the mom
 
 “This big one is this kid’s mom.”
 
@@ -3394,13 +2608,13 @@ Left: the kid’s dad. Middle: the mom. Right: the kid.
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 299. The mom needs help
+### 243. The mom needs help
 
 “Oh no! The mom in the middle is sad now!”
 
 [Stimulus source](assets/stimuli/b1ba34666825-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-### 300. Who will help? — PROPOSED WORDING
+### 244. Who will help? — PROPOSED WORDING
 
 “Who will help the mom in the middle now that they’re sad?”
 
@@ -3412,63 +2626,7 @@ Choices: The kid’s dad / The kid.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No prediction question.*
 
-### 301. “HAVE TO” practice
-
-“Now, sometimes people *HAVE TO* do things.”
-
-*The Evelyn recording uses continuous speech. HAVE TO remains uppercase and italic on screen as an adaptation. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 302. Practice · Red light
-
-“When the traffic light is red, do you HAVE TO stop? Yes or No.”
-
-Display treatment: Let’s practice! / The traffic light is red. / Do you HAVE TO stop?
-
-Choices: Yes / No.
-
-Expected check/practice answer: Yes.
-
-A correct response is required to advance; there is no bypass.
-
-Mandatory correct-answer feedback: “That’s right! When the traffic light is red, you HAVE TO stop.”
-
-Incorrect-answer correction: “No, that’s not quite right. When the traffic light is red, you HAVE TO stop. Let’s try that question again.”
-
-Reminder if needed: “No, that’s not quite right. When the traffic light is red, you HAVE TO stop. Let’s try that question again.”
-
-After the reminder, reread the full question and response labels before reopening the choices.
-
-*Correct-answer feedback is mandatory. Incorrect answers receive contextual correction and a reread; only the correct answer advances. Brief comprehension practice, not a study outcome. Role-free traffic-light example, illustration, and split display wording are draft adaptations for review. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 303. Practice · Lie
-
-“When someone asks you a question, do you HAVE TO lie? Yes or No.”
-
-Display treatment: Let’s practice! / Someone asks you a question. / Do you HAVE TO lie?
-
-Choices: Yes / No.
-
-Expected check/practice answer: No.
-
-A correct response is required to advance; there is no bypass.
-
-Mandatory correct-answer feedback: “That’s right! When someone asks you a question, you do NOT HAVE TO lie.”
-
-Incorrect-answer correction: “No, that’s not quite right. When someone asks you a question, you do NOT HAVE TO lie. Let’s try that question again.”
-
-Reminder if needed: “No, that’s not quite right. When someone asks you a question, you do NOT HAVE TO lie. Let’s try that question again.”
-
-After the reminder, reread the full question and response labels before reopening the choices.
-
-*Correct-answer feedback is mandatory. Incorrect answers receive contextual correction and a reread; only the correct answer advances. Brief comprehension practice, not a study outcome. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 304. Back to our story
-
-“So now, I’m going to ask you some questions about whether people HAVE TO do things.”
-
-*Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 305. Who HAS TO help? — PROPOSED WORDING
+### 245. Who HAS TO help? — PROPOSED WORDING
 
 “Who do you think HAS TO help the mom in the middle?”
 
@@ -3480,7 +2638,7 @@ Choices: The kid’s dad / The kid.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No obligation question.*
 
-### 306. No one helped
+### 246. No one helped
 
 “No one helped the mom.”
 
@@ -3490,7 +2648,7 @@ Display wording: “No one helped the mom.” Both helper cues remain visible be
 
 *Standalone outcome statement. Continue after the sentence to hear each helper’s action and the repeated no-one-helped statement.*
 
-### 307. Each helper did NOT help
+### 247. Each helper did NOT help
 
 “The kid’s dad did NOT help the mom. The kid did NOT help the mom. No one helped the mom.”
 
@@ -3502,7 +2660,7 @@ Captions follow the narration, in order: “The kid’s dad did NOT help the mom
 
 *Every response path reaches this same outcome, regardless of prediction or obligation choices.*
 
-### 308. Recall · No one helped
+### 248. Recall · No one helped
 
 “Can you tell me, did either of these people help the mom?”
 
@@ -3510,7 +2668,7 @@ Captions follow the narration, in order: “The kid’s dad did NOT help the mom
 
 Choices: Yes / No.
 
-Expected check/practice answer: No.
+Expected recall answer: No.
 
 A correct response is required to advance; there is no bypass.
 
@@ -3518,7 +2676,7 @@ Reminder if needed: “Actually, remember, no one helped the mom. The kid’s da
 
 After the reminder, reread the full question and response labels before reopening the choices.
 
-### 309. Who was meaner? — PROPOSED WORDING
+### 249. Who was meaner? — PROPOSED WORDING
 
 “Who was meaner for NOT helping the mom in the middle?”
 
@@ -3530,7 +2688,7 @@ Choices: The kid’s dad / The kid.
 
 *Two-helper comparison adapted from Marshall. Buttons follow the scene: the kid’s dad left, the kid right.*
 
-### 310. Selected helper · How mean is the kid’s dad? — PROPOSED WORDING
+### 250. Selected helper · How mean is the kid’s dad? — PROPOSED WORDING
 
 *Only after “The kid’s dad” to Who was meaner?.*
 
@@ -3544,7 +2702,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
-### 311. Selected helper · How mean is the kid? — PROPOSED WORDING
+### 251. Selected helper · How mean is the kid? — PROPOSED WORDING
 
 *Only after “The kid” to Who was meaner?.*
 
@@ -3558,7 +2716,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
-### 312. Individual evaluation · The kid’s dad
+### 252. Individual evaluation · The kid’s dad
 
 “Do you think it was Mean or Not Mean that the kid’s dad did NOT help the mom in the middle?”
 
@@ -3566,7 +2724,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Choices: Mean / Not Mean.
 
-### 313. Meanness strength · The kid’s dad
+### 253. Meanness strength · The kid’s dad
 
 *Only after “Mean” to Individual evaluation · The kid’s dad.*
 
@@ -3578,7 +2736,7 @@ Display wording: “How mean do you think the kid’s dad was for NOT helping th
 
 Choices: A teeny bit mean / A little bit mean / Very mean.
 
-### 314. Individual evaluation · The kid
+### 254. Individual evaluation · The kid
 
 “Do you think it was Mean or Not Mean that the kid did NOT help the mom in the middle?”
 
@@ -3586,7 +2744,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Choices: Mean / Not Mean.
 
-### 315. Meanness strength · The kid
+### 255. Meanness strength · The kid
 
 *Only after “Mean” to Individual evaluation · The kid.*
 
@@ -3602,13 +2760,13 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Left: the kid. Middle: the dad. Right: the kid’s mom.
 
-### 316. Meet the characters
+### 256. Meet the characters
 
 “Look! Here are some people.”
 
 [Stimulus source](assets/stimuli/0b393251d294-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-### 317. Meet the kid
+### 257. Meet the kid
 
 “This little one is a kid.”
 
@@ -3616,7 +2774,7 @@ Left: the kid. Middle: the dad. Right: the kid’s mom.
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 318. Meet the dad
+### 258. Meet the dad
 
 “This big one is this kid’s dad.”
 
@@ -3624,7 +2782,7 @@ Left: the kid. Middle: the dad. Right: the kid’s mom.
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 319. Meet the kid’s mom
+### 259. Meet the kid’s mom
 
 “This big one is this kid’s mom.”
 
@@ -3632,13 +2790,13 @@ Left: the kid. Middle: the dad. Right: the kid’s mom.
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 320. The dad needs help
+### 260. The dad needs help
 
 “Oh no! The dad in the middle is sad now!”
 
 [Stimulus source](assets/stimuli/a47ed9f1306d-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-### 321. Who will help? — PROPOSED WORDING
+### 261. Who will help? — PROPOSED WORDING
 
 “Who will help the dad in the middle now that they’re sad?”
 
@@ -3650,63 +2808,7 @@ Choices: The kid / The kid’s mom.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No prediction question.*
 
-### 322. “HAVE TO” practice
-
-“Now, sometimes people *HAVE TO* do things.”
-
-*The Evelyn recording uses continuous speech. HAVE TO remains uppercase and italic on screen as an adaptation. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 323. Practice · Red light
-
-“When the traffic light is red, do you HAVE TO stop? Yes or No.”
-
-Display treatment: Let’s practice! / The traffic light is red. / Do you HAVE TO stop?
-
-Choices: Yes / No.
-
-Expected check/practice answer: Yes.
-
-A correct response is required to advance; there is no bypass.
-
-Mandatory correct-answer feedback: “That’s right! When the traffic light is red, you HAVE TO stop.”
-
-Incorrect-answer correction: “No, that’s not quite right. When the traffic light is red, you HAVE TO stop. Let’s try that question again.”
-
-Reminder if needed: “No, that’s not quite right. When the traffic light is red, you HAVE TO stop. Let’s try that question again.”
-
-After the reminder, reread the full question and response labels before reopening the choices.
-
-*Correct-answer feedback is mandatory. Incorrect answers receive contextual correction and a reread; only the correct answer advances. Brief comprehension practice, not a study outcome. Role-free traffic-light example, illustration, and split display wording are draft adaptations for review. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 324. Practice · Lie
-
-“When someone asks you a question, do you HAVE TO lie? Yes or No.”
-
-Display treatment: Let’s practice! / Someone asks you a question. / Do you HAVE TO lie?
-
-Choices: Yes / No.
-
-Expected check/practice answer: No.
-
-A correct response is required to advance; there is no bypass.
-
-Mandatory correct-answer feedback: “That’s right! When someone asks you a question, you do NOT HAVE TO lie.”
-
-Incorrect-answer correction: “No, that’s not quite right. When someone asks you a question, you do NOT HAVE TO lie. Let’s try that question again.”
-
-Reminder if needed: “No, that’s not quite right. When someone asks you a question, you do NOT HAVE TO lie. Let’s try that question again.”
-
-After the reminder, reread the full question and response labels before reopening the choices.
-
-*Correct-answer feedback is mandatory. Incorrect answers receive contextual correction and a reread; only the correct answer advances. Brief comprehension practice, not a study outcome. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 325. Back to our story
-
-“So now, I’m going to ask you some questions about whether people HAVE TO do things.”
-
-*Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 326. Who HAS TO help? — PROPOSED WORDING
+### 262. Who HAS TO help? — PROPOSED WORDING
 
 “Who do you think HAS TO help the dad in the middle?”
 
@@ -3718,7 +2820,7 @@ Choices: The kid / The kid’s mom.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No obligation question.*
 
-### 327. No one helped
+### 263. No one helped
 
 “No one helped the dad.”
 
@@ -3728,7 +2830,7 @@ Display wording: “No one helped the dad.” Both helper cues remain visible be
 
 *Standalone outcome statement. Continue after the sentence to hear each helper’s action and the repeated no-one-helped statement.*
 
-### 328. Each helper did NOT help
+### 264. Each helper did NOT help
 
 “The kid did NOT help the dad. The kid’s mom did NOT help the dad. No one helped the dad.”
 
@@ -3740,7 +2842,7 @@ Captions follow the narration, in order: “The kid did NOT help the dad.” →
 
 *Every response path reaches this same outcome, regardless of prediction or obligation choices.*
 
-### 329. Recall · No one helped
+### 265. Recall · No one helped
 
 “Can you tell me, did either of these people help the dad?”
 
@@ -3748,7 +2850,7 @@ Captions follow the narration, in order: “The kid did NOT help the dad.” →
 
 Choices: Yes / No.
 
-Expected check/practice answer: No.
+Expected recall answer: No.
 
 A correct response is required to advance; there is no bypass.
 
@@ -3756,7 +2858,7 @@ Reminder if needed: “Actually, remember, no one helped the dad. The kid did NO
 
 After the reminder, reread the full question and response labels before reopening the choices.
 
-### 330. Who was meaner? — PROPOSED WORDING
+### 266. Who was meaner? — PROPOSED WORDING
 
 “Who was meaner for NOT helping the dad in the middle?”
 
@@ -3768,7 +2870,7 @@ Choices: The kid / The kid’s mom.
 
 *Two-helper comparison adapted from Marshall. Buttons follow the scene: the kid left, the kid’s mom right.*
 
-### 331. Selected helper · How mean is the kid? — PROPOSED WORDING
+### 267. Selected helper · How mean is the kid? — PROPOSED WORDING
 
 *Only after “The kid” to Who was meaner?.*
 
@@ -3782,7 +2884,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
-### 332. Selected helper · How mean is the kid’s mom? — PROPOSED WORDING
+### 268. Selected helper · How mean is the kid’s mom? — PROPOSED WORDING
 
 *Only after “The kid’s mom” to Who was meaner?.*
 
@@ -3796,7 +2898,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
-### 333. Individual evaluation · The kid
+### 269. Individual evaluation · The kid
 
 “Do you think it was Mean or Not Mean that the kid did NOT help the dad in the middle?”
 
@@ -3804,7 +2906,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Choices: Mean / Not Mean.
 
-### 334. Meanness strength · The kid
+### 270. Meanness strength · The kid
 
 *Only after “Mean” to Individual evaluation · The kid.*
 
@@ -3816,7 +2918,7 @@ Display wording: “How mean do you think the kid was for NOT helping the dad in
 
 Choices: A teeny bit mean / A little bit mean / Very mean.
 
-### 335. Individual evaluation · The kid’s mom
+### 271. Individual evaluation · The kid’s mom
 
 “Do you think it was Mean or Not Mean that the kid’s mom did NOT help the dad in the middle?”
 
@@ -3824,7 +2926,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Choices: Mean / Not Mean.
 
-### 336. Meanness strength · The kid’s mom
+### 272. Meanness strength · The kid’s mom
 
 *Only after “Mean” to Individual evaluation · The kid’s mom.*
 
@@ -3840,13 +2942,13 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Left: the teacher on the left. Middle: the teacher in the middle. Right: the kid.
 
-### 337. Meet the characters
+### 273. Meet the characters
 
 “Look! Here are some people.”
 
 [Stimulus source](assets/stimuli/448d8507c0ab-intro_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-### 338. Meet the kid
+### 274. Meet the kid
 
 “This little one is a kid.”
 
@@ -3854,7 +2956,7 @@ Left: the teacher on the left. Middle: the teacher in the middle. Right: the kid
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 339. Meet the teacher on the left
+### 275. Meet the teacher on the left
 
 “This big one is this kid’s teacher.”
 
@@ -3862,7 +2964,7 @@ Left: the teacher on the left. Middle: the teacher in the middle. Right: the kid
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 340. Meet the teacher in the middle
+### 276. Meet the teacher in the middle
 
 “This big one is this kid’s teacher too.”
 
@@ -3870,13 +2972,13 @@ Left: the teacher on the left. Middle: the teacher in the middle. Right: the kid
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 341. The teacher in the middle needs help
+### 277. The teacher in the middle needs help
 
 “Oh no! The teacher in the middle is sad now!”
 
 [Stimulus source](assets/stimuli/4bb031a656d9-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-### 342. Who will help? — PROPOSED WORDING
+### 278. Who will help? — PROPOSED WORDING
 
 “Who will help the teacher in the middle now that they’re sad?”
 
@@ -3888,63 +2990,7 @@ Choices: The teacher on the left / The kid.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No prediction question.*
 
-### 343. “HAVE TO” practice
-
-“Now, sometimes people *HAVE TO* do things.”
-
-*The Evelyn recording uses continuous speech. HAVE TO remains uppercase and italic on screen as an adaptation. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 344. Practice · Red light
-
-“When the traffic light is red, do you HAVE TO stop? Yes or No.”
-
-Display treatment: Let’s practice! / The traffic light is red. / Do you HAVE TO stop?
-
-Choices: Yes / No.
-
-Expected check/practice answer: Yes.
-
-A correct response is required to advance; there is no bypass.
-
-Mandatory correct-answer feedback: “That’s right! When the traffic light is red, you HAVE TO stop.”
-
-Incorrect-answer correction: “No, that’s not quite right. When the traffic light is red, you HAVE TO stop. Let’s try that question again.”
-
-Reminder if needed: “No, that’s not quite right. When the traffic light is red, you HAVE TO stop. Let’s try that question again.”
-
-After the reminder, reread the full question and response labels before reopening the choices.
-
-*Correct-answer feedback is mandatory. Incorrect answers receive contextual correction and a reread; only the correct answer advances. Brief comprehension practice, not a study outcome. Role-free traffic-light example, illustration, and split display wording are draft adaptations for review. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 345. Practice · Lie
-
-“When someone asks you a question, do you HAVE TO lie? Yes or No.”
-
-Display treatment: Let’s practice! / Someone asks you a question. / Do you HAVE TO lie?
-
-Choices: Yes / No.
-
-Expected check/practice answer: No.
-
-A correct response is required to advance; there is no bypass.
-
-Mandatory correct-answer feedback: “That’s right! When someone asks you a question, you do NOT HAVE TO lie.”
-
-Incorrect-answer correction: “No, that’s not quite right. When someone asks you a question, you do NOT HAVE TO lie. Let’s try that question again.”
-
-Reminder if needed: “No, that’s not quite right. When someone asks you a question, you do NOT HAVE TO lie. Let’s try that question again.”
-
-After the reminder, reread the full question and response labels before reopening the choices.
-
-*Correct-answer feedback is mandatory. Incorrect answers receive contextual correction and a reread; only the correct answer advances. Brief comprehension practice, not a study outcome. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 346. Back to our story
-
-“So now, I’m going to ask you some questions about whether people HAVE TO do things.”
-
-*Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 347. Who HAS TO help? — PROPOSED WORDING
+### 279. Who HAS TO help? — PROPOSED WORDING
 
 “Who do you think HAS TO help the teacher in the middle?”
 
@@ -3956,7 +3002,7 @@ Choices: The teacher on the left / The kid.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No obligation question.*
 
-### 348. No one helped
+### 280. No one helped
 
 “No one helped the teacher in the middle.”
 
@@ -3966,7 +3012,7 @@ Display wording: “No one helped the teacher in the middle.” Both helper cues
 
 *Standalone outcome statement. Continue after the sentence to hear each helper’s action and the repeated no-one-helped statement.*
 
-### 349. Each helper did NOT help
+### 281. Each helper did NOT help
 
 “The teacher on the left did NOT help the teacher in the middle. The kid did NOT help the teacher in the middle. No one helped the teacher in the middle.”
 
@@ -3978,7 +3024,7 @@ Captions follow the narration, in order: “The teacher on the left did NOT help
 
 *Every response path reaches this same outcome, regardless of prediction or obligation choices.*
 
-### 350. Recall · No one helped
+### 282. Recall · No one helped
 
 “Can you tell me, did either of these people help the teacher in the middle?”
 
@@ -3986,7 +3032,7 @@ Captions follow the narration, in order: “The teacher on the left did NOT help
 
 Choices: Yes / No.
 
-Expected check/practice answer: No.
+Expected recall answer: No.
 
 A correct response is required to advance; there is no bypass.
 
@@ -3994,7 +3040,7 @@ Reminder if needed: “Actually, remember, no one helped the teacher in the midd
 
 After the reminder, reread the full question and response labels before reopening the choices.
 
-### 351. Who was meaner? — PROPOSED WORDING
+### 283. Who was meaner? — PROPOSED WORDING
 
 “Who was meaner for NOT helping the teacher in the middle?”
 
@@ -4006,7 +3052,7 @@ Choices: The teacher on the left / The kid.
 
 *Two-helper comparison adapted from Marshall. Buttons follow the scene: the teacher on the left left, the kid right.*
 
-### 352. Selected helper · How mean is the teacher on the left? — PROPOSED WORDING
+### 284. Selected helper · How mean is the teacher on the left? — PROPOSED WORDING
 
 *Only after “The teacher on the left” to Who was meaner?.*
 
@@ -4020,7 +3066,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
-### 353. Selected helper · How mean is the kid? — PROPOSED WORDING
+### 285. Selected helper · How mean is the kid? — PROPOSED WORDING
 
 *Only after “The kid” to Who was meaner?.*
 
@@ -4034,7 +3080,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
-### 354. Individual evaluation · The teacher on the left
+### 286. Individual evaluation · The teacher on the left
 
 “Do you think it was Mean or Not Mean that the teacher on the left did NOT help the teacher in the middle?”
 
@@ -4042,7 +3088,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Choices: Mean / Not Mean.
 
-### 355. Meanness strength · The teacher on the left
+### 287. Meanness strength · The teacher on the left
 
 *Only after “Mean” to Individual evaluation · The teacher on the left.*
 
@@ -4054,7 +3100,7 @@ Display wording: “How mean do you think the teacher on the left was for NOT he
 
 Choices: A teeny bit mean / A little bit mean / Very mean.
 
-### 356. Individual evaluation · The kid
+### 288. Individual evaluation · The kid
 
 “Do you think it was Mean or Not Mean that the kid did NOT help the teacher in the middle?”
 
@@ -4062,7 +3108,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Choices: Mean / Not Mean.
 
-### 357. Meanness strength · The kid
+### 289. Meanness strength · The kid
 
 *Only after “Mean” to Individual evaluation · The kid.*
 
@@ -4078,13 +3124,13 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Left: the kid’s classmate. Middle: the kid in the middle. Right: the kid’s teacher.
 
-### 358. Meet the characters
+### 290. Meet the characters
 
 “Look! Here are some people.”
 
 [Stimulus source](assets/stimuli/44d39b1df683-intro_01.svg) — original reference image; the preview replaces its caption with the wording above.
 
-### 359. Meet the kid in the middle
+### 291. Meet the kid in the middle
 
 “This little one is a kid.”
 
@@ -4092,7 +3138,7 @@ Left: the kid’s classmate. Middle: the kid in the middle. Right: the kid’s t
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 360. Meet the kid’s classmate
+### 292. Meet the kid’s classmate
 
 “This little one is this kid’s classmate.”
 
@@ -4100,7 +3146,7 @@ Left: the kid’s classmate. Middle: the kid in the middle. Right: the kid’s t
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 361. Meet the kid’s teacher
+### 293. Meet the kid’s teacher
 
 “This big one is this kid’s teacher.”
 
@@ -4108,13 +3154,13 @@ Left: the kid’s classmate. Middle: the kid in the middle. Right: the kid’s t
 
 *Narrated character introduction from Find the Caregiver.*
 
-### 362. The kid in the middle needs help
+### 294. The kid in the middle needs help
 
 “Oh no! The kid in the middle is sad now!”
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
-### 363. Who will help? — PROPOSED WORDING
+### 295. Who will help? — PROPOSED WORDING
 
 “Who will help the kid in the middle now that they’re sad?”
 
@@ -4126,63 +3172,7 @@ Choices: The kid’s classmate / The kid’s teacher.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No prediction question.*
 
-### 364. “HAVE TO” practice
-
-“Now, sometimes people *HAVE TO* do things.”
-
-*The Evelyn recording uses continuous speech. HAVE TO remains uppercase and italic on screen as an adaptation. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 365. Practice · Red light
-
-“When the traffic light is red, do you HAVE TO stop? Yes or No.”
-
-Display treatment: Let’s practice! / The traffic light is red. / Do you HAVE TO stop?
-
-Choices: Yes / No.
-
-Expected check/practice answer: Yes.
-
-A correct response is required to advance; there is no bypass.
-
-Mandatory correct-answer feedback: “That’s right! When the traffic light is red, you HAVE TO stop.”
-
-Incorrect-answer correction: “No, that’s not quite right. When the traffic light is red, you HAVE TO stop. Let’s try that question again.”
-
-Reminder if needed: “No, that’s not quite right. When the traffic light is red, you HAVE TO stop. Let’s try that question again.”
-
-After the reminder, reread the full question and response labels before reopening the choices.
-
-*Correct-answer feedback is mandatory. Incorrect answers receive contextual correction and a reread; only the correct answer advances. Brief comprehension practice, not a study outcome. Role-free traffic-light example, illustration, and split display wording are draft adaptations for review. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 366. Practice · Lie
-
-“When someone asks you a question, do you HAVE TO lie? Yes or No.”
-
-Display treatment: Let’s practice! / Someone asks you a question. / Do you HAVE TO lie?
-
-Choices: Yes / No.
-
-Expected check/practice answer: No.
-
-A correct response is required to advance; there is no bypass.
-
-Mandatory correct-answer feedback: “That’s right! When someone asks you a question, you do NOT HAVE TO lie.”
-
-Incorrect-answer correction: “No, that’s not quite right. When someone asks you a question, you do NOT HAVE TO lie. Let’s try that question again.”
-
-Reminder if needed: “No, that’s not quite right. When someone asks you a question, you do NOT HAVE TO lie. Let’s try that question again.”
-
-After the reminder, reread the full question and response labels before reopening the choices.
-
-*Correct-answer feedback is mandatory. Incorrect answers receive contextual correction and a reread; only the correct answer advances. Brief comprehension practice, not a study outcome. Reminder wording is a draft implementation choice. This compact forced-choice version omits the strength follow-up. Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 367. Back to our story
-
-“So now, I’m going to ask you some questions about whether people HAVE TO do things.”
-
-*Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.*
-
-### 368. Who HAS TO help? — PROPOSED WORDING
+### 296. Who HAS TO help? — PROPOSED WORDING
 
 “Who do you think HAS TO help the kid in the middle?”
 
@@ -4194,7 +3184,7 @@ Choices: The kid’s classmate / The kid’s teacher.
 
 *Two-helper forced-choice adaptation; this is not the original Marshall Study 1 individual Yes/No obligation question.*
 
-### 369. No one helped
+### 297. No one helped
 
 “No one helped the kid in the middle.”
 
@@ -4204,7 +3194,7 @@ Display wording: “No one helped the kid in the middle.” Both helper cues rem
 
 *Standalone outcome statement. Continue after the sentence to hear each helper’s action and the repeated no-one-helped statement.*
 
-### 370. Each helper did NOT help
+### 298. Each helper did NOT help
 
 “The kid’s classmate did NOT help the kid in the middle. And the kid’s teacher did NOT help the kid in the middle. No one helped the kid in the middle.”
 
@@ -4216,7 +3206,7 @@ Captions follow the narration, in order: “The kid’s classmate did NOT help t
 
 *Every response path reaches this same outcome, regardless of prediction or obligation choices.*
 
-### 371. Recall · No one helped
+### 299. Recall · No one helped
 
 “Can you tell me, did either of these people help the kid in the middle?”
 
@@ -4224,7 +3214,7 @@ Captions follow the narration, in order: “The kid’s classmate did NOT help t
 
 Choices: Yes / No.
 
-Expected check/practice answer: No.
+Expected recall answer: No.
 
 A correct response is required to advance; there is no bypass.
 
@@ -4232,7 +3222,7 @@ Reminder if needed: “Actually, remember, no one helped the kid in the middle. 
 
 After the reminder, reread the full question and response labels before reopening the choices.
 
-### 372. Who was meaner? — PROPOSED WORDING
+### 300. Who was meaner? — PROPOSED WORDING
 
 “Who was meaner for NOT helping the kid in the middle?”
 
@@ -4244,7 +3234,7 @@ Choices: The kid’s classmate / The kid’s teacher.
 
 *Two-helper comparison adapted from Marshall. Buttons follow the scene: the kid’s classmate left, the kid’s teacher right.*
 
-### 373. Selected helper · How mean is the kid’s classmate? — PROPOSED WORDING
+### 301. Selected helper · How mean is the kid’s classmate? — PROPOSED WORDING
 
 *Only after “The kid’s classmate” to Who was meaner?.*
 
@@ -4258,7 +3248,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
-### 374. Selected helper · How mean is the kid’s teacher? — PROPOSED WORDING
+### 302. Selected helper · How mean is the kid’s teacher? — PROPOSED WORDING
 
 *Only after “The kid’s teacher” to Who was meaner?.*
 
@@ -4272,7 +3262,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
-### 375. Individual evaluation · The kid’s classmate
+### 303. Individual evaluation · The kid’s classmate
 
 “Do you think it was Mean or Not Mean that the kid’s classmate did NOT help the kid in the middle?”
 
@@ -4280,7 +3270,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Choices: Mean / Not Mean.
 
-### 376. Meanness strength · The kid’s classmate
+### 304. Meanness strength · The kid’s classmate
 
 *Only after “Mean” to Individual evaluation · The kid’s classmate.*
 
@@ -4292,7 +3282,7 @@ Display wording: “How mean do you think the kid’s classmate was for NOT help
 
 Choices: A teeny bit mean / A little bit mean / Very mean.
 
-### 377. Individual evaluation · The kid’s teacher
+### 305. Individual evaluation · The kid’s teacher
 
 “Do you think it was Mean or Not Mean that the kid’s teacher did NOT help the kid in the middle?”
 
@@ -4300,7 +3290,7 @@ Choices: A teeny bit mean / A little bit mean / Very mean.
 
 Choices: Mean / Not Mean.
 
-### 378. Meanness strength · The kid’s teacher
+### 306. Meanness strength · The kid’s teacher
 
 *Only after “Mean” to Individual evaluation · The kid’s teacher.*
 
@@ -4312,7 +3302,7 @@ Display wording: “How mean do you think the kid’s teacher was for NOT helpin
 
 Choices: A teeny bit mean / A little bit mean / Very mean.
 
-### 379. End of this session
+### 307. End of this session
 
 “That’s the end of our stories. Thank you!”
 

@@ -22,18 +22,18 @@ These are forced comparisons between helpers. There is no both, neither, or equa
 2. Show the original Find the Caregiver introduction slides. Each character gains an outline and label as the recording introduces them. Preserve the source intro order, which begins with the kid even when the recipient is an adult.
 3. Say the recipient is sad.
 4. Ask who will help. The two helper choices follow their positions in the scene, left then right.
-5. Run brief HAVE TO comprehension practice: introduction, role-free red-traffic-light/stop Yes/No item, lie Yes/No item, and return to the story. Practice can repeat for every story or occur once.
-6. Ask who HAS TO help, with the same two helper choices.
-7. State the fixed outcome: no one helped, then name each helper who did NOT help.
-8. Ask one Yes/No recall check: did either person help? The expected answer is No; a correction restates the explicit outcome when needed.
-9. Ask who was meaner for NOT helping the recipient, with the same helper choices.
+5. Ask who HAS TO help, with the same two helper choices.
+6. State the fixed outcome: no one helped, then name each helper who did NOT help.
+7. Ask one Yes/No recall check: did either person help? The expected answer is No; a correction restates the explicit outcome when needed.
+8. Ask who was meaner for NOT helping the recipient, with the same helper choices.
+9. Rate the selected helper’s meanness, then evaluate each helper individually with Mean / Not Mean and a strength rating after Mean.
 10. Continue to the next pairing, then thank the child at session end.
 
-There are **three main judgments per story**, with no individual helper ratings, overall Mean/Nice judgment, individual recall questions, or how-much scales. The two practice items remain Yes/No comprehension checks and are not main dependent variables. Prediction or obligation responses never change whether the helpers help: the nonhelping outcome is fixed.
+There are **three forced-choice judgments per story**, followed by a selected-helper meanness rating and individual evaluations. Prediction or obligation responses never change whether the helpers help: the nonhelping outcome is fixed.
 
 ## Counts and illustrative duration
 
-The six-story session includes 18 narrated character introductions. Each introduction advances at the end of its recording. See the [current default script](SCRIPT.md) for the response count and the researcher view for the recording-based duration of each practice setting.
+The six-story session includes 18 narrated character introductions. Each introduction advances at the end of its recording. See the [current default script](SCRIPT.md) for the response count and the researcher view for the recording-based duration of the selected role set.
 
 ## Stimuli and presentation
 
@@ -43,13 +43,13 @@ Choices always match the two displayed helpers. Their alternatives are read toge
 
 ## Scripts and narration
 
-The preview defaults to practice once. `SCRIPT.md` is the Woman set with practice once. `SCRIPT-{woman,man,family,all}-{each,once}.md` provides all eight combinations with every prompt, choice, check, and corrective reminder. The full storyboard can also be printed.
+Instructional practice is omitted. Existing `practice=once` and `practice=each` links also use the practice-free flow. `SCRIPT.md` is the Woman set; the existing `SCRIPT-{woman,man,family,all}-{each,once}.md` download paths are retained as compatible copies of the current scripts. The full storyboard can also be printed.
 
 New forced-choice prompts need new NaturalReaders recordings. Existing recordings may be reused only when the complete spoken text matches exactly. A changed prompt must not play an older individual-rating recording. The narration manifest and recording index document current coverage and pending clips; duration remains illustrative until the required recordings are connected.
 
 ## Scope and source limits
 
-This is a two-helper sadness adaptation using the relationship pairings from Find the Caregiver. It is not a verbatim copy of Marshall et al. (2022), Study 1, which used individual Yes/No prediction and obligation measures with follow-ups. Brief practice, explicit nonhelping narration, corrective reminders, fixed review order, and on-screen taps are implementation choices in this draft. Six stories per role set is retained for review; assignment and randomized presentation order are separate study-design decisions.
+This is a two-helper sadness adaptation using the relationship pairings from Find the Caregiver. It is not a verbatim copy of Marshall et al. (2022), Study 1, which used individual Yes/No prediction and obligation measures with follow-ups. Explicit nonhelping narration, corrective reminders, fixed review order, and on-screen taps are implementation choices in this draft. Six stories per role set is retained for review; assignment and randomized presentation order are separate study-design decisions.
 
 This preview is for reviewing the proposed task. Do not submit, activate, or recruit from this draft without the user’s separate instruction.
 
@@ -57,4 +57,4 @@ The green Next arrow is visible beside Replay on narration pages. Standalone rev
 
 Helper selections now advance directly, without a separate “Did you mean…? Yes or No” confirmation. This applies to prediction, obligation, and the meaner comparison in every pairing set. The selected helper still determines the following how-mean rating.
 
-Practice layout: full-width caption bands, enlarged responsive illustrations, and larger Yes/No buttons. The positive practice item uses a red traffic light and a stopped car with no role labels. This is a proposed practice adaptation for researcher review, not a validated comprehension item. The lie item keeps its wording and uses unlabeled characters.
+Instructional practice removed: prediction now leads directly to the obligation question. Welcome, character introductions, story questions, recall checks, ratings, narration and visual styling are unchanged.

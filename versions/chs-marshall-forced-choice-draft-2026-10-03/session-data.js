@@ -20,7 +20,7 @@
     return next;
   }
 
-  function storySteps(pairing, storyIndex, includePractice) {
+  function storySteps(pairing, storyIndex) {
     const result = [], p = copy(pairing);
     // Use one clear name for the child recipient in every prompt and cue.
     if (!p.recipient.isAdult) {
@@ -52,13 +52,6 @@
       ...pairOptions,
       text:`Who will help ${recipient.reference} now that they’re sad?`
     });
-    if (includePractice) {
-      for (const template of draft.steps.filter(s => s.id.startsWith('practice-'))) {
-        add(template.id, template.id, {image:template.image, note:[template.note,
-          'Brief HAVE TO comprehension practice; there are no prediction or obligation strength scales in this forced-choice variant. Only correct check answers advance.'
-        ].filter(Boolean).join(' ')});
-      }
-    }
     add('obligation-compare', 'obligation-compare', {
       ...pairOptions,
       text:`Who do you think HAS TO help ${recipient.reference}?`
@@ -163,26 +156,27 @@
       assumptions:[
         'Illustrative estimate, not observed child-session duration.',
         'Read-aloud pace: 110–130 words per minute; response time: 3–5 seconds per selection.',
-        'Includes each response label once, mandatory correct-answer practice feedback; excludes repeated binary labels already stated in the prompt.',
-        'Assumes correct recall and practice answers, including Yes to stopping at a red traffic light and No to lying. Incorrect check responses require correction and retry; there is no bypass.',
-        'Does not include correction repeats, breaks, setup, narration-only transition delays, or extra pauses between glowing options. Screen counts include correct-answer feedback stages; error retries are not counted.'
+        'Includes each response label once; excludes repeated binary labels already stated in the prompt.',
+        'Assumes correct recall answers. Incorrect recall responses require correction and retry; there is no bypass.',
+        'Does not include correction repeats, breaks, setup, narration-only transition delays, or extra pauses between glowing options. Error retries are not counted.'
       ]
     };
   }
 
-  function build(setId = 'woman', practiceMode = 'each') {
-    if (!['each', 'once'].includes(practiceMode)) throw new Error(`Unknown practice mode: ${practiceMode}`);
+  function build(setId = 'woman') {
+    // Legacy practice=once/each links use the same practice-free flow.
+    const practiceMode = 'none';
     const set = catalog.roleSets.find(s => s.id === setId);
     if (!set && setId !== 'all') throw new Error(`Unknown pairing set: ${setId}`);
     const pairings = setId === 'all' ? catalog.pairings.slice() : set.pairingIds.map(id => catalog.pairings.find(p => p.id === id));
-    const steps = pairings.flatMap((p, index) => storySteps(p, index, practiceMode === 'each' || index === 0));
+    const steps = pairings.flatMap((p, index) => storySteps(p, index));
     steps.push({...copy(templates.end), id:'session-end', localId:'end', image:null,
       phase:'End of this session', text:'That’s the end of our stories. Thank you!',
       pairing:null, storyIndex:pairings.length, adapted:true,
       note:'Draft closing wording. This is the end of the selected preview.'});
     return {
       variant:'forced-choice', setId, setLabel:setId === 'all' ? 'All pairings · researcher review' : set.label,
-      practiceMode, practiceLabel:practiceMode === 'each' ? 'Practice with every story' : 'Practice once · proposed adaptation',
+      practiceMode,
       isAllReview:setId === 'all', pairings, steps, stats:statsFor(steps, pairings.length),
       notes:[
         'This separate forced-choice draft uses the same Find the Caregiver stimuli and pairing catalog as the individual-rating draft.',
@@ -192,7 +186,7 @@
         'White backgrounds and the same sadness context are used throughout. Source relationships, character positions, and intro order are preserved.',
         'All paths have the same explicit outcome: no one helped, followed by each named helper did NOT help. A single Yes/No recall check precedes the meaner comparison.',
         'After the meaner comparison, a three-option how-mean rating is asked for the selected helper. Then each helper receives an individual Mean/Not Mean question and a conditional how-mean follow-up after Mean. Prediction and obligation remain forced choices without strength follow-ups. Overall Mean/Nice and individual recall questions remain omitted.',
-        practiceMode === 'each' ? 'Brief HAVE TO comprehension practice repeats before the obligation comparison in each story.' : 'Brief HAVE TO comprehension practice occurs before the first obligation comparison only.',
+        'Instructional HAVE TO practice is omitted; prediction is followed directly by the obligation question.',
         setId === 'all' ? 'The 18-story view is a researcher catalog of all three role sets, not the proposed length of one child’s session.' : 'This preview contains the six pairings from one role set in a fixed review order.'
       ],
       nextIndex(index, answers) { return nextIndex(steps, index, answers); }
@@ -203,14 +197,13 @@
     const {stats} = session;
     const lines = [
       '# Forced-choice obligation study draft — full session', '',
-      `**${session.setLabel} · ${session.pairings.length} stories · ${session.practiceLabel}**`, '',
+      `**${session.setLabel} · ${session.pairings.length} stories**`, '',
       ...session.notes.map(note => `- ${note}`), '',
       `Expected path range: **${stats.screens.min}–${stats.screens.max} screens**, **${stats.responses.min}–${stats.responses.max} responses**.`, '',
-      `Includes ${stats.virtualCorrectFeedbackScreens} correct-answer practice-feedback screens in addition to the static storyboard.`, '',
-      `${stats.forcedChoiceResponses} forced choices + ${stats.individualEvaluationResponses} individual Mean/Not Mean judgments + ${stats.strengthResponses.min}–${stats.strengthResponses.max} how-mean ratings + ${stats.checks} recall checks + ${stats.practiceResponses} brief practice responses.`, '',
+      `${stats.forcedChoiceResponses} forced choices + ${stats.individualEvaluationResponses} individual Mean/Not Mean judgments + ${stats.strengthResponses.min}–${stats.strengthResponses.max} how-mean ratings + ${stats.checks} recall checks.`, '',
       `Illustrative duration: **${stats.minutes.min}–${stats.minutes.max} minutes**, based on ${stats.words.min}–${stats.words.max} spoken words.`, '',
       ...stats.assumptions.map(note => `- ${note}`), '',
-      'The first three judgments per story are two-helper choices that advance immediately after selection. Exactly one selected-helper how-mean card follows the meaner comparison. Individual how-mean cards follow Mean only. Practice feedback is mandatory; corrections require a retry.', ''
+      'The first three judgments per story are two-helper choices that advance immediately after selection. Exactly one selected-helper how-mean card follows the meaner comparison. Individual how-mean cards follow Mean only. Recall corrections require a retry.', ''
     ];
     let lastStory = -1;
     for (const [index, step] of session.steps.entries()) {
@@ -235,7 +228,7 @@
       if (step.choiceQuestion) lines.push(`Read the choices together: “${step.choiceQuestion}”`, '');
       if (step.choices) lines.push(`Choices: ${step.choices.join(' / ')}.`, '');
       if (step.point) lines.push(`Selection check: ${step.point}.`, '');
-      if (step.expected) lines.push(`Expected check/practice answer: ${step.expected}.`, '');
+      if (step.expected) lines.push(`Expected recall answer: ${step.expected}.`, '');
       if (step.requireCorrect) lines.push('A correct response is required to advance; there is no bypass.', '');
       if (step.correctFeedback) lines.push(`Mandatory correct-answer feedback: “${step.correctFeedback}”`, '');
       if (step.incorrectFeedback) lines.push(`Incorrect-answer correction: “${step.incorrectFeedback}”`, '');
