@@ -181,6 +181,10 @@
       const active=spans.some(cue=>cue.actorId===button.dataset.narrationActor&&seconds>=cue.start&&seconds<cue.end);
       button.classList.toggle('narration-actor-current',active);
     });
+    stage.querySelectorAll('.yes-no-answer').forEach(button=>{
+      const active=spans.some(cue=>cue.optionIndex===Number(button.dataset.answer)&&seconds>=cue.start&&seconds<cue.end);
+      button.classList.toggle('option-current',active);
+    });
     const captionCue=spans.find(cue=>cue.captionText&&seconds>=cue.start&&seconds<cue.end);
     const heading=stage.querySelector('.prompt h2');
     if(captionCue&&heading&&heading.textContent!==captionCue.captionText)heading.textContent=captionCue.captionText;
@@ -282,6 +286,10 @@
   }
   function caption(s){const text=esc(s.displayTitle||s.displayText||s.text);return s.captionEmphasis==='HAVE TO'?text.replace(/\bHAVE TO\b/g,'<em class="obligation-emphasis">HAVE TO</em>'):text;}
   function prompt(s){return `<div class="prompt${s.localId==='recall-all'?' recall-prompt':''}">${s.context&&!s.displayText?`<p class="referent">${esc(s.context)}</p>`:''}${s.preface?`<p class="preface">${esc(s.preface)}</p>`:''}<h2>${caption(s)}</h2></div>`;}
+  function yesNoLabel(label){
+    const path=label==='Yes'?'M13 34 L27 48 L53 17':'M17 17 L47 47 M47 17 L17 47';
+    return `<svg class="yes-no-symbol" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="${path}" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="yes-no-label">${esc(label)}</span>`;
+  }
   function branchNote(s){if(!s.when)return '';const parent=steps.find(p=>p.id===s.when[0]);return `Only after “${s.when[1]}” to ${parent.phase.toLowerCase()}. `;}
   function choiceReaderControls(binary=false){return `<div class="option-reader-controls${binary?' binary-reader-controls':''}"><button data-read-options type="button" aria-label="Replay choices">▶</button></div><p class="reader-status${binary?' binary-reader-status':''}" data-reader-status role="status">Listen to each choice, then tap one.</p>`;}
   function scaleOptions(s,interactive=false){
@@ -298,7 +306,8 @@
     $('child-story-label').textContent=s.pairing?`Story ${s.storyIndex+1} of ${session.pairings.length}`:'All done!';
     $('progress-bar').style.width=`${100*(index+1)/steps.length}%`;
     $('progress-bar').style.backgroundColor=storyAccent(s);
-    let options=s.point?`<p class="point-instruction">Tap ${esc(actors(s).find(a=>a.id===s.point).description)}.</p>`:`<div class="answers">${(s.choices||[s.localId==='end'?'Read the full storyboard':'Continue']).map((c,i)=>`<button class="${s.choices?'spoken-choice option-visible':'continue-answer'}" data-answer="${i}"${s.choices?'':' aria-label="Next"'}>${s.choices?esc(c):'<span aria-hidden="true">➜</span>'}</button>`).join('')}</div>${s.choices?choiceReaderControls(true):''}`;
+    const yesNo=s.choices?.length===2&&s.choices[0]==='Yes'&&s.choices[1]==='No';
+    let options=s.point?`<p class="point-instruction">Tap ${esc(actors(s).find(a=>a.id===s.point).description)}.</p>`:`<div class="answers${yesNo?' yes-no-answers':''}">${(s.choices||[s.localId==='end'?'Read the full storyboard':'Continue']).map((c,i)=>`<button class="${s.choices?'spoken-choice option-visible'+(yesNo?' yes-no-answer':''):'continue-answer'}" data-answer="${i}"${yesNo?` data-answer-kind="${c.toLowerCase()}"`:''}${s.choices?'':' aria-label="Next"'}>${s.choices?(yesNo?yesNoLabel(c):esc(c)):'<span aria-hidden="true">➜</span>'}</button>`).join('')}</div>${s.choices?choiceReaderControls(true):''}`;
     if(s.virtualType==='correct-feedback')options='';
     if(helperChoiceActors(s).length)options=choiceReaderControls(true);
     if(s.choices?.length===3)options=scaleOptions(s,true);
