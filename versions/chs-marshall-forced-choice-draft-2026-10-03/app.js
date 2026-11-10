@@ -181,7 +181,7 @@
       const active=spans.some(cue=>cue.actorId===button.dataset.narrationActor&&seconds>=cue.start&&seconds<cue.end);
       button.classList.toggle('narration-actor-current',active);
     });
-    stage.querySelectorAll('.yes-no-answer,.rating-answer').forEach(button=>{
+    stage.querySelectorAll('.yes-no-answer,.evaluation-answer,.rating-answer').forEach(button=>{
       const active=spans.some(cue=>cue.optionIndex===Number(button.dataset.answer)&&seconds>=cue.start&&seconds<cue.end);
       button.classList.toggle('option-current',active);
     });
@@ -297,8 +297,8 @@
   }
   function choiceReaderControls(binary=false){return `<div class="option-reader-controls${binary?' binary-reader-controls':''}"><button data-read-options type="button" aria-label="Replay choices">▶</button></div><p class="reader-status${binary?' binary-reader-status':''}" data-reader-status role="status">Listen to each choice, then tap one.</p>`;}
   function meannessFace(level){
-    const brows=['M26 30 L38 32 M58 32 L70 30','M25 27 L39 33 M57 33 L71 27','M24 25 L40 35 M56 35 L72 25'][level];
-    const mouth=['M33 65 Q48 59 63 65','M31 68 Q48 50 65 68','M29 71 Q48 43 67 71'][level];
+    const brows=level==='neutral'?'M26 30 L38 30 M58 30 L70 30':['M26 30 L38 32 M58 32 L70 30','M25 27 L39 33 M57 33 L71 27','M24 25 L40 35 M56 35 L72 25'][level];
+    const mouth=level==='neutral'?'M34 63 L62 63':['M33 65 Q48 59 63 65','M31 68 Q48 50 65 68','M29 71 Q48 43 67 71'][level];
     return `<svg class="meanness-face" viewBox="0 0 96 96" aria-hidden="true" focusable="false"><circle cx="48" cy="48" r="43" fill="#FFD35C" stroke="#E6B648" stroke-width="2.5"/><g fill="#29333D"><circle cx="33" cy="43" r="4.5"/><circle cx="63" cy="43" r="4.5"/></g><path d="${brows} ${mouth}" fill="none" stroke="#29333D" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
   }
   function scaleOptions(s,interactive=false){
@@ -316,7 +316,8 @@
     $('progress-bar').style.width=`${100*(index+1)/steps.length}%`;
     $('progress-bar').style.backgroundColor=storyAccent(s);
     const yesNo=s.choices?.length===2&&s.choices[0]==='Yes'&&s.choices[1]==='No';
-    let options=s.point?`<p class="point-instruction">Tap ${esc(actors(s).find(a=>a.id===s.point).description)}.</p>`:`<div class="answers${yesNo?' yes-no-answers':''}">${(s.choices||[s.localId==='end'?'Read the full storyboard':'Continue']).map((c,i)=>`<button class="${s.choices?'spoken-choice option-visible'+(yesNo?' yes-no-answer':''):'continue-answer'}" data-answer="${i}"${yesNo?` data-answer-kind="${c.toLowerCase()}"`:''}${s.choices?'':' aria-label="Next"'}>${s.choices?(yesNo?yesNoLabel(c):esc(c)):'<span aria-hidden="true">➜</span>'}</button>`).join('')}</div>${s.choices?choiceReaderControls(true):''}`;
+    const meanNotMean=s.choices?.length===2&&s.choices[0]==='Mean'&&s.choices[1]==='Not Mean';
+    let options=s.point?`<p class="point-instruction">Tap ${esc(actors(s).find(a=>a.id===s.point).description)}.</p>`:`<div class="answers${yesNo?' yes-no-answers':meanNotMean?' evaluation-answers':''}">${(s.choices||[s.localId==='end'?'Read the full storyboard':'Continue']).map((c,i)=>`<button class="${s.choices?'spoken-choice option-visible'+(yesNo?' yes-no-answer':meanNotMean?' evaluation-answer':''):'continue-answer'}" data-answer="${i}"${yesNo?` data-answer-kind="${c.toLowerCase()}"`:''}${s.choices?'':' aria-label="Next"'}>${s.choices?(yesNo?yesNoLabel(c):meanNotMean?meannessFace(i===0?1:'neutral')+`<span>${esc(c)}</span>`:esc(c)):'<span aria-hidden="true">➜</span>'}</button>`).join('')}</div>${s.choices?choiceReaderControls(true):''}`;
     if(s.virtualType==='correct-feedback')options='';
     if(helperChoiceActors(s).length)options=choiceReaderControls(true);
     if(s.choices?.length===3)options=scaleOptions(s,true);

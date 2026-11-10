@@ -210,9 +210,12 @@ body.child-view .answers button {
   box-shadow: 0 5px 12px #2531410d;
 }
 
-.answers.yes-no-answers { gap: clamp(20px, 3vw, 44px); }
+.answers.yes-no-answers,
+.answers.evaluation-answers { gap: clamp(20px, 3vw, 44px); }
 .answers button.yes-no-answer,
-body.child-view .answers button.yes-no-answer {
+body.child-view .answers button.yes-no-answer,
+.answers button.evaluation-answer,
+body.child-view .answers button.evaluation-answer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -232,11 +235,14 @@ body.child-view .answers button.yes-no-answer {
   opacity: 1;
 }
 .yes-no-symbol { width: clamp(62px, 6vw, 80px); height: clamp(62px, 6vw, 80px); }
+.evaluation-answer .meanness-face { width: clamp(62px, 6vw, 80px); height: clamp(62px, 6vw, 80px); }
 [data-answer-kind="yes"] .yes-no-symbol { color: #198468; }
 [data-answer-kind="no"] .yes-no-symbol { color: #c44747; }
 @media (max-width: 460px) {
-  .answers.yes-no-answers { gap: 18px; }
-  body.child-view .answers button.yes-no-answer { width: 130px; min-height: 120px; }
+  .answers.yes-no-answers,
+  .answers.evaluation-answers { gap: 18px; }
+  body.child-view .answers button.yes-no-answer,
+  body.child-view .answers button.evaluation-answer { width: 130px; min-height: 120px; }
 }
 
 body.child-view .answers button.continue-answer {
