@@ -4853,11 +4853,11 @@
       "historicalInactive": true
     },
     {
-      "id": "nr_258",
+      "id": "nr_meaner_not_01_r54",
       "text": "Who was meaner for NOT helping the kid in the middle?",
-      "src": "assets/narration/nr_258-complete.mp3",
+      "src": "assets/narration/nr_meaner_not_01_r54.mp3",
       "kind": "prompt",
-      "status": "verified-complete-native-recording",
+      "status": "verified-word-tempo-edit",
       "uses": [
         {
           "stepId": "woman-mom-teacher:compare",
@@ -12888,11 +12888,11 @@
       }
     },
     {
-      "id": "nr_261",
+      "id": "nr_meaner_not_02_r54",
       "text": "Who was meaner for NOT helping the mom in the middle?",
-      "src": "assets/narration/nr_261-complete.mp3",
+      "src": "assets/narration/nr_meaner_not_02_r54.mp3",
       "kind": "prompt",
-      "status": "verified-complete-native-recording",
+      "status": "verified-word-tempo-edit",
       "uses": [
         {
           "stepId": "family-dad-kid:compare",
@@ -13984,11 +13984,11 @@
       }
     },
     {
-      "id": "nr_264",
+      "id": "nr_meaner_not_03_r54",
       "text": "Who was meaner for NOT helping the dad in the middle?",
-      "src": "assets/narration/nr_264-complete.mp3",
+      "src": "assets/narration/nr_meaner_not_03_r54.mp3",
       "kind": "prompt",
-      "status": "verified-complete-native-recording",
+      "status": "verified-word-tempo-edit",
       "uses": [
         {
           "stepId": "family-mom-kid:compare",
@@ -15131,11 +15131,11 @@
       }
     },
     {
-      "id": "nr_267",
+      "id": "nr_meaner_not_04_r54",
       "text": "Who was meaner for NOT helping the teacher in the middle?",
-      "src": "assets/narration/nr_267-complete.mp3",
+      "src": "assets/narration/nr_meaner_not_04_r54.mp3",
       "kind": "prompt",
-      "status": "verified-complete-native-recording",
+      "status": "verified-word-tempo-edit",
       "uses": [
         {
           "stepId": "family-teacher-kid:compare",

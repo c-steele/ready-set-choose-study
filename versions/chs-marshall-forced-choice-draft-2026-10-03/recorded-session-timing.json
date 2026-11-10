@@ -2,10 +2,10 @@
   "complete": true,
   "allRecordingsComplete": true,
   "pendingRetryRecordingIDs": [],
-  "createdAt": "2026-11-09T05:43:08.998Z",
+  "createdAt": "2026-11-10T11:30:49.615Z",
   "basis": "Verified MP3 durations and programmed pauses across complete paths, rating the selected meaner helper once and evaluating only the other helper.",
   "gapSeconds": 0.25,
-  "manifestSha256": "8c016f6a246940bef7c61aeed44a79ab9232221bed393a3a2783533ba15583af",
+  "manifestSha256": "d93d51ba72d2e840ea3db832e155226aedc7c1a31a6d94cf235b1bb73d1aee69",
   "assumptions": [
     "Assumes correct recall answers. The selected meaner helper receives one strength rating; only the other helper receives Mean/Not Mean and a conditional strength rating after Mean.",
     "Every prompted option is read once; binary options embedded in the full question are not read again.",
@@ -21,8 +21,8 @@
       "practiceMode": "none",
       "storyCount": 6,
       "playbackSeconds": {
-        "min": 471.6276929999999,
-        "max": 545.1582569999998
+        "min": 472.2547529999998,
+        "max": 545.7853169999998
       },
       "playbackMinutes": {
         "min": 7.9,
@@ -52,8 +52,8 @@
       "practiceMode": "none",
       "storyCount": 6,
       "playbackSeconds": {
-        "min": 473.66529899999995,
-        "max": 547.195864
+        "min": 474.29235899999986,
+        "max": 547.822924
       },
       "playbackMinutes": {
         "min": 7.9,
@@ -83,8 +83,8 @@
       "practiceMode": "none",
       "storyCount": 6,
       "playbackSeconds": {
-        "min": 466.1421269999999,
-        "max": 539.7510579999998
+        "min": 466.74302499999993,
+        "max": 540.3519559999997
       },
       "playbackMinutes": {
         "min": 7.8,
@@ -114,8 +114,8 @@
       "practiceMode": "none",
       "storyCount": 18,
       "playbackSeconds": {
-        "min": 1403.7029189999996,
-        "max": 1624.3729789999998
+        "min": 1405.557936999999,
+        "max": 1626.2279969999995
       },
       "playbackMinutes": {
         "min": 23.4,

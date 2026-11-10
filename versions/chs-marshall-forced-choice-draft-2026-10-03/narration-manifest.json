@@ -32,8 +32,8 @@
   "summary": {
     "storyCount": 18,
     "screenCount": 523,
-    "clipCount": 245,
-    "readyCount": 245,
+    "clipCount": 249,
+    "readyCount": 249,
     "pendingCount": 0,
     "newForcedChoiceRecordingCount": 12,
     "emphasisPendingCount": 2,
@@ -63,7 +63,8 @@
     "sadPredictionQuestionRecordingCount": 4,
     "trafficPracticeNewRecordingCount": 3,
     "outcomeWithoutAndRecordings": 11,
-    "slowerHasToRecordingCount": 4
+    "slowerHasToRecordingCount": 4,
+    "slowerNotRecordingCount": 4
   },
   "notes": [
     "This is the separate forced-choice adaptation. Each story has one prediction, one obligation, and one comparative evaluation choice between its two helpers.",
@@ -96,7 +97,8 @@
     "r41: proposed role-free practice uses a red traffic light and stopped car. Three new complete Evelyn Soft recordings replace Teacher/stop-being-mean prompt, correction, and correct feedback. Stable practice-stop step IDs are retained. Other study questions are unchanged.",
     "r43: Child-recipient outcome sentences each begin with The; the second helper sentence no longer begins with And. Eleven updated passages use three complete Evelyn Soft 0.90x sentences, verified independently from the final MP3 at their known assembly boundaries. Existing adult-recipient outcome audio is unchanged. Each helper outline glows only during its spoken role name; the characters and no-help badges stay still.",
     "r44: The four forced-choice obligation prompts use a pitch-preserving local tempo edit and gentle gain emphasis on HAS TO. Every other spoken word is retained. New final MP3s and updated word cues pass unprompted full-sentence recognition; these are edited recordings, not newly synthesized native prosody.",
-    "r45: Replaced r44 obligation prompts, which inherited a slower 0.80x source. Four fresh Evelyn Soft 0.90x / 180 WPM recordings now match the surrounding narration pace. Only HAS TO is time-stretched at 0.65 tempo with gentle gain; prefix/suffix samples outside 5ms joins are unchanged before MP3 encoding. Native sources retained for comparison. Final audio and new cues pass independent unprompted full-sentence recognition."
+    "r45: Replaced r44 obligation prompts, which inherited a slower 0.80x source. Four fresh Evelyn Soft 0.90x / 180 WPM recordings now match the surrounding narration pace. Only HAS TO is time-stretched at 0.65 tempo with gentle gain; prefix/suffix samples outside 5ms joins are unchanged before MP3 encoding. Native sources retained for comparison. Final audio and new cues pass independent unprompted full-sentence recognition.",
+    "r54: Only NOT is slower in the four Who was meaner questions, including kid and adult recipients. Existing Evelyn Soft voice, wording and surrounding audio pace are retained. No pause or volume change. New files and spoken-word cues passed exact full-sentence recognition."
   ],
   "clips": [
     {
@@ -4798,83 +4800,7 @@
       "src": "assets/narration/nr_258-complete.mp3",
       "kind": "prompt",
       "status": "verified-complete-native-recording",
-      "uses": [
-        {
-          "stepId": "woman-mom-teacher:compare",
-          "proposedWording": true,
-          "part": "prompt"
-        },
-        {
-          "stepId": "woman-sister-friend:compare",
-          "proposedWording": true,
-          "part": "prompt"
-        },
-        {
-          "stepId": "woman-bestfriend-friend:compare",
-          "proposedWording": true,
-          "part": "prompt"
-        },
-        {
-          "stepId": "woman-teacher-friend:compare",
-          "proposedWording": true,
-          "part": "prompt"
-        },
-        {
-          "stepId": "woman-mom-sister:compare",
-          "proposedWording": true,
-          "part": "prompt"
-        },
-        {
-          "stepId": "woman-teacher-classmate:compare",
-          "proposedWording": true,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-dad-teacher:compare",
-          "proposedWording": true,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-brother-friend:compare",
-          "proposedWording": true,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-bestfriend-friend:compare",
-          "proposedWording": true,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-teacher-friend:compare",
-          "proposedWording": true,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-dad-brother:compare",
-          "proposedWording": true,
-          "part": "prompt"
-        },
-        {
-          "stepId": "man-teacher-classmate:compare",
-          "proposedWording": true,
-          "part": "prompt"
-        },
-        {
-          "stepId": "family-mom-dad:compare",
-          "proposedWording": true,
-          "part": "prompt"
-        },
-        {
-          "stepId": "family-sister-brother:compare",
-          "proposedWording": true,
-          "part": "prompt"
-        },
-        {
-          "stepId": "family-teacher-classmate:compare",
-          "proposedWording": true,
-          "part": "prompt"
-        }
-      ],
+      "uses": [],
       "sha256": "5a4b3499ee8df19ed3117c68630b6942a89f9474ace6f6824368652d29d4ff9d",
       "bytes": 145285,
       "durationSeconds": 3.631,
@@ -4913,7 +4839,8 @@
         "fullProjectTextVerified": true,
         "verifiedSourceAuditRecord": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_child_flow_revision_2026-10-04/naturalreader-batch-01/processed/verified-native-recordings.json",
         "installedFileBytesMatchVerifiedSource": true
-      }
+      },
+      "supersededBy": "nr_meaner_not_01_r54"
     },
     {
       "id": "nr_325",
@@ -12809,13 +12736,7 @@
       "src": "assets/narration/nr_261-complete.mp3",
       "kind": "prompt",
       "status": "verified-complete-native-recording",
-      "uses": [
-        {
-          "stepId": "family-dad-kid:compare",
-          "proposedWording": true,
-          "part": "prompt"
-        }
-      ],
+      "uses": [],
       "sha256": "0e238a5d7030626af5fa59205a9cab8492c11f03b0359307558e08ca1faad8cc",
       "bytes": 148420,
       "durationSeconds": 3.709375,
@@ -12854,7 +12775,8 @@
         "fullProjectTextVerified": true,
         "verifiedSourceAuditRecord": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_child_flow_revision_2026-10-04/naturalreader-batch-01/processed/verified-native-recordings.json",
         "installedFileBytesMatchVerifiedSource": true
-      }
+      },
+      "supersededBy": "nr_meaner_not_02_r54"
     },
     {
       "id": "nr_349",
@@ -13881,13 +13803,7 @@
       "src": "assets/narration/nr_264-complete.mp3",
       "kind": "prompt",
       "status": "verified-complete-native-recording",
-      "uses": [
-        {
-          "stepId": "family-mom-kid:compare",
-          "proposedWording": true,
-          "part": "prompt"
-        }
-      ],
+      "uses": [],
       "sha256": "932f5e20da85d415e2b87f6e3db8658ee54740f23b0979a048c784035e86bdde",
       "bytes": 144241,
       "durationSeconds": 3.6049,
@@ -13926,7 +13842,8 @@
         "fullProjectTextVerified": true,
         "verifiedSourceAuditRecord": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_child_flow_revision_2026-10-04/naturalreader-batch-01/processed/verified-native-recordings.json",
         "installedFileBytesMatchVerifiedSource": true
-      }
+      },
+      "supersededBy": "nr_meaner_not_03_r54"
     },
     {
       "id": "nr_355",
@@ -15004,13 +14921,7 @@
       "src": "assets/narration/nr_267-complete.mp3",
       "kind": "prompt",
       "status": "verified-complete-native-recording",
-      "uses": [
-        {
-          "stepId": "family-teacher-kid:compare",
-          "proposedWording": true,
-          "part": "prompt"
-        }
-      ],
+      "uses": [],
       "sha256": "4c20a0f0c64fed8ccf8076ef99dd982326746dbb5dcffc826c7e962d9b1fe7e4",
       "bytes": 149465,
       "durationSeconds": 3.7355,
@@ -15049,7 +14960,8 @@
         "fullProjectTextVerified": true,
         "verifiedSourceAuditRecord": "/Users/christinasteele/.codex/.chatgpt-projects/g-p-6a68b271d66c8191ab7518c24cd35212/outputs/marshall_child_flow_revision_2026-10-04/naturalreader-batch-01/processed/verified-native-recordings.json",
         "installedFileBytesMatchVerifiedSource": true
-      }
+      },
+      "supersededBy": "nr_meaner_not_04_r54"
     },
     {
       "id": "nr_361",
@@ -19233,6 +19145,256 @@
         "recordingWordCheckMethod": "Unprompted full-sentence recognition from final MP3",
         "cueAlignmentApproved": true
       }
+    },
+    {
+      "id": "nr_meaner_not_01_r54",
+      "text": "Who was meaner for NOT helping the kid in the middle?",
+      "src": "assets/narration/nr_meaner_not_01_r54.mp3",
+      "kind": "prompt",
+      "status": "verified-word-tempo-edit",
+      "uses": [
+        {
+          "stepId": "woman-mom-teacher:compare",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "woman-sister-friend:compare",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "woman-bestfriend-friend:compare",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "woman-teacher-friend:compare",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "woman-mom-sister:compare",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "woman-teacher-classmate:compare",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-dad-teacher:compare",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-brother-friend:compare",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-bestfriend-friend:compare",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-teacher-friend:compare",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-dad-brother:compare",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "man-teacher-classmate:compare",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "family-mom-dad:compare",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "family-sister-brother:compare",
+          "proposedWording": true,
+          "part": "prompt"
+        },
+        {
+          "stepId": "family-teacher-classmate:compare",
+          "proposedWording": true,
+          "part": "prompt"
+        }
+      ],
+      "sha256": "a510659936a49f26203e4bdf334b61cbd5015162e5e5318caed3a07157301325",
+      "bytes": 150509,
+      "durationSeconds": 3.73551,
+      "revisionCategory": "slower-not-r54",
+      "provenance": {
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "sourceClipId": "nr_258",
+        "sourceSha256": "5a4b3499ee8df19ed3117c68630b6942a89f9474ace6f6824368652d29d4ff9d",
+        "nativeRecordingUnedited": false,
+        "processing": "Pitch-preserving tempo reduction only on NOT. No added pause or gain. Surrounding decoded samples outside 3 ms joins are unchanged before MP3 encoding.",
+        "edit": {
+          "oldId": "nr_258",
+          "sourceSha256": "5a4b3499ee8df19ed3117c68630b6942a89f9474ace6f6824368652d29d4ff9d",
+          "phrase": "NOT",
+          "sourcePhraseStart": 1.2350113378684808,
+          "sourcePhraseEnd": 1.418684807256236,
+          "tempo": 0.7,
+          "pitchPreserved": true,
+          "originalPhraseSeconds": 0.1836734693877551,
+          "revisedPhraseSeconds": 0.24877551020408165,
+          "boundaryBlendMilliseconds": 2.993197278911565,
+          "prefixSamplesUnchanged": true,
+          "suffixSamplesUnchanged": true,
+          "insertedPauseMilliseconds": 0,
+          "peak": 0.5568562150001526
+        },
+        "independentExactNormalizedRecognition": true,
+        "recordingWordCheckMethod": "Unprompted full-sentence recognition from final MP3",
+        "cueAlignmentApproved": true
+      }
+    },
+    {
+      "id": "nr_meaner_not_02_r54",
+      "text": "Who was meaner for NOT helping the mom in the middle?",
+      "src": "assets/narration/nr_meaner_not_02_r54.mp3",
+      "kind": "prompt",
+      "status": "verified-word-tempo-edit",
+      "uses": [
+        {
+          "stepId": "family-dad-kid:compare",
+          "proposedWording": true,
+          "part": "prompt"
+        }
+      ],
+      "sha256": "c509cff434404bda35a879fe291d2757f3694d6bb2c82fa9af6a03dc81855c04",
+      "bytes": 153644,
+      "durationSeconds": 3.813878,
+      "revisionCategory": "slower-not-r54",
+      "provenance": {
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "sourceClipId": "nr_261",
+        "sourceSha256": "0e238a5d7030626af5fa59205a9cab8492c11f03b0359307558e08ca1faad8cc",
+        "nativeRecordingUnedited": false,
+        "processing": "Pitch-preserving tempo reduction only on NOT. No added pause or gain. Surrounding decoded samples outside 3 ms joins are unchanged before MP3 encoding.",
+        "edit": {
+          "oldId": "nr_261",
+          "sourceSha256": "0e238a5d7030626af5fa59205a9cab8492c11f03b0359307558e08ca1faad8cc",
+          "phrase": "NOT",
+          "sourcePhraseStart": 1.2150113378684808,
+          "sourcePhraseEnd": 1.402607709750567,
+          "tempo": 0.7,
+          "pitchPreserved": true,
+          "originalPhraseSeconds": 0.18759637188208617,
+          "revisedPhraseSeconds": 0.2482312925170068,
+          "boundaryBlendMilliseconds": 2.993197278911565,
+          "prefixSamplesUnchanged": true,
+          "suffixSamplesUnchanged": true,
+          "insertedPauseMilliseconds": 0,
+          "peak": 0.5515274405479431
+        },
+        "independentExactNormalizedRecognition": true,
+        "recordingWordCheckMethod": "Unprompted full-sentence recognition from final MP3",
+        "cueAlignmentApproved": true
+      }
+    },
+    {
+      "id": "nr_meaner_not_03_r54",
+      "text": "Who was meaner for NOT helping the dad in the middle?",
+      "src": "assets/narration/nr_meaner_not_03_r54.mp3",
+      "kind": "prompt",
+      "status": "verified-word-tempo-edit",
+      "uses": [
+        {
+          "stepId": "family-mom-kid:compare",
+          "proposedWording": true,
+          "part": "prompt"
+        }
+      ],
+      "sha256": "e1aa3299dbef2d13476eab253263dfc84c290743adad06992772ca123e052b31",
+      "bytes": 148419,
+      "durationSeconds": 3.683265,
+      "revisionCategory": "slower-not-r54",
+      "provenance": {
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "sourceClipId": "nr_264",
+        "sourceSha256": "932f5e20da85d415e2b87f6e3db8658ee54740f23b0979a048c784035e86bdde",
+        "nativeRecordingUnedited": false,
+        "processing": "Pitch-preserving tempo reduction only on NOT. No added pause or gain. Surrounding decoded samples outside 3 ms joins are unchanged before MP3 encoding.",
+        "edit": {
+          "oldId": "nr_264",
+          "sourceSha256": "932f5e20da85d415e2b87f6e3db8658ee54740f23b0979a048c784035e86bdde",
+          "phrase": "NOT",
+          "sourcePhraseStart": 1.1773242630385488,
+          "sourcePhraseEnd": 1.3356916099773242,
+          "tempo": 0.7,
+          "pitchPreserved": true,
+          "originalPhraseSeconds": 0.15836734693877552,
+          "revisedPhraseSeconds": 0.21419501133786847,
+          "boundaryBlendMilliseconds": 2.993197278911565,
+          "prefixSamplesUnchanged": true,
+          "suffixSamplesUnchanged": true,
+          "insertedPauseMilliseconds": 0,
+          "peak": 0.5509300231933594
+        },
+        "independentExactNormalizedRecognition": true,
+        "recordingWordCheckMethod": "Unprompted full-sentence recognition from final MP3",
+        "cueAlignmentApproved": true
+      }
+    },
+    {
+      "id": "nr_meaner_not_04_r54",
+      "text": "Who was meaner for NOT helping the teacher in the middle?",
+      "src": "assets/narration/nr_meaner_not_04_r54.mp3",
+      "kind": "prompt",
+      "status": "verified-word-tempo-edit",
+      "uses": [
+        {
+          "stepId": "family-teacher-kid:compare",
+          "proposedWording": true,
+          "part": "prompt"
+        }
+      ],
+      "sha256": "61c741e5cd6d97508b849df73bf28202fc5f729c2ca05a66fdfc39769d978d4b",
+      "bytes": 154689,
+      "durationSeconds": 3.84,
+      "revisionCategory": "slower-not-r54",
+      "provenance": {
+        "provider": "NaturalReaders Commercial",
+        "sourceVoice": "Evelyn Soft",
+        "sourceClipId": "nr_267",
+        "sourceSha256": "4c20a0f0c64fed8ccf8076ef99dd982326746dbb5dcffc826c7e962d9b1fe7e4",
+        "nativeRecordingUnedited": false,
+        "processing": "Pitch-preserving tempo reduction only on NOT. No added pause or gain. Surrounding decoded samples outside 3 ms joins are unchanged before MP3 encoding.",
+        "edit": {
+          "oldId": "nr_267",
+          "sourceSha256": "4c20a0f0c64fed8ccf8076ef99dd982326746dbb5dcffc826c7e962d9b1fe7e4",
+          "phrase": "NOT",
+          "sourcePhraseStart": 1.2550113378684806,
+          "sourcePhraseEnd": 1.4404308390022675,
+          "tempo": 0.7,
+          "pitchPreserved": true,
+          "originalPhraseSeconds": 0.18541950113378686,
+          "revisedPhraseSeconds": 0.24922902494331065,
+          "boundaryBlendMilliseconds": 2.993197278911565,
+          "prefixSamplesUnchanged": true,
+          "suffixSamplesUnchanged": true,
+          "insertedPauseMilliseconds": 0,
+          "peak": 0.5896588563919067
+        },
+        "independentExactNormalizedRecognition": true,
+        "recordingWordCheckMethod": "Unprompted full-sentence recognition from final MP3",
+        "cueAlignmentApproved": true
+      }
     }
   ],
   "screens": {
@@ -19414,7 +19576,7 @@
       "proposedWording": false
     },
     "woman-mom-teacher:compare": {
-      "prompt": "nr_258",
+      "prompt": "nr_meaner_not_01_r54",
       "reminder": null,
       "options": [
         "nr_051",
@@ -19687,7 +19849,7 @@
       "proposedWording": false
     },
     "woman-sister-friend:compare": {
-      "prompt": "nr_258",
+      "prompt": "nr_meaner_not_01_r54",
       "reminder": null,
       "options": [
         "nr_073",
@@ -19960,7 +20122,7 @@
       "proposedWording": false
     },
     "woman-bestfriend-friend:compare": {
-      "prompt": "nr_258",
+      "prompt": "nr_meaner_not_01_r54",
       "reminder": null,
       "options": [
         "nr_074",
@@ -20233,7 +20395,7 @@
       "proposedWording": false
     },
     "woman-teacher-friend:compare": {
-      "prompt": "nr_258",
+      "prompt": "nr_meaner_not_01_r54",
       "reminder": null,
       "options": [
         "nr_051",
@@ -20506,7 +20668,7 @@
       "proposedWording": false
     },
     "woman-mom-sister:compare": {
-      "prompt": "nr_258",
+      "prompt": "nr_meaner_not_01_r54",
       "reminder": null,
       "options": [
         "nr_052",
@@ -20779,7 +20941,7 @@
       "proposedWording": false
     },
     "woman-teacher-classmate:compare": {
-      "prompt": "nr_258",
+      "prompt": "nr_meaner_not_01_r54",
       "reminder": null,
       "options": [
         "nr_102",
@@ -21052,7 +21214,7 @@
       "proposedWording": false
     },
     "man-dad-teacher:compare": {
-      "prompt": "nr_258",
+      "prompt": "nr_meaner_not_01_r54",
       "reminder": null,
       "options": [
         "nr_051",
@@ -21325,7 +21487,7 @@
       "proposedWording": false
     },
     "man-brother-friend:compare": {
-      "prompt": "nr_258",
+      "prompt": "nr_meaner_not_01_r54",
       "reminder": null,
       "options": [
         "nr_126",
@@ -21598,7 +21760,7 @@
       "proposedWording": false
     },
     "man-bestfriend-friend:compare": {
-      "prompt": "nr_258",
+      "prompt": "nr_meaner_not_01_r54",
       "reminder": null,
       "options": [
         "nr_074",
@@ -21871,7 +22033,7 @@
       "proposedWording": false
     },
     "man-teacher-friend:compare": {
-      "prompt": "nr_258",
+      "prompt": "nr_meaner_not_01_r54",
       "reminder": null,
       "options": [
         "nr_051",
@@ -22144,7 +22306,7 @@
       "proposedWording": false
     },
     "man-dad-brother:compare": {
-      "prompt": "nr_258",
+      "prompt": "nr_meaner_not_01_r54",
       "reminder": null,
       "options": [
         "nr_114",
@@ -22417,7 +22579,7 @@
       "proposedWording": false
     },
     "man-teacher-classmate:compare": {
-      "prompt": "nr_258",
+      "prompt": "nr_meaner_not_01_r54",
       "reminder": null,
       "options": [
         "nr_102",
@@ -22690,7 +22852,7 @@
       "proposedWording": false
     },
     "family-mom-dad:compare": {
-      "prompt": "nr_258",
+      "prompt": "nr_meaner_not_01_r54",
       "reminder": null,
       "options": [
         "nr_114",
@@ -22963,7 +23125,7 @@
       "proposedWording": false
     },
     "family-sister-brother:compare": {
-      "prompt": "nr_258",
+      "prompt": "nr_meaner_not_01_r54",
       "reminder": null,
       "options": [
         "nr_073",
@@ -23236,7 +23398,7 @@
       "proposedWording": false
     },
     "family-dad-kid:compare": {
-      "prompt": "nr_261",
+      "prompt": "nr_meaner_not_02_r54",
       "reminder": null,
       "options": [
         "nr_114",
@@ -23509,7 +23671,7 @@
       "proposedWording": false
     },
     "family-mom-kid:compare": {
-      "prompt": "nr_264",
+      "prompt": "nr_meaner_not_03_r54",
       "reminder": null,
       "options": [
         "nr_153",
@@ -23782,7 +23944,7 @@
       "proposedWording": false
     },
     "family-teacher-kid:compare": {
-      "prompt": "nr_267",
+      "prompt": "nr_meaner_not_04_r54",
       "reminder": null,
       "options": [
         "nr_194",
@@ -24055,7 +24217,7 @@
       "proposedWording": false
     },
     "family-teacher-classmate:compare": {
-      "prompt": "nr_258",
+      "prompt": "nr_meaner_not_01_r54",
       "reminder": null,
       "options": [
         "nr_102",
