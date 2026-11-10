@@ -23,17 +23,12 @@ for (const set of ['woman', 'man', 'family']) for (const order of ['will-first',
         for (const evaluation of ['Mean', 'Not Mean']) {
           const afterOther = {...afterRating, [otherQuestion.id]: evaluation};
           let next = session.nextIndex(otherIndex, afterOther);
-          if (evaluation === 'Mean') {
-            const otherRating = session.steps[next];
-            assert.equal(otherRating.localId, `evaluation-${other.id}-amount`);
-            for (const otherAmount of otherRating.choices) {
-              const end = session.steps[session.nextIndex(next, {...afterOther, [otherRating.id]: otherAmount})];
-              assert(end.localId === 'group' || end.localId === 'end');
-              assert.notEqual(end.pairing?.id, pairing.id);
-              paths++;
-            }
-          } else {
-            const end = session.steps[next];
+          const otherRating = session.steps[next];
+          assert.equal(otherRating.localId, `evaluation-${other.id}-amount`);
+          assert.deepEqual(otherRating.choices, ['Not mean','A teeny bit mean','A little bit mean','Very mean']);
+          assert.deepEqual(selectedRating.choices, otherRating.choices);
+          for (const otherAmount of otherRating.choices) {
+            const end = session.steps[session.nextIndex(next, {...afterOther, [otherRating.id]: otherAmount})];
             assert(end.localId === 'group' || end.localId === 'end');
             assert.notEqual(end.pairing?.id, pairing.id);
             paths++;
@@ -42,11 +37,11 @@ for (const set of ['woman', 'man', 'family']) for (const order of ['will-first',
       }
     }
   }
-  assert.deepEqual(session.stats.responses, {min:36, max:42});
+  assert.deepEqual(session.stats.responses, {min:42, max:42});
   assert.equal(session.stats.individualEvaluationResponses, 6);
-  assert.deepEqual(session.stats.strengthResponses, {min:6, max:12});
+  assert.deepEqual(session.stats.strengthResponses, {min:12, max:12});
   assert.equal(session.stats.forcedChoiceResponses, 18);
 }
 const all = api.build('all');
-assert.deepEqual(all.stats.responses, {min:108, max:126});
+assert.deepEqual(all.stats.responses, {min:126, max:126});
 console.log(`Passed ${paths} paths across all 18 stories and both question orders: both helper choices, all face ratings, and Mean / Not Mean branches.`);

@@ -10,24 +10,24 @@
 - Each forced-choice question requires a choice between the two helpers. Choices appear in scene order: left helper, then right helper. There is no both, neither, or equal option.
 - Forced-choice prediction and obligation are adaptations of the Marshall paradigm, not the original Study 1 individual Yes/No measures. The meaner comparison is adapted to these two-helper stories.
 - White backgrounds and the same sadness context are used throughout. Source relationships, character positions, and intro order are preserved.
-- All paths have the same explicit outcome: no one helped, followed by each named helper did NOT help. A single Yes/No recall check precedes the meaner comparison.
-- After the meaner comparison, a three-option how-mean rating is asked once for the selected helper. Only the other helper receives a Mean/Not Mean question, with a how-mean follow-up after Mean. The selected helper is not asked either question again. Prediction and obligation remain forced choices without strength follow-ups. Overall Mean/Nice and individual recall questions remain omitted.
+- All paths have the same explicit outcome: no one helped, followed by each named helper did NOT help. A Yes/No recall check precedes the meaner comparison. Yes replays the two nonhelping outcome screens and then asks the check again, repeating until No.
+- After the meaner comparison, a four-option how-mean rating is asked once for the selected helper. Only the other helper receives a Mean/Not Mean question, with a how-mean follow-up after either Mean or Not Mean. Both scales include Not mean, A teeny bit mean, A little bit mean, and Very mean. The selected helper is not asked either question again. Prediction and obligation remain forced choices without strength follow-ups. Overall Mean/Nice and individual recall questions remain omitted.
 - Instructional HAVE TO practice is omitted; the two early questions follow the assigned order.
 - This preview contains the six pairings from one role set in a fixed review order.
 
-Expected path range: **79–85 screens**, **36–42 responses**.
+Expected path range: **85–85 screens**, **42–42 responses**.
 
-18 forced choices + 6 individual Mean/Not Mean judgments + 6–12 how-mean ratings + 6 recall checks.
+18 forced choices + 6 individual Mean/Not Mean judgments + 12–12 how-mean ratings + 6 recall checks.
 
-Illustrative duration: **10.5–15.2 minutes**, based on 1132–1292 spoken words.
+Illustrative duration: **12.2–15.5 minutes**, based on 1319–1316 spoken words.
 
 - Illustrative estimate, not observed child-session duration.
 - Read-aloud pace: 110–130 words per minute; response time: 3–5 seconds per selection.
 - Includes each response label once; excludes repeated binary labels already stated in the prompt.
-- Assumes correct recall answers. Incorrect recall responses require correction and retry; there is no bypass.
+- Assumes correct recall answers. Incorrect recall responses replay the outcome story and then repeat the question; there is no bypass.
 - Does not include correction repeats, breaks, setup, narration-only transition delays, or extra pauses between glowing options. Error retries are not counted.
 
-The first three judgments per story are two-helper choices that advance immediately after selection. Exactly one selected-helper how-mean card follows the meaner comparison. Only the other helper receives Mean/Not Mean and, after Mean, a how-mean rating. Recall corrections require a retry.
+The first three judgments per story are two-helper choices that advance immediately after selection. Exactly one selected-helper how-mean card follows the meaner comparison. Only the other helper receives Mean/Not Mean and then a how-mean rating after either answer. Both helpers receive the four-option scale once. An incorrect recall answer replays the outcome story and then repeats the question.
 
 ## Story 1: Mom–Dad
 
@@ -125,11 +125,9 @@ Choices: Yes / No.
 
 Expected recall answer: No.
 
+After Yes, replay the two nonhelping outcome screens with their original narration and role highlights, then ask this question again. Repeat until No.
+
 A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “Actually, remember, no one helped the kid in the middle. And the kid’s dad did NOT help the kid in the middle. And the kid’s mom did NOT help the kid in the middle. No one helped the kid in the middle.”
-
-After the reminder, reread the full question and response labels before reopening the choices.
 
 ### 11. Who was meaner? — PROPOSED WORDING
 
@@ -153,7 +151,7 @@ Display wording: “How mean do you think the kid’s dad was for NOT helping th
 
 [Stimulus source](assets/stimuli/443991b4edc3-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-Choices: A teeny bit mean / A little bit mean / Very mean.
+Choices: Not mean / A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
@@ -167,7 +165,7 @@ Display wording: “How mean do you think the kid’s mom was for NOT helping th
 
 [Stimulus source](assets/stimuli/443991b4edc3-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-Choices: A teeny bit mean / A little bit mean / Very mean.
+Choices: Not mean / A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
@@ -183,8 +181,6 @@ Choices: Mean / Not Mean.
 
 ### 15. Meanness strength · The kid’s dad
 
-*Only after “Mean” to Individual evaluation · The kid’s dad.*
-
 *Skip if “The kid’s dad” was selected as meaner; this helper has already been rated.*
 
 “How mean do you think the kid’s dad was for NOT helping the kid in the middle?”
@@ -193,7 +189,7 @@ Display wording: “How mean do you think the kid’s dad was for NOT helping th
 
 [Stimulus source](assets/stimuli/443991b4edc3-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-Choices: A teeny bit mean / A little bit mean / Very mean.
+Choices: Not mean / A teeny bit mean / A little bit mean / Very mean.
 
 ### 16. Individual evaluation · The kid’s mom
 
@@ -207,8 +203,6 @@ Choices: Mean / Not Mean.
 
 ### 17. Meanness strength · The kid’s mom
 
-*Only after “Mean” to Individual evaluation · The kid’s mom.*
-
 *Skip if “The kid’s mom” was selected as meaner; this helper has already been rated.*
 
 “How mean do you think the kid’s mom was for NOT helping the kid in the middle?”
@@ -217,7 +211,7 @@ Display wording: “How mean do you think the kid’s mom was for NOT helping th
 
 [Stimulus source](assets/stimuli/443991b4edc3-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-Choices: A teeny bit mean / A little bit mean / Very mean.
+Choices: Not mean / A teeny bit mean / A little bit mean / Very mean.
 
 ## Story 2: Sister–Brother
 
@@ -315,11 +309,9 @@ Choices: Yes / No.
 
 Expected recall answer: No.
 
+After Yes, replay the two nonhelping outcome screens with their original narration and role highlights, then ask this question again. Repeat until No.
+
 A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “Actually, remember, no one helped the kid in the middle. And the kid’s sister did NOT help the kid in the middle. And the kid’s brother did NOT help the kid in the middle. No one helped the kid in the middle.”
-
-After the reminder, reread the full question and response labels before reopening the choices.
 
 ### 28. Who was meaner? — PROPOSED WORDING
 
@@ -343,7 +335,7 @@ Display wording: “How mean do you think the kid’s sister was for NOT helping
 
 [Stimulus source](assets/stimuli/fac075f520aa-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-Choices: A teeny bit mean / A little bit mean / Very mean.
+Choices: Not mean / A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
@@ -357,7 +349,7 @@ Display wording: “How mean do you think the kid’s brother was for NOT helpin
 
 [Stimulus source](assets/stimuli/fac075f520aa-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-Choices: A teeny bit mean / A little bit mean / Very mean.
+Choices: Not mean / A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
@@ -373,8 +365,6 @@ Choices: Mean / Not Mean.
 
 ### 32. Meanness strength · The kid’s sister
 
-*Only after “Mean” to Individual evaluation · The kid’s sister.*
-
 *Skip if “The kid’s sister” was selected as meaner; this helper has already been rated.*
 
 “How mean do you think the kid’s sister was for NOT helping the kid in the middle?”
@@ -383,7 +373,7 @@ Display wording: “How mean do you think the kid’s sister was for NOT helping
 
 [Stimulus source](assets/stimuli/fac075f520aa-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-Choices: A teeny bit mean / A little bit mean / Very mean.
+Choices: Not mean / A teeny bit mean / A little bit mean / Very mean.
 
 ### 33. Individual evaluation · The kid’s brother
 
@@ -397,8 +387,6 @@ Choices: Mean / Not Mean.
 
 ### 34. Meanness strength · The kid’s brother
 
-*Only after “Mean” to Individual evaluation · The kid’s brother.*
-
 *Skip if “The kid’s brother” was selected as meaner; this helper has already been rated.*
 
 “How mean do you think the kid’s brother was for NOT helping the kid in the middle?”
@@ -407,7 +395,7 @@ Display wording: “How mean do you think the kid’s brother was for NOT helpin
 
 [Stimulus source](assets/stimuli/fac075f520aa-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-Choices: A teeny bit mean / A little bit mean / Very mean.
+Choices: Not mean / A teeny bit mean / A little bit mean / Very mean.
 
 ## Story 3: Dad–Kid
 
@@ -505,11 +493,9 @@ Choices: Yes / No.
 
 Expected recall answer: No.
 
+After Yes, replay the two nonhelping outcome screens with their original narration and role highlights, then ask this question again. Repeat until No.
+
 A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “Actually, remember, no one helped the mom. The kid’s dad did NOT help the mom. The kid did NOT help the mom. No one helped the mom.”
-
-After the reminder, reread the full question and response labels before reopening the choices.
 
 ### 45. Who was meaner? — PROPOSED WORDING
 
@@ -533,7 +519,7 @@ Display wording: “How mean do you think the kid’s dad was for NOT helping th
 
 [Stimulus source](assets/stimuli/b1ba34666825-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-Choices: A teeny bit mean / A little bit mean / Very mean.
+Choices: Not mean / A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
@@ -547,7 +533,7 @@ Display wording: “How mean do you think the kid was for NOT helping the mom in
 
 [Stimulus source](assets/stimuli/b1ba34666825-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-Choices: A teeny bit mean / A little bit mean / Very mean.
+Choices: Not mean / A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
@@ -563,8 +549,6 @@ Choices: Mean / Not Mean.
 
 ### 49. Meanness strength · The kid’s dad
 
-*Only after “Mean” to Individual evaluation · The kid’s dad.*
-
 *Skip if “The kid’s dad” was selected as meaner; this helper has already been rated.*
 
 “How mean do you think the kid’s dad was for NOT helping the mom in the middle?”
@@ -573,7 +557,7 @@ Display wording: “How mean do you think the kid’s dad was for NOT helping th
 
 [Stimulus source](assets/stimuli/b1ba34666825-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-Choices: A teeny bit mean / A little bit mean / Very mean.
+Choices: Not mean / A teeny bit mean / A little bit mean / Very mean.
 
 ### 50. Individual evaluation · The kid
 
@@ -587,8 +571,6 @@ Choices: Mean / Not Mean.
 
 ### 51. Meanness strength · The kid
 
-*Only after “Mean” to Individual evaluation · The kid.*
-
 *Skip if “The kid” was selected as meaner; this helper has already been rated.*
 
 “How mean do you think the kid was for NOT helping the mom in the middle?”
@@ -597,7 +579,7 @@ Display wording: “How mean do you think the kid was for NOT helping the mom in
 
 [Stimulus source](assets/stimuli/b1ba34666825-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-Choices: A teeny bit mean / A little bit mean / Very mean.
+Choices: Not mean / A teeny bit mean / A little bit mean / Very mean.
 
 ## Story 4: Mom–Kid
 
@@ -695,11 +677,9 @@ Choices: Yes / No.
 
 Expected recall answer: No.
 
+After Yes, replay the two nonhelping outcome screens with their original narration and role highlights, then ask this question again. Repeat until No.
+
 A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “Actually, remember, no one helped the dad. The kid did NOT help the dad. The kid’s mom did NOT help the dad. No one helped the dad.”
-
-After the reminder, reread the full question and response labels before reopening the choices.
 
 ### 62. Who was meaner? — PROPOSED WORDING
 
@@ -723,7 +703,7 @@ Display wording: “How mean do you think the kid was for NOT helping the dad in
 
 [Stimulus source](assets/stimuli/a47ed9f1306d-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-Choices: A teeny bit mean / A little bit mean / Very mean.
+Choices: Not mean / A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
@@ -737,7 +717,7 @@ Display wording: “How mean do you think the kid’s mom was for NOT helping th
 
 [Stimulus source](assets/stimuli/a47ed9f1306d-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-Choices: A teeny bit mean / A little bit mean / Very mean.
+Choices: Not mean / A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
@@ -753,8 +733,6 @@ Choices: Mean / Not Mean.
 
 ### 66. Meanness strength · The kid
 
-*Only after “Mean” to Individual evaluation · The kid.*
-
 *Skip if “The kid” was selected as meaner; this helper has already been rated.*
 
 “How mean do you think the kid was for NOT helping the dad in the middle?”
@@ -763,7 +741,7 @@ Display wording: “How mean do you think the kid was for NOT helping the dad in
 
 [Stimulus source](assets/stimuli/a47ed9f1306d-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-Choices: A teeny bit mean / A little bit mean / Very mean.
+Choices: Not mean / A teeny bit mean / A little bit mean / Very mean.
 
 ### 67. Individual evaluation · The kid’s mom
 
@@ -777,8 +755,6 @@ Choices: Mean / Not Mean.
 
 ### 68. Meanness strength · The kid’s mom
 
-*Only after “Mean” to Individual evaluation · The kid’s mom.*
-
 *Skip if “The kid’s mom” was selected as meaner; this helper has already been rated.*
 
 “How mean do you think the kid’s mom was for NOT helping the dad in the middle?”
@@ -787,7 +763,7 @@ Display wording: “How mean do you think the kid’s mom was for NOT helping th
 
 [Stimulus source](assets/stimuli/a47ed9f1306d-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-Choices: A teeny bit mean / A little bit mean / Very mean.
+Choices: Not mean / A teeny bit mean / A little bit mean / Very mean.
 
 ## Story 5: Teacher–Kid
 
@@ -885,11 +861,9 @@ Choices: Yes / No.
 
 Expected recall answer: No.
 
+After Yes, replay the two nonhelping outcome screens with their original narration and role highlights, then ask this question again. Repeat until No.
+
 A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “Actually, remember, no one helped the teacher in the middle. The teacher on the left did NOT help the teacher in the middle. The kid did NOT help the teacher in the middle. No one helped the teacher in the middle.”
-
-After the reminder, reread the full question and response labels before reopening the choices.
 
 ### 79. Who was meaner? — PROPOSED WORDING
 
@@ -913,7 +887,7 @@ Display wording: “How mean do you think the teacher on the left was for NOT he
 
 [Stimulus source](assets/stimuli/4bb031a656d9-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-Choices: A teeny bit mean / A little bit mean / Very mean.
+Choices: Not mean / A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
@@ -927,7 +901,7 @@ Display wording: “How mean do you think the kid was for NOT helping the teache
 
 [Stimulus source](assets/stimuli/4bb031a656d9-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-Choices: A teeny bit mean / A little bit mean / Very mean.
+Choices: Not mean / A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
@@ -943,8 +917,6 @@ Choices: Mean / Not Mean.
 
 ### 83. Meanness strength · The teacher on the left
 
-*Only after “Mean” to Individual evaluation · The teacher on the left.*
-
 *Skip if “The teacher on the left” was selected as meaner; this helper has already been rated.*
 
 “How mean do you think the teacher on the left was for NOT helping the teacher in the middle?”
@@ -953,7 +925,7 @@ Display wording: “How mean do you think the teacher on the left was for NOT he
 
 [Stimulus source](assets/stimuli/4bb031a656d9-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-Choices: A teeny bit mean / A little bit mean / Very mean.
+Choices: Not mean / A teeny bit mean / A little bit mean / Very mean.
 
 ### 84. Individual evaluation · The kid
 
@@ -967,8 +939,6 @@ Choices: Mean / Not Mean.
 
 ### 85. Meanness strength · The kid
 
-*Only after “Mean” to Individual evaluation · The kid.*
-
 *Skip if “The kid” was selected as meaner; this helper has already been rated.*
 
 “How mean do you think the kid was for NOT helping the teacher in the middle?”
@@ -977,7 +947,7 @@ Display wording: “How mean do you think the kid was for NOT helping the teache
 
 [Stimulus source](assets/stimuli/4bb031a656d9-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
-Choices: A teeny bit mean / A little bit mean / Very mean.
+Choices: Not mean / A teeny bit mean / A little bit mean / Very mean.
 
 ## Story 6: Teacher–Classmate
 
@@ -1075,11 +1045,9 @@ Choices: Yes / No.
 
 Expected recall answer: No.
 
+After Yes, replay the two nonhelping outcome screens with their original narration and role highlights, then ask this question again. Repeat until No.
+
 A correct response is required to advance; there is no bypass.
-
-Reminder if needed: “Actually, remember, no one helped the kid in the middle. And the kid’s classmate did NOT help the kid in the middle. And the kid’s teacher did NOT help the kid in the middle. No one helped the kid in the middle.”
-
-After the reminder, reread the full question and response labels before reopening the choices.
 
 ### 96. Who was meaner? — PROPOSED WORDING
 
@@ -1103,7 +1071,7 @@ Display wording: “How mean do you think the kid’s classmate was for NOT help
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
-Choices: A teeny bit mean / A little bit mean / Very mean.
+Choices: Not mean / A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
@@ -1117,7 +1085,7 @@ Display wording: “How mean do you think the kid’s teacher was for NOT helpin
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
-Choices: A teeny bit mean / A little bit mean / Very mean.
+Choices: Not mean / A teeny bit mean / A little bit mean / Very mean.
 
 *Added strength rating for the helper selected as meaner. This follows the comparison and is an adaptation.*
 
@@ -1133,8 +1101,6 @@ Choices: Mean / Not Mean.
 
 ### 100. Meanness strength · The kid’s classmate
 
-*Only after “Mean” to Individual evaluation · The kid’s classmate.*
-
 *Skip if “The kid’s classmate” was selected as meaner; this helper has already been rated.*
 
 “How mean do you think the kid’s classmate was for NOT helping the kid in the middle?”
@@ -1143,7 +1109,7 @@ Display wording: “How mean do you think the kid’s classmate was for NOT help
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
-Choices: A teeny bit mean / A little bit mean / Very mean.
+Choices: Not mean / A teeny bit mean / A little bit mean / Very mean.
 
 ### 101. Individual evaluation · The kid’s teacher
 
@@ -1157,8 +1123,6 @@ Choices: Mean / Not Mean.
 
 ### 102. Meanness strength · The kid’s teacher
 
-*Only after “Mean” to Individual evaluation · The kid’s teacher.*
-
 *Skip if “The kid’s teacher” was selected as meaner; this helper has already been rated.*
 
 “How mean do you think the kid’s teacher was for NOT helping the kid in the middle?”
@@ -1167,7 +1131,7 @@ Display wording: “How mean do you think the kid’s teacher was for NOT helpin
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 
-Choices: A teeny bit mean / A little bit mean / Very mean.
+Choices: Not mean / A teeny bit mean / A little bit mean / Very mean.
 
 ### 103. End of this session
 

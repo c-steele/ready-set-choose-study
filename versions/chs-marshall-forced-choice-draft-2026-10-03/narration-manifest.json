@@ -64,7 +64,11 @@
     "trafficPracticeNewRecordingCount": 3,
     "outcomeWithoutAndRecordings": 11,
     "slowerHasToRecordingCount": 4,
-    "slowerNotRecordingCount": 4
+    "slowerNotRecordingCount": 4,
+    "currentFlowRevision": "recall-replay-four-ratings-r56",
+    "currentPossibleStaticScreens": 307,
+    "currentScaleOptionCount": 4,
+    "currentRatingsPerStory": 2
   },
   "notes": [
     "This is the separate forced-choice adaptation. Each story has one prediction, one obligation, and one comparative evaluation choice between its two helpers.",
@@ -98,7 +102,8 @@
     "r43: Child-recipient outcome sentences each begin with The; the second helper sentence no longer begins with And. Eleven updated passages use three complete Evelyn Soft 0.90x sentences, verified independently from the final MP3 at their known assembly boundaries. Existing adult-recipient outcome audio is unchanged. Each helper outline glows only during its spoken role name; the characters and no-help badges stay still.",
     "r44: The four forced-choice obligation prompts use a pitch-preserving local tempo edit and gentle gain emphasis on HAS TO. Every other spoken word is retained. New final MP3s and updated word cues pass unprompted full-sentence recognition; these are edited recordings, not newly synthesized native prosody.",
     "r45: Replaced r44 obligation prompts, which inherited a slower 0.80x source. Four fresh Evelyn Soft 0.90x / 180 WPM recordings now match the surrounding narration pace. Only HAS TO is time-stretched at 0.65 tempo with gentle gain; prefix/suffix samples outside 5ms joins are unchanged before MP3 encoding. Native sources retained for comparison. Final audio and new cues pass independent unprompted full-sentence recognition.",
-    "r54: Only NOT is slower in the four Who was meaner questions, including kid and adult recipients. Existing Evelyn Soft voice, wording and surrounding audio pace are retained. No pause or volume change. New files and spoken-word cues passed exact full-sentence recognition."
+    "r54: Only NOT is slower in the four Who was meaner questions, including kid and adult recipients. Existing Evelyn Soft voice, wording and surrounding audio pace are retained. No pause or volume change. New files and spoken-word cues passed exact full-sentence recognition.",
+    "r56: Incorrect recall responses replay the original nonhelping outcome screens, then ask the recall question again until No. The small correction/reminder is no longer used. Every helper receives one four-option meanness scale, including Not mean; the other helper receives this scale after either Mean or Not Mean. Original verified option recordings are reused with the new option order."
   ],
   "clips": [
     {
@@ -5133,433 +5138,433 @@
           "stepId": "woman-mom-teacher:compare-helper1-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "woman-mom-teacher:compare-helper2-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "woman-mom-teacher:evaluation-helper1-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "woman-mom-teacher:evaluation-helper2-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "woman-sister-friend:compare-helper1-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "woman-sister-friend:compare-helper2-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "woman-sister-friend:evaluation-helper1-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "woman-sister-friend:evaluation-helper2-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "woman-bestfriend-friend:compare-helper1-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "woman-bestfriend-friend:compare-helper2-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "woman-bestfriend-friend:evaluation-helper1-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "woman-bestfriend-friend:evaluation-helper2-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "woman-teacher-friend:compare-helper1-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "woman-teacher-friend:compare-helper2-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "woman-teacher-friend:evaluation-helper1-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "woman-teacher-friend:evaluation-helper2-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "woman-mom-sister:compare-helper1-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "woman-mom-sister:compare-helper2-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "woman-mom-sister:evaluation-helper1-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "woman-mom-sister:evaluation-helper2-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "woman-teacher-classmate:compare-helper1-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "woman-teacher-classmate:compare-helper2-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "woman-teacher-classmate:evaluation-helper1-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "woman-teacher-classmate:evaluation-helper2-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "man-dad-teacher:compare-helper1-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "man-dad-teacher:compare-helper2-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "man-dad-teacher:evaluation-helper1-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "man-dad-teacher:evaluation-helper2-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "man-brother-friend:compare-helper1-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "man-brother-friend:compare-helper2-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "man-brother-friend:evaluation-helper1-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "man-brother-friend:evaluation-helper2-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "man-bestfriend-friend:compare-helper1-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "man-bestfriend-friend:compare-helper2-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "man-bestfriend-friend:evaluation-helper1-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "man-bestfriend-friend:evaluation-helper2-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "man-teacher-friend:compare-helper1-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "man-teacher-friend:compare-helper2-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "man-teacher-friend:evaluation-helper1-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "man-teacher-friend:evaluation-helper2-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "man-dad-brother:compare-helper1-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "man-dad-brother:compare-helper2-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "man-dad-brother:evaluation-helper1-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "man-dad-brother:evaluation-helper2-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "man-teacher-classmate:compare-helper1-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "man-teacher-classmate:compare-helper2-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "man-teacher-classmate:evaluation-helper1-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "man-teacher-classmate:evaluation-helper2-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "family-mom-dad:compare-helper1-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "family-mom-dad:compare-helper2-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "family-mom-dad:evaluation-helper1-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "family-mom-dad:evaluation-helper2-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "family-sister-brother:compare-helper1-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "family-sister-brother:compare-helper2-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "family-sister-brother:evaluation-helper1-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "family-sister-brother:evaluation-helper2-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "family-dad-kid:compare-helper1-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "family-dad-kid:compare-helper2-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "family-dad-kid:evaluation-helper1-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "family-dad-kid:evaluation-helper2-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "family-mom-kid:compare-helper1-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "family-mom-kid:compare-helper2-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "family-mom-kid:evaluation-helper1-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "family-mom-kid:evaluation-helper2-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "family-teacher-kid:compare-helper1-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "family-teacher-kid:compare-helper2-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "family-teacher-kid:evaluation-helper1-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "family-teacher-kid:evaluation-helper2-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "family-teacher-classmate:compare-helper1-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "family-teacher-classmate:compare-helper2-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "family-teacher-classmate:evaluation-helper1-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         },
         {
           "stepId": "family-teacher-classmate:evaluation-helper2-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 0
+          "optionIndex": 1
         }
       ],
       "sha256": "5c181b834e79461e0c436e8f2dcdf3e6b3cc14ba3c421420af2ee52b3527676e",
@@ -5598,433 +5603,433 @@
           "stepId": "woman-mom-teacher:compare-helper1-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "woman-mom-teacher:compare-helper2-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "woman-mom-teacher:evaluation-helper1-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "woman-mom-teacher:evaluation-helper2-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "woman-sister-friend:compare-helper1-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "woman-sister-friend:compare-helper2-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "woman-sister-friend:evaluation-helper1-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "woman-sister-friend:evaluation-helper2-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "woman-bestfriend-friend:compare-helper1-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "woman-bestfriend-friend:compare-helper2-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "woman-bestfriend-friend:evaluation-helper1-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "woman-bestfriend-friend:evaluation-helper2-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "woman-teacher-friend:compare-helper1-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "woman-teacher-friend:compare-helper2-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "woman-teacher-friend:evaluation-helper1-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "woman-teacher-friend:evaluation-helper2-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "woman-mom-sister:compare-helper1-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "woman-mom-sister:compare-helper2-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "woman-mom-sister:evaluation-helper1-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "woman-mom-sister:evaluation-helper2-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "woman-teacher-classmate:compare-helper1-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "woman-teacher-classmate:compare-helper2-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "woman-teacher-classmate:evaluation-helper1-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "woman-teacher-classmate:evaluation-helper2-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "man-dad-teacher:compare-helper1-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "man-dad-teacher:compare-helper2-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "man-dad-teacher:evaluation-helper1-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "man-dad-teacher:evaluation-helper2-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "man-brother-friend:compare-helper1-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "man-brother-friend:compare-helper2-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "man-brother-friend:evaluation-helper1-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "man-brother-friend:evaluation-helper2-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "man-bestfriend-friend:compare-helper1-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "man-bestfriend-friend:compare-helper2-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "man-bestfriend-friend:evaluation-helper1-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "man-bestfriend-friend:evaluation-helper2-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "man-teacher-friend:compare-helper1-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "man-teacher-friend:compare-helper2-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "man-teacher-friend:evaluation-helper1-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "man-teacher-friend:evaluation-helper2-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "man-dad-brother:compare-helper1-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "man-dad-brother:compare-helper2-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "man-dad-brother:evaluation-helper1-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "man-dad-brother:evaluation-helper2-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "man-teacher-classmate:compare-helper1-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "man-teacher-classmate:compare-helper2-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "man-teacher-classmate:evaluation-helper1-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "man-teacher-classmate:evaluation-helper2-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "family-mom-dad:compare-helper1-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "family-mom-dad:compare-helper2-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "family-mom-dad:evaluation-helper1-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "family-mom-dad:evaluation-helper2-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "family-sister-brother:compare-helper1-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "family-sister-brother:compare-helper2-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "family-sister-brother:evaluation-helper1-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "family-sister-brother:evaluation-helper2-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "family-dad-kid:compare-helper1-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "family-dad-kid:compare-helper2-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "family-dad-kid:evaluation-helper1-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "family-dad-kid:evaluation-helper2-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "family-mom-kid:compare-helper1-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "family-mom-kid:compare-helper2-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "family-mom-kid:evaluation-helper1-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "family-mom-kid:evaluation-helper2-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "family-teacher-kid:compare-helper1-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "family-teacher-kid:compare-helper2-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "family-teacher-kid:evaluation-helper1-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "family-teacher-kid:evaluation-helper2-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "family-teacher-classmate:compare-helper1-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "family-teacher-classmate:compare-helper2-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "family-teacher-classmate:evaluation-helper1-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         },
         {
           "stepId": "family-teacher-classmate:evaluation-helper2-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 1
+          "optionIndex": 2
         }
       ],
       "sha256": "9bee8d5dfe7a6d2ed0dbcff27cc0bebf99b91a7a0f4f9e1d8569187d5aeaf63b",
@@ -6063,433 +6068,433 @@
           "stepId": "woman-mom-teacher:compare-helper1-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "woman-mom-teacher:compare-helper2-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "woman-mom-teacher:evaluation-helper1-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "woman-mom-teacher:evaluation-helper2-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "woman-sister-friend:compare-helper1-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "woman-sister-friend:compare-helper2-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "woman-sister-friend:evaluation-helper1-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "woman-sister-friend:evaluation-helper2-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "woman-bestfriend-friend:compare-helper1-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "woman-bestfriend-friend:compare-helper2-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "woman-bestfriend-friend:evaluation-helper1-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "woman-bestfriend-friend:evaluation-helper2-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "woman-teacher-friend:compare-helper1-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "woman-teacher-friend:compare-helper2-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "woman-teacher-friend:evaluation-helper1-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "woman-teacher-friend:evaluation-helper2-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "woman-mom-sister:compare-helper1-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "woman-mom-sister:compare-helper2-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "woman-mom-sister:evaluation-helper1-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "woman-mom-sister:evaluation-helper2-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "woman-teacher-classmate:compare-helper1-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "woman-teacher-classmate:compare-helper2-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "woman-teacher-classmate:evaluation-helper1-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "woman-teacher-classmate:evaluation-helper2-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "man-dad-teacher:compare-helper1-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "man-dad-teacher:compare-helper2-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "man-dad-teacher:evaluation-helper1-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "man-dad-teacher:evaluation-helper2-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "man-brother-friend:compare-helper1-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "man-brother-friend:compare-helper2-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "man-brother-friend:evaluation-helper1-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "man-brother-friend:evaluation-helper2-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "man-bestfriend-friend:compare-helper1-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "man-bestfriend-friend:compare-helper2-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "man-bestfriend-friend:evaluation-helper1-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "man-bestfriend-friend:evaluation-helper2-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "man-teacher-friend:compare-helper1-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "man-teacher-friend:compare-helper2-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "man-teacher-friend:evaluation-helper1-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "man-teacher-friend:evaluation-helper2-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "man-dad-brother:compare-helper1-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "man-dad-brother:compare-helper2-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "man-dad-brother:evaluation-helper1-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "man-dad-brother:evaluation-helper2-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "man-teacher-classmate:compare-helper1-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "man-teacher-classmate:compare-helper2-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "man-teacher-classmate:evaluation-helper1-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "man-teacher-classmate:evaluation-helper2-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "family-mom-dad:compare-helper1-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "family-mom-dad:compare-helper2-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "family-mom-dad:evaluation-helper1-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "family-mom-dad:evaluation-helper2-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "family-sister-brother:compare-helper1-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "family-sister-brother:compare-helper2-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "family-sister-brother:evaluation-helper1-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "family-sister-brother:evaluation-helper2-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "family-dad-kid:compare-helper1-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "family-dad-kid:compare-helper2-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "family-dad-kid:evaluation-helper1-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "family-dad-kid:evaluation-helper2-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "family-mom-kid:compare-helper1-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "family-mom-kid:compare-helper2-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "family-mom-kid:evaluation-helper1-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "family-mom-kid:evaluation-helper2-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "family-teacher-kid:compare-helper1-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "family-teacher-kid:compare-helper2-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "family-teacher-kid:evaluation-helper1-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "family-teacher-kid:evaluation-helper2-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "family-teacher-classmate:compare-helper1-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "family-teacher-classmate:compare-helper2-amount",
           "proposedWording": true,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "family-teacher-classmate:evaluation-helper1-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         },
         {
           "stepId": "family-teacher-classmate:evaluation-helper2-amount",
           "proposedWording": false,
           "part": "option",
-          "optionIndex": 2
+          "optionIndex": 3
         }
       ],
       "sha256": "3ec7dae2841f3be800e9d321b7c7e7e51a52e0d40b8f4340d5ea96d2832d1b0b",
@@ -7153,6 +7158,438 @@
           "proposedWording": false,
           "part": "option",
           "optionIndex": 1
+        },
+        {
+          "stepId": "woman-mom-teacher:compare-helper1-amount",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "woman-mom-teacher:compare-helper2-amount",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "woman-mom-teacher:evaluation-helper1-amount",
+          "proposedWording": false,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "woman-mom-teacher:evaluation-helper2-amount",
+          "proposedWording": false,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "woman-sister-friend:compare-helper1-amount",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "woman-sister-friend:compare-helper2-amount",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "woman-sister-friend:evaluation-helper1-amount",
+          "proposedWording": false,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "woman-sister-friend:evaluation-helper2-amount",
+          "proposedWording": false,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "woman-bestfriend-friend:compare-helper1-amount",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "woman-bestfriend-friend:compare-helper2-amount",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "woman-bestfriend-friend:evaluation-helper1-amount",
+          "proposedWording": false,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "woman-bestfriend-friend:evaluation-helper2-amount",
+          "proposedWording": false,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "woman-teacher-friend:compare-helper1-amount",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "woman-teacher-friend:compare-helper2-amount",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "woman-teacher-friend:evaluation-helper1-amount",
+          "proposedWording": false,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "woman-teacher-friend:evaluation-helper2-amount",
+          "proposedWording": false,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "woman-mom-sister:compare-helper1-amount",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "woman-mom-sister:compare-helper2-amount",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "woman-mom-sister:evaluation-helper1-amount",
+          "proposedWording": false,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "woman-mom-sister:evaluation-helper2-amount",
+          "proposedWording": false,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "woman-teacher-classmate:compare-helper1-amount",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "woman-teacher-classmate:compare-helper2-amount",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "woman-teacher-classmate:evaluation-helper1-amount",
+          "proposedWording": false,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "woman-teacher-classmate:evaluation-helper2-amount",
+          "proposedWording": false,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "man-dad-teacher:compare-helper1-amount",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "man-dad-teacher:compare-helper2-amount",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "man-dad-teacher:evaluation-helper1-amount",
+          "proposedWording": false,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "man-dad-teacher:evaluation-helper2-amount",
+          "proposedWording": false,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "man-brother-friend:compare-helper1-amount",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "man-brother-friend:compare-helper2-amount",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "man-brother-friend:evaluation-helper1-amount",
+          "proposedWording": false,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "man-brother-friend:evaluation-helper2-amount",
+          "proposedWording": false,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "man-bestfriend-friend:compare-helper1-amount",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "man-bestfriend-friend:compare-helper2-amount",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "man-bestfriend-friend:evaluation-helper1-amount",
+          "proposedWording": false,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "man-bestfriend-friend:evaluation-helper2-amount",
+          "proposedWording": false,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "man-teacher-friend:compare-helper1-amount",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "man-teacher-friend:compare-helper2-amount",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "man-teacher-friend:evaluation-helper1-amount",
+          "proposedWording": false,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "man-teacher-friend:evaluation-helper2-amount",
+          "proposedWording": false,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "man-dad-brother:compare-helper1-amount",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "man-dad-brother:compare-helper2-amount",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "man-dad-brother:evaluation-helper1-amount",
+          "proposedWording": false,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "man-dad-brother:evaluation-helper2-amount",
+          "proposedWording": false,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "man-teacher-classmate:compare-helper1-amount",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "man-teacher-classmate:compare-helper2-amount",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "man-teacher-classmate:evaluation-helper1-amount",
+          "proposedWording": false,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "man-teacher-classmate:evaluation-helper2-amount",
+          "proposedWording": false,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "family-mom-dad:compare-helper1-amount",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "family-mom-dad:compare-helper2-amount",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "family-mom-dad:evaluation-helper1-amount",
+          "proposedWording": false,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "family-mom-dad:evaluation-helper2-amount",
+          "proposedWording": false,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "family-sister-brother:compare-helper1-amount",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "family-sister-brother:compare-helper2-amount",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "family-sister-brother:evaluation-helper1-amount",
+          "proposedWording": false,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "family-sister-brother:evaluation-helper2-amount",
+          "proposedWording": false,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "family-dad-kid:compare-helper1-amount",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "family-dad-kid:compare-helper2-amount",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "family-dad-kid:evaluation-helper1-amount",
+          "proposedWording": false,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "family-dad-kid:evaluation-helper2-amount",
+          "proposedWording": false,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "family-mom-kid:compare-helper1-amount",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "family-mom-kid:compare-helper2-amount",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "family-mom-kid:evaluation-helper1-amount",
+          "proposedWording": false,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "family-mom-kid:evaluation-helper2-amount",
+          "proposedWording": false,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "family-teacher-kid:compare-helper1-amount",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "family-teacher-kid:compare-helper2-amount",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "family-teacher-kid:evaluation-helper1-amount",
+          "proposedWording": false,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "family-teacher-kid:evaluation-helper2-amount",
+          "proposedWording": false,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "family-teacher-classmate:compare-helper1-amount",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "family-teacher-classmate:compare-helper2-amount",
+          "proposedWording": true,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "family-teacher-classmate:evaluation-helper1-amount",
+          "proposedWording": false,
+          "part": "option",
+          "optionIndex": 0
+        },
+        {
+          "stepId": "family-teacher-classmate:evaluation-helper2-amount",
+          "proposedWording": false,
+          "part": "option",
+          "optionIndex": 0
         }
       ],
       "sha256": "24277ed40eef68cc883af9a690fb354e2fd5945167604d5c81f8b6b290a7bf2f",
@@ -12672,13 +13109,7 @@
       "src": "assets/narration/nr_318-reminder-native-article-pronunciation.mp3",
       "kind": "reminder",
       "status": "verified-complete-native-recording",
-      "uses": [
-        {
-          "stepId": "family-dad-kid:recall-all",
-          "proposedWording": false,
-          "part": "reminder"
-        }
-      ],
+      "uses": [],
       "revisionCategory": "recallReminder",
       "sha256": "d514f76ca1c1b860537a216008f6c9a1b78ca12a1c4b7d8c940eb76a3970b955",
       "bytes": 466069,
@@ -13739,13 +14170,7 @@
       "src": "assets/narration/nr_319-reminder-native-article-pronunciation.mp3",
       "kind": "reminder",
       "status": "verified-complete-native-recording",
-      "uses": [
-        {
-          "stepId": "family-mom-kid:recall-all",
-          "proposedWording": false,
-          "part": "reminder"
-        }
-      ],
+      "uses": [],
       "revisionCategory": "recallReminder",
       "sha256": "48013dfcd1de8dbef02f9e9d5b0dac953144f54734081b469fdda6ec8ffb8e36",
       "bytes": 472338,
@@ -14857,13 +15282,7 @@
       "src": "assets/narration/nr_320-teacher-reminder-native-Thee.mp3",
       "kind": "reminder",
       "status": "verified-complete-native-recording",
-      "uses": [
-        {
-          "stepId": "family-teacher-kid:recall-all",
-          "proposedWording": false,
-          "part": "reminder"
-        }
-      ],
+      "uses": [],
       "revisionCategory": "recallReminder",
       "sha256": "58077b3fbd347d48058f577e37f2e832ed63d5c0735f67f372ab056976b8e947",
       "bytes": 602951,
@@ -15701,12 +16120,7 @@
       "src": "assets/narration/nr_middle_019.mp3",
       "kind": "reminder",
       "status": "verified-complete-native-recording",
-      "uses": [
-        {
-          "stepId": "woman-mom-teacher:recall-all",
-          "part": "reminder"
-        }
-      ],
+      "uses": [],
       "sha256": "3d34b3c7e760dcfc5c965c6ea624f0850a448dc0612f23f18e362448d7b10dae",
       "bytes": 523538,
       "durationSeconds": 13.087325,
@@ -15868,12 +16282,7 @@
       "src": "assets/narration/nr_middle_039.mp3",
       "kind": "reminder",
       "status": "verified-complete-native-recording",
-      "uses": [
-        {
-          "stepId": "woman-sister-friend:recall-all",
-          "part": "reminder"
-        }
-      ],
+      "uses": [],
       "sha256": "adbba468f1113a6223f9d076eab478e6503fb2dbddaa77e26f37f4c323aea34f",
       "bytes": 524583,
       "durationSeconds": 13.11345,
@@ -16039,16 +16448,7 @@
       "src": "assets/narration/nr_middle_052.mp3",
       "kind": "reminder",
       "status": "verified-complete-native-recording",
-      "uses": [
-        {
-          "stepId": "woman-bestfriend-friend:recall-all",
-          "part": "reminder"
-        },
-        {
-          "stepId": "man-bestfriend-friend:recall-all",
-          "part": "reminder"
-        }
-      ],
+      "uses": [],
       "sha256": "2da3d9e65abed7e7791bc98b5b059b01dd637f6351330f5abe7a4061cf24496b",
       "bytes": 533987,
       "durationSeconds": 13.34855,
@@ -16214,16 +16614,7 @@
       "src": "assets/narration/nr_middle_057.mp3",
       "kind": "reminder",
       "status": "verified-complete-native-recording",
-      "uses": [
-        {
-          "stepId": "woman-teacher-friend:recall-all",
-          "part": "reminder"
-        },
-        {
-          "stepId": "man-teacher-friend:recall-all",
-          "part": "reminder"
-        }
-      ],
+      "uses": [],
       "sha256": "c5e5e283153f82ddbc975ee41d802e8b2c87528a43cb228ebddec2f13594a7d5",
       "bytes": 522494,
       "durationSeconds": 13.061225,
@@ -16385,12 +16776,7 @@
       "src": "assets/narration/nr_middle_060.mp3",
       "kind": "reminder",
       "status": "verified-complete-native-recording",
-      "uses": [
-        {
-          "stepId": "woman-mom-sister:recall-all",
-          "part": "reminder"
-        }
-      ],
+      "uses": [],
       "sha256": "75267fd874221e15920007ff41f99084fff3e4df31efc48fe8b03ba5bebc0ba6",
       "bytes": 525628,
       "durationSeconds": 13.139575,
@@ -16560,20 +16946,7 @@
       "src": "assets/narration/nr_middle_069.mp3",
       "kind": "reminder",
       "status": "verified-complete-native-recording",
-      "uses": [
-        {
-          "stepId": "woman-teacher-classmate:recall-all",
-          "part": "reminder"
-        },
-        {
-          "stepId": "man-teacher-classmate:recall-all",
-          "part": "reminder"
-        },
-        {
-          "stepId": "family-teacher-classmate:recall-all",
-          "part": "reminder"
-        }
-      ],
+      "uses": [],
       "sha256": "1ea95edb2f9960a5b7746b7180210a136cd5ecaa757cada307973add99dbd843",
       "bytes": 530853,
       "durationSeconds": 13.2702,
@@ -16735,12 +17108,7 @@
       "src": "assets/narration/nr_middle_080.mp3",
       "kind": "reminder",
       "status": "verified-complete-native-recording",
-      "uses": [
-        {
-          "stepId": "man-dad-teacher:recall-all",
-          "part": "reminder"
-        }
-      ],
+      "uses": [],
       "sha256": "8ce86da39dff5d0701ed0f0a9b3ccb77fa220ce1c7530dad7268ff61f128dfa3",
       "bytes": 522494,
       "durationSeconds": 13.061225,
@@ -16902,12 +17270,7 @@
       "src": "assets/narration/nr_middle_091.mp3",
       "kind": "reminder",
       "status": "verified-complete-native-recording",
-      "uses": [
-        {
-          "stepId": "man-brother-friend:recall-all",
-          "part": "reminder"
-        }
-      ],
+      "uses": [],
       "sha256": "6e5601a3509eabccfbe25b353a59eb833886db796a68b603745bec2e23590768",
       "bytes": 523538,
       "durationSeconds": 13.087325,
@@ -17069,12 +17432,7 @@
       "src": "assets/narration/nr_middle_096.mp3",
       "kind": "reminder",
       "status": "verified-complete-native-recording",
-      "uses": [
-        {
-          "stepId": "man-dad-brother:recall-all",
-          "part": "reminder"
-        }
-      ],
+      "uses": [],
       "sha256": "0ab9527357f5b580402f29dffab0daad775a489c335b10dd6be8027cd81c08bb",
       "bytes": 523538,
       "durationSeconds": 13.087325,
@@ -17236,12 +17594,7 @@
       "src": "assets/narration/nr_middle_099.mp3",
       "kind": "reminder",
       "status": "verified-complete-native-recording",
-      "uses": [
-        {
-          "stepId": "family-mom-dad:recall-all",
-          "part": "reminder"
-        }
-      ],
+      "uses": [],
       "sha256": "94e5d1625c908957de1d489d748dea1f40def4caf27ff9dface24731cdc1a7ad",
       "bytes": 519359,
       "durationSeconds": 12.98285,
@@ -17403,12 +17756,7 @@
       "src": "assets/narration/nr_middle_102.mp3",
       "kind": "reminder",
       "status": "verified-complete-native-recording",
-      "uses": [
-        {
-          "stepId": "family-sister-brother:recall-all",
-          "part": "reminder"
-        }
-      ],
+      "uses": [],
       "sha256": "f49c6b840d4947cde61191d3ced58aaccbebfd368c9ea86ed267827d43d5f585",
       "bytes": 528763,
       "durationSeconds": 13.21795,
@@ -19568,7 +19916,7 @@
     },
     "woman-mom-teacher:recall-all": {
       "prompt": "nr_middle_018",
-      "reminder": "nr_middle_019",
+      "reminder": null,
       "options": [
         "nr_011",
         "nr_012"
@@ -19617,6 +19965,7 @@
       "prompt": "nr_200",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -19627,6 +19976,7 @@
       "prompt": "nr_202",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -19646,6 +19996,7 @@
       "prompt": "nr_200",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -19665,6 +20016,7 @@
       "prompt": "nr_202",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -19841,7 +20193,7 @@
     },
     "woman-sister-friend:recall-all": {
       "prompt": "nr_middle_018",
-      "reminder": "nr_middle_039",
+      "reminder": null,
       "options": [
         "nr_011",
         "nr_012"
@@ -19890,6 +20242,7 @@
       "prompt": "nr_206",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -19900,6 +20253,7 @@
       "prompt": "nr_208",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -19919,6 +20273,7 @@
       "prompt": "nr_206",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -19938,6 +20293,7 @@
       "prompt": "nr_208",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -20114,7 +20470,7 @@
     },
     "woman-bestfriend-friend:recall-all": {
       "prompt": "nr_middle_018",
-      "reminder": "nr_middle_052",
+      "reminder": null,
       "options": [
         "nr_011",
         "nr_012"
@@ -20163,6 +20519,7 @@
       "prompt": "nr_208",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -20173,6 +20530,7 @@
       "prompt": "nr_212",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -20192,6 +20550,7 @@
       "prompt": "nr_208",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -20211,6 +20570,7 @@
       "prompt": "nr_212",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -20387,7 +20747,7 @@
     },
     "woman-teacher-friend:recall-all": {
       "prompt": "nr_middle_018",
-      "reminder": "nr_middle_057",
+      "reminder": null,
       "options": [
         "nr_011",
         "nr_012"
@@ -20436,6 +20796,7 @@
       "prompt": "nr_200",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -20446,6 +20807,7 @@
       "prompt": "nr_208",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -20465,6 +20827,7 @@
       "prompt": "nr_200",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -20484,6 +20847,7 @@
       "prompt": "nr_208",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -20660,7 +21024,7 @@
     },
     "woman-mom-sister:recall-all": {
       "prompt": "nr_middle_018",
-      "reminder": "nr_middle_060",
+      "reminder": null,
       "options": [
         "nr_011",
         "nr_012"
@@ -20709,6 +21073,7 @@
       "prompt": "nr_202",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -20719,6 +21084,7 @@
       "prompt": "nr_206",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -20738,6 +21104,7 @@
       "prompt": "nr_202",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -20757,6 +21124,7 @@
       "prompt": "nr_206",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -20933,7 +21301,7 @@
     },
     "woman-teacher-classmate:recall-all": {
       "prompt": "nr_middle_018",
-      "reminder": "nr_middle_069",
+      "reminder": null,
       "options": [
         "nr_011",
         "nr_012"
@@ -20982,6 +21350,7 @@
       "prompt": "nr_220",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -20992,6 +21361,7 @@
       "prompt": "nr_200",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -21011,6 +21381,7 @@
       "prompt": "nr_220",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -21030,6 +21401,7 @@
       "prompt": "nr_200",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -21206,7 +21578,7 @@
     },
     "man-dad-teacher:recall-all": {
       "prompt": "nr_middle_018",
-      "reminder": "nr_middle_080",
+      "reminder": null,
       "options": [
         "nr_011",
         "nr_012"
@@ -21255,6 +21627,7 @@
       "prompt": "nr_200",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -21265,6 +21638,7 @@
       "prompt": "nr_224",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -21284,6 +21658,7 @@
       "prompt": "nr_200",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -21303,6 +21678,7 @@
       "prompt": "nr_224",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -21479,7 +21855,7 @@
     },
     "man-brother-friend:recall-all": {
       "prompt": "nr_middle_018",
-      "reminder": "nr_middle_091",
+      "reminder": null,
       "options": [
         "nr_011",
         "nr_012"
@@ -21528,6 +21904,7 @@
       "prompt": "nr_228",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -21538,6 +21915,7 @@
       "prompt": "nr_208",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -21557,6 +21935,7 @@
       "prompt": "nr_228",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -21576,6 +21955,7 @@
       "prompt": "nr_208",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -21752,7 +22132,7 @@
     },
     "man-bestfriend-friend:recall-all": {
       "prompt": "nr_middle_018",
-      "reminder": "nr_middle_052",
+      "reminder": null,
       "options": [
         "nr_011",
         "nr_012"
@@ -21801,6 +22181,7 @@
       "prompt": "nr_208",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -21811,6 +22192,7 @@
       "prompt": "nr_212",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -21830,6 +22212,7 @@
       "prompt": "nr_208",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -21849,6 +22232,7 @@
       "prompt": "nr_212",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -22025,7 +22409,7 @@
     },
     "man-teacher-friend:recall-all": {
       "prompt": "nr_middle_018",
-      "reminder": "nr_middle_057",
+      "reminder": null,
       "options": [
         "nr_011",
         "nr_012"
@@ -22074,6 +22458,7 @@
       "prompt": "nr_200",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -22084,6 +22469,7 @@
       "prompt": "nr_208",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -22103,6 +22489,7 @@
       "prompt": "nr_200",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -22122,6 +22509,7 @@
       "prompt": "nr_208",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -22298,7 +22686,7 @@
     },
     "man-dad-brother:recall-all": {
       "prompt": "nr_middle_018",
-      "reminder": "nr_middle_096",
+      "reminder": null,
       "options": [
         "nr_011",
         "nr_012"
@@ -22347,6 +22735,7 @@
       "prompt": "nr_224",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -22357,6 +22746,7 @@
       "prompt": "nr_228",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -22376,6 +22766,7 @@
       "prompt": "nr_224",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -22395,6 +22786,7 @@
       "prompt": "nr_228",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -22571,7 +22963,7 @@
     },
     "man-teacher-classmate:recall-all": {
       "prompt": "nr_middle_018",
-      "reminder": "nr_middle_069",
+      "reminder": null,
       "options": [
         "nr_011",
         "nr_012"
@@ -22620,6 +23012,7 @@
       "prompt": "nr_220",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -22630,6 +23023,7 @@
       "prompt": "nr_200",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -22649,6 +23043,7 @@
       "prompt": "nr_220",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -22668,6 +23063,7 @@
       "prompt": "nr_200",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -22844,7 +23240,7 @@
     },
     "family-mom-dad:recall-all": {
       "prompt": "nr_middle_018",
-      "reminder": "nr_middle_099",
+      "reminder": null,
       "options": [
         "nr_011",
         "nr_012"
@@ -22893,6 +23289,7 @@
       "prompt": "nr_224",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -22903,6 +23300,7 @@
       "prompt": "nr_202",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -22922,6 +23320,7 @@
       "prompt": "nr_224",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -22941,6 +23340,7 @@
       "prompt": "nr_202",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -23117,7 +23517,7 @@
     },
     "family-sister-brother:recall-all": {
       "prompt": "nr_middle_018",
-      "reminder": "nr_middle_102",
+      "reminder": null,
       "options": [
         "nr_011",
         "nr_012"
@@ -23166,6 +23566,7 @@
       "prompt": "nr_206",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -23176,6 +23577,7 @@
       "prompt": "nr_228",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -23195,6 +23597,7 @@
       "prompt": "nr_206",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -23214,6 +23617,7 @@
       "prompt": "nr_228",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -23390,7 +23794,7 @@
     },
     "family-dad-kid:recall-all": {
       "prompt": "nr_143",
-      "reminder": "nr_318",
+      "reminder": null,
       "options": [
         "nr_011",
         "nr_012"
@@ -23439,6 +23843,7 @@
       "prompt": "nr_239",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -23449,6 +23854,7 @@
       "prompt": "nr_241",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -23468,6 +23874,7 @@
       "prompt": "nr_239",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -23487,6 +23894,7 @@
       "prompt": "nr_241",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -23663,7 +24071,7 @@
     },
     "family-mom-kid:recall-all": {
       "prompt": "nr_163",
-      "reminder": "nr_319",
+      "reminder": null,
       "options": [
         "nr_011",
         "nr_012"
@@ -23712,6 +24120,7 @@
       "prompt": "nr_246",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -23722,6 +24131,7 @@
       "prompt": "nr_248",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -23741,6 +24151,7 @@
       "prompt": "nr_246",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -23760,6 +24171,7 @@
       "prompt": "nr_248",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -23936,7 +24348,7 @@
     },
     "family-teacher-kid:recall-all": {
       "prompt": "nr_184",
-      "reminder": "nr_320",
+      "reminder": null,
       "options": [
         "nr_011",
         "nr_012"
@@ -23985,6 +24397,7 @@
       "prompt": "nr_253",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -23995,6 +24408,7 @@
       "prompt": "nr_255",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -24014,6 +24428,7 @@
       "prompt": "nr_253",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -24033,6 +24448,7 @@
       "prompt": "nr_255",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -24209,7 +24625,7 @@
     },
     "family-teacher-classmate:recall-all": {
       "prompt": "nr_middle_018",
-      "reminder": "nr_middle_069",
+      "reminder": null,
       "options": [
         "nr_011",
         "nr_012"
@@ -24258,6 +24674,7 @@
       "prompt": "nr_220",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -24268,6 +24685,7 @@
       "prompt": "nr_200",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -24287,6 +24705,7 @@
       "prompt": "nr_220",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"
@@ -24306,6 +24725,7 @@
       "prompt": "nr_200",
       "reminder": null,
       "options": [
+        "nr_042",
         "nr_044",
         "nr_037",
         "nr_045"

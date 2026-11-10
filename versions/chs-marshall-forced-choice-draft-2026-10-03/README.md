@@ -24,9 +24,9 @@ These are forced comparisons between helpers. There is no both, neither, or equa
 4. Ask the first assigned question: who WILL help or who HAS TO help. The two helper choices follow their positions in the scene, left then right.
 5. Ask the other question, with the same two helper choices.
 6. State the fixed outcome: no one helped, then name each helper who did NOT help.
-7. Ask one Yes/No recall check: did either person help? The expected answer is No; a correction restates the explicit outcome when needed.
+7. Ask one Yes/No recall check: did either person help? The expected answer is No. Yes returns to the two original nonhelping outcome screens with narration and role highlights, then repeats the recall question. This repeats until No; there is no small-text correction panel.
 8. Ask who was meaner for NOT helping the recipient, with the same helper choices.
-9. Rate the selected helper’s meanness once, then ask only about the other helper with Mean / Not Mean and a strength rating after Mean. Skip both repeated questions for the selected helper.
+9. Rate the selected helper’s meanness once, then ask only about the other helper with Mean / Not Mean and a strength rating after either Mean or Not Mean. Each helper receives exactly one scale: Not mean / A teeny bit mean / A little bit mean / Very mean. Skip both repeated questions for the selected helper.
 10. Continue to the next pairing, then thank the child at session end.
 
 There are **three forced-choice judgments per story**, followed by a selected-helper meanness rating and an individual evaluation of the other helper. Prediction or obligation responses never change whether the helpers help: the nonhelping outcome is fixed.
@@ -49,7 +49,7 @@ New forced-choice prompts need new NaturalReaders recordings. Existing recording
 
 ## Scope and source limits
 
-This is a two-helper sadness adaptation using the relationship pairings from Find the Caregiver. It is not a verbatim copy of Marshall et al. (2022), Study 1, which used individual Yes/No prediction and obligation measures with follow-ups. Explicit nonhelping narration, corrective reminders, fixed review order, and on-screen taps are implementation choices in this draft. Six stories per role set is retained for review; question order has two explicit versions per role set; role-set assignment and randomized story order remain separate study-design decisions.
+This is a two-helper sadness adaptation using the relationship pairings from Find the Caregiver. It is not a verbatim copy of Marshall et al. (2022), Study 1, which used individual Yes/No prediction and obligation measures with follow-ups. Explicit nonhelping narration, outcome replays after an incorrect recall answer, fixed review order, and on-screen taps are implementation choices in this draft. Six stories per role set is retained for review; question order has two explicit versions per role set; role-set assignment and randomized story order remain separate study-design decisions.
 
 This preview is for reviewing the proposed task. Do not submit, activate, or recruit from this draft without the user’s separate instruction.
 
@@ -73,3 +73,5 @@ Use both versions within Woman/Girl (`set=woman`), Man/Boy (`set=man`), and Gend
 These are fixed condition links, not a shared enrollment allocator. Opening links does not reserve a slot or automatically enforce equal enrollment. Old links without `questionOrder` retain WILL-first for compatibility; use the explicit links to counterbalance. In the CHS draft, the parent launcher must pass the selected `questionOrder` to the iframe.
 
 Screen messages, response records and completion payloads include `question_order`, `first_question`, `counterbalance_cell`, and `question_order_version`. Prediction and obligation records also include `question_position` (1 or 2). Screen IDs and response keys keep their original measure names even when their positions swap. Data submission remains disabled in the private CHS review draft.
+
+Recall responses retain every Yes attempt as an unaccepted response. `outcome_replay_count` records how many outcome replays preceded the accepted No. Replays do not repeat the prediction or obligation questions or change their responses.

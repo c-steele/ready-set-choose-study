@@ -5,7 +5,7 @@
   const params=new URLSearchParams(location.search);
   const chsBridge=window.MarshallCHSBridge;
   let childView=false,choiceConfirmation=null,correctFeedbackState=null,screenHeard=false;
-  let session,steps,index=0,answers={},history=[],wrong=null,optionReader=null,downloadUrl=null;
+  let session,steps,index=0,answers={},history=[],recallReplays={},wrong=null,optionReader=null,downloadUrl=null;
   let elapsed=0,started=null,timerUsed=false,incomplete=false,completed=false;
   let narrationRun=null,narrationEnabled=false,narrationPlaying=false,audioStartRequired=false,audioEverStarted=false,autoAdvanceTimer=null,advanceGeneration=0;
   const narration=window.ObligationNarration;
@@ -285,7 +285,7 @@
     return `<p class="choice-caption">${esc(s.choiceQuestion || s.choices[0]+' or '+second+'?')}</p>`;
   }
   function caption(s){const text=esc(s.displayTitle||s.displayText||s.text);return s.captionEmphasis==='HAVE TO'?text.replace(/\bHAVE TO\b/g,'<em class="obligation-emphasis">HAVE TO</em>'):text;}
-  function prompt(s){return `<div class="prompt${s.localId==='recall-all'?' recall-prompt':''}${s.choices?.length===3?' scale-prompt':''}${s.measure==='Individual evaluation'?' evaluation-prompt':''}">${s.context&&!s.displayText?`<p class="referent">${esc(s.context)}</p>`:''}${s.preface?`<p class="preface">${esc(s.preface)}</p>`:''}<h2>${caption(s)}</h2></div>`;}
+  function prompt(s){return `<div class="prompt${s.localId==='recall-all'?' recall-prompt':''}${s.choices?.length===4?' scale-prompt':''}${s.measure==='Individual evaluation'?' evaluation-prompt':''}">${s.context&&!s.displayText?`<p class="referent">${esc(s.context)}</p>`:''}${s.preface?`<p class="preface">${esc(s.preface)}</p>`:''}<h2>${caption(s)}</h2></div>`;}
   function yesNoLabel(label){
     const path=label==='Yes'?'M13 34 L27 48 L53 17':'M17 17 L47 47 M47 17 L17 47';
     return `<svg class="yes-no-symbol" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="${path}" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="yes-no-label">${esc(label)}</span>`;
@@ -302,7 +302,7 @@
     return `<svg class="meanness-face" viewBox="0 0 96 96" aria-hidden="true" focusable="false"><circle cx="48" cy="48" r="43" fill="#FFD35C" stroke="#E6B648" stroke-width="2.5"/><g fill="#29333D"><circle cx="33" cy="43" r="4.5"/><circle cx="63" cy="43" r="4.5"/></g><path d="${brows} ${mouth}" fill="none" stroke="#29333D" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
   }
   function scaleOptions(s,interactive=false){
-    const cards=s.choices.map((c,i)=>interactive?`<button class="rating-answer" data-answer="${i}" disabled>${meannessFace(i)}<span>${esc(c)}</span></button>`:`<div class="rating-answer option-visible">${meannessFace(i)}<span>${esc(c)}</span></div>`).join('');
+    const cards=s.choices.map((c,i)=>interactive?`<button class="rating-answer" data-answer="${i}" disabled>${meannessFace(i===0?'neutral':i-1)}<span>${esc(c)}</span></button>`:`<div class="rating-answer option-visible">${meannessFace(i===0?'neutral':i-1)}<span>${esc(c)}</span></div>`).join('');
     return `<div class="rating-options">${cards}</div>${interactive?choiceReaderControls():''}`;
   }
   function render(){
@@ -320,14 +320,14 @@
     let options=s.point?`<p class="point-instruction">Tap ${esc(actors(s).find(a=>a.id===s.point).description)}.</p>`:`<div class="answers${yesNo?' yes-no-answers':meanNotMean?' evaluation-answers':''}">${(s.choices||[s.localId==='end'?'Read the full storyboard':'Continue']).map((c,i)=>`<button class="${s.choices?'spoken-choice option-visible'+(yesNo?' yes-no-answer':meanNotMean?' evaluation-answer':''):'continue-answer'}" data-answer="${i}"${yesNo?` data-answer-kind="${c.toLowerCase()}"`:''}${s.choices?'':' aria-label="Next"'}>${s.choices?(yesNo?yesNoLabel(c):meanNotMean?meannessFace(i===0?1:'neutral')+`<span>${esc(c)}</span>`:esc(c)):'<span aria-hidden="true">➜</span>'}</button>`).join('')}</div>${s.choices?choiceReaderControls(true):''}`;
     if(s.virtualType==='correct-feedback')options='';
     if(helperChoiceActors(s).length)options=choiceReaderControls(true);
-    if(s.choices?.length===3)options=scaleOptions(s,true);
+    if(s.choices?.length===4)options=scaleOptions(s,true);
     const feedback=wrong?`<p class="feedback">${esc(s.reminder)}</p>`:'';
     stage.classList.toggle('message-slide',!s.image&&!s.visual);
     stage.dataset.choiceLocation=helperChoiceActors(s).length?'characters':'controls';
     stage.dataset.practiceVisual=s.visual||'';
     stage.dataset.screenKind=s.visual?'illustrated-practice':s.image?'story':'practice';
     stage.dataset.responseFormat=s.optionActors?'forced-choice':s.point?'character':s.choices?'check':'continue';
-    stage.dataset.responseKind=s.choices?.length===3?'scale':s.point?'character':s.choices?'binary':'continue';
+    stage.dataset.responseKind=s.choices?.length===4?'scale':s.point?'character':s.choices?'binary':'continue';
     const art = scene(s, true);
     const visual = s.image ? `<div class="story-art">${art}</div>` : art;
     stage.innerHTML=prompt(s)+visual+choiceCaption(s)+feedback+options+childFooter(s);
@@ -369,6 +369,12 @@
     }
     if(correctFeedbackState)return;
     if(!interactionRules.isCorrect(s,answer)){
+      const retryIndex=session.retryIndex(index);
+      if(retryIndex!==index){
+        recallReplays[s.id]=(recallReplays[s.id]||0)+1;
+        chsBridge?.answer(s,session,answer,{accepted:false,outcomeReplayCount:recallReplays[s.id]});
+        history.push(index);index=retryIndex;wrong=null;render();return;
+      }
       chsBridge?.answer(s,session,answer,{accepted:false});wrong=answer;render();return;
     }
     if(interactionRules.needsCorrectFeedback(s,answer)){
@@ -379,7 +385,7 @@
     }
     commit(answer);
   }
-  function commit(answer){chsBridge?.answer(steps[index],session,answer,{accepted:true,continuedAfterReminder:!!wrong});if(timerUsed&&started===null)incomplete=true;for(let n=index;n<steps.length;n++)delete answers[steps[n].id];answers[steps[index].id]=answer;history.push(index);wrong=null;choiceConfirmation=null;correctFeedbackState=null;index=Math.min(session.nextIndex(index,answers),steps.length-1);render();}
+  function commit(answer){chsBridge?.answer(steps[index],session,answer,{accepted:true,continuedAfterReminder:!!wrong,outcomeReplayCount:recallReplays[steps[index].id]||0});if(timerUsed&&started===null)incomplete=true;for(let n=index;n<steps.length;n++)delete answers[steps[n].id];answers[steps[index].id]=answer;history.push(index);wrong=null;choiceConfirmation=null;correctFeedbackState=null;index=Math.min(session.nextIndex(index,answers),steps.length-1);render();}
   function goTo(target){markBrowse();history.push(index);index=target;wrong=null;choiceConfirmation=null;correctFeedbackState=null;showBoard(false);render();stage.scrollIntoView({block:'nearest'});}
   function showBoard(value){
     if(value&&childView)setChildView(false);
@@ -393,7 +399,7 @@
     const confirmations=s.choiceConfirmations?Object.entries(s.choiceConfirmations).map(([choice,item])=>`<p class="card-note"><strong>After choosing ${esc(choice)}:</strong> “${esc(item.text)}” Yes keeps this choice; No returns to the original question.</p>`).join(''):'';
     return feedback||confirmations?`<div class="card-flow-notes">${feedback}${confirmations}</div>`:'';
   }
-  function card(s,i){return `<article class="story-card${!s.image&&!s.visual?' message-slide':''}" style="--story-accent:${esc(storyAccent(s))}"><h3 class="card-heading">${String(i+1).padStart(2,'0')} · ${esc(s.phase)}${s.proposed?' · PROPOSED WORDING':''}</h3>${prompt(s)}${scene(s)}${choiceCaption(s)}${s.choices?.length===3?scaleOptions(s):`<p class="card-options">${s.point?'Tap '+esc(actors(s).find(a=>a.id===s.point).description):s.choices?s.choices.map(esc).join(' &nbsp; / &nbsp; '):'Narration'}</p>`}${s.when||s.unless||s.note||s.expected||s.point?`<p class="card-note">${esc(branchNote(s)+(s.note||''))}${s.expected?' Check answer: '+esc(s.expected)+'.':''}${s.reminder?' Reminder if needed: “'+esc(s.reminder)+'”':''}</p>`:''}${cardExtraScript(s)}</article>`;}
+  function card(s,i){return `<article class="story-card${!s.image&&!s.visual?' message-slide':''}" style="--story-accent:${esc(storyAccent(s))}"><h3 class="card-heading">${String(i+1).padStart(2,'0')} · ${esc(s.phase)}${s.proposed?' · PROPOSED WORDING':''}</h3>${prompt(s)}${scene(s)}${choiceCaption(s)}${s.choices?.length===4?scaleOptions(s):`<p class="card-options">${s.point?'Tap '+esc(actors(s).find(a=>a.id===s.point).description):s.choices?s.choices.map(esc).join(' &nbsp; / &nbsp; '):'Narration'}</p>`}${s.when||s.unless||s.note||s.expected||s.point?`<p class="card-note">${esc(branchNote(s)+(s.note||''))}${s.expected?' Check answer: '+esc(s.expected)+'.':''}${s.replayFrom?' After Yes, replay the nonhelping outcome and ask again until No.':''}${s.reminder?' Reminder if needed: “'+esc(s.reminder)+'”':''}</p>`:''}${cardExtraScript(s)}</article>`;}
   function buildBoard(){
     $('cards').innerHTML=session.pairings.map((p,n)=>`<section class="board-story" id="board-${p.id}"><h2>Story ${n+1} · ${esc(p.label)}</h2><p class="recipient-note">${esc(p.recipient.reference)} is sad.</p><div class="story-grid">${steps.filter(s=>s.pairing?.id===p.id).map(card).join('')}</div></section>`).join('')+`<div class="story-grid">${card(steps[steps.length-1],0)}</div>`;
   }
@@ -407,7 +413,7 @@
     for(const order of ObligationSession.questionOrders){
       const url=new URL('index.html',location.href);
       url.searchParams.set('view','child');url.searchParams.set('set',session.setId);
-      url.searchParams.set('questionOrder',order.id);url.searchParams.set('practice','none');url.searchParams.set('v','larger-rating-caption-r55');
+      url.searchParams.set('questionOrder',order.id);url.searchParams.set('practice','none');url.searchParams.set('v','recall-replay-four-ratings-r56');
       $('preview-'+order.id).href=url.href;
     }
     $('session-warning').textContent=session.isAllReview?'All 18 story instances are shown for review. Shared pairings recur across sets; this is not the six-story session one child would receive.':'One child would see one set of six pairings. The order below is fixed for review.';
@@ -419,7 +425,7 @@
     $('story-jump').innerHTML=session.pairings.map((p,i)=>`<option value="${p.id}">${i+1} · ${esc(p.label)}</option>`).join('')+'<option value="end">Session end</option>';
     if(downloadUrl)URL.revokeObjectURL(downloadUrl);downloadUrl=URL.createObjectURL(new Blob([ObligationSession.toMarkdown(session)],{type:'text/markdown'}));$('download-script').href=downloadUrl;$('download-script').download=`forced-choice-${session.setId}-${session.questionOrder}.md`;
   }
-  function resetRun(){chsBridge?.reset();stopNarration();narrationEnabled=true;choiceConfirmation=null;correctFeedbackState=null;screenHeard=false;optionReader?.dispose();optionReader=null;index=0;answers={};history=[];wrong=null;elapsed=0;started=null;timerUsed=false;incomplete=false;completed=false;showBoard(false);render();updateTimer();}
+  function resetRun(){chsBridge?.reset();stopNarration();narrationEnabled=true;choiceConfirmation=null;correctFeedbackState=null;screenHeard=false;optionReader?.dispose();optionReader=null;index=0;answers={};history=[];recallReplays={};wrong=null;elapsed=0;started=null;timerUsed=false;incomplete=false;completed=false;showBoard(false);render();updateTimer();}
   function configure(){session=ObligationSession.build($('set-select').value,$('question-order-select').value);steps=session.steps;const u=new URL(location.href);u.searchParams.set('set',session.setId);u.searchParams.set('practice',session.practiceMode);u.searchParams.set('questionOrder',session.questionOrder);window.history.replaceState(null,'',u);updateOverview();buildBoard();resetRun();}
   function pauseTimer(){if(started!==null){elapsed+=Date.now()-started;started=null;}updateTimer();}
   function markBrowse(){if(timerUsed){incomplete=true;pauseTimer();}}
