@@ -146,7 +146,7 @@ body.child-view .prompt h2 {
 .stage[data-screen-kind="story"] > .prompt.scale-prompt h2 {
   width: 100%;
   max-width: none;
-  font-size: max(22px, calc(2.2 * var(--caption-unit)));
+  font-size: max(22px, calc(2.45 * var(--caption-unit)));
   text-wrap: wrap;
 }
 

@@ -407,7 +407,7 @@
     for(const order of ObligationSession.questionOrders){
       const url=new URL('index.html',location.href);
       url.searchParams.set('view','child');url.searchParams.set('set',session.setId);
-      url.searchParams.set('questionOrder',order.id);url.searchParams.set('practice','none');url.searchParams.set('v','slower-not-r54');
+      url.searchParams.set('questionOrder',order.id);url.searchParams.set('practice','none');url.searchParams.set('v','larger-rating-caption-r55');
       $('preview-'+order.id).href=url.href;
     }
     $('session-warning').textContent=session.isAllReview?'All 18 story instances are shown for review. Shared pairings recur across sets; this is not the six-story session one child would receive.':'One child would see one set of six pairings. The order below is fixed for review.';
