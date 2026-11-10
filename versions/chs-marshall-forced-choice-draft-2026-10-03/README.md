@@ -21,8 +21,8 @@ These are forced comparisons between helpers. There is no both, neither, or equa
 1. Meet the group.
 2. Show the original Find the Caregiver introduction slides. Each character gains an outline and label as the recording introduces them. Preserve the source intro order, which begins with the kid even when the recipient is an adult.
 3. Say the recipient is sad.
-4. Ask who will help. The two helper choices follow their positions in the scene, left then right.
-5. Ask who HAS TO help, with the same two helper choices.
+4. Ask the first assigned question: who WILL help or who HAS TO help. The two helper choices follow their positions in the scene, left then right.
+5. Ask the other question, with the same two helper choices.
 6. State the fixed outcome: no one helped, then name each helper who did NOT help.
 7. Ask one Yes/No recall check: did either person help? The expected answer is No; a correction restates the explicit outcome when needed.
 8. Ask who was meaner for NOT helping the recipient, with the same helper choices.
@@ -49,7 +49,7 @@ New forced-choice prompts need new NaturalReaders recordings. Existing recording
 
 ## Scope and source limits
 
-This is a two-helper sadness adaptation using the relationship pairings from Find the Caregiver. It is not a verbatim copy of Marshall et al. (2022), Study 1, which used individual Yes/No prediction and obligation measures with follow-ups. Explicit nonhelping narration, corrective reminders, fixed review order, and on-screen taps are implementation choices in this draft. Six stories per role set is retained for review; assignment and randomized presentation order are separate study-design decisions.
+This is a two-helper sadness adaptation using the relationship pairings from Find the Caregiver. It is not a verbatim copy of Marshall et al. (2022), Study 1, which used individual Yes/No prediction and obligation measures with follow-ups. Explicit nonhelping narration, corrective reminders, fixed review order, and on-screen taps are implementation choices in this draft. Six stories per role set is retained for review; question order has two explicit versions per role set; role-set assignment and randomized story order remain separate study-design decisions.
 
 This preview is for reviewing the proposed task. Do not submit, activate, or recruit from this draft without the user’s separate instruction.
 
@@ -57,4 +57,19 @@ The green Next arrow is visible beside Replay on narration pages. Standalone rev
 
 Helper selections now advance directly, without a separate “Did you mean…? Yes or No” confirmation. This applies to prediction, obligation, and the meaner comparison in every pairing set. The selected helper still determines the following how-mean rating.
 
-Instructional practice removed: prediction now leads directly to the obligation question. Welcome, character introductions, story questions, recall checks, ratings, narration and visual styling are unchanged.
+Instructional practice removed: prediction and obligation follow the assigned question order. Welcome, character introductions, story questions, recall checks, ratings, narration and visual styling are unchanged.
+
+## Question-order counterbalancing
+
+Each role set has two versions. Keep the assigned order across all six stories:
+
+| Link parameter | First question | Second question |
+| --- | --- | --- |
+| `questionOrder=will-first` | Who WILL help? | Who HAS TO help? |
+| `questionOrder=has-to-first` | Who HAS TO help? | Who WILL help? |
+
+Use both versions within Woman/Girl (`set=woman`), Man/Boy (`set=man`), and Gender/Adult in Need (`set=family`): six role-set × order cells. Alternate the two order links across participants **within each role set**. The researcher view has an order selector and child-view links for both orders. The selected order is written into the URL, retained on restart/reload, and included in the downloaded script.
+
+These are fixed condition links, not a shared enrollment allocator. Opening links does not reserve a slot or automatically enforce equal enrollment. Old links without `questionOrder` retain WILL-first for compatibility; use the explicit links to counterbalance. In the CHS draft, the parent launcher must pass the selected `questionOrder` to the iframe.
+
+Screen messages, response records and completion payloads include `question_order`, `first_question`, `counterbalance_cell`, and `question_order_version`. Prediction and obligation records also include `question_position` (1 or 2). Screen IDs and response keys keep their original measure names even when their positions swap. Data submission remains disabled in the private CHS review draft.

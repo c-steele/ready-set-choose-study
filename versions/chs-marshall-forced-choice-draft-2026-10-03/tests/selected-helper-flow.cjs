@@ -2,8 +2,8 @@ const assert = require('node:assert/strict');
 const api = require('../session-data.js');
 
 let paths = 0;
-for (const set of ['woman', 'man', 'family']) {
-  const session = api.build(set);
+for (const set of ['woman', 'man', 'family']) for (const order of ['will-first', 'has-to-first']) {
+  const session = api.build(set, order);
   for (const pairing of session.pairings) {
     const compareIndex = session.steps.findIndex(s => s.pairing?.id === pairing.id && s.localId === 'compare');
     const compare = session.steps[compareIndex];
@@ -49,4 +49,4 @@ for (const set of ['woman', 'man', 'family']) {
 }
 const all = api.build('all');
 assert.deepEqual(all.stats.responses, {min:108, max:126});
-console.log(`Passed ${paths} paths across all 18 stories: both helper choices, all face ratings, and Mean / Not Mean branches.`);
+console.log(`Passed ${paths} paths across all 18 stories and both question orders: both helper choices, all face ratings, and Mean / Not Mean branches.`);

@@ -13,6 +13,10 @@
   const apostrophes = text => String(text).replace(/'/g, '’');
   const copy = value => JSON.parse(JSON.stringify(value));
   const wordCount = text => (String(text).match(/[\p{L}\p{N}]+(?:[’'-][\p{L}\p{N}]+)*/gu) || []).length;
+  const questionOrders = [
+    {id:'will-first', label:'Who WILL help? → Who HAS TO help?', firstQuestion:'prediction', steps:['predict-compare','obligation-compare']},
+    {id:'has-to-first', label:'Who HAS TO help? → Who WILL help?', firstQuestion:'obligation', steps:['obligation-compare','predict-compare']}
+  ];
 
   function nextIndex(steps, index, answers) {
     let next = index + 1;
@@ -25,7 +29,7 @@
     return next;
   }
 
-  function storySteps(pairing, storyIndex) {
+  function storySteps(pairing, storyIndex, questionOrder) {
     const result = [], p = copy(pairing);
     // Use one clear name for the child recipient in every prompt and cue.
     if (!p.recipient.isAdult) {
@@ -54,14 +58,13 @@
       });
     }
     add('need', 'need', {phase:`${upper(recipient.description)} needs help`, text:p.sourceNeedText});
-    add('predict-compare', 'predict-compare', {
-      ...pairOptions,
-      text:`Who will help ${recipient.reference} now that they’re sad?`
-    });
-    add('obligation-compare', 'obligation-compare', {
-      ...pairOptions,
-      text:`Who do you think HAS TO help ${recipient.reference}?`
-    });
+    const earlyQuestions = {
+      'predict-compare':`Who will help ${recipient.reference} now that they’re sad?`,
+      'obligation-compare':`Who do you think HAS TO help ${recipient.reference}?`
+    };
+    questionOrder.steps.forEach((localId, index) => add(localId, localId, {
+      ...pairOptions, text:earlyQuestions[localId], questionPosition:index+1
+    }));
     const outcomeSummary = `No one helped ${recipient.description}.`;
     add('outcome-summary', 'outcome-summary', {text:outcomeSummary, displayText:outcomeSummary, outcomeVisual:true});
     const outcomeCaptions = helpers.map(helper=>`${upper(helper.description)} did NOT help ${recipient.description}.`).concat(outcomeSummary);
@@ -170,30 +173,36 @@
     };
   }
 
-  function build(setId = 'woman') {
+  function build(setId = 'woman', questionOrderId = 'will-first') {
     // Legacy practice=once/each links use the same practice-free flow.
     const practiceMode = 'none';
+    // Older script/timing exporters passed their practice mode here.
+    if (['once','each','none'].includes(questionOrderId)) questionOrderId = 'will-first';
     const set = catalog.roleSets.find(s => s.id === setId);
     if (!set && setId !== 'all') throw new Error(`Unknown pairing set: ${setId}`);
+    const questionOrder = questionOrders.find(order => order.id === questionOrderId);
+    if (!questionOrder) throw new Error(`Unknown question order: ${questionOrderId}`);
     const pairings = setId === 'all' ? catalog.pairings.slice() : set.pairingIds.map(id => catalog.pairings.find(p => p.id === id));
-    const steps = pairings.flatMap((p, index) => storySteps(p, index));
+    const steps = pairings.flatMap((p, index) => storySteps(p, index, questionOrder));
     steps.push({...copy(templates.end), id:'session-end', localId:'end', image:null,
       phase:'End of this session', text:'That’s the end of our stories. Thank you!',
       pairing:null, storyIndex:pairings.length, adapted:true,
       note:'Draft closing wording. This is the end of the selected preview.'});
     return {
       variant:'forced-choice', setId, setLabel:setId === 'all' ? 'All pairings · researcher review' : set.label,
-      practiceMode,
+      practiceMode, questionOrder:questionOrder.id, questionOrderLabel:questionOrder.label,
+      firstQuestion:questionOrder.firstQuestion, counterbalanceCell:`${setId}:${questionOrder.id}`,
       isAllReview:setId === 'all', pairings, steps, stats:statsFor(steps, pairings.length),
       notes:[
         'This separate forced-choice draft uses the same Find the Caregiver stimuli and pairing catalog as the individual-rating draft.',
-        'Each story first asks three forced-choice questions: who will help, who HAS TO help, and who was meaner for NOT helping. A character selection is recorded immediately and advances to the next part.',
+        `Question order for this session: ${questionOrder.label}. This order is kept across every story. Both orders are available within each role set; alternate the assigned order across participants within each set.`,
+        'Prediction and obligation are asked before the nonhelping outcome. The meaner comparison follows the outcome and recall check. A character selection is recorded immediately and advances to the next part.',
         'Each forced-choice question requires a choice between the two helpers. Choices appear in scene order: left helper, then right helper. There is no both, neither, or equal option.',
         'Forced-choice prediction and obligation are adaptations of the Marshall paradigm, not the original Study 1 individual Yes/No measures. The meaner comparison is adapted to these two-helper stories.',
         'White backgrounds and the same sadness context are used throughout. Source relationships, character positions, and intro order are preserved.',
         'All paths have the same explicit outcome: no one helped, followed by each named helper did NOT help. A single Yes/No recall check precedes the meaner comparison.',
         'After the meaner comparison, a three-option how-mean rating is asked once for the selected helper. Only the other helper receives a Mean/Not Mean question, with a how-mean follow-up after Mean. The selected helper is not asked either question again. Prediction and obligation remain forced choices without strength follow-ups. Overall Mean/Nice and individual recall questions remain omitted.',
-        'Instructional HAVE TO practice is omitted; prediction is followed directly by the obligation question.',
+        'Instructional HAVE TO practice is omitted; the two early questions follow the assigned order.',
         setId === 'all' ? 'The 18-story view is a researcher catalog of all three role sets, not the proposed length of one child’s session.' : 'This preview contains the six pairings from one role set in a fixed review order.'
       ],
       nextIndex(index, answers) { return nextIndex(steps, index, answers); }
@@ -205,6 +214,7 @@
     const lines = [
       '# Forced-choice obligation study draft — full session', '',
       `**${session.setLabel} · ${session.pairings.length} stories**`, '',
+      `**Question order: ${session.questionOrderLabel}**`, '',
       ...session.notes.map(note => `- ${note}`), '',
       `Expected path range: **${stats.screens.min}–${stats.screens.max} screens**, **${stats.responses.min}–${stats.responses.max} responses**.`, '',
       `${stats.forcedChoiceResponses} forced choices + ${stats.individualEvaluationResponses} individual Mean/Not Mean judgments + ${stats.strengthResponses.min}–${stats.strengthResponses.max} how-mean ratings + ${stats.checks} recall checks.`, '',
@@ -247,5 +257,5 @@
     }
     return lines.join('\n');
   }
-  return {build, toMarkdown, spokenWords};
+  return {build, toMarkdown, spokenWords, questionOrders};
 });

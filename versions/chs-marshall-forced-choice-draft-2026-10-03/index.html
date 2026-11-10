@@ -1,11 +1,10 @@
-<!-- Republish tested caption update after GitHub Pages timeout. -->
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Who has to help? · Forced-choice draft</title>
-  <link rel="stylesheet" href="style.css?v=mean-not-mean-faces-r52">
-  <link rel="stylesheet" href="child-view.css?v=mean-not-mean-faces-r52">
+  <link rel="stylesheet" href="style.css?v=question-order-r53">
+  <link rel="stylesheet" href="child-view.css?v=question-order-r53">
 </head>
 <body>
   <header class="site-header">
@@ -20,7 +19,9 @@
     <section id="child-welcome" aria-label="Study introduction" hidden></section>
     <details class="session-overview" open>
       <summary>Session overview &amp; pairings</summary>
-      <div class="session-settings"><label>Pairing set<select id="set-select"><option value="woman">Mom / sister set · 6 stories</option><option value="man">Dad / brother set · 6 stories</option><option value="family">Family set · 6 stories</option><option value="all">All three sets · 18 stories · Review only</option></select></label></div>
+      <div class="session-settings"><label>Pairing set<select id="set-select"><option value="woman">Mom / sister set · 6 stories</option><option value="man">Dad / brother set · 6 stories</option><option value="family">Family set · 6 stories</option><option value="all">All three sets · 18 stories · Review only</option></select></label><label>Question order<select id="question-order-select"><option value="will-first">Who WILL help? first</option><option value="has-to-first">Who HAS TO help? first</option></select></label></div>
+      <p class="session-explainer">Keep this order throughout the child’s six stories. Alternate the two orders across participants within each role set.</p>
+      <p class="order-preview-links"><a id="preview-will-first" href="?view=child&amp;set=woman&amp;questionOrder=will-first" target="_blank" rel="noopener">Preview WILL first ↗</a> · <a id="preview-has-to-first" href="?view=child&amp;set=woman&amp;questionOrder=has-to-first" target="_blank" rel="noopener">Preview HAS TO first ↗</a></p>
       <p id="session-warning" class="session-explainer"></p><div id="session-stats" class="session-stats"></div>
       <details class="timing-explanation"><summary>What the estimate includes</summary><p id="timing-details"></p></details>
       <div id="pairing-list" class="pairing-list"></div>
@@ -39,7 +40,7 @@
     </section>
     <details class="research-notes"><summary>Draft decisions &amp; sources</summary>
       <p>This is a review adaptation of Marshall et al. (2022), Study 1, using all three existing Find the Caregiver pairing sets. Each assigned set has six stories; the combined 18-story view is for review. Colors and character positions follow one existing balanced visual plan. The orange mom–sister story keeps mom on the left. Every story uses sadness, two helpers, and a plain background. Original study files are unchanged.</p>
-      <p>Each story asks three main questions: “Who will help…now that they’re sad?”, “Who do you think HAS TO help…?”, and “Who was meaner for NOT helping…?” Children choose between the two helpers. The three comparisons are followed by a meanness strength rating for the chosen helper and a Mean / Not Mean judgment about only the other helper, with a strength rating after Mean. The chosen helper is not rated again. A six-story session includes 24 main judgments, plus ratings, introductions, recall checks.</p>
+      <p>Each story asks three main questions. The selected order places WILL first or HAS TO first throughout the session: “Who will help…now that they’re sad?”, “Who do you think HAS TO help…?”, and “Who was meaner for NOT helping…?” Children choose between the two helpers. The three comparisons are followed by a meanness strength rating for the chosen helper and a Mean / Not Mean judgment about only the other helper, with a strength rating after Mean. The chosen helper is not rated again. A six-story session includes 24 main judgments, plus ratings, introductions, recall checks.</p>
       <p><strong>Adaptation:</strong> Marshall Study 1 asked individual prediction and obligation questions. This version measures relative helper choice. Choosing one helper does not establish that the other helper has no obligation. All stories continue with the same explicit outcome: no one helps.</p>
       <p><strong>Review choices:</strong> stories use a fixed review order; the two choices follow the helpers’ left and right positions in the scene. Checks give a spoken reminder and require the correct answer before continuing. This private preview does not implement research exclusion rules.</p>
       <p id="recording-coverage"></p><p><a href="narration-script.txt" download>Full narration script</a> · <a href="narration-recording-index.json" download>Full recording index</a></p><p>Narration and answer choices play automatically. In child view, story-only screens advance after narration finishes; questions wait for a response. A green Next arrow sits beside Replay on narration pages. Standalone previews can use it to move ahead immediately; embedded CHS sessions keep it locked until narration finishes. A speaker button replays narration and Pause stops it. There is no self-reading option or separate Let’s listen screen. If browser policy blocks the first audible recording, one tap anywhere on the story allows it to start. On helper-question screens, each character’s outline glows while its role name is read. Responses unlock after narration finishes. Children tap a character to record their choice and continue directly to the next part. No facilitator bypass is offered. The question outlines pulse in place without bouncing. Answers remain in memory during review; the CHS draft remains a private preview with participant response submission disabled.</p>
@@ -47,6 +48,6 @@
     </details>
   </main>
   <footer>Researcher review · Three forced choices per story · Adapted wording</footer>
-  <script src="chs-bridge.js?v=20261106-forced-intro-r28"></script><script src="script-data.js?v=mean-not-mean-faces-r52"></script><script src="pairing-catalog.js?v=20261106-forced-intro-r28"></script><script src="study-visuals.js?v=mean-not-mean-faces-r52"></script><script src="session-data.js?v=mean-not-mean-faces-r52"></script><script src="narration-manifest.js?v=mean-not-mean-faces-r52"></script><script src="narration-timing.js?v=mean-not-mean-faces-r52"></script><script src="narration-player.js?v=choice-question-r36"></script><script src="option-reader.js?v=choice-question-r36"></script><script src="narration-cues.js?v=mean-not-mean-faces-r52"></script><script src="practice-visuals.js?v=mean-not-mean-faces-r52"></script><script src="app.js?v=mean-not-mean-faces-r52"></script>
+  <script src="chs-bridge.js?v=question-order-r53"></script><script src="script-data.js?v=question-order-r53"></script><script src="pairing-catalog.js?v=20261106-forced-intro-r28"></script><script src="study-visuals.js?v=question-order-r53"></script><script src="session-data.js?v=question-order-r53"></script><script src="narration-manifest.js?v=question-order-r53"></script><script src="narration-timing.js?v=question-order-r53"></script><script src="narration-player.js?v=choice-question-r36"></script><script src="option-reader.js?v=choice-question-r36"></script><script src="narration-cues.js?v=question-order-r53"></script><script src="practice-visuals.js?v=question-order-r53"></script><script src="app.js?v=question-order-r53"></script>
 </body>
 </html>

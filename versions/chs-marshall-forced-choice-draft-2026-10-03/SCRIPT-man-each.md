@@ -2,14 +2,17 @@
 
 **Man set · 6 stories**
 
+**Question order: Who WILL help? → Who HAS TO help?**
+
 - This separate forced-choice draft uses the same Find the Caregiver stimuli and pairing catalog as the individual-rating draft.
-- Each story first asks three forced-choice questions: who will help, who HAS TO help, and who was meaner for NOT helping. A character selection is recorded immediately and advances to the next part.
+- Question order for this session: Who WILL help? → Who HAS TO help?. This order is kept across every story. Both orders are available within each role set; alternate the assigned order across participants within each set.
+- Prediction and obligation are asked before the nonhelping outcome. The meaner comparison follows the outcome and recall check. A character selection is recorded immediately and advances to the next part.
 - Each forced-choice question requires a choice between the two helpers. Choices appear in scene order: left helper, then right helper. There is no both, neither, or equal option.
 - Forced-choice prediction and obligation are adaptations of the Marshall paradigm, not the original Study 1 individual Yes/No measures. The meaner comparison is adapted to these two-helper stories.
 - White backgrounds and the same sadness context are used throughout. Source relationships, character positions, and intro order are preserved.
 - All paths have the same explicit outcome: no one helped, followed by each named helper did NOT help. A single Yes/No recall check precedes the meaner comparison.
 - After the meaner comparison, a three-option how-mean rating is asked once for the selected helper. Only the other helper receives a Mean/Not Mean question, with a how-mean follow-up after Mean. The selected helper is not asked either question again. Prediction and obligation remain forced choices without strength follow-ups. Overall Mean/Nice and individual recall questions remain omitted.
-- Instructional HAVE TO practice is omitted; prediction is followed directly by the obligation question.
+- Instructional HAVE TO practice is omitted; the two early questions follow the assigned order.
 - This preview contains the six pairings from one role set in a fixed review order.
 
 Expected path range: **79–85 screens**, **36–42 responses**.

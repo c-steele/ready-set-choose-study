@@ -403,7 +403,13 @@
     const automaticAdvanceSeconds=session.steps.filter(s=>!s.choices&&!s.point&&!s.virtualType&&s.localId!=='end').length*0.65;
     const baseMinutes=recordedTiming?.estimatedSessionMinutesIncludingResponses||t.minutes;
     const estimatedMinutes={min:baseMinutes.min+automaticAdvanceSeconds/60,max:baseMinutes.max+automaticAdvanceSeconds/60};
-    $('session-subtitle').textContent=`${roleNames[session.setId]} · ${t.storyCount} stories · Sadness · Plain backgrounds`;
+    $('session-subtitle').textContent=`${roleNames[session.setId]} · ${t.storyCount} stories · ${session.questionOrderLabel}`;
+    for(const order of ObligationSession.questionOrders){
+      const url=new URL('index.html',location.href);
+      url.searchParams.set('view','child');url.searchParams.set('set',session.setId);
+      url.searchParams.set('questionOrder',order.id);url.searchParams.set('practice','none');url.searchParams.set('v','question-order-r53');
+      $('preview-'+order.id).href=url.href;
+    }
     $('session-warning').textContent=session.isAllReview?'All 18 story instances are shown for review. Shared pairings recur across sets; this is not the six-story session one child would receive.':'One child would see one set of six pairings. The order below is fixed for review.';
     $('session-stats').innerHTML=`<div><strong>${t.storyCount}</strong><span>stories</span></div><div><strong>${t.substantive}</strong><span>main judgments</span></div><div><strong>${t.responses.min}–${t.responses.max}</strong><span>question responses</span></div><div><strong>~${Math.round(estimatedMinutes.min)}–${Math.round(estimatedMinutes.max)} min</strong><span>illustrative estimate</span></div>`;
     $('timing-details').textContent=`${t.screens.min}–${t.screens.max} screens on a complete path. Includes ${t.checks} recall checks and three main forced-choice judgments per story. Includes meanness strength ratings and individual helper evaluations. ${recordedTiming?'The recordings and programmed pauses total '+recordedTiming.playbackMinutes.min.toFixed(1)+'–'+recordedTiming.playbackMinutes.max.toFixed(1)+' minutes. The estimate adds 3–5 seconds per response.':'Timing assumes reading aloud at 110–130 words/minute plus 3–5 seconds per selection.'} The automatic story transitions add about ${Math.round(automaticAdvanceSeconds)} seconds, included in the illustrative session estimate. It is not measured child-session time; breaks, corrections and control/navigation time can add to it.`;
@@ -411,10 +417,10 @@
     $('pairing-list').querySelectorAll('[data-story]').forEach(b=>b.addEventListener('click',()=>goTo(steps.findIndex(s=>s.pairing?.id===b.dataset.story))));
     jump.innerHTML=session.pairings.map((p,i)=>`<optgroup label="Story ${i+1} · ${esc(p.label)}">${steps.filter(s=>s.pairing?.id===p.id).map((s,n)=>`<option value="${s.id}">${n+1} · ${esc(s.phase)}${s.when||s.unless?' (conditional)':''}</option>`).join('')}</optgroup>`).join('')+'<option value="session-end">Session end</option>';
     $('story-jump').innerHTML=session.pairings.map((p,i)=>`<option value="${p.id}">${i+1} · ${esc(p.label)}</option>`).join('')+'<option value="end">Session end</option>';
-    if(downloadUrl)URL.revokeObjectURL(downloadUrl);downloadUrl=URL.createObjectURL(new Blob([ObligationSession.toMarkdown(session)],{type:'text/markdown'}));$('download-script').href=downloadUrl;$('download-script').download=`forced-choice-${session.setId}.md`;
+    if(downloadUrl)URL.revokeObjectURL(downloadUrl);downloadUrl=URL.createObjectURL(new Blob([ObligationSession.toMarkdown(session)],{type:'text/markdown'}));$('download-script').href=downloadUrl;$('download-script').download=`forced-choice-${session.setId}-${session.questionOrder}.md`;
   }
   function resetRun(){chsBridge?.reset();stopNarration();narrationEnabled=true;choiceConfirmation=null;correctFeedbackState=null;screenHeard=false;optionReader?.dispose();optionReader=null;index=0;answers={};history=[];wrong=null;elapsed=0;started=null;timerUsed=false;incomplete=false;completed=false;showBoard(false);render();updateTimer();}
-  function configure(){session=ObligationSession.build($('set-select').value);steps=session.steps;const u=new URL(location.href);u.searchParams.set('set',session.setId);u.searchParams.set('practice',session.practiceMode);window.history.replaceState(null,'',u);updateOverview();buildBoard();resetRun();}
+  function configure(){session=ObligationSession.build($('set-select').value,$('question-order-select').value);steps=session.steps;const u=new URL(location.href);u.searchParams.set('set',session.setId);u.searchParams.set('practice',session.practiceMode);u.searchParams.set('questionOrder',session.questionOrder);window.history.replaceState(null,'',u);updateOverview();buildBoard();resetRun();}
   function pauseTimer(){if(started!==null){elapsed+=Date.now()-started;started=null;}updateTimer();}
   function markBrowse(){if(timerUsed){incomplete=true;pauseTimer();}}
   function updateTimer(){const total=Math.floor((elapsed+(started===null?0:Date.now()-started))/1000);$('elapsed').textContent=`${Math.floor(total/60)}:${String(total%60).padStart(2,'0')}`;$('timer-toggle').textContent=started!==null?'Pause':timerUsed?'Resume timer':'Start timer';$('timer-toggle').disabled=completed;$('timer-note').textContent=incomplete?'Partial walkthrough: navigation or a late start skipped part of the session.':completed&&timerUsed?'Finished walkthrough; this is your preview time.':timerUsed?(started!==null?'Timing this walkthrough.':'Timer paused.'):'Start on the first screen and play the narration to check the pace.';}
@@ -428,7 +434,11 @@
   $('story-tab').addEventListener('click',()=>showBoard(false));$('board-tab').addEventListener('click',()=>showBoard(true));$('print').addEventListener('click',async()=>{const imgs=[...$('cards').querySelectorAll('img')];imgs.forEach(img=>img.loading='eager');await Promise.all(imgs.map(img=>img.decode().catch(()=>{})));window.print();});
   window.addEventListener('beforeprint',()=>{document.querySelectorAll('#cards img').forEach(img=>img.loading='eager');});
   $('set-select').value=Object.keys(roleNames).includes(params.get('set'))?params.get('set'):'woman';
+  const requestedOrder=params.get('questionOrder')||'will-first';
+  if(!ObligationSession.questionOrders.some(order=>order.id===requestedOrder))throw new Error('Unknown questionOrder. Use will-first or has-to-first.');
+  $('question-order-select').value=requestedOrder;
   $('set-select').addEventListener('change',configure);
+  $('question-order-select').addEventListener('change',configure);
   window.addEventListener('pagehide',()=>{stopNarration();narrationEnabled=false;optionReader?.dispose();optionReader=null;pauseTimer();});window.addEventListener('pageshow',e=>{if(e.persisted&&$('child-welcome').hidden)render();});
   $('play-narration').addEventListener('click',playNarration);$('stop-narration').addEventListener('click',()=>{stopNarration();optionReader?.reset();$('narration-status').textContent='Audio stopped. Tap Replay to hear this screen.';});
   $('auto-narration').addEventListener('change',()=>{if(!$('auto-narration').checked){stopNarration();optionReader?.reset();$('narration-status').textContent='Audio stopped. Tap Replay to hear this screen.';}});
