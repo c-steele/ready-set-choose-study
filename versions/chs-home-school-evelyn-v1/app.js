@@ -193,6 +193,7 @@ const requestedResearcherJump = configValue("researcherJump", "researcher_jump")
 const requestedResearcherTools = configValue("researcherTools");
 const requestedResearcherToolbar = configValue("researcherToolbar", "researcher_toolbar").toLowerCase();
 const isFacilitatorMode = configValue("facilitator", "zoom") === "1";
+const allowImmediateChildStart = isFacilitatorMode || configValue("immediateChildStart") === "1";
 const isLiveShareMode = configValue("liveShare", "screenShare", "screen_share") === "1";
 const showLiveReadAloud = isLiveShareMode
   && configValue("showReadAloud", "readAloudCaptions", "read_aloud_captions") !== "0";
@@ -4736,7 +4737,7 @@ async function main() {
                 <span class="ksize-icon-symbol" aria-hidden="true">▶</span>
                 <span class="ksize-icon-label">Replay</span>
               </button>
-              <button class="ksize-next-btn ksize-icon-btn" type="button" aria-label="Start" ${isFacilitatorMode ? "" : "disabled"}>
+              <button class="ksize-next-btn ksize-icon-btn" type="button" aria-label="Start" ${allowImmediateChildStart ? "" : "disabled"}>
                 <span class="ksize-icon-symbol" aria-hidden="true">➜</span>
                 <span class="ksize-icon-label">Start</span>
               </button>
@@ -4754,20 +4755,12 @@ async function main() {
         installResearcherSkip(jsPsych);
         const playButton = document.querySelector(".ksize-start-audio");
         const startButton = document.querySelector(".ksize-next-btn");
-        let narrationComplete = isFacilitatorMode;
-        const lockStart = () => {
-          narrationComplete = isFacilitatorMode;
-          if (startButton) startButton.disabled = !narrationComplete;
-          startButton?.classList.remove("ksize-prompt-glow");
+        const setStartEnabled = (enabled) => {
+          startButton.disabled = !enabled;
+          startButton.classList.toggle("ksize-prompt-glow", enabled);
         };
-        const unlockStart = () => {
-          narrationComplete = true;
-          if (startButton) startButton.disabled = false;
-          startButton?.classList.add("ksize-prompt-glow");
-        };
-        lockStart();
         const runWelcomeSequence = async ({ includeOpening = true, replay = false } = {}) => {
-          lockStart();
+          setStartEnabled(allowImmediateChildStart);
           welcomeSequenceToken += 1;
           const sequenceToken = welcomeSequenceToken;
           audio.stop();
@@ -4777,23 +4770,27 @@ async function main() {
           stopIntroMusic();
           playButton?.classList.remove("ksize-prompt-glow");
           const played = await audio.playFile(START_INTRO_AUDIO, START_INTRO_TEXT, {
-            onRetry: () => runWelcomeSequence({ includeOpening: false, replay: true }),
+            onRetry: () => {
+              if (sequenceToken === welcomeSequenceToken) {
+                return runWelcomeSequence({ includeOpening: false, replay: true });
+              }
+            },
           });
           if (!played || sequenceToken !== welcomeSequenceToken) return;
           playIntroOpeningMusic();
-          unlockStart();
+          setStartEnabled(true);
         };
         if (!isFacilitatorMode) {
           runWelcomeSequence({ includeOpening: !introMusicStopper });
         } else {
           playButton.hidden = true;
-          startButton?.classList.add("ksize-prompt-glow");
+          setStartEnabled(true);
         }
         playButton?.addEventListener("click", () => {
           runWelcomeSequence({ includeOpening: false, replay: true });
         });
         startButton?.addEventListener("click", () => {
-          if (!narrationComplete) return;
+          if (startButton.disabled) return;
           welcomeSequenceToken += 1;
           stopIntroMusic();
           audio.stop();
