@@ -3,7 +3,7 @@
 
   const REVIEW_VERSION = "who-helps-where-review-r28";
   const STUDY_RUNTIME_VERSION = "chs-home-school-evelyn-v1-r28-camera-preview-1";
-  const SPELKE_VERSION = "whw-spelke-house-pacing-r2";
+  const SPELKE_VERSION = "whw-spelke-full-takes-r3";
   const STUDY_ENTRYPOINT = "../versions/chs-home-school-evelyn-v1/index.html";
   const CONTEXT_ORDERS = Object.freeze([
     Object.freeze({

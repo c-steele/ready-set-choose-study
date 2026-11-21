@@ -753,8 +753,8 @@ function versionedAudioSrc(src) {
   if (!src) return src;
   const normalizedSrc = normalizeAudioSrc(src);
   let version = AUDIO_VERSION;
-  if (normalizedSrc.startsWith(HOME_SCHOOL_NEUTRAL_AUDIO_ROOT) && /_house[_.]/.test(normalizedSrc)) {
-    version = "whw-spelke-house-pacing-r2";
+  if (normalizedSrc.startsWith(HOME_SCHOOL_NEUTRAL_AUDIO_ROOT)) {
+    version = "whw-spelke-full-takes-r3";
   } else if (normalizedSrc.startsWith(HOME_SCHOOL_GENERATED_ROOT) || normalizedSrc.startsWith(HOME_SCHOOL_REVISED_AUDIO_ROOT)) {
     version = HOME_SCHOOL_ASSET_VERSION;
   } else if (normalizedSrc.startsWith(TEACHER_CLASSMATE_GENERATED_ROOT)) {
