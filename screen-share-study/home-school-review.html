@@ -22,6 +22,12 @@
         font-weight: 650;
         line-height: 1.5;
       }
+      .review-audio-samples { margin-top: 16px; }
+      .review-audio-samples summary { cursor: pointer; width: fit-content; font-weight: 700; }
+      .review-audio-grid { display: flex; flex-wrap: wrap; gap: 12px 20px; margin-top: 12px; }
+      .review-audio-grid figure { margin: 0; max-width: 100%; }
+      .review-audio-grid figcaption { font-weight: 600; margin-bottom: 4px; }
+      .review-audio-grid audio { display: block; width: 246px; max-width: 100%; }
       .review-gallery-link {
         color: #fff;
         font-weight: 850;
@@ -111,6 +117,23 @@
             <a class="review-gallery-link" href="../home_school_furnished_color_groups_mockup.html?v=palette-picture-v38&amp;backgroundMode=soft-theme&amp;portraitArt=palette">open the focused room-art gallery</a>.
           </p>
           <p class="review-design-note">Historical audio note: the older School / Dad / Hug question has an unclear opening “At.” That recording has not been fixed, but it is no longer reachable in this two-role-set design: the family condition and its adult-recipient stories have been removed. Every story here asks about helping the kid.</p>
+          <details class="review-audio-samples" hidden>
+            <summary>Listen to the house and school narration</summary>
+            <div class="review-audio-grid">
+              <figure>
+                <figcaption>House introduction</figcaption>
+                <audio controls preload="none" aria-label="House introduction" src="../versions/chs-home-school-evelyn-v1/audio/home_school_neutral/hs_r17_005_context_intro_house.mp3?v=whw-spelke-house-pacing-r2"></audio>
+              </figure>
+              <figure>
+                <figcaption>School introduction</figcaption>
+                <audio controls preload="none" aria-label="School introduction" src="../versions/chs-home-school-evelyn-v1/audio/home_school_neutral/hs_r13_002_context_intro_school.mp3"></audio>
+              </figure>
+              <figure>
+                <figcaption>Hug question at the house</figcaption>
+                <audio controls preload="none" aria-label="Hug question at the house" src="../versions/chs-home-school-evelyn-v1/audio/home_school_neutral/hs_r17_006_house_kid_hug_question.mp3?v=whw-spelke-house-pacing-r2"></audio>
+              </figure>
+            </div>
+          </details>
         </div>
         <div class="review-progress-card" aria-live="polite">
           <strong data-progress-count>0 / 48</strong>
@@ -197,6 +220,6 @@
       </article>
     </template>
 
-    <script src="home-school-review.js?v=who-helps-where-review-r28"></script>
+    <script src="home-school-review.js?v=who-helps-where-review-r28-spelke-r2"></script>
   </body>
 </html>

@@ -20,6 +20,7 @@ const HOME_SCHOOL_FURNISHED_VISUAL_VERSION = "home_school_furnished_palette_pict
 const RATING_SCHEDULE_VERSION = "unique_focal_role_per_set_v1";
 const HOME_SCHOOL_GENERATED_ROOT = "assets/home_school/generated/";
 const HOME_SCHOOL_REVISED_AUDIO_ROOT = "versions/chs-home-school-evelyn-v1/assets/audio-r18/";
+const HOME_SCHOOL_NEUTRAL_AUDIO_ROOT = "versions/chs-home-school-evelyn-v1/audio/home_school_neutral/";
 const HOME_SCHOOL_FURNISHED_FOREGROUND_ROOT = "versions/chs-home-school-evelyn-v1/assets/home_school/foregrounds/";
 const HOME_SCHOOL_FURNISHED_ROOM_ROOT = "assets/home_school/furnished_color_group_preview/";
 const HOME_SCHOOL_ENTRANCE_ROOT = "versions/chs-home-school-evelyn-v1/assets/entrance/";
@@ -751,12 +752,14 @@ function audioPathForText(text) {
 function versionedAudioSrc(src) {
   if (!src) return src;
   const normalizedSrc = normalizeAudioSrc(src);
-  const version = (normalizedSrc.startsWith(HOME_SCHOOL_GENERATED_ROOT)
-    || normalizedSrc.startsWith(HOME_SCHOOL_REVISED_AUDIO_ROOT))
-    ? HOME_SCHOOL_ASSET_VERSION
-    : (normalizedSrc.startsWith(TEACHER_CLASSMATE_GENERATED_ROOT)
-      ? TEACHER_CLASSMATE_ASSET_VERSION
-      : AUDIO_VERSION);
+  let version = AUDIO_VERSION;
+  if (normalizedSrc.startsWith(HOME_SCHOOL_NEUTRAL_AUDIO_ROOT) && /_house[_.]/.test(normalizedSrc)) {
+    version = "whw-spelke-house-pacing-r2";
+  } else if (normalizedSrc.startsWith(HOME_SCHOOL_GENERATED_ROOT) || normalizedSrc.startsWith(HOME_SCHOOL_REVISED_AUDIO_ROOT)) {
+    version = HOME_SCHOOL_ASSET_VERSION;
+  } else if (normalizedSrc.startsWith(TEACHER_CLASSMATE_GENERATED_ROOT)) {
+    version = TEACHER_CLASSMATE_ASSET_VERSION;
+  }
   const resolvedSrc = assetUrl(src);
   return resolvedSrc.includes("?") ? `${resolvedSrc}&v=${version}` : `${resolvedSrc}?v=${version}`;
 }
@@ -2547,7 +2550,7 @@ function useNeutralSettingCues(contexts) {
     const text = neutralText(cue[textKey]);
     if (text === cue[textKey]) return;
     const filename = cue[audioKey].split("/").pop();
-    const path = `versions/chs-home-school-evelyn-v1/audio/home_school_neutral/${filename}`;
+    const path = `${HOME_SCHOOL_NEUTRAL_AUDIO_ROOT}${filename}`;
     cue[textKey] = text;
     cue[audioKey] = path;
     canonicalAudioByText.set(normalizeAudioText(text), path);

@@ -130,6 +130,14 @@ for (const entry of entries) {
   for (const orderValue of orderValues) {
     const order = api.contextOrderDefinition(orderValue);
     const url = api.buildStudyUrl(entry, sandbox.window.location.href, orderValue);
+    const spelkeUrl = api.buildStudyUrl(entry, sandbox.window.location.href + "?lab=spelke", orderValue);
+    assert.equal(spelkeUrl.searchParams.get("settingLanguage"), "neutral");
+    assert.equal(spelkeUrl.searchParams.get("immediateChildStart"), "1");
+    assert.equal(spelkeUrl.searchParams.get("skipParentSetup"), "0");
+    assert.equal(spelkeUrl.searchParams.get("v"), "whw-spelke-house-pacing-r2");
+    for (const key of ["context", "roleSet", "event", "variant", "seed", "assignmentCell", "previewIndex", "researcherToolbar"]) {
+      assert.equal(spelkeUrl.searchParams.get(key), url.searchParams.get(key));
+    }
     launchUrls.push(url.href);
     pairedSeeds.push(url.searchParams.get("seed"));
     reviewKeys.push(api.reviewCheckKey(orderValue, entry.id));

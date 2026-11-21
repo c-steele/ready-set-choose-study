@@ -3,7 +3,7 @@
 
   const REVIEW_VERSION = "who-helps-where-review-r28";
   const STUDY_RUNTIME_VERSION = "chs-home-school-evelyn-v1-r28-camera-preview-1";
-  const STORAGE_KEY = `${REVIEW_VERSION}:checked`;
+  const SPELKE_VERSION = "whw-spelke-house-pacing-r2";
   const STUDY_ENTRYPOINT = "../versions/chs-home-school-evelyn-v1/index.html";
   const CONTEXT_ORDERS = Object.freeze([
     Object.freeze({
@@ -80,6 +80,10 @@
     return roleIndex * 6 + eventIndex * 2 + orderIndex + 1;
   }
 
+  function isSpelkeBoard(href) {
+    return new URL(href).searchParams.get("lab") === "spelke";
+  }
+
   function buildStudyUrl(entry, baseHref, requestedFirstContext = "HOME") {
     const order = contextOrderDefinition(requestedFirstContext);
     const url = new URL(STUDY_ENTRYPOINT, baseHref);
@@ -109,6 +113,12 @@
       showDataStatus: "0",
       exportFormat: "csv",
     };
+    if (isSpelkeBoard(baseHref)) {
+      values.v = SPELKE_VERSION;
+      values.settingLanguage = "neutral";
+      values.immediateChildStart = "1";
+      values.skipParentSetup = "0";
+    }
     Object.entries(values).forEach(([key, value]) => url.searchParams.set(key, value));
     return url;
   }
@@ -137,6 +147,17 @@
   globalObject.FTCHomeSchoolReview = api;
 
   if (!documentObject) return;
+
+  const spelke = isSpelkeBoard(globalObject.location.href);
+  const STORAGE_KEY = `${spelke ? SPELKE_VERSION : REVIEW_VERSION}:checked`;
+  if (spelke) {
+    documentObject.querySelector(".review-hero h1").textContent = "Who Helps Where?";
+    documentObject.querySelector(".review-eyebrow").textContent = "Spelke Lab · Study previews";
+    documentObject.querySelector(".review-subtitle").textContent =
+      "Choose School → Home or Home → School on any card. Each preview opens at the family welcome. Use Back or Skip to move through the story.";
+    documentObject.querySelectorAll(".review-design-note").forEach(note => { note.hidden = true; });
+    documentObject.querySelector(".review-audio-samples").hidden = false;
+  }
 
   const entries = renditionEntries();
   const grid = documentObject.querySelector("[data-review-grid]");
