@@ -12,7 +12,10 @@ const TEACHER_CLASSMATE_V78_TRIAL_REVISION = /^trials\/14(?:[ab]\/intro_04|[cd]\
 const HOME_SCHOOL_ASSET_VERSION = "chs-home-school-evelyn-v1-r28-camera-preview-1";
 const HOME_SCHOOL_DESIGN_VERSION = "home_school_context_chs_candidate_v1";
 const HOME_SCHOOL_WITHIN_CHILD_DESIGN_VERSION = "home_school_within_child_two_role_sets_v2";
-const HOME_SCHOOL_CONTEXT_SCRIPT_VERSION = "home_school_house_entrance_recipient_aware_v6";
+const neutralSettingLanguage = configValue("settingLanguage") === "neutral";
+const HOME_SCHOOL_CONTEXT_SCRIPT_VERSION = neutralSettingLanguage
+  ? "home_school_neutral_setting_v1"
+  : "home_school_house_entrance_recipient_aware_v6";
 const HOME_SCHOOL_FURNISHED_VISUAL_VERSION = "home_school_furnished_palette_picture_v38";
 const RATING_SCHEDULE_VERSION = "unique_focal_role_per_set_v1";
 const HOME_SCHOOL_GENERATED_ROOT = "assets/home_school/generated/";
@@ -2538,6 +2541,30 @@ function contextSpec(context = activeStudyContext) {
   return homeSchoolContextManifest?.contexts?.[context] || null;
 }
 
+function useNeutralSettingCues(contexts) {
+  const neutralText = (text) => text.replace(/the kid['’]s (house|school)\b/gi, "the $1");
+  function updateCue(cue, textKey, audioKey) {
+    const text = neutralText(cue[textKey]);
+    if (text === cue[textKey]) return;
+    const filename = cue[audioKey].split("/").pop();
+    const path = `versions/chs-home-school-evelyn-v1/audio/home_school_neutral/${filename}`;
+    cue[textKey] = text;
+    cue[audioKey] = path;
+    canonicalAudioByText.set(normalizeAudioText(text), path);
+  }
+  for (const context of Object.values(contexts)) {
+    context.label = neutralText(context.label);
+    context.badge.alt = neutralText(context.badge.alt);
+    updateCue(context.intro, "text", "audio");
+    for (const events of [context.events, ...Object.values(context.recipientEvents)]) {
+      for (const event of Object.values(events)) {
+        updateCue(event, "eventText", "eventAudio");
+        updateCue(event, "questionText", "questionAudio");
+      }
+    }
+  }
+}
+
 function contextIntroText(context = activeStudyContext) {
   return contextSpec(context)?.intro?.text || "";
 }
@@ -3914,6 +3941,9 @@ async function main() {
   ]);
   homeSchoolContextManifest = loadedHomeSchoolContextManifest;
   installCanonicalAudioMap(canonicalAudioManifest, teacherClassmateAudioManifest, homeSchoolAudioManifest);
+  if (isHomeSchoolStudy && neutralSettingLanguage) {
+    useNeutralSettingCues(homeSchoolContextManifest.contexts);
+  }
   ratingOptionCueManifest = ratingOptionCues;
   introImageFixes = await fetchStudyJson(INTRO_IMAGE_FIXES_URL).catch(() => ({}));
   const assignment = balancedAssignment(
