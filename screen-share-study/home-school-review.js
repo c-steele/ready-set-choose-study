@@ -154,7 +154,7 @@
     documentObject.querySelector(".review-hero h1").textContent = "Who Helps Where?";
     documentObject.querySelector(".review-eyebrow").textContent = "Spelke Lab · Study previews";
     documentObject.querySelector(".review-subtitle").textContent =
-      "Choose School → Home or Home → School on any card. Each preview opens at the family welcome. Use Back or Skip to move through the story.";
+      "Choose School → Home or Home → School on any card. Each preview opens at the family welcome. Open Slide navigator to choose a slide, or Skip to end to read the family debrief.";
     documentObject.querySelectorAll(".review-design-note").forEach(note => { note.hidden = true; });
     documentObject.querySelector(".review-audio-samples").hidden = false;
   }

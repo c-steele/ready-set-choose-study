@@ -408,6 +408,9 @@ const TEACHER_BOX_QUESTION_TEXT = {
 };
 let introImageFixes = {};
 let currentPreviewIndex = 0;
+const showSpelkePreviewNavigation = isHomeSchoolStudy && neutralSettingLanguage && showResearcherTools && !isFacilitatorMode && configValue("cameraPreviewBridge") !== "chs-parent";
+let assignedPreviewSlides = [];
+let openNavigatorOnLoad = showSpelkePreviewNavigation && params.get("openNavigator") === "1";
 let totalPreviewScreens = 0;
 let currentSessionParams = {};
 let canonicalAudioByText = new Map();
@@ -2164,7 +2167,10 @@ function makeStudyPreloader(media, jsPsych) {
         audio.preloadedFiles.set(src, file);
       });
     },
-    on_load: () => document.addEventListener("click", retry),
+    on_load: () => {
+      document.addEventListener("click", retry);
+      if (showSpelkePreviewNavigation) installResearcherSkip(jsPsych);
+    },
     on_finish: () => document.removeEventListener("click", retry),
   };
 }
@@ -2441,6 +2447,12 @@ function installResearcherSkip(jsPsych) {
     Object.entries(currentSessionParams).forEach(([key, value]) => {
       if (value) url.searchParams.set(key, value);
     });
+    // The within-child export calls the context BOTH; a review URL needs its actual first setting.
+    if (showSpelkePreviewNavigation && requestedWithinChildContexts) {
+      url.searchParams.set("context", currentSessionParams.firstContext);
+    }
+    url.searchParams.delete("openNavigator");
+    url.searchParams.delete("previewEnd");
     url.searchParams.delete("resumeBackupKey");
     url.searchParams.delete("expectedResumeRows");
     url.searchParams.set("researcherJump", "1");
@@ -2509,7 +2521,31 @@ function installResearcherSkip(jsPsych) {
     window.open(new URL("data.html", window.location.href).toString(), "_blank", "noopener");
   });
 
-  if (requestedResearcherToolbar === "back-skip") {
+  if (showSpelkePreviewNavigation) {
+    wrap.classList.add("whw-preview-controls");
+    wrap.setAttribute("role", "navigation");
+    wrap.setAttribute("aria-label", "Researcher preview");
+    const navigator = document.createElement("button");
+    navigator.type = "button";
+    navigator.textContent = "Slide navigator";
+    navigator.setAttribute("aria-haspopup", "dialog");
+    const openSlides = () => window.WhoHelpsWherePreview.open(assignedPreviewSlides, currentPreviewIndex, jumpToPreview);
+    navigator.addEventListener("click", openSlides);
+    // Reload the assigned slide directly, even while the welcome media is loading.
+    const next = document.createElement("button");
+    next.type = "button";
+    next.textContent = "Skip";
+    next.disabled = end.disabled;
+    next.addEventListener("click", () => jumpToPreview(currentPreviewIndex + 1));
+    end.textContent = "Skip to end";
+    end.title = "Open the family debrief";
+    wrap.append(navigator, back, next, end);
+    document.body.classList.add("whw-review");
+    if (openNavigatorOnLoad) {
+      openNavigatorOnLoad = false;
+      openSlides();
+    }
+  } else if (requestedResearcherToolbar === "back-skip") {
     wrap.append(back, button);
   } else {
     wrap.append(start, back, button, data, end);
@@ -4989,7 +5025,17 @@ async function main() {
           ...secondPartNodes,
           doneNode,
         ])
-  ).map((node, index) => withPreviewIndex(node, index));
+  );
+  if (showSpelkePreviewNavigation) {
+    reviewNodes.push({
+      type: jsPsychHtmlButtonResponse,
+      stimulus: '<iframe class="whw-debrief-preview" title="Family debrief" src="family-debrief-preview.html"></iframe>',
+      choices: [],
+      data: { slide_kind: "family_debrief" },
+      on_load: () => installResearcherSkip(jsPsych)
+    });
+    assignedPreviewSlides = reviewNodes;
+  }
   totalPreviewScreens = reviewNodes.length;
   const safeRequestedPreviewIndex = safeFacilitatorPreviewIndex({
     requestedIndex: requestedPreviewIndex,
@@ -4999,10 +5045,12 @@ async function main() {
     expectedRows: requestedExpectedResumeRows,
     restoredRows: facilitatorRestoredRowCount,
   });
-  const startIndex = Math.min(safeRequestedPreviewIndex, Math.max(0, reviewNodes.length - 1));
+  const startIndex = showSpelkePreviewNavigation && params.get("previewEnd") === "1"
+    ? reviewNodes.length - 1
+    : Math.min(safeRequestedPreviewIndex, Math.max(0, reviewNodes.length - 1));
   currentPreviewIndex = startIndex;
 
-  const assignedNodes = reviewNodes.slice(startIndex);
+  const assignedNodes = reviewNodes.slice(startIndex).map((node, i) => withPreviewIndex(node, startIndex + i));
   const timeline = [makeStudyPreloader(mediaForAssignedNodes(assignedNodes), jsPsych), ...assignedNodes];
 
   jsPsych.run(timeline);
