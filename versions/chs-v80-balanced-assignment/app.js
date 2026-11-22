@@ -197,6 +197,8 @@ const facilitatorSessionKey = configValue("facilitatorSession", "facilitator_ses
   || requestedSeed;
 const showResearcherTools = requestedResearcherTools === "1"
   && (!isFacilitatorChildWindow || isLiveShareMode);
+const isNarratedBoardPreview = showResearcherTools && !isFacilitatorMode
+  && !requestedChsResponse && !requestedChsChild && requestedAssignmentMethod === "review_preview_only";
 const requestedDataEndpoint = configValue("dataEndpoint") || DATA_ENDPOINT_URL;
 const requestedCheckpointEndpoint = configValue("checkpointEndpoint", "checkpoint_endpoint");
 const shouldDownloadData = configValue("downloadData") === "1";
@@ -415,6 +417,8 @@ const TEACHER_BOX_QUESTION_TEXT = {
 let introImageFixes = {};
 let currentPreviewIndex = 0;
 let totalPreviewScreens = 0;
+let navigatorSlides = [];
+let leavingPreviewSlide = false;
 let currentSessionParams = {};
 let canonicalAudioByText = new Map();
 let canonicalAudioByOriginalSrc = new Map();
@@ -554,7 +558,18 @@ function canonicalAudioPathForSrc(src) {
   return canonicalAudioByOriginalSrc.get(normalizeAudioSrc(src)) || "";
 }
 
+function openSlideDialog() {
+  return isNarratedBoardPreview && document.querySelector(".ftc-slide-navigator[open]");
+}
+
 function finishParticipantTrial(jsPsych, data, amount, label) {
+  const dialog = openSlideDialog();
+  if (dialog) {
+    dialog.addEventListener("close", () => {
+      if (!leavingPreviewSlide) finishParticipantTrial(jsPsych, data, amount, label);
+    }, { once: true });
+    return;
+  }
   document.querySelectorAll("button").forEach((button) => {
     button.disabled = true;
   });
@@ -2014,6 +2029,12 @@ const audio = {
     return this.playFile(audioPathForText(text), text, options);
   },
   playFile(src, text, options = {}) {
+    const dialog = openSlideDialog();
+    if (dialog) {
+      return new Promise((resolve) => dialog.addEventListener("close", () => {
+        resolve(leavingPreviewSlide ? false : this.playFile(src, text, options));
+      }, { once: true }));
+    }
     this.stop();
     if (isFacilitatorMode) {
       options.onStart?.();
@@ -2125,6 +2146,7 @@ function installResearcherSkip(jsPsych) {
       }
     }
     url.searchParams.set("previewIndex", String(targetIndex));
+    if (isNarratedBoardPreview) leavingPreviewSlide = true;
     window.location.href = url.toString();
   };
 
@@ -2152,6 +2174,10 @@ function installResearcherSkip(jsPsych) {
   button.className = "ksize-researcher-skip";
   button.textContent = "Skip";
   button.addEventListener("click", () => {
+    if (isNarratedBoardPreview) {
+      jumpToPreview(currentPreviewIndex + 1);
+      return;
+    }
     audio.stop();
     jsPsych.finishTrial({ researcher_skip: true });
   });
@@ -2164,7 +2190,40 @@ function installResearcherSkip(jsPsych) {
   end.disabled = !totalPreviewScreens || currentPreviewIndex >= totalPreviewScreens - 1;
   end.addEventListener("click", () => jumpToPreview(totalPreviewScreens - 1));
 
-  wrap.append(start, back, button, end);
+  if (isNarratedBoardPreview) {
+    document.body.classList.add("ftc-narrated-preview");
+    wrap.setAttribute("role", "navigation");
+    wrap.setAttribute("aria-label", "Study preview controls");
+    const slides = document.createElement("button");
+    slides.type = "button";
+    slides.className = "ftc-open-slides";
+    slides.textContent = "Slide navigator";
+    slides.setAttribute("aria-haspopup", "dialog");
+    slides.addEventListener("click", () => {
+      const dialog = window.FindCaregiverPreview.open(navigatorSlides, currentPreviewIndex, jumpToPreview);
+      const playing = audio.current;
+      if (dialog && playing && !playing.paused) {
+        playing.pause();
+        dialog.addEventListener("close", () => {
+          if (!leavingPreviewSlide && audio.current === playing) playing.play().catch(() => {});
+        }, { once: true });
+      }
+    });
+    button.disabled = end.disabled;
+    wrap.append(slides, back, button);
+    const childWelcomeIndex = navigatorSlides.findIndex((node) => node.data.slide_kind === "child_welcome");
+    if (currentPreviewIndex < childWelcomeIndex) {
+      const skipSetup = document.createElement("button");
+      skipSetup.type = "button";
+      skipSetup.className = "ftc-skip-setup";
+      skipSetup.textContent = "Skip grown-up setup";
+      skipSetup.title = "Go straight to the child’s Start screen";
+      skipSetup.addEventListener("click", () => jumpToPreview(childWelcomeIndex));
+      wrap.append(skipSetup);
+    }
+  } else {
+    wrap.append(start, back, button, end);
+  }
   document.body.appendChild(wrap);
 }
 
@@ -4037,6 +4096,7 @@ async function main() {
         ]
   ).map((node, index) => withPreviewIndex(node, index));
   totalPreviewScreens = reviewNodes.length;
+  if (isNarratedBoardPreview) navigatorSlides = reviewNodes;
   const safeRequestedPreviewIndex = safeFacilitatorPreviewIndex({
     requestedIndex: requestedPreviewIndex,
     facilitatorMode: isFacilitatorMode,

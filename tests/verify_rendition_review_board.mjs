@@ -11,7 +11,7 @@ const css = fs.readFileSync(path.join(reviewRoot, "review.css"), "utf8");
 const source = fs.readFileSync(path.join(reviewRoot, "review.js"), "utf8");
 
 assert.match(html, /Study review board/);
-assert.match(html, /review\.js\?v=ftc-rendition-review-v8-unique-colors/);
+assert.match(html, /review\.js\?v=ftc-rendition-review-v9-slide-navigator/);
 assert.match(html, /review\.css\?v=ftc-rendition-review-v4/);
 assert.match(html, /data\.html\?v=ftc-browser-dataset-v1/);
 assert.match(html, /View \/ download data/);
@@ -148,7 +148,7 @@ for (const entry of entries) {
   assert.equal(uniqueZoomUrl.searchParams.get("seed"), entry.seed,
     "a unique run ID must not change the balanced plan seed");
 
-  assert.equal(audioUrl.searchParams.get("previewIndex"), "4");
+  assert.equal(audioUrl.searchParams.get("previewIndex"), "0", "narrated previews start at the family welcome");
   for (const omittedParam of [
     "facilitator",
     "facilitatorChild",

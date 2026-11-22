@@ -18,8 +18,8 @@
       label: "CHS audio / autoplay",
       progressLabel: "CHS audio runs reviewed",
       openLabel: "Open CHS audio rendition",
-      help: "The six-story CHS candidate now has complete prerecorded Evelyn audio and is ready for CHS re-approval review.",
-      summary: "Each opens in participant autoplay mode with the proposed Teacher–Classmate story and complete Evelyn narration. The approved CHS v76 study remains unchanged.",
+      help: "Start at the family welcome or choose Skip grown-up setup to go straight to the child’s turn. Use Slide navigator to jump to any thumbnail, or Back and Skip to move one slide.",
+      summary: "Opens this assignment with Evelyn’s narration. The slide navigator includes all six stories, their rating questions, and the ending.",
     }),
   });
   const ROLE_SETS = Object.freeze([
@@ -215,7 +215,7 @@
       .slice(0, 80);
     const sessionId = `review-zoom-${entry.id}${normalizedLaunchToken ? `-${normalizedLaunchToken}` : ""}`;
     const values = requestedMode === "chs"
-      ? { ...commonValues, previewIndex: "4" }
+      ? { ...commonValues, previewIndex: "0" }
       : {
           facilitator: "1",
           facilitatorChild: "1",
