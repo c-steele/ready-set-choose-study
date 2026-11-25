@@ -109,7 +109,7 @@
     "r45: Replaced r44 obligation prompts, which inherited a slower 0.80x source. Four fresh Evelyn Soft 0.90x / 180 WPM recordings now match the surrounding narration pace. Only HAS TO is time-stretched at 0.65 tempo with gentle gain; prefix/suffix samples outside 5ms joins are unchanged before MP3 encoding. Native sources retained for comparison. Final audio and new cues pass independent unprompted full-sentence recognition.",
     "r54: Only NOT is slower in the four Who was meaner questions, including kid and adult recipients. Existing Evelyn Soft voice, wording and surrounding audio pace are retained. No pause or volume change. New files and spoken-word cues passed exact full-sentence recognition.",
     "r56: Incorrect recall responses replay the original nonhelping outcome screens, then ask the recall question again until No. The small correction/reminder is no longer used. Every helper receives one four-option meanness scale, including Not mean; the other helper receives this scale after either Mean or Not Mean. Original verified option recordings are reused with the new option order.",
-    "All twelve care-specific obligation prompts use the original Evelyn Soft recordings with a slower, gently stressed HAS TO and brief pauses. Each complete revised question was verified by offline speech recognition."
+    "The twelve care-specific obligation questions retain their original full recordings, with only the vowel of HAS lengthened approximately 60 ms. No added pause or gain. Whisper transcribed HAS TO correctly in all twelve and the entire sentence exactly in eleven. For the mom/strawberries question, Whisper interpreted one later preposition the same way in both the untouched take and the revision."
   ],
   "clips": [
     {
@@ -20355,15 +20355,16 @@
       ],
       "src": "assets/narration/obligation_hug_kid.mp3",
       "status": "verified-source-recording",
-      "sha256": "669cac9797373b5f03e2e8403550d2fc73cc0bdb1c79553a1f162c3bea7bc946",
-      "bytes": 170362,
-      "durationSeconds": 4.231837,
+      "sha256": "14187805a5c8ac671b09846f9355b09279702e730e82604bfb13ef81551ce9f5",
+      "bytes": 156778,
+      "durationSeconds": 3.892245,
       "provenance": {
         "source": "Full question recorded in NaturalReaders Commercial, Evelyn Soft.",
         "sourceSha256": "b24910b15fbc85e1f1e6209f5b7fe38fa998ab77f4928b0c8e605550ee728213",
-        "edit": "Pitch-preserving local duration adjustment to the intact take. The original quiet transitions around HAS TO are slightly extended and HAS TO has a 1.5 dB emphasis. The rest of the sentence retains its original pace.",
+        "edit": "Added about 60 ms inside the voiced vowel of has, using pitch-synchronous interpolation between adjacent original cycles. Original amplitude and inter-word spacing retained. PCM from the end of that vowel through the entire remainder of the question is untouched.",
+        "vowelExtensionSeconds": 0.061905,
         "originalPhraseSeconds": 0.4,
-        "revisedPhraseSeconds": 0.5838
+        "revisedPhraseSeconds": 0.4619
       }
     },
     {
@@ -20449,15 +20450,16 @@
       ],
       "src": "assets/narration/obligation_food_kid.mp3",
       "status": "verified-source-recording",
-      "sha256": "9f82b9b3c49e64a4b3de9a3920e8850efff468d803704f61c050a77ab04c3752",
-      "bytes": 183946,
-      "durationSeconds": 4.571429,
+      "sha256": "d0868c1b499b06d03573345e4303a73411a313235c8b70953a0e74cdee2c1981",
+      "bytes": 171407,
+      "durationSeconds": 4.257959,
       "provenance": {
         "source": "Full question recorded in NaturalReaders Commercial, Evelyn Soft.",
         "sourceSha256": "f2c92804a97dd401b0782b2d31afba5e7c447b7e870535eca0291395066b37d0",
-        "edit": "Pitch-preserving local duration adjustment to the intact take. The original quiet transitions around HAS TO are slightly extended and HAS TO has a 1.5 dB emphasis. The rest of the sentence retains its original pace.",
+        "edit": "Added about 60 ms inside the voiced vowel of has, using pitch-synchronous interpolation between adjacent original cycles. Original amplitude and inter-word spacing retained. PCM from the end of that vowel through the entire remainder of the question is untouched.",
+        "vowelExtensionSeconds": 0.059546,
         "originalPhraseSeconds": 0.37,
-        "revisedPhraseSeconds": 0.54
+        "revisedPhraseSeconds": 0.4295
       }
     },
     {
@@ -20543,15 +20545,16 @@
       ],
       "src": "assets/narration/obligation_help_kid.mp3",
       "status": "verified-source-recording",
-      "sha256": "f4c8bbe522cc203b3de1793606ba8084c811c4322485faec9ee580ecdbfe8526",
-      "bytes": 199619,
-      "durationSeconds": 4.963265,
+      "sha256": "234af3d8396cd3686d82988a4d4c508791e8fa9383a7b24b2627aecd4ddf4138",
+      "bytes": 188125,
+      "durationSeconds": 4.675918,
       "provenance": {
         "source": "Full question recorded in NaturalReaders Commercial, Evelyn Soft.",
         "sourceSha256": "3e3d4438db158bb9360e08292ad49899a7db63b2dfff9ac3d2960c83fd2f2aed",
-        "edit": "Pitch-preserving local duration adjustment to the intact take. The original quiet transitions around HAS TO are slightly extended and HAS TO has a 1.5 dB emphasis. The rest of the sentence retains its original pace.",
+        "edit": "Added about 60 ms inside the voiced vowel of has, using pitch-synchronous interpolation between adjacent original cycles. Original amplitude and inter-word spacing retained. PCM from the end of that vowel through the entire remainder of the question is untouched.",
+        "vowelExtensionSeconds": 0.060839,
         "originalPhraseSeconds": 0.34,
-        "revisedPhraseSeconds": 0.4961
+        "revisedPhraseSeconds": 0.4008
       }
     },
     {
@@ -20567,15 +20570,16 @@
       ],
       "src": "assets/narration/obligation_hug_mom.mp3",
       "status": "verified-source-recording",
-      "sha256": "6f6bd6aedeaa92d9b5eef8ee5e8c61531134531544f3ed837c7b08e7479eab96",
-      "bytes": 169317,
-      "durationSeconds": 4.205714,
+      "sha256": "d185885a20a2edbede6e522ed06309a631e056746f6915f6ca5fe9dd797d177c",
+      "bytes": 156778,
+      "durationSeconds": 3.892245,
       "provenance": {
         "source": "Full question recorded in NaturalReaders Commercial, Evelyn Soft.",
         "sourceSha256": "57e4fb77422650abb62cff889c14263e1e345a087507bbeda71d89838a6831cc",
-        "edit": "Pitch-preserving local duration adjustment to the intact take. The original quiet transitions around HAS TO are slightly extended and HAS TO has a 1.5 dB emphasis. The rest of the sentence retains its original pace.",
+        "edit": "Added about 60 ms inside the voiced vowel of has, using pitch-synchronous interpolation between adjacent original cycles. Original amplitude and inter-word spacing retained. PCM from the end of that vowel through the entire remainder of the question is untouched.",
+        "vowelExtensionSeconds": 0.063129,
         "originalPhraseSeconds": 0.38,
-        "revisedPhraseSeconds": 0.5549
+        "revisedPhraseSeconds": 0.4431
       }
     },
     {
@@ -20591,15 +20595,16 @@
       ],
       "src": "assets/narration/obligation_food_mom.mp3",
       "status": "verified-source-recording",
-      "sha256": "acca2b8dbcf6a4e281dc85967abe31e3588f3f7236c49eacd593f039feaf5bae",
-      "bytes": 184991,
-      "durationSeconds": 4.597551,
+      "sha256": "8efe7a402e651f25919672b4cea6d7ac03cea009bbaf9936ebccd023062bcf34",
+      "bytes": 172452,
+      "durationSeconds": 4.284082,
       "provenance": {
         "source": "Full question recorded in NaturalReaders Commercial, Evelyn Soft.",
         "sourceSha256": "56cec1579ac941625b2822de8a048d97b3e0306dc918dfa86fa9f8244186c7d5",
-        "edit": "Pitch-preserving local duration adjustment to the intact take. The original quiet transitions around HAS TO are slightly extended and HAS TO has a 1.5 dB emphasis. The rest of the sentence retains its original pace.",
+        "edit": "Added about 60 ms inside the voiced vowel of has, using pitch-synchronous interpolation between adjacent original cycles. Original amplitude and inter-word spacing retained. PCM from the end of that vowel through the entire remainder of the question is untouched.",
+        "vowelExtensionSeconds": 0.060068,
         "originalPhraseSeconds": 0.37,
-        "revisedPhraseSeconds": 0.5399
+        "revisedPhraseSeconds": 0.4301
       }
     },
     {
@@ -20615,15 +20620,16 @@
       ],
       "src": "assets/narration/obligation_help_mom.mp3",
       "status": "verified-source-recording",
-      "sha256": "4f0f93ac80456bb21cce33c0c62b262ea03796cd972d57c7c0d371804fd173ee",
-      "bytes": 201709,
-      "durationSeconds": 5.01551,
+      "sha256": "ce91c3c7b3d65abc84777ff57ee9a6831f5e8ea72247e63c212151e260786b42",
+      "bytes": 190215,
+      "durationSeconds": 4.728163,
       "provenance": {
         "source": "Full question recorded in NaturalReaders Commercial, Evelyn Soft.",
         "sourceSha256": "cbc9c9127e694fa0d30076585d4dae757c2fd6b1d510792f4edac293323e22e4",
-        "edit": "Pitch-preserving local duration adjustment to the intact take. The original quiet transitions around HAS TO are slightly extended and HAS TO has a 1.5 dB emphasis. The rest of the sentence retains its original pace.",
+        "edit": "Added about 60 ms inside the voiced vowel of has, using pitch-synchronous interpolation between adjacent original cycles. Original amplitude and inter-word spacing retained. PCM from the end of that vowel through the entire remainder of the question is untouched.",
+        "vowelExtensionSeconds": 0.060544,
         "originalPhraseSeconds": 0.36,
-        "revisedPhraseSeconds": 0.5253
+        "revisedPhraseSeconds": 0.4205
       }
     },
     {
@@ -20639,15 +20645,16 @@
       ],
       "src": "assets/narration/obligation_hug_dad.mp3",
       "status": "verified-source-recording",
-      "sha256": "f02a3e2dd1f5caeb901c483bb3dfaefd26de1b29843370e4855500c2dae7a115",
-      "bytes": 168272,
-      "durationSeconds": 4.179592,
+      "sha256": "c57afaab537642e423c05d79906bf5ac8c9ef5687201d7dd7e8461b41cfe4a54",
+      "bytes": 154689,
+      "durationSeconds": 3.84,
       "provenance": {
         "source": "Full question recorded in NaturalReaders Commercial, Evelyn Soft.",
         "sourceSha256": "7514a36f63183c1974c3b67563f50e7aec0833adae50e5634a5ae7a983f3ae51",
-        "edit": "Pitch-preserving local duration adjustment to the intact take. The original quiet transitions around HAS TO are slightly extended and HAS TO has a 1.5 dB emphasis. The rest of the sentence retains its original pace.",
+        "edit": "Added about 60 ms inside the voiced vowel of has, using pitch-synchronous interpolation between adjacent original cycles. Original amplitude and inter-word spacing retained. PCM from the end of that vowel through the entire remainder of the question is untouched.",
+        "vowelExtensionSeconds": 0.063311,
         "originalPhraseSeconds": 0.38,
-        "revisedPhraseSeconds": 0.5547
+        "revisedPhraseSeconds": 0.4433
       }
     },
     {
@@ -20663,15 +20670,16 @@
       ],
       "src": "assets/narration/obligation_food_dad.mp3",
       "status": "verified-source-recording",
-      "sha256": "691e9652c723bfccd4bd50d652ed3609bdc202c19df6fb92ba6d097273a86518",
-      "bytes": 181856,
-      "durationSeconds": 4.519184,
+      "sha256": "5ce04304aa8c5e187978d1c3d3462523653386568ab8a8c5621d77c38a09cb6e",
+      "bytes": 169317,
+      "durationSeconds": 4.205714,
       "provenance": {
         "source": "Full question recorded in NaturalReaders Commercial, Evelyn Soft.",
         "sourceSha256": "050cdbbd9219f41290950b6f6cbd0eb3abc1656cdde472bd694e7d1433072b1e",
-        "edit": "Pitch-preserving local duration adjustment to the intact take. The original quiet transitions around HAS TO are slightly extended and HAS TO has a 1.5 dB emphasis. The rest of the sentence retains its original pace.",
+        "edit": "Added about 60 ms inside the voiced vowel of has, using pitch-synchronous interpolation between adjacent original cycles. Original amplitude and inter-word spacing retained. PCM from the end of that vowel through the entire remainder of the question is untouched.",
+        "vowelExtensionSeconds": 0.060658,
         "originalPhraseSeconds": 0.37,
-        "revisedPhraseSeconds": 0.5399
+        "revisedPhraseSeconds": 0.4307
       }
     },
     {
@@ -20687,15 +20695,16 @@
       ],
       "src": "assets/narration/obligation_help_dad.mp3",
       "status": "verified-source-recording",
-      "sha256": "ad742aeeef101fd25c19365d9147bc2d7f5bffd342a453a0879f01453130cf1b",
-      "bytes": 200664,
-      "durationSeconds": 4.989388,
+      "sha256": "c4b2439b8348034b8ae8e7357b6b0ee7b0405e98c9dc3b9cadd21de913fae853",
+      "bytes": 189170,
+      "durationSeconds": 4.702041,
       "provenance": {
         "source": "Full question recorded in NaturalReaders Commercial, Evelyn Soft.",
         "sourceSha256": "427c59a5806078667214e935916fb96c084a9c0be83a2111f20822e14904bb3a",
-        "edit": "Pitch-preserving local duration adjustment to the intact take. The original quiet transitions around HAS TO are slightly extended and HAS TO has a 1.5 dB emphasis. The rest of the sentence retains its original pace.",
+        "edit": "Added about 60 ms inside the voiced vowel of has, using pitch-synchronous interpolation between adjacent original cycles. Original amplitude and inter-word spacing retained. PCM from the end of that vowel through the entire remainder of the question is untouched.",
+        "vowelExtensionSeconds": 0.060862,
         "originalPhraseSeconds": 0.34,
-        "revisedPhraseSeconds": 0.4961
+        "revisedPhraseSeconds": 0.4009
       }
     },
     {
@@ -20711,15 +20720,16 @@
       ],
       "src": "assets/narration/obligation_hug_teacher.mp3",
       "status": "verified-source-recording",
-      "sha256": "58acacedcc36854bcfabe8c1077a43f9a12ace3838ee5e3fdcdeec4ff52555c8",
-      "bytes": 170362,
-      "durationSeconds": 4.231837,
+      "sha256": "ae8460eaa8111ad83a02628cc66c1b43941044bce3a2d691502ea1f3e442d0d1",
+      "bytes": 157823,
+      "durationSeconds": 3.918367,
       "provenance": {
         "source": "Full question recorded in NaturalReaders Commercial, Evelyn Soft.",
         "sourceSha256": "48f8f27929d0d28433d0f7c608b3cfc8c9407286af8d91c77c744245122e8be9",
-        "edit": "Pitch-preserving local duration adjustment to the intact take. The original quiet transitions around HAS TO are slightly extended and HAS TO has a 1.5 dB emphasis. The rest of the sentence retains its original pace.",
+        "edit": "Added about 60 ms inside the voiced vowel of has, using pitch-synchronous interpolation between adjacent original cycles. Original amplitude and inter-word spacing retained. PCM from the end of that vowel through the entire remainder of the question is untouched.",
+        "vowelExtensionSeconds": 0.060952,
         "originalPhraseSeconds": 0.38,
-        "revisedPhraseSeconds": 0.5545
+        "revisedPhraseSeconds": 0.441
       }
     },
     {
@@ -20735,15 +20745,16 @@
       ],
       "src": "assets/narration/obligation_food_teacher.mp3",
       "status": "verified-source-recording",
-      "sha256": "03b819e47d3264c6863f46c4655a74834c993f53d9d4479bf52d3de991e6ac8e",
-      "bytes": 186036,
-      "durationSeconds": 4.623673,
+      "sha256": "295df601b29761aa583b3cc9f980753268ef18029898176429d759b99a85e013",
+      "bytes": 173497,
+      "durationSeconds": 4.310204,
       "provenance": {
         "source": "Full question recorded in NaturalReaders Commercial, Evelyn Soft.",
         "sourceSha256": "83f0b359a702bef5733e56792e62dafc8cb3aa3437c9a9145f529503df8d77e7",
-        "edit": "Pitch-preserving local duration adjustment to the intact take. The original quiet transitions around HAS TO are slightly extended and HAS TO has a 1.5 dB emphasis. The rest of the sentence retains its original pace.",
+        "edit": "Added about 60 ms inside the voiced vowel of has, using pitch-synchronous interpolation between adjacent original cycles. Original amplitude and inter-word spacing retained. PCM from the end of that vowel through the entire remainder of the question is untouched.",
+        "vowelExtensionSeconds": 0.059002,
         "originalPhraseSeconds": 0.36,
-        "revisedPhraseSeconds": 0.5265
+        "revisedPhraseSeconds": 0.419
       }
     },
     {
@@ -20759,15 +20770,16 @@
       ],
       "src": "assets/narration/obligation_help_teacher.mp3",
       "status": "verified-source-recording",
-      "sha256": "e6db887f6060a8ad36b6ed4c361793e302edc14ac531c93157a16d6259f46231",
-      "bytes": 204844,
-      "durationSeconds": 5.093878,
+      "sha256": "42aef60250f5ac4e5279a2ed122c8266c505012d38c1b21b1ffff384ab1e5fbd",
+      "bytes": 193350,
+      "durationSeconds": 4.806531,
       "provenance": {
         "source": "Full question recorded in NaturalReaders Commercial, Evelyn Soft.",
         "sourceSha256": "afed1d6ef4985b85c08b700dc4a54f7810925fa5e4c20ebb1fc81871a4b33ad0",
-        "edit": "Pitch-preserving local duration adjustment to the intact take. The original quiet transitions around HAS TO are slightly extended and HAS TO has a 1.5 dB emphasis. The rest of the sentence retains its original pace.",
+        "edit": "Added about 60 ms inside the voiced vowel of has, using pitch-synchronous interpolation between adjacent original cycles. Original amplitude and inter-word spacing retained. PCM from the end of that vowel through the entire remainder of the question is untouched.",
+        "vowelExtensionSeconds": 0.058345,
         "originalPhraseSeconds": 0.32,
-        "revisedPhraseSeconds": 0.4668
+        "revisedPhraseSeconds": 0.3783
       }
     }
   ],
