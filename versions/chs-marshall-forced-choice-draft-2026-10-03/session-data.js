@@ -172,15 +172,32 @@
     };
   }
 
-  function build(setId = 'woman', questionOrderId = 'will-first') {
+  function resolveAssignment(setId, questionOrderId, assignmentNumber = null) {
+    if (assignmentNumber !== null) {
+      if (!catalog.roleSets.some(set => set.id === setId)) {
+        throw new Error('Choose a single pairing set for a numbered assignment.');
+      }
+      const number = Number(assignmentNumber);
+      if (!/^\d+$/.test(String(assignmentNumber)) || !Number.isSafeInteger(number) || number < 1) {
+        throw new Error('Enter a whole assignment number of 1 or higher.');
+      }
+      return {assignmentNumber: number, questionOrderId: number % 2 === 1 ? 'will-first' : 'has-to-first'};
+    }
+    if (!questionOrders.some(order => order.id === questionOrderId)) {
+      throw new Error(`Unknown question order: ${questionOrderId}`);
+    }
+    return {assignmentNumber: null, questionOrderId};
+  }
+
+  function build(setId = 'woman', questionOrderId = 'will-first', assignmentNumber = null) {
     // Legacy practice=once/each links use the same practice-free flow.
     const practiceMode = 'none';
     // Older script/timing exporters passed their practice mode here.
     if (['once','each','none'].includes(questionOrderId)) questionOrderId = 'will-first';
     const set = catalog.roleSets.find(s => s.id === setId);
     if (!set && setId !== 'all') throw new Error(`Unknown pairing set: ${setId}`);
-    const questionOrder = questionOrders.find(order => order.id === questionOrderId);
-    if (!questionOrder) throw new Error(`Unknown question order: ${questionOrderId}`);
+    const assignment = resolveAssignment(setId, questionOrderId, assignmentNumber);
+    const questionOrder = questionOrders.find(order => order.id === assignment.questionOrderId);
     const pairings = setId === 'all' ? catalog.pairings.slice() : set.pairingIds.map(id => catalog.pairings.find(p => p.id === id));
     const steps = pairings.flatMap((p, index) => storySteps(p, index, questionOrder));
     steps.push({...copy(templates.end), id:'session-end', localId:'end', image:null,
@@ -189,7 +206,7 @@
       note:'Draft closing wording. This is the end of the selected preview.'});
     return {
       variant:'forced-choice', setId, setLabel:setId === 'all' ? 'All pairings · researcher review' : set.label,
-      practiceMode, questionOrder:questionOrder.id, questionOrderLabel:questionOrder.label,
+      practiceMode, assignmentNumber:assignment.assignmentNumber, questionOrder:questionOrder.id, questionOrderLabel:questionOrder.label,
       firstQuestion:questionOrder.firstQuestion, counterbalanceCell:`${setId}:${questionOrder.id}`,
       isAllReview:setId === 'all', pairings, steps, stats:statsFor(steps, pairings.length),
       notes:[
@@ -219,6 +236,7 @@
       '# Forced-choice obligation study draft — full session', '',
       `**${session.setLabel} · ${session.pairings.length} stories**`, '',
       `**Question order: ${session.questionOrderLabel}**`, '',
+      ...(session.assignmentNumber === null ? [] : [`Assignment ${session.assignmentNumber} within this pairing set.`, '']),
       ...session.notes.map(note => `- ${note}`), '',
       `Expected path range: **${stats.screens.min}–${stats.screens.max} screens**, **${stats.responses.min}–${stats.responses.max} responses**.`, '',
       `${stats.forcedChoiceResponses} forced choices + ${stats.individualEvaluationResponses} individual Mean/Not Mean judgments + ${stats.strengthResponses.min}–${stats.strengthResponses.max} how-mean ratings + ${stats.checks} recall checks.`, '',
@@ -262,5 +280,5 @@
     }
     return lines.join('\n');
   }
-  return {build, toMarkdown, spokenWords, questionOrders};
+  return {build, resolveAssignment, toMarkdown, spokenWords, questionOrders};
 });

@@ -124,3 +124,24 @@
 .story-card.message-slide .practice-space{display:none}
 @media(max-width:460px){.stage.message-slide .prompt{padding:28px 22px}.stage.message-slide .prompt h2{font-size:29px;max-width:22ch}.story-card.message-slide .prompt h2{font-size:23px}}
 @media print{.story-card.message-slide .prompt{background:white!important;color:#292821!important;min-height:260px}.story-card.message-slide .prompt h2{font-size:30px}.confirmation-selected{box-shadow:none!important}}
+
+.session-settings { grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr)); }
+.session-settings input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 9px 8px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: white;
+  font: inherit;
+}
+.session-settings input:disabled { background: #f1f1ec; }
+#preview-assignment:not([hidden]) {
+  display: inline-block;
+  margin-right: 12px;
+  padding: 7px 12px;
+  background: #17466f;
+  color: white;
+  border-radius: 7px;
+  text-decoration: none;
+}

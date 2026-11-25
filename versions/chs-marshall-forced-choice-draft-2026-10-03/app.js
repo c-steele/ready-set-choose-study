@@ -3,6 +3,7 @@
   const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const $=id=>document.getElementById(id), stage=$('stage'), jump=$('jump');
   const params=new URLSearchParams(location.search);
+  const assignmentInput=$('assignment-number');
   const chsBridge=window.MarshallCHSBridge;
   let childView=false,choiceConfirmation=null,correctFeedbackState=null,screenHeard=false;
   let session,steps,index=0,answers={},history=[],recallReplays={},wrong=null,optionReader=null,downloadUrl=null;
@@ -410,10 +411,22 @@
     const baseMinutes=recordedTiming?.estimatedSessionMinutesIncludingResponses||t.minutes;
     const estimatedMinutes={min:baseMinutes.min+automaticAdvanceSeconds/60,max:baseMinutes.max+automaticAdvanceSeconds/60};
     $('session-subtitle').textContent=`${roleNames[session.setId]} · ${t.storyCount} stories · ${session.questionOrderLabel}`;
+    const assignedLink=$('preview-assignment');
+    assignedLink.hidden=session.assignmentNumber===null;
+    if(!assignedLink.hidden){
+      const url=new URL('index.html',location.href);
+      url.searchParams.set('view','child');
+      url.searchParams.set('set',session.setId);
+      url.searchParams.set('assignmentNumber',session.assignmentNumber);
+      assignedLink.href=url.href;
+      assignedLink.textContent=`Preview assignment ${session.assignmentNumber} ↗`;
+    }else{
+      assignedLink.removeAttribute('href');
+    }
     for(const order of ObligationSession.questionOrders){
       const url=new URL('index.html',location.href);
       url.searchParams.set('view','child');url.searchParams.set('set',session.setId);
-      url.searchParams.set('questionOrder',order.id);url.searchParams.set('practice','none');url.searchParams.set('v','recall-replay-four-ratings-r56');
+      url.searchParams.set('questionOrder',order.id);url.searchParams.set('practice','none');url.searchParams.set('v','assignment-number-r57');
       $('preview-'+order.id).href=url.href;
     }
     $('session-warning').textContent=session.isAllReview?'All 18 story instances are shown for review. Shared pairings recur across sets; this is not the six-story session one child would receive.':'One child would see one set of six pairings. The order below is fixed for review.';
@@ -426,7 +439,32 @@
     if(downloadUrl)URL.revokeObjectURL(downloadUrl);downloadUrl=URL.createObjectURL(new Blob([ObligationSession.toMarkdown(session)],{type:'text/markdown'}));$('download-script').href=downloadUrl;$('download-script').download=`forced-choice-${session.setId}-${session.questionOrder}.md`;
   }
   function resetRun(){chsBridge?.reset();stopNarration();narrationEnabled=true;choiceConfirmation=null;correctFeedbackState=null;screenHeard=false;optionReader?.dispose();optionReader=null;index=0;answers={};history=[];recallReplays={};wrong=null;elapsed=0;started=null;timerUsed=false;incomplete=false;completed=false;showBoard(false);render();updateTimer();}
-  function configure(){session=ObligationSession.build($('set-select').value,$('question-order-select').value);steps=session.steps;const u=new URL(location.href);u.searchParams.set('set',session.setId);u.searchParams.set('practice',session.practiceMode);u.searchParams.set('questionOrder',session.questionOrder);window.history.replaceState(null,'',u);updateOverview();buildBoard();resetRun();}
+  function configure(){
+    const setId=$('set-select').value;
+    assignmentInput.disabled=setId==='all';
+    if(assignmentInput.disabled)assignmentInput.value='';
+    assignmentInput.setCustomValidity('');
+    try{
+      if(!assignmentInput.validity.valid)throw new Error('Enter a whole assignment number of 1 or higher.');
+      session=ObligationSession.build(setId,$('question-order-select').value,assignmentInput.value||null);
+    }catch(error){
+      assignmentInput.setCustomValidity(error.message);
+      assignmentInput.reportValidity();
+      $('preview-assignment').hidden=true;
+      return;
+    }
+    steps=session.steps;
+    assignmentInput.value=session.assignmentNumber??'';
+    $('question-order-select').value=session.questionOrder;
+    const url=new URL(location.href);
+    url.searchParams.set('set',session.setId);
+    url.searchParams.set('practice',session.practiceMode);
+    url.searchParams.set('questionOrder',session.questionOrder);
+    if(session.assignmentNumber===null)url.searchParams.delete('assignmentNumber');
+    else url.searchParams.set('assignmentNumber',session.assignmentNumber);
+    window.history.replaceState(null,'',url);
+    updateOverview();buildBoard();resetRun();
+  }
   function pauseTimer(){if(started!==null){elapsed+=Date.now()-started;started=null;}updateTimer();}
   function markBrowse(){if(timerUsed){incomplete=true;pauseTimer();}}
   function updateTimer(){const total=Math.floor((elapsed+(started===null?0:Date.now()-started))/1000);$('elapsed').textContent=`${Math.floor(total/60)}:${String(total%60).padStart(2,'0')}`;$('timer-toggle').textContent=started!==null?'Pause':timerUsed?'Resume timer':'Start timer';$('timer-toggle').disabled=completed;$('timer-note').textContent=incomplete?'Partial walkthrough: navigation or a late start skipped part of the session.':completed&&timerUsed?'Finished walkthrough; this is your preview time.':timerUsed?(started!==null?'Timing this walkthrough.':'Timer paused.'):'Start on the first screen and play the narration to check the pace.';}
@@ -439,12 +477,29 @@
   $('child-view').addEventListener('click',()=>setChildView(true));$('researcher-view').addEventListener('click',()=>setChildView(false));
   $('story-tab').addEventListener('click',()=>showBoard(false));$('board-tab').addEventListener('click',()=>showBoard(true));$('print').addEventListener('click',async()=>{const imgs=[...$('cards').querySelectorAll('img')];imgs.forEach(img=>img.loading='eager');await Promise.all(imgs.map(img=>img.decode().catch(()=>{})));window.print();});
   window.addEventListener('beforeprint',()=>{document.querySelectorAll('#cards img').forEach(img=>img.loading='eager');});
-  $('set-select').value=Object.keys(roleNames).includes(params.get('set'))?params.get('set'):'woman';
-  const requestedOrder=params.get('questionOrder')||'will-first';
-  if(!ObligationSession.questionOrders.some(order=>order.id===requestedOrder))throw new Error('Unknown questionOrder. Use will-first or has-to-first.');
-  $('question-order-select').value=requestedOrder;
+  const requestedSet=params.get('set')||'woman';
+  try{
+    const assignment=ObligationSession.resolveAssignment(requestedSet,params.get('questionOrder')||'will-first',params.get('assignmentNumber'));
+    $('set-select').value=Object.hasOwn(roleNames,requestedSet)?requestedSet:'woman';
+    $('question-order-select').value=assignment.questionOrderId;
+    assignmentInput.value=assignment.assignmentNumber??'';
+  }catch(error){
+    const message=document.createElement('p');
+    message.setAttribute('role','alert');
+    message.textContent=`This study link has an invalid assignment. ${error.message}`;
+    document.querySelector('main').replaceChildren(message);
+    document.querySelector('.toolbar').hidden=true;
+    return;
+  }
   $('set-select').addEventListener('change',configure);
-  $('question-order-select').addEventListener('change',configure);
+  $('question-order-select').addEventListener('change',()=>{
+    assignmentInput.value='';
+    configure();
+  });
+  assignmentInput.addEventListener('change',configure);
+  assignmentInput.addEventListener('keydown',event=>{
+    if(event.key==='Enter')assignmentInput.blur();
+  });
   window.addEventListener('pagehide',()=>{stopNarration();narrationEnabled=false;optionReader?.dispose();optionReader=null;pauseTimer();});window.addEventListener('pageshow',e=>{if(e.persisted&&$('child-welcome').hidden)render();});
   $('play-narration').addEventListener('click',playNarration);$('stop-narration').addEventListener('click',()=>{stopNarration();optionReader?.reset();$('narration-status').textContent='Audio stopped. Tap Replay to hear this screen.';});
   $('auto-narration').addEventListener('change',()=>{if(!$('auto-narration').checked){stopNarration();optionReader?.reset();$('narration-status').textContent='Audio stopped. Tap Replay to hear this screen.';}});

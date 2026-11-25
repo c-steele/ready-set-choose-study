@@ -45,11 +45,13 @@ for (const set of ['woman', 'man', 'family', 'all']) {
     const window = {location:{search:'?session_id=TEST'}, parent};
     const context = {window, document:{referrer:'https://childrenhelpingscience.com/preview/'}, URL, URLSearchParams, performance:{now:()=>100}, Date};
     vm.runInNewContext(bridgeSource, context);
-    for (const step of session.steps.filter(s => s.questionPosition).slice(0, 2)) {
-      window.MarshallCHSBridge.screen(step, session, session.steps.indexOf(step));
-      window.MarshallCHSBridge.answer(step, session, step.choices[0], {accepted:true});
+    const number = session.questionOrder === 'will-first' ? 3 : 4;
+    const loggedSession = set === 'all' ? session : api.build(set, session.questionOrder, number);
+    for (const step of loggedSession.steps.filter(s => s.questionPosition).slice(0, 2)) {
+      window.MarshallCHSBridge.screen(step, loggedSession, loggedSession.steps.indexOf(step));
+      window.MarshallCHSBridge.answer(step, loggedSession, step.choices[0], {accepted:true});
     }
-    window.MarshallCHSBridge.complete(session, {});
+    window.MarshallCHSBridge.complete(loggedSession, {});
     const records = window.MarshallCHSBridge.snapshot();
     assert.equal(records.length, 2);
     assert.deepEqual(Array.from(records, r=>r.question_position), [1,2]);
@@ -57,9 +59,11 @@ for (const set of ['woman', 'man', 'family', 'all']) {
       assert.equal(record.question_order, session.questionOrder);
       assert.equal(record.first_question, session.firstQuestion);
       assert.equal(record.counterbalance_cell, session.counterbalanceCell);
+      assert.equal(record.assignment_number, loggedSession.assignmentNumber);
     }
     const completion = messages.find(m => m.message.type === 'GAME_COMPLETE').message;
     assert.equal(completion.payload.question_order, session.questionOrder);
+    assert.equal(completion.payload.assignment_number, loggedSession.assignmentNumber);
     assert.equal(completion.data_posted, false);
     assert(messages.every(m => m.origin === 'https://childrenhelpingscience.com'));
   }
@@ -67,4 +71,21 @@ for (const set of ['woman', 'man', 'family', 'all']) {
 assert.equal(api.build('woman').questionOrder, 'will-first');
 for (const legacy of ['once','each','none']) assert.equal(api.build('woman',legacy).questionOrder,'will-first');
 assert.throws(()=>api.build('woman','wrong-order'), /Unknown question order/);
+for (const set of ['woman','man','family']) {
+  for (const number of [1,2,3,4,5,6]) {
+    const order = number % 2 ? 'will-first' : 'has-to-first';
+    const conflictingOrder = number % 2 ? 'has-to-first' : 'will-first';
+    const session = api.build(set, conflictingOrder, String(number));
+    assert.equal(session.assignmentNumber, number);
+    assert.equal(session.questionOrder, order);
+    assert.equal(session.practiceMode, 'none');
+    assert.equal(session.stats.practiceResponses, 0);
+    assert.deepEqual(session.steps, api.build(set, order).steps);
+  }
+}
+assert.equal(api.build('all','has-to-first').assignmentNumber, null);
+assert.throws(()=>api.build('all','will-first',1), /single pairing set/);
+for (const invalid of ['', '0', '-1', '2.5', '1e3', 'x', '9007199254740992']) {
+  assert.throws(()=>api.build('man','will-first',invalid), /whole assignment number/);
+}
 console.log(`Passed ${checkedStories} ordered stories including all-set previews: both orders, unchanged measures/audio/branches, and recorded order fields.`);

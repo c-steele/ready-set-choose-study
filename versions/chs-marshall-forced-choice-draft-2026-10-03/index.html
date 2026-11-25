@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Who has to help? · Forced-choice draft</title>
-  <link rel="stylesheet" href="style.css?v=recall-replay-four-ratings-r56">
+  <link rel="stylesheet" href="style.css?v=assignment-number-r57">
   <link rel="stylesheet" href="child-view.css?v=recall-replay-four-ratings-r56">
 </head>
 <body>
@@ -18,10 +18,14 @@
   <main>
     <section id="child-welcome" aria-label="Study introduction" hidden></section>
     <details class="session-overview" open>
-      <summary>Session overview &amp; pairings</summary>
-      <div class="session-settings"><label>Pairing set<select id="set-select"><option value="woman">Mom / sister set · 6 stories</option><option value="man">Dad / brother set · 6 stories</option><option value="family">Family set · 6 stories</option><option value="all">All three sets · 18 stories · Review only</option></select></label><label>Question order<select id="question-order-select"><option value="will-first">Who WILL help? first</option><option value="has-to-first">Who HAS TO help? first</option></select></label></div>
-      <p class="session-explainer">Keep this order throughout the child’s six stories. Alternate the two orders across participants within each role set.</p>
-      <p class="order-preview-links"><a id="preview-will-first" href="?view=child&amp;set=woman&amp;questionOrder=will-first" target="_blank" rel="noopener">Preview WILL first ↗</a> · <a id="preview-has-to-first" href="?view=child&amp;set=woman&amp;questionOrder=has-to-first" target="_blank" rel="noopener">Preview HAS TO first ↗</a></p>
+      <summary>Researcher preview · Pairings and question order</summary>
+      <div class="session-settings">
+        <label>Pairing set<select id="set-select"><option value="woman">Mom / sister set · 6 stories</option><option value="man">Dad / brother set · 6 stories</option><option value="family">Family set · 6 stories</option><option value="all">All three sets · 18 stories · Review only</option></select></label>
+        <label>Assignment number within this set<input id="assignment-number" type="number" inputmode="numeric" min="1" max="9007199254740991" step="1" placeholder="Optional" aria-describedby="assignment-help"></label>
+        <label>Question order<select id="question-order-select"><option value="will-first">Who WILL help? first</option><option value="has-to-first">Who HAS TO help? first</option></select></label>
+      </div>
+      <p id="assignment-help" class="session-explainer">Number children consecutively within each set. Odd numbers hear WILL first and even numbers hear HAS TO first, for all six stories. Opening or refreshing a preview does not assign a number.</p>
+      <p class="order-preview-links"><a id="preview-assignment" target="_blank" rel="noopener" hidden></a> <a id="preview-will-first" href="?view=child&amp;set=woman&amp;questionOrder=will-first" target="_blank" rel="noopener">Preview WILL first ↗</a> · <a id="preview-has-to-first" href="?view=child&amp;set=woman&amp;questionOrder=has-to-first" target="_blank" rel="noopener">Preview HAS TO first ↗</a></p>
       <p id="session-warning" class="session-explainer"></p><div id="session-stats" class="session-stats"></div>
       <details class="timing-explanation"><summary>What the estimate includes</summary><p id="timing-details"></p></details>
       <div id="pairing-list" class="pairing-list"></div>
@@ -48,6 +52,6 @@
     </details>
   </main>
   <footer>Researcher review · Three forced choices per story · Adapted wording</footer>
-  <script src="chs-bridge.js?v=recall-replay-four-ratings-r56"></script><script src="script-data.js?v=recall-replay-four-ratings-r56"></script><script src="pairing-catalog.js?v=20261106-forced-intro-r28"></script><script src="study-visuals.js?v=recall-replay-four-ratings-r56"></script><script src="session-data.js?v=recall-replay-four-ratings-r56"></script><script src="narration-manifest.js?v=recall-replay-four-ratings-r56"></script><script src="narration-timing.js?v=recall-replay-four-ratings-r56"></script><script src="narration-player.js?v=choice-question-r36"></script><script src="option-reader.js?v=choice-question-r36"></script><script src="narration-cues.js?v=recall-replay-four-ratings-r56"></script><script src="practice-visuals.js?v=recall-replay-four-ratings-r56"></script><script src="app.js?v=recall-replay-four-ratings-r56"></script>
+  <script src="chs-bridge.js?v=assignment-number-r57"></script><script src="script-data.js?v=recall-replay-four-ratings-r56"></script><script src="pairing-catalog.js?v=20261106-forced-intro-r28"></script><script src="study-visuals.js?v=recall-replay-four-ratings-r56"></script><script src="session-data.js?v=assignment-number-r57"></script><script src="narration-manifest.js?v=recall-replay-four-ratings-r56"></script><script src="narration-timing.js?v=recall-replay-four-ratings-r56"></script><script src="narration-player.js?v=choice-question-r36"></script><script src="option-reader.js?v=choice-question-r36"></script><script src="narration-cues.js?v=recall-replay-four-ratings-r56"></script><script src="practice-visuals.js?v=recall-replay-four-ratings-r56"></script><script src="app.js?v=assignment-number-r57"></script>
 </body>
 </html>
