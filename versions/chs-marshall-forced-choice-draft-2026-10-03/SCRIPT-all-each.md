@@ -15,7 +15,7 @@
 - All paths have the same explicit outcome: no one helped, followed by each named helper did NOT help. A Yes/No recall check precedes the meaner comparison. Yes replays the two nonhelping outcome screens and then asks the check again, repeating until No.
 - After the meaner comparison, a four-option how-mean rating is asked once for the selected helper. Only the other helper receives a Mean/Not Mean question, with a how-mean follow-up after either Mean or Not Mean. Both scales include Not mean, A teeny bit mean, A little bit mean, and Very mean. The selected helper is not asked either question again. Prediction and obligation remain forced choices without strength follow-ups. Overall Mean/Nice and individual recall questions remain omitted.
 - Instructional HAVE TO practice is omitted; the two early questions follow the assigned order.
-- The 18-story view is a researcher catalog of all three role sets, not the proposed length of one child’s session.
+- The 18 stories appear in catalog order for researcher review.
 
 Expected path range: **253–253 screens**, **126–126 responses**.
 

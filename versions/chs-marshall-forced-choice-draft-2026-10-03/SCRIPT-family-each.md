@@ -15,7 +15,7 @@
 - All paths have the same explicit outcome: no one helped, followed by each named helper did NOT help. A Yes/No recall check precedes the meaner comparison. Yes replays the two nonhelping outcome screens and then asks the check again, repeating until No.
 - After the meaner comparison, a four-option how-mean rating is asked once for the selected helper. Only the other helper receives a Mean/Not Mean question, with a how-mean follow-up after either Mean or Not Mean. Both scales include Not mean, A teeny bit mean, A little bit mean, and Very mean. The selected helper is not asked either question again. Prediction and obligation remain forced choices without strength follow-ups. Overall Mean/Nice and individual recall questions remain omitted.
 - Instructional HAVE TO practice is omitted; the two early questions follow the assigned order.
-- This preview contains the six pairings from one role set in a fixed review order.
+- The six pairings appear once each in a shuffled order, recorded with story seed 528.
 
 Expected path range: **85–85 screens**, **42–42 responses**.
 

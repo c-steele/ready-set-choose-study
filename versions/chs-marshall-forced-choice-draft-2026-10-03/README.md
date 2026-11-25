@@ -18,9 +18,17 @@ These links show the same six pairings from the mom and sister set. Use the rese
 
 Opening the random link gives each care condition a one-in-three chance. The preview also draws the pairing set and question order. All three choices then appear in the address, so refreshing or sharing that resolved address preserves the same version. To vary only the care condition, for example, use `?view=child&assign=random&set=family&questionOrder=has-to-first`. An ordinary unnumbered link with no care or order specified opens comfort with WILL first.
 
+### Pairing order
+
+Each child sees all six pairings from the assigned set once, in shuffled order. The story-order draw is independent of the care condition and the order of the WILL and HAS TO questions. Reloading, restarting, or reopening the child's resolved URL preserves the entire session. For a fresh draw, open a link without a `storySeed`. A first pairing can recur across draws.
+
+In researcher view, **Shuffle pairings** draws another sequence for the selected conditions. The WILL-first, HAS-TO-first, and numbered child-preview links on that page keep the displayed sequence for comparison. The 18-story review lists all pairings in catalog order.
+
+The `storySeed` parameter accepts an unsigned 32-bit integer, including 0. A new unseeded launch generates one with the browser's secure random number generator and puts it in the URL before the welcome. The study uses a seeded Fisher–Yates shuffle with rejection sampling. A Children Helping Science launcher can provide the seed with the assignment.
+
 ### Numbered assignments
 
-The three pairing sets each have a separate sequence of assignment numbers, starting at 1. A researcher can enter a child's number within their set, or open a link such as `?view=child&set=woman&assignmentNumber=2`. Reuse that number within the same set when returning to the same child. The researcher maintains the enrollment list independently of the preview.
+The three pairing sets each have a separate sequence of assignment numbers, starting at 1. A researcher can enter a child's number within their set, or open a link such as `?view=child&set=woman&assignmentNumber=2`. Save the child's resolved link when returning to a numbered assignment. The number fixes care and question order, and the story seed fixes pairing order. The researcher maintains the enrollment list independently of the preview.
 
 In each complete block of six assignments within a set, every care condition occurs once with WILL first and once with HAS TO first. Odd slots ask WILL first, and even slots ask HAS TO first. The schedule shuffles the three care conditions separately for odd and even slots, using the pairing set, block number, and question order to reproduce the draw on return. A numbered assignment takes precedence over explicit care and order parameters. Manually changing either selection clears the number. The all-pairings catalog shows 18 stories for researcher review and accepts explicit care and order selections.
 
@@ -37,8 +45,8 @@ The main comparisons measure relative judgments between two helpers. A choice of
 
 The pairings and artwork come from *Find the Caregiver!*. Role labels distinguish the two teachers in the teacher–child story. Helper options are read aloud in the order of their positions. The standalone preview allows researchers to advance narration pages with **Next**. A response screen waits for a choice, and the embedded Children Helping Science preview retains the narration gate. The private draft is for researcher review.
 
-The researcher view offers a full storyboard and a downloadable script for the selected set, care condition, and question order. [SCRIPT.md](SCRIPT.md) shows the default mom and sister comfort version. Historical script filenames containing `once` or `each` and older URLs with a practice parameter use the practice-free flow. Timing estimates are illustrative and exclude setup, breaks, and outcome replays.
+The researcher view offers a full storyboard and a downloadable script for the selected set, care condition, and question order. [SCRIPT.md](SCRIPT.md) shows one reproducible mom and sister comfort session with story seed 528. Historical script filenames containing `once` or `each` and older URLs with a practice parameter use the practice-free flow. Timing estimates are illustrative and exclude setup, breaks, and outcome replays.
 
-Screen messages, response records, and completion messages carry `role_set`, `care_context`, `question_order`, `first_question`, `assignment_number` (when supplied), `assignment_version`, and `counterbalance_cell`. The cell identifies the set, care condition, and order. Prediction and obligation also carry `question_position`. Private CHS preview responses stay in memory.
+Screen messages, response records, and completion messages carry `role_set`, `care_context`, `question_order`, `first_question`, `assignment_number` (when supplied), `assignment_version`, and `counterbalance_cell`. The cell identifies the set, care condition, and question order. Records include `story_seed`, the presented pairing IDs in `pairing_order`, and `story_order_version`. The zero-based `story_index` points to the current pairing in that list. Prediction and obligation also carry `question_position`. Private CHS preview responses stay in memory.
 
 The experiment adapts the expectation, obligation, and failure-to-help judgments used by Marshall and colleagues. Their main Study 1 asked about each helper individually. Their supplemental study included forced choices and counterbalanced expectation and obligation question sets. [Main article](https://doi.org/10.1037/xge0001136) · [Supplemental study methods](https://doi.org/10.1037/xge0001136.supp)

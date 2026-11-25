@@ -63,10 +63,14 @@ for (const set of ['woman', 'man', 'family', 'all']) for(const care of ['hug','f
       assert.equal(record.counterbalance_cell, loggedSession.counterbalanceCell);
       assert.equal(record.care_context, loggedSession.care);
       assert.equal(record.assignment_number, loggedSession.assignmentNumber);
+      assert.equal(record.story_seed, loggedSession.storySeed);
+      assert.deepEqual(Array.from(record.pairing_order), loggedSession.pairingOrder);
+      assert.equal(record.pairing_order[record.story_index], record.pairing_id);
     }
     const completion = messages.find(m => m.message.type === 'GAME_COMPLETE').message;
     assert.equal(completion.payload.question_order, session.questionOrder);
     assert.equal(completion.payload.assignment_number, loggedSession.assignmentNumber);
+    assert.deepEqual(Array.from(completion.payload.pairing_order), loggedSession.pairingOrder);
     assert.equal(completion.payload.care_context, loggedSession.care);
     assert.equal(completion.data_posted, false);
     assert(messages.every(m => m.origin === 'https://childrenhelpingscience.com'));
@@ -110,6 +114,24 @@ for(const care of cares)for(const order of ['will-first','has-to-first']){
   assert.deepEqual(api.resolveAssignment('man',order,null,care),{assignmentNumber:null,questionOrderId:order,care});
 }
 assert.throws(()=>api.build('woman','will-first',null,'unknown'),/Unknown care condition/);
+for(const set of ['woman','man','family']){
+  const orders=new Set();
+  for(const seed of [0,1,100,12345678,4294967295]){
+    const preview=api.build(set,'will-first',null,'hug',seed);
+    const numbered=api.build(set,'has-to-first',2,'food',String(seed));
+    assert.deepEqual(numbered.pairingOrder,preview.pairingOrder);
+    assert.equal(preview.storySeed,seed);
+    assert.equal(new Set(preview.pairingOrder).size,6);
+    assert.deepEqual(preview.pairings.map(pair=>pair.id),preview.pairingOrder);
+    for(const step of preview.steps.filter(step=>step.pairing))assert.equal(preview.pairingOrder[step.storyIndex],step.pairing.id);
+    orders.add(preview.pairingOrder.join(','));
+  }
+  assert.equal(orders.size,5);
+}
+for(const value of ['',-1,4294967296,'1e2','1.5',null])assert.throws(()=>api.parseStorySeed(value),/story seed/);
+const catalogReview=api.build('all');
+assert.equal(catalogReview.storySeed,null);
+assert.deepEqual(catalogReview.pairingOrder,api.build('all','has-to-first',null,'food',42).pairingOrder);
 assert.equal(api.build('all','has-to-first').assignmentNumber, null);
 assert.throws(()=>api.build('all','will-first',1), /single pairing set/);
 for (const invalid of ['', '0', '-1', '2.5', '1e3', 'x', '9007199254740992']) {

@@ -215,7 +215,36 @@
     return {assignmentNumber: null, questionOrderId, care};
   }
 
-  function build(setId = 'woman', questionOrderId = 'will-first', assignmentNumber = null, care = 'hug') {
+  function parseStorySeed(value) {
+    const seed = Number(value);
+    if (!/^\d+$/.test(String(value)) || !Number.isInteger(seed) || seed > 0xffffffff) {
+      throw new Error('The story seed must be a whole number from 0 to 4294967295.');
+    }
+    return seed;
+  }
+
+  function shuffledPairingIds(ids, seed) {
+    const result = [...ids];
+    // SplitMix32-style counter with a bijective MurmurHash3 finalizer. Zero is valid.
+    let state = seed;
+    function nextUint32() {
+      state = (state + 0x9e3779b9) >>> 0;
+      let word = Math.imul(state ^ (state >>> 16), 0x85ebca6b);
+      word = Math.imul(word ^ (word >>> 13), 0xc2b2ae35);
+      return (word ^ (word >>> 16)) >>> 0;
+    }
+    for (let remaining = result.length; remaining > 1; remaining--) {
+      const limit = 0x100000000 - (0x100000000 % remaining);
+      let draw;
+      do { draw = nextUint32(); } while (draw >= limit);
+      const other = draw % remaining;
+      [result[remaining - 1], result[other]] = [result[other], result[remaining - 1]];
+    }
+    return result;
+  }
+
+  // Offline examples use seed zero. Browser launches always pass a resolved session seed.
+  function build(setId = 'woman', questionOrderId = 'will-first', assignmentNumber = null, care = 'hug', seed = 0) {
     // Legacy practice=once/each links use the same practice-free flow.
     const practiceMode = 'none';
     // Older script/timing exporters passed their practice mode here.
@@ -224,14 +253,19 @@
     if (!set && setId !== 'all') throw new Error(`Unknown pairing set: ${setId}`);
     const assignment = resolveAssignment(setId, questionOrderId, assignmentNumber, care);
     const questionOrder = questionOrders.find(order => order.id === assignment.questionOrderId);
-    const pairings = setId === 'all' ? catalog.pairings.slice() : set.pairingIds.map(id => catalog.pairings.find(p => p.id === id));
+    const storySeed = setId === 'all' ? null : parseStorySeed(seed);
+    const pairingOrder = setId === 'all'
+      ? catalog.pairings.map(pairing => pairing.id)
+      : shuffledPairingIds(set.pairingIds, storySeed);
+    const pairings = pairingOrder.map(id => catalog.pairings.find(pairing => pairing.id === id));
     const steps = pairings.flatMap((p, index) => storySteps(p, index, questionOrder, assignment.care));
     steps.push({...copy(templates.end), id:'session-end', localId:'end', image:null,
       phase:'End of this session', text:'That’s the end of our stories. Thank you!',
-      pairing:null, storyIndex:pairings.length, adapted:true,
+      pairing:null, storyIndex:null, adapted:true,
       note:'Draft closing wording. This is the end of the selected preview.'});
     return {
       variant:'forced-choice', setId, setLabel:setId === 'all' ? 'All pairings · researcher review' : set.label,
+      storySeed, pairingOrder, storyOrderVersion:storySeed === null ? 'catalog-v1' : 'shuffle-v1',
       practiceMode, assignmentNumber:assignment.assignmentNumber, questionOrder:questionOrder.id, questionOrderLabel:questionOrder.label,
       care:assignment.care, careLabel:careLabels[assignment.care],
       firstQuestion:questionOrder.firstQuestion, counterbalanceCell:`${setId}:${assignment.care}:${questionOrder.id}`,
@@ -246,7 +280,7 @@
         'All paths have the same explicit outcome: no one helped, followed by each named helper did NOT help. A Yes/No recall check precedes the meaner comparison. Yes replays the two nonhelping outcome screens and then asks the check again, repeating until No.',
         'After the meaner comparison, a four-option how-mean rating is asked once for the selected helper. Only the other helper receives a Mean/Not Mean question, with a how-mean follow-up after either Mean or Not Mean. Both scales include Not mean, A teeny bit mean, A little bit mean, and Very mean. The selected helper is not asked either question again. Prediction and obligation remain forced choices without strength follow-ups. Overall Mean/Nice and individual recall questions remain omitted.',
         'Instructional HAVE TO practice is omitted; the two early questions follow the assigned order.',
-        setId === 'all' ? 'The 18-story view is a researcher catalog of all three role sets, not the proposed length of one child’s session.' : 'This preview contains the six pairings from one role set in a fixed review order.'
+        setId === 'all' ? 'The 18 stories appear in catalog order for researcher review.' : `The six pairings appear once each in a shuffled order, recorded with story seed ${storySeed}.`
       ],
       nextIndex(index, answers) { return nextIndex(steps, index, answers); },
       retryIndex(index) {
@@ -308,5 +342,5 @@
     }
     return lines.join('\n');
   }
-  return {build, resolveAssignment, toMarkdown, spokenWords, questionOrders};
+  return {build, parseStorySeed, resolveAssignment, toMarkdown, spokenWords, questionOrders};
 });

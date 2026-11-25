@@ -11,7 +11,12 @@
   let records=[],screenTime=performance.now(),currentScreen=null,completeSent=false;
   function emit(type,fields){if(embedded&&allowedParent)root.parent.postMessage(Object.assign({type,bridge_version:VERSION,session_id:sessionId},fields),origin);}
   function clone(value){return JSON.parse(JSON.stringify(value));}
-  function orderFields(session){return {care_context:session.care,question_order:session.questionOrder,first_question:session.firstQuestion,counterbalance_cell:session.counterbalanceCell,assignment_number:session.assignmentNumber,assignment_version:'care-order-v1',question_order_version:'between_participant_order_v1'};}
+  function orderFields(session){return {
+    care_context:session.care,question_order:session.questionOrder,first_question:session.firstQuestion,
+    counterbalance_cell:session.counterbalanceCell,assignment_number:session.assignmentNumber,
+    assignment_version:'care-order-v1',question_order_version:'between_participant_order_v1',
+    story_seed:session.storySeed,pairing_order:session.pairingOrder,story_order_version:session.storyOrderVersion
+  };}
   root.MarshallCHSBridge={
     version:VERSION,embedded,
     screen(step,session,index){if(currentScreen!==step.id){screenTime=performance.now();currentScreen=step.id;emit('MARSHALL_SCREEN',{step_id:step.id,role_set:session.setId,story_index:step.storyIndex??null,step_index:index,...orderFields(session),question_position:step.questionPosition??null});}},

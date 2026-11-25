@@ -4,7 +4,6 @@
   const $=id=>document.getElementById(id), stage=$('stage'), jump=$('jump');
   const params=new URLSearchParams(location.search);
   if(params.get('assign')==='random'){
-    // Resolve the launch once, before the family welcome, so refreshes keep it.
     if(!params.has('assignmentNumber')){
       for(const [key, options] of [
         ['set', ['woman', 'man', 'family']],
@@ -15,9 +14,6 @@
       }
     }
     params.delete('assign');
-    const url=new URL(location.href);
-    url.search=params.toString();
-    window.history.replaceState(null,'',url);
   }
   function randomOption(options){
     const limit=2 ** 32 - (2 ** 32 % options.length);
@@ -26,6 +22,8 @@
     return options[draw[0] % options.length];
   }
   const assignmentInput=$('assignment-number');
+  let storySeed=null;
+  function freshStorySeed(){return window.crypto.getRandomValues(new Uint32Array(1))[0];}
   const chsBridge=window.MarshallCHSBridge;
   let childView=false,choiceConfirmation=null,correctFeedbackState=null,screenHeard=false;
   let session,steps,index=0,answers={},history=[],recallReplays={},wrong=null,optionReader=null,downloadUrl=null;
@@ -449,6 +447,7 @@
       url.searchParams.set('view','child');
       url.searchParams.set('set',session.setId);
       url.searchParams.set('assignmentNumber',session.assignmentNumber);
+      url.searchParams.set('storySeed',session.storySeed);
       assignedLink.href=url.href;
       assignedLink.textContent=`Preview assignment ${session.assignmentNumber} ↗`;
     }else{
@@ -457,10 +456,12 @@
     for(const order of ObligationSession.questionOrders){
       const url=new URL('index.html',location.href);
       url.searchParams.set('view','child');url.searchParams.set('set',session.setId);
-      url.searchParams.set('care',session.care);url.searchParams.set('questionOrder',order.id);url.searchParams.set('practice','none');url.searchParams.set('v','care-condition-r58');
+      url.searchParams.set('care',session.care);url.searchParams.set('questionOrder',order.id);url.searchParams.set('practice','none');url.searchParams.set('v','pairing-shuffle-r59');
+      if(session.storySeed!==null)url.searchParams.set('storySeed',session.storySeed);
       $('preview-'+order.id).href=url.href;
     }
-    $('session-warning').textContent=session.isAllReview?'All 18 story instances are shown for review. Shared pairings recur across sets; this is not the six-story session one child would receive.':'One child would see one set of six pairings. The order below is fixed for review.';
+    $('shuffle-pairings').hidden=session.isAllReview;
+    $('session-warning').textContent=session.isAllReview?'All 18 pairings appear in catalog order for researcher review.':'Each pairing appears once. Reopening this session link preserves the order shown below.';
     $('session-stats').innerHTML=`<div><strong>${t.storyCount}</strong><span>stories</span></div><div><strong>${t.substantive}</strong><span>main judgments</span></div><div><strong>${t.responses.min}–${t.responses.max}</strong><span>question responses</span></div><div><strong>~${Math.round(estimatedMinutes.min)}–${Math.round(estimatedMinutes.max)} min</strong><span>illustrative estimate</span></div>`;
     $('timing-details').textContent=`${t.screens.min}–${t.screens.max} screens on a complete path. Includes ${t.checks} recall checks and three main forced-choice judgments per story. Includes meanness strength ratings and individual helper evaluations. ${usableTiming?'The recordings and programmed pauses total '+usableTiming.playbackMinutes.min.toFixed(1)+'–'+usableTiming.playbackMinutes.max.toFixed(1)+' minutes. The estimate adds 3–5 seconds per response.':'Timing assumes reading aloud at 110–130 words/minute plus 3–5 seconds per selection.'} The automatic story transitions add about ${Math.round(automaticAdvanceSeconds)} seconds, included in the illustrative session estimate. It is not measured child-session time; breaks, corrections and control/navigation time can add to it.`;
     $('pairing-list').innerHTML=session.pairings.map((p,i)=>`<button class="pairing-tile" data-story="${p.id}"><span class="tile-number">${i+1}</span><span class="tile-picture"><img src="${esc(p.images.need)}" alt="${esc(p.label)}"></span><strong>${esc(p.label)}</strong><span>${esc(p.needSummary||session.careLabel)}</span></button>`).join('');
@@ -477,7 +478,8 @@
     assignmentInput.setCustomValidity('');
     try{
       if(!assignmentInput.validity.valid)throw new Error('Enter a whole assignment number of 1 or higher.');
-      session=ObligationSession.build(setId,$('question-order-select').value,assignmentInput.value||null,$('care-select').value);
+      if(setId!=='all'&&storySeed===null)storySeed=freshStorySeed();
+      session=ObligationSession.build(setId,$('question-order-select').value,assignmentInput.value||null,$('care-select').value,storySeed);
     }catch(error){
       assignmentInput.setCustomValidity(error.message);
       assignmentInput.reportValidity();
@@ -493,6 +495,8 @@
     url.searchParams.set('practice',session.practiceMode);
     url.searchParams.set('care',session.care);
     url.searchParams.set('questionOrder',session.questionOrder);
+    if(session.storySeed===null)url.searchParams.delete('storySeed');
+    else url.searchParams.set('storySeed',session.storySeed);
     if(session.assignmentNumber===null)url.searchParams.delete('assignmentNumber');
     else url.searchParams.set('assignmentNumber',session.assignmentNumber);
     window.history.replaceState(null,'',url);
@@ -513,6 +517,16 @@
   const requestedSet=params.get('set')||'woman';
   try{
     const assignment=ObligationSession.resolveAssignment(requestedSet,params.get('questionOrder')||'will-first',params.get('assignmentNumber'),params.get('care')??'hug');
+    if(params.has('storySeed'))storySeed=ObligationSession.parseStorySeed(params.get('storySeed'));
+    if(requestedSet==='all')params.delete('storySeed');
+    else{
+      storySeed??=freshStorySeed();
+      params.set('storySeed',storySeed);
+    }
+    // Resolve the family link before the welcome so refreshing reproduces the session.
+    const launchUrl=new URL(location.href);
+    launchUrl.search=params.toString();
+    window.history.replaceState(null,'',launchUrl);
     $('set-select').value=Object.hasOwn(roleNames,requestedSet)?requestedSet:'woman';
     $('question-order-select').value=assignment.questionOrderId;
     $('care-select').value=assignment.care;
@@ -526,6 +540,10 @@
     return;
   }
   $('set-select').addEventListener('change',configure);
+  $('shuffle-pairings').addEventListener('click',()=>{
+    storySeed=freshStorySeed();
+    configure();
+  });
   for(const selector of ['question-order-select','care-select']){
     $(selector).addEventListener('change',()=>{
       assignmentInput.value='';
