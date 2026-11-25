@@ -18,9 +18,12 @@
     #jspsych-content { width: 100%; max-width: 100%; }
     .ksize-shell { width: min(calc(100% - 24px), clamp(1180px, 92vw, 1720px)); }
     .ksize-setup-shell { width: min(calc(100% - 24px), clamp(980px, 80vw, 1280px)); }
+    .local-camera-preview { align-content: center; grid-template-rows: auto; }
+    .local-camera-preview .ksize-camera-preview-retry { justify-self: center; }
+    .local-camera-preview video { display: block; width: 100%; height: 100%; max-height: 360px; object-fit: contain; transform: scaleX(-1); }
   </style>
   <script defer src="opening-music.js?v=welcome-music-r34"></script>
-  <script defer src="intro.js?v=immediate-start-r37"></script>
+  <script defer src="intro.js?v=local-camera-r60"></script>
 </head>
 <body class="jspsych-display-element">
   <div class="jspsych-content-wrapper"><div id="jspsych-content" class="jspsych-content">
@@ -92,7 +95,7 @@
     <div class="ksize-before-begin-card">
       <strong>Before you begin</strong>
       <span>This is a picture game about who has to help.</span>
-      <span>Camera and microphone stay off in this preview</span>
+      <span data-camera-summary>Camera and microphone stay off in this preview</span>
       <span>You and your child may stop at any time</span>
       <span>There are no right or wrong answers in this game</span>
       <span>The pages are read aloud, so your child does not need to read</span>
@@ -221,7 +224,7 @@
         </div>
         <div class="ksize-recording-note">
           <span class="ksize-recording-dot" aria-hidden="true"></span>
-          <p><strong>Camera check:</strong> These examples show how to position your child for a recorded session.</p>
+          <p><strong>Camera check:</strong> <span data-camera-position-note>These examples show how to position your child for a recorded session.</span></p>
         </div>
       </section>
     </div>

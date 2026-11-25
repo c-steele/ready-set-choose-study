@@ -4,7 +4,7 @@
   "pendingRetryRecordingIDs": [],
   "basis": "Measured MP3 durations for the selected care condition, including the recorded alternative pair where played. Both orders use the same audio.",
   "gapSeconds": 0.25,
-  "manifestSha256": "f2d647a3b15f389d798640c2e6137f8f895dc813dadae2d7f4feb7ede639f311",
+  "manifestSha256": "a689b8179a463c5a68d2257dd9807dd44c1660e5ce9c6cc53e834e973417cded",
   "assumptions": [
     "The child hears every scheduled question and set of choices once, answers the recall question correctly on the first attempt, and makes seven choices per story.",
     "Playback includes the 250 ms pauses between separately recorded options. Response time adds 3–5 seconds per choice.",
@@ -17,34 +17,8 @@
       "care": "hug",
       "storyCount": 6,
       "playbackSeconds": {
-        "min": 553.1927629999999,
-        "max": 554.0025569999999
-      },
-      "playbackMinutes": {
-        "min": 9.2,
-        "max": 9.2
-      },
-      "estimatedSessionMinutesIncludingResponses": {
-        "min": 11.3,
-        "max": 12.7
-      },
-      "responseCounts": {
-        "min": 42,
-        "max": 42
-      },
-      "screens": {
-        "min": 85,
-        "max": 85
-      }
-    },
-    "woman-food": {
-      "setId": "woman",
-      "practiceMode": "none",
-      "care": "food",
-      "storyCount": 6,
-      "playbackSeconds": {
-        "min": 559.776113,
-        "max": 560.5859069999999
+        "min": 555.857585,
+        "max": 556.667379
       },
       "playbackMinutes": {
         "min": 9.3,
@@ -63,14 +37,40 @@
         "max": 85
       }
     },
+    "woman-food": {
+      "setId": "woman",
+      "practiceMode": "none",
+      "care": "food",
+      "storyCount": 6,
+      "playbackSeconds": {
+        "min": 562.283687,
+        "max": 563.093481
+      },
+      "playbackMinutes": {
+        "min": 9.4,
+        "max": 9.4
+      },
+      "estimatedSessionMinutesIncludingResponses": {
+        "min": 11.5,
+        "max": 12.9
+      },
+      "responseCounts": {
+        "min": 42,
+        "max": 42
+      },
+      "screens": {
+        "min": 85,
+        "max": 85
+      }
+    },
     "woman-help": {
       "setId": "woman",
       "practiceMode": "none",
       "care": "help",
       "storyCount": 6,
       "playbackSeconds": {
-        "min": 562.7539129999999,
-        "max": 563.5637069999999
+        "min": 565.105103,
+        "max": 565.914897
       },
       "playbackMinutes": {
         "min": 9.4,
@@ -95,34 +95,8 @@
       "care": "hug",
       "storyCount": 6,
       "playbackSeconds": {
-        "min": 552.827099,
-        "max": 553.689139
-      },
-      "playbackMinutes": {
-        "min": 9.2,
-        "max": 9.2
-      },
-      "estimatedSessionMinutesIncludingResponses": {
-        "min": 11.3,
-        "max": 12.7
-      },
-      "responseCounts": {
-        "min": 42,
-        "max": 42
-      },
-      "screens": {
-        "min": 85,
-        "max": 85
-      }
-    },
-    "man-food": {
-      "setId": "man",
-      "practiceMode": "none",
-      "care": "food",
-      "storyCount": 6,
-      "playbackSeconds": {
-        "min": 559.410449,
-        "max": 560.272489
+        "min": 555.491921,
+        "max": 556.353961
       },
       "playbackMinutes": {
         "min": 9.3,
@@ -141,14 +115,40 @@
         "max": 85
       }
     },
+    "man-food": {
+      "setId": "man",
+      "practiceMode": "none",
+      "care": "food",
+      "storyCount": 6,
+      "playbackSeconds": {
+        "min": 561.918023,
+        "max": 562.780063
+      },
+      "playbackMinutes": {
+        "min": 9.4,
+        "max": 9.4
+      },
+      "estimatedSessionMinutesIncludingResponses": {
+        "min": 11.5,
+        "max": 12.9
+      },
+      "responseCounts": {
+        "min": 42,
+        "max": 42
+      },
+      "screens": {
+        "min": 85,
+        "max": 85
+      }
+    },
     "man-help": {
       "setId": "man",
       "practiceMode": "none",
       "care": "help",
       "storyCount": 6,
       "playbackSeconds": {
-        "min": 562.388249,
-        "max": 563.250289
+        "min": 564.739439,
+        "max": 565.601479
       },
       "playbackMinutes": {
         "min": 9.4,
@@ -173,16 +173,16 @@
       "care": "hug",
       "storyCount": 6,
       "playbackSeconds": {
-        "min": 539.1390439999999,
-        "max": 540.654146
+        "min": 541.751498,
+        "max": 543.2666
       },
       "playbackMinutes": {
-        "min": 9,
-        "max": 9
+        "min": 9.0,
+        "max": 9.1
       },
       "estimatedSessionMinutesIncludingResponses": {
         "min": 11.1,
-        "max": 12.5
+        "max": 12.6
       },
       "responseCounts": {
         "min": 42,
@@ -199,34 +199,8 @@
       "care": "food",
       "storyCount": 6,
       "playbackSeconds": {
-        "min": 545.461044,
-        "max": 546.976146
-      },
-      "playbackMinutes": {
-        "min": 9.1,
-        "max": 9.1
-      },
-      "estimatedSessionMinutesIncludingResponses": {
-        "min": 11.2,
-        "max": 12.6
-      },
-      "responseCounts": {
-        "min": 42,
-        "max": 42
-      },
-      "screens": {
-        "min": 85,
-        "max": 85
-      }
-    },
-    "family-help": {
-      "setId": "family",
-      "practiceMode": "none",
-      "care": "help",
-      "storyCount": 6,
-      "playbackSeconds": {
-        "min": 548.647844,
-        "max": 550.1629459999999
+        "min": 547.968739,
+        "max": 549.483841
       },
       "playbackMinutes": {
         "min": 9.1,
@@ -245,22 +219,48 @@
         "max": 85
       }
     },
+    "family-help": {
+      "setId": "family",
+      "practiceMode": "none",
+      "care": "help",
+      "storyCount": 6,
+      "playbackSeconds": {
+        "min": 550.998915,
+        "max": 552.514017
+      },
+      "playbackMinutes": {
+        "min": 9.2,
+        "max": 9.2
+      },
+      "estimatedSessionMinutesIncludingResponses": {
+        "min": 11.3,
+        "max": 12.7
+      },
+      "responseCounts": {
+        "min": 42,
+        "max": 42
+      },
+      "screens": {
+        "min": 85,
+        "max": 85
+      }
+    },
     "all-hug": {
       "setId": "all",
       "practiceMode": "none",
       "care": "hug",
       "storyCount": 18,
       "playbackSeconds": {
-        "min": 1637.426706,
-        "max": 1640.6136419999998
+        "min": 1645.368804,
+        "max": 1648.55574
       },
       "playbackMinutes": {
-        "min": 27.3,
-        "max": 27.3
+        "min": 27.4,
+        "max": 27.5
       },
       "estimatedSessionMinutesIncludingResponses": {
-        "min": 33.6,
-        "max": 37.8
+        "min": 33.7,
+        "max": 38.0
       },
       "responseCounts": {
         "min": 126,
@@ -277,16 +277,16 @@
       "care": "food",
       "storyCount": 18,
       "playbackSeconds": {
-        "min": 1656.9154060000003,
-        "max": 1660.102342
+        "min": 1664.438249,
+        "max": 1667.625185
       },
       "playbackMinutes": {
-        "min": 27.6,
-        "max": 27.7
+        "min": 27.7,
+        "max": 27.8
       },
       "estimatedSessionMinutesIncludingResponses": {
-        "min": 33.9,
-        "max": 38.2
+        "min": 34.0,
+        "max": 38.3
       },
       "responseCounts": {
         "min": 126,
@@ -303,16 +303,16 @@
       "care": "help",
       "storyCount": 18,
       "playbackSeconds": {
-        "min": 1666.0578059999998,
-        "max": 1669.244742
+        "min": 1673.111257,
+        "max": 1676.298193
       },
       "playbackMinutes": {
-        "min": 27.8,
-        "max": 27.8
+        "min": 27.9,
+        "max": 27.9
       },
       "estimatedSessionMinutesIncludingResponses": {
-        "min": 34.1,
-        "max": 38.3
+        "min": 34.2,
+        "max": 38.4
       },
       "responseCounts": {
         "min": 126,

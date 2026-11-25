@@ -7,6 +7,8 @@
   const introOptions = new URLSearchParams(location.search);
   const openingMusicEnabled = introOptions.get('openingMusic') === '1';
   const immediateStartEnabled = introOptions.get('immediateStart') === '1';
+  const localCameraEnabled = introOptions.get('cameraPreview') === 'local';
+  let closeCamera = null;
   let music = null;
   let audioRun = 0;
 
@@ -69,10 +71,89 @@
     clip.play().catch(onError);
   }
 
+  function mountCamera(panel) {
+    const slot = panel.querySelector('.ksize-camera-preview-slot');
+    const status = panel.querySelector('.ksize-camera-preview-status');
+    const button = panel.querySelector('.ksize-camera-preview-retry');
+    const video = document.createElement('video');
+    video.muted = true;
+    video.playsInline = true;
+    video.setAttribute('aria-label', 'Live view from your camera');
+    slot.replaceChildren(video);
+    panel.classList.add('local-camera-preview');
+    panel.removeAttribute('data-camera-preview-state');
+    let request = 0;
+    let cameraOn = false;
+    const off = 'You can turn on your camera to check the picture, or continue using the examples below. This view stays on your device.';
+
+    function stop(message = off, label = 'Turn on camera') {
+      request += 1;
+      cameraOn = false;
+      video.srcObject?.getTracks().forEach(track => track.stop());
+      video.srcObject = null;
+      slot.hidden = true;
+      status.textContent = message;
+      button.textContent = label;
+    }
+
+    async function toggleCamera() {
+      if (cameraOn) {
+        stop();
+        return;
+      }
+      cameraOn = true;
+      const current = ++request;
+      status.textContent = 'Allow camera access in your browser to see the picture.';
+      button.textContent = 'Cancel camera preview';
+      try {
+        const stream = await navigator.mediaDevices.getUserMedia({video: true, audio: false});
+        if (current !== request) {
+          stream.getTracks().forEach(track => track.stop());
+          return;
+        }
+        stream.getVideoTracks()[0].addEventListener('ended', () => {
+          if (current === request) stop('The camera disconnected. You can reconnect it or continue.', 'Try camera again');
+        }, {once: true});
+        video.srcObject = stream;
+        slot.hidden = false;
+        await video.play();
+        if (current !== request) return;
+        status.textContent = 'Check that your child’s face and shoulders are in view. The camera turns off when you leave this step.';
+        button.textContent = 'Turn off camera';
+      } catch (error) {
+        if (current !== request) return;
+        const message = error.name === 'NotAllowedError'
+          ? 'Camera access is blocked. You can allow it in your browser and try again, or continue using the examples below.'
+          : 'The camera could not start. Check that it is connected and available, or continue using the examples below.';
+        stop(message, 'Try camera again');
+      }
+    }
+
+    stop();
+    if (!navigator.mediaDevices?.getUserMedia) {
+      status.textContent = 'A live view is unavailable in this browser. Use the examples below to check your position.';
+      return;
+    }
+    button.hidden = false;
+    button.addEventListener('click', toggleCamera);
+    closeCamera = stop;
+  }
+
   function showSlide(index) {
     stopAudio();
+    closeCamera?.();
+    closeCamera = null;
     position = index;
     stage.replaceChildren(slides[index].content.cloneNode(true));
+    if (localCameraEnabled) {
+      const summary = stage.querySelector('[data-camera-summary]');
+      if (summary) summary.textContent = 'You can use your camera to check your position. Your microphone stays off, and this preview does not record.';
+      const panel = stage.querySelector('.ksize-camera-live-preview');
+      if (panel) {
+        stage.querySelector('[data-camera-position-note]').textContent = 'Use these examples to check where your child sits.';
+        mountCamera(panel);
+      }
+    }
     setStartReady(false);
     const heading = stage.querySelector('h1');
     heading.tabIndex = -1;
@@ -118,6 +199,9 @@
     if (!toggle || parentSound) playAudio();
   }
 
-  window.addEventListener('pagehide', stopAudio);
+  window.addEventListener('pagehide', () => {
+    closeCamera?.();
+    stopAudio();
+  });
   showSlide(0);
 })();

@@ -143,7 +143,8 @@ body.child-view .prompt h2 {
   font-size: max(22px, calc(2.75 * var(--caption-unit)));
   text-wrap: wrap;
 }
-.stage[data-screen-kind="story"] > .prompt.scale-prompt h2 {
+.stage[data-screen-kind="story"] > .prompt.scale-prompt h2,
+.stage[data-screen-kind="story"] > .prompt.obligation-prompt h2 {
   width: 100%;
   max-width: none;
   font-size: max(22px, calc(2.45 * var(--caption-unit)));
@@ -154,6 +155,7 @@ body.child-view .prompt h2 {
   .stage[data-screen-kind="story"] > .prompt h2,
   .choice-caption,
   .stage[data-screen-kind="story"] > .prompt.recall-prompt h2,
+  .stage[data-screen-kind="story"] > .prompt.obligation-prompt h2,
   .stage[data-screen-kind="story"] > .prompt.scale-prompt h2 { font-size: 19px; }
 }
 
