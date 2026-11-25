@@ -3,6 +3,28 @@
   const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const $=id=>document.getElementById(id), stage=$('stage'), jump=$('jump');
   const params=new URLSearchParams(location.search);
+  if(params.get('assign')==='random'){
+    // Resolve the launch once, before the family welcome, so refreshes keep it.
+    if(!params.has('assignmentNumber')){
+      for(const [key, options] of [
+        ['set', ['woman', 'man', 'family']],
+        ['care', ['hug', 'food', 'help']],
+        ['questionOrder', ['will-first', 'has-to-first']]
+      ]){
+        if(!params.has(key))params.set(key, randomOption(options));
+      }
+    }
+    params.delete('assign');
+    const url=new URL(location.href);
+    url.search=params.toString();
+    window.history.replaceState(null,'',url);
+  }
+  function randomOption(options){
+    const limit=2 ** 32 - (2 ** 32 % options.length);
+    const draw=new Uint32Array(1);
+    do { window.crypto.getRandomValues(draw); } while(draw[0]>=limit);
+    return options[draw[0] % options.length];
+  }
   const assignmentInput=$('assignment-number');
   const chsBridge=window.MarshallCHSBridge;
   let childView=false,choiceConfirmation=null,correctFeedbackState=null,screenHeard=false;
@@ -94,13 +116,21 @@
   }
   function recordingWords(clipId,allowRecognizedMismatch=false){
     const clip=narration.clipsById[clipId],entry=window.ObligationNarrationCues?.clips?.[clipId];
-    if(!clip?.sha256||entry?.sha256!==clip.sha256||(!allowRecognizedMismatch&&entry.exactNormalizedWordMatch===false)||entry.alignmentValid===false||!Array.isArray(entry.words))return [];
+    if(!clip?.sha256||entry?.sha256!==clip.sha256||entry.alignmentValid===false||!Array.isArray(entry.words))return [];
     if(entry.expectedText&&cueTokens(entry.expectedText).join(' ')!==cueTokens(clip.text).join(' '))return [];
     const duration=clip.durationSeconds||entry.durationSeconds;
     const words=[];
     for(const word of entry.words){
       if(!Number.isFinite(word.start)||!Number.isFinite(word.end)||word.start<0||word.end<word.start||(Number.isFinite(duration)&&word.end>duration+.08))return [];
       for(const token of cueTokens(word.word))words.push({token,start:word.start,end:word.end});
+    }
+    if(!allowRecognizedMismatch&&entry.exactNormalizedWordMatch===false){
+      if(!Array.isArray(entry.glowWordRange))return [];
+      const phrase=entry.glowWordRange.join(' ');
+      const matches=phraseMatches(words,phrase);
+      const recognized=cueTokens(entry.recognizedText).map(token=>({token}));
+      if(matches.length!==1||phraseMatches(recognized,phrase).length!==1)return [];
+      return words.slice(matches[0].at,matches[0].at+matches[0].length);
     }
     return words;
   }
@@ -271,7 +301,7 @@
     const spokenCues=interactive ? shownActors.filter(actor=>actor.id===s.confirmationActorId).map(actor=>`<span class="narration-actor-cue confirmation-selected"${actorTargetStyle(s,actor)} aria-hidden="true"></span>`).join('')
       +(s.outcomeVisual?s.pairing.helpers.map(actor=>`<span class="narration-actor-cue outcome-role-cue"${actorTargetStyle(s,actor)} data-narration-actor="${actor.id}" aria-hidden="true"></span>`).join(''):''):'';
     const alt=shownActors.map(a=>a.side==='middle'&&a.description.endsWith('in the middle')?a.description:`${a.description} ${a.side==='middle'?'in the middle':'on the '+a.side}`).join('; ');
-    const picture=`<div class="picture"><img ${interactive?'':'loading="lazy"'} src="${esc(s.image)}" alt="${esc(alt)}.${s.image===s.pairing.images.need?' '+esc(s.pairing.recipient.reference)+' is sad.':''}">${window.ObligationStudyVisuals.nonhelpingEyeOverlay(s)}${choiceBoxes}${spokenCues}</div>`;
+    const picture=`<div class="picture"><img ${interactive?'':'loading="lazy"'} src="${esc(s.image)}" alt="${esc(alt)}.${s.image===s.pairing.images.need?' '+esc(s.pairing.needSummary):''}">${window.ObligationStudyVisuals.nonhelpingEyeOverlay(s)}${choiceBoxes}${spokenCues}</div>`;
     if(!s.outcomeVisual)return picture;
     const badges=s.pairing.helpers.map(helper=>{
       const bounds=introActorBounds[s.pairing.id][helper.id],center=bounds[0]+bounds[2]/2;
@@ -402,15 +432,16 @@
   }
   function card(s,i){return `<article class="story-card${!s.image&&!s.visual?' message-slide':''}" style="--story-accent:${esc(storyAccent(s))}"><h3 class="card-heading">${String(i+1).padStart(2,'0')} · ${esc(s.phase)}${s.proposed?' · PROPOSED WORDING':''}</h3>${prompt(s)}${scene(s)}${choiceCaption(s)}${s.choices?.length===4?scaleOptions(s):`<p class="card-options">${s.point?'Tap '+esc(actors(s).find(a=>a.id===s.point).description):s.choices?s.choices.map(esc).join(' &nbsp; / &nbsp; '):'Narration'}</p>`}${s.when||s.unless||s.note||s.expected||s.point?`<p class="card-note">${esc(branchNote(s)+(s.note||''))}${s.expected?' Check answer: '+esc(s.expected)+'.':''}${s.replayFrom?' After Yes, replay the nonhelping outcome and ask again until No.':''}${s.reminder?' Reminder if needed: “'+esc(s.reminder)+'”':''}</p>`:''}${cardExtraScript(s)}</article>`;}
   function buildBoard(){
-    $('cards').innerHTML=session.pairings.map((p,n)=>`<section class="board-story" id="board-${p.id}"><h2>Story ${n+1} · ${esc(p.label)}</h2><p class="recipient-note">${esc(p.recipient.reference)} is sad.</p><div class="story-grid">${steps.filter(s=>s.pairing?.id===p.id).map(card).join('')}</div></section>`).join('')+`<div class="story-grid">${card(steps[steps.length-1],0)}</div>`;
+    $('cards').innerHTML=session.pairings.map((p,n)=>`<section class="board-story" id="board-${p.id}"><h2>Story ${n+1} · ${esc(p.label)}</h2><p class="recipient-note">${esc(p.needSummary||steps.find(s=>s.pairing?.id===p.id&&s.localId==='need').text)}</p><div class="story-grid">${steps.filter(s=>s.pairing?.id===p.id).map(card).join('')}</div></section>`).join('')+`<div class="story-grid">${card(steps[steps.length-1],0)}</div>`;
   }
   function updateOverview(){
     const t=session.stats;
-    const recordedTiming=window.ObligationNarrationTiming?.get?.(session.setId,session.practiceMode);
+    const recordedTiming=window.ObligationNarrationTiming?.get?.(session.setId,session.practiceMode,session.care);
+    const usableTiming=recordedTiming?.care===session.care ? recordedTiming : null;
     const automaticAdvanceSeconds=session.steps.filter(s=>!s.choices&&!s.point&&!s.virtualType&&s.localId!=='end').length*0.65;
-    const baseMinutes=recordedTiming?.estimatedSessionMinutesIncludingResponses||t.minutes;
+    const baseMinutes=usableTiming?.estimatedSessionMinutesIncludingResponses||t.minutes;
     const estimatedMinutes={min:baseMinutes.min+automaticAdvanceSeconds/60,max:baseMinutes.max+automaticAdvanceSeconds/60};
-    $('session-subtitle').textContent=`${roleNames[session.setId]} · ${t.storyCount} stories · ${session.questionOrderLabel}`;
+    $('session-subtitle').textContent=`${roleNames[session.setId]} · ${t.storyCount} stories · ${session.careLabel} · ${session.questionOrderLabel}`;
     const assignedLink=$('preview-assignment');
     assignedLink.hidden=session.assignmentNumber===null;
     if(!assignedLink.hidden){
@@ -426,17 +457,17 @@
     for(const order of ObligationSession.questionOrders){
       const url=new URL('index.html',location.href);
       url.searchParams.set('view','child');url.searchParams.set('set',session.setId);
-      url.searchParams.set('questionOrder',order.id);url.searchParams.set('practice','none');url.searchParams.set('v','assignment-number-r57');
+      url.searchParams.set('care',session.care);url.searchParams.set('questionOrder',order.id);url.searchParams.set('practice','none');url.searchParams.set('v','care-condition-r58');
       $('preview-'+order.id).href=url.href;
     }
     $('session-warning').textContent=session.isAllReview?'All 18 story instances are shown for review. Shared pairings recur across sets; this is not the six-story session one child would receive.':'One child would see one set of six pairings. The order below is fixed for review.';
     $('session-stats').innerHTML=`<div><strong>${t.storyCount}</strong><span>stories</span></div><div><strong>${t.substantive}</strong><span>main judgments</span></div><div><strong>${t.responses.min}–${t.responses.max}</strong><span>question responses</span></div><div><strong>~${Math.round(estimatedMinutes.min)}–${Math.round(estimatedMinutes.max)} min</strong><span>illustrative estimate</span></div>`;
-    $('timing-details').textContent=`${t.screens.min}–${t.screens.max} screens on a complete path. Includes ${t.checks} recall checks and three main forced-choice judgments per story. Includes meanness strength ratings and individual helper evaluations. ${recordedTiming?'The recordings and programmed pauses total '+recordedTiming.playbackMinutes.min.toFixed(1)+'–'+recordedTiming.playbackMinutes.max.toFixed(1)+' minutes. The estimate adds 3–5 seconds per response.':'Timing assumes reading aloud at 110–130 words/minute plus 3–5 seconds per selection.'} The automatic story transitions add about ${Math.round(automaticAdvanceSeconds)} seconds, included in the illustrative session estimate. It is not measured child-session time; breaks, corrections and control/navigation time can add to it.`;
-    $('pairing-list').innerHTML=session.pairings.map((p,i)=>`<button class="pairing-tile" data-story="${p.id}"><span class="tile-number">${i+1}</span><span class="tile-picture"><img src="${esc(p.images.need)}" alt="${esc(p.label)}; ${esc(p.recipient.reference)} is sad."></span><strong>${esc(p.label)}</strong><span>${p.recipient.role==='KID'?'Kid is sad':esc(p.recipient.label.charAt(0).toUpperCase()+p.recipient.label.slice(1))+' is sad'}</span></button>`).join('');
+    $('timing-details').textContent=`${t.screens.min}–${t.screens.max} screens on a complete path. Includes ${t.checks} recall checks and three main forced-choice judgments per story. Includes meanness strength ratings and individual helper evaluations. ${usableTiming?'The recordings and programmed pauses total '+usableTiming.playbackMinutes.min.toFixed(1)+'–'+usableTiming.playbackMinutes.max.toFixed(1)+' minutes. The estimate adds 3–5 seconds per response.':'Timing assumes reading aloud at 110–130 words/minute plus 3–5 seconds per selection.'} The automatic story transitions add about ${Math.round(automaticAdvanceSeconds)} seconds, included in the illustrative session estimate. It is not measured child-session time; breaks, corrections and control/navigation time can add to it.`;
+    $('pairing-list').innerHTML=session.pairings.map((p,i)=>`<button class="pairing-tile" data-story="${p.id}"><span class="tile-number">${i+1}</span><span class="tile-picture"><img src="${esc(p.images.need)}" alt="${esc(p.label)}"></span><strong>${esc(p.label)}</strong><span>${esc(p.needSummary||session.careLabel)}</span></button>`).join('');
     $('pairing-list').querySelectorAll('[data-story]').forEach(b=>b.addEventListener('click',()=>goTo(steps.findIndex(s=>s.pairing?.id===b.dataset.story))));
     jump.innerHTML=session.pairings.map((p,i)=>`<optgroup label="Story ${i+1} · ${esc(p.label)}">${steps.filter(s=>s.pairing?.id===p.id).map((s,n)=>`<option value="${s.id}">${n+1} · ${esc(s.phase)}${s.when||s.unless?' (conditional)':''}</option>`).join('')}</optgroup>`).join('')+'<option value="session-end">Session end</option>';
     $('story-jump').innerHTML=session.pairings.map((p,i)=>`<option value="${p.id}">${i+1} · ${esc(p.label)}</option>`).join('')+'<option value="end">Session end</option>';
-    if(downloadUrl)URL.revokeObjectURL(downloadUrl);downloadUrl=URL.createObjectURL(new Blob([ObligationSession.toMarkdown(session)],{type:'text/markdown'}));$('download-script').href=downloadUrl;$('download-script').download=`forced-choice-${session.setId}-${session.questionOrder}.md`;
+    if(downloadUrl)URL.revokeObjectURL(downloadUrl);downloadUrl=URL.createObjectURL(new Blob([ObligationSession.toMarkdown(session)],{type:'text/markdown'}));$('download-script').href=downloadUrl;$('download-script').download=`forced-choice-${session.setId}-${session.care}-${session.questionOrder}.md`;
   }
   function resetRun(){chsBridge?.reset();stopNarration();narrationEnabled=true;choiceConfirmation=null;correctFeedbackState=null;screenHeard=false;optionReader?.dispose();optionReader=null;index=0;answers={};history=[];recallReplays={};wrong=null;elapsed=0;started=null;timerUsed=false;incomplete=false;completed=false;showBoard(false);render();updateTimer();}
   function configure(){
@@ -446,7 +477,7 @@
     assignmentInput.setCustomValidity('');
     try{
       if(!assignmentInput.validity.valid)throw new Error('Enter a whole assignment number of 1 or higher.');
-      session=ObligationSession.build(setId,$('question-order-select').value,assignmentInput.value||null);
+      session=ObligationSession.build(setId,$('question-order-select').value,assignmentInput.value||null,$('care-select').value);
     }catch(error){
       assignmentInput.setCustomValidity(error.message);
       assignmentInput.reportValidity();
@@ -456,9 +487,11 @@
     steps=session.steps;
     assignmentInput.value=session.assignmentNumber??'';
     $('question-order-select').value=session.questionOrder;
+    $('care-select').value=session.care;
     const url=new URL(location.href);
     url.searchParams.set('set',session.setId);
     url.searchParams.set('practice',session.practiceMode);
+    url.searchParams.set('care',session.care);
     url.searchParams.set('questionOrder',session.questionOrder);
     if(session.assignmentNumber===null)url.searchParams.delete('assignmentNumber');
     else url.searchParams.set('assignmentNumber',session.assignmentNumber);
@@ -479,9 +512,10 @@
   window.addEventListener('beforeprint',()=>{document.querySelectorAll('#cards img').forEach(img=>img.loading='eager');});
   const requestedSet=params.get('set')||'woman';
   try{
-    const assignment=ObligationSession.resolveAssignment(requestedSet,params.get('questionOrder')||'will-first',params.get('assignmentNumber'));
+    const assignment=ObligationSession.resolveAssignment(requestedSet,params.get('questionOrder')||'will-first',params.get('assignmentNumber'),params.get('care')??'hug');
     $('set-select').value=Object.hasOwn(roleNames,requestedSet)?requestedSet:'woman';
     $('question-order-select').value=assignment.questionOrderId;
+    $('care-select').value=assignment.care;
     assignmentInput.value=assignment.assignmentNumber??'';
   }catch(error){
     const message=document.createElement('p');
@@ -492,10 +526,12 @@
     return;
   }
   $('set-select').addEventListener('change',configure);
-  $('question-order-select').addEventListener('change',()=>{
-    assignmentInput.value='';
-    configure();
-  });
+  for(const selector of ['question-order-select','care-select']){
+    $(selector).addEventListener('change',()=>{
+      assignmentInput.value='';
+      configure();
+    });
+  }
   assignmentInput.addEventListener('change',configure);
   assignmentInput.addEventListener('keydown',event=>{
     if(event.key==='Enter')assignmentInput.blur();

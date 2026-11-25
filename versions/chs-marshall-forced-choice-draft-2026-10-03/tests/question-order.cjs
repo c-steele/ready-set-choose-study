@@ -7,8 +7,8 @@ const manifest = require('../narration-manifest.json');
 const clips = Object.fromEntries(manifest.clips.map(clip => [clip.id, clip]));
 const bridgeSource = fs.readFileSync(path.join(__dirname, '../chs-bridge.js'), 'utf8');
 let checkedStories = 0;
-for (const set of ['woman', 'man', 'family', 'all']) {
-  const will = api.build(set, 'will-first'), hasTo = api.build(set, 'has-to-first');
+for (const set of ['woman', 'man', 'family', 'all']) for(const care of ['hug','food','help']) {
+  const will = api.build(set, 'will-first', null, care), hasTo = api.build(set, 'has-to-first', null, care);
   assert.deepEqual(will.stats, hasTo.stats);
   assert.deepEqual(will.pairings, hasTo.pairings);
   assert.equal(will.steps.length, hasTo.steps.length);
@@ -30,13 +30,15 @@ for (const set of ['woman', 'man', 'family', 'all']) {
       assert.deepEqual(early.map(s => s.questionPosition), [1, 2]);
       assert.equal(story[need + 3].localId, 'outcome-summary');
       for (const step of early) {
-        assert.equal(clips[manifest.screens[step.id].prompt].text, step.text);
+        const screen = manifest.screens[step.id];
+        assert.equal(clips[screen.carePrompts?.[care] || screen.prompt].text, step.text);
+        assert.equal(step.care, care);
         const index = session.steps.indexOf(step);
         for (const answer of step.choices) assert.equal(session.nextIndex(index, {[step.id]:answer}), index + 1);
       }
       checkedStories++;
     }
-    assert.equal(session.counterbalanceCell, `${set}:${session.questionOrder}`);
+    assert.equal(session.counterbalanceCell, `${set}:${session.care}:${session.questionOrder}`);
     assert.equal(session.firstQuestion, session.questionOrder === 'will-first' ? 'prediction' : 'obligation');
     assert(api.toMarkdown(session).includes(`Question order: ${session.questionOrderLabel}`));
     // Exercise the same message bridge used by the embedded CHS preview.
@@ -58,12 +60,14 @@ for (const set of ['woman', 'man', 'family', 'all']) {
     for (const record of records) {
       assert.equal(record.question_order, session.questionOrder);
       assert.equal(record.first_question, session.firstQuestion);
-      assert.equal(record.counterbalance_cell, session.counterbalanceCell);
+      assert.equal(record.counterbalance_cell, loggedSession.counterbalanceCell);
+      assert.equal(record.care_context, loggedSession.care);
       assert.equal(record.assignment_number, loggedSession.assignmentNumber);
     }
     const completion = messages.find(m => m.message.type === 'GAME_COMPLETE').message;
     assert.equal(completion.payload.question_order, session.questionOrder);
     assert.equal(completion.payload.assignment_number, loggedSession.assignmentNumber);
+    assert.equal(completion.payload.care_context, loggedSession.care);
     assert.equal(completion.data_posted, false);
     assert(messages.every(m => m.origin === 'https://childrenhelpingscience.com'));
   }
@@ -80,9 +84,32 @@ for (const set of ['woman','man','family']) {
     assert.equal(session.questionOrder, order);
     assert.equal(session.practiceMode, 'none');
     assert.equal(session.stats.practiceResponses, 0);
-    assert.deepEqual(session.steps, api.build(set, order).steps);
+    assert.deepEqual(session.steps, api.build(set, order, null, session.care).steps);
   }
 }
+// Every complete block of six numbered children contains all six care × order cells.
+const cares=['hug','food','help'];
+for(const set of ['woman','man','family']){
+  const sequences=new Set();
+  const expected=cares.flatMap(care=>['will-first','has-to-first'].map(order=>care+':'+order)).sort();
+  for(let block=0;block<64;block++){
+    const cells=[];
+    for(let slot=1;slot<=6;slot++){
+      const number=block*6+slot;
+      const assignment=api.resolveAssignment(set,'has-to-first',number,'food');
+      assert.deepEqual(api.resolveAssignment(set,'will-first',String(number),'hug'),assignment);
+      assert.equal(assignment.questionOrderId,number%2?'will-first':'has-to-first');
+      cells.push(assignment.care+':'+assignment.questionOrderId);
+    }
+    sequences.add(cells.join('|'));
+    assert.deepEqual(cells.sort(),expected);
+  }
+  assert(sequences.size>1);
+}
+for(const care of cares)for(const order of ['will-first','has-to-first']){
+  assert.deepEqual(api.resolveAssignment('man',order,null,care),{assignmentNumber:null,questionOrderId:order,care});
+}
+assert.throws(()=>api.build('woman','will-first',null,'unknown'),/Unknown care condition/);
 assert.equal(api.build('all','has-to-first').assignmentNumber, null);
 assert.throws(()=>api.build('all','will-first',1), /single pairing set/);
 for (const invalid of ['', '0', '-1', '2.5', '1e3', 'x', '9007199254740992']) {

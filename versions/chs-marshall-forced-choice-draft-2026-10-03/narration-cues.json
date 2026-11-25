@@ -29060,8 +29060,2558 @@
       "decodedDurationSeconds": 2.56,
       "exactNormalizedWordMatch": true,
       "alignmentValid": true
+    },
+    "ftc_006": {
+      "sha256": "9a2fb17c3949a7cc78dc0b54e2d04a71a3eb30983e114d9509bab4559648a089",
+      "durationSeconds": 3.8139,
+      "recognizedText": "Who will give the kid in the middle a hug now that they're sad?",
+      "words": [
+        {
+          "word": "who",
+          "start": 0.18,
+          "end": 0.39
+        },
+        {
+          "word": "will",
+          "start": 0.39,
+          "end": 0.54
+        },
+        {
+          "word": "give",
+          "start": 0.54,
+          "end": 0.76
+        },
+        {
+          "word": "the",
+          "start": 0.76,
+          "end": 0.85
+        },
+        {
+          "word": "kid",
+          "start": 0.85,
+          "end": 1.22
+        },
+        {
+          "word": "in",
+          "start": 1.22,
+          "end": 1.34
+        },
+        {
+          "word": "the",
+          "start": 1.34,
+          "end": 1.41
+        },
+        {
+          "word": "middle",
+          "start": 1.41,
+          "end": 1.76
+        },
+        {
+          "word": "a",
+          "start": 1.76,
+          "end": 1.81
+        },
+        {
+          "word": "hug",
+          "start": 1.81,
+          "end": 2.18
+        },
+        {
+          "word": "now",
+          "start": 2.18,
+          "end": 2.42
+        },
+        {
+          "word": "that",
+          "start": 2.42,
+          "end": 2.55
+        },
+        {
+          "word": "they're",
+          "start": 2.55,
+          "end": 2.7
+        },
+        {
+          "word": "sad",
+          "start": 2.7,
+          "end": 3.23
+        }
+      ],
+      "alignmentMethod": "PocketSphinx 5.1.1 phonetic alignment to the full script, decoded English audio at 16 kHz; 10 ms frames. Transcript independently checked with whisper.cpp base.en.",
+      "expectedText": "Who will give the kid in the middle a hug now that they're sad?",
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0
+    },
+    "ftc_008": {
+      "sha256": "d4195208f4b98bed91ae99d61712f99a03cff93bc73a971a1a52a24b16020a8a",
+      "durationSeconds": 4.1013,
+      "recognizedText": "Oh no! The kid in the middle is hungry now.",
+      "words": [
+        {
+          "word": "oh",
+          "start": 0.27,
+          "end": 0.42
+        },
+        {
+          "word": "no",
+          "start": 0.42,
+          "end": 0.94
+        },
+        {
+          "word": "the",
+          "start": 1.57,
+          "end": 1.64
+        },
+        {
+          "word": "kid",
+          "start": 1.64,
+          "end": 1.89
+        },
+        {
+          "word": "in",
+          "start": 1.89,
+          "end": 2.0
+        },
+        {
+          "word": "the",
+          "start": 2.0,
+          "end": 2.09
+        },
+        {
+          "word": "middle",
+          "start": 2.09,
+          "end": 2.51
+        },
+        {
+          "word": "is",
+          "start": 2.51,
+          "end": 2.64
+        },
+        {
+          "word": "hungry",
+          "start": 2.64,
+          "end": 3.09
+        },
+        {
+          "word": "now",
+          "start": 3.09,
+          "end": 3.55
+        }
+      ],
+      "alignmentMethod": "PocketSphinx 5.1.1 phonetic alignment to the full script, decoded English audio at 16 kHz; 10 ms frames. Transcript independently checked with whisper.cpp base.en.",
+      "expectedText": "Oh no! The kid in the middle is hungry now!",
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0
+    },
+    "ftc_009": {
+      "sha256": "a2fbe606c86575c68a7c35326adad4c6e32ac93959852a4cbc521ba3ad5573ea",
+      "durationSeconds": 4.3886,
+      "recognizedText": "Who will give the kid in the middle strawberries now that they're hungry?",
+      "words": [
+        {
+          "word": "who",
+          "start": 0.18,
+          "end": 0.44
+        },
+        {
+          "word": "will",
+          "start": 0.44,
+          "end": 0.59
+        },
+        {
+          "word": "give",
+          "start": 0.59,
+          "end": 0.83
+        },
+        {
+          "word": "the",
+          "start": 0.83,
+          "end": 0.93
+        },
+        {
+          "word": "kid",
+          "start": 0.93,
+          "end": 1.36
+        },
+        {
+          "word": "in",
+          "start": 1.36,
+          "end": 1.5
+        },
+        {
+          "word": "the",
+          "start": 1.5,
+          "end": 1.57
+        },
+        {
+          "word": "middle",
+          "start": 1.57,
+          "end": 1.89
+        },
+        {
+          "word": "strawberries",
+          "start": 1.89,
+          "end": 2.69
+        },
+        {
+          "word": "now",
+          "start": 2.69,
+          "end": 2.9
+        },
+        {
+          "word": "that",
+          "start": 2.9,
+          "end": 3.05
+        },
+        {
+          "word": "they're",
+          "start": 3.05,
+          "end": 3.18
+        },
+        {
+          "word": "hungry",
+          "start": 3.18,
+          "end": 3.78
+        }
+      ],
+      "alignmentMethod": "PocketSphinx 5.1.1 phonetic alignment to the full script, decoded English audio at 16 kHz; 10 ms frames. Transcript independently checked with whisper.cpp base.en.",
+      "expectedText": "Who will give the kid in the middle strawberries now that they're hungry?",
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0
+    },
+    "ftc_010": {
+      "sha256": "5ff43f4f514f8ea75934f71e82b7f023be67c71205f2e875e848181eb6a51388",
+      "durationSeconds": 4.6237,
+      "recognizedText": "Oh no! The kid in the middle dropped a heavy box now.",
+      "words": [
+        {
+          "word": "oh",
+          "start": 0.27,
+          "end": 0.42
+        },
+        {
+          "word": "no",
+          "start": 0.42,
+          "end": 0.94
+        },
+        {
+          "word": "the",
+          "start": 1.57,
+          "end": 1.63
+        },
+        {
+          "word": "kid",
+          "start": 1.63,
+          "end": 1.83
+        },
+        {
+          "word": "in",
+          "start": 1.83,
+          "end": 1.93
+        },
+        {
+          "word": "the",
+          "start": 1.93,
+          "end": 2.03
+        },
+        {
+          "word": "middle",
+          "start": 2.03,
+          "end": 2.4
+        },
+        {
+          "word": "dropped",
+          "start": 2.4,
+          "end": 2.79
+        },
+        {
+          "word": "a",
+          "start": 2.79,
+          "end": 2.83
+        },
+        {
+          "word": "heavy",
+          "start": 2.83,
+          "end": 3.19
+        },
+        {
+          "word": "box",
+          "start": 3.19,
+          "end": 3.63
+        },
+        {
+          "word": "now",
+          "start": 3.63,
+          "end": 4.07
+        }
+      ],
+      "alignmentMethod": "PocketSphinx 5.1.1 phonetic alignment to the full script, decoded English audio at 16 kHz; 10 ms frames. Transcript independently checked with whisper.cpp base.en.",
+      "expectedText": "Oh no! The kid in the middle dropped a heavy box now!",
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0
+    },
+    "ftc_011": {
+      "sha256": "7222af991eed24d0eca7018f2ed57c6e68a185291187a2cc42f46a3fce49470b",
+      "durationSeconds": 3.9445,
+      "recognizedText": "Who will help the kid in the middle pick up the heavy box?",
+      "words": [
+        {
+          "word": "who",
+          "start": 0.18,
+          "end": 0.42
+        },
+        {
+          "word": "will",
+          "start": 0.42,
+          "end": 0.62
+        },
+        {
+          "word": "help",
+          "start": 0.62,
+          "end": 0.9
+        },
+        {
+          "word": "the",
+          "start": 0.9,
+          "end": 1.01
+        },
+        {
+          "word": "kid",
+          "start": 1.01,
+          "end": 1.32
+        },
+        {
+          "word": "in",
+          "start": 1.32,
+          "end": 1.45
+        },
+        {
+          "word": "the",
+          "start": 1.45,
+          "end": 1.51
+        },
+        {
+          "word": "middle",
+          "start": 1.51,
+          "end": 1.92
+        },
+        {
+          "word": "pick",
+          "start": 1.92,
+          "end": 2.21
+        },
+        {
+          "word": "up",
+          "start": 2.21,
+          "end": 2.36
+        },
+        {
+          "word": "the",
+          "start": 2.36,
+          "end": 2.47
+        },
+        {
+          "word": "heavy",
+          "start": 2.47,
+          "end": 2.8
+        },
+        {
+          "word": "box",
+          "start": 2.8,
+          "end": 3.39
+        }
+      ],
+      "alignmentMethod": "PocketSphinx 5.1.1 phonetic alignment to the full script, decoded English audio at 16 kHz; 10 ms frames. Transcript independently checked with whisper.cpp base.en.",
+      "expectedText": "Who will help the kid in the middle pick up the heavy box?",
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0
+    },
+    "ftc_019": {
+      "sha256": "99c400c5cb6cb12403f3f73a6a410910662db07af12e7db6b93465b18ea18a44",
+      "durationSeconds": 3.84,
+      "recognizedText": "Who will give the mom in the middle a hug now that they're sad?",
+      "words": [
+        {
+          "word": "who",
+          "start": 0.18,
+          "end": 0.42
+        },
+        {
+          "word": "will",
+          "start": 0.42,
+          "end": 0.58
+        },
+        {
+          "word": "give",
+          "start": 0.58,
+          "end": 0.79
+        },
+        {
+          "word": "the",
+          "start": 0.79,
+          "end": 0.88
+        },
+        {
+          "word": "mom",
+          "start": 0.88,
+          "end": 1.27
+        },
+        {
+          "word": "in",
+          "start": 1.27,
+          "end": 1.36
+        },
+        {
+          "word": "the",
+          "start": 1.36,
+          "end": 1.44
+        },
+        {
+          "word": "middle",
+          "start": 1.44,
+          "end": 1.76
+        },
+        {
+          "word": "a",
+          "start": 1.76,
+          "end": 1.82
+        },
+        {
+          "word": "hug",
+          "start": 1.82,
+          "end": 2.18
+        },
+        {
+          "word": "now",
+          "start": 2.18,
+          "end": 2.42
+        },
+        {
+          "word": "that",
+          "start": 2.42,
+          "end": 2.56
+        },
+        {
+          "word": "they're",
+          "start": 2.56,
+          "end": 2.71
+        },
+        {
+          "word": "sad",
+          "start": 2.71,
+          "end": 3.24
+        }
+      ],
+      "alignmentMethod": "PocketSphinx 5.1.1 phonetic alignment to the full script, decoded English audio at 16 kHz; 10 ms frames. Transcript independently checked with whisper.cpp base.en.",
+      "expectedText": "Who will give the mom in the middle a hug now that they're sad?",
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0
+    },
+    "ftc_021": {
+      "sha256": "53cc79116716f36133d3fbc4b02af4621de67bc8f2456993ca7336af425963da",
+      "durationSeconds": 4.3102,
+      "recognizedText": "Oh no! The mom in the middle is hungry now.",
+      "words": [
+        {
+          "word": "oh",
+          "start": 0.27,
+          "end": 0.42
+        },
+        {
+          "word": "no",
+          "start": 0.42,
+          "end": 0.93
+        },
+        {
+          "word": "the",
+          "start": 1.59,
+          "end": 1.69
+        },
+        {
+          "word": "mom",
+          "start": 1.69,
+          "end": 2.09
+        },
+        {
+          "word": "in",
+          "start": 2.09,
+          "end": 2.16
+        },
+        {
+          "word": "the",
+          "start": 2.16,
+          "end": 2.27
+        },
+        {
+          "word": "middle",
+          "start": 2.27,
+          "end": 2.69
+        },
+        {
+          "word": "is",
+          "start": 2.69,
+          "end": 2.83
+        },
+        {
+          "word": "hungry",
+          "start": 2.83,
+          "end": 3.29
+        },
+        {
+          "word": "now",
+          "start": 3.29,
+          "end": 3.74
+        }
+      ],
+      "alignmentMethod": "PocketSphinx 5.1.1 phonetic alignment to the full script, decoded English audio at 16 kHz; 10 ms frames. Transcript independently checked with whisper.cpp base.en.",
+      "expectedText": "Oh no! The mom in the middle is hungry now!",
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0
+    },
+    "ftc_022": {
+      "sha256": "8f26b99c293f74b2167ba88b7a55cd61be2ad7cd05936746052f266807c81829",
+      "durationSeconds": 4.2841,
+      "recognizedText": "Who will give the mom and the middle strawberries now that they're hungry?",
+      "words": [
+        {
+          "word": "who",
+          "start": 0.18,
+          "end": 0.43
+        },
+        {
+          "word": "will",
+          "start": 0.43,
+          "end": 0.61
+        },
+        {
+          "word": "give",
+          "start": 0.61,
+          "end": 0.84
+        },
+        {
+          "word": "the",
+          "start": 0.84,
+          "end": 0.93
+        },
+        {
+          "word": "mom",
+          "start": 0.93,
+          "end": 1.36
+        },
+        {
+          "word": "in",
+          "start": 1.36,
+          "end": 1.45
+        },
+        {
+          "word": "the",
+          "start": 1.45,
+          "end": 1.52
+        },
+        {
+          "word": "middle",
+          "start": 1.52,
+          "end": 1.84
+        },
+        {
+          "word": "strawberries",
+          "start": 1.84,
+          "end": 2.6
+        },
+        {
+          "word": "now",
+          "start": 2.6,
+          "end": 2.82
+        },
+        {
+          "word": "that",
+          "start": 2.82,
+          "end": 2.95
+        },
+        {
+          "word": "they're",
+          "start": 2.95,
+          "end": 3.08
+        },
+        {
+          "word": "hungry",
+          "start": 3.08,
+          "end": 3.68
+        }
+      ],
+      "alignmentMethod": "PocketSphinx 5.1.1 phonetic alignment to the full script, decoded English audio at 16 kHz; 10 ms frames. Transcript independently checked with whisper.cpp base.en.",
+      "expectedText": "Who will give the mom in the middle strawberries now that they're hungry?",
+      "exactNormalizedWordMatch": false,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "transcriptVerificationSpeed": 1,
+      "glowWordRange": [
+        "the",
+        "mom"
+      ],
+      "glowWordRangeNote": "The independent transcript agrees on the recipient and action but renders the following reduced preposition as “and”. Use only the aligned, independently recognized role phrase for the glow."
+    },
+    "ftc_023": {
+      "sha256": "d88bccd858136a44779c41ffe6674522f1348bca7f7a5075676424092a579cf7",
+      "durationSeconds": 4.8066,
+      "recognizedText": "Oh no! The mom in the middle dropped a heavy box now.",
+      "words": [
+        {
+          "word": "oh",
+          "start": 0.27,
+          "end": 0.42
+        },
+        {
+          "word": "no",
+          "start": 0.42,
+          "end": 0.93
+        },
+        {
+          "word": "the",
+          "start": 1.59,
+          "end": 1.68
+        },
+        {
+          "word": "mom",
+          "start": 1.68,
+          "end": 2.05
+        },
+        {
+          "word": "in",
+          "start": 2.05,
+          "end": 2.13
+        },
+        {
+          "word": "the",
+          "start": 2.13,
+          "end": 2.2
+        },
+        {
+          "word": "middle",
+          "start": 2.2,
+          "end": 2.57
+        },
+        {
+          "word": "dropped",
+          "start": 2.57,
+          "end": 2.99
+        },
+        {
+          "word": "a",
+          "start": 2.99,
+          "end": 3.02
+        },
+        {
+          "word": "heavy",
+          "start": 3.02,
+          "end": 3.38
+        },
+        {
+          "word": "box",
+          "start": 3.38,
+          "end": 3.82
+        },
+        {
+          "word": "now",
+          "start": 3.82,
+          "end": 4.25
+        }
+      ],
+      "alignmentMethod": "PocketSphinx 5.1.1 phonetic alignment to the full script, decoded English audio at 16 kHz; 10 ms frames. Transcript independently checked with whisper.cpp base.en.",
+      "expectedText": "Oh no! The mom in the middle dropped a heavy box now!",
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0
+    },
+    "ftc_024": {
+      "sha256": "11f2204fb5a186594ee2d9ec23007c4a5d13fd44ab88cf5f3a179c43f0f0ac13",
+      "durationSeconds": 3.9445,
+      "recognizedText": "Who will help the mom in the middle pick up the heavy box?",
+      "words": [
+        {
+          "word": "who",
+          "start": 0.18,
+          "end": 0.42
+        },
+        {
+          "word": "will",
+          "start": 0.42,
+          "end": 0.62
+        },
+        {
+          "word": "help",
+          "start": 0.62,
+          "end": 0.9
+        },
+        {
+          "word": "the",
+          "start": 0.9,
+          "end": 0.99
+        },
+        {
+          "word": "mom",
+          "start": 0.99,
+          "end": 1.34
+        },
+        {
+          "word": "in",
+          "start": 1.34,
+          "end": 1.44
+        },
+        {
+          "word": "the",
+          "start": 1.44,
+          "end": 1.5
+        },
+        {
+          "word": "middle",
+          "start": 1.5,
+          "end": 1.91
+        },
+        {
+          "word": "pick",
+          "start": 1.91,
+          "end": 2.2
+        },
+        {
+          "word": "up",
+          "start": 2.2,
+          "end": 2.37
+        },
+        {
+          "word": "the",
+          "start": 2.37,
+          "end": 2.44
+        },
+        {
+          "word": "heavy",
+          "start": 2.44,
+          "end": 2.78
+        },
+        {
+          "word": "box",
+          "start": 2.78,
+          "end": 3.37
+        }
+      ],
+      "alignmentMethod": "PocketSphinx 5.1.1 phonetic alignment to the full script, decoded English audio at 16 kHz; 10 ms frames. Transcript independently checked with whisper.cpp base.en.",
+      "expectedText": "Who will help the mom in the middle pick up the heavy box?",
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0
+    },
+    "ftc_028": {
+      "sha256": "68231b9311a4991392faf0d6db6caf6dfbd3e61915843ee98d03452f7d8bebd4",
+      "durationSeconds": 3.9445,
+      "recognizedText": "Who will give the teacher in the middle a hug now that they're sad?",
+      "words": [
+        {
+          "word": "who",
+          "start": 0.18,
+          "end": 0.43
+        },
+        {
+          "word": "will",
+          "start": 0.43,
+          "end": 0.58
+        },
+        {
+          "word": "give",
+          "start": 0.58,
+          "end": 0.77
+        },
+        {
+          "word": "the",
+          "start": 0.77,
+          "end": 0.88
+        },
+        {
+          "word": "teacher",
+          "start": 0.88,
+          "end": 1.34
+        },
+        {
+          "word": "in",
+          "start": 1.34,
+          "end": 1.44
+        },
+        {
+          "word": "the",
+          "start": 1.44,
+          "end": 1.5
+        },
+        {
+          "word": "middle",
+          "start": 1.5,
+          "end": 1.86
+        },
+        {
+          "word": "a",
+          "start": 1.86,
+          "end": 1.91
+        },
+        {
+          "word": "hug",
+          "start": 1.91,
+          "end": 2.28
+        },
+        {
+          "word": "now",
+          "start": 2.28,
+          "end": 2.52
+        },
+        {
+          "word": "that",
+          "start": 2.52,
+          "end": 2.66
+        },
+        {
+          "word": "they're",
+          "start": 2.66,
+          "end": 2.81
+        },
+        {
+          "word": "sad",
+          "start": 2.81,
+          "end": 3.35
+        }
+      ],
+      "alignmentMethod": "PocketSphinx 5.1.1 phonetic alignment to the full script, decoded English audio at 16 kHz; 10 ms frames. Transcript independently checked with whisper.cpp base.en.",
+      "expectedText": "Who will give the teacher in the middle a hug now that they're sad?",
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0
+    },
+    "ftc_030": {
+      "sha256": "44820857301dc07d9e903c13be0ca87cba3255c4161291ecd579bc60c1805d32",
+      "durationSeconds": 4.3886,
+      "recognizedText": "Oh no! The teacher in the middle is hungry now.",
+      "words": [
+        {
+          "word": "oh",
+          "start": 0.27,
+          "end": 0.42
+        },
+        {
+          "word": "no",
+          "start": 0.42,
+          "end": 0.94
+        },
+        {
+          "word": "the",
+          "start": 1.6,
+          "end": 1.7
+        },
+        {
+          "word": "teacher",
+          "start": 1.7,
+          "end": 2.14
+        },
+        {
+          "word": "in",
+          "start": 2.14,
+          "end": 2.24
+        },
+        {
+          "word": "the",
+          "start": 2.24,
+          "end": 2.32
+        },
+        {
+          "word": "middle",
+          "start": 2.32,
+          "end": 2.74
+        },
+        {
+          "word": "is",
+          "start": 2.74,
+          "end": 2.89
+        },
+        {
+          "word": "hungry",
+          "start": 2.89,
+          "end": 3.34
+        },
+        {
+          "word": "now",
+          "start": 3.34,
+          "end": 3.79
+        }
+      ],
+      "alignmentMethod": "PocketSphinx 5.1.1 phonetic alignment to the full script, decoded English audio at 16 kHz; 10 ms frames. Transcript independently checked with whisper.cpp base.en.",
+      "expectedText": "Oh no! The teacher in the middle is hungry now!",
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0
+    },
+    "ftc_031": {
+      "sha256": "9ba6fd38789cf2a6c44e2856778005812482b81df07fce1d4f7ea62b653ba9f6",
+      "durationSeconds": 4.4147,
+      "recognizedText": "Who will give the teacher in the middle strawberries now that they're hungry?",
+      "words": [
+        {
+          "word": "who",
+          "start": 0.18,
+          "end": 0.42
+        },
+        {
+          "word": "will",
+          "start": 0.42,
+          "end": 0.59
+        },
+        {
+          "word": "give",
+          "start": 0.59,
+          "end": 0.82
+        },
+        {
+          "word": "the",
+          "start": 0.82,
+          "end": 0.92
+        },
+        {
+          "word": "teacher",
+          "start": 0.92,
+          "end": 1.4
+        },
+        {
+          "word": "in",
+          "start": 1.4,
+          "end": 1.51
+        },
+        {
+          "word": "the",
+          "start": 1.51,
+          "end": 1.58
+        },
+        {
+          "word": "middle",
+          "start": 1.58,
+          "end": 1.9
+        },
+        {
+          "word": "strawberries",
+          "start": 1.9,
+          "end": 2.7
+        },
+        {
+          "word": "now",
+          "start": 2.7,
+          "end": 2.93
+        },
+        {
+          "word": "that",
+          "start": 2.93,
+          "end": 3.07
+        },
+        {
+          "word": "they're",
+          "start": 3.07,
+          "end": 3.2
+        },
+        {
+          "word": "hungry",
+          "start": 3.2,
+          "end": 3.81
+        }
+      ],
+      "alignmentMethod": "PocketSphinx 5.1.1 phonetic alignment to the full script, decoded English audio at 16 kHz; 10 ms frames. Transcript independently checked with whisper.cpp base.en.",
+      "expectedText": "Who will give the teacher in the middle strawberries now that they're hungry?",
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "transcriptVerificationSpeed": 0.98
+    },
+    "ftc_032": {
+      "sha256": "a53fd9b81ace28290d20b76a6dc23789f901040436116f604c1557db2c7330ce",
+      "durationSeconds": 4.7804,
+      "recognizedText": "Oh no! The teacher in the middle dropped a heavy box now.",
+      "words": [
+        {
+          "word": "oh",
+          "start": 0.27,
+          "end": 0.42
+        },
+        {
+          "word": "no",
+          "start": 0.42,
+          "end": 0.94
+        },
+        {
+          "word": "the",
+          "start": 1.57,
+          "end": 1.63
+        },
+        {
+          "word": "teacher",
+          "start": 1.63,
+          "end": 2.0
+        },
+        {
+          "word": "in",
+          "start": 2.0,
+          "end": 2.11
+        },
+        {
+          "word": "the",
+          "start": 2.11,
+          "end": 2.18
+        },
+        {
+          "word": "middle",
+          "start": 2.18,
+          "end": 2.57
+        },
+        {
+          "word": "dropped",
+          "start": 2.57,
+          "end": 2.96
+        },
+        {
+          "word": "a",
+          "start": 2.96,
+          "end": 2.99
+        },
+        {
+          "word": "heavy",
+          "start": 2.99,
+          "end": 3.35
+        },
+        {
+          "word": "box",
+          "start": 3.35,
+          "end": 3.79
+        },
+        {
+          "word": "now",
+          "start": 3.79,
+          "end": 4.2
+        }
+      ],
+      "alignmentMethod": "PocketSphinx 5.1.1 phonetic alignment to the full script, decoded English audio at 16 kHz; 10 ms frames. Transcript independently checked with whisper.cpp base.en.",
+      "expectedText": "Oh no! The teacher in the middle dropped a heavy box now!",
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0
+    },
+    "ftc_033": {
+      "sha256": "f660e65800fbc30769b7a1258b2d6dd4271bae8411f9dc910e9cbe1ecf5c6a11",
+      "durationSeconds": 3.9706,
+      "recognizedText": "Who will help the teacher in the middle pick up the heavy box?",
+      "words": [
+        {
+          "word": "who",
+          "start": 0.18,
+          "end": 0.42
+        },
+        {
+          "word": "will",
+          "start": 0.42,
+          "end": 0.59
+        },
+        {
+          "word": "help",
+          "start": 0.59,
+          "end": 0.86
+        },
+        {
+          "word": "the",
+          "start": 0.86,
+          "end": 0.98
+        },
+        {
+          "word": "teacher",
+          "start": 0.98,
+          "end": 1.41
+        },
+        {
+          "word": "in",
+          "start": 1.41,
+          "end": 1.51
+        },
+        {
+          "word": "the",
+          "start": 1.51,
+          "end": 1.58
+        },
+        {
+          "word": "middle",
+          "start": 1.58,
+          "end": 1.96
+        },
+        {
+          "word": "pick",
+          "start": 1.96,
+          "end": 2.25
+        },
+        {
+          "word": "up",
+          "start": 2.25,
+          "end": 2.4
+        },
+        {
+          "word": "the",
+          "start": 2.4,
+          "end": 2.51
+        },
+        {
+          "word": "heavy",
+          "start": 2.51,
+          "end": 2.83
+        },
+        {
+          "word": "box",
+          "start": 2.83,
+          "end": 3.41
+        }
+      ],
+      "alignmentMethod": "PocketSphinx 5.1.1 phonetic alignment to the full script, decoded English audio at 16 kHz; 10 ms frames. Transcript independently checked with whisper.cpp base.en.",
+      "expectedText": "Who will help the teacher in the middle pick up the heavy box?",
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0
+    },
+    "ftc_043": {
+      "sha256": "25cf60645f4e0005b992aa2c7dfecee3e14687fd7e84fa9f4e7dafbdf32c4f5f",
+      "durationSeconds": 3.8139,
+      "recognizedText": "Who will give the dad in the middle a hug now that they're sad?",
+      "words": [
+        {
+          "word": "who",
+          "start": 0.18,
+          "end": 0.41
+        },
+        {
+          "word": "will",
+          "start": 0.41,
+          "end": 0.58
+        },
+        {
+          "word": "give",
+          "start": 0.58,
+          "end": 0.81
+        },
+        {
+          "word": "the",
+          "start": 0.81,
+          "end": 0.92
+        },
+        {
+          "word": "dad",
+          "start": 0.92,
+          "end": 1.25
+        },
+        {
+          "word": "in",
+          "start": 1.25,
+          "end": 1.36
+        },
+        {
+          "word": "the",
+          "start": 1.36,
+          "end": 1.43
+        },
+        {
+          "word": "middle",
+          "start": 1.43,
+          "end": 1.77
+        },
+        {
+          "word": "a",
+          "start": 1.77,
+          "end": 1.81
+        },
+        {
+          "word": "hug",
+          "start": 1.81,
+          "end": 2.18
+        },
+        {
+          "word": "now",
+          "start": 2.18,
+          "end": 2.42
+        },
+        {
+          "word": "that",
+          "start": 2.42,
+          "end": 2.55
+        },
+        {
+          "word": "they're",
+          "start": 2.55,
+          "end": 2.7
+        },
+        {
+          "word": "sad",
+          "start": 2.7,
+          "end": 3.23
+        }
+      ],
+      "alignmentMethod": "PocketSphinx 5.1.1 phonetic alignment to the full script, decoded English audio at 16 kHz; 10 ms frames. Transcript independently checked with whisper.cpp base.en.",
+      "expectedText": "Who will give the dad in the middle a hug now that they're sad?",
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0
+    },
+    "ftc_045": {
+      "sha256": "02eb56f4a15d67305450931d9ad106d99382e9932b4191331cec7a64e6930f94",
+      "durationSeconds": 4.3102,
+      "recognizedText": "Oh no! The dad in the middle is hungry now.",
+      "words": [
+        {
+          "word": "oh",
+          "start": 0.27,
+          "end": 0.42
+        },
+        {
+          "word": "no",
+          "start": 0.42,
+          "end": 0.94
+        },
+        {
+          "word": "the",
+          "start": 1.61,
+          "end": 1.71
+        },
+        {
+          "word": "dad",
+          "start": 1.71,
+          "end": 2.07
+        },
+        {
+          "word": "in",
+          "start": 2.07,
+          "end": 2.19
+        },
+        {
+          "word": "the",
+          "start": 2.19,
+          "end": 2.25
+        },
+        {
+          "word": "middle",
+          "start": 2.25,
+          "end": 2.68
+        },
+        {
+          "word": "is",
+          "start": 2.68,
+          "end": 2.82
+        },
+        {
+          "word": "hungry",
+          "start": 2.82,
+          "end": 3.28
+        },
+        {
+          "word": "now",
+          "start": 3.28,
+          "end": 3.72
+        }
+      ],
+      "alignmentMethod": "PocketSphinx 5.1.1 phonetic alignment to the full script, decoded English audio at 16 kHz; 10 ms frames. Transcript independently checked with whisper.cpp base.en.",
+      "expectedText": "Oh no! The dad in the middle is hungry now!",
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0
+    },
+    "ftc_046": {
+      "sha256": "843bb64b15aa25c07e507fe7b03eb1908019674680aaa439971ec50f85b28e5a",
+      "durationSeconds": 4.258,
+      "recognizedText": "Who will give the dad in the middle strawberries now that they're hungry?",
+      "words": [
+        {
+          "word": "who",
+          "start": 0.18,
+          "end": 0.44
+        },
+        {
+          "word": "will",
+          "start": 0.44,
+          "end": 0.61
+        },
+        {
+          "word": "give",
+          "start": 0.61,
+          "end": 0.85
+        },
+        {
+          "word": "the",
+          "start": 0.85,
+          "end": 0.97
+        },
+        {
+          "word": "dad",
+          "start": 0.97,
+          "end": 1.33
+        },
+        {
+          "word": "in",
+          "start": 1.33,
+          "end": 1.44
+        },
+        {
+          "word": "the",
+          "start": 1.44,
+          "end": 1.5
+        },
+        {
+          "word": "middle",
+          "start": 1.5,
+          "end": 1.81
+        },
+        {
+          "word": "strawberries",
+          "start": 1.81,
+          "end": 2.58
+        },
+        {
+          "word": "now",
+          "start": 2.58,
+          "end": 2.79
+        },
+        {
+          "word": "that",
+          "start": 2.79,
+          "end": 2.92
+        },
+        {
+          "word": "they're",
+          "start": 2.92,
+          "end": 3.06
+        },
+        {
+          "word": "hungry",
+          "start": 3.06,
+          "end": 3.66
+        }
+      ],
+      "alignmentMethod": "PocketSphinx 5.1.1 phonetic alignment to the full script, decoded English audio at 16 kHz; 10 ms frames. Transcript independently checked with whisper.cpp base.en.",
+      "expectedText": "Who will give the dad in the middle strawberries now that they're hungry?",
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0
+    },
+    "ftc_047": {
+      "sha256": "d3efea48312811e0ac775fe730b35c7f32fe41f57a6324dc80a7a7cc94c68d9a",
+      "durationSeconds": 4.8066,
+      "recognizedText": "Oh no! The dad in the middle dropped a heavy box now.",
+      "words": [
+        {
+          "word": "oh",
+          "start": 0.27,
+          "end": 0.42
+        },
+        {
+          "word": "no",
+          "start": 0.42,
+          "end": 0.94
+        },
+        {
+          "word": "the",
+          "start": 1.59,
+          "end": 1.69
+        },
+        {
+          "word": "dad",
+          "start": 1.69,
+          "end": 2.02
+        },
+        {
+          "word": "in",
+          "start": 2.02,
+          "end": 2.13
+        },
+        {
+          "word": "the",
+          "start": 2.13,
+          "end": 2.2
+        },
+        {
+          "word": "middle",
+          "start": 2.2,
+          "end": 2.57
+        },
+        {
+          "word": "dropped",
+          "start": 2.57,
+          "end": 2.97
+        },
+        {
+          "word": "a",
+          "start": 2.97,
+          "end": 3.01
+        },
+        {
+          "word": "heavy",
+          "start": 3.01,
+          "end": 3.36
+        },
+        {
+          "word": "box",
+          "start": 3.36,
+          "end": 3.81
+        },
+        {
+          "word": "now",
+          "start": 3.81,
+          "end": 4.24
+        }
+      ],
+      "alignmentMethod": "PocketSphinx 5.1.1 phonetic alignment to the full script, decoded English audio at 16 kHz; 10 ms frames. Transcript independently checked with whisper.cpp base.en.",
+      "expectedText": "Oh no! The dad in the middle dropped a heavy box now!",
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0
+    },
+    "ftc_048": {
+      "sha256": "a476ae19fc7473c41894f8d10c12d2182ab5b3a6cf15e49e40276c49cf078b91",
+      "durationSeconds": 3.9184,
+      "recognizedText": "Who will help the dad in the middle pick up the heavy box?",
+      "words": [
+        {
+          "word": "who",
+          "start": 0.17,
+          "end": 0.44
+        },
+        {
+          "word": "will",
+          "start": 0.44,
+          "end": 0.63
+        },
+        {
+          "word": "help",
+          "start": 0.63,
+          "end": 0.91
+        },
+        {
+          "word": "the",
+          "start": 0.91,
+          "end": 1.04
+        },
+        {
+          "word": "dad",
+          "start": 1.04,
+          "end": 1.35
+        },
+        {
+          "word": "in",
+          "start": 1.35,
+          "end": 1.47
+        },
+        {
+          "word": "the",
+          "start": 1.47,
+          "end": 1.53
+        },
+        {
+          "word": "middle",
+          "start": 1.53,
+          "end": 1.92
+        },
+        {
+          "word": "pick",
+          "start": 1.92,
+          "end": 2.21
+        },
+        {
+          "word": "up",
+          "start": 2.21,
+          "end": 2.36
+        },
+        {
+          "word": "the",
+          "start": 2.36,
+          "end": 2.47
+        },
+        {
+          "word": "heavy",
+          "start": 2.47,
+          "end": 2.79
+        },
+        {
+          "word": "box",
+          "start": 2.79,
+          "end": 3.37
+        }
+      ],
+      "alignmentMethod": "PocketSphinx 5.1.1 phonetic alignment to the full script, decoded English audio at 16 kHz; 10 ms frames. Transcript independently checked with whisper.cpp base.en.",
+      "expectedText": "Who will help the dad in the middle pick up the heavy box?",
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0
+    },
+    "obligation_food_dad": {
+      "sha256": "050cdbbd9219f41290950b6f6cbd0eb3abc1656cdde472bd694e7d1433072b1e",
+      "durationSeconds": 4.1013,
+      "recognizedText": "Who do you think has to give the dad in the middle strawberries?",
+      "words": [
+        {
+          "word": "who",
+          "start": 0.18,
+          "end": 0.43
+        },
+        {
+          "word": "do",
+          "start": 0.43,
+          "end": 0.5
+        },
+        {
+          "word": "you",
+          "start": 0.5,
+          "end": 0.63
+        },
+        {
+          "word": "think",
+          "start": 0.63,
+          "end": 0.99
+        },
+        {
+          "word": "has",
+          "start": 0.99,
+          "end": 1.25
+        },
+        {
+          "word": "to",
+          "start": 1.25,
+          "end": 1.36
+        },
+        {
+          "word": "give",
+          "start": 1.36,
+          "end": 1.59
+        },
+        {
+          "word": "the",
+          "start": 1.59,
+          "end": 1.71
+        },
+        {
+          "word": "dad",
+          "start": 1.71,
+          "end": 2.11
+        },
+        {
+          "word": "in",
+          "start": 2.11,
+          "end": 2.21
+        },
+        {
+          "word": "the",
+          "start": 2.21,
+          "end": 2.28
+        },
+        {
+          "word": "middle",
+          "start": 2.28,
+          "end": 2.61
+        },
+        {
+          "word": "strawberries",
+          "start": 2.61,
+          "end": 3.52
+        }
+      ],
+      "alignmentMethod": "PocketSphinx 5.1.1 phonetic alignment to the full script, decoded English audio at 16 kHz; 10 ms frames. Transcript independently checked with whisper.cpp base.en.",
+      "expectedText": "Who do you think HAS TO give the dad in the middle strawberries?",
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0
+    },
+    "obligation_food_kid": {
+      "sha256": "f2c92804a97dd401b0782b2d31afba5e7c447b7e870535eca0291395066b37d0",
+      "durationSeconds": 4.1535,
+      "recognizedText": "Who do you think has to give the kid in the middle strawberries?",
+      "words": [
+        {
+          "word": "who",
+          "start": 0.18,
+          "end": 0.44
+        },
+        {
+          "word": "do",
+          "start": 0.44,
+          "end": 0.5
+        },
+        {
+          "word": "you",
+          "start": 0.5,
+          "end": 0.65
+        },
+        {
+          "word": "think",
+          "start": 0.65,
+          "end": 0.99
+        },
+        {
+          "word": "has",
+          "start": 0.99,
+          "end": 1.25
+        },
+        {
+          "word": "to",
+          "start": 1.25,
+          "end": 1.36
+        },
+        {
+          "word": "give",
+          "start": 1.36,
+          "end": 1.59
+        },
+        {
+          "word": "the",
+          "start": 1.59,
+          "end": 1.68
+        },
+        {
+          "word": "kid",
+          "start": 1.68,
+          "end": 2.15
+        },
+        {
+          "word": "in",
+          "start": 2.15,
+          "end": 2.29
+        },
+        {
+          "word": "the",
+          "start": 2.29,
+          "end": 2.35
+        },
+        {
+          "word": "middle",
+          "start": 2.35,
+          "end": 2.68
+        },
+        {
+          "word": "strawberries",
+          "start": 2.68,
+          "end": 3.59
+        }
+      ],
+      "alignmentMethod": "PocketSphinx 5.1.1 phonetic alignment to the full script, decoded English audio at 16 kHz; 10 ms frames. Transcript independently checked with whisper.cpp base.en.",
+      "expectedText": "Who do you think HAS TO give the kid in the middle strawberries?",
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0
+    },
+    "obligation_food_mom": {
+      "sha256": "56cec1579ac941625b2822de8a048d97b3e0306dc918dfa86fa9f8244186c7d5",
+      "durationSeconds": 4.1796,
+      "recognizedText": "Who do you think has to give the mom and the middle strawberries?",
+      "words": [
+        {
+          "word": "who",
+          "start": 0.18,
+          "end": 0.43
+        },
+        {
+          "word": "do",
+          "start": 0.43,
+          "end": 0.49
+        },
+        {
+          "word": "you",
+          "start": 0.49,
+          "end": 0.64
+        },
+        {
+          "word": "think",
+          "start": 0.64,
+          "end": 1.0
+        },
+        {
+          "word": "has",
+          "start": 1.0,
+          "end": 1.26
+        },
+        {
+          "word": "to",
+          "start": 1.26,
+          "end": 1.37
+        },
+        {
+          "word": "give",
+          "start": 1.37,
+          "end": 1.59
+        },
+        {
+          "word": "the",
+          "start": 1.59,
+          "end": 1.69
+        },
+        {
+          "word": "mom",
+          "start": 1.69,
+          "end": 2.2
+        },
+        {
+          "word": "in",
+          "start": 2.2,
+          "end": 2.31
+        },
+        {
+          "word": "the",
+          "start": 2.31,
+          "end": 2.38
+        },
+        {
+          "word": "middle",
+          "start": 2.38,
+          "end": 2.71
+        },
+        {
+          "word": "strawberries",
+          "start": 2.71,
+          "end": 3.62
+        }
+      ],
+      "alignmentMethod": "PocketSphinx 5.1.1 phonetic alignment to the full script, decoded English audio at 16 kHz; 10 ms frames. Transcript independently checked with whisper.cpp base.en.",
+      "expectedText": "Who do you think HAS TO give the mom in the middle strawberries?",
+      "exactNormalizedWordMatch": false,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0,
+      "transcriptVerificationSpeed": 1,
+      "glowWordRange": [
+        "the",
+        "mom"
+      ],
+      "glowWordRangeNote": "The independent transcript agrees on the recipient and action but renders the following reduced preposition as “and”. Use only the aligned, independently recognized role phrase for the glow."
+    },
+    "obligation_food_teacher": {
+      "sha256": "83f0b359a702bef5733e56792e62dafc8cb3aa3437c9a9145f529503df8d77e7",
+      "durationSeconds": 4.2058,
+      "recognizedText": "Who do you think has to give the teacher in the middle strawberries?",
+      "words": [
+        {
+          "word": "who",
+          "start": 0.18,
+          "end": 0.44
+        },
+        {
+          "word": "do",
+          "start": 0.44,
+          "end": 0.5
+        },
+        {
+          "word": "you",
+          "start": 0.5,
+          "end": 0.65
+        },
+        {
+          "word": "think",
+          "start": 0.65,
+          "end": 0.98
+        },
+        {
+          "word": "has",
+          "start": 0.98,
+          "end": 1.24
+        },
+        {
+          "word": "to",
+          "start": 1.24,
+          "end": 1.34
+        },
+        {
+          "word": "give",
+          "start": 1.34,
+          "end": 1.56
+        },
+        {
+          "word": "the",
+          "start": 1.56,
+          "end": 1.67
+        },
+        {
+          "word": "teacher",
+          "start": 1.67,
+          "end": 2.21
+        },
+        {
+          "word": "in",
+          "start": 2.21,
+          "end": 2.33
+        },
+        {
+          "word": "the",
+          "start": 2.33,
+          "end": 2.39
+        },
+        {
+          "word": "middle",
+          "start": 2.39,
+          "end": 2.72
+        },
+        {
+          "word": "strawberries",
+          "start": 2.72,
+          "end": 3.63
+        }
+      ],
+      "alignmentMethod": "PocketSphinx 5.1.1 phonetic alignment to the full script, decoded English audio at 16 kHz; 10 ms frames. Transcript independently checked with whisper.cpp base.en.",
+      "expectedText": "Who do you think HAS TO give the teacher in the middle strawberries?",
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0
+    },
+    "obligation_help_dad": {
+      "sha256": "427c59a5806078667214e935916fb96c084a9c0be83a2111f20822e14904bb3a",
+      "durationSeconds": 4.5976,
+      "recognizedText": "Who do you think has to help the dad in the middle pick up the heavy box?",
+      "words": [
+        {
+          "word": "who",
+          "start": 0.18,
+          "end": 0.42
+        },
+        {
+          "word": "do",
+          "start": 0.42,
+          "end": 0.48
+        },
+        {
+          "word": "you",
+          "start": 0.48,
+          "end": 0.63
+        },
+        {
+          "word": "think",
+          "start": 0.63,
+          "end": 0.96
+        },
+        {
+          "word": "has",
+          "start": 0.96,
+          "end": 1.22
+        },
+        {
+          "word": "to",
+          "start": 1.22,
+          "end": 1.3
+        },
+        {
+          "word": "help",
+          "start": 1.3,
+          "end": 1.62
+        },
+        {
+          "word": "the",
+          "start": 1.62,
+          "end": 1.72
+        },
+        {
+          "word": "dad",
+          "start": 1.72,
+          "end": 2.06
+        },
+        {
+          "word": "in",
+          "start": 2.06,
+          "end": 2.17
+        },
+        {
+          "word": "the",
+          "start": 2.17,
+          "end": 2.24
+        },
+        {
+          "word": "middle",
+          "start": 2.24,
+          "end": 2.63
+        },
+        {
+          "word": "pick",
+          "start": 2.63,
+          "end": 2.92
+        },
+        {
+          "word": "up",
+          "start": 2.92,
+          "end": 3.06
+        },
+        {
+          "word": "the",
+          "start": 3.06,
+          "end": 3.15
+        },
+        {
+          "word": "heavy",
+          "start": 3.15,
+          "end": 3.46
+        },
+        {
+          "word": "box",
+          "start": 3.46,
+          "end": 4.04
+        }
+      ],
+      "alignmentMethod": "PocketSphinx 5.1.1 phonetic alignment to the full script, decoded English audio at 16 kHz; 10 ms frames. Transcript independently checked with whisper.cpp base.en.",
+      "expectedText": "Who do you think HAS TO help the dad in the middle pick up the heavy box?",
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0
+    },
+    "obligation_help_kid": {
+      "sha256": "3e3d4438db158bb9360e08292ad49899a7db63b2dfff9ac3d2960c83fd2f2aed",
+      "durationSeconds": 4.5714,
+      "recognizedText": "Who do you think has to help the kid in the middle pick up the heavy box?",
+      "words": [
+        {
+          "word": "who",
+          "start": 0.18,
+          "end": 0.42
+        },
+        {
+          "word": "do",
+          "start": 0.42,
+          "end": 0.48
+        },
+        {
+          "word": "you",
+          "start": 0.48,
+          "end": 0.63
+        },
+        {
+          "word": "think",
+          "start": 0.63,
+          "end": 0.96
+        },
+        {
+          "word": "has",
+          "start": 0.96,
+          "end": 1.22
+        },
+        {
+          "word": "to",
+          "start": 1.22,
+          "end": 1.3
+        },
+        {
+          "word": "help",
+          "start": 1.3,
+          "end": 1.6
+        },
+        {
+          "word": "the",
+          "start": 1.6,
+          "end": 1.7
+        },
+        {
+          "word": "kid",
+          "start": 1.7,
+          "end": 2.03
+        },
+        {
+          "word": "in",
+          "start": 2.03,
+          "end": 2.16
+        },
+        {
+          "word": "the",
+          "start": 2.16,
+          "end": 2.23
+        },
+        {
+          "word": "middle",
+          "start": 2.23,
+          "end": 2.61
+        },
+        {
+          "word": "pick",
+          "start": 2.61,
+          "end": 2.89
+        },
+        {
+          "word": "up",
+          "start": 2.89,
+          "end": 3.04
+        },
+        {
+          "word": "the",
+          "start": 3.04,
+          "end": 3.12
+        },
+        {
+          "word": "heavy",
+          "start": 3.12,
+          "end": 3.44
+        },
+        {
+          "word": "box",
+          "start": 3.44,
+          "end": 4.01
+        }
+      ],
+      "alignmentMethod": "PocketSphinx 5.1.1 phonetic alignment to the full script, decoded English audio at 16 kHz; 10 ms frames. Transcript independently checked with whisper.cpp base.en.",
+      "expectedText": "Who do you think HAS TO help the kid in the middle pick up the heavy box?",
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0
+    },
+    "obligation_help_mom": {
+      "sha256": "cbc9c9127e694fa0d30076585d4dae757c2fd6b1d510792f4edac293323e22e4",
+      "durationSeconds": 4.6237,
+      "recognizedText": "Who do you think has to help the mom in the middle pick up the heavy box?",
+      "words": [
+        {
+          "word": "who",
+          "start": 0.18,
+          "end": 0.42
+        },
+        {
+          "word": "do",
+          "start": 0.42,
+          "end": 0.48
+        },
+        {
+          "word": "you",
+          "start": 0.48,
+          "end": 0.63
+        },
+        {
+          "word": "think",
+          "start": 0.63,
+          "end": 0.96
+        },
+        {
+          "word": "has",
+          "start": 0.96,
+          "end": 1.22
+        },
+        {
+          "word": "to",
+          "start": 1.22,
+          "end": 1.32
+        },
+        {
+          "word": "help",
+          "start": 1.32,
+          "end": 1.61
+        },
+        {
+          "word": "the",
+          "start": 1.61,
+          "end": 1.7
+        },
+        {
+          "word": "mom",
+          "start": 1.7,
+          "end": 2.09
+        },
+        {
+          "word": "in",
+          "start": 2.09,
+          "end": 2.19
+        },
+        {
+          "word": "the",
+          "start": 2.19,
+          "end": 2.25
+        },
+        {
+          "word": "middle",
+          "start": 2.25,
+          "end": 2.66
+        },
+        {
+          "word": "pick",
+          "start": 2.66,
+          "end": 2.94
+        },
+        {
+          "word": "up",
+          "start": 2.94,
+          "end": 3.1
+        },
+        {
+          "word": "the",
+          "start": 3.1,
+          "end": 3.17
+        },
+        {
+          "word": "heavy",
+          "start": 3.17,
+          "end": 3.49
+        },
+        {
+          "word": "box",
+          "start": 3.49,
+          "end": 4.07
+        }
+      ],
+      "alignmentMethod": "PocketSphinx 5.1.1 phonetic alignment to the full script, decoded English audio at 16 kHz; 10 ms frames. Transcript independently checked with whisper.cpp base.en.",
+      "expectedText": "Who do you think HAS TO help the mom in the middle pick up the heavy box?",
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0
+    },
+    "obligation_help_teacher": {
+      "sha256": "afed1d6ef4985b85c08b700dc4a54f7810925fa5e4c20ebb1fc81871a4b33ad0",
+      "durationSeconds": 4.7021,
+      "recognizedText": "Who do you think has to help the teacher in the middle pick up the heavy box?",
+      "words": [
+        {
+          "word": "who",
+          "start": 0.18,
+          "end": 0.44
+        },
+        {
+          "word": "do",
+          "start": 0.44,
+          "end": 0.5
+        },
+        {
+          "word": "you",
+          "start": 0.5,
+          "end": 0.64
+        },
+        {
+          "word": "think",
+          "start": 0.64,
+          "end": 0.95
+        },
+        {
+          "word": "has",
+          "start": 0.95,
+          "end": 1.2
+        },
+        {
+          "word": "to",
+          "start": 1.2,
+          "end": 1.27
+        },
+        {
+          "word": "help",
+          "start": 1.27,
+          "end": 1.58
+        },
+        {
+          "word": "the",
+          "start": 1.58,
+          "end": 1.69
+        },
+        {
+          "word": "teacher",
+          "start": 1.69,
+          "end": 2.13
+        },
+        {
+          "word": "in",
+          "start": 2.13,
+          "end": 2.24
+        },
+        {
+          "word": "the",
+          "start": 2.24,
+          "end": 2.3
+        },
+        {
+          "word": "middle",
+          "start": 2.3,
+          "end": 2.71
+        },
+        {
+          "word": "pick",
+          "start": 2.71,
+          "end": 2.99
+        },
+        {
+          "word": "up",
+          "start": 2.99,
+          "end": 3.15
+        },
+        {
+          "word": "the",
+          "start": 3.15,
+          "end": 3.22
+        },
+        {
+          "word": "heavy",
+          "start": 3.22,
+          "end": 3.54
+        },
+        {
+          "word": "box",
+          "start": 3.54,
+          "end": 4.12
+        }
+      ],
+      "alignmentMethod": "PocketSphinx 5.1.1 phonetic alignment to the full script, decoded English audio at 16 kHz; 10 ms frames. Transcript independently checked with whisper.cpp base.en.",
+      "expectedText": "Who do you think HAS TO help the teacher in the middle pick up the heavy box?",
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0
+    },
+    "obligation_hug_dad": {
+      "sha256": "7514a36f63183c1974c3b67563f50e7aec0833adae50e5634a5ae7a983f3ae51",
+      "durationSeconds": 3.7355,
+      "recognizedText": "Who do you think has to give the dad in the middle a hug?",
+      "words": [
+        {
+          "word": "who",
+          "start": 0.18,
+          "end": 0.41
+        },
+        {
+          "word": "do",
+          "start": 0.41,
+          "end": 0.47
+        },
+        {
+          "word": "you",
+          "start": 0.47,
+          "end": 0.62
+        },
+        {
+          "word": "think",
+          "start": 0.62,
+          "end": 0.96
+        },
+        {
+          "word": "has",
+          "start": 0.96,
+          "end": 1.24
+        },
+        {
+          "word": "to",
+          "start": 1.24,
+          "end": 1.34
+        },
+        {
+          "word": "give",
+          "start": 1.34,
+          "end": 1.59
+        },
+        {
+          "word": "the",
+          "start": 1.59,
+          "end": 1.71
+        },
+        {
+          "word": "dad",
+          "start": 1.71,
+          "end": 2.09
+        },
+        {
+          "word": "in",
+          "start": 2.09,
+          "end": 2.19
+        },
+        {
+          "word": "the",
+          "start": 2.19,
+          "end": 2.25
+        },
+        {
+          "word": "middle",
+          "start": 2.25,
+          "end": 2.62
+        },
+        {
+          "word": "a",
+          "start": 2.62,
+          "end": 2.68
+        },
+        {
+          "word": "hug",
+          "start": 2.68,
+          "end": 3.18
+        }
+      ],
+      "alignmentMethod": "PocketSphinx 5.1.1 phonetic alignment to the full script, decoded English audio at 16 kHz; 10 ms frames. Transcript independently checked with whisper.cpp base.en.",
+      "expectedText": "Who do you think HAS TO give the dad in the middle a hug?",
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0
+    },
+    "obligation_hug_kid": {
+      "sha256": "b24910b15fbc85e1f1e6209f5b7fe38fa998ab77f4928b0c8e605550ee728213",
+      "durationSeconds": 3.7877,
+      "recognizedText": "Who do you think has to give the kid in the middle a hug?",
+      "words": [
+        {
+          "word": "who",
+          "start": 0.18,
+          "end": 0.42
+        },
+        {
+          "word": "do",
+          "start": 0.42,
+          "end": 0.48
+        },
+        {
+          "word": "you",
+          "start": 0.48,
+          "end": 0.63
+        },
+        {
+          "word": "think",
+          "start": 0.63,
+          "end": 0.96
+        },
+        {
+          "word": "has",
+          "start": 0.96,
+          "end": 1.24
+        },
+        {
+          "word": "to",
+          "start": 1.24,
+          "end": 1.36
+        },
+        {
+          "word": "give",
+          "start": 1.36,
+          "end": 1.57
+        },
+        {
+          "word": "the",
+          "start": 1.57,
+          "end": 1.69
+        },
+        {
+          "word": "kid",
+          "start": 1.69,
+          "end": 2.12
+        },
+        {
+          "word": "in",
+          "start": 2.12,
+          "end": 2.25
+        },
+        {
+          "word": "the",
+          "start": 2.25,
+          "end": 2.32
+        },
+        {
+          "word": "middle",
+          "start": 2.32,
+          "end": 2.69
+        },
+        {
+          "word": "a",
+          "start": 2.69,
+          "end": 2.73
+        },
+        {
+          "word": "hug",
+          "start": 2.73,
+          "end": 3.21
+        }
+      ],
+      "alignmentMethod": "PocketSphinx 5.1.1 phonetic alignment to the full script, decoded English audio at 16 kHz; 10 ms frames. Transcript independently checked with whisper.cpp base.en.",
+      "expectedText": "Who do you think HAS TO give the kid in the middle a hug?",
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0
+    },
+    "obligation_hug_mom": {
+      "sha256": "57e4fb77422650abb62cff889c14263e1e345a087507bbeda71d89838a6831cc",
+      "durationSeconds": 3.7877,
+      "recognizedText": "Who do you think has to give the mom in the middle a hug?",
+      "words": [
+        {
+          "word": "who",
+          "start": 0.18,
+          "end": 0.42
+        },
+        {
+          "word": "do",
+          "start": 0.42,
+          "end": 0.48
+        },
+        {
+          "word": "you",
+          "start": 0.48,
+          "end": 0.63
+        },
+        {
+          "word": "think",
+          "start": 0.63,
+          "end": 0.96
+        },
+        {
+          "word": "has",
+          "start": 0.96,
+          "end": 1.23
+        },
+        {
+          "word": "to",
+          "start": 1.23,
+          "end": 1.34
+        },
+        {
+          "word": "give",
+          "start": 1.34,
+          "end": 1.56
+        },
+        {
+          "word": "the",
+          "start": 1.56,
+          "end": 1.66
+        },
+        {
+          "word": "mom",
+          "start": 1.66,
+          "end": 2.14
+        },
+        {
+          "word": "in",
+          "start": 2.14,
+          "end": 2.24
+        },
+        {
+          "word": "the",
+          "start": 2.24,
+          "end": 2.31
+        },
+        {
+          "word": "middle",
+          "start": 2.31,
+          "end": 2.7
+        },
+        {
+          "word": "a",
+          "start": 2.7,
+          "end": 2.73
+        },
+        {
+          "word": "hug",
+          "start": 2.73,
+          "end": 3.21
+        }
+      ],
+      "alignmentMethod": "PocketSphinx 5.1.1 phonetic alignment to the full script, decoded English audio at 16 kHz; 10 ms frames. Transcript independently checked with whisper.cpp base.en.",
+      "expectedText": "Who do you think HAS TO give the mom in the middle a hug?",
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0
+    },
+    "obligation_hug_teacher": {
+      "sha256": "48f8f27929d0d28433d0f7c608b3cfc8c9407286af8d91c77c744245122e8be9",
+      "durationSeconds": 3.8139,
+      "recognizedText": "Who do you think has to give the teacher in the middle a hug?",
+      "words": [
+        {
+          "word": "who",
+          "start": 0.18,
+          "end": 0.44
+        },
+        {
+          "word": "do",
+          "start": 0.44,
+          "end": 0.5
+        },
+        {
+          "word": "you",
+          "start": 0.5,
+          "end": 0.64
+        },
+        {
+          "word": "think",
+          "start": 0.64,
+          "end": 0.96
+        },
+        {
+          "word": "has",
+          "start": 0.96,
+          "end": 1.25
+        },
+        {
+          "word": "to",
+          "start": 1.25,
+          "end": 1.34
+        },
+        {
+          "word": "give",
+          "start": 1.34,
+          "end": 1.55
+        },
+        {
+          "word": "the",
+          "start": 1.55,
+          "end": 1.67
+        },
+        {
+          "word": "teacher",
+          "start": 1.67,
+          "end": 2.16
+        },
+        {
+          "word": "in",
+          "start": 2.16,
+          "end": 2.26
+        },
+        {
+          "word": "the",
+          "start": 2.26,
+          "end": 2.33
+        },
+        {
+          "word": "middle",
+          "start": 2.33,
+          "end": 2.71
+        },
+        {
+          "word": "a",
+          "start": 2.71,
+          "end": 2.76
+        },
+        {
+          "word": "hug",
+          "start": 2.76,
+          "end": 3.25
+        }
+      ],
+      "alignmentMethod": "PocketSphinx 5.1.1 phonetic alignment to the full script, decoded English audio at 16 kHz; 10 ms frames. Transcript independently checked with whisper.cpp base.en.",
+      "expectedText": "Who do you think HAS TO give the teacher in the middle a hug?",
+      "exactNormalizedWordMatch": true,
+      "alignmentValid": true,
+      "alignmentFailures": [],
+      "zeroDurationWordCount": 0
     }
   },
   "reuseNote": "Verified existing hash-bound timestamps are preserved, including historical inactive entries. Newly reused exact-text ready option recordings copy their original timestamp entries without realignment.",
-  "pairedQuestionTimingsNote": "Original paired helper questions aligned offline to their unchanged recordings on 2026-11-08; each role-name phrase glows in its actual left/right position."
+  "pairedQuestionTimingsNote": "Original paired helper questions aligned offline to their unchanged recordings on 2026-11-08; each role-name phrase glows in its actual left/right position.",
+  "careConditionTiming": "Care event and action-question entries with a PocketSphinx alignmentMethod use phonetic alignment and an independent Whisper transcript. Timings and recordings are matched by their SHA-256 hashes."
 }

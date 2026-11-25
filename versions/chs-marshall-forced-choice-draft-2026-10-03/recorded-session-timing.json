@@ -2,35 +2,31 @@
   "complete": true,
   "allRecordingsComplete": true,
   "pendingRetryRecordingIDs": [],
-  "createdAt": "2026-11-10T12:00:27.789Z",
-  "basis": "Verified MP3 durations and programmed pauses across complete paths. Each helper receives one four-option how-mean rating regardless of the other helper’s Mean/Not Mean answer.",
+  "basis": "Measured MP3 durations for the selected care condition, including the recorded alternative pair where played. Both orders use the same audio.",
   "gapSeconds": 0.25,
-  "manifestSha256": "523b0fb87bb83724c7629d5ed25261b3a453a77d1343b10d65406eaf4e4d1da4",
+  "manifestSha256": "f2d647a3b15f389d798640c2e6137f8f895dc813dadae2d7f4feb7ede639f311",
   "assumptions": [
-    "Assumes correct recall answers. After Yes, the original outcome screens and recall question repeat until No. Replays are excluded from these timing estimates. Each helper receives one four-option meanness rating; only the other helper receives the additional Mean/Not Mean question.",
-    "Every prompted option is read once; binary options embedded in the full question are not read again.",
-    "Estimated session time adds 3–5 seconds per response.",
-    "Playback, screen and response ranges are computed independently across complete paths.",
-    "Excludes correction repeats, replays, network loading, setup, breaks and narration-only transition delays.",
-    "This is a script-based playback calculation, not observed child-session time.",
-    "All 18 stories remain a researcher-review catalog; a child session uses a six-story role set."
+    "The child hears every scheduled question and set of choices once, answers the recall question correctly on the first attempt, and makes seven choices per story.",
+    "Playback includes the 250 ms pauses between separately recorded options. Response time adds 3–5 seconds per choice.",
+    "The estimate excludes setup, optional replays, breaks, page transitions and network delays. It is based on the recordings, not observed child session times."
   ],
   "sessions": {
-    "woman-none": {
+    "woman-hug": {
       "setId": "woman",
       "practiceMode": "none",
+      "care": "hug",
       "storyCount": 6,
       "playbackSeconds": {
-        "min": 572.7396229999999,
-        "max": 573.549417
+        "min": 553.1927629999999,
+        "max": 554.0025569999999
       },
       "playbackMinutes": {
-        "min": 9.5,
-        "max": 9.6
+        "min": 9.2,
+        "max": 9.2
       },
       "estimatedSessionMinutesIncludingResponses": {
-        "min": 11.6,
-        "max": 13.1
+        "min": 11.3,
+        "max": 12.7
       },
       "responseCounts": {
         "min": 42,
@@ -39,29 +35,24 @@
       "screens": {
         "min": 85,
         "max": 85
-      },
-      "confirmationScreens": {
-        "min": 0,
-        "max": 0
-      },
-      "requiredConfirmationScreens": 0,
-      "requiredCorrectFeedbackScreens": 0
+      }
     },
-    "man-none": {
-      "setId": "man",
+    "woman-food": {
+      "setId": "woman",
       "practiceMode": "none",
+      "care": "food",
       "storyCount": 6,
       "playbackSeconds": {
-        "min": 574.7249839999998,
-        "max": 575.5870239999998
+        "min": 559.776113,
+        "max": 560.5859069999999
       },
       "playbackMinutes": {
-        "min": 9.6,
-        "max": 9.6
+        "min": 9.3,
+        "max": 9.3
       },
       "estimatedSessionMinutesIncludingResponses": {
-        "min": 11.7,
-        "max": 13.1
+        "min": 11.4,
+        "max": 12.8
       },
       "responseCounts": {
         "min": 42,
@@ -70,29 +61,24 @@
       "screens": {
         "min": 85,
         "max": 85
-      },
-      "confirmationScreens": {
-        "min": 0,
-        "max": 0
-      },
-      "requiredConfirmationScreens": 0,
-      "requiredCorrectFeedbackScreens": 0
+      }
     },
-    "family-none": {
-      "setId": "family",
+    "woman-help": {
+      "setId": "woman",
       "practiceMode": "none",
+      "care": "help",
       "storyCount": 6,
       "playbackSeconds": {
-        "min": 566.6009539999999,
-        "max": 568.116056
+        "min": 562.7539129999999,
+        "max": 563.5637069999999
       },
       "playbackMinutes": {
         "min": 9.4,
-        "max": 9.5
+        "max": 9.4
       },
       "estimatedSessionMinutesIncludingResponses": {
         "min": 11.5,
-        "max": 13
+        "max": 12.9
       },
       "responseCounts": {
         "min": 42,
@@ -101,29 +87,180 @@
       "screens": {
         "min": 85,
         "max": 85
-      },
-      "confirmationScreens": {
-        "min": 0,
-        "max": 0
-      },
-      "requiredConfirmationScreens": 0,
-      "requiredCorrectFeedbackScreens": 0
+      }
     },
-    "all-none": {
-      "setId": "all",
+    "man-hug": {
+      "setId": "man",
       "practiceMode": "none",
-      "storyCount": 18,
+      "care": "hug",
+      "storyCount": 6,
       "playbackSeconds": {
-        "min": 1706.333361,
-        "max": 1709.5202969999998
+        "min": 552.827099,
+        "max": 553.689139
       },
       "playbackMinutes": {
-        "min": 28.4,
-        "max": 28.5
+        "min": 9.2,
+        "max": 9.2
       },
       "estimatedSessionMinutesIncludingResponses": {
-        "min": 34.7,
-        "max": 39
+        "min": 11.3,
+        "max": 12.7
+      },
+      "responseCounts": {
+        "min": 42,
+        "max": 42
+      },
+      "screens": {
+        "min": 85,
+        "max": 85
+      }
+    },
+    "man-food": {
+      "setId": "man",
+      "practiceMode": "none",
+      "care": "food",
+      "storyCount": 6,
+      "playbackSeconds": {
+        "min": 559.410449,
+        "max": 560.272489
+      },
+      "playbackMinutes": {
+        "min": 9.3,
+        "max": 9.3
+      },
+      "estimatedSessionMinutesIncludingResponses": {
+        "min": 11.4,
+        "max": 12.8
+      },
+      "responseCounts": {
+        "min": 42,
+        "max": 42
+      },
+      "screens": {
+        "min": 85,
+        "max": 85
+      }
+    },
+    "man-help": {
+      "setId": "man",
+      "practiceMode": "none",
+      "care": "help",
+      "storyCount": 6,
+      "playbackSeconds": {
+        "min": 562.388249,
+        "max": 563.250289
+      },
+      "playbackMinutes": {
+        "min": 9.4,
+        "max": 9.4
+      },
+      "estimatedSessionMinutesIncludingResponses": {
+        "min": 11.5,
+        "max": 12.9
+      },
+      "responseCounts": {
+        "min": 42,
+        "max": 42
+      },
+      "screens": {
+        "min": 85,
+        "max": 85
+      }
+    },
+    "family-hug": {
+      "setId": "family",
+      "practiceMode": "none",
+      "care": "hug",
+      "storyCount": 6,
+      "playbackSeconds": {
+        "min": 539.1390439999999,
+        "max": 540.654146
+      },
+      "playbackMinutes": {
+        "min": 9,
+        "max": 9
+      },
+      "estimatedSessionMinutesIncludingResponses": {
+        "min": 11.1,
+        "max": 12.5
+      },
+      "responseCounts": {
+        "min": 42,
+        "max": 42
+      },
+      "screens": {
+        "min": 85,
+        "max": 85
+      }
+    },
+    "family-food": {
+      "setId": "family",
+      "practiceMode": "none",
+      "care": "food",
+      "storyCount": 6,
+      "playbackSeconds": {
+        "min": 545.461044,
+        "max": 546.976146
+      },
+      "playbackMinutes": {
+        "min": 9.1,
+        "max": 9.1
+      },
+      "estimatedSessionMinutesIncludingResponses": {
+        "min": 11.2,
+        "max": 12.6
+      },
+      "responseCounts": {
+        "min": 42,
+        "max": 42
+      },
+      "screens": {
+        "min": 85,
+        "max": 85
+      }
+    },
+    "family-help": {
+      "setId": "family",
+      "practiceMode": "none",
+      "care": "help",
+      "storyCount": 6,
+      "playbackSeconds": {
+        "min": 548.647844,
+        "max": 550.1629459999999
+      },
+      "playbackMinutes": {
+        "min": 9.1,
+        "max": 9.2
+      },
+      "estimatedSessionMinutesIncludingResponses": {
+        "min": 11.2,
+        "max": 12.7
+      },
+      "responseCounts": {
+        "min": 42,
+        "max": 42
+      },
+      "screens": {
+        "min": 85,
+        "max": 85
+      }
+    },
+    "all-hug": {
+      "setId": "all",
+      "practiceMode": "none",
+      "care": "hug",
+      "storyCount": 18,
+      "playbackSeconds": {
+        "min": 1637.426706,
+        "max": 1640.6136419999998
+      },
+      "playbackMinutes": {
+        "min": 27.3,
+        "max": 27.3
+      },
+      "estimatedSessionMinutesIncludingResponses": {
+        "min": 33.6,
+        "max": 37.8
       },
       "responseCounts": {
         "min": 126,
@@ -132,13 +269,59 @@
       "screens": {
         "min": 253,
         "max": 253
+      }
+    },
+    "all-food": {
+      "setId": "all",
+      "practiceMode": "none",
+      "care": "food",
+      "storyCount": 18,
+      "playbackSeconds": {
+        "min": 1656.9154060000003,
+        "max": 1660.102342
       },
-      "confirmationScreens": {
-        "min": 0,
-        "max": 0
+      "playbackMinutes": {
+        "min": 27.6,
+        "max": 27.7
       },
-      "requiredConfirmationScreens": 0,
-      "requiredCorrectFeedbackScreens": 0
+      "estimatedSessionMinutesIncludingResponses": {
+        "min": 33.9,
+        "max": 38.2
+      },
+      "responseCounts": {
+        "min": 126,
+        "max": 126
+      },
+      "screens": {
+        "min": 253,
+        "max": 253
+      }
+    },
+    "all-help": {
+      "setId": "all",
+      "practiceMode": "none",
+      "care": "help",
+      "storyCount": 18,
+      "playbackSeconds": {
+        "min": 1666.0578059999998,
+        "max": 1669.244742
+      },
+      "playbackMinutes": {
+        "min": 27.8,
+        "max": 27.8
+      },
+      "estimatedSessionMinutesIncludingResponses": {
+        "min": 34.1,
+        "max": 38.3
+      },
+      "responseCounts": {
+        "min": 126,
+        "max": 126
+      },
+      "screens": {
+        "min": 253,
+        "max": 253
+      }
     }
   }
 }

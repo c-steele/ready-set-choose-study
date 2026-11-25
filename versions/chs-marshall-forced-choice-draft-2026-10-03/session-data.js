@@ -29,7 +29,7 @@
     return next;
   }
 
-  function storySteps(pairing, storyIndex, questionOrder) {
+  function storySteps(pairing, storyIndex, questionOrder, care = 'hug') {
     const result = [], p = copy(pairing);
     // Use one clear name for the child recipient in every prompt and cue.
     if (!p.recipient.isAdult) {
@@ -37,10 +37,14 @@
       for (const intro of p.intros) if (intro.actorId === 'recipient') intro.description = p.recipient.reference;
     }
     const recipient = p.recipient, helpers = p.helpers;
+    const scene = p.careEvents[care];
+    p.care = care;
+    p.images.need = scene.image;
+    p.needSummary = upper(scene.need.replace(/^Oh no! /, '').replace(/ now!$/, '.'));
     const prefix = localId => `${p.id}:${localId}`;
     function add(localId, templateId, overrides) {
       const step = {...copy(templates[templateId]), image:p.images.need, ...overrides,
-        id:prefix(localId), localId, pairing:p, storyIndex, adapted:true};
+        id:prefix(localId), localId, pairing:p, care, storyIndex, adapted:true};
       if (step.replayFrom) step.replayFrom = prefix(step.replayFrom);
       if (step.when) step.when = [prefix(step.when[0]), step.when[1]];
       if (step.unless) step.unless = [prefix(step.unless[0]), step.unless[1]];
@@ -58,10 +62,10 @@
         note:'Narrated character introduction from Find the Caregiver.'
       });
     }
-    add('need', 'need', {phase:`${upper(recipient.description)} needs help`, text:p.sourceNeedText});
+    add('need', 'need', {phase:`${upper(recipient.description)} needs help`, text:scene.need});
     const earlyQuestions = {
-      'predict-compare':`Who will help ${recipient.reference} now that they’re sad?`,
-      'obligation-compare':`Who do you think HAS TO help ${recipient.reference}?`
+      'predict-compare':scene.prediction,
+      'obligation-compare':scene.obligation
     };
     questionOrder.steps.forEach((localId, index) => add(localId, localId, {
       ...pairOptions, text:earlyQuestions[localId], questionPosition:index+1
@@ -172,7 +176,27 @@
     };
   }
 
-  function resolveAssignment(setId, questionOrderId, assignmentNumber = null) {
+  const careLabels = {hug: 'Comfort (hug)', food: 'Sharing food', help: 'Practical help (heavy box)'};
+  // Each half of a six-child block uses one of the six permutations, drawn
+  // independently for this pairing set, block number and question order.
+  const carePermutations = [
+    ['hug', 'food', 'help'], ['hug', 'help', 'food'],
+    ['food', 'hug', 'help'], ['food', 'help', 'hug'],
+    ['help', 'hug', 'food'], ['help', 'food', 'hug']
+  ];
+  function assignedCare(setId, number, order) {
+    const slot = number - 1;
+    const block = Math.floor(slot / 6);
+    const key = `care-v1:${setId}:${block}:${order}`;
+    // A seeded hash keeps replayed links reproducible across browsers.
+    let hash = 2166136261;
+    for (const char of key) hash = Math.imul(hash ^ char.charCodeAt(0), 16777619);
+    hash = Math.imul(hash ^ (hash >>> 16), 0x85ebca6b);
+    hash = Math.imul(hash ^ (hash >>> 13), 0xc2b2ae35);
+    const permutation = ((hash ^ (hash >>> 16)) >>> 0) % carePermutations.length;
+    return carePermutations[permutation][Math.floor((slot % 6) / 2)];
+  }
+  function resolveAssignment(setId, questionOrderId, assignmentNumber = null, care = 'hug') {
     if (assignmentNumber !== null) {
       if (!catalog.roleSets.some(set => set.id === setId)) {
         throw new Error('Choose a single pairing set for a numbered assignment.');
@@ -181,25 +205,27 @@
       if (!/^\d+$/.test(String(assignmentNumber)) || !Number.isSafeInteger(number) || number < 1) {
         throw new Error('Enter a whole assignment number of 1 or higher.');
       }
-      return {assignmentNumber: number, questionOrderId: number % 2 === 1 ? 'will-first' : 'has-to-first'};
+      const order = number % 2 === 1 ? 'will-first' : 'has-to-first';
+      return {assignmentNumber: number, questionOrderId: order, care: assignedCare(setId, number, order)};
     }
     if (!questionOrders.some(order => order.id === questionOrderId)) {
       throw new Error(`Unknown question order: ${questionOrderId}`);
     }
-    return {assignmentNumber: null, questionOrderId};
+    if (!Object.hasOwn(careLabels, care)) throw new Error(`Unknown care condition: ${care}`);
+    return {assignmentNumber: null, questionOrderId, care};
   }
 
-  function build(setId = 'woman', questionOrderId = 'will-first', assignmentNumber = null) {
+  function build(setId = 'woman', questionOrderId = 'will-first', assignmentNumber = null, care = 'hug') {
     // Legacy practice=once/each links use the same practice-free flow.
     const practiceMode = 'none';
     // Older script/timing exporters passed their practice mode here.
     if (['once','each','none'].includes(questionOrderId)) questionOrderId = 'will-first';
     const set = catalog.roleSets.find(s => s.id === setId);
     if (!set && setId !== 'all') throw new Error(`Unknown pairing set: ${setId}`);
-    const assignment = resolveAssignment(setId, questionOrderId, assignmentNumber);
+    const assignment = resolveAssignment(setId, questionOrderId, assignmentNumber, care);
     const questionOrder = questionOrders.find(order => order.id === assignment.questionOrderId);
     const pairings = setId === 'all' ? catalog.pairings.slice() : set.pairingIds.map(id => catalog.pairings.find(p => p.id === id));
-    const steps = pairings.flatMap((p, index) => storySteps(p, index, questionOrder));
+    const steps = pairings.flatMap((p, index) => storySteps(p, index, questionOrder, assignment.care));
     steps.push({...copy(templates.end), id:'session-end', localId:'end', image:null,
       phase:'End of this session', text:'That’s the end of our stories. Thank you!',
       pairing:null, storyIndex:pairings.length, adapted:true,
@@ -207,15 +233,16 @@
     return {
       variant:'forced-choice', setId, setLabel:setId === 'all' ? 'All pairings · researcher review' : set.label,
       practiceMode, assignmentNumber:assignment.assignmentNumber, questionOrder:questionOrder.id, questionOrderLabel:questionOrder.label,
-      firstQuestion:questionOrder.firstQuestion, counterbalanceCell:`${setId}:${questionOrder.id}`,
-      isAllReview:setId === 'all', pairings, steps, stats:statsFor(steps, pairings.length),
+      care:assignment.care, careLabel:careLabels[assignment.care],
+      firstQuestion:questionOrder.firstQuestion, counterbalanceCell:`${setId}:${assignment.care}:${questionOrder.id}`,
+      isAllReview:setId === 'all', pairings:steps.filter(step => step.localId === 'group').map(step => step.pairing), steps, stats:statsFor(steps, pairings.length),
       notes:[
         'This separate forced-choice draft uses the same Find the Caregiver stimuli and pairing catalog as the individual-rating draft.',
         `Question order for this session: ${questionOrder.label}. This order is kept across every story. Both orders are available within each role set; alternate the assigned order across participants within each set.`,
         'Prediction and obligation are asked before the nonhelping outcome. The meaner comparison follows the outcome and recall check. A character selection is recorded immediately and advances to the next part.',
         'Each forced-choice question requires a choice between the two helpers. Choices appear in scene order: left helper, then right helper. There is no both, neither, or equal option.',
         'Forced-choice prediction and obligation are adaptations of the Marshall paradigm, not the original Study 1 individual Yes/No measures. The meaner comparison is adapted to these two-helper stories.',
-        'White backgrounds and the same sadness context are used throughout. Source relationships, character positions, and intro order are preserved.',
+        `All stories in this session concern ${careLabels[assignment.care].toLowerCase()}. Source relationships, character positions, and introduction order are preserved.`,
         'All paths have the same explicit outcome: no one helped, followed by each named helper did NOT help. A Yes/No recall check precedes the meaner comparison. Yes replays the two nonhelping outcome screens and then asks the check again, repeating until No.',
         'After the meaner comparison, a four-option how-mean rating is asked once for the selected helper. Only the other helper receives a Mean/Not Mean question, with a how-mean follow-up after either Mean or Not Mean. Both scales include Not mean, A teeny bit mean, A little bit mean, and Very mean. The selected helper is not asked either question again. Prediction and obligation remain forced choices without strength follow-ups. Overall Mean/Nice and individual recall questions remain omitted.',
         'Instructional HAVE TO practice is omitted; the two early questions follow the assigned order.',
@@ -235,6 +262,7 @@
     const lines = [
       '# Forced-choice obligation study draft — full session', '',
       `**${session.setLabel} · ${session.pairings.length} stories**`, '',
+      `**Type of care: ${session.careLabel}**`, '',
       `**Question order: ${session.questionOrderLabel}**`, '',
       ...(session.assignmentNumber === null ? [] : [`Assignment ${session.assignmentNumber} within this pairing set.`, '']),
       ...session.notes.map(note => `- ${note}`), '',
@@ -262,7 +290,7 @@
       const scriptText=step.captionEmphasis==='HAVE TO'?step.text.replace(/\bHAVE TO\b/g,'*HAVE TO*'):step.text;
       lines.push(`“${scriptText}”`, '');
       if (step.displayTitle) lines.push(`Display treatment: ${step.displayTitle} / ${step.displaySetup} / ${step.displayQuestion}`, '');
-      if (step.displayText) lines.push(`Display wording: “${step.displayText}” ${step.outcomeVisual?'Both no-help badges remain visible beneath the original sad scene. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper’s outline glows when their role is spoken; the characters and badges stay still.':'The role is included in the question; no separate role label is displayed above it.'}`, '');
+      if (step.displayText) lines.push(`Display wording: “${step.displayText}” ${step.outcomeVisual?'Both no-help badges remain visible beneath the scene showing the recipient’s need. The first outcome screen speaks only the no-one-helped sentence; the next names both helpers and repeats that sentence at the end. Each helper’s outline glows when their role is spoken; the characters and badges stay still.':'The role is included in the question; no separate role label is displayed above it.'}`, '');
       if (step.outcomeCaptions) lines.push(`Captions follow the narration, in order: ${step.outcomeCaptions.map(text=>`“${text}”`).join(' → ')}.`, '');
       if (step.image) lines.push(`[Stimulus source](${step.image}) — original reference image; the preview replaces its caption with the wording above.`, '');
       if (step.choiceQuestion) lines.push(`Read the choices together: “${step.choiceQuestion}”`, '');
