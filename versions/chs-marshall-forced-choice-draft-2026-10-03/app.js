@@ -25,6 +25,9 @@
   let storySeed=null;
   function freshStorySeed(){return window.crypto.getRandomValues(new Uint32Array(1))[0];}
   const chsBridge=window.MarshallCHSBridge;
+  const choiceBoxPreview = window.parent === window && params.get('choiceBoxes') === '1';
+  document.body.classList.toggle('choice-box-preview', choiceBoxPreview);
+  let launchAtChoice = choiceBoxPreview && params.get('view') === 'child' && params.get('choicePreview') === '1';
   let childView=false,choiceConfirmation=null,correctFeedbackState=null,screenHeard=false;
   let session,steps,index=0,answers={},history=[],recallReplays={},wrong=null,optionReader=null,downloadUrl=null;
   let elapsed=0,started=null,timerUsed=false,incomplete=false,completed=false;
@@ -93,8 +96,10 @@
     const helpers=ids.map(id=>s.pairing.helpers.find(actor=>actor.id===id));
     return helpers.every(Boolean)?helpers:[];
   }
-  // Choice boxes cover the people, while their original role labels stay below.
+  // The standalone preview uses the same two side columns as Find the Caregiver.
+  // The standard targets fit the individual character above its label.
   function characterChoiceStyle(s,actor){
+    if(choiceBoxPreview) return ` style="left:${actor.side==='left'?4:66}%"`;
     const bounds=window.ObligationStudyVisuals?.actorBoundsFor(s,actor.id)||introActorBounds[s.pairing.id]?.[actor.id];
     return bounds?` style="left:${bounds[0]}%;top:${bounds[1]}%;width:${bounds[2]}%;height:${bounds[3]-13.5}%"`:'';
   }
@@ -449,6 +454,7 @@
       url.searchParams.set('set',session.setId);
       url.searchParams.set('assignmentNumber',session.assignmentNumber);
       url.searchParams.set('storySeed',session.storySeed);
+      if(choiceBoxPreview) url.searchParams.set('choiceBoxes','1');
       assignedLink.href=url.href;
       assignedLink.textContent=`Preview assignment ${session.assignmentNumber} ↗`;
     }else{
@@ -459,7 +465,17 @@
       url.searchParams.set('view','child');url.searchParams.set('set',session.setId);
       url.searchParams.set('care',session.care);url.searchParams.set('questionOrder',order.id);url.searchParams.set('practice','none');url.searchParams.set('v','pairing-shuffle-r59');
       if(session.storySeed!==null)url.searchParams.set('storySeed',session.storySeed);
+      if(choiceBoxPreview) url.searchParams.set('choiceBoxes','1');
       $('preview-'+order.id).href=url.href;
+    }
+    const boxLink = $('preview-choice-boxes');
+    boxLink.hidden = window.parent !== window;
+    if(!boxLink.hidden){
+      const sample = new URL(location.href);
+      sample.searchParams.set('view','child');
+      sample.searchParams.set('choiceBoxes','1');
+      sample.searchParams.set('choicePreview','1');
+      boxLink.href = sample.href;
     }
     $('shuffle-pairings').hidden=session.isAllReview;
     $('session-warning').textContent=session.isAllReview?'All 18 pairings appear in catalog order for researcher review.':'Each pairing appears once. Reopening this session link preserves the order shown below.';
@@ -476,7 +492,10 @@
       link.download=`forced-choice-${session.setId}-${session.care}-${session.questionOrder}.md`;
     }
   }
-  function resetRun(){chsBridge?.reset();stopNarration();narrationEnabled=true;choiceConfirmation=null;correctFeedbackState=null;screenHeard=false;optionReader?.dispose();optionReader=null;index=0;answers={};history=[];recallReplays={};wrong=null;elapsed=0;started=null;timerUsed=false;incomplete=false;completed=false;showBoard(false);render();updateTimer();}
+  function resetRun(){
+    const firstScreen = launchAtChoice ? steps.findIndex(step => step.questionPosition === 1) : 0;
+    launchAtChoice = false;
+    chsBridge?.reset();stopNarration();narrationEnabled=true;choiceConfirmation=null;correctFeedbackState=null;screenHeard=false;optionReader?.dispose();optionReader=null;index=Math.max(0,firstScreen);answers={};history=[];recallReplays={};wrong=null;elapsed=0;started=null;timerUsed=false;incomplete=false;completed=false;showBoard(false);render();updateTimer();}
   function configure(){
     const setId=$('set-select').value;
     assignmentInput.disabled=setId==='all';
@@ -586,7 +605,8 @@
     childView=true;
     document.body.classList.add('child-view');
     $('auto-narration').checked=true;
-    openIntroduction();
+    if(launchAtChoice) configure();
+    else openIntroduction();
   }else{
     configure();
     if(params.get('view')==='storyboard')showBoard(true);

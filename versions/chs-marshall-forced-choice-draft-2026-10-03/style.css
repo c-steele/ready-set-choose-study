@@ -145,3 +145,30 @@
   border-radius: 7px;
   text-decoration: none;
 }
+
+/* The reference choices occupy 30% of the full slide on either side.
+   Their 13% and 14% vertical margins are translated to this study's 1920 × 840 crop. */
+.choice-box-preview :is(.character-choice-target, .character-choice-cue) {
+  top: 2.43%;
+  width: 30%;
+  height: 93.86%;
+  border: clamp(3px, 0.45vw, 6px) solid #ffb000;
+  border-radius: 8px;
+  background: rgb(255 244 191 / 8%) !important;
+  box-shadow: 0 0 0 4px rgb(255 255 255 / 68%), 0 0 16px rgb(255 176 0 / 45%);
+}
+.choice-box-preview .character-choice-target.option-ready {
+  animation: choice-box-glow 1.25s ease-in-out infinite alternate;
+}
+.choice-box-preview .character-choice-target:is(.narration-actor-current, .option-current, :focus-visible) {
+  border-color: #2477b8;
+  background: rgb(234 247 255 / 16%) !important;
+  box-shadow: 0 0 0 5px rgb(255 255 255 / 82%), 0 0 26px rgb(36 119 184 / 74%);
+  animation: none;
+}
+@keyframes choice-box-glow {
+  to { box-shadow: 0 0 0 6px rgb(255 255 255 / 74%), 0 0 26px rgb(255 176 0 / 72%); }
+}
+@media (prefers-reduced-motion: reduce), print {
+  .choice-box-preview .character-choice-target.option-ready { animation: none; }
+}
