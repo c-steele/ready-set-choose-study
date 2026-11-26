@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Who Has to Help? · Study preview board</title>
+  <link rel="stylesheet" href="../../screen-share-study/review.css">
+  <style>
+    .review-controls { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .set-section > h2 { margin: 26px 2px 12px; font-size: 1.4rem; }
+    .review-card > h3 { margin: 0 0 14px; font-size: 1.25rem; }
+    .order-row + .order-row { margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--line); }
+    .order-row h4 { margin: 0 0 9px; color: var(--ink); font-size: 1rem; }
+    .order-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0 12px; }
+    .review-open { min-height: 44px; padding: 0 12px; font-size: .9rem; }
+    .jump-link { display: inline-flex; align-items: center; min-height: 44px; font-size: .9rem; color: var(--teal-dark); text-underline-offset: 3px; }
+    a:focus-visible, select:focus-visible { outline: 3px solid #154c75; outline-offset: 3px; }
+    .review-summary p + p { margin-top: 6px; }
+    [hidden] { display: none !important; }
+    @media (max-width: 680px) { .review-controls { grid-template-columns: 1fr; } }
+  </style>
+  <script defer src="review.js"></script>
+</head>
+<body>
+  <main class="review-shell">
+    <header class="review-hero">
+      <div>
+        <p class="review-eyebrow">Study preview board</p>
+        <h1>Who Has to Help?</h1>
+        <p class="review-subtitle">Open a narrated version from the family welcome or jump to the first choice. In each preview, use <strong>Slide navigator</strong> to jump to any story or question.</p>
+      </div>
+    </header>
+    <section class="review-controls" aria-label="Filter study versions">
+      <label><span>Character set</span><select id="set-filter"><option value="">All character sets</option></select></label>
+      <label><span>Type of care</span><select id="care-filter"><option value="">All types of care</option></select></label>
+      <label><span>Question order</span><select id="order-filter"><option value="">Both question orders</option></select></label>
+    </section>
+    <div class="review-summary">
+      <p><strong id="count" role="status" aria-live="polite"></strong></p>
+      <p>Each child sees six stories in a shuffled order. For comparison, these previews keep the same story order within each character set.</p>
+    </div>
+    <div id="versions"></div>
+    <noscript>Enable JavaScript to open the interactive previews.</noscript>
+  </main>
+  <template id="order-template">
+    <section class="order-row">
+      <h4></h4>
+      <div class="order-actions">
+        <a class="review-open" target="_blank" rel="noopener">Open narrated preview</a>
+        <a class="jump-link" target="_blank" rel="noopener">Jump to first choice</a>
+      </div>
+    </section>
+  </template>
+</body>
+</html>

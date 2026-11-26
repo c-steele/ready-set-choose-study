@@ -25,14 +25,24 @@
   let storySeed=null;
   function freshStorySeed(){return window.crypto.getRandomValues(new Uint32Array(1))[0];}
   const chsBridge=window.MarshallCHSBridge;
-  const choiceBoxPreview = window.parent === window && params.get('choiceBoxes') === '1';
+  const standalone = window.parent === window;
+  const choiceBoxPreview = standalone && params.get('choiceBoxes') !== '0';
+  const slidePreview = standalone && params.get('slides') !== '0';
   document.body.classList.toggle('choice-box-preview', choiceBoxPreview);
-  let launchAtChoice = choiceBoxPreview && params.get('view') === 'child' && params.get('choicePreview') === '1';
+  const launchAtChoice = choiceBoxPreview && params.get('view') === 'child' && params.get('choicePreview') === '1';
   let childView=false,choiceConfirmation=null,correctFeedbackState=null,screenHeard=false;
   let session,steps,index=0,answers={},history=[],recallReplays={},wrong=null,optionReader=null,downloadUrl=null;
   let elapsed=0,started=null,timerUsed=false,incomplete=false,completed=false;
   let narrationRun=null,narrationEnabled=false,narrationPlaying=false,audioStartRequired=false,audioEverStarted=false,autoAdvanceTimer=null,advanceGeneration=0;
   const narration=window.ObligationNarration;
+  const introductionSteps = [
+    ['welcome','Welcome, grown-ups!'], ['setup','Get ready to play'], ['camera','Check the camera position'],
+    ['handoff','Now it’s your child’s turn!'], ['start','Who Has to Help?']
+  ].map(([id,phase])=>({id:'intro-'+id,phase,text:phase,previewIntro:true}));
+  let previewSteps = [];
+  let previewNavigator = null;
+  let introPosition = 0;
+  let resumeStory = false;
   const roleNames={woman:'Mom / sister set',man:'Dad / brother set',family:'Family set',all:'All three sets · review only'};
 
   function activeStep(){
@@ -391,6 +401,7 @@
       });}catch(error){stage.querySelector('[data-reader-status]').textContent='Option reading could not start. Please refresh this draft.';}
     }
     if(completed)pauseTimer();else updateTimer();
+    previewNavigator?.refresh();
     const ready=narrationStatus();gateNarration(true);if(ready&&(childView||$('auto-narration').checked)&&!$('player').hidden)playNarration();
   }
   function respond(answer){
@@ -492,11 +503,13 @@
       link.download=`forced-choice-${session.setId}-${session.care}-${session.questionOrder}.md`;
     }
   }
-  function resetRun(){
-    const firstScreen = launchAtChoice ? steps.findIndex(step => step.questionPosition === 1) : 0;
-    launchAtChoice = false;
+  function resetRun(firstScreen = 0){
     chsBridge?.reset();stopNarration();narrationEnabled=true;choiceConfirmation=null;correctFeedbackState=null;screenHeard=false;optionReader?.dispose();optionReader=null;index=Math.max(0,firstScreen);answers={};history=[];recallReplays={};wrong=null;elapsed=0;started=null;timerUsed=false;incomplete=false;completed=false;showBoard(false);render();updateTimer();}
-  function configure(){
+  function selectedSession(){
+    return ObligationSession.build($('set-select').value,$('question-order-select').value,
+      assignmentInput.value||null,$('care-select').value,storySeed);
+  }
+  function configure({startAt=0, firstQuestion=false} = {}){
     const setId=$('set-select').value;
     assignmentInput.disabled=setId==='all';
     if(assignmentInput.disabled)assignmentInput.value='';
@@ -504,7 +517,7 @@
     try{
       if(!assignmentInput.validity.valid)throw new Error('Enter a whole assignment number of 1 or higher.');
       if(setId!=='all'&&storySeed===null)storySeed=freshStorySeed();
-      session=ObligationSession.build(setId,$('question-order-select').value,assignmentInput.value||null,$('care-select').value,storySeed);
+      session=selectedSession();
     }catch(error){
       assignmentInput.setCustomValidity(error.message);
       assignmentInput.reportValidity();
@@ -512,6 +525,7 @@
       return;
     }
     steps=session.steps;
+    if(slidePreview) previewSteps=introductionSteps.concat(steps);
     assignmentInput.value=session.assignmentNumber??'';
     $('question-order-select').value=session.questionOrder;
     $('care-select').value=session.care;
@@ -525,7 +539,7 @@
     if(session.assignmentNumber===null)url.searchParams.delete('assignmentNumber');
     else url.searchParams.set('assignmentNumber',session.assignmentNumber);
     window.history.replaceState(null,'',url);
-    updateOverview();buildBoard();resetRun();
+    updateOverview();buildBoard();resetRun(firstQuestion ? steps.findIndex(step=>step.questionPosition===1) : startAt);
   }
   function pauseTimer(){if(started!==null){elapsed+=Date.now()-started;started=null;}updateTimer();}
   function markBrowse(){if(timerUsed){incomplete=true;pauseTimer();}}
@@ -535,7 +549,7 @@
   jump.addEventListener('change',()=>goTo(steps.findIndex(s=>s.id===jump.value)));
   $('story-jump').addEventListener('change',()=>goTo($('story-jump').value==='end'?steps.length-1:steps.findIndex(s=>s.pairing?.id===$('story-jump').value)));
   $('back').addEventListener('click',()=>{if(history.length){markBrowse();index=history.pop();wrong=null;choiceConfirmation=null;correctFeedbackState=null;render();}});
-  $('restart').addEventListener('click',resetRun);
+  $('restart').addEventListener('click',()=>resetRun());
   $('child-view').addEventListener('click',()=>setChildView(true));$('researcher-view').addEventListener('click',()=>setChildView(false));
   $('story-tab').addEventListener('click',()=>showBoard(false));$('board-tab').addEventListener('click',()=>showBoard(true));$('print').addEventListener('click',async()=>{const imgs=[...$('cards').querySelectorAll('img')];imgs.forEach(img=>img.loading='eager');await Promise.all(imgs.map(img=>img.decode().catch(()=>{})));window.print();});
   window.addEventListener('beforeprint',()=>{document.querySelectorAll('#cards img').forEach(img=>img.loading='eager');});
@@ -584,28 +598,96 @@
   $('auto-narration').addEventListener('change',()=>{if(!$('auto-narration').checked){stopNarration();optionReader?.reset();$('narration-status').textContent='Audio stopped. Tap Replay to hear this screen.';}});
   const recordingClips=Object.values(narration.clipsById);$('recording-coverage').textContent=`${recordingClips.filter(c=>c.src).length} of ${recordingClips.length} distinct recordings connected across all pairing sets.`;
   const welcome = $('child-welcome');
-  function openIntroduction(){
+  function leaveIntroduction(){
+    const frame=welcome.querySelector('iframe');
+    frame?.dispatchEvent(new Event('preview-intro-stop'));
+    welcome.replaceChildren();
+    welcome.hidden=true;
+    $('player').hidden=false;
+  }
+  function jumpToPreviewSlide(position){
+    if(!Number.isInteger(position)||position<0||position>=previewSteps.length) return;
+    resumeStory=false;
+    if(position<introductionSteps.length){
+      openIntroduction(position);
+      return;
+    }
+    const target=position-introductionSteps.length;
+    if(!welcome.hidden) leaveIntroduction();
+    if(!session) configure({startAt:target});
+    else goTo(target);
+    window.scrollTo(0,0);
+  }
+  function openIntroduction(start = 0){
+    if(slidePreview){
+      introPosition=start;
+      if(!previewSteps.length) previewSteps=introductionSteps.concat(selectedSession().steps);
+      const existing=welcome.querySelector('iframe');
+      if(existing){
+        delete existing.dataset.previewPaused;
+        existing.dataset.previewIndex=String(start);
+        existing.dispatchEvent(new Event('preview-intro-jump'));
+        previewNavigator?.refresh();
+        return;
+      }
+      if(session){ stopNarration(); optionReader?.dispose(); optionReader=null; }
+    }
     $('player').hidden = true;
     welcome.hidden = false;
     const frame = document.createElement('iframe');
     frame.title = 'Who Has to Help? Study introduction';
     frame.allow = 'camera; autoplay; fullscreen';
-    frame.src = '../marshall-introduction/index.html?openingMusic=1&immediateStart=1&cameraPreview=local&v=local-camera-r60';
+    const introUrl=new URL('../marshall-introduction/index.html?openingMusic=1&immediateStart=1&cameraPreview=local',location.href);
+    introUrl.searchParams.set('v','slides-r66');
+    if(slidePreview){
+      frame.dataset.previewIndex=String(start);
+      introUrl.searchParams.set('previewSlides','1');
+      frame.addEventListener('intro-position',()=>{
+        introPosition=Number(frame.dataset.previewIndex);
+        previewNavigator?.refresh();
+      });
+    }
+    frame.src=introUrl.href;
     frame.addEventListener('intro-complete', () => {
-      welcome.hidden = true;
-      frame.remove();
+      leaveIntroduction();
       configure();
       stage.tabIndex = -1;
       stage.focus({preventScroll:true});
     }, {once:true});
     welcome.replaceChildren(frame);
+    previewNavigator?.refresh();
     window.scrollTo(0,0);
+  }
+  if(slidePreview){
+    previewNavigator=window.createStudySlideNavigator({
+      getSteps:()=>previewSteps,
+      getIndex:()=>welcome.hidden ? introductionSteps.length+index : introPosition,
+      jumpTo:jumpToPreviewSlide,
+      onOpen(){
+        if(!welcome.hidden){
+          const frame=welcome.querySelector('iframe');
+          if(frame){frame.dataset.previewPaused='1';frame.dispatchEvent(new Event('preview-intro-pause'));}
+        }else{
+          resumeStory=narrationPlaying||autoAdvanceTimer!==null;
+          if(resumeStory) pauseChildPlayback();
+        }
+      },
+      onDismiss(){
+        if(!welcome.hidden){
+          const frame=welcome.querySelector('iframe');
+          if(frame){delete frame.dataset.previewPaused;frame.dispatchEvent(new Event('preview-intro-resume'));}
+        }else if(resumeStory){
+          resumeStory=false;
+          playChildNarration();
+        }
+      }
+    });
   }
   if(params.get('view')==='child'){
     childView=true;
     document.body.classList.add('child-view');
     $('auto-narration').checked=true;
-    if(launchAtChoice) configure();
+    if(launchAtChoice) configure({firstQuestion:true});
     else openIntroduction();
   }else{
     configure();

@@ -8,6 +8,8 @@
   const openingMusicEnabled = introOptions.get('openingMusic') === '1';
   const immediateStartEnabled = introOptions.get('immediateStart') === '1';
   const localCameraEnabled = introOptions.get('cameraPreview') === 'local';
+  const reviewFrame = introOptions.get('previewSlides') === '1' ? window.frameElement : null;
+  let resumePreviewAudio = false;
   let closeCamera = null;
   let music = null;
   let audioRun = 0;
@@ -144,6 +146,10 @@
     closeCamera?.();
     closeCamera = null;
     position = index;
+    if(reviewFrame){
+      reviewFrame.dataset.previewIndex=String(index);
+      reviewFrame.dispatchEvent(new Event('intro-position'));
+    }
     stage.replaceChildren(slides[index].content.cloneNode(true));
     if (localCameraEnabled) {
       const summary = stage.querySelector('[data-camera-summary]');
@@ -196,12 +202,31 @@
         window.frameElement.dispatchEvent(new Event('intro-complete'));
       }
     });
-    if (!toggle || parentSound) playAudio();
+    if (!toggle || parentSound) {
+      if(reviewFrame?.dataset.previewPaused==='1') resumePreviewAudio=true;
+      else playAudio();
+    }
   }
 
   window.addEventListener('pagehide', () => {
     closeCamera?.();
     stopAudio();
   });
-  showSlide(0);
+  function requestedSlide(){
+    const target=Number(reviewFrame?.dataset.previewIndex);
+    return Number.isInteger(target)&&target>=0&&target<slides.length ? target : 0;
+  }
+  if(reviewFrame){
+    reviewFrame.addEventListener('preview-intro-jump',()=>showSlide(requestedSlide()));
+    reviewFrame.addEventListener('preview-intro-stop',()=>{stopAudio();closeCamera?.();});
+    reviewFrame.addEventListener('preview-intro-pause',()=>{
+      resumePreviewAudio=!!music||!!(narration&&!narration.paused);
+      stopAudio();
+    });
+    reviewFrame.addEventListener('preview-intro-resume',()=>{
+      if(resumePreviewAudio) playAudio();
+      resumePreviewAudio=false;
+    });
+  }
+  showSlide(requestedSlide());
 })();

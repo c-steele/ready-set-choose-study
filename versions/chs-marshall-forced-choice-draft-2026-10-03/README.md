@@ -2,6 +2,8 @@
 
 Do children expect care from the same person they believe has an obligation to provide it? If children expect one person to act but think someone else has to act, whom do they blame when both fail to help? This forced-choice study asks those questions about emotional comfort, food sharing, and practical help. Each child sees six stories about **one** kind of need and answers questions about two potential helpers in every story.
 
+[Browse all 18 narrated versions](https://c-steele.github.io/ready-set-choose-study/versions/chs-marshall-forced-choice-draft-2026-10-03/review.html). Each version has a slide navigator and a shortcut to its first choice.
+
 [Open a randomly assigned child preview](https://c-steele.github.io/ready-set-choose-study/versions/chs-marshall-forced-choice-draft-2026-10-03/index.html?view=child&assign=random) or [choose a specific version and view its storyboard](https://c-steele.github.io/ready-set-choose-study/versions/chs-marshall-forced-choice-draft-2026-10-03/index.html).
 
 ## Care conditions and question order
