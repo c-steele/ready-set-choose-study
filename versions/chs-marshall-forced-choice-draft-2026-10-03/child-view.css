@@ -144,7 +144,7 @@ body.child-view .prompt h2 {
   text-wrap: wrap;
 }
 .stage[data-screen-kind="story"] > .prompt.scale-prompt h2,
-.stage[data-screen-kind="story"] > .prompt.obligation-prompt h2 {
+.stage[data-screen-kind="story"] > .prompt.care-question-prompt h2 {
   width: 100%;
   max-width: none;
   font-size: max(22px, calc(2.45 * var(--caption-unit)));
@@ -152,7 +152,10 @@ body.child-view .prompt h2 {
 }
 
 @media (min-width: 1024px) {
-  .stage[data-care="food"] > .prompt.obligation-prompt h2 {
+  .stage[data-care="hug"] > .prompt.care-question-prompt h2 {
+    font-size: calc(2.95 * var(--caption-unit));
+  }
+  .stage[data-care="food"] > .prompt.care-question-prompt h2 {
     font-size: max(18px, calc(1.92 * var(--caption-unit)));
   }
 }
@@ -161,7 +164,7 @@ body.child-view .prompt h2 {
   .stage[data-screen-kind="story"] > .prompt h2,
   .choice-caption,
   .stage[data-screen-kind="story"] > .prompt.recall-prompt h2,
-  .stage[data-screen-kind="story"] > .prompt.obligation-prompt h2,
+  .stage[data-screen-kind="story"] > .prompt.care-question-prompt h2,
   .stage[data-screen-kind="story"] > .prompt.scale-prompt h2 { font-size: 19px; }
 }
 
