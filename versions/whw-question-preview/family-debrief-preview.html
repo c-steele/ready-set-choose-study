@@ -9,5 +9,17 @@ h1{line-height:1.15;margin:0 0 1rem}a{color:#175e87}p:last-child{margin-bottom:0
 </style></head>
 <body><main><h1>Thank you for playing!</h1>
 <p>Your child saw the same six pairs of people at the house and at the school. After each story, they chose between two people who could help.</p>
-<p>Some children are asked who will help, and others are asked who has to help. We want to learn whether the setting changes whom children expect to help and whom they think has a responsibility to help.</p>
-<p><a href="./" target="_top">Return to the study previews</a></p></main></body></html>
+<p id="questions">Some children are asked who will help, and others are asked who has to help. We want to learn whether the setting changes whom children expect to help and whom they think has a responsibility to help.</p>
+<p><a href="./" target="_top">Return to the study previews</a></p></main>
+<script>
+  if (window.parent !== window && document.referrer && new URL(document.referrer).origin === location.origin) {
+    const order = new URL(window.parent.location.href).searchParams.get("question");
+    if (order === "will-first" || order === "has-to-first") {
+      const first = order === "will-first" ? "who will help" : "who has to help";
+      const second = order === "will-first" ? "who has to help" : "who will help";
+      document.getElementById("questions").textContent = "For each story, your child was asked " + first
+        + " and then " + second + ". We want to learn whether the setting changes whom children expect to help"
+        + " and whom they think has a responsibility to help.";
+    }
+  }
+</script></body></html>

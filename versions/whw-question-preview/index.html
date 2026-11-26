@@ -18,7 +18,7 @@
     header { max-width: 47rem; }
     header p { margin: .6rem 0 0; }
     .context { color: #594582; font-size: .85rem; font-weight: 700; }
-    h1, h2 { margin: 0; line-height: 1.16; letter-spacing: -.025em; }
+    h1, h2, h3 { margin: 0; line-height: 1.16; letter-spacing: -.025em; }
     h1 { font-size: clamp(2.2rem, 5vw, 3.25rem); margin: .25rem 0 .75rem; }
     header p:last-child { color: #495368; font-size: 1.06rem; }
     fieldset { margin: 2rem 0 1.5rem; padding: .9rem 1.25rem 1.15rem; border: 1px solid #cfcddd; border-radius: 1rem; }
@@ -29,11 +29,15 @@
     .versions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
     article { --accent: #31588b; --edge: #9bbce6; display: flex; flex-direction: column; align-items: flex-start; padding: clamp(1.25rem, 3vw, 2rem); background: #fff; border: 1px solid #d6d8df; border-top: 4px solid var(--edge); border-radius: 1rem; }
     article:nth-child(2) { --accent: #664587; --edge: #c1a7d7; }
-    h2 { font-size: 1.55rem; color: var(--accent); }
+    section + section { margin-top: 2rem; }
+    h2 { font-size: 1.55rem; }
+    h2 + p { margin: .4rem 0 1rem; color: #495368; }
+    h3 { font-size: 1.35rem; color: var(--accent); }
     article p { margin: .6rem 0 1.35rem; color: #495368; }
     a { color: var(--accent); text-underline-offset: .2em; }
     .launch { display: inline-flex; align-items: center; margin-top: auto; min-height: 2.75rem; border-radius: .55rem; padding: .65rem 1rem; font-weight: 650; color: #fff; background: var(--accent); text-decoration: none; }
     .jump { display: inline-flex; align-items: center; min-height: 2.75rem; margin-top: .25rem; font-size: .94rem; }
+    .random-order { display: inline-flex; align-items: center; min-height: 2.75rem; margin-top: .25rem; color: #514481; }
     .launch:hover { filter: brightness(.9); }
     :focus-visible { outline: 3px solid #076a7b; outline-offset: 3px; }
     @media (max-width: 43rem) { .fields { grid-template-columns: 1fr; gap: .7rem; } }
@@ -45,10 +49,10 @@
     <header>
       <p class="context">Researcher preview</p>
       <h1>Who Helps Where?</h1>
-      <p>Compare two narrated versions of the same stories. Each child answers one question type for all 12 choices and sees the same six pairs of characters at the house and at the school.</p>
+      <p>Compare the questions children hear about the same six pairs of characters at the house and at the school.</p>
     </header>
     <fieldset>
-      <legend>Story settings for both previews</legend>
+      <legend>Story settings for all previews</legend>
       <div class="fields">
         <label>Type of care
           <select id="event">
@@ -71,19 +75,42 @@
         </label>
       </div>
     </fieldset>
-    <section class="versions" aria-label="Question previews">
-      <article>
-        <h2>Who will help?</h2>
-        <p>Children choose the person they expect to help.</p>
-        <a class="launch" data-question="will" href="study.html?question=will&amp;event=HUG&amp;roleSet=woman&amp;context=HOME" aria-label="Start the WILL preview at the family welcome">Start at the family welcome</a>
-        <a class="jump" data-question="will" data-start="question" href="study.html?question=will&amp;event=HUG&amp;roleSet=woman&amp;context=HOME&amp;start=question" aria-label="Skip to the first WILL question">Skip to the first question</a>
-      </article>
-      <article>
-        <h2>Who has to help?</h2>
-        <p>Children choose the person they think has a responsibility to help.</p>
-        <a class="launch" data-question="has-to" href="study.html?question=has-to&amp;event=HUG&amp;roleSet=woman&amp;context=HOME" aria-label="Start the HAS TO preview at the family welcome">Start at the family welcome</a>
-        <a class="jump" data-question="has-to" data-start="question" href="study.html?question=has-to&amp;event=HUG&amp;roleSet=woman&amp;context=HOME&amp;start=question" aria-label="Skip to the first HAS TO question">Skip to the first question</a>
-      </article>
+    <section aria-labelledby="paired">
+      <h2 id="paired">Two questions after each story</h2>
+      <p>Children answer both questions about the same scene. They hear them in their assigned order throughout all 12 stories, for 24 choices in total.</p>
+      <div class="versions">
+        <article>
+          <h3>WILL first, then HAS TO</h3>
+          <p>Children first predict who will help, then choose who has a responsibility to help.</p>
+          <a class="launch" data-question="will-first" href="study.html?question=will-first&amp;event=HUG&amp;roleSet=woman&amp;context=HOME" aria-label="Start the paired WILL-first preview at the family welcome">Start at the family welcome</a>
+          <a class="jump" data-question="will-first" data-start="question" href="study.html?question=will-first&amp;event=HUG&amp;roleSet=woman&amp;context=HOME&amp;start=question" aria-label="Skip to the first question in the paired WILL-first preview">Skip to the first question</a>
+        </article>
+        <article>
+          <h3>HAS TO first, then WILL</h3>
+          <p>Children first choose who has a responsibility to help, then predict who will help.</p>
+          <a class="launch" data-question="has-to-first" href="study.html?question=has-to-first&amp;event=HUG&amp;roleSet=woman&amp;context=HOME" aria-label="Start the paired HAS TO-first preview at the family welcome">Start at the family welcome</a>
+          <a class="jump" data-question="has-to-first" data-start="question" href="study.html?question=has-to-first&amp;event=HUG&amp;roleSet=woman&amp;context=HOME&amp;start=question" aria-label="Skip to the first question in the paired HAS TO-first preview">Skip to the first question</a>
+        </article>
+      </div>
+      <a class="random-order" data-question="paired" href="study.html?question=paired&amp;event=HUG&amp;roleSet=woman&amp;context=HOME">Try a randomly assigned question order</a>
+    </section>
+    <section aria-labelledby="single">
+      <h2 id="single">One question after each story</h2>
+      <p>Children hear their assigned question throughout all 12 stories, for 12 choices in total.</p>
+      <div class="versions">
+        <article>
+          <h3>Who will help?</h3>
+          <p>Children choose the person they expect to help.</p>
+          <a class="launch" data-question="will" href="study.html?question=will&amp;event=HUG&amp;roleSet=woman&amp;context=HOME" aria-label="Start the WILL preview at the family welcome">Start at the family welcome</a>
+          <a class="jump" data-question="will" data-start="question" href="study.html?question=will&amp;event=HUG&amp;roleSet=woman&amp;context=HOME&amp;start=question" aria-label="Skip to the first WILL question">Skip to the first question</a>
+        </article>
+        <article>
+          <h3>Who has to help?</h3>
+          <p>Children choose the person they think has a responsibility to help.</p>
+          <a class="launch" data-question="has-to" href="study.html?question=has-to&amp;event=HUG&amp;roleSet=woman&amp;context=HOME" aria-label="Start the HAS TO preview at the family welcome">Start at the family welcome</a>
+          <a class="jump" data-question="has-to" data-start="question" href="study.html?question=has-to&amp;event=HUG&amp;roleSet=woman&amp;context=HOME&amp;start=question" aria-label="Skip to the first HAS TO question">Skip to the first question</a>
+        </article>
+      </div>
     </section>
   </main>
   <script>

@@ -2652,7 +2652,9 @@ function contextAudioIdForText(text, context = activeStudyContext) {
     spec?.exterior?.text,
     spec?.room?.text,
     spec?.intro?.text,
-    ...Object.values(spec?.events || {}).flatMap((event) => [event.eventText, event.questionText]),
+    ...Object.values(spec?.events || {}).flatMap((event) => [
+      event.eventText, event.questionText, ...(event.previewQuestions || []).map((prompt) => prompt.text)
+    ]),
     ...Object.values(spec?.recipientEvents || {}).flatMap((eventGroup) =>
       Object.values(eventGroup || {}).flatMap((event) => [event.eventText, event.questionText])
     ),
@@ -2972,7 +2974,7 @@ function entranceController(element, studyContext) {
   };
 }
 
-function renderKidSlide({ trial = null, image, text, choices = [], overlayChoices = false, showText = false, slideKind = "", showNext = false, visualChoices = false, contextIntro = false, contextCondition = "", studyContext = activeStudyContext, storyNumber = null, storyTotal = null }) {
+function renderKidSlide({ trial = null, image, text, responseQuestionText = "", choices = [], overlayChoices = false, showText = false, slideKind = "", showNext = false, visualChoices = false, contextIntro = false, contextCondition = "", studyContext = activeStudyContext, storyNumber = null, storyTotal = null }) {
   const hasChoicePrompt = choices.length > 0 && !visualChoices;
   const contextEvent = studyContext && activeStudyEvent
     ? contextEventSpec(activeStudyEvent, studyContext, contextCondition)
@@ -2986,7 +2988,7 @@ function renderKidSlide({ trial = null, image, text, choices = [], overlayChoice
         ? text || contextIntroText(studyContext)
         : (slideKind === "story"
           ? contextEvent?.eventText || ""
-          : (slideKind === "response_choices" ? contextEvent?.questionText || "" : ""))))
+          : (slideKind === "response_choices" ? responseQuestionText || contextEvent?.questionText || "" : ""))))
     : "";
   const contextOverlayHtml = contextOverlayText
     ? `<div class="ksize-context-spoken-banner"${furnishedScene ? ` style="background:${escapeHtml(furnishedScene.accent)};color:${window.WTCCaptionContrast?.textColorForHex(furnishedScene.accent) || '#fff'}"` : ""}>${escapeHtml(contextOverlayText)}</div>`
@@ -3054,7 +3056,7 @@ function renderKidSlide({ trial = null, image, text, choices = [], overlayChoice
   `;
 }
 
-function makeKidNode(jsPsych, { trial, block, suffix, image, text, audioSegments = [], audioTexts = [], choices = [], slideKind, overlayChoices = false, showText = false, autoPlay = true, autoAdvanceAfterAudio = false, partKind, partNumber, visualChoices = false, highlightChoices = false, highlightStartMs = 350, contextIntro = false, studyContext = activeStudyContext, contextBlock = null, storyWithinContext = null, storyNumber = null, storyTotal = null }) {
+function makeKidNode(jsPsych, { trial, block, suffix, image, text, reviewPrompt = null, audioSegments = [], audioTexts = [], choices = [], slideKind, overlayChoices = false, showText = false, autoPlay = true, autoAdvanceAfterAudio = false, partKind, partNumber, visualChoices = false, highlightChoices = false, highlightStartMs = 350, contextIntro = false, studyContext = activeStudyContext, contextBlock = null, storyWithinContext = null, storyNumber = null, storyTotal = null }) {
   const contextCondition = block?.condition || trial?.blocks?.INTRO?.condition || "";
   const contextEvent = studyContext && activeStudyEvent
     ? contextEventSpec(activeStudyEvent, studyContext, contextCondition)
@@ -3071,7 +3073,7 @@ function makeKidNode(jsPsych, { trial, block, suffix, image, text, audioSegments
     _ksizeNarration: audioTexts.length
       ? audioTexts.map((audioText, index) => ({ text: audioText, src: audioSegments[index] }))
       : audioSegments.map((src) => ({ src, text: text || "" })),
-    stimulus: renderKidSlide({ trial, image, text, choices, overlayChoices, showText, slideKind, showNext: !hasChoices && (isFacilitatorMode || entranceVisualOnly || !autoAdvanceAfterAudio), visualChoices, contextIntro, contextCondition, studyContext, storyNumber, storyTotal }),
+    stimulus: renderKidSlide({ trial, image, text, responseQuestionText: reviewPrompt?.text, choices, overlayChoices, showText, slideKind, showNext: !hasChoices && (isFacilitatorMode || entranceVisualOnly || !autoAdvanceAfterAudio), visualChoices, contextIntro, contextCondition, studyContext, storyNumber, storyTotal }),
     choices: [],
     data: {
       trial_key: trial.id,
@@ -3101,7 +3103,12 @@ function makeKidNode(jsPsych, { trial, block, suffix, image, text, audioSegments
       context_audio_ids: contextAudioIds.join(",") || null,
       context_intro_text: studyContext ? contextIntroText(studyContext) : null,
       context_event_line_1: contextEvent?.eventText || null,
-      context_event_line_2: contextEvent?.questionText || null,
+      context_event_line_2: reviewPrompt?.text || contextEvent?.questionText || null,
+      ...(reviewPrompt ? {
+        helping_question_type: reviewPrompt.type,
+        helping_question_position: reviewPrompt.position,
+        helping_question_order: reviewPrompt.order,
+      } : {}),
       context_visual_version: studyContext ? trial?.homeSchoolFurnished?.version || null : null,
       context_visual_repair_version: studyContext ? trial?.homeSchoolFurnished?.backgroundRepairVersion || null : null,
       context_window_greenery_repair_version: studyContext === "SCHOOL" ? trial?.homeSchoolFurnished?.windowGreeneryRepairVersion || null : null,
@@ -3467,29 +3474,33 @@ function buildEventTrialNodes(
       const questionAudio = responseAudio.slice(0, -1);
       const optionLine = responseLines.at(-1);
       const optionAudio = responseAudio.at(-1) ? [responseAudio.at(-1)] : [];
-      nodes.push(makeKidNode(jsPsych, {
-        trial,
-        block,
-        suffix,
-        image: responseImage,
-        text: optionLine,
-        audioSegments: [...questionAudio, ...optionAudio],
-        audioTexts: [...questionLines, optionLine],
-        choices: block.choices || [],
-        slideKind: "response_choices",
-        overlayChoices: Boolean(responseImage),
-        showText: false,
-        autoPlay: true,
-        highlightChoices: true,
-        highlightStartMs: 350,
-        partKind,
-        partNumber,
-        studyContext,
-        contextBlock,
-        storyWithinContext,
-        storyNumber: trialIndex + 1,
-        storyTotal: totalTrials,
-      }));
+      const prompts = contextEventSpec(eventSuffix, studyContext, condition)?.previewQuestions || [null];
+      for (const reviewPrompt of prompts) {
+        nodes.push(makeKidNode(jsPsych, {
+          trial,
+          block,
+          suffix,
+          image: responseImage,
+          text: optionLine,
+          reviewPrompt,
+          audioSegments: [...(reviewPrompt ? [reviewPrompt.src] : questionAudio), ...optionAudio],
+          audioTexts: [...(reviewPrompt ? [reviewPrompt.text] : questionLines), optionLine],
+          choices: block.choices || [],
+          slideKind: "response_choices",
+          overlayChoices: Boolean(responseImage),
+          showText: false,
+          autoPlay: true,
+          highlightChoices: true,
+          highlightStartMs: 350,
+          partKind,
+          partNumber,
+          studyContext,
+          contextBlock,
+          storyWithinContext,
+          storyNumber: trialIndex + 1,
+          storyTotal: totalTrials,
+        }));
+      }
     }
     return nodes;
   });
@@ -3982,6 +3993,15 @@ async function main() {
   installCanonicalAudioMap(canonicalAudioManifest, teacherClassmateAudioManifest, homeSchoolAudioManifest);
   if (isHomeSchoolStudy && neutralSettingLanguage) {
     useNeutralSettingCues(homeSchoolContextManifest.contexts);
+    // Only the separate researcher preview supplies alternate helping questions.
+    if (showSpelkePreviewNavigation && runtimeConfig.previewHelpingQuestions) {
+      for (const [setting, context] of Object.entries(homeSchoolContextManifest.contexts)) {
+        for (const [care, event] of Object.entries(context.events)) {
+          event.previewQuestions = runtimeConfig.previewHelpingQuestions(setting, care, event);
+          for (const prompt of event.previewQuestions) canonicalAudioByText.set(normalizeAudioText(prompt.text), prompt.src);
+        }
+      }
+    }
   }
   ratingOptionCueManifest = ratingOptionCues;
   introImageFixes = await fetchStudyJson(INTRO_IMAGE_FIXES_URL).catch(() => ({}));
