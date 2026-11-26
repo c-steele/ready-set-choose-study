@@ -355,6 +355,7 @@
     stage.dataset.choiceLocation=helperChoiceActors(s).length?'characters':'controls';
     stage.dataset.practiceVisual=s.visual||'';
     stage.dataset.screenKind=s.visual?'illustrated-practice':s.image?'story':'practice';
+    stage.dataset.care=s.care||'';
     stage.dataset.responseFormat=s.optionActors?'forced-choice':s.point?'character':s.choices?'check':'continue';
     stage.dataset.responseKind=s.choices?.length===4?'scale':s.point?'character':s.choices?'binary':'continue';
     const art = scene(s, true);

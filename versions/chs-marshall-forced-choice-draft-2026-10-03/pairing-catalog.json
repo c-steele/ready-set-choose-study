@@ -149,7 +149,7 @@
           "image": "assets/stimuli/5c-food.png",
           "need": "Oh no! The kid in the middle is hungry now!",
           "prediction": "Who will give the kid in the middle strawberries now that they're hungry?",
-          "obligation": "Who do you think HAS TO give the kid in the middle strawberries?"
+          "obligation": "Who do you think HAS TO give the kid in the middle strawberries now that they're hungry?"
         },
         "help": {
           "image": "assets/stimuli/5c-help.png",
@@ -259,7 +259,7 @@
           "image": "assets/stimuli/6b-food.png",
           "need": "Oh no! The kid in the middle is hungry now!",
           "prediction": "Who will give the kid in the middle strawberries now that they're hungry?",
-          "obligation": "Who do you think HAS TO give the kid in the middle strawberries?"
+          "obligation": "Who do you think HAS TO give the kid in the middle strawberries now that they're hungry?"
         },
         "help": {
           "image": "assets/stimuli/6b-help.png",
@@ -369,7 +369,7 @@
           "image": "assets/stimuli/13d-food.png",
           "need": "Oh no! The kid in the middle is hungry now!",
           "prediction": "Who will give the kid in the middle strawberries now that they're hungry?",
-          "obligation": "Who do you think HAS TO give the kid in the middle strawberries?"
+          "obligation": "Who do you think HAS TO give the kid in the middle strawberries now that they're hungry?"
         },
         "help": {
           "image": "assets/stimuli/13d-help.png",
@@ -479,7 +479,7 @@
           "image": "assets/stimuli/2b-food.png",
           "need": "Oh no! The kid in the middle is hungry now!",
           "prediction": "Who will give the kid in the middle strawberries now that they're hungry?",
-          "obligation": "Who do you think HAS TO give the kid in the middle strawberries?"
+          "obligation": "Who do you think HAS TO give the kid in the middle strawberries now that they're hungry?"
         },
         "help": {
           "image": "assets/stimuli/2b-help.png",
@@ -591,7 +591,7 @@
           "image": "assets/stimuli/1a-food.png",
           "need": "Oh no! The kid in the middle is hungry now!",
           "prediction": "Who will give the kid in the middle strawberries now that they're hungry?",
-          "obligation": "Who do you think HAS TO give the kid in the middle strawberries?"
+          "obligation": "Who do you think HAS TO give the kid in the middle strawberries now that they're hungry?"
         },
         "help": {
           "image": "assets/stimuli/1a-help.png",
@@ -703,7 +703,7 @@
           "image": "../../assets/teacher_classmate/generated/trials/14d/food_story.svg",
           "need": "Oh no! The kid in the middle is hungry now!",
           "prediction": "Who will give the kid in the middle strawberries now that they're hungry?",
-          "obligation": "Who do you think HAS TO give the kid in the middle strawberries?"
+          "obligation": "Who do you think HAS TO give the kid in the middle strawberries now that they're hungry?"
         },
         "help": {
           "image": "../../assets/teacher_classmate/generated/trials/14d/help_story.svg",
@@ -813,7 +813,7 @@
           "image": "assets/stimuli/9c-food.png",
           "need": "Oh no! The kid in the middle is hungry now!",
           "prediction": "Who will give the kid in the middle strawberries now that they're hungry?",
-          "obligation": "Who do you think HAS TO give the kid in the middle strawberries?"
+          "obligation": "Who do you think HAS TO give the kid in the middle strawberries now that they're hungry?"
         },
         "help": {
           "image": "assets/stimuli/9c-help.png",
@@ -923,7 +923,7 @@
           "image": "assets/stimuli/10b-food.png",
           "need": "Oh no! The kid in the middle is hungry now!",
           "prediction": "Who will give the kid in the middle strawberries now that they're hungry?",
-          "obligation": "Who do you think HAS TO give the kid in the middle strawberries?"
+          "obligation": "Who do you think HAS TO give the kid in the middle strawberries now that they're hungry?"
         },
         "help": {
           "image": "assets/stimuli/10b-help.png",
@@ -1033,7 +1033,7 @@
           "image": "assets/stimuli/13d-food.png",
           "need": "Oh no! The kid in the middle is hungry now!",
           "prediction": "Who will give the kid in the middle strawberries now that they're hungry?",
-          "obligation": "Who do you think HAS TO give the kid in the middle strawberries?"
+          "obligation": "Who do you think HAS TO give the kid in the middle strawberries now that they're hungry?"
         },
         "help": {
           "image": "assets/stimuli/13d-help.png",
@@ -1143,7 +1143,7 @@
           "image": "assets/stimuli/2b-food.png",
           "need": "Oh no! The kid in the middle is hungry now!",
           "prediction": "Who will give the kid in the middle strawberries now that they're hungry?",
-          "obligation": "Who do you think HAS TO give the kid in the middle strawberries?"
+          "obligation": "Who do you think HAS TO give the kid in the middle strawberries now that they're hungry?"
         },
         "help": {
           "image": "assets/stimuli/2b-help.png",
@@ -1255,7 +1255,7 @@
           "image": "assets/stimuli/7a-food.png",
           "need": "Oh no! The kid in the middle is hungry now!",
           "prediction": "Who will give the kid in the middle strawberries now that they're hungry?",
-          "obligation": "Who do you think HAS TO give the kid in the middle strawberries?"
+          "obligation": "Who do you think HAS TO give the kid in the middle strawberries now that they're hungry?"
         },
         "help": {
           "image": "assets/stimuli/7a-help.png",
@@ -1367,7 +1367,7 @@
           "image": "../../assets/teacher_classmate/generated/trials/14d/food_story.svg",
           "need": "Oh no! The kid in the middle is hungry now!",
           "prediction": "Who will give the kid in the middle strawberries now that they're hungry?",
-          "obligation": "Who do you think HAS TO give the kid in the middle strawberries?"
+          "obligation": "Who do you think HAS TO give the kid in the middle strawberries now that they're hungry?"
         },
         "help": {
           "image": "../../assets/teacher_classmate/generated/trials/14d/help_story.svg",
@@ -1477,7 +1477,7 @@
           "image": "assets/stimuli/11c-food.png",
           "need": "Oh no! The kid in the middle is hungry now!",
           "prediction": "Who will give the kid in the middle strawberries now that they're hungry?",
-          "obligation": "Who do you think HAS TO give the kid in the middle strawberries?"
+          "obligation": "Who do you think HAS TO give the kid in the middle strawberries now that they're hungry?"
         },
         "help": {
           "image": "assets/stimuli/11c-help.png",
@@ -1587,7 +1587,7 @@
           "image": "assets/stimuli/12b-food.png",
           "need": "Oh no! The kid in the middle is hungry now!",
           "prediction": "Who will give the kid in the middle strawberries now that they're hungry?",
-          "obligation": "Who do you think HAS TO give the kid in the middle strawberries?"
+          "obligation": "Who do you think HAS TO give the kid in the middle strawberries now that they're hungry?"
         },
         "help": {
           "image": "assets/stimuli/12b-help.png",
@@ -1699,7 +1699,7 @@
           "image": "assets/stimuli/3b-food.png",
           "need": "Oh no! The mom in the middle is hungry now!",
           "prediction": "Who will give the mom in the middle strawberries now that they're hungry?",
-          "obligation": "Who do you think HAS TO give the mom in the middle strawberries?"
+          "obligation": "Who do you think HAS TO give the mom in the middle strawberries now that they're hungry?"
         },
         "help": {
           "image": "assets/stimuli/3b-help.png",
@@ -1811,7 +1811,7 @@
           "image": "assets/stimuli/8d-food.png",
           "need": "Oh no! The dad in the middle is hungry now!",
           "prediction": "Who will give the dad in the middle strawberries now that they're hungry?",
-          "obligation": "Who do you think HAS TO give the dad in the middle strawberries?"
+          "obligation": "Who do you think HAS TO give the dad in the middle strawberries now that they're hungry?"
         },
         "help": {
           "image": "assets/stimuli/8d-help.png",
@@ -1924,7 +1924,7 @@
           "image": "assets/stimuli/4a-food.png",
           "need": "Oh no! The teacher in the middle is hungry now!",
           "prediction": "Who will give the teacher in the middle strawberries now that they're hungry?",
-          "obligation": "Who do you think HAS TO give the teacher in the middle strawberries?"
+          "obligation": "Who do you think HAS TO give the teacher in the middle strawberries now that they're hungry?"
         },
         "help": {
           "image": "assets/stimuli/4a-help.png",
@@ -2036,7 +2036,7 @@
           "image": "../../assets/teacher_classmate/generated/trials/14d/food_story.svg",
           "need": "Oh no! The kid in the middle is hungry now!",
           "prediction": "Who will give the kid in the middle strawberries now that they're hungry?",
-          "obligation": "Who do you think HAS TO give the kid in the middle strawberries?"
+          "obligation": "Who do you think HAS TO give the kid in the middle strawberries now that they're hungry?"
         },
         "help": {
           "image": "../../assets/teacher_classmate/generated/trials/14d/help_story.svg",

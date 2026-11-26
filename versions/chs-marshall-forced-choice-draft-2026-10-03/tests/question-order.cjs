@@ -1,10 +1,12 @@
 const assert = require('node:assert/strict');
+const {createHash} = require('node:crypto');
 const fs = require('node:fs');
 const path = require('node:path');
 const vm = require('node:vm');
 const api = require('../session-data.js');
 const manifest = require('../narration-manifest.json');
 const clips = Object.fromEntries(manifest.clips.map(clip => [clip.id, clip]));
+const cues = require('../narration-cues.json').clips;
 const bridgeSource = fs.readFileSync(path.join(__dirname, '../chs-bridge.js'), 'utf8');
 let checkedStories = 0;
 for (const set of ['woman', 'man', 'family', 'all']) for(const care of ['hug','food','help']) {
@@ -77,6 +79,17 @@ for (const set of ['woman', 'man', 'family', 'all']) for(const care of ['hug','f
   }
 }
 assert.equal(api.build('woman').questionOrder, 'will-first');
+// The same reminder of hunger belongs to both food questions, whoever is in the middle.
+for (const recipient of ['kid', 'mom', 'dad', 'teacher']) {
+  const id = `obligation_food_${recipient}`;
+  const clip = clips[id];
+  assert.equal(clip.text, `Who do you think HAS TO give the ${recipient} in the middle strawberries now that they're hungry?`);
+  const bytes = fs.readFileSync(path.join(__dirname, '..', clip.src));
+  assert.equal(createHash('sha256').update(bytes).digest('hex'), clip.sha256, id);
+  assert.equal(cues[id].sha256, clip.sha256, id);
+  assert.equal(cues[id].expectedText, clip.text, id);
+  assert.equal(cues[id].words.at(-1).word.toLowerCase().replace(/[^a-z]/g, ''), 'hungry', id);
+}
 for (const legacy of ['once','each','none']) assert.equal(api.build('woman',legacy).questionOrder,'will-first');
 assert.throws(()=>api.build('woman','wrong-order'), /Unknown question order/);
 for (const set of ['woman','man','family']) {

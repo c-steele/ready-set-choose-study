@@ -109,7 +109,8 @@
     "r45: Replaced r44 obligation prompts, which inherited a slower 0.80x source. Four fresh Evelyn Soft 0.90x / 180 WPM recordings now match the surrounding narration pace. Only HAS TO is time-stretched at 0.65 tempo with gentle gain; prefix/suffix samples outside 5ms joins are unchanged before MP3 encoding. Native sources retained for comparison. Final audio and new cues pass independent unprompted full-sentence recognition.",
     "r54: Only NOT is slower in the four Who was meaner questions, including kid and adult recipients. Existing Evelyn Soft voice, wording and surrounding audio pace are retained. No pause or volume change. New files and spoken-word cues passed exact full-sentence recognition.",
     "r56: Incorrect recall responses replay the original nonhelping outcome screens, then ask the recall question again until No. The small correction/reminder is no longer used. Every helper receives one four-option meanness scale, including Not mean; the other helper receives this scale after either Mean or Not Mean. Original verified option recordings are reused with the new option order.",
-    "The twelve care-specific obligation questions retain their original full recordings, with only the vowel of HAS lengthened approximately 60 ms. No added pause or gain. Whisper transcribed HAS TO correctly in all twelve and the entire sentence exactly in eleven. For the mom/strawberries question, Whisper interpreted one later preposition the same way in both the untouched take and the revision."
+    "r61: The twelve care-specific obligation questions retain their original full recordings, with only the vowel of HAS lengthened approximately 60 ms. No added pause or gain. Whisper transcribed HAS TO correctly in all twelve and the entire sentence exactly in eleven. For the mom/strawberries question, Whisper interpreted one later preposition the same way in both the untouched take and the revision.",
+    "The food obligation recordings repeat the hunger reminder used in the prediction questions. All four use the reviewed opening and a fresh continuous recording of the complete recipient-specific action and hunger reminder. The resulting gaps before HAS and before give are approximately 0.17 and 0.18 seconds. Independent speech recognition matched all four questions."
   ],
   "clips": [
     {
@@ -20369,7 +20370,7 @@
     },
     {
       "id": "obligation_food_kid",
-      "text": "Who do you think HAS TO give the kid in the middle strawberries?",
+      "text": "Who do you think HAS TO give the kid in the middle strawberries now that they're hungry?",
       "kind": "prompt",
       "uses": [
         {
@@ -20449,17 +20450,18 @@
         }
       ],
       "src": "assets/narration/obligation_food_kid.mp3",
-      "status": "verified-source-recording",
-      "sha256": "d0868c1b499b06d03573345e4303a73411a313235c8b70953a0e74cdee2c1981",
-      "bytes": 171407,
-      "durationSeconds": 4.257959,
+      "status": "verified-complete-sentence-audio-derivative",
+      "sha256": "9377959196b9ffc9d83747572c3eb4e8e56d0497fe8807912996bb93e367fbaf",
+      "bytes": 245595,
+      "durationSeconds": 6.112653,
       "provenance": {
-        "source": "Full question recorded in NaturalReaders Commercial, Evelyn Soft.",
-        "sourceSha256": "f2c92804a97dd401b0782b2d31afba5e7c447b7e870535eca0291395066b37d0",
-        "edit": "Added about 60 ms inside the voiced vowel of has, using pitch-synchronous interpolation between adjacent original cycles. Original amplitude and inter-word spacing retained. PCM from the end of that vowel through the entire remainder of the question is untouched.",
-        "vowelExtensionSeconds": 0.059546,
-        "originalPhraseSeconds": 0.37,
-        "revisedPhraseSeconds": 0.4295
+        "voice": "NaturalReaders Commercial, Evelyn Soft.",
+        "source": "The reviewed obligation opening and a newly recorded full food question for this recipient.",
+        "openingSha256": "de8dc9d7ef149fd73f8f1141b089feb7bdb7a34e5deb24ae8ef6b26b91797bc1",
+        "fullQuestionSha256": "96fea84a330b84ddc056b986234783bac6244d7135d441cde2457c9428e27211",
+        "edit": "Approved slower HAS and TO and both shortened pauses; the full action phrase, from give through hungry, is from the newly recorded full question in NaturalReaders Commercial, Evelyn Soft, 0.90x. An 8 ms crossfade inside the silent gap before give joins the approved opening and the fresh take. No action-phrase speed or gain change.",
+        "pauseBeforeHasSeconds": 0.167755,
+        "pauseBeforeGiveSeconds": 0.177982
       }
     },
     {
@@ -20584,7 +20586,7 @@
     },
     {
       "id": "obligation_food_mom",
-      "text": "Who do you think HAS TO give the mom in the middle strawberries?",
+      "text": "Who do you think HAS TO give the mom in the middle strawberries now that they're hungry?",
       "kind": "prompt",
       "uses": [
         {
@@ -20594,17 +20596,18 @@
         }
       ],
       "src": "assets/narration/obligation_food_mom.mp3",
-      "status": "verified-source-recording",
-      "sha256": "8efe7a402e651f25919672b4cea6d7ac03cea009bbaf9936ebccd023062bcf34",
-      "bytes": 172452,
-      "durationSeconds": 4.284082,
+      "status": "verified-complete-sentence-audio-derivative",
+      "sha256": "dc3b5b1519ff4407c8e8d9914a40ab24688faf5600e9afd7c86834bf42ca306d",
+      "bytes": 247685,
+      "durationSeconds": 6.164898,
       "provenance": {
-        "source": "Full question recorded in NaturalReaders Commercial, Evelyn Soft.",
-        "sourceSha256": "56cec1579ac941625b2822de8a048d97b3e0306dc918dfa86fa9f8244186c7d5",
-        "edit": "Added about 60 ms inside the voiced vowel of has, using pitch-synchronous interpolation between adjacent original cycles. Original amplitude and inter-word spacing retained. PCM from the end of that vowel through the entire remainder of the question is untouched.",
-        "vowelExtensionSeconds": 0.060068,
-        "originalPhraseSeconds": 0.37,
-        "revisedPhraseSeconds": 0.4301
+        "voice": "NaturalReaders Commercial, Evelyn Soft.",
+        "source": "The reviewed obligation opening and a newly recorded full food question for this recipient.",
+        "openingSha256": "de8dc9d7ef149fd73f8f1141b089feb7bdb7a34e5deb24ae8ef6b26b91797bc1",
+        "fullQuestionSha256": "8bff823ee474cbb22fa6126861c18d998c4ae91d837bf15df57a81f84ccfad95",
+        "edit": "Approved slower HAS and TO and both shortened pauses; the full action phrase, from give through hungry, is from the newly recorded full question in NaturalReaders Commercial, Evelyn Soft, 0.90x. An 8 ms crossfade inside the silent gap before give joins the approved opening and the fresh take. No action-phrase speed or gain change.",
+        "pauseBeforeHasSeconds": 0.167755,
+        "pauseBeforeGiveSeconds": 0.177982
       }
     },
     {
@@ -20659,7 +20662,7 @@
     },
     {
       "id": "obligation_food_dad",
-      "text": "Who do you think HAS TO give the dad in the middle strawberries?",
+      "text": "Who do you think HAS TO give the dad in the middle strawberries now that they're hungry?",
       "kind": "prompt",
       "uses": [
         {
@@ -20669,17 +20672,18 @@
         }
       ],
       "src": "assets/narration/obligation_food_dad.mp3",
-      "status": "verified-source-recording",
-      "sha256": "5ce04304aa8c5e187978d1c3d3462523653386568ab8a8c5621d77c38a09cb6e",
-      "bytes": 169317,
-      "durationSeconds": 4.205714,
+      "status": "verified-complete-sentence-audio-derivative",
+      "sha256": "9aa932f0b4da4f59f5eba84b747696d53e40f107a2cc4b6bc1b974d39b7d5e7e",
+      "bytes": 245595,
+      "durationSeconds": 6.112653,
       "provenance": {
-        "source": "Full question recorded in NaturalReaders Commercial, Evelyn Soft.",
-        "sourceSha256": "050cdbbd9219f41290950b6f6cbd0eb3abc1656cdde472bd694e7d1433072b1e",
-        "edit": "Added about 60 ms inside the voiced vowel of has, using pitch-synchronous interpolation between adjacent original cycles. Original amplitude and inter-word spacing retained. PCM from the end of that vowel through the entire remainder of the question is untouched.",
-        "vowelExtensionSeconds": 0.060658,
-        "originalPhraseSeconds": 0.37,
-        "revisedPhraseSeconds": 0.4307
+        "voice": "NaturalReaders Commercial, Evelyn Soft.",
+        "source": "The reviewed obligation opening and a newly recorded full food question for this recipient.",
+        "openingSha256": "de8dc9d7ef149fd73f8f1141b089feb7bdb7a34e5deb24ae8ef6b26b91797bc1",
+        "fullQuestionSha256": "2f8e81ebf2387a1e116e844ff14111f847c1f306103122228f57eb308a39fa10",
+        "edit": "Approved slower HAS and TO and both shortened pauses; the full action phrase, from give through hungry, is from the newly recorded full question in NaturalReaders Commercial, Evelyn Soft, 0.90x. An 8 ms crossfade inside the silent gap before give joins the approved opening and the fresh take. No action-phrase speed or gain change.",
+        "pauseBeforeHasSeconds": 0.167755,
+        "pauseBeforeGiveSeconds": 0.177982
       }
     },
     {
@@ -20734,7 +20738,7 @@
     },
     {
       "id": "obligation_food_teacher",
-      "text": "Who do you think HAS TO give the teacher in the middle strawberries?",
+      "text": "Who do you think HAS TO give the teacher in the middle strawberries now that they're hungry?",
       "kind": "prompt",
       "uses": [
         {
@@ -20744,17 +20748,18 @@
         }
       ],
       "src": "assets/narration/obligation_food_teacher.mp3",
-      "status": "verified-source-recording",
-      "sha256": "295df601b29761aa583b3cc9f980753268ef18029898176429d759b99a85e013",
-      "bytes": 173497,
-      "durationSeconds": 4.310204,
+      "status": "verified-complete-sentence-audio-derivative",
+      "sha256": "85fa75dae818844e95a308615c6e2440ddbbed4a8e333c89b9684f31defacf86",
+      "bytes": 252909,
+      "durationSeconds": 6.29551,
       "provenance": {
-        "source": "Full question recorded in NaturalReaders Commercial, Evelyn Soft.",
-        "sourceSha256": "83f0b359a702bef5733e56792e62dafc8cb3aa3437c9a9145f529503df8d77e7",
-        "edit": "Added about 60 ms inside the voiced vowel of has, using pitch-synchronous interpolation between adjacent original cycles. Original amplitude and inter-word spacing retained. PCM from the end of that vowel through the entire remainder of the question is untouched.",
-        "vowelExtensionSeconds": 0.059002,
-        "originalPhraseSeconds": 0.36,
-        "revisedPhraseSeconds": 0.419
+        "voice": "NaturalReaders Commercial, Evelyn Soft.",
+        "source": "The reviewed obligation opening and a newly recorded full food question for this recipient.",
+        "openingSha256": "de8dc9d7ef149fd73f8f1141b089feb7bdb7a34e5deb24ae8ef6b26b91797bc1",
+        "fullQuestionSha256": "30630580db24f251c9353b722ce726199e1fa51d839b6f1b85e7b5f3c464f7b4",
+        "edit": "Approved slower HAS and TO and both shortened pauses; the full action phrase, from give through hungry, is from the newly recorded full question in NaturalReaders Commercial, Evelyn Soft, 0.90x. An 8 ms crossfade inside the silent gap before give joins the approved opening and the fresh take. No action-phrase speed or gain change.",
+        "pauseBeforeHasSeconds": 0.167755,
+        "pauseBeforeGiveSeconds": 0.177982
       }
     },
     {
