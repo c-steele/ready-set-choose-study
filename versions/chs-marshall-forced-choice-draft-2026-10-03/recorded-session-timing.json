@@ -4,7 +4,7 @@
   "pendingRetryRecordingIDs": [],
   "basis": "Measured MP3 durations for the selected care condition, including the recorded alternative pair where played. Both orders use the same audio.",
   "gapSeconds": 0.25,
-  "manifestSha256": "aff33fc7e97d41da4819cd76688293dafb1f63d3a539ae8017b6ce3963940c68",
+  "manifestSha256": "25714d6a5cd4bd9df923aac5ff7f0b7aa8b2fdf40a6048eb7c0e9f92082c707d",
   "assumptions": [
     "The child hears every scheduled question and set of choices once, answers the recall question correctly on the first attempt, and makes seven choices per story.",
     "Playback includes the 250 ms pauses between separately recorded options. Response time adds 3–5 seconds per choice.",
@@ -17,8 +17,8 @@
       "care": "hug",
       "storyCount": 6,
       "playbackSeconds": {
-        "min": 555.387377,
-        "max": 556.197171
+        "min": 555.230645,
+        "max": 556.040439
       },
       "playbackMinutes": {
         "min": 9.3,
@@ -69,16 +69,16 @@
       "care": "help",
       "storyCount": 6,
       "playbackSeconds": {
-        "min": 560.089595,
-        "max": 560.899389
+        "min": 560.246327,
+        "max": 561.056121
       },
       "playbackMinutes": {
         "min": 9.3,
-        "max": 9.3
+        "max": 9.4
       },
       "estimatedSessionMinutesIncludingResponses": {
         "min": 11.4,
-        "max": 12.8
+        "max": 12.9
       },
       "responseCounts": {
         "min": 42,
@@ -95,15 +95,15 @@
       "care": "hug",
       "storyCount": 6,
       "playbackSeconds": {
-        "min": 555.021713,
-        "max": 555.883753
+        "min": 554.864981,
+        "max": 555.727021
       },
       "playbackMinutes": {
-        "min": 9.3,
+        "min": 9.2,
         "max": 9.3
       },
       "estimatedSessionMinutesIncludingResponses": {
-        "min": 11.4,
+        "min": 11.3,
         "max": 12.8
       },
       "responseCounts": {
@@ -147,8 +147,8 @@
       "care": "help",
       "storyCount": 6,
       "playbackSeconds": {
-        "min": 559.723931,
-        "max": 560.585971
+        "min": 559.880663,
+        "max": 560.742703
       },
       "playbackMinutes": {
         "min": 9.3,
@@ -173,8 +173,8 @@
       "care": "hug",
       "storyCount": 6,
       "playbackSeconds": {
-        "min": 541.359659,
-        "max": 542.874761
+        "min": 541.281293,
+        "max": 542.796395
       },
       "playbackMinutes": {
         "min": 9.0,
@@ -225,8 +225,8 @@
       "care": "help",
       "storyCount": 6,
       "playbackSeconds": {
-        "min": 546.061773,
-        "max": 547.576875
+        "min": 546.166262,
+        "max": 547.681364
       },
       "playbackMinutes": {
         "min": 9.1,
@@ -251,16 +251,16 @@
       "care": "hug",
       "storyCount": 18,
       "playbackSeconds": {
-        "min": 1644.036549,
-        "max": 1647.223485
+        "min": 1643.644719,
+        "max": 1646.831655
       },
       "playbackMinutes": {
         "min": 27.4,
-        "max": 27.5
+        "max": 27.4
       },
       "estimatedSessionMinutesIncludingResponses": {
         "min": 33.7,
-        "max": 38.0
+        "max": 37.9
       },
       "responseCounts": {
         "min": 126,
@@ -303,8 +303,8 @@
       "care": "help",
       "storyCount": 18,
       "playbackSeconds": {
-        "min": 1658.143099,
-        "max": 1661.330035
+        "min": 1658.561052,
+        "max": 1661.747988
       },
       "playbackMinutes": {
         "min": 27.6,

@@ -111,7 +111,8 @@
     "r56: Incorrect recall responses replay the original nonhelping outcome screens, then ask the recall question again until No. The small correction/reminder is no longer used. Every helper receives one four-option meanness scale, including Not mean; the other helper receives this scale after either Mean or Not Mean. Original verified option recordings are reused with the new option order.",
     "r61: The twelve care-specific obligation questions retain their original full recordings, with only the vowel of HAS lengthened approximately 60 ms. No added pause or gain. Whisper transcribed HAS TO correctly in all twelve and the entire sentence exactly in eleven. For the mom/strawberries question, Whisper interpreted one later preposition the same way in both the untouched take and the revision.",
     "The food obligation recordings repeat the hunger reminder used in the prediction questions. All four use the reviewed opening and a fresh continuous recording of the complete recipient-specific action and hunger reminder. The resulting gaps before HAS and before give are approximately 0.17 and 0.18 seconds. Independent speech recognition matched all four questions.",
-    "The current obligation prompts use the direct Who HAS TO opening. Hug and food repeat the need stated in the corresponding prediction prompt. Each recording names the recipient in its own scene."
+    "The current obligation prompts use the direct Who HAS TO opening. Hug and food repeat the need stated in the corresponding prediction prompt. Each recording names the recipient in its own scene.",
+    "Each WILL and HAS TO pair uses the same recorded ending for its care condition and recipient, preserving the pitch and timing of sad, hungry, or box across the two questions."
   ],
   "clips": [
     {
@@ -20357,14 +20358,28 @@
       ],
       "src": "assets/narration/obligation_hug_kid.mp3",
       "status": "verified-complete-sentence-audio-derivative",
-      "sha256": "03c491252aedbca708716659e63238f2c14ad7e059a5c143733b04f4583c84a2",
-      "bytes": 133791,
-      "durationSeconds": 4.153469,
+      "sha256": "948a606768845535eced6a37a4f84bd72b24960e878e8a6d6ae9dea97875c1a8",
+      "bytes": 166182,
+      "durationSeconds": 4.127347,
       "provenance": {
-        "voice": "NaturalReaders Commercial, Evelyn Soft.",
-        "source": "hug-has-to.wav",
-        "sourceSha256": "ae164a476dec7a4d22d098daed3c3f3d1f930c7206be8124d13bef4b81c7798e",
-        "edit": "Encoded from the approved complete child-recipient WAV."
+        "openingSourceSha256": "03c491252aedbca708716659e63238f2c14ad7e059a5c143733b04f4583c84a2",
+        "openingSource": {
+          "voice": "NaturalReaders Commercial, Evelyn Soft.",
+          "source": "hug-has-to.wav",
+          "sourceSha256": "ae164a476dec7a4d22d098daed3c3f3d1f930c7206be8124d13bef4b81c7798e",
+          "edit": "Encoded from the approved complete child-recipient WAV."
+        },
+        "edit": "Retained the recorded HAS TO question up to the quiet /t/ closure in ‘that’. From that closure onward the entire ending is the matching WILL recording. An 8 ms raised-cosine crossfade joins silence. No gain, speed or pitch change.",
+        "sampleRate": 44100,
+        "openingCrossfadeStartSample": 124539,
+        "endingCrossfadeStartSample": 112632,
+        "crossfadeSamples": 353,
+        "matchedEnding": {
+          "willClipId": "ftc_006",
+          "willSha256": "9a2fb17c3949a7cc78dc0b54e2d04a71a3eb30983e114d9509bab4559648a089",
+          "finalWord": "sad",
+          "hasToSha256": "948a606768845535eced6a37a4f84bd72b24960e878e8a6d6ae9dea97875c1a8"
+        }
       }
     },
     {
@@ -20450,14 +20465,28 @@
       ],
       "src": "assets/narration/obligation_food_kid.mp3",
       "status": "verified-complete-sentence-audio-derivative",
-      "sha256": "62a12420b40efcf5f70e2366c4fdd1101460be11c2349b632ab631e3453d6b95",
-      "bytes": 151345,
+      "sha256": "f4e7cf4ec6e8e310c40e2d7c58ee234af585871b51def648b2e6cc99eff90957",
+      "bytes": 189170,
       "durationSeconds": 4.702041,
       "provenance": {
-        "voice": "NaturalReaders Commercial, Evelyn Soft.",
-        "source": "strawberries-has-to.wav",
-        "sourceSha256": "8985d43c711074b35c14dbc203ccf6947729e601d78b114f73014055f4db0afa",
-        "edit": "Encoded from the approved complete child-recipient WAV."
+        "openingSourceSha256": "62a12420b40efcf5f70e2366c4fdd1101460be11c2349b632ab631e3453d6b95",
+        "openingSource": {
+          "voice": "NaturalReaders Commercial, Evelyn Soft.",
+          "source": "strawberries-has-to.wav",
+          "sourceSha256": "8985d43c711074b35c14dbc203ccf6947729e601d78b114f73014055f4db0afa",
+          "edit": "Encoded from the approved complete child-recipient WAV."
+        },
+        "edit": "Retained the recorded HAS TO question up to the quiet /t/ closure in ‘that’. From that closure onward the entire ending is the matching WILL recording. An 8 ms raised-cosine crossfade joins silence. No gain, speed or pitch change.",
+        "sampleRate": 44100,
+        "openingCrossfadeStartSample": 146456,
+        "endingCrossfadeStartSample": 134814,
+        "crossfadeSamples": 353,
+        "matchedEnding": {
+          "willClipId": "ftc_009",
+          "willSha256": "a2fbe606c86575c68a7c35326adad4c6e32ac93959852a4cbc521ba3ad5573ea",
+          "finalWord": "hungry",
+          "hasToSha256": "f4e7cf4ec6e8e310c40e2d7c58ee234af585871b51def648b2e6cc99eff90957"
+        }
       }
     },
     {
@@ -20543,14 +20572,28 @@
       ],
       "src": "assets/narration/obligation_help_kid.mp3",
       "status": "verified-complete-sentence-audio-derivative",
-      "sha256": "60b4c34f0bedcceab1deac97634ce0bb1ac06d13729c8a551fdee6322bf9ad9c",
-      "bytes": 132955,
-      "durationSeconds": 4.127347,
+      "sha256": "4e3fa7379ee000baccfaae3dc86d3ce60778fdf4bb8fb22633eff0918d880130",
+      "bytes": 167227,
+      "durationSeconds": 4.153469,
       "provenance": {
-        "voice": "NaturalReaders Commercial, Evelyn Soft.",
-        "source": "heavy-box-has-to-corrected.wav",
-        "sourceSha256": "e2bed3406405bd582ecdedc3f5ebcd3a5f52f5fc8b4aa075336db66a7e3785e8",
-        "edit": "Encoded from the approved complete child-recipient WAV."
+        "openingSourceSha256": "60b4c34f0bedcceab1deac97634ce0bb1ac06d13729c8a551fdee6322bf9ad9c",
+        "openingSource": {
+          "voice": "NaturalReaders Commercial, Evelyn Soft.",
+          "source": "heavy-box-has-to-corrected.wav",
+          "sourceSha256": "e2bed3406405bd582ecdedc3f5ebcd3a5f52f5fc8b4aa075336db66a7e3785e8",
+          "edit": "Encoded from the approved complete child-recipient WAV."
+        },
+        "edit": "Pairs use the same recording from pick through box; a raised-cosine crossfade falls in the quiet /p/ closure before pick. The corrected HAS TO help opening and original recipient phrase are retained. No time, pitch or volume changes.",
+        "sampleRate": 44100,
+        "openingCrossfadeStartSample": 94815,
+        "endingCrossfadeStartSample": 87318,
+        "crossfadeSamples": 353,
+        "matchedEnding": {
+          "willClipId": "ftc_011",
+          "willSha256": "7222af991eed24d0eca7018f2ed57c6e68a185291187a2cc42f46a3fce49470b",
+          "finalWord": "box",
+          "hasToSha256": "4e3fa7379ee000baccfaae3dc86d3ce60778fdf4bb8fb22633eff0918d880130"
+        }
       }
     },
     {
@@ -20586,7 +20629,13 @@
           }
         ],
         "method": "Approved short Who HAS TO prefix and intact action through sad from the original adult's Evelyn WILL recording, joined inside the low-energy closure before the release of /g/ in give, with a 6 ms raised-cosine crossfade. No pitch, gain, or rate alteration.",
-        "outputSha256": "729285d1948bf8337004e191396e0d3aabe864c4ba93369846704ded3bc643fe"
+        "outputSha256": "729285d1948bf8337004e191396e0d3aabe864c4ba93369846704ded3bc643fe",
+        "matchedEnding": {
+          "willClipId": "ftc_019",
+          "willSha256": "99c400c5cb6cb12403f3f73a6a410910662db07af12e7db6b93465b18ea18a44",
+          "finalWord": "sad",
+          "hasToSha256": "729285d1948bf8337004e191396e0d3aabe864c4ba93369846704ded3bc643fe"
+        }
       }
     },
     {
@@ -20602,28 +20651,42 @@
       ],
       "src": "assets/narration/obligation_food_mom.mp3",
       "status": "verified-complete-sentence-audio-derivative",
-      "sha256": "6d7c8f73eb02c51b6a4809f1815afa2e8c3453a600ab41f4fcae2c2756433fd4",
-      "bytes": 152181,
+      "sha256": "2aadaa5ecc3447a0e9d0a32b6d6f720c3221f83370a2a3cfe7d9ab414352b983",
+      "bytes": 190215,
       "durationSeconds": 4.728163,
       "provenance": {
-        "sourcePrefix": "outputs/study-question-audio/natural-tiny-pause-after-to/strawberries-has-to.wav",
-        "sourcePrefixSha256": "8985d43c711074b35c14dbc203ccf6947729e601d78b114f73014055f4db0afa",
-        "sourceSuffix": "versions/chs-marshall-forced-choice-draft-2026-10-03/assets/narration/obligation_food_mom.mp3",
-        "sourceSuffixSha256": "dc3b5b1519ff4407c8e8d9914a40ab24688faf5600e9afd7c86834bf42ca306d",
-        "method": "The approved child strawberries opening is preserved sample-for-sample through the post-TO pause. An 8 ms crossfade within the silent closure before give joins the full, existing recipient-specific Evelyn action clause. Speech onsets, speed and gain are preserved.",
-        "prefixGiveOnsetSec": 0.936122,
-        "suffixGiveOnsetSec": 2.3544444444444443,
-        "crossfadeMs": 8,
-        "joinPeakDbFS": -73.568,
-        "decodedWaveformCorrelations": [
-          0.9999997378923103,
-          0.9999998224449502
-        ],
-        "durationSeconds": 4.728163,
-        "decodedDurationSeconds": 4.700884353741497,
-        "peakDbFS": -4.86,
-        "sha256": "6d7c8f73eb02c51b6a4809f1815afa2e8c3453a600ab41f4fcae2c2756433fd4",
-        "bytes": 152181
+        "openingSourceSha256": "6d7c8f73eb02c51b6a4809f1815afa2e8c3453a600ab41f4fcae2c2756433fd4",
+        "openingSource": {
+          "sourcePrefix": "outputs/study-question-audio/natural-tiny-pause-after-to/strawberries-has-to.wav",
+          "sourcePrefixSha256": "8985d43c711074b35c14dbc203ccf6947729e601d78b114f73014055f4db0afa",
+          "sourceSuffix": "versions/chs-marshall-forced-choice-draft-2026-10-03/assets/narration/obligation_food_mom.mp3",
+          "sourceSuffixSha256": "dc3b5b1519ff4407c8e8d9914a40ab24688faf5600e9afd7c86834bf42ca306d",
+          "method": "The approved child strawberries opening is preserved sample-for-sample through the post-TO pause. An 8 ms crossfade within the silent closure before give joins the full, existing recipient-specific Evelyn action clause. Speech onsets, speed and gain are preserved.",
+          "prefixGiveOnsetSec": 0.936122,
+          "suffixGiveOnsetSec": 2.3544444444444443,
+          "crossfadeMs": 8,
+          "joinPeakDbFS": -73.568,
+          "decodedWaveformCorrelations": [
+            0.9999997378923103,
+            0.9999998224449502
+          ],
+          "durationSeconds": 4.728163,
+          "decodedDurationSeconds": 4.700884353741497,
+          "peakDbFS": -4.86,
+          "sha256": "6d7c8f73eb02c51b6a4809f1815afa2e8c3453a600ab41f4fcae2c2756433fd4",
+          "bytes": 152181
+        },
+        "edit": "Retained the recorded HAS TO question up to the quiet /t/ closure in ‘that’. From that closure onward the entire ending is the matching WILL recording. An 8 ms raised-cosine crossfade joins silence. No gain, speed or pitch change.",
+        "sampleRate": 44100,
+        "openingCrossfadeStartSample": 148441,
+        "endingCrossfadeStartSample": 130404,
+        "crossfadeSamples": 353,
+        "matchedEnding": {
+          "willClipId": "ftc_022",
+          "willSha256": "8f26b99c293f74b2167ba88b7a55cd61be2ad7cd05936746052f266807c81829",
+          "finalWord": "hungry",
+          "hasToSha256": "2aadaa5ecc3447a0e9d0a32b6d6f720c3221f83370a2a3cfe7d9ab414352b983"
+        }
       }
     },
     {
@@ -20639,38 +20702,52 @@
       ],
       "src": "assets/narration/obligation_help_mom.mp3",
       "status": "verified-complete-sentence-audio-derivative",
-      "sha256": "dc79136fa1b3eabbe4d86be24d06d3a5ca339e20f5b0500bfd9303cc9a877aeb",
-      "bytes": 135462,
-      "durationSeconds": 4.205714,
+      "sha256": "fcc878e7eaf4b1cc1dfab4bc7bd614caa16f33b2c0d955d485e1aadffaeb715e",
+      "bytes": 170362,
+      "durationSeconds": 4.231837,
       "provenance": {
-        "source": "outputs/study-question-audio/natural-tiny-pause-after-to/heavy-box-has-to-corrected.wav",
-        "sourceSha256": "e2bed3406405bd582ecdedc3f5ebcd3a5f52f5fc8b4aa075336db66a7e3785e8",
-        "recipientSource": "versions/chs-marshall-forced-choice-draft-2026-10-03/assets/narration/obligation_help_mom.mp3",
-        "recipientSourceSha256": "ce91c3c7b3d65abc84777ff57ee9a6831f5e8ea72247e63c212151e260786b42",
-        "wording": "Who HAS TO help the mom in the middle pick up the heavy box?",
-        "method": "Retained the unbroken approved 'Who has to help' and entire approved 'pick up the heavy box' ending. Used the existing role-specific Evelyn recording for 'the mom in the middle'. Two 8 ms raised-cosine crossfades fall inside low-energy /p/ stop closures after the vowel of 'help' and before the release of 'pick'. No change to speech speed, pitch or amplitude.",
-        "crossfadeMilliseconds": 8.004535147392291,
-        "sourceCutSeconds": [
-          1.105,
-          2.15
-        ],
-        "recipientCutSeconds": [
-          1.66,
-          2.77
-        ],
-        "joinsRmsDBFS": [
-          [
-            -61.54,
-            -61.62
+        "openingSourceSha256": "dc79136fa1b3eabbe4d86be24d06d3a5ca339e20f5b0500bfd9303cc9a877aeb",
+        "openingSource": {
+          "source": "outputs/study-question-audio/natural-tiny-pause-after-to/heavy-box-has-to-corrected.wav",
+          "sourceSha256": "e2bed3406405bd582ecdedc3f5ebcd3a5f52f5fc8b4aa075336db66a7e3785e8",
+          "recipientSource": "versions/chs-marshall-forced-choice-draft-2026-10-03/assets/narration/obligation_help_mom.mp3",
+          "recipientSourceSha256": "ce91c3c7b3d65abc84777ff57ee9a6831f5e8ea72247e63c212151e260786b42",
+          "wording": "Who HAS TO help the mom in the middle pick up the heavy box?",
+          "method": "Retained the unbroken approved 'Who has to help' and entire approved 'pick up the heavy box' ending. Used the existing role-specific Evelyn recording for 'the mom in the middle'. Two 8 ms raised-cosine crossfades fall inside low-energy /p/ stop closures after the vowel of 'help' and before the release of 'pick'. No change to speech speed, pitch or amplitude.",
+          "crossfadeMilliseconds": 8.004535147392291,
+          "sourceCutSeconds": [
+            1.105,
+            2.15
           ],
-          [
-            -76.09,
-            -75.67
-          ]
-        ],
-        "mp3Sha256": "dc79136fa1b3eabbe4d86be24d06d3a5ca339e20f5b0500bfd9303cc9a877aeb",
-        "durationSeconds": 4.163446712018141,
-        "peakDBFS": -4.38
+          "recipientCutSeconds": [
+            1.66,
+            2.77
+          ],
+          "joinsRmsDBFS": [
+            [
+              -61.54,
+              -61.62
+            ],
+            [
+              -76.09,
+              -75.67
+            ]
+          ],
+          "mp3Sha256": "dc79136fa1b3eabbe4d86be24d06d3a5ca339e20f5b0500bfd9303cc9a877aeb",
+          "durationSeconds": 4.163446712018141,
+          "peakDBFS": -4.38
+        },
+        "edit": "Pairs use the same recording from pick through box; a raised-cosine crossfade falls in the quiet /p/ closure before pick. The corrected HAS TO help opening and original recipient phrase are retained. No time, pitch or volume changes.",
+        "sampleRate": 44100,
+        "openingCrossfadeStartSample": 97682,
+        "endingCrossfadeStartSample": 86877,
+        "crossfadeSamples": 353,
+        "matchedEnding": {
+          "willClipId": "ftc_024",
+          "willSha256": "11f2204fb5a186594ee2d9ec23007c4a5d13fd44ab88cf5f3a179c43f0f0ac13",
+          "finalWord": "box",
+          "hasToSha256": "fcc878e7eaf4b1cc1dfab4bc7bd614caa16f33b2c0d955d485e1aadffaeb715e"
+        }
       }
     },
     {
@@ -20706,7 +20783,13 @@
           }
         ],
         "method": "Approved short Who HAS TO prefix and intact action through sad from the original adult's Evelyn WILL recording, joined inside the low-energy closure before the release of /g/ in give, with a 6 ms raised-cosine crossfade. No pitch, gain, or rate alteration.",
-        "outputSha256": "5a119ac84d613fdf85b4a73a5fc64962034fb42bc4d7383ce303ceb7c7d032b8"
+        "outputSha256": "5a119ac84d613fdf85b4a73a5fc64962034fb42bc4d7383ce303ceb7c7d032b8",
+        "matchedEnding": {
+          "willClipId": "ftc_043",
+          "willSha256": "25cf60645f4e0005b992aa2c7dfecee3e14687fd7e84fa9f4e7dafbdf32c4f5f",
+          "finalWord": "sad",
+          "hasToSha256": "5a119ac84d613fdf85b4a73a5fc64962034fb42bc4d7383ce303ceb7c7d032b8"
+        }
       }
     },
     {
@@ -20722,28 +20805,42 @@
       ],
       "src": "assets/narration/obligation_food_dad.mp3",
       "status": "verified-complete-sentence-audio-derivative",
-      "sha256": "4fffce6be92265065bc8c93feb0cf63be92c2a92c85e9ec097a63a6485d769cc",
-      "bytes": 150509,
+      "sha256": "f3c0722d11cb228802b039850fc8dd7321aee4f207833b5a640690debe15da6a",
+      "bytes": 188125,
       "durationSeconds": 4.675918,
       "provenance": {
-        "sourcePrefix": "outputs/study-question-audio/natural-tiny-pause-after-to/strawberries-has-to.wav",
-        "sourcePrefixSha256": "8985d43c711074b35c14dbc203ccf6947729e601d78b114f73014055f4db0afa",
-        "sourceSuffix": "versions/chs-marshall-forced-choice-draft-2026-10-03/assets/narration/obligation_food_dad.mp3",
-        "sourceSuffixSha256": "9aa932f0b4da4f59f5eba84b747696d53e40f107a2cc4b6bc1b974d39b7d5e7e",
-        "method": "The approved child strawberries opening is preserved sample-for-sample through the post-TO pause. An 8 ms crossfade within the silent closure before give joins the full, existing recipient-specific Evelyn action clause. Speech onsets, speed and gain are preserved.",
-        "prefixGiveOnsetSec": 0.936122,
-        "suffixGiveOnsetSec": 2.3544444444444443,
-        "crossfadeMs": 8,
-        "joinPeakDbFS": -73.257,
-        "decodedWaveformCorrelations": [
-          0.9999997378923132,
-          0.9999997569046466
-        ],
-        "durationSeconds": 4.675918,
-        "decodedDurationSeconds": 4.648367346938776,
-        "peakDbFS": -4.86,
-        "sha256": "4fffce6be92265065bc8c93feb0cf63be92c2a92c85e9ec097a63a6485d769cc",
-        "bytes": 150509
+        "openingSourceSha256": "4fffce6be92265065bc8c93feb0cf63be92c2a92c85e9ec097a63a6485d769cc",
+        "openingSource": {
+          "sourcePrefix": "outputs/study-question-audio/natural-tiny-pause-after-to/strawberries-has-to.wav",
+          "sourcePrefixSha256": "8985d43c711074b35c14dbc203ccf6947729e601d78b114f73014055f4db0afa",
+          "sourceSuffix": "versions/chs-marshall-forced-choice-draft-2026-10-03/assets/narration/obligation_food_dad.mp3",
+          "sourceSuffixSha256": "9aa932f0b4da4f59f5eba84b747696d53e40f107a2cc4b6bc1b974d39b7d5e7e",
+          "method": "The approved child strawberries opening is preserved sample-for-sample through the post-TO pause. An 8 ms crossfade within the silent closure before give joins the full, existing recipient-specific Evelyn action clause. Speech onsets, speed and gain are preserved.",
+          "prefixGiveOnsetSec": 0.936122,
+          "suffixGiveOnsetSec": 2.3544444444444443,
+          "crossfadeMs": 8,
+          "joinPeakDbFS": -73.257,
+          "decodedWaveformCorrelations": [
+            0.9999997378923132,
+            0.9999997569046466
+          ],
+          "durationSeconds": 4.675918,
+          "decodedDurationSeconds": 4.648367346938776,
+          "peakDbFS": -4.86,
+          "sha256": "4fffce6be92265065bc8c93feb0cf63be92c2a92c85e9ec097a63a6485d769cc",
+          "bytes": 150509
+        },
+        "edit": "Retained the recorded HAS TO question up to the quiet /t/ closure in ‘that’. From that closure onward the entire ending is the matching WILL recording. An 8 ms raised-cosine crossfade joins silence. No gain, speed or pitch change.",
+        "sampleRate": 44100,
+        "openingCrossfadeStartSample": 146236,
+        "endingCrossfadeStartSample": 129302,
+        "crossfadeSamples": 353,
+        "matchedEnding": {
+          "willClipId": "ftc_046",
+          "willSha256": "843bb64b15aa25c07e507fe7b03eb1908019674680aaa439971ec50f85b28e5a",
+          "finalWord": "hungry",
+          "hasToSha256": "f3c0722d11cb228802b039850fc8dd7321aee4f207833b5a640690debe15da6a"
+        }
       }
     },
     {
@@ -20759,38 +20856,52 @@
       ],
       "src": "assets/narration/obligation_help_dad.mp3",
       "status": "verified-complete-sentence-audio-derivative",
-      "sha256": "91c6fc54e6868ee0033f8dcbfac3bf77d9072ce87b3566609508e19b4eea89f3",
-      "bytes": 134627,
+      "sha256": "ea1634ac8b19162f75b48c427b249d88dabfe4802f1737c0024e128314eaba9e",
+      "bytes": 168272,
       "durationSeconds": 4.179592,
       "provenance": {
-        "source": "outputs/study-question-audio/natural-tiny-pause-after-to/heavy-box-has-to-corrected.wav",
-        "sourceSha256": "e2bed3406405bd582ecdedc3f5ebcd3a5f52f5fc8b4aa075336db66a7e3785e8",
-        "recipientSource": "versions/chs-marshall-forced-choice-draft-2026-10-03/assets/narration/obligation_help_dad.mp3",
-        "recipientSourceSha256": "c4b2439b8348034b8ae8e7357b6b0ee7b0405e98c9dc3b9cadd21de913fae853",
-        "wording": "Who HAS TO help the dad in the middle pick up the heavy box?",
-        "method": "Retained the unbroken approved 'Who has to help' and entire approved 'pick up the heavy box' ending. Used the existing role-specific Evelyn recording for 'the dad in the middle'. Two 8 ms raised-cosine crossfades fall inside low-energy /p/ stop closures after the vowel of 'help' and before the release of 'pick'. No change to speech speed, pitch or amplitude.",
-        "crossfadeMilliseconds": 8.004535147392291,
-        "sourceCutSeconds": [
-          1.105,
-          2.15
-        ],
-        "recipientCutSeconds": [
-          1.66,
-          2.75
-        ],
-        "joinsRmsDBFS": [
-          [
-            -61.54,
-            -66.51
+        "openingSourceSha256": "91c6fc54e6868ee0033f8dcbfac3bf77d9072ce87b3566609508e19b4eea89f3",
+        "openingSource": {
+          "source": "outputs/study-question-audio/natural-tiny-pause-after-to/heavy-box-has-to-corrected.wav",
+          "sourceSha256": "e2bed3406405bd582ecdedc3f5ebcd3a5f52f5fc8b4aa075336db66a7e3785e8",
+          "recipientSource": "versions/chs-marshall-forced-choice-draft-2026-10-03/assets/narration/obligation_help_dad.mp3",
+          "recipientSourceSha256": "c4b2439b8348034b8ae8e7357b6b0ee7b0405e98c9dc3b9cadd21de913fae853",
+          "wording": "Who HAS TO help the dad in the middle pick up the heavy box?",
+          "method": "Retained the unbroken approved 'Who has to help' and entire approved 'pick up the heavy box' ending. Used the existing role-specific Evelyn recording for 'the dad in the middle'. Two 8 ms raised-cosine crossfades fall inside low-energy /p/ stop closures after the vowel of 'help' and before the release of 'pick'. No change to speech speed, pitch or amplitude.",
+          "crossfadeMilliseconds": 8.004535147392291,
+          "sourceCutSeconds": [
+            1.105,
+            2.15
           ],
-          [
-            -73.47,
-            -75.67
-          ]
-        ],
-        "mp3Sha256": "91c6fc54e6868ee0033f8dcbfac3bf77d9072ce87b3566609508e19b4eea89f3",
-        "durationSeconds": 4.14344671201814,
-        "peakDBFS": -4.38
+          "recipientCutSeconds": [
+            1.66,
+            2.75
+          ],
+          "joinsRmsDBFS": [
+            [
+              -61.54,
+              -66.51
+            ],
+            [
+              -73.47,
+              -75.67
+            ]
+          ],
+          "mp3Sha256": "91c6fc54e6868ee0033f8dcbfac3bf77d9072ce87b3566609508e19b4eea89f3",
+          "durationSeconds": 4.14344671201814,
+          "peakDBFS": -4.38
+        },
+        "edit": "Pairs use the same recording from pick through box; a raised-cosine crossfade falls in the quiet /p/ closure before pick. The corrected HAS TO help opening and original recipient phrase are retained. No time, pitch or volume changes.",
+        "sampleRate": 44100,
+        "openingCrossfadeStartSample": 96800,
+        "endingCrossfadeStartSample": 87098,
+        "crossfadeSamples": 353,
+        "matchedEnding": {
+          "willClipId": "ftc_048",
+          "willSha256": "a476ae19fc7473c41894f8d10c12d2182ab5b3a6cf15e49e40276c49cf078b91",
+          "finalWord": "box",
+          "hasToSha256": "ea1634ac8b19162f75b48c427b249d88dabfe4802f1737c0024e128314eaba9e"
+        }
       }
     },
     {
@@ -20826,7 +20937,13 @@
           }
         ],
         "method": "Approved short Who HAS TO prefix and intact action through sad from the original adult's Evelyn WILL recording, joined inside the low-energy closure before the release of /g/ in give, with a 6 ms raised-cosine crossfade. No pitch, gain, or rate alteration.",
-        "outputSha256": "97fa98018b81c71f64a123378088c5c505b3ce1aaf6ec96353c31a002a6182dc"
+        "outputSha256": "97fa98018b81c71f64a123378088c5c505b3ce1aaf6ec96353c31a002a6182dc",
+        "matchedEnding": {
+          "willClipId": "ftc_028",
+          "willSha256": "68231b9311a4991392faf0d6db6caf6dfbd3e61915843ee98d03452f7d8bebd4",
+          "finalWord": "sad",
+          "hasToSha256": "97fa98018b81c71f64a123378088c5c505b3ce1aaf6ec96353c31a002a6182dc"
+        }
       }
     },
     {
@@ -20842,28 +20959,42 @@
       ],
       "src": "assets/narration/obligation_food_teacher.mp3",
       "status": "verified-complete-sentence-audio-derivative",
-      "sha256": "9794ddb9dd993e580f1c2b4b7cad5316495e7c8a81e490364b089d59b0b84397",
-      "bytes": 156360,
+      "sha256": "e1e023b9ef228d2113ecd5b7c6ce7eb769bc4066418a76844ca35892413d4b2e",
+      "bytes": 195440,
       "durationSeconds": 4.858776,
       "provenance": {
-        "sourcePrefix": "outputs/study-question-audio/natural-tiny-pause-after-to/strawberries-has-to.wav",
-        "sourcePrefixSha256": "8985d43c711074b35c14dbc203ccf6947729e601d78b114f73014055f4db0afa",
-        "sourceSuffix": "versions/chs-marshall-forced-choice-draft-2026-10-03/assets/narration/obligation_food_teacher.mp3",
-        "sourceSuffixSha256": "85fa75dae818844e95a308615c6e2440ddbbed4a8e333c89b9684f31defacf86",
-        "method": "The approved child strawberries opening is preserved sample-for-sample through the post-TO pause. An 8 ms crossfade within the silent closure before give joins the full, existing recipient-specific Evelyn action clause. Speech onsets, speed and gain are preserved.",
-        "prefixGiveOnsetSec": 0.936122,
-        "suffixGiveOnsetSec": 2.3544444444444443,
-        "crossfadeMs": 8,
-        "joinPeakDbFS": -73.246,
-        "decodedWaveformCorrelations": [
-          0.9999997378923199,
-          0.999999705456061
-        ],
-        "durationSeconds": 4.858776,
-        "decodedDurationSeconds": 4.826145124716553,
-        "peakDbFS": -4.86,
-        "sha256": "9794ddb9dd993e580f1c2b4b7cad5316495e7c8a81e490364b089d59b0b84397",
-        "bytes": 156360
+        "openingSourceSha256": "9794ddb9dd993e580f1c2b4b7cad5316495e7c8a81e490364b089d59b0b84397",
+        "openingSource": {
+          "sourcePrefix": "outputs/study-question-audio/natural-tiny-pause-after-to/strawberries-has-to.wav",
+          "sourcePrefixSha256": "8985d43c711074b35c14dbc203ccf6947729e601d78b114f73014055f4db0afa",
+          "sourceSuffix": "versions/chs-marshall-forced-choice-draft-2026-10-03/assets/narration/obligation_food_teacher.mp3",
+          "sourceSuffixSha256": "85fa75dae818844e95a308615c6e2440ddbbed4a8e333c89b9684f31defacf86",
+          "method": "The approved child strawberries opening is preserved sample-for-sample through the post-TO pause. An 8 ms crossfade within the silent closure before give joins the full, existing recipient-specific Evelyn action clause. Speech onsets, speed and gain are preserved.",
+          "prefixGiveOnsetSec": 0.936122,
+          "suffixGiveOnsetSec": 2.3544444444444443,
+          "crossfadeMs": 8,
+          "joinPeakDbFS": -73.246,
+          "decodedWaveformCorrelations": [
+            0.9999997378923199,
+            0.999999705456061
+          ],
+          "durationSeconds": 4.858776,
+          "decodedDurationSeconds": 4.826145124716553,
+          "peakDbFS": -4.86,
+          "sha256": "9794ddb9dd993e580f1c2b4b7cad5316495e7c8a81e490364b089d59b0b84397",
+          "bytes": 156360
+        },
+        "edit": "Retained the recorded HAS TO question up to the quiet /t/ closure in ‘that’. From that closure onward the entire ending is the matching WILL recording. An 8 ms raised-cosine crossfade joins silence. No gain, speed or pitch change.",
+        "sampleRate": 44100,
+        "openingCrossfadeStartSample": 153954,
+        "endingCrossfadeStartSample": 135917,
+        "crossfadeSamples": 353,
+        "matchedEnding": {
+          "willClipId": "ftc_031",
+          "willSha256": "9ba6fd38789cf2a6c44e2856778005812482b81df07fce1d4f7ea62b653ba9f6",
+          "finalWord": "hungry",
+          "hasToSha256": "e1e023b9ef228d2113ecd5b7c6ce7eb769bc4066418a76844ca35892413d4b2e"
+        }
       }
     },
     {
@@ -20879,38 +21010,52 @@
       ],
       "src": "assets/narration/obligation_help_teacher.mp3",
       "status": "verified-complete-sentence-audio-derivative",
-      "sha256": "a65bbac71da9b36440c9c662e6c1e198911e18fb2bab419ea2f13771834a3987",
-      "bytes": 137970,
+      "sha256": "4143cb7580ba540774abe85be54428e778d1f6b99da47aa43815b205389a2e2b",
+      "bytes": 172452,
       "durationSeconds": 4.284082,
       "provenance": {
-        "source": "outputs/study-question-audio/natural-tiny-pause-after-to/heavy-box-has-to-corrected.wav",
-        "sourceSha256": "e2bed3406405bd582ecdedc3f5ebcd3a5f52f5fc8b4aa075336db66a7e3785e8",
-        "recipientSource": "versions/chs-marshall-forced-choice-draft-2026-10-03/assets/narration/obligation_help_teacher.mp3",
-        "recipientSourceSha256": "42aef60250f5ac4e5279a2ed122c8266c505012d38c1b21b1ffff384ab1e5fbd",
-        "wording": "Who HAS TO help the teacher in the middle pick up the heavy box?",
-        "method": "Retained the unbroken approved 'Who has to help' and entire approved 'pick up the heavy box' ending. Used the existing role-specific Evelyn recording for 'the teacher in the middle'. Two 8 ms raised-cosine crossfades fall inside low-energy /p/ stop closures after the vowel of 'help' and before the release of 'pick'. No change to speech speed, pitch or amplitude.",
-        "crossfadeMilliseconds": 8.004535147392291,
-        "sourceCutSeconds": [
-          1.105,
-          2.15
-        ],
-        "recipientCutSeconds": [
-          1.625,
-          2.82
-        ],
-        "joinsRmsDBFS": [
-          [
-            -61.54,
-            -62.95
+        "openingSourceSha256": "a65bbac71da9b36440c9c662e6c1e198911e18fb2bab419ea2f13771834a3987",
+        "openingSource": {
+          "source": "outputs/study-question-audio/natural-tiny-pause-after-to/heavy-box-has-to-corrected.wav",
+          "sourceSha256": "e2bed3406405bd582ecdedc3f5ebcd3a5f52f5fc8b4aa075336db66a7e3785e8",
+          "recipientSource": "versions/chs-marshall-forced-choice-draft-2026-10-03/assets/narration/obligation_help_teacher.mp3",
+          "recipientSourceSha256": "42aef60250f5ac4e5279a2ed122c8266c505012d38c1b21b1ffff384ab1e5fbd",
+          "wording": "Who HAS TO help the teacher in the middle pick up the heavy box?",
+          "method": "Retained the unbroken approved 'Who has to help' and entire approved 'pick up the heavy box' ending. Used the existing role-specific Evelyn recording for 'the teacher in the middle'. Two 8 ms raised-cosine crossfades fall inside low-energy /p/ stop closures after the vowel of 'help' and before the release of 'pick'. No change to speech speed, pitch or amplitude.",
+          "crossfadeMilliseconds": 8.004535147392291,
+          "sourceCutSeconds": [
+            1.105,
+            2.15
           ],
-          [
-            -73.4,
-            -75.67
-          ]
-        ],
-        "mp3Sha256": "a65bbac71da9b36440c9c662e6c1e198911e18fb2bab419ea2f13771834a3987",
-        "durationSeconds": 4.248458049886621,
-        "peakDBFS": -4.38
+          "recipientCutSeconds": [
+            1.625,
+            2.82
+          ],
+          "joinsRmsDBFS": [
+            [
+              -61.54,
+              -62.95
+            ],
+            [
+              -73.4,
+              -75.67
+            ]
+          ],
+          "mp3Sha256": "a65bbac71da9b36440c9c662e6c1e198911e18fb2bab419ea2f13771834a3987",
+          "durationSeconds": 4.248458049886621,
+          "peakDBFS": -4.38
+        },
+        "edit": "Pairs use the same recording from pick through box; a raised-cosine crossfade falls in the quiet /p/ closure before pick. The corrected HAS TO help opening and original recipient phrase are retained. No time, pitch or volume changes.",
+        "sampleRate": 44100,
+        "openingCrossfadeStartSample": 101430,
+        "endingCrossfadeStartSample": 89082,
+        "crossfadeSamples": 353,
+        "matchedEnding": {
+          "willClipId": "ftc_033",
+          "willSha256": "f660e65800fbc30769b7a1258b2d6dd4271bae8411f9dc910e9cbe1ecf5c6a11",
+          "finalWord": "box",
+          "hasToSha256": "4143cb7580ba540774abe85be54428e778d1f6b99da47aa43815b205389a2e2b"
+        }
       }
     }
   ],

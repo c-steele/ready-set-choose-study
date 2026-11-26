@@ -31,6 +31,16 @@ for (const set of ['woman', 'man', 'family', 'all']) for(const care of ['hug','f
       assert.deepEqual(early.map(s => s.localId), expected);
       assert.deepEqual(early.map(s => s.questionPosition), [1, 2]);
       assert.equal(story[need + 3].localId, 'outcome-summary');
+      const prediction = early.find(step => step.localId === 'predict-compare');
+      const obligation = early.find(step => step.localId === 'obligation-compare');
+      const willClip = clips[manifest.screens[prediction.id].carePrompts[care]];
+      const hasToClip = clips[manifest.screens[obligation.id].carePrompts[care]];
+      assert.deepEqual(hasToClip.provenance.matchedEnding, {
+        willClipId: willClip.id,
+        willSha256: willClip.sha256,
+        hasToSha256: hasToClip.sha256,
+        finalWord: {hug: 'sad', food: 'hungry', help: 'box'}[care]
+      }, obligation.id);
       for (const step of early) {
         const screen = manifest.screens[step.id];
         assert.equal(clips[screen.carePrompts?.[care] || screen.prompt].text, step.text);
