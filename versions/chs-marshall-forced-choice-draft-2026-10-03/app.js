@@ -469,7 +469,12 @@
     $('pairing-list').querySelectorAll('[data-story]').forEach(b=>b.addEventListener('click',()=>goTo(steps.findIndex(s=>s.pairing?.id===b.dataset.story))));
     jump.innerHTML=session.pairings.map((p,i)=>`<optgroup label="Story ${i+1} · ${esc(p.label)}">${steps.filter(s=>s.pairing?.id===p.id).map((s,n)=>`<option value="${s.id}">${n+1} · ${esc(s.phase)}${s.when||s.unless?' (conditional)':''}</option>`).join('')}</optgroup>`).join('')+'<option value="session-end">Session end</option>';
     $('story-jump').innerHTML=session.pairings.map((p,i)=>`<option value="${p.id}">${i+1} · ${esc(p.label)}</option>`).join('')+'<option value="end">Session end</option>';
-    if(downloadUrl)URL.revokeObjectURL(downloadUrl);downloadUrl=URL.createObjectURL(new Blob([ObligationSession.toMarkdown(session)],{type:'text/markdown'}));$('download-script').href=downloadUrl;$('download-script').download=`forced-choice-${session.setId}-${session.care}-${session.questionOrder}.md`;
+    if(downloadUrl) URL.revokeObjectURL(downloadUrl);
+    downloadUrl=URL.createObjectURL(new Blob([ObligationSession.toMarkdown(session)],{type:'text/markdown'}));
+    for(const link of [$('download-script'), $('download-session-narration')]){
+      link.href=downloadUrl;
+      link.download=`forced-choice-${session.setId}-${session.care}-${session.questionOrder}.md`;
+    }
   }
   function resetRun(){chsBridge?.reset();stopNarration();narrationEnabled=true;choiceConfirmation=null;correctFeedbackState=null;screenHeard=false;optionReader?.dispose();optionReader=null;index=0;answers={};history=[];recallReplays={};wrong=null;elapsed=0;started=null;timerUsed=false;incomplete=false;completed=false;showBoard(false);render();updateTimer();}
   function configure(){
