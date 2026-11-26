@@ -79,16 +79,24 @@ for (const set of ['woman', 'man', 'family', 'all']) for(const care of ['hug','f
   }
 }
 assert.equal(api.build('woman').questionOrder, 'will-first');
-// The same reminder of hunger belongs to both food questions, whoever is in the middle.
+// Every obligation recording must match the WILL wording after the modal,
+// including the person in the middle and the cue about the child's need.
 for (const recipient of ['kid', 'mom', 'dad', 'teacher']) {
-  const id = `obligation_food_${recipient}`;
-  const clip = clips[id];
-  assert.equal(clip.text, `Who do you think HAS TO give the ${recipient} in the middle strawberries now that they're hungry?`);
-  const bytes = fs.readFileSync(path.join(__dirname, '..', clip.src));
-  assert.equal(createHash('sha256').update(bytes).digest('hex'), clip.sha256, id);
-  assert.equal(cues[id].sha256, clip.sha256, id);
-  assert.equal(cues[id].expectedText, clip.text, id);
-  assert.equal(cues[id].words.at(-1).word.toLowerCase().replace(/[^a-z]/g, ''), 'hungry', id);
+  for (const care of ['hug', 'food', 'help']) {
+    const id = `obligation_${care}_${recipient}`;
+    const clip = clips[id];
+    const text = {
+      hug: `Who HAS TO give the ${recipient} in the middle a hug now that they're sad?`,
+      food: `Who HAS TO give the ${recipient} in the middle strawberries now that they're hungry?`,
+      help: `Who HAS TO help the ${recipient} in the middle pick up the heavy box?`
+    }[care];
+    assert.equal(clip.text, text, id);
+    const bytes = fs.readFileSync(path.join(__dirname, '..', clip.src));
+    assert.equal(createHash('sha256').update(bytes).digest('hex'), clip.sha256, id);
+    assert.equal(cues[id].sha256, clip.sha256, id);
+    assert.equal(cues[id].expectedText, text, id);
+    assert.equal(cues[id].exactNormalizedWordMatch, true, id);
+  }
 }
 for (const legacy of ['once','each','none']) assert.equal(api.build('woman',legacy).questionOrder,'will-first');
 assert.throws(()=>api.build('woman','wrong-order'), /Unknown question order/);

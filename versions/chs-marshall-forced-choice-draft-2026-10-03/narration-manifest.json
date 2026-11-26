@@ -110,7 +110,8 @@
     "r54: Only NOT is slower in the four Who was meaner questions, including kid and adult recipients. Existing Evelyn Soft voice, wording and surrounding audio pace are retained. No pause or volume change. New files and spoken-word cues passed exact full-sentence recognition.",
     "r56: Incorrect recall responses replay the original nonhelping outcome screens, then ask the recall question again until No. The small correction/reminder is no longer used. Every helper receives one four-option meanness scale, including Not mean; the other helper receives this scale after either Mean or Not Mean. Original verified option recordings are reused with the new option order.",
     "r61: The twelve care-specific obligation questions retain their original full recordings, with only the vowel of HAS lengthened approximately 60 ms. No added pause or gain. Whisper transcribed HAS TO correctly in all twelve and the entire sentence exactly in eleven. For the mom/strawberries question, Whisper interpreted one later preposition the same way in both the untouched take and the revision.",
-    "The food obligation recordings repeat the hunger reminder used in the prediction questions. All four use the reviewed opening and a fresh continuous recording of the complete recipient-specific action and hunger reminder. The resulting gaps before HAS and before give are approximately 0.17 and 0.18 seconds. Independent speech recognition matched all four questions."
+    "The food obligation recordings repeat the hunger reminder used in the prediction questions. All four use the reviewed opening and a fresh continuous recording of the complete recipient-specific action and hunger reminder. The resulting gaps before HAS and before give are approximately 0.17 and 0.18 seconds. Independent speech recognition matched all four questions.",
+    "The current obligation prompts use the direct Who HAS TO opening. Hug and food repeat the need stated in the corresponding prediction prompt. Each recording names the recipient in its own scene."
   ],
   "clips": [
     {
@@ -20275,7 +20276,7 @@
     },
     {
       "id": "obligation_hug_kid",
-      "text": "Who do you think HAS TO give the kid in the middle a hug?",
+      "text": "Who HAS TO give the kid in the middle a hug now that they're sad?",
       "kind": "prompt",
       "uses": [
         {
@@ -20355,22 +20356,20 @@
         }
       ],
       "src": "assets/narration/obligation_hug_kid.mp3",
-      "status": "verified-source-recording",
-      "sha256": "14187805a5c8ac671b09846f9355b09279702e730e82604bfb13ef81551ce9f5",
-      "bytes": 156778,
-      "durationSeconds": 3.892245,
+      "status": "verified-complete-sentence-audio-derivative",
+      "sha256": "03c491252aedbca708716659e63238f2c14ad7e059a5c143733b04f4583c84a2",
+      "bytes": 133791,
+      "durationSeconds": 4.153469,
       "provenance": {
-        "source": "Full question recorded in NaturalReaders Commercial, Evelyn Soft.",
-        "sourceSha256": "b24910b15fbc85e1f1e6209f5b7fe38fa998ab77f4928b0c8e605550ee728213",
-        "edit": "Added about 60 ms inside the voiced vowel of has, using pitch-synchronous interpolation between adjacent original cycles. Original amplitude and inter-word spacing retained. PCM from the end of that vowel through the entire remainder of the question is untouched.",
-        "vowelExtensionSeconds": 0.061905,
-        "originalPhraseSeconds": 0.4,
-        "revisedPhraseSeconds": 0.4619
+        "voice": "NaturalReaders Commercial, Evelyn Soft.",
+        "source": "hug-has-to.wav",
+        "sourceSha256": "ae164a476dec7a4d22d098daed3c3f3d1f930c7206be8124d13bef4b81c7798e",
+        "edit": "Encoded from the approved complete child-recipient WAV."
       }
     },
     {
       "id": "obligation_food_kid",
-      "text": "Who do you think HAS TO give the kid in the middle strawberries now that they're hungry?",
+      "text": "Who HAS TO give the kid in the middle strawberries now that they're hungry?",
       "kind": "prompt",
       "uses": [
         {
@@ -20451,22 +20450,19 @@
       ],
       "src": "assets/narration/obligation_food_kid.mp3",
       "status": "verified-complete-sentence-audio-derivative",
-      "sha256": "9377959196b9ffc9d83747572c3eb4e8e56d0497fe8807912996bb93e367fbaf",
-      "bytes": 245595,
-      "durationSeconds": 6.112653,
+      "sha256": "62a12420b40efcf5f70e2366c4fdd1101460be11c2349b632ab631e3453d6b95",
+      "bytes": 151345,
+      "durationSeconds": 4.702041,
       "provenance": {
         "voice": "NaturalReaders Commercial, Evelyn Soft.",
-        "source": "The reviewed obligation opening and a newly recorded full food question for this recipient.",
-        "openingSha256": "de8dc9d7ef149fd73f8f1141b089feb7bdb7a34e5deb24ae8ef6b26b91797bc1",
-        "fullQuestionSha256": "96fea84a330b84ddc056b986234783bac6244d7135d441cde2457c9428e27211",
-        "edit": "Approved slower HAS and TO and both shortened pauses; the full action phrase, from give through hungry, is from the newly recorded full question in NaturalReaders Commercial, Evelyn Soft, 0.90x. An 8 ms crossfade inside the silent gap before give joins the approved opening and the fresh take. No action-phrase speed or gain change.",
-        "pauseBeforeHasSeconds": 0.167755,
-        "pauseBeforeGiveSeconds": 0.177982
+        "source": "strawberries-has-to.wav",
+        "sourceSha256": "8985d43c711074b35c14dbc203ccf6947729e601d78b114f73014055f4db0afa",
+        "edit": "Encoded from the approved complete child-recipient WAV."
       }
     },
     {
       "id": "obligation_help_kid",
-      "text": "Who do you think HAS TO help the kid in the middle pick up the heavy box?",
+      "text": "Who HAS TO help the kid in the middle pick up the heavy box?",
       "kind": "prompt",
       "uses": [
         {
@@ -20546,22 +20542,20 @@
         }
       ],
       "src": "assets/narration/obligation_help_kid.mp3",
-      "status": "verified-source-recording",
-      "sha256": "234af3d8396cd3686d82988a4d4c508791e8fa9383a7b24b2627aecd4ddf4138",
-      "bytes": 188125,
-      "durationSeconds": 4.675918,
+      "status": "verified-complete-sentence-audio-derivative",
+      "sha256": "60b4c34f0bedcceab1deac97634ce0bb1ac06d13729c8a551fdee6322bf9ad9c",
+      "bytes": 132955,
+      "durationSeconds": 4.127347,
       "provenance": {
-        "source": "Full question recorded in NaturalReaders Commercial, Evelyn Soft.",
-        "sourceSha256": "3e3d4438db158bb9360e08292ad49899a7db63b2dfff9ac3d2960c83fd2f2aed",
-        "edit": "Added about 60 ms inside the voiced vowel of has, using pitch-synchronous interpolation between adjacent original cycles. Original amplitude and inter-word spacing retained. PCM from the end of that vowel through the entire remainder of the question is untouched.",
-        "vowelExtensionSeconds": 0.060839,
-        "originalPhraseSeconds": 0.34,
-        "revisedPhraseSeconds": 0.4008
+        "voice": "NaturalReaders Commercial, Evelyn Soft.",
+        "source": "heavy-box-has-to-corrected.wav",
+        "sourceSha256": "e2bed3406405bd582ecdedc3f5ebcd3a5f52f5fc8b4aa075336db66a7e3785e8",
+        "edit": "Encoded from the approved complete child-recipient WAV."
       }
     },
     {
       "id": "obligation_hug_mom",
-      "text": "Who do you think HAS TO give the mom in the middle a hug?",
+      "text": "Who HAS TO give the mom in the middle a hug now that they're sad?",
       "kind": "prompt",
       "uses": [
         {
@@ -20571,22 +20565,33 @@
         }
       ],
       "src": "assets/narration/obligation_hug_mom.mp3",
-      "status": "verified-source-recording",
-      "sha256": "d185885a20a2edbede6e522ed06309a631e056746f6915f6ca5fe9dd797d177c",
-      "bytes": 156778,
-      "durationSeconds": 3.892245,
+      "status": "verified-complete-sentence-audio-derivative",
+      "sha256": "729285d1948bf8337004e191396e0d3aabe864c4ba93369846704ded3bc643fe",
+      "bytes": 166182,
+      "durationSeconds": 4.127347,
       "provenance": {
-        "source": "Full question recorded in NaturalReaders Commercial, Evelyn Soft.",
-        "sourceSha256": "57e4fb77422650abb62cff889c14263e1e345a087507bbeda71d89838a6831cc",
-        "edit": "Added about 60 ms inside the voiced vowel of has, using pitch-synchronous interpolation between adjacent original cycles. Original amplitude and inter-word spacing retained. PCM from the end of that vowel through the entire remainder of the question is untouched.",
-        "vowelExtensionSeconds": 0.063129,
-        "originalPhraseSeconds": 0.38,
-        "revisedPhraseSeconds": 0.4431
+        "text": "Who HAS TO give the mom in the middle a hug now that they're sad?",
+        "sources": [
+          {
+            "file": "outputs/study-question-audio/natural-tiny-pause-after-to/hug-has-to.wav",
+            "sha256": "ae164a476dec7a4d22d098daed3c3f3d1f930c7206be8124d13bef4b81c7798e",
+            "start": 0,
+            "end": 0.878
+          },
+          {
+            "file": "audio_evelyn/ftc_019_story_question_04_who_will_give_the_mom_in_the_middle_a_hug_now_that_theyre_sad.mp3",
+            "sha256": "99c400c5cb6cb12403f3f73a6a410910662db07af12e7db6b93465b18ea18a44",
+            "start": 0.62,
+            "end": "end"
+          }
+        ],
+        "method": "Approved short Who HAS TO prefix and intact action through sad from the original adult's Evelyn WILL recording, joined inside the low-energy closure before the release of /g/ in give, with a 6 ms raised-cosine crossfade. No pitch, gain, or rate alteration.",
+        "outputSha256": "729285d1948bf8337004e191396e0d3aabe864c4ba93369846704ded3bc643fe"
       }
     },
     {
       "id": "obligation_food_mom",
-      "text": "Who do you think HAS TO give the mom in the middle strawberries now that they're hungry?",
+      "text": "Who HAS TO give the mom in the middle strawberries now that they're hungry?",
       "kind": "prompt",
       "uses": [
         {
@@ -20597,22 +20602,33 @@
       ],
       "src": "assets/narration/obligation_food_mom.mp3",
       "status": "verified-complete-sentence-audio-derivative",
-      "sha256": "dc3b5b1519ff4407c8e8d9914a40ab24688faf5600e9afd7c86834bf42ca306d",
-      "bytes": 247685,
-      "durationSeconds": 6.164898,
+      "sha256": "6d7c8f73eb02c51b6a4809f1815afa2e8c3453a600ab41f4fcae2c2756433fd4",
+      "bytes": 152181,
+      "durationSeconds": 4.728163,
       "provenance": {
-        "voice": "NaturalReaders Commercial, Evelyn Soft.",
-        "source": "The reviewed obligation opening and a newly recorded full food question for this recipient.",
-        "openingSha256": "de8dc9d7ef149fd73f8f1141b089feb7bdb7a34e5deb24ae8ef6b26b91797bc1",
-        "fullQuestionSha256": "8bff823ee474cbb22fa6126861c18d998c4ae91d837bf15df57a81f84ccfad95",
-        "edit": "Approved slower HAS and TO and both shortened pauses; the full action phrase, from give through hungry, is from the newly recorded full question in NaturalReaders Commercial, Evelyn Soft, 0.90x. An 8 ms crossfade inside the silent gap before give joins the approved opening and the fresh take. No action-phrase speed or gain change.",
-        "pauseBeforeHasSeconds": 0.167755,
-        "pauseBeforeGiveSeconds": 0.177982
+        "sourcePrefix": "outputs/study-question-audio/natural-tiny-pause-after-to/strawberries-has-to.wav",
+        "sourcePrefixSha256": "8985d43c711074b35c14dbc203ccf6947729e601d78b114f73014055f4db0afa",
+        "sourceSuffix": "versions/chs-marshall-forced-choice-draft-2026-10-03/assets/narration/obligation_food_mom.mp3",
+        "sourceSuffixSha256": "dc3b5b1519ff4407c8e8d9914a40ab24688faf5600e9afd7c86834bf42ca306d",
+        "method": "The approved child strawberries opening is preserved sample-for-sample through the post-TO pause. An 8 ms crossfade within the silent closure before give joins the full, existing recipient-specific Evelyn action clause. Speech onsets, speed and gain are preserved.",
+        "prefixGiveOnsetSec": 0.936122,
+        "suffixGiveOnsetSec": 2.3544444444444443,
+        "crossfadeMs": 8,
+        "joinPeakDbFS": -73.568,
+        "decodedWaveformCorrelations": [
+          0.9999997378923103,
+          0.9999998224449502
+        ],
+        "durationSeconds": 4.728163,
+        "decodedDurationSeconds": 4.700884353741497,
+        "peakDbFS": -4.86,
+        "sha256": "6d7c8f73eb02c51b6a4809f1815afa2e8c3453a600ab41f4fcae2c2756433fd4",
+        "bytes": 152181
       }
     },
     {
       "id": "obligation_help_mom",
-      "text": "Who do you think HAS TO help the mom in the middle pick up the heavy box?",
+      "text": "Who HAS TO help the mom in the middle pick up the heavy box?",
       "kind": "prompt",
       "uses": [
         {
@@ -20622,22 +20638,44 @@
         }
       ],
       "src": "assets/narration/obligation_help_mom.mp3",
-      "status": "verified-source-recording",
-      "sha256": "ce91c3c7b3d65abc84777ff57ee9a6831f5e8ea72247e63c212151e260786b42",
-      "bytes": 190215,
-      "durationSeconds": 4.728163,
+      "status": "verified-complete-sentence-audio-derivative",
+      "sha256": "dc79136fa1b3eabbe4d86be24d06d3a5ca339e20f5b0500bfd9303cc9a877aeb",
+      "bytes": 135462,
+      "durationSeconds": 4.205714,
       "provenance": {
-        "source": "Full question recorded in NaturalReaders Commercial, Evelyn Soft.",
-        "sourceSha256": "cbc9c9127e694fa0d30076585d4dae757c2fd6b1d510792f4edac293323e22e4",
-        "edit": "Added about 60 ms inside the voiced vowel of has, using pitch-synchronous interpolation between adjacent original cycles. Original amplitude and inter-word spacing retained. PCM from the end of that vowel through the entire remainder of the question is untouched.",
-        "vowelExtensionSeconds": 0.060544,
-        "originalPhraseSeconds": 0.36,
-        "revisedPhraseSeconds": 0.4205
+        "source": "outputs/study-question-audio/natural-tiny-pause-after-to/heavy-box-has-to-corrected.wav",
+        "sourceSha256": "e2bed3406405bd582ecdedc3f5ebcd3a5f52f5fc8b4aa075336db66a7e3785e8",
+        "recipientSource": "versions/chs-marshall-forced-choice-draft-2026-10-03/assets/narration/obligation_help_mom.mp3",
+        "recipientSourceSha256": "ce91c3c7b3d65abc84777ff57ee9a6831f5e8ea72247e63c212151e260786b42",
+        "wording": "Who HAS TO help the mom in the middle pick up the heavy box?",
+        "method": "Retained the unbroken approved 'Who has to help' and entire approved 'pick up the heavy box' ending. Used the existing role-specific Evelyn recording for 'the mom in the middle'. Two 8 ms raised-cosine crossfades fall inside low-energy /p/ stop closures after the vowel of 'help' and before the release of 'pick'. No change to speech speed, pitch or amplitude.",
+        "crossfadeMilliseconds": 8.004535147392291,
+        "sourceCutSeconds": [
+          1.105,
+          2.15
+        ],
+        "recipientCutSeconds": [
+          1.66,
+          2.77
+        ],
+        "joinsRmsDBFS": [
+          [
+            -61.54,
+            -61.62
+          ],
+          [
+            -76.09,
+            -75.67
+          ]
+        ],
+        "mp3Sha256": "dc79136fa1b3eabbe4d86be24d06d3a5ca339e20f5b0500bfd9303cc9a877aeb",
+        "durationSeconds": 4.163446712018141,
+        "peakDBFS": -4.38
       }
     },
     {
       "id": "obligation_hug_dad",
-      "text": "Who do you think HAS TO give the dad in the middle a hug?",
+      "text": "Who HAS TO give the dad in the middle a hug now that they're sad?",
       "kind": "prompt",
       "uses": [
         {
@@ -20647,22 +20685,33 @@
         }
       ],
       "src": "assets/narration/obligation_hug_dad.mp3",
-      "status": "verified-source-recording",
-      "sha256": "c57afaab537642e423c05d79906bf5ac8c9ef5687201d7dd7e8461b41cfe4a54",
-      "bytes": 154689,
-      "durationSeconds": 3.84,
+      "status": "verified-complete-sentence-audio-derivative",
+      "sha256": "5a119ac84d613fdf85b4a73a5fc64962034fb42bc4d7383ce303ceb7c7d032b8",
+      "bytes": 165138,
+      "durationSeconds": 4.101224,
       "provenance": {
-        "source": "Full question recorded in NaturalReaders Commercial, Evelyn Soft.",
-        "sourceSha256": "7514a36f63183c1974c3b67563f50e7aec0833adae50e5634a5ae7a983f3ae51",
-        "edit": "Added about 60 ms inside the voiced vowel of has, using pitch-synchronous interpolation between adjacent original cycles. Original amplitude and inter-word spacing retained. PCM from the end of that vowel through the entire remainder of the question is untouched.",
-        "vowelExtensionSeconds": 0.063311,
-        "originalPhraseSeconds": 0.38,
-        "revisedPhraseSeconds": 0.4433
+        "text": "Who HAS TO give the dad in the middle a hug now that they're sad?",
+        "sources": [
+          {
+            "file": "outputs/study-question-audio/natural-tiny-pause-after-to/hug-has-to.wav",
+            "sha256": "ae164a476dec7a4d22d098daed3c3f3d1f930c7206be8124d13bef4b81c7798e",
+            "start": 0,
+            "end": 0.878
+          },
+          {
+            "file": "audio_evelyn/ftc_043_story_question_10_who_will_give_the_dad_in_the_middle_a_hug_now_that_theyre_sad.mp3",
+            "sha256": "25cf60645f4e0005b992aa2c7dfecee3e14687fd7e84fa9f4e7dafbdf32c4f5f",
+            "start": 0.62,
+            "end": "end"
+          }
+        ],
+        "method": "Approved short Who HAS TO prefix and intact action through sad from the original adult's Evelyn WILL recording, joined inside the low-energy closure before the release of /g/ in give, with a 6 ms raised-cosine crossfade. No pitch, gain, or rate alteration.",
+        "outputSha256": "5a119ac84d613fdf85b4a73a5fc64962034fb42bc4d7383ce303ceb7c7d032b8"
       }
     },
     {
       "id": "obligation_food_dad",
-      "text": "Who do you think HAS TO give the dad in the middle strawberries now that they're hungry?",
+      "text": "Who HAS TO give the dad in the middle strawberries now that they're hungry?",
       "kind": "prompt",
       "uses": [
         {
@@ -20673,22 +20722,33 @@
       ],
       "src": "assets/narration/obligation_food_dad.mp3",
       "status": "verified-complete-sentence-audio-derivative",
-      "sha256": "9aa932f0b4da4f59f5eba84b747696d53e40f107a2cc4b6bc1b974d39b7d5e7e",
-      "bytes": 245595,
-      "durationSeconds": 6.112653,
+      "sha256": "4fffce6be92265065bc8c93feb0cf63be92c2a92c85e9ec097a63a6485d769cc",
+      "bytes": 150509,
+      "durationSeconds": 4.675918,
       "provenance": {
-        "voice": "NaturalReaders Commercial, Evelyn Soft.",
-        "source": "The reviewed obligation opening and a newly recorded full food question for this recipient.",
-        "openingSha256": "de8dc9d7ef149fd73f8f1141b089feb7bdb7a34e5deb24ae8ef6b26b91797bc1",
-        "fullQuestionSha256": "2f8e81ebf2387a1e116e844ff14111f847c1f306103122228f57eb308a39fa10",
-        "edit": "Approved slower HAS and TO and both shortened pauses; the full action phrase, from give through hungry, is from the newly recorded full question in NaturalReaders Commercial, Evelyn Soft, 0.90x. An 8 ms crossfade inside the silent gap before give joins the approved opening and the fresh take. No action-phrase speed or gain change.",
-        "pauseBeforeHasSeconds": 0.167755,
-        "pauseBeforeGiveSeconds": 0.177982
+        "sourcePrefix": "outputs/study-question-audio/natural-tiny-pause-after-to/strawberries-has-to.wav",
+        "sourcePrefixSha256": "8985d43c711074b35c14dbc203ccf6947729e601d78b114f73014055f4db0afa",
+        "sourceSuffix": "versions/chs-marshall-forced-choice-draft-2026-10-03/assets/narration/obligation_food_dad.mp3",
+        "sourceSuffixSha256": "9aa932f0b4da4f59f5eba84b747696d53e40f107a2cc4b6bc1b974d39b7d5e7e",
+        "method": "The approved child strawberries opening is preserved sample-for-sample through the post-TO pause. An 8 ms crossfade within the silent closure before give joins the full, existing recipient-specific Evelyn action clause. Speech onsets, speed and gain are preserved.",
+        "prefixGiveOnsetSec": 0.936122,
+        "suffixGiveOnsetSec": 2.3544444444444443,
+        "crossfadeMs": 8,
+        "joinPeakDbFS": -73.257,
+        "decodedWaveformCorrelations": [
+          0.9999997378923132,
+          0.9999997569046466
+        ],
+        "durationSeconds": 4.675918,
+        "decodedDurationSeconds": 4.648367346938776,
+        "peakDbFS": -4.86,
+        "sha256": "4fffce6be92265065bc8c93feb0cf63be92c2a92c85e9ec097a63a6485d769cc",
+        "bytes": 150509
       }
     },
     {
       "id": "obligation_help_dad",
-      "text": "Who do you think HAS TO help the dad in the middle pick up the heavy box?",
+      "text": "Who HAS TO help the dad in the middle pick up the heavy box?",
       "kind": "prompt",
       "uses": [
         {
@@ -20698,22 +20758,44 @@
         }
       ],
       "src": "assets/narration/obligation_help_dad.mp3",
-      "status": "verified-source-recording",
-      "sha256": "c4b2439b8348034b8ae8e7357b6b0ee7b0405e98c9dc3b9cadd21de913fae853",
-      "bytes": 189170,
-      "durationSeconds": 4.702041,
+      "status": "verified-complete-sentence-audio-derivative",
+      "sha256": "91c6fc54e6868ee0033f8dcbfac3bf77d9072ce87b3566609508e19b4eea89f3",
+      "bytes": 134627,
+      "durationSeconds": 4.179592,
       "provenance": {
-        "source": "Full question recorded in NaturalReaders Commercial, Evelyn Soft.",
-        "sourceSha256": "427c59a5806078667214e935916fb96c084a9c0be83a2111f20822e14904bb3a",
-        "edit": "Added about 60 ms inside the voiced vowel of has, using pitch-synchronous interpolation between adjacent original cycles. Original amplitude and inter-word spacing retained. PCM from the end of that vowel through the entire remainder of the question is untouched.",
-        "vowelExtensionSeconds": 0.060862,
-        "originalPhraseSeconds": 0.34,
-        "revisedPhraseSeconds": 0.4009
+        "source": "outputs/study-question-audio/natural-tiny-pause-after-to/heavy-box-has-to-corrected.wav",
+        "sourceSha256": "e2bed3406405bd582ecdedc3f5ebcd3a5f52f5fc8b4aa075336db66a7e3785e8",
+        "recipientSource": "versions/chs-marshall-forced-choice-draft-2026-10-03/assets/narration/obligation_help_dad.mp3",
+        "recipientSourceSha256": "c4b2439b8348034b8ae8e7357b6b0ee7b0405e98c9dc3b9cadd21de913fae853",
+        "wording": "Who HAS TO help the dad in the middle pick up the heavy box?",
+        "method": "Retained the unbroken approved 'Who has to help' and entire approved 'pick up the heavy box' ending. Used the existing role-specific Evelyn recording for 'the dad in the middle'. Two 8 ms raised-cosine crossfades fall inside low-energy /p/ stop closures after the vowel of 'help' and before the release of 'pick'. No change to speech speed, pitch or amplitude.",
+        "crossfadeMilliseconds": 8.004535147392291,
+        "sourceCutSeconds": [
+          1.105,
+          2.15
+        ],
+        "recipientCutSeconds": [
+          1.66,
+          2.75
+        ],
+        "joinsRmsDBFS": [
+          [
+            -61.54,
+            -66.51
+          ],
+          [
+            -73.47,
+            -75.67
+          ]
+        ],
+        "mp3Sha256": "91c6fc54e6868ee0033f8dcbfac3bf77d9072ce87b3566609508e19b4eea89f3",
+        "durationSeconds": 4.14344671201814,
+        "peakDBFS": -4.38
       }
     },
     {
       "id": "obligation_hug_teacher",
-      "text": "Who do you think HAS TO give the teacher in the middle a hug?",
+      "text": "Who HAS TO give the teacher in the middle a hug now that they're sad?",
       "kind": "prompt",
       "uses": [
         {
@@ -20723,22 +20805,33 @@
         }
       ],
       "src": "assets/narration/obligation_hug_teacher.mp3",
-      "status": "verified-source-recording",
-      "sha256": "ae8460eaa8111ad83a02628cc66c1b43941044bce3a2d691502ea1f3e442d0d1",
-      "bytes": 157823,
-      "durationSeconds": 3.918367,
+      "status": "verified-complete-sentence-audio-derivative",
+      "sha256": "97fa98018b81c71f64a123378088c5c505b3ce1aaf6ec96353c31a002a6182dc",
+      "bytes": 170362,
+      "durationSeconds": 4.231837,
       "provenance": {
-        "source": "Full question recorded in NaturalReaders Commercial, Evelyn Soft.",
-        "sourceSha256": "48f8f27929d0d28433d0f7c608b3cfc8c9407286af8d91c77c744245122e8be9",
-        "edit": "Added about 60 ms inside the voiced vowel of has, using pitch-synchronous interpolation between adjacent original cycles. Original amplitude and inter-word spacing retained. PCM from the end of that vowel through the entire remainder of the question is untouched.",
-        "vowelExtensionSeconds": 0.060952,
-        "originalPhraseSeconds": 0.38,
-        "revisedPhraseSeconds": 0.441
+        "text": "Who HAS TO give the teacher in the middle a hug now that they're sad?",
+        "sources": [
+          {
+            "file": "outputs/study-question-audio/natural-tiny-pause-after-to/hug-has-to.wav",
+            "sha256": "ae164a476dec7a4d22d098daed3c3f3d1f930c7206be8124d13bef4b81c7798e",
+            "start": 0,
+            "end": 0.878
+          },
+          {
+            "file": "audio_evelyn/ftc_028_story_question_07_who_will_give_the_teacher_in_the_middle_a_hug_now_that_theyre.mp3",
+            "sha256": "68231b9311a4991392faf0d6db6caf6dfbd3e61915843ee98d03452f7d8bebd4",
+            "start": 0.62,
+            "end": "end"
+          }
+        ],
+        "method": "Approved short Who HAS TO prefix and intact action through sad from the original adult's Evelyn WILL recording, joined inside the low-energy closure before the release of /g/ in give, with a 6 ms raised-cosine crossfade. No pitch, gain, or rate alteration.",
+        "outputSha256": "97fa98018b81c71f64a123378088c5c505b3ce1aaf6ec96353c31a002a6182dc"
       }
     },
     {
       "id": "obligation_food_teacher",
-      "text": "Who do you think HAS TO give the teacher in the middle strawberries now that they're hungry?",
+      "text": "Who HAS TO give the teacher in the middle strawberries now that they're hungry?",
       "kind": "prompt",
       "uses": [
         {
@@ -20749,22 +20842,33 @@
       ],
       "src": "assets/narration/obligation_food_teacher.mp3",
       "status": "verified-complete-sentence-audio-derivative",
-      "sha256": "85fa75dae818844e95a308615c6e2440ddbbed4a8e333c89b9684f31defacf86",
-      "bytes": 252909,
-      "durationSeconds": 6.29551,
+      "sha256": "9794ddb9dd993e580f1c2b4b7cad5316495e7c8a81e490364b089d59b0b84397",
+      "bytes": 156360,
+      "durationSeconds": 4.858776,
       "provenance": {
-        "voice": "NaturalReaders Commercial, Evelyn Soft.",
-        "source": "The reviewed obligation opening and a newly recorded full food question for this recipient.",
-        "openingSha256": "de8dc9d7ef149fd73f8f1141b089feb7bdb7a34e5deb24ae8ef6b26b91797bc1",
-        "fullQuestionSha256": "30630580db24f251c9353b722ce726199e1fa51d839b6f1b85e7b5f3c464f7b4",
-        "edit": "Approved slower HAS and TO and both shortened pauses; the full action phrase, from give through hungry, is from the newly recorded full question in NaturalReaders Commercial, Evelyn Soft, 0.90x. An 8 ms crossfade inside the silent gap before give joins the approved opening and the fresh take. No action-phrase speed or gain change.",
-        "pauseBeforeHasSeconds": 0.167755,
-        "pauseBeforeGiveSeconds": 0.177982
+        "sourcePrefix": "outputs/study-question-audio/natural-tiny-pause-after-to/strawberries-has-to.wav",
+        "sourcePrefixSha256": "8985d43c711074b35c14dbc203ccf6947729e601d78b114f73014055f4db0afa",
+        "sourceSuffix": "versions/chs-marshall-forced-choice-draft-2026-10-03/assets/narration/obligation_food_teacher.mp3",
+        "sourceSuffixSha256": "85fa75dae818844e95a308615c6e2440ddbbed4a8e333c89b9684f31defacf86",
+        "method": "The approved child strawberries opening is preserved sample-for-sample through the post-TO pause. An 8 ms crossfade within the silent closure before give joins the full, existing recipient-specific Evelyn action clause. Speech onsets, speed and gain are preserved.",
+        "prefixGiveOnsetSec": 0.936122,
+        "suffixGiveOnsetSec": 2.3544444444444443,
+        "crossfadeMs": 8,
+        "joinPeakDbFS": -73.246,
+        "decodedWaveformCorrelations": [
+          0.9999997378923199,
+          0.999999705456061
+        ],
+        "durationSeconds": 4.858776,
+        "decodedDurationSeconds": 4.826145124716553,
+        "peakDbFS": -4.86,
+        "sha256": "9794ddb9dd993e580f1c2b4b7cad5316495e7c8a81e490364b089d59b0b84397",
+        "bytes": 156360
       }
     },
     {
       "id": "obligation_help_teacher",
-      "text": "Who do you think HAS TO help the teacher in the middle pick up the heavy box?",
+      "text": "Who HAS TO help the teacher in the middle pick up the heavy box?",
       "kind": "prompt",
       "uses": [
         {
@@ -20774,17 +20878,39 @@
         }
       ],
       "src": "assets/narration/obligation_help_teacher.mp3",
-      "status": "verified-source-recording",
-      "sha256": "42aef60250f5ac4e5279a2ed122c8266c505012d38c1b21b1ffff384ab1e5fbd",
-      "bytes": 193350,
-      "durationSeconds": 4.806531,
+      "status": "verified-complete-sentence-audio-derivative",
+      "sha256": "a65bbac71da9b36440c9c662e6c1e198911e18fb2bab419ea2f13771834a3987",
+      "bytes": 137970,
+      "durationSeconds": 4.284082,
       "provenance": {
-        "source": "Full question recorded in NaturalReaders Commercial, Evelyn Soft.",
-        "sourceSha256": "afed1d6ef4985b85c08b700dc4a54f7810925fa5e4c20ebb1fc81871a4b33ad0",
-        "edit": "Added about 60 ms inside the voiced vowel of has, using pitch-synchronous interpolation between adjacent original cycles. Original amplitude and inter-word spacing retained. PCM from the end of that vowel through the entire remainder of the question is untouched.",
-        "vowelExtensionSeconds": 0.058345,
-        "originalPhraseSeconds": 0.32,
-        "revisedPhraseSeconds": 0.3783
+        "source": "outputs/study-question-audio/natural-tiny-pause-after-to/heavy-box-has-to-corrected.wav",
+        "sourceSha256": "e2bed3406405bd582ecdedc3f5ebcd3a5f52f5fc8b4aa075336db66a7e3785e8",
+        "recipientSource": "versions/chs-marshall-forced-choice-draft-2026-10-03/assets/narration/obligation_help_teacher.mp3",
+        "recipientSourceSha256": "42aef60250f5ac4e5279a2ed122c8266c505012d38c1b21b1ffff384ab1e5fbd",
+        "wording": "Who HAS TO help the teacher in the middle pick up the heavy box?",
+        "method": "Retained the unbroken approved 'Who has to help' and entire approved 'pick up the heavy box' ending. Used the existing role-specific Evelyn recording for 'the teacher in the middle'. Two 8 ms raised-cosine crossfades fall inside low-energy /p/ stop closures after the vowel of 'help' and before the release of 'pick'. No change to speech speed, pitch or amplitude.",
+        "crossfadeMilliseconds": 8.004535147392291,
+        "sourceCutSeconds": [
+          1.105,
+          2.15
+        ],
+        "recipientCutSeconds": [
+          1.625,
+          2.82
+        ],
+        "joinsRmsDBFS": [
+          [
+            -61.54,
+            -62.95
+          ],
+          [
+            -73.4,
+            -75.67
+          ]
+        ],
+        "mp3Sha256": "a65bbac71da9b36440c9c662e6c1e198911e18fb2bab419ea2f13771834a3987",
+        "durationSeconds": 4.248458049886621,
+        "peakDBFS": -4.38
       }
     }
   ],

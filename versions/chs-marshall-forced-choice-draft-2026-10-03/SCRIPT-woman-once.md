@@ -21,7 +21,7 @@ Expected path range: **85–85 screens**, **42–42 responses**.
 
 18 forced choices + 6 individual Mean/Not Mean judgments + 12–12 how-mean ratings + 6 recall checks.
 
-Illustrative duration: **12.8–16.1 minutes**, based on 1388–1389 spoken words.
+Illustrative duration: **12.8–16.2 minutes**, based on 1394–1395 spoken words.
 
 - Illustrative estimate, not observed child-session duration.
 - Read-aloud pace: 110–130 words per minute; response time: 3–5 seconds per selection.
@@ -85,7 +85,7 @@ Choices: The kid’s teacher / The kid’s mom.
 
 ### 7. Who HAS TO help? — PROPOSED WORDING
 
-“Who do you think HAS TO give the kid in the middle a hug?”
+“Who HAS TO give the kid in the middle a hug now that they're sad?”
 
 [Stimulus source](assets/stimuli/ef6ceaf063c6-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -269,7 +269,7 @@ Choices: The kid’s sister / The kid’s friend.
 
 ### 24. Who HAS TO help? — PROPOSED WORDING
 
-“Who do you think HAS TO give the kid in the middle a hug?”
+“Who HAS TO give the kid in the middle a hug now that they're sad?”
 
 [Stimulus source](assets/stimuli/d8367f1a225f-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -453,7 +453,7 @@ Choices: The kid’s friend / The kid’s best friend.
 
 ### 41. Who HAS TO help? — PROPOSED WORDING
 
-“Who do you think HAS TO give the kid in the middle a hug?”
+“Who HAS TO give the kid in the middle a hug now that they're sad?”
 
 [Stimulus source](assets/stimuli/520e21f5de44-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -637,7 +637,7 @@ Choices: The kid’s teacher / The kid’s friend.
 
 ### 58. Who HAS TO help? — PROPOSED WORDING
 
-“Who do you think HAS TO give the kid in the middle a hug?”
+“Who HAS TO give the kid in the middle a hug now that they're sad?”
 
 [Stimulus source](assets/stimuli/5d5c93a1f149-hug_01.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -821,7 +821,7 @@ Choices: The kid’s mom / The kid’s sister.
 
 ### 75. Who HAS TO help? — PROPOSED WORDING
 
-“Who do you think HAS TO give the kid in the middle a hug?”
+“Who HAS TO give the kid in the middle a hug now that they're sad?”
 
 [Stimulus source](assets/stimuli/cf266d33caca-05-sad.png) — original reference image; the preview replaces its caption with the wording above.
 
@@ -1005,7 +1005,7 @@ Choices: The kid’s classmate / The kid’s teacher.
 
 ### 92. Who HAS TO help? — PROPOSED WORDING
 
-“Who do you think HAS TO give the kid in the middle a hug?”
+“Who HAS TO give the kid in the middle a hug now that they're sad?”
 
 [Stimulus source](assets/stimuli/bd2a372b55b6-hug_story.svg) — original reference image; the preview replaces its caption with the wording above.
 

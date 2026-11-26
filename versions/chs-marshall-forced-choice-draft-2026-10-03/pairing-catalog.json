@@ -143,19 +143,19 @@
           "image": "assets/stimuli/ef6ceaf063c6-hug_01.png",
           "need": "Oh no! The kid in the middle is sad now!",
           "prediction": "Who will give the kid in the middle a hug now that they're sad?",
-          "obligation": "Who do you think HAS TO give the kid in the middle a hug?"
+          "obligation": "Who HAS TO give the kid in the middle a hug now that they're sad?"
         },
         "food": {
           "image": "assets/stimuli/5c-food.png",
           "need": "Oh no! The kid in the middle is hungry now!",
           "prediction": "Who will give the kid in the middle strawberries now that they're hungry?",
-          "obligation": "Who do you think HAS TO give the kid in the middle strawberries now that they're hungry?"
+          "obligation": "Who HAS TO give the kid in the middle strawberries now that they're hungry?"
         },
         "help": {
           "image": "assets/stimuli/5c-help.png",
           "need": "Oh no! The kid in the middle dropped a heavy box now!",
           "prediction": "Who will help the kid in the middle pick up the heavy box?",
-          "obligation": "Who do you think HAS TO help the kid in the middle pick up the heavy box?"
+          "obligation": "Who HAS TO help the kid in the middle pick up the heavy box?"
         }
       }
     },
@@ -253,19 +253,19 @@
           "image": "assets/stimuli/d8367f1a225f-hug_01.png",
           "need": "Oh no! The kid in the middle is sad now!",
           "prediction": "Who will give the kid in the middle a hug now that they're sad?",
-          "obligation": "Who do you think HAS TO give the kid in the middle a hug?"
+          "obligation": "Who HAS TO give the kid in the middle a hug now that they're sad?"
         },
         "food": {
           "image": "assets/stimuli/6b-food.png",
           "need": "Oh no! The kid in the middle is hungry now!",
           "prediction": "Who will give the kid in the middle strawberries now that they're hungry?",
-          "obligation": "Who do you think HAS TO give the kid in the middle strawberries now that they're hungry?"
+          "obligation": "Who HAS TO give the kid in the middle strawberries now that they're hungry?"
         },
         "help": {
           "image": "assets/stimuli/6b-help.png",
           "need": "Oh no! The kid in the middle dropped a heavy box now!",
           "prediction": "Who will help the kid in the middle pick up the heavy box?",
-          "obligation": "Who do you think HAS TO help the kid in the middle pick up the heavy box?"
+          "obligation": "Who HAS TO help the kid in the middle pick up the heavy box?"
         }
       }
     },
@@ -363,19 +363,19 @@
           "image": "assets/stimuli/520e21f5de44-hug_01.png",
           "need": "Oh no! The kid in the middle is sad now!",
           "prediction": "Who will give the kid in the middle a hug now that they're sad?",
-          "obligation": "Who do you think HAS TO give the kid in the middle a hug?"
+          "obligation": "Who HAS TO give the kid in the middle a hug now that they're sad?"
         },
         "food": {
           "image": "assets/stimuli/13d-food.png",
           "need": "Oh no! The kid in the middle is hungry now!",
           "prediction": "Who will give the kid in the middle strawberries now that they're hungry?",
-          "obligation": "Who do you think HAS TO give the kid in the middle strawberries now that they're hungry?"
+          "obligation": "Who HAS TO give the kid in the middle strawberries now that they're hungry?"
         },
         "help": {
           "image": "assets/stimuli/13d-help.png",
           "need": "Oh no! The kid in the middle dropped a heavy box now!",
           "prediction": "Who will help the kid in the middle pick up the heavy box?",
-          "obligation": "Who do you think HAS TO help the kid in the middle pick up the heavy box?"
+          "obligation": "Who HAS TO help the kid in the middle pick up the heavy box?"
         }
       }
     },
@@ -473,19 +473,19 @@
           "image": "assets/stimuli/5d5c93a1f149-hug_01.png",
           "need": "Oh no! The kid in the middle is sad now!",
           "prediction": "Who will give the kid in the middle a hug now that they're sad?",
-          "obligation": "Who do you think HAS TO give the kid in the middle a hug?"
+          "obligation": "Who HAS TO give the kid in the middle a hug now that they're sad?"
         },
         "food": {
           "image": "assets/stimuli/2b-food.png",
           "need": "Oh no! The kid in the middle is hungry now!",
           "prediction": "Who will give the kid in the middle strawberries now that they're hungry?",
-          "obligation": "Who do you think HAS TO give the kid in the middle strawberries now that they're hungry?"
+          "obligation": "Who HAS TO give the kid in the middle strawberries now that they're hungry?"
         },
         "help": {
           "image": "assets/stimuli/2b-help.png",
           "need": "Oh no! The kid in the middle dropped a heavy box now!",
           "prediction": "Who will help the kid in the middle pick up the heavy box?",
-          "obligation": "Who do you think HAS TO help the kid in the middle pick up the heavy box?"
+          "obligation": "Who HAS TO help the kid in the middle pick up the heavy box?"
         }
       }
     },
@@ -585,19 +585,19 @@
           "image": "assets/stimuli/cf266d33caca-05-sad.png",
           "need": "Oh no! The kid in the middle is sad now!",
           "prediction": "Who will give the kid in the middle a hug now that they're sad?",
-          "obligation": "Who do you think HAS TO give the kid in the middle a hug?"
+          "obligation": "Who HAS TO give the kid in the middle a hug now that they're sad?"
         },
         "food": {
           "image": "assets/stimuli/1a-food.png",
           "need": "Oh no! The kid in the middle is hungry now!",
           "prediction": "Who will give the kid in the middle strawberries now that they're hungry?",
-          "obligation": "Who do you think HAS TO give the kid in the middle strawberries now that they're hungry?"
+          "obligation": "Who HAS TO give the kid in the middle strawberries now that they're hungry?"
         },
         "help": {
           "image": "assets/stimuli/1a-help.png",
           "need": "Oh no! The kid in the middle dropped a heavy box now!",
           "prediction": "Who will help the kid in the middle pick up the heavy box?",
-          "obligation": "Who do you think HAS TO help the kid in the middle pick up the heavy box?"
+          "obligation": "Who HAS TO help the kid in the middle pick up the heavy box?"
         }
       }
     },
@@ -697,19 +697,19 @@
           "image": "assets/stimuli/bd2a372b55b6-hug_story.svg",
           "need": "Oh no! The kid in the middle is sad now!",
           "prediction": "Who will give the kid in the middle a hug now that they're sad?",
-          "obligation": "Who do you think HAS TO give the kid in the middle a hug?"
+          "obligation": "Who HAS TO give the kid in the middle a hug now that they're sad?"
         },
         "food": {
           "image": "../../assets/teacher_classmate/generated/trials/14d/food_story.svg",
           "need": "Oh no! The kid in the middle is hungry now!",
           "prediction": "Who will give the kid in the middle strawberries now that they're hungry?",
-          "obligation": "Who do you think HAS TO give the kid in the middle strawberries now that they're hungry?"
+          "obligation": "Who HAS TO give the kid in the middle strawberries now that they're hungry?"
         },
         "help": {
           "image": "../../assets/teacher_classmate/generated/trials/14d/help_story.svg",
           "need": "Oh no! The kid in the middle dropped a heavy box now!",
           "prediction": "Who will help the kid in the middle pick up the heavy box?",
-          "obligation": "Who do you think HAS TO help the kid in the middle pick up the heavy box?"
+          "obligation": "Who HAS TO help the kid in the middle pick up the heavy box?"
         }
       }
     },
@@ -807,19 +807,19 @@
           "image": "assets/stimuli/ee15b1b5be65-hug_01.png",
           "need": "Oh no! The kid in the middle is sad now!",
           "prediction": "Who will give the kid in the middle a hug now that they're sad?",
-          "obligation": "Who do you think HAS TO give the kid in the middle a hug?"
+          "obligation": "Who HAS TO give the kid in the middle a hug now that they're sad?"
         },
         "food": {
           "image": "assets/stimuli/9c-food.png",
           "need": "Oh no! The kid in the middle is hungry now!",
           "prediction": "Who will give the kid in the middle strawberries now that they're hungry?",
-          "obligation": "Who do you think HAS TO give the kid in the middle strawberries now that they're hungry?"
+          "obligation": "Who HAS TO give the kid in the middle strawberries now that they're hungry?"
         },
         "help": {
           "image": "assets/stimuli/9c-help.png",
           "need": "Oh no! The kid in the middle dropped a heavy box now!",
           "prediction": "Who will help the kid in the middle pick up the heavy box?",
-          "obligation": "Who do you think HAS TO help the kid in the middle pick up the heavy box?"
+          "obligation": "Who HAS TO help the kid in the middle pick up the heavy box?"
         }
       }
     },
@@ -917,19 +917,19 @@
           "image": "assets/stimuli/3538d8e77c34-hug_01.png",
           "need": "Oh no! The kid in the middle is sad now!",
           "prediction": "Who will give the kid in the middle a hug now that they're sad?",
-          "obligation": "Who do you think HAS TO give the kid in the middle a hug?"
+          "obligation": "Who HAS TO give the kid in the middle a hug now that they're sad?"
         },
         "food": {
           "image": "assets/stimuli/10b-food.png",
           "need": "Oh no! The kid in the middle is hungry now!",
           "prediction": "Who will give the kid in the middle strawberries now that they're hungry?",
-          "obligation": "Who do you think HAS TO give the kid in the middle strawberries now that they're hungry?"
+          "obligation": "Who HAS TO give the kid in the middle strawberries now that they're hungry?"
         },
         "help": {
           "image": "assets/stimuli/10b-help.png",
           "need": "Oh no! The kid in the middle dropped a heavy box now!",
           "prediction": "Who will help the kid in the middle pick up the heavy box?",
-          "obligation": "Who do you think HAS TO help the kid in the middle pick up the heavy box?"
+          "obligation": "Who HAS TO help the kid in the middle pick up the heavy box?"
         }
       }
     },
@@ -1027,19 +1027,19 @@
           "image": "assets/stimuli/520e21f5de44-hug_01.png",
           "need": "Oh no! The kid in the middle is sad now!",
           "prediction": "Who will give the kid in the middle a hug now that they're sad?",
-          "obligation": "Who do you think HAS TO give the kid in the middle a hug?"
+          "obligation": "Who HAS TO give the kid in the middle a hug now that they're sad?"
         },
         "food": {
           "image": "assets/stimuli/13d-food.png",
           "need": "Oh no! The kid in the middle is hungry now!",
           "prediction": "Who will give the kid in the middle strawberries now that they're hungry?",
-          "obligation": "Who do you think HAS TO give the kid in the middle strawberries now that they're hungry?"
+          "obligation": "Who HAS TO give the kid in the middle strawberries now that they're hungry?"
         },
         "help": {
           "image": "assets/stimuli/13d-help.png",
           "need": "Oh no! The kid in the middle dropped a heavy box now!",
           "prediction": "Who will help the kid in the middle pick up the heavy box?",
-          "obligation": "Who do you think HAS TO help the kid in the middle pick up the heavy box?"
+          "obligation": "Who HAS TO help the kid in the middle pick up the heavy box?"
         }
       }
     },
@@ -1137,19 +1137,19 @@
           "image": "assets/stimuli/5d5c93a1f149-hug_01.png",
           "need": "Oh no! The kid in the middle is sad now!",
           "prediction": "Who will give the kid in the middle a hug now that they're sad?",
-          "obligation": "Who do you think HAS TO give the kid in the middle a hug?"
+          "obligation": "Who HAS TO give the kid in the middle a hug now that they're sad?"
         },
         "food": {
           "image": "assets/stimuli/2b-food.png",
           "need": "Oh no! The kid in the middle is hungry now!",
           "prediction": "Who will give the kid in the middle strawberries now that they're hungry?",
-          "obligation": "Who do you think HAS TO give the kid in the middle strawberries now that they're hungry?"
+          "obligation": "Who HAS TO give the kid in the middle strawberries now that they're hungry?"
         },
         "help": {
           "image": "assets/stimuli/2b-help.png",
           "need": "Oh no! The kid in the middle dropped a heavy box now!",
           "prediction": "Who will help the kid in the middle pick up the heavy box?",
-          "obligation": "Who do you think HAS TO help the kid in the middle pick up the heavy box?"
+          "obligation": "Who HAS TO help the kid in the middle pick up the heavy box?"
         }
       }
     },
@@ -1249,19 +1249,19 @@
           "image": "assets/stimuli/09b52ae33b24-hug_01.png",
           "need": "Oh no! The kid in the middle is sad now!",
           "prediction": "Who will give the kid in the middle a hug now that they're sad?",
-          "obligation": "Who do you think HAS TO give the kid in the middle a hug?"
+          "obligation": "Who HAS TO give the kid in the middle a hug now that they're sad?"
         },
         "food": {
           "image": "assets/stimuli/7a-food.png",
           "need": "Oh no! The kid in the middle is hungry now!",
           "prediction": "Who will give the kid in the middle strawberries now that they're hungry?",
-          "obligation": "Who do you think HAS TO give the kid in the middle strawberries now that they're hungry?"
+          "obligation": "Who HAS TO give the kid in the middle strawberries now that they're hungry?"
         },
         "help": {
           "image": "assets/stimuli/7a-help.png",
           "need": "Oh no! The kid in the middle dropped a heavy box now!",
           "prediction": "Who will help the kid in the middle pick up the heavy box?",
-          "obligation": "Who do you think HAS TO help the kid in the middle pick up the heavy box?"
+          "obligation": "Who HAS TO help the kid in the middle pick up the heavy box?"
         }
       }
     },
@@ -1361,19 +1361,19 @@
           "image": "assets/stimuli/bd2a372b55b6-hug_story.svg",
           "need": "Oh no! The kid in the middle is sad now!",
           "prediction": "Who will give the kid in the middle a hug now that they're sad?",
-          "obligation": "Who do you think HAS TO give the kid in the middle a hug?"
+          "obligation": "Who HAS TO give the kid in the middle a hug now that they're sad?"
         },
         "food": {
           "image": "../../assets/teacher_classmate/generated/trials/14d/food_story.svg",
           "need": "Oh no! The kid in the middle is hungry now!",
           "prediction": "Who will give the kid in the middle strawberries now that they're hungry?",
-          "obligation": "Who do you think HAS TO give the kid in the middle strawberries now that they're hungry?"
+          "obligation": "Who HAS TO give the kid in the middle strawberries now that they're hungry?"
         },
         "help": {
           "image": "../../assets/teacher_classmate/generated/trials/14d/help_story.svg",
           "need": "Oh no! The kid in the middle dropped a heavy box now!",
           "prediction": "Who will help the kid in the middle pick up the heavy box?",
-          "obligation": "Who do you think HAS TO help the kid in the middle pick up the heavy box?"
+          "obligation": "Who HAS TO help the kid in the middle pick up the heavy box?"
         }
       }
     },
@@ -1471,19 +1471,19 @@
           "image": "assets/stimuli/443991b4edc3-hug_01.png",
           "need": "Oh no! The kid in the middle is sad now!",
           "prediction": "Who will give the kid in the middle a hug now that they're sad?",
-          "obligation": "Who do you think HAS TO give the kid in the middle a hug?"
+          "obligation": "Who HAS TO give the kid in the middle a hug now that they're sad?"
         },
         "food": {
           "image": "assets/stimuli/11c-food.png",
           "need": "Oh no! The kid in the middle is hungry now!",
           "prediction": "Who will give the kid in the middle strawberries now that they're hungry?",
-          "obligation": "Who do you think HAS TO give the kid in the middle strawberries now that they're hungry?"
+          "obligation": "Who HAS TO give the kid in the middle strawberries now that they're hungry?"
         },
         "help": {
           "image": "assets/stimuli/11c-help.png",
           "need": "Oh no! The kid in the middle dropped a heavy box now!",
           "prediction": "Who will help the kid in the middle pick up the heavy box?",
-          "obligation": "Who do you think HAS TO help the kid in the middle pick up the heavy box?"
+          "obligation": "Who HAS TO help the kid in the middle pick up the heavy box?"
         }
       }
     },
@@ -1581,19 +1581,19 @@
           "image": "assets/stimuli/fac075f520aa-hug_01.png",
           "need": "Oh no! The kid in the middle is sad now!",
           "prediction": "Who will give the kid in the middle a hug now that they're sad?",
-          "obligation": "Who do you think HAS TO give the kid in the middle a hug?"
+          "obligation": "Who HAS TO give the kid in the middle a hug now that they're sad?"
         },
         "food": {
           "image": "assets/stimuli/12b-food.png",
           "need": "Oh no! The kid in the middle is hungry now!",
           "prediction": "Who will give the kid in the middle strawberries now that they're hungry?",
-          "obligation": "Who do you think HAS TO give the kid in the middle strawberries now that they're hungry?"
+          "obligation": "Who HAS TO give the kid in the middle strawberries now that they're hungry?"
         },
         "help": {
           "image": "assets/stimuli/12b-help.png",
           "need": "Oh no! The kid in the middle dropped a heavy box now!",
           "prediction": "Who will help the kid in the middle pick up the heavy box?",
-          "obligation": "Who do you think HAS TO help the kid in the middle pick up the heavy box?"
+          "obligation": "Who HAS TO help the kid in the middle pick up the heavy box?"
         }
       }
     },
@@ -1693,19 +1693,19 @@
           "image": "assets/stimuli/b1ba34666825-hug_01.png",
           "need": "Oh no! The mom in the middle is sad now!",
           "prediction": "Who will give the mom in the middle a hug now that they're sad?",
-          "obligation": "Who do you think HAS TO give the mom in the middle a hug?"
+          "obligation": "Who HAS TO give the mom in the middle a hug now that they're sad?"
         },
         "food": {
           "image": "assets/stimuli/3b-food.png",
           "need": "Oh no! The mom in the middle is hungry now!",
           "prediction": "Who will give the mom in the middle strawberries now that they're hungry?",
-          "obligation": "Who do you think HAS TO give the mom in the middle strawberries now that they're hungry?"
+          "obligation": "Who HAS TO give the mom in the middle strawberries now that they're hungry?"
         },
         "help": {
           "image": "assets/stimuli/3b-help.png",
           "need": "Oh no! The mom in the middle dropped a heavy box now!",
           "prediction": "Who will help the mom in the middle pick up the heavy box?",
-          "obligation": "Who do you think HAS TO help the mom in the middle pick up the heavy box?"
+          "obligation": "Who HAS TO help the mom in the middle pick up the heavy box?"
         }
       }
     },
@@ -1805,19 +1805,19 @@
           "image": "assets/stimuli/a47ed9f1306d-hug_01.png",
           "need": "Oh no! The dad in the middle is sad now!",
           "prediction": "Who will give the dad in the middle a hug now that they're sad?",
-          "obligation": "Who do you think HAS TO give the dad in the middle a hug?"
+          "obligation": "Who HAS TO give the dad in the middle a hug now that they're sad?"
         },
         "food": {
           "image": "assets/stimuli/8d-food.png",
           "need": "Oh no! The dad in the middle is hungry now!",
           "prediction": "Who will give the dad in the middle strawberries now that they're hungry?",
-          "obligation": "Who do you think HAS TO give the dad in the middle strawberries now that they're hungry?"
+          "obligation": "Who HAS TO give the dad in the middle strawberries now that they're hungry?"
         },
         "help": {
           "image": "assets/stimuli/8d-help.png",
           "need": "Oh no! The dad in the middle dropped a heavy box now!",
           "prediction": "Who will help the dad in the middle pick up the heavy box?",
-          "obligation": "Who do you think HAS TO help the dad in the middle pick up the heavy box?"
+          "obligation": "Who HAS TO help the dad in the middle pick up the heavy box?"
         }
       }
     },
@@ -1918,19 +1918,19 @@
           "image": "assets/stimuli/4bb031a656d9-hug_01.png",
           "need": "Oh no! The teacher in the middle is sad now!",
           "prediction": "Who will give the teacher in the middle a hug now that they're sad?",
-          "obligation": "Who do you think HAS TO give the teacher in the middle a hug?"
+          "obligation": "Who HAS TO give the teacher in the middle a hug now that they're sad?"
         },
         "food": {
           "image": "assets/stimuli/4a-food.png",
           "need": "Oh no! The teacher in the middle is hungry now!",
           "prediction": "Who will give the teacher in the middle strawberries now that they're hungry?",
-          "obligation": "Who do you think HAS TO give the teacher in the middle strawberries now that they're hungry?"
+          "obligation": "Who HAS TO give the teacher in the middle strawberries now that they're hungry?"
         },
         "help": {
           "image": "assets/stimuli/4a-help.png",
           "need": "Oh no! The teacher in the middle dropped a heavy box now!",
           "prediction": "Who will help the teacher in the middle pick up the heavy box?",
-          "obligation": "Who do you think HAS TO help the teacher in the middle pick up the heavy box?"
+          "obligation": "Who HAS TO help the teacher in the middle pick up the heavy box?"
         }
       }
     },
@@ -2030,19 +2030,19 @@
           "image": "assets/stimuli/bd2a372b55b6-hug_story.svg",
           "need": "Oh no! The kid in the middle is sad now!",
           "prediction": "Who will give the kid in the middle a hug now that they're sad?",
-          "obligation": "Who do you think HAS TO give the kid in the middle a hug?"
+          "obligation": "Who HAS TO give the kid in the middle a hug now that they're sad?"
         },
         "food": {
           "image": "../../assets/teacher_classmate/generated/trials/14d/food_story.svg",
           "need": "Oh no! The kid in the middle is hungry now!",
           "prediction": "Who will give the kid in the middle strawberries now that they're hungry?",
-          "obligation": "Who do you think HAS TO give the kid in the middle strawberries now that they're hungry?"
+          "obligation": "Who HAS TO give the kid in the middle strawberries now that they're hungry?"
         },
         "help": {
           "image": "../../assets/teacher_classmate/generated/trials/14d/help_story.svg",
           "need": "Oh no! The kid in the middle dropped a heavy box now!",
           "prediction": "Who will help the kid in the middle pick up the heavy box?",
-          "obligation": "Who do you think HAS TO help the kid in the middle pick up the heavy box?"
+          "obligation": "Who HAS TO help the kid in the middle pick up the heavy box?"
         }
       }
     }
