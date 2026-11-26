@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Who Helps Where? · Question previews</title>
+  <style>
+    :root {
+      font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #262e3c;
+      background: #f5f4fa;
+      line-height: 1.55;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; border-top: 5px solid #514481; }
+    main { max-width: 64rem; margin: 0 auto; padding: clamp(2rem, 6vw, 4rem) 1.25rem 3rem; }
+    header { max-width: 47rem; }
+    header p { margin: .6rem 0 0; }
+    .context { color: #594582; font-size: .85rem; font-weight: 700; }
+    h1, h2 { margin: 0; line-height: 1.16; letter-spacing: -.025em; }
+    h1 { font-size: clamp(2.2rem, 5vw, 3.25rem); margin: .25rem 0 .75rem; }
+    header p:last-child { color: #495368; font-size: 1.06rem; }
+    fieldset { margin: 2rem 0 1.5rem; padding: .9rem 1.25rem 1.15rem; border: 1px solid #cfcddd; border-radius: 1rem; }
+    legend { font-weight: 700; padding: 0 .4rem; }
+    .fields { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; }
+    label { display: grid; gap: .35rem; font-weight: 600; font-size: .9rem; }
+    select { font: inherit; font-weight: 400; color: inherit; background: #fff; border: 1px solid #a3a6b5; border-radius: .45rem; padding: .6rem .7rem; width: 100%; min-height: 2.75rem; }
+    .versions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+    article { --accent: #31588b; --edge: #9bbce6; display: flex; flex-direction: column; align-items: flex-start; padding: clamp(1.25rem, 3vw, 2rem); background: #fff; border: 1px solid #d6d8df; border-top: 4px solid var(--edge); border-radius: 1rem; }
+    article:nth-child(2) { --accent: #664587; --edge: #c1a7d7; }
+    h2 { font-size: 1.55rem; color: var(--accent); }
+    article p { margin: .6rem 0 1.35rem; color: #495368; }
+    a { color: var(--accent); text-underline-offset: .2em; }
+    .launch { display: inline-flex; align-items: center; margin-top: auto; min-height: 2.75rem; border-radius: .55rem; padding: .65rem 1rem; font-weight: 650; color: #fff; background: var(--accent); text-decoration: none; }
+    .jump { display: inline-flex; align-items: center; min-height: 2.75rem; margin-top: .25rem; font-size: .94rem; }
+    .launch:hover { filter: brightness(.9); }
+    :focus-visible { outline: 3px solid #076a7b; outline-offset: 3px; }
+    @media (max-width: 43rem) { .fields { grid-template-columns: 1fr; gap: .7rem; } }
+    @media (max-width: 36rem) { .versions { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="context">Researcher preview</p>
+      <h1>Who Helps Where?</h1>
+      <p>Compare two narrated versions of the same stories. Each child answers one question type for all 12 choices and sees the same six pairs of characters at the house and at the school.</p>
+    </header>
+    <fieldset>
+      <legend>Story settings for both previews</legend>
+      <div class="fields">
+        <label>Type of care
+          <select id="event">
+            <option value="HUG">Giving a hug</option>
+            <option value="FOOD">Sharing strawberries</option>
+            <option value="HELP">Helping with a heavy box</option>
+          </select>
+        </label>
+        <label>Character set
+          <select id="roleSet">
+            <option value="woman">Mom and sister</option>
+            <option value="man">Dad and brother</option>
+          </select>
+        </label>
+        <label>First setting
+          <select id="context">
+            <option value="HOME">House first</option>
+            <option value="SCHOOL">School first</option>
+          </select>
+        </label>
+      </div>
+    </fieldset>
+    <section class="versions" aria-label="Question previews">
+      <article>
+        <h2>Who will help?</h2>
+        <p>Children choose the person they expect to help.</p>
+        <a class="launch" data-question="will" href="study.html?question=will&amp;event=HUG&amp;roleSet=woman&amp;context=HOME" aria-label="Start the WILL preview at the family welcome">Start at the family welcome</a>
+        <a class="jump" data-question="will" data-start="question" href="study.html?question=will&amp;event=HUG&amp;roleSet=woman&amp;context=HOME&amp;start=question" aria-label="Skip to the first WILL question">Skip to the first question</a>
+      </article>
+      <article>
+        <h2>Who has to help?</h2>
+        <p>Children choose the person they think has a responsibility to help.</p>
+        <a class="launch" data-question="has-to" href="study.html?question=has-to&amp;event=HUG&amp;roleSet=woman&amp;context=HOME" aria-label="Start the HAS TO preview at the family welcome">Start at the family welcome</a>
+        <a class="jump" data-question="has-to" data-start="question" href="study.html?question=has-to&amp;event=HUG&amp;roleSet=woman&amp;context=HOME&amp;start=question" aria-label="Skip to the first HAS TO question">Skip to the first question</a>
+      </article>
+    </section>
+  </main>
+  <script>
+    const selectors = document.querySelectorAll("select");
+    const links = document.querySelectorAll("a[data-question]");
+    function updateLinks() {
+      for (const link of links) {
+        const params = new URLSearchParams({ question: link.dataset.question });
+        for (const select of selectors) params.set(select.id, select.value);
+        if (link.dataset.start) params.set("start", link.dataset.start);
+        link.href = "study.html?" + params.toString();
+      }
+    }
+    for (const select of selectors) select.addEventListener("change", updateLinks);
+    window.addEventListener("pageshow", updateLinks);
+    updateLinks();
+  </script>
+</body>
+</html>
