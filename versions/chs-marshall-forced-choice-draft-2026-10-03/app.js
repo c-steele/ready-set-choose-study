@@ -106,10 +106,11 @@
     const helpers=ids.map(id=>s.pairing.helpers.find(actor=>actor.id===id));
     return helpers.every(Boolean)?helpers:[];
   }
-  // The standalone preview uses the same two side columns as Find the Caregiver.
+  // Use the same two side columns as Find the Caregiver.
+  function sideBoxStyle(actor){return ` style="left:${actor.side==='left'?4:66}%"`;}
   // The standard targets fit the individual character above its label.
   function characterChoiceStyle(s,actor){
-    if(choiceBoxPreview) return ` style="left:${actor.side==='left'?4:66}%"`;
+    if(choiceBoxPreview) return sideBoxStyle(actor);
     const bounds=window.ObligationStudyVisuals?.actorBoundsFor(s,actor.id)||introActorBounds[s.pairing.id]?.[actor.id];
     return bounds?` style="left:${bounds[0]}%;top:${bounds[1]}%;width:${bounds[2]}%;height:${bounds[3]-13.5}%"`:'';
   }
@@ -191,8 +192,7 @@
     }
     // The no-help badges follow the whole negated helper clause, including NOT.
     if(s.outcomeVisual){
-      // “No one helped” refers to both potential helpers. The recipient is
-      // highlighted separately when the following noun phrase is spoken.
+      // “No one helped” cues both side boxes together.
       for(const range of phraseMatches(words,'no one helped')){
         for(const helper of s.pairing.helpers)
           spans.push({actorId:helper.id,start:range.start,end:range.end});
@@ -319,7 +319,7 @@
       :`<span class="character-choice-cue"${characterChoiceStyle(s,actor)} aria-hidden="true"></span>`).join('');
     // Only an already selected answer gets a still confirmation outline.
     const spokenCues=interactive ? shownActors.filter(actor=>actor.id===s.confirmationActorId).map(actor=>`<span class="narration-actor-cue confirmation-selected"${actorTargetStyle(s,actor)} aria-hidden="true"></span>`).join('')
-      +(s.outcomeVisual?shownActors.map(actor=>`<span class="narration-actor-cue outcome-role-cue"${actorTargetStyle(s,actor)} data-narration-actor="${actor.id}" aria-hidden="true"></span>`).join(''):''):'';
+      +(s.outcomeVisual?s.pairing.helpers.map(actor=>`<span class="outcome-role-cue"${sideBoxStyle(actor)} data-narration-actor="${actor.id}" aria-hidden="true"></span>`).join(''):''):'';
     const alt=shownActors.map(a=>a.side==='middle'&&a.description.endsWith('in the middle')?a.description:`${a.description} ${a.side==='middle'?'in the middle':'on the '+a.side}`).join('; ');
     const picture=`<div class="picture"><img ${interactive?'':'loading="lazy"'} src="${esc(s.image)}" alt="${esc(alt)}.${s.image===s.pairing.images.need?' '+esc(s.pairing.needSummary):''}">${window.ObligationStudyVisuals.nonhelpingEyeOverlay(s)}${choiceBoxes}${spokenCues}</div>`;
     if(!s.outcomeVisual)return picture;
