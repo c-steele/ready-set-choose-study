@@ -29,7 +29,7 @@
     return next;
   }
 
-  function storySteps(pairing, storyIndex, questionOrder, care = 'hug') {
+  function storySteps(pairing, storyIndex, questionOrder, care, firstRatingSide) {
     const result = [], p = copy(pairing);
     // Use one clear name for the child recipient in every prompt and cue.
     if (!p.recipient.isAdult) {
@@ -42,8 +42,9 @@
     p.images.need = scene.image;
     p.needSummary = upper(scene.need.replace(/^Oh no! /, '').replace(/ now!$/, '.'));
     const prefix = localId => `${p.id}:${localId}`;
-    function add(localId, templateId, overrides) {
-      const step = {...copy(templates[templateId]), image:p.images.need, ...overrides,
+    function add(localId, source, overrides) {
+      const template = typeof source === 'string' ? templates[source] : source;
+      const step = {...copy(template), image:p.images.need, ...overrides,
         id:prefix(localId), localId, pairing:p, care, storyIndex, adapted:true};
       if (step.replayFrom) step.replayFrom = prefix(step.replayFrom);
       if (step.when) step.when = [prefix(step.when[0]), step.when[1]];
@@ -79,34 +80,12 @@
       text:`Can you tell me, did either of these people help ${recipient.description}?`,
       replayFrom:'outcome-summary'
     });
-    add('compare', 'compare', {
-      ...pairOptions,
-      text:`Who was meaner for NOT helping ${recipient.reference}?`,
-      note:`Two-helper comparison adapted from Marshall. Buttons follow the scene: ${helpers[0].description} left, ${helpers[1].description} right.`
+    const ratingOrder = firstRatingSide === 'left' ? helpers : [...helpers].reverse();
+    ratingOrder.forEach((helper, index) => {
+      for (const step of draft.ratingsFor(helper, recipient.reference, index + 1)) {
+        add(step.id, step);
+      }
     });
-    // Exactly one selected-helper strength card follows the comparison.
-    for (const helper of helpers) {
-      add(`compare-${helper.id}-amount`, `compare-${helper.id}-amount`, {
-        phase:`Selected helper · How mean is ${helper.description}?`,
-        text:`How mean do you think ${helper.description} was for NOT helping ${recipient.reference}?`,
-        displayText:`How mean do you think ${helper.description} was for NOT helping ${recipient.reference}?`,
-        when:['compare', upper(helper.description)], comparisonSource:prefix('compare'), ratedActor:helper.id
-      });
-    }
-    // The selected helper was already rated. Only evaluate the other helper.
-    for (const helper of helpers) {
-      add(`evaluation-${helper.id}`, 'evaluation-mom', {
-        phase:`Individual evaluation · ${upper(helper.description)}`,
-        text:`Do you think it was Mean or Not Mean that ${helper.description} did NOT help ${recipient.reference}?`,
-        unless:['compare', upper(helper.description)], ratedActor:helper.id
-      });
-      add(`evaluation-${helper.id}-amount`, 'evaluation-mom-amount', {
-        phase:`Meanness strength · ${upper(helper.description)}`,
-        text:`How mean do you think ${helper.description} was for NOT helping ${recipient.reference}?`,
-        displayText:`How mean do you think ${helper.description} was for NOT helping ${recipient.reference}?`,
-        unless:['compare', upper(helper.description)], ratedActor:helper.id
-      });
-    }
     return result;
   }
 
@@ -126,13 +105,10 @@
       let answer = step.expected || step.point;
       if (!answer && step.choices) {
         const children = steps.filter(s => s.when && s.when[0] === step.id);
-        if (step.confirmChoice) {
-          const cost = choice => wordCount(step.choiceConfirmations[choice].text) + children.filter(child => child.when[1] === choice).reduce((sum, child) => sum + spokenWords(child), 0);
-          answer = step.choices.reduce((chosen, choice) => (maximize ? cost(choice) > cost(chosen) : cost(choice) < cost(chosen)) ? choice : chosen);
-        } else {
-          const child = children[0];
-          answer = child ? (maximize ? child.when[1] : step.choices.find(c => c !== child.when[1])) : step.choices[0];
-        }
+        const cost = choice => (step.confirmChoice ? wordCount(step.choiceConfirmations[choice].text) : 0)
+          + children.filter(child => child.when[1] === choice).reduce((sum, child) => sum + spokenWords(child), 0);
+        answer = step.choices.reduce((chosen, choice) =>
+          (maximize ? cost(choice) > cost(chosen) : cost(choice) < cost(chosen)) ? choice : chosen);
       }
       answers[step.id] = answer || 'Continue';
       index = nextIndex(steps, index, answers);
@@ -258,7 +234,12 @@
       ? catalog.pairings.map(pairing => pairing.id)
       : shuffledPairingIds(set.pairingIds, storySeed);
     const pairings = pairingOrder.map(id => catalog.pairings.find(pairing => pairing.id === id));
-    const steps = pairings.flatMap((p, index) => storySteps(p, index, questionOrder, assignment.care));
+    // Alternate sides within every six-story session; the seed determines which side starts.
+    const firstRatingSide = (storySeed ?? 0) % 2 ? 'right' : 'left';
+    const steps = pairings.flatMap((p, index) => {
+      const leftFirst = (firstRatingSide === 'left') === (index % 2 === 0);
+      return storySteps(p, index, questionOrder, assignment.care, leftFirst ? 'left' : 'right');
+    });
     steps.push({...copy(templates.end), id:'session-end', localId:'end', image:null,
       phase:'End of this session', text:'That’s the end of our stories. Thank you!',
       pairing:null, storyIndex:null, adapted:true,
@@ -266,19 +247,18 @@
     return {
       variant:'forced-choice', setId, setLabel:setId === 'all' ? 'All pairings · researcher review' : set.label,
       storySeed, pairingOrder, storyOrderVersion:storySeed === null ? 'catalog-v1' : 'shuffle-v1',
-      practiceMode, assignmentNumber:assignment.assignmentNumber, questionOrder:questionOrder.id, questionOrderLabel:questionOrder.label,
+      firstRatingSide, practiceMode, assignmentNumber:assignment.assignmentNumber, questionOrder:questionOrder.id, questionOrderLabel:questionOrder.label,
       care:assignment.care, careLabel:careLabels[assignment.care],
       firstQuestion:questionOrder.firstQuestion, counterbalanceCell:`${setId}:${assignment.care}:${questionOrder.id}`,
       isAllReview:setId === 'all', pairings:steps.filter(step => step.localId === 'group').map(step => step.pairing), steps, stats:statsFor(steps, pairings.length),
       notes:[
-        'This separate forced-choice draft uses the same Find the Caregiver stimuli and pairing catalog as the individual-rating draft.',
+        'The characters, artwork and pairing sets come from Find the Caregiver.',
         `Question order for this session: ${questionOrder.label}. This order is kept across every story. Both orders are available within each role set; alternate the assigned order across participants within each set.`,
-        'Prediction and obligation are asked before the nonhelping outcome. The meaner comparison follows the outcome and recall check. A character selection is recorded immediately and advances to the next part.',
-        'Each forced-choice question requires a choice between the two helpers. Choices appear in scene order: left helper, then right helper. There is no both, neither, or equal option.',
-        'Forced-choice prediction and obligation are adaptations of the Marshall paradigm, not the original Study 1 individual Yes/No measures. The meaner comparison is adapted to these two-helper stories.',
+        'Children choose between the two helpers for prediction and obligation. Both questions precede the outcome. Helper options are read in scene order, left then right.',
         `All stories in this session concern ${careLabels[assignment.care].toLowerCase()}. Source relationships, character positions, and introduction order are preserved.`,
-        'All paths have the same explicit outcome: no one helped, followed by each named helper did NOT help. A Yes/No recall check precedes the meaner comparison. Yes replays the two nonhelping outcome screens and then asks the check again, repeating until No.',
-        'After the meaner comparison, a four-option how-mean rating is asked once for the selected helper. Only the other helper receives a Mean/Not Mean question, with a how-mean follow-up after either Mean or Not Mean. Both scales include Not mean, A teeny bit mean, A little bit mean, and Very mean. The selected helper is not asked either question again. Prediction and obligation remain forced choices without strength follow-ups. Overall Mean/Nice and individual recall questions remain omitted.',
+        'Children hear that neither helper helped. A Yes response on the recall check replays the outcome and repeats the check until the child answers No.',
+        `Children then rate both helpers individually. The ${firstRatingSide} helper is rated first in the first story. The starting side alternates across stories.`,
+        'For each helper, the child first answers Yes or No about whether that person was mean for not helping. Yes leads immediately to three degrees of mean. No leads immediately to three degrees of not mean. Then the child answers the same questions about the other helper.',
         'Instructional HAVE TO practice is omitted; the two early questions follow the assigned order.',
         setId === 'all' ? 'The 18 stories appear in catalog order for researcher review.' : `The six pairings appear once each in a shuffled order, recorded with story seed ${storySeed}.`
       ],
@@ -301,10 +281,10 @@
       ...(session.assignmentNumber === null ? [] : [`Assignment ${session.assignmentNumber} within this pairing set.`, '']),
       ...session.notes.map(note => `- ${note}`), '',
       `Expected path range: **${stats.screens.min}–${stats.screens.max} screens**, **${stats.responses.min}–${stats.responses.max} responses**.`, '',
-      `${stats.forcedChoiceResponses} forced choices + ${stats.individualEvaluationResponses} individual Mean/Not Mean judgments + ${stats.strengthResponses.min}–${stats.strengthResponses.max} how-mean ratings + ${stats.checks} recall checks.`, '',
+      `${stats.forcedChoiceResponses} forced choices + ${stats.individualEvaluationResponses} individual Yes/No meanness judgments + ${stats.strengthResponses.min}–${stats.strengthResponses.max} three-option ratings + ${stats.checks} recall checks.`, '',
       `Illustrative duration: **${stats.minutes.min}–${stats.minutes.max} minutes**, based on ${stats.words.min}–${stats.words.max} spoken words.`, '',
       ...stats.assumptions.map(note => `- ${note}`), '',
-      'The first three judgments per story are two-helper choices that advance immediately after selection. Exactly one selected-helper how-mean card follows the meaner comparison. Only the other helper receives Mean/Not Mean and then a how-mean rating after either answer. Both helpers receive the four-option scale once. An incorrect recall answer replays the outcome story and then repeats the question.', ''
+      'The storyboard shows both follow-ups for each helper. During the study, the child sees only the follow-up for the answer they gave.', ''
     ];
     let lastStory = -1;
     for (const [index, step] of session.steps.entries()) {
@@ -318,7 +298,6 @@
         const parent = session.steps.find(s => s.id === step.when[0]);
         lines.push(`*Only after “${step.when[1]}” to ${parent.phase}.*`, '');
       }
-      if (step.unless) lines.push(`*Skip if “${step.unless[1]}” was selected as meaner; this helper has already been rated.*`, '');
       if (step.context) lines.push(`**${step.context}**`, '');
       if (step.preface) lines.push(step.preface, '');
       const scriptText=step.captionEmphasis==='HAVE TO'?step.text.replace(/\bHAVE TO\b/g,'*HAVE TO*'):step.text;

@@ -33755,9 +33755,2315 @@
       "exactNormalizedWordMatch": true,
       "alignmentValid": true,
       "decodedDurationSeconds": 10.0049375
+    },
+    "individual_r71_01": {
+      "sha256": "eaeefa5c050f3d739606a58883b3aa8f87701cd0aa47d2c8a3cec94e5d2e7f84",
+      "durationSeconds": 4.649775,
+      "recognizedText": "Do you think the kids' teacher was mean for not helping the kid in the middle?",
+      "words": [
+        {
+          "word": "Do",
+          "start": 0.0,
+          "end": 0.26
+        },
+        {
+          "word": "you",
+          "start": 0.26,
+          "end": 0.4
+        },
+        {
+          "word": "think",
+          "start": 0.4,
+          "end": 0.64
+        },
+        {
+          "word": "the",
+          "start": 0.64,
+          "end": 0.8
+        },
+        {
+          "word": "kids'",
+          "start": 0.8,
+          "end": 1.28
+        },
+        {
+          "word": "teacher",
+          "start": 1.28,
+          "end": 1.4
+        },
+        {
+          "word": "was",
+          "start": 1.4,
+          "end": 1.76
+        },
+        {
+          "word": "mean",
+          "start": 1.76,
+          "end": 2.02
+        },
+        {
+          "word": "for",
+          "start": 2.02,
+          "end": 2.36
+        },
+        {
+          "word": "not",
+          "start": 2.36,
+          "end": 2.58
+        },
+        {
+          "word": "helping",
+          "start": 2.58,
+          "end": 2.96
+        },
+        {
+          "word": "the",
+          "start": 2.96,
+          "end": 3.1
+        },
+        {
+          "word": "kid",
+          "start": 3.1,
+          "end": 3.38
+        },
+        {
+          "word": "in",
+          "start": 3.38,
+          "end": 3.52
+        },
+        {
+          "word": "the",
+          "start": 3.52,
+          "end": 3.62
+        },
+        {
+          "word": "middle?",
+          "start": 3.62,
+          "end": 4.24
+        }
+      ],
+      "alignmentMethod": "Offline Whisper base.en, unprompted transcription with audio-cropped word-level cross-attention alignment at 20 ms resolution.",
+      "expectedText": "Do you think the kid’s teacher was mean for not helping the kid in the middle?",
+      "exactNormalizedWordMatch": true
+    },
+    "individual_r71_02": {
+      "sha256": "3dfa823b42137c599c12254d61aba8da8017a3d89fd681c4036a15360b5c0566",
+      "durationSeconds": 4.5453,
+      "recognizedText": "Do you think the kids' mom was mean for not helping the kid in the middle?",
+      "words": [
+        {
+          "word": "Do",
+          "start": 0.0,
+          "end": 0.28
+        },
+        {
+          "word": "you",
+          "start": 0.28,
+          "end": 0.38
+        },
+        {
+          "word": "think",
+          "start": 0.38,
+          "end": 0.62
+        },
+        {
+          "word": "the",
+          "start": 0.62,
+          "end": 0.78
+        },
+        {
+          "word": "kids'",
+          "start": 0.78,
+          "end": 1.22
+        },
+        {
+          "word": "mom",
+          "start": 1.22,
+          "end": 1.38
+        },
+        {
+          "word": "was",
+          "start": 1.38,
+          "end": 1.66
+        },
+        {
+          "word": "mean",
+          "start": 1.66,
+          "end": 1.92
+        },
+        {
+          "word": "for",
+          "start": 1.92,
+          "end": 2.26
+        },
+        {
+          "word": "not",
+          "start": 2.26,
+          "end": 2.46
+        },
+        {
+          "word": "helping",
+          "start": 2.46,
+          "end": 2.86
+        },
+        {
+          "word": "the",
+          "start": 2.86,
+          "end": 3.0
+        },
+        {
+          "word": "kid",
+          "start": 3.0,
+          "end": 3.28
+        },
+        {
+          "word": "in",
+          "start": 3.28,
+          "end": 3.42
+        },
+        {
+          "word": "the",
+          "start": 3.42,
+          "end": 3.52
+        },
+        {
+          "word": "middle?",
+          "start": 3.52,
+          "end": 4.1
+        }
+      ],
+      "alignmentMethod": "Offline Whisper base.en, unprompted transcription with audio-cropped word-level cross-attention alignment at 20 ms resolution.",
+      "expectedText": "Do you think the kid’s mom was mean for not helping the kid in the middle?",
+      "exactNormalizedWordMatch": true
+    },
+    "individual_r71_03": {
+      "sha256": "1341306665c1835451671de778557632f685bd8c0155c5582145e856ebf99de4",
+      "durationSeconds": 4.623675,
+      "recognizedText": "Do you think the kid's sister was mean for not helping the kid in the middle?",
+      "words": [
+        {
+          "word": "Do",
+          "start": 0.0,
+          "end": 0.28
+        },
+        {
+          "word": "you",
+          "start": 0.28,
+          "end": 0.38
+        },
+        {
+          "word": "think",
+          "start": 0.38,
+          "end": 0.62
+        },
+        {
+          "word": "the",
+          "start": 0.62,
+          "end": 0.78
+        },
+        {
+          "word": "kid's",
+          "start": 0.78,
+          "end": 1.16
+        },
+        {
+          "word": "sister",
+          "start": 1.16,
+          "end": 1.52
+        },
+        {
+          "word": "was",
+          "start": 1.52,
+          "end": 1.72
+        },
+        {
+          "word": "mean",
+          "start": 1.72,
+          "end": 2.0
+        },
+        {
+          "word": "for",
+          "start": 2.0,
+          "end": 2.32
+        },
+        {
+          "word": "not",
+          "start": 2.32,
+          "end": 2.54
+        },
+        {
+          "word": "helping",
+          "start": 2.54,
+          "end": 2.92
+        },
+        {
+          "word": "the",
+          "start": 2.92,
+          "end": 3.08
+        },
+        {
+          "word": "kid",
+          "start": 3.08,
+          "end": 3.36
+        },
+        {
+          "word": "in",
+          "start": 3.36,
+          "end": 3.5
+        },
+        {
+          "word": "the",
+          "start": 3.5,
+          "end": 3.6
+        },
+        {
+          "word": "middle?",
+          "start": 3.6,
+          "end": 4.22
+        }
+      ],
+      "alignmentMethod": "Offline Whisper base.en, unprompted transcription with audio-cropped word-level cross-attention alignment at 20 ms resolution.",
+      "expectedText": "Do you think the kid’s sister was mean for not helping the kid in the middle?",
+      "exactNormalizedWordMatch": true
+    },
+    "individual_r71_04": {
+      "sha256": "a5a499cd34a96f2d0189a76ffc75af2306c89b63f3e496957d7ec6f175bc0988",
+      "durationSeconds": 4.702025,
+      "recognizedText": "Do you think the kid's friend was mean for not helping the kid in the middle?",
+      "words": [
+        {
+          "word": "Do",
+          "start": 0.0,
+          "end": 0.28
+        },
+        {
+          "word": "you",
+          "start": 0.28,
+          "end": 0.44
+        },
+        {
+          "word": "think",
+          "start": 0.44,
+          "end": 0.7
+        },
+        {
+          "word": "the",
+          "start": 0.7,
+          "end": 0.88
+        },
+        {
+          "word": "kid's",
+          "start": 0.88,
+          "end": 1.3
+        },
+        {
+          "word": "friend",
+          "start": 1.3,
+          "end": 1.48
+        },
+        {
+          "word": "was",
+          "start": 1.48,
+          "end": 1.78
+        },
+        {
+          "word": "mean",
+          "start": 1.78,
+          "end": 2.06
+        },
+        {
+          "word": "for",
+          "start": 2.06,
+          "end": 2.36
+        },
+        {
+          "word": "not",
+          "start": 2.36,
+          "end": 2.58
+        },
+        {
+          "word": "helping",
+          "start": 2.58,
+          "end": 2.94
+        },
+        {
+          "word": "the",
+          "start": 2.94,
+          "end": 3.12
+        },
+        {
+          "word": "kid",
+          "start": 3.12,
+          "end": 3.42
+        },
+        {
+          "word": "in",
+          "start": 3.42,
+          "end": 3.56
+        },
+        {
+          "word": "the",
+          "start": 3.56,
+          "end": 3.66
+        },
+        {
+          "word": "middle?",
+          "start": 3.66,
+          "end": 4.3
+        }
+      ],
+      "alignmentMethod": "Offline Whisper base.en, unprompted transcription with audio-cropped word-level cross-attention alignment at 20 ms resolution.",
+      "expectedText": "Do you think the kid’s friend was mean for not helping the kid in the middle?",
+      "exactNormalizedWordMatch": true
+    },
+    "individual_r71_05": {
+      "sha256": "556c849b227d66d37b4365060692ed96cd4941b00d956893605ce906d4c96a64",
+      "durationSeconds": 4.96325,
+      "recognizedText": "Do you think the kid's best friend was mean for not helping the kid in the middle?",
+      "words": [
+        {
+          "word": "Do",
+          "start": 0.0,
+          "end": 0.28
+        },
+        {
+          "word": "you",
+          "start": 0.28,
+          "end": 0.42
+        },
+        {
+          "word": "think",
+          "start": 0.42,
+          "end": 0.66
+        },
+        {
+          "word": "the",
+          "start": 0.66,
+          "end": 0.86
+        },
+        {
+          "word": "kid's",
+          "start": 0.86,
+          "end": 1.28
+        },
+        {
+          "word": "best",
+          "start": 1.28,
+          "end": 1.42
+        },
+        {
+          "word": "friend",
+          "start": 1.42,
+          "end": 1.82
+        },
+        {
+          "word": "was",
+          "start": 1.82,
+          "end": 2.08
+        },
+        {
+          "word": "mean",
+          "start": 2.08,
+          "end": 2.34
+        },
+        {
+          "word": "for",
+          "start": 2.34,
+          "end": 2.66
+        },
+        {
+          "word": "not",
+          "start": 2.66,
+          "end": 2.88
+        },
+        {
+          "word": "helping",
+          "start": 2.88,
+          "end": 3.2
+        },
+        {
+          "word": "the",
+          "start": 3.2,
+          "end": 3.42
+        },
+        {
+          "word": "kid",
+          "start": 3.42,
+          "end": 3.68
+        },
+        {
+          "word": "in",
+          "start": 3.68,
+          "end": 3.82
+        },
+        {
+          "word": "the",
+          "start": 3.82,
+          "end": 3.92
+        },
+        {
+          "word": "middle?",
+          "start": 3.92,
+          "end": 4.54
+        }
+      ],
+      "alignmentMethod": "Offline Whisper base.en, unprompted transcription with audio-cropped word-level cross-attention alignment at 20 ms resolution.",
+      "expectedText": "Do you think the kid’s best friend was mean for not helping the kid in the middle?",
+      "exactNormalizedWordMatch": true
+    },
+    "individual_r71_06": {
+      "sha256": "4472dae2e4456e263e54f6b200003813aa3b00093cdaf873239b14341b4065a1",
+      "durationSeconds": 4.911,
+      "recognizedText": "Do you think the kids' classmate was mean for not helping the kid in the middle?",
+      "words": [
+        {
+          "word": "Do",
+          "start": 0.0,
+          "end": 0.28
+        },
+        {
+          "word": "you",
+          "start": 0.28,
+          "end": 0.4
+        },
+        {
+          "word": "think",
+          "start": 0.4,
+          "end": 0.66
+        },
+        {
+          "word": "the",
+          "start": 0.66,
+          "end": 0.82
+        },
+        {
+          "word": "kids'",
+          "start": 0.82,
+          "end": 1.3
+        },
+        {
+          "word": "classmate",
+          "start": 1.3,
+          "end": 1.54
+        },
+        {
+          "word": "was",
+          "start": 1.54,
+          "end": 2.04
+        },
+        {
+          "word": "mean",
+          "start": 2.04,
+          "end": 2.32
+        },
+        {
+          "word": "for",
+          "start": 2.32,
+          "end": 2.66
+        },
+        {
+          "word": "not",
+          "start": 2.66,
+          "end": 2.86
+        },
+        {
+          "word": "helping",
+          "start": 2.86,
+          "end": 3.22
+        },
+        {
+          "word": "the",
+          "start": 3.22,
+          "end": 3.38
+        },
+        {
+          "word": "kid",
+          "start": 3.38,
+          "end": 3.66
+        },
+        {
+          "word": "in",
+          "start": 3.66,
+          "end": 3.78
+        },
+        {
+          "word": "the",
+          "start": 3.78,
+          "end": 3.88
+        },
+        {
+          "word": "middle?",
+          "start": 3.88,
+          "end": 4.48
+        }
+      ],
+      "alignmentMethod": "Offline Whisper base.en, unprompted transcription with audio-cropped word-level cross-attention alignment at 20 ms resolution.",
+      "expectedText": "Do you think the kid’s classmate was mean for not helping the kid in the middle?",
+      "exactNormalizedWordMatch": true
+    },
+    "individual_r71_07": {
+      "sha256": "158aefba1fe04aa540930755fe8d65583d87805c1cdaa65c76f5940d10b6284b",
+      "durationSeconds": 4.59755,
+      "recognizedText": "Do you think the kids' dad was mean for not helping the kid in the middle?",
+      "words": [
+        {
+          "word": "Do",
+          "start": 0.0,
+          "end": 0.28
+        },
+        {
+          "word": "you",
+          "start": 0.28,
+          "end": 0.4
+        },
+        {
+          "word": "think",
+          "start": 0.4,
+          "end": 0.64
+        },
+        {
+          "word": "the",
+          "start": 0.64,
+          "end": 0.82
+        },
+        {
+          "word": "kids'",
+          "start": 0.82,
+          "end": 1.32
+        },
+        {
+          "word": "dad",
+          "start": 1.32,
+          "end": 1.48
+        },
+        {
+          "word": "was",
+          "start": 1.48,
+          "end": 1.72
+        },
+        {
+          "word": "mean",
+          "start": 1.72,
+          "end": 2.0
+        },
+        {
+          "word": "for",
+          "start": 2.0,
+          "end": 2.32
+        },
+        {
+          "word": "not",
+          "start": 2.32,
+          "end": 2.52
+        },
+        {
+          "word": "helping",
+          "start": 2.52,
+          "end": 2.9
+        },
+        {
+          "word": "the",
+          "start": 2.9,
+          "end": 3.06
+        },
+        {
+          "word": "kid",
+          "start": 3.06,
+          "end": 3.34
+        },
+        {
+          "word": "in",
+          "start": 3.34,
+          "end": 3.48
+        },
+        {
+          "word": "the",
+          "start": 3.48,
+          "end": 3.58
+        },
+        {
+          "word": "middle?",
+          "start": 3.58,
+          "end": 4.18
+        }
+      ],
+      "alignmentMethod": "Offline Whisper base.en, unprompted transcription with audio-cropped word-level cross-attention alignment at 20 ms resolution.",
+      "expectedText": "Do you think the kid’s dad was mean for not helping the kid in the middle?",
+      "exactNormalizedWordMatch": true
+    },
+    "individual_r71_08": {
+      "sha256": "879fa28911d73176d0f7baeb73e5029dbe43a72ad3d02b68bd8793f6c3431fb7",
+      "durationSeconds": 4.6759,
+      "recognizedText": "Do you think the kid's brother was mean for not helping the kid in the middle?",
+      "words": [
+        {
+          "word": "Do",
+          "start": 0.0,
+          "end": 0.28
+        },
+        {
+          "word": "you",
+          "start": 0.28,
+          "end": 0.4
+        },
+        {
+          "word": "think",
+          "start": 0.4,
+          "end": 0.66
+        },
+        {
+          "word": "the",
+          "start": 0.66,
+          "end": 0.82
+        },
+        {
+          "word": "kid's",
+          "start": 0.82,
+          "end": 1.22
+        },
+        {
+          "word": "brother",
+          "start": 1.22,
+          "end": 1.52
+        },
+        {
+          "word": "was",
+          "start": 1.52,
+          "end": 1.78
+        },
+        {
+          "word": "mean",
+          "start": 1.78,
+          "end": 2.06
+        },
+        {
+          "word": "for",
+          "start": 2.06,
+          "end": 2.38
+        },
+        {
+          "word": "not",
+          "start": 2.38,
+          "end": 2.58
+        },
+        {
+          "word": "helping",
+          "start": 2.58,
+          "end": 2.94
+        },
+        {
+          "word": "the",
+          "start": 2.94,
+          "end": 3.12
+        },
+        {
+          "word": "kid",
+          "start": 3.12,
+          "end": 3.4
+        },
+        {
+          "word": "in",
+          "start": 3.4,
+          "end": 3.54
+        },
+        {
+          "word": "the",
+          "start": 3.54,
+          "end": 3.64
+        },
+        {
+          "word": "middle?",
+          "start": 3.64,
+          "end": 4.26
+        }
+      ],
+      "alignmentMethod": "Offline Whisper base.en, unprompted transcription with audio-cropped word-level cross-attention alignment at 20 ms resolution.",
+      "expectedText": "Do you think the kid’s brother was mean for not helping the kid in the middle?",
+      "exactNormalizedWordMatch": true
+    },
+    "individual_r71_09": {
+      "sha256": "3315d2e12e50cba1d14d061d76ea90f104a32151aec212be91720385a8bd25d3",
+      "durationSeconds": 4.649775,
+      "recognizedText": "Do you think the kids' dad was mean for not helping the mom in the middle?",
+      "words": [
+        {
+          "word": "Do",
+          "start": 0.0,
+          "end": 0.28
+        },
+        {
+          "word": "you",
+          "start": 0.28,
+          "end": 0.4
+        },
+        {
+          "word": "think",
+          "start": 0.4,
+          "end": 0.64
+        },
+        {
+          "word": "the",
+          "start": 0.64,
+          "end": 0.82
+        },
+        {
+          "word": "kids'",
+          "start": 0.82,
+          "end": 1.26
+        },
+        {
+          "word": "dad",
+          "start": 1.26,
+          "end": 1.48
+        },
+        {
+          "word": "was",
+          "start": 1.48,
+          "end": 1.72
+        },
+        {
+          "word": "mean",
+          "start": 1.72,
+          "end": 2.0
+        },
+        {
+          "word": "for",
+          "start": 2.0,
+          "end": 2.32
+        },
+        {
+          "word": "not",
+          "start": 2.32,
+          "end": 2.52
+        },
+        {
+          "word": "helping",
+          "start": 2.52,
+          "end": 2.86
+        },
+        {
+          "word": "the",
+          "start": 2.86,
+          "end": 3.06
+        },
+        {
+          "word": "mom",
+          "start": 3.06,
+          "end": 3.24
+        },
+        {
+          "word": "in",
+          "start": 3.24,
+          "end": 3.52
+        },
+        {
+          "word": "the",
+          "start": 3.52,
+          "end": 3.6
+        },
+        {
+          "word": "middle?",
+          "start": 3.6,
+          "end": 4.22
+        }
+      ],
+      "alignmentMethod": "Offline Whisper base.en, unprompted transcription with audio-cropped word-level cross-attention alignment at 20 ms resolution.",
+      "expectedText": "Do you think the kid’s dad was mean for not helping the mom in the middle?",
+      "exactNormalizedWordMatch": true
+    },
+    "individual_r71_10": {
+      "sha256": "3e4d3c196fc9a143ca9658242e9a5da15868e14644dc6075824d039f4987d171",
+      "durationSeconds": 4.36245,
+      "recognizedText": "Do you think the kid was mean for not helping the mom in the middle?",
+      "words": [
+        {
+          "word": "Do",
+          "start": 0.0,
+          "end": 0.28
+        },
+        {
+          "word": "you",
+          "start": 0.28,
+          "end": 0.42
+        },
+        {
+          "word": "think",
+          "start": 0.42,
+          "end": 0.68
+        },
+        {
+          "word": "the",
+          "start": 0.68,
+          "end": 0.84
+        },
+        {
+          "word": "kid",
+          "start": 0.84,
+          "end": 1.1
+        },
+        {
+          "word": "was",
+          "start": 1.1,
+          "end": 1.36
+        },
+        {
+          "word": "mean",
+          "start": 1.36,
+          "end": 1.66
+        },
+        {
+          "word": "for",
+          "start": 1.66,
+          "end": 1.94
+        },
+        {
+          "word": "not",
+          "start": 1.94,
+          "end": 2.16
+        },
+        {
+          "word": "helping",
+          "start": 2.16,
+          "end": 2.5
+        },
+        {
+          "word": "the",
+          "start": 2.5,
+          "end": 2.72
+        },
+        {
+          "word": "mom",
+          "start": 2.72,
+          "end": 2.92
+        },
+        {
+          "word": "in",
+          "start": 2.92,
+          "end": 3.2
+        },
+        {
+          "word": "the",
+          "start": 3.2,
+          "end": 3.28
+        },
+        {
+          "word": "middle?",
+          "start": 3.28,
+          "end": 3.96
+        }
+      ],
+      "alignmentMethod": "Offline Whisper base.en, unprompted transcription with audio-cropped word-level cross-attention alignment at 20 ms resolution.",
+      "expectedText": "Do you think the kid was mean for not helping the mom in the middle?",
+      "exactNormalizedWordMatch": true
+    },
+    "individual_r71_11": {
+      "sha256": "1844e2a126822a020d1537ff33d240f50917cf80ecf1ad8c8d5ea7936a32cccf",
+      "durationSeconds": 4.336325,
+      "recognizedText": "Do you think the kid was mean for not helping the dad in the middle?",
+      "words": [
+        {
+          "word": "Do",
+          "start": 0.0,
+          "end": 0.3
+        },
+        {
+          "word": "you",
+          "start": 0.3,
+          "end": 0.42
+        },
+        {
+          "word": "think",
+          "start": 0.42,
+          "end": 0.66
+        },
+        {
+          "word": "the",
+          "start": 0.66,
+          "end": 0.84
+        },
+        {
+          "word": "kid",
+          "start": 0.84,
+          "end": 1.12
+        },
+        {
+          "word": "was",
+          "start": 1.12,
+          "end": 1.36
+        },
+        {
+          "word": "mean",
+          "start": 1.36,
+          "end": 1.66
+        },
+        {
+          "word": "for",
+          "start": 1.66,
+          "end": 1.94
+        },
+        {
+          "word": "not",
+          "start": 1.94,
+          "end": 2.18
+        },
+        {
+          "word": "helping",
+          "start": 2.18,
+          "end": 2.5
+        },
+        {
+          "word": "the",
+          "start": 2.5,
+          "end": 2.74
+        },
+        {
+          "word": "dad",
+          "start": 2.74,
+          "end": 3.04
+        },
+        {
+          "word": "in",
+          "start": 3.04,
+          "end": 3.2
+        },
+        {
+          "word": "the",
+          "start": 3.2,
+          "end": 3.28
+        },
+        {
+          "word": "middle?",
+          "start": 3.28,
+          "end": 3.94
+        }
+      ],
+      "alignmentMethod": "Offline Whisper base.en, unprompted transcription with audio-cropped word-level cross-attention alignment at 20 ms resolution.",
+      "expectedText": "Do you think the kid was mean for not helping the dad in the middle?",
+      "exactNormalizedWordMatch": true
+    },
+    "individual_r71_12": {
+      "sha256": "d4b0ca4eb620531ea68164e588f270adb1e79ff218854adf0145618c13a3ed74",
+      "durationSeconds": 4.571425,
+      "recognizedText": "Do you think the kids' mom was mean for not helping the dad in the middle?",
+      "words": [
+        {
+          "word": "Do",
+          "start": 0.0,
+          "end": 0.26
+        },
+        {
+          "word": "you",
+          "start": 0.26,
+          "end": 0.38
+        },
+        {
+          "word": "think",
+          "start": 0.38,
+          "end": 0.62
+        },
+        {
+          "word": "the",
+          "start": 0.62,
+          "end": 0.78
+        },
+        {
+          "word": "kids'",
+          "start": 0.78,
+          "end": 1.22
+        },
+        {
+          "word": "mom",
+          "start": 1.22,
+          "end": 1.4
+        },
+        {
+          "word": "was",
+          "start": 1.4,
+          "end": 1.68
+        },
+        {
+          "word": "mean",
+          "start": 1.68,
+          "end": 1.94
+        },
+        {
+          "word": "for",
+          "start": 1.94,
+          "end": 2.26
+        },
+        {
+          "word": "not",
+          "start": 2.26,
+          "end": 2.46
+        },
+        {
+          "word": "helping",
+          "start": 2.46,
+          "end": 2.84
+        },
+        {
+          "word": "the",
+          "start": 2.84,
+          "end": 3.0
+        },
+        {
+          "word": "dad",
+          "start": 3.0,
+          "end": 3.26
+        },
+        {
+          "word": "in",
+          "start": 3.26,
+          "end": 3.46
+        },
+        {
+          "word": "the",
+          "start": 3.46,
+          "end": 3.54
+        },
+        {
+          "word": "middle?",
+          "start": 3.54,
+          "end": 4.12
+        }
+      ],
+      "alignmentMethod": "Offline Whisper base.en, unprompted transcription with audio-cropped word-level cross-attention alignment at 20 ms resolution.",
+      "expectedText": "Do you think the kid’s mom was mean for not helping the dad in the middle?",
+      "exactNormalizedWordMatch": true
+    },
+    "individual_r71_13": {
+      "sha256": "749ef1fa5192b8bc2a0adbeb9214f11500b674f82c4300d158bb9d5f783e933d",
+      "durationSeconds": 5.12,
+      "recognizedText": "Do you think the teacher on the left was mean for not helping the teacher in the middle?",
+      "words": [
+        {
+          "word": "Do",
+          "start": 0.0,
+          "end": 0.3
+        },
+        {
+          "word": "you",
+          "start": 0.3,
+          "end": 0.4
+        },
+        {
+          "word": "think",
+          "start": 0.4,
+          "end": 0.62
+        },
+        {
+          "word": "the",
+          "start": 0.62,
+          "end": 0.8
+        },
+        {
+          "word": "teacher",
+          "start": 0.8,
+          "end": 1.12
+        },
+        {
+          "word": "on",
+          "start": 1.12,
+          "end": 1.42
+        },
+        {
+          "word": "the",
+          "start": 1.42,
+          "end": 1.54
+        },
+        {
+          "word": "left",
+          "start": 1.54,
+          "end": 1.82
+        },
+        {
+          "word": "was",
+          "start": 1.82,
+          "end": 2.1
+        },
+        {
+          "word": "mean",
+          "start": 2.1,
+          "end": 2.36
+        },
+        {
+          "word": "for",
+          "start": 2.36,
+          "end": 2.66
+        },
+        {
+          "word": "not",
+          "start": 2.66,
+          "end": 2.92
+        },
+        {
+          "word": "helping",
+          "start": 2.92,
+          "end": 3.3
+        },
+        {
+          "word": "the",
+          "start": 3.3,
+          "end": 3.48
+        },
+        {
+          "word": "teacher",
+          "start": 3.48,
+          "end": 3.82
+        },
+        {
+          "word": "in",
+          "start": 3.82,
+          "end": 4.02
+        },
+        {
+          "word": "the",
+          "start": 4.02,
+          "end": 4.1
+        },
+        {
+          "word": "middle?",
+          "start": 4.1,
+          "end": 4.74
+        }
+      ],
+      "alignmentMethod": "Offline Whisper base.en, unprompted transcription with audio-cropped word-level cross-attention alignment at 20 ms resolution.",
+      "expectedText": "Do you think the teacher on the left was mean for not helping the teacher in the middle?",
+      "exactNormalizedWordMatch": true
+    },
+    "individual_r71_14": {
+      "sha256": "09a62d74bd8adf68cde719e21d5e5849528b7df4989e585f79f285facd8f052c",
+      "durationSeconds": 4.4408,
+      "recognizedText": "Do you think the kid was mean for not helping the teacher in the middle?",
+      "words": [
+        {
+          "word": "Do",
+          "start": 0.0,
+          "end": 0.3
+        },
+        {
+          "word": "you",
+          "start": 0.3,
+          "end": 0.42
+        },
+        {
+          "word": "think",
+          "start": 0.42,
+          "end": 0.68
+        },
+        {
+          "word": "the",
+          "start": 0.68,
+          "end": 0.86
+        },
+        {
+          "word": "kid",
+          "start": 0.86,
+          "end": 1.14
+        },
+        {
+          "word": "was",
+          "start": 1.14,
+          "end": 1.38
+        },
+        {
+          "word": "mean",
+          "start": 1.38,
+          "end": 1.66
+        },
+        {
+          "word": "for",
+          "start": 1.66,
+          "end": 1.96
+        },
+        {
+          "word": "not",
+          "start": 1.96,
+          "end": 2.22
+        },
+        {
+          "word": "helping",
+          "start": 2.22,
+          "end": 2.6
+        },
+        {
+          "word": "the",
+          "start": 2.6,
+          "end": 2.78
+        },
+        {
+          "word": "teacher",
+          "start": 2.78,
+          "end": 3.14
+        },
+        {
+          "word": "in",
+          "start": 3.14,
+          "end": 3.34
+        },
+        {
+          "word": "the",
+          "start": 3.34,
+          "end": 3.42
+        },
+        {
+          "word": "middle?",
+          "start": 3.42,
+          "end": 4.06
+        }
+      ],
+      "alignmentMethod": "Offline Whisper base.en, unprompted transcription with audio-cropped word-level cross-attention alignment at 20 ms resolution.",
+      "expectedText": "Do you think the kid was mean for not helping the teacher in the middle?",
+      "exactNormalizedWordMatch": true
+    },
+    "individual_r71_15": {
+      "sha256": "6d9294668baaceb81fdd7d8a5afd9a001b055203cf1c063ac0c338e92d27c31b",
+      "durationSeconds": 2.5861,
+      "recognizedText": "How mean was the kids' teacher?",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.36
+        },
+        {
+          "word": "mean",
+          "start": 0.36,
+          "end": 0.58
+        },
+        {
+          "word": "was",
+          "start": 0.58,
+          "end": 0.86
+        },
+        {
+          "word": "the",
+          "start": 0.86,
+          "end": 1.0
+        },
+        {
+          "word": "kids'",
+          "start": 1.0,
+          "end": 1.46
+        },
+        {
+          "word": "teacher?",
+          "start": 1.46,
+          "end": 2.3
+        }
+      ],
+      "alignmentMethod": "Offline Whisper base.en, unprompted transcription with audio-cropped word-level cross-attention alignment at 20 ms resolution.",
+      "expectedText": "How mean was the kid’s teacher?",
+      "exactNormalizedWordMatch": true
+    },
+    "individual_r71_16": {
+      "sha256": "a42658fc4b82226c19d208ce09c3cd035f58467fcf1eaaba6b07d8829996e1bf",
+      "durationSeconds": 2.4555,
+      "recognizedText": "How mean was the kids mom?",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.38
+        },
+        {
+          "word": "mean",
+          "start": 0.38,
+          "end": 0.6
+        },
+        {
+          "word": "was",
+          "start": 0.6,
+          "end": 0.9
+        },
+        {
+          "word": "the",
+          "start": 0.9,
+          "end": 1.04
+        },
+        {
+          "word": "kids",
+          "start": 1.04,
+          "end": 1.28
+        },
+        {
+          "word": "mom?",
+          "start": 1.28,
+          "end": 2.16
+        }
+      ],
+      "alignmentMethod": "Offline Whisper base.en, unprompted transcription with audio-cropped word-level cross-attention alignment at 20 ms resolution.",
+      "expectedText": "How mean was the kid’s mom?",
+      "exactNormalizedWordMatch": true
+    },
+    "individual_r71_17": {
+      "sha256": "8c06e313c9d3ca7e61121cc19a0b6d94de94b56ecde7d3f64831251b2cd8dd31",
+      "durationSeconds": 2.63835,
+      "recognizedText": "How mean was the kid's sister?",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.36
+        },
+        {
+          "word": "mean",
+          "start": 0.36,
+          "end": 0.6
+        },
+        {
+          "word": "was",
+          "start": 0.6,
+          "end": 0.88
+        },
+        {
+          "word": "the",
+          "start": 0.88,
+          "end": 1.04
+        },
+        {
+          "word": "kid's",
+          "start": 1.04,
+          "end": 1.44
+        },
+        {
+          "word": "sister?",
+          "start": 1.44,
+          "end": 2.3
+        }
+      ],
+      "alignmentMethod": "Offline Whisper base.en, unprompted transcription with audio-cropped word-level cross-attention alignment at 20 ms resolution.",
+      "expectedText": "How mean was the kid’s sister?",
+      "exactNormalizedWordMatch": true
+    },
+    "individual_r71_18": {
+      "sha256": "cc736e117cacefed415a87bc529ca45b8a840d5cca0194fdadd72070a7c4d535",
+      "durationSeconds": 2.50775,
+      "recognizedText": "How mean was the kid's friend?",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.36
+        },
+        {
+          "word": "mean",
+          "start": 0.36,
+          "end": 0.6
+        },
+        {
+          "word": "was",
+          "start": 0.6,
+          "end": 0.88
+        },
+        {
+          "word": "the",
+          "start": 0.88,
+          "end": 1.02
+        },
+        {
+          "word": "kid's",
+          "start": 1.02,
+          "end": 1.4
+        },
+        {
+          "word": "friend?",
+          "start": 1.4,
+          "end": 2.28
+        }
+      ],
+      "alignmentMethod": "Offline Whisper base.en, unprompted transcription with audio-cropped word-level cross-attention alignment at 20 ms resolution.",
+      "expectedText": "How mean was the kid’s friend?",
+      "exactNormalizedWordMatch": true
+    },
+    "individual_r71_19": {
+      "sha256": "480b35938509ac909f5c404b561c3ba7e44679237d4f3b3664d8936e1d06d3d2",
+      "durationSeconds": 2.847325,
+      "recognizedText": "How mean was the kid's best friend?",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.36
+        },
+        {
+          "word": "mean",
+          "start": 0.36,
+          "end": 0.6
+        },
+        {
+          "word": "was",
+          "start": 0.6,
+          "end": 0.86
+        },
+        {
+          "word": "the",
+          "start": 0.86,
+          "end": 1.0
+        },
+        {
+          "word": "kid's",
+          "start": 1.0,
+          "end": 1.4
+        },
+        {
+          "word": "best",
+          "start": 1.4,
+          "end": 1.56
+        },
+        {
+          "word": "friend?",
+          "start": 1.56,
+          "end": 2.58
+        }
+      ],
+      "alignmentMethod": "Offline Whisper base.en, unprompted transcription with audio-cropped word-level cross-attention alignment at 20 ms resolution.",
+      "expectedText": "How mean was the kid’s best friend?",
+      "exactNormalizedWordMatch": true
+    },
+    "individual_r71_20": {
+      "sha256": "d9ca4c71e68f370c2f8dd8a3439d7d08e04696271dcbebfa455d579d0e40f54b",
+      "durationSeconds": 2.768975,
+      "recognizedText": "How mean was the kids classmate?",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.36
+        },
+        {
+          "word": "mean",
+          "start": 0.36,
+          "end": 0.58
+        },
+        {
+          "word": "was",
+          "start": 0.58,
+          "end": 0.84
+        },
+        {
+          "word": "the",
+          "start": 0.84,
+          "end": 1.0
+        },
+        {
+          "word": "kids",
+          "start": 1.0,
+          "end": 1.3
+        },
+        {
+          "word": "classmate?",
+          "start": 1.3,
+          "end": 2.56
+        }
+      ],
+      "alignmentMethod": "Offline Whisper base.en, unprompted transcription with audio-cropped word-level cross-attention alignment at 20 ms resolution.",
+      "expectedText": "How mean was the kid’s classmate?",
+      "exactNormalizedWordMatch": true
+    },
+    "individual_r71_21": {
+      "sha256": "cb322651a6649e306b2005130d7aec5435cda9cd36283cb890c7ceafc35b0ab2",
+      "durationSeconds": 2.40325,
+      "recognizedText": "How mean was the kids' dad?",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.36
+        },
+        {
+          "word": "mean",
+          "start": 0.36,
+          "end": 0.6
+        },
+        {
+          "word": "was",
+          "start": 0.6,
+          "end": 0.86
+        },
+        {
+          "word": "the",
+          "start": 0.86,
+          "end": 1.0
+        },
+        {
+          "word": "kids'",
+          "start": 1.0,
+          "end": 1.42
+        },
+        {
+          "word": "dad?",
+          "start": 1.42,
+          "end": 2.06
+        }
+      ],
+      "alignmentMethod": "Offline Whisper base.en, unprompted transcription with audio-cropped word-level cross-attention alignment at 20 ms resolution.",
+      "expectedText": "How mean was the kid’s dad?",
+      "exactNormalizedWordMatch": true
+    },
+    "individual_r71_22": {
+      "sha256": "61cc17eb443b2874d8ebdd2b85d4a9691d6b1e2fdb004ea0cd0c7625587e6845",
+      "durationSeconds": 2.5861,
+      "recognizedText": "How mean was the kid's brother?",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.36
+        },
+        {
+          "word": "mean",
+          "start": 0.36,
+          "end": 0.58
+        },
+        {
+          "word": "was",
+          "start": 0.58,
+          "end": 0.88
+        },
+        {
+          "word": "the",
+          "start": 0.88,
+          "end": 1.04
+        },
+        {
+          "word": "kid's",
+          "start": 1.04,
+          "end": 1.44
+        },
+        {
+          "word": "brother?",
+          "start": 1.44,
+          "end": 2.32
+        }
+      ],
+      "alignmentMethod": "Offline Whisper base.en, unprompted transcription with audio-cropped word-level cross-attention alignment at 20 ms resolution.",
+      "expectedText": "How mean was the kid’s brother?",
+      "exactNormalizedWordMatch": true
+    },
+    "individual_r71_23": {
+      "sha256": "a621d33280dd701760e1ed8da8f993b75b3232ef5ffa930e0ef9dd535b978333",
+      "durationSeconds": 2.142025,
+      "recognizedText": "How mean was the kid?",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.38
+        },
+        {
+          "word": "mean",
+          "start": 0.38,
+          "end": 0.62
+        },
+        {
+          "word": "was",
+          "start": 0.62,
+          "end": 0.88
+        },
+        {
+          "word": "the",
+          "start": 0.88,
+          "end": 1.04
+        },
+        {
+          "word": "kid?",
+          "start": 1.04,
+          "end": 1.94
+        }
+      ],
+      "alignmentMethod": "Offline Whisper base.en, unprompted transcription with audio-cropped word-level cross-attention alignment at 20 ms resolution.",
+      "expectedText": "How mean was the kid?",
+      "exactNormalizedWordMatch": true
+    },
+    "individual_r71_24": {
+      "sha256": "285b32dd1a888bb26294c86cd6c7f707aa6cd6d8ff94f42aa23d6a2a2449a6ac",
+      "durationSeconds": 2.951825,
+      "recognizedText": "How mean was the teacher on the left?",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.38
+        },
+        {
+          "word": "mean",
+          "start": 0.38,
+          "end": 0.6
+        },
+        {
+          "word": "was",
+          "start": 0.6,
+          "end": 0.84
+        },
+        {
+          "word": "the",
+          "start": 0.84,
+          "end": 1.0
+        },
+        {
+          "word": "teacher",
+          "start": 1.0,
+          "end": 1.34
+        },
+        {
+          "word": "on",
+          "start": 1.34,
+          "end": 1.6
+        },
+        {
+          "word": "the",
+          "start": 1.6,
+          "end": 1.72
+        },
+        {
+          "word": "left?",
+          "start": 1.72,
+          "end": 2.74
+        }
+      ],
+      "alignmentMethod": "Offline Whisper base.en, unprompted transcription with audio-cropped word-level cross-attention alignment at 20 ms resolution.",
+      "expectedText": "How mean was the teacher on the left?",
+      "exactNormalizedWordMatch": true
+    },
+    "individual_r71_25": {
+      "sha256": "ca9f3f2ff060bb6993e6dd8d7aab2feab8e617fb3657d5d17476311e3fec5810",
+      "durationSeconds": 2.821225,
+      "recognizedText": "How not mean was the kids teacher?",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.36
+        },
+        {
+          "word": "not",
+          "start": 0.36,
+          "end": 0.54
+        },
+        {
+          "word": "mean",
+          "start": 0.54,
+          "end": 0.8
+        },
+        {
+          "word": "was",
+          "start": 0.8,
+          "end": 1.08
+        },
+        {
+          "word": "the",
+          "start": 1.08,
+          "end": 1.26
+        },
+        {
+          "word": "kids",
+          "start": 1.26,
+          "end": 1.52
+        },
+        {
+          "word": "teacher?",
+          "start": 1.52,
+          "end": 2.5
+        }
+      ],
+      "alignmentMethod": "Offline Whisper base.en, unprompted transcription with audio-cropped word-level cross-attention alignment at 20 ms resolution.",
+      "expectedText": "How not mean was the kid’s teacher?",
+      "exactNormalizedWordMatch": true
+    },
+    "individual_r71_26": {
+      "sha256": "a68109f0b760f6d71bd80c373a9310a55a7b8aa07dff2bed19cbe4d610979957",
+      "durationSeconds": 2.664475,
+      "recognizedText": "How not mean was the kids mom?",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.36
+        },
+        {
+          "word": "not",
+          "start": 0.36,
+          "end": 0.54
+        },
+        {
+          "word": "mean",
+          "start": 0.54,
+          "end": 0.82
+        },
+        {
+          "word": "was",
+          "start": 0.82,
+          "end": 1.1
+        },
+        {
+          "word": "the",
+          "start": 1.1,
+          "end": 1.26
+        },
+        {
+          "word": "kids",
+          "start": 1.26,
+          "end": 1.5
+        },
+        {
+          "word": "mom?",
+          "start": 1.5,
+          "end": 2.36
+        }
+      ],
+      "alignmentMethod": "Offline Whisper base.en, unprompted transcription with audio-cropped word-level cross-attention alignment at 20 ms resolution.",
+      "expectedText": "How not mean was the kid’s mom?",
+      "exactNormalizedWordMatch": true
+    },
+    "individual_r71_27": {
+      "sha256": "3e9d1d1b8b5017a96c6aa15b2f6f867df7e3c9c8619595b8cfbbc54c68b6d89d",
+      "durationSeconds": 2.87345,
+      "recognizedText": "How not mean was the kid's sister?",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.36
+        },
+        {
+          "word": "not",
+          "start": 0.36,
+          "end": 0.54
+        },
+        {
+          "word": "mean",
+          "start": 0.54,
+          "end": 0.8
+        },
+        {
+          "word": "was",
+          "start": 0.8,
+          "end": 1.12
+        },
+        {
+          "word": "the",
+          "start": 1.12,
+          "end": 1.28
+        },
+        {
+          "word": "kid's",
+          "start": 1.28,
+          "end": 1.68
+        },
+        {
+          "word": "sister?",
+          "start": 1.68,
+          "end": 2.52
+        }
+      ],
+      "alignmentMethod": "Offline Whisper base.en, unprompted transcription with audio-cropped word-level cross-attention alignment at 20 ms resolution.",
+      "expectedText": "How not mean was the kid’s sister?",
+      "exactNormalizedWordMatch": true
+    },
+    "individual_r71_28": {
+      "sha256": "8f6426355f3aefe13940aed0e5f4591b431f3432633dd9c677202ec0cbd6f5bb",
+      "durationSeconds": 2.74285,
+      "recognizedText": "How Not Mean was the kid's friend.",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.36
+        },
+        {
+          "word": "Not",
+          "start": 0.36,
+          "end": 0.54
+        },
+        {
+          "word": "Mean",
+          "start": 0.54,
+          "end": 0.8
+        },
+        {
+          "word": "was",
+          "start": 0.8,
+          "end": 1.08
+        },
+        {
+          "word": "the",
+          "start": 1.08,
+          "end": 1.24
+        },
+        {
+          "word": "kid's",
+          "start": 1.24,
+          "end": 1.64
+        },
+        {
+          "word": "friend.",
+          "start": 1.64,
+          "end": 2.52
+        }
+      ],
+      "alignmentMethod": "Offline Whisper base.en, unprompted transcription with audio-cropped word-level cross-attention alignment at 20 ms resolution.",
+      "expectedText": "How not mean was the kid’s friend?",
+      "exactNormalizedWordMatch": true
+    },
+    "individual_r71_29": {
+      "sha256": "afe6fcf15af081f73d53bb2ea7d61618e5a38622d43c2cef9d69022f366019ee",
+      "durationSeconds": 3.056325,
+      "recognizedText": "How not mean was the kids best friend?",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.36
+        },
+        {
+          "word": "not",
+          "start": 0.36,
+          "end": 0.54
+        },
+        {
+          "word": "mean",
+          "start": 0.54,
+          "end": 0.78
+        },
+        {
+          "word": "was",
+          "start": 0.78,
+          "end": 1.08
+        },
+        {
+          "word": "the",
+          "start": 1.08,
+          "end": 1.24
+        },
+        {
+          "word": "kids",
+          "start": 1.24,
+          "end": 1.52
+        },
+        {
+          "word": "best",
+          "start": 1.52,
+          "end": 1.76
+        },
+        {
+          "word": "friend?",
+          "start": 1.76,
+          "end": 2.72
+        }
+      ],
+      "alignmentMethod": "Offline Whisper base.en, unprompted transcription with audio-cropped word-level cross-attention alignment at 20 ms resolution.",
+      "expectedText": "How not mean was the kid’s best friend?",
+      "exactNormalizedWordMatch": true
+    },
+    "individual_r71_30": {
+      "sha256": "875c7ea4d229942672f641e2d79c9dc3302756bf3f4184ada9019f0144dbcc89",
+      "durationSeconds": 3.0302,
+      "recognizedText": "How not mean was the kids classmate?",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.36
+        },
+        {
+          "word": "not",
+          "start": 0.36,
+          "end": 0.54
+        },
+        {
+          "word": "mean",
+          "start": 0.54,
+          "end": 0.78
+        },
+        {
+          "word": "was",
+          "start": 0.78,
+          "end": 1.06
+        },
+        {
+          "word": "the",
+          "start": 1.06,
+          "end": 1.22
+        },
+        {
+          "word": "kids",
+          "start": 1.22,
+          "end": 1.5
+        },
+        {
+          "word": "classmate?",
+          "start": 1.5,
+          "end": 2.72
+        }
+      ],
+      "alignmentMethod": "Offline Whisper base.en, unprompted transcription with audio-cropped word-level cross-attention alignment at 20 ms resolution.",
+      "expectedText": "How not mean was the kid’s classmate?",
+      "exactNormalizedWordMatch": true
+    },
+    "individual_r71_31": {
+      "sha256": "ee518a32135d159bd23308227e982710fc79046e7a1637b9f887613c3d75892b",
+      "durationSeconds": 2.63835,
+      "recognizedText": "How Not Mean was the kid's dad?",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.36
+        },
+        {
+          "word": "Not",
+          "start": 0.36,
+          "end": 0.54
+        },
+        {
+          "word": "Mean",
+          "start": 0.54,
+          "end": 0.8
+        },
+        {
+          "word": "was",
+          "start": 0.8,
+          "end": 1.08
+        },
+        {
+          "word": "the",
+          "start": 1.08,
+          "end": 1.24
+        },
+        {
+          "word": "kid's",
+          "start": 1.24,
+          "end": 1.62
+        },
+        {
+          "word": "dad?",
+          "start": 1.62,
+          "end": 2.32
+        }
+      ],
+      "alignmentMethod": "Offline Whisper base.en, unprompted transcription with audio-cropped word-level cross-attention alignment at 20 ms resolution.",
+      "expectedText": "How not mean was the kid’s dad?",
+      "exactNormalizedWordMatch": true
+    },
+    "individual_r71_32": {
+      "sha256": "96c4a6f28fa5adfecf32723e2f762abe778e5a814d236a64fc6e5c06ceba2413",
+      "durationSeconds": 2.821225,
+      "recognizedText": "How not mean was the kid's brother?",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.36
+        },
+        {
+          "word": "not",
+          "start": 0.36,
+          "end": 0.54
+        },
+        {
+          "word": "mean",
+          "start": 0.54,
+          "end": 0.8
+        },
+        {
+          "word": "was",
+          "start": 0.8,
+          "end": 1.12
+        },
+        {
+          "word": "the",
+          "start": 1.12,
+          "end": 1.3
+        },
+        {
+          "word": "kid's",
+          "start": 1.3,
+          "end": 1.7
+        },
+        {
+          "word": "brother?",
+          "start": 1.7,
+          "end": 2.52
+        }
+      ],
+      "alignmentMethod": "Offline Whisper base.en, unprompted transcription with audio-cropped word-level cross-attention alignment at 20 ms resolution.",
+      "expectedText": "How not mean was the kid’s brother?",
+      "exactNormalizedWordMatch": true
+    },
+    "individual_r71_33": {
+      "sha256": "83d0e352727c14de82982afc6b6dddf9062c4417c6bb2af5d34ec8fe168e2a39",
+      "durationSeconds": 2.351,
+      "recognizedText": "How not mean was the kid?",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.38
+        },
+        {
+          "word": "not",
+          "start": 0.38,
+          "end": 0.56
+        },
+        {
+          "word": "mean",
+          "start": 0.56,
+          "end": 0.82
+        },
+        {
+          "word": "was",
+          "start": 0.82,
+          "end": 1.08
+        },
+        {
+          "word": "the",
+          "start": 1.08,
+          "end": 1.24
+        },
+        {
+          "word": "kid?",
+          "start": 1.24,
+          "end": 2.12
+        }
+      ],
+      "alignmentMethod": "Offline Whisper base.en, unprompted transcription with audio-cropped word-level cross-attention alignment at 20 ms resolution.",
+      "expectedText": "How not mean was the kid?",
+      "exactNormalizedWordMatch": true
+    },
+    "individual_r71_34": {
+      "sha256": "77aeab5111e493052d4c7f83153f93dba2439388cedb3cec3c6f473b674a979d",
+      "durationSeconds": 3.21305,
+      "recognizedText": "How not mean was the teacher on the left?",
+      "words": [
+        {
+          "word": "How",
+          "start": 0.0,
+          "end": 0.36
+        },
+        {
+          "word": "not",
+          "start": 0.36,
+          "end": 0.54
+        },
+        {
+          "word": "mean",
+          "start": 0.54,
+          "end": 0.8
+        },
+        {
+          "word": "was",
+          "start": 0.8,
+          "end": 1.06
+        },
+        {
+          "word": "the",
+          "start": 1.06,
+          "end": 1.24
+        },
+        {
+          "word": "teacher",
+          "start": 1.24,
+          "end": 1.58
+        },
+        {
+          "word": "on",
+          "start": 1.58,
+          "end": 1.88
+        },
+        {
+          "word": "the",
+          "start": 1.88,
+          "end": 2.0
+        },
+        {
+          "word": "left?",
+          "start": 2.0,
+          "end": 2.98
+        }
+      ],
+      "alignmentMethod": "Offline Whisper base.en, unprompted transcription with audio-cropped word-level cross-attention alignment at 20 ms resolution.",
+      "expectedText": "How not mean was the teacher on the left?",
+      "exactNormalizedWordMatch": true
+    },
+    "individual_r71_35": {
+      "sha256": "f9fba49e2ffc6de7b16ea765afabf38702560cba9ac4dc0bac990122067cbcf1",
+      "durationSeconds": 2.063675,
+      "recognizedText": "A tiny bit mean.",
+      "words": [
+        {
+          "word": "A",
+          "start": 0.0,
+          "end": 0.26
+        },
+        {
+          "word": "tiny",
+          "start": 0.26,
+          "end": 0.56
+        },
+        {
+          "word": "bit",
+          "start": 0.56,
+          "end": 0.9
+        },
+        {
+          "word": "mean.",
+          "start": 0.9,
+          "end": 1.66
+        }
+      ],
+      "alignmentMethod": "Offline Whisper base.en, unprompted transcription with audio-cropped word-level cross-attention alignment at 20 ms resolution.",
+      "expectedText": "A tiny bit mean",
+      "exactNormalizedWordMatch": true
+    },
+    "individual_r71_36": {
+      "sha256": "9bee8d5dfe7a6d2ed0dbcff27cc0bebf99b91a7a0f4f9e1d8569187d5aeaf63b",
+      "durationSeconds": 1.93305,
+      "recognizedText": "A little bit mean.",
+      "words": [
+        {
+          "word": "A",
+          "start": 0.0,
+          "end": 0.3
+        },
+        {
+          "word": "little",
+          "start": 0.3,
+          "end": 0.6
+        },
+        {
+          "word": "bit",
+          "start": 0.6,
+          "end": 0.8
+        },
+        {
+          "word": "mean.",
+          "start": 0.8,
+          "end": 1.6
+        }
+      ],
+      "alignmentMethod": "Offline Whisper base.en, unprompted transcription with audio-cropped word-level cross-attention alignment at 20 ms resolution.",
+      "expectedText": "A little bit mean",
+      "exactNormalizedWordMatch": true
+    },
+    "individual_r71_37": {
+      "sha256": "3ec7dae2841f3be800e9d321b7c7e7e51a52e0d40b8f4340d5ea96d2832d1b0b",
+      "durationSeconds": 2.063675,
+      "recognizedText": "Very mean.",
+      "words": [
+        {
+          "word": "Very",
+          "start": 0.0,
+          "end": 0.56
+        },
+        {
+          "word": "mean.",
+          "start": 0.56,
+          "end": 1.44
+        }
+      ],
+      "alignmentMethod": "Offline Whisper base.en, unprompted transcription with audio-cropped word-level cross-attention alignment at 20 ms resolution.",
+      "expectedText": "Very mean",
+      "exactNormalizedWordMatch": true
+    },
+    "individual_r71_38": {
+      "sha256": "db7f48f2322df15d669ec2f681ebb28d07af07516ae1208071820613f16e4c52",
+      "durationSeconds": 2.2204,
+      "recognizedText": "A tiny bit not mean.",
+      "words": [
+        {
+          "word": "A",
+          "start": 0.0,
+          "end": 0.26
+        },
+        {
+          "word": "tiny",
+          "start": 0.26,
+          "end": 0.54
+        },
+        {
+          "word": "bit",
+          "start": 0.54,
+          "end": 0.86
+        },
+        {
+          "word": "not",
+          "start": 0.86,
+          "end": 1.1
+        },
+        {
+          "word": "mean.",
+          "start": 1.1,
+          "end": 1.92
+        }
+      ],
+      "alignmentMethod": "Offline Whisper base.en, unprompted transcription with audio-cropped word-level cross-attention alignment at 20 ms resolution.",
+      "expectedText": "A tiny bit not mean",
+      "exactNormalizedWordMatch": true
+    },
+    "individual_r71_39": {
+      "sha256": "74fb0429552bb11a89aa469cf20cc473b3c56b10b6fa8071e1f092240ee90e50",
+      "durationSeconds": 2.194275,
+      "recognizedText": "A little bit not mean.",
+      "words": [
+        {
+          "word": "A",
+          "start": 0.0,
+          "end": 0.28
+        },
+        {
+          "word": "little",
+          "start": 0.28,
+          "end": 0.58
+        },
+        {
+          "word": "bit",
+          "start": 0.58,
+          "end": 0.8
+        },
+        {
+          "word": "not",
+          "start": 0.8,
+          "end": 1.08
+        },
+        {
+          "word": "mean.",
+          "start": 1.08,
+          "end": 1.88
+        }
+      ],
+      "alignmentMethod": "Offline Whisper base.en, unprompted transcription with audio-cropped word-level cross-attention alignment at 20 ms resolution.",
+      "expectedText": "A little bit not mean",
+      "exactNormalizedWordMatch": true
+    },
+    "individual_r71_40": {
+      "sha256": "55cab9153ba93576c39045bf3cc08577bf26b5a270e74dd3e88bbd2f68367d63",
+      "durationSeconds": 1.854675,
+      "recognizedText": "Very not mean.",
+      "words": [
+        {
+          "word": "Very",
+          "start": 0.0,
+          "end": 0.48
+        },
+        {
+          "word": "not",
+          "start": 0.48,
+          "end": 0.76
+        },
+        {
+          "word": "mean.",
+          "start": 0.76,
+          "end": 1.54
+        }
+      ],
+      "alignmentMethod": "Offline Whisper base.en, unprompted transcription with audio-cropped word-level cross-attention alignment at 20 ms resolution.",
+      "expectedText": "Very not mean",
+      "exactNormalizedWordMatch": true
     }
   },
   "reuseNote": "Verified existing hash-bound timestamps are preserved, including historical inactive entries. Newly reused exact-text ready option recordings copy their original timestamp entries without realignment.",
   "pairedQuestionTimingsNote": "Original paired helper questions aligned offline to their unchanged recordings on 2026-11-08; each role-name phrase glows in its actual left/right position.",
-  "careConditionTiming": "Care event and action-question entries with a PocketSphinx alignmentMethod use phonetic alignment and an independent Whisper transcript. Timings and recordings are matched by their SHA-256 hashes."
+  "careConditionTiming": "Care event and action-question entries with a PocketSphinx alignmentMethod use phonetic alignment and an independent Whisper transcript. Timings and recordings are matched by their SHA-256 hashes.",
+  "individualJudgmentTiming": "All 40 complete individual-rating questions and response labels were transcribed independently from each published MP3; all matched the intended wording in order. Each entry is bound to the MP3 by its SHA-256 hash."
 }

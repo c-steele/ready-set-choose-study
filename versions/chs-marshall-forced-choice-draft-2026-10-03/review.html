@@ -20,7 +20,7 @@
     [hidden] { display: none !important; }
     @media (max-width: 680px) { .review-controls { grid-template-columns: 1fr; } }
   </style>
-  <script defer src="review.js"></script>
+  <script defer src="review.js?v=individual-r71"></script>
 </head>
 <body>
   <main class="review-shell">
@@ -28,7 +28,7 @@
       <div>
         <p class="review-eyebrow">Study preview board</p>
         <h1>Who Has to Help?</h1>
-        <p class="review-subtitle">Open a narrated version from the family welcome or jump to the first choice. In each preview, use <strong>Slide navigator</strong> to jump to any story or question.</p>
+        <p class="review-subtitle">Open a narrated version from the family welcome or jump to the first choice or the helper ratings. In each preview, use <strong>Slide navigator</strong> to jump to any story or question.</p>
       </div>
     </header>
     <section class="review-controls" aria-label="Filter study versions">
@@ -49,6 +49,7 @@
       <div class="order-actions">
         <a class="review-open" target="_blank" rel="noopener">Open narrated preview</a>
         <a class="jump-link" target="_blank" rel="noopener">Jump to first choice</a>
+        <a class="jump-link rating-link" target="_blank" rel="noopener">Jump to helper ratings</a>
       </div>
     </section>
   </template>

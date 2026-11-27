@@ -23,14 +23,16 @@ for(const set of ['woman','man','family'])for(const order of ['will-first','has-
    }
    assert.deepEqual(sequence,['outcome-summary','outcome']);
   }
-  assert.equal(session.steps[session.nextIndex(recallIndex,{[recall.id]:'No'})].localId,'compare');
-  for(const scale of session.steps.filter(s=>s.pairing?.id===pairing.id&&s.choices?.length===4)){
-   const options=manifest.screens[scale.id].options;
-   assert.equal(options.length,4);
-   assert.deepEqual(options.map(id=>clips[id].text.toLowerCase()),scale.choices.map(c=>c.toLowerCase()));
+  const firstEvaluation = session.steps[session.nextIndex(recallIndex,{[recall.id]:'No'})];
+  assert.equal(firstEvaluation.measure,'Individual evaluation');
+  assert.equal(firstEvaluation.ratingPosition,1);
+  for(const rating of session.steps.filter(s=>s.pairing?.id===pairing.id && s.ratingBranch)){
+   const options=manifest.screens[rating.id].options;
+   assert.equal(options.length,3);
+   assert.deepEqual(options.map(id=>clips[id].text.toLowerCase().replace(/[.!?]$/,'')),rating.choices.map(c=>c.toLowerCase()));
    assert(options.every(id=>clips[id].src));
   }
   checked++;
  }
 }
-console.log(`Passed ${checked} stories: unlimited outcome-only recall retries, No advances, and four recorded scale options in order.`);
+console.log(`Passed ${checked} stories: unlimited outcome-only recall retries, No advances, and three recorded degree options in order.`);

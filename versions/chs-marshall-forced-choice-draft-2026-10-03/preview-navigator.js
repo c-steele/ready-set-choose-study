@@ -84,7 +84,9 @@
       caption.append(title);
       if (step.when || step.unless) {
         const branch = document.createElement('small');
-        branch.textContent = step.when ? `After choosing ${step.when[1]}` : `When the other helper is chosen`;
+        branch.textContent = step.ratingBranch
+          ? `After answering ${step.when[1]} for ${step.pairing.helpers.find(actor => actor.id === step.ratedActor).description}`
+          : step.when ? `After choosing ${step.when[1]}` : `Conditional slide`;
         caption.append(branch);
       }
       button.append(thumb, caption);

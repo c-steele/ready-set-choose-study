@@ -317,11 +317,13 @@
     const choiceBoxes=choiceActors.map((actor,choiceIndex)=>interactive
       ?`<button class="character-choice-target option-visible"${characterChoiceStyle(s,actor)} data-answer="${choiceIndex}" data-narration-actor="${actor.id}" aria-label="${esc(s.choices[choiceIndex])}"></button>`
       :`<span class="character-choice-cue"${characterChoiceStyle(s,actor)} aria-hidden="true"></span>`).join('');
-    // Only an already selected answer gets a still confirmation outline.
+    const ratedHelper = s.pairing.helpers.find(actor => actor.id === s.ratedActor);
+    const ratingCue = ratedHelper ? `<span class="rated-helper-cue"${sideBoxStyle(ratedHelper)} aria-hidden="true"></span>` : '';
+    // Keep the referent visible while the child chooses a rating.
     const spokenCues=interactive ? shownActors.filter(actor=>actor.id===s.confirmationActorId).map(actor=>`<span class="narration-actor-cue confirmation-selected"${actorTargetStyle(s,actor)} aria-hidden="true"></span>`).join('')
       +(s.outcomeVisual?s.pairing.helpers.map(actor=>`<span class="outcome-role-cue"${sideBoxStyle(actor)} data-narration-actor="${actor.id}" aria-hidden="true"></span>`).join(''):''):'';
     const alt=shownActors.map(a=>a.side==='middle'&&a.description.endsWith('in the middle')?a.description:`${a.description} ${a.side==='middle'?'in the middle':'on the '+a.side}`).join('; ');
-    const picture=`<div class="picture"><img ${interactive?'':'loading="lazy"'} src="${esc(s.image)}" alt="${esc(alt)}.${s.image===s.pairing.images.need?' '+esc(s.pairing.needSummary):''}">${window.ObligationStudyVisuals.nonhelpingEyeOverlay(s)}${choiceBoxes}${spokenCues}</div>`;
+    const picture=`<div class="picture"><img ${interactive?'':'loading="lazy"'} src="${esc(s.image)}" alt="${esc(alt)}.${s.image===s.pairing.images.need?' '+esc(s.pairing.needSummary):''}">${window.ObligationStudyVisuals.nonhelpingEyeOverlay(s)}${choiceBoxes}${ratingCue}${spokenCues}</div>`;
     if(!s.outcomeVisual)return picture;
     const badges=s.pairing.helpers.map(helper=>{
       const bounds=introActorBounds[s.pairing.id][helper.id],center=bounds[0]+bounds[2]/2;
@@ -338,7 +340,7 @@
   function caption(s){const text=esc(s.displayTitle||s.displayText||s.text);return s.captionEmphasis==='HAVE TO'?text.replace(/\bHAVE TO\b/g,'<em class="obligation-emphasis">HAVE TO</em>'):text;}
   function prompt(s){
     const careQuestion = s.localId === 'predict-compare' || s.localId === 'obligation-compare';
-    return `<div class="prompt${careQuestion?' care-question-prompt':''}${s.localId==='recall-all'?' recall-prompt':''}${s.choices?.length===4?' scale-prompt':''}${s.measure==='Individual evaluation'?' evaluation-prompt':''}">${s.context&&!s.displayText?`<p class="referent">${esc(s.context)}</p>`:''}${s.preface?`<p class="preface">${esc(s.preface)}</p>`:''}<h2>${caption(s)}</h2></div>`;}
+    return `<div class="prompt${careQuestion?' care-question-prompt':''}${s.localId==='recall-all'?' recall-prompt':''}${s.ratingBranch?' scale-prompt':''}${s.measure==='Individual evaluation'?' evaluation-prompt':''}">${s.context&&!s.displayText?`<p class="referent">${esc(s.context)}</p>`:''}${s.preface?`<p class="preface">${esc(s.preface)}</p>`:''}<h2>${caption(s)}</h2></div>`;}
   function yesNoLabel(label){
     const path=label==='Yes'?'M13 34 L27 48 L53 17':'M17 17 L47 47 M47 17 L17 47';
     return `<svg class="yes-no-symbol" viewBox="0 0 64 64" aria-hidden="true" focusable="false"><path d="${path}" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="yes-no-label">${esc(label)}</span>`;
@@ -346,7 +348,7 @@
   function branchNote(s){
     const parent=s.when&&steps.find(p=>p.id===s.when[0]);
     return (parent?`Only after “${s.when[1]}” to ${parent.phase.toLowerCase()}. `:'')+
-      (s.unless?`Skip if “${s.unless[1]}” was selected as meaner; this helper has already been rated. `:'');
+      (s.unless?`Skip after “${s.unless[1]}”. `:'');
   }
   function choiceReaderControls(binary=false){return `<div class="option-reader-controls${binary?' binary-reader-controls':''}"><button data-read-options type="button" aria-label="Replay choices">▶</button></div><p class="reader-status${binary?' binary-reader-status':''}" data-reader-status role="status">Listen to each choice, then tap one.</p>`;}
   function meannessFace(level){
@@ -354,9 +356,15 @@
     const mouth=level==='neutral'?'M34 63 L62 63':['M33 65 Q48 59 63 65','M31 68 Q48 50 65 68','M29 71 Q48 43 67 71'][level];
     return `<svg class="meanness-face" viewBox="0 0 96 96" aria-hidden="true" focusable="false"><circle cx="48" cy="48" r="43" fill="#FFD35C" stroke="#E6B648" stroke-width="2.5"/><g fill="#29333D"><circle cx="33" cy="43" r="4.5"/><circle cx="63" cy="43" r="4.5"/></g><path d="${brows} ${mouth}" fill="none" stroke="#29333D" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
   }
-  function scaleOptions(s,interactive=false){
-    const cards=s.choices.map((c,i)=>interactive?`<button class="rating-answer" data-answer="${i}" disabled>${meannessFace(i===0?'neutral':i-1)}<span>${esc(c)}</span></button>`:`<div class="rating-answer option-visible">${meannessFace(i===0?'neutral':i-1)}<span>${esc(c)}</span></div>`).join('');
-    return `<div class="rating-options">${cards}</div>${interactive?choiceReaderControls():''}`;
+  function scaleOptions(s, interactive = false) {
+    const cards = s.choices.map((label, i) => {
+      const level = s.ratingBranch === 'mean' ? i : 'neutral';
+      const content = `<span class="degree-icon degree-${i + 1}">${meannessFace(level)}</span><span>${esc(label)}</span>`;
+      return interactive
+        ? `<button class="rating-answer" data-answer="${i}" disabled>${content}</button>`
+        : `<div class="rating-answer option-visible">${content}</div>`;
+    }).join('');
+    return `<div class="rating-options">${cards}</div>${interactive ? choiceReaderControls() : ''}`;
   }
   function render(){
     stopNarration();optionReader?.dispose();optionReader=null;
@@ -373,15 +381,15 @@
     let options=s.point?`<p class="point-instruction">Tap ${esc(actors(s).find(a=>a.id===s.point).description)}.</p>`:`<div class="answers${yesNo?' yes-no-answers':meanNotMean?' evaluation-answers':''}">${(s.choices||[s.localId==='end'?'Read the full storyboard':'Continue']).map((c,i)=>`<button class="${s.choices?'spoken-choice option-visible'+(yesNo?' yes-no-answer':meanNotMean?' evaluation-answer':''):'continue-answer'}" data-answer="${i}"${yesNo?` data-answer-kind="${c.toLowerCase()}"`:''}${s.choices?'':' aria-label="Next"'}>${s.choices?(yesNo?yesNoLabel(c):meanNotMean?meannessFace(i===0?1:'neutral')+`<span>${esc(c)}</span>`:esc(c)):'<span aria-hidden="true">➜</span>'}</button>`).join('')}</div>${s.choices?choiceReaderControls(true):''}`;
     if(s.virtualType==='correct-feedback')options='';
     if(helperChoiceActors(s).length)options=choiceReaderControls(true);
-    if(s.choices?.length===4)options=scaleOptions(s,true);
+    if(s.ratingBranch)options=scaleOptions(s,true);
     const feedback=wrong?`<p class="feedback">${esc(s.reminder)}</p>`:'';
     stage.classList.toggle('message-slide',!s.image&&!s.visual);
     stage.dataset.choiceLocation=helperChoiceActors(s).length?'characters':'controls';
     stage.dataset.practiceVisual=s.visual||'';
     stage.dataset.screenKind=s.visual?'illustrated-practice':s.image?'story':'practice';
     stage.dataset.care=s.care||'';
-    stage.dataset.responseFormat=s.optionActors?'forced-choice':s.point?'character':s.choices?'check':'continue';
-    stage.dataset.responseKind=s.choices?.length===4?'scale':s.point?'character':s.choices?'binary':'continue';
+    stage.dataset.responseFormat=s.optionActors?'forced-choice':s.ratedActor?'individual-rating':s.point?'character':s.choices?'check':'continue';
+    stage.dataset.responseKind=s.ratingBranch?'scale':s.point?'character':s.choices?'binary':'continue';
     const art = scene(s, true);
     const visual = s.image ? `<div class="story-art">${art}</div>` : art;
     stage.innerHTML=prompt(s)+visual+choiceCaption(s)+feedback+options+childFooter(s);
@@ -454,7 +462,7 @@
     const confirmations=s.choiceConfirmations?Object.entries(s.choiceConfirmations).map(([choice,item])=>`<p class="card-note"><strong>After choosing ${esc(choice)}:</strong> “${esc(item.text)}” Yes keeps this choice; No returns to the original question.</p>`).join(''):'';
     return feedback||confirmations?`<div class="card-flow-notes">${feedback}${confirmations}</div>`:'';
   }
-  function card(s,i){return `<article class="story-card${!s.image&&!s.visual?' message-slide':''}" style="--story-accent:${esc(storyAccent(s))}"><h3 class="card-heading">${String(i+1).padStart(2,'0')} · ${esc(s.phase)}${s.proposed?' · PROPOSED WORDING':''}</h3>${prompt(s)}${scene(s)}${choiceCaption(s)}${s.choices?.length===4?scaleOptions(s):`<p class="card-options">${s.point?'Tap '+esc(actors(s).find(a=>a.id===s.point).description):s.choices?s.choices.map(esc).join(' &nbsp; / &nbsp; '):'Narration'}</p>`}${s.when||s.unless||s.note||s.expected||s.point?`<p class="card-note">${esc(branchNote(s)+(s.note||''))}${s.expected?' Check answer: '+esc(s.expected)+'.':''}${s.replayFrom?' After Yes, replay the nonhelping outcome and ask again until No.':''}${s.reminder?' Reminder if needed: “'+esc(s.reminder)+'”':''}</p>`:''}${cardExtraScript(s)}</article>`;}
+  function card(s,i){return `<article class="story-card${!s.image&&!s.visual?' message-slide':''}" style="--story-accent:${esc(storyAccent(s))}"><h3 class="card-heading">${String(i+1).padStart(2,'0')} · ${esc(s.phase)}${s.proposed?' · PROPOSED WORDING':''}</h3>${prompt(s)}${scene(s)}${choiceCaption(s)}${s.ratingBranch?scaleOptions(s):`<p class="card-options">${s.point?'Tap '+esc(actors(s).find(a=>a.id===s.point).description):s.choices?s.choices.map(esc).join(' &nbsp; / &nbsp; '):'Narration'}</p>`}${s.when||s.unless||s.note||s.expected||s.point?`<p class="card-note">${esc(branchNote(s)+(s.note||''))}${s.expected?' Check answer: '+esc(s.expected)+'.':''}${s.replayFrom?' After Yes, replay the nonhelping outcome and ask again until No.':''}${s.reminder?' Reminder if needed: “'+esc(s.reminder)+'”':''}</p>`:''}${cardExtraScript(s)}</article>`;}
   function buildBoard(){
     $('cards').innerHTML=session.pairings.map((p,n)=>`<section class="board-story" id="board-${p.id}"><h2>Story ${n+1} · ${esc(p.label)}</h2><p class="recipient-note">${esc(p.needSummary||steps.find(s=>s.pairing?.id===p.id&&s.localId==='need').text)}</p><div class="story-grid">${steps.filter(s=>s.pairing?.id===p.id).map(card).join('')}</div></section>`).join('')+`<div class="story-grid">${card(steps[steps.length-1],0)}</div>`;
   }
@@ -500,7 +508,7 @@
     $('shuffle-pairings').hidden=session.isAllReview;
     $('session-warning').textContent=session.isAllReview?'All 18 pairings appear in catalog order for researcher review.':'Each pairing appears once. Reopening this session link preserves the order shown below.';
     $('session-stats').innerHTML=`<div><strong>${t.storyCount}</strong><span>stories</span></div><div><strong>${t.substantive}</strong><span>main judgments</span></div><div><strong>${t.responses.min}–${t.responses.max}</strong><span>question responses</span></div><div><strong>~${Math.round(estimatedMinutes.min)}–${Math.round(estimatedMinutes.max)} min</strong><span>illustrative estimate</span></div>`;
-    $('timing-details').textContent=`${t.screens.min}–${t.screens.max} screens on a complete path. Includes ${t.checks} recall checks and three main forced-choice judgments per story. Includes meanness strength ratings and individual helper evaluations. ${usableTiming?'The recordings and programmed pauses total '+usableTiming.playbackMinutes.min.toFixed(1)+'–'+usableTiming.playbackMinutes.max.toFixed(1)+' minutes. The estimate adds 3–5 seconds per response.':'Timing assumes reading aloud at 110–130 words/minute plus 3–5 seconds per selection.'} The automatic story transitions add about ${Math.round(automaticAdvanceSeconds)} seconds, included in the illustrative session estimate. It is not measured child-session time; breaks, corrections and control/navigation time can add to it.`;
+    $('timing-details').textContent=`${t.screens.min}–${t.screens.max} screens on a complete path. Includes ${t.checks} recall checks and two helper choices per story. Children then rate each helper individually with a yes/no answer and a three-option follow-up. ${usableTiming?'The recordings and programmed pauses total '+usableTiming.playbackMinutes.min.toFixed(1)+'–'+usableTiming.playbackMinutes.max.toFixed(1)+' minutes. The estimate adds 3–5 seconds per response.':'Timing assumes reading aloud at 110–130 words/minute plus 3–5 seconds per selection.'} The automatic story transitions add about ${Math.round(automaticAdvanceSeconds)} seconds, included in the illustrative session estimate. It is not measured child-session time; breaks, corrections and control/navigation time can add to it.`;
     $('pairing-list').innerHTML=session.pairings.map((p,i)=>`<button class="pairing-tile" data-story="${p.id}"><span class="tile-number">${i+1}</span><span class="tile-picture"><img src="${esc(p.images.need)}" alt="${esc(p.label)}"></span><strong>${esc(p.label)}</strong><span>${esc(p.needSummary||session.careLabel)}</span></button>`).join('');
     $('pairing-list').querySelectorAll('[data-story]').forEach(b=>b.addEventListener('click',()=>goTo(steps.findIndex(s=>s.pairing?.id===b.dataset.story))));
     jump.innerHTML=session.pairings.map((p,i)=>`<optgroup label="Story ${i+1} · ${esc(p.label)}">${steps.filter(s=>s.pairing?.id===p.id).map((s,n)=>`<option value="${s.id}">${n+1} · ${esc(s.phase)}${s.when||s.unless?' (conditional)':''}</option>`).join('')}</optgroup>`).join('')+'<option value="session-end">Session end</option>';
@@ -697,6 +705,7 @@
     document.body.classList.add('child-view');
     $('auto-narration').checked=true;
     if(slidePreview && params.get('previewStep')==='outcome-summary') configure({startOn:step=>step.localId==='outcome-summary'});
+    else if(slidePreview && params.get('previewStep')==='individual-rating') configure({startOn:step=>step.measure==='Individual evaluation'});
     else if(launchAtChoice) configure({startOn:step=>step.questionPosition===1});
     else openIntroduction();
   }else{

@@ -56,6 +56,11 @@ for (const [set, setName] of sets) {
       url.searchParams.set('choicePreview', '1');
       jump.href = url.href;
       jump.setAttribute('aria-label', 'Jump to first choice, ' + context);
+      url.searchParams.delete('choicePreview');
+      url.searchParams.set('previewStep', 'individual-rating');
+      const ratings = row.querySelector('.rating-link');
+      ratings.href = url.href;
+      ratings.setAttribute('aria-label', 'Jump to helper ratings, ' + context);
       card.append(row);
     }
     grid.append(card);
