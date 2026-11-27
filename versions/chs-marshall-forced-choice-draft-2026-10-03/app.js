@@ -191,6 +191,12 @@
     }
     // The no-help badges follow the whole negated helper clause, including NOT.
     if(s.outcomeVisual){
+      // “No one helped” refers to both potential helpers. The recipient is
+      // highlighted separately when the following noun phrase is spoken.
+      for(const range of phraseMatches(words,'no one helped')){
+        for(const helper of s.pairing.helpers)
+          spans.push({actorId:helper.id,start:range.start,end:range.end});
+      }
       for(const helper of s.pairing.helpers){
         const fullClause=`${helper.description} did NOT help ${s.pairing.recipient.description}`;
         const ranges=phraseMatches(words,fullClause);
@@ -218,7 +224,7 @@
     stage.querySelectorAll('.narration-actor-current,.option-current,.choice-bounce-a,.choice-bounce-b,.outcome-spoken').forEach(element=>element.classList.remove('narration-actor-current','option-current','choice-bounce-a','choice-bounce-b','outcome-spoken'));
   }
   function showSpokenCues(spans,seconds){
-    // Question targets and outcome helper outlines follow the spoken role name.
+    // Question targets and outcome outlines follow the spoken references.
     // Characters and the no-help badges never move or bounce.
     stage.classList.add('child-speaking');
     stage.querySelectorAll('.character-choice-target,.outcome-role-cue').forEach(button=>{
@@ -286,6 +292,7 @@
   function playNarration(){
     stopNarration();if(!narrationStatus())return;
     const s=activeStep(),screenId=s.id;audioStartRequired=false;screenHeard=false;narrationEnabled=true;narrationPlaying=true;optionReader?.prepare();gateNarration(true);
+    if(s.outcomeCaptions)stage.querySelector('.prompt h2').textContent=s.outcomeCaptions[0];
     $('stop-narration').disabled=false;$('play-narration').textContent='Replay narration';$('narration-status').textContent='Listen to Evelyn…';
     syncChildControls();
     const clipSpans=new Map();
@@ -312,7 +319,7 @@
       :`<span class="character-choice-cue"${characterChoiceStyle(s,actor)} aria-hidden="true"></span>`).join('');
     // Only an already selected answer gets a still confirmation outline.
     const spokenCues=interactive ? shownActors.filter(actor=>actor.id===s.confirmationActorId).map(actor=>`<span class="narration-actor-cue confirmation-selected"${actorTargetStyle(s,actor)} aria-hidden="true"></span>`).join('')
-      +(s.outcomeVisual?s.pairing.helpers.map(actor=>`<span class="narration-actor-cue outcome-role-cue"${actorTargetStyle(s,actor)} data-narration-actor="${actor.id}" aria-hidden="true"></span>`).join(''):''):'';
+      +(s.outcomeVisual?shownActors.map(actor=>`<span class="narration-actor-cue outcome-role-cue"${actorTargetStyle(s,actor)} data-narration-actor="${actor.id}" aria-hidden="true"></span>`).join(''):''):'';
     const alt=shownActors.map(a=>a.side==='middle'&&a.description.endsWith('in the middle')?a.description:`${a.description} ${a.side==='middle'?'in the middle':'on the '+a.side}`).join('; ');
     const picture=`<div class="picture"><img ${interactive?'':'loading="lazy"'} src="${esc(s.image)}" alt="${esc(alt)}.${s.image===s.pairing.images.need?' '+esc(s.pairing.needSummary):''}">${window.ObligationStudyVisuals.nonhelpingEyeOverlay(s)}${choiceBoxes}${spokenCues}</div>`;
     if(!s.outcomeVisual)return picture;
@@ -511,7 +518,7 @@
     return ObligationSession.build($('set-select').value,$('question-order-select').value,
       assignmentInput.value||null,$('care-select').value,storySeed);
   }
-  function configure({startAt=0, firstQuestion=false} = {}){
+  function configure({startAt=0, startOn} = {}){
     const setId=$('set-select').value;
     assignmentInput.disabled=setId==='all';
     if(assignmentInput.disabled)assignmentInput.value='';
@@ -541,7 +548,7 @@
     if(session.assignmentNumber===null)url.searchParams.delete('assignmentNumber');
     else url.searchParams.set('assignmentNumber',session.assignmentNumber);
     window.history.replaceState(null,'',url);
-    updateOverview();buildBoard();resetRun(firstQuestion ? steps.findIndex(step=>step.questionPosition===1) : startAt);
+    updateOverview();buildBoard();resetRun(startOn ? Math.max(0,steps.findIndex(startOn)) : startAt);
   }
   function pauseTimer(){if(started!==null){elapsed+=Date.now()-started;started=null;}updateTimer();}
   function markBrowse(){if(timerUsed){incomplete=true;pauseTimer();}}
@@ -689,7 +696,8 @@
     childView=true;
     document.body.classList.add('child-view');
     $('auto-narration').checked=true;
-    if(launchAtChoice) configure({firstQuestion:true});
+    if(slidePreview && params.get('previewStep')==='outcome-summary') configure({startOn:step=>step.localId==='outcome-summary'});
+    else if(launchAtChoice) configure({startOn:step=>step.questionPosition===1});
     else openIntroduction();
   }else{
     configure();
