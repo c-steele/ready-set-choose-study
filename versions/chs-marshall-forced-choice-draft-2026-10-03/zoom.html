@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Who Has to Help? · Zoom pilot</title>
+  <link rel="stylesheet" href="zoom.css">
+  <script defer src="pairing-catalog.js"></script>
+  <script defer src="script-data.js"></script>
+  <script defer src="session-data.js"></script>
+  <script defer src="study-visuals.js"></script>
+  <script defer src="zoom-pilot.js"></script>
+</head>
+<body>
+  <main>
+    <section id="setup" class="host-panel" aria-labelledby="setup-title">
+      <p class="kicker">Zoom pilot</p>
+      <h1 id="setup-title">Who Has to Help?</h1>
+      <p class="lede">Choose a version for this child or use random assignment.</p>
+      <form id="pilot-form">
+        <label for="set-select">Character set</label>
+        <select id="set-select">
+          <option value="random" selected>Assign randomly</option>
+          <option value="woman">Mom and sister</option>
+          <option value="man">Dad and brother</option>
+          <option value="family">Family and teacher</option>
+        </select>
+        <label for="care-select">Type of care</label>
+        <select id="care-select">
+          <option value="random" selected>Assign randomly</option>
+          <option value="hug">Giving a hug</option>
+          <option value="food">Sharing strawberries</option>
+          <option value="help">Helping with a heavy box</option>
+        </select>
+        <label for="order-select">Question order</label>
+        <select id="order-select">
+          <option value="random" selected>Assign randomly</option>
+          <option value="will-first">WILL first</option>
+          <option value="has-to-first">HAS TO first</option>
+        </select>
+        <label for="length-select">Pilot length</label>
+        <select id="length-select">
+          <option value="6" selected>Full pilot · six stories</option>
+          <option value="1">Quick pilot · one story</option>
+        </select>
+        <div class="host-note"><strong>During the call</strong>
+          <p>Start the pilot, then share this tab in Zoom. Read each slide and its choices aloud. Click the answer the child gives. Use Back to correct a click.</p>
+        </div>
+        <p id="setup-error" role="alert"></p>
+        <div class="setup-actions">
+          <button id="start" class="primary" type="submit">Start pilot</button>
+          <button id="resume" type="button" hidden>Resume pilot</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="study" aria-label="Who Has to Help?" hidden>
+      <div class="study-shell">
+        <p id="story-counter"></p>
+        <div class="slide">
+          <h1 id="prompt" aria-live="polite"></h1>
+          <div class="slide-body">
+            <div id="picture">
+              <img id="scene" alt="">
+              <div id="targets"></div>
+            </div>
+            <p id="choice-prompt"></p>
+            <div id="answers" role="group" aria-label="Answer choices"></div>
+          </div>
+        </div>
+        <nav class="controls" aria-label="Slide controls">
+          <button id="back" type="button">Back</button>
+          <button id="partial-download" type="button">Save progress</button>
+          <button id="next" type="button">Next</button>
+        </nav>
+      </div>
+    </section>
+
+    <section id="finish" class="host-panel" aria-labelledby="finish-title" hidden>
+      <h1 id="finish-title">Thank you for helping!</h1>
+      <p class="lede">That's the end of our stories.</p>
+      <div class="finish-actions"><p>Stop sharing in Zoom, then save the responses for this pilot.</p>
+        <button id="download" class="primary" type="button">Download responses (CSV)</button>
+        <button id="again" type="button">New pilot</button>
+      </div>
+    </section>
+    <noscript>This pilot requires JavaScript. Enable it and reload this page.</noscript>
+  </main>
+</body>
+</html>
