@@ -87,11 +87,17 @@ body.child-view .prompt {
   background: var(--story-accent);
 }
 
+/* Wrap at the next word that does not fit, across the full caption band. */
+.prompt h2,
+.choice-caption {
+  width: 100%;
+  text-wrap: wrap;
+}
+
 body.child-view .prompt h2 {
   font-size: clamp(20px, 2.2vw, 28px);
   line-height: 1.13;
   letter-spacing: -.3px;
-  text-wrap: balance;
 }
 
 /* Match the original stimulus bands in proportion to the full slide width. */
@@ -114,12 +120,11 @@ body.child-view .prompt h2 {
   font-weight: 700;
   line-height: 1.12;
   letter-spacing: -.3px;
-  text-wrap: balance;
 }
 
 .choice-caption {
   display: grid;
-  place-items: center;
+  align-items: center;
   flex: 0 0 auto;
   min-height: max(52px, calc(6.875 * var(--caption-unit)));
   margin: 0;
@@ -128,27 +133,14 @@ body.child-view .prompt h2 {
   text-align: center;
 }
 
-/* Fill each line naturally instead of forcing equally short caption lines. */
-.stage[data-screen-kind="story"] > .prompt.evaluation-prompt h2 {
-  width: 100%;
-  max-width: none;
-  text-wrap: wrap;
-}
-
 /* Keep the longer recall question on one line on desktop without shrinking
    the other story captions. Narrow screens can wrap at a readable size. */
 .stage[data-screen-kind="story"] > .prompt.recall-prompt h2 {
-  width: 100%;
-  max-width: none;
   font-size: max(22px, calc(2.75 * var(--caption-unit)));
-  text-wrap: wrap;
 }
 .stage[data-screen-kind="story"] > .prompt.scale-prompt h2,
 .stage[data-screen-kind="story"] > .prompt.care-question-prompt h2 {
-  width: 100%;
-  max-width: none;
   font-size: max(22px, calc(2.45 * var(--caption-unit)));
-  text-wrap: wrap;
 }
 
 @media (min-width: 1024px) {
@@ -526,11 +518,11 @@ body.child-view .answers button.spoken-choice.option-current{box-shadow:0 0 0 5p
 /* Keep text-only screens centered; retain compact headers on illustrated scenes. */
 body.child-view .stage.message-slide{min-height:calc(100vh - 82px);min-height:calc(100dvh - 82px)}
 body.child-view .stage.message-slide .prompt{flex:1;margin-block:auto;padding:clamp(26px,5vh,60px) 30px;background:#fff;color:#292821}
-body.child-view .stage.message-slide .prompt h2{font-size:clamp(29px,3.3vw,43px);line-height:1.25;max-width:24ch;text-wrap:balance}
+body.child-view .stage.message-slide .prompt h2{font-size:clamp(29px,3.3vw,43px);line-height:1.25}
 body.child-view .answers button.continue-answer{font-size:42px;line-height:1;flex-direction:column;gap:3px;padding:7px 20px}
 body.child-view .child-next .child-control-symbol{font-size:42px}
 body.child-view .answers button.continue-answer::before{content:none!important;display:none!important}
-@media(max-width:460px){body.child-view .stage.message-slide .prompt{padding:26px 22px}body.child-view .stage.message-slide .prompt h2{font-size:29px;max-width:22ch}}
+@media(max-width:460px){body.child-view .stage.message-slide .prompt{padding:26px 22px}body.child-view .stage.message-slide .prompt h2{font-size:29px}}
 @media(max-height:650px) and (min-width:700px){body.child-view .stage.message-slide{min-height:calc(100dvh - 66px)}body.child-view .stage.message-slide .prompt h2{font-size:32px}body.child-view .stage.message-slide .prompt{padding-block:22px}}
 
 /* Keep Next beside Replay even on automatically advancing story pages. */

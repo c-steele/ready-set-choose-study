@@ -115,14 +115,14 @@
 .answers button.continue-answer{font-size:34px;line-height:1;min-width:82px;min-height:56px}
 .stage.message-slide{display:flex;flex-direction:column;min-height:420px}
 .stage.message-slide .prompt{flex:1;width:100%;margin:auto;background:#fff;color:#292821;padding:38px 28px;align-items:center;justify-content:center}
-.stage.message-slide .prompt h2{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:clamp(28px,3.4vw,42px);line-height:1.25;max-width:24ch;letter-spacing:-.45px;text-wrap:balance}
+.stage.message-slide .prompt h2{font-family:'Helvetica Neue',Helvetica,Arial,sans-serif;font-size:clamp(28px,3.4vw,42px);line-height:1.25;letter-spacing:-.45px}
 .stage.message-slide .preface{font-size:22px;color:#575145;margin-bottom:12px}
 .stage.message-slide .referent{font-size:19px;color:#575145;margin-bottom:10px}
 .stage.message-slide .practice-space{display:none}
 .story-card.message-slide .prompt{background:#fff;color:#292821;padding:28px 22px;min-height:180px}
-.story-card.message-slide .prompt h2{font-size:24px;line-height:1.25;text-wrap:balance}
+.story-card.message-slide .prompt h2{font-size:24px;line-height:1.25}
 .story-card.message-slide .practice-space{display:none}
-@media(max-width:460px){.stage.message-slide .prompt{padding:28px 22px}.stage.message-slide .prompt h2{font-size:29px;max-width:22ch}.story-card.message-slide .prompt h2{font-size:23px}}
+@media(max-width:460px){.stage.message-slide .prompt{padding:28px 22px}.stage.message-slide .prompt h2{font-size:29px}.story-card.message-slide .prompt h2{font-size:23px}}
 @media print{.story-card.message-slide .prompt{background:white!important;color:#292821!important;min-height:260px}.story-card.message-slide .prompt h2{font-size:30px}.confirmation-selected{box-shadow:none!important}}
 
 .session-settings { grid-template-columns: repeat(auto-fit, minmax(min(100%, 180px), 1fr)); }
