@@ -198,6 +198,7 @@
           (current>=0 && state.active?' · Family is on slide '+(current+1):''),'step-counter'));
         if(item.step || Number.isInteger(item.parentIndex) || item.finish)inspect.append(exactPreview(item,groups[g]));
         else if(item.image)inspect.append(picture(item.image,'Study scene','still'));
+        if(item.conditional)inspect.append(node('p','Only after “'+item.conditional+'”','flag'));
         inspect.append(node('p',item.label,'prompt'));
         if(item.body && item.body!==item.label) inspect.append(node('p',item.body));
         const controls=node('div',null,'preview-controls');
@@ -238,7 +239,7 @@
             const img=node('img',null,'full-thumb');img.src=new URL(item.fullSlideImage,location.href).href;img.alt='';img.loading='lazy';e.append(img);
           }else if(item.image)e.append(picture(item.image,'','thumb'));
           else e.append(node('span',item.label,'thumb-title'));
-          e.append(node('span',(item.current?'Showing · ':'')+item.label));
+          e.append(node('span',(item.current?'Showing · ':'')+(item.conditional?'If “'+item.conditional+'” · ':'')+item.label));
           details.append(e);
         });
       };

@@ -43,18 +43,28 @@
     // The narrated study supplies the shared cast, story order, and side order.
     session = ObligationSession.build(run.set, 'has-to-first', null, run.care, run.seed);
     steps = session.steps.filter(step =>
-      step.pairing && step.storyIndex < run.count && !step.ratingBranch &&
+      step.pairing && step.storyIndex < run.count &&
+      (!step.ratingBranch || (run.version === 4 && step.ratingBranch === 'mean')) &&
       step.localId !== 'predict-compare' && step.localId !== 'recall-all'
     ).map(step => {
       if (!step.ratedActor) return step;
       const actor = step.pairing.helpers.find(helper => helper.id === step.ratedActor);
       const role = actor.role === step.pairing.recipient.role ? actor.description : 'the ' + actor.label;
+      if (step.ratingBranch === 'mean') {
+        return {...step, text:`How mean was ${role}?`, choices:ratingOptions.slice(1),
+          when:[step.when[0], 'Mean'], ratingScale:'meanness-degree'};
+      }
       const recipient = step.pairing.recipient;
       const missedAction = {
         hug: `giving a hug to the sad ${recipient.label} in the middle`,
         food: `giving strawberries to the hungry ${recipient.label} in the middle`,
         help: `helping ${recipient.reference} pick up the heavy box`
       }[step.care];
+      if (run.version === 4) {
+        return {...step, text:`Was ${role} mean or not mean for not ${missedAction}?`,
+          choices:['Mean', 'Not mean'], ratingScale:'meanness-binary'};
+      }
+      // Sessions started with the one-step scale retain their original slide indices and scoring.
       const id = 'evaluation-four-' + actor.id;
       return {...step, id:step.pairing.id + ':' + id, localId:id,
         text:`How mean or not mean was ${role} for not ${missedAction}?`, choices:ratingOptions,
@@ -79,7 +89,7 @@
     run = {
       id: Array.from(crypto.getRandomValues(new Uint32Array(2)), n => n.toString(16).padStart(8,'0')).join(''),
       set: condition('set-select',sets), care: condition('care-select',careTypes),
-      seed, count:6, index:firstSlide, line:0, trail:[], ended:false
+      seed, version:4, count:6, index:firstSlide, line:0, trail:[], ended:false
     };
     reconstruct();
     syncPresenter(true);
@@ -142,13 +152,17 @@
   }
   function makeRecord(step, picked) {
     const helper = step.pairing.helpers.find(h => h.id === (step.ratedActor || step.optionActors?.[picked]));
+    let score = '';
+    if (step.ratingScale === 'meanness-four') score = picked;
+    if (step.ratingScale === 'meanness-degree') score = picked + 1;
+    if (step.ratingScale === 'meanness-binary' && step.choices[picked] === 'Not mean') score = 0;
     return {
       story:step.storyIndex+1, pairing_id:step.pairing.id, recipient:step.pairing.recipient.reference,
       left:step.pairing.helpers[0].description, right:step.pairing.helpers[1].description,
       step_id:step.id, measure:step.measure || step.phase, prompt:displayed(step), options:step.choices.join(' | '),
       answer:step.choices[picked], accepted:true,
       helper_role:helper?.description || '', helper_side:helper?.side || '', rating_position:step.ratingPosition || '',
-      rating_scale:step.ratingScale || '', meanness_score:step.ratingScale === 'meanness-four' ? picked : '',
+      rating_scale:step.ratingScale || '', meanness_score:score,
       elapsed_ms:Math.round(performance.now()-startedScreen)
     };
   }
@@ -173,6 +187,8 @@
     else {
       if (options.length) visit.record = makeRecord(step,picked);
       run.index++;
+      const followup = steps[run.index]?.when;
+      if (followup && followup[0] === step.id && visit.record?.answer !== followup[1]) run.index++;
       run.line = 0;
       run.ended = run.index >= steps.length;
     }
@@ -237,7 +253,7 @@
     steps.forEach((step,index) => {
       const lines = step.outcomeCaptions || [displayed(step,0)];
       lines.forEach((label,line) => {
-        stories[step.storyIndex].slides.push({label, step, line, options:step.choices || [], body:step.choiceQuestion || '', image:step.image, current:!run.ended && index===run.index && line===run.line,
+        stories[step.storyIndex].slides.push({label, conditional:step.when?.[1], step, line, options:step.choices || [], body:step.choiceQuestion || '', image:step.image, current:!run.ended && index===run.index && line===run.line,
           visitedIndex:visited.get(index + ':' + line) ?? null});
       });
     });
@@ -255,6 +271,7 @@
       step ? 'Story ' + (step.storyIndex+1) + ' of ' + run.count : page?.title || 'Child’s turn';
     const prompt = run.ended ? byId('finish-title').textContent : page?.title || (step ? displayed(step) : 'Who Has to Help?');
     const cue = run.ended ? '' : page ? [page.text,page.cue].filter(Boolean).join(' ') :
+      step?.ratingScale === 'meanness-degree' ? 'Read all three choices aloud.' :
       step?.choiceQuestion || (!step ? 'Listen to the story, then answer the questions.' : '');
     presenter.update({active:!beforeStart && !run.ended, ended:run.ended, previewing:Boolean(sharedPreview),
       counter, image:step?.image, title:'Who Has to Help?', prompt, cue, options, stories, count:run.count,
@@ -264,7 +281,7 @@
 
   function download() {
     const base = {
-      pilot_version:'who-has-to-help-zoom-3', pilot_id:run.id, completed:run.ended,
+      pilot_version:'who-has-to-help-zoom-' + (run.version || 3), pilot_id:run.id, completed:run.ended,
       assigned_stories:run.count, set:run.set, care:run.care, question_type:'has-to-only',
       verbal_permission_confirmed_at:run.trail.find(v=>v.index===-2)?.confirmedAt || '',
       story_seed:run.seed, pairing_order:session.pairingOrder.slice(0,run.count).join(' | ')

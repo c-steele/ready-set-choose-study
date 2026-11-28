@@ -123,3 +123,17 @@ body.child-view .rating-options-four .rating-answer > span:last-child {
   #stage[data-response-format="forced-choice"] > .prompt.care-question-prompt h2,
   #stage[data-response-format="forced-choice"] > .choice-caption { font-size: 19px; }
 }
+
+@media (max-width: 360px) {
+  body.child-view .answers.evaluation-answers {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+  body.child-view .answers.evaluation-answers .evaluation-answer {
+    width: 100%;
+    min-width: 0;
+    padding-inline: 4px;
+    font-size: 20px;
+  }
+}
