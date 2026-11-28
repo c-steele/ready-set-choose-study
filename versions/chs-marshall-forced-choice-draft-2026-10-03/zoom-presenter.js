@@ -118,7 +118,7 @@
         viewport.replaceChildren(fallback);
       }
     },{once:true});
-    frame.src='about:blank';viewport.append(frame);
+    frame.src=new URL('zoom-navigator-frame.html',location.href).href;viewport.append(frame);
     // Each isolated visual retains the same 1280 x 720 design viewport.
     const observer=new ResizeObserver(()=>{
       if(!viewport.isConnected){observer.disconnect();return;}
