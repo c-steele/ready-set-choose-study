@@ -95,7 +95,7 @@
     stage.querySelectorAll('[data-answer]').forEach(el=>el.addEventListener('click',()=>onAnswer(Number(el.dataset.answer))));
     stage.querySelector('#next')?.addEventListener('click',onNext);
     stage.querySelector('#back')?.addEventListener('click',onBack);
-    const save=document.querySelector('#partial-download');
+    const save=stage.ownerDocument.querySelector('#partial-download');
     if(save){ save.hidden=!canSave; save.onclick=onSave; }
   }
   window.ZoomSlideVisuals={render};

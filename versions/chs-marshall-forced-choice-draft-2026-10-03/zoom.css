@@ -111,3 +111,15 @@ body.child-view .rating-options-four .rating-answer > span:last-child {
   body.child-view .rating-options-four { width: calc(100% - 10px); gap: 4px; }
   body.child-view .rating-options-four .meanness-face { width: clamp(38px,13vw,60px); height: auto; }
 }
+
+/* Use the same type scale for the question and the names read aloud below it. */
+#stage[data-response-format="forced-choice"] > .prompt.care-question-prompt h2,
+#stage[data-response-format="forced-choice"] > .choice-caption {
+  font-size: max(22px, calc(3.25 * var(--caption-unit)));
+  line-height: 1.12;
+  text-wrap: wrap;
+}
+@media (max-width: 460px) {
+  #stage[data-response-format="forced-choice"] > .prompt.care-question-prompt h2,
+  #stage[data-response-format="forced-choice"] > .choice-caption { font-size: 19px; }
+}

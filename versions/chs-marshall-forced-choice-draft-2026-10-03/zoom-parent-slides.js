@@ -9,6 +9,14 @@
     'With your permission, I will record our game in Zoom.'
   ];
   const pages = {
+    '-4': {
+      title: 'Welcome!',
+      image: '../zoom-ksize-intro-outro-v1/slide-01.png',
+      text: '',
+      cue: 'Welcome the family, then advance to the instructions.',
+      options: [],
+      nextLabel: 'Next'
+    },
     '-3': {
       title: 'About today’s game',
       text: '',
@@ -23,12 +31,10 @@
       options: ['Continue', 'End visit']
     }
   };
-  function getPage(index, count = 6) {
+  function getPage(index) {
     const page = pages[index];
     if (Number(index) !== -3) return page;
-    const duration = count === 'both' ? 'About 5 minutes for one story or 10–15 minutes for six stories.' :
-      Number(count) === 1 ? 'About 5 minutes.' : 'About 10–15 minutes.';
-    const bullets = [duration, ...content];
+    const bullets = ['About 10–15 minutes.', ...content];
     return {...page, text:bullets.join(' '), bullets};
   }
   function el(tag, cls, text) {
@@ -44,15 +50,25 @@
     b.addEventListener('click', action);
     return b;
   }
-  function render(stage, index, onNext, onAnswer, onBack, canBack, count = 6) {
-    const page = getPage(index,count);
+  function render(stage, index, onNext, onAnswer, onBack, canBack) {
+    const page = getPage(index);
     const wrap = el('section','zoom-parent-page');
-    const card = el('div',page.bullets ? 'zoom-parent-sheet instructions' : 'zoom-parent-sheet consent');
+    const kind = page.image ? 'welcome' : page.bullets ? 'instructions' : 'consent';
+    const card = el('div','zoom-parent-sheet ' + kind);
     wrap.setAttribute('aria-labelledby','prompt');
     const title = el('h1','',page.title);
     title.id = 'prompt';
     card.append(title);
-    const body = el(page.bullets ? 'ul' : 'blockquote','', page.bullets ? '' : page.text);
+    if (page.image) {
+      const image = el('img', 'zoom-parent-welcome-image');
+      image.src = page.image;
+      image.alt = '';
+      image.width = 1920;
+      image.height = 1080;
+      card.append(image);
+    }
+    const body = page.image ? el('span') : el(page.bullets ? 'ul' : 'blockquote','', page.bullets ? '' : page.text);
+    if (page.image) body.hidden = true;
     body.id = 'choice-prompt';
     if (page.bullets) {
       page.bullets.forEach((label, i) => {

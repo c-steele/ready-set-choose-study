@@ -8,58 +8,77 @@
   <link rel="stylesheet" href="../chs-home-school-evelyn-v1/styles.css?v=whw-camera-captions-2026-11-04">
   <link rel="stylesheet" href="style.css?v=individual-r71">
   <link rel="stylesheet" href="child-view.css?v=caption-wrap-r70">
-  <link rel="stylesheet" href="zoom.css?v=obligation-only-3">
-  <link rel="stylesheet" href="zoom-parent.css?v=obligation-only-3">
+  <link rel="stylesheet" href="zoom.css?v=six-board-4">
+  <link rel="stylesheet" href="zoom-parent.css?v=six-board-4">
+  <link id="review-theme" rel="stylesheet" href="../../screen-share-study/review.css?v=ftc-rendition-review-v4">
+  <link rel="stylesheet" href="zoom-board.css?v=six-board-4">
+  <link rel="stylesheet" href="zoom-navigator.css?v=six-board-4">
   <script defer src="pairing-catalog.js"></script>
   <script defer src="script-data.js"></script>
   <script defer src="session-data.js"></script>
   <script defer src="study-visuals.js"></script>
-  <script defer src="zoom-presenter.js?v=obligation-only-3"></script>
-  <script defer src="zoom-slide-visuals.js?v=obligation-only-3"></script>
-  <script defer src="zoom-parent-slides.js?v=obligation-only-3"></script>
-  <script defer src="zoom-pilot.js?v=obligation-only-3"></script>
+  <script defer src="zoom-presenter.js?v=six-board-4"></script>
+  <script defer src="zoom-slide-visuals.js?v=six-board-4"></script>
+  <script defer src="zoom-parent-slides.js?v=six-board-4"></script>
+  <script defer src="zoom-pilot.js?v=six-board-4"></script>
+  <script defer src="zoom-board.js?v=six-board-4"></script>
 </head>
 <body>
   <main>
-    <section id="setup" class="host-panel" aria-labelledby="setup-title">
-      <p class="kicker">Zoom pilot</p>
-      <h1 id="setup-title">Who Has to Help?</h1>
-      <p class="lede">Choose a version for this child or use random assignment.</p>
-      <form id="pilot-form">
-        <label for="set-select">Character set</label>
-        <select id="set-select">
-          <option value="random" selected>Assign randomly</option>
-          <option value="woman">Mom and sister</option>
-          <option value="man">Dad and brother</option>
-          <option value="family">Family and teacher</option>
-        </select>
-        <label for="care-select">Type of care</label>
-        <select id="care-select">
-          <option value="random" selected>Assign randomly</option>
-          <option value="hug">Giving a hug</option>
-          <option value="food">Sharing strawberries</option>
-          <option value="help">Helping with a heavy box</option>
-        </select>
-        <label for="length-select">Pilot length</label>
-        <select id="length-select">
-          <option value="6" selected>Full pilot · six stories</option>
-          <option value="1">Quick pilot · one story</option>
-        </select>
-        <div class="host-note"><strong>During the call</strong>
-          <p>Open the private presenter window if you want to see your notes and slide list. Start the pilot, then share only the study window in Zoom. Show the instructions, then the verbal consent slide. Read the stories aloud and select the child’s answers.</p>
+    <section id="setup" class="review-shell" aria-labelledby="setup-title">
+      <header class="review-hero">
+        <div>
+          <p class="review-eyebrow">Zoom pilot · Researcher preview</p>
+          <h1 id="setup-title">Who Has to Help?</h1>
+          <p class="review-subtitle">Six stories about one kind of care. In each story, children choose who has to help and then rate both helpers.</p>
         </div>
-        <p class="shortcuts">Use → to advance, ← to go back, or 1–4 to record the answer in the order shown. Press P to reopen the presenter.</p>
+        <div class="review-progress-card" aria-live="polite">
+          <strong id="review-count">0 / 9</strong>
+          <span>Versions reviewed</span>
+          <div class="review-progress-track" aria-hidden="true"><i id="review-bar"></i></div>
+        </div>
+      </header>
+      <form id="pilot-form">
+        <div class="board-launch">
+          <div class="board-launch-text">
+            <h2>Start a six-story pilot</h2>
+            <p>Open a version below or draw one at random. Share the family’s Welcome window in Zoom. Use the slide navigator to see the script and record answers privately.</p>
+          </div>
+          <div class="board-launch-actions">
+            <button id="start" type="submit" class="review-open">Start random version</button>
+            <button id="open-presenter" type="button" class="board-secondary">Slide navigator</button>
+            <button id="resume" type="button" class="board-secondary" hidden>Resume pilot</button>
+            <a id="resume-previous" href="zoom-legacy-v2.html" hidden>Open earlier saved pilot</a>
+          </div>
+        </div>
         <p id="setup-error" role="alert"></p>
-        <div class="setup-actions">
-          <button id="start" class="primary" type="submit">Start pilot</button>
-          <button id="open-presenter" type="button">Open private presenter</button>
-          <button id="resume" type="button" hidden>Resume pilot</button>
-          <a id="resume-previous" href="zoom-legacy-v2.html" hidden>Open earlier saved pilot</a>
+        <div class="review-controls" aria-label="Preview filters">
+          <label for="set-select"><span>Character set</span>
+            <select id="set-select">
+              <option value="random" selected>All character sets</option>
+              <option value="woman">Mom and sister</option>
+              <option value="man">Dad and brother</option>
+              <option value="family">Family and teacher</option>
+            </select>
+          </label>
+          <label for="care-select"><span>Kind of care</span>
+            <select id="care-select">
+              <option value="random" selected>All kinds of care</option>
+              <option value="hug">Giving a hug</option>
+              <option value="food">Giving strawberries</option>
+              <option value="help">Lifting a heavy box</option>
+            </select>
+          </label>
+          <label class="review-check-filter"><input type="checkbox" id="unreviewed"><span>Only show unreviewed</span></label>
+          <button type="button" class="review-reset" id="reset-checks">Clear review checks</button>
         </div>
       </form>
+      <section class="review-summary"><p><strong id="visible-count">9 versions</strong> shown. Each launch shuffles the six pairings. The first helper rated can be on either side. That side alternates across the six stories.</p><p>Review checks are saved in this browser.</p></section>
+      <section class="review-grid" aria-label="Six-story pilot versions" id="version-grid"></section>
     </section>
 
     <section id="study" aria-label="Who Has to Help?" hidden>
+      <div class="zoom-navigator-bar"><button id="study-navigator" class="zoom-slide-navigator" type="button">Slide navigator</button></div>
       <div class="child-topbar"><p id="story-counter" class="child-story-label"></p>
         <button id="partial-download" type="button" hidden>Save progress</button></div>
       <article id="stage" class="stage" aria-live="polite"></article>

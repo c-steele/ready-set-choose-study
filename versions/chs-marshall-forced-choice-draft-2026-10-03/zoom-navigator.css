@@ -1,0 +1,11 @@
+.zoom-navigator-bar {
+  display:flex; align-items:center; justify-content:center; margin:0 auto; padding:3px 8px 5px; gap:8px;
+}
+button.zoom-slide-navigator {
+  display:inline-flex; gap:.45em; align-items:center; justify-content:center;
+  min-height:32px; padding:4px 13px; font:650 14px/1.25 system-ui,sans-serif;
+  border:1px solid #185d83; border-radius:6px; background:#195e85; color:white; cursor:pointer;
+}
+button.zoom-slide-navigator::before { content:'▤'; font-size:16px; line-height:1; }
+button.zoom-slide-navigator:hover { background:#104969; }
+button.zoom-slide-navigator:focus-visible { outline:3px solid #2583b8;outline-offset:2px; }
