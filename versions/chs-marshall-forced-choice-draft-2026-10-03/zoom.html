@@ -5,12 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex,nofollow">
   <title>Who Has to Help? · Zoom pilot</title>
-  <link rel="stylesheet" href="zoom.css">
+  <link rel="stylesheet" href="zoom.css?v=presenter-1">
   <script defer src="pairing-catalog.js"></script>
   <script defer src="script-data.js"></script>
   <script defer src="session-data.js"></script>
   <script defer src="study-visuals.js"></script>
-  <script defer src="zoom-pilot.js"></script>
+  <script defer src="zoom-presenter.js?v=1"></script>
+  <script defer src="zoom-pilot.js?v=presenter-1"></script>
 </head>
 <body>
   <main>
@@ -45,11 +46,13 @@
           <option value="1">Quick pilot · one story</option>
         </select>
         <div class="host-note"><strong>During the call</strong>
-          <p>Start the pilot, then share this tab in Zoom. Read each slide and its choices aloud. Click the answer the child gives. Use Back to correct a click.</p>
+          <p>Open the private presenter window if you want to see your notes and slide list. Start the pilot, then share only the study window in Zoom. Read the slides aloud and click the answer the child gives.</p>
         </div>
+        <p class="shortcuts">Use → to advance, ← to go back, or 1–3 to record the answer in the order shown. Press P to reopen the presenter.</p>
         <p id="setup-error" role="alert"></p>
         <div class="setup-actions">
           <button id="start" class="primary" type="submit">Start pilot</button>
+          <button id="open-presenter" type="button">Open private presenter</button>
           <button id="resume" type="button" hidden>Resume pilot</button>
         </div>
       </form>
@@ -70,9 +73,9 @@
           </div>
         </div>
         <nav class="controls" aria-label="Slide controls">
-          <button id="back" type="button">Back</button>
+          <button id="back" type="button" title="Previous slide (left arrow)">← Back</button>
           <button id="partial-download" type="button">Save progress</button>
-          <button id="next" type="button">Next</button>
+          <button id="next" type="button" title="Next slide (right arrow)">Next →</button>
         </nav>
       </div>
     </section>

@@ -198,3 +198,14 @@ button:not(:disabled):hover { border-color: var(--teal); }
 @media (max-width: 540px) {
   #answers button[data-degree] { flex-direction: column; gap: 2px; }
 }
+
+.shortcuts { margin: .1em 0 .65em; color: var(--muted); font-size: .9rem; }
+.controls { display: grid; grid-template-columns: 1fr auto auto 1fr; justify-content: center; }
+#back { grid-column: 2; grid-row: 1; border-color: var(--teal); color: var(--teal); }
+#next { grid-column: 3; grid-row: 1; }
+.controls #next[hidden] { display: block !important; visibility: hidden; }
+#partial-download { grid-column: 4; grid-row: 1; justify-self: end; }
+@media (max-width: 400px) {
+  .controls { gap: 4px; }
+  .controls button { min-width: 60px; padding-inline: .45em; }
+}

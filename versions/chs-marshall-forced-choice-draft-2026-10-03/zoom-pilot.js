@@ -4,6 +4,7 @@
   const byId = id => document.getElementById(id);
   const params = new URLSearchParams(location.search);
   const storageKey = 'who-has-to-help-zoom-v1';
+  const presenter = window.ObligationZoomPresenter;
   const sets = ['woman', 'man', 'family'];
   const careTypes = ['hug', 'food', 'help'];
   const orders = ['will-first', 'has-to-first'];
@@ -45,6 +46,7 @@
   }
   function setup() {
     view('setup');
+    presenter?.update({active:false, ended:false, stories:[], options:[]});
     const saved = savedRun();
     byId('resume').hidden = !saved;
     byId('resume').textContent = saved?.ended ? 'Reopen completed pilot' : 'Resume pilot';
@@ -71,8 +73,8 @@
     render();
   }
 
-  function displayed(step) {
-    if (step.outcomeCaptions) return step.outcomeCaptions[run.line];
+  function displayed(step, line = run.line) {
+    if (step.outcomeCaptions) return step.outcomeCaptions[line];
     if (!step.ratedActor) return step.text;
     const actor = step.pairing.helpers.find(h => h.id === step.ratedActor).description;
     if (!step.ratingBranch) return 'Do you think ' + actor + ' was mean or not mean?';
@@ -132,6 +134,7 @@
     if (run.ended) {
       view('finish');
       byId('finish').querySelector('.lede').textContent = run.count === 1 ? 'That’s the end of our story.' : 'That’s the end of our stories.';
+      syncPresenter();
       return;
     }
     view('study');
@@ -154,9 +157,10 @@
       byId('answers').appendChild(option);
     });
     byId('next').hidden = options.length > 0;
-    byId('next').textContent = welcome ? 'Start story' : 'Next';
+    byId('next').textContent = welcome ? 'Start story →' : 'Next →';
     byId('back').disabled = !run.trail.length;
     byId('partial-download').hidden = !run.trail.some(item => item.record);
+    syncPresenter();
   }
   function valuesSoFar() {
     const values = {};
@@ -199,9 +203,10 @@
     remember();
     render();
   }
-  function back() {
-    const previous = run.trail.pop();
-    if (!previous) return;
+  function jumpBack(trailIndex) {
+    if (!Number.isInteger(trailIndex) || !run?.trail[trailIndex]) return;
+    const previous = run.trail[trailIndex];
+    run.trail.length = trailIndex;
     run.index = previous.index;
     run.line = previous.line;
     run.ended = false;
@@ -209,6 +214,32 @@
     remember();
     render();
   }
+  function back() { jumpBack(run.trail.length - 1); }
+
+  function syncPresenter() {
+    if (!presenter) return;
+    const visited = new Map();
+    run.trail.forEach(({index,line}, n) => visited.set(index + ':' + line, n));
+    const stories = session.pairings.slice(0,run.count).map((p,i) => ({title:'Story ' + (i+1) + ' · ' + p.label, slides:[]}));
+    const answers = valuesSoFar();
+    steps.forEach((step,index) => {
+      // Only the applicable follow-up appears after a helper has been rated.
+      if (step.when && answers[step.when[0]] && answers[step.when[0]] !== step.when[1]) return;
+      const lines = step.outcomeCaptions || [displayed(step,0)];
+      lines.forEach((label,line) => {
+        stories[step.storyIndex].slides.push({label, image:step.image, current:!run.ended && index===run.index && line===run.line,
+          visitedIndex:visited.get(index + ':' + line) ?? null});
+      });
+    });
+    const step = run.ended ? null : steps[run.index];
+    const options = step ? choices(step) : [];
+    presenter?.update({active:!run.ended, ended:run.ended, counter:run.ended ? 'Pilot complete' : byId('story-counter').textContent, image:step?.image,
+      title:'Who Has to Help?', prompt:run.ended ? byId('finish-title').textContent : byId('prompt').textContent,
+      cue:run.ended ? '' : byId('choice-prompt').textContent,
+      options, stories, canNext:!run.ended && !options.length, canBack:Boolean(run.trail.length),
+      canSave:run.trail.some(item => item.record)});
+  }
+
   function download() {
     const base = {
       pilot_version:'who-has-to-help-zoom-1', pilot_id:run.id, completed:run.ended,
@@ -226,6 +257,23 @@
     a.click();
     setTimeout(()=>URL.revokeObjectURL(url),1000);
   }
+  presenter?.register({next:()=>advance(), back, choose:i=>advance(i), download, jumpBack});
+  function openPresenter() {
+    if (!presenter?.open()) window.alert('Allow pop-ups for this study to open the private presenter. You can also control the pilot from the study window.');
+  }
+  byId('open-presenter').addEventListener('click',openPresenter);
+  document.addEventListener('keydown', event => {
+    if (event.repeat || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey ||
+        event.target.closest?.('input,select,textarea,[contenteditable="true"]')) return;
+    const active = !byId('study').hidden;
+    if (event.key.toLowerCase() === 'p') { event.preventDefault(); openPresenter(); return; }
+    if (!active) return;
+    if (event.key === 'ArrowRight') { event.preventDefault(); advance(); }
+    else if (event.key === 'ArrowLeft') { event.preventDefault(); back(); }
+    else if (/^[1-3]$/.test(event.key) && steps[run.index] && choices(steps[run.index]).length) {
+      event.preventDefault(); advance(Number(event.key)-1);
+    }
+  });
   byId('pilot-form').addEventListener('submit',start);
   byId('resume').addEventListener('click',resume);
   byId('next').addEventListener('click',()=>advance());
