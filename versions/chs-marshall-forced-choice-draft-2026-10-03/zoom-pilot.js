@@ -5,6 +5,8 @@
   const params = new URLSearchParams(location.search);
   const storageKey = 'who-has-to-help-zoom-v1';
   const presenter = window.ObligationZoomPresenter;
+  const parentSlides = window.ZoomParentSlides;
+  const firstSlide = -5;
   const sets = ['woman', 'man', 'family'];
   const careTypes = ['hug', 'food', 'help'];
   const orders = ['will-first', 'has-to-first'];
@@ -42,6 +44,8 @@
     steps = session.steps.filter(s => s.pairing && s.storyIndex < run.count);
   }
   function view(name) {
+    document.body.classList.toggle('child-view',name !== 'setup');
+    document.body.classList.toggle('choice-box-preview',name === 'study');
     for (const id of ['setup','study','finish']) byId(id).hidden = id !== name;
   }
   function setup() {
@@ -58,7 +62,7 @@
       run = {
         id: Array.from(crypto.getRandomValues(new Uint32Array(2)), n => n.toString(16).padStart(8,'0')).join(''),
         set: condition('set-select',sets), order: condition('order-select',orders), care: condition('care-select',careTypes),
-        seed, count:Number(byId('length-select').value), index:-1, line:0, trail:[], ended:false
+        seed, count:Number(byId('length-select').value), index:firstSlide, line:0, trail:[], ended:false
       };
       reconstruct();
       remember();
@@ -89,77 +93,40 @@
   function choices(step) {
     return step.ratedActor && !step.ratingBranch ? ['Mean','Not mean'] : step.choices || [];
   }
-  function button(label, action, className) {
-    const element = document.createElement('button');
-    element.type = 'button';
-    element.textContent = label;
-    if (className) element.className = className;
-    element.addEventListener('click', action);
-    return element;
+  function currentOptions() {
+    if (run.ended) return [];
+    return parentSlides.pages[run.index]?.options || (steps[run.index] ? choices(steps[run.index]) : []);
   }
-  function degreeFace(branch, index) {
-    const brows = branch === 'not-mean' ? 'M26 30 L38 30 M58 30 L70 30' :
-      ['M26 30 L38 32 M58 32 L70 30','M25 27 L39 33 M57 33 L71 27','M24 25 L40 35 M56 35 L72 25'][index];
-    const mouth = branch === 'not-mean' ? 'M34 63 L62 63' :
-      ['M33 65 Q48 59 63 65','M31 68 Q48 50 65 68','M29 71 Q48 43 67 71'][index];
-    return `<svg class="zoom-degree-face" viewBox="0 0 96 96" aria-hidden="true"><circle cx="48" cy="48" r="43" fill="#ffd35c" stroke="#e6b648" stroke-width="2.5"/><g fill="#29333d"><circle cx="33" cy="43" r="4.5"/><circle cx="63" cy="43" r="4.5"/></g><path d="${brows} ${mouth}" fill="none" stroke="#29333d" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
-  }
-  function showScene(step) {
-    const targets = byId('targets');
-    targets.replaceChildren();
-    byId('picture').hidden = !step.image;
-    if (!step.image) return;
-    byId('scene').src = step.image;
-    byId('scene').alt = [step.pairing.helpers[0],step.pairing.recipient,step.pairing.helpers[1]]
-      .map(actor => actor.side + ': ' + actor.description).join('. ');
-    targets.insertAdjacentHTML('afterbegin', ObligationStudyVisuals.nonhelpingEyeOverlay(step));
-    const paired = Boolean(step.optionActors);
-    let highlighted = [];
-    if (step.outcomeVisual) {
-      const helper = step.outcomeCaptions && step.pairing.helpers[run.line];
-      highlighted = helper ? [helper.id] : step.pairing.helpers.map(h => h.id);
-    }
-    for (const [i, actor] of step.pairing.helpers.entries()) {
-      if (!paired && actor.id !== step.ratedActor && !highlighted.includes(actor.id)) continue;
-      const target = paired ? button('', () => advance(i), 'helper-target') : document.createElement('span');
-      if (paired) target.setAttribute('aria-label',step.choices[i]);
-      else { target.className = 'helper-outline'; target.setAttribute('aria-hidden','true'); }
-      target.dataset.side = actor.side;
-      targets.appendChild(target);
-    }
-  }
-
   function render() {
     startedScreen = performance.now();
     if (run.ended) {
       view('finish');
-      byId('finish').querySelector('.lede').textContent = run.count === 1 ? 'That’s the end of our story.' : 'That’s the end of our stories.';
+      byId('finish-title').textContent = run.declined ? 'Thank you for meeting with us!' : 'Thank you for helping!';
+      byId('finish').querySelector('.lede').textContent = run.declined ? 'We’ll finish here today.' :
+        run.count === 1 ? 'That’s the end of our story.' : 'That’s the end of our stories.';
+      const hasResponses = run.trail.some(item=>item.record);
+      byId('download').hidden = !hasResponses;
+      byId('finish-note').hidden = !hasResponses;
       syncPresenter();
       return;
     }
     view('study');
+    const stage = byId('stage');
+    const page = parentSlides.pages[run.index];
     const step = steps[run.index];
-    const welcome = run.index === -1;
-    byId('study').style.setProperty('--story-accent',step?.pairing.visualHex || '#2d769b');
-    byId('story-counter').textContent = welcome ? 'Who Has to Help?' : 'Story ' + (step.storyIndex + 1) + ' of ' + run.count;
-    byId('prompt').textContent = welcome ? 'Let’s look at some stories together!' : displayed(step);
-    byId('choice-prompt').textContent = welcome ? 'I’ll read each story out loud. You can tell me your answer or point to your choice.' : step.choiceQuestion || '';
-    const options = welcome ? [] : choices(step);
-    byId('answers').replaceChildren();
-    if (welcome) byId('picture').hidden = true;
-    else showScene(step);
-    options.forEach((label, i) => {
-      const option = button(label, () => advance(i));
-      if (step.ratingBranch) {
-        option.dataset.degree = i + 1;
-        option.insertAdjacentHTML('afterbegin',degreeFace(step.ratingBranch,i));
-      }
-      byId('answers').appendChild(option);
-    });
-    byId('next').hidden = options.length > 0;
-    byId('next').textContent = welcome ? 'Start story →' : 'Next →';
-    byId('back').disabled = !run.trail.length;
-    byId('partial-download').hidden = !run.trail.some(item => item.record);
+    const canBack = Boolean(run.trail.length);
+    const canSave = run.trail.some(item=>item.record);
+    byId('study').classList.toggle('zoom-parent-step',Boolean(page));
+    byId('story-counter').textContent = page ? page.title : step ? 'Story ' + (step.storyIndex+1) + ' of ' + run.count : 'Who Has to Help?';
+    byId('partial-download').hidden = !canSave;
+    if (page) {
+      stage.classList.remove('zoom-welcome');
+      parentSlides.render(stage,run.index,()=>advance(),advance,back,canBack);
+    } else {
+      stage.classList.remove('zoom-parent-stage');
+      ZoomSlideVisuals.render({stage, step:step || null, line:run.line, prompt:step ? displayed(step) : 'Who Has to Help?',
+        options:currentOptions(), onAnswer:advance, onNext:()=>advance(), onBack:back, onSave:download, canBack, canSave});
+    }
     syncPresenter();
   }
   function valuesSoFar() {
@@ -182,12 +149,20 @@
   function advance(picked) {
     if (byId('study').hidden || performance.now() - lastTap < 180) return;
     const step = steps[run.index];
-    const options = step ? choices(step) : [];
+    const options = currentOptions();
     if (options.length && (!Number.isInteger(picked) || !options[picked])) return;
     lastTap = performance.now();
     const visit = {index:run.index,line:run.line};
     run.trail.push(visit);
-    if (!step) run.index = 0;
+    if (run.index < -1) {
+      if (options.length && picked === 1) {
+        run.declined = true;
+        run.ended = true;
+      } else {
+        if (options.length) visit.confirmedAt = new Date().toISOString();
+        run.index++;
+      }
+    } else if (!step) run.index = 0;
     else if (step.outcomeCaptions && run.line+1 < step.outcomeCaptions.length) run.line++;
     else {
       let accepted = true;
@@ -210,6 +185,7 @@
     run.index = previous.index;
     run.line = previous.line;
     run.ended = false;
+    run.declined = false;
     lastTap = -Infinity;
     remember();
     render();
@@ -231,19 +207,28 @@
           visitedIndex:visited.get(index + ':' + line) ?? null});
       });
     });
+    const intro = Object.keys(parentSlides.pages).map(Number).sort((a,b)=>a-b).concat(-1);
+    stories.unshift({title:'Consent and instructions',slides:intro.map(index=>({
+      label:parentSlides.pages[index]?.title || 'Child’s turn',
+      current:!run.ended && run.index===index, visitedIndex:visited.get(index + ':0') ?? null
+    }))});
     const step = run.ended ? null : steps[run.index];
-    const options = step ? choices(step) : [];
+    const page = parentSlides.pages[run.index];
+    const options = currentOptions();
     presenter?.update({active:!run.ended, ended:run.ended, counter:run.ended ? 'Pilot complete' : byId('story-counter').textContent, image:step?.image,
       title:'Who Has to Help?', prompt:run.ended ? byId('finish-title').textContent : byId('prompt').textContent,
-      cue:run.ended ? '' : byId('choice-prompt').textContent,
+      cue:run.ended ? '' : page ? page.text + '  ' + page.cue : byId('choice-prompt').textContent,
       options, stories, canNext:!run.ended && !options.length, canBack:Boolean(run.trail.length),
       canSave:run.trail.some(item => item.record)});
   }
 
   function download() {
     const base = {
-      pilot_version:'who-has-to-help-zoom-1', pilot_id:run.id, completed:run.ended,
+      pilot_version:'who-has-to-help-zoom-2', pilot_id:run.id, completed:run.ended,
       assigned_stories:run.count, set:run.set, care:run.care, question_order:run.order,
+      signed_form_checked_at:run.trail.find(v=>v.index===-5)?.confirmedAt || '',
+      verbal_permission_confirmed_at:run.trail.find(v=>v.index===-4)?.confirmedAt || '',
+      child_agreed_at:run.trail.find(v=>v.index===-2)?.confirmedAt || '',
       story_seed:run.seed, pairing_order:session.pairingOrder.slice(0,run.count).join(' | ')
     };
     const rows = run.trail.filter(item=>item.record).map(({record},i)=>({...base,response_number:i+1,...record}));
@@ -270,15 +255,12 @@
     if (!active) return;
     if (event.key === 'ArrowRight') { event.preventDefault(); advance(); }
     else if (event.key === 'ArrowLeft') { event.preventDefault(); back(); }
-    else if (/^[1-3]$/.test(event.key) && steps[run.index] && choices(steps[run.index]).length) {
+    else if (/^[1-3]$/.test(event.key) && currentOptions().length) {
       event.preventDefault(); advance(Number(event.key)-1);
     }
   });
   byId('pilot-form').addEventListener('submit',start);
   byId('resume').addEventListener('click',resume);
-  byId('next').addEventListener('click',()=>advance());
-  byId('back').addEventListener('click',back);
-  byId('partial-download').addEventListener('click',download);
   byId('download').addEventListener('click',download);
   byId('again').addEventListener('click',setup);
   setup();
