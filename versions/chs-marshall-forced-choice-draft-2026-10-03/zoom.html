@@ -8,16 +8,16 @@
   <link rel="stylesheet" href="../chs-home-school-evelyn-v1/styles.css?v=whw-camera-captions-2026-11-04">
   <link rel="stylesheet" href="style.css?v=individual-r71">
   <link rel="stylesheet" href="child-view.css?v=caption-wrap-r70">
-  <link rel="stylesheet" href="zoom.css?v=family-2">
-  <link rel="stylesheet" href="zoom-parent.css?v=family-2">
+  <link rel="stylesheet" href="zoom.css?v=obligation-only-3">
+  <link rel="stylesheet" href="zoom-parent.css?v=obligation-only-3">
   <script defer src="pairing-catalog.js"></script>
   <script defer src="script-data.js"></script>
   <script defer src="session-data.js"></script>
   <script defer src="study-visuals.js"></script>
-  <script defer src="zoom-presenter.js?v=1"></script>
-  <script defer src="zoom-slide-visuals.js?v=family-2"></script>
-  <script defer src="zoom-parent-slides.js?v=family-2"></script>
-  <script defer src="zoom-pilot.js?v=family-2"></script>
+  <script defer src="zoom-presenter.js?v=obligation-only-3"></script>
+  <script defer src="zoom-slide-visuals.js?v=obligation-only-3"></script>
+  <script defer src="zoom-parent-slides.js?v=obligation-only-3"></script>
+  <script defer src="zoom-pilot.js?v=obligation-only-3"></script>
 </head>
 <body>
   <main>
@@ -40,26 +40,21 @@
           <option value="food">Sharing strawberries</option>
           <option value="help">Helping with a heavy box</option>
         </select>
-        <label for="order-select">Question order</label>
-        <select id="order-select">
-          <option value="random" selected>Assign randomly</option>
-          <option value="will-first">WILL first</option>
-          <option value="has-to-first">HAS TO first</option>
-        </select>
         <label for="length-select">Pilot length</label>
         <select id="length-select">
           <option value="6" selected>Full pilot · six stories</option>
           <option value="1">Quick pilot · one story</option>
         </select>
         <div class="host-note"><strong>During the call</strong>
-          <p>Open the private presenter window if you want to see your notes and slide list. Start the pilot, then share only the study window in Zoom. Begin with the parent consent and instructions slides. Read the stories aloud and select the child’s answers.</p>
+          <p>Open the private presenter window if you want to see your notes and slide list. Start the pilot, then share only the study window in Zoom. Show the instructions, then the verbal consent slide. Read the stories aloud and select the child’s answers.</p>
         </div>
-        <p class="shortcuts">Use → to advance, ← to go back, or 1–3 to record the answer in the order shown. Press P to reopen the presenter.</p>
+        <p class="shortcuts">Use → to advance, ← to go back, or 1–4 to record the answer in the order shown. Press P to reopen the presenter.</p>
         <p id="setup-error" role="alert"></p>
         <div class="setup-actions">
           <button id="start" class="primary" type="submit">Start pilot</button>
           <button id="open-presenter" type="button">Open private presenter</button>
           <button id="resume" type="button" hidden>Resume pilot</button>
+          <a id="resume-previous" href="zoom-legacy-v2.html" hidden>Open earlier saved pilot</a>
         </div>
       </form>
     </section>

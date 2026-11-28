@@ -1,45 +1,47 @@
-/* The parent screens share the study's setup card and progress indicator. */
+/* The source Zoom deck uses black type on white and a four-row icon list. */
+body.child-view #study.zoom-parent-step > .child-topbar { display:none; }
 body.child-view #stage:has(.zoom-parent-page) {
-  display: block;
-  min-height: 0;
-  overflow: visible;
-  background: transparent;
-  border: 0;
-  box-shadow: none;
+  display:block; min-height:0; border:0; box-shadow:none; background:transparent; overflow:visible;
 }
-body.child-view .zoom-parent-page.ksize-shell { width: min(100%, 1000px); margin: 0 auto; padding: 0; }
-body.child-view .zoom-parent-page .ksize-setup-screen { width: 100%; min-height: 0; margin: 0; padding: clamp(16px,3.2vh,36px) clamp(18px,4vw,54px); }
-body.child-view .zoom-parent-page .ksize-parent-progress { width: min(100%,650px); margin: 0 auto clamp(12px,3vh,28px); }
-body.child-view .zoom-parent-page #prompt { padding: 0; margin: .1em 0 .2em; background: transparent; border: 0; color: #22323a; line-height: 1.12; font-size: clamp(28px,4.7vmin,50px); }
-body.child-view .zoom-parent-page #choice-prompt,
-body.child-view .zoom-parent-page .zoom-parent-detail,
-body.child-view .zoom-parent-page .zoom-parent-note { max-width: 42em; margin: .55em auto; font-size: clamp(17px,2.8vmin,26px); line-height: 1.42; color: #22323a; font-weight: 500; text-align: center; }
-body.child-view .zoom-parent-page blockquote#choice-prompt { margin: 1em auto; padding: .9em 1.15em; max-width: 30em; background: #eff8f4; border: 2px solid #98c8b9; border-radius: 16px; font-weight: 650; }
-body.child-view .zoom-parent-page .zoom-parent-note { font-size: clamp(15px,2.25vmin,21px); margin-top: 1em; }
-body.child-view .zoom-parent-page .ksize-parent-welcome-grid { margin-top: .5em; }
-body.child-view .zoom-parent-page .ksize-parent-welcome-card { padding: .6em; }
-body.child-view .zoom-parent-page .ksize-parent-welcome-card p { font-size: clamp(14px,2.1vmin,20px); }
-body.child-view .zoom-parent-page .zoom-parent-footer { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 10px; margin-top: clamp(16px,3vh,30px); }
-body.child-view .zoom-parent-page button { min-height: 44px; cursor: pointer; }
-body.child-view .zoom-parent-page button:disabled { opacity: .45; cursor: default; }
-body.child-view .zoom-parent-page #answers { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px; width: auto; }
-/* Keep the lab's ordinary green setup action and a quiet secondary exit. */
-body.child-view .zoom-parent-page #answers .ksize-setup-next { background: #208568; color: white; border: none; border-radius: 100px; padding: .55em 1.2em; font-size: clamp(15px,2.2vmin,21px); font-weight: 700; }
-body.child-view .zoom-parent-page .zoom-parent-back,
-body.child-view .zoom-parent-page #answers .zoom-parent-stop { background: white; color: #36534c; border: 1px solid #a4c2b7; border-radius: 100px; padding: .5em .95em; font-size: clamp(14px,2vmin,18px); }
-body.child-view .zoom-parent-page #back { display: inline-block; }
-@media(max-width:580px) {
-  body.child-view .zoom-parent-page .ksize-parent-progress-step b { font-size: 10px; }
-  body.child-view .zoom-parent-page .ksize-parent-welcome-grid { grid-template-columns: 1fr; }
+.zoom-parent-page {
+  --u:min(.135vw,.176vh,1.55px);
+  width:min(100%, 1380px); margin:0 auto;
+  font-family:'Avenir Next', 'Helvetica Neue', Arial, sans-serif; color:#111;
 }
-
-body.child-view #study.zoom-parent-step > .child-topbar { display: none; }
-@media (min-width:700px) and (max-height:660px) {
-  body.child-view .zoom-parent-page .ksize-setup-screen { padding-block: 12px; }
-  body.child-view .zoom-parent-page .ksize-parent-progress { margin-bottom: 8px; }
-  body.child-view .zoom-parent-page .ksize-setup-title { margin-block: 2px; }
-  body.child-view .zoom-parent-page .ksize-parent-welcome-card { padding: 6px 10px; }
-  body.child-view .zoom-parent-page .ksize-parent-welcome-icon { width: 40px; height: 40px; margin-bottom: 3px; }
-  body.child-view .zoom-parent-page .ksize-parent-welcome-card h2 { margin-block: 3px; }
-  body.child-view .zoom-parent-page .zoom-parent-footer { margin-top: 9px; }
+.zoom-parent-sheet {
+  width:100%; min-height:min(81dvh, 710px); background:#fff; padding:clamp(16px,2.5vh,28px) clamp(15px,4.4vw,72px);
+  display:flex; flex-direction:column; justify-content:center;
+}
+.zoom-parent-page #prompt { font-size:clamp(27px,5.1vmin,49px); line-height:1.1; letter-spacing:-.025em; text-align:center; color:#101010; margin:0; padding:0; border:0; background:none; font-weight:700; }
+.zoom-parent-sheet.instructions { gap:clamp(14px,2.3vh,27px); }
+.zoom-parent-sheet.instructions #choice-prompt {
+  list-style:none; padding:0; margin:0 auto; width:min(100%, 1050px); display:grid; gap:clamp(6px,1.2vh,14px);
+  text-align:left; font-size:clamp(18px,3.7vmin,35px); font-weight:450; line-height:1.28; color:#111;
+}
+.zoom-parent-sheet li { display:grid; grid-template-columns:calc(118 * var(--u)) 1fr; align-items:center; gap:clamp(14px,3.2vw,45px); }
+.zoom-parent-icon {
+  width:calc(118 * var(--u)); height:calc(80 * var(--u)); background-color:#fff;
+  background-image:url('../zoom-ksize-intro-outro-v1/slide-02.png'); background-repeat:no-repeat;
+  background-size:calc(780 * var(--u)) calc(438.75 * var(--u)); background-position:calc(-16 * var(--u)) calc(var(--offset) * var(--u));
+}
+.zoom-parent-icon.icon-0 { --offset:-64; }
+.zoom-parent-icon.icon-1 { --offset:-155; }
+.zoom-parent-icon.icon-2 { --offset:-256; }
+.zoom-parent-icon.icon-3 { --offset:-350; }
+.zoom-parent-sheet.consent { gap:clamp(18px,3.7vh,36px); }
+.zoom-parent-sheet.consent #prompt { font-size:clamp(26px,4.1vmin,37px); }
+.zoom-parent-sheet blockquote#choice-prompt {
+  text-align:center; font-weight:550; line-height:1.23; font-size:clamp(22px,5.0vmin,47px); color:#111;
+  margin:0 auto; max-width:26em; padding:0; border:0; background:none;
+}
+.zoom-parent-footer, .zoom-parent-actions { display:flex; justify-content:center; align-items:center; gap:8px; flex-wrap:wrap; }
+.zoom-parent-footer { padding-top:8px; }
+.zoom-parent-footer button { cursor:pointer; min-height:40px; padding:.45em .9em; border-radius:9px; font:600 16px/1.3 'Helvetica Neue',Arial,sans-serif; border:1px solid #9ab9b1; background:#fff; color:#2b4a43; }
+.zoom-parent-footer button.primary { background:#176e59; color:white; border-color:#176e59; }
+.zoom-parent-footer button:disabled { opacity:.45; cursor:default; }
+@media(max-width:500px) {
+  .zoom-parent-page { --u:.49px; }
+  .zoom-parent-sheet { min-height:75dvh; }
+  .zoom-parent-sheet.instructions { gap:20px; }
+  .zoom-parent-sheet.instructions #choice-prompt { gap:17px; }
 }

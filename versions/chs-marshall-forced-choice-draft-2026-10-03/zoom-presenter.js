@@ -89,7 +89,7 @@
       controls.append(back,next);live.append(controls);
     }
     if(state.canSave)live.append(button('Download responses',()=>action('download'),'save'));
-    if(state.active && !state.ended)live.append(node('small','Use → or Space to advance, ← to go back, and 1–3 to record an answer.'));
+    if(state.active && !state.ended)live.append(node('small','Use → or Space to advance, ← to go back, and 1–4 to record an answer.'));
     left.append(live);
     if(examined){
       const [g,s]=examined;
@@ -155,7 +155,7 @@
     if(target.matches?.('input,textarea,select,[contenteditable=true]'))return;
     if(e.key==='ArrowRight' || (e.code==='Space' && !target.closest?.('button,summary'))){e.preventDefault();action('next');}
     else if(e.key==='ArrowLeft'){e.preventDefault();action('back');}
-    else if(/^[1-3]$/.test(e.key)){e.preventDefault();action('choose',Number(e.key)-1);}
+    else if(/^[1-4]$/.test(e.key)){e.preventDefault();action('choose',Number(e.key)-1);}
   }
   function open(){
     if(childWindow && !childWindow.closed){childWindow.focus();render();return true;}

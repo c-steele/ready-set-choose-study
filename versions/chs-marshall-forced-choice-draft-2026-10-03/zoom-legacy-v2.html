@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Who Has to Help? · Earlier Zoom pilot</title>
+  <link rel="stylesheet" href="../chs-home-school-evelyn-v1/styles.css?v=whw-camera-captions-2026-11-04">
+  <link rel="stylesheet" href="style.css?v=individual-r71">
+  <link rel="stylesheet" href="child-view.css?v=caption-wrap-r70">
+  <link rel="stylesheet" href="zoom.css?v=family-2">
+  <style>
+/* The parent screens share the study's setup card and progress indicator. */
+body.child-view #stage:has(.zoom-parent-page) {
+  display: block;
+  min-height: 0;
+  overflow: visible;
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+}
+body.child-view .zoom-parent-page.ksize-shell { width: min(100%, 1000px); margin: 0 auto; padding: 0; }
+body.child-view .zoom-parent-page .ksize-setup-screen { width: 100%; min-height: 0; margin: 0; padding: clamp(16px,3.2vh,36px) clamp(18px,4vw,54px); }
+body.child-view .zoom-parent-page .ksize-parent-progress { width: min(100%,650px); margin: 0 auto clamp(12px,3vh,28px); }
+body.child-view .zoom-parent-page #prompt { padding: 0; margin: .1em 0 .2em; background: transparent; border: 0; color: #22323a; line-height: 1.12; font-size: clamp(28px,4.7vmin,50px); }
+body.child-view .zoom-parent-page #choice-prompt,
+body.child-view .zoom-parent-page .zoom-parent-detail,
+body.child-view .zoom-parent-page .zoom-parent-note { max-width: 42em; margin: .55em auto; font-size: clamp(17px,2.8vmin,26px); line-height: 1.42; color: #22323a; font-weight: 500; text-align: center; }
+body.child-view .zoom-parent-page blockquote#choice-prompt { margin: 1em auto; padding: .9em 1.15em; max-width: 30em; background: #eff8f4; border: 2px solid #98c8b9; border-radius: 16px; font-weight: 650; }
+body.child-view .zoom-parent-page .zoom-parent-note { font-size: clamp(15px,2.25vmin,21px); margin-top: 1em; }
+body.child-view .zoom-parent-page .ksize-parent-welcome-grid { margin-top: .5em; }
+body.child-view .zoom-parent-page .ksize-parent-welcome-card { padding: .6em; }
+body.child-view .zoom-parent-page .ksize-parent-welcome-card p { font-size: clamp(14px,2.1vmin,20px); }
+body.child-view .zoom-parent-page .zoom-parent-footer { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 10px; margin-top: clamp(16px,3vh,30px); }
+body.child-view .zoom-parent-page button { min-height: 44px; cursor: pointer; }
+body.child-view .zoom-parent-page button:disabled { opacity: .45; cursor: default; }
+body.child-view .zoom-parent-page #answers { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px; width: auto; }
+/* Keep the lab's ordinary green setup action and a quiet secondary exit. */
+body.child-view .zoom-parent-page #answers .ksize-setup-next { background: #208568; color: white; border: none; border-radius: 100px; padding: .55em 1.2em; font-size: clamp(15px,2.2vmin,21px); font-weight: 700; }
+body.child-view .zoom-parent-page .zoom-parent-back,
+body.child-view .zoom-parent-page #answers .zoom-parent-stop { background: white; color: #36534c; border: 1px solid #a4c2b7; border-radius: 100px; padding: .5em .95em; font-size: clamp(14px,2vmin,18px); }
+body.child-view .zoom-parent-page #back { display: inline-block; }
+@media(max-width:580px) {
+  body.child-view .zoom-parent-page .ksize-parent-progress-step b { font-size: 10px; }
+  body.child-view .zoom-parent-page .ksize-parent-welcome-grid { grid-template-columns: 1fr; }
+}
+
+body.child-view #study.zoom-parent-step > .child-topbar { display: none; }
+@media (min-width:700px) and (max-height:660px) {
+  body.child-view .zoom-parent-page .ksize-setup-screen { padding-block: 12px; }
+  body.child-view .zoom-parent-page .ksize-parent-progress { margin-bottom: 8px; }
+  body.child-view .zoom-parent-page .ksize-setup-title { margin-block: 2px; }
+  body.child-view .zoom-parent-page .ksize-parent-welcome-card { padding: 6px 10px; }
+  body.child-view .zoom-parent-page .ksize-parent-welcome-icon { width: 40px; height: 40px; margin-bottom: 3px; }
+  body.child-view .zoom-parent-page .ksize-parent-welcome-card h2 { margin-block: 3px; }
+  body.child-view .zoom-parent-page .zoom-parent-footer { margin-top: 9px; }
+}
+
+</style>
+  <script defer src="pairing-catalog.js"></script>
+  <script defer src="script-data.js"></script>
+  <script defer src="session-data.js"></script>
+  <script defer src="study-visuals.js"></script>
+  <script defer src="zoom-presenter.js?v=1"></script>
+  <script defer src="zoom-slide-visuals.js?v=family-2"></script>
+
+
+</head>
+<body>
+  <main>
+    <section id="setup" class="host-panel" aria-labelledby="setup-title">
+      <p class="kicker">Zoom pilot</p>
+      <h1 id="setup-title">Who Has to Help?</h1>
+      <p class="lede">Resume the pilot already saved in this tab to continue with its original questions.</p>
+      <form id="pilot-form">
+        <a href="zoom.html">Open the current pilot</a>
+        <label for="set-select">Character set</label>
+        <select id="set-select">
+          <option value="random" selected>Assign randomly</option>
+          <option value="woman">Mom and sister</option>
+          <option value="man">Dad and brother</option>
+          <option value="family">Family and teacher</option>
+        </select>
+        <label for="care-select">Type of care</label>
+        <select id="care-select">
+          <option value="random" selected>Assign randomly</option>
+          <option value="hug">Giving a hug</option>
+          <option value="food">Sharing strawberries</option>
+          <option value="help">Helping with a heavy box</option>
+        </select>
+        <label for="order-select">Question order</label>
+        <select id="order-select">
+          <option value="random" selected>Assign randomly</option>
+          <option value="will-first">WILL first</option>
+          <option value="has-to-first">HAS TO first</option>
+        </select>
+        <label for="length-select">Pilot length</label>
+        <select id="length-select">
+          <option value="6" selected>Full pilot · six stories</option>
+          <option value="1">Quick pilot · one story</option>
+        </select>
+        <div class="host-note"><strong>During the call</strong>
+          <p>Open the private presenter window if you want to see your notes and slide list. Start the pilot, then share only the study window in Zoom. Begin with the parent consent and instructions slides. Read the stories aloud and select the child’s answers.</p>
+        </div>
+        <p class="shortcuts">Use → to advance, ← to go back, or 1–3 to record the answer in the order shown. Press P to reopen the presenter.</p>
+        <p id="setup-error" role="alert"></p>
+        <div class="setup-actions">
+          <button id="start" class="primary" type="submit" hidden disabled>Start pilot</button>
+          <button id="open-presenter" type="button">Open private presenter</button>
+          <button id="resume" type="button" hidden>Resume pilot</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="study" aria-label="Who Has to Help?" hidden>
+      <div class="child-topbar"><p id="story-counter" class="child-story-label"></p>
+        <button id="partial-download" type="button" hidden>Save progress</button></div>
+      <article id="stage" class="stage" aria-live="polite"></article>
+    </section>
+
+    <section id="finish" aria-labelledby="finish-title" hidden>
+      <div class="child-topbar"><span class="child-story-label">All done!</span></div>
+      <article class="stage message-slide" style="--story-accent:#f5b236">
+        <div class="prompt"><h2 id="finish-title">Thank you for helping!</h2></div>
+        <div class="ksize-welcome-screen zoom-goodbye"><div class="ksize-helper ksize-helper-start" aria-hidden="true"><div class="ksize-helper-face"><span class="ksize-eye ksize-eye-left"></span><span class="ksize-eye ksize-eye-right"></span><span class="ksize-mouth"></span></div></div>
+        <p class="ksize-text lede"></p></div>
+      </article>
+      <div class="host-panel finish-actions">
+        <p id="finish-note">Stop sharing in Zoom, then save the responses for this pilot.</p>
+        <button id="download" class="primary" type="button">Download responses (CSV)</button>
+        <button id="again" type="button">New pilot</button>
+      </div>
+    </section>
+    <noscript>This pilot requires JavaScript. Enable it and reload this page.</noscript>
+  </main>
+<script type="module">
+/* Opening screens for facilitator-led Zoom. Written consent is completed via the lab's study-specific form. */
+(() => {
+  'use strict';
+
+  const pages = {
+    '-5': {
+      title: 'Welcome, grown-ups!',
+      text: 'I will tell your child short stories about someone who needs help. Your child will choose between characters and tell me what they think about each person. With your permission, I will record our visit in Zoom.',
+      detail: 'Did you receive and sign the parent permission form the Spelke Lab emailed you? We can review it together. What questions do you have before we begin?',
+      note: 'Taking part is your choice and your child’s choice. Either of you can ask for a break or stop at any time.',
+      cue: 'Keep Zoom recording off. Confirm receipt of the signed parent permission form for this study. Describe the procedures, answer questions, and explain that you will record the parent’s verbal consent. Continue only once the parent says they are ready. If the form is missing, use the lab’s Adobe Sign process before proceeding.',
+      options: ['Signed form confirmed', 'End visit']
+    },
+    '-4': {
+      title: 'Parent or guardian’s permission',
+      text: '“I have read and understand the consent document. I am this child\'s parent or legal guardian and we both agree to participate in this study.”',
+      lead: 'Once you are ready and I have started recording in Zoom, please read this statement aloud.',
+      cue: 'When the parent confirms readiness, start recording with the Harvard-licensed Zoom account. Ask the parent to say the displayed statement. Confirm only after you have heard it on the recording. These study slides do not start or store a recording.',
+      options: ['Verbal consent confirmed', 'End visit']
+    },
+    '-3': {
+      title: 'Getting ready for the stories',
+      text: 'Can your child see the pictures and hear me clearly?',
+      cards: [
+        ['◉', 'One screen', 'Place the shared study screen directly in front of your child.'],
+        ['♫', 'Listen and choose', 'I will read aloud. Your child can say an answer or point to a character and tell me which one.'],
+        ['♡', 'Stay nearby', 'You can help with the device. Please let your child choose each answer on their own.']
+      ],
+      note: 'We can take a break whenever your child likes.',
+      cue: 'Check the screen and sound with the family. If pointing is unclear over Zoom, ask which character the child meant before entering the response.',
+      options: [],
+      nextLabel: 'Ready'
+    },
+    '-2': {
+      title: 'Would you like to play?',
+      text: 'I have some picture stories to show you. I will read them to you, and you can tell me what you think.',
+      detail: 'You can say yes or no. You can ask for a break or stop whenever you want.',
+      cue: 'Ask the child directly, “Would you like to play?” Where verbal assent applies, capture both the question and the child’s answer on the Zoom recording. Accept their answer and end the visit if they decline.',
+      options: ['Yes, I want to play', 'End visit']
+    }
+  };
+  const stepNames = ['Written permission', 'Spoken permission', 'Instructions', 'Child’s turn'];
+
+  function element(tag, classes, text, id) {
+    const el = document.createElement(tag);
+    if (classes) el.className = classes;
+    if (text) el.textContent = text;
+    if (id) el.id = id;
+    return el;
+  }
+
+  function control(label, classes, callback, id) {
+    const button = element('button', classes, label, id);
+    button.type = 'button';
+    button.addEventListener('click', callback);
+    return button;
+  }
+
+  function progress(current) {
+    const nav = element('nav', 'ksize-parent-progress');
+    nav.setAttribute('aria-label', 'Getting ready');
+    stepNames.forEach((label, index) => {
+      const status = index === current ? ' active' : index < current ? ' complete' : '';
+      const span = element('span', 'ksize-parent-progress-step' + status);
+      if (index === current) span.setAttribute('aria-current', 'step');
+      span.append(element('i', '', index < current ? '✓' : String(index + 1)), element('b', '', label));
+      nav.append(span);
+    });
+    return nav;
+  }
+
+  function render(stage, index, onNext, onAnswer, onBack, canBack) {
+    const page = pages[index];
+    const shell = element('div', 'ksize-shell ksize-setup-shell zoom-parent-page');
+    const card = element('section','ksize-screen ksize-setup-screen ksize-parent-welcome-screen');
+    card.setAttribute('aria-labelledby', 'prompt');
+    shell.append(card);
+    card.append(progress(index + 5));
+    const header = element('header','ksize-parent-welcome-header');
+    header.append(element('span','ksize-setup-eyebrow','Who Has to Help? · Spelke Lab'),
+      element('h1','ksize-setup-title',page.title,'prompt'));
+    if (page.lead) header.append(element('p','ksize-parent-welcome-lead',page.lead));
+    card.append(header);
+    const copy = element(index === -4 ? 'blockquote' : 'p','zoom-parent-copy',page.text,'choice-prompt');
+    card.append(copy);
+    if (page.detail) card.append(element('p','zoom-parent-detail',page.detail));
+    if (page.cards) {
+      const grid = element('div','ksize-parent-welcome-grid');
+      page.cards.forEach(([symbol, title, detail]) => {
+        const item = element('article','ksize-parent-welcome-card');
+        const icon = element('span','ksize-parent-welcome-icon',symbol);
+        icon.setAttribute('aria-hidden','true');
+        item.append(icon,element('h2','',title),element('p','',detail));
+        grid.append(item);
+      });
+      card.append(grid);
+    }
+    if (page.note) card.append(element('p','zoom-parent-note',page.note));
+    const footer = element('footer','zoom-parent-footer');
+    const back = control('← Back','zoom-parent-back',onBack,'back');
+    back.disabled = !canBack;
+    footer.append(back);
+    const answers = element('div','zoom-parent-actions',null,'answers');
+    if (page.options.length) {
+      page.options.forEach((label,i) => {
+        const button=control(label,i===0?'ksize-setup-next':'zoom-parent-stop',()=>onAnswer(i));
+        button.dataset.answer=String(i);
+        answers.append(button);
+      });
+    } else {
+      answers.append(control(page.nextLabel + ' ➜','ksize-setup-next',onNext,'next'));
+    }
+    footer.append(answers);
+    card.append(footer);
+    stage.replaceChildren(shell);
+  }
+
+  window.ZoomParentSlides = {pages, render};
+})();
+
+</script>
+<script type="module">
+/* Live, read-aloud version. Answers stay in this browser tab until the facilitator exports them. */
+(() => {
+  'use strict';
+  const byId = id => document.getElementById(id);
+  const params = new URLSearchParams(location.search);
+  const storageKey = 'who-has-to-help-zoom-v1';
+  const presenter = window.ObligationZoomPresenter;
+  const parentSlides = window.ZoomParentSlides;
+  const firstSlide = -5;
+  const sets = ['woman', 'man', 'family'];
+  const careTypes = ['hug', 'food', 'help'];
+  const orders = ['will-first', 'has-to-first'];
+  let run, session, steps;
+  let startedScreen = 0;
+  let lastTap = -Infinity;
+
+  function draw() {
+    return crypto.getRandomValues(new Uint32Array(1))[0];
+  }
+  function condition(id, values) {
+    const selected = byId(id).value;
+    if (values.includes(selected)) return selected;
+    const limit = 2 ** 32 - (2 ** 32 % values.length);
+    let n;
+    do { n = draw(); } while (n >= limit);
+    return values[n % values.length];
+  }
+  function preselect(id, param, values) {
+    if (values.includes(params.get(param))) byId(id).value = params.get(param);
+  }
+  preselect('set-select', 'set', sets);
+  preselect('care-select', 'care', careTypes);
+  preselect('order-select', 'questionOrder', orders);
+  preselect('length-select', 'stories', ['1','6']);
+
+  function savedRun() {
+    try { return JSON.parse(sessionStorage.getItem(storageKey)); } catch { return null; }
+  }
+  function remember() {
+    try { sessionStorage.setItem(storageKey, JSON.stringify(run)); } catch { /* CSV export also works without browser storage. */ }
+  }
+  function reconstruct() {
+    session = ObligationSession.build(run.set, run.order, null, run.care, run.seed);
+    steps = session.steps.filter(s => s.pairing && s.storyIndex < run.count);
+  }
+  function view(name) {
+    document.body.classList.toggle('child-view',name !== 'setup');
+    document.body.classList.toggle('choice-box-preview',name === 'study');
+    for (const id of ['setup','study','finish']) byId(id).hidden = id !== name;
+  }
+  function setup() {
+    view('setup');
+    presenter?.update({active:false, ended:false, stories:[], options:[]});
+    const saved = savedRun();
+    byId('resume').hidden = !saved;
+    byId('resume').textContent = saved?.ended ? 'Reopen completed pilot' : 'Resume pilot';
+  }
+  function start(event) {
+    event.preventDefault();
+    try {
+      const seed = params.has('storySeed') ? ObligationSession.parseStorySeed(params.get('storySeed')) : draw();
+      run = {
+        id: Array.from(crypto.getRandomValues(new Uint32Array(2)), n => n.toString(16).padStart(8,'0')).join(''),
+        set: condition('set-select',sets), order: condition('order-select',orders), care: condition('care-select',careTypes),
+        seed, count:Number(byId('length-select').value), index:firstSlide, line:0, trail:[], ended:false
+      };
+      reconstruct();
+      remember();
+      render();
+    } catch (error) { byId('setup-error').textContent = error.message; }
+  }
+  function resume() {
+    const saved = savedRun();
+    if (!saved) return setup();
+    run = saved;
+    reconstruct();
+    render();
+  }
+
+  function displayed(step, line = run.line) {
+    if (step.outcomeCaptions) return step.outcomeCaptions[line];
+    if (!step.ratedActor) return step.text;
+    const actor = step.pairing.helpers.find(h => h.id === step.ratedActor).description;
+    if (!step.ratingBranch) return 'Do you think ' + actor + ' was mean or not mean?';
+    const recipient = step.pairing.recipient.reference;
+    const action = {
+      hug: 'giving ' + recipient.replace(/^the /,'the sad ') + ' a hug',
+      food: 'giving ' + recipient.replace(/^the /,'the hungry ') + ' strawberries',
+      help: 'helping ' + recipient + ' pick up the heavy box'
+    }[step.care];
+    return 'How mean or not mean was ' + actor + ' for not ' + action + '?';
+  }
+  function choices(step) {
+    return step.ratedActor && !step.ratingBranch ? ['Mean','Not mean'] : step.choices || [];
+  }
+  function currentOptions() {
+    if (run.ended) return [];
+    return parentSlides.pages[run.index]?.options || (steps[run.index] ? choices(steps[run.index]) : []);
+  }
+  function render() {
+    startedScreen = performance.now();
+    if (run.ended) {
+      view('finish');
+      byId('finish-title').textContent = run.declined ? 'Thank you for meeting with us!' : 'Thank you for helping!';
+      byId('finish').querySelector('.lede').textContent = run.declined ? 'We’ll finish here today.' :
+        run.count === 1 ? 'That’s the end of our story.' : 'That’s the end of our stories.';
+      const hasResponses = run.trail.some(item=>item.record);
+      byId('download').hidden = !hasResponses;
+      byId('finish-note').hidden = !hasResponses;
+      syncPresenter();
+      return;
+    }
+    view('study');
+    const stage = byId('stage');
+    const page = parentSlides.pages[run.index];
+    const step = steps[run.index];
+    const canBack = Boolean(run.trail.length);
+    const canSave = run.trail.some(item=>item.record);
+    byId('study').classList.toggle('zoom-parent-step',Boolean(page));
+    byId('story-counter').textContent = page ? page.title : step ? 'Story ' + (step.storyIndex+1) + ' of ' + run.count : 'Who Has to Help?';
+    byId('partial-download').hidden = !canSave;
+    if (page) {
+      stage.classList.remove('zoom-welcome');
+      parentSlides.render(stage,run.index,()=>advance(),advance,back,canBack);
+    } else {
+      stage.classList.remove('zoom-parent-stage');
+      ZoomSlideVisuals.render({stage, step:step || null, line:run.line, prompt:step ? displayed(step) : 'Who Has to Help?',
+        options:currentOptions(), onAnswer:advance, onNext:()=>advance(), onBack:back, onSave:download, canBack, canSave});
+    }
+    syncPresenter();
+  }
+  function valuesSoFar() {
+    const values = {};
+    for (const {record} of run.trail) if (record?.accepted) values[record.step_id] = record.branch_value;
+    return values;
+  }
+  function makeRecord(step, picked, branchValue, accepted) {
+    const helper = step.pairing.helpers.find(h => h.id === (step.ratedActor || step.optionActors?.[picked]));
+    return {
+      story:step.storyIndex+1, pairing_id:step.pairing.id, recipient:step.pairing.recipient.reference,
+      left:step.pairing.helpers[0].description, right:step.pairing.helpers[1].description,
+      step_id:step.id, measure:step.measure || step.phase, prompt:displayed(step), options:choices(step).join(' | '),
+      answer:choices(step)[picked], branch_value:branchValue, accepted,
+      helper_role:helper?.description || '', helper_side:helper?.side || '', rating_position:step.ratingPosition || '',
+      rating_branch:step.ratingBranch || '', meanness_score:step.ratingBranch ? (step.ratingBranch==='mean' ? 4+picked : 3-picked) : '',
+      elapsed_ms:Math.round(performance.now()-startedScreen)
+    };
+  }
+  function advance(picked) {
+    if (byId('study').hidden || performance.now() - lastTap < 180) return;
+    const step = steps[run.index];
+    const options = currentOptions();
+    if (options.length && (!Number.isInteger(picked) || !options[picked])) return;
+    lastTap = performance.now();
+    const visit = {index:run.index,line:run.line};
+    run.trail.push(visit);
+    if (run.index < -1) {
+      if (options.length && picked === 1) {
+        run.declined = true;
+        run.ended = true;
+      } else {
+        if (options.length) visit.confirmedAt = new Date().toISOString();
+        run.index++;
+      }
+    } else if (!step) run.index = 0;
+    else if (step.outcomeCaptions && run.line+1 < step.outcomeCaptions.length) run.line++;
+    else {
+      let accepted = true;
+      if (options.length) {
+        const branchValue = step.choices[picked];
+        accepted = !step.expected || branchValue === step.expected;
+        visit.record = makeRecord(step,picked,branchValue,accepted);
+      }
+      run.index = accepted ? session.nextIndex(run.index,valuesSoFar()) : session.retryIndex(run.index);
+      run.line = 0;
+      run.ended = run.index >= steps.length;
+    }
+    remember();
+    render();
+  }
+  function jumpBack(trailIndex) {
+    if (!Number.isInteger(trailIndex) || !run?.trail[trailIndex]) return;
+    const previous = run.trail[trailIndex];
+    run.trail.length = trailIndex;
+    run.index = previous.index;
+    run.line = previous.line;
+    run.ended = false;
+    run.declined = false;
+    lastTap = -Infinity;
+    remember();
+    render();
+  }
+  function back() { jumpBack(run.trail.length - 1); }
+
+  function syncPresenter() {
+    if (!presenter) return;
+    const visited = new Map();
+    run.trail.forEach(({index,line}, n) => visited.set(index + ':' + line, n));
+    const stories = session.pairings.slice(0,run.count).map((p,i) => ({title:'Story ' + (i+1) + ' · ' + p.label, slides:[]}));
+    const answers = valuesSoFar();
+    steps.forEach((step,index) => {
+      // Only the applicable follow-up appears after a helper has been rated.
+      if (step.when && answers[step.when[0]] && answers[step.when[0]] !== step.when[1]) return;
+      const lines = step.outcomeCaptions || [displayed(step,0)];
+      lines.forEach((label,line) => {
+        stories[step.storyIndex].slides.push({label, image:step.image, current:!run.ended && index===run.index && line===run.line,
+          visitedIndex:visited.get(index + ':' + line) ?? null});
+      });
+    });
+    const intro = Object.keys(parentSlides.pages).map(Number).sort((a,b)=>a-b).concat(-1);
+    stories.unshift({title:'Consent and instructions',slides:intro.map(index=>({
+      label:parentSlides.pages[index]?.title || 'Child’s turn',
+      current:!run.ended && run.index===index, visitedIndex:visited.get(index + ':0') ?? null
+    }))});
+    const step = run.ended ? null : steps[run.index];
+    const page = parentSlides.pages[run.index];
+    const options = currentOptions();
+    presenter?.update({active:!run.ended, ended:run.ended, counter:run.ended ? 'Pilot complete' : byId('story-counter').textContent, image:step?.image,
+      title:'Who Has to Help?', prompt:run.ended ? byId('finish-title').textContent : byId('prompt').textContent,
+      cue:run.ended ? '' : page ? page.text + '  ' + page.cue : byId('choice-prompt').textContent,
+      options, stories, canNext:!run.ended && !options.length, canBack:Boolean(run.trail.length),
+      canSave:run.trail.some(item => item.record)});
+  }
+
+  function download() {
+    const base = {
+      pilot_version:'who-has-to-help-zoom-2', pilot_id:run.id, completed:run.ended,
+      assigned_stories:run.count, set:run.set, care:run.care, question_order:run.order,
+      signed_form_checked_at:run.trail.find(v=>v.index===-5)?.confirmedAt || '',
+      verbal_permission_confirmed_at:run.trail.find(v=>v.index===-4)?.confirmedAt || '',
+      child_agreed_at:run.trail.find(v=>v.index===-2)?.confirmedAt || '',
+      story_seed:run.seed, pairing_order:session.pairingOrder.slice(0,run.count).join(' | ')
+    };
+    const rows = run.trail.filter(item=>item.record).map(({record},i)=>({...base,response_number:i+1,...record}));
+    if (!rows.length) return;
+    const quote = value => '"' + String(value ?? '').replace(/"/g,'""') + '"';
+    const csv = [Object.keys(rows[0]), ...rows.map(row=>Object.values(row))].map(row=>row.map(quote).join(',')).join('\r\n');
+    const url = URL.createObjectURL(new Blob(['\uFEFF',csv], {type:'text/csv;charset=utf-8'}));
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'who-has-to-help-zoom-' + run.id + (run.ended ? '' : '-partial') + '.csv';
+    a.click();
+    setTimeout(()=>URL.revokeObjectURL(url),1000);
+  }
+  presenter?.register({next:()=>advance(), back, choose:i=>advance(i), download, jumpBack});
+  function openPresenter() {
+    if (!presenter?.open()) window.alert('Allow pop-ups for this study to open the private presenter. You can also control the pilot from the study window.');
+  }
+  byId('open-presenter').addEventListener('click',openPresenter);
+  document.addEventListener('keydown', event => {
+    if (event.repeat || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey ||
+        event.target.closest?.('input,select,textarea,[contenteditable="true"]')) return;
+    const active = !byId('study').hidden;
+    if (event.key.toLowerCase() === 'p') { event.preventDefault(); openPresenter(); return; }
+    if (!active) return;
+    if (event.key === 'ArrowRight') { event.preventDefault(); advance(); }
+    else if (event.key === 'ArrowLeft') { event.preventDefault(); back(); }
+    else if (/^[1-3]$/.test(event.key) && currentOptions().length) {
+      event.preventDefault(); advance(Number(event.key)-1);
+    }
+  });
+  byId('pilot-form').addEventListener('submit',start);
+  byId('resume').addEventListener('click',resume);
+  byId('download').addEventListener('click',download);
+  byId('again').addEventListener('click',setup);
+  setup();
+})();
+
+</script>
+</body>
+</html>

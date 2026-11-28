@@ -95,3 +95,19 @@ body.child-view #finish .message-slide {
   width: 100%; padding: 8px 12px 0; margin: 0; border: 0; background: transparent; box-shadow: none; font-size: 14px;
 }
 #finish .finish-actions button, #finish .finish-actions p { margin: 0; }
+
+/* Equal-sized faces and cards keep the four spoken labels visually comparable. */
+body.child-view .rating-options-four {
+  grid-template-columns: repeat(4,minmax(0,1fr));
+}
+body.child-view .rating-options-four .rating-answer {
+  display: grid; grid-template-rows: auto auto;
+  align-content: center; justify-items: center;
+}
+body.child-view .rating-options-four .rating-answer > span:last-child {
+  display: grid; place-items: center; min-height: 2.2em; line-height: 1.1;
+}
+@media (max-width: 460px) {
+  body.child-view .rating-options-four { width: calc(100% - 10px); gap: 4px; }
+  body.child-view .rating-options-four .meanness-face { width: clamp(38px,13vw,60px); height: auto; }
+}

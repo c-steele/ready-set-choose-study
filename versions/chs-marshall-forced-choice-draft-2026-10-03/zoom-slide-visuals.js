@@ -49,10 +49,17 @@
 
   function answerCards(step, options) {
     if(step.optionActors || !options.length) return '<div id="answers" hidden></div>';
-    if(step.ratingBranch){
-      return '<div class="rating-options" id="answers">'+options.map((label,i)=>
-        '<button type="button" class="rating-answer option-visible option-ready" data-degree="'+(i+1)+'" data-answer="'+i+'"><span class="degree-icon degree-'+(i+1)+'">'+helperFace(step.ratingBranch==='mean'?i:'neutral')+'</span><span>'+esc(label)+'</span></button>'
-      ).join('')+'</div>';
+    const fourPoint = step.ratingScale === 'meanness-four';
+    if (fourPoint || step.ratingBranch) {
+      const gridClass = fourPoint ? 'rating-options rating-options-four' : 'rating-options';
+      const cards = options.map((label,i) => {
+        const degree = i+1;
+        const iconClass = fourPoint ? 'degree-icon' : 'degree-icon degree-'+degree;
+        const level = fourPoint ? ['neutral',0,1,2][i] : step.ratingBranch==='mean' ? i : 'neutral';
+        return '<button type="button" class="rating-answer option-visible option-ready" data-degree="'+degree+
+          '" data-answer="'+i+'"><span class="'+iconClass+'">'+helperFace(level)+'</span><span>'+esc(label)+'</span></button>';
+      });
+      return '<div class="'+gridClass+'" id="answers">'+cards.join('')+'</div>';
     }
     const binary=options.length===2 && options[0]==='Yes' && options[1]==='No';
     return '<div class="answers '+(binary?'yes-no-answers':'evaluation-answers')+'" id="answers">'+options.map((label,i)=>
@@ -73,12 +80,13 @@
     stage.dataset.care=step?.care||'';
     stage.dataset.choiceLocation=step?.optionActors?'characters':'controls';
     stage.dataset.responseFormat=step?.optionActors?'forced-choice':step?.ratedActor?'individual-rating':options.length?'check':'continue';
-    stage.dataset.responseKind=step?.ratingBranch?'scale':options.length?'binary':'continue';
+    const scale = step?.ratingScale === 'meanness-four' || Boolean(step?.ratingBranch);
+    stage.dataset.responseKind=scale?'scale':options.length?'binary':'continue';
     stage.style.setProperty('--story-accent',step?.pairing.visualHex||'#f5b236');
     if(!step){
       stage.innerHTML=welcome(canBack);
     }else{
-      const kind=step.optionActors?'care-question-prompt':step.ratingBranch?'scale-prompt':step.ratedActor?'evaluation-prompt':step.localId==='recall-all'?'recall-prompt':'';
+      const kind=step.optionActors?'care-question-prompt':scale?'scale-prompt':step.ratedActor?'evaluation-prompt':step.localId==='recall-all'?'recall-prompt':'';
       const detail=(step.context&&!step.displayText?'<p class="referent">'+esc(step.context)+'</p>':'')+(step.preface?'<p class="preface">'+esc(step.preface)+'</p>':'');
       const header='<div class="prompt '+kind+'">'+detail+'<h2 id="prompt">'+esc(prompt)+'</h2></div>';
       const band=step.optionActors?'<p class="choice-caption" id="choice-prompt">'+esc(step.choiceQuestion)+'</p>':'<span id="choice-prompt" hidden></span>';
