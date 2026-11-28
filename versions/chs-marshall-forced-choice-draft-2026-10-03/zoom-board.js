@@ -10,14 +10,37 @@
     {id:'food', name:'Giving strawberries', need:'Feeling hungry'},
     {id:'help', name:'Lifting a heavy box', need:'Dropped a heavy box'}
   ];
-  const cards = roleSets.flatMap((set,r) => care.map((event,c) => ({
-    set, event, id:set.id + '-' + event.id, number:r*care.length+c+1
+  const schedule = window.ZoomAssignment;
+  const cards = roleSets.flatMap(set => care.map(event => ({
+    set, event, id:set.id + '-' + event.id,
+    examples:[1,2,3,4].map(visit=>schedule.forCell(set.id,event.id,visit)).sort((a,b)=>a.visualPlan-b.visualPlan)
   })));
-  const checkKey = 'obligation-zoom-reviewed-versions-1';
+  const examples = cards.flatMap(card=>card.examples);
+  const numberInput = byId('assignment-number');
+  const incomingNumber = new URL(location.href).searchParams.get('assignment');
+  if(incomingNumber !== null) numberInput.value = incomingNumber;
+  let stagedNumber;
+  function sessionURL(number,rehearsal) {
+    const url = new URL('zoom.html',document.baseURI);
+    url.searchParams.set('launch','1');
+    url.searchParams.set('assignment',String(number));
+    if(rehearsal) url.searchParams.set('rehearsal','1');
+    return url.href;
+  }
+  function describe(assignment) {
+    return roleNames[assignment.set]+' · '+care.find(event=>event.id===assignment.care).name+' · Plan '+assignment.visualPlan;
+  }
+  function enteredAssignment() {
+    const value = numberInput.value;
+    const number = Number(value);
+    if(!/^\d+$/.test(value) || !Number.isSafeInteger(number) || number < 1) return null;
+    return schedule.forNumber(number);
+  }
+  const checkKey = 'obligation-zoom-reviewed-layouts-1';
   let checked = new Set();
   try {
     const saved = JSON.parse(localStorage.getItem(checkKey) || '[]');
-    if (Array.isArray(saved)) checked = new Set(saved.filter(id => cards.some(c => c.id===id)));
+    if (Array.isArray(saved)) checked = new Set(saved.filter(number => examples.some(example=>example.number===number)));
   } catch { /* Unavailable storage only affects the next visit's checkmarks. */ }
   const grid = byId('version-grid');
 
@@ -30,19 +53,31 @@
   function saveChecks() {
     try { localStorage.setItem(checkKey,JSON.stringify([...checked])); } catch {}
   }
+  function planLink(example) {
+    const wrapper=element('div','plan-example');
+    wrapper.dataset.number=example.number;
+    const link=element('a','','Plan '+example.visualPlan+' ↗');
+    link.href=sessionURL(example.number,true);
+    link.target='_blank';link.rel='noopener';
+    link.setAttribute('aria-label','Rehearse assignment '+example.number+', '+describe(example));
+    link.append(element('small','','Assignment '+example.number));
+    const label=element('label','review-done');
+    const check=element('input');check.type='checkbox';
+    check.setAttribute('aria-label','Mark assignment '+example.number+', '+describe(example)+' reviewed');
+    check.addEventListener('change',()=>{
+      if(check.checked) checked.add(example.number); else checked.delete(example.number);
+      saveChecks();update();
+    });
+    label.append(check,element('span','','Reviewed'));
+    wrapper.append(link,label);
+    return wrapper;
+  }
   function card(entry) {
-    const {set,event,id,number}=entry;
+    const {set,event,id}=entry;
     const article=element('article','review-card');
     article.dataset.version=id;
     const top=element('div','review-card-topline');
-    const name=element('span','review-role','#'+String(number).padStart(2,'0')+' · '+roleNames[set.id]);
-    const label=element('label','review-done');
-    const input=element('input');
-    input.type='checkbox';
-    input.checked=checked.has(id);
-    input.setAttribute('aria-label','Mark '+roleNames[set.id]+', '+event.name.toLowerCase()+' reviewed');
-    const mark=element('span','','Reviewed');
-    label.append(input,mark); top.append(name,label);
+    top.append(element('span','review-role',roleNames[set.id]));
     const heading=element('h2','',event.name);
     const dl=element('dl'), row=element('div');
     row.append(element('dt','','Story event'),element('dd','',event.need)); dl.append(row);
@@ -55,46 +90,88 @@
       item.append(element('span','','For '+p.recipient.description)); list.append(item);
     }
     details.append(list);
-    const link=element('a','review-open','Open six-story pilot');
-    const url=new URL(location.href);
-    url.search=''; url.hash='';
-    url.searchParams.set('launch','1'); url.searchParams.set('set',set.id); url.searchParams.set('care',event.id);
-    link.href=url.href; link.target='_blank';link.rel='noopener';
-    link.setAttribute('aria-label','Open six-story pilot: '+roleNames[set.id]+', '+event.name.toLowerCase());
-    const arrow=element('span','','↗'); arrow.setAttribute('aria-hidden','true');link.append(arrow);
-    article.append(top,heading,dl,details,link);
-    input.addEventListener('change',()=>{
-      if(input.checked) checked.add(id); else checked.delete(id);
-      saveChecks(); update();
-    });
+    const links=element('div','plan-links');
+    links.append(...entry.examples.map(planLink));
+    article.append(top,heading,dl,details,links);
     return article;
   }
   const rendered=new Map(cards.map(entry=>{
     const article=card(entry); grid.append(article);
     return [entry.id,article];
   }));
-  const empty=element('p','review-empty','No versions match these filters.');
+  const empty=element('p','review-empty','No combinations match these filters.');
   grid.append(empty);
   function update() {
     let count=0;
     const set=byId('set-select').value, kind=byId('care-select').value, unreviewed=byId('unreviewed').checked;
     for(const entry of cards) {
-      const article=rendered.get(entry.id), done=checked.has(entry.id);
-      article.hidden=(set!=='random' && set!==entry.set.id) || (kind!=='random' && kind!==entry.event.id) || (unreviewed && done);
-      article.classList.toggle('is-reviewed',done); article.querySelector('input').checked=done;
+      const article=rendered.get(entry.id);
+      const allDone=entry.examples.every(example=>checked.has(example.number));
+      article.hidden=(set!=='random' && set!==entry.set.id) || (kind!=='random' && kind!==entry.event.id) || (unreviewed && allDone);
+      article.classList.toggle('is-reviewed',allDone);
+      for(const preview of article.querySelectorAll('.plan-example')) {
+        const done=checked.has(Number(preview.dataset.number));
+        preview.querySelector('input').checked=done;
+        preview.hidden=unreviewed && done;
+      }
       if(!article.hidden) count++;
     }
-    byId('visible-count').textContent=count+' '+(count===1?'version':'versions');
-    byId('review-count').textContent=checked.size+' / '+cards.length;
-    byId('review-bar').style.width=checked.size/cards.length*100+'%';
-    byId('start').textContent=(set!=='random' && kind!=='random')?'Start selected version':(set!=='random' || kind!=='random')?'Draw from selected conditions':'Start random version';
+    byId('visible-count').textContent=count+' '+(count===1?'combination':'combinations');
+    byId('review-count').textContent=checked.size+' / '+examples.length;
+    byId('review-bar').style.width=checked.size/examples.length*100+'%';
     empty.hidden=count>0;
   }
-  ['set-select','care-select','unreviewed'].forEach(id=>byId(id).addEventListener('change',update));
+  function stage(assignment) {
+    if(stagedNumber===assignment.number) return;
+    stagedNumber=assignment.number;
+    byId('rehearsal-assignment').value=String(assignment.number);
+    byId('rehearsal-summary').textContent='Previewing assignment '+assignment.number+' · '+describe(assignment);
+    window.dispatchEvent(new CustomEvent('zoom-rehearsal-selected',{detail:{number:assignment.number}}));
+  }
+  function stageFilterExample() {
+    const set=byId('set-select').value, kind=byId('care-select').value;
+    const eligible=examples.filter(example=>(set==='random'||set===example.set) && (kind==='random'||kind===example.care));
+    stage(eligible[Math.floor(Math.random()*eligible.length)]);
+  }
+  const scheduleLength=216;
+  function blockStart(number) {
+    return number-(number-1)%scheduleLength;
+  }
+  function syncNumber() {
+    const assignment=enteredAssignment();
+    numberInput.setCustomValidity(numberInput.value && !assignment ? 'Enter a positive whole assignment number.' : '');
+    byId('assignment-summary').textContent=assignment ? 'Assignment '+assignment.number+' · '+describe(assignment) : '';
+    const first=blockStart(assignment?.number||1);
+    byId('download-schedule').textContent='Download assignments '+first+'–'+Math.min(first+scheduleLength-1,Number.MAX_SAFE_INTEGER)+' (CSV)';
+    if(assignment) stage(assignment); else stageFilterExample();
+  }
+  function downloadSchedule() {
+    const first=blockStart(enteredAssignment()?.number||1);
+    const count=Math.min(scheduleLength,Number.MAX_SAFE_INTEGER-first+1);
+    const rows=[['Assignment number','Character set','Kind of care','Visual plan','Story order','First helper rated in story 1','Participant session','Rehearsal','Pilot or main collection','Testing status']];
+    for(let offset=0;offset<count;offset++) {
+      const n=first+offset, assignment=schedule.forNumber(n);
+      const names=assignment.pairingOrder.map(id=>pairingDetails.get(id).label);
+      rows.push([n,roleNames[assignment.set],care.find(event=>event.id===assignment.care).name,assignment.visualPlan,names.join(' / '),assignment.firstRatingSide,sessionURL(n,false),sessionURL(n,true),'','']);
+    }
+    const csv = rows.map(row=>row.map(value=>'"'+String(value).replaceAll('"','""')+'"').join(',')).join('\r\n');
+    const url=URL.createObjectURL(new Blob(['\uFEFF',csv],{type:'text/csv;charset=utf-8'}));
+    const link=element('a');link.href=url;link.download='Who Has to Help - assignments '+first+'-'+(first+count-1)+'.csv';
+    link.click();setTimeout(()=>URL.revokeObjectURL(url),1000);
+  }
+  ['set-select','care-select'].forEach(id=>byId(id).addEventListener('change',()=>{update();stageFilterExample();}));
+  byId('unreviewed').addEventListener('change',update);
   byId('reset-checks').addEventListener('click',()=>{checked.clear();saveChecks();update();});
+  byId('download-schedule').addEventListener('click',downloadSchedule);
+  numberInput.addEventListener('input',syncNumber);
+  if(!byId('setup').hidden) syncNumber();
   // The reference review stylesheet includes document-level styles. Limit its
   // lifetime to the board, preserving the shared family's fonts and palette.
-  function toggleTheme(){byId('review-theme').disabled=byId('setup').hidden;}
+  function toggleTheme(){
+    const hidden=byId('setup').hidden;
+    byId('review-theme').disabled=hidden;
+    if(!hidden && stagedNumber===undefined) syncNumber();
+  }
   new MutationObserver(toggleTheme).observe(byId('setup'),{attributes:true,attributeFilter:['hidden']});
   toggleTheme();update();
 })();

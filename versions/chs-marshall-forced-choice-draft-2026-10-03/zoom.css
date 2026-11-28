@@ -136,4 +136,11 @@ body.child-view .rating-options-four .rating-answer > span:last-child {
     padding-inline: 4px;
     font-size: 20px;
   }
+  body.child-view .stage[data-response-format="individual-rating"] .child-session-footer {
+    flex-wrap: nowrap;
+    gap: 8px;
+  }
+  body.child-view .stage[data-response-format="individual-rating"] .child-helper-bubble {
+    max-width: 118px;
+  }
 }

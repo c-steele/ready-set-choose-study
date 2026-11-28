@@ -26,9 +26,9 @@
     const geometry=eyeGeometry[typeof pairing==='string'?pairing:pairing?.id];
     return geometry?JSON.parse(JSON.stringify(geometry)):null;
   }
-  function nonhelpingEyeOverlay(step){
+  function nonhelpingEyeOverlay(step, overrideGeometry){
     if(!shouldLookAway(step))return '';
-    const geometry=eyesForPairing(step.pairing);
+    const geometry=overrideGeometry || eyesForPairing(step.pairing);
     if(!geometry)return '';
     const source=step.pairing.images.need;
     const prefix='look-down-'+String(step.id||step.pairing.id).replace(/[^a-z\d-]/gi,'-');

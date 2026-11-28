@@ -29,7 +29,7 @@
     return next;
   }
 
-  function storySteps(pairing, storyIndex, questionOrder, care, firstRatingSide) {
+  function storySteps(pairing, storyIndex, questionOrder, care, firstRatingSide, firstMentionSide) {
     const result = [], p = copy(pairing);
     // Use one clear name for the child recipient in every prompt and cue.
     if (!p.recipient.isAdult) {
@@ -53,7 +53,9 @@
       result.push(step);
     }
     const helperChoices = helpers.map(h => upper(h.description));
-    const choiceQuestion = apostrophes(p.sourceHugQuestion.trim().split('\n').pop());
+    const named = firstMentionSide === 'right' ? [...helpers].reverse() : helpers;
+    const choiceQuestion = firstMentionSide ? upper(named[0].description) + ' or ' + named[1].description + '?' :
+      apostrophes(p.sourceHugQuestion.trim().split('\n').pop());
     const pairOptions = {choices:helperChoices, choiceQuestion, optionActors:helpers.map(h => h.id)};
     add('group', 'group', {image:p.images.group});
     for (const intro of p.intros) {
@@ -321,5 +323,8 @@
     }
     return lines.join('\n');
   }
-  return {build, parseStorySeed, resolveAssignment, toMarkdown, spokenWords, questionOrders};
+  function buildZoomStory(pairing, index, care, layout) {
+    return storySteps(pairing, index, questionOrders[1], care, layout.firstRatingSide, layout.firstMentionSide);
+  }
+  return {build, buildZoomStory, parseStorySeed, resolveAssignment, toMarkdown, spokenWords, questionOrders};
 });

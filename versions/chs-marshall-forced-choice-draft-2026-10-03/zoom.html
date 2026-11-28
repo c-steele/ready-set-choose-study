@@ -4,54 +4,71 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex,nofollow">
-  <title>Who Has to Help? · Zoom pilot</title>
+  <title>Who Has to Help? · Zoom study</title>
   <link rel="stylesheet" href="../chs-home-school-evelyn-v1/styles.css?v=whw-camera-captions-2026-11-04">
   <link rel="stylesheet" href="style.css?v=individual-r71">
   <link rel="stylesheet" href="child-view.css?v=caption-wrap-r70">
-  <link rel="stylesheet" href="zoom.css?v=mean-branch-1">
+  <link rel="stylesheet" href="zoom.css?v=assign-1">
   <link rel="stylesheet" href="zoom-parent.css?v=six-board-4">
   <link id="review-theme" rel="stylesheet" href="../../screen-share-study/review.css?v=ftc-rendition-review-v4">
-  <link rel="stylesheet" href="zoom-board.css?v=six-board-4">
+  <link rel="stylesheet" href="zoom-board.css?v=assign-1">
   <link rel="stylesheet" href="zoom-navigator.css?v=six-board-4">
   <script defer src="pairing-catalog.js"></script>
   <script defer src="script-data.js"></script>
-  <script defer src="session-data.js"></script>
-  <script defer src="study-visuals.js"></script>
-  <script defer src="zoom-presenter.js?v=mean-branch-1"></script>
-  <script defer src="zoom-slide-visuals.js?v=six-board-4"></script>
+  <script defer src="session-data.js?v=assign-1"></script>
+  <script defer src="study-visuals.js?v=assign-1"></script>
+  <script defer src="zoom-presenter.js?v=assign-1"></script>
+  <script defer src="zoom-slide-visuals.js?v=assign-1"></script>
   <script defer src="zoom-parent-slides.js?v=six-board-4"></script>
-  <script defer src="zoom-pilot.js?v=mean-branch-1"></script>
-  <script defer src="zoom-board.js?v=six-board-4"></script>
+  <script defer src="zoom-assignment.js?v=assign-1"></script>
+  <script defer src="zoom-pilot.js?v=assign-1"></script>
+  <script defer src="zoom-board.js?v=assign-1"></script>
 </head>
 <body>
   <main>
     <section id="setup" class="review-shell" aria-labelledby="setup-title">
       <header class="review-hero">
         <div>
-          <p class="review-eyebrow">Zoom pilot · Researcher preview</p>
+          <p class="review-eyebrow">Researcher · Zoom study</p>
           <h1 id="setup-title">Who Has to Help?</h1>
           <p class="review-subtitle">Six stories about one kind of care. In each story, children choose who has to help. They judge each helper as mean or not mean and say how mean if they choose “Mean.”</p>
         </div>
-        <div class="review-progress-card" aria-live="polite">
-          <strong id="review-count">0 / 9</strong>
-          <span>Versions reviewed</span>
-          <div class="review-progress-track" aria-hidden="true"><i id="review-bar"></i></div>
-        </div>
       </header>
-      <form id="pilot-form">
-        <div class="board-launch">
-          <div class="board-launch-text">
-            <h2>Start a six-story pilot</h2>
-            <p>Open a version below or draw one at random. Share the family’s Welcome window in Zoom. Use the slide navigator to see the script and record answers privately.</p>
-          </div>
-          <div class="board-launch-actions">
-            <button id="start" type="submit" class="review-open">Start random version</button>
-            <button id="open-presenter" type="button" class="board-secondary">Slide navigator</button>
-            <button id="resume" type="button" class="board-secondary" hidden>Resume pilot</button>
-            <a id="resume-previous" href="zoom-legacy-v2.html" hidden>Open earlier saved pilot</a>
-          </div>
+      <section class="assignment-panel" aria-labelledby="assignment-heading">
+        <h2 id="assignment-heading">Run a participant session</h2>
+        <p>Reserve the next unused number in your shared testing log. Use the same numbering for pilot and later sessions. Share the family’s Welcome window in Zoom.</p>
+        <form id="assignment-form" method="get" action="zoom.html" target="_blank" rel="noopener">
+          <input type="hidden" name="launch" value="1">
+          <label for="assignment-number">Assignment number
+            <input id="assignment-number" name="assignment" type="text" inputmode="numeric" pattern="[0-9]+" autocomplete="off" required placeholder="e.g., 1">
+          </label>
+          <button id="assignment-start" class="review-open" type="submit">Start participant session</button>
+          <button id="assignment-preview" type="submit" name="rehearsal" value="1" class="board-secondary">Rehearse this assignment</button>
+        </form>
+        <p id="assignment-summary" aria-live="polite"></p>
+        <div class="assignment-tools">
+          <button id="download-schedule" class="text-action" type="button">Download assignment schedule (CSV)</button>
+          <button id="resume" type="button" class="board-secondary" hidden>Resume saved session</button>
+          <a id="resume-previous" href="zoom-legacy-v2.html" hidden>Open earlier saved pilot</a>
         </div>
         <p id="setup-error" role="alert"></p>
+      </section>
+
+      <form id="pilot-form" method="get" action="zoom.html" target="_blank" rel="noopener">
+        <input type="hidden" name="launch" value="1">
+        <input type="hidden" name="rehearsal" value="1">
+        <input id="rehearsal-assignment" type="hidden" name="assignment">
+        <div class="board-launch">
+          <div class="board-launch-text">
+            <h2>Rehearsal previews</h2>
+            <p>Choose one of four color and layout plans for each character-set and care combination. Each rehearsal opens at the family Welcome slide. Use the slide navigator to jump ahead.</p>
+          </div>
+          <div class="review-progress-card" aria-live="polite">
+            <strong id="review-count">0 / 36</strong>
+            <span>Previews reviewed</span>
+            <div class="review-progress-track" aria-hidden="true"><i id="review-bar"></i></div>
+          </div>
+        </div>
         <div class="review-controls" aria-label="Preview filters">
           <label for="set-select"><span>Character set</span>
             <select id="set-select">
@@ -72,9 +89,14 @@
           <label class="review-check-filter"><input type="checkbox" id="unreviewed"><span>Only show unreviewed</span></label>
           <button type="button" class="review-reset" id="reset-checks">Clear review checks</button>
         </div>
+        <div class="rehearsal-launch">
+          <p id="rehearsal-summary" aria-live="polite"></p>
+          <button id="start" type="submit" class="board-secondary">Open rehearsal</button>
+          <button id="open-presenter" type="button" class="board-secondary">Slide navigator</button>
+        </div>
       </form>
-      <section class="review-summary"><p><strong id="visible-count">9 versions</strong> shown. Each launch shuffles the six pairings. The first helper rated can be on either side. That side alternates across the six stories.</p><p>Review checks are saved in this browser.</p></section>
-      <section class="review-grid" aria-label="Six-story pilot versions" id="version-grid"></section>
+      <section class="review-summary"><p><strong id="visible-count">9 combinations</strong> shown. Review checks are saved in this browser.</p></section>
+      <section class="review-grid" aria-label="Rehearsal combinations" id="version-grid"></section>
     </section>
 
     <section id="study" aria-label="Who Has to Help?" hidden>
@@ -92,9 +114,9 @@
         <p class="ksize-text lede"></p></div>
       </article>
       <div class="host-panel finish-actions">
-        <p id="finish-note">Stop sharing in Zoom, then save the responses for this pilot.</p>
+        <p id="finish-note">Stop sharing in Zoom, then save the responses for this session.</p>
         <button id="download" class="primary" type="button">Download responses (CSV)</button>
-        <button id="again" type="button">New pilot</button>
+        <button id="again" type="button">Return to study board</button>
       </div>
     </section>
     <noscript>This pilot requires JavaScript. Enable it and reload this page.</noscript>

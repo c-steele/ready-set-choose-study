@@ -3,7 +3,11 @@
   'use strict';
   const byId = id => document.getElementById(id);
   const params = new URLSearchParams(location.search);
-  const storageKey = 'who-has-to-help-zoom-v3';
+  const oldStorageKey = 'who-has-to-help-zoom-v3';
+  const requestedNumber = params.get('assignment');
+  const isRehearsal = params.get('rehearsal') === '1';
+  const storageKey = requestedNumber === null ? oldStorageKey :
+    'who-has-to-help-zoom-v5-' + (isRehearsal ? 'rehearsal-' : 'collection-') + requestedNumber;
   const presenter = window.ObligationZoomPresenter;
   const parentSlides = window.ZoomParentSlides;
   const firstSlide = -4;
@@ -19,14 +23,6 @@
   function draw() {
     return crypto.getRandomValues(new Uint32Array(1))[0];
   }
-  function condition(id, values) {
-    const selected = byId(id).value;
-    if (values.includes(selected)) return selected;
-    const limit = 2 ** 32 - (2 ** 32 % values.length);
-    let n;
-    do { n = draw(); } while (n >= limit);
-    return values[n % values.length];
-  }
   function preselect(id, param, values) {
     if (values.includes(params.get(param))) byId(id).value = params.get(param);
   }
@@ -40,11 +36,18 @@
     try { sessionStorage.setItem(storageKey, JSON.stringify(run)); } catch { /* CSV export also works without browser storage. */ }
   }
   function reconstruct() {
-    // The narrated study supplies the shared cast, story order, and side order.
-    session = ObligationSession.build(run.set, 'has-to-first', null, run.care, run.seed);
+    if (run.assignmentNumber) {
+      const plan = ZoomAssignment.forNumber(run.assignmentNumber);
+      const byPairing = new Map(ObligationPairings.pairings.map(pairing => [pairing.id,pairing]));
+      const pairings = plan.stories.map(layout => ZoomSlideVisuals.numberedPairing(byPairing.get(layout.pairingId),layout.trialId));
+      const plannedSteps = pairings.flatMap((pairing,index) => ObligationSession.buildZoomStory(pairing,index,plan.care,plan.stories[index]));
+      session = {plan, pairings, pairingOrder:plan.pairingOrder, steps:plannedSteps};
+    } else {
+      session = ObligationSession.build(run.set, 'has-to-first', null, run.care, run.seed);
+    }
     steps = session.steps.filter(step =>
       step.pairing && step.storyIndex < run.count &&
-      (!step.ratingBranch || (run.version === 4 && step.ratingBranch === 'mean')) &&
+      (!step.ratingBranch || (run.version >= 4 && step.ratingBranch === 'mean')) &&
       step.localId !== 'predict-compare' && step.localId !== 'recall-all'
     ).map(step => {
       if (!step.ratedActor) return step;
@@ -60,7 +63,7 @@
         food: `giving strawberries to the hungry ${recipient.label} in the middle`,
         help: `helping ${recipient.reference} pick up the heavy box`
       }[step.care];
-      if (run.version === 4) {
+      if (run.version >= 4) {
         return {...step, text:`Was ${role} mean or not mean for not ${missedAction}?`,
           choices:['Mean', 'Not mean'], ratingScale:'meanness-binary'};
       }
@@ -78,29 +81,25 @@
   }
   function setup() {
     view('setup');
-    prepareBoardPreview();
     const saved = savedRun();
     byId('resume-previous').hidden = !savedRun('who-has-to-help-zoom-v1');
     byId('resume').hidden = !saved;
     byId('resume').textContent = saved?.ended ? 'Reopen completed pilot' : 'Resume pilot';
   }
-  function prepareBoardPreview() {
-    const seed = params.has('storySeed') ? ObligationSession.parseStorySeed(params.get('storySeed')) : draw();
+  function prepareBoardPreview(number) {
+    const plan = ZoomAssignment.forNumber(number);
     run = {
       id: Array.from(crypto.getRandomValues(new Uint32Array(2)), n => n.toString(16).padStart(8,'0')).join(''),
-      set: condition('set-select',sets), care: condition('care-select',careTypes),
-      seed, version:4, count:6, index:firstSlide, line:0, trail:[], ended:false
+      version:5, assignmentNumber:plan.number, rehearsal:isRehearsal,
+      set:plan.set, care:plan.care, count:6, index:firstSlide, line:0, trail:[], ended:false
     };
     reconstruct();
     syncPresenter(true);
   }
-  function start(event) {
-    event?.preventDefault();
-    try {
-      history.replaceState({...history.state, zoomPilotId:run.id},'');
-      remember();
-      render();
-    } catch (error) { byId('setup-error').textContent = error.message; }
+  function start() {
+    history.replaceState({...history.state, zoomPilotId:run.id},'');
+    remember();
+    render();
   }
   function resume() {
     const saved = savedRun();
@@ -151,13 +150,20 @@
     syncPresenter();
   }
   function makeRecord(step, picked) {
-    const helper = step.pairing.helpers.find(h => h.id === (step.ratedActor || step.optionActors?.[picked]));
+    const helpers = step.pairing.helpers;
+    const helper = helpers.find(h => h.id === (step.ratedActor || step.optionActors?.[picked]));
+    const layout = session.plan?.stories[step.storyIndex];
     let score = '';
     if (step.ratingScale === 'meanness-four') score = picked;
     if (step.ratingScale === 'meanness-degree') score = picked + 1;
     if (step.ratingScale === 'meanness-binary' && step.choices[picked] === 'Not mean') score = 0;
     return {
       story:step.storyIndex+1, pairing_id:step.pairing.id, recipient:step.pairing.recipient.reference,
+      ...(layout && {
+        source_trial:layout.trialId, visual_variant:layout.variant, stimulus_color:step.pairing.visualHex,
+        first_mentioned_side:layout.firstMentionSide, first_mentioned_helper:helpers.find(h=>h.side===layout.firstMentionSide).description,
+        first_rated_side:layout.firstRatingSide, first_rated_helper:helpers.find(h=>h.side===layout.firstRatingSide).description
+      }),
       left:step.pairing.helpers[0].description, right:step.pairing.helpers[1].description,
       step_id:step.id, measure:step.measure || step.phase, prompt:displayed(step), options:step.choices.join(' | '),
       answer:step.choices[picked], accepted:true,
@@ -272,9 +278,11 @@
     const prompt = run.ended ? byId('finish-title').textContent : page?.title || (step ? displayed(step) : 'Who Has to Help?');
     const cue = run.ended ? '' : page ? [page.text,page.cue].filter(Boolean).join(' ') :
       step?.ratingScale === 'meanness-degree' ? 'Read all three choices aloud.' :
+      step?.optionActors && session.plan ? step.choiceQuestion + '  Record the choice: 1 = left, 2 = right.' :
       step?.choiceQuestion || (!step ? 'Listen to the story, then answer the questions.' : '');
     presenter.update({active:!beforeStart && !run.ended, ended:run.ended, previewing:Boolean(sharedPreview),
-      counter, image:step?.image, title:'Who Has to Help?', prompt, cue, options, stories, count:run.count,
+      counter:session.plan ? (beforeStart || run.rehearsal ? 'Rehearsal' : 'Participant') + ' ' + run.assignmentNumber + ' · ' + counter : counter,
+      image:step?.image, title:'Who Has to Help?', prompt, cue, options, stories, count:run.count,
       canNext:!beforeStart && !run.ended && !options.length, canBack:Boolean(run.trail.length),
       canSave:run.trail.some(item => item.record)});
   }
@@ -284,7 +292,12 @@
       pilot_version:'who-has-to-help-zoom-' + (run.version || 3), pilot_id:run.id, completed:run.ended,
       assigned_stories:run.count, set:run.set, care:run.care, question_type:'has-to-only',
       verbal_permission_confirmed_at:run.trail.find(v=>v.index===-2)?.confirmedAt || '',
-      story_seed:run.seed, pairing_order:session.pairingOrder.slice(0,run.count).join(' | ')
+      ...(session.plan && {
+        session_type:run.rehearsal ? 'rehearsal' : 'participant',
+        assignment_number:session.plan.number, assignment_schedule:session.plan.version,
+        cell_visit:session.plan.cellVisit, visual_plan:session.plan.visualPlan, story_order_row:session.plan.orderRow
+      }),
+      story_seed:run.seed ?? '', pairing_order:session.pairingOrder.slice(0,run.count).join(' | ')
     };
     const rows = run.trail.filter(item=>item.record).map(({record},i)=>({...base,response_number:i+1,...record}));
     if (!rows.length) return;
@@ -293,7 +306,8 @@
     const url = URL.createObjectURL(new Blob(['\uFEFF',csv], {type:'text/csv;charset=utf-8'}));
     const a = document.createElement('a');
     a.href = url;
-    a.download = 'who-has-to-help-zoom-' + run.id + (run.ended ? '' : '-partial') + '.csv';
+    const assignmentLabel = run.assignmentNumber ? (run.rehearsal ? 'rehearsal-' : 'participant-') + run.assignmentNumber + '-' : '';
+    a.download = 'who-has-to-help-zoom-' + assignmentLabel + run.id + (run.ended ? '' : '-partial') + '.csv';
     a.click();
     setTimeout(()=>URL.revokeObjectURL(url),1000);
   }
@@ -310,7 +324,11 @@
   }
   byId('open-presenter').addEventListener('click',openPresenter);
   byId('study-navigator').addEventListener('click',openPresenter);
-  for (const id of ['set-select','care-select']) byId(id).addEventListener('change',prepareBoardPreview);
+  window.addEventListener('zoom-rehearsal-selected',event=>{
+    if (byId('setup').hidden) return;
+    try { prepareBoardPreview(event.detail.number); }
+    catch(error) { byId('setup-error').textContent = error.message; }
+  });
   document.addEventListener('keydown', event => {
     if (event.repeat || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey ||
         event.target.closest?.('input,select,textarea,[contenteditable="true"]')) return;
@@ -324,18 +342,29 @@
       event.preventDefault(); advance(Number(event.key)-1);
     }
   });
-  byId('pilot-form').addEventListener('submit',start);
   byId('resume').addEventListener('click',resume);
   byId('download').addEventListener('click',download);
   byId('again').addEventListener('click',()=>{
-    const url = new URL(location.href);
-    url.searchParams.delete('launch');
-    history.replaceState(null,'',url);
-    setup();
+    location.assign(location.pathname);
   });
   setup();
   if (params.get('launch') === '1') {
-    if (history.state?.zoomPilotId === savedRun()?.id && savedRun()) resume();
-    else start();
+    try {
+      const saved = savedRun();
+      if (saved && history.state?.zoomPilotId === saved.id) resume();
+      else if (requestedNumber !== null) {
+        prepareBoardPreview(requestedNumber);
+        start();
+      } else {
+        // Bookmarked role/care previews remain rehearsals. A participant launch always has a number.
+        const pick = values => values[draw() % values.length];
+        const set = sets.includes(params.get('set')) ? params.get('set') : pick(sets);
+        const care = careTypes.includes(params.get('care')) ? params.get('care') : pick(careTypes);
+        const url = new URL(location.href);
+        url.searchParams.set('assignment',ZoomAssignment.forCell(set,care,1).number);
+        url.searchParams.set('rehearsal','1');
+        location.replace(url);
+      }
+    } catch(error) { byId('setup-error').textContent = error.message; }
   }
 })();
